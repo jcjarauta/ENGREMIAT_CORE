@@ -1,0 +1,12 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "plan-to-worker.schema",
+  "type": "object",
+  "required": ["objective_id","stages","worker_package"],
+  "properties": {
+    "objective_id": {"type": "string"},
+    "source": {"type": "object"},
+    "stages": {"type": "array"},
+    "worker_package": {"type": "object"}
+  }
+}

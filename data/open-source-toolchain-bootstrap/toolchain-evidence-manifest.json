@@ -1,0 +1,312 @@
+﻿{
+    "objective_id":  "ENGREMIAT_OPEN_SOURCE_TOOLCHAIN_BOOTSTRAP_003",
+    "stage":  "E08",
+    "status":  "TOOLCHAIN_BOOTSTRAP_CLOSED",
+    "readiness":  75,
+    "decision":  "GO_WITH_MANUAL_GATES",
+    "tools":  [
+                  {
+                      "name":  "winget",
+                      "installed":  false,
+                      "version":  null
+                  },
+                  {
+                      "name":  "git",
+                      "installed":  false,
+                      "version":  null
+                  },
+                  {
+                      "name":  "gh",
+                      "installed":  false,
+                      "version":  null
+                  },
+                  {
+                      "name":  "node",
+                      "installed":  false,
+                      "version":  null
+                  },
+                  {
+                      "name":  "npm",
+                      "installed":  false,
+                      "version":  null
+                  },
+                  {
+                      "name":  "ollama",
+                      "installed":  false,
+                      "version":  null
+                  },
+                  {
+                      "name":  "cline",
+                      "installed":  false,
+                      "version":  null
+                  },
+                  {
+                      "name":  "dot",
+                      "installed":  false,
+                      "version":  null
+                  },
+                  {
+                      "name":  "sqlite3",
+                      "installed":  false,
+                      "version":  null
+                  }
+              ],
+    "installed":  [
+
+                  ],
+    "missing":  [
+                    "winget",
+                    "git",
+                    "gh",
+                    "node",
+                    "npm",
+                    "ollama",
+                    "cline",
+                    "dot",
+                    "sqlite3"
+                ],
+    "core_ready":  false,
+    "ollama_prepared":  true,
+    "cline_prepared":  true,
+    "openclaw_deferred":  true,
+    "dashboard_ready":  true,
+    "evidence_items":  [
+                           {
+                               "path":  "C:\\Users\\sacan\\Desktop\\ENGREMIAT_CORE\\reports\\open-source-toolchain-bootstrap\\cline-cli-validation-report.json",
+                               "sha256":  "6da56d2cb215459ae488e26d9b12b529ac15567319aaa171f37565469ef93af0",
+                               "type":  "JSON_REPORT",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "C:\\Users\\sacan\\Desktop\\ENGREMIAT_CORE\\reports\\open-source-toolchain-bootstrap\\cline-request-adapter-check-report.json",
+                               "sha256":  "d08658676dcef05b0d195e1a70dc96aa5ae57b207a5ce87591f82277c482f0a4",
+                               "type":  "JSON_REPORT",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "C:\\Users\\sacan\\Desktop\\ENGREMIAT_CORE\\reports\\open-source-toolchain-bootstrap\\e01-readiness-smoke-report.json",
+                               "sha256":  "c62692ba5a67ed055ceceb92051ba883ef970ea8cc1bc70858bfbb55e93f65e4",
+                               "type":  "JSON_REPORT",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "C:\\Users\\sacan\\Desktop\\ENGREMIAT_CORE\\reports\\open-source-toolchain-bootstrap\\e01-readiness-validation-report.json",
+                               "sha256":  "3cbe8d352d7fe991b4ef4b24cd9dcb47e03764d0046a653ee6ed39c6068a8a38",
+                               "type":  "JSON_REPORT",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "C:\\Users\\sacan\\Desktop\\ENGREMIAT_CORE\\reports\\open-source-toolchain-bootstrap\\e02-core-toolchain-smoke-report.json",
+                               "sha256":  "67d5a62ea0cefbeeb8730c37dd1c2a2b20e8be333f915ce44b2415133c68eded",
+                               "type":  "JSON_REPORT",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "C:\\Users\\sacan\\Desktop\\ENGREMIAT_CORE\\reports\\open-source-toolchain-bootstrap\\e02-core-toolchain-validation-report.json",
+                               "sha256":  "3de264d7cb01c46b0105fdc42e78fe1fc36b179e292f65da92beacf4d7a7e808",
+                               "type":  "JSON_REPORT",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "C:\\Users\\sacan\\Desktop\\ENGREMIAT_CORE\\reports\\open-source-toolchain-bootstrap\\e03-ollama-smoke-report.json",
+                               "sha256":  "a76b1dd1fa96fb018f177328e2e7b841a0018462ad4ce81569fe135576a89651",
+                               "type":  "JSON_REPORT",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "C:\\Users\\sacan\\Desktop\\ENGREMIAT_CORE\\reports\\open-source-toolchain-bootstrap\\e03-ollama-validation-report.json",
+                               "sha256":  "c8717873a1f8200219c15e7e7b2bd30542b28cac5ed517a958bfb2698d4a5763",
+                               "type":  "JSON_REPORT",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "C:\\Users\\sacan\\Desktop\\ENGREMIAT_CORE\\reports\\open-source-toolchain-bootstrap\\e04-cline-smoke-report.json",
+                               "sha256":  "a7f03354a543b5005203c408d7b115f6f789a657ebf52b934a7b6fc9a90f2b42",
+                               "type":  "JSON_REPORT",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "C:\\Users\\sacan\\Desktop\\ENGREMIAT_CORE\\reports\\open-source-toolchain-bootstrap\\e04-cline-validation-report.json",
+                               "sha256":  "150f23f0c91cf20e4bc9e1ef69e6713cf559e370193f5858eb00af0deebc3794",
+                               "type":  "JSON_REPORT",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "C:\\Users\\sacan\\Desktop\\ENGREMIAT_CORE\\reports\\open-source-toolchain-bootstrap\\e05-visual-persistence-smoke-report.json",
+                               "sha256":  "770b0fbfc2efd9a83cf33053baaabec2d7bb9d1fcbe05f8c5b6c97ec22b1feb5",
+                               "type":  "JSON_REPORT",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "C:\\Users\\sacan\\Desktop\\ENGREMIAT_CORE\\reports\\open-source-toolchain-bootstrap\\e05-visual-persistence-validation-report.json",
+                               "sha256":  "c54d145777907fbe1b167fcc14556acda0ee7be5ea06c056751a0431fd5e08d6",
+                               "type":  "JSON_REPORT",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "C:\\Users\\sacan\\Desktop\\ENGREMIAT_CORE\\reports\\open-source-toolchain-bootstrap\\e06-openclaw-deferred-smoke-report.json",
+                               "sha256":  "a81d112c9879ec5be3e761049c12827029230f9480212c3a5f76ec7baf3469fa",
+                               "type":  "JSON_REPORT",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "C:\\Users\\sacan\\Desktop\\ENGREMIAT_CORE\\reports\\open-source-toolchain-bootstrap\\e06-openclaw-deferred-validation-report.json",
+                               "sha256":  "34fd7747db29ccbce790fe57506a0a3adeacaaa648d81dc09e7e17669bf6e965",
+                               "type":  "JSON_REPORT",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "C:\\Users\\sacan\\Desktop\\ENGREMIAT_CORE\\reports\\open-source-toolchain-bootstrap\\e07-dashboard-smoke-report.json",
+                               "sha256":  "551c56d7a6677b6e328639cd4e4614d2a242fd14e27e99d4b5544f1af2e07cae",
+                               "type":  "JSON_REPORT",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "C:\\Users\\sacan\\Desktop\\ENGREMIAT_CORE\\reports\\open-source-toolchain-bootstrap\\e07-dashboard-validation-report.json",
+                               "sha256":  "ad6cffa5f6de2de209e3e42ab7c592a283b8b6ca0a1425b7c044b888be113526",
+                               "type":  "JSON_REPORT",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "C:\\Users\\sacan\\Desktop\\ENGREMIAT_CORE\\reports\\open-source-toolchain-bootstrap\\git-local-validation-report.json",
+                               "sha256":  "0a3e629924c4a851f5b110fe52118b31625b33bc96d17cb7f5bd0c368ba2b4fb",
+                               "type":  "JSON_REPORT",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "C:\\Users\\sacan\\Desktop\\ENGREMIAT_CORE\\reports\\open-source-toolchain-bootstrap\\graphviz-validation-report.json",
+                               "sha256":  "f3c27bd444bf53106cf2f92cc920f898ccc64c8170f791f8c955e27930aca534",
+                               "type":  "JSON_REPORT",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "C:\\Users\\sacan\\Desktop\\ENGREMIAT_CORE\\reports\\open-source-toolchain-bootstrap\\node-runtime-validation-report.json",
+                               "sha256":  "2b6b5ffa049f62cbd6fb327916e1487025aa0f32cbf9f48b156e7c9381ad506b",
+                               "type":  "JSON_REPORT",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "C:\\Users\\sacan\\Desktop\\ENGREMIAT_CORE\\reports\\open-source-toolchain-bootstrap\\ollama-request-adapter-check-report.json",
+                               "sha256":  "83a7209e63f9d9c68854e8f5b3728c3da7cbd6d4e74afdc598a223804e8e37fa",
+                               "type":  "JSON_REPORT",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "C:\\Users\\sacan\\Desktop\\ENGREMIAT_CORE\\reports\\open-source-toolchain-bootstrap\\ollama-runtime-validation-report.json",
+                               "sha256":  "b94ee2ebf87275b02e945c977c936851b745fdaadd782c904220d166714a03ef",
+                               "type":  "JSON_REPORT",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "C:\\Users\\sacan\\Desktop\\ENGREMIAT_CORE\\reports\\open-source-toolchain-bootstrap\\openclaw-prepared-report.json",
+                               "sha256":  "cac9d70e5f3898c0e756a5efb12e19fd84fd5746e613c71551b5cf1462c5e25f",
+                               "type":  "JSON_REPORT",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "C:\\Users\\sacan\\Desktop\\ENGREMIAT_CORE\\reports\\open-source-toolchain-bootstrap\\sqlite-validation-report.json",
+                               "sha256":  "180b030e3d18f858d8541bddca31ea9ea204e9063e44770df00be5d16bb83250",
+                               "type":  "JSON_REPORT",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "C:\\Users\\sacan\\Desktop\\ENGREMIAT_CORE\\reports\\open-source-toolchain-bootstrap\\toolchain-readiness-report.json",
+                               "sha256":  "95399bfafae9b3b3d5583adfa9b8a33ee5496b76d774fd99b4bd15b9711fd43d",
+                               "type":  "JSON_REPORT",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "data/open-source-toolchain-bootstrap/install-plan.safe.json",
+                               "sha256":  "5c4f5f918c5cd06f4bab6c4700bf9391ec1b6d7856ab9d3ec6ecdd73135fcb21",
+                               "type":  "ARTIFACT",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "data/open-source-toolchain-bootstrap/ollama-model-policy.json",
+                               "sha256":  "0a9941719c7800872dd171843adf5735989f85051388233e506bc9d523aae06d",
+                               "type":  "ARTIFACT",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "data/open-source-toolchain-bootstrap/cline-worker-policy.json",
+                               "sha256":  "b8f0e9b4a6b76852666980ee0281e64a66753cfdef424ab25ed28576421024d1",
+                               "type":  "ARTIFACT",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "data/open-source-toolchain-bootstrap/visual-persistence-policy.json",
+                               "sha256":  "a029fd70bf1aa73b642dbcfec245e083886272ff4ec7af8c6f7c3d0c6b032e1e",
+                               "type":  "ARTIFACT",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "data/open-source-toolchain-bootstrap/openclaw-policy.json",
+                               "sha256":  "52179915346e3d2c35fb66f06a5bafb39d6853a0195fea883471d2f877fd3511",
+                               "type":  "ARTIFACT",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "data/open-source-toolchain-bootstrap/toolchain-command-status.json",
+                               "sha256":  "3aec5369b7c81f2a3540c8b4bdcf4d85fd141159eed65021dbd74b0e21875d91",
+                               "type":  "ARTIFACT",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "dashboard/open-source-toolchain/index.html",
+                               "sha256":  "a48c6fead53475c49773be10996cbbb7c5b4718581787d77e799071bf5eacd0d",
+                               "type":  "ARTIFACT",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "docs/TOOLCHAIN_BOOTSTRAP_PLAN.md",
+                               "sha256":  "0570f67a322dd93bbdb876292948a1b297205912db753a05cb94acc3768247b1",
+                               "type":  "ARTIFACT",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "docs/CORE_TOOLCHAIN_MANUAL_INSTALL.md",
+                               "sha256":  "039a8627bd84f63a7e46225b3b187da574f2e316077b67117c1dc625e9395ccf",
+                               "type":  "ARTIFACT",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "docs/OLLAMA_MANUAL_GATE.md",
+                               "sha256":  "fb8fb2e8c471164a93beb7716f756f43ef55728240dc7ee08ef20c31849e17e4",
+                               "type":  "ARTIFACT",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "docs/CLINE_CLI_MANUAL_GATE.md",
+                               "sha256":  "6da0bde175331b0c801e038bcd9471dfab447dd396904fa792350e8e3b4809d0",
+                               "type":  "ARTIFACT",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "docs/VISUAL_PERSISTENCE_OPTIONAL_TOOLS.md",
+                               "sha256":  "17b475681ac9f4182573edb8d708201737d518497ec6784e2820861593bfcfee",
+                               "type":  "ARTIFACT",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "docs/OPENCLAW_ADAPTER_CONTRACT.md",
+                               "sha256":  "0edac3e343295a0e314a2578d3ad257de174c4d977eaeecaf2e363c8432dd50d",
+                               "type":  "ARTIFACT",
+                               "exists":  true
+                           }
+                       ],
+    "evidence_count":  37,
+    "security":  {
+                     "external_network":  false,
+                     "install_executed":  false,
+                     "git_write":  false,
+                     "commit":  false,
+                     "push":  false,
+                     "fetch":  false,
+                     "merge":  false,
+                     "worker_real_execution":  false,
+                     "auto_apply":  false,
+                     "human_gate_required":  true
+                 },
+    "next":  "CONNECT_CONTROLLED_WORKER_ADAPTERS",
+    "created_at":  "2026-06-16T12:06:29"
+}

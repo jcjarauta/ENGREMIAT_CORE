@@ -1,0 +1,34 @@
+﻿{
+    "schema":  "next-plan-step.v1",
+    "selected":  {
+                     "objective_id":  "ENGREMIAT_CORE_MVP_001",
+                     "stage_id":  "E01",
+                     "stage_name":  "Base contractual Core MVP",
+                     "stage_description":  "Definir el contrato mínimo del MVP antes de construir flujo funcional.",
+                     "stage_deliverable":  "Contrato MVP creado.",
+                     "block_id":  "B01.1",
+                     "block_name":  "Contrato de dominio",
+                     "block_description":  "Definir entidades, límites y flujo mínimo necesidad-tarea-match-oferta.",
+                     "block_deliverable":  "Dominio inicial creado.",
+                     "step_id":  "P01.1.1",
+                     "step_name":  "Crear CORE_MVP_CONTRACT",
+                     "step_description":  "Generar contrato local del MVP con entidades Need, Task, MatchProposal, Offer, Acceptance y Evidence.",
+                     "step_deliverable":  "Contrato creado.",
+                     "artifact":  "CORE_MVP_CONTRACT.md",
+                     "dependency":  "NONE",
+                     "format":  "Markdown",
+                     "risk":  "LOW",
+                     "automatable":  "SI",
+                     "priority":  "Alta",
+                     "status":  "PENDING",
+                     "notes":  "Primer paso real del MVP.",
+                     "line_number":  1,
+                     "source_path":  "data/prompt-factory/input/engremiat-core-mvp-plan.tsv"
+                 },
+    "completed_steps":  [
+                            "P01.3.2"
+                        ],
+    "plan":  "data/prompt-factory/out/core-mvp-plan-normalized.json",
+    "selected_at":  "2026-06-16T10:49:13",
+    "decision":  "NEXT_STEP_SELECTED"
+}

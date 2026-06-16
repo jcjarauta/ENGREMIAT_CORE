@@ -1,0 +1,17 @@
+﻿[
+    {
+        "task_id":  "TASK-BUILD-EVENT-LEDGER-001",
+        "depends_on":  "TASK-DEFINE-CONTRACTS-001",
+        "unlock_when":  "COMPLETED"
+    },
+    {
+        "task_id":  "TASK-MATCHING-V0-001",
+        "depends_on":  "TASK-BUILD-EVENT-LEDGER-001",
+        "unlock_when":  "COMPLETED"
+    },
+    {
+        "task_id":  "TASK-EVIDENCE-CLOSE-001",
+        "depends_on":  "TASK-MATCHING-V0-001",
+        "unlock_when":  "COMPLETED"
+    }
+]

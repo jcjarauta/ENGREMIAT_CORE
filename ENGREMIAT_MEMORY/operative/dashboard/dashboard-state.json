@@ -1,0 +1,188 @@
+﻿{
+    "objective_id":  "ENGREMIAT_DEV_VISUAL_MEMORY_OPERATIVE_002",
+    "stage_id":  "E03",
+    "status":  "OK",
+    "active_objective":  "ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001",
+    "active_stage":  "E07",
+    "readiness":  "100",
+    "events_count":  96,
+    "gates_count":  3,
+    "artifacts_count":  195,
+    "last_ok":  [
+                    {
+                        "event_id":  "EVT_ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001_E04_a0822d9e9ff26d5dd5bb21467f50efaecc561e3726c379f4407eeb3df93683ff",
+                        "objective_id":  "ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001",
+                        "stage_id":  "E04",
+                        "block_id":  "",
+                        "step_id":  "",
+                        "status":  "OK",
+                        "source_path":  "reports/prompt-factory/e04-generador-prompt-repair/prompt-repair-smoke-report.json",
+                        "evidence_sha256":  "a0822d9e9ff26d5dd5bb21467f50efaecc561e3726c379f4407eeb3df93683ff",
+                        "artifact":  "reports/prompt-factory/e04-generador-prompt-repair/prompt-repair-smoke-report.json",
+                        "risk":  "LOW",
+                        "next":  "E05_OUTBOX_INBOX_HANDOFF",
+                        "created_at":  "2026-06-16T10:49:28",
+                        "metadata":  {
+                                         "source_id":  "reports",
+                                         "kind":  "reports",
+                                         "bytes":  3939,
+                                         "last_write":  "2026-06-16T10:42:44"
+                                     }
+                    },
+                    {
+                        "event_id":  "EVT_ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001_E05_7a718d62b6af62c9a2c903dbbd126a42e08f51134d0727abdeaee5b3e45b4751",
+                        "objective_id":  "ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001",
+                        "stage_id":  "E05",
+                        "block_id":  "",
+                        "step_id":  "",
+                        "status":  "OK",
+                        "source_path":  "reports/prompt-factory/e05-outbox-inbox-handoff/prompt-factory-e05-outbox-inbox-validation-report.json",
+                        "evidence_sha256":  "7a718d62b6af62c9a2c903dbbd126a42e08f51134d0727abdeaee5b3e45b4751",
+                        "artifact":  "reports/prompt-factory/e05-outbox-inbox-handoff/prompt-factory-e05-outbox-inbox-validation-report.json",
+                        "risk":  "LOW",
+                        "next":  "E06_INTEGRACION_EN_ENG_PS1",
+                        "created_at":  "2026-06-16T10:49:28",
+                        "metadata":  {
+                                         "source_id":  "reports",
+                                         "kind":  "reports",
+                                         "bytes":  1058,
+                                         "last_write":  "2026-06-16T10:44:31"
+                                     }
+                    },
+                    {
+                        "event_id":  "EVT_ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001_E05_22d78f84cbd370d3f1b3ac066cab77caa5ffa36eba2d9335a1528aee5889ace2",
+                        "objective_id":  "ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001",
+                        "stage_id":  "E05",
+                        "block_id":  "",
+                        "step_id":  "",
+                        "status":  "OK",
+                        "source_path":  "reports/prompt-factory/e05-outbox-inbox-handoff/prompt-outbox-inbox-smoke-report.json",
+                        "evidence_sha256":  "22d78f84cbd370d3f1b3ac066cab77caa5ffa36eba2d9335a1528aee5889ace2",
+                        "artifact":  "reports/prompt-factory/e05-outbox-inbox-handoff/prompt-outbox-inbox-smoke-report.json",
+                        "risk":  "LOW",
+                        "next":  "E06_INTEGRACION_EN_ENG_PS1",
+                        "created_at":  "2026-06-16T10:49:28",
+                        "metadata":  {
+                                         "source_id":  "reports",
+                                         "kind":  "reports",
+                                         "bytes":  2716,
+                                         "last_write":  "2026-06-16T10:44:31"
+                                     }
+                    },
+                    {
+                        "event_id":  "EVT_ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001_E05_ccafbd6c604bbcd413b7eaa291d45af9616726581eac166bcb9aa38ba139b830",
+                        "objective_id":  "ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001",
+                        "stage_id":  "E05",
+                        "block_id":  "",
+                        "step_id":  "",
+                        "status":  "OK",
+                        "source_path":  "reports/prompt-factory/e05-outbox-inbox-handoff/worker-response-import-report.json",
+                        "evidence_sha256":  "ccafbd6c604bbcd413b7eaa291d45af9616726581eac166bcb9aa38ba139b830",
+                        "artifact":  "reports/prompt-factory/e05-outbox-inbox-handoff/worker-response-import-report.json",
+                        "risk":  "LOW",
+                        "next":  "HUMAN_REVIEW_OR_PROMPT_NEXT",
+                        "created_at":  "2026-06-16T10:49:28",
+                        "metadata":  {
+                                         "source_id":  "reports",
+                                         "kind":  "reports",
+                                         "bytes":  735,
+                                         "last_write":  "2026-06-16T10:44:31"
+                                     }
+                    },
+                    {
+                        "event_id":  "EVT_ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001_E06_5b4b226f0ec67c2b7710fd8ece9c4e836cd2b4cdc10e754f8c49a35896283e8c",
+                        "objective_id":  "ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001",
+                        "stage_id":  "E06",
+                        "block_id":  "",
+                        "step_id":  "",
+                        "status":  "OK",
+                        "source_path":  "reports/prompt-factory/e06-integracion-eng-ps1/prompt-factory-command-smoke-report.json",
+                        "evidence_sha256":  "5b4b226f0ec67c2b7710fd8ece9c4e836cd2b4cdc10e754f8c49a35896283e8c",
+                        "artifact":  "reports/prompt-factory/e06-integracion-eng-ps1/prompt-factory-command-smoke-report.json",
+                        "risk":  "LOW",
+                        "next":  "E07_DEMO_CON_CORE_MVP_Y_CIERRE",
+                        "created_at":  "2026-06-16T10:49:28",
+                        "metadata":  {
+                                         "source_id":  "reports",
+                                         "kind":  "reports",
+                                         "bytes":  3157,
+                                         "last_write":  "2026-06-16T10:46:04"
+                                     }
+                    },
+                    {
+                        "event_id":  "EVT_ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001_E06_64bb0503ae94a0c46d3dc5209e771704344f1cf4fa7fa39e54d926a2d7dffb82",
+                        "objective_id":  "ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001",
+                        "stage_id":  "E06",
+                        "block_id":  "",
+                        "step_id":  "",
+                        "status":  "OK",
+                        "source_path":  "reports/prompt-factory/e06-integracion-eng-ps1/prompt-factory-e06-command-hub-validation-report.json",
+                        "evidence_sha256":  "64bb0503ae94a0c46d3dc5209e771704344f1cf4fa7fa39e54d926a2d7dffb82",
+                        "artifact":  "reports/prompt-factory/e06-integracion-eng-ps1/prompt-factory-e06-command-hub-validation-report.json",
+                        "risk":  "LOW",
+                        "next":  "E07_DEMO_CON_CORE_MVP_Y_CIERRE",
+                        "created_at":  "2026-06-16T10:49:28",
+                        "metadata":  {
+                                         "source_id":  "reports",
+                                         "kind":  "reports",
+                                         "bytes":  939,
+                                         "last_write":  "2026-06-16T10:46:04"
+                                     }
+                    },
+                    {
+                        "event_id":  "EVT_ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001_E07_46841b4f93005bfe1abd1c609f8bd53e66892ca17db0bb48494379a79db7fa4b",
+                        "objective_id":  "ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001",
+                        "stage_id":  "E07",
+                        "block_id":  "",
+                        "step_id":  "",
+                        "status":  "OK",
+                        "source_path":  "reports/prompt-factory/e07-demo-core-mvp-cierre/prompt-factory-e07-close-validation-report.json",
+                        "evidence_sha256":  "46841b4f93005bfe1abd1c609f8bd53e66892ca17db0bb48494379a79db7fa4b",
+                        "artifact":  "reports/prompt-factory/e07-demo-core-mvp-cierre/prompt-factory-e07-close-validation-report.json",
+                        "risk":  "LOW",
+                        "next":  "ENGREMIAT_CORE_MVP_001",
+                        "created_at":  "2026-06-16T10:49:28",
+                        "metadata":  {
+                                         "source_id":  "reports",
+                                         "kind":  "reports",
+                                         "bytes":  1300,
+                                         "last_write":  "2026-06-16T10:49:22"
+                                     }
+                    },
+                    {
+                        "event_id":  "EVT_ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001_E07_97f031c9f53735348b3d6d61fdad8b1fbb8d20b073c8cb1359739c0e45eacb65",
+                        "objective_id":  "ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001",
+                        "stage_id":  "E07",
+                        "block_id":  "",
+                        "step_id":  "",
+                        "status":  "OK",
+                        "source_path":  "reports/prompt-factory/e07-demo-core-mvp-cierre/prompt-factory-readiness-report.json",
+                        "evidence_sha256":  "97f031c9f53735348b3d6d61fdad8b1fbb8d20b073c8cb1359739c0e45eacb65",
+                        "artifact":  "reports/prompt-factory/e07-demo-core-mvp-cierre/prompt-factory-readiness-report.json",
+                        "risk":  "LOW",
+                        "next":  "ENGREMIAT_CORE_MVP_001",
+                        "created_at":  "2026-06-16T10:49:28",
+                        "metadata":  {
+                                         "source_id":  "reports",
+                                         "kind":  "reports",
+                                         "bytes":  2708,
+                                         "last_write":  "2026-06-16T10:49:22"
+                                     }
+                    }
+                ],
+    "last_issue":  [
+
+                   ],
+    "maps":  [
+                 "ENGREMIAT_MEMORY/logseq/pages/Home.md",
+                 "ENGREMIAT_MEMORY/maps/OPERATIVE_OVERVIEW.md",
+                 "ENGREMIAT_MEMORY/maps/GATES_MAP.md",
+                 "ENGREMIAT_MEMORY/maps/WORKERS_MAP.md",
+                 "ENGREMIAT_MEMORY/maps/ERRORS_MAP.md",
+                 "ENGREMIAT_MEMORY/maps/DECISIONS_MAP.md"
+             ],
+    "next":  "Iniciar Core MVP usando Prompt Factory",
+    "updated_at":  "2026-06-16T10:49:37",
+    "external_network":  false,
+    "dashboard_html":  "ENGREMIAT_MEMORY/dashboard/memory/index.html"
+}

@@ -1,0 +1,24 @@
+﻿{
+    "objective":  "ENGREMIAT_DUAL_PC_DEVELOPMENT_WORKFLOW_009B",
+    "stage":  "E03",
+    "policy_id":  "WRITER-LOCK-POLICY-009B-E03",
+    "single_active_writer":  true,
+    "writer_scope":  "objective_or_block",
+    "active_writer_default":  "CURRENT_PC_PREPARATION_ONLY",
+    "main_pc_writer_status":  "PENDING_UNTIL_HUMAN_SWITCH_AND_READINESS",
+    "lock_rules":  [
+                       "Antes de escribir codigo, ejecutar repo readiness en el PC activo.",
+                       "No escribir desde dos PCs en el mismo bloque.",
+                       "No usar ENGREMIAT_SHARED como repo vivo.",
+                       "Si se cambia de PC, crear handoff y validar Git local antes de continuar.",
+                       "Git remoto no se ejecuta automaticamente en este objetivo."
+                   ],
+    "writer_conflict":  false,
+    "safety":  {
+                   "git_write":  false,
+                   "git_remote_auto":  false,
+                   "shared_repo_edit":  false,
+                   "remote_execution":  false,
+                   "auto_apply":  false
+               }
+}

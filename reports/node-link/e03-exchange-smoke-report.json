@@ -1,0 +1,35 @@
+﻿{
+    "objective_id":  "ENGREMIAT_LOCAL_NODE_LINK_004A",
+    "stage":  "E03",
+    "blocks":  [
+                   "B03.1",
+                   "B03.2",
+                   "B03.3"
+               ],
+    "steps":  [
+                  "P03.1.1",
+                  "P03.1.2",
+                  "P03.2.1",
+                  "P03.2.2",
+                  "P03.3.1",
+                  "P03.3.2"
+              ],
+    "exchange_policy":  true,
+    "exchange_guide":  true,
+    "inbox_outbox":  true,
+    "sample_packet":  true,
+    "validator":  true,
+    "network_required":  false,
+    "main_pc_can_be_off":  true,
+    "shared_folder_created":  false,
+    "firewall_changed":  false,
+    "services_changed":  false,
+    "remote_execution":  false,
+    "problems":  [
+
+                 ],
+    "smoke":  true,
+    "decision":  "GO",
+    "next":  "E04_CANAL_DE_SERVICIOS_CONTROLADO",
+    "created_at":  "2026-06-16T12:57:24"
+}

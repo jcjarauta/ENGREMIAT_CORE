@@ -1,0 +1,71 @@
+﻿{
+    "objective_id":  "ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001",
+    "stage_id":  "E05",
+    "block_id":  "B05.3",
+    "step_id":  "P05.3.2",
+    "status":  "OK",
+    "validation_passed":  true,
+    "score":  100,
+    "threshold":  90,
+    "checks":  [
+                   {
+                       "id":  "outbox_exists",
+                       "ok":  true,
+                       "points":  10,
+                       "message":  "prompts/outbox"
+                   },
+                   {
+                       "id":  "inbox_exists",
+                       "ok":  true,
+                       "points":  10,
+                       "message":  "prompts/inbox"
+                   },
+                   {
+                       "id":  "active_prompt_exists",
+                       "ok":  true,
+                       "points":  15,
+                       "message":  "prompts/outbox/ACTIVE_PROMPT.md"
+                   },
+                   {
+                       "id":  "manifest_ok",
+                       "ok":  true,
+                       "points":  15,
+                       "message":  "prompts/outbox/manifest.json"
+                   },
+                   {
+                       "id":  "contract_exists",
+                       "ok":  true,
+                       "points":  10,
+                       "message":  "prompts/inbox/PROMPT_INBOX_CONTRACT.md"
+                   },
+                   {
+                       "id":  "handoff_exists",
+                       "ok":  true,
+                       "points":  10,
+                       "message":  "prompts/outbox/WORKER_HANDOFF.md"
+                   },
+                   {
+                       "id":  "import_report_ok",
+                       "ok":  true,
+                       "points":  20,
+                       "message":  "reports/prompt-factory/e05-outbox-inbox-handoff/worker-response-import-report.json"
+                   },
+                   {
+                       "id":  "tools_exist",
+                       "ok":  true,
+                       "points":  10,
+                       "message":  "tools"
+                   }
+               ],
+    "outbox":  "prompts/outbox",
+    "inbox":  "prompts/inbox",
+    "manifest":  "prompts/outbox/manifest.json",
+    "active_prompt":  "prompts/outbox/ACTIVE_PROMPT.md",
+    "handoff":  "prompts/outbox/WORKER_HANDOFF.md",
+    "worker_response_report":  "reports/prompt-factory/e05-outbox-inbox-handoff/worker-response-import-report.json",
+    "apply_executed":  false,
+    "external_network":  false,
+    "git":  false,
+    "next":  "E06_INTEGRACION_EN_ENG_PS1",
+    "checked_at":  "2026-06-16T10:44:31"
+}

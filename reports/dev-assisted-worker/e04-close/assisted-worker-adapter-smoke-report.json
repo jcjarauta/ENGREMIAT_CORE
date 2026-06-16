@@ -1,0 +1,52 @@
+﻿{
+    "objective_id":  "ENGREMIAT_DEV_ASSISTED_WORKER_ADAPTER_001",
+    "stage_id":  "E04",
+    "repair_id":  "E04-HANDOFF-PARSE-REPAIR-004",
+    "status":  "OK",
+    "validation_passed":  true,
+    "failed_commands":  [
+
+                        ],
+    "command_smoke":  [
+                          {
+                              "command":  "assisted-task",
+                              "exit_code":  0,
+                              "ok":  true,
+                              "output":  "OK assisted_task_package=data/dev-assisted-worker/tasks/AW-TASK-LOCAL-001/agent-task-package.json mode=PROPOSAL_ONLY step=P03.1.2"
+                          },
+                          {
+                              "command":  "assisted-handoff",
+                              "exit_code":  0,
+                              "ok":  true,
+                              "output":  "OK assisted_handoffs_total= pending=1 external_execution=False"
+                          },
+                          {
+                              "command":  "assisted-intake",
+                              "exit_code":  0,
+                              "ok":  true,
+                              "output":  "OK assisted_intake_validate=True task_id=AW-TASK-FIXTURE-001 recommendation=REQUEST_REVIEW"
+                          },
+                          {
+                              "command":  "assisted-review",
+                              "exit_code":  0,
+                              "ok":  true,
+                              "output":  "OK assisted_review status=PENDING_HUMAN_DECISION apply_allowed=False gate=AW-APPLY-GATE-001"
+                          },
+                          {
+                              "command":  "assisted-state",
+                              "exit_code":  0,
+                              "ok":  true,
+                              "output":  "{     \"objective_id\":  \"ENGREMIAT_DEV_ASSISTED_WORKER_ADAPTER_001\",     \"stage_id\":  \"E02\",     \"updated_at\":  \"2026-06-16T09:32:39\",     \"totals\":  {                    \"handoffs\":  null,                    \"pending\":  1,                    \"active\":  1,                    \"completed\":  0,                    \"blocked\":  0,                    \"expired\":  0                },     \"pending\":  [                     {                         \"handoff_id\":  \"AW-HANDOFF-FIXTURE-001\",                         \"task_id\":  \"AW-TASK-FIXTURE-001\",                         \"worker_target\":  \"CLINE_OR_OLLAMA\",                         \"mode\":  \"MANUAL_HANDOFF\",                         \"prompt_path\":  \"data/dev-assisted-worker/handoffs/AW-HANDOFF-FIXTURE-001/prompt.md\",                         \"created_at\":  \"2026-06-16T09:28:30\",                         \"status\":  \"PREPARED\",                         \"evidence_expected\":  [                                                   \"agent-result-proposal.json\",                                                   \"summary.md\",                                                   \"evidence-manifest.json\"                                               ],                         \"external_execution\":  false,                         \"human_action_required\":  true,                         \"note\":  \"Handoff preparado localmente; no enviado automáticamente.\"                     }                 ],     \"next\":  {                  \"step_id\":  \"P03.1.1\",                  \"action\":  \"Definir AgentResultProposal\",                  \"target\":  \"agent-result-proposal.schema.json\"              },     \"external_execution\":  false,     \"note\":  \"Estado derivado de handoff-registry; no implica envío automático.\",     \"last_imported_result\":  {                                  \"task_id\":  \"AW-TASK-FIXTURE-001\",                                  \"proposal\":  \"data/dev-assisted-worker/results/AW-TASK-FIXTURE-001/agent-result-proposal.json\",                                  \"review_request\":  \"data/dev-assisted-worker/results/assisted-worker-review-request.json\",                                  \"status\":  \"PROPOSAL_IMPORTED_PENDING_REVIEW\",                                  \"updated_at\":  \"2026-06-16T09:30:57\"                              },     \"review\":  {                    \"status\":  \"PENDING_HUMAN_DECISION\",                    \"review_request\":  \"data/dev-assisted-worker/review/assisted-worker-review-request.json\",                    \"gate\":  \"data/dev-assisted-worker/review/assisted-worker-apply-gate.json\",                    \"apply_allowed\":  false                },     \"adapter_status\":  \"READY_FOR_MANUAL_REVIEW\" } "
+                          },
+                          {
+                              "command":  "dashboard",
+                              "exit_code":  0,
+                              "ok":  true,
+                              "output":  "OK dashboard=reports/dev-dashboard/index.html"
+                          }
+                      ],
+    "apply_executed":  false,
+    "external_execution":  false,
+    "git":  false,
+    "next":  "CLOSE_ADAPTER"
+}

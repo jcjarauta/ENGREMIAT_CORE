@@ -1,0 +1,34 @@
+﻿{
+    "objective_id":  "ENGREMIAT_LOCAL_NODE_LINK_004A",
+    "stage":  "E04",
+    "blocks":  [
+                   "B04.1",
+                   "B04.2",
+                   "B04.3"
+               ],
+    "steps":  [
+                  "P04.1.1",
+                  "P04.1.2",
+                  "P04.2.1",
+                  "P04.2.2",
+                  "P04.3.1",
+                  "P04.3.2"
+              ],
+    "services_contract":  true,
+    "services_guide":  true,
+    "probe_script":  true,
+    "probe_deferred":  true,
+    "ollama_bridge":  true,
+    "main_pc_can_be_off":  true,
+    "firewall_changed":  false,
+    "services_changed":  false,
+    "inference":  false,
+    "worker_real_execution":  false,
+    "problems":  [
+
+                 ],
+    "smoke":  true,
+    "decision":  "GO",
+    "next":  "E05_CIERRE_DE_RED_INICIAL",
+    "created_at":  "2026-06-16T12:59:32"
+}

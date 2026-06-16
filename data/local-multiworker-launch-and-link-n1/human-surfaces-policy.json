@@ -1,0 +1,40 @@
+﻿{
+    "policy_id":  "HUMAN-SURFACES-POLICY-N1",
+    "objective":  "ENGREMIAT_LOCAL_MULTIWORKER_LAUNCH_AND_LINK_009A_N1",
+    "stage":  "E02",
+    "browser_open":  false,
+    "preview_only":  true,
+    "manual_open_allowed":  true,
+    "auto_open_allowed":  false,
+    "allowed_surface_types":  [
+                                  "local_html_dashboard",
+                                  "local_markdown_doc",
+                                  "local_json_report"
+                              ],
+    "allowed_paths":  [
+                          "dashboard/kanban-human-control/index.html",
+                          "dashboard/cline-real-proposal-no-apply/proposal-review.html",
+                          "dashboard/first-real-cline-proposal-task/first-real-cline-proposal-review.html",
+                          "dashboard/local-multiworker-launch-and-link-n1/index.html",
+                          "docs",
+                          "reports"
+                      ],
+    "forbidden_actions":  [
+                              "browser_automation",
+                              "clipboard_automation",
+                              "ui_automation",
+                              "auto_submit",
+                              "auto_send",
+                              "open_external_url",
+                              "remote_execution",
+                              "git_write"
+                          ],
+    "safety":  {
+                   "browser_opened":  false,
+                   "preview_only":  true,
+                   "remote_execution":  false,
+                   "ui_automation":  false,
+                   "git_write":  false,
+                   "apply_executed":  false
+               }
+}

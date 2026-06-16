@@ -1,0 +1,250 @@
+﻿{
+    "objective":  "ENGREMIAT_LOCAL_MULTIWORKER_LAUNCH_AND_LINK_009A_N2",
+    "registry_id":  "LOCAL-MULTIWORKER-NODES-REGISTRY-N2",
+    "inherits_from":  "data/local-multiworker-launch-and-link-n1/nodes-registry.json",
+    "stage":  "E01",
+    "created_at_utc":  "2026-06-16T12:45:54.3245161Z",
+    "nodes":  [
+                  {
+                      "node_id":  "current-machine",
+                      "machine_name":  "DESKTOP-RLPN1LL",
+                      "role":  "CURRENT_MACHINE",
+                      "availability":  "ACTIVE",
+                      "workspace_path":  "C:\\Users\\sacan\\Desktop\\ENGREMIAT_CORE",
+                      "capabilities":  [
+                                           "local_files",
+                                           "powershell",
+                                           "json_reports",
+                                           "dashboards_preview"
+                                       ],
+                      "risks":  [
+                                    "local_terminal_errors",
+                                    "path_mismatch"
+                                ],
+                      "allowed_actions":  [
+                                              "local_read",
+                                              "local_write_project_artifacts",
+                                              "json_validation",
+                                              "dashboard_generation",
+                                              "preview_only"
+                                          ],
+                      "forbidden_actions":  [
+                                                "remote_execution",
+                                                "ssh",
+                                                "scp",
+                                                "winrm",
+                                                "git_write",
+                                                "git_commit",
+                                                "git_push",
+                                                "git_fetch",
+                                                "git_merge",
+                                                "auto_apply",
+                                                "source_write_by_worker",
+                                                "worker_real_execution",
+                                                "remote_inference",
+                                                "browser_automation",
+                                                "clipboard_automation"
+                                            ],
+                      "last_check_utc":  "2026-06-16T12:38:35.9530531Z",
+                      "notes":  "Nodo local activo para preparar readiness parcial."
+                  },
+                  {
+                      "node_id":  "main-pc",
+                      "machine_name":  "MAIN-PC",
+                      "role":  "MAIN_PC",
+                      "availability":  "PENDING",
+                      "workspace_path":  null,
+                      "capabilities":  [
+                                           "cline_candidate",
+                                           "ollama_candidate",
+                                           "gpu_candidate",
+                                           "full_multiworker_test"
+                                       ],
+                      "risks":  [
+                                    "not_active_or_not_confirmed"
+                                ],
+                      "allowed_actions":  [
+                                              "manual_readiness_check",
+                                              "future_local_main_pc_validation"
+                                          ],
+                      "forbidden_actions":  [
+                                                "remote_execution",
+                                                "ssh",
+                                                "scp",
+                                                "winrm",
+                                                "git_write",
+                                                "git_commit",
+                                                "git_push",
+                                                "git_fetch",
+                                                "git_merge",
+                                                "auto_apply",
+                                                "source_write_by_worker",
+                                                "worker_real_execution",
+                                                "remote_inference",
+                                                "browser_automation",
+                                                "clipboard_automation"
+                                            ],
+                      "last_check_utc":  "2026-06-16T12:45:54.3245161Z",
+                      "notes":  "Actualizado por N2 E01 con evidencia manual/read-only."
+                  },
+                  {
+                      "node_id":  "ai-local",
+                      "machine_name":  "AI-LOCAL",
+                      "role":  "AI_LOCAL",
+                      "availability":  "PENDING",
+                      "workspace_path":  null,
+                      "capabilities":  [
+                                           "ollama_candidate",
+                                           "local_inference_candidate"
+                                       ],
+                      "risks":  [
+                                    "not_checked",
+                                    "remote_inference_blocked_by_default"
+                                ],
+                      "allowed_actions":  [
+                                              "future_preflight_only"
+                                          ],
+                      "forbidden_actions":  [
+                                                "remote_execution",
+                                                "ssh",
+                                                "scp",
+                                                "winrm",
+                                                "git_write",
+                                                "git_commit",
+                                                "git_push",
+                                                "git_fetch",
+                                                "git_merge",
+                                                "auto_apply",
+                                                "source_write_by_worker",
+                                                "worker_real_execution",
+                                                "remote_inference",
+                                                "browser_automation",
+                                                "clipboard_automation"
+                                            ],
+                      "last_check_utc":  "2026-06-16T12:38:35.9530531Z",
+                      "notes":  "Ollama opcional en Nivel 1."
+                  },
+                  {
+                      "node_id":  "old-pc",
+                      "machine_name":  "OLD-PC",
+                      "role":  "OLD_PC",
+                      "availability":  "PENDING",
+                      "workspace_path":  null,
+                      "capabilities":  [
+                                           "secondary_terminal_candidate",
+                                           "light_tests_candidate"
+                                       ],
+                      "risks":  [
+                                    "terminal_sensitive",
+                                    "lower_resources"
+                                ],
+                      "allowed_actions":  [
+                                              "future_manual_check"
+                                          ],
+                      "forbidden_actions":  [
+                                                "remote_execution",
+                                                "ssh",
+                                                "scp",
+                                                "winrm",
+                                                "git_write",
+                                                "git_commit",
+                                                "git_push",
+                                                "git_fetch",
+                                                "git_merge",
+                                                "auto_apply",
+                                                "source_write_by_worker",
+                                                "worker_real_execution",
+                                                "remote_inference",
+                                                "browser_automation",
+                                                "clipboard_automation"
+                                            ],
+                      "last_check_utc":  "2026-06-16T12:38:35.9530531Z",
+                      "notes":  "Nodo secundario futuro."
+                  },
+                  {
+                      "node_id":  "mobile",
+                      "machine_name":  "MOBILE",
+                      "role":  "MOBILE",
+                      "availability":  "PENDING",
+                      "workspace_path":  null,
+                      "capabilities":  [
+                                           "human_review_candidate",
+                                           "telegram_future_surface"
+                                       ],
+                      "risks":  [
+                                    "not_integrated"
+                                ],
+                      "allowed_actions":  [
+                                              "future_human_review"
+                                          ],
+                      "forbidden_actions":  [
+                                                "remote_execution",
+                                                "ssh",
+                                                "scp",
+                                                "winrm",
+                                                "git_write",
+                                                "git_commit",
+                                                "git_push",
+                                                "git_fetch",
+                                                "git_merge",
+                                                "auto_apply",
+                                                "source_write_by_worker",
+                                                "worker_real_execution",
+                                                "remote_inference",
+                                                "browser_automation",
+                                                "clipboard_automation"
+                                            ],
+                      "last_check_utc":  "2026-06-16T12:38:35.9530531Z",
+                      "notes":  "Superficie humana futura."
+                  },
+                  {
+                      "node_id":  "raspberry",
+                      "machine_name":  "RASPBERRY",
+                      "role":  "RASPBERRY",
+                      "availability":  "PENDING",
+                      "workspace_path":  null,
+                      "capabilities":  [
+                                           "backup_candidate",
+                                           "watchdog_candidate",
+                                           "light_service_candidate"
+                                       ],
+                      "risks":  [
+                                    "not_checked",
+                                    "storage_or_network_pending"
+                                ],
+                      "allowed_actions":  [
+                                              "future_manual_check"
+                                          ],
+                      "forbidden_actions":  [
+                                                "remote_execution",
+                                                "ssh",
+                                                "scp",
+                                                "winrm",
+                                                "git_write",
+                                                "git_commit",
+                                                "git_push",
+                                                "git_fetch",
+                                                "git_merge",
+                                                "auto_apply",
+                                                "source_write_by_worker",
+                                                "worker_real_execution",
+                                                "remote_inference",
+                                                "browser_automation",
+                                                "clipboard_automation"
+                                            ],
+                      "last_check_utc":  "2026-06-16T12:38:35.9530531Z",
+                      "notes":  "Nodo futuro de backup/watchdog."
+                  }
+              ],
+    "main_pc_status":  "data/local-multiworker-launch-and-link-n2/main-pc-status.json",
+    "safety":  {
+                   "remote_execution":  false,
+                   "ssh":  false,
+                   "winrm":  false,
+                   "network_probe":  false,
+                   "network_write":  false,
+                   "git_write":  false,
+                   "apply_executed":  false,
+                   "worker_real_execution":  false
+               }
+}

@@ -1,0 +1,57 @@
+﻿{
+    "objective_id":  "ENGREMIAT_OPEN_SOURCE_TOOLCHAIN_BOOTSTRAP_003",
+    "stage":  "E05",
+    "status":  "E05_VALIDATED_OPTIONAL_NON_BLOCKING",
+    "artifacts":  [
+                      {
+                          "path":  "tools/toolchain/Install-GraphvizGate.ps1",
+                          "sha256":  "400cdb3780ea29e52b40e861b8a15953cbbb6a908b08cdd0d2e5c2ac5050889c",
+                          "type":  "PowerShell",
+                          "step":  "P05.1.1"
+                      },
+                      {
+                          "path":  "reports/open-source-toolchain-bootstrap/graphviz-validation-report.json",
+                          "sha256":  "f3c27bd444bf53106cf2f92cc920f898ccc64c8170f791f8c955e27930aca534",
+                          "type":  "JSON",
+                          "step":  "P05.1.2"
+                      },
+                      {
+                          "path":  "tools/toolchain/Install-SqliteGate.ps1",
+                          "sha256":  "e1c6a350c505c11d494d4cbfbe1178439ca0e5a649a4ee2c6a808ab93ad5ab65",
+                          "type":  "PowerShell",
+                          "step":  "P05.2.1"
+                      },
+                      {
+                          "path":  "reports/open-source-toolchain-bootstrap/sqlite-validation-report.json",
+                          "sha256":  "180b030e3d18f858d8541bddca31ea9ea204e9063e44770df00be5d16bb83250",
+                          "type":  "JSON",
+                          "step":  "P05.2.2"
+                      },
+                      {
+                          "path":  "tools/toolchain/Test-VisualPersistenceTools.ps1",
+                          "sha256":  "c322a841f713cfebdde5e7a89836a645f6aeb9eb10e1c30521eb9bd8f2fc4101",
+                          "type":  "PowerShell",
+                          "step":  "P05.3.1"
+                      },
+                      {
+                          "path":  "reports/open-source-toolchain-bootstrap/e05-visual-persistence-smoke-report.json",
+                          "sha256":  "770b0fbfc2efd9a83cf33053baaabec2d7bb9d1fcbe05f8c5b6c97ec22b1feb5",
+                          "type":  "JSON",
+                          "step":  "P05.3.2"
+                      },
+                      {
+                          "path":  "docs/VISUAL_PERSISTENCE_OPTIONAL_TOOLS.md",
+                          "sha256":  "17b475681ac9f4182573edb8d708201737d518497ec6784e2820861593bfcfee",
+                          "type":  "Markdown",
+                          "step":  "P05.3.2"
+                      }
+                  ],
+    "score":  100,
+    "decision":  "GO_OPTIONAL_TOOLS_PREPARED",
+    "optional_missing":  [
+                             "graphviz",
+                             "sqlite"
+                         ],
+    "next":  "E06_OPENCLAW_PREPARACION_DIFERIDA",
+    "created_at":  "2026-06-16T12:02:31"
+}

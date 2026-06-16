@@ -1,0 +1,25 @@
+﻿$ErrorActionPreference="Stop"
+[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+$scopePath="data/gated-worker-execution/first-gated-execution-scope.json"
+$requestPath="data/gated-worker-execution/first-cline-readonly-request.json"
+$adaptersManifestPath="data/controlled-worker-adapters/controlled-worker-adapters-manifest.json"
+if(!(Test-Path $scopePath)){Write-Host "NO_GO scope_missing=True";exit 2}
+if(!(Test-Path $requestPath)){Write-Host "NO_GO request_missing=True";exit 2}
+if(!(Test-Path $adaptersManifestPath)){Write-Host "NO_GO adapters_manifest_missing=True";exit 2}
+$cline=Get-Command cline -ErrorAction SilentlyContinue
+$s=Get-Content $scopePath -Raw|ConvertFrom-Json
+$r=Get-Content $requestPath -Raw|ConvertFrom-Json
+$m=Get-Content $adaptersManifestPath -Raw|ConvertFrom-Json
+$problems=@()
+if(-not $cline){$problems+="cline_missing"}
+if($s.limits.no_file_write -ne $true){$problems+="scope_no_file_write_not_true"}
+if($s.limits.no_command_execution -ne $true){$problems+="scope_no_command_execution_not_true"}
+if($s.limits.no_git -ne $true){$problems+="scope_no_git_not_true"}
+if($r.limits.write_files -ne $false){$problems+="request_write_files_not_false"}
+if($r.limits.run_commands -ne $false){$problems+="request_run_commands_not_false"}
+if($r.limits.auto_apply -ne $false){$problems+="request_auto_apply_not_false"}
+if($r.limits.git_write -ne $false){$problems+="request_git_write_not_false"}
+if($r.status -ne "PREPARED_NOT_EXECUTED"){$problems+="request_not_prepared"}
+if($m.security.worker_real_execution -ne $false){$problems+="previous_manifest_worker_execution_not_false"}
+if($problems.Count -gt 0){Write-Host ("NO_GO problems="+($problems -join ","));exit 2}
+Write-Host "OK first_gated_execution_preflight=True cline_detected=True scope=True request=True readonly=True write_files=False run_commands=False auto_apply=False git_write=False worker_executed=False" -ForegroundColor Green

@@ -1,0 +1,33 @@
+﻿{
+    "objective":  "ENGREMIAT_CLINE_REAL_PROPOSAL_NO_APPLY_008",
+    "stage":  "E04",
+    "repair":  "PARAM_POSITION_FIXED",
+    "receipt_id":  "FIRST-CLINE-PROPOSAL-TASK-RECEIPT-008-E04-001",
+    "mode":  "preview",
+    "approved":  false,
+    "execute_allowed":  false,
+    "task_created":  false,
+    "prompt_sent":  false,
+    "worker_real_execution":  false,
+    "candidate_id":  "CLINE-PROPOSAL-NO-APPLY-008-CANDIDATE-001",
+    "prompt_size_chars":  1573,
+    "limits":  {
+                   "proposal_only":  true,
+                   "auto_apply":  false,
+                   "apply_executed":  false,
+                   "source_write_by_worker":  false,
+                   "git_write":  false,
+                   "git_commit":  false,
+                   "git_push":  false,
+                   "remote_inference":  false,
+                   "ui_automation":  false
+               },
+    "decision":  "NO_GO_PREVIEW_OR_NOT_AUTHORIZED",
+    "reason":  "No explicit human authorization for real Cline task creation.",
+    "evidence":  [
+                     "data/cline-real-proposal-no-apply/cline-task-creation-gate.json",
+                     "data/cline-real-proposal-no-apply/cline-proposal-task-candidate.json",
+                     "data/cline-real-proposal-no-apply/cline-proposal-prompt-preview.md",
+                     "reports/cline-real-proposal-no-apply/e04-gate-approval-check-report.json"
+                 ]
+}

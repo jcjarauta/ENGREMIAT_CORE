@@ -1,0 +1,43 @@
+﻿{
+    "policy_id":  "CLINE-SAFE-USE-POLICY-N1",
+    "objective":  "ENGREMIAT_LOCAL_MULTIWORKER_LAUNCH_AND_LINK_009A_N1",
+    "stage":  "E02",
+    "worker":  "CLINE",
+    "level":  "N1_LOCAL_PARTIAL_READINESS",
+    "cline_real_task_reserved_for":  "ENGREMIAT_FIRST_REAL_CLINE_PROPOSAL_TASK_009",
+    "task_creation":  false,
+    "launch_cline_task":  false,
+    "prompt_sent":  false,
+    "worker_real_execution":  false,
+    "proposal_only":  true,
+    "human_gate_required":  true,
+    "allowed_actions":  [
+                            "detect_presence_later",
+                            "prepare_prompt_preview",
+                            "validate_policy",
+                            "manual_review"
+                        ],
+    "forbidden_actions":  [
+                              "create_task",
+                              "send_prompt",
+                              "auto_apply",
+                              "apply_patch",
+                              "edit_source_by_worker",
+                              "run_commands",
+                              "git_write",
+                              "git_commit",
+                              "git_push",
+                              "remote_execution",
+                              "ui_automation"
+                          ],
+    "safety":  {
+                   "auto_apply":  false,
+                   "apply_executed":  false,
+                   "source_write_by_worker":  false,
+                   "git_write":  false,
+                   "git_commit":  false,
+                   "git_push":  false,
+                   "remote_execution":  false,
+                   "ui_automation":  false
+               }
+}

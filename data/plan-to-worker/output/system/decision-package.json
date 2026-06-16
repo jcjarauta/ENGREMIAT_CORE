@@ -1,0 +1,16 @@
+﻿{
+    "decision_id":  "DECISION-PACKAGE-20260616114439",
+    "objective_id":  "ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002",
+    "stage":  "E05",
+    "decision":  "PREPARED_NOT_EXECUTED",
+    "reason":  "System output prepared for ENGREMIAT consumers; real worker execution blocked by default.",
+    "next":  "E06_SALIDA_GRAFO_Y_VISION_HUMANA",
+    "requires_human_gate":  true,
+    "readiness_decision":  "GO",
+    "adapter_status":  {
+                           "cline":  true,
+                           "ollama":  true,
+                           "openclaw":  true
+                       },
+    "created_at":  "2026-06-16T11:44:39"
+}

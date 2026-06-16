@@ -1,0 +1,41 @@
+﻿{
+    "schema_id":  "active-row.schema.v1",
+    "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+    "stage_id":  "E03",
+    "block_id":  "B03.1",
+    "required":  [
+                     "objective_id",
+                     "stage_id",
+                     "block_id",
+                     "step_id",
+                     "dependency",
+                     "risk",
+                     "agrupable",
+                     "priority",
+                     "status",
+                     "artifact",
+                     "validation",
+                     "next"
+                 ],
+    "properties":  {
+                       "objective_id":  "current objective id",
+                       "stage_id":  "current stage id",
+                       "block_id":  "current block id",
+                       "step_id":  "current step id",
+                       "dependency":  "required validated dependency",
+                       "risk":  "LOW|MEDIUM|HIGH|CRITICAL",
+                       "agrupable":  "SI|NO",
+                       "priority":  "Alta|Media|Baja",
+                       "status":  "PENDING|IN_PROGRESS|BLOCKED|NO_GO|DONE|VALIDATED",
+                       "artifact":  "expected artifact path",
+                       "validation":  "expected validation mode",
+                       "next":  "recommended next action"
+                   },
+    "validation_rules":  [
+                             "dependency_required",
+                             "risk_required",
+                             "artifact_required",
+                             "validation_required",
+                             "fail_closed_if_not_low_or_not_agrupable"
+                         ]
+}

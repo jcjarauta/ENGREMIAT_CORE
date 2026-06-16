@@ -1,0 +1,28 @@
+﻿{
+    "$schema":  "https://json-schema.org/draft/2020-12/schema",
+    "title":  "CapabilityDeclaration",
+    "type":  "object",
+    "required":  [
+                     "id",
+                     "provider_id",
+                     "capability",
+                     "declared",
+                     "verified",
+                     "available_now"
+                 ],
+    "additionalProperties":  true,
+    "properties":  {
+                       "id":  {
+                                  "type":  "string"
+                              },
+                       "type":  {
+                                    "type":  "string"
+                                },
+                       "status":  {
+                                      "type":  "string"
+                                  },
+                       "created_at":  {
+                                          "type":  "string"
+                                      }
+                   }
+}

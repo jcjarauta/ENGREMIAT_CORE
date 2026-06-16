@@ -1,0 +1,45 @@
+﻿{
+    "objective":  "ENGREMIAT_CLINE_REAL_PROPOSAL_NO_APPLY_008",
+    "stage":  "E01",
+    "purpose":  "Definir el contrato minimo para una primera tarea real de Cline orientada solo a propuesta revisable por humano.",
+    "expected_result":  "Contrato de tarea Cline real no-apply preparado y validado localmente.",
+    "mode":  "CONTRACT_ONLY_NO_CLINE_ACTIVATION",
+    "allowed_actions":  [
+                            "prepare_scope",
+                            "prepare_policy",
+                            "prepare_output_contract",
+                            "prepare_human_guide",
+                            "validate_local_contract",
+                            "write_local_reports"
+                        ],
+    "forbidden_actions":  [
+                              "launch_cline",
+                              "create_cline_task",
+                              "send_prompt",
+                              "run_worker",
+                              "auto_apply",
+                              "write_source_files_by_worker",
+                              "git_write",
+                              "git_commit",
+                              "git_push",
+                              "remote_inference",
+                              "ui_automation"
+                          ],
+    "expected_worker_output":  "Propuesta estructurada con resumen, archivos afectados, riesgos, diff propuesto, evidencia y decision sugerida.",
+    "safety":  {
+                   "proposal_only":  true,
+                   "human_review_required":  true,
+                   "cline_task_created":  false,
+                   "launch_cline_task":  false,
+                   "prompt_sent":  false,
+                   "worker_real_execution":  false,
+                   "auto_apply":  false,
+                   "apply_executed":  false,
+                   "source_write_by_worker":  false,
+                   "git_write":  false,
+                   "git_commit":  false,
+                   "git_push":  false,
+                   "remote_inference":  false,
+                   "ui_automation":  false
+               }
+}

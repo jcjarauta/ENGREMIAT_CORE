@@ -1,0 +1,34 @@
+﻿{
+    "schema":  "next-plan-step.v1",
+    "selected":  {
+                     "objective_id":  "ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001",
+                     "stage_id":  "E02",
+                     "stage_name":  "Lector de plan de desarrollo",
+                     "stage_description":  "Leer el plan establecido y convertirlo en pasos operativos locales.",
+                     "stage_deliverable":  "Plan legible por máquina.",
+                     "block_id":  "B02.1",
+                     "block_name":  "Importación de plan",
+                     "block_description":  "Preparar entrada desde TSV CSV JSON o XLSX exportado.",
+                     "block_deliverable":  "Importador creado.",
+                     "step_id":  "P02.1.1",
+                     "step_name":  "Crear Import-DevelopmentPlan",
+                     "step_description":  "Crear script que lea plan TSV CSV y lo normalice a JSON.",
+                     "step_deliverable":  "Importador creado.",
+                     "artifact":  "tools/prompt-factory/Import-DevelopmentPlan.ps1",
+                     "dependency":  "P01.3.2",
+                     "format":  "PowerShell",
+                     "risk":  "LOW",
+                     "automatable":  "SI",
+                     "priority":  "Alta",
+                     "status":  "PENDING",
+                     "notes":  "Primera fuente será TSV de Sheets.",
+                     "line_number":  1,
+                     "source_path":  "data/prompt-factory/input/development-plan.sample.tsv"
+                 },
+    "completed_steps":  [
+                            "P01.3.2"
+                        ],
+    "plan":  "data/prompt-factory/out/plan-normalized.json",
+    "selected_at":  "2026-06-16T10:38:03",
+    "decision":  "NEXT_STEP_SELECTED"
+}

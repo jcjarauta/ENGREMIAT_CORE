@@ -1,0 +1,82 @@
+﻿{
+    "objective":  "ENGREMIAT_DUAL_PC_DEVELOPMENT_WORKFLOW_009B",
+    "stage":  "E05",
+    "repair":  "ALIAS_H_TO_HTMLESC",
+    "dashboard_id":  "DUAL-PC-DASHBOARD-009B-E05",
+    "created_at_utc":  "2026-06-16T13:11:21.2675861Z",
+    "current_pc":  {
+                       "computer_name":  "DESKTOP-RLPN1LL",
+                       "user_name":  "sacan",
+                       "cwd":  "C:\\Users\\sacan\\Desktop\\ENGREMIAT_CORE",
+                       "role":  "CURRENT_PC",
+                       "allowed_now":  [
+                                           "preparar",
+                                           "revisar",
+                                           "crear handoff",
+                                           "crear dashboards",
+                                           "validar modelo",
+                                           "trabajo ligero"
+                                       ],
+                       "forbidden_now":  [
+                                             "Cline real sin gate",
+                                             "Ollama real sin gate",
+                                             "remote execution MAIN-PC",
+                                             "git remoto automatico",
+                                             "usar shared como repo"
+                                         ]
+                   },
+    "main_pc":  {
+                    "status":  "PENDING_UNTIL_HUMAN_SWITCH",
+                    "required_later_for":  [
+                                               "vinculacion real MAIN-PC",
+                                               "Cline real proposal-only",
+                                               "Ollama/GPU",
+                                               "workers pesados"
+                                           ],
+                    "do_not_go_yet":  "Continuar desde PC actual hasta cierre E06 o instruccion explicita."
+                },
+    "writer_lock":  {
+                        "single_active_writer":  true,
+                        "writer_scope":  "objective_or_block",
+                        "writer_conflict":  false,
+                        "active_writer":  "CURRENT_PC_PREPARATION_ONLY",
+                        "main_pc_writer":  "PENDING"
+                    },
+    "repo_readiness":  {
+                           "current_pc_git_detected":  false,
+                           "current_pc_decision":  "NO_GO_CURRENT_PC_REPO_NOT_DETECTED",
+                           "current_pc_safe_to_write":  false,
+                           "main_pc_repo_pending":  true,
+                           "git_remote_auto":  false,
+                           "git_write":  false
+                       },
+    "sync":  {
+                 "git_source_of_truth":  "GIT",
+                 "shared_workspace":  "C:\\ENGREMIAT_SHARED",
+                 "shared_role":  "Puente de handoff, prompts, reports, evidence, receipts y control entre PCs.",
+                 "fetch_auto":  false,
+                 "push_auto":  false,
+                 "merge_auto":  false,
+                 "shared_repo_edit":  false,
+                 "secret_storage_allowed":  false
+             },
+    "next_actions":  [
+                         "E06 cerrar workflow dual-PC",
+                         "generar manifest y decision",
+                         "solo despues decidir si volver a MAIN-PC",
+                         "mantener MAIN-PC pendiente hasta instruccion explicita"
+                     ],
+    "safety":  {
+                   "browser_opened":  false,
+                   "main_pc_touched":  false,
+                   "remote_execution":  false,
+                   "git_write":  false,
+                   "git_fetch":  false,
+                   "git_pull":  false,
+                   "git_push":  false,
+                   "git_merge":  false,
+                   "auto_apply":  false,
+                   "shared_repo_edit":  false,
+                   "secret_values_read":  false
+               }
+}

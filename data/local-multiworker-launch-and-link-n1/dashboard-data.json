@@ -1,0 +1,450 @@
+﻿{
+    "objective":  "ENGREMIAT_LOCAL_MULTIWORKER_LAUNCH_AND_LINK_009A_N1",
+    "stage":  "E03",
+    "dashboard_id":  "LOCAL-MULTIWORKER-N1-DASHBOARD-DATA",
+    "created_at_utc":  "2026-06-16T12:40:31.5333694Z",
+    "level":  "N1_LOCAL_PARTIAL_READINESS",
+    "registry":  {
+                     "objective":  "ENGREMIAT_LOCAL_MULTIWORKER_LAUNCH_AND_LINK_009A_N1",
+                     "registry_id":  "LOCAL-MULTIWORKER-NODES-REGISTRY-N1",
+                     "level":  "N1_LOCAL_PARTIAL_READINESS",
+                     "created_at_utc":  "2026-06-16T12:38:35.9530531Z",
+                     "nodes":  [
+                                   {
+                                       "node_id":  "current-machine",
+                                       "machine_name":  "DESKTOP-RLPN1LL",
+                                       "role":  "CURRENT_MACHINE",
+                                       "availability":  "ACTIVE",
+                                       "workspace_path":  "C:\\Users\\sacan\\Desktop\\ENGREMIAT_CORE",
+                                       "capabilities":  [
+                                                            "local_files",
+                                                            "powershell",
+                                                            "json_reports",
+                                                            "dashboards_preview"
+                                                        ],
+                                       "risks":  [
+                                                     "local_terminal_errors",
+                                                     "path_mismatch"
+                                                 ],
+                                       "allowed_actions":  [
+                                                               "local_read",
+                                                               "local_write_project_artifacts",
+                                                               "json_validation",
+                                                               "dashboard_generation",
+                                                               "preview_only"
+                                                           ],
+                                       "forbidden_actions":  [
+                                                                 "remote_execution",
+                                                                 "ssh",
+                                                                 "scp",
+                                                                 "winrm",
+                                                                 "git_write",
+                                                                 "git_commit",
+                                                                 "git_push",
+                                                                 "git_fetch",
+                                                                 "git_merge",
+                                                                 "auto_apply",
+                                                                 "source_write_by_worker",
+                                                                 "worker_real_execution",
+                                                                 "remote_inference",
+                                                                 "browser_automation",
+                                                                 "clipboard_automation"
+                                                             ],
+                                       "last_check_utc":  "2026-06-16T12:38:35.9530531Z",
+                                       "notes":  "Nodo local activo para preparar readiness parcial."
+                                   },
+                                   {
+                                       "node_id":  "main-pc",
+                                       "machine_name":  "MAIN-PC",
+                                       "role":  "MAIN_PC",
+                                       "availability":  "PENDING",
+                                       "workspace_path":  null,
+                                       "capabilities":  [
+                                                            "cline_candidate",
+                                                            "ollama_candidate",
+                                                            "gpu_candidate",
+                                                            "full_multiworker_test"
+                                                        ],
+                                       "risks":  [
+                                                     "offline",
+                                                     "not_validated_from_n1"
+                                                 ],
+                                       "allowed_actions":  [
+                                                               "manual_turn_on_later",
+                                                               "future_readiness_check"
+                                                           ],
+                                       "forbidden_actions":  [
+                                                                 "remote_execution",
+                                                                 "ssh",
+                                                                 "scp",
+                                                                 "winrm",
+                                                                 "git_write",
+                                                                 "git_commit",
+                                                                 "git_push",
+                                                                 "git_fetch",
+                                                                 "git_merge",
+                                                                 "auto_apply",
+                                                                 "source_write_by_worker",
+                                                                 "worker_real_execution",
+                                                                 "remote_inference",
+                                                                 "browser_automation",
+                                                                 "clipboard_automation"
+                                                             ],
+                                       "last_check_utc":  "2026-06-16T12:38:35.9530531Z",
+                                       "notes":  "No requerido para Nivel 1; requerido para prueba multiworker completa."
+                                   },
+                                   {
+                                       "node_id":  "ai-local",
+                                       "machine_name":  "AI-LOCAL",
+                                       "role":  "AI_LOCAL",
+                                       "availability":  "PENDING",
+                                       "workspace_path":  null,
+                                       "capabilities":  [
+                                                            "ollama_candidate",
+                                                            "local_inference_candidate"
+                                                        ],
+                                       "risks":  [
+                                                     "not_checked",
+                                                     "remote_inference_blocked_by_default"
+                                                 ],
+                                       "allowed_actions":  [
+                                                               "future_preflight_only"
+                                                           ],
+                                       "forbidden_actions":  [
+                                                                 "remote_execution",
+                                                                 "ssh",
+                                                                 "scp",
+                                                                 "winrm",
+                                                                 "git_write",
+                                                                 "git_commit",
+                                                                 "git_push",
+                                                                 "git_fetch",
+                                                                 "git_merge",
+                                                                 "auto_apply",
+                                                                 "source_write_by_worker",
+                                                                 "worker_real_execution",
+                                                                 "remote_inference",
+                                                                 "browser_automation",
+                                                                 "clipboard_automation"
+                                                             ],
+                                       "last_check_utc":  "2026-06-16T12:38:35.9530531Z",
+                                       "notes":  "Ollama opcional en Nivel 1."
+                                   },
+                                   {
+                                       "node_id":  "old-pc",
+                                       "machine_name":  "OLD-PC",
+                                       "role":  "OLD_PC",
+                                       "availability":  "PENDING",
+                                       "workspace_path":  null,
+                                       "capabilities":  [
+                                                            "secondary_terminal_candidate",
+                                                            "light_tests_candidate"
+                                                        ],
+                                       "risks":  [
+                                                     "terminal_sensitive",
+                                                     "lower_resources"
+                                                 ],
+                                       "allowed_actions":  [
+                                                               "future_manual_check"
+                                                           ],
+                                       "forbidden_actions":  [
+                                                                 "remote_execution",
+                                                                 "ssh",
+                                                                 "scp",
+                                                                 "winrm",
+                                                                 "git_write",
+                                                                 "git_commit",
+                                                                 "git_push",
+                                                                 "git_fetch",
+                                                                 "git_merge",
+                                                                 "auto_apply",
+                                                                 "source_write_by_worker",
+                                                                 "worker_real_execution",
+                                                                 "remote_inference",
+                                                                 "browser_automation",
+                                                                 "clipboard_automation"
+                                                             ],
+                                       "last_check_utc":  "2026-06-16T12:38:35.9530531Z",
+                                       "notes":  "Nodo secundario futuro."
+                                   },
+                                   {
+                                       "node_id":  "mobile",
+                                       "machine_name":  "MOBILE",
+                                       "role":  "MOBILE",
+                                       "availability":  "PENDING",
+                                       "workspace_path":  null,
+                                       "capabilities":  [
+                                                            "human_review_candidate",
+                                                            "telegram_future_surface"
+                                                        ],
+                                       "risks":  [
+                                                     "not_integrated"
+                                                 ],
+                                       "allowed_actions":  [
+                                                               "future_human_review"
+                                                           ],
+                                       "forbidden_actions":  [
+                                                                 "remote_execution",
+                                                                 "ssh",
+                                                                 "scp",
+                                                                 "winrm",
+                                                                 "git_write",
+                                                                 "git_commit",
+                                                                 "git_push",
+                                                                 "git_fetch",
+                                                                 "git_merge",
+                                                                 "auto_apply",
+                                                                 "source_write_by_worker",
+                                                                 "worker_real_execution",
+                                                                 "remote_inference",
+                                                                 "browser_automation",
+                                                                 "clipboard_automation"
+                                                             ],
+                                       "last_check_utc":  "2026-06-16T12:38:35.9530531Z",
+                                       "notes":  "Superficie humana futura."
+                                   },
+                                   {
+                                       "node_id":  "raspberry",
+                                       "machine_name":  "RASPBERRY",
+                                       "role":  "RASPBERRY",
+                                       "availability":  "PENDING",
+                                       "workspace_path":  null,
+                                       "capabilities":  [
+                                                            "backup_candidate",
+                                                            "watchdog_candidate",
+                                                            "light_service_candidate"
+                                                        ],
+                                       "risks":  [
+                                                     "not_checked",
+                                                     "storage_or_network_pending"
+                                                 ],
+                                       "allowed_actions":  [
+                                                               "future_manual_check"
+                                                           ],
+                                       "forbidden_actions":  [
+                                                                 "remote_execution",
+                                                                 "ssh",
+                                                                 "scp",
+                                                                 "winrm",
+                                                                 "git_write",
+                                                                 "git_commit",
+                                                                 "git_push",
+                                                                 "git_fetch",
+                                                                 "git_merge",
+                                                                 "auto_apply",
+                                                                 "source_write_by_worker",
+                                                                 "worker_real_execution",
+                                                                 "remote_inference",
+                                                                 "browser_automation",
+                                                                 "clipboard_automation"
+                                                             ],
+                                       "last_check_utc":  "2026-06-16T12:38:35.9530531Z",
+                                       "notes":  "Nodo futuro de backup/watchdog."
+                                   }
+                               ],
+                     "safety":  {
+                                    "main_pc_required_for_local_prep":  false,
+                                    "main_pc_required_for_full_test":  true,
+                                    "remote_execution":  false,
+                                    "ssh":  false,
+                                    "network_write":  false,
+                                    "git_write":  false,
+                                    "apply_executed":  false,
+                                    "worker_real_execution":  false
+                                }
+                 },
+    "surfaces_policy":  {
+                            "policy_id":  "HUMAN-SURFACES-POLICY-N1",
+                            "objective":  "ENGREMIAT_LOCAL_MULTIWORKER_LAUNCH_AND_LINK_009A_N1",
+                            "stage":  "E02",
+                            "browser_open":  false,
+                            "preview_only":  true,
+                            "manual_open_allowed":  true,
+                            "auto_open_allowed":  false,
+                            "allowed_surface_types":  [
+                                                          "local_html_dashboard",
+                                                          "local_markdown_doc",
+                                                          "local_json_report"
+                                                      ],
+                            "allowed_paths":  [
+                                                  "dashboard/kanban-human-control/index.html",
+                                                  "dashboard/cline-real-proposal-no-apply/proposal-review.html",
+                                                  "dashboard/first-real-cline-proposal-task/first-real-cline-proposal-review.html",
+                                                  "dashboard/local-multiworker-launch-and-link-n1/index.html",
+                                                  "docs",
+                                                  "reports"
+                                              ],
+                            "forbidden_actions":  [
+                                                      "browser_automation",
+                                                      "clipboard_automation",
+                                                      "ui_automation",
+                                                      "auto_submit",
+                                                      "auto_send",
+                                                      "open_external_url",
+                                                      "remote_execution",
+                                                      "git_write"
+                                                  ],
+                            "safety":  {
+                                           "browser_opened":  false,
+                                           "preview_only":  true,
+                                           "remote_execution":  false,
+                                           "ui_automation":  false,
+                                           "git_write":  false,
+                                           "apply_executed":  false
+                                       }
+                        },
+    "surfaces_index":  {
+                           "index_id":  "HUMAN-SURFACES-INDEX-N1",
+                           "objective":  "ENGREMIAT_LOCAL_MULTIWORKER_LAUNCH_AND_LINK_009A_N1",
+                           "stage":  "E02",
+                           "created_at_utc":  "2026-06-16T12:39:26.4581364Z",
+                           "policy":  "data/local-multiworker-launch-and-link-n1/human-surfaces-policy.json",
+                           "surfaces":  [
+                                            {
+                                                "surface_id":  "kanban-human-control-007",
+                                                "label":  "Kanban Human Control 007",
+                                                "path":  "dashboard/kanban-human-control/index.html",
+                                                "exists":  true,
+                                                "type":  "local_html_dashboard",
+                                                "open_mode":  "manual_or_preview",
+                                                "required_for_n1":  false
+                                            },
+                                            {
+                                                "surface_id":  "cline-proposal-review-008",
+                                                "label":  "Cline Proposal Review 008",
+                                                "path":  "dashboard/cline-real-proposal-no-apply/proposal-review.html",
+                                                "exists":  true,
+                                                "type":  "local_html_dashboard",
+                                                "open_mode":  "manual_or_preview",
+                                                "required_for_n1":  false
+                                            },
+                                            {
+                                                "surface_id":  "first-real-cline-proposal-009-future",
+                                                "label":  "First Real Cline Proposal 009 future dashboard",
+                                                "path":  "dashboard/first-real-cline-proposal-task/first-real-cline-proposal-review.html",
+                                                "exists":  false,
+                                                "type":  "local_html_dashboard",
+                                                "open_mode":  "future",
+                                                "required_for_n1":  false
+                                            },
+                                            {
+                                                "surface_id":  "local-multiworker-n1-future",
+                                                "label":  "Local Multiworker N1 dashboard future",
+                                                "path":  "dashboard/local-multiworker-launch-and-link-n1/index.html",
+                                                "exists":  false,
+                                                "type":  "local_html_dashboard",
+                                                "open_mode":  "future",
+                                                "required_for_n1":  false
+                                            }
+                                        ],
+                           "summary":  {
+                                           "total":  4,
+                                           "existing":  2,
+                                           "missing":  2,
+                                           "browser_opened":  false,
+                                           "preview_only":  true
+                                       },
+                           "safety":  {
+                                          "remote_execution":  false,
+                                          "browser_automation":  false,
+                                          "ui_automation":  false,
+                                          "git_write":  false,
+                                          "apply_executed":  false
+                                      }
+                       },
+    "cline_policy":  {
+                         "policy_id":  "CLINE-SAFE-USE-POLICY-N1",
+                         "objective":  "ENGREMIAT_LOCAL_MULTIWORKER_LAUNCH_AND_LINK_009A_N1",
+                         "stage":  "E02",
+                         "worker":  "CLINE",
+                         "level":  "N1_LOCAL_PARTIAL_READINESS",
+                         "cline_real_task_reserved_for":  "ENGREMIAT_FIRST_REAL_CLINE_PROPOSAL_TASK_009",
+                         "task_creation":  false,
+                         "launch_cline_task":  false,
+                         "prompt_sent":  false,
+                         "worker_real_execution":  false,
+                         "proposal_only":  true,
+                         "human_gate_required":  true,
+                         "allowed_actions":  [
+                                                 "detect_presence_later",
+                                                 "prepare_prompt_preview",
+                                                 "validate_policy",
+                                                 "manual_review"
+                                             ],
+                         "forbidden_actions":  [
+                                                   "create_task",
+                                                   "send_prompt",
+                                                   "auto_apply",
+                                                   "apply_patch",
+                                                   "edit_source_by_worker",
+                                                   "run_commands",
+                                                   "git_write",
+                                                   "git_commit",
+                                                   "git_push",
+                                                   "remote_execution",
+                                                   "ui_automation"
+                                               ],
+                         "safety":  {
+                                        "auto_apply":  false,
+                                        "apply_executed":  false,
+                                        "source_write_by_worker":  false,
+                                        "git_write":  false,
+                                        "git_commit":  false,
+                                        "git_push":  false,
+                                        "remote_execution":  false,
+                                        "ui_automation":  false
+                                    }
+                     },
+    "ollama_policy":  {
+                          "policy_id":  "OLLAMA-SAFE-USE-POLICY-N1",
+                          "objective":  "ENGREMIAT_LOCAL_MULTIWORKER_LAUNCH_AND_LINK_009A_N1",
+                          "stage":  "E02",
+                          "worker":  "OLLAMA",
+                          "level":  "N1_LOCAL_PARTIAL_READINESS",
+                          "ollama_required":  false,
+                          "ollama_recommended_for_full_test":  true,
+                          "inference_executed":  false,
+                          "remote_inference":  false,
+                          "prompt_sent":  false,
+                          "model_required":  false,
+                          "allowed_actions":  [
+                                                  "mark_optional",
+                                                  "future_presence_check",
+                                                  "future_model_inventory_if_authorized"
+                                              ],
+                          "forbidden_actions":  [
+                                                    "generate_text",
+                                                    "send_project_context",
+                                                    "remote_inference",
+                                                    "network_write",
+                                                    "auto_worker_loop",
+                                                    "write_source",
+                                                    "git_write"
+                                                ],
+                          "safety":  {
+                                         "ollama_required":  false,
+                                         "inference_executed":  false,
+                                         "remote_inference":  false,
+                                         "prompt_sent":  false,
+                                         "source_write_by_worker":  false,
+                                         "git_write":  false,
+                                         "apply_executed":  false
+                                     }
+                      },
+    "summary":  {
+                    "nodes_total":  6,
+                    "active_nodes":  1,
+                    "pending_nodes":  5,
+                    "surfaces_total":  4,
+                    "surfaces_existing":  2,
+                    "main_pc_required_for_local_prep":  false,
+                    "main_pc_required_for_full_test":  true,
+                    "browser_opened":  false,
+                    "cline_task_creation":  false,
+                    "ollama_required":  false,
+                    "remote_execution":  false,
+                    "git_write":  false,
+                    "apply_executed":  false
+                },
+    "next":  "E04_PARTIAL_READINESS_AND_CONTINUITY"
+}

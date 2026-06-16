@@ -1,0 +1,23 @@
+﻿{
+    "status_id":  "MAIN-PC-STATUS-N2-E01",
+    "objective":  "ENGREMIAT_LOCAL_MULTIWORKER_LAUNCH_AND_LINK_009A_N2",
+    "stage":  "E01",
+    "availability":  "PENDING",
+    "evidence_file":  "data/local-multiworker-launch-and-link-n2/main-pc-profile-evidence.json",
+    "evidence_found":  false,
+    "evidence_confirmed":  false,
+    "active_requires_evidence":  true,
+    "manual_readonly":  true,
+    "computer_name":  null,
+    "workspace_path":  null,
+    "decision":  "NO_GO_MAIN_PC_PENDING",
+    "safety":  {
+                   "remote_execution":  false,
+                   "ssh":  false,
+                   "winrm":  false,
+                   "network_probe":  false,
+                   "git_write":  false,
+                   "apply_executed":  false,
+                   "worker_real_execution":  false
+               }
+}

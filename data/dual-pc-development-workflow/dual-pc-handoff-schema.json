@@ -1,0 +1,47 @@
+﻿{
+    "objective":  "ENGREMIAT_DUAL_PC_DEVELOPMENT_WORKFLOW_009B",
+    "stage":  "E02",
+    "schema_id":  "DUAL-PC-HANDOFF-SCHEMA-009B-E02",
+    "version":  "1.0.0",
+    "required_fields":  [
+                            "handoff_id",
+                            "objective",
+                            "active_stage",
+                            "current_pc",
+                            "target_pc",
+                            "writer_authority",
+                            "git_status_summary",
+                            "next_action",
+                            "evidence",
+                            "limits",
+                            "created_at_utc"
+                        ],
+    "field_contract":  {
+                           "handoff_id":  "string unique",
+                           "objective":  "active objective id",
+                           "active_stage":  "stage or block being handed off",
+                           "current_pc":  "machine creating the handoff",
+                           "target_pc":  "MAIN_PC or CURRENT_PC",
+                           "writer_authority":  "who may write next",
+                           "git_status_summary":  "read-only summary, never remote automatic",
+                           "next_action":  "human-readable next step",
+                           "evidence":  "array of local reports/docs/manifests",
+                           "limits":  "safety flags",
+                           "created_at_utc":  "UTC timestamp"
+                       },
+    "forbidden_content":  [
+                              "secret",
+                              "token",
+                              "password",
+                              ".env value",
+                              "api key",
+                              "private key"
+                          ],
+    "safety":  {
+                   "main_pc_touched":  false,
+                   "remote_execution":  false,
+                   "git_write":  false,
+                   "git_remote_auto":  false,
+                   "secret_values_read":  false
+               }
+}

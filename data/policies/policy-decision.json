@@ -1,0 +1,61 @@
+﻿{
+    "objective":  "ENGREMIAT_CORE_MVP_001",
+    "stage":  "E04",
+    "policies":  [
+                     {
+                         "policy_id":  "POLICY-001",
+                         "offer_id":  "OFFER-001",
+                         "subject":  "WORKER-MAIN-COORDINATOR",
+                         "action":  "ACCEPT_SIMULATED_LOCAL_OFFER",
+                         "resource":  "TASK-DEFINE-CONTRACTS-001",
+                         "conditions":  [
+                                            "LOCAL_ONLY",
+                                            "NO_GIT",
+                                            "NO_NETWORK",
+                                            "NO_REMOTE_EXECUTION",
+                                            "EVIDENCE_REQUIRED"
+                                        ],
+                         "decision":  "ALLOW",
+                         "reason":  "LOW_RISK_LOCAL_SIMULATED_OFFER",
+                         "expires_at":  "2026-06-16 02:33:09",
+                         "created_at":  "2026-06-16 00:33:09"
+                     },
+                     {
+                         "policy_id":  "POLICY-002",
+                         "offer_id":  "OFFER-002",
+                         "subject":  "WORKER-MAIN-COORDINATOR",
+                         "action":  "ACCEPT_SIMULATED_LOCAL_OFFER",
+                         "resource":  "TASK-BUILD-EVENT-LEDGER-001",
+                         "conditions":  [
+                                            "LOCAL_ONLY",
+                                            "NO_GIT",
+                                            "NO_NETWORK",
+                                            "NO_REMOTE_EXECUTION",
+                                            "EVIDENCE_REQUIRED"
+                                        ],
+                         "decision":  "ALLOW",
+                         "reason":  "LOW_RISK_LOCAL_SIMULATED_OFFER",
+                         "expires_at":  "2026-06-16 02:33:09",
+                         "created_at":  "2026-06-16 00:33:09"
+                     },
+                     {
+                         "policy_id":  "POLICY-003",
+                         "offer_id":  "OFFER-003",
+                         "subject":  "WORKER-MAIN-COORDINATOR",
+                         "action":  "ACCEPT_SIMULATED_LOCAL_OFFER",
+                         "resource":  "TASK-MATCHING-V0-001",
+                         "conditions":  [
+                                            "LOCAL_ONLY",
+                                            "NO_GIT",
+                                            "NO_NETWORK",
+                                            "NO_REMOTE_EXECUTION",
+                                            "EVIDENCE_REQUIRED"
+                                        ],
+                         "decision":  "ALLOW",
+                         "reason":  "LOW_RISK_LOCAL_SIMULATED_OFFER",
+                         "expires_at":  "2026-06-16 02:33:09",
+                         "created_at":  "2026-06-16 00:33:09"
+                     }
+                 ],
+    "status":  "OK"
+}

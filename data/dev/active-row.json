@@ -1,0 +1,21 @@
+﻿{
+    "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+    "stage_id":  "E03",
+    "block_id":  "B03.1",
+    "step_id":  "P03.1.2",
+    "name":  "Crear active-row inicial",
+    "dependency":  "P03.1.1",
+    "dependency_artifact":  "data/dev/active-row.schema.json",
+    "risk":  "LOW",
+    "agrupable":  "SI",
+    "priority":  "Alta",
+    "status":  "PENDING",
+    "artifact":  "data/dev/active-row.json",
+    "validation":  "JSON parse + required fields + dependency exists",
+    "next":  {
+                 "step_id":  "P03.2.1",
+                 "action":  "Crear next-package",
+                 "target":  "data/dev/next-package.json"
+             },
+    "updated_at":  "2026-06-16T09:13:45"
+}

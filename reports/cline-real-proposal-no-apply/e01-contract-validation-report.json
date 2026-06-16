@@ -1,0 +1,34 @@
+﻿{
+    "objective":  "ENGREMIAT_CLINE_REAL_PROPOSAL_NO_APPLY_008",
+    "stage":  "E01",
+    "blocks":  "B01.1-B01.3",
+    "steps":  6,
+    "scope_file":  "data/cline-real-proposal-no-apply/first-cline-proposal-no-apply-scope.json",
+    "policy_file":  "data/cline-real-proposal-no-apply/cline-proposal-no-apply-policy.json",
+    "output_contract_file":  "data/cline-real-proposal-no-apply/cline-proposal-output-contract.json",
+    "guide_file":  "docs/CLINE_PROPOSAL_NO_APPLY_CONTRACT_GUIDE.md",
+    "required_sections_checked":  10,
+    "missing_required_sections":  [
+
+                                  ],
+    "bad_safety_flags":  [
+
+                         ],
+    "proposal_only":  true,
+    "human_review_required":  true,
+    "cline_task_created":  false,
+    "launch_cline_task":  false,
+    "prompt_sent":  false,
+    "worker_real_execution":  false,
+    "auto_apply":  false,
+    "apply_executed":  false,
+    "source_write_by_worker":  false,
+    "git_write":  false,
+    "git_commit":  false,
+    "git_push":  false,
+    "remote_inference":  false,
+    "ui_automation":  false,
+    "readiness":  100,
+    "decision":  "GO_E01_CLINE_PROPOSAL_NO_APPLY_CONTRACT_VALIDATED",
+    "next":  "E02_SELECT_KANBAN_CANDIDATE_AND_PROMPT_PREVIEW"
+}

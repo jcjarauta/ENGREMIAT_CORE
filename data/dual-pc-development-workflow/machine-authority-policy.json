@@ -1,0 +1,57 @@
+﻿{
+    "objective":  "ENGREMIAT_DUAL_PC_DEVELOPMENT_WORKFLOW_009B",
+    "stage":  "E01",
+    "policy_id":  "MACHINE-AUTHORITY-POLICY-009B-E01",
+    "single_active_writer":  true,
+    "writer_scope":  "objective_or_block",
+    "current_pc_default_role":  "PREPARATION_REVIEW_LIGHT_DEVELOPMENT",
+    "main_pc_default_role":  "HEAVY_WORKER_AND_REAL_CLINE_OLLAMA_WHEN_AVAILABLE",
+    "authority_rules":  [
+                            {
+                                "rule":  "ONE_WRITER",
+                                "description":  "Solo un PC puede modificar codigo fuente dentro del objetivo/bloque activo.",
+                                "enforced_by":  "handoff + readiness + writer lock policy later"
+                            },
+                            {
+                                "rule":  "NO_SIMULTANEOUS_REPO_EDIT",
+                                "description":  "No editar el mismo repo desde dos PCs a la vez.",
+                                "enforced_by":  "human workflow + git status checks"
+                            },
+                            {
+                                "rule":  "CURRENT_PC_CAN_PREPARE",
+                                "description":  "El PC actual puede preparar contratos, dashboards, docs, reports y readiness sin MAIN-PC.",
+                                "enforced_by":  "local-only scripts"
+                            },
+                            {
+                                "rule":  "MAIN_PC_REQUIRED_FOR_REAL_WORKERS",
+                                "description":  "Cline real, Ollama y pruebas pesadas requieren volver a MAIN-PC.",
+                                "enforced_by":  "N2/009 readiness gates"
+                            }
+                        ],
+    "allowed_current_pc_actions":  [
+                                       "create_policies",
+                                       "create_dashboards",
+                                       "create_handoff",
+                                       "create_reports",
+                                       "read_only_git_status",
+                                       "prepare_prompts",
+                                       "review_docs"
+                                   ],
+    "forbidden_current_pc_actions":  [
+                                         "remote_execute_main_pc",
+                                         "edit_shared_repo_as_source",
+                                         "auto_apply",
+                                         "create_real_cline_task_without_gate",
+                                         "run_ollama_inference_without_gate",
+                                         "git_push_auto",
+                                         "git_fetch_auto",
+                                         "git_merge_auto"
+                                     ],
+    "safety":  {
+                   "writer_conflict":  false,
+                   "main_pc_touched":  false,
+                   "remote_execution":  false,
+                   "auto_apply":  false,
+                   "git_write":  false
+               }
+}

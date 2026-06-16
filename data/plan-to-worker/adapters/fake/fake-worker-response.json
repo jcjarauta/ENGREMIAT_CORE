@@ -1,0 +1,32 @@
+﻿{
+    "response_id":  "FAKE-RESP-20260616114730",
+    "request_id":  "REQ-GENERIC-20260616114235",
+    "adapter":  "fake",
+    "summary":  "Fake worker response generated locally to validate worker response contract before connecting Cline, Ollama or OpenClaw.",
+    "files_changed_or_created":  [
+                                     "data/plan-to-worker/adapters/fake/fake-worker-response.json"
+                                 ],
+    "validation_commands":  [
+                                "Validate fake response contract",
+                                "Validate system output exists",
+                                "Validate graph output exists",
+                                "Validate consolidated dashboard exists"
+                            ],
+    "evidence_paths":  [
+                           "data/plan-to-worker/output/system/evidence-manifest.json",
+                           "data/plan-to-worker/output/graph/graph.json",
+                           "dashboard/plan-to-worker/index.html"
+                       ],
+    "risks":  [
+                  "No real worker executed",
+                  "Human review still required before connecting real adapters"
+              ],
+    "decision":  "GO",
+    "policy":  {
+                   "external_network":  false,
+                   "git_write":  false,
+                   "worker_real_execution":  false,
+                   "auto_apply":  false
+               },
+    "created_at":  "2026-06-16T11:47:30"
+}

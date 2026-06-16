@@ -1,0 +1,27 @@
+﻿{
+    "objective_id":  "ENGREMIAT_DEV_ASSISTED_WORKER_ADAPTER_001",
+    "stage_id":  "E02",
+    "blocks":  [
+                   "B02.1",
+                   "B02.2"
+               ],
+    "steps":  [
+                  "P02.1.1",
+                  "P02.1.2",
+                  "P02.2.1",
+                  "P02.2.2"
+              ],
+    "status":  "OK",
+    "validation_passed":  true,
+    "schema":  "data/dev-assisted-worker/assisted-handoff-record.schema.json",
+    "registry":  "data/dev-assisted-worker/handoff-registry.jsonl",
+    "tool":  "tools/eng-assisted-handoff.ps1",
+    "handoffs_count":  null,
+    "problems":  [
+
+                 ],
+    "external_execution":  false,
+    "git":  false,
+    "risk":  "LOW",
+    "next":  "P02.3.1_CREATE_ASSISTED_WORKER_STATE"
+}

@@ -1,0 +1,66 @@
+﻿{
+    "objective_id":  "ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002",
+    "stage":  "E05",
+    "repair":  "R1_COMPILE_FIX",
+    "status":  "E05_VALIDATED",
+    "artifacts":  [
+                      {
+                          "path":  "tools/plan-to-worker/Build-SystemOutput.ps1",
+                          "sha256":  "3a1467b95d6a043655475a1dd65638d6545e59b4b6c51c8538ac2ea5ec2bfa4d",
+                          "type":  "PowerShell",
+                          "step":  "P05.1.1"
+                      },
+                      {
+                          "path":  "data/plan-to-worker/output/system/engremiat-action.json",
+                          "sha256":  "6f50e9b68f3faddc3f004e70cebfcaa26dd73622bcde0b58a1c3f76b7288ba5a",
+                          "type":  "JSON",
+                          "step":  "P05.1.2"
+                      },
+                      {
+                          "path":  "data/plan-to-worker/output/system/task-package.json",
+                          "sha256":  "1324742eb27542ed875c4cc91723bb07545adc5a2c4eed64b533fa7aea7f57fb",
+                          "type":  "JSON",
+                          "step":  "P05.1.2"
+                      },
+                      {
+                          "path":  "data/plan-to-worker/output/system/decision-package.json",
+                          "sha256":  "c57d9e70e91870f20a1f2a146ba727c0dd15f41c36d99eee18bf16963438bcad",
+                          "type":  "JSON",
+                          "step":  "P05.1.2"
+                      },
+                      {
+                          "path":  "tools/plan-to-worker/Build-SystemEvidence.ps1",
+                          "sha256":  "11f8bcbf9b8ee3c2028f2c78fb293e6d8a0ad2bc7538ef6c578e7e0941cdaf8c",
+                          "type":  "PowerShell",
+                          "step":  "P05.2.1"
+                      },
+                      {
+                          "path":  "data/plan-to-worker/output/system/evidence-manifest.json",
+                          "sha256":  "85773c03d2c09d024138c58b0dad05dbc58bbe9899ab6ff771c93ae2cf3022d3",
+                          "type":  "JSON",
+                          "step":  "P05.2.2"
+                      },
+                      {
+                          "path":  "data/plan-to-worker/output/system/app-state.json",
+                          "sha256":  "3ebc9d9f14fe537fb3af4ecdabd0e7ef063183fb3a1a60b23a22db32a08ae686",
+                          "type":  "JSON",
+                          "step":  "P05.2.2"
+                      },
+                      {
+                          "path":  "tools/plan-to-worker/Test-SystemOutput.ps1",
+                          "sha256":  "43ddd308c2f05cd9849b1c0c114074beb552e0483fe769a767be72ace1ef2ae8",
+                          "type":  "PowerShell",
+                          "step":  "P05.3.1"
+                      },
+                      {
+                          "path":  "reports/plan-to-worker/consolidation/e05-system-output-smoke-report.json",
+                          "sha256":  "555bafebeaae0817b794c33253870f3bcd457523507deed99dd4d2bad20b1337",
+                          "type":  "JSON",
+                          "step":  "P05.3.2"
+                      }
+                  ],
+    "score":  100,
+    "decision":  "GO",
+    "next":  "E06_SALIDA_GRAFO_Y_VISION_HUMANA",
+    "created_at":  "2026-06-16T11:44:39"
+}

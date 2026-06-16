@@ -1,0 +1,44 @@
+﻿{
+    "objective_id":  "ENGREMIAT_CONTROLLED_WORKER_ADAPTERS_005",
+    "stage":  "E06",
+    "status":  "CONTROLLED_WORKER_ADAPTERS_CLOSED",
+    "readiness":  100,
+    "decision":  "GO_ADAPTERS_READY_FOR_GATED_EXECUTION",
+    "adapters":  {
+                     "common_contract":  true,
+                     "cline_adapter":  true,
+                     "ollama_remote_prepared":  true,
+                     "simulation_receipt":  true
+                 },
+    "gates":  {
+                  "human_gate_ready":  true,
+                  "current_decision":  "DEFER",
+                  "execution_allowed":  false,
+                  "default_deny":  true
+              },
+    "security":  {
+                     "worker_real_execution":  false,
+                     "launch_cline_task":  false,
+                     "send_prompt_to_cline":  false,
+                     "probe_remote_ollama":  false,
+                     "remote_inference":  false,
+                     "auto_apply":  false,
+                     "auto_approve":  false,
+                     "git_write":  false,
+                     "push":  false,
+                     "fetch":  false,
+                     "merge":  false,
+                     "firewall_changed":  false,
+                     "services_changed":  false,
+                     "main_pc_can_be_off":  true
+                 },
+    "evidence":  {
+                     "e01":  "reports/controlled-worker-adapters/e01-contract-validation-report.json",
+                     "e02":  "reports/controlled-worker-adapters/e02-cline-dry-run-validation-report.json",
+                     "e03":  "reports/controlled-worker-adapters/e03-gate-validation-report.json",
+                     "e04":  "reports/controlled-worker-adapters/e04-simulation-validation-report.json",
+                     "e05":  "reports/controlled-worker-adapters/e05-remote-ollama-prepared-validation-report.json"
+                 },
+    "next":  "NEXT_OBJECTIVE_GATED_WORKER_EXECUTION",
+    "created_at":  "2026-06-16T13:37:06"
+}

@@ -1,0 +1,77 @@
+﻿{
+    "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+    "stage_id":  "E00",
+    "block_id":  "B00.1",
+    "status":  "DRAFT_VALIDATED",
+    "purpose":  "Sistema mínimo antifricción para reducir pérdida de contexto, pérdida de rutas, validación manual y ejecución dispersa antes de ENGREMIAT_CORE_MVP_001",
+    "source":  "Hoja operativa etapa-bloque-paso",
+    "components":  [
+                       "DEV_ARTIFACT_REGISTRY",
+                       "DEV_CONTEXT_SNAPSHOT",
+                       "DEV_RUNNER",
+                       "DEV_GATE_CENTER",
+                       "DEV_READINESS_CHECKER",
+                       "DEV_ERROR_MEMORY",
+                       "DEV_DOC_SYNC",
+                       "DEV_DASHBOARD",
+                       "DEV_COMMAND_HUB"
+                   ],
+    "inputs":  [
+                   "plan_sheet_or_export",
+                   "master_documents",
+                   "active_row",
+                   "artifact_registry",
+                   "gate_registry",
+                   "error_memory",
+                   "readiness_state"
+               ],
+    "outputs":  [
+                    "active-row.json",
+                    "next-package.json",
+                    "artifact-registry.jsonl",
+                    "context-snapshot.json",
+                    "gate-registry.jsonl",
+                    "readiness.json",
+                    "error-memory.jsonl",
+                    "dev-dashboard/index.html",
+                    "compact_status_line"
+                ],
+    "commands":  [
+                     "status",
+                     "next",
+                     "package",
+                     "run-safe",
+                     "artifacts",
+                     "context",
+                     "gates",
+                     "readiness",
+                     "errors",
+                     "docs",
+                     "dashboard"
+                 ],
+    "modes":  [
+                  "LOCAL_ONLY",
+                  "DRY_RUN",
+                  "PREPARED_ONLY",
+                  "MANUAL_HANDOFF",
+                  "AUTHORIZED_ONLY"
+              ],
+    "limits":  [
+                   "NO_REMOTE_BY_DEFAULT",
+                   "NO_EXTERNAL_NETWORK_BY_DEFAULT",
+                   "NO_SECRETS",
+                   "NO_GIT_REMOTE",
+                   "NO_REAL_ACTION_WITHOUT_GATE",
+                   "FAIL_CLOSED",
+                   "ARTIFACTS_REGISTERED_OR_NOT_VALIDATED"
+               ],
+    "definition_of_done":  [
+                               "contract_created",
+                               "guide_created",
+                               "policy_created",
+                               "validation_report_ok",
+                               "required_fields_present",
+                               "safe_modes_declared",
+                               "fail_closed_declared"
+                           ]
+}

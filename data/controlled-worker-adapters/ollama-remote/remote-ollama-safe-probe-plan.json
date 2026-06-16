@@ -1,0 +1,46 @@
+﻿{
+    "objective_id":  "ENGREMIAT_CONTROLLED_WORKER_ADAPTERS_005",
+    "stage":  "E05",
+    "plan_id":  "REMOTE-OLLAMA-SAFE-PROBE-PLAN-001",
+    "purpose":  "Prepare future safe probe to MAIN-PC Ollama /api/tags without inference",
+    "main_pc":  {
+                    "host":  "DESKTOP-PVRVE56",
+                    "ip":  "192.168.1.67",
+                    "base_url":  "http://192.168.1.67:11434",
+                    "can_be_off_now":  true,
+                    "needs_to_be_on_only_for_probe":  true
+                },
+    "runtime_bridge":  {
+                           "node_link_manifest_present":  true,
+                           "runtime_remote_config_present":  true,
+                           "runtime_evidence_present":  true
+                       },
+    "allowed_future_probe":  {
+                                 "method":  "GET",
+                                 "endpoint":  "/api/tags",
+                                 "full_url":  "http://192.168.1.67:11434/api/tags",
+                                 "requires_human_gate":  true,
+                                 "gate_enabled_now":  false
+                             },
+    "blocked_actions":  [
+                            "ollama_generate",
+                            "ollama_chat",
+                            "model_pull",
+                            "model_download",
+                            "remote_inference",
+                            "worker_real_execution",
+                            "auto_apply",
+                            "git_write",
+                            "firewall_change",
+                            "service_start"
+                        ],
+    "probe_executed":  false,
+    "inference_allowed":  false,
+    "worker_real_execution":  false,
+    "auto_apply":  false,
+    "git_write":  false,
+    "network_required_now":  false,
+    "main_pc_can_be_off":  true,
+    "next":  "E06_CIERRE_ADAPTERS_CONTROLADOS",
+    "created_at":  "2026-06-16T13:36:00"
+}

@@ -1,0 +1,51 @@
+﻿{
+    "objective":  "ENGREMIAT_DUAL_PC_DEVELOPMENT_WORKFLOW_009B",
+    "stage":  "E03",
+    "schema_id":  "LOCAL-REPO-READINESS-SCHEMA-009B-E03",
+    "version":  "1.0.0",
+    "required_fields":  [
+                            "machine_name",
+                            "cwd",
+                            "git_root",
+                            "branch",
+                            "head",
+                            "dirty_status",
+                            "remote_sync",
+                            "writer_lock",
+                            "safe_to_write"
+                        ],
+    "field_contract":  {
+                           "machine_name":  "PC que ejecuta readiness",
+                           "cwd":  "directorio actual",
+                           "git_root":  "raiz git detectada o null",
+                           "branch":  "rama actual o null",
+                           "head":  "commit corto o null",
+                           "dirty_status":  "git status --short read-only",
+                           "remote_sync":  "UNKNOWN en este bloque; no fetch",
+                           "writer_lock":  "single_active_writer contract",
+                           "safe_to_write":  "true solo si repo git detectado y lock no conflictivo"
+                       },
+    "read_only_git_commands_allowed":  [
+                                           "git rev-parse --show-toplevel",
+                                           "git branch --show-current",
+                                           "git rev-parse --short HEAD",
+                                           "git status --short"
+                                       ],
+    "forbidden_git_commands":  [
+                                   "git fetch",
+                                   "git pull",
+                                   "git push",
+                                   "git merge",
+                                   "git rebase",
+                                   "git commit",
+                                   "git add",
+                                   "git reset --hard"
+                               ],
+    "safety":  {
+                   "git_read_only":  true,
+                   "git_write":  false,
+                   "git_remote_auto":  false,
+                   "main_pc_touched":  false,
+                   "remote_execution":  false
+               }
+}

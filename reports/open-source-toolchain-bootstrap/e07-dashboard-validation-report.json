@@ -1,0 +1,47 @@
+﻿{
+    "objective_id":  "ENGREMIAT_OPEN_SOURCE_TOOLCHAIN_BOOTSTRAP_003",
+    "stage":  "E07",
+    "status":  "E07_VALIDATED_TOOLCHAIN_OPERABLE",
+    "artifacts":  [
+                      {
+                          "path":  "tools/toolchain/Invoke-ToolchainCommand.ps1",
+                          "sha256":  "1d8e9b7378130d0e749abc19517bc69cdd6c75f3056efc69a41b365db5d987df",
+                          "type":  "PowerShell",
+                          "step":  "P07.1.1"
+                      },
+                      {
+                          "path":  "tools/toolchain/tool.ps1",
+                          "sha256":  "8a0632b6f4f8772c83dd98ec0d1d2ad0118462e6114e837fe508920ed07e4dbc",
+                          "type":  "PowerShell",
+                          "step":  "P07.1.2"
+                      },
+                      {
+                          "path":  "tools/toolchain/Build-ToolchainDashboard.ps1",
+                          "sha256":  "ca60e88cfec0ce4225a297e52e5633da078a03a63f5f106eda0f56eff18dffc0",
+                          "type":  "PowerShell",
+                          "step":  "P07.2.1"
+                      },
+                      {
+                          "path":  "dashboard/open-source-toolchain/index.html",
+                          "sha256":  "a48c6fead53475c49773be10996cbbb7c5b4718581787d77e799071bf5eacd0d",
+                          "type":  "HTML",
+                          "step":  "P07.2.2"
+                      },
+                      {
+                          "path":  "tools/toolchain/Test-ToolchainDashboard.ps1",
+                          "sha256":  "14c200811750b77a82e550ea0cd4710bad360d66376ff7fcf576444d7a0c4edb",
+                          "type":  "PowerShell",
+                          "step":  "P07.3.1"
+                      },
+                      {
+                          "path":  "reports/open-source-toolchain-bootstrap/e07-dashboard-smoke-report.json",
+                          "sha256":  "551c56d7a6677b6e328639cd4e4614d2a242fd14e27e99d4b5544f1af2e07cae",
+                          "type":  "JSON",
+                          "step":  "P07.3.2"
+                      }
+                  ],
+    "score":  100,
+    "decision":  "GO",
+    "next":  "E08_CIERRE_MEMORIA_Y_SIGUIENTE_CONEXION",
+    "created_at":  "2026-06-16T12:04:16"
+}

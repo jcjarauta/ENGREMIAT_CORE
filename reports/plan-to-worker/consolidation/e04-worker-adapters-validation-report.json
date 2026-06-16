@@ -1,0 +1,65 @@
+﻿{
+    "objective_id":  "ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002",
+    "stage":  "E04",
+    "status":  "E04_VALIDATED",
+    "artifacts":  [
+                      {
+                          "path":  "data/plan-to-worker/adapters/common/worker-request.schema.json",
+                          "sha256":  "50b9e03509b54502da6a7e67f5773bd7abb2ca25d49f3a322af5b67a74cefd4e",
+                          "type":  "JSON",
+                          "step":  "P04.1.1"
+                      },
+                      {
+                          "path":  "data/plan-to-worker/adapters/common/worker-response.schema.json",
+                          "sha256":  "211a2de39766d007f5d9bfda22c95b42013c624f8d167ed4a6d4d4228351cc2b",
+                          "type":  "JSON",
+                          "step":  "P04.1.2"
+                      },
+                      {
+                          "path":  "tools/plan-to-worker/Build-WorkerAdapterRequests.ps1",
+                          "sha256":  "53329d45a72fcbee3ec622bee1be2b435aef3de586e8d4f5a21b3a028ab0ad3c",
+                          "type":  "PowerShell",
+                          "step":  "P04.2.1"
+                      },
+                      {
+                          "path":  "data/plan-to-worker/adapters/cline/request.json",
+                          "sha256":  "f8c65ef85669bced1384a8d06b6d31bd9f312786bc64b4328dc550a7869ec23c",
+                          "type":  "JSON",
+                          "step":  "P04.2.2"
+                      },
+                      {
+                          "path":  "data/plan-to-worker/adapters/ollama/request.json",
+                          "sha256":  "7bd7a0605b373b51a6e94cc8cf82b48629bc9014c0c89bd8b822204466249dc1",
+                          "type":  "JSON",
+                          "step":  "P04.2.2"
+                      },
+                      {
+                          "path":  "data/plan-to-worker/adapters/openclaw/request.json",
+                          "sha256":  "9891ba4f81cefe0ba69dc12114dfb88571555610e2c353e36395b5dfc588da26",
+                          "type":  "JSON",
+                          "step":  "P04.2.2"
+                      },
+                      {
+                          "path":  "data/plan-to-worker/adapters/generic/request.json",
+                          "sha256":  "d9502fe45e2c1a8f460cc3598310e68b8a14c15f7a2e5303fc582bcc35f99ec5",
+                          "type":  "JSON",
+                          "step":  "P04.2.2"
+                      },
+                      {
+                          "path":  "tools/plan-to-worker/Test-WorkerAdapters.ps1",
+                          "sha256":  "beb00684541414ec0c035128721aa3429255b68718461756ecc809d67ca02f55",
+                          "type":  "PowerShell",
+                          "step":  "P04.3.1"
+                      },
+                      {
+                          "path":  "reports/plan-to-worker/consolidation/e04-worker-adapters-smoke-report.json",
+                          "sha256":  "670ba524574bd538c8faee7a85299ab38a7b1a9b8eee8d3da5c9d7e8580c901c",
+                          "type":  "JSON",
+                          "step":  "P04.3.2"
+                      }
+                  ],
+    "score":  100,
+    "decision":  "GO",
+    "next":  "E05_SALIDA_CONSUMIBLE_POR_ENGREMIAT",
+    "created_at":  "2026-06-16T11:42:35"
+}

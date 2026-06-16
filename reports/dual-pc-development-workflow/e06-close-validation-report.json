@@ -1,0 +1,27 @@
+﻿{
+    "objective":  "ENGREMIAT_DUAL_PC_DEVELOPMENT_WORKFLOW_009B",
+    "stage":  "E06",
+    "blocks":  "B06.1-B06.3",
+    "steps":  6,
+    "readiness_rules":  "data/dual-pc-development-workflow/dual-pc-readiness-rules.json",
+    "readiness_report":  "reports/dual-pc-development-workflow/e06-dual-pc-readiness-report.json",
+    "manifest":  "data/dual-pc-development-workflow/dual-pc-development-workflow-manifest.json",
+    "close_report":  "docs/DUAL_PC_DEVELOPMENT_WORKFLOW_CLOSE_REPORT.md",
+    "next_objective":  "docs/NEXT_OBJECTIVE_MAIN_PC_LINKING_OR_CURRENT_PC_PREP.md",
+    "missing_artifacts":  [
+                              "data/dual-pc-development-workflow/dual-pc-readiness-rules.json"
+                          ],
+    "current_pc_ready":  true,
+    "main_pc_required_later":  true,
+    "workflow_ready":  true,
+    "writer_conflict":  false,
+    "main_pc_touched":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "git_remote_auto":  false,
+    "auto_apply":  false,
+    "shared_repo_edit":  false,
+    "readiness":  70,
+    "decision":  "NO_GO_REPAIR",
+    "next":  "REPAIR_MISSING_ARTIFACTS_OR_CONFLICTS"
+}

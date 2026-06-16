@@ -1,0 +1,584 @@
+﻿{
+    "schema":  "prompt-context.v1",
+    "objective_id":  "ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001",
+    "stage_id":  "E03",
+    "active_objective":  "ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001",
+    "active_stage":  "E02",
+    "active_step":  "P02.3.2",
+    "next_step":  {
+                      "objective_id":  "ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001",
+                      "stage_id":  "E02",
+                      "stage_name":  "Lector de plan de desarrollo",
+                      "stage_description":  "Leer el plan establecido y convertirlo en pasos operativos locales.",
+                      "stage_deliverable":  "Plan legible por máquina.",
+                      "block_id":  "B02.1",
+                      "block_name":  "Importación de plan",
+                      "block_description":  "Preparar entrada desde TSV CSV JSON o XLSX exportado.",
+                      "block_deliverable":  "Importador creado.",
+                      "step_id":  "P02.1.1",
+                      "step_name":  "Crear Import-DevelopmentPlan",
+                      "step_description":  "Crear script que lea plan TSV CSV y lo normalice a JSON.",
+                      "step_deliverable":  "Importador creado.",
+                      "artifact":  "tools/prompt-factory/Import-DevelopmentPlan.ps1",
+                      "dependency":  "P01.3.2",
+                      "format":  "PowerShell",
+                      "risk":  "LOW",
+                      "automatable":  "SI",
+                      "priority":  "Alta",
+                      "status":  "PENDING",
+                      "notes":  "Primera fuente será TSV de Sheets.",
+                      "line_number":  1,
+                      "source_path":  "data/prompt-factory/input/development-plan.sample.tsv"
+                  },
+    "last_ok":  [
+                    {
+                        "event_id":  "EVT_ENGREMIAT_DEV_VISUAL_MEMORY_OPERATIVE_002_E06_a62404fb573f919d9b55ae2d3a8496dc07b2a0b44835f45733460861f7255e26",
+                        "objective_id":  "ENGREMIAT_DEV_VISUAL_MEMORY_OPERATIVE_002",
+                        "stage_id":  "E06",
+                        "block_id":  "",
+                        "step_id":  "",
+                        "status":  "OK",
+                        "source_path":  "reports/dev-visual-memory-operative/e06-operative-close-handoff/visual-memory-operative-readiness-report.json",
+                        "evidence_sha256":  "a62404fb573f919d9b55ae2d3a8496dc07b2a0b44835f45733460861f7255e26",
+                        "artifact":  "reports/dev-visual-memory-operative/e06-operative-close-handoff/visual-memory-operative-readiness-report.json",
+                        "risk":  "LOW",
+                        "next":  "ENGREMIAT_CORE_MVP_001",
+                        "created_at":  "2026-06-16T10:38:11",
+                        "metadata":  {
+                                         "source_id":  "reports",
+                                         "kind":  "reports",
+                                         "bytes":  3401,
+                                         "last_write":  "2026-06-16T10:20:15"
+                                     }
+                    },
+                    {
+                        "event_id":  "EVT_ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001_E01_58eda8f5baa0dc2a3f7b8e55ebe4446857091ce1fbc6d5f5731237dd1ed9666b",
+                        "objective_id":  "ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001",
+                        "stage_id":  "E01",
+                        "block_id":  "",
+                        "step_id":  "",
+                        "status":  "OK",
+                        "source_path":  "reports/prompt-factory/e01-modelo-prompt-factory/prompt-factory-e01-model-validation-report.json",
+                        "evidence_sha256":  "58eda8f5baa0dc2a3f7b8e55ebe4446857091ce1fbc6d5f5731237dd1ed9666b",
+                        "artifact":  "reports/prompt-factory/e01-modelo-prompt-factory/prompt-factory-e01-model-validation-report.json",
+                        "risk":  "LOW",
+                        "next":  "E02_LECTOR_DE_PLAN_DE_DESARROLLO",
+                        "created_at":  "2026-06-16T10:38:11",
+                        "metadata":  {
+                                         "source_id":  "reports",
+                                         "kind":  "reports",
+                                         "bytes":  1201,
+                                         "last_write":  "2026-06-16T10:34:27"
+                                     }
+                    },
+                    {
+                        "event_id":  "EVT_ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001_E01_39fc54e3e572b4904ef0b3cbbeeac7da1c94c0f3fc5c7eb9ebc2b2c0a243afe5",
+                        "objective_id":  "ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001",
+                        "stage_id":  "E01",
+                        "block_id":  "",
+                        "step_id":  "",
+                        "status":  "OK",
+                        "source_path":  "reports/prompt-factory/e01-modelo-prompt-factory/prompt-factory-model-smoke-report.json",
+                        "evidence_sha256":  "39fc54e3e572b4904ef0b3cbbeeac7da1c94c0f3fc5c7eb9ebc2b2c0a243afe5",
+                        "artifact":  "reports/prompt-factory/e01-modelo-prompt-factory/prompt-factory-model-smoke-report.json",
+                        "risk":  "LOW",
+                        "next":  "E02_LECTOR_DE_PLAN_DE_DESARROLLO",
+                        "created_at":  "2026-06-16T10:38:11",
+                        "metadata":  {
+                                         "source_id":  "reports",
+                                         "kind":  "reports",
+                                         "bytes":  3521,
+                                         "last_write":  "2026-06-16T10:34:27"
+                                     }
+                    },
+                    {
+                        "event_id":  "EVT_ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001_E02_5fa5098e167afebf40a3ab4299de1eaa99aa7c93b3d4d2e964e42564aeb66f57",
+                        "objective_id":  "ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001",
+                        "stage_id":  "E02",
+                        "block_id":  "",
+                        "step_id":  "",
+                        "status":  "OK",
+                        "source_path":  "reports/prompt-factory/e02-lector-plan-desarrollo/development-plan-reader-smoke-report.json",
+                        "evidence_sha256":  "5fa5098e167afebf40a3ab4299de1eaa99aa7c93b3d4d2e964e42564aeb66f57",
+                        "artifact":  "reports/prompt-factory/e02-lector-plan-desarrollo/development-plan-reader-smoke-report.json",
+                        "risk":  "LOW",
+                        "next":  "E03_GENERADOR_PROMPT_NEXT",
+                        "created_at":  "2026-06-16T10:38:11",
+                        "metadata":  {
+                                         "source_id":  "reports",
+                                         "kind":  "reports",
+                                         "bytes":  2371,
+                                         "last_write":  "2026-06-16T10:38:05"
+                                     }
+                    },
+                    {
+                        "event_id":  "EVT_ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001_E02_8b1382565e0ee8cc67a9d1f22154d9478c18fc534914b7dddfc18a9f4522a56f",
+                        "objective_id":  "ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001",
+                        "stage_id":  "E02",
+                        "block_id":  "",
+                        "step_id":  "",
+                        "status":  "OK",
+                        "source_path":  "reports/prompt-factory/e02-lector-plan-desarrollo/prompt-factory-e02-plan-reader-validation-report.json",
+                        "evidence_sha256":  "8b1382565e0ee8cc67a9d1f22154d9478c18fc534914b7dddfc18a9f4522a56f",
+                        "artifact":  "reports/prompt-factory/e02-lector-plan-desarrollo/prompt-factory-e02-plan-reader-validation-report.json",
+                        "risk":  "LOW",
+                        "next":  "E03_GENERADOR_PROMPT_NEXT",
+                        "created_at":  "2026-06-16T10:38:11",
+                        "metadata":  {
+                                         "source_id":  "reports",
+                                         "kind":  "reports",
+                                         "bytes":  1199,
+                                         "last_write":  "2026-06-16T10:38:05"
+                                     }
+                    }
+                ],
+    "last_issue":  [
+
+                   ],
+    "artifacts":  [
+                      {
+                          "artifact_id":  "ART-VM-E02-P0231-001",
+                          "objective_id":  "ENGREMIAT_DEV_VISUAL_MEMORY_001",
+                          "stage_id":  "E02",
+                          "block_id":  "B02.3",
+                          "step_id":  "P02.3.1",
+                          "artifact_type":  "tool",
+                          "name":  "Import-RoadmapTsv.ps1",
+                          "path":  "tools/memory/Import-RoadmapTsv.ps1",
+                          "format":  "PowerShell",
+                          "created_at":  "2026-06-16T09:55:00",
+                          "sha256":  "8bf043936b3a8e813a8b6de3e45d82f003cb1b4ccc659aeef9918a139dd72a48",
+                          "status":  "ACTIVE",
+                          "description":  "Importa roadmap TSV desde Sheets a notas Markdown.",
+                          "tags":  [
+                                       "visual-memory",
+                                       "templates",
+                                       "capture",
+                                       "local-first"
+                                   ]
+                      },
+                      {
+                          "artifact_id":  "ART-VMO-E04-P0412-001",
+                          "objective_id":  "ENGREMIAT_DEV_VISUAL_MEMORY_OPERATIVE_002",
+                          "stage_id":  "E04",
+                          "block_id":  "B04.1",
+                          "step_id":  "P04.1.2",
+                          "artifact_type":  "tool",
+                          "name":  "Invoke-VisualMemoryCommand.ps1",
+                          "path":  "tools/memory/Invoke-VisualMemoryCommand.ps1",
+                          "format":  "PowerShell",
+                          "created_at":  "2026-06-16T10:14:19",
+                          "sha256":  "6fc77e48096ef557a59b62c19e56512fb3c8e754e13028ddd404988023fcdf93",
+                          "status":  "ACTIVE",
+                          "description":  "Dispatcher de comandos visual memory.",
+                          "tags":  [
+                                       "visual-memory-operative",
+                                       "command-hub",
+                                       "human-flow",
+                                       "local-first"
+                                   ]
+                      },
+                      {
+                          "artifact_id":  "ART-VMO-E05-P0522-001",
+                          "objective_id":  "ENGREMIAT_DEV_VISUAL_MEMORY_OPERATIVE_002",
+                          "stage_id":  "E05",
+                          "block_id":  "B05.2",
+                          "step_id":  "P05.2.2",
+                          "artifact_type":  "tool",
+                          "name":  "MemoryGraphAdapter.ps1",
+                          "path":  "tools/memory/MemoryGraphAdapter.ps1",
+                          "format":  "PowerShell",
+                          "created_at":  "2026-06-16T10:15:41",
+                          "sha256":  "f51c4dd5d83a11387de9681a61d07eaf7608c01099e0af2510705955abfc9131",
+                          "status":  "ACTIVE",
+                          "description":  "Adapter local queryable con ingest real bloqueado.",
+                          "tags":  [
+                                       "visual-memory-operative",
+                                       "queryable-graph",
+                                       "jsonl",
+                                       "local-first"
+                                   ]
+                      },
+                      {
+                          "artifact_id":  "ART-VMO-E05-P0511-001",
+                          "objective_id":  "ENGREMIAT_DEV_VISUAL_MEMORY_OPERATIVE_002",
+                          "stage_id":  "E05",
+                          "block_id":  "B05.1",
+                          "step_id":  "P05.1.1",
+                          "artifact_type":  "tool",
+                          "name":  "Query-MemoryGraph.ps1",
+                          "path":  "tools/memory/Query-MemoryGraph.ps1",
+                          "format":  "PowerShell",
+                          "created_at":  "2026-06-16T10:15:41",
+                          "sha256":  "e7f1689f407c4ed8c08d103fb1044fe553c76d349965480baface8b08a5acd11",
+                          "status":  "ACTIVE",
+                          "description":  "Herramienta de consulta local sobre JSONL.",
+                          "tags":  [
+                                       "visual-memory-operative",
+                                       "queryable-graph",
+                                       "jsonl",
+                                       "local-first"
+                                   ]
+                      },
+                      {
+                          "artifact_id":  "ART-VMO-E01-P0112-001",
+                          "objective_id":  "ENGREMIAT_DEV_VISUAL_MEMORY_OPERATIVE_002",
+                          "stage_id":  "E01",
+                          "block_id":  "B01.1",
+                          "step_id":  "P01.1.2",
+                          "artifact_type":  "tool",
+                          "name":  "Scan-EngremiatEvidence.ps1",
+                          "path":  "tools/memory/Scan-EngremiatEvidence.ps1",
+                          "format":  "PowerShell",
+                          "created_at":  "2026-06-16T10:09:23",
+                          "sha256":  "39ef59a655c6e5853917d6ed3a05bf2e2ed92fbba149d57bf288c920a9f82597",
+                          "status":  "ACTIVE",
+                          "description":  "Scanner readonly de evidencias locales.",
+                          "tags":  [
+                                       "visual-memory-operative",
+                                       "live-sync",
+                                       "evidence",
+                                       "local-first"
+                                   ]
+                      },
+                      {
+                          "artifact_id":  "ART-VMO-E01-P0131-001",
+                          "objective_id":  "ENGREMIAT_DEV_VISUAL_MEMORY_OPERATIVE_002",
+                          "stage_id":  "E01",
+                          "block_id":  "B01.3",
+                          "step_id":  "P01.3.1",
+                          "artifact_type":  "tool",
+                          "name":  "Sync-VisualMemory.ps1",
+                          "path":  "tools/memory/Sync-VisualMemory.ps1",
+                          "format":  "PowerShell",
+                          "created_at":  "2026-06-16T10:09:23",
+                          "sha256":  "3a2a4813f6effe631b46ba9a8bc004dbaa4af8a7b1d25b2d8d8480b3fb41cc05",
+                          "status":  "ACTIVE",
+                          "description":  "Sincroniza memoria Markdown desde eventos.",
+                          "tags":  [
+                                       "visual-memory-operative",
+                                       "live-sync",
+                                       "evidence",
+                                       "local-first"
+                                   ]
+                      },
+                      {
+                          "artifact_id":  "ART-VM-E02-P0232-001",
+                          "objective_id":  "ENGREMIAT_DEV_VISUAL_MEMORY_001",
+                          "stage_id":  "E02",
+                          "block_id":  "B02.3",
+                          "step_id":  "P02.3.2",
+                          "artifact_type":  "tool",
+                          "name":  "Test-MemoryIntegrity.ps1",
+                          "path":  "tools/memory/Test-MemoryIntegrity.ps1",
+                          "format":  "PowerShell",
+                          "created_at":  "2026-06-16T09:55:00",
+                          "sha256":  "65adde8ba51e54a2ae6637f6e56c1c6f46ea76a428986168894b6e6a1e2595eb",
+                          "status":  "ACTIVE",
+                          "description":  "Valida integridad minima de memoria visual.",
+                          "tags":  [
+                                       "visual-memory",
+                                       "templates",
+                                       "capture",
+                                       "local-first"
+                                   ]
+                      },
+                      {
+                          "artifact_id":  "ART-VMO-E03-P0331-001",
+                          "objective_id":  "ENGREMIAT_DEV_VISUAL_MEMORY_OPERATIVE_002",
+                          "stage_id":  "E03",
+                          "block_id":  "B03.3",
+                          "step_id":  "P03.3.1",
+                          "artifact_type":  "tool",
+                          "name":  "Test-VisualDashboard.ps1",
+                          "path":  "tools/memory/Test-VisualDashboard.ps1",
+                          "format":  "PowerShell",
+                          "created_at":  "2026-06-16T10:12:47",
+                          "sha256":  "97d354931705f7f68f24ee6514775df6455884993bb3a5b6e8e42177fb5f52f4",
+                          "status":  "ACTIVE",
+                          "description":  "Valida dashboard operativo.",
+                          "tags":  [
+                                       "visual-memory-operative",
+                                       "dashboard",
+                                       "html",
+                                       "local-first"
+                                   ]
+                      },
+                      {
+                          "artifact_id":  "ART-VMO-E02-P0231-001",
+                          "objective_id":  "ENGREMIAT_DEV_VISUAL_MEMORY_OPERATIVE_002",
+                          "stage_id":  "E02",
+                          "block_id":  "B02.3",
+                          "step_id":  "P02.3.1",
+                          "artifact_type":  "tool",
+                          "name":  "Test-VisualNavigation.ps1",
+                          "path":  "tools/memory/Test-VisualNavigation.ps1",
+                          "format":  "PowerShell",
+                          "created_at":  "2026-06-16T10:11:27",
+                          "sha256":  "5c6a57e61a437cf9b491cb61151265989d8678e310bbd9e49394d16ac861161f",
+                          "status":  "ACTIVE",
+                          "description":  "Valida navegacion Markdown y mapas minimos.",
+                          "tags":  [
+                                       "visual-memory-operative",
+                                       "live-maps",
+                                       "navigation",
+                                       "logseq"
+                                   ]
+                      },
+                      {
+                          "artifact_id":  "ART-VMO-E02-P0211-001",
+                          "objective_id":  "ENGREMIAT_DEV_VISUAL_MEMORY_OPERATIVE_002",
+                          "stage_id":  "E02",
+                          "block_id":  "B02.1",
+                          "step_id":  "P02.1.1",
+                          "artifact_type":  "tool",
+                          "name":  "Update-LogseqHome.ps1",
+                          "path":  "tools/memory/Update-LogseqHome.ps1",
+                          "format":  "PowerShell",
+                          "created_at":  "2026-06-16T10:11:27",
+                          "sha256":  "39026c954df4133e339d7493d93f499ebcd0196a797ec5f94e40bdfa5fb9abd6",
+                          "status":  "ACTIVE",
+                          "description":  "Actualiza Home viva de Logseq desde eventos reales.",
+                          "tags":  [
+                                       "visual-memory-operative",
+                                       "live-maps",
+                                       "navigation",
+                                       "logseq"
+                                   ]
+                      },
+                      {
+                          "artifact_id":  "ART-VMO-E02-P0221-001",
+                          "objective_id":  "ENGREMIAT_DEV_VISUAL_MEMORY_OPERATIVE_002",
+                          "stage_id":  "E02",
+                          "block_id":  "B02.2",
+                          "step_id":  "P02.2.1",
+                          "artifact_type":  "tool",
+                          "name":  "Update-VisualMaps.ps1",
+                          "path":  "tools/memory/Update-VisualMaps.ps1",
+                          "format":  "PowerShell",
+                          "created_at":  "2026-06-16T10:11:27",
+                          "sha256":  "8b2bba305be232da28d5436679ac67127ada81f5ac5d1c828e87c962c0cef022",
+                          "status":  "ACTIVE",
+                          "description":  "Regenera mapas visuales desde eventos, gates y workers.",
+                          "tags":  [
+                                       "visual-memory-operative",
+                                       "live-maps",
+                                       "navigation",
+                                       "logseq"
+                                   ]
+                      },
+                      {
+                          "artifact_id":  "ART-VM-E02-P0221-001",
+                          "objective_id":  "ENGREMIAT_DEV_VISUAL_MEMORY_001",
+                          "stage_id":  "E02",
+                          "block_id":  "B02.2",
+                          "step_id":  "P02.2.1",
+                          "artifact_type":  "tool",
+                          "name":  "Write-MemoryEntry.ps1",
+                          "path":  "tools/memory/Write-MemoryEntry.ps1",
+                          "format":  "PowerShell",
+                          "created_at":  "2026-06-16T09:55:00",
+                          "sha256":  "c1073860a8ec37317e4d14b3269fed5bd072cd8d24df7bab8a961216c3364abb",
+                          "status":  "ACTIVE",
+                          "description":  "Helper local para crear notas Markdown normalizadas.",
+                          "tags":  [
+                                       "visual-memory",
+                                       "templates",
+                                       "capture",
+                                       "local-first"
+                                   ]
+                      },
+                      {
+                          "artifact_id":  "ART-PF-E01-P0131-001",
+                          "objective_id":  "ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001",
+                          "stage_id":  "E01",
+                          "block_id":  "B01.3",
+                          "step_id":  "P01.3.1",
+                          "artifact_type":  "tool",
+                          "name":  "Test-PromptFactoryModel.ps1",
+                          "path":  "tools/prompt-factory/Test-PromptFactoryModel.ps1",
+                          "format":  "PowerShell",
+                          "created_at":  "2026-06-16T10:34:27",
+                          "sha256":  "da8f759bec0882d73d0227a768345922383d87c7db480974fd3ec06b45db0cd8",
+                          "status":  "ACTIVE",
+                          "description":  "Validador local del modelo Prompt Factory.",
+                          "tags":  [
+                                       "prompt-factory",
+                                       "repair",
+                                       "model",
+                                       "cline",
+                                       "ollama"
+                                   ]
+                      },
+                      {
+                          "artifact_id":  "ART-PF-E02-REPORT-001",
+                          "objective_id":  "ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001",
+                          "stage_id":  "E02",
+                          "block_id":  "B02.3",
+                          "step_id":  "P02.3.2",
+                          "artifact_type":  "report",
+                          "name":  "prompt-factory-e02-plan-reader-validation-report.json",
+                          "path":  "reports/prompt-factory/e02-lector-plan-desarrollo/prompt-factory-e02-plan-reader-validation-report.json",
+                          "format":  "JSON",
+                          "created_at":  "2026-06-16T10:38:05",
+                          "sha256":  "8b1382565e0ee8cc67a9d1f22154d9478c18fc534914b7dddfc18a9f4522a56f",
+                          "status":  "ACTIVE",
+                          "description":  "Reporte cierre E02 Prompt Factory.",
+                          "tags":  [
+                                       "prompt-factory",
+                                       "plan-reader",
+                                       "repair",
+                                       "local-first"
+                                   ]
+                      },
+                      {
+                          "artifact_id":  "ART-PF-E02-P0232-001",
+                          "objective_id":  "ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001",
+                          "stage_id":  "E02",
+                          "block_id":  "B02.3",
+                          "step_id":  "P02.3.2",
+                          "artifact_type":  "report",
+                          "name":  "development-plan-reader-smoke-report.json",
+                          "path":  "reports/prompt-factory/e02-lector-plan-desarrollo/development-plan-reader-smoke-report.json",
+                          "format":  "JSON",
+                          "created_at":  "2026-06-16T10:38:05",
+                          "sha256":  "5fa5098e167afebf40a3ab4299de1eaa99aa7c93b3d4d2e964e42564aeb66f57",
+                          "status":  "ACTIVE",
+                          "description":  "Smoke lector de plan.",
+                          "tags":  [
+                                       "prompt-factory",
+                                       "plan-reader",
+                                       "repair",
+                                       "local-first"
+                                   ]
+                      },
+                      {
+                          "artifact_id":  "ART-PF-E02-P0211-001",
+                          "objective_id":  "ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001",
+                          "stage_id":  "E02",
+                          "block_id":  "B02.1",
+                          "step_id":  "P02.1.1",
+                          "artifact_type":  "tool",
+                          "name":  "Import-DevelopmentPlan.ps1",
+                          "path":  "tools/prompt-factory/Import-DevelopmentPlan.ps1",
+                          "format":  "PowerShell",
+                          "created_at":  "2026-06-16T10:38:05",
+                          "sha256":  "898f5a9e0af9c499551ba4b045ee8f3bf61a46e2f551c048ce5bf87c16d74dab",
+                          "status":  "ACTIVE",
+                          "description":  "Importa plan TSV/CSV normalizado a JSON.",
+                          "tags":  [
+                                       "prompt-factory",
+                                       "plan-reader",
+                                       "repair",
+                                       "local-first"
+                                   ]
+                      },
+                      {
+                          "artifact_id":  "ART-PF-E02-P0231-001",
+                          "objective_id":  "ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001",
+                          "stage_id":  "E02",
+                          "block_id":  "B02.3",
+                          "step_id":  "P02.3.1",
+                          "artifact_type":  "tool",
+                          "name":  "Test-DevelopmentPlanReader.ps1",
+                          "path":  "tools/prompt-factory/Test-DevelopmentPlanReader.ps1",
+                          "format":  "PowerShell",
+                          "created_at":  "2026-06-16T10:38:05",
+                          "sha256":  "a7db85a62a52e16bf5fc37e33d01ef7b44d55c7ecc3a79ff81cfe193bba30cd8",
+                          "status":  "ACTIVE",
+                          "description":  "Validador de importacion y next-step.",
+                          "tags":  [
+                                       "prompt-factory",
+                                       "plan-reader",
+                                       "repair",
+                                       "local-first"
+                                   ]
+                      },
+                      {
+                          "artifact_id":  "ART-PF-E02-P0212-001",
+                          "objective_id":  "ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001",
+                          "stage_id":  "E02",
+                          "block_id":  "B02.1",
+                          "step_id":  "P02.1.2",
+                          "artifact_type":  "data",
+                          "name":  "plan-normalized.json",
+                          "path":  "data/prompt-factory/out/plan-normalized.json",
+                          "format":  "JSON",
+                          "created_at":  "2026-06-16T10:38:05",
+                          "sha256":  "5a618897a8f2746853ea0b8d74027078d55ccd732a3499d43010a809765abd45",
+                          "status":  "ACTIVE",
+                          "description":  "Plan de desarrollo normalizado.",
+                          "tags":  [
+                                       "prompt-factory",
+                                       "plan-reader",
+                                       "repair",
+                                       "local-first"
+                                   ]
+                      },
+                      {
+                          "artifact_id":  "ART-PF-E02-P0221-001",
+                          "objective_id":  "ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001",
+                          "stage_id":  "E02",
+                          "block_id":  "B02.2",
+                          "step_id":  "P02.2.1",
+                          "artifact_type":  "tool",
+                          "name":  "Select-NextPlanStep.ps1",
+                          "path":  "tools/prompt-factory/Select-NextPlanStep.ps1",
+                          "format":  "PowerShell",
+                          "created_at":  "2026-06-16T10:38:05",
+                          "sha256":  "4ca16f547d7f114634d714bb59038a2258a39a9318e37177caded0170a05193a",
+                          "status":  "ACTIVE",
+                          "description":  "Selecciona siguiente paso ejecutable.",
+                          "tags":  [
+                                       "prompt-factory",
+                                       "plan-reader",
+                                       "repair",
+                                       "local-first"
+                                   ]
+                      },
+                      {
+                          "artifact_id":  "ART-PF-E02-P0222-001",
+                          "objective_id":  "ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001",
+                          "stage_id":  "E02",
+                          "block_id":  "B02.2",
+                          "step_id":  "P02.2.2",
+                          "artifact_type":  "data",
+                          "name":  "next-step.json",
+                          "path":  "data/prompt-factory/out/next-step.json",
+                          "format":  "JSON",
+                          "created_at":  "2026-06-16T10:38:05",
+                          "sha256":  "884c59cc506e402e507f758329b1f1cbec3bff809caa9ceadafb2f9239a7172a",
+                          "status":  "ACTIVE",
+                          "description":  "Siguiente paso seleccionado.",
+                          "tags":  [
+                                       "prompt-factory",
+                                       "plan-reader",
+                                       "repair",
+                                       "local-first"
+                                   ]
+                      }
+                  ],
+    "visual_memory":  {
+                          "dashboard":  "ENGREMIAT_MEMORY/dashboard/memory/index.html",
+                          "memory_status_command":  ".\\eng.ps1 memory-status",
+                          "memory_sync_command":  ".\\eng.ps1 memory-sync"
+                      },
+    "security":  {
+                     "external_network":  false,
+                     "git_write":  false,
+                     "commit":  false,
+                     "push":  false,
+                     "fetch":  false,
+                     "merge":  false,
+                     "browser":  false,
+                     "clipboard":  false,
+                     "apply_sensible":  false,
+                     "human_gate_required_for_sensitive_actions":  true
+                 },
+    "next":  {
+                 "step_id":  "P03.2.1",
+                 "action":  "Crear Build-PromptNext",
+                 "target":  "tools/prompt-factory/Build-PromptNext.ps1"
+             },
+    "generated_at":  "2026-06-16T10:40:59"
+}

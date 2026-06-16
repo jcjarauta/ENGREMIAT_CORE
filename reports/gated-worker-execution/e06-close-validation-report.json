@@ -1,0 +1,41 @@
+﻿{
+    "objective_id":  "ENGREMIAT_GATED_WORKER_EXECUTION_006",
+    "stage":  "E06",
+    "status":  "E06_GATED_WORKER_EXECUTION_CLOSED",
+    "readiness":  100,
+    "decision":  "GO_GATED_READONLY_EXECUTION_CLOSED",
+    "artifacts":  [
+                      {
+                          "path":  "tools/gated-worker-execution/Build-GatedWorkerExecutionManifest.ps1",
+                          "sha256":  "5196fce906964c54fc46276882506a6744d1493d9e3a162d21d79ed422bee6b3",
+                          "step":  "P06.1.1"
+                      },
+                      {
+                          "path":  "data/gated-worker-execution/gated-worker-execution-manifest.json",
+                          "sha256":  "02cc5e4818e47e94ad85f7fec506371d9263ab16b3214949aaa6fe429c71b218",
+                          "step":  "P06.1.2"
+                      },
+                      {
+                          "path":  "tools/gated-worker-execution/Build-GatedWorkerExecutionDashboard.ps1",
+                          "sha256":  "73d1f1b7bdf91607d1934800b206b984059c74da6ee7822b7d996b8c677ab22c",
+                          "step":  "P06.2.1"
+                      },
+                      {
+                          "path":  "dashboard/gated-worker-execution/index.html",
+                          "sha256":  "4e873e3de01af38d3c13bde95f2fa0070892d48e1ddebdb471bd4718293635d1",
+                          "step":  "P06.2.2"
+                      },
+                      {
+                          "path":  "docs/GATED_WORKER_EXECUTION_CLOSE_REPORT.md",
+                          "sha256":  "d7917b925b4f0058d8bff326542d9a2b240541dad2a7a0f9928d475c63545e55",
+                          "step":  "P06.3.1"
+                      },
+                      {
+                          "path":  "docs/NEXT_OBJECTIVE_CONTROLLED_APPLY_OR_OLLAMA_PROBE.md",
+                          "sha256":  "724f75d3ac665828ca76811d550e3ff76c08cf36fce680c79f56bc25f0b448fe",
+                          "step":  "P06.3.2"
+                      }
+                  ],
+    "next":  "NEXT_OBJECTIVE_CONTROLLED_APPLY_OR_OLLAMA_PROBE",
+    "created_at":  "2026-06-16T13:58:21"
+}

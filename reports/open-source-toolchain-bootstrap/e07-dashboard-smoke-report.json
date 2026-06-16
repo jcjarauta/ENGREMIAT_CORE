@@ -1,0 +1,53 @@
+﻿{
+    "objective_id":  "ENGREMIAT_OPEN_SOURCE_TOOLCHAIN_BOOTSTRAP_003",
+    "stage":  "E07",
+    "blocks":  [
+                   "B07.1",
+                   "B07.2",
+                   "B07.3"
+               ],
+    "steps":  [
+                  "P07.1.1",
+                  "P07.1.2",
+                  "P07.2.1",
+                  "P07.2.2",
+                  "P07.3.1",
+                  "P07.3.2"
+              ],
+    "dispatcher":  true,
+    "wrapper":  true,
+    "dashboard_builder":  true,
+    "dashboard":  true,
+    "validator":  true,
+    "installed_count":  0,
+    "missing":  [
+                    "winget",
+                    "git",
+                    "gh",
+                    "node",
+                    "npm",
+                    "ollama",
+                    "cline",
+                    "dot",
+                    "sqlite3"
+                ],
+    "commands":  [
+                     "tool-status",
+                     "tool-plan",
+                     "tool-validate",
+                     "tool-open"
+                 ],
+    "install_executed":  false,
+    "external_network":  false,
+    "git_write":  false,
+    "worker_real_execution":  false,
+    "smoke":  true,
+    "score":  100,
+    "decision":  "GO",
+    "problems":  [
+
+                 ],
+    "report":  "reports/open-source-toolchain-bootstrap/e07-dashboard-smoke-report.json",
+    "next":  "E08_CIERRE_MEMORIA_Y_SIGUIENTE_CONEXION",
+    "created_at":  "2026-06-16T12:04:16"
+}

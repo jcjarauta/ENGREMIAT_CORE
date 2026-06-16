@@ -1,0 +1,41 @@
+﻿{
+    "schema_id":  "context-snapshot.schema.v1",
+    "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+    "stage_id":  "E02",
+    "block_id":  "B02.1",
+    "required":  [
+                     "objective_id",
+                     "active_stage",
+                     "active_block",
+                     "active_step",
+                     "last_validated",
+                     "artifacts",
+                     "gates",
+                     "errors",
+                     "readiness",
+                     "next",
+                     "norms",
+                     "updated_at"
+                 ],
+    "properties":  {
+                       "objective_id":  "active objective id",
+                       "active_stage":  "active stage id",
+                       "active_block":  "active block id",
+                       "active_step":  "active step id",
+                       "last_validated":  "last validated step id",
+                       "artifacts":  "recent artifact references",
+                       "gates":  "pending gate summary",
+                       "errors":  "last/open error summary",
+                       "readiness":  "current readiness summary",
+                       "next":  "recommended next action",
+                       "norms":  "active development rules",
+                       "updated_at":  "local ISO datetime"
+                   },
+    "validation_rules":  [
+                             "required_fields_present",
+                             "next_action_present",
+                             "norms_present",
+                             "artifacts_array_present",
+                             "updated_at_present"
+                         ]
+}

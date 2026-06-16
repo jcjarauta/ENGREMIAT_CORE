@@ -1,0 +1,54 @@
+﻿{
+    "ok":  true,
+    "objective":  "ENGREMIAT_CORE_MVP_001",
+    "stage":  "E06",
+    "generated_at":  "2026-06-16T00:38:31.7699963+02:00",
+    "items":  [
+                  {
+                      "task_id":  "TASK-BUILD-EVENT-LEDGER-001",
+                      "project_id":  "PROJECT-UNKNOWN",
+                      "status":  "UNKNOWN",
+                      "related_event_types":  [
+                                                  "MATCH_PROPOSED",
+                                                  "OFFER_SENT",
+                                                  "OFFER_ACCEPTED",
+                                                  "LEASE_CREATED"
+                                              ],
+                      "last_run_id":  "",
+                      "last_worker_id":  "",
+                      "last_evidence_id":  ""
+                  },
+                  {
+                      "task_id":  "TASK-DEFINE-CONTRACTS-001",
+                      "project_id":  "PROJECT-UNKNOWN",
+                      "status":  "COMPLETED",
+                      "related_event_types":  [
+                                                  "MATCH_PROPOSED",
+                                                  "OFFER_SENT",
+                                                  "OFFER_ACCEPTED",
+                                                  "LEASE_CREATED"
+                                              ],
+                      "last_run_id":  "RUN-3CD6F21D989F",
+                      "last_worker_id":  "WORKER-MAIN-COORDINATOR",
+                      "last_evidence_id":  "EVID-AF5EBDA75753"
+                  },
+                  {
+                      "task_id":  "TASK-MATCHING-V0-001",
+                      "project_id":  "PROJECT-UNKNOWN",
+                      "status":  "UNKNOWN",
+                      "related_event_types":  [
+                                                  "MATCH_PROPOSED",
+                                                  "OFFER_SENT",
+                                                  "OFFER_ACCEPTED",
+                                                  "LEASE_CREATED"
+                                              ],
+                      "last_run_id":  "",
+                      "last_worker_id":  "",
+                      "last_evidence_id":  ""
+                  }
+              ],
+    "counters":  {
+                     "total":  3,
+                     "completed":  1
+                 }
+}

@@ -1,0 +1,78 @@
+﻿{
+    "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+    "stage_id":  "E07",
+    "block_id":  "B07.1",
+    "step_id":  "P07.1.1",
+    "status":  "ACTIVE",
+    "purpose":  "Sincronizar documentación derivada desde registros reales para evitar documentación manual desactualizada.",
+    "sources":  [
+                    {
+                        "name":  "context",
+                        "path":  "data/dev/context-snapshot.json",
+                        "required":  true
+                    },
+                    {
+                        "name":  "artifacts",
+                        "path":  "data/registry/artifact-registry.jsonl",
+                        "required":  true
+                    },
+                    {
+                        "name":  "gates",
+                        "path":  "data/gates/gate-registry.jsonl",
+                        "required":  true
+                    },
+                    {
+                        "name":  "readiness",
+                        "path":  "data/dev/readiness.json",
+                        "required":  true
+                    },
+                    {
+                        "name":  "errors",
+                        "path":  "data/errors/error-memory.jsonl",
+                        "required":  true
+                    }
+                ],
+    "targets":  [
+                    {
+                        "name":  "CURRENT_CONTEXT",
+                        "path":  "docs/CURRENT_CONTEXT.md"
+                    },
+                    {
+                        "name":  "ARTIFACT_INDEX",
+                        "path":  "docs/ARTIFACT_INDEX.md"
+                    },
+                    {
+                        "name":  "GATE_INDEX",
+                        "path":  "docs/GATE_INDEX.md"
+                    },
+                    {
+                        "name":  "READINESS",
+                        "path":  "docs/READINESS.md"
+                    },
+                    {
+                        "name":  "ERROR_PLAYBOOK",
+                        "path":  "docs/ERROR_PLAYBOOK.md"
+                    },
+                    {
+                        "name":  "DEVELOPMENT_LOG",
+                        "path":  "docs/DEVELOPMENT_LOG.md"
+                    }
+                ],
+    "rules":  [
+                  "read_sources_only",
+                  "generate_markdown_targets",
+                  "do_not_use_external_network",
+                  "do_not_modify_remote",
+                  "fail_closed_if_required_source_missing",
+                  "register_generated_docs_as_artifacts",
+                  "update_context_snapshot"
+              ],
+    "sections":  [
+                     "current_state",
+                     "recent_artifacts",
+                     "pending_gates",
+                     "readiness",
+                     "known_errors",
+                     "development_log"
+                 ]
+}

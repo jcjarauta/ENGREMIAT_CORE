@@ -1,0 +1,22 @@
+﻿$ErrorActionPreference="Stop"
+[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+$base="data/controlled-worker-adapters"
+$requestPath=Join-Path $base "cline/sample-cline-request.json"
+$responsePath=Join-Path $base "fake-worker-response.json"
+$receiptPath=Join-Path $base "receipts/sample-worker-receipt.json"
+if(!(Test-Path $requestPath)){Write-Host "NO_GO request_missing=True";exit 2}
+if(!(Test-Path $responsePath)){Write-Host "NO_GO response_missing=True";exit 2}
+if(!(Test-Path $receiptPath)){Write-Host "NO_GO receipt_missing=True";exit 2}
+$r=Get-Content $responsePath -Raw|ConvertFrom-Json
+$rc=Get-Content $receiptPath -Raw|ConvertFrom-Json
+$problems=@()
+if($r.no_execution -ne $true){$problems+="response_no_execution_not_true"}
+if($r.evidence.worker_real_execution -ne $false){$problems+="worker_real_execution_unexpected"}
+if($r.evidence.cline_launched -ne $false){$problems+="cline_launched_unexpected"}
+if($r.evidence.ollama_called -ne $false){$problems+="ollama_called_unexpected"}
+if($rc.executed -ne $false){$problems+="receipt_executed_unexpected"}
+if($rc.no_execution -ne $true){$problems+="receipt_no_execution_not_true"}
+if($rc.auto_apply -ne $false){$problems+="auto_apply_unexpected"}
+if($rc.git_write -ne $false){$problems+="git_write_unexpected"}
+if($problems.Count -gt 0){Write-Host ("NO_GO problems="+($problems -join ","));exit 2}
+Write-Host "OK worker_simulation=True request=True response=True receipt=True no_execution=True worker_real_execution=False auto_apply=False git_write=False" -ForegroundColor Green

@@ -1,0 +1,41 @@
+﻿{
+    "objective_id":  "ENGREMIAT_GATED_WORKER_EXECUTION_006",
+    "stage":  "E03",
+    "status":  "E03_CLINE_READONLY_DISPATCHER_PREPARED",
+    "readiness":  100,
+    "decision":  "GO",
+    "artifacts":  [
+                      {
+                          "path":  "data/gated-worker-execution/cline-readonly-dispatch-contract.json",
+                          "sha256":  "f838cff43be34ddf525c0fa107a71af90cc8a8eae1bddf7d6ddafd2903f16f13",
+                          "step":  "P03.1.1"
+                      },
+                      {
+                          "path":  "docs/CLINE_READONLY_DISPATCH_GUIDE.md",
+                          "sha256":  "6efe23165b08904a05ae4c2e5f04c52d8a2d3f7151992b0ea8cec44197840b5f",
+                          "step":  "P03.1.2"
+                      },
+                      {
+                          "path":  "tools/gated-worker-execution/Invoke-ClineReadonlyGated.ps1",
+                          "sha256":  "a72e841ec84591d88b732c965c25912ff47a7e47cd43a4f46536ef9bc5d8d7bc",
+                          "step":  "P03.2.1"
+                      },
+                      {
+                          "path":  "reports/gated-worker-execution/cline-dispatch-preview.json",
+                          "sha256":  "62f76e77585e16c4f86caa49ac25270f19bbe32526cd31cbfb8980abe061f761",
+                          "step":  "P03.2.2"
+                      },
+                      {
+                          "path":  "tools/gated-worker-execution/Test-ClineReadonlyDispatcher.ps1",
+                          "sha256":  "7557322ad82b519c52d422b40a6976fafd5f4234f8b97e2c5aa39350fa46e1dd",
+                          "step":  "P03.3.1"
+                      },
+                      {
+                          "path":  "reports/gated-worker-execution/e03-dispatcher-smoke-report.json",
+                          "sha256":  "83186c03b29af9106cb32e461db67099c05b65d09f71ef192dd971ac41c0977c",
+                          "step":  "P03.3.2"
+                      }
+                  ],
+    "next":  "E04_PRIMERA_EJECUCION_CLINE_READONLY",
+    "created_at":  "2026-06-16T13:49:09"
+}

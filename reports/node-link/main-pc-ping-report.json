@@ -1,0 +1,19 @@
+﻿{
+    "objective_id":  "ENGREMIAT_LOCAL_NODE_LINK_004A",
+    "stage":  "E02",
+    "repair":  true,
+    "operation":  "MAIN_PC_ENDPOINT_FIXED_PING_WARNING",
+    "endpoint_ready":  true,
+    "target":  "192.168.1.67",
+    "host":  "DESKTOP-PVRVE56",
+    "ping_tested":  true,
+    "ping_ok":  false,
+    "tcp_445_smb":  false,
+    "tcp_3389_rdp":  false,
+    "firewall_changed":  false,
+    "services_changed":  false,
+    "aggressive_scan":  false,
+    "decision":  "GO_ENDPOINT_READY_PING_BLOCKED_OR_FAILED",
+    "next":  "E03_CANAL_DE_INTERCAMBIO_LOCAL",
+    "created_at":  "2026-06-16T12:51:52"
+}

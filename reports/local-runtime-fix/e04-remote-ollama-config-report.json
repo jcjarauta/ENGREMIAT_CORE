@@ -1,0 +1,39 @@
+﻿{
+    "objective_id":  "ENGREMIAT_LOCAL_RUNTIME_FIX_004",
+    "stage":  "E04",
+    "remote_ollama_adapter":  true,
+    "old_pc_local_ollama_install":  false,
+    "model_download":  false,
+    "inference":  false,
+    "api_generate":  false,
+    "api_chat":  false,
+    "safe_probe_script":  "tools/runtime/Test-RemoteOllamaSafeProbe.ps1",
+    "config":  "data/local-runtime-fix/remote-ollama-target.local.json",
+    "adapter_request":  "data/plan-to-worker/adapters/ollama-remote/request.json",
+    "config_ready_for_probe":  false,
+    "decision":  "NO_GO_REMOTE_ENDPOINT_CONFIG_REQUIRED",
+    "next":  "SET_MAIN_PC_IP_ENABLE_PROBE_THEN_RUN_SAFE_PROBE",
+    "artifacts":  [
+                      {
+                          "path":  "data/local-runtime-fix/remote-ollama-target.example.json",
+                          "sha256":  "d08e6411db262fcf52a5eb14a254a284d94dbeefa3cbeacdb19ca7200860cd34"
+                      },
+                      {
+                          "path":  "data/local-runtime-fix/remote-ollama-target.local.json",
+                          "sha256":  "d08e6411db262fcf52a5eb14a254a284d94dbeefa3cbeacdb19ca7200860cd34"
+                      },
+                      {
+                          "path":  "data/plan-to-worker/adapters/ollama-remote/request.json",
+                          "sha256":  "012bf8a2af604006b5c0cf610f35e425a8cd7a38930c52f6ebe3d20f5ab5588b"
+                      },
+                      {
+                          "path":  "tools/runtime/Test-RemoteOllamaSafeProbe.ps1",
+                          "sha256":  "6c0bd91147090c53e167509372f095a0ca39a13634f08de55bbfbc67b2aeb262"
+                      },
+                      {
+                          "path":  "docs/REMOTE_OLLAMA_MAIN_PC_RUNTIME.md",
+                          "sha256":  "051d32aa69c68ab67a4938eeafa6b41942ceec20c2364598202046998cc6272a"
+                      }
+                  ],
+    "created_at":  "2026-06-16T12:32:34"
+}

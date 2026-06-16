@@ -1,0 +1,59 @@
+﻿{
+    "objective_id":  "ENGREMIAT_OPEN_SOURCE_TOOLCHAIN_BOOTSTRAP_003",
+    "stage":  "E04",
+    "status":  "E04_VALIDATED_SAFE_OR_GATED",
+    "artifacts":  [
+                      {
+                          "path":  "tools/toolchain/Install-ClineCliGate.ps1",
+                          "sha256":  "572c5cf9c02353ed0b64e905760fbf0bb6ee8341c3e0890edaa39a49d40580b2",
+                          "type":  "PowerShell",
+                          "step":  "P04.1.1"
+                      },
+                      {
+                          "path":  "reports/open-source-toolchain-bootstrap/cline-cli-validation-report.json",
+                          "sha256":  "6da56d2cb215459ae488e26d9b12b529ac15567319aaa171f37565469ef93af0",
+                          "type":  "JSON",
+                          "step":  "P04.1.2"
+                      },
+                      {
+                          "path":  "data/open-source-toolchain-bootstrap/cline-worker-policy.json",
+                          "sha256":  "b8f0e9b4a6b76852666980ee0281e64a66753cfdef424ab25ed28576421024d1",
+                          "type":  "JSON",
+                          "step":  "P04.2.1"
+                      },
+                      {
+                          "path":  "tools/toolchain/Test-ClineRequestAdapter.ps1",
+                          "sha256":  "be11394795af0f3ba5fc16234b8ff950ffa58c093c54ba2d4f90f093838601e0",
+                          "type":  "PowerShell",
+                          "step":  "P04.2.2"
+                      },
+                      {
+                          "path":  "reports/open-source-toolchain-bootstrap/cline-request-adapter-check-report.json",
+                          "sha256":  "d08658676dcef05b0d195e1a70dc96aa5ae57b207a5ce87591f82277c482f0a4",
+                          "type":  "JSON",
+                          "step":  "P04.2.2"
+                      },
+                      {
+                          "path":  "tools/toolchain/Test-ClineToolchain.ps1",
+                          "sha256":  "52aef78ee991523a2eb35e910738c39f848ea8b55f75ea2388edfdda6862ec1d",
+                          "type":  "PowerShell",
+                          "step":  "P04.3.1"
+                      },
+                      {
+                          "path":  "reports/open-source-toolchain-bootstrap/e04-cline-smoke-report.json",
+                          "sha256":  "a7f03354a543b5005203c408d7b115f6f789a657ebf52b934a7b6fc9a90f2b42",
+                          "type":  "JSON",
+                          "step":  "P04.3.2"
+                      },
+                      {
+                          "path":  "docs/CLINE_CLI_MANUAL_GATE.md",
+                          "sha256":  "6da0bde175331b0c801e038bcd9471dfab447dd396904fa792350e8e3b4809d0",
+                          "type":  "Markdown",
+                          "step":  "P04.3.2"
+                      }
+                  ],
+    "score":  64,
+    "decision":  "NO_GO_MANUAL_INSTALL_OR_ADAPTER_REQUIRED",
+    "next":  "REPAIR_OR_MANUAL_PREPARE_CLINE_THEN_RERUN_E04",
+    "created_at":  "2026-06-16T12:01:40"
+}

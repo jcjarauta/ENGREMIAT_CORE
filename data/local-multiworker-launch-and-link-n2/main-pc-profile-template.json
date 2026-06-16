@@ -1,0 +1,22 @@
+﻿{
+    "template_id":  "MAIN-PC-PROFILE-TEMPLATE-N2-E01",
+    "objective":  "ENGREMIAT_LOCAL_MULTIWORKER_LAUNCH_AND_LINK_009A_N2",
+    "stage":  "E01",
+    "evidence_confirmed":  false,
+    "availability":  "PENDING",
+    "computer_name":  "",
+    "user_name":  "",
+    "workspace_path":  "",
+    "os":  "",
+    "powershell_version":  "",
+    "cline_expected":  true,
+    "ollama_expected":  true,
+    "notes":  "Rellenar manualmente solo si hay evidencia directa de MAIN-PC.",
+    "safety_ack":  {
+                       "manual_readonly":  true,
+                       "no_remote_connection":  true,
+                       "no_ssh":  true,
+                       "no_git_write":  true,
+                       "no_apply":  true
+                   }
+}

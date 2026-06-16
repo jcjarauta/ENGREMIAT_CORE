@@ -1,0 +1,32 @@
+﻿{
+    "objective":  "ENGREMIAT_CLINE_REAL_PROPOSAL_NO_APPLY_008",
+    "stage":  "E06",
+    "blocks":  "B06.1-B06.3",
+    "steps":  6,
+    "decision_file":  "data/cline-real-proposal-no-apply/sample-human-proposal-decision.json",
+    "decision_validation_report":  "reports/cline-real-proposal-no-apply/e06-proposal-decision-validation-report.json",
+    "manifest_file":  "data/cline-real-proposal-no-apply/cline-real-proposal-no-apply-manifest.json",
+    "close_report":  "docs/CLINE_REAL_PROPOSAL_NO_APPLY_CLOSE_REPORT.md",
+    "next_objective_file":  "docs/NEXT_OBJECTIVE_CONTROLLED_APPLY_OR_REPAIR.md",
+    "human_decision":  "DEFER",
+    "proposal_status":  "PENDING_OUTPUT",
+    "proposal_recommended_decision":  "DEFER",
+    "task_created":  false,
+    "prompt_sent":  false,
+    "missing_artifacts":  [
+
+                          ],
+    "safe_no_apply":  true,
+    "proposal_only":  true,
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "source_write_by_worker":  false,
+    "git_write":  false,
+    "git_commit":  false,
+    "git_push":  false,
+    "remote_inference":  false,
+    "ui_automation":  false,
+    "readiness":  100,
+    "decision":  "GO_CLINE_PROPOSAL_NO_APPLY_CLOSED_DEFER_OR_REVIEW_MORE",
+    "next":  "NEXT_OBJECTIVE_WAIT_OR_RETRY_CLINE_REAL_PROPOSAL"
+}

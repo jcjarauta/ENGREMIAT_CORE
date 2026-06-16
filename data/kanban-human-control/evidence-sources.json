@@ -1,0 +1,40 @@
+﻿{
+    "objective":  "ENGREMIAT_KANBAN_HUMAN_CONTROL_SURFACE_007",
+    "stage":  "E02",
+    "canonical_source_note":  "Kanban es superficie visual; la fuente canonica sigue siendo data, reports, docs, receipts, manifests y dashboards.",
+    "roots":  [
+                  {
+                      "path":  "data",
+                      "role":  "canonical_data",
+                      "required":  true
+                  },
+                  {
+                      "path":  "reports",
+                      "role":  "validation_reports",
+                      "required":  true
+                  },
+                  {
+                      "path":  "docs",
+                      "role":  "human_guides_and_close_reports",
+                      "required":  true
+                  },
+                  {
+                      "path":  "dashboard",
+                      "role":  "human_dashboards",
+                      "required":  false
+                  },
+                  {
+                      "path":  "receipts",
+                      "role":  "execution_receipts_root_optional",
+                      "required":  false
+                  }
+              ],
+    "safety":  {
+                   "kanban_write":  false,
+                   "cline_task_created":  false,
+                   "worker_real_execution":  false,
+                   "auto_apply":  false,
+                   "git_write":  false,
+                   "remote_inference":  false
+               }
+}

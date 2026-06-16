@@ -1,0 +1,43 @@
+﻿{
+    "objective_id":  "ENGREMIAT_DEV_VISUAL_MEMORY_OPERATIVE_002",
+    "stage_id":  "E05",
+    "block_id":  "B05.3",
+    "step_id":  "P05.3.1",
+    "status":  "OK",
+    "validation_passed":  true,
+    "nodes_count":  35,
+    "edges_count":  34,
+    "queries":  [
+                    {
+                        "query":  "summary",
+                        "out":  "reports/dev-visual-memory-operative/e05-local-queryable-graph/query-summary.json",
+                        "exists":  true
+                    },
+                    {
+                        "query":  "errors",
+                        "out":  "reports/dev-visual-memory-operative/e05-local-queryable-graph/query-errors.json",
+                        "exists":  true
+                    },
+                    {
+                        "query":  "gates",
+                        "out":  "reports/dev-visual-memory-operative/e05-local-queryable-graph/query-gates.json",
+                        "exists":  true
+                    },
+                    {
+                        "query":  "artifacts",
+                        "out":  "reports/dev-visual-memory-operative/e05-local-queryable-graph/query-artifacts.json",
+                        "exists":  true
+                    },
+                    {
+                        "query":  "dependencies",
+                        "out":  "reports/dev-visual-memory-operative/e05-local-queryable-graph/query-dependencies.json",
+                        "exists":  true
+                    }
+                ],
+    "failed":  [
+
+               ],
+    "external_network":  false,
+    "database":  false,
+    "checked_at":  "2026-06-16T10:15:39"
+}

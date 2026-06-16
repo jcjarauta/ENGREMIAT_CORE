@@ -1,0 +1,68 @@
+﻿{
+    "schema_id":  "engremiat.kanban_card.v1",
+    "objective":  "ENGREMIAT_KANBAN_HUMAN_CONTROL_SURFACE_007",
+    "purpose":  "Representar objetivos, etapas, gates, workers, proposals y decisiones como tarjetas humanas sin convertir Kanban en fuente canonica.",
+    "canonical_source":  [
+                             "data",
+                             "reports",
+                             "docs",
+                             "receipts",
+                             "manifest.json"
+                         ],
+    "kanban_role":  "HUMAN_CONTROL_SURFACE_ONLY",
+    "required_fields":  [
+                            "card_id",
+                            "objective",
+                            "stage",
+                            "block",
+                            "step",
+                            "title",
+                            "description",
+                            "status",
+                            "risk",
+                            "gate",
+                            "worker",
+                            "evidence",
+                            "next_action",
+                            "safety"
+                        ],
+    "allowed_status":  [
+                           "BACKLOG",
+                           "READY",
+                           "GATED",
+                           "RUNNING",
+                           "REVIEW",
+                           "DEFERRED",
+                           "DONE",
+                           "BLOCKED"
+                       ],
+    "allowed_risk":  [
+                         "LOW",
+                         "MEDIUM",
+                         "HIGH"
+                     ],
+    "default_safety":  {
+                           "kanban_write":  false,
+                           "cline_task_created":  false,
+                           "worker_real_execution":  false,
+                           "auto_apply":  false,
+                           "git_write":  false,
+                           "remote_inference":  false
+                       },
+    "field_model":  {
+                        "card_id":  "Identificador estable de tarjeta",
+                        "objective":  "Objetivo ENGREMIAT asociado",
+                        "stage":  "Etapa del objetivo",
+                        "block":  "Bloque de trabajo",
+                        "step":  "Paso atomico",
+                        "title":  "Titulo humano breve",
+                        "description":  "Descripcion legible",
+                        "status":  "Estado visual",
+                        "risk":  "Riesgo operativo",
+                        "gate":  "Decision y autorizacion humana",
+                        "worker":  "Worker asociado o NONE",
+                        "evidence":  "Rutas a evidencia canonica",
+                        "next_action":  "Siguiente accion recomendada",
+                        "safety":  "Flags de seguridad"
+                    }
+}

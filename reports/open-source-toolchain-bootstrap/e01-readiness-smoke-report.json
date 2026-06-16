@@ -1,0 +1,52 @@
+﻿{
+    "objective_id":  "ENGREMIAT_OPEN_SOURCE_TOOLCHAIN_BOOTSTRAP_003",
+    "stage":  "E01",
+    "blocks":  [
+                   "B01.1",
+                   "B01.2",
+                   "B01.3"
+               ],
+    "steps":  [
+                  "P01.1.1",
+                  "P01.1.2",
+                  "P01.2.1",
+                  "P01.2.2",
+                  "P01.3.1",
+                  "P01.3.2"
+              ],
+    "readiness_script":  true,
+    "readiness_report":  true,
+    "install_plan":  true,
+    "human_plan":  true,
+    "validator":  true,
+    "smoke":  true,
+    "tools_checked":  10,
+    "installed":  [
+
+                  ],
+    "missing":  [
+                    "winget",
+                    "git",
+                    "gh",
+                    "node",
+                    "npm",
+                    "ollama",
+                    "cline",
+                    "docker",
+                    "dot",
+                    "sqlite3"
+                ],
+    "readiness":  20,
+    "score":  100,
+    "decision":  "GO",
+    "problems":  [
+
+                 ],
+    "external_network":  false,
+    "install_executed":  false,
+    "git_write":  false,
+    "worker_real_execution":  false,
+    "report":  "reports/open-source-toolchain-bootstrap/e01-readiness-smoke-report.json",
+    "next":  "E02_INSTALACION_CORE_MINIMA",
+    "created_at":  "2026-06-16T11:58:00"
+}

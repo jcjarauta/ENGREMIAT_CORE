@@ -1,0 +1,69 @@
+﻿# ASSISTED WORKER PROMPT SAMPLE
+
+Usa este paquete como contrato. No apliques cambios. Devuelve solo propuesta y evidencias.
+
+```json
+{
+    "task_id":  "AW-TASK-FIXTURE-001",
+    "objective_id":  "ENGREMIAT_DEV_ASSISTED_WORKER_ADAPTER_001",
+    "stage_id":  "E01",
+    "block_id":  "B01.1",
+    "step_id":  "P01.1.2",
+    "worker_target":  "CLINE_OR_OLLAMA",
+    "mode":  "PROPOSAL_ONLY",
+    "context":  {
+                    "summary":  "Fixture documental seguro para validar formato AgentTaskPackage antes de integración real.",
+                    "active_objective":  "ENGREMIAT_DEV_ASSISTED_WORKER_ADAPTER_001",
+                    "active_step":  "P03.1.2",
+                    "source":  "DEV_SYSTEM_CONTEXT"
+                },
+    "allowed_paths":  [
+                          "docs/",
+                          "data/dev-assisted-worker/",
+                          "reports/dev-assisted-worker/"
+                      ],
+    "forbidden_paths":  [
+                            ".git/",
+                            ".env",
+                            "secrets/",
+                            "node_modules/",
+                            "dist/"
+                        ],
+    "allowed_actions":  [
+                            "READ_LOCAL_CONTEXT",
+                            "GENERATE_DOC",
+                            "PROPOSE_PATCH",
+                            "GENERATE_TEST_PLAN",
+                            "SUMMARIZE_EVIDENCE"
+                        ],
+    "forbidden_actions":  [
+                              "GIT_PUSH",
+                              "GIT_FETCH",
+                              "GIT_MERGE",
+                              "READ_SECRETS",
+                              "RUN_EXTERNAL_NETWORK",
+                              "APPLY_WITHOUT_REVIEW",
+                              "WRITE_WITHOUT_GATE"
+                          ],
+    "expected_output":  [
+                            "agent-result-proposal.json",
+                            "summary.md",
+                            "evidence-manifest.json"
+                        ],
+    "gate_policy":  {
+                        "human_gate_before_apply":  true,
+                        "proposal_only":  true,
+                        "apply_allowed":  false,
+                        "decision_required":  [
+                                                  "APPROVE",
+                                                  "REJECT",
+                                                  "REQUEST_CHANGES"
+                                              ]
+                    },
+    "created_at":  "2026-06-16T09:27:20"
+}
+
+```
+
+## Instrucción final
+Responde con `agent-result-proposal.json`, `summary.md` y `evidence-manifest.json`.

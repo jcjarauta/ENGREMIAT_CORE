@@ -1,0 +1,34 @@
+﻿{
+    "objective_id":  "PLAN_TO_WORKER_FAKE_WORKER_SMOKE_001",
+    "target_objective":  "ENGREMIAT_PLAN_TO_WORKER_APP_001",
+    "prompt_exists":  true,
+    "context_exists":  true,
+    "selected_step":  "P02.1.1",
+    "inbox_response_created":  true,
+    "worker_response_path":  "prompts/inbox/fake-worker-response.20260616-113426.json",
+    "evidence_path":  "reports/plan-to-worker/fake-worker-smoke/fake-worker-evidence.md",
+    "contract_required":  [
+                              "summary",
+                              "files_changed_or_created",
+                              "validation_commands",
+                              "evidence_paths",
+                              "risks",
+                              "decision"
+                          ],
+    "contract_missing":  [
+
+                         ],
+    "contract_valid":  true,
+    "problems":  [
+
+                 ],
+    "score":  100,
+    "decision":  "GO",
+    "external_network":  false,
+    "git_write":  false,
+    "worker_real_execution":  false,
+    "auto_apply":  false,
+    "report":  "reports/plan-to-worker/fake-worker-smoke/fake-worker-smoke-report.json",
+    "next":  "CONNECT_ENGREMIAT_OLLAMA_GATE",
+    "created_at":  "2026-06-16T11:34:26"
+}

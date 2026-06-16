@@ -1,0 +1,45 @@
+﻿[
+    {
+        "id":  "AVL-MAIN-001",
+        "subject_id":  "WORKER-MAIN-COORDINATOR",
+        "status":  "AVAILABLE",
+        "updated_at":  "2026-06-16 00:26:02",
+        "allowed_task_types":  [
+                                   "SCHEMA",
+                                   "DOCS",
+                                   "LEDGER",
+                                   "MATCHING"
+                               ]
+    },
+    {
+        "id":  "AVL-RPI-001",
+        "subject_id":  "WORKER-RPI-BACKUP",
+        "status":  "AVAILABLE",
+        "updated_at":  "2026-06-16 00:26:02",
+        "allowed_task_types":  [
+                                   "BACKUP",
+                                   "EVIDENCE_STORAGE"
+                               ]
+    },
+    {
+        "id":  "AVL-OLDPC-001",
+        "subject_id":  "WORKER-OLDPC-TEST",
+        "status":  "AVAILABLE_LIMITED",
+        "updated_at":  "2026-06-16 00:26:02",
+        "allowed_task_types":  [
+                                   "TEST"
+                               ]
+    },
+    {
+        "id":  "AVL-HUMAN-001",
+        "subject_id":  "WORKER-HUMAN-APPROVAL",
+        "status":  "AVAILABLE_LIMITED",
+        "updated_at":  "2026-06-16 00:26:02",
+        "allowed_task_types":  [
+                                   "REVIEW",
+                                   "DECISION",
+                                   "APPROVAL"
+                               ],
+        "human_monitoring":  false
+    }
+]

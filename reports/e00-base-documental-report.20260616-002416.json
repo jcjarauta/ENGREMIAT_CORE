@@ -1,0 +1,112 @@
+﻿{
+    "objective":  "ENGREMIAT_CORE_MVP_001",
+    "stage":  "E00",
+    "block":  "B00_GROUPED",
+    "steps":  [
+                  "P00.1.1",
+                  "P00.1.2",
+                  "P00.2.1"
+              ],
+    "timestamp":  "2026-06-16 00:24:16",
+    "root":  "C:\\Users\\sacan\\DESKTOP\\ENGREMIAT_CORE",
+    "git":  false,
+    "external_network":  false,
+    "remote_execution":  false,
+    "created":  [
+                    {
+                        "type":  "dir",
+                        "path":  "data",
+                        "exists":  true
+                    },
+                    {
+                        "type":  "dir",
+                        "path":  "data/fixtures",
+                        "exists":  true
+                    },
+                    {
+                        "type":  "dir",
+                        "path":  "data/events",
+                        "exists":  true
+                    },
+                    {
+                        "type":  "dir",
+                        "path":  "data/state",
+                        "exists":  true
+                    },
+                    {
+                        "type":  "dir",
+                        "path":  "data/evidence",
+                        "exists":  true
+                    },
+                    {
+                        "type":  "dir",
+                        "path":  "data/reports",
+                        "exists":  true
+                    },
+                    {
+                        "type":  "dir",
+                        "path":  "docs",
+                        "exists":  true
+                    },
+                    {
+                        "type":  "dir",
+                        "path":  "tools",
+                        "exists":  true
+                    },
+                    {
+                        "type":  "dir",
+                        "path":  "reports",
+                        "exists":  true
+                    },
+                    {
+                        "type":  "dir",
+                        "path":  "evidence",
+                        "exists":  true
+                    },
+                    {
+                        "type":  "dir",
+                        "path":  "manifests",
+                        "exists":  true
+                    },
+                    {
+                        "type":  "dir",
+                        "path":  "tmp",
+                        "exists":  true
+                    },
+                    {
+                        "type":  "file",
+                        "path":  "docs/DEVELOPMENT_LOG.md",
+                        "exists":  true
+                    },
+                    {
+                        "type":  "file",
+                        "path":  "docs/CURRENT_STATE.md",
+                        "exists":  true
+                    },
+                    {
+                        "type":  "file",
+                        "path":  "docs/MVP_GUIDE.md",
+                        "exists":  true
+                    },
+                    {
+                        "type":  "file",
+                        "path":  "docs/ARCHITECTURE.md",
+                        "exists":  true
+                    },
+                    {
+                        "type":  "file",
+                        "path":  "docs/ROADMAP.md",
+                        "exists":  true
+                    },
+                    {
+                        "type":  "file",
+                        "path":  "manifests/evidence-template.json",
+                        "exists":  true
+                    }
+                ],
+    "missing":  [
+
+                ],
+    "status":  "OK",
+    "next":  "E01_B01_1_PARTICIPANTES_NODOS_WORKERS"
+}

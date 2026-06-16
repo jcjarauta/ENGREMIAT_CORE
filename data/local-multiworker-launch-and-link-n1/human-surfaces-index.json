@@ -1,0 +1,59 @@
+﻿{
+    "index_id":  "HUMAN-SURFACES-INDEX-N1",
+    "objective":  "ENGREMIAT_LOCAL_MULTIWORKER_LAUNCH_AND_LINK_009A_N1",
+    "stage":  "E02",
+    "created_at_utc":  "2026-06-16T12:39:26.4581364Z",
+    "policy":  "data/local-multiworker-launch-and-link-n1/human-surfaces-policy.json",
+    "surfaces":  [
+                     {
+                         "surface_id":  "kanban-human-control-007",
+                         "label":  "Kanban Human Control 007",
+                         "path":  "dashboard/kanban-human-control/index.html",
+                         "exists":  true,
+                         "type":  "local_html_dashboard",
+                         "open_mode":  "manual_or_preview",
+                         "required_for_n1":  false
+                     },
+                     {
+                         "surface_id":  "cline-proposal-review-008",
+                         "label":  "Cline Proposal Review 008",
+                         "path":  "dashboard/cline-real-proposal-no-apply/proposal-review.html",
+                         "exists":  true,
+                         "type":  "local_html_dashboard",
+                         "open_mode":  "manual_or_preview",
+                         "required_for_n1":  false
+                     },
+                     {
+                         "surface_id":  "first-real-cline-proposal-009-future",
+                         "label":  "First Real Cline Proposal 009 future dashboard",
+                         "path":  "dashboard/first-real-cline-proposal-task/first-real-cline-proposal-review.html",
+                         "exists":  false,
+                         "type":  "local_html_dashboard",
+                         "open_mode":  "future",
+                         "required_for_n1":  false
+                     },
+                     {
+                         "surface_id":  "local-multiworker-n1-future",
+                         "label":  "Local Multiworker N1 dashboard future",
+                         "path":  "dashboard/local-multiworker-launch-and-link-n1/index.html",
+                         "exists":  false,
+                         "type":  "local_html_dashboard",
+                         "open_mode":  "future",
+                         "required_for_n1":  false
+                     }
+                 ],
+    "summary":  {
+                    "total":  4,
+                    "existing":  2,
+                    "missing":  2,
+                    "browser_opened":  false,
+                    "preview_only":  true
+                },
+    "safety":  {
+                   "remote_execution":  false,
+                   "browser_automation":  false,
+                   "ui_automation":  false,
+                   "git_write":  false,
+                   "apply_executed":  false
+               }
+}

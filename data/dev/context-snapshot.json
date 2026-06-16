@@ -1,0 +1,126 @@
+﻿{
+    "objective_id":  "ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001",
+    "active_stage":  "E07",
+    "active_block":  "B07.3",
+    "active_step":  "P07.3.2",
+    "last_validated":  "P07.3.2",
+    "artifacts":  [
+                      {
+                          "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+                          "stage_id":  "E00",
+                          "block_id":  "B00.x",
+                          "step_id":  "P00.x.x",
+                          "name":  "dev-system-contract.json",
+                          "path":  "data/dev/dev-system-contract.json",
+                          "status":  "ACTIVE"
+                      },
+                      {
+                          "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+                          "stage_id":  "E00",
+                          "block_id":  "B00.x",
+                          "step_id":  "P00.x.x",
+                          "name":  "dev-system-policy.json",
+                          "path":  "data/dev/dev-system-policy.json",
+                          "status":  "ACTIVE"
+                      },
+                      {
+                          "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+                          "stage_id":  "E01",
+                          "block_id":  "B01.1",
+                          "step_id":  "P01.1.1",
+                          "name":  "artifact-record.schema.json",
+                          "path":  "data/registry/artifact-record.schema.json",
+                          "status":  "ACTIVE"
+                      },
+                      {
+                          "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+                          "stage_id":  "E01",
+                          "block_id":  "B01.1",
+                          "step_id":  "P01.1.2",
+                          "name":  "artifact-registry.jsonl",
+                          "path":  "data/registry/artifact-registry.jsonl",
+                          "status":  "ACTIVE"
+                      },
+                      {
+                          "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+                          "stage_id":  "E01",
+                          "block_id":  "B01.1",
+                          "step_id":  "P01.1.2",
+                          "name":  "artifact-registry-latest.json",
+                          "path":  "data/registry/artifact-registry-latest.json",
+                          "status":  "ACTIVE"
+                      },
+                      {
+                          "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+                          "stage_id":  "E01",
+                          "block_id":  "B01.2",
+                          "step_id":  "P01.2.2",
+                          "name":  "ARTIFACT_INDEX.md",
+                          "path":  "docs/ARTIFACT_INDEX.md",
+                          "status":  "ACTIVE"
+                      },
+                      {
+                          "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+                          "stage_id":  "E00",
+                          "block_id":  "B00.x",
+                          "step_id":  "P00.x.x",
+                          "name":  "DEV_SYSTEM_GUIDE.md",
+                          "path":  "docs/DEV_SYSTEM_GUIDE.md",
+                          "status":  "ACTIVE"
+                      },
+                      {
+                          "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+                          "stage_id":  "E00",
+                          "block_id":  "B00.x",
+                          "step_id":  "P00.x.x",
+                          "name":  "dev-system-contract-validation-report.json",
+                          "path":  "reports/dev-system/e00-contract/dev-system-contract-validation-report.json",
+                          "status":  "ACTIVE"
+                      },
+                      {
+                          "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+                          "stage_id":  "E01",
+                          "block_id":  "B01.2",
+                          "step_id":  "P01.2.1",
+                          "name":  "eng-artifacts.ps1",
+                          "path":  "tools/eng-artifacts.ps1",
+                          "status":  "ACTIVE"
+                      }
+                  ],
+    "gates":  {
+                  "pending_count":  0,
+                  "registry":  "data/gates/gate-registry.jsonl",
+                  "pending":  "data/gates/pending-gates.json",
+                  "index":  "docs/GATE_INDEX.md"
+              },
+    "errors":  {
+                   "open_count":  0,
+                   "known_count":  4,
+                   "registry":  "data/errors/error-memory.jsonl",
+                   "last_error":  "data/errors/last-error.json",
+                   "playbook":  "docs/ERROR_PLAYBOOK.md"
+               },
+    "readiness":  {
+                      "current_percent":  100,
+                      "decision":  "VISUAL_MEMORY_READY",
+                      "report":  "reports/dev-visual-memory/e05-dashboard-demo-close/visual-memory-e05-close-validation-report.json",
+                      "blockers":  0
+                  },
+    "next":  {
+                 "objective_id":  "ENGREMIAT_CORE_MVP_001",
+                 "action":  "Iniciar Core MVP usando Prompt Factory",
+                 "prompt":  "prompts/outbox/ACTIVE_PROMPT.md"
+             },
+    "norms":  [
+                  "LOCAL_FIRST",
+                  "EVIDENCE_FIRST",
+                  "NO_REMOTE_BY_DEFAULT",
+                  "NO_EXTERNAL_NETWORK_BY_DEFAULT",
+                  "NO_SECRETS",
+                  "NO_REAL_ACTION_WITHOUT_GATE",
+                  "FAIL_CLOSED",
+                  "ARTIFACTS_REGISTERED_OR_NOT_VALIDATED"
+              ],
+    "updated_at":  "2026-06-16T10:49:22",
+    "decision":  "PROMPT_FACTORY_READY_FOR_CORE_MVP"
+}

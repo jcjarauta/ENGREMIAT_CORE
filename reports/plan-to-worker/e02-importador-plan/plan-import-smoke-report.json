@@ -1,0 +1,37 @@
+﻿{
+    "objective_id":  "ENGREMIAT_PLAN_TO_WORKER_APP_001",
+    "stage":  "E02",
+    "repair":  "R3_STRONG_SAMPLE_AND_READER",
+    "blocks":  [
+                   "B02.1",
+                   "B02.2",
+                   "B02.3"
+               ],
+    "steps":  [
+                  "P02.1.1",
+                  "P02.1.2",
+                  "P02.2.1",
+                  "P02.2.2",
+                  "P02.3.1",
+                  "P02.3.2"
+              ],
+    "input_structure":  true,
+    "detector":  true,
+    "importer":  true,
+    "raw_plan":  true,
+    "validator":  true,
+    "smoke":  true,
+    "format":  "TSV",
+    "rows":  3,
+    "score":  100,
+    "decision":  "GO",
+    "problems":  [
+
+                 ],
+    "external_network":  false,
+    "google_api":  false,
+    "git_write":  false,
+    "report":  "reports/plan-to-worker/e02-importador-plan/plan-import-smoke-report.json",
+    "next":  "E03_NORMALIZADOR_Y_VALIDADOR_DE_PLAN",
+    "created_at":  "2026-06-16T11:18:19"
+}

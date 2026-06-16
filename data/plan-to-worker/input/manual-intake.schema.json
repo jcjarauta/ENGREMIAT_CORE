@@ -1,0 +1,29 @@
+﻿{
+    "schema_id":  "manual-intake.schema",
+    "objective_id":  "ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002",
+    "stage":  "E02",
+    "type":  "object",
+    "required":  [
+                     "objective_id",
+                     "items"
+                 ],
+    "properties":  {
+                       "objective_id":  "string",
+                       "title":  "string",
+                       "description":  "string",
+                       "items":  "array",
+                       "human_notes":  "array"
+                   },
+    "item_required":  [
+                          "stage_id",
+                          "block_id",
+                          "step_id",
+                          "title",
+                          "artifact",
+                          "status"
+                      ],
+    "external_network":  false,
+    "git_write":  false,
+    "worker_real_execution":  false,
+    "created_at":  "2026-06-16T11:40:39"
+}

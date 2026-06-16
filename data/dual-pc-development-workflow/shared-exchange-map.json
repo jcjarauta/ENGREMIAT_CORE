@@ -1,0 +1,102 @@
+﻿{
+    "objective":  "ENGREMIAT_DUAL_PC_DEVELOPMENT_WORKFLOW_009B",
+    "stage":  "E04",
+    "map_id":  "SHARED-EXCHANGE-MAP-009B-E04",
+    "shared_root":  "C:\\ENGREMIAT_SHARED",
+    "folders":  [
+                    {
+                        "folder":  "INBOX_FROM_OTHER_PC",
+                        "purpose":  "Entrada manual desde otro PC",
+                        "allowed":  [
+                                        "reports",
+                                        "handoff",
+                                        "evidence"
+                                    ],
+                        "forbidden":  [
+                                          "secrets",
+                                          "repo_root",
+                                          "executables_auto"
+                                      ]
+                    },
+                    {
+                        "folder":  "OUTBOX_TO_OTHER_PC",
+                        "purpose":  "Salida manual hacia otro PC",
+                        "allowed":  [
+                                        "handoff",
+                                        "next_action",
+                                        "reports"
+                                    ],
+                        "forbidden":  [
+                                          "secrets",
+                                          "node_modules",
+                                          ".git"
+                                      ]
+                    },
+                    {
+                        "folder":  "HANDOFF",
+                        "purpose":  "Estado de continuidad entre maquinas",
+                        "allowed":  [
+                                        "json",
+                                        "md"
+                                    ],
+                        "forbidden":  [
+                                          "credentials"
+                                      ]
+                    },
+                    {
+                        "folder":  "PROMPTS",
+                        "purpose":  "Prompts revisables",
+                        "allowed":  [
+                                        "md",
+                                        "txt"
+                                    ],
+                        "forbidden":  [
+                                          "tokens",
+                                          "private_context_sensitive"
+                                      ]
+                    },
+                    {
+                        "folder":  "REPORTS",
+                        "purpose":  "Reports exportados",
+                        "allowed":  [
+                                        "json",
+                                        "md",
+                                        "html"
+                                    ],
+                        "forbidden":  [
+                                          "secret dumps"
+                                      ]
+                    },
+                    {
+                        "folder":  "EVIDENCE",
+                        "purpose":  "Evidencias no sensibles",
+                        "allowed":  [
+                                        "json",
+                                        "txt",
+                                        "md",
+                                        "png if manual"
+                                    ],
+                        "forbidden":  [
+                                          "keys",
+                                          "tokens"
+                                      ]
+                    },
+                    {
+                        "folder":  "_CONTROL",
+                        "purpose":  "Policies, manifests y readme",
+                        "allowed":  [
+                                        "json",
+                                        "md"
+                                    ],
+                        "forbidden":  [
+                                          "code execution triggers"
+                                      ]
+                    }
+                ],
+    "safety":  {
+                   "shared_repo_edit":  false,
+                   "auto_execution_from_shared":  false,
+                   "git_write":  false,
+                   "secret_storage_allowed":  false
+               }
+}

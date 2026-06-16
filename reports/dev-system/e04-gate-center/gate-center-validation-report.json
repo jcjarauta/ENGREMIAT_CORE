@@ -1,0 +1,67 @@
+﻿{
+    "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+    "stage_id":  "E04",
+    "blocks":  [
+                   "B04.1",
+                   "B04.2"
+               ],
+    "steps":  [
+                  "P04.1.1",
+                  "P04.1.2",
+                  "P04.2.1",
+                  "P04.2.2"
+              ],
+    "status":  "OK",
+    "validation_passed":  true,
+    "dependency":  "P03.2.2",
+    "files":  [
+                  {
+                      "path":  "data/gates/gate-record.schema.json",
+                      "exists":  true,
+                      "sha256":  "7b50a98b3dff8c523f62e18137189648ad458b159aa4d4f57ea193accbc3094f"
+                  },
+                  {
+                      "path":  "data/gates/gate-registry.jsonl",
+                      "exists":  true,
+                      "sha256":  "f1945cd6c19e56b3c1c78943ef5ec18116907a4ca1efc40a57d48ab1db7adfc5"
+                  },
+                  {
+                      "path":  "data/gates/pending-gates.json",
+                      "exists":  true,
+                      "sha256":  "740694d35b492b860dac8f8b09cc68bb7337f589487f6eb844f7cd5f5eb20d65"
+                  },
+                  {
+                      "path":  "tools/eng-gates.ps1",
+                      "exists":  true,
+                      "sha256":  "da024b32bc6b93bdd78e6cdf166d5cb40f11d1d05694e0d791321f544b2640df"
+                  },
+                  {
+                      "path":  "docs/GATE_INDEX.md",
+                      "exists":  true,
+                      "sha256":  "2c2a3fea87934fd1d7cdc78847f44e59f5e3d751a4f1a00dddfed2c3080ee3a2"
+                  },
+                  {
+                      "path":  "reports/gates/pending-gates.json",
+                      "exists":  true,
+                      "sha256":  "740694d35b492b860dac8f8b09cc68bb7337f589487f6eb844f7cd5f5eb20d65"
+                  },
+                  {
+                      "path":  "data/registry/artifact-registry.jsonl",
+                      "exists":  true,
+                      "sha256":  "1cc538eaf49b93fcd93a87b5267f8ec7fbc2d69c34dc6c8742bd9f6bbaa21fdc"
+                  },
+                  {
+                      "path":  "docs/ARTIFACT_INDEX.md",
+                      "exists":  true,
+                      "sha256":  "d12470641408c3df6e2abfb4c808c68862979b383b1d3d8434ade79d7f49c565"
+                  }
+              ],
+    "gates_pending":  0,
+    "gate_registry":  "data/gates/gate-registry.jsonl",
+    "gate_index":  "docs/GATE_INDEX.md",
+    "registry_updated":  true,
+    "external_network":  false,
+    "git":  false,
+    "risk":  "LOW",
+    "next":  "E05_DEV_READINESS_CHECKER"
+}

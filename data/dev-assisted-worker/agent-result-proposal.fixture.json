@@ -1,0 +1,41 @@
+﻿{
+    "task_id":  "AW-TASK-FIXTURE-001",
+    "summary":  "Propuesta documental de ejemplo para validar intake sin worker real.",
+    "proposed_changes":  [
+                             {
+                                 "path":  "docs/ASSISTED_WORKER_ADAPTER_GUIDE.md",
+                                 "change_type":  "DOC_APPEND_PROPOSAL",
+                                 "description":  "Añadir sección de ejemplo de salida del worker.",
+                                 "applied":  false
+                             }
+                         ],
+    "files_touched":  [
+                          "docs/ASSISTED_WORKER_ADAPTER_GUIDE.md"
+                      ],
+    "evidence":  [
+                     {
+                         "path":  "data/dev-assisted-worker/results/agent-result-proposal.fixture.json",
+                         "type":  "proposal_fixture"
+                     },
+                     {
+                         "path":  "data/dev-assisted-worker/results/summary.fixture.md",
+                         "type":  "summary"
+                     },
+                     {
+                         "path":  "data/dev-assisted-worker/evidence/assisted-worker-evidence-manifest.json",
+                         "type":  "evidence_manifest"
+                     }
+                 ],
+    "risks":  [
+                  "proposal_only",
+                  "requires_human_review_before_apply"
+              ],
+    "validation_suggested":  [
+                                 "json_parse_ok",
+                                 "paths_allowed",
+                                 "no_forbidden_paths",
+                                 "human_review_required"
+                             ],
+    "apply_recommendation":  "REQUEST_REVIEW",
+    "created_at":  "2026-06-16T09:30:49"
+}

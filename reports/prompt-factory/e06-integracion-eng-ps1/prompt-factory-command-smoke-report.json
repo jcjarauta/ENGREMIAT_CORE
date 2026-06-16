@@ -1,0 +1,81 @@
+﻿{
+    "objective_id":  "ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001",
+    "stage_id":  "E06",
+    "block_id":  "B06.3",
+    "step_id":  "P06.3.2",
+    "status":  "OK",
+    "validation_passed":  true,
+    "score":  100,
+    "threshold":  90,
+    "checks":  [
+                   {
+                       "id":  "invoke_exists",
+                       "ok":  true,
+                       "points":  15,
+                       "message":  "tools/prompt-factory/Invoke-PromptFactoryCommand.ps1"
+                   },
+                   {
+                       "id":  "eng_exists",
+                       "ok":  true,
+                       "points":  15,
+                       "message":  "eng.ps1"
+                   },
+                   {
+                       "id":  "docs_updated",
+                       "ok":  true,
+                       "points":  15,
+                       "message":  "docs/ENG_COMMANDS.md"
+                   },
+                   {
+                       "id":  "active_prompt_exists",
+                       "ok":  true,
+                       "points":  15,
+                       "message":  "prompts/outbox/ACTIVE_PROMPT.md"
+                   },
+                   {
+                       "id":  "commands_ok",
+                       "ok":  true,
+                       "points":  40,
+                       "message":  "failed=0"
+                   }
+               ],
+    "commands":  [
+                     {
+                         "command":  "prompt-status",
+                         "exit_code":  0,
+                         "ok":  true,
+                         "output":  "reports/prompt-factory/e06-integracion-eng-ps1/smoke-prompt-status.out.txt"
+                     },
+                     {
+                         "command":  "prompt-next",
+                         "exit_code":  0,
+                         "ok":  true,
+                         "output":  "reports/prompt-factory/e06-integracion-eng-ps1/smoke-prompt-next.out.txt"
+                     },
+                     {
+                         "command":  "prompt-repair",
+                         "exit_code":  0,
+                         "ok":  true,
+                         "output":  "reports/prompt-factory/e06-integracion-eng-ps1/smoke-prompt-repair.out.txt"
+                     },
+                     {
+                         "command":  "prompt-open",
+                         "exit_code":  0,
+                         "ok":  true,
+                         "output":  "reports/prompt-factory/e06-integracion-eng-ps1/smoke-prompt-open.out.txt"
+                     },
+                     {
+                         "command":  "prompt-inbox",
+                         "exit_code":  0,
+                         "ok":  true,
+                         "output":  "reports/prompt-factory/e06-integracion-eng-ps1/smoke-prompt-inbox.out.txt"
+                     }
+                 ],
+    "failed":  [
+
+               ],
+    "external_network":  false,
+    "git":  false,
+    "next":  "E07_DEMO_CON_CORE_MVP_Y_CIERRE",
+    "checked_at":  "2026-06-16T10:46:04"
+}

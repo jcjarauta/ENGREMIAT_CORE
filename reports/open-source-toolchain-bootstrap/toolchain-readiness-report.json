@@ -1,0 +1,111 @@
+﻿{
+    "objective_id":  "ENGREMIAT_OPEN_SOURCE_TOOLCHAIN_BOOTSTRAP_003",
+    "stage":  "E01",
+    "operation":  "READINESS_LOCAL_ONLY_NO_INSTALL",
+    "root":  "C:\\Users\\sacan\\Desktop\\ENGREMIAT_CORE",
+    "tools":  [
+                  {
+                      "name":  "winget",
+                      "installed":  false,
+                      "path":  null,
+                      "version":  null,
+                      "check":  "winget --version"
+                  },
+                  {
+                      "name":  "git",
+                      "installed":  false,
+                      "path":  null,
+                      "version":  null,
+                      "check":  "git --version"
+                  },
+                  {
+                      "name":  "gh",
+                      "installed":  false,
+                      "path":  null,
+                      "version":  null,
+                      "check":  "gh --version"
+                  },
+                  {
+                      "name":  "node",
+                      "installed":  false,
+                      "path":  null,
+                      "version":  null,
+                      "check":  "node --version"
+                  },
+                  {
+                      "name":  "npm",
+                      "installed":  false,
+                      "path":  null,
+                      "version":  null,
+                      "check":  "npm --version"
+                  },
+                  {
+                      "name":  "ollama",
+                      "installed":  false,
+                      "path":  null,
+                      "version":  null,
+                      "check":  "ollama --version"
+                  },
+                  {
+                      "name":  "cline",
+                      "installed":  false,
+                      "path":  null,
+                      "version":  null,
+                      "check":  "cline --version"
+                  },
+                  {
+                      "name":  "docker",
+                      "installed":  false,
+                      "path":  null,
+                      "version":  null,
+                      "check":  "docker --version"
+                  },
+                  {
+                      "name":  "dot",
+                      "installed":  false,
+                      "path":  null,
+                      "version":  null,
+                      "check":  "dot -V"
+                  },
+                  {
+                      "name":  "sqlite3",
+                      "installed":  false,
+                      "path":  null,
+                      "version":  null,
+                      "check":  "sqlite3 --version"
+                  }
+              ],
+    "installed":  [
+
+                  ],
+    "missing":  [
+                    "winget",
+                    "git",
+                    "gh",
+                    "node",
+                    "npm",
+                    "ollama",
+                    "cline",
+                    "docker",
+                    "dot",
+                    "sqlite3"
+                ],
+    "install_plan_path":  "data/open-source-toolchain-bootstrap/install-plan.safe.json",
+    "security":  {
+                     "external_network":  false,
+                     "install_executed":  false,
+                     "git_write":  false,
+                     "commit":  false,
+                     "push":  false,
+                     "fetch":  false,
+                     "merge":  false,
+                     "worker_real_execution":  false,
+                     "ollama_model_download":  false,
+                     "openclaw_execution":  false,
+                     "human_gate_required":  true
+                 },
+    "readiness":  20,
+    "decision":  "PARTIAL_READY_INSTALL_CORE_FIRST",
+    "next":  "E02_INSTALACION_CORE_MINIMA",
+    "created_at":  "2026-06-16T11:58:00"
+}

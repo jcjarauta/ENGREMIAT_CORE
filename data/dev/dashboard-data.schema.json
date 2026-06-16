@@ -1,0 +1,47 @@
+﻿{
+    "schema_id":  "dashboard-data.schema.v1",
+    "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+    "stage_id":  "E08",
+    "block_id":  "B08.1",
+    "required":  [
+                     "objective_id",
+                     "now",
+                     "next",
+                     "blocked",
+                     "gates",
+                     "artifacts",
+                     "errors",
+                     "readiness",
+                     "recent_activity",
+                     "updated_at"
+                 ],
+    "properties":  {
+                       "objective_id":  "active objective id",
+                       "now":  "current stage/block/step and status",
+                       "next":  "next recommended action",
+                       "blocked":  "blocking conditions",
+                       "gates":  "pending gate summary",
+                       "artifacts":  "recent artifacts",
+                       "errors":  "open/known error summary",
+                       "readiness":  "current readiness summary",
+                       "recent_activity":  "recent validation and artifact events",
+                       "updated_at":  "local ISO datetime"
+                   },
+    "sections":  [
+                     "NOW",
+                     "NEXT",
+                     "BLOCKED",
+                     "GATES",
+                     "ARTIFACTS",
+                     "ERRORS",
+                     "READINESS",
+                     "RECENT_ACTIVITY"
+                 ],
+    "validation_rules":  [
+                             "required_sections_present",
+                             "source_files_exist",
+                             "html_contains_sections",
+                             "no_external_assets_required",
+                             "local_static_html"
+                         ]
+}

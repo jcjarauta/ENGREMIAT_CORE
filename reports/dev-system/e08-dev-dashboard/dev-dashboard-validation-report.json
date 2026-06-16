@@ -1,0 +1,43 @@
+﻿{
+    "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+    "stage_id":  "E08",
+    "blocks":  [
+                   "B08.1",
+                   "B08.2"
+               ],
+    "steps":  [
+                  "P08.1.1",
+                  "P08.1.2",
+                  "P08.2.1",
+                  "P08.2.2"
+              ],
+    "status":  "OK",
+    "validation_passed":  true,
+    "dependency":  "P07.2.2",
+    "files":  [
+                  {
+                      "path":  "data/dev/dashboard-data.schema.json",
+                      "exists":  true,
+                      "sha256":  "80ea29b16d794f8e443be8e9e58dfe79a7f1af6db94eb6f1b578eeaaa258b975"
+                  },
+                  {
+                      "path":  "reports/dev-dashboard/dashboard-data.json",
+                      "exists":  true,
+                      "sha256":  "ee0f983039eff5dd8955a4280f04b1b3c6ea753ec061a50e057378273eff8878"
+                  },
+                  {
+                      "path":  "reports/dev-dashboard/index.html",
+                      "exists":  true,
+                      "sha256":  "81e5e377be34771d4b71fa8b39f79a0600cc34fe4f91478967fe79fef7990dee"
+                  }
+              ],
+    "missing_sections":  [
+
+                         ],
+    "dashboard":  "reports/dev-dashboard/index.html",
+    "data":  "reports/dev-dashboard/dashboard-data.json",
+    "external_network":  false,
+    "git":  false,
+    "risk":  "LOW",
+    "next":  "E09_DEV_COMMAND_HUB_AND_CLOSE"
+}

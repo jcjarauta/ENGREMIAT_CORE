@@ -1,0 +1,51 @@
+﻿{
+    "decision_id":  "HUMAN-APPROVE-READONLY-001",
+    "objective_id":  "ENGREMIAT_GATED_WORKER_EXECUTION_006",
+    "stage":  "E02",
+    "request_id":  "REQ-FIRST-CLINE-READONLY-001",
+    "worker_id":  "worker.cline.old_pc.local",
+    "decision":  "APPROVE",
+    "human_confirmation":  true,
+    "approval_scope":  "READONLY_ANALYSIS_AND_PROPOSAL_ONLY",
+    "allowed_actions":  [
+                            "launch_cline_task_for_readonly_analysis",
+                            "produce_text_proposal",
+                            "return_summary",
+                            "return_risks",
+                            "return_recommended_next_steps"
+                        ],
+    "blocked_actions":  [
+                            "write_files",
+                            "modify_files",
+                            "delete_files",
+                            "run_shell_commands",
+                            "install_packages",
+                            "auto_apply",
+                            "auto_approve",
+                            "git_write",
+                            "git_commit",
+                            "push",
+                            "fetch",
+                            "merge",
+                            "remote_inference",
+                            "ollama_generate",
+                            "ollama_chat",
+                            "firewall_change",
+                            "service_start",
+                            "secret_read"
+                        ],
+    "conditions":  {
+                       "one_request_only":  true,
+                       "request_id_must_match":  "REQ-FIRST-CLINE-READONLY-001",
+                       "readonly":  true,
+                       "write_files":  false,
+                       "run_commands":  false,
+                       "auto_apply":  false,
+                       "git_write":  false,
+                       "remote_inference":  false,
+                       "postcheck_required":  true,
+                       "receipt_required":  true
+                   },
+    "execution_allowed":  true,
+    "created_at":  "2026-06-16T13:47:25"
+}

@@ -1,0 +1,48 @@
+﻿{
+    "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+    "stage_id":  "E09",
+    "block_id":  "B09.2",
+    "step_id":  "P09.2.1",
+    "status":  "OK",
+    "validation_passed":  true,
+    "missing":  [
+
+                ],
+    "command_smoke":  [
+                          {
+                              "command":  "status",
+                              "exit_code":  0,
+                              "ok":  true,
+                              "output":  "OK tool=dev-runner command=status objective=ENGREMIAT_DEV_SYSTEM_001 active=E03/B03.1/P03.1.2 risk=LOW agrupable=SI next=P03.2.1"
+                          },
+                          {
+                              "command":  "next",
+                              "exit_code":  0,
+                              "ok":  true,
+                              "output":  "OK tool=dev-runner command=status objective=ENGREMIAT_DEV_SYSTEM_001 active=E03/B03.1/P03.1.2 risk=LOW agrupable=SI next=P03.2.1"
+                          },
+                          {
+                              "command":  "package",
+                              "exit_code":  0,
+                              "ok":  true,
+                              "output":  "OK tool=dev-runner command=status objective=ENGREMIAT_DEV_SYSTEM_001 active=E03/B03.1/P03.1.2 risk=LOW agrupable=SI next=P03.2.1"
+                          },
+                          {
+                              "command":  "readiness",
+                              "exit_code":  0,
+                              "ok":  true,
+                              "output":  "OK tool=readiness objective=ENGREMIAT_DEV_SYSTEM_001 readiness=100 decision=GO blockers=0 gates_pending=0 errors_open=0"
+                          },
+                          {
+                              "command":  "dashboard",
+                              "exit_code":  0,
+                              "ok":  true,
+                              "output":  "OK dashboard=reports/dev-dashboard/index.html"
+                          }
+                      ],
+    "external_network":  false,
+    "git":  false,
+    "risk":  "LOW",
+    "next":  "P09.2.2_GENERATE_CLOSE",
+    "created_at":  "2026-06-16T09:24:53"
+}

@@ -1,0 +1,41 @@
+﻿{
+    "objective":  "ENGREMIAT_LOCAL_MULTIWORKER_LAUNCH_AND_LINK_009A_N1",
+    "stage":  "E03",
+    "launcher":  "Open-LocalMultiworkerSurfacesN1.ps1",
+    "mode":  "preview",
+    "authorized_open":  false,
+    "browser_opened":  false,
+    "dashboard":  "dashboard/local-multiworker-launch-and-link-n1/index.html",
+    "surfaces":  [
+                     {
+                         "surface_id":  "kanban-human-control-007",
+                         "path":  "dashboard/kanban-human-control/index.html",
+                         "exists":  true,
+                         "open_mode":  "manual_or_preview"
+                     },
+                     {
+                         "surface_id":  "cline-proposal-review-008",
+                         "path":  "dashboard/cline-real-proposal-no-apply/proposal-review.html",
+                         "exists":  true,
+                         "open_mode":  "manual_or_preview"
+                     },
+                     {
+                         "surface_id":  "first-real-cline-proposal-009-future",
+                         "path":  "dashboard/first-real-cline-proposal-task/first-real-cline-proposal-review.html",
+                         "exists":  false,
+                         "open_mode":  "future"
+                     },
+                     {
+                         "surface_id":  "local-multiworker-n1-future",
+                         "path":  "dashboard/local-multiworker-launch-and-link-n1/index.html",
+                         "exists":  false,
+                         "open_mode":  "future"
+                     }
+                 ],
+    "cline_executed":  false,
+    "ollama_executed":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "apply_executed":  false,
+    "decision":  "PREVIEW_ONLY_NO_BROWSER_OPENED"
+}

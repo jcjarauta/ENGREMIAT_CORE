@@ -1,0 +1,32 @@
+﻿{
+    "objective":  "ENGREMIAT_LOCAL_MULTIWORKER_LAUNCH_AND_LINK_009A_N1",
+    "stage":  "E04",
+    "blocks":  "B04.1-B04.3",
+    "steps":  6,
+    "readiness_rules":  "data/local-multiworker-launch-and-link-n1/local-readiness-rules.json",
+    "readiness_report":  "reports/local-multiworker-launch-and-link-n1/e04-local-readiness-partial-report.json",
+    "manifest":  "data/local-multiworker-launch-and-link-n1/local-multiworker-launch-and-link-n1-manifest.json",
+    "close_report":  "docs/LOCAL_MULTIWORKER_LAUNCH_AND_LINK_N1_CLOSE_REPORT.md",
+    "next_objective":  "docs/NEXT_OBJECTIVE_AFTER_LOCAL_MULTIWORKER_N1.md",
+    "missing_artifacts":  [
+
+                          ],
+    "main_pc_required_for_local_prep":  false,
+    "main_pc_required_for_full_test":  true,
+    "ollama_required":  false,
+    "ollama_recommended_for_full_test":  true,
+    "browser_opened":  false,
+    "cline_task_creation":  false,
+    "cline_prompt_sent":  false,
+    "worker_real_execution":  false,
+    "remote_execution":  false,
+    "ssh":  false,
+    "network_write":  false,
+    "apply_executed":  false,
+    "git_write":  false,
+    "git_commit":  false,
+    "git_push":  false,
+    "readiness":  100,
+    "decision":  "GO_LOCAL_READINESS_PARTIAL",
+    "next":  "ENGREMIAT_LOCAL_MULTIWORKER_LAUNCH_AND_LINK_009A_N2_OR_PREPARE_009"
+}

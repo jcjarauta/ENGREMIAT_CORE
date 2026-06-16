@@ -1,0 +1,30 @@
+﻿{
+    "objective":  "ENGREMIAT_KANBAN_HUMAN_CONTROL_SURFACE_007",
+    "stage":  "E06",
+    "blocks":  "B06.1-B06.3",
+    "steps":  6,
+    "manifest_file":  "data/kanban-human-control/kanban-human-control-manifest.json",
+    "dashboard_file":  "dashboard/kanban-human-control/index.html",
+    "close_report":  "docs/KANBAN_HUMAN_CONTROL_CLOSE_REPORT.md",
+    "next_objective_file":  "docs/NEXT_OBJECTIVE_CLINE_REAL_PROPOSAL_NO_APPLY.md",
+    "validation_report":  "reports/kanban-human-control/e06-close-validation-report.json",
+    "present_count":  22,
+    "missing_artifacts":  [
+                              "reports/kanban-human-control/e06-close-validation-report.json"
+                          ],
+    "dashboard_ok":  true,
+    "gate_ok":  true,
+    "kanban_write":  false,
+    "real_kanban_sync":  false,
+    "launch_cline_task":  false,
+    "cline_task_created":  false,
+    "worker_real_execution":  false,
+    "auto_apply":  false,
+    "git_write":  false,
+    "remote_inference":  false,
+    "ui_automation":  false,
+    "next_objective":  "ENGREMIAT_CLINE_REAL_PROPOSAL_NO_APPLY_008",
+    "readiness":  100,
+    "decision":  "GO_KANBAN_HUMAN_CONTROL_READY_FOR_NEXT_OBJECTIVE",
+    "next":  "OPTIONAL_GIT_CLOSE_OR_START_ENGREMIAT_CLINE_REAL_PROPOSAL_NO_APPLY_008"
+}

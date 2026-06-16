@@ -1,0 +1,25 @@
+﻿{
+    "task_id":  "AW-TASK-FIXTURE-001",
+    "summary":  "Propuesta documental de ejemplo para validar intake sin worker real.",
+    "files_touched":  [
+                          "docs/ASSISTED_WORKER_ADAPTER_GUIDE.md"
+                      ],
+    "risks":  [
+                  "proposal_only",
+                  "requires_human_review_before_apply"
+              ],
+    "validation_suggested":  [
+                                 "json_parse_ok",
+                                 "paths_allowed",
+                                 "no_forbidden_paths",
+                                 "human_review_required"
+                             ],
+    "options":  [
+                    "APPROVE",
+                    "REJECT",
+                    "REQUEST_CHANGES"
+                ],
+    "apply_allowed":  false,
+    "human_gate_required":  true,
+    "created_at":  "2026-06-16T09:30:57"
+}

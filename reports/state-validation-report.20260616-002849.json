@@ -1,0 +1,37 @@
+﻿{
+    "objective":  "ENGREMIAT_CORE_MVP_001",
+    "stage":  "E02",
+    "block":  "B02_GROUPED_REPAIR_001",
+    "steps":  [
+                  "P02.1.1",
+                  "P02.1.2",
+                  "P02.2.1",
+                  "P02.2.2"
+              ],
+    "timestamp":  "2026-06-16 00:28:49",
+    "schema":  "C:\\Users\\sacan\\DESKTOP\\ENGREMIAT_CORE\\data\\schemas\\event-envelope.schema.json",
+    "events":  "C:\\Users\\sacan\\DESKTOP\\ENGREMIAT_CORE\\data\\events\\events.jsonl",
+    "seed":  "C:\\Users\\sacan\\DESKTOP\\ENGREMIAT_CORE\\data\\events\\events.seed.jsonl",
+    "network_state":  "C:\\Users\\sacan\\DESKTOP\\ENGREMIAT_CORE\\data\\state\\network-state.json",
+    "project_state":  "C:\\Users\\sacan\\DESKTOP\\ENGREMIAT_CORE\\data\\state\\project-state.json",
+    "task_queue":  "C:\\Users\\sacan\\DESKTOP\\ENGREMIAT_CORE\\data\\state\\task-queue.json",
+    "counts":  {
+                   "events":  35,
+                   "participants":  6,
+                   "nodes":  4,
+                   "workers":  4,
+                   "projects":  1,
+                   "tasks":  4,
+                   "capabilities":  8,
+                   "needs":  4,
+                   "availability":  4
+               },
+    "errors":  [
+
+               ],
+    "status":  "OK",
+    "git":  false,
+    "external_network":  false,
+    "remote_execution":  false,
+    "next":  "E03_B03_1_MATCHING_FILTRO_OBLIGATORIO"
+}

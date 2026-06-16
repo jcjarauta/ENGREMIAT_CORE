@@ -1,0 +1,49 @@
+﻿{
+    "rules_id":  "LOCAL-READINESS-RULES-N1",
+    "objective":  "ENGREMIAT_LOCAL_MULTIWORKER_LAUNCH_AND_LINK_009A_N1",
+    "stage":  "E04",
+    "go_partial_conditions":  [
+                                  "E01 validation_ok=True",
+                                  "E02 validation_ok=True",
+                                  "E03 validation_ok=True",
+                                  "current_machine ACTIVE",
+                                  "remote_execution=False",
+                                  "apply_executed=False",
+                                  "git_write=False",
+                                  "browser_opened=False",
+                                  "cline_task_creation=False",
+                                  "ollama_required=False"
+                              ],
+    "no_go_repair_conditions":  [
+                                    "missing required artifacts",
+                                    "E01/E02/E03 validation failed",
+                                    "remote_execution=True",
+                                    "git_write=True",
+                                    "apply_executed=True",
+                                    "worker_real_execution=True"
+                                ],
+    "need_main_pc_for_full_test_conditions":  [
+                                                  "first real Cline proposal task",
+                                                  "Ollama/GPU validation",
+                                                  "full multiworker test",
+                                                  "real Cline UI workflow"
+                                              ],
+    "decisions":  {
+                      "go_partial":  "GO_LOCAL_READINESS_PARTIAL",
+                      "need_main_pc":  "NEED_MAIN_PC_FOR_FULL_TEST",
+                      "repair":  "NO_GO_REPAIR"
+                  },
+    "safety":  {
+                   "main_pc_required_for_local_prep":  false,
+                   "main_pc_required_for_full_test":  true,
+                   "remote_execution":  false,
+                   "ssh":  false,
+                   "network_write":  false,
+                   "browser_opened":  false,
+                   "cline_task_creation":  false,
+                   "ollama_required":  false,
+                   "inference_executed":  false,
+                   "apply_executed":  false,
+                   "git_write":  false
+               }
+}

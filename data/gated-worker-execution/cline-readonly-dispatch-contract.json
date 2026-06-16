@@ -1,0 +1,46 @@
+﻿{
+    "objective_id":  "ENGREMIAT_GATED_WORKER_EXECUTION_006",
+    "stage":  "E03",
+    "contract_id":  "CLINE-READONLY-DISPATCH-CONTRACT-001",
+    "purpose":  "Prepare controlled Cline readonly dispatch with apply blocked",
+    "worker_id":  "worker.cline.old_pc.local",
+    "request_id":  "REQ-FIRST-CLINE-READONLY-001",
+    "cline":  {
+                  "available":  true,
+                  "version":  "3.0.24",
+                  "path":  "C:\\Users\\sacan\\AppData\\Roaming\\npm\\cline.ps1"
+              },
+    "dispatch_mode":  "PREVIEW_ONLY_BY_DEFAULT",
+    "execute_requires":  "-ExecuteGate parameter plus valid APPROVE readonly gate",
+    "allowed_execution":  "launch_cline_for_readonly_analysis_only",
+    "blocked_actions":  [
+                            "write_files",
+                            "modify_files",
+                            "delete_files",
+                            "run_shell_commands",
+                            "auto_apply",
+                            "auto_approve",
+                            "git_write",
+                            "git_commit",
+                            "push",
+                            "fetch",
+                            "merge",
+                            "remote_inference",
+                            "ollama_generate",
+                            "ollama_chat"
+                        ],
+    "safety":  {
+                   "default_execute":  false,
+                   "preview_only":  true,
+                   "readonly":  true,
+                   "write_files":  false,
+                   "run_commands":  false,
+                   "auto_apply":  false,
+                   "git_write":  false,
+                   "receipt_required_after_execution":  true,
+                   "postcheck_required_after_execution":  true
+               },
+    "status":  "DISPATCHER_PREPARED_NOT_EXECUTED",
+    "next":  "E04_PRIMERA_EJECUCION_CLINE_READONLY",
+    "created_at":  "2026-06-16T13:49:07"
+}

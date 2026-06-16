@@ -1,0 +1,29 @@
+﻿{
+    "objective_id":  "ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001",
+    "stage_id":  "E06",
+    "blocks":  [
+                   "B06.1",
+                   "B06.2",
+                   "B06.3"
+               ],
+    "steps":  [
+                  "P06.1.1",
+                  "P06.1.2",
+                  "P06.2.1",
+                  "P06.2.2",
+                  "P06.3.1",
+                  "P06.3.2"
+              ],
+    "status":  "OK",
+    "validation_passed":  true,
+    "score":  100,
+    "eng_ps1":  "eng.ps1",
+    "invoke":  "tools/prompt-factory/Invoke-PromptFactoryCommand.ps1",
+    "docs":  "docs/ENG_COMMANDS.md",
+    "active_prompt":  "prompts/outbox/ACTIVE_PROMPT.md",
+    "smoke_report":  "reports/prompt-factory/e06-integracion-eng-ps1/prompt-factory-command-smoke-report.json",
+    "external_network":  false,
+    "git":  false,
+    "risk":  "LOW",
+    "next":  "E07_DEMO_CON_CORE_MVP_Y_CIERRE"
+}

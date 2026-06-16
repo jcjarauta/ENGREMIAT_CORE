@@ -1,0 +1,32 @@
+﻿{
+    "objective":  "ENGREMIAT_DUAL_PC_DEVELOPMENT_WORKFLOW_009B",
+    "stage":  "E05",
+    "repair":  "ALIAS_H_TO_HTMLESC",
+    "required_artifacts":  [
+                               "data/dual-pc-development-workflow/dual-pc-dashboard-data.json",
+                               "dashboard/dual-pc-development-workflow/index.html",
+                               "tools/dual-pc-development-workflow/Open-DualPcWorkflowDashboard.ps1",
+                               "docs/DUAL_PC_DEVELOPMENT_WORKFLOW_GUIDE.md"
+                           ],
+    "missing_artifacts":  [
+
+                          ],
+    "errors":  [
+
+               ],
+    "dashboard_data":  "data/dual-pc-development-workflow/dual-pc-dashboard-data.json",
+    "dashboard_html":  "dashboard/dual-pc-development-workflow/index.html",
+    "launcher":  "tools/dual-pc-development-workflow/Open-DualPcWorkflowDashboard.ps1",
+    "guide":  "docs/DUAL_PC_DEVELOPMENT_WORKFLOW_GUIDE.md",
+    "dashboard_ready":  true,
+    "browser_opened":  false,
+    "main_pc_touched":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "git_remote_auto":  false,
+    "secret_values_read":  false,
+    "validation_ok":  true,
+    "readiness":  100,
+    "decision":  "GO_E05_DUAL_PC_DASHBOARD_READY",
+    "next":  "E06_CLOSE_AND_CONTINUITY_TO_MAIN_PC_LINKING"
+}

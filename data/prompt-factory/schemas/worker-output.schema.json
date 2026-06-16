@@ -1,0 +1,31 @@
+﻿{
+    "schema_id":  "worker-output.schema.v1",
+    "objective_id":  "ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001",
+    "stage_id":  "E01",
+    "required":  [
+                     "worker_id",
+                     "task_id",
+                     "decision",
+                     "summary",
+                     "files_touched",
+                     "tests_executed",
+                     "risks",
+                     "evidence",
+                     "next"
+                 ],
+    "properties":  {
+                       "worker_id":  "string",
+                       "task_id":  "string",
+                       "decision":  "GO|NO_GO|REQUEST_CHANGES|BLOCKED",
+                       "summary":  "string",
+                       "files_touched":  "array",
+                       "tests_executed":  "array",
+                       "risks":  "array",
+                       "evidence":  "array",
+                       "validation_report":  "string",
+                       "apply_executed":  "false by default",
+                       "external_network":  "false by default",
+                       "git_write":  "false by default",
+                       "next":  "string"
+                   }
+}

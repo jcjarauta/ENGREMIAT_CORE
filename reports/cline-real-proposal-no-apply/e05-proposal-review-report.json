@@ -1,0 +1,33 @@
+﻿{
+    "objective":  "ENGREMIAT_CLINE_REAL_PROPOSAL_NO_APPLY_008",
+    "stage":  "E05",
+    "repair":  "HTML_ALIAS_H_FIXED",
+    "blocks":  "B05.1-B05.3",
+    "steps":  6,
+    "capture_request":  "data/cline-real-proposal-no-apply/cline-output-capture-request.json",
+    "raw_output":  "data/cline-real-proposal-no-apply/cline-proposal-raw-output.json",
+    "normalizer":  "tools/cline-real-proposal-no-apply/Normalize-ClineProposalOutput.ps1",
+    "normalized_proposal":  "data/cline-real-proposal-no-apply/cline-proposal-normalized.json",
+    "review_dashboard":  "dashboard/cline-real-proposal-no-apply/proposal-review.html",
+    "raw_status":  "PENDING_OUTPUT",
+    "proposal_status":  "PENDING_OUTPUT",
+    "recommended_human_decision":  "DEFER",
+    "missing_artifacts":  [
+
+                          ],
+    "dashboard_ok":  true,
+    "proposal_only":  true,
+    "task_created":  false,
+    "prompt_sent":  false,
+    "apply_executed":  false,
+    "source_write_by_worker":  false,
+    "git_write":  false,
+    "git_commit":  false,
+    "git_push":  false,
+    "remote_inference":  false,
+    "ui_automation":  false,
+    "secret_values_read":  false,
+    "readiness":  100,
+    "decision":  "GO_E05_PROPOSAL_REVIEW_READY_NO_APPLY",
+    "next":  "E06_DECISION_CLOSE_AND_NEXT_OBJECTIVE"
+}

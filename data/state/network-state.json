@@ -1,0 +1,84 @@
+﻿{
+    "ok":  true,
+    "objective":  "ENGREMIAT_CORE_MVP_001",
+    "stage":  "E06",
+    "generated_at":  "2026-06-16T00:38:31.6762109+02:00",
+    "source":  "events.jsonl + local json artifacts",
+    "projects":  [
+                     "PROJECT-ENGREMIAT-CORE-MVP-001",
+                     "PROJECT-UNKNOWN"
+                 ],
+    "tasks":  [
+                  "TASK-BUILD-EVENT-LEDGER-001",
+                  "TASK-DEFINE-CONTRACTS-001",
+                  "TASK-MATCHING-V0-001"
+              ],
+    "workers":  [
+                    "WORKER-MAIN-COORDINATOR"
+                ],
+    "nodes":  [
+                  "NODE-LOCAL-CORE"
+              ],
+    "capabilities":  [
+
+                     ],
+    "needs":  [
+
+              ],
+    "matches":  [
+
+                ],
+    "leases":  [
+
+               ],
+    "runs":  [
+                 "RUN-3CD6F21D989F"
+             ],
+    "evidences":  [
+                      "EVID-AF5EBDA75753"
+                  ],
+    "blocked":  [
+
+                ],
+    "counters":  {
+                     "events":  47,
+                     "event_types":  {
+                                         "PARTICIPANT_REGISTERED":  6,
+                                         "TASK_CREATED":  4,
+                                         "OFFER_ACCEPTED":  3,
+                                         "CAPABILITY_DECLARED":  8,
+                                         "LEASE_CREATED":  3,
+                                         "OFFER_SENT":  3,
+                                         "NEED_DECLARED":  4,
+                                         "PROJECT_CREATED":  1,
+                                         "AVAILABILITY_UPDATED":  4,
+                                         "NODE_REGISTERED":  4,
+                                         "WORKER_REGISTERED":  4,
+                                         "MATCH_PROPOSED":  3
+                                     },
+                     "projects":  2,
+                     "tasks":  3,
+                     "workers":  1,
+                     "matches":  0,
+                     "leases":  0,
+                     "runs":  1,
+                     "evidences":  1,
+                     "blocked":  0
+                 },
+    "last_known":  {
+                       "project_id":  "PROJECT-UNKNOWN",
+                       "task_id":  "TASK-DEFINE-CONTRACTS-001",
+                       "worker_id":  "WORKER-MAIN-COORDINATOR",
+                       "lease_id":  "LEASE-001",
+                       "run_id":  "RUN-3CD6F21D989F",
+                       "evidence_id":  "EVID-AF5EBDA75753"
+                   },
+    "safety":  {
+                   "local_only":  true,
+                   "network":  false,
+                   "git":  false,
+                   "remote_execution":  false,
+                   "external_systems_touched":  false
+               },
+    "next":  "E07_B07_1_MANIFEST_Y_CHECKSUMS"
+}

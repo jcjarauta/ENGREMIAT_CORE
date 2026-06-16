@@ -1,0 +1,22 @@
+﻿{
+  "objective_id": "ENGREMIAT_PLAN_TO_WORKER_APP_001",
+  "stage_id": "E01",
+  "status": "ACTIVE",
+  "local_first": true,
+  "external_network": false,
+  "git_write": false,
+  "commit": false,
+  "push": false,
+  "fetch": false,
+  "merge": false,
+  "browser": false,
+  "clipboard": false,
+  "worker_real_execution": false,
+  "auto_apply": false,
+  "read_secrets": false,
+  "allowed_inputs": ["TSV","CSV","XLSX","JSON"],
+  "allowed_outputs": ["NORMALIZED_PLAN","NEXT_STEP","WORKER_PACKAGE","WORKER_PROMPT","EVIDENCE_REPORT","VISUAL_MEMORY_EVENT"],
+  "forbidden_actions": ["EXTERNAL_NETWORK","AUTO_APPLY","COMMIT","PUSH","FETCH","MERGE","REAL_WORKER_EXECUTION","READ_SECRETS","BROWSER_AUTOMATION","CLIPBOARD_AUTOMATION"],
+  "human_gate_required_for": ["REAL_WORKER_EXECUTION","APPLY_PATCH","WRITE_SOURCE","COMMIT","PUSH","FETCH","MERGE","EXTERNAL_NETWORK","READ_SECRETS"],
+  "default_decision": "NO_GO_UNTIL_VALIDATED"
+}

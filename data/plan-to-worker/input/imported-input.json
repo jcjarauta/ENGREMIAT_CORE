@@ -1,0 +1,21 @@
+﻿{
+    "objective_id":  "ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002",
+    "stage":  "E02",
+    "source_path":  "data/plan-to-worker/input/samples/plan-input.sample.tsv",
+    "source_format":  "TSV",
+    "records_count":  1,
+    "records":  [
+                    {
+                        "objective_id    stage_id    stage_name    stage_description    stage_output    block_id    block_name    block_description    block_output    step_id    step_name    step_description    step_output    artifact    depends_on    format    risk    requires_human    priority    status    notes":  "ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002    E02    Interfaz de entrada de datos    Crear entrada estable para planes, formularios, inbox y datos manuales.    Input layer funcional.    B02.2    Importador unificado    Unificar importacion desde TSV CSV JSON manual intake e inbox.    Importador consolidado.    P02.2.1    Crear Import-PlanInput    Crear importador que detecte entrada valide contrato y genere imported-input.json.    Importador creado.    tools/plan-to-worker/Import-PlanInput.ps1    P02.1.2    PowerShell    LOW    SI    Alta    PENDING    Sample TSV local."
+                    }
+                ],
+    "metadata":  {
+                     "imported_at":  "2026-06-16T11:40:43",
+                     "importer":  "Import-PlanInput.ps1",
+                     "external_network":  false,
+                     "git_write":  false,
+                     "worker_real_execution":  false
+                 },
+    "decision":  "GO",
+    "next":  "E03_SALIDA_CANONICA_NORMALIZADA"
+}

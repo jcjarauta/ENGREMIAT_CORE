@@ -1,0 +1,37 @@
+﻿{
+    "objective":  "ENGREMIAT_DUAL_PC_DEVELOPMENT_WORKFLOW_009B",
+    "stage":  "E01",
+    "policy_id":  "FORBIDDEN-OPERATIONS-POLICY-009B-E01",
+    "forbidden_operations":  [
+                                 "remote_execution",
+                                 "ssh_auto",
+                                 "winrm_auto",
+                                 "shared_repo_edit",
+                                 "auto_apply",
+                                 "source_write_by_worker_without_gate",
+                                 "git_remote_auto",
+                                 "git_push_auto",
+                                 "git_fetch_auto",
+                                 "git_merge_auto",
+                                 "store_secrets_in_shared",
+                                 "run_scripts_from_shared_automatically",
+                                 "create_real_cline_task_without_gate",
+                                 "send_prompt_without_gate",
+                                 "ollama_inference_without_gate",
+                                 "two_pc_simultaneous_write"
+                             ],
+    "allowed_in_e01":  [
+                           "write_policy_json",
+                           "write_validation_script",
+                           "write_validation_report",
+                           "local_readiness_preparation"
+                       ],
+    "safety":  {
+                   "remote_execution":  false,
+                   "shared_repo_edit":  false,
+                   "auto_apply":  false,
+                   "git_remote_auto":  false,
+                   "git_write":  false,
+                   "main_pc_touched":  false
+               }
+}

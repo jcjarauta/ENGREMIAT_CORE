@@ -1,0 +1,25 @@
+﻿{
+    "response_id":  "RESP-SIM-20260616133453",
+    "request_id":  "REQ-CLINE-DRYRUN-001",
+    "worker_id":  "worker.cline.old_pc.local",
+    "worker_type":  "simulated_worker",
+    "status":  "SIMULATED_NO_EXECUTION",
+    "decision":  "DEFER",
+    "no_execution":  true,
+    "dry_run":  true,
+    "execution_allowed_by_gate":  false,
+    "output":  {
+                   "summary":  "Simulacion local generada. No se lanzo Cline ni Ollama.",
+                   "safe":  true
+               },
+    "evidence":  {
+                     "request_path":  "data/controlled-worker-adapters/cline/sample-cline-request.json",
+                     "gate_path":  "data/controlled-worker-adapters/sample-human-gate-decision.json",
+                     "worker_real_execution":  false,
+                     "cline_launched":  false,
+                     "ollama_called":  false,
+                     "auto_apply":  false,
+                     "git_write":  false
+                 },
+    "created_at":  "2026-06-16T13:34:53"
+}

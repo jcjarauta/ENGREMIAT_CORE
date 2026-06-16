@@ -1,0 +1,41 @@
+﻿{
+    "objective":  "ENGREMIAT_CORE_MVP_001",
+    "stage":  "E04",
+    "leases":  [
+                   {
+                       "reservation_id":  "LEASE-001",
+                       "offer_id":  "OFFER-001",
+                       "task_id":  "TASK-DEFINE-CONTRACTS-001",
+                       "worker_id":  "WORKER-MAIN-COORDINATOR",
+                       "lease_seconds":  7200,
+                       "renewable":  true,
+                       "created_at":  "2026-06-16 00:33:09",
+                       "expires_at":  "2026-06-16 02:33:09",
+                       "status":  "ACTIVE"
+                   },
+                   {
+                       "reservation_id":  "LEASE-002",
+                       "offer_id":  "OFFER-002",
+                       "task_id":  "TASK-BUILD-EVENT-LEDGER-001",
+                       "worker_id":  "WORKER-MAIN-COORDINATOR",
+                       "lease_seconds":  7200,
+                       "renewable":  true,
+                       "created_at":  "2026-06-16 00:33:09",
+                       "expires_at":  "2026-06-16 02:33:09",
+                       "status":  "ACTIVE"
+                   },
+                   {
+                       "reservation_id":  "LEASE-003",
+                       "offer_id":  "OFFER-003",
+                       "task_id":  "TASK-MATCHING-V0-001",
+                       "worker_id":  "WORKER-MAIN-COORDINATOR",
+                       "lease_seconds":  7200,
+                       "renewable":  true,
+                       "created_at":  "2026-06-16 00:33:09",
+                       "expires_at":  "2026-06-16 02:33:09",
+                       "status":  "ACTIVE"
+                   }
+               ],
+    "active_lease_count":  3,
+    "status":  "OK"
+}

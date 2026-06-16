@@ -1,0 +1,56 @@
+﻿{
+    "objective_id":  "ENGREMIAT_PLAN_TO_WORKER_APP_001",
+    "stage":  "E05",
+    "package_type":  "WORKER_CONTEXT",
+    "decision":  "NEXT",
+    "prompt_type":  "PROMPT_NEXT",
+    "reason":  "READY_STEP_SELECTED",
+    "plan_summary":  "objective=ENGREMIAT_PLAN_TO_WORKER_APP_001 stages=1 rows=3",
+    "selected_step":  {
+                          "stage_id":  "E02",
+                          "block_id":  "B02.1",
+                          "step_id":  "P02.1.1",
+                          "title":  "Crear estructura input",
+                          "artifact":  "data/plan-to-worker/input",
+                          "depends_on":  "P01.3.2",
+                          "format":  "Folder",
+                          "risk":  "LOW",
+                          "requires_human":  "SI",
+                          "priority":  "Alta",
+                          "status":  "PENDING",
+                          "notes":  "Punto de entrada del plan."
+                      },
+    "limits":  {
+                   "external_network":  false,
+                   "git_write":  false,
+                   "commit":  false,
+                   "push":  false,
+                   "fetch":  false,
+                   "merge":  false,
+                   "browser":  false,
+                   "clipboard":  false,
+                   "worker_real_execution":  false,
+                   "auto_apply":  false,
+                   "read_secrets":  false,
+                   "apply_without_human_gate":  false
+               },
+    "reports":  {
+                    "plan_validation":  "data/plan-to-worker/plan-validation-report.json",
+                    "worker_decision":  "data/plan-to-worker/worker-decision.json",
+                    "selected_step":  "data/plan-to-worker/selected-step.json"
+                },
+    "registry_hint":  "data/registry/artifact-registry.jsonl",
+    "visual_memory_hint":  "ENGREMIAT_MEMORY",
+    "output_contract":  [
+                            "return_summary",
+                            "files_changed_or_created",
+                            "validation_commands",
+                            "evidence_paths",
+                            "risks",
+                            "decision_GO_or_NO_GO"
+                        ],
+    "external_network":  false,
+    "git_write":  false,
+    "worker_real_execution":  false,
+    "created_at":  "2026-06-16T11:25:50"
+}

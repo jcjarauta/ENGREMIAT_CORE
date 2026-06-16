@@ -1,0 +1,33 @@
+﻿{
+    "objective_id":  "ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001",
+    "stage_id":  "E07",
+    "repair":  "E07-EMPTY-COMPLETEDSTEPS-REPAIR-001",
+    "blocks":  [
+                   "B07.1",
+                   "B07.2",
+                   "B07.3"
+               ],
+    "steps":  [
+                  "P07.1.1",
+                  "P07.1.2",
+                  "P07.2.1",
+                  "P07.2.2",
+                  "P07.3.1",
+                  "P07.3.2"
+              ],
+    "status":  "OK",
+    "validation_passed":  true,
+    "score":  100,
+    "decision":  "PROMPT_FACTORY_READY_FOR_CORE_MVP",
+    "core_mvp_plan":  "data/prompt-factory/out/core-mvp-plan-normalized.json",
+    "core_mvp_next_step":  "data/prompt-factory/out/core-mvp-next-step.json",
+    "core_mvp_prompt":  "data/prompt-factory/out/PROMPT_NEXT_CORE_MVP_001.md",
+    "active_prompt":  "prompts/outbox/ACTIVE_PROMPT.md",
+    "readiness":  "reports/prompt-factory/e07-demo-core-mvp-cierre/prompt-factory-readiness-report.json",
+    "close_report":  "data/prompt-factory/out/PROMPT_FACTORY_CLOSE_REPORT.md",
+    "next_objective":  "data/prompt-factory/out/NEXT_OBJECTIVE_CORE_MVP_START.md",
+    "external_network":  false,
+    "git":  false,
+    "risk":  "LOW",
+    "next":  "ENGREMIAT_CORE_MVP_001"
+}

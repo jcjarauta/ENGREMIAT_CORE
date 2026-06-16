@@ -1,0 +1,23 @@
+﻿$ErrorActionPreference="Stop"
+[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+$gatePath="data/gated-worker-execution/first-human-approve-readonly.json"
+$requestPath="data/gated-worker-execution/first-cline-readonly-request.json"
+if(!(Test-Path $gatePath)){Write-Host "NO_GO approve_gate_missing=True";exit 2}
+if(!(Test-Path $requestPath)){Write-Host "NO_GO request_missing=True";exit 2}
+$g=Get-Content $gatePath -Raw|ConvertFrom-Json
+$r=Get-Content $requestPath -Raw|ConvertFrom-Json
+$problems=@()
+if($g.decision -ne "APPROVE"){$problems+="decision_not_approve"}
+if($g.human_confirmation -ne $true){$problems+="human_confirmation_not_true"}
+if($g.execution_allowed -ne $true){$problems+="execution_allowed_not_true"}
+if($g.request_id -ne $r.request_id){$problems+="request_id_mismatch"}
+if($g.conditions.write_files -ne $false){$problems+="write_files_not_false"}
+if($g.conditions.run_commands -ne $false){$problems+="run_commands_not_false"}
+if($g.conditions.auto_apply -ne $false){$problems+="auto_apply_not_false"}
+if($g.conditions.git_write -ne $false){$problems+="git_write_not_false"}
+if($g.conditions.remote_inference -ne $false){$problems+="remote_inference_not_false"}
+if(($g.allowed_actions -join ",") -notmatch "readonly"){$problems+="allowed_actions_not_readonly"}
+if(($g.blocked_actions -join ",") -notmatch "write_files"){$problems+="blocked_write_files_missing"}
+if(($g.blocked_actions -join ",") -notmatch "git_write"){$problems+="blocked_git_write_missing"}
+if($problems.Count -gt 0){Write-Host ("NO_GO problems="+($problems -join ","));exit 2}
+Write-Host "OK human_gate_readonly_approve=True execution_allowed=True write_files=False run_commands=False auto_apply=False git_write=False remote_inference=False" -ForegroundColor Green

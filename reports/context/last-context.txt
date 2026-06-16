@@ -1,0 +1,37 @@
+﻿# CURRENT_CONTEXT
+
+objective=
+ENGREMIAT_DEV_SYSTEM_001
+active_stage=
+E02
+active_block=
+B02.1
+active_step=
+P02.1.2
+last_validated=
+P01.2.2
+next=
+P02.2.1
+ 
+Crear eng-context
+
+## Normas activas
+- LOCAL_FIRST
+- EVIDENCE_FIRST
+- NO_REMOTE_BY_DEFAULT
+- NO_EXTERNAL_NETWORK_BY_DEFAULT
+- NO_SECRETS
+- NO_REAL_ACTION_WITHOUT_GATE
+- FAIL_CLOSED
+- ARTIFACTS_REGISTERED_OR_NOT_VALIDATED
+
+## Artefactos recientes
+- P00.x.x | dev-system-contract.json | data/dev/dev-system-contract.json
+- P00.x.x | dev-system-policy.json | data/dev/dev-system-policy.json
+- P01.1.1 | artifact-record.schema.json | data/registry/artifact-record.schema.json
+- P01.1.2 | artifact-registry.jsonl | data/registry/artifact-registry.jsonl
+- P01.1.2 | artifact-registry-latest.json | data/registry/artifact-registry-latest.json
+- P01.2.2 | ARTIFACT_INDEX.md | docs/ARTIFACT_INDEX.md
+- P00.x.x | DEV_SYSTEM_GUIDE.md | docs/DEV_SYSTEM_GUIDE.md
+- P00.x.x | dev-system-contract-validation-report.json | reports/dev-system/e00-contract/dev-system-contract-validation-report.json
+- P01.2.1 | eng-artifacts.ps1 | tools/eng-artifacts.ps1

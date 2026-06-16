@@ -1,0 +1,40 @@
+﻿{
+    "objective_id":  "ENGREMIAT_OPEN_SOURCE_TOOLCHAIN_BOOTSTRAP_003",
+    "stage":  "E06",
+    "policy":  "OPENCLAW_DEFERRED_POLICY",
+    "status":  "DEFERRED_PREPARED_ONLY",
+    "install_allowed":  false,
+    "install_executed":  false,
+    "external_network":  false,
+    "gateway_active":  false,
+    "agent_real_execution":  false,
+    "worker_real_execution":  false,
+    "auto_apply":  false,
+    "git_write":  false,
+    "commit":  false,
+    "push":  false,
+    "fetch":  false,
+    "merge":  false,
+    "read_secrets":  false,
+    "human_gate_required":  true,
+    "request_path":  "data/plan-to-worker/adapters/openclaw/request.json",
+    "response_schema":  "data/plan-to-worker/adapters/common/worker-response.schema.json",
+    "allowed_now":  [
+                        "document contract",
+                        "write deferred policy",
+                        "validate prepared request file",
+                        "write local reports"
+                    ],
+    "blocked_now":  [
+                        "install OpenClaw",
+                        "start gateway",
+                        "connect external channels",
+                        "run agent",
+                        "apply changes",
+                        "git remote actions",
+                        "read secrets",
+                        "download runtime without gate"
+                    ],
+    "next_gate":  "EXPLICIT_HUMAN_AUTHORIZATION_REQUIRED_FOR_OPENCLAW_INSTALL_OR_EXECUTION",
+    "created_at":  "2026-06-16T12:03:19"
+}

@@ -1,0 +1,47 @@
+﻿{
+    "objective_id":  "ENGREMIAT_OPEN_SOURCE_TOOLCHAIN_BOOTSTRAP_003",
+    "stage":  "E06",
+    "status":  "E06_VALIDATED_OPENCLAW_DEFERRED",
+    "artifacts":  [
+                      {
+                          "path":  "docs/OPENCLAW_ADAPTER_CONTRACT.md",
+                          "sha256":  "0edac3e343295a0e314a2578d3ad257de174c4d977eaeecaf2e363c8432dd50d",
+                          "type":  "Markdown",
+                          "step":  "P06.1.1"
+                      },
+                      {
+                          "path":  "data/open-source-toolchain-bootstrap/openclaw-policy.json",
+                          "sha256":  "52179915346e3d2c35fb66f06a5bafb39d6853a0195fea883471d2f877fd3511",
+                          "type":  "JSON",
+                          "step":  "P06.1.2"
+                      },
+                      {
+                          "path":  "tools/toolchain/Test-OpenClawPreparedAdapter.ps1",
+                          "sha256":  "17ed86633c386c4e4d475351c3505b683ca0551ee28a40f576bc9f0b5b8317fb",
+                          "type":  "PowerShell",
+                          "step":  "P06.2.1"
+                      },
+                      {
+                          "path":  "reports/open-source-toolchain-bootstrap/openclaw-prepared-report.json",
+                          "sha256":  "cac9d70e5f3898c0e756a5efb12e19fd84fd5746e613c71551b5cf1462c5e25f",
+                          "type":  "JSON",
+                          "step":  "P06.2.2"
+                      },
+                      {
+                          "path":  "tools/toolchain/Test-OpenClawDeferred.ps1",
+                          "sha256":  "d90bfade2cfa692eb4beb0c9d22880732edc2d5142392ef60ad5967ae81f55ef",
+                          "type":  "PowerShell",
+                          "step":  "P06.3.1"
+                      },
+                      {
+                          "path":  "reports/open-source-toolchain-bootstrap/e06-openclaw-deferred-smoke-report.json",
+                          "sha256":  "a81d112c9879ec5be3e761049c12827029230f9480212c3a5f76ec7baf3469fa",
+                          "type":  "JSON",
+                          "step":  "P06.3.2"
+                      }
+                  ],
+    "score":  100,
+    "decision":  "GO_OPENCLAW_DEFERRED_READY",
+    "next":  "E07_DASHBOARD_Y_COMANDOS_TOOLCHAIN",
+    "created_at":  "2026-06-16T12:03:19"
+}

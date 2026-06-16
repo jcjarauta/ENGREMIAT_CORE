@@ -1,0 +1,62 @@
+﻿{
+    "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+    "stage_id":  "E02",
+    "blocks":  [
+                   "B02.1",
+                   "B02.2"
+               ],
+    "steps":  [
+                  "P02.1.1",
+                  "P02.1.2",
+                  "P02.2.1",
+                  "P02.2.2"
+              ],
+    "status":  "OK",
+    "validation_passed":  true,
+    "dependency":  "P01.2.2",
+    "files":  [
+                  {
+                      "path":  "data/dev/context-snapshot.schema.json",
+                      "exists":  true,
+                      "sha256":  "60b786246cfb8138cf1e9b93a55744951f7a148889f9bd436ed0b3ee0f76509b"
+                  },
+                  {
+                      "path":  "data/dev/context-snapshot.json",
+                      "exists":  true,
+                      "sha256":  "2848405be32cf6733c58f37484202bfad818044d5f415031cfc4a5783661a0ea"
+                  },
+                  {
+                      "path":  "tools/eng-context.ps1",
+                      "exists":  true,
+                      "sha256":  "7d3d85c93399d6f5bdf4f69adb6139cd0669f798cfed10db790e9d4d6ad5e732"
+                  },
+                  {
+                      "path":  "docs/CURRENT_CONTEXT.md",
+                      "exists":  true,
+                      "sha256":  "4a1eaedc6bd59bdc1bea996354132af3592b5cec29e8138ac4c78c68fb6ec7c1"
+                  },
+                  {
+                      "path":  "reports/context/last-context.txt",
+                      "exists":  true,
+                      "sha256":  "4a1eaedc6bd59bdc1bea996354132af3592b5cec29e8138ac4c78c68fb6ec7c1"
+                  },
+                  {
+                      "path":  "data/registry/artifact-registry.jsonl",
+                      "exists":  true,
+                      "sha256":  "c783f2328486e3e5a547ef1df297117703bf66af726e2a66ef01b567d54b1eab"
+                  },
+                  {
+                      "path":  "docs/ARTIFACT_INDEX.md",
+                      "exists":  true,
+                      "sha256":  "dde4e9141c89fd368718027724c6fa32b57fc4c13fb4b70bd4c3e24b719788cc"
+                  }
+              ],
+    "context_snapshot":  "data/dev/context-snapshot.json",
+    "current_context":  "docs/CURRENT_CONTEXT.md",
+    "last_context":  "reports/context/last-context.txt",
+    "registry_updated":  true,
+    "external_network":  false,
+    "git":  false,
+    "risk":  "LOW",
+    "next":  "E03_DEV_RUNNER"
+}

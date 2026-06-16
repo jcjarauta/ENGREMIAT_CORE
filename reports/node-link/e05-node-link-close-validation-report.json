@@ -1,0 +1,44 @@
+﻿{
+    "objective_id":  "ENGREMIAT_LOCAL_NODE_LINK_004A",
+    "stage":  "E05",
+    "status":  "E05_NODE_LINK_CLOSED",
+    "readiness":  100,
+    "decision":  "GO_NODE_LINK_INITIAL_READY",
+    "main_pc_host":  "DESKTOP-PVRVE56",
+    "main_pc_ip":  "192.168.1.67",
+    "main_pc_can_be_off":  true,
+    "artifacts":  [
+                      {
+                          "path":  "tools/node-link/Build-NodeLinkManifest.ps1",
+                          "sha256":  "b19b759dca76180f98872eda50020922f01f9ca8f21b0160f2b64a728180619f",
+                          "step":  "P05.1.1"
+                      },
+                      {
+                          "path":  "data/node-link/node-link-manifest.json",
+                          "sha256":  "cc3b7c333ca1f65d734fc48d9b24a752dd2d98f950dca29ecb7a8ffb69f6838c",
+                          "step":  "P05.1.2"
+                      },
+                      {
+                          "path":  "tools/node-link/Build-NodeLinkDashboard.ps1",
+                          "sha256":  "40799181a50d86de2269cf559f70cb54abdbf37699d07c585d39f8167b7d505e",
+                          "step":  "P05.2.1"
+                      },
+                      {
+                          "path":  "dashboard/node-link/index.html",
+                          "sha256":  "bc270bc8648944634d0323b13a856810ddbbde1194ced953cb8ae5950e5261bc",
+                          "step":  "P05.2.2"
+                      },
+                      {
+                          "path":  "docs/NODE_LINK_CLOSE_REPORT.md",
+                          "sha256":  "aff3e7a302343d18dd2ed1649dc6f08411751101320f7e77d398514fa5b050e3",
+                          "step":  "P05.3.1"
+                      },
+                      {
+                          "path":  "docs/NEXT_OBJECTIVE_REMOTE_OLLAMA_RUNTIME.md",
+                          "sha256":  "c55484db7dde56e4179084fcd59cb58b840bb318945410b7ca3897246c096c13",
+                          "step":  "P05.3.2"
+                      }
+                  ],
+    "next":  "RETURN_TO_ENGREMIAT_LOCAL_RUNTIME_FIX_004_E04_REMOTE_OLLAMA_WHEN_MAIN_PC_ON",
+    "created_at":  "2026-06-16T13:00:30"
+}

@@ -1,0 +1,68 @@
+﻿{
+    "candidate_id":  "CLINE-PROPOSAL-NO-APPLY-008-CANDIDATE-001",
+    "objective":  "ENGREMIAT_CLINE_REAL_PROPOSAL_NO_APPLY_008",
+    "stage":  "E02",
+    "source_objective":  "ENGREMIAT_KANBAN_HUMAN_CONTROL_SURFACE_007",
+    "source_card_id":  "KANBAN-007-E06-CLOSE",
+    "title":  "Primera tarea Cline real proposal-only desde Kanban 007",
+    "purpose":  "Preparar una tarea Cline real para que proponga una mejora o siguiente paso, sin apply ni escritura de codigo.",
+    "context_files":  [
+                          "data/kanban-human-control/kanban-board.json",
+                          "data/kanban-human-control/cline-kanban-export-preview.json",
+                          "data/kanban-human-control/kanban-write-gate.json",
+                          "reports/kanban-human-control/e06-close-validation-report.json",
+                          "data/kanban-human-control/kanban-human-control-manifest.json",
+                          "docs/KANBAN_HUMAN_CONTROL_CLOSE_REPORT.md",
+                          "docs/NEXT_OBJECTIVE_CLINE_REAL_PROPOSAL_NO_APPLY.md",
+                          "data/cline-real-proposal-no-apply/cline-proposal-output-contract.json",
+                          "data/cline-real-proposal-no-apply/cline-proposal-no-apply-policy.json"
+                      ],
+    "selected_card_summary":  {
+                                  "card_id":  "KANBAN-007-E06-CLOSE",
+                                  "title":  "Cerrar Kanban Human Control Surface 007",
+                                  "status":  "DONE",
+                                  "risk":  "LOW",
+                                  "next_action":  "ENGREMIAT_CLINE_REAL_PROPOSAL_NO_APPLY_008",
+                                  "evidence":  [
+                                                   "data/kanban-human-control/kanban-human-control-manifest.json",
+                                                   "docs/KANBAN_HUMAN_CONTROL_CLOSE_REPORT.md",
+                                                   "docs/NEXT_OBJECTIVE_CLINE_REAL_PROPOSAL_NO_APPLY.md",
+                                                   "reports/kanban-human-control/e06-close-validation-report.json"
+                                               ]
+                              },
+    "task_limits":  {
+                        "proposal_only":  true,
+                        "human_review_required":  true,
+                        "no_apply":  true,
+                        "no_git_write":  true,
+                        "no_source_write_by_worker":  true,
+                        "no_commands":  true,
+                        "no_remote_inference":  true
+                    },
+    "expected_output":  [
+                            "summary",
+                            "target_context",
+                            "affected_files",
+                            "proposed_changes",
+                            "proposed_diff_or_patch",
+                            "risks",
+                            "tests_or_validation",
+                            "evidence",
+                            "open_questions",
+                            "recommended_human_decision"
+                        ],
+    "safety":  {
+                   "cline_task_created":  false,
+                   "launch_cline_task":  false,
+                   "prompt_sent":  false,
+                   "worker_real_execution":  false,
+                   "auto_apply":  false,
+                   "apply_executed":  false,
+                   "source_write_by_worker":  false,
+                   "git_write":  false,
+                   "git_commit":  false,
+                   "git_push":  false,
+                   "remote_inference":  false,
+                   "ui_automation":  false
+               }
+}

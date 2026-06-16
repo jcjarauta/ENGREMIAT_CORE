@@ -1,0 +1,45 @@
+﻿{
+    "objective":  "ENGREMIAT_CLINE_REAL_PROPOSAL_NO_APPLY_008",
+    "stage":  "E05",
+    "repair":  "HTML_ALIAS_H_FIXED",
+    "status":  "PENDING_OUTPUT",
+    "summary":  "No hay output real de Cline porque la tarea no fue creada o no se ha aportado salida manual.",
+    "target_context":  {
+                           "candidate_id":  "CLINE-PROPOSAL-NO-APPLY-008-CANDIDATE-001",
+                           "source_card_id":  "KANBAN-007-E06-CLOSE",
+                           "title":  "Primera tarea Cline real proposal-only desde Kanban 007"
+                       },
+    "affected_files":  [
+
+                       ],
+    "proposed_changes":  [
+
+                         ],
+    "proposed_diff_or_patch":  "PENDING_OUTPUT_NO_DIFF_AVAILABLE",
+    "risks":  [
+                  "No aplicar sin revision humana",
+                  "Output pendiente si no existe tarea real Cline"
+              ],
+    "tests_or_validation":  [
+                                "Validar propuesta antes de abrir objetivo apply separado"
+                            ],
+    "evidence":  [
+                     "data/cline-real-proposal-no-apply/cline-proposal-raw-output.json",
+                     "data/cline-real-proposal-no-apply/cline-proposal-task-candidate.json",
+                     "data/cline-real-proposal-no-apply/cline-proposal-output-contract.json"
+                 ],
+    "open_questions":  [
+                           "Esperar autorizacion/tarea real o aportar salida manual de Cline en manual-cline-output.md"
+                       ],
+    "recommended_human_decision":  "DEFER",
+    "safety":  {
+                   "proposal_only":  true,
+                   "apply_executed":  false,
+                   "source_write_by_worker":  false,
+                   "git_write":  false,
+                   "git_commit":  false,
+                   "git_push":  false,
+                   "remote_inference":  false,
+                   "ui_automation":  false
+               }
+}

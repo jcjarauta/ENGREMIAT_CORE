@@ -1,0 +1,67 @@
+﻿{
+    "objective_id":  "ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002",
+    "stage":  "E05",
+    "manifest_id":  "EVIDENCE-20260616114439",
+    "items":  [
+                  {
+                      "path":  "data/plan-to-worker/output/canonical-work-items.json",
+                      "sha256":  "07720d19455f0f8ae0bbebfa8d372b26b9b3f7f4c9b00e9fdc6b7c22aa1c1060",
+                      "exists":  true
+                  },
+                  {
+                      "path":  "data/plan-to-worker/output/canonical-worker-queue.json",
+                      "sha256":  "d511a33ef84f3448e7c06e022e55c169390c4ff602286daffd88bf353a8fc68f",
+                      "exists":  true
+                  },
+                  {
+                      "path":  "data/plan-to-worker/output/canonical-readiness.json",
+                      "sha256":  "11b8a5a979f2938ee6d06a5c25ccc61869d9fcaada5efea81d5db4b88b9ca93b",
+                      "exists":  true
+                  },
+                  {
+                      "path":  "data/plan-to-worker/adapters/common/worker-request.schema.json",
+                      "sha256":  "50b9e03509b54502da6a7e67f5773bd7abb2ca25d49f3a322af5b67a74cefd4e",
+                      "exists":  true
+                  },
+                  {
+                      "path":  "data/plan-to-worker/adapters/common/worker-response.schema.json",
+                      "sha256":  "211a2de39766d007f5d9bfda22c95b42013c624f8d167ed4a6d4d4228351cc2b",
+                      "exists":  true
+                  },
+                  {
+                      "path":  "data/plan-to-worker/adapters/cline/request.json",
+                      "sha256":  "f8c65ef85669bced1384a8d06b6d31bd9f312786bc64b4328dc550a7869ec23c",
+                      "exists":  true
+                  },
+                  {
+                      "path":  "data/plan-to-worker/adapters/ollama/request.json",
+                      "sha256":  "7bd7a0605b373b51a6e94cc8cf82b48629bc9014c0c89bd8b822204466249dc1",
+                      "exists":  true
+                  },
+                  {
+                      "path":  "data/plan-to-worker/adapters/openclaw/request.json",
+                      "sha256":  "9891ba4f81cefe0ba69dc12114dfb88571555610e2c353e36395b5dfc588da26",
+                      "exists":  true
+                  },
+                  {
+                      "path":  "data/plan-to-worker/output/system/engremiat-action.json",
+                      "sha256":  "6f50e9b68f3faddc3f004e70cebfcaa26dd73622bcde0b58a1c3f76b7288ba5a",
+                      "exists":  true
+                  },
+                  {
+                      "path":  "data/plan-to-worker/output/system/task-package.json",
+                      "sha256":  "1324742eb27542ed875c4cc91723bb07545adc5a2c4eed64b533fa7aea7f57fb",
+                      "exists":  true
+                  },
+                  {
+                      "path":  "data/plan-to-worker/output/system/decision-package.json",
+                      "sha256":  "c57d9e70e91870f20a1f2a146ba727c0dd15f41c36d99eee18bf16963438bcad",
+                      "exists":  true
+                  }
+              ],
+    "items_count":  11,
+    "external_network":  false,
+    "git_write":  false,
+    "worker_real_execution":  false,
+    "created_at":  "2026-06-16T11:44:39"
+}

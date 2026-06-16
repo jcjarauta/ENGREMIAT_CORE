@@ -1,0 +1,32 @@
+﻿{
+    "schema_id":  "dashboard-state.schema.v1",
+    "required":  [
+                     "objective_id",
+                     "stage_id",
+                     "status",
+                     "active_objective",
+                     "active_stage",
+                     "readiness",
+                     "events_count",
+                     "gates_count",
+                     "artifacts_count",
+                     "next",
+                     "updated_at"
+                 ],
+    "fields":  {
+                   "objective_id":  "dashboard objective",
+                   "stage_id":  "dashboard stage",
+                   "status":  "OK NO_GO",
+                   "active_objective":  "current objective",
+                   "active_stage":  "current stage",
+                   "readiness":  "readiness percent or UNKNOWN",
+                   "last_ok":  "array",
+                   "last_issue":  "array",
+                   "gates_count":  "integer",
+                   "artifacts_count":  "integer",
+                   "events_count":  "integer",
+                   "maps":  "array",
+                   "next":  "next action",
+                   "updated_at":  "iso datetime"
+               }
+}

@@ -1,0 +1,18 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "app-state.schema",
+  "type": "object",
+  "required": ["objective_id","active_plan","active_step","readiness","inbox","outbox"],
+  "properties": {
+    "objective_id": {"type": "string"},
+    "active_plan": {"type": ["string","null"]},
+    "active_stage": {"type": ["string","null"]},
+    "active_block": {"type": ["string","null"]},
+    "active_step": {"type": ["string","null"]},
+    "prompt_active": {"type": ["string","null"]},
+    "inbox": {"type": "string"},
+    "outbox": {"type": "string"},
+    "readiness": {"type": "object"},
+    "updated_at": {"type": "string"}
+  }
+}

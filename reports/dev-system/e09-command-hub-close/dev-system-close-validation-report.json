@@ -1,0 +1,26 @@
+﻿{
+    "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+    "stage_id":  "E09",
+    "blocks":  [
+                   "B09.1",
+                   "B09.2"
+               ],
+    "steps":  [
+                  "P09.1.1",
+                  "P09.1.2",
+                  "P09.2.1",
+                  "P09.2.2"
+              ],
+    "status":  "OK",
+    "validation_passed":  true,
+    "decision":  "DEV_SYSTEM_READY",
+    "smoke":  "reports/dev-system/e09-command-hub-close/dev-system-smoke-report.json",
+    "manifest":  "manifests/ENGREMIAT_DEV_SYSTEM_001/manifest.json",
+    "checksums":  "manifests/ENGREMIAT_DEV_SYSTEM_001/checksums.sha256",
+    "demo":  "DEMO_SCRIPT.md",
+    "next_objective":  "NEXT_OBJECTIVE.md",
+    "external_network":  false,
+    "git":  false,
+    "risk":  "LOW",
+    "next":  "CHOOSE_NEXT_OBJECTIVE"
+}

@@ -1,0 +1,41 @@
+﻿{
+    "gate_id":  "engremiat.kanban_write_gate.v1",
+    "objective":  "ENGREMIAT_KANBAN_HUMAN_CONTROL_SURFACE_007",
+    "stage":  "E05",
+    "purpose":  "Preparar autorizacion humana para futura escritura real en Kanban sin activarla en este objetivo.",
+    "decision":  "DEFER",
+    "decision_reason":  "007 solo prepara superficie humana y gate; la escritura real queda para objetivo separado si se autoriza.",
+    "authorization_required":  true,
+    "required_human_phrase":  "AUTORIZO_KANBAN_WRITE_REAL_CARD_FOR_SPECIFIC_REQUEST",
+    "allowed_future_scope":  [
+                                 "create_one_real_kanban_card_from_preview",
+                                 "sync_one_real_kanban_card_from_canonical_card"
+                             ],
+    "forbidden_now":  [
+                          "write_real_kanban_card",
+                          "create_cline_task",
+                          "launch_cline",
+                          "send_prompt",
+                          "run_worker",
+                          "auto_apply",
+                          "git_write",
+                          "remote_inference",
+                          "ui_automation"
+                      ],
+    "required_evidence_before_approval":  [
+                                              "data/kanban-human-control/cline-kanban-export-preview.json",
+                                              "data/kanban-human-control/kanban-board.json",
+                                              "reports/kanban-human-control/e04-cline-kanban-adapter-preview-report.json"
+                                          ],
+    "safety":  {
+                   "kanban_write":  false,
+                   "real_kanban_sync":  false,
+                   "launch_cline_task":  false,
+                   "cline_task_created":  false,
+                   "worker_real_execution":  false,
+                   "auto_apply":  false,
+                   "git_write":  false,
+                   "remote_inference":  false,
+                   "ui_automation":  false
+               }
+}

@@ -1,0 +1,52 @@
+﻿{
+    "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+    "stage_id":  "E00",
+    "block_id":  "B00.2",
+    "status":  "DRAFT_VALIDATED",
+    "default_mode":  "LOCAL_ONLY",
+    "allowed_modes":  [
+                          "LOCAL_ONLY",
+                          "DRY_RUN",
+                          "PREPARED_ONLY",
+                          "MANUAL_HANDOFF",
+                          "AUTHORIZED_ONLY"
+                      ],
+    "forbidden_by_default":  [
+                                 "REMOTE_EXECUTION",
+                                 "EXTERNAL_NETWORK",
+                                 "SECRETS_ACCESS",
+                                 "GIT_PUSH",
+                                 "GIT_FETCH",
+                                 "GIT_MERGE",
+                                 "REAL_AGENT_EXECUTION",
+                                 "REAL_NODE_EXECUTION",
+                                 "REAL_SHEETS_WRITE",
+                                 "REAL_TELEGRAM_DECISION",
+                                 "UNREGISTERED_ARTIFACT_VALIDATION"
+                             ],
+    "gate_required_for":  [
+                              "MEDIUM_RISK",
+                              "HIGH_RISK",
+                              "AGRUPABLE_NO",
+                              "EXTERNAL_ACTION",
+                              "REAL_WRITE",
+                              "RESTORE",
+                              "REMOTE_ACTION",
+                              "AGENT_REAL_APPLY",
+                              "PERMISSION_CHANGE"
+                          ],
+    "validation_rules":  [
+                             "required_fields_present",
+                             "paths_created",
+                             "json_parse_ok",
+                             "guide_exists",
+                             "policy_exists",
+                             "fail_closed_enabled",
+                             "no_external_action"
+                         ],
+    "fail_closed_decisions":  [
+                                  "NO_GO",
+                                  "BLOCKED",
+                                  "REQUIRES_HUMAN_REVIEW"
+                              ]
+}

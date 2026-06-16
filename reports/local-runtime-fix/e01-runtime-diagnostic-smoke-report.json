@@ -1,0 +1,62 @@
+﻿{
+    "objective_id":  "ENGREMIAT_LOCAL_RUNTIME_FIX_004",
+    "stage":  "E01",
+    "blocks":  [
+                   "B01.1",
+                   "B01.2",
+                   "B01.3"
+               ],
+    "steps":  [
+                  "P01.1.1",
+                  "P01.1.2",
+                  "P01.2.1",
+                  "P01.2.2",
+                  "P01.3.1",
+                  "P01.3.2"
+              ],
+    "path_script":  true,
+    "path_report":  true,
+    "installer_script":  true,
+    "installer_report":  true,
+    "diagnostic_validator":  true,
+    "commands_checked":  [
+                             "winget",
+                             "msiexec",
+                             "node",
+                             "npm",
+                             "git",
+                             "ollama",
+                             "cline",
+                             "where"
+                         ],
+    "installed":  [
+                      "msiexec",
+                      "where"
+                  ],
+    "missing":  [
+                    "winget",
+                    "node",
+                    "npm",
+                    "git",
+                    "ollama",
+                    "cline"
+                ],
+    "path_issues":  [
+
+                    ],
+    "installer_strategy":  "MANUAL_DOWNLOAD_OR_INSTALL_REQUIRED",
+    "install_executed":  false,
+    "download_executed":  false,
+    "external_network":  false,
+    "git_write":  false,
+    "worker_real_execution":  false,
+    "smoke":  true,
+    "score":  100,
+    "decision":  "GO",
+    "problems":  [
+
+                 ],
+    "report":  "reports/local-runtime-fix/e01-runtime-diagnostic-smoke-report.json",
+    "next":  "E02_RESOLVER_NODEJS_Y_NPM",
+    "created_at":  "2026-06-16T12:14:35"
+}

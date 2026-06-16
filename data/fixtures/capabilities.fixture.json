@@ -1,0 +1,74 @@
+﻿[
+    {
+        "id":  "CAP-MAIN-SCHEMA-001",
+        "provider_id":  "WORKER-MAIN-COORDINATOR",
+        "capability":  "DATA.SCHEMA_DEFINITION",
+        "declared":  true,
+        "verified":  true,
+        "available_now":  true,
+        "trust_level":  "TRUST_2_LOCALLY_VERIFIED"
+    },
+    {
+        "id":  "CAP-MAIN-DOCS-001",
+        "provider_id":  "WORKER-MAIN-COORDINATOR",
+        "capability":  "DATA.DOCUMENTATION",
+        "declared":  true,
+        "verified":  true,
+        "available_now":  true,
+        "trust_level":  "TRUST_2_LOCALLY_VERIFIED"
+    },
+    {
+        "id":  "CAP-MAIN-LEDGER-001",
+        "provider_id":  "WORKER-MAIN-COORDINATOR",
+        "capability":  "DATA.EVENT_LEDGER",
+        "declared":  true,
+        "verified":  false,
+        "available_now":  true,
+        "trust_level":  "TRUST_1_REGISTERED"
+    },
+    {
+        "id":  "CAP-MAIN-MATCHING-001",
+        "provider_id":  "WORKER-MAIN-COORDINATOR",
+        "capability":  "MATCHING.DETERMINISTIC",
+        "declared":  true,
+        "verified":  false,
+        "available_now":  true,
+        "trust_level":  "TRUST_1_REGISTERED"
+    },
+    {
+        "id":  "CAP-RPI-BACKUP-001",
+        "provider_id":  "WORKER-RPI-BACKUP",
+        "capability":  "STORAGE.BACKUP",
+        "declared":  true,
+        "verified":  false,
+        "available_now":  true,
+        "trust_level":  "TRUST_1_REGISTERED"
+    },
+    {
+        "id":  "CAP-RPI-EVIDENCE-001",
+        "provider_id":  "WORKER-RPI-BACKUP",
+        "capability":  "DATA.EVIDENCE_STORAGE",
+        "declared":  true,
+        "verified":  false,
+        "available_now":  true,
+        "trust_level":  "TRUST_1_REGISTERED"
+    },
+    {
+        "id":  "CAP-OLDPC-TEST-001",
+        "provider_id":  "WORKER-OLDPC-TEST",
+        "capability":  "SOFTWARE.TEST_EXECUTION",
+        "declared":  true,
+        "verified":  false,
+        "available_now":  true,
+        "trust_level":  "TRUST_1_REGISTERED"
+    },
+    {
+        "id":  "CAP-HUMAN-APPROVAL-001",
+        "provider_id":  "WORKER-HUMAN-APPROVAL",
+        "capability":  "HUMAN.APPROVAL",
+        "declared":  true,
+        "verified":  true,
+        "available_now":  true,
+        "trust_level":  "TRUST_3_COMMUNITY_VERIFIED"
+    }
+]

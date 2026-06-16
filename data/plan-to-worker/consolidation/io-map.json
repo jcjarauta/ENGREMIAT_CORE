@@ -1,0 +1,113 @@
+﻿{
+    "objective_id":  "ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002",
+    "stage":  "E01",
+    "status":  "ACTIVE",
+    "input_layer":  [
+                        {
+                            "name":  "manual_intake",
+                            "path":  "data/plan-to-worker/input/manual-intake.json",
+                            "format":  "JSON",
+                            "consumer":  "Import-PlanInput"
+                        },
+                        {
+                            "name":  "sheets_tsv",
+                            "path":  "data/plan-to-worker/input/*.tsv",
+                            "format":  "TSV",
+                            "consumer":  "Import-PlanInput"
+                        },
+                        {
+                            "name":  "sheets_csv",
+                            "path":  "data/plan-to-worker/input/*.csv",
+                            "format":  "CSV",
+                            "consumer":  "Import-PlanInput"
+                        },
+                        {
+                            "name":  "inbox",
+                            "path":  "data/plan-to-worker/input/inbox",
+                            "format":  "Folder",
+                            "consumer":  "Import-PlanInput"
+                        }
+                    ],
+    "normalized_layer":  [
+                             {
+                                 "name":  "imported_input",
+                                 "path":  "data/plan-to-worker/input/imported-input.json",
+                                 "format":  "JSON"
+                             },
+                             {
+                                 "name":  "canonical_work_items",
+                                 "path":  "data/plan-to-worker/output/canonical-work-items.json",
+                                 "format":  "JSON"
+                             },
+                             {
+                                 "name":  "canonical_worker_queue",
+                                 "path":  "data/plan-to-worker/output/canonical-worker-queue.json",
+                                 "format":  "JSON"
+                             }
+                         ],
+    "adapter_layer":  [
+                          {
+                              "name":  "cline_request",
+                              "path":  "data/plan-to-worker/adapters/cline/request.json",
+                              "format":  "JSON"
+                          },
+                          {
+                              "name":  "ollama_request",
+                              "path":  "data/plan-to-worker/adapters/ollama/request.json",
+                              "format":  "JSON"
+                          },
+                          {
+                              "name":  "openclaw_request",
+                              "path":  "data/plan-to-worker/adapters/openclaw/request.json",
+                              "format":  "JSON"
+                          },
+                          {
+                              "name":  "generic_request",
+                              "path":  "data/plan-to-worker/adapters/generic/request.json",
+                              "format":  "JSON"
+                          }
+                      ],
+    "system_output_layer":  [
+                                {
+                                    "name":  "engremiat_action",
+                                    "path":  "data/plan-to-worker/output/system/engremiat-action.json",
+                                    "format":  "JSON"
+                                },
+                                {
+                                    "name":  "task_package",
+                                    "path":  "data/plan-to-worker/output/system/task-package.json",
+                                    "format":  "JSON"
+                                },
+                                {
+                                    "name":  "evidence_manifest",
+                                    "path":  "data/plan-to-worker/output/system/evidence-manifest.json",
+                                    "format":  "JSON"
+                                }
+                            ],
+    "graph_output_layer":  [
+                               {
+                                   "name":  "nodes",
+                                   "path":  "data/plan-to-worker/output/graph/nodes.json",
+                                   "format":  "JSON"
+                               },
+                               {
+                                   "name":  "edges",
+                                   "path":  "data/plan-to-worker/output/graph/edges.json",
+                                   "format":  "JSON"
+                               },
+                               {
+                                   "name":  "graph",
+                                   "path":  "data/plan-to-worker/output/graph/graph.json",
+                                   "format":  "JSON"
+                               },
+                               {
+                                   "name":  "graph_dashboard",
+                                   "path":  "dashboard/plan-to-worker/graph.html",
+                                   "format":  "HTML"
+                               }
+                           ],
+    "external_network":  false,
+    "git_write":  false,
+    "worker_real_execution":  false,
+    "created_at":  "2026-06-16T11:39:35"
+}

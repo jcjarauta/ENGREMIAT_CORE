@@ -1,0 +1,30 @@
+﻿{
+    "objective_id":  "ENGREMIAT_DEV_VISUAL_MEMORY_OPERATIVE_002",
+    "stage_id":  "E03",
+    "blocks":  [
+                   "B03.1",
+                   "B03.2",
+                   "B03.3"
+               ],
+    "steps":  [
+                  "P03.1.1",
+                  "P03.1.2",
+                  "P03.2.1",
+                  "P03.2.2",
+                  "P03.3.1",
+                  "P03.3.2"
+              ],
+    "status":  "OK",
+    "validation_passed":  true,
+    "schema":  "ENGREMIAT_MEMORY/operative/dashboard/dashboard-state.schema.json",
+    "state":  "ENGREMIAT_MEMORY/operative/dashboard/dashboard-state.json",
+    "html":  "ENGREMIAT_MEMORY/dashboard/memory/index.html",
+    "smoke_report":  "reports/dev-visual-memory-operative/e03-operative-dashboard/visual-dashboard-smoke-report.json",
+    "events_count":  64,
+    "gates_count":  3,
+    "artifacts_count":  128,
+    "external_network":  false,
+    "git":  false,
+    "risk":  "LOW",
+    "next":  "E04_COMMAND_HUB_Y_FLUJO_HUMANO"
+}

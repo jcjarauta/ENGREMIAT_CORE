@@ -1,0 +1,45 @@
+﻿{
+    "contract_id":  "engremiat.cline_kanban_adapter.preview.v1",
+    "objective":  "ENGREMIAT_KANBAN_HUMAN_CONTROL_SURFACE_007",
+    "stage":  "E04",
+    "purpose":  "Preparar formato de exportacion hacia una superficie Kanban/Cline sin escribir tarjetas reales ni lanzar Cline.",
+    "mode":  "PREVIEW_ONLY",
+    "canonical_input":  "data/kanban-human-control/kanban-board.json",
+    "preview_output":  "data/kanban-human-control/cline-kanban-export-preview.json",
+    "forbidden_actions":  [
+                              "write_real_kanban_card",
+                              "create_cline_task",
+                              "launch_cline",
+                              "send_prompt",
+                              "run_worker",
+                              "auto_apply",
+                              "git_write",
+                              "remote_inference"
+                          ],
+    "allowed_actions":  [
+                            "read_local_board_json",
+                            "write_local_preview_json",
+                            "write_local_report_json",
+                            "write_local_docs"
+                        ],
+    "fields":  {
+                   "external_card_id":  "Identificador candidato para tarjeta externa",
+                   "source_card_id":  "Identificador de tarjeta canonica ENGREMIAT",
+                   "title":  "Titulo humano",
+                   "lane":  "Columna Kanban sugerida",
+                   "body":  "Descripcion exportable",
+                   "labels":  "Etiquetas visuales",
+                   "evidence_links":  "Rutas locales a evidencia canonica",
+                   "gate_summary":  "Resumen de autorizacion",
+                   "safety_flags":  "Flags de seguridad que deben permanecer en false"
+               },
+    "safety":  {
+                   "kanban_write":  false,
+                   "launch_cline_task":  false,
+                   "cline_task_created":  false,
+                   "worker_real_execution":  false,
+                   "auto_apply":  false,
+                   "git_write":  false,
+                   "remote_inference":  false
+               }
+}

@@ -1,0 +1,72 @@
+﻿{
+    "objective_id":  "ENGREMIAT_LOCAL_RUNTIME_FIX_004",
+    "stage":  "E06",
+    "status":  "LOCAL_RUNTIME_FIX_CLOSED",
+    "readiness":  100,
+    "decision":  "GO_RUNTIME_READY_CONTROLLED",
+    "old_pc_role":  "DEV_CONTROL_NODE",
+    "main_pc_role":  "COMPUTE_WORKER_NODE",
+    "tools":  {
+                  "node":  {
+                               "installed":  true,
+                               "version":  "v24.16.0",
+                               "path":  "C:\\Program Files\\nodejs\\node.exe"
+                           },
+                  "npm":  {
+                              "installed":  true,
+                              "version":  "11.13.0",
+                              "path":  "C:\\Program Files\\nodejs\\npm.ps1"
+                          },
+                  "git":  {
+                              "installed":  true,
+                              "version":  "git version 2.54.0.windows.1",
+                              "path":  "C:\\Program Files\\Git\\cmd\\git.exe"
+                          },
+                  "cline":  {
+                                "installed":  true,
+                                "version":  "3.0.24",
+                                "path":  "C:\\Users\\sacan\\AppData\\Roaming\\npm\\cline.ps1",
+                                "launch_task":  false,
+                                "auto_apply":  false
+                            },
+                  "ollama_old_pc":  {
+                                        "installed":  false,
+                                        "version":  null,
+                                        "required":  false,
+                                        "local_install_policy":  "NOT_REQUIRED_ON_OLD_PC"
+                                    },
+                  "ollama_remote_main_pc":  {
+                                                "configured":  true,
+                                                "enabled":  false,
+                                                "base_url":  "http://192.168.1.67:11434",
+                                                "probe_allowed":  false,
+                                                "inference_allowed":  false
+                                            }
+              },
+    "security":  {
+                     "old_pc_ollama_install_required":  false,
+                     "old_pc_model_download":  false,
+                     "remote_inference":  false,
+                     "cline_launch_task":  false,
+                     "cline_auto_apply":  false,
+                     "git_write":  false,
+                     "push":  false,
+                     "fetch":  false,
+                     "merge":  false,
+                     "firewall_changed":  false,
+                     "services_changed":  false
+                 },
+    "node_link":  {
+                      "available":  true,
+                      "main_pc_can_be_off":  true,
+                      "manifest":  "data/node-link/node-link-manifest.json"
+                  },
+    "reports":  {
+                    "e02_node_npm":  "reports/local-runtime-fix/e02-node-npm-validation-report.json",
+                    "e03_git":  "reports/local-runtime-fix/e03-git-validation-report.json",
+                    "e05_cline":  "reports/local-runtime-fix/e05-cline-validation-report.json",
+                    "node_link":  "reports/node-link/e05-node-link-close-validation-report.json"
+                },
+    "next":  "CONNECT_CONTROLLED_WORKER_ADAPTERS_OR_RETURN_REMOTE_OLLAMA_WHEN_MAIN_PC_ON",
+    "created_at":  "2026-06-16T13:19:56"
+}

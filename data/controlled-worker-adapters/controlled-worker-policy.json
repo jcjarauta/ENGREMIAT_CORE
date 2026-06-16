@@ -1,0 +1,51 @@
+﻿{
+    "objective_id":  "ENGREMIAT_CONTROLLED_WORKER_ADAPTERS_005",
+    "stage":  "E01",
+    "policy_id":  "CONTROLLED-WORKER-POLICY-001",
+    "mode":  "DEFAULT_DENY",
+    "worker_real_execution_allowed":  false,
+    "execution_requires_human_approve":  true,
+    "auto_apply":  false,
+    "auto_approve":  false,
+    "git_write":  false,
+    "push":  false,
+    "fetch":  false,
+    "merge":  false,
+    "remote_execution":  false,
+    "remote_inference":  false,
+    "ollama_generate":  false,
+    "ollama_chat":  false,
+    "ollama_tags_probe":  false,
+    "secret_read":  false,
+    "firewall_changed":  false,
+    "services_changed":  false,
+    "network_required_now":  false,
+    "main_pc_can_be_off":  true,
+    "allowed_without_gate":  [
+                                 "read_contracts",
+                                 "generate_request_files",
+                                 "validate_json",
+                                 "generate_dashboard",
+                                 "simulate_worker_response",
+                                 "generate_receipt"
+                             ],
+    "requires_explicit_gate":  [
+                                   "launch_cline_task",
+                                   "probe_remote_ollama_tags",
+                                   "run_worker",
+                                   "write_files_from_worker_output",
+                                   "git_commit",
+                                   "open_firewall",
+                                   "start_service"
+                               ],
+    "blocked_always_in_this_objective":  [
+                                             "push",
+                                             "fetch",
+                                             "merge",
+                                             "internet_exposure",
+                                             "secret_exfiltration",
+                                             "unattended_auto_apply"
+                                         ],
+    "next":  "E02_ADAPTER_CLINE_CLI_DRY_RUN",
+    "created_at":  "2026-06-16T13:30:47"
+}

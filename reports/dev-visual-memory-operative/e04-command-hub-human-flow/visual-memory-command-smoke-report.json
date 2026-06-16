@@ -1,0 +1,46 @@
+﻿{
+    "objective_id":  "ENGREMIAT_DEV_VISUAL_MEMORY_OPERATIVE_002",
+    "stage_id":  "E04",
+    "block_id":  "B04.3",
+    "step_id":  "P04.3.1",
+    "status":  "OK",
+    "validation_passed":  true,
+    "commands":  [
+                     {
+                         "command":  "memory",
+                         "exit_code":  0,
+                         "ok":  true,
+                         "output":  "reports/dev-visual-memory-operative/e04-command-hub-human-flow/smoke-memory.out.txt"
+                     },
+                     {
+                         "command":  "memory-status",
+                         "exit_code":  0,
+                         "ok":  true,
+                         "output":  "reports/dev-visual-memory-operative/e04-command-hub-human-flow/smoke-memory-status.out.txt"
+                     },
+                     {
+                         "command":  "memory-sync",
+                         "exit_code":  0,
+                         "ok":  true,
+                         "output":  "reports/dev-visual-memory-operative/e04-command-hub-human-flow/smoke-memory-sync.out.txt"
+                     },
+                     {
+                         "command":  "memory-dashboard",
+                         "exit_code":  0,
+                         "ok":  true,
+                         "output":  "reports/dev-visual-memory-operative/e04-command-hub-human-flow/smoke-memory-dashboard.out.txt"
+                     },
+                     {
+                         "command":  "memory-graph",
+                         "exit_code":  0,
+                         "ok":  true,
+                         "output":  "reports/dev-visual-memory-operative/e04-command-hub-human-flow/smoke-memory-graph.out.txt"
+                     }
+                 ],
+    "failed":  [
+
+               ],
+    "checked_at":  "2026-06-16T10:14:19",
+    "external_network":  false,
+    "git":  false
+}

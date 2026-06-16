@@ -1,0 +1,65 @@
+﻿{
+    "request_id":  "KANBAN-WRITE-REQUEST-PREVIEW-007-E05-001",
+    "objective":  "ENGREMIAT_KANBAN_HUMAN_CONTROL_SURFACE_007",
+    "stage":  "E05",
+    "mode":  "PREVIEW_ONLY_NO_WRITE",
+    "gate":  "data/kanban-human-control/kanban-write-gate.json",
+    "source_preview":  "data/kanban-human-control/cline-kanban-export-preview.json",
+    "candidate_card":  {
+                           "external_card_id":  "CLINE-KANBAN-PREVIEW-KANBAN-005-E06",
+                           "source_card_id":  "KANBAN-005-E06",
+                           "title":  "Controlled Worker Adapters",
+                           "lane":  "DONE",
+                           "body":  "Objective: ENGREMIAT_CONTROLLED_WORKER_ADAPTERS_005\nStage: E06 Controlled Worker Adapters\nBlock: CLOSE Evidence derived card\nStep: ADAPTERS_READY Controlled Worker Adapters\nDecision: NOT_REQUIRED_VIEW_ONLY\nNext: 006_GATED_WORKER_EXECUTION",
+                           "labels":  [
+                                          "ENGREMIAT",
+                                          "DONE",
+                                          "LOW",
+                                          "E06"
+                                      ],
+                           "evidence_links":  [
+                                                  "data/controlled-worker-adapters/controlled-worker-adapters-manifest.json",
+                                                  "data/controlled-worker-adapters/controlled-worker-policy.json",
+                                                  "data/controlled-worker-adapters/fake-worker-response.json",
+                                                  "data/controlled-worker-adapters/sample-human-gate-decision.json",
+                                                  "data/controlled-worker-adapters/worker-adapter-contract.json",
+                                                  "data/controlled-worker-adapters/worker-execution-gate-schema.json",
+                                                  "data/controlled-worker-adapters/cline/cline-adapter-contract.json",
+                                                  "data/controlled-worker-adapters/cline/sample-cline-request.json",
+                                                  "data/controlled-worker-adapters/ollama-remote/remote-ollama-probe-gate.json",
+                                                  "data/controlled-worker-adapters/ollama-remote/remote-ollama-safe-probe-plan.json",
+                                                  "data/controlled-worker-adapters/receipts/sample-worker-receipt.json",
+                                                  "reports/controlled-worker-adapters/e01-contract-smoke-report.json"
+                                              ],
+                           "gate_summary":  {
+                                                "authorization_required":  false,
+                                                "decision":  "NOT_REQUIRED_VIEW_ONLY",
+                                                "reason":  "Generacion local de tarjeta desde evidencia"
+                                            },
+                           "safety_flags":  {
+                                                "kanban_write":  false,
+                                                "launch_cline_task":  false,
+                                                "cline_task_created":  false,
+                                                "worker_real_execution":  false,
+                                                "auto_apply":  false,
+                                                "git_write":  false,
+                                                "remote_inference":  false
+                                            },
+                           "proposed_action":  "PREVIEW_ONLY_NO_WRITE"
+                       },
+    "requested_future_action":  "create_one_real_kanban_card_from_preview",
+    "execution_now":  false,
+    "decision":  "DEFER",
+    "no_go_reason":  "E05 prepara gate y request preview, pero no activa escritura real.",
+    "safety":  {
+                   "kanban_write":  false,
+                   "real_kanban_sync":  false,
+                   "launch_cline_task":  false,
+                   "cline_task_created":  false,
+                   "worker_real_execution":  false,
+                   "auto_apply":  false,
+                   "git_write":  false,
+                   "remote_inference":  false,
+                   "ui_automation":  false
+               }
+}

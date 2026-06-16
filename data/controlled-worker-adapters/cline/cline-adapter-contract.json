@@ -1,0 +1,57 @@
+﻿{
+    "objective_id":  "ENGREMIAT_CONTROLLED_WORKER_ADAPTERS_005",
+    "stage":  "E02",
+    "adapter_id":  "CLINE-CLI-LOCAL-ADAPTER-001",
+    "worker_id":  "worker.cline.old_pc.local",
+    "worker_type":  "cline_cli_local",
+    "role":  "LOCAL_CODE_ASSISTANT_GOVERNED_BY_HUMAN_GATE",
+    "status":  "CLI_DETECTED_DRY_RUN_ONLY",
+    "cli":  {
+                "available":  true,
+                "version":  "3.0.24",
+                "path":  "C:\\Users\\sacan\\AppData\\Roaming\\npm\\cline.ps1"
+            },
+    "execution_mode":  "DRY_RUN_ONLY",
+    "dry_run":  true,
+    "human_gate_required":  true,
+    "allowed_actions":  [
+                            "detect_cli",
+                            "read_contract",
+                            "generate_request_json",
+                            "validate_request",
+                            "simulate_dispatch",
+                            "generate_receipt",
+                            "prepare_human_gate"
+                        ],
+    "blocked_actions":  [
+                            "launch_cline_task",
+                            "send_prompt_to_cline",
+                            "auto_approve",
+                            "auto_apply",
+                            "worker_real_execution",
+                            "write_source_files_from_worker",
+                            "git_write",
+                            "git_commit",
+                            "push",
+                            "fetch",
+                            "merge",
+                            "secret_read",
+                            "network_action"
+                        ],
+    "evidence_required":  [
+                              "cline-adapter-contract.json",
+                              "sample-cline-request.json",
+                              "e02-cline-dry-run-smoke-report.json",
+                              "human_gate_decision_before_real_execution"
+                          ],
+    "security":  {
+                     "auto_approve":  false,
+                     "auto_apply":  false,
+                     "worker_real_execution":  false,
+                     "git_write":  false,
+                     "launch_task":  false,
+                     "network_required_now":  false
+                 },
+    "next":  "E03_GATE_HUMANO_DE_EJECUCION_CONTROLADA",
+    "created_at":  "2026-06-16T13:32:26"
+}

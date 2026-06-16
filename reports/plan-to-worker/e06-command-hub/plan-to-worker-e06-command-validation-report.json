@@ -1,0 +1,55 @@
+﻿{
+    "objective_id":  "ENGREMIAT_PLAN_TO_WORKER_APP_001",
+    "stage":  "E06",
+    "status":  "E06_VALIDATED",
+    "artifacts":  [
+                      {
+                          "path":  "tools/plan-to-worker/Invoke-PlanToWorkerCommand.ps1",
+                          "sha256":  "176cafb7d6fc8078b7325680e37217bf0399bfad68dcf8ad6a45e0490847411d",
+                          "type":  "PowerShell",
+                          "step":  "P06.1.1"
+                      },
+                      {
+                          "path":  "eng.ps1",
+                          "sha256":  "ecfabca420fd8b2b511ebf6e274b88a9de6ac9d5fdab5be370b01a2816bca179",
+                          "type":  "PowerShell",
+                          "step":  "P06.1.2"
+                      },
+                      {
+                          "path":  "tools/plan-to-worker/Build-PlanToWorkerDashboard.ps1",
+                          "sha256":  "eb21c18a03eb3c0a4440345adf6c5face2eda403f71e1fedb84117de64735fcf",
+                          "type":  "PowerShell",
+                          "step":  "P06.2.1"
+                      },
+                      {
+                          "path":  "dashboard/plan-to-worker/index.html",
+                          "sha256":  "3ec60c6e1294789ffc6830ea564f66271a924d116cd48e679147286e8bec42d1",
+                          "type":  "HTML",
+                          "step":  "P06.2.2"
+                      },
+                      {
+                          "path":  "tools/plan-to-worker/Test-PlanToWorkerCommands.ps1",
+                          "sha256":  "7b95eb98f04ba747e023dce94876e09f71457f675ba6d9a9175cac07c7412aac",
+                          "type":  "PowerShell",
+                          "step":  "P06.3.1"
+                      },
+                      {
+                          "path":  "reports/plan-to-worker/e06-command-hub/plan-to-worker-command-smoke-report.json",
+                          "sha256":  "904a74816396f468ece8da06a271d77d8163231f6407955777f38b8d07955d2e",
+                          "type":  "JSON",
+                          "step":  "P06.3.2"
+                      }
+                  ],
+    "score":  100,
+    "decision":  "GO",
+    "next":  "E07_MEMORIA_DEMO_Y_CIERRE",
+    "commands":  [
+                     "plan-status",
+                     "plan-import",
+                     "plan-next",
+                     "plan-prompt",
+                     "plan-open",
+                     "plan-inbox"
+                 ],
+    "created_at":  "2026-06-16T11:27:07"
+}

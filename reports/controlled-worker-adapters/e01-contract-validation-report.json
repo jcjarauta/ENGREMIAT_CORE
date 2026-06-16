@@ -1,0 +1,41 @@
+﻿{
+    "objective_id":  "ENGREMIAT_CONTROLLED_WORKER_ADAPTERS_005",
+    "stage":  "E01",
+    "status":  "E01_WORKER_ADAPTER_CONTRACT_READY",
+    "readiness":  100,
+    "decision":  "GO",
+    "artifacts":  [
+                      {
+                          "path":  "data/controlled-worker-adapters/worker-adapter-contract.json",
+                          "sha256":  "cc4e6bf9379d35c3d0f0791dd29fdca0fffbd604e087302cceb6194ef3cb7f16",
+                          "step":  "P01.1.1"
+                      },
+                      {
+                          "path":  "docs/WORKER_ADAPTER_CONTRACT_GUIDE.md",
+                          "sha256":  "90380143fad705c11f09e4aa2a3f4c17233f9e358338e4f43afcc92ea09a2194",
+                          "step":  "P01.1.2"
+                      },
+                      {
+                          "path":  "data/controlled-worker-adapters/controlled-worker-policy.json",
+                          "sha256":  "a92d7f7b1a49a7fda45b6e96c0f34aefd3e3bcee5cb0e0026f8f2cabf60c44ee",
+                          "step":  "P01.2.1"
+                      },
+                      {
+                          "path":  "docs/SECURITY_GATES_GUIDE.md",
+                          "sha256":  "0138ba0d74fd9fec31ba9cd73030590916bdc495dab3a79d8c81c86f2538c0aa",
+                          "step":  "P01.2.2"
+                      },
+                      {
+                          "path":  "tools/worker-adapters/Test-WorkerAdapterContract.ps1",
+                          "sha256":  "cf6ed219b52bb84d2e8653d8a6a0c49784b8e9001489e5d07b28d3ffb1106801",
+                          "step":  "P01.3.1"
+                      },
+                      {
+                          "path":  "reports/controlled-worker-adapters/e01-contract-smoke-report.json",
+                          "sha256":  "6859cb3222df334458371d2c82e87ddf72fb0cd6c964623d0fd3461ff14b9f93",
+                          "step":  "P01.3.2"
+                      }
+                  ],
+    "next":  "E02_ADAPTER_CLINE_CLI_DRY_RUN",
+    "created_at":  "2026-06-16T13:30:47"
+}

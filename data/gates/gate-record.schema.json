@@ -1,0 +1,45 @@
+﻿{
+    "schema_id":  "gate-record.schema.v1",
+    "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+    "stage_id":  "E04",
+    "block_id":  "B04.1",
+    "required":  [
+                     "gate_id",
+                     "objective_id",
+                     "stage_id",
+                     "block_id",
+                     "step_id",
+                     "action",
+                     "risk",
+                     "scope",
+                     "decision",
+                     "evidence",
+                     "status",
+                     "created_at",
+                     "expires_at"
+                 ],
+    "properties":  {
+                       "gate_id":  "string stable unique id",
+                       "objective_id":  "objective or MVP id",
+                       "stage_id":  "stage id",
+                       "block_id":  "block id",
+                       "step_id":  "step id",
+                       "action":  "human-authorized action",
+                       "risk":  "LOW|MEDIUM|HIGH|CRITICAL",
+                       "scope":  "allowed scope for the decision",
+                       "decision":  "PENDING|APPROVED|REJECTED|EXPIRED|CANCELLED",
+                       "evidence":  "path or evidence object",
+                       "status":  "OPEN|CLOSED|BLOCKED",
+                       "created_at":  "local ISO datetime",
+                       "expires_at":  "local ISO datetime or null"
+                   },
+    "validation_rules":  [
+                             "gate_id_required",
+                             "scope_required",
+                             "risk_required",
+                             "pending_by_default",
+                             "approved_requires_decision_source",
+                             "closed_requires_evidence",
+                             "fail_closed_if_missing_gate"
+                         ]
+}

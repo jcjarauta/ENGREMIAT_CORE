@@ -1,0 +1,24 @@
+﻿{
+    "objective_id":  "ENGREMIAT_LOCAL_NODE_LINK_004A",
+    "stage":  "E04",
+    "bridge_id":  "REMOTE-OLLAMA-NODE-LINK-BRIDGE-001",
+    "from_node_link":  "data/node-link/main-pc-endpoint.local.json",
+    "to_runtime_config":  "data/local-runtime-fix/remote-ollama-target.local.json",
+    "old_pc_local_ollama_install":  false,
+    "main_pc_ollama_future":  true,
+    "main_pc_host":  "DESKTOP-PVRVE56",
+    "main_pc_ip":  "192.168.1.67",
+    "remote_ollama_base_url":  "http://192.168.1.67:11434",
+    "probe_path":  "/api/tags",
+    "probe_allowed_now":  false,
+    "inference_allowed_now":  false,
+    "model_download_allowed_old_pc":  false,
+    "blocked_now":  [
+                        "ollama_pull_old_pc",
+                        "ollama_run_old_pc",
+                        "api_generate",
+                        "api_chat",
+                        "remote_inference"
+                    ],
+    "next":  "RETURN_TO_RUNTIME_FIX_E04_WHEN_MAIN_PC_ON"
+}

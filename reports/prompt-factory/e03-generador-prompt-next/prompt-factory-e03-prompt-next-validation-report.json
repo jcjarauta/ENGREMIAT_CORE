@@ -1,0 +1,31 @@
+﻿{
+    "objective_id":  "ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001",
+    "stage_id":  "E03",
+    "repair":  "E03-PROMPTNEXT-JSON-QUOTE-REPAIR-001",
+    "blocks":  [
+                   "B03.1",
+                   "B03.2",
+                   "B03.3"
+               ],
+    "steps":  [
+                  "P03.1.1",
+                  "P03.1.2",
+                  "P03.2.1",
+                  "P03.2.2",
+                  "P03.3.1",
+                  "P03.3.2"
+              ],
+    "status":  "OK",
+    "validation_passed":  true,
+    "score":  100,
+    "context":  "data/prompt-factory/out/prompt-context.json",
+    "prompt":  "data/prompt-factory/out/PROMPT_NEXT.md",
+    "context_builder":  "tools/prompt-factory/Build-PromptContext.ps1",
+    "prompt_builder":  "tools/prompt-factory/Build-PromptNext.ps1",
+    "validator":  "tools/prompt-factory/Test-PromptNext.ps1",
+    "smoke_report":  "reports/prompt-factory/e03-generador-prompt-next/prompt-next-smoke-report.json",
+    "external_network":  false,
+    "git":  false,
+    "risk":  "LOW",
+    "next":  "E04_GENERADOR_PROMPT_REPAIR"
+}

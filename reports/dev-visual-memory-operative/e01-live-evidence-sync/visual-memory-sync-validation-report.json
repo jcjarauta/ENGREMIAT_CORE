@@ -1,0 +1,32 @@
+﻿{
+    "objective_id":  "ENGREMIAT_DEV_VISUAL_MEMORY_OPERATIVE_002",
+    "stage_id":  "E01",
+    "blocks":  [
+                   "B01.1",
+                   "B01.2",
+                   "B01.3"
+               ],
+    "steps":  [
+                  "P01.1.1",
+                  "P01.1.2",
+                  "P01.2.1",
+                  "P01.2.2",
+                  "P01.3.1",
+                  "P01.3.2"
+              ],
+    "status":  "OK",
+    "validation_passed":  true,
+    "sources_index":  "ENGREMIAT_MEMORY/operative/sources/visual-memory-source-index.json",
+    "scan":  "ENGREMIAT_MEMORY/operative/sources/evidence-scan.json",
+    "events":  "ENGREMIAT_MEMORY/operative/events/events.jsonl",
+    "synced":  "ENGREMIAT_MEMORY/operative/synced",
+    "sources_count":  6,
+    "scanned_items":  64,
+    "events_count":  64,
+    "synced_notes":  5,
+    "read_only_sources":  true,
+    "external_network":  false,
+    "git":  false,
+    "risk":  "LOW",
+    "next":  "E02_LIVE_MAPS_AND_NAVIGATION"
+}

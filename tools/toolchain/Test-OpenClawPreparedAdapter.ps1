@@ -1,0 +1,3 @@
+﻿$ErrorActionPreference="Stop"
+[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+$req="data/plan-to-worker/adapters/openclaw/request.json";$policy="data/open-source-toolchain-bootstrap/openclaw-policy.json";$schema="data/plan-to-worker/adapters/common/worker-response.schema.json";$ok=(Test-Path -LiteralPath $policy -PathType Leaf);$reqOk=(Test-Path -LiteralPath $req -PathType Leaf);$schemaOk=(Test-Path -LiteralPath $schema -PathType Leaf);Write-Host ("OK Test-OpenClawPreparedAdapter policy="+$ok+" request="+$reqOk+" schema="+$schemaOk+" deferred=True install_executed=False agent_real_execution=False")

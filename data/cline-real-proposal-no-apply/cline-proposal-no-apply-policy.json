@@ -1,0 +1,36 @@
+﻿{
+    "policy_id":  "engremiat.cline_proposal_no_apply.policy.v1",
+    "objective":  "ENGREMIAT_CLINE_REAL_PROPOSAL_NO_APPLY_008",
+    "stage":  "E01",
+    "decision_default":  "DEFER",
+    "human_review_required":  true,
+    "proposal_only":  true,
+    "apply_allowed":  false,
+    "git_write_allowed":  false,
+    "source_write_by_worker_allowed":  false,
+    "task_creation_requires_future_gate":  true,
+    "required_future_authorization_phrase":  "AUTORIZO_CLINE_REAL_PROPOSAL_TASK_NO_APPLY_FOR_SPECIFIC_REQUEST",
+    "hard_limits":  [
+                        "auto_apply must remain false",
+                        "git_write must remain false",
+                        "worker may propose only",
+                        "human must review before any apply objective",
+                        "no commit or push inside 008 unless separate close authorization"
+                    ],
+    "safety":  {
+                   "proposal_only":  true,
+                   "human_review_required":  true,
+                   "cline_task_created":  false,
+                   "launch_cline_task":  false,
+                   "prompt_sent":  false,
+                   "worker_real_execution":  false,
+                   "auto_apply":  false,
+                   "apply_executed":  false,
+                   "source_write_by_worker":  false,
+                   "git_write":  false,
+                   "git_commit":  false,
+                   "git_push":  false,
+                   "remote_inference":  false,
+                   "ui_automation":  false
+               }
+}

@@ -1,0 +1,36 @@
+﻿{
+    "objective_id":  "ENGREMIAT_LOCAL_RUNTIME_FIX_004",
+    "stage":  "E02",
+    "block":  "B02.2",
+    "node_installed":  false,
+    "npm_installed":  false,
+    "winget_installed":  false,
+    "node_version":  null,
+    "npm_version":  null,
+    "node_path":  null,
+    "npm_path":  null,
+    "npm_prefix_g":  null,
+    "npm_root_g":  null,
+    "npm_bin_g":  null,
+    "path_status":  [
+                        {
+                            "path":  "C:\\Program Files\\nodejs",
+                            "exists":  false,
+                            "in_session_path":  false
+                        },
+                        {
+                            "path":  "C:\\Users\\sacan\\AppData\\Roaming\\npm",
+                            "exists":  false,
+                            "in_session_path":  false
+                        }
+                    ],
+    "install_executed":  false,
+    "manual_gate_required":  true,
+    "problems":  [
+                     "node_missing",
+                     "npm_missing"
+                 ],
+    "decision":  "NO_GO_NODE_NPM_REQUIRED",
+    "next":  "INSTALL_NODE_LTS_REOPEN_POWERSHELL_THEN_RERUN_E02",
+    "created_at":  "2026-06-16T12:16:07"
+}

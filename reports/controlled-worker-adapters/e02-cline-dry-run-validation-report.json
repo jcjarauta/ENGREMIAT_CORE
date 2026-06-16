@@ -1,0 +1,41 @@
+﻿{
+    "objective_id":  "ENGREMIAT_CONTROLLED_WORKER_ADAPTERS_005",
+    "stage":  "E02",
+    "status":  "E02_CLINE_ADAPTER_DRY_RUN_READY",
+    "readiness":  100,
+    "decision":  "GO",
+    "artifacts":  [
+                      {
+                          "path":  "data/controlled-worker-adapters/cline/cline-adapter-contract.json",
+                          "sha256":  "e2ebef3bc0646a548bc562593579a424d79a6dc0d667d1f6991f01f1cd72eed7",
+                          "step":  "P02.1.1"
+                      },
+                      {
+                          "path":  "docs/CLINE_ADAPTER_GUIDE.md",
+                          "sha256":  "3f9650f333b5bdb8f678dc71dde16b10965ad0476a1f96a6a8972a27279f71ed",
+                          "step":  "P02.1.2"
+                      },
+                      {
+                          "path":  "data/controlled-worker-adapters/cline/sample-cline-request.json",
+                          "sha256":  "3da0554909ab9042e6b51b935ea648dc982e8c94bb5fcb421104ae5cbfeb5ad4",
+                          "step":  "P02.2.1"
+                      },
+                      {
+                          "path":  "tools/worker-adapters/Build-ClineDryRunRequest.ps1",
+                          "sha256":  "7bafc2d1e0173180f7bdea8feef6363a20c62949091d8d8be3b1fb683238164e",
+                          "step":  "P02.2.2"
+                      },
+                      {
+                          "path":  "tools/worker-adapters/Test-ClineAdapterDryRun.ps1",
+                          "sha256":  "06b5800c1b12ea1cb1a2bff0e3f75f21b466a5e704ec13d1c11cf134cb797a17",
+                          "step":  "P02.3.1"
+                      },
+                      {
+                          "path":  "reports/controlled-worker-adapters/e02-cline-dry-run-smoke-report.json",
+                          "sha256":  "1d749a34bd57ae46aacb49f7aa0f1307aa0f5dfff41a1b5d58c452cc653c1bd1",
+                          "step":  "P02.3.2"
+                      }
+                  ],
+    "next":  "E03_GATE_HUMANO_DE_EJECUCION_CONTROLADA",
+    "created_at":  "2026-06-16T13:32:26"
+}

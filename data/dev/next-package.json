@@ -1,0 +1,82 @@
+﻿{
+    "package_id":  "DEV-SAFE-PACKAGE-E03-B03",
+    "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+    "stage_id":  "E03",
+    "blocks":  [
+                   "B03.1",
+                   "B03.2"
+               ],
+    "steps":  [
+                  {
+                      "step_id":  "P03.1.1",
+                      "action":  "Definir ActiveRow",
+                      "artifact":  "data/dev/active-row.schema.json",
+                      "risk":  "LOW",
+                      "agrupable":  "SI"
+                  },
+                  {
+                      "step_id":  "P03.1.2",
+                      "action":  "Crear active-row inicial",
+                      "artifact":  "data/dev/active-row.json",
+                      "risk":  "LOW",
+                      "agrupable":  "SI"
+                  },
+                  {
+                      "step_id":  "P03.2.1",
+                      "action":  "Crear next-package",
+                      "artifact":  "data/dev/next-package.json",
+                      "risk":  "LOW",
+                      "agrupable":  "SI"
+                  },
+                  {
+                      "step_id":  "P03.2.2",
+                      "action":  "Crear eng-dev-runner",
+                      "artifact":  "tools/eng-dev-runner.ps1",
+                      "risk":  "LOW",
+                      "agrupable":  "SI"
+                  }
+              ],
+    "mode":  "LOCAL_ONLY",
+    "allowed_operations":  [
+                               "READ_LOCAL",
+                               "WRITE_LOCAL_JSON",
+                               "WRITE_LOCAL_POWERSHELL",
+                               "VALIDATE_JSON",
+                               "REGISTER_ARTIFACT",
+                               "UPDATE_CONTEXT"
+                           ],
+    "forbidden_operations":  [
+                                 "EXTERNAL_NETWORK",
+                                 "GIT_REMOTE",
+                                 "SECRETS_ACCESS",
+                                 "REAL_AGENT_EXECUTION",
+                                 "REAL_NODE_EXECUTION",
+                                 "REAL_SHEETS_WRITE",
+                                 "REAL_TELEGRAM_DECISION"
+                             ],
+    "expected_artifacts":  [
+                               "data/dev/active-row.schema.json",
+                               "data/dev/active-row.json",
+                               "data/dev/next-package.json",
+                               "tools/eng-dev-runner.ps1",
+                               "reports/dev-system/e03-dev-runner/dev-runner-validation-report.json"
+                           ],
+    "validations":  [
+                        "required_files_exist",
+                        "json_parse_ok",
+                        "risk_low",
+                        "agrupable_si",
+                        "forbidden_operations_absent",
+                        "fail_closed_declared"
+                    ],
+    "stop_conditions":  [
+                            "missing_dependency",
+                            "missing_artifact",
+                            "risk_not_low",
+                            "agrupable_no",
+                            "external_action_detected",
+                            "gate_required"
+                        ],
+    "next":  "E05_DEV_READINESS_CHECKER_OR_E04_DEV_GATE_CENTER",
+    "created_at":  "2026-06-16T09:13:45"
+}

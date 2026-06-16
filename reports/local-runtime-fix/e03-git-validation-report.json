@@ -1,0 +1,31 @@
+﻿{
+    "objective_id":  "ENGREMIAT_LOCAL_RUNTIME_FIX_004",
+    "stage":  "E03",
+    "status":  "E03_GIT_READY_READONLY_REPAIRED",
+    "readiness":  100,
+    "decision":  "GO_GIT_READY_NO_REPO_CONTEXT",
+    "artifacts":  [
+                      {
+                          "path":  "reports/local-runtime-fix/git-runtime-readonly-report.json",
+                          "sha256":  "f8237d9df71ccb7ca33bf520fb4d3db8e9452dd09c3a057c89d4c6b6bad69c80",
+                          "type":  "JSON",
+                          "step":  "P03.2.2"
+                      },
+                      {
+                          "path":  "reports/local-runtime-fix/e03-git-smoke-report.json",
+                          "sha256":  "d175895ae825dcbe4e8ca89bf5d4b8a4873ef97946aefc69998e9a57b9d68b6f",
+                          "type":  "JSON",
+                          "step":  "P03.3.2"
+                      }
+                  ],
+    "git_installed":  true,
+    "git_version":  "git version 2.54.0.windows.1",
+    "repo_inside":  false,
+    "git_write":  false,
+    "commit":  false,
+    "push":  false,
+    "fetch":  false,
+    "merge":  false,
+    "next":  "OPEN_PROJECT_REPO_OR_CONTINUE_E04_IF_REPO_NOT_REQUIRED",
+    "created_at":  "2026-06-16T12:29:19"
+}

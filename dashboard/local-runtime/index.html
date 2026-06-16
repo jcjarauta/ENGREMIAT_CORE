@@ -1,0 +1,54 @@
+﻿<!doctype html><html><head><meta charset="utf-8"><title>ENGREMIAT Local Runtime</title><style>body{font-family:Segoe UI,Arial;margin:24px;background:#10131a;color:#e8eefc}section{border:1px solid #2b3448;border-radius:10px;padding:16px;margin:12px 0;background:#151a24}.ok{color:#62d26f}.warn{color:#ffd166}.bad{color:#ff6b6b}code{background:#0b0e14;padding:2px 5px;border-radius:4px}table{border-collapse:collapse;width:100%}td,th{border-bottom:1px solid #2b3448;padding:8px;text-align:left}</style></head><body>
+<h1>ENGREMIAT_LOCAL_RUNTIME_FIX_004</h1>
+<section><h2>Estado</h2><p class="ok">LOCAL_RUNTIME_FIX_CLOSED</p><p>Readiness: <b>
+100
+</b></p><p>Decision: <code>
+GO_RUNTIME_READY_CONTROLLED
+</code></p></section>
+<section><h2>Herramientas OLD-PC</h2><table><tr><th>Tool</th><th>Installed</th><th>Version</th><th>Path</th></tr>
+<tr><td>Node</td><td>
+True
+</td><td><code>
+v24.16.0
+</code></td><td><code>
+C:\Program Files\nodejs\node.exe
+</code></td></tr>
+<tr><td>npm</td><td>
+True
+</td><td><code>
+11.13.0
+</code></td><td><code>
+C:\Program Files\nodejs\npm.ps1
+</code></td></tr>
+<tr><td>Git</td><td>
+True
+</td><td><code>
+git version 2.54.0.windows.1
+</code></td><td><code>
+C:\Program Files\Git\cmd\git.exe
+</code></td></tr>
+<tr><td>Cline</td><td>
+True
+</td><td><code>
+3.0.24
+</code></td><td><code>
+C:\Users\sacan\AppData\Roaming\npm\cline.ps1
+</code></td></tr>
+<tr><td>Ollama OLD-PC</td><td>
+False
+</td><td><code>
+
+</code></td><td><span class="warn">No requerido en OLD-PC</span></td></tr>
+</table></section>
+<section><h2>MAIN-PC remoto</h2><p>Node link disponible: <b>
+True
+</b></p><p>Remote Ollama config: <b>
+True
+</b></p><p>Base URL: <code>
+http://192.168.1.67:11434
+</code></p><p>Inference allowed: <b>false</b></p></section>
+<section><h2>Seguridad</h2><p>worker_real_execution=false · auto_apply=false · git_write=false · firewall_changed=false · services_changed=false</p></section>
+<section><h2>Siguiente</h2><p><code>
+CONNECT_CONTROLLED_WORKER_ADAPTERS_OR_RETURN_REMOTE_OLLAMA_WHEN_MAIN_PC_ON
+</code></p></section>
+</body></html>

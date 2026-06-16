@@ -1,0 +1,39 @@
+﻿{
+    "handoff_id":  "CURRENT-TO-MAIN-PC-HANDOFF-TEMPLATE-009B-E02",
+    "objective":  "ENGREMIAT_DUAL_PC_DEVELOPMENT_WORKFLOW_009B",
+    "active_stage":  "PENDING_MAIN_PC_LINKING_WHEN_REQUESTED",
+    "current_pc":  "DESKTOP-RLPN1LL",
+    "target_pc":  "MAIN_PC",
+    "writer_authority":  {
+                             "current_writer":  "CURRENT_PC_PREPARATION_ONLY",
+                             "next_writer":  "MAIN_PC_AFTER_HUMAN_SWITCH_AND_READINESS",
+                             "single_active_writer":  true,
+                             "writer_conflict":  false
+                         },
+    "git_status_summary":  {
+                               "mode":  "READ_ONLY_OR_MANUAL",
+                               "local_git_required_before_write":  true,
+                               "remote_git_auto":  false,
+                               "note":  "Run repo readiness before modifying code on MAIN-PC."
+                           },
+    "next_action":  "Cuando el asistente lo indique, abrir MAIN-PC, validar repo local, leer este handoff y continuar con linking/readiness.",
+    "evidence":  [
+                     "reports/dual-pc-development-workflow/e01-dual-pc-model-validation-report.json",
+                     "reports/dual-pc-development-workflow/e02-dual-pc-handoff-validation-report.json",
+                     "docs/HANDOFF_CURRENT_PC_TO_MAIN_PC.md"
+                 ],
+    "limits":  {
+                   "main_pc_touched":  false,
+                   "remote_execution":  false,
+                   "ssh":  false,
+                   "winrm":  false,
+                   "shared_repo_edit":  false,
+                   "auto_apply":  false,
+                   "git_write":  false,
+                   "git_push":  false,
+                   "git_fetch":  false,
+                   "git_merge":  false,
+                   "secret_values_read":  false
+               },
+    "created_at_utc":  "2026-06-16T13:06:26.3021747Z"
+}

@@ -1,0 +1,103 @@
+﻿[
+    {
+        "id":  "CORE_NODE",
+        "tool":  "Node.js LTS",
+        "command":  "winget install OpenJS.NodeJS.LTS",
+        "priority":  "Alta",
+        "risk":  "MEDIUM",
+        "required_for":  [
+                             "Cline CLI",
+                             "adapters",
+                             "local scripts"
+                         ],
+        "execute_now":  false,
+        "human_gate_required":  true
+    },
+    {
+        "id":  "CORE_GIT",
+        "tool":  "Git",
+        "command":  "winget install Git.Git",
+        "priority":  "Alta",
+        "risk":  "MEDIUM",
+        "required_for":  [
+                             "repository control"
+                         ],
+        "execute_now":  false,
+        "human_gate_required":  true
+    },
+    {
+        "id":  "CORE_GH",
+        "tool":  "GitHub CLI",
+        "command":  "winget install GitHub.cli",
+        "priority":  "Media",
+        "risk":  "MEDIUM",
+        "required_for":  [
+                             "future governed GitHub operations"
+                         ],
+        "execute_now":  false,
+        "human_gate_required":  true
+    },
+    {
+        "id":  "OLLAMA_RUNTIME",
+        "tool":  "Ollama",
+        "command":  "winget install Ollama.Ollama",
+        "priority":  "Alta",
+        "risk":  "MEDIUM",
+        "required_for":  [
+                             "local model runtime"
+                         ],
+        "execute_now":  false,
+        "human_gate_required":  true,
+        "note":  "No descargar modelos sin gate"
+    },
+    {
+        "id":  "CLINE_CLI",
+        "tool":  "Cline CLI",
+        "command":  "npm install -g cline",
+        "priority":  "Alta",
+        "risk":  "MEDIUM",
+        "required_for":  [
+                             "controlled coding worker"
+                         ],
+        "execute_now":  false,
+        "human_gate_required":  true,
+        "note":  "Requiere Node/npm"
+    },
+    {
+        "id":  "GRAPHVIZ_OPTIONAL",
+        "tool":  "Graphviz",
+        "command":  "winget install Graphviz.Graphviz",
+        "priority":  "Media",
+        "risk":  "LOW",
+        "required_for":  [
+                             "optional graph dot/svg export"
+                         ],
+        "execute_now":  false,
+        "human_gate_required":  true
+    },
+    {
+        "id":  "SQLITE_OPTIONAL",
+        "tool":  "SQLite",
+        "command":  "winget install SQLite.SQLite",
+        "priority":  "Media",
+        "risk":  "LOW",
+        "required_for":  [
+                             "optional local persistence"
+                         ],
+        "execute_now":  false,
+        "human_gate_required":  true
+    },
+    {
+        "id":  "OPENCLAW_DEFERRED",
+        "tool":  "OpenClaw",
+        "command":  "DEFERRED_GATE_REQUIRED",
+        "priority":  "Media",
+        "risk":  "HIGH",
+        "required_for":  [
+                             "future channel/agent gateway"
+                         ],
+        "execute_now":  false,
+        "human_gate_required":  true,
+        "note":  "Solo contrato diferido; no instalar ahora"
+    }
+]

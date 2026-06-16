@@ -1,0 +1,25 @@
+﻿{
+    "objective":  "ENGREMIAT_KANBAN_HUMAN_CONTROL_SURFACE_007",
+    "stage":  "E04",
+    "blocks":  "B04.1-B04.3",
+    "steps":  6,
+    "adapter_contract":  "data/kanban-human-control/cline-kanban-adapter-contract.json",
+    "guide":  "docs/CLINE_KANBAN_ADAPTER_GUIDE.md",
+    "preview_file":  "data/kanban-human-control/cline-kanban-export-preview.json",
+    "source_board":  "data/kanban-human-control/kanban-board.json",
+    "preview_items_count":  3,
+    "bad_safety_flags":  [
+
+                         ],
+    "kanban_write":  false,
+    "launch_cline_task":  false,
+    "cline_task_created":  false,
+    "worker_real_execution":  false,
+    "auto_apply":  false,
+    "git_write":  false,
+    "remote_inference":  false,
+    "real_kanban_sync":  false,
+    "decision":  "GO_E04_CLINE_KANBAN_PREVIEW_ADAPTER_VALIDATED",
+    "readiness":  100,
+    "next":  "E05_KANBAN_WRITE_GATE_DEFER_BY_DEFAULT"
+}

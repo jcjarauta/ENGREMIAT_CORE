@@ -1,0 +1,65 @@
+﻿[
+    {
+        "id":  "HUMAN-JCJ",
+        "type":  "HUMAN",
+        "status":  "ACTIVE",
+        "roles":  [
+                      "OWNER",
+                      "DECISION_MAKER",
+                      "SUPERVISOR"
+                  ],
+        "created_at":  "2026-06-16 00:26:02"
+    },
+    {
+        "id":  "NODE-MAIN-PC",
+        "type":  "NODE",
+        "status":  "SIMULATED",
+        "roles":  [
+                      "COORDINATOR",
+                      "COMPUTE",
+                      "AI_HOST",
+                      "DEVELOPMENT"
+                  ],
+        "created_at":  "2026-06-16 00:26:02"
+    },
+    {
+        "id":  "NODE-RASPBERRY",
+        "type":  "NODE",
+        "status":  "SIMULATED",
+        "roles":  [
+                      "BACKUP",
+                      "MONITOR",
+                      "REGISTRY_REPLICA"
+                  ],
+        "created_at":  "2026-06-16 00:26:02"
+    },
+    {
+        "id":  "NODE-OLD-PC",
+        "type":  "NODE",
+        "status":  "SIMULATED",
+        "roles":  [
+                      "SECONDARY_COMPUTE",
+                      "TEST_WORKER"
+                  ],
+        "created_at":  "2026-06-16 00:26:02"
+    },
+    {
+        "id":  "NODE-MOBILE",
+        "type":  "NODE",
+        "status":  "LOGICAL_SIMULATED",
+        "roles":  [
+                      "HUMAN_INTERFACE",
+                      "APPROVAL_GATE"
+                  ],
+        "created_at":  "2026-06-16 00:26:02"
+    },
+    {
+        "id":  "COMMUNITY-LOCAL-001",
+        "type":  "COMMUNITY",
+        "status":  "DRAFT",
+        "roles":  [
+                      "FUTURE_FEDERATION_CONTEXT"
+                  ],
+        "created_at":  "2026-06-16 00:26:02"
+    }
+]

@@ -1,0 +1,65 @@
+﻿{
+    "request_id":  "REQ-OLLAMA-20260616114235",
+    "adapter":  "ollama",
+    "mode":  "FILE_ENDPOINT_ONLY",
+    "objective_id":  "ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002",
+    "stage":  "E04",
+    "selected_item":  {
+                          "canonical_id":  "CWI-0001",
+                          "objective_id":  "ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002",
+                          "stage_id":  "UNASSIGNED_STAGE",
+                          "stage_name":  "",
+                          "block_id":  "UNASSIGNED_BLOCK",
+                          "block_name":  "",
+                          "step_id":  "ITEM-001",
+                          "title":  "ITEM-001",
+                          "description":  "",
+                          "artifact":  "UNDEFINED_ARTIFACT",
+                          "depends_on":  "",
+                          "format":  "",
+                          "risk":  "LOW",
+                          "requires_human":  "",
+                          "priority":  "Media",
+                          "status":  "PENDING",
+                          "notes":  "",
+                          "source_format":  "TSV",
+                          "source_path":  "data/plan-to-worker/input/samples/plan-input.sample.tsv",
+                          "created_at":  "2026-06-16T11:41:44"
+                      },
+    "context":  {
+                    "canonical_queue_path":  "data/plan-to-worker/output/canonical-worker-queue.json",
+                    "canonical_items_path":  "data/plan-to-worker/output/canonical-work-items.json",
+                    "adapter_context":  {
+                                            "adapter":  "ollama",
+                                            "endpoint_type":  "file",
+                                            "endpoint_path":  "data/plan-to-worker/adapters/ollama/request.json",
+                                            "notes":  "Prepared endpoint only. No real execution.",
+                                            "expected_future_transport":  "local_http_after_gate"
+                                        }
+                },
+    "policy":  {
+                   "mode":  "FILE_ENDPOINT_ONLY",
+                   "external_network":  false,
+                   "real_worker_execution":  false,
+                   "worker_real_execution":  false,
+                   "auto_apply":  false,
+                   "git_write":  false,
+                   "commit":  false,
+                   "push":  false,
+                   "fetch":  false,
+                   "merge":  false,
+                   "browser":  false,
+                   "clipboard":  false,
+                   "read_secrets":  false,
+                   "human_gate_required":  true
+               },
+    "output_contract":  [
+                            "summary",
+                            "files_changed_or_created",
+                            "validation_commands",
+                            "evidence_paths",
+                            "risks",
+                            "decision"
+                        ],
+    "created_at":  "2026-06-16T11:42:35"
+}

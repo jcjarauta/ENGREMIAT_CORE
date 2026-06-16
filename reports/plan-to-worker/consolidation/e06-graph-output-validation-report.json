@@ -1,0 +1,61 @@
+﻿{
+    "objective_id":  "ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002",
+    "stage":  "E06",
+    "status":  "E06_VALIDATED",
+    "artifacts":  [
+                      {
+                          "path":  "tools/plan-to-worker/Build-PlanGraph.ps1",
+                          "sha256":  "2e45450917f554e4b28f3d1f9087a02c970061e88d0c83f87f8a04fbf5333055",
+                          "type":  "PowerShell",
+                          "step":  "P06.1.1"
+                      },
+                      {
+                          "path":  "data/plan-to-worker/output/graph/nodes.json",
+                          "sha256":  "5de2075577aac59c1fcfe914af01699d016880e8af57035b74576562853385f8",
+                          "type":  "JSON",
+                          "step":  "P06.1.2"
+                      },
+                      {
+                          "path":  "data/plan-to-worker/output/graph/edges.json",
+                          "sha256":  "db827c64a31b51b6b8042683a4b9e480be4d910f9d29e05b6376f7726518ca67",
+                          "type":  "JSON",
+                          "step":  "P06.1.2"
+                      },
+                      {
+                          "path":  "data/plan-to-worker/output/graph/graph.json",
+                          "sha256":  "c6d26c9c18e6b472a5b2837c6f7059954ba0318eafa487dd871bf0d880051ef1",
+                          "type":  "JSON",
+                          "step":  "P06.1.2"
+                      },
+                      {
+                          "path":  "tools/plan-to-worker/Build-PlanGraphDashboard.ps1",
+                          "sha256":  "d945e379db207a4fcf901b0d57b713e64af3ad8e4a47be4e45a2de4e45191ea5",
+                          "type":  "PowerShell",
+                          "step":  "P06.2.1"
+                      },
+                      {
+                          "path":  "dashboard/plan-to-worker/graph.html",
+                          "sha256":  "69d98dbfbc53134f45a9e21a0a950d7090b0051895e3f6a6866327574d838281",
+                          "type":  "HTML",
+                          "step":  "P06.2.2"
+                      },
+                      {
+                          "path":  "tools/plan-to-worker/Test-PlanGraphOutput.ps1",
+                          "sha256":  "06f5c31e43eebb46cf2dc836079e45e7fa52a2de4ce2b2b7710e7fba358f1e48",
+                          "type":  "PowerShell",
+                          "step":  "P06.3.1"
+                      },
+                      {
+                          "path":  "reports/plan-to-worker/consolidation/e06-graph-output-smoke-report.json",
+                          "sha256":  "dd41127e4882dd6c250d24aeb54f6ebaeabfadcf5cefa614c1c4f503100cbfee",
+                          "type":  "JSON",
+                          "step":  "P06.3.2"
+                      }
+                  ],
+    "nodes_count":  12,
+    "edges_count":  11,
+    "score":  100,
+    "decision":  "GO",
+    "next":  "E07_DASHBOARD_HUMANO_CONSOLIDADO",
+    "created_at":  "2026-06-16T11:45:34"
+}

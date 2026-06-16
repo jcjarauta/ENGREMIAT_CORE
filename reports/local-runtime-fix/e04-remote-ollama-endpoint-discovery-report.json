@@ -1,0 +1,20 @@
+﻿{
+    "objective_id":  "ENGREMIAT_LOCAL_RUNTIME_FIX_004",
+    "stage":  "E04",
+    "operation":  "REMOTE_OLLAMA_ENDPOINT_DISCOVERY",
+    "old_pc_local_ollama_install":  false,
+    "inference":  false,
+    "model_download":  false,
+    "dns_candidates":  [
+
+                       ],
+    "unique_ips":  [
+
+                   ],
+    "selected_ip":  null,
+    "config_ready_for_probe":  false,
+    "arp_snapshot":  "Interfaz: 192.168.1.106 --- 0xd\r\n  Direcci�n de Internet          Direcci�n f�sica      Tipo\r\n  192.168.1.1           bc-30-d9-a4-02-73     din�mico  \r\n  192.168.1.83          b4-c9-b9-1d-39-d6     din�mico  \r\n  192.168.1.97          00-f6-20-e4-8a-b3     din�mico  \r\n  192.168.1.121         1c-f2-9a-09-9a-ec     din�mico  \r\n  192.168.1.255         ff-ff-ff-ff-ff-ff     est�tico  \r\n  224.0.0.2             01-00-5e-00-00-02     est�tico  \r\n  224.0.0.22            01-00-5e-00-00-16     est�tico  \r\n  224.0.0.251           01-00-5e-00-00-fb     est�tico  \r\n  224.0.0.252           01-00-5e-00-00-fc     est�tico  \r\n  239.255.255.250       01-00-5e-7f-ff-fa     est�tico  \r\n  255.255.255.255       ff-ff-ff-ff-ff-ff     est�tico",
+    "decision":  "NO_GO_MAIN_PC_IP_REQUIRED",
+    "next":  "SET_MAIN_PC_IP_WITH_HELPER_THEN_RUN_SAFE_PROBE",
+    "created_at":  "2026-06-16T12:33:28"
+}

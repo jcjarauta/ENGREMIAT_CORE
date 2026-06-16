@@ -1,0 +1,37 @@
+﻿{
+    "schema_id":  "error-memory-record.schema.v1",
+    "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+    "stage_id":  "E06",
+    "block_id":  "B06.1",
+    "required":  [
+                     "error_id",
+                     "signature",
+                     "where",
+                     "root_cause",
+                     "repair_used",
+                     "files_affected",
+                     "prevention_rule",
+                     "status",
+                     "created_at"
+                 ],
+    "properties":  {
+                       "error_id":  "string stable unique id",
+                       "signature":  "normalized error signature",
+                       "where":  "file/script/phase where it happened",
+                       "root_cause":  "known or suspected cause",
+                       "repair_used":  "repair applied or suggested",
+                       "files_affected":  "array of affected paths",
+                       "prevention_rule":  "rule to avoid recurrence",
+                       "status":  "OPEN|RESOLVED|KNOWN|SUPERSEDED",
+                       "created_at":  "local ISO datetime",
+                       "last_seen_at":  "local ISO datetime optional",
+                       "tags":  "array of strings optional"
+                   },
+    "validation_rules":  [
+                             "signature_required",
+                             "root_cause_required",
+                             "prevention_rule_required",
+                             "status_controlled",
+                             "known_errors_visible_in_playbook"
+                         ]
+}

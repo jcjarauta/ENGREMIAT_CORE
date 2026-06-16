@@ -1,0 +1,23 @@
+﻿{
+    "adapter_id":  "ollama-remote-main-pc",
+    "source_node":  "OLD-PC",
+    "target_node":  "MAIN-PC",
+    "transport":  "HTTP_LAN_GATE",
+    "endpoint_config":  "data/local-runtime-fix/remote-ollama-target.local.json",
+    "allowed_now":  [
+                        "contract_validation",
+                        "config_validation"
+                    ],
+    "blocked_now":  [
+                        "local_ollama_install",
+                        "model_download",
+                        "inference",
+                        "api_generate",
+                        "api_chat"
+                    ],
+    "evidence_required":  [
+                              "remote_endpoint_config",
+                              "safe_probe_report_before_inference"
+                          ],
+    "human_gate_required":  true
+}

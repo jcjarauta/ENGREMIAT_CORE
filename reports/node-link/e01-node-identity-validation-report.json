@@ -1,0 +1,41 @@
+﻿{
+    "objective_id":  "ENGREMIAT_LOCAL_NODE_LINK_004A",
+    "stage":  "E01",
+    "status":  "E01_NODE_IDENTITY_READY",
+    "readiness":  100,
+    "decision":  "GO",
+    "artifacts":  [
+                      {
+                          "path":  "tools/node-link/Test-OldPcNodeIdentity.ps1",
+                          "sha256":  "22f2ccd1f3ad2ede4416ed53e427c81547d04f43c4d9cacfa7f2a7f3e0b5745e",
+                          "step":  "P01.1.1"
+                      },
+                      {
+                          "path":  "reports/node-link/old-pc-node-identity-report.json",
+                          "sha256":  "e001b880945bdad725615d02b398a229eb2c714a81d4c41c30a188e4ca79124e",
+                          "step":  "P01.1.2"
+                      },
+                      {
+                          "path":  "tools/node-link/Test-MainPcNodeIdentity.ps1",
+                          "sha256":  "08707aaf7852d7410c8f6a24fb0b1c307bdd6543fbb7dcabde39b63f8adb0630",
+                          "step":  "P01.2.1"
+                      },
+                      {
+                          "path":  "docs/MAIN_PC_IDENTITY_GUIDE.md",
+                          "sha256":  "ed4b322be68caddb1790e3ab2aee27c6729897c059de2dc22af9b3366a9dcf9b",
+                          "step":  "P01.2.2"
+                      },
+                      {
+                          "path":  "data/node-link/local-node-topology.example.json",
+                          "sha256":  "38bbcbf640c4e674e78d340f5c02a9eab9256ead3a538635e44e6faee3a0a26e",
+                          "step":  "P01.3.1"
+                      },
+                      {
+                          "path":  "reports/node-link/e01-node-identity-smoke-report.json",
+                          "sha256":  "85d411471c4574dec31c560b484fde89c97515f357e5bff48df4413f58269d06",
+                          "step":  "P01.3.2"
+                      }
+                  ],
+    "next":  "E02_CONECTIVIDAD_LAN_BASICA",
+    "created_at":  "2026-06-16T12:42:47"
+}

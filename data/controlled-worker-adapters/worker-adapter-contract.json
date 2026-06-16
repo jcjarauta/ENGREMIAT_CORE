@@ -1,0 +1,70 @@
+﻿{
+    "objective_id":  "ENGREMIAT_CONTROLLED_WORKER_ADAPTERS_005",
+    "stage":  "E01",
+    "contract_id":  "WORKER-ADAPTER-CONTRACT-001",
+    "purpose":  "Convert ENGREMIAT work packages into governed worker requests without automatic execution",
+    "adapter_types":  [
+                          "cline_cli_local",
+                          "ollama_remote_main_pc",
+                          "generic_future_worker"
+                      ],
+    "common_fields":  [
+                          "request_id",
+                          "worker_id",
+                          "worker_type",
+                          "role",
+                          "input_package",
+                          "allowed_actions",
+                          "blocked_actions",
+                          "human_gate_required",
+                          "dry_run",
+                          "evidence_required",
+                          "expected_receipt",
+                          "security_policy"
+                      ],
+    "default_request_state":  "PREPARED_NOT_EXECUTED",
+    "default_dry_run":  true,
+    "human_gate_required":  true,
+    "allowed_actions":  [
+                            "contract_validation",
+                            "request_generation",
+                            "dry_run_packaging",
+                            "evidence_manifest_generation",
+                            "human_review"
+                        ],
+    "blocked_actions":  [
+                            "worker_real_execution",
+                            "auto_apply",
+                            "auto_approve",
+                            "git_write",
+                            "push",
+                            "fetch",
+                            "merge",
+                            "remote_inference",
+                            "ollama_generate",
+                            "ollama_chat",
+                            "secret_read",
+                            "firewall_change",
+                            "service_start"
+                        ],
+    "evidence_required":  [
+                              "request_json",
+                              "policy_json",
+                              "human_gate_decision",
+                              "worker_response_or_simulated_response",
+                              "receipt_json",
+                              "hashes"
+                          ],
+    "security":  {
+                     "default_deny":  true,
+                     "old_pc_role":  "DEV_CONTROL_NODE",
+                     "main_pc_role":  "COMPUTE_WORKER_NODE",
+                     "main_pc_can_be_off":  true,
+                     "network_required_now":  false,
+                     "worker_real_execution":  false,
+                     "auto_apply":  false,
+                     "git_write":  false
+                 },
+    "next":  "E02_ADAPTER_CLINE_CLI_DRY_RUN",
+    "created_at":  "2026-06-16T13:30:47"
+}

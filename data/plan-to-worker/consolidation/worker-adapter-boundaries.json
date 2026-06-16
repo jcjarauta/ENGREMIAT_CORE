@@ -1,0 +1,48 @@
+﻿{
+    "objective_id":  "ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002",
+    "stage":  "E01",
+    "status":  "ACTIVE",
+    "adapters":  [
+                     "cline",
+                     "ollama",
+                     "openclaw",
+                     "generic",
+                     "fake"
+                 ],
+    "default_mode":  "FILE_ENDPOINT_PREPARED_ONLY",
+    "real_execution":  false,
+    "external_network":  false,
+    "git_write":  false,
+    "auto_apply":  false,
+    "read_secrets":  false,
+    "human_gate_required_for":  [
+                                    "REAL_WORKER_EXECUTION",
+                                    "APPLY_PATCH",
+                                    "WRITE_SOURCE",
+                                    "COMMIT",
+                                    "PUSH",
+                                    "FETCH",
+                                    "MERGE",
+                                    "EXTERNAL_NETWORK",
+                                    "READ_SECRETS"
+                                ],
+    "allowed_actions":  [
+                            "BUILD_REQUEST",
+                            "WRITE_REQUEST_FILE",
+                            "VALIDATE_RESPONSE_FILE",
+                            "BUILD_FAKE_RESPONSE",
+                            "EXPORT_EVIDENCE"
+                        ],
+    "forbidden_actions":  [
+                              "RUN_REAL_WORKER",
+                              "AUTO_APPLY",
+                              "PUSH",
+                              "FETCH",
+                              "MERGE",
+                              "READ_SECRETS",
+                              "BROWSER_AUTOMATION",
+                              "CLIPBOARD_AUTOMATION",
+                              "EXTERNAL_NETWORK"
+                          ],
+    "created_at":  "2026-06-16T11:39:35"
+}

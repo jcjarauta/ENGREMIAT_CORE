@@ -1,0 +1,20 @@
+﻿$ErrorActionPreference="Stop"
+[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+$proposalPath="data/gated-worker-execution/worker-proposal.json"
+$decisionPath="data/gated-worker-execution/sample-proposal-decision.json"
+$panelPath="dashboard/gated-worker-execution/proposal-review.html"
+if(!(Test-Path $proposalPath)){Write-Host "NO_GO proposal_missing=True";exit 2}
+if(!(Test-Path $decisionPath)){Write-Host "NO_GO decision_missing=True";exit 2}
+if(!(Test-Path $panelPath)){Write-Host "NO_GO panel_missing=True";exit 2}
+$p=Get-Content $proposalPath -Raw|ConvertFrom-Json
+$d=Get-Content $decisionPath -Raw|ConvertFrom-Json
+$problems=@()
+if($p.apply_recommended -ne $false){$problems+="apply_recommended_not_false"}
+if($p.write_files -ne $false){$problems+="write_files_not_false"}
+if($p.auto_apply -ne $false){$problems+="auto_apply_not_false"}
+if($p.git_write -ne $false){$problems+="git_write_not_false"}
+if($d.decision -ne "DEFER"){$problems+="decision_not_defer"}
+if($d.apply_allowed -ne $false){$problems+="apply_allowed_not_false"}
+if($d.git_write -ne $false){$problems+="decision_git_write_not_false"}
+if($problems.Count -gt 0){Write-Host ("NO_GO problems="+($problems -join ","));exit 2}
+Write-Host "OK worker_proposal_review=True decision=DEFER apply_allowed=False write_files=False auto_apply=False git_write=False" -ForegroundColor Green

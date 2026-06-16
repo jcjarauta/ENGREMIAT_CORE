@@ -1,0 +1,38 @@
+﻿{
+    "schema_id":  "prompt-task.schema.v1",
+    "objective_id":  "ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001",
+    "stage_id":  "E01",
+    "required":  [
+                     "objective_id",
+                     "stage_id",
+                     "block_id",
+                     "step_id",
+                     "step_name",
+                     "dependency",
+                     "artifact",
+                     "format",
+                     "risk",
+                     "validation",
+                     "next"
+                 ],
+    "properties":  {
+                       "objective_id":  "string",
+                       "stage_id":  "string",
+                       "block_id":  "string",
+                       "step_id":  "string",
+                       "step_name":  "string",
+                       "step_description":  "string",
+                       "dependency":  "string",
+                       "artifact":  "string",
+                       "format":  "string",
+                       "risk":  "LOW|MEDIUM|HIGH",
+                       "automatable":  "SI|NO",
+                       "priority":  "Alta|Media|Baja",
+                       "status":  "PENDING|IN_PROGRESS|DONE|BLOCKED",
+                       "validation":  "string",
+                       "allowed_paths":  "array",
+                       "forbidden_paths":  "array",
+                       "required_evidence":  "array",
+                       "next":  "string"
+                   }
+}

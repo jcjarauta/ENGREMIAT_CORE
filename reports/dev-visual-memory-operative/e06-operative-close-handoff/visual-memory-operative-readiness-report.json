@@ -1,0 +1,82 @@
+﻿{
+    "objective_id":  "ENGREMIAT_DEV_VISUAL_MEMORY_OPERATIVE_002",
+    "stage_id":  "E06",
+    "repair":  "E06-ADD-CONTENT-ALIAS-REPAIR-003",
+    "status":  "OK",
+    "validation_passed":  true,
+    "readiness":  100,
+    "threshold":  90,
+    "decision":  "GO_VISUAL_MEMORY_OPERATIVE",
+    "events_count":  79,
+    "nodes_count":  37,
+    "checks":  [
+                   {
+                       "id":  "sync_report",
+                       "path":  "reports/dev-visual-memory-operative/e01-live-evidence-sync/visual-memory-sync-validation-report.json",
+                       "points":  10,
+                       "ok":  true
+                   },
+                   {
+                       "id":  "navigation_report",
+                       "path":  "reports/dev-visual-memory-operative/e02-live-maps-navigation/visual-memory-operative-e02-navigation-validation-report.json",
+                       "points":  10,
+                       "ok":  true
+                   },
+                   {
+                       "id":  "dashboard_report",
+                       "path":  "reports/dev-visual-memory-operative/e03-operative-dashboard/visual-memory-operative-e03-dashboard-validation-report.json",
+                       "points":  10,
+                       "ok":  true
+                   },
+                   {
+                       "id":  "command_hub_report",
+                       "path":  "reports/dev-visual-memory-operative/e04-command-hub-human-flow/visual-memory-operative-e04-command-hub-validation-report.json",
+                       "points":  10,
+                       "ok":  true
+                   },
+                   {
+                       "id":  "query_graph_report",
+                       "path":  "reports/dev-visual-memory-operative/e05-local-queryable-graph/visual-memory-operative-e05-queryable-graph-validation-report.json",
+                       "points":  10,
+                       "ok":  true
+                   },
+                   {
+                       "id":  "eng_ps1",
+                       "path":  "eng.ps1",
+                       "points":  10,
+                       "ok":  true
+                   },
+                   {
+                       "id":  "dashboard_html",
+                       "path":  "ENGREMIAT_MEMORY/dashboard/memory/index.html",
+                       "points":  10,
+                       "ok":  true
+                   },
+                   {
+                       "id":  "events_jsonl",
+                       "path":  "ENGREMIAT_MEMORY/operative/events/events.jsonl",
+                       "points":  10,
+                       "ok":  true
+                   },
+                   {
+                       "id":  "nodes_jsonl",
+                       "path":  "ENGREMIAT_MEMORY/graph/export/nodes.jsonl",
+                       "points":  10,
+                       "ok":  true
+                   },
+                   {
+                       "id":  "docs_commands",
+                       "path":  "docs/ENG_COMMANDS.md",
+                       "points":  10,
+                       "ok":  true
+                   }
+               ],
+    "missing":  [
+
+                ],
+    "external_network":  false,
+    "database":  false,
+    "git":  false,
+    "checked_at":  "2026-06-16T10:20:15",
+    "next":  "ENGREMIAT_CORE_MVP_001"
+}

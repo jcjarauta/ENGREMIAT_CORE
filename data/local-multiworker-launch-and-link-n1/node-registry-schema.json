@@ -1,0 +1,49 @@
+﻿{
+    "schema_id":  "ENGREMIAT_NODE_REGISTRY_SCHEMA_N1",
+    "objective":  "ENGREMIAT_LOCAL_MULTIWORKER_LAUNCH_AND_LINK_009A_N1",
+    "version":  "1.0.0",
+    "required_fields":  [
+                            "node_id",
+                            "role",
+                            "availability",
+                            "workspace_path",
+                            "capabilities",
+                            "allowed_actions",
+                            "forbidden_actions"
+                        ],
+    "availability_values":  [
+                                "ACTIVE",
+                                "PENDING",
+                                "OFFLINE",
+                                "UNKNOWN"
+                            ],
+    "role_values":  [
+                        "CURRENT_MACHINE",
+                        "MAIN_PC",
+                        "AI_LOCAL",
+                        "OLD_PC",
+                        "MOBILE",
+                        "RASPBERRY"
+                    ],
+    "node_contract":  {
+                          "node_id":  "string unique",
+                          "machine_name":  "string",
+                          "role":  "enum",
+                          "availability":  "enum",
+                          "workspace_path":  "string or null",
+                          "capabilities":  "array",
+                          "risks":  "array",
+                          "allowed_actions":  "array",
+                          "forbidden_actions":  "array",
+                          "last_check_utc":  "datetime string",
+                          "notes":  "string"
+                      },
+    "security_defaults":  {
+                              "remote_execution":  false,
+                              "ssh":  false,
+                              "network_write":  false,
+                              "git_write":  false,
+                              "apply_executed":  false,
+                              "worker_real_execution":  false
+                          }
+}

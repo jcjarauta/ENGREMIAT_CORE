@@ -1,0 +1,72 @@
+﻿{
+    "contract_id":  "engremiat.cline_proposal_output_contract.v1",
+    "objective":  "ENGREMIAT_CLINE_REAL_PROPOSAL_NO_APPLY_008",
+    "stage":  "E01",
+    "required_sections":  [
+                              "summary",
+                              "target_context",
+                              "affected_files",
+                              "proposed_changes",
+                              "proposed_diff_or_patch",
+                              "risks",
+                              "tests_or_validation",
+                              "evidence",
+                              "open_questions",
+                              "recommended_human_decision"
+                          ],
+    "allowed_decisions":  [
+                              "APPROVE_FOR_FUTURE_APPLY_OBJECTIVE",
+                              "DEFER",
+                              "REJECT",
+                              "REPAIR",
+                              "REVIEW_MORE"
+                          ],
+    "output_rules":  [
+                         "must not claim changes were applied",
+                         "must not run commands",
+                         "must not modify files",
+                         "must provide proposal only",
+                         "must include risks and validation idea",
+                         "must be parseable by later normalizer"
+                     ],
+    "template":  {
+                     "summary":  "Breve resumen de la propuesta.",
+                     "target_context":  "Contexto objetivo/tarjeta/evidencia usada.",
+                     "affected_files":  [
+
+                                        ],
+                     "proposed_changes":  [
+
+                                          ],
+                     "proposed_diff_or_patch":  "Diff propuesto o descripcion aplicable en objetivo posterior.",
+                     "risks":  [
+
+                               ],
+                     "tests_or_validation":  [
+
+                                             ],
+                     "evidence":  [
+
+                                  ],
+                     "open_questions":  [
+
+                                        ],
+                     "recommended_human_decision":  "DEFER"
+                 },
+    "safety":  {
+                   "proposal_only":  true,
+                   "human_review_required":  true,
+                   "cline_task_created":  false,
+                   "launch_cline_task":  false,
+                   "prompt_sent":  false,
+                   "worker_real_execution":  false,
+                   "auto_apply":  false,
+                   "apply_executed":  false,
+                   "source_write_by_worker":  false,
+                   "git_write":  false,
+                   "git_commit":  false,
+                   "git_push":  false,
+                   "remote_inference":  false,
+                   "ui_automation":  false
+               }
+}

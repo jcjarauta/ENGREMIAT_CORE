@@ -1,0 +1,24 @@
+﻿{
+    "request_id":  "CLINE-OUTPUT-CAPTURE-REQUEST-008-E05-001",
+    "objective":  "ENGREMIAT_CLINE_REAL_PROPOSAL_NO_APPLY_008",
+    "stage":  "E05",
+    "repair":  "HTML_ALIAS_H_FIXED",
+    "purpose":  "Recoger salida de Cline si existe o registrar PENDING_OUTPUT si la tarea real no fue creada.",
+    "expected_sources":  [
+                             "data/cline-real-proposal-no-apply/manual-cline-output.md",
+                             "Cline UI manual copy if human provides it later"
+                         ],
+    "sensitive_data_policy":  "Do not read secrets, tokens, env files, credentials, browser storage or unrelated logs.",
+    "receipt":  "data/cline-real-proposal-no-apply/receipts/first-cline-proposal-task-receipt.json",
+    "task_created":  false,
+    "prompt_sent":  false,
+    "capture_now":  false,
+    "safety":  {
+                   "read_secrets":  false,
+                   "apply_executed":  false,
+                   "source_write_by_worker":  false,
+                   "git_write":  false,
+                   "remote_inference":  false,
+                   "ui_automation":  false
+               }
+}

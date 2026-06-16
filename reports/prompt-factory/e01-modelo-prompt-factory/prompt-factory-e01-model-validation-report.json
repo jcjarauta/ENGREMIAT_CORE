@@ -1,0 +1,33 @@
+﻿{
+    "objective_id":  "ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001",
+    "stage_id":  "E01",
+    "repair":  "E01-SMOKE-SCORE-REPAIR-001",
+    "blocks":  [
+                   "B01.1",
+                   "B01.2",
+                   "B01.3"
+               ],
+    "steps":  [
+                  "P01.1.1",
+                  "P01.1.2",
+                  "P01.2.1",
+                  "P01.2.2",
+                  "P01.3.1",
+                  "P01.3.2"
+              ],
+    "status":  "OK",
+    "validation_passed":  true,
+    "score":  100,
+    "schemas":  [
+                    "data/prompt-factory/schemas/prompt-task.schema.json",
+                    "data/prompt-factory/schemas/prompt-context.schema.json",
+                    "data/prompt-factory/schemas/worker-output.schema.json"
+                ],
+    "contract":  "docs/prompt-factory/PROMPT_FACTORY_CONTRACT.md",
+    "validator":  "tools/prompt-factory/Test-PromptFactoryModel.ps1",
+    "smoke_report":  "reports/prompt-factory/e01-modelo-prompt-factory/prompt-factory-model-smoke-report.json",
+    "external_network":  false,
+    "git":  false,
+    "risk":  "LOW",
+    "next":  "E02_LECTOR_DE_PLAN_DE_DESARROLLO"
+}

@@ -1,0 +1,60 @@
+﻿{
+    "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+    "stage_id":  "E03",
+    "blocks":  [
+                   "B03.1",
+                   "B03.2"
+               ],
+    "steps":  [
+                  "P03.1.1",
+                  "P03.1.2",
+                  "P03.2.1",
+                  "P03.2.2"
+              ],
+    "status":  "OK",
+    "validation_passed":  true,
+    "dependency":  "P02.2.2",
+    "files":  [
+                  {
+                      "path":  "data/dev/active-row.schema.json",
+                      "exists":  true,
+                      "sha256":  "eecc6b5b07e6b3e79e5abc962b06fe2d6ea0ab680ce529136558ee88756ad680"
+                  },
+                  {
+                      "path":  "data/dev/active-row.json",
+                      "exists":  true,
+                      "sha256":  "b0a0c45517c690879ce22f4f912b2a24565b1c7a1f78e70fc301a52d14cab7db"
+                  },
+                  {
+                      "path":  "data/dev/next-package.json",
+                      "exists":  true,
+                      "sha256":  "709dd1ded3bc780060bff225d19a73d7c7b8a13cfd8a473dea3d80f75d64e94c"
+                  },
+                  {
+                      "path":  "tools/eng-dev-runner.ps1",
+                      "exists":  true,
+                      "sha256":  "eaa3780a6be34ed44f0acd16b92ed21f67ae28e8314bd281828c2d72e0c84ec3"
+                  },
+                  {
+                      "path":  "data/registry/artifact-registry.jsonl",
+                      "exists":  true,
+                      "sha256":  "61c937bc15883f77a0f63ed293d84a3e97bd84b182bbd033bece14f70e1e07ac"
+                  },
+                  {
+                      "path":  "docs/ARTIFACT_INDEX.md",
+                      "exists":  true,
+                      "sha256":  "ad3f28754e02e99676f40dcf0f3eecabc95c20498c77a6330935711377a6487e"
+                  }
+              ],
+    "unsafe":  [
+
+               ],
+    "runner":  "tools/eng-dev-runner.ps1",
+    "active_row":  "data/dev/active-row.json",
+    "next_package":  "data/dev/next-package.json",
+    "registry_updated":  true,
+    "external_network":  false,
+    "git":  false,
+    "risk":  "LOW",
+    "next":  "E05_DEV_READINESS_CHECKER"
+}

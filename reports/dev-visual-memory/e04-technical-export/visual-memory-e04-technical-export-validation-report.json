@@ -1,0 +1,31 @@
+﻿{
+    "objective_id":  "ENGREMIAT_DEV_VISUAL_MEMORY_001",
+    "stage_id":  "E04",
+    "blocks":  [
+                   "B04.1",
+                   "B04.2",
+                   "B04.3"
+               ],
+    "steps":  [
+                  "P04.1.1",
+                  "P04.1.2",
+                  "P04.2.1",
+                  "P04.2.2",
+                  "P04.3.1",
+                  "P04.3.2"
+              ],
+    "status":  "OK",
+    "validation_passed":  true,
+    "node_schema":  "ENGREMIAT_MEMORY/graph/schemas/node.schema.json",
+    "edge_schema":  "ENGREMIAT_MEMORY/graph/schemas/edge.schema.json",
+    "nodes":  "ENGREMIAT_MEMORY/graph/export/nodes.jsonl",
+    "edges":  "ENGREMIAT_MEMORY/graph/export/edges.jsonl",
+    "graph_validation":  "reports/dev-visual-memory/e04-technical-export/memory-graph-validation-report.json",
+    "graphiti_plan":  "ENGREMIAT_MEMORY/GRAPHITI_READY_PLAN.md",
+    "adapter":  "tools/memory/MemoryGraphAdapter.ps1",
+    "external_network":  false,
+    "database":  false,
+    "git":  false,
+    "risk":  "LOW",
+    "next":  "E05_DASHBOARD_DEMO_CLOSE"
+}

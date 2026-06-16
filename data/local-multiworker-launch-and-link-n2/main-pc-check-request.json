@@ -1,0 +1,34 @@
+﻿{
+    "request_id":  "MAIN-PC-CHECK-REQUEST-N2-E01",
+    "objective":  "ENGREMIAT_LOCAL_MULTIWORKER_LAUNCH_AND_LINK_009A_N2",
+    "stage":  "E01",
+    "purpose":  "Verificar manualmente que MAIN-PC esta disponible para pruebas multiworker completas.",
+    "mode":  "MANUAL_READONLY",
+    "remote_connection_allowed":  false,
+    "ssh_allowed":  false,
+    "winrm_allowed":  false,
+    "network_probe_allowed":  false,
+    "expected_main_pc":  {
+                             "role":  "MAIN_PC",
+                             "expected_use":  [
+                                                  "Cline real proposal-only en 009",
+                                                  "Ollama/GPU opcional",
+                                                  "dashboard/control humano"
+                                              ]
+                         },
+    "manual_evidence_file":  "data/local-multiworker-launch-and-link-n2/main-pc-profile-evidence.json",
+    "instructions":  [
+                         "Si estas ejecutando esto en MAIN-PC, puedes crear evidencia manual copiando el template main-pc-profile-template.json a main-pc-profile-evidence.json y marcando evidence_confirmed=True.",
+                         "Si MAIN-PC no esta encendido o no estas seguro, dejar status=PENDING.",
+                         "No usar SSH, ping, WinRM ni conexion remota automatica en E01."
+                     ],
+    "safety":  {
+                   "remote_execution":  false,
+                   "ssh":  false,
+                   "winrm":  false,
+                   "network_probe":  false,
+                   "git_write":  false,
+                   "apply_executed":  false,
+                   "worker_real_execution":  false
+               }
+}

@@ -1,0 +1,47 @@
+﻿{
+    "objective":  "ENGREMIAT_DUAL_PC_DEVELOPMENT_WORKFLOW_009B",
+    "stage":  "E06",
+    "status":  "CLOSED",
+    "created_at_utc":  "2026-06-16T13:12:43.5208674Z",
+    "purpose":  "Consolidar el workflow dual-PC y dejar clara la ruta: continuar en el PC actual o volver a MAIN-PC cuando se indique.",
+    "artifacts":  [
+                      "data/dual-pc-development-workflow/dual-pc-role-model.json",
+                      "data/dual-pc-development-workflow/machine-authority-policy.json",
+                      "data/dual-pc-development-workflow/workspace-separation-policy.json",
+                      "data/dual-pc-development-workflow/forbidden-operations-policy.json",
+                      "data/dual-pc-development-workflow/dual-pc-handoff-schema.json",
+                      "data/dual-pc-development-workflow/current-to-main-pc-handoff-template.json",
+                      "data/dual-pc-development-workflow/current-pc-state-snapshot.json",
+                      "data/dual-pc-development-workflow/local-repo-readiness-schema.json",
+                      "data/dual-pc-development-workflow/writer-lock-policy.json",
+                      "data/dual-pc-development-workflow/git-sync-policy.json",
+                      "data/dual-pc-development-workflow/shared-workspace-bridge-policy.json",
+                      "data/dual-pc-development-workflow/shared-exchange-map.json",
+                      "data/dual-pc-development-workflow/dual-pc-dashboard-data.json",
+                      "data/dual-pc-development-workflow/dual-pc-readiness-rules.json",
+                      "reports/dual-pc-development-workflow/e01-dual-pc-model-validation-report.json",
+                      "reports/dual-pc-development-workflow/e02-dual-pc-handoff-validation-report.json",
+                      "reports/dual-pc-development-workflow/e03-repo-readiness-model-report.json",
+                      "reports/dual-pc-development-workflow/e04-dual-pc-sync-validation-report.json",
+                      "reports/dual-pc-development-workflow/e05-dual-pc-dashboard-validation-report.json",
+                      "reports/dual-pc-development-workflow/e06-dual-pc-readiness-report.json"
+                  ],
+    "missing_artifacts":  [
+                              "data/dual-pc-development-workflow/dual-pc-readiness-rules.json"
+                          ],
+    "readiness":  {
+                      "current_pc_ready":  true,
+                      "main_pc_required_later":  true,
+                      "workflow_ready":  true
+                  },
+    "decision":  "NO_GO_REPAIR",
+    "safety":  {
+                   "main_pc_touched":  false,
+                   "remote_execution":  false,
+                   "git_write":  false,
+                   "auto_apply":  false,
+                   "shared_repo_edit":  false,
+                   "secret_values_read":  false
+               },
+    "next_objective_policy":  "If the human asks to continue on the current PC, keep preparing and exporting evidence. If the human says to go to MAIN-PC, switch there and run MAIN-PC linking/readiness next."
+}

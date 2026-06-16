@@ -1,0 +1,41 @@
+﻿{
+    "objective_id":  "ENGREMIAT_GATED_WORKER_EXECUTION_006",
+    "stage":  "E05",
+    "status":  "E05_WORKER_PROPOSAL_REVIEW_READY",
+    "readiness":  100,
+    "decision":  "GO",
+    "artifacts":  [
+                      {
+                          "path":  "tools/gated-worker-execution/Normalize-ClineReadonlyOutput.ps1",
+                          "sha256":  "66ba7d6e49132e31bc77bcd4c6c54bce217d59cdb2c7e12248c7171d4084ea78",
+                          "step":  "P05.1.1"
+                      },
+                      {
+                          "path":  "data/gated-worker-execution/worker-proposal.json",
+                          "sha256":  "35f65acf99670364f8b1ddeb90852826d5c07cf10fe161b5034c35e9f3af30bb",
+                          "step":  "P05.1.2"
+                      },
+                      {
+                          "path":  "tools/gated-worker-execution/Build-WorkerProposalReviewPanel.ps1",
+                          "sha256":  "06bbe6cfe7350c2e3394f5d8c427318131172c9ef545712f7f18c654a66fe679",
+                          "step":  "P05.2.1"
+                      },
+                      {
+                          "path":  "dashboard/gated-worker-execution/proposal-review.html",
+                          "sha256":  "aead14a6d5d666c4278e322dade030739c9b40f48598caff7b46fd874f2e0f7f",
+                          "step":  "P05.2.2"
+                      },
+                      {
+                          "path":  "data/gated-worker-execution/sample-proposal-decision.json",
+                          "sha256":  "b7eff82ba6b2342c0fb77f0cf89241548631ce4e906efed67a9c3ab1bc718718",
+                          "step":  "P05.3.1"
+                      },
+                      {
+                          "path":  "reports/gated-worker-execution/e05-proposal-review-smoke-report.json",
+                          "sha256":  "01cb5f25397c2ed3b1f900011a8c5ab52fa5fb5a09078965df610e28223ccfbb",
+                          "step":  "P05.3.2"
+                      }
+                  ],
+    "next":  "E06_CIERRE_EJECUCION_GATED",
+    "created_at":  "2026-06-16T13:57:02"
+}

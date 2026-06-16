@@ -1,0 +1,20 @@
+﻿$ErrorActionPreference="Stop"
+[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+$env:Path=[System.Environment]::GetEnvironmentVariable("Path","Machine")+";"+[System.Environment]::GetEnvironmentVariable("Path","User")
+$contractPath="data/controlled-worker-adapters/cline/cline-adapter-contract.json"
+$requestPath="data/controlled-worker-adapters/cline/sample-cline-request.json"
+if(!(Test-Path $contractPath)){Write-Host "NO_GO contract_missing=True";exit 2}
+if(!(Test-Path $requestPath)){Write-Host "NO_GO request_missing=True";exit 2}
+$cline=Get-Command cline -ErrorAction SilentlyContinue
+$c=Get-Content $contractPath -Raw|ConvertFrom-Json
+$r=Get-Content $requestPath -Raw|ConvertFrom-Json
+$problems=@()
+if(-not $cline){$problems+="cline_missing"}
+if($c.dry_run -ne $true){$problems+="contract_dry_run_not_true"}
+if($c.security.worker_real_execution -ne $false){$problems+="worker_real_execution_not_false"}
+if($c.security.auto_apply -ne $false){$problems+="auto_apply_not_false"}
+if($r.limits.dry_run -ne $true){$problems+="request_dry_run_not_true"}
+if($r.limits.launch_task -ne $false){$problems+="launch_task_not_false"}
+if($r.status -ne "PREPARED_NOT_EXECUTED"){$problems+="request_status_not_prepared"}
+if($problems.Count -gt 0){Write-Host ("NO_GO problems="+($problems -join ","));exit 2}
+Write-Host "OK cline_adapter_dry_run=True cli_detected=True launch_task=False worker_real_execution=False auto_apply=False git_write=False" -ForegroundColor Green

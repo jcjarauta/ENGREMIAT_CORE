@@ -1,0 +1,78 @@
+﻿{
+    "objective_id":  "ENGREMIAT_DEV_ASSISTED_WORKER_ADAPTER_001",
+    "stage_id":  "E00",
+    "block_id":  "B00.3",
+    "modes":  [
+                  {
+                      "mode":  "PREPARED_ONLY",
+                      "risk":  "LOW",
+                      "gate_required":  false,
+                      "description":  "Solo genera contratos, paquetes y prompts. No entrega ni aplica.",
+                      "allowed_actions":  [
+                                              "READ_LOCAL_CONTEXT",
+                                              "GENERATE_TASK_PACKAGE",
+                                              "GENERATE_PROMPT"
+                                          ],
+                      "forbidden_actions":  [
+                                                "WRITE_SOURCE",
+                                                "RUN_COMMAND",
+                                                "APPLY_PATCH",
+                                                "EXTERNAL_NETWORK"
+                                            ]
+                  },
+                  {
+                      "mode":  "MANUAL_HANDOFF",
+                      "risk":  "LOW",
+                      "gate_required":  false,
+                      "description":  "Prepara prompt para que el humano lo lleve manualmente a Cline/Ollama.",
+                      "allowed_actions":  [
+                                              "READ_LOCAL_CONTEXT",
+                                              "EXPORT_PROMPT",
+                                              "REGISTER_HANDOFF"
+                                          ],
+                      "forbidden_actions":  [
+                                                "AUTO_SEND",
+                                                "APPLY_PATCH",
+                                                "GIT_REMOTE",
+                                                "READ_SECRETS"
+                                            ]
+                  },
+                  {
+                      "mode":  "PROPOSAL_ONLY",
+                      "risk":  "LOW",
+                      "gate_required":  false,
+                      "description":  "El worker devuelve propuesta, evidencias y riesgos. No aplica.",
+                      "allowed_actions":  [
+                                              "IMPORT_PROPOSAL",
+                                              "REGISTER_EVIDENCE",
+                                              "CREATE_REVIEW_REQUEST"
+                                          ],
+                      "forbidden_actions":  [
+                                                "APPLY_PATCH",
+                                                "CLOSE_STEP",
+                                                "WRITE_WITHOUT_REVIEW"
+                                            ]
+                  },
+                  {
+                      "mode":  "LOCAL_AUTHORIZED",
+                      "risk":  "MEDIUM",
+                      "gate_required":  true,
+                      "description":  "Aplicación local controlada solo tras gate humano explícito.",
+                      "allowed_actions":  [
+                                              "DRY_RUN_APPLY",
+                                              "VALIDATE_ALLOWED_PATHS",
+                                              "PREPARE_ROLLBACK",
+                                              "APPLY_APPROVED_LOCAL_CHANGE"
+                                          ],
+                      "forbidden_actions":  [
+                                                "GIT_PUSH",
+                                                "GIT_FETCH",
+                                                "GIT_MERGE",
+                                                "READ_SECRETS",
+                                                "EXTERNAL_NETWORK"
+                                            ]
+                  }
+              ],
+    "default_mode":  "PROPOSAL_ONLY",
+    "fail_closed":  true
+}

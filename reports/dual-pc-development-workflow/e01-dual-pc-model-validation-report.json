@@ -1,0 +1,35 @@
+﻿{
+    "objective":  "ENGREMIAT_DUAL_PC_DEVELOPMENT_WORKFLOW_009B",
+    "stage":  "E01",
+    "required_artifacts":  [
+                               "data/dual-pc-development-workflow/dual-pc-role-model.json",
+                               "data/dual-pc-development-workflow/machine-authority-policy.json",
+                               "data/dual-pc-development-workflow/workspace-separation-policy.json",
+                               "data/dual-pc-development-workflow/forbidden-operations-policy.json"
+                           ],
+    "missing_artifacts":  [
+
+                          ],
+    "errors":  [
+
+               ],
+    "roles":  [
+                  "CURRENT_PC",
+                  "MAIN_PC",
+                  "SHARED_WORKSPACE",
+                  "GIT_SOURCE_OF_TRUTH"
+              ],
+    "single_active_writer":  true,
+    "writer_conflict":  false,
+    "main_pc_touched":  false,
+    "shared_repo_edit":  false,
+    "git_source_of_truth":  true,
+    "remote_execution":  false,
+    "auto_apply":  false,
+    "git_remote_auto":  false,
+    "git_write":  false,
+    "validation_ok":  true,
+    "readiness":  100,
+    "decision":  "GO_E01_DUAL_PC_MODEL_AUTHORITY_READY",
+    "next":  "E02_DUAL_PC_HANDOFF"
+}

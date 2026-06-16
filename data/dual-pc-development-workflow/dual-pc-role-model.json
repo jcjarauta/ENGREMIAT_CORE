@@ -1,0 +1,51 @@
+﻿{
+    "objective":  "ENGREMIAT_DUAL_PC_DEVELOPMENT_WORKFLOW_009B",
+    "stage":  "E01",
+    "model_id":  "DUAL-PC-ROLE-MODEL-009B-E01",
+    "created_at_utc":  "2026-06-16T13:04:54.9901873Z",
+    "roles":  [
+                  {
+                      "role":  "CURRENT_PC",
+                      "description":  "PC desde el que trabaja ahora el humano; puede preparar modelos, policies, dashboards, handoff y readiness local.",
+                      "can_prepare_without_main_pc":  true,
+                      "can_run_heavy_workers":  false,
+                      "default_authority":  "PREPARE_AND_REVIEW"
+                  },
+                  {
+                      "role":  "MAIN_PC",
+                      "description":  "PC principal para Cline real, Ollama, GPU, workers y pruebas pesadas cuando el humano vuelva a el.",
+                      "can_prepare_without_main_pc":  false,
+                      "can_run_heavy_workers":  true,
+                      "default_authority":  "HEAVY_WORKER_HOST_PENDING_LINK"
+                  },
+                  {
+                      "role":  "SHARED_WORKSPACE",
+                      "description":  "Carpeta compartida gobernada para handoff, prompts, reports y evidencias; no es repo vivo.",
+                      "can_prepare_without_main_pc":  true,
+                      "can_run_heavy_workers":  false,
+                      "default_authority":  "CONTEXT_BRIDGE_ONLY"
+                  },
+                  {
+                      "role":  "GIT_SOURCE_OF_TRUTH",
+                      "description":  "Git es la fuente de verdad del codigo entre PCs; cada PC usa su propio repo local.",
+                      "can_prepare_without_main_pc":  true,
+                      "can_run_heavy_workers":  false,
+                      "default_authority":  "CODE_TRUTH"
+                  }
+              ],
+    "principles":  [
+                       "Un solo PC escritor activo por objetivo/bloque.",
+                       "Cada PC trabaja en su repo local.",
+                       "La carpeta compartida no es repo vivo.",
+                       "Git sincroniza codigo; ENGREMIAT_SHARED sincroniza contexto/evidencia.",
+                       "MAIN-PC no se toca desde este bloque."
+                   ],
+    "safety":  {
+                   "main_pc_touched":  false,
+                   "remote_execution":  false,
+                   "shared_repo_edit":  false,
+                   "auto_apply":  false,
+                   "git_remote_auto":  false,
+                   "git_write":  false
+               }
+}

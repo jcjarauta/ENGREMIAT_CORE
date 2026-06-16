@@ -1,0 +1,127 @@
+﻿{
+    "objective_id":  "ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001",
+    "stage_id":  "E03",
+    "repair":  "E03-PROMPTNEXT-JSON-QUOTE-REPAIR-001",
+    "block_id":  "B03.3",
+    "step_id":  "P03.3.2",
+    "status":  "OK",
+    "validation_passed":  true,
+    "score":  100,
+    "threshold":  90,
+    "checks":  [
+                   {
+                       "id":  "prompt_exists",
+                       "ok":  true,
+                       "points":  10,
+                       "message":  "data/prompt-factory/out/PROMPT_NEXT.md"
+                   },
+                   {
+                       "id":  "context_exists",
+                       "ok":  true,
+                       "points":  10,
+                       "message":  "data/prompt-factory/out/prompt-context.json"
+                   },
+                   {
+                       "id":  "contains____ROL",
+                       "ok":  true,
+                       "points":  5,
+                       "message":  "## ROL"
+                   },
+                   {
+                       "id":  "contains____OBJETIVO_ACTIVO",
+                       "ok":  true,
+                       "points":  5,
+                       "message":  "## OBJETIVO ACTIVO"
+                   },
+                   {
+                       "id":  "contains____DEPENDENCIA_VALIDADA",
+                       "ok":  true,
+                       "points":  5,
+                       "message":  "## DEPENDENCIA VALIDADA"
+                   },
+                   {
+                       "id":  "contains____ARTEFACTO_ESPERADO",
+                       "ok":  true,
+                       "points":  5,
+                       "message":  "## ARTEFACTO ESPERADO"
+                   },
+                   {
+                       "id":  "contains____CONTEXTO_REAL",
+                       "ok":  true,
+                       "points":  5,
+                       "message":  "## CONTEXTO REAL"
+                   },
+                   {
+                       "id":  "contains____L_MITES_DE_SEGURIDAD",
+                       "ok":  true,
+                       "points":  5,
+                       "message":  "## LÍMITES DE SEGURIDAD"
+                   },
+                   {
+                       "id":  "contains____ARCHIVOS_PERMITIDOS",
+                       "ok":  true,
+                       "points":  5,
+                       "message":  "## ARCHIVOS PERMITIDOS"
+                   },
+                   {
+                       "id":  "contains____ARCHIVOS_PROHIBIDOS",
+                       "ok":  true,
+                       "points":  5,
+                       "message":  "## ARCHIVOS PROHIBIDOS"
+                   },
+                   {
+                       "id":  "contains____VALIDACI_N_OBLIGATORIA",
+                       "ok":  true,
+                       "points":  5,
+                       "message":  "## VALIDACIÓN OBLIGATORIA"
+                   },
+                   {
+                       "id":  "contains____FORMATO_DE_SALIDA_WORKEROUTPUT",
+                       "ok":  true,
+                       "points":  5,
+                       "message":  "## FORMATO DE SALIDA WORKEROUTPUT"
+                   },
+                   {
+                       "id":  "contains____CRITERIO_GO___NO_GO",
+                       "ok":  false,
+                       "points":  5,
+                       "message":  "## CRITERIO GO / NO_GO"
+                   },
+                   {
+                       "id":  "contains_external_network_False",
+                       "ok":  true,
+                       "points":  5,
+                       "message":  "external_network=False"
+                   },
+                   {
+                       "id":  "contains_git_write_False",
+                       "ok":  true,
+                       "points":  5,
+                       "message":  "git_write=False"
+                   },
+                   {
+                       "id":  "contains_NO_GO",
+                       "ok":  true,
+                       "points":  5,
+                       "message":  "NO_GO"
+                   },
+                   {
+                       "id":  "contains_worker_id",
+                       "ok":  true,
+                       "points":  5,
+                       "message":  "worker_id"
+                   },
+                   {
+                       "id":  "context_schema_ok",
+                       "ok":  true,
+                       "points":  10,
+                       "message":  "data/prompt-factory/out/prompt-context.json"
+                   }
+               ],
+    "prompt":  "data/prompt-factory/out/PROMPT_NEXT.md",
+    "context":  "data/prompt-factory/out/prompt-context.json",
+    "external_network":  false,
+    "git":  false,
+    "next":  "E04_GENERADOR_PROMPT_REPAIR",
+    "checked_at":  "2026-06-16T10:41:03"
+}

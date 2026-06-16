@@ -1,0 +1,26 @@
+﻿{
+    "$schema":  "https://json-schema.org/draft/2020-12/schema",
+    "title":  "NodeProfile",
+    "type":  "object",
+    "required":  [
+                     "id",
+                     "node_type",
+                     "roles",
+                     "status"
+                 ],
+    "additionalProperties":  true,
+    "properties":  {
+                       "id":  {
+                                  "type":  "string"
+                              },
+                       "type":  {
+                                    "type":  "string"
+                                },
+                       "status":  {
+                                      "type":  "string"
+                                  },
+                       "created_at":  {
+                                          "type":  "string"
+                                      }
+                   }
+}

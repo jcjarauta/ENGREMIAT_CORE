@@ -1,0 +1,31 @@
+﻿{
+    "schema_id":  "prompt-context.schema.v1",
+    "objective_id":  "ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001",
+    "stage_id":  "E01",
+    "required":  [
+                     "active_objective",
+                     "active_stage",
+                     "last_ok",
+                     "last_issue",
+                     "readiness",
+                     "gates",
+                     "artifacts",
+                     "visual_memory",
+                     "next"
+                 ],
+    "properties":  {
+                       "active_objective":  "string",
+                       "active_stage":  "string",
+                       "active_step":  "string",
+                       "last_ok":  "array",
+                       "last_issue":  "array",
+                       "readiness":  "object",
+                       "gates":  "array",
+                       "artifacts":  "array",
+                       "visual_memory":  "object",
+                       "dashboard":  "string",
+                       "graph":  "object",
+                       "next":  "object",
+                       "generated_at":  "datetime"
+                   }
+}

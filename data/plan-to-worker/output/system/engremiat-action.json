@@ -1,0 +1,54 @@
+﻿{
+    "action_id":  "ENG-ACTION-20260616114439",
+    "objective_id":  "ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002",
+    "stage":  "E05",
+    "action_type":  "PLAN_TO_WORKER_SYSTEM_OUTPUT_READY",
+    "status":  "PENDING_HUMAN_REVIEW",
+    "selected_item":  {
+                          "canonical_id":  "CWI-0001",
+                          "objective_id":  "ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002",
+                          "stage_id":  "UNASSIGNED_STAGE",
+                          "stage_name":  "",
+                          "block_id":  "UNASSIGNED_BLOCK",
+                          "block_name":  "",
+                          "step_id":  "ITEM-001",
+                          "title":  "ITEM-001",
+                          "description":  "",
+                          "artifact":  "UNDEFINED_ARTIFACT",
+                          "depends_on":  "",
+                          "format":  "",
+                          "risk":  "LOW",
+                          "requires_human":  "",
+                          "priority":  "Media",
+                          "status":  "PENDING",
+                          "notes":  "",
+                          "source_format":  "TSV",
+                          "source_path":  "data/plan-to-worker/input/samples/plan-input.sample.tsv",
+                          "created_at":  "2026-06-16T11:41:44"
+                      },
+    "consumers":  [
+                      "DEV_SYSTEM",
+                      "PROMPT_FACTORY",
+                      "VISUAL_MEMORY",
+                      "TELEGRAM_FUTURE",
+                      "SHEETS_CONTROL"
+                  ],
+    "inputs":  [
+                   "canonical-worker-queue.json",
+                   "worker adapter requests"
+               ],
+    "outputs":  [
+                    "task-package.json",
+                    "decision-package.json",
+                    "evidence-manifest.json",
+                    "app-state.json"
+                ],
+    "policy":  {
+                   "external_network":  false,
+                   "git_write":  false,
+                   "worker_real_execution":  false,
+                   "auto_apply":  false,
+                   "human_gate_required":  true
+               },
+    "created_at":  "2026-06-16T11:44:39"
+}

@@ -1,0 +1,37 @@
+﻿{
+    "schema_id":  "agent-result-proposal.schema.v1",
+    "objective_id":  "ENGREMIAT_DEV_ASSISTED_WORKER_ADAPTER_001",
+    "stage_id":  "E03",
+    "block_id":  "B03.1",
+    "required":  [
+                     "task_id",
+                     "summary",
+                     "proposed_changes",
+                     "files_touched",
+                     "evidence",
+                     "risks",
+                     "validation_suggested",
+                     "apply_recommendation",
+                     "created_at"
+                 ],
+    "properties":  {
+                       "task_id":  "AgentTaskPackage task id",
+                       "summary":  "short result summary",
+                       "proposed_changes":  "array of proposed changes, not applied",
+                       "files_touched":  "array of proposed file paths",
+                       "evidence":  "array/object with evidence paths",
+                       "risks":  "array of detected risks",
+                       "validation_suggested":  "array of validations suggested by worker",
+                       "apply_recommendation":  "PROPOSAL_ONLY|REQUEST_REVIEW|BLOCKED|SAFE_TO_REVIEW",
+                       "created_at":  "local ISO datetime"
+                   },
+    "validation_rules":  [
+                             "task_id_required",
+                             "summary_required",
+                             "proposed_changes_array",
+                             "evidence_required",
+                             "apply_recommendation_not_auto_apply",
+                             "risks_declared",
+                             "validation_suggested_declared"
+                         ]
+}

@@ -1,0 +1,47 @@
+﻿{
+    "objective_id":  "ENGREMIAT_OPEN_SOURCE_TOOLCHAIN_BOOTSTRAP_003",
+    "stage":  "E04",
+    "blocks":  [
+                   "B04.1",
+                   "B04.2",
+                   "B04.3"
+               ],
+    "steps":  [
+                  "P04.1.1",
+                  "P04.1.2",
+                  "P04.2.1",
+                  "P04.2.2",
+                  "P04.3.1",
+                  "P04.3.2"
+              ],
+    "install_gate":  true,
+    "node_installed":  false,
+    "npm_installed":  false,
+    "cline_installed":  false,
+    "cline_version":  null,
+    "policy_created":  true,
+    "adapter_check":  true,
+    "adapter_exists":  true,
+    "response_schema_exists":  true,
+    "validator":  true,
+    "install_executed":  false,
+    "worker_real_execution":  false,
+    "auto_apply":  false,
+    "smoke":  false,
+    "score":  64,
+    "decision":  "NO_GO_MANUAL_INSTALL_OR_ADAPTER_REQUIRED",
+    "problems":  [
+                     "node_missing",
+                     "npm_missing",
+                     "cline_missing"
+                 ],
+    "external_network":  false,
+    "git_write":  false,
+    "commit":  false,
+    "push":  false,
+    "fetch":  false,
+    "merge":  false,
+    "report":  "reports/open-source-toolchain-bootstrap/e04-cline-smoke-report.json",
+    "next":  "REPAIR_OR_MANUAL_PREPARE_CLINE_THEN_RERUN_E04",
+    "created_at":  "2026-06-16T12:01:40"
+}

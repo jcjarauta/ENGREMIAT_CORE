@@ -1,0 +1,76 @@
+﻿param([string]$IssuePath="data/prompt-factory/out/last-issue.json",[string]$OutPath="data/prompt-factory/out/PROMPT_REPAIR.md")
+$ErrorActionPreference="Stop"
+[Console]::OutputEncoding=[System.Text.Encoding]::UTF8
+function EnsureDir([string]$p){if($p -and !(Test-Path -LiteralPath $p)){New-Item -ItemType Directory -Path $p -Force|Out-Null}}
+if(!(Test-Path -LiteralPath $IssuePath -PathType Leaf)){throw "last-issue no encontrado: $IssuePath"}
+$payload=Get-Content -LiteralPath $IssuePath -Raw -Encoding UTF8|ConvertFrom-Json
+$i=$payload.issue
+$lines=@()
+$lines += "# PROMPT_REPAIR - ENGREMIAT CONTROLLED REPAIR"
+$lines += ""
+$lines += "## ROL"
+$lines += "Actúa como worker local controlado para reparar un fallo de ENGREMIAT. No avances de fase. Repara solo la causa detectada y devuelve evidencia."
+$lines += ""
+$lines += "## ISSUE DETECTADO"
+$lines += "- decision: "+$payload.decision
+$lines += "- status: "+$i.status
+$lines += "- report_path: "+$i.path
+$lines += "- message: "+$i.message
+$lines += "- next: "+$i.next
+$lines += ""
+$lines += "## OBJETIVO"
+$lines += "- objective_id: ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001"
+$lines += "- stage_id: E04"
+$lines += "- repair_mode: controlled_local_repair"
+$lines += ""
+$lines += "## LÍMITES DE SEGURIDAD"
+$lines += "- external_network=False"
+$lines += "- git_write=False"
+$lines += "- commit=False"
+$lines += "- push=False"
+$lines += "- fetch=False"
+$lines += "- merge=False"
+$lines += "- browser=False"
+$lines += "- clipboard=False"
+$lines += "- apply_sensible=False sin gate humano explícito"
+$lines += "- Si no puedes validar la reparación, responde NO_GO."
+$lines += ""
+$lines += "## ARCHIVOS PERMITIDOS"
+$lines += "- data/prompt-factory/**"
+$lines += "- tools/prompt-factory/**"
+$lines += "- reports/prompt-factory/**"
+$lines += "- docs/prompt-factory/**"
+$lines += ""
+$lines += "## ARCHIVOS PROHIBIDOS"
+$lines += "- .git/**"
+$lines += "- node_modules/**"
+$lines += "- backend/node_modules/**"
+$lines += "- secretos, tokens o credenciales"
+$lines += "- cambios fuera de la frontera técnica actual"
+$lines += ""
+$lines += "## TAREA DE REPARACIÓN"
+$lines += "1. Leer la evidencia indicada."
+$lines += "2. Identificar causa raíz mínima."
+$lines += "3. Corregir solo lo necesario."
+$lines += "4. Ejecutar validación local."
+$lines += "5. Generar o actualizar reporte JSON."
+$lines += "6. Devolver GO solo con evidencia."
+$lines += ""
+$lines += "## FORMATO DE SALIDA WORKEROUTPUT"
+$lines += "- worker_id: cline_or_ollama"
+$lines += "- task_id: PROMPT_REPAIR"
+$lines += "- decision: GO|NO_GO|REQUEST_CHANGES|BLOCKED"
+$lines += "- summary: resumen breve"
+$lines += "- files_touched: lista de archivos"
+$lines += "- tests_executed: lista de pruebas"
+$lines += "- risks: lista de riesgos"
+$lines += "- evidence: rutas de reportes o artefactos"
+$lines += "- validation_report: ruta del reporte"
+$lines += "- external_network: false"
+$lines += "- git_write: false"
+$lines += "- next: siguiente paso lógico"
+$lines += ""
+$lines += "## CRITERIO GO / NO_GO"
+$lines += "GO solo si el fallo queda reparado y validado. NO_GO si falta evidencia, si el cambio excede el alcance o si requiere gate humano."
+EnsureDir (Split-Path -Parent $OutPath);Set-Content -LiteralPath $OutPath -Value $lines -Encoding UTF8
+Write-Host ("OK build_prompt_repair=True issue="+$i.status+" output="+$OutPath)

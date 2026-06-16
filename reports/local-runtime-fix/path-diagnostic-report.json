@@ -1,0 +1,176 @@
+﻿{
+    "objective_id":  "ENGREMIAT_LOCAL_RUNTIME_FIX_004",
+    "stage":  "E01",
+    "block":  "B01.1",
+    "operation":  "PATH_AND_COMMAND_DIAGNOSTIC_READONLY",
+    "computer":  "DESKTOP-RLPN1LL",
+    "user":  "sacan",
+    "pwd":  "C:\\Users\\sacan\\Desktop\\ENGREMIAT_CORE",
+    "powershell":  "5.1.19041.6456",
+    "session_path_count":  6,
+    "user_path_count":  1,
+    "machine_path_count":  5,
+    "session_path":  [
+                         "C:\\Windows\\system32",
+                         "C:\\Windows",
+                         "C:\\Windows\\System32\\Wbem",
+                         "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\",
+                         "C:\\Windows\\System32\\OpenSSH\\",
+                         "C:\\Users\\sacan\\AppData\\Local\\Microsoft\\WindowsApps"
+                     ],
+    "user_path":  "C:\\Users\\sacan\\AppData\\Local\\Microsoft\\WindowsApps",
+    "machine_path":  [
+                         "C:\\Windows\\system32",
+                         "C:\\Windows",
+                         "C:\\Windows\\System32\\Wbem",
+                         "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\",
+                         "C:\\Windows\\System32\\OpenSSH\\"
+                     ],
+    "known_path_status":  [
+                              {
+                                  "path":  "C:\\Program Files\\nodejs",
+                                  "exists":  false,
+                                  "in_session_path":  false,
+                                  "in_user_path":  false,
+                                  "in_machine_path":  false
+                              },
+                              {
+                                  "path":  "C:\\Program Files\\Git\\cmd",
+                                  "exists":  false,
+                                  "in_session_path":  false,
+                                  "in_user_path":  false,
+                                  "in_machine_path":  false
+                              },
+                              {
+                                  "path":  "C:\\Program Files\\Git\\bin",
+                                  "exists":  false,
+                                  "in_session_path":  false,
+                                  "in_user_path":  false,
+                                  "in_machine_path":  false
+                              },
+                              {
+                                  "path":  "C:\\Users\\sacan\\AppData\\Roaming\\npm",
+                                  "exists":  false,
+                                  "in_session_path":  false,
+                                  "in_user_path":  false,
+                                  "in_machine_path":  false
+                              },
+                              {
+                                  "path":  "C:\\Users\\sacan\\AppData\\Local\\Programs\\Ollama",
+                                  "exists":  false,
+                                  "in_session_path":  false,
+                                  "in_user_path":  false,
+                                  "in_machine_path":  false
+                              },
+                              {
+                                  "path":  "C:\\Program Files\\Ollama",
+                                  "exists":  false,
+                                  "in_session_path":  false,
+                                  "in_user_path":  false,
+                                  "in_machine_path":  false
+                              },
+                              {
+                                  "path":  "C:\\Users\\sacan\\AppData\\Local\\Microsoft\\WindowsApps",
+                                  "exists":  true,
+                                  "in_session_path":  true,
+                                  "in_user_path":  true,
+                                  "in_machine_path":  false
+                              }
+                          ],
+    "commands":  [
+                     {
+                         "name":  "winget",
+                         "installed":  false,
+                         "path":  null,
+                         "version":  null,
+                         "all_paths":  [
+
+                                       ]
+                     },
+                     {
+                         "name":  "msiexec",
+                         "installed":  true,
+                         "path":  "C:\\Windows\\system32\\msiexec.exe",
+                         "version":  "",
+                         "all_paths":  [
+                                           "C:\\Windows\\system32\\msiexec.exe"
+                                       ]
+                     },
+                     {
+                         "name":  "node",
+                         "installed":  false,
+                         "path":  null,
+                         "version":  null,
+                         "all_paths":  [
+
+                                       ]
+                     },
+                     {
+                         "name":  "npm",
+                         "installed":  false,
+                         "path":  null,
+                         "version":  null,
+                         "all_paths":  [
+
+                                       ]
+                     },
+                     {
+                         "name":  "git",
+                         "installed":  false,
+                         "path":  null,
+                         "version":  null,
+                         "all_paths":  [
+
+                                       ]
+                     },
+                     {
+                         "name":  "ollama",
+                         "installed":  false,
+                         "path":  null,
+                         "version":  null,
+                         "all_paths":  [
+
+                                       ]
+                     },
+                     {
+                         "name":  "cline",
+                         "installed":  false,
+                         "path":  null,
+                         "version":  null,
+                         "all_paths":  [
+
+                                       ]
+                     },
+                     {
+                         "name":  "where",
+                         "installed":  true,
+                         "path":  "",
+                         "version":  "",
+                         "all_paths":  [
+                                           "",
+                                           "C:\\Windows\\system32\\where.exe"
+                                       ]
+                     }
+                 ],
+    "installed":  [
+                      "msiexec",
+                      "where"
+                  ],
+    "missing":  [
+                    "winget",
+                    "node",
+                    "npm",
+                    "git",
+                    "ollama",
+                    "cline"
+                ],
+    "path_issues":  [
+
+                    ],
+    "recommendation":  "INSTALL_OR_REPAIR_CORE_RUNTIME",
+    "install_executed":  false,
+    "download_executed":  false,
+    "git_write":  false,
+    "worker_real_execution":  false,
+    "created_at":  "2026-06-16T12:14:35"
+}

@@ -1,0 +1,36 @@
+﻿{
+    "policy_id":  "OLLAMA-SAFE-USE-POLICY-N1",
+    "objective":  "ENGREMIAT_LOCAL_MULTIWORKER_LAUNCH_AND_LINK_009A_N1",
+    "stage":  "E02",
+    "worker":  "OLLAMA",
+    "level":  "N1_LOCAL_PARTIAL_READINESS",
+    "ollama_required":  false,
+    "ollama_recommended_for_full_test":  true,
+    "inference_executed":  false,
+    "remote_inference":  false,
+    "prompt_sent":  false,
+    "model_required":  false,
+    "allowed_actions":  [
+                            "mark_optional",
+                            "future_presence_check",
+                            "future_model_inventory_if_authorized"
+                        ],
+    "forbidden_actions":  [
+                              "generate_text",
+                              "send_project_context",
+                              "remote_inference",
+                              "network_write",
+                              "auto_worker_loop",
+                              "write_source",
+                              "git_write"
+                          ],
+    "safety":  {
+                   "ollama_required":  false,
+                   "inference_executed":  false,
+                   "remote_inference":  false,
+                   "prompt_sent":  false,
+                   "source_write_by_worker":  false,
+                   "git_write":  false,
+                   "apply_executed":  false
+               }
+}

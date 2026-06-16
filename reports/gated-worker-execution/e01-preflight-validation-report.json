@@ -1,0 +1,41 @@
+﻿{
+    "objective_id":  "ENGREMIAT_GATED_WORKER_EXECUTION_006",
+    "stage":  "E01",
+    "status":  "E01_FIRST_GATED_EXECUTION_PREFLIGHT_READY",
+    "readiness":  100,
+    "decision":  "GO",
+    "artifacts":  [
+                      {
+                          "path":  "data/gated-worker-execution/first-gated-execution-scope.json",
+                          "sha256":  "0c135af30fa055506a30714f938ef670cb3ec01ada1f3a0046e969cd0012fa7c",
+                          "step":  "P01.1.1"
+                      },
+                      {
+                          "path":  "docs/FIRST_GATED_EXECUTION_GUIDE.md",
+                          "sha256":  "01575191590f1a9bbf4ea4130bef1e2a43327a45b3cf96609f76e20d8c7809df",
+                          "step":  "P01.1.2"
+                      },
+                      {
+                          "path":  "data/gated-worker-execution/first-cline-readonly-request.json",
+                          "sha256":  "8b2cad3372d47e2a1d29b66948eb75a35a2a75c52b43656552144da8db819333",
+                          "step":  "P01.2.1"
+                      },
+                      {
+                          "path":  "tools/gated-worker-execution/Build-FirstClineReadonlyRequest.ps1",
+                          "sha256":  "72320f5b58d44a1bc00a164f2529146c298969f7238d36a21f45861cb6aece6e",
+                          "step":  "P01.2.2"
+                      },
+                      {
+                          "path":  "tools/gated-worker-execution/Test-FirstGatedExecutionPreflight.ps1",
+                          "sha256":  "09c59fcf77e28a659521509b3091c0cc867e8a65a2911dabf85dffa826c1e467",
+                          "step":  "P01.3.1"
+                      },
+                      {
+                          "path":  "reports/gated-worker-execution/e01-preflight-smoke-report.json",
+                          "sha256":  "801652112c8b206dfe42ed266ad2378e1de3ff9be9da6e242bb8e9f30d89c588",
+                          "step":  "P01.3.2"
+                      }
+                  ],
+    "next":  "E02_GATE_HUMANO_APPROVE_LIMITADO",
+    "created_at":  "2026-06-16T13:46:13"
+}

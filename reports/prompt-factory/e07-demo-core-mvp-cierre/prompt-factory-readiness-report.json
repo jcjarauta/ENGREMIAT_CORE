@@ -1,0 +1,78 @@
+﻿{
+    "objective_id":  "ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001",
+    "stage_id":  "E07",
+    "repair":  "E07-EMPTY-COMPLETEDSTEPS-REPAIR-001",
+    "block_id":  "B07.2",
+    "step_id":  "P07.2.2",
+    "status":  "OK",
+    "validation_passed":  true,
+    "score":  100,
+    "threshold":  90,
+    "checks":  [
+                   {
+                       "id":  "e01_model",
+                       "ok":  true,
+                       "points":  10,
+                       "message":  "E01"
+                   },
+                   {
+                       "id":  "e02_reader",
+                       "ok":  true,
+                       "points":  10,
+                       "message":  "E02"
+                   },
+                   {
+                       "id":  "e03_prompt_next",
+                       "ok":  true,
+                       "points":  10,
+                       "message":  "E03"
+                   },
+                   {
+                       "id":  "e04_prompt_repair",
+                       "ok":  true,
+                       "points":  10,
+                       "message":  "E04"
+                   },
+                   {
+                       "id":  "e05_outbox_inbox",
+                       "ok":  true,
+                       "points":  10,
+                       "message":  "E05"
+                   },
+                   {
+                       "id":  "e06_commands",
+                       "ok":  true,
+                       "points":  10,
+                       "message":  "E06"
+                   },
+                   {
+                       "id":  "core_mvp_next_step",
+                       "ok":  true,
+                       "points":  10,
+                       "message":  "core-mvp-next-step"
+                   },
+                   {
+                       "id":  "core_mvp_prompt",
+                       "ok":  true,
+                       "points":  10,
+                       "message":  "PROMPT_NEXT_CORE_MVP_001"
+                   },
+                   {
+                       "id":  "active_prompt",
+                       "ok":  true,
+                       "points":  10,
+                       "message":  "ACTIVE_PROMPT"
+                   },
+                   {
+                       "id":  "commands_available",
+                       "ok":  true,
+                       "points":  10,
+                       "message":  "command hub"
+                   }
+               ],
+    "external_network":  false,
+    "git":  false,
+    "decision":  "PROMPT_FACTORY_READY_FOR_CORE_MVP",
+    "next":  "ENGREMIAT_CORE_MVP_001",
+    "checked_at":  "2026-06-16T10:49:22"
+}

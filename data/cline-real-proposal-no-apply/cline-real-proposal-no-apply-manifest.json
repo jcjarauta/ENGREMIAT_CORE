@@ -1,0 +1,153 @@
+﻿{
+    "objective":  "ENGREMIAT_CLINE_REAL_PROPOSAL_NO_APPLY_008",
+    "stage":  "E06",
+    "status":  "CLOSED",
+    "created_at_utc":  "2026-06-16T12:26:53.4887206Z",
+    "purpose":  "Cerrar el ciclo Cline proposal-only sin apply y preparar continuidad hacia apply controlado o reparacion.",
+    "stages_closed":  [
+                          "E01_CONTRACT",
+                          "E02_SELECT_CANDIDATE",
+                          "E03_TASK_CREATION_GATE",
+                          "E04_CONTROLLED_TASK_CREATION_OR_NO_GO",
+                          "E05_CAPTURE_AND_REVIEW",
+                          "E06_CLOSE"
+                      ],
+    "artifacts":  [
+                      {
+                          "path":  "data/cline-real-proposal-no-apply/first-cline-proposal-no-apply-scope.json",
+                          "exists":  true,
+                          "size_bytes":  2160
+                      },
+                      {
+                          "path":  "data/cline-real-proposal-no-apply/cline-proposal-no-apply-policy.json",
+                          "exists":  true,
+                          "size_bytes":  1598
+                      },
+                      {
+                          "path":  "data/cline-real-proposal-no-apply/cline-proposal-output-contract.json",
+                          "exists":  true,
+                          "size_bytes":  2991
+                      },
+                      {
+                          "path":  "data/cline-real-proposal-no-apply/selected-kanban-context.json",
+                          "exists":  true,
+                          "size_bytes":  8107
+                      },
+                      {
+                          "path":  "data/cline-real-proposal-no-apply/cline-proposal-task-candidate.json",
+                          "exists":  true,
+                          "size_bytes":  3805
+                      },
+                      {
+                          "path":  "data/cline-real-proposal-no-apply/cline-proposal-prompt-preview.md",
+                          "exists":  true,
+                          "size_bytes":  1576
+                      },
+                      {
+                          "path":  "data/cline-real-proposal-no-apply/cline-task-creation-gate.json",
+                          "exists":  true,
+                          "size_bytes":  2838
+                      },
+                      {
+                          "path":  "data/cline-real-proposal-no-apply/cline-task-creation-request-preview.json",
+                          "exists":  true,
+                          "size_bytes":  1912
+                      },
+                      {
+                          "path":  "data/cline-real-proposal-no-apply/receipts/first-cline-proposal-task-receipt.json",
+                          "exists":  true,
+                          "size_bytes":  1466
+                      },
+                      {
+                          "path":  "data/cline-real-proposal-no-apply/cline-output-capture-request.json",
+                          "exists":  true,
+                          "size_bytes":  1160
+                      },
+                      {
+                          "path":  "data/cline-real-proposal-no-apply/cline-proposal-raw-output.json",
+                          "exists":  true,
+                          "size_bytes":  840
+                      },
+                      {
+                          "path":  "data/cline-real-proposal-no-apply/cline-proposal-normalized.json",
+                          "exists":  true,
+                          "size_bytes":  2017
+                      },
+                      {
+                          "path":  "data/cline-real-proposal-no-apply/sample-human-proposal-decision.json",
+                          "exists":  true,
+                          "size_bytes":  1205
+                      },
+                      {
+                          "path":  "reports/cline-real-proposal-no-apply/e01-contract-validation-report.json",
+                          "exists":  true,
+                          "size_bytes":  1282
+                      },
+                      {
+                          "path":  "reports/cline-real-proposal-no-apply/e02-task-candidate-report.json",
+                          "exists":  true,
+                          "size_bytes":  1434
+                      },
+                      {
+                          "path":  "reports/cline-real-proposal-no-apply/e03-task-creation-gate-report.json",
+                          "exists":  true,
+                          "size_bytes":  1771
+                      },
+                      {
+                          "path":  "reports/cline-real-proposal-no-apply/e04-task-creation-validation-report.json",
+                          "exists":  true,
+                          "size_bytes":  1357
+                      },
+                      {
+                          "path":  "reports/cline-real-proposal-no-apply/e05-proposal-review-report.json",
+                          "exists":  true,
+                          "size_bytes":  1329
+                      },
+                      {
+                          "path":  "reports/cline-real-proposal-no-apply/e06-proposal-decision-validation-report.json",
+                          "exists":  true,
+                          "size_bytes":  701
+                      },
+                      {
+                          "path":  "dashboard/cline-real-proposal-no-apply/proposal-review.html",
+                          "exists":  true,
+                          "size_bytes":  2293
+                      },
+                      {
+                          "path":  "docs/CLINE_PROPOSAL_NO_APPLY_CONTRACT_GUIDE.md",
+                          "exists":  true,
+                          "size_bytes":  1250
+                      },
+                      {
+                          "path":  "docs/CLINE_TASK_CREATION_GATE_GUIDE.md",
+                          "exists":  true,
+                          "size_bytes":  1314
+                      },
+                      {
+                          "path":  "docs/TASK_CANDIDATE_HUMAN_REVIEW.md",
+                          "exists":  true,
+                          "size_bytes":  790
+                      }
+                  ],
+    "missing_artifacts":  [
+
+                          ],
+    "proposal_status":  "PENDING_OUTPUT",
+    "human_decision":  "DEFER",
+    "e04_decision":  "NO_GO_E04_NO_EXPLICIT_AUTHORIZATION_TASK_NOT_CREATED",
+    "e05_decision":  "GO_E05_PROPOSAL_REVIEW_READY_NO_APPLY",
+    "task_created":  false,
+    "prompt_sent":  false,
+    "safety":  {
+                   "proposal_only":  true,
+                   "apply_executed":  false,
+                   "auto_apply":  false,
+                   "source_write_by_worker":  false,
+                   "git_write":  false,
+                   "git_commit":  false,
+                   "git_push":  false,
+                   "remote_inference":  false,
+                   "ui_automation":  false
+               },
+    "next_objective_policy":  "If decision APPROVE and proposal exists, prepare controlled apply as separate gated objective; otherwise repair/defer/review more."
+}

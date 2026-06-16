@@ -1,0 +1,52 @@
+﻿{
+    "schema_id":  "artifact-record.schema.v1",
+    "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+    "stage_id":  "E01",
+    "block_id":  "B01.1",
+    "required":  [
+                     "artifact_id",
+                     "objective_id",
+                     "stage_id",
+                     "block_id",
+                     "step_id",
+                     "artifact_type",
+                     "name",
+                     "path",
+                     "format",
+                     "created_at",
+                     "sha256",
+                     "status",
+                     "description",
+                     "tags"
+                 ],
+    "properties":  {
+                       "artifact_id":  "string stable unique id",
+                       "objective_id":  "string objective or MVP id",
+                       "stage_id":  "string stage id",
+                       "block_id":  "string block id",
+                       "step_id":  "string step id",
+                       "artifact_type":  "contract|schema|tool|report|index|guide|state|evidence|dashboard|manifest|checksum",
+                       "name":  "file name",
+                       "path":  "repo-relative path",
+                       "format":  "JSON|JSONL|Markdown|PowerShell|HTML|TXT|SHA256",
+                       "created_at":  "local ISO datetime",
+                       "sha256":  "sha256 hash when file exists",
+                       "status":  "ACTIVE|SUPERSEDED|MISSING|DRAFT",
+                       "description":  "human readable purpose",
+                       "tags":  "array of strings"
+                   },
+    "route_standard":  [
+                           "reports/{objective_id}/{stage_id}/{block_id}/{step_id}/",
+                           "evidence/{objective_id}/{stage_id}/{block_id}/{step_id}/",
+                           "data/objectives/{objective_id}/",
+                           "docs/objectives/{objective_id}/",
+                           "manifests/{objective_id}/"
+                       ],
+    "validation_rules":  [
+                             "path_required",
+                             "file_exists_for_active_artifact",
+                             "sha256_required_for_active_file",
+                             "objective_stage_block_step_required",
+                             "status_controlled"
+                         ]
+}

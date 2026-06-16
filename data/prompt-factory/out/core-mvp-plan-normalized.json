@@ -1,0 +1,136 @@
+﻿{
+    "schema":  "development-plan-normalized.v1",
+    "input":  "data/prompt-factory/input/engremiat-core-mvp-plan.tsv",
+    "rows_count":  3,
+    "objectives":  [
+                       "ENGREMIAT_CORE_MVP_001"
+                   ],
+    "stages":  [
+                   {
+                       "stage_id":  "E01",
+                       "stage_name":  "Base contractual Core MVP",
+                       "blocks":  [
+                                      {
+                                          "block_id":  "B01.1",
+                                          "block_name":  "Contrato de dominio",
+                                          "steps":  [
+                                                        {
+                                                            "step_id":  "P01.1.1",
+                                                            "step_name":  "Crear CORE_MVP_CONTRACT",
+                                                            "dependency":  "NONE",
+                                                            "artifact":  "CORE_MVP_CONTRACT.md",
+                                                            "status":  "PENDING",
+                                                            "risk":  "LOW",
+                                                            "format":  "Markdown",
+                                                            "priority":  "Alta"
+                                                        },
+                                                        {
+                                                            "step_id":  "P01.1.2",
+                                                            "step_name":  "Crear core-mvp-domain.schema",
+                                                            "dependency":  "P01.1.1",
+                                                            "artifact":  "core-mvp-domain.schema.json",
+                                                            "status":  "PENDING",
+                                                            "risk":  "LOW",
+                                                            "format":  "JSON",
+                                                            "priority":  "Alta"
+                                                        }
+                                                    ]
+                                      },
+                                      {
+                                          "block_id":  "B01.2",
+                                          "block_name":  "Smoke base MVP",
+                                          "steps":  [
+                                                        {
+                                                            "step_id":  "P01.2.1",
+                                                            "step_name":  "Crear Test-CoreMvpBase",
+                                                            "dependency":  "P01.1.2",
+                                                            "artifact":  "tools/core-mvp/Test-CoreMvpBase.ps1",
+                                                            "status":  "PENDING",
+                                                            "risk":  "LOW",
+                                                            "format":  "PowerShell",
+                                                            "priority":  "Alta"
+                                                        }
+                                                    ]
+                                      }
+                                  ]
+                   }
+               ],
+    "steps":  [
+                  {
+                      "objective_id":  "ENGREMIAT_CORE_MVP_001",
+                      "stage_id":  "E01",
+                      "stage_name":  "Base contractual Core MVP",
+                      "stage_description":  "Definir el contrato mínimo del MVP antes de construir flujo funcional.",
+                      "stage_deliverable":  "Contrato MVP creado.",
+                      "block_id":  "B01.1",
+                      "block_name":  "Contrato de dominio",
+                      "block_description":  "Definir entidades, límites y flujo mínimo necesidad-tarea-match-oferta.",
+                      "block_deliverable":  "Dominio inicial creado.",
+                      "step_id":  "P01.1.1",
+                      "step_name":  "Crear CORE_MVP_CONTRACT",
+                      "step_description":  "Generar contrato local del MVP con entidades Need, Task, MatchProposal, Offer, Acceptance y Evidence.",
+                      "step_deliverable":  "Contrato creado.",
+                      "artifact":  "CORE_MVP_CONTRACT.md",
+                      "dependency":  "NONE",
+                      "format":  "Markdown",
+                      "risk":  "LOW",
+                      "automatable":  "SI",
+                      "priority":  "Alta",
+                      "status":  "PENDING",
+                      "notes":  "Primer paso real del MVP.",
+                      "line_number":  1,
+                      "source_path":  "data/prompt-factory/input/engremiat-core-mvp-plan.tsv"
+                  },
+                  {
+                      "objective_id":  "ENGREMIAT_CORE_MVP_001",
+                      "stage_id":  "E01",
+                      "stage_name":  "Base contractual Core MVP",
+                      "stage_description":  "Definir el contrato mínimo del MVP antes de construir flujo funcional.",
+                      "stage_deliverable":  "Contrato MVP creado.",
+                      "block_id":  "B01.1",
+                      "block_name":  "Contrato de dominio",
+                      "block_description":  "Definir entidades, límites y flujo mínimo necesidad-tarea-match-oferta.",
+                      "block_deliverable":  "Dominio inicial creado.",
+                      "step_id":  "P01.1.2",
+                      "step_name":  "Crear core-mvp-domain.schema",
+                      "step_description":  "Crear schema JSON para entidades y estados del flujo mínimo.",
+                      "step_deliverable":  "Schema creado.",
+                      "artifact":  "core-mvp-domain.schema.json",
+                      "dependency":  "P01.1.1",
+                      "format":  "JSON",
+                      "risk":  "LOW",
+                      "automatable":  "SI",
+                      "priority":  "Alta",
+                      "status":  "PENDING",
+                      "notes":  "Base técnica del MVP.",
+                      "line_number":  2,
+                      "source_path":  "data/prompt-factory/input/engremiat-core-mvp-plan.tsv"
+                  },
+                  {
+                      "objective_id":  "ENGREMIAT_CORE_MVP_001",
+                      "stage_id":  "E01",
+                      "stage_name":  "Base contractual Core MVP",
+                      "stage_description":  "Definir el contrato mínimo del MVP antes de construir flujo funcional.",
+                      "stage_deliverable":  "Contrato MVP creado.",
+                      "block_id":  "B01.2",
+                      "block_name":  "Smoke base MVP",
+                      "block_description":  "Validar que el contrato y schema existen y son coherentes.",
+                      "block_deliverable":  "Base validada.",
+                      "step_id":  "P01.2.1",
+                      "step_name":  "Crear Test-CoreMvpBase",
+                      "step_description":  "Crear validador local de contrato y schema MVP.",
+                      "step_deliverable":  "Validador creado.",
+                      "artifact":  "tools/core-mvp/Test-CoreMvpBase.ps1",
+                      "dependency":  "P01.1.2",
+                      "format":  "PowerShell",
+                      "risk":  "LOW",
+                      "automatable":  "SI",
+                      "priority":  "Alta",
+                      "status":  "PENDING",
+                      "notes":  "No avanzar sin base estable.",
+                      "line_number":  3,
+                      "source_path":  "data/prompt-factory/input/engremiat-core-mvp-plan.tsv"
+                  }
+              ],
+    "generated_at":  "2026-06-16T10:49:11"
+}

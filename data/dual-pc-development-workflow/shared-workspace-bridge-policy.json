@@ -1,0 +1,52 @@
+﻿{
+    "objective":  "ENGREMIAT_DUAL_PC_DEVELOPMENT_WORKFLOW_009B",
+    "stage":  "E04",
+    "policy_id":  "SHARED-WORKSPACE-BRIDGE-POLICY-009B-E04",
+    "shared_workspace_default":  "C:\\ENGREMIAT_SHARED",
+    "purpose":  "Puente de handoff, prompts, reports, evidence, receipts y control entre PCs.",
+    "allowed_content":  [
+                            "HANDOFF",
+                            "PROMPTS",
+                            "REPORTS",
+                            "EVIDENCE",
+                            "RECEIPTS",
+                            "CONTROL",
+                            "MANUAL_IMPORT",
+                            "NEXT_ACTION"
+                        ],
+    "forbidden_content":  [
+                              "live_repo_root",
+                              "source_repo_editing",
+                              "node_modules",
+                              ".git",
+                              ".env",
+                              "tokens",
+                              "passwords",
+                              "private_keys",
+                              "api_keys",
+                              "browser_storage",
+                              "automatic_executable_queue"
+                          ],
+    "allowed_operations":  [
+                               "manual_copy_reports",
+                               "manual_copy_handoff",
+                               "manual_review_prompts",
+                               "manual_exchange_evidence"
+                           ],
+    "forbidden_operations":  [
+                                 "execute_scripts_from_shared_automatically",
+                                 "use_shared_as_repo",
+                                 "git_commit_from_shared",
+                                 "git_push_from_shared",
+                                 "store_secrets",
+                                 "auto_apply_from_shared"
+                             ],
+    "safety":  {
+                   "shared_repo_edit":  false,
+                   "auto_execution_from_shared":  false,
+                   "secret_storage_allowed":  false,
+                   "git_write_from_shared":  false,
+                   "apply_from_shared":  false,
+                   "remote_execution":  false
+               }
+}

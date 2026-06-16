@@ -1,0 +1,69 @@
+﻿{
+    "objective_id":  "ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002",
+    "stage":  "E08",
+    "status":  "CONSOLIDATION_READY",
+    "readiness":  100,
+    "decision":  "GO",
+    "blocks":  [
+                   "B08.1",
+                   "B08.2",
+                   "B08.3"
+               ],
+    "steps":  [
+                  "P08.1.1",
+                  "P08.1.2",
+                  "P08.2.1",
+                  "P08.2.2",
+                  "P08.3.1",
+                  "P08.3.2"
+              ],
+    "fake_worker_loop":  true,
+    "fake_response":  "data/plan-to-worker/adapters/fake/fake-worker-response.json",
+    "consolidation_smoke":  "reports/plan-to-worker/consolidation/e08-consolidation-smoke-report.json",
+    "close_report":  "docs/PLAN_TO_WORKER_CONSOLIDATION_CLOSE_REPORT.md",
+    "next_objective":  "docs/NEXT_OBJECTIVE_CONNECT_WORKER_ADAPTERS.md",
+    "event":  "ENGREMIAT_MEMORY/events/plan-to-worker-consolidation-closed.json",
+    "external_network":  false,
+    "git_write":  false,
+    "worker_real_execution":  false,
+    "next":  "CONNECT_CONTROLLED_WORKER_ADAPTERS",
+    "artifacts":  [
+                      {
+                          "path":  "tools/plan-to-worker/Test-FakeWorkerLoop.ps1",
+                          "sha256":  "561fb8942e96ebb040f18b05c25c6fec26e24e60c0368aa4afc53620be5ced6f",
+                          "type":  "PowerShell",
+                          "step":  "P08.1.1"
+                      },
+                      {
+                          "path":  "data/plan-to-worker/adapters/fake/fake-worker-response.json",
+                          "sha256":  "08adf059b22bbcc3464cc69e4b5e965c4304a927c1f89243f205acae7e5b445f",
+                          "type":  "JSON",
+                          "step":  "P08.1.2"
+                      },
+                      {
+                          "path":  "tools/plan-to-worker/Test-ConsolidationE2E.ps1",
+                          "sha256":  "9f03a2bd18fd41cefc85b1cebce6b14e0bbbc49d6a206294ff87f1a234d8905b",
+                          "type":  "PowerShell",
+                          "step":  "P08.2.1"
+                      },
+                      {
+                          "path":  "reports/plan-to-worker/consolidation/e08-consolidation-smoke-report.json",
+                          "sha256":  "ec8adbb56961d47ddc098a6418860685f5083234b89f4b82d04f601a79cccc25",
+                          "type":  "JSON",
+                          "step":  "P08.2.2"
+                      },
+                      {
+                          "path":  "docs/PLAN_TO_WORKER_CONSOLIDATION_CLOSE_REPORT.md",
+                          "sha256":  "d2c9776d3b5bc605354e275f2e5671c719207c7740f2f56b881a9bf0f212b097",
+                          "type":  "Markdown",
+                          "step":  "P08.3.1"
+                      },
+                      {
+                          "path":  "docs/NEXT_OBJECTIVE_CONNECT_WORKER_ADAPTERS.md",
+                          "sha256":  "3874bc2d0e188e5bba73982a519c16621dd018bbd930062f611753880582a73a",
+                          "type":  "Markdown",
+                          "step":  "P08.3.2"
+                      }
+                  ],
+    "created_at":  "2026-06-16T11:47:30"
+}

@@ -1,0 +1,40 @@
+﻿{
+    "objective":  "ENGREMIAT_DUAL_PC_DEVELOPMENT_WORKFLOW_009B",
+    "stage":  "E01",
+    "policy_id":  "WORKSPACE-SEPARATION-POLICY-009B-E01",
+    "code_source_of_truth":  "GIT",
+    "shared_workspace_role":  "CONTEXT_AND_EVIDENCE_BRIDGE_ONLY",
+    "local_repo_rule":  "Each PC must have its own local repo/workspace.",
+    "shared_workspace_allowed":  [
+                                     "HANDOFF",
+                                     "PROMPTS",
+                                     "REPORTS",
+                                     "EVIDENCE",
+                                     "RECEIPTS",
+                                     "MANUAL_IMPORT",
+                                     "CONTROL"
+                                 ],
+    "shared_workspace_forbidden":  [
+                                       "live_repo_root",
+                                       "node_modules",
+                                       "secrets",
+                                       ".env",
+                                       "tokens",
+                                       "git_objects",
+                                       ".git",
+                                       "automatic_execution",
+                                       "worker_generated_source_apply"
+                                   ],
+    "recommended_paths":  {
+                              "current_pc_repo":  "C:\\ENGREMIAT_CORE or local equivalent",
+                              "main_pc_repo":  "C:\\ENGREMIAT_CORE or local equivalent on MAIN-PC",
+                              "shared_workspace":  "C:\\ENGREMIAT_SHARED"
+                          },
+    "safety":  {
+                   "shared_repo_edit":  false,
+                   "secret_storage_allowed":  false,
+                   "auto_execution_from_shared":  false,
+                   "git_write_from_shared":  false,
+                   "apply_from_shared":  false
+               }
+}

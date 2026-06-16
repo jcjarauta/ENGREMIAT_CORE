@@ -1,0 +1,55 @@
+﻿{
+    "objective":  "ENGREMIAT_DUAL_PC_DEVELOPMENT_WORKFLOW_009B",
+    "stage":  "E04",
+    "policy_id":  "DUAL-PC-GIT-SYNC-POLICY-009B-E04",
+    "created_at_utc":  "2026-06-16T13:09:17.4728628Z",
+    "source_of_truth":  "GIT",
+    "principle":  "Cada PC tiene su propio repo local; Git sincroniza codigo; no se ejecuta Git remoto automaticamente en este objetivo.",
+    "allowed_readonly_commands":  [
+                                      "git status --short",
+                                      "git branch --show-current",
+                                      "git rev-parse --short HEAD",
+                                      "git rev-parse --show-toplevel"
+                                  ],
+    "governed_manual_commands":  [
+                                     "git fetch",
+                                     "git pull",
+                                     "git push",
+                                     "git merge",
+                                     "git rebase"
+                                 ],
+    "forbidden_automatic_commands":  [
+                                         "git fetch auto",
+                                         "git pull auto",
+                                         "git push auto",
+                                         "git merge auto",
+                                         "git rebase auto",
+                                         "git commit auto in this objective",
+                                         "git add ."
+                                     ],
+    "before_switch_pc":  [
+                             "cerrar bloque actual",
+                             "crear handoff",
+                             "revisar status local",
+                             "no dejar escritor dual activo",
+                             "copiar evidencias a shared si procede"
+                         ],
+    "after_switch_pc":  [
+                            "leer handoff",
+                            "validar repo local",
+                            "confirmar branch/head",
+                            "confirmar writer lock",
+                            "continuar solo si readiness GO"
+                        ],
+    "safety":  {
+                   "git_read_only":  true,
+                   "git_write":  false,
+                   "git_fetch":  false,
+                   "git_pull":  false,
+                   "git_push":  false,
+                   "git_merge":  false,
+                   "git_commit":  false,
+                   "git_remote_auto":  false,
+                   "single_active_writer":  true
+               }
+}

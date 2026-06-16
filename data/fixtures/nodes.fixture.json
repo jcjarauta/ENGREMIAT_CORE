@@ -1,0 +1,49 @@
+﻿[
+    {
+        "id":  "NODE-MAIN-PC",
+        "node_type":  "WINDOWS_PC",
+        "os_family":  "windows",
+        "roles":  [
+                      "COORDINATOR",
+                      "COMPUTE",
+                      "AI_HOST",
+                      "DEVELOPMENT"
+                  ],
+        "status":  "SIMULATED",
+        "created_at":  "2026-06-16 00:26:02"
+    },
+    {
+        "id":  "NODE-RASPBERRY",
+        "node_type":  "RASPBERRY_PI",
+        "os_family":  "linux",
+        "roles":  [
+                      "BACKUP",
+                      "MONITOR",
+                      "REGISTRY_REPLICA"
+                  ],
+        "status":  "SIMULATED",
+        "created_at":  "2026-06-16 00:26:02"
+    },
+    {
+        "id":  "NODE-OLD-PC",
+        "node_type":  "LEGACY_PC",
+        "os_family":  "windows_or_linux",
+        "roles":  [
+                      "SECONDARY_COMPUTE",
+                      "TEST_WORKER"
+                  ],
+        "status":  "SIMULATED",
+        "created_at":  "2026-06-16 00:26:02"
+    },
+    {
+        "id":  "NODE-MOBILE",
+        "node_type":  "MOBILE_LOGICAL",
+        "os_family":  "android_or_web",
+        "roles":  [
+                      "HUMAN_INTERFACE",
+                      "APPROVAL_GATE"
+                  ],
+        "status":  "LOGICAL_SIMULATED",
+        "created_at":  "2026-06-16 00:26:02"
+    }
+]

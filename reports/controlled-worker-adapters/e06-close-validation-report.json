@@ -1,0 +1,41 @@
+﻿{
+    "objective_id":  "ENGREMIAT_CONTROLLED_WORKER_ADAPTERS_005",
+    "stage":  "E06",
+    "status":  "E06_CONTROLLED_WORKER_ADAPTERS_CLOSED",
+    "readiness":  100,
+    "decision":  "GO_ADAPTERS_READY_FOR_GATED_EXECUTION",
+    "artifacts":  [
+                      {
+                          "path":  "tools/worker-adapters/Build-ControlledWorkerAdaptersManifest.ps1",
+                          "sha256":  "4e386f815b3f1a519b73634ebfc70d90e288dd7812238670d2e9512381b21b45",
+                          "step":  "P06.1.1"
+                      },
+                      {
+                          "path":  "data/controlled-worker-adapters/controlled-worker-adapters-manifest.json",
+                          "sha256":  "62dbab424e3e99e00c31721caba072840edf2cf7176dbcab79c5cfd7a9957394",
+                          "step":  "P06.1.2"
+                      },
+                      {
+                          "path":  "tools/worker-adapters/Build-ControlledWorkerAdaptersDashboard.ps1",
+                          "sha256":  "71087670a709080786b1138456976775416add6b34f86ecbc97d29a18c44ff52",
+                          "step":  "P06.2.1"
+                      },
+                      {
+                          "path":  "dashboard/controlled-worker-adapters/index.html",
+                          "sha256":  "8b9de24e23602530b3ded8fdbdc635b67869eea5027e0f9dcd4e1bcc844c2ba8",
+                          "step":  "P06.2.2"
+                      },
+                      {
+                          "path":  "docs/CONTROLLED_WORKER_ADAPTERS_CLOSE_REPORT.md",
+                          "sha256":  "e212e3cc774b7359ff936ae34610f9b333c9d215b10b1d1be87edfe85c4e683e",
+                          "step":  "P06.3.1"
+                      },
+                      {
+                          "path":  "docs/NEXT_OBJECTIVE_GATED_WORKER_EXECUTION.md",
+                          "sha256":  "7e9fc91b5cf1b7da4c58f54ce7b61a16eb2c8b6753bc6abbc04ff1c603468d98",
+                          "step":  "P06.3.2"
+                      }
+                  ],
+    "next":  "NEXT_OBJECTIVE_GATED_WORKER_EXECUTION",
+    "created_at":  "2026-06-16T13:37:06"
+}

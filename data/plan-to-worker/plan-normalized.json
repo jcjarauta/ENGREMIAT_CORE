@@ -1,0 +1,86 @@
+﻿{
+    "objective_id":  "ENGREMIAT_PLAN_TO_WORKER_APP_001",
+    "stage":  "E03",
+    "source":  "data/plan-to-worker/samples/plan-to-worker-sample.tsv",
+    "source_format":  "TSV",
+    "rows_count":  3,
+    "stages_count":  1,
+    "stages":  [
+                   {
+                       "stage_id":  "E02",
+                       "name":  "Importador de plan Sheets",
+                       "blocks_count":  2,
+                       "blocks":  [
+                                      {
+                                          "block_id":  "B02.1",
+                                          "name":  "Entrada de archivos",
+                                          "steps_count":  2,
+                                          "steps":  [
+                                                        {
+                                                            "index":  1,
+                                                            "step_id":  "P02.1.1",
+                                                            "title":  "Crear estructura input",
+                                                            "artifact":  "data/plan-to-worker/input",
+                                                            "depends_on":  "P01.3.2",
+                                                            "format":  "Folder",
+                                                            "risk":  "LOW",
+                                                            "requires_human":  "SI",
+                                                            "priority":  "Alta",
+                                                            "status":  "PENDING",
+                                                            "notes":  "Punto de entrada del plan."
+                                                        },
+                                                        {
+                                                            "index":  2,
+                                                            "step_id":  "P02.1.2",
+                                                            "title":  "Crear format-detector",
+                                                            "artifact":  "tools/plan-to-worker/Detect-PlanFormat.ps1",
+                                                            "depends_on":  "P02.1.1",
+                                                            "format":  "PowerShell",
+                                                            "risk":  "LOW",
+                                                            "requires_human":  "SI",
+                                                            "priority":  "Alta",
+                                                            "status":  "PENDING",
+                                                            "notes":  "Evita errores al importar."
+                                                        }
+                                                    ]
+                                      },
+                                      {
+                                          "block_id":  "B02.2",
+                                          "name":  "Importacion tabular",
+                                          "steps_count":  1,
+                                          "steps":  [
+                                                        {
+                                                            "index":  1,
+                                                            "step_id":  "P02.2.1",
+                                                            "title":  "Crear Import-PlanTable",
+                                                            "artifact":  "tools/plan-to-worker/Import-PlanTable.ps1",
+                                                            "depends_on":  "P02.1.2",
+                                                            "format":  "PowerShell",
+                                                            "risk":  "LOW",
+                                                            "requires_human":  "SI",
+                                                            "priority":  "Alta",
+                                                            "status":  "PENDING",
+                                                            "notes":  "Primera version sin depender de API Google."
+                                                        }
+                                                    ]
+                                      }
+                                  ]
+                   }
+               ],
+    "indexes":  {
+                    "step_ids":  [
+                                     "P02.1.1",
+                                     "P02.1.2",
+                                     "P02.2.1"
+                                 ],
+                    "artifact_paths":  [
+                                           "data/plan-to-worker/input",
+                                           "tools/plan-to-worker/Detect-PlanFormat.ps1",
+                                           "tools/plan-to-worker/Import-PlanTable.ps1"
+                                       ]
+                },
+    "external_network":  false,
+    "google_api":  false,
+    "git_write":  false,
+    "created_at":  "2026-06-16T11:22:16"
+}

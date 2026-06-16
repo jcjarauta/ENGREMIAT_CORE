@@ -1,0 +1,31 @@
+﻿{
+    "objective_id":  "ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001",
+    "stage_id":  "E05",
+    "blocks":  [
+                   "B05.1",
+                   "B05.2",
+                   "B05.3"
+               ],
+    "steps":  [
+                  "P05.1.1",
+                  "P05.1.2",
+                  "P05.2.1",
+                  "P05.2.2",
+                  "P05.3.1",
+                  "P05.3.2"
+              ],
+    "status":  "OK",
+    "validation_passed":  true,
+    "score":  100,
+    "outbox":  "prompts/outbox",
+    "inbox":  "prompts/inbox",
+    "publish_tool":  "tools/prompt-factory/Publish-Prompt.ps1",
+    "import_tool":  "tools/prompt-factory/Import-WorkerResponse.ps1",
+    "inbox_contract":  "prompts/inbox/PROMPT_INBOX_CONTRACT.md",
+    "handoff":  "prompts/outbox/WORKER_HANDOFF.md",
+    "smoke_report":  "reports/prompt-factory/e05-outbox-inbox-handoff/prompt-outbox-inbox-smoke-report.json",
+    "external_network":  false,
+    "git":  false,
+    "risk":  "LOW",
+    "next":  "E06_INTEGRACION_EN_ENG_PS1"
+}

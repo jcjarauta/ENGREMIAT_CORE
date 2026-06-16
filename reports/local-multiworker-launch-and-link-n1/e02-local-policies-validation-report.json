@@ -1,0 +1,39 @@
+﻿{
+    "objective":  "ENGREMIAT_LOCAL_MULTIWORKER_LAUNCH_AND_LINK_009A_N1",
+    "stage":  "E02",
+    "required_artifacts":  [
+                               "data/local-multiworker-launch-and-link-n1/human-surfaces-policy.json",
+                               "data/local-multiworker-launch-and-link-n1/human-surfaces-index.json",
+                               "data/local-multiworker-launch-and-link-n1/cline-safe-use-policy.json",
+                               "data/local-multiworker-launch-and-link-n1/ollama-safe-use-policy.json",
+                               "data/local-multiworker-launch-and-link-n1/nodes-registry.json"
+                           ],
+    "missing_artifacts":  [
+
+                          ],
+    "errors":  [
+
+               ],
+    "forbidden_actions_present":  true,
+    "surfaces_total":  4,
+    "surfaces_existing":  2,
+    "browser_opened":  false,
+    "preview_only":  true,
+    "cline_task_creation":  false,
+    "cline_prompt_sent":  false,
+    "cline_worker_real_execution":  false,
+    "cline_auto_apply":  false,
+    "ollama_required":  false,
+    "ollama_inference_executed":  false,
+    "remote_inference":  false,
+    "remote_execution":  false,
+    "ssh":  false,
+    "network_write":  false,
+    "git_write":  false,
+    "apply_executed":  false,
+    "source_write_by_worker":  false,
+    "validation_ok":  true,
+    "readiness":  100,
+    "decision":  "GO_E02_LOCAL_POLICIES_N1_READY",
+    "next":  "E03_DASHBOARD_AND_LAUNCHER_PREVIEW"
+}

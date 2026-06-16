@@ -1,0 +1,43 @@
+﻿{
+    "objective_id":  "ENGREMIAT_LOCAL_NODE_LINK_004A",
+    "stage":  "E03",
+    "status":  "E03_LOCAL_EXCHANGE_CHANNEL_READY",
+    "readiness":  100,
+    "decision":  "GO",
+    "main_pc_can_be_off":  true,
+    "network_required":  false,
+    "artifacts":  [
+                      {
+                          "path":  "data/node-link/node-exchange-policy.json",
+                          "sha256":  "1a531ef3580713e27f7b7f899807b9d0c11bcbc35251b98e5a02916e52d3b2cd",
+                          "step":  "P03.1.1"
+                      },
+                      {
+                          "path":  "docs/NODE_EXCHANGE_GUIDE.md",
+                          "sha256":  "3dfed046396a989ea5a3634c8884cd916bc8446ca40b79db0d172dee5f5a61d2",
+                          "step":  "P03.1.2"
+                      },
+                      {
+                          "path":  "data/node-link/inbox",
+                          "type":  "Directory",
+                          "step":  "P03.2.1"
+                      },
+                      {
+                          "path":  "data/node-link/outbox/sample-node-packet.json",
+                          "sha256":  "1447027b595399167949935f30f92cb641fa3ebd82ae6a512bd75bf2e306eff9",
+                          "step":  "P03.2.2"
+                      },
+                      {
+                          "path":  "tools/node-link/Test-NodeExchangeStructure.ps1",
+                          "sha256":  "b7d8559c74ee46d14b6bdc6090a19a7ba5b9b95864542c87f8addd0c69d79d73",
+                          "step":  "P03.3.1"
+                      },
+                      {
+                          "path":  "reports/node-link/e03-exchange-smoke-report.json",
+                          "sha256":  "6ca643d79a44982843abaceac4bb39cea59b8310c007e0f9c3d8a9c7b97bd8cd",
+                          "step":  "P03.3.2"
+                      }
+                  ],
+    "next":  "E04_CANAL_DE_SERVICIOS_CONTROLADO",
+    "created_at":  "2026-06-16T12:57:24"
+}

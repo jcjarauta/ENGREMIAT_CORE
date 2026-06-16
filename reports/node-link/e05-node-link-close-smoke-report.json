@@ -1,0 +1,33 @@
+﻿{
+    "objective_id":  "ENGREMIAT_LOCAL_NODE_LINK_004A",
+    "stage":  "E05",
+    "blocks":  [
+                   "B05.1",
+                   "B05.2",
+                   "B05.3"
+               ],
+    "steps":  [
+                  "P05.1.1",
+                  "P05.1.2",
+                  "P05.2.1",
+                  "P05.2.2",
+                  "P05.3.1",
+                  "P05.3.2"
+              ],
+    "manifest":  true,
+    "dashboard":  true,
+    "close_report":  true,
+    "next_objective":  true,
+    "main_pc_can_be_off":  true,
+    "firewall_changed":  false,
+    "services_changed":  false,
+    "inference":  false,
+    "worker_real_execution":  false,
+    "problems":  [
+
+                 ],
+    "smoke":  true,
+    "decision":  "GO_NODE_LINK_INITIAL_READY",
+    "next":  "RETURN_TO_ENGREMIAT_LOCAL_RUNTIME_FIX_004_E04_REMOTE_OLLAMA_WHEN_MAIN_PC_ON",
+    "created_at":  "2026-06-16T13:00:30"
+}

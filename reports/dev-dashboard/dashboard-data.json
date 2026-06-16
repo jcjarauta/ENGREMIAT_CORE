@@ -1,0 +1,478 @@
+﻿{
+    "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+    "now":  {
+                "active_stage":  "E07",
+                "active_block":  "B07.2",
+                "active_step":  "P07.2.2",
+                "last_validated":  "P07.2.1",
+                "status":  "DASHBOARD_GENERATED"
+            },
+    "next":  {
+                 "step_id":  "P08.2.2",
+                 "action":  "Validar dev-dashboard",
+                 "target":  "reports/dev-system/e08-dev-dashboard/dev-dashboard-validation-report.json"
+             },
+    "blocked":  [
+
+                ],
+    "gates":  {
+                  "pending_count":  0,
+                  "registry":  "data/gates/gate-registry.jsonl",
+                  "index":  "docs/GATE_INDEX.md"
+              },
+    "artifacts":  {
+                      "total":  39,
+                      "recent":  [
+                                     {
+                                         "artifact_id":  "ART-DEV-E02-P0222-001",
+                                         "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+                                         "stage_id":  "E02",
+                                         "block_id":  "B02.2",
+                                         "step_id":  "P02.2.2",
+                                         "artifact_type":  "doc",
+                                         "name":  "CURRENT_CONTEXT.md",
+                                         "path":  "docs/CURRENT_CONTEXT.md",
+                                         "format":  "Markdown",
+                                         "created_at":  "2026-06-16T09:12:31",
+                                         "sha256":  "4a1eaedc6bd59bdc1bea996354132af3592b5cec29e8138ac4c78c68fb6ec7c1",
+                                         "status":  "ACTIVE",
+                                         "description":  "Contexto humano actual para retomar el desarrollo.",
+                                         "tags":  [
+                                                      "context",
+                                                      "docs"
+                                                  ]
+                                     },
+                                     {
+                                         "artifact_id":  "ART-DEV-E00-002",
+                                         "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+                                         "stage_id":  "E00",
+                                         "block_id":  "B00.x",
+                                         "step_id":  "P00.x.x",
+                                         "artifact_type":  "e00_artifact",
+                                         "name":  "DEV_SYSTEM_GUIDE.md",
+                                         "path":  "docs/DEV_SYSTEM_GUIDE.md",
+                                         "format":  "Markdown",
+                                         "created_at":  "2026-06-16T09:11:25",
+                                         "sha256":  "ff490abbf81bd2f35f155c55c85d2989587f7bdff7910340adead55e752b776a",
+                                         "status":  "ACTIVE",
+                                         "description":  "Artefacto existente de E00 registrado por Artifact Registry.",
+                                         "tags":  [
+                                                      "e00",
+                                                      "bootstrap"
+                                                  ]
+                                     },
+                                     {
+                                         "artifact_id":  "ART-DEV-E06-P0622-001",
+                                         "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+                                         "stage_id":  "E06",
+                                         "block_id":  "B06.2",
+                                         "step_id":  "P06.2.2",
+                                         "artifact_type":  "doc",
+                                         "name":  "ERROR_PLAYBOOK.md",
+                                         "path":  "docs/ERROR_PLAYBOOK.md",
+                                         "format":  "Markdown",
+                                         "created_at":  "2026-06-16T09:18:43",
+                                         "sha256":  "9d22df2fcce95a56f3b88a89310f23971f44ac88221c35c9fa62acd1d38d5d88",
+                                         "status":  "ACTIVE",
+                                         "description":  "Playbook vivo de errores, reparaciones y prevención.",
+                                         "tags":  [
+                                                      "errors",
+                                                      "docs"
+                                                  ]
+                                     },
+                                     {
+                                         "artifact_id":  "ART-DEV-E04-P0422-001",
+                                         "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+                                         "stage_id":  "E04",
+                                         "block_id":  "B04.2",
+                                         "step_id":  "P04.2.2",
+                                         "artifact_type":  "index",
+                                         "name":  "GATE_INDEX.md",
+                                         "path":  "docs/GATE_INDEX.md",
+                                         "format":  "Markdown",
+                                         "created_at":  "2026-06-16T09:15:10",
+                                         "sha256":  "2c2a3fea87934fd1d7cdc78847f44e59f5e3d751a4f1a00dddfed2c3080ee3a2",
+                                         "status":  "ACTIVE",
+                                         "description":  "Índice humano de gates.",
+                                         "tags":  [
+                                                      "gates",
+                                                      "docs"
+                                                  ]
+                                     },
+                                     {
+                                         "artifact_id":  "ART-DEV-E02-P0222-002",
+                                         "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+                                         "stage_id":  "E02",
+                                         "block_id":  "B02.2",
+                                         "step_id":  "P02.2.2",
+                                         "artifact_type":  "report",
+                                         "name":  "last-context.txt",
+                                         "path":  "reports/context/last-context.txt",
+                                         "format":  "TXT",
+                                         "created_at":  "2026-06-16T09:12:31",
+                                         "sha256":  "4a1eaedc6bd59bdc1bea996354132af3592b5cec29e8138ac4c78c68fb6ec7c1",
+                                         "status":  "ACTIVE",
+                                         "description":  "Contexto compacto para copiar en otra conversación.",
+                                         "tags":  [
+                                                      "context",
+                                                      "chat"
+                                                  ]
+                                     },
+                                     {
+                                         "artifact_id":  "ART-DEV-E00-004",
+                                         "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+                                         "stage_id":  "E00",
+                                         "block_id":  "B00.x",
+                                         "step_id":  "P00.x.x",
+                                         "artifact_type":  "e00_artifact",
+                                         "name":  "dev-system-contract-validation-report.json",
+                                         "path":  "reports/dev-system/e00-contract/dev-system-contract-validation-report.json",
+                                         "format":  "JSON",
+                                         "created_at":  "2026-06-16T09:11:25",
+                                         "sha256":  "24b7f80744949d45f31bf0bcbabc049ddc307aaa005fa29d5ffd980011c740e1",
+                                         "status":  "ACTIVE",
+                                         "description":  "Artefacto existente de E00 registrado por Artifact Registry.",
+                                         "tags":  [
+                                                      "e00",
+                                                      "bootstrap"
+                                                  ]
+                                     },
+                                     {
+                                         "artifact_id":  "ART-DEV-E04-P0422-002",
+                                         "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+                                         "stage_id":  "E04",
+                                         "block_id":  "B04.2",
+                                         "step_id":  "P04.2.2",
+                                         "artifact_type":  "report",
+                                         "name":  "pending-gates.json",
+                                         "path":  "reports/gates/pending-gates.json",
+                                         "format":  "JSON",
+                                         "created_at":  "2026-06-16T09:15:10",
+                                         "sha256":  "740694d35b492b860dac8f8b09cc68bb7337f589487f6eb844f7cd5f5eb20d65",
+                                         "status":  "ACTIVE",
+                                         "description":  "Reporte de gates pendientes para dashboard.",
+                                         "tags":  [
+                                                      "gates",
+                                                      "report"
+                                                  ]
+                                     },
+                                     {
+                                         "artifact_id":  "ART-DEV-E05-P0522-001",
+                                         "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+                                         "stage_id":  "E05",
+                                         "block_id":  "B05.2",
+                                         "step_id":  "P05.2.2",
+                                         "artifact_type":  "report",
+                                         "name":  "current-readiness.json",
+                                         "path":  "reports/readiness/current-readiness.json",
+                                         "format":  "JSON",
+                                         "created_at":  "2026-06-16T09:17:47",
+                                         "sha256":  "b0dd57f4a4c88b040cbc3148e8ce24bcd9206f64ae6a98f15834b14b1ec5a74c",
+                                         "status":  "ACTIVE",
+                                         "description":  "Reporte JSON de readiness actual.",
+                                         "tags":  [
+                                                      "readiness",
+                                                      "report"
+                                                  ]
+                                     },
+                                     {
+                                         "artifact_id":  "ART-DEV-E05-P0522-002",
+                                         "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+                                         "stage_id":  "E05",
+                                         "block_id":  "B05.2",
+                                         "step_id":  "P05.2.2",
+                                         "artifact_type":  "report",
+                                         "name":  "current-readiness.md",
+                                         "path":  "reports/readiness/current-readiness.md",
+                                         "format":  "Markdown",
+                                         "created_at":  "2026-06-16T09:17:47",
+                                         "sha256":  "d7cdf731822d3130aeaa7d35e2a9b3e2886d918872aee70312c400adf8435479",
+                                         "status":  "ACTIVE",
+                                         "description":  "Reporte Markdown de readiness actual.",
+                                         "tags":  [
+                                                      "readiness",
+                                                      "report"
+                                                  ]
+                                     },
+                                     {
+                                         "artifact_id":  "ART-DEV-E05-P0522-003",
+                                         "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+                                         "stage_id":  "E05",
+                                         "block_id":  "B05.2",
+                                         "step_id":  "P05.2.2",
+                                         "artifact_type":  "dashboard",
+                                         "name":  "index.html",
+                                         "path":  "reports/readiness/index.html",
+                                         "format":  "HTML",
+                                         "created_at":  "2026-06-16T09:17:47",
+                                         "sha256":  "55ae4f52d9747d64bb28b740271a22e51ec1e0cd3076f4416c146aa62a9dfb08",
+                                         "status":  "ACTIVE",
+                                         "description":  "Dashboard HTML de readiness.",
+                                         "tags":  [
+                                                      "readiness",
+                                                      "dashboard"
+                                                  ]
+                                     },
+                                     {
+                                         "artifact_id":  "ART-DEV-E01-P0121-001",
+                                         "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+                                         "stage_id":  "E01",
+                                         "block_id":  "B01.2",
+                                         "step_id":  "P01.2.1",
+                                         "artifact_type":  "tool",
+                                         "name":  "eng-artifacts.ps1",
+                                         "path":  "tools/eng-artifacts.ps1",
+                                         "format":  "PowerShell",
+                                         "created_at":  "2026-06-16T09:11:25",
+                                         "sha256":  "8e8f39b1dc3783bdd031cbe2662336344de6efeeaf361259106efebac7255500",
+                                         "status":  "ACTIVE",
+                                         "description":  "Herramienta para consultar y reconstruir índice de artefactos.",
+                                         "tags":  [
+                                                      "artifact",
+                                                      "tool"
+                                                  ]
+                                     },
+                                     {
+                                         "artifact_id":  "ART-DEV-E02-P0221-001",
+                                         "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+                                         "stage_id":  "E02",
+                                         "block_id":  "B02.2",
+                                         "step_id":  "P02.2.1",
+                                         "artifact_type":  "tool",
+                                         "name":  "eng-context.ps1",
+                                         "path":  "tools/eng-context.ps1",
+                                         "format":  "PowerShell",
+                                         "created_at":  "2026-06-16T09:12:31",
+                                         "sha256":  "7d3d85c93399d6f5bdf4f69adb6139cd0669f798cfed10db790e9d4d6ad5e732",
+                                         "status":  "ACTIVE",
+                                         "description":  "Herramienta para consultar y reconstruir contexto.",
+                                         "tags":  [
+                                                      "context",
+                                                      "tool"
+                                                  ]
+                                     },
+                                     {
+                                         "artifact_id":  "ART-DEV-E03-P0322-001",
+                                         "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+                                         "stage_id":  "E03",
+                                         "block_id":  "B03.2",
+                                         "step_id":  "P03.2.2",
+                                         "artifact_type":  "tool",
+                                         "name":  "eng-dev-runner.ps1",
+                                         "path":  "tools/eng-dev-runner.ps1",
+                                         "format":  "PowerShell",
+                                         "created_at":  "2026-06-16T09:13:46",
+                                         "sha256":  "eaa3780a6be34ed44f0acd16b92ed21f67ae28e8314bd281828c2d72e0c84ec3",
+                                         "status":  "ACTIVE",
+                                         "description":  "Runner seguro para status, next, package, validate-package y run-safe.",
+                                         "tags":  [
+                                                      "runner",
+                                                      "tool"
+                                                  ]
+                                     },
+                                     {
+                                         "artifact_id":  "ART-DEV-E06-P0621-001",
+                                         "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+                                         "stage_id":  "E06",
+                                         "block_id":  "B06.2",
+                                         "step_id":  "P06.2.1",
+                                         "artifact_type":  "tool",
+                                         "name":  "eng-errors.ps1",
+                                         "path":  "tools/eng-errors.ps1",
+                                         "format":  "PowerShell",
+                                         "created_at":  "2026-06-16T09:18:43",
+                                         "sha256":  "d00ec409379a96211138c97ca48183966194d46a27f39fd2c80c2b6a581c02ae",
+                                         "status":  "ACTIVE",
+                                         "description":  "Herramienta para consultar errores, último error, hints y añadir entradas.",
+                                         "tags":  [
+                                                      "errors",
+                                                      "tool"
+                                                  ]
+                                     },
+                                     {
+                                         "artifact_id":  "ART-DEV-E04-P0421-001",
+                                         "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+                                         "stage_id":  "E04",
+                                         "block_id":  "B04.2",
+                                         "step_id":  "P04.2.1",
+                                         "artifact_type":  "tool",
+                                         "name":  "eng-gates.ps1",
+                                         "path":  "tools/eng-gates.ps1",
+                                         "format":  "PowerShell",
+                                         "created_at":  "2026-06-16T09:15:10",
+                                         "sha256":  "da024b32bc6b93bdd78e6cdf166d5cb40f11d1d05694e0d791321f544b2640df",
+                                         "status":  "ACTIVE",
+                                         "description":  "Herramienta para listar, aprobar, rechazar e historizar gates.",
+                                         "tags":  [
+                                                      "gates",
+                                                      "tool"
+                                                  ]
+                                     },
+                                     {
+                                         "artifact_id":  "ART-DEV-E05-P0521-001",
+                                         "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+                                         "stage_id":  "E05",
+                                         "block_id":  "B05.2",
+                                         "step_id":  "P05.2.1",
+                                         "artifact_type":  "tool",
+                                         "name":  "eng-readiness.ps1",
+                                         "path":  "tools/eng-readiness.ps1",
+                                         "format":  "PowerShell",
+                                         "created_at":  "2026-06-16T09:17:47",
+                                         "sha256":  "028e363db7cf8d6833dda570c06fd60ca5310a3003c5e316483e3d77c2eb57ca",
+                                         "status":  "ACTIVE",
+                                         "description":  "Herramienta para consultar readiness, objetivo y bloqueos.",
+                                         "tags":  [
+                                                      "readiness",
+                                                      "tool"
+                                                  ]
+                                     },
+                                     {
+                                         "artifact_id":  "ART-DEV-E07-P0711-001",
+                                         "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+                                         "stage_id":  "E07",
+                                         "block_id":  "B07.1",
+                                         "step_id":  "P07.1.1",
+                                         "artifact_type":  "plan",
+                                         "name":  "doc-sync-plan.json",
+                                         "path":  "data/dev/doc-sync-plan.json",
+                                         "format":  "JSON",
+                                         "created_at":  "2026-06-16T09:19:52",
+                                         "sha256":  "8ab68915a4ad73758dddccfdc3c6fa2742ff92556487e6388a2df119bdf2fa13",
+                                         "status":  "ACTIVE",
+                                         "description":  "Plan de sincronización documental desde fuentes reales.",
+                                         "tags":  [
+                                                      "docs",
+                                                      "sync",
+                                                      "plan"
+                                                  ]
+                                     },
+                                     {
+                                         "artifact_id":  "ART-DEV-E07-P0712-001",
+                                         "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+                                         "stage_id":  "E07",
+                                         "block_id":  "B07.1",
+                                         "step_id":  "P07.1.2",
+                                         "artifact_type":  "doc",
+                                         "name":  "DEVELOPMENT_LOG.md",
+                                         "path":  "docs/DEVELOPMENT_LOG.md",
+                                         "format":  "Markdown",
+                                         "created_at":  "2026-06-16T09:19:52",
+                                         "sha256":  "030da03fdf03c1083df38558650d8c3096e41b896a8ec2fba4a42d39e9cde9e2",
+                                         "status":  "ACTIVE",
+                                         "description":  "Log documental de desarrollo.",
+                                         "tags":  [
+                                                      "docs",
+                                                      "log"
+                                                  ]
+                                     },
+                                     {
+                                         "artifact_id":  "ART-DEV-E07-P0721-001",
+                                         "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+                                         "stage_id":  "E07",
+                                         "block_id":  "B07.2",
+                                         "step_id":  "P07.2.1",
+                                         "artifact_type":  "tool",
+                                         "name":  "eng-doc-sync.ps1",
+                                         "path":  "tools/eng-doc-sync.ps1",
+                                         "format":  "PowerShell",
+                                         "created_at":  "2026-06-16T09:19:52",
+                                         "sha256":  "19eab5786ce6eef352a0970c69f25ab04f1a0c5987251983f1f1f98dd13220d9",
+                                         "status":  "ACTIVE",
+                                         "description":  "Herramienta para regenerar documentación viva.",
+                                         "tags":  [
+                                                      "docs",
+                                                      "tool"
+                                                  ]
+                                     },
+                                     {
+                                         "artifact_id":  "ART-DEV-E07-P0722-001",
+                                         "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+                                         "stage_id":  "E07",
+                                         "block_id":  "B07.2",
+                                         "step_id":  "P07.2.2",
+                                         "artifact_type":  "report",
+                                         "name":  "doc-sync-validation-report.json",
+                                         "path":  "reports/dev-system/e07-doc-sync/doc-sync-validation-report.json",
+                                         "format":  "JSON",
+                                         "created_at":  "2026-06-16T09:19:52",
+                                         "sha256":  "e7e93c5a6aeb1d5e62b55699b310e8ce469718aaaa40eeefc58136f01e476224",
+                                         "status":  "ACTIVE",
+                                         "description":  "Reporte de validación de documentación sincronizada.",
+                                         "tags":  [
+                                                      "docs",
+                                                      "report"
+                                                  ]
+                                     }
+                                 ]
+                  },
+    "errors":  {
+                   "open_count":  0,
+                   "known_count":  4,
+                   "playbook":  "docs/ERROR_PLAYBOOK.md"
+               },
+    "readiness":  {
+                      "percent":  100,
+                      "decision":  "GO",
+                      "report":  "reports/readiness/current-readiness.json"
+                  },
+    "recent_activity":  [
+                            {
+                                "type":  "validation",
+                                "path":  "reports/dev-system/e00-contract/dev-system-contract-validation-report.json",
+                                "status":  "OK",
+                                "stage":  "E00",
+                                "created_at":  "2026-06-16T09:09:35"
+                            },
+                            {
+                                "type":  "validation",
+                                "path":  "reports/dev-system/e01-artifact-registry/artifact-registry-validation-report.json",
+                                "status":  "OK",
+                                "stage":  "E01",
+                                "created_at":  "2026-06-16T09:11:25"
+                            },
+                            {
+                                "type":  "validation",
+                                "path":  "reports/dev-system/e02-context-snapshot/context-snapshot-validation-report.json",
+                                "status":  "OK",
+                                "stage":  "E02",
+                                "created_at":  "2026-06-16T09:12:31"
+                            },
+                            {
+                                "type":  "validation",
+                                "path":  "reports/dev-system/e03-dev-runner/dev-runner-validation-report.json",
+                                "status":  "OK",
+                                "stage":  "E03",
+                                "created_at":  "2026-06-16T09:13:46"
+                            },
+                            {
+                                "type":  "validation",
+                                "path":  "reports/dev-system/e04-gate-center/gate-center-validation-report.json",
+                                "status":  "OK",
+                                "stage":  "E04",
+                                "created_at":  "2026-06-16T09:15:10"
+                            },
+                            {
+                                "type":  "validation",
+                                "path":  "reports/dev-system/e05-readiness-checker/readiness-checker-validation-report.json",
+                                "status":  "OK",
+                                "stage":  "E05",
+                                "created_at":  "2026-06-16T09:17:47"
+                            },
+                            {
+                                "type":  "validation",
+                                "path":  "reports/dev-system/e06-error-memory/error-memory-validation-report.json",
+                                "status":  "OK",
+                                "stage":  "E06",
+                                "created_at":  "2026-06-16T09:18:43"
+                            },
+                            {
+                                "type":  "validation",
+                                "path":  "reports/dev-system/e07-doc-sync/doc-sync-validation-report.json",
+                                "status":  "OK",
+                                "stage":  "E07",
+                                "created_at":  "2026-06-16T09:19:52"
+                            }
+                        ],
+    "updated_at":  "2026-06-16T09:22:30"
+}

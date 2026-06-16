@@ -1,0 +1,53 @@
+﻿{
+    "gate_id":  "engremiat.cline_task_creation_gate.v1",
+    "objective":  "ENGREMIAT_CLINE_REAL_PROPOSAL_NO_APPLY_008",
+    "stage":  "E03",
+    "purpose":  "Preparar decision humana explicita para crear o no la primera tarea real de Cline proposal-only.",
+    "decision":  "DEFER",
+    "decision_reason":  "E03 prepara el gate y una request preview; no crea tarea real sin autorizacion especifica.",
+    "authorization_required":  true,
+    "required_human_phrase":  "AUTORIZO_CLINE_REAL_PROPOSAL_TASK_NO_APPLY_FOR_SPECIFIC_REQUEST",
+    "allowed_future_scope":  [
+                                 "create_one_real_cline_task_from_prompt_preview",
+                                 "send_one_prompt_to_cline_for_proposal_only"
+                             ],
+    "forbidden_now":  [
+                          "launch_cline",
+                          "create_cline_task",
+                          "send_prompt",
+                          "run_worker",
+                          "auto_apply",
+                          "apply_executed",
+                          "source_write_by_worker",
+                          "git_write",
+                          "git_commit",
+                          "git_push",
+                          "remote_inference",
+                          "ui_automation"
+                      ],
+    "required_evidence_before_approval":  [
+                                              "data/cline-real-proposal-no-apply/cline-proposal-task-candidate.json",
+                                              "data/cline-real-proposal-no-apply/cline-proposal-prompt-preview.md",
+                                              "data/cline-real-proposal-no-apply/cline-proposal-output-contract.json",
+                                              "data/cline-real-proposal-no-apply/cline-proposal-no-apply-policy.json",
+                                              "reports/cline-real-proposal-no-apply/e02-task-candidate-report.json"
+                                          ],
+    "candidate_id":  "CLINE-PROPOSAL-NO-APPLY-008-CANDIDATE-001",
+    "source_card_id":  "KANBAN-007-E06-CLOSE",
+    "safety":  {
+                   "proposal_only":  true,
+                   "human_review_required":  true,
+                   "cline_task_created":  false,
+                   "launch_cline_task":  false,
+                   "prompt_sent":  false,
+                   "worker_real_execution":  false,
+                   "auto_apply":  false,
+                   "apply_executed":  false,
+                   "source_write_by_worker":  false,
+                   "git_write":  false,
+                   "git_commit":  false,
+                   "git_push":  false,
+                   "remote_inference":  false,
+                   "ui_automation":  false
+               }
+}

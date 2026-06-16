@@ -1,0 +1,47 @@
+﻿{
+    "objective_id":  "ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002",
+    "stage":  "E02",
+    "status":  "E02_VALIDATED",
+    "artifacts":  [
+                      {
+                          "path":  "data/plan-to-worker/input/manual-intake.schema.json",
+                          "sha256":  "2f8915cd706f338291be1e42fb9c09d5ef9d2cf3ed67f14450eed4b925c4ca2a",
+                          "type":  "JSON",
+                          "step":  "P02.1.1"
+                      },
+                      {
+                          "path":  "data/plan-to-worker/input/form-submission.schema.json",
+                          "sha256":  "55fdd497613c9add7bd59c723707ff1c6f7c2bdf936318febee7e6b62b2bf4df",
+                          "type":  "JSON",
+                          "step":  "P02.1.2"
+                      },
+                      {
+                          "path":  "tools/plan-to-worker/Import-PlanInput.ps1",
+                          "sha256":  "bb4f6be2235a129c811d8dde7f1b9f7da7532e0f57873c5d9518af7e2bc1c5e0",
+                          "type":  "PowerShell",
+                          "step":  "P02.2.1"
+                      },
+                      {
+                          "path":  "data/plan-to-worker/input/imported-input.json",
+                          "sha256":  "3689ec9ad84b4f6f50a908f397b3f93a11674bbc83c9a35b922656154e2b12a3",
+                          "type":  "JSON",
+                          "step":  "P02.2.2"
+                      },
+                      {
+                          "path":  "tools/plan-to-worker/Test-PlanInputLayer.ps1",
+                          "sha256":  "70b2486b44643094776676ebe5d7d3d4a74c50f6aff6bf53fa144387146324fe",
+                          "type":  "PowerShell",
+                          "step":  "P02.3.1"
+                      },
+                      {
+                          "path":  "reports/plan-to-worker/consolidation/e02-input-layer-smoke-report.json",
+                          "sha256":  "22c57e8e4bbca2878a7f049bf0788dff3b38f096d27ef1d0615e2ef18d01de05",
+                          "type":  "JSON",
+                          "step":  "P02.3.2"
+                      }
+                  ],
+    "score":  100,
+    "decision":  "GO",
+    "next":  "E03_SALIDA_CANONICA_NORMALIZADA",
+    "created_at":  "2026-06-16T11:40:43"
+}

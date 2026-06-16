@@ -1,0 +1,43 @@
+﻿{
+    "objective":  "ENGREMIAT_LOCAL_MULTIWORKER_LAUNCH_AND_LINK_009A_N1",
+    "version":  "1.0.0",
+    "roles":  [
+                  {
+                      "role":  "CURRENT_MACHINE",
+                      "description":  "Maquina desde la que se prepara el readiness parcial",
+                      "required_for_level_1":  true,
+                      "default_availability":  "ACTIVE"
+                  },
+                  {
+                      "role":  "MAIN_PC",
+                      "description":  "Maquina principal prevista para pruebas completas Cline/Ollama",
+                      "required_for_level_1":  false,
+                      "default_availability":  "PENDING"
+                  },
+                  {
+                      "role":  "AI_LOCAL",
+                      "description":  "Nodo local de IA/Ollama cuando este disponible",
+                      "required_for_level_1":  false,
+                      "default_availability":  "PENDING"
+                  },
+                  {
+                      "role":  "OLD_PC",
+                      "description":  "Equipo secundario o legacy para pruebas ligeras",
+                      "required_for_level_1":  false,
+                      "default_availability":  "PENDING"
+                  },
+                  {
+                      "role":  "MOBILE",
+                      "description":  "Superficie humana futura para aprobaciones/Telegram",
+                      "required_for_level_1":  false,
+                      "default_availability":  "PENDING"
+                  },
+                  {
+                      "role":  "RASPBERRY",
+                      "description":  "Nodo futuro de backup, watchdog o servicio ligero",
+                      "required_for_level_1":  false,
+                      "default_availability":  "PENDING"
+                  }
+              ],
+    "security_note":  "Nivel 1 no conecta maquinas ni requiere MAIN-PC encendido."
+}

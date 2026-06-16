@@ -1,0 +1,53 @@
+﻿{
+    "objective_id":  "ENGREMIAT_OPEN_SOURCE_TOOLCHAIN_BOOTSTRAP_003",
+    "stage":  "E03",
+    "status":  "E03_VALIDATED_SAFE_OR_GATED",
+    "artifacts":  [
+                      {
+                          "path":  "tools/toolchain/Install-OllamaGate.ps1",
+                          "sha256":  "fe55a101fef9a4cc20c68c1e43fa2f3e568d0f7a9f4c2fdb5b60da5a78d7e1af",
+                          "type":  "PowerShell",
+                          "step":  "P03.1.1"
+                      },
+                      {
+                          "path":  "reports/open-source-toolchain-bootstrap/ollama-runtime-validation-report.json",
+                          "sha256":  "b94ee2ebf87275b02e945c977c936851b745fdaadd782c904220d166714a03ef",
+                          "type":  "JSON",
+                          "step":  "P03.1.2"
+                      },
+                      {
+                          "path":  "data/open-source-toolchain-bootstrap/ollama-model-policy.json",
+                          "sha256":  "0a9941719c7800872dd171843adf5735989f85051388233e506bc9d523aae06d",
+                          "type":  "JSON",
+                          "step":  "P03.2.1"
+                      },
+                      {
+                          "path":  "tools/toolchain/Test-OllamaRequestAdapter.ps1",
+                          "sha256":  "ce1bb6ab1789786702a0773a8b2dd0e07f3a2894d0123144a303790affbc2bfa",
+                          "type":  "PowerShell",
+                          "step":  "P03.2.2"
+                      },
+                      {
+                          "path":  "tools/toolchain/Test-OllamaToolchain.ps1",
+                          "sha256":  "2cda7c3af78e0b8d9b8b486669ceb681904b7e48cf8941147900f93b954ff95f",
+                          "type":  "PowerShell",
+                          "step":  "P03.3.1"
+                      },
+                      {
+                          "path":  "reports/open-source-toolchain-bootstrap/e03-ollama-smoke-report.json",
+                          "sha256":  "a76b1dd1fa96fb018f177328e2e7b841a0018462ad4ce81569fe135576a89651",
+                          "type":  "JSON",
+                          "step":  "P03.3.2"
+                      },
+                      {
+                          "path":  "docs/OLLAMA_MANUAL_GATE.md",
+                          "sha256":  "fb8fb2e8c471164a93beb7716f756f43ef55728240dc7ee08ef20c31849e17e4",
+                          "type":  "Markdown",
+                          "step":  "P03.3.2"
+                      }
+                  ],
+    "score":  85,
+    "decision":  "NO_GO_MANUAL_INSTALL_OR_ADAPTER_REQUIRED",
+    "next":  "REPAIR_OR_MANUAL_PREPARE_OLLAMA_THEN_RERUN_E03",
+    "created_at":  "2026-06-16T12:00:43"
+}

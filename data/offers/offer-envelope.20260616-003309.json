@@ -1,0 +1,100 @@
+﻿{
+    "objective":  "ENGREMIAT_CORE_MVP_001",
+    "stage":  "E04",
+    "offers":  [
+                   {
+                       "offer_id":  "OFFER-001",
+                       "proposal_id":  "PROPOSAL-001",
+                       "task_id":  "TASK-DEFINE-CONTRACTS-001",
+                       "project_id":  "PROJECT-ENGREMIAT-CORE-MVP-001",
+                       "worker_id":  "WORKER-MAIN-COORDINATOR",
+                       "status":  "SENT",
+                       "expires_at":  "2026-06-16 02:33:09",
+                       "allowed_actions":  [
+                                               "SIMULATED_EXECUTION",
+                                               "LOCAL_EVIDENCE_WRITE",
+                                               "LOCAL_REPORT_WRITE"
+                                           ],
+                       "forbidden_actions":  [
+                                                 "GIT",
+                                                 "EXTERNAL_NETWORK",
+                                                 "REMOTE_EXECUTION",
+                                                 "REAL_NODE_EXECUTION",
+                                                 "SECRET_READ"
+                                             ],
+                       "accessible_data":  [
+                                               "data/state/network-state.json",
+                                               "data/matching/match-result.json"
+                                           ],
+                       "expected_evidence":  [
+                                                 "execution-started.json",
+                                                 "execution-report.json",
+                                                 "evidence-manifest.json"
+                                             ],
+                       "created_at":  "2026-06-16 00:33:09"
+                   },
+                   {
+                       "offer_id":  "OFFER-002",
+                       "proposal_id":  "PROPOSAL-002",
+                       "task_id":  "TASK-BUILD-EVENT-LEDGER-001",
+                       "project_id":  "PROJECT-ENGREMIAT-CORE-MVP-001",
+                       "worker_id":  "WORKER-MAIN-COORDINATOR",
+                       "status":  "SENT",
+                       "expires_at":  "2026-06-16 02:33:09",
+                       "allowed_actions":  [
+                                               "SIMULATED_EXECUTION",
+                                               "LOCAL_EVIDENCE_WRITE",
+                                               "LOCAL_REPORT_WRITE"
+                                           ],
+                       "forbidden_actions":  [
+                                                 "GIT",
+                                                 "EXTERNAL_NETWORK",
+                                                 "REMOTE_EXECUTION",
+                                                 "REAL_NODE_EXECUTION",
+                                                 "SECRET_READ"
+                                             ],
+                       "accessible_data":  [
+                                               "data/state/network-state.json",
+                                               "data/matching/match-result.json"
+                                           ],
+                       "expected_evidence":  [
+                                                 "execution-started.json",
+                                                 "execution-report.json",
+                                                 "evidence-manifest.json"
+                                             ],
+                       "created_at":  "2026-06-16 00:33:09"
+                   },
+                   {
+                       "offer_id":  "OFFER-003",
+                       "proposal_id":  "PROPOSAL-003",
+                       "task_id":  "TASK-MATCHING-V0-001",
+                       "project_id":  "PROJECT-ENGREMIAT-CORE-MVP-001",
+                       "worker_id":  "WORKER-MAIN-COORDINATOR",
+                       "status":  "SENT",
+                       "expires_at":  "2026-06-16 02:33:09",
+                       "allowed_actions":  [
+                                               "SIMULATED_EXECUTION",
+                                               "LOCAL_EVIDENCE_WRITE",
+                                               "LOCAL_REPORT_WRITE"
+                                           ],
+                       "forbidden_actions":  [
+                                                 "GIT",
+                                                 "EXTERNAL_NETWORK",
+                                                 "REMOTE_EXECUTION",
+                                                 "REAL_NODE_EXECUTION",
+                                                 "SECRET_READ"
+                                             ],
+                       "accessible_data":  [
+                                               "data/state/network-state.json",
+                                               "data/matching/match-result.json"
+                                           ],
+                       "expected_evidence":  [
+                                                 "execution-started.json",
+                                                 "execution-report.json",
+                                                 "evidence-manifest.json"
+                                             ],
+                       "created_at":  "2026-06-16 00:33:09"
+                   }
+               ],
+    "status":  "OK"
+}

@@ -1,0 +1,24 @@
+﻿{
+    "objective":  "ENGREMIAT_CORE_MVP_001",
+    "stage":  "E04",
+    "step":  "P04.3.2",
+    "timestamp":  "2026-06-16 00:33:09",
+    "simulation_only":  true,
+    "active_leases_preserved":  true,
+    "expired_lease":  {
+                          "reservation_id":  "LEASE-EXPIRATION-SIM-001",
+                          "offer_id":  "OFFER-EXPIRATION-SIM-001",
+                          "task_id":  "TASK-DEFINE-CONTRACTS-001",
+                          "worker_id":  "WORKER-MAIN-COORDINATOR",
+                          "lease_seconds":  1,
+                          "renewable":  false,
+                          "created_at":  "2026-06-16 00:32:59",
+                          "expires_at":  "2026-06-16 00:33:00",
+                          "status":  "EXPIRED_SIMULATION_ONLY"
+                      },
+    "events":  [
+                   "LEASE_EXPIRED",
+                   "TASK_RELEASED"
+               ],
+    "status":  "OK"
+}

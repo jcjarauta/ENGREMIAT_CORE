@@ -1,0 +1,40 @@
+﻿{
+    "objective_id":  "ENGREMIAT_GATED_WORKER_EXECUTION_006",
+    "stage":  "E02",
+    "blocks":  [
+                   "B02.1",
+                   "B02.2",
+                   "B02.3"
+               ],
+    "steps":  [
+                  "P02.1.1",
+                  "P02.1.2",
+                  "P02.2.1",
+                  "P02.2.2",
+                  "P02.3.1",
+                  "P02.3.2"
+              ],
+    "approve_gate":  true,
+    "guide":  true,
+    "validator":  true,
+    "gate_report":  true,
+    "panel":  true,
+    "dashboard":  true,
+    "decision":  "APPROVE",
+    "human_confirmation":  true,
+    "execution_allowed":  true,
+    "readonly":  true,
+    "write_files":  false,
+    "run_commands":  false,
+    "auto_apply":  false,
+    "git_write":  false,
+    "remote_inference":  false,
+    "problems":  [
+
+                 ],
+    "smoke":  true,
+    "decision_result":  "GO",
+    "report":  "reports/gated-worker-execution/e02-approval-smoke-report.json",
+    "next":  "E03_DISPATCHER_CLINE_NO_DESTRUCTIVO",
+    "created_at":  "2026-06-16T13:47:27"
+}

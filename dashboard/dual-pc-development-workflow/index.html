@@ -1,0 +1,27 @@
+﻿<!doctype html><html lang="es"><head><meta charset="utf-8"><title>ENGREMIAT Dual-PC Workflow 009B</title><style>body{font-family:Segoe UI,Arial,sans-serif;margin:24px;background:#111827;color:#e5e7eb}h1{color:#67e8f9}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}.card{background:#1f2937;border:1px solid #374151;border-radius:12px;padding:16px}.ok{color:#86efac}.warn{color:#fde68a}.bad{color:#fca5a5}.muted{color:#9ca3af}code{background:#0b1220;padding:2px 5px;border-radius:5px}ul{margin-top:6px}</style></head><body>
+<h1>ENGREMIAT Dual-PC Workflow 009B</h1>
+<p class="muted">Dashboard humano para saber desde que PC se trabaja, que esta permitido y cuando hara falta volver a MAIN-PC.</p>
+<div class="grid">
+<div class="card"><h2>PC actual</h2><p><b>Equipo:</b> 
+DESKTOP-RLPN1LL
+</p><p><b>Ruta:</b> <code>
+C:\Users\sacan\Desktop\ENGREMIAT_CORE
+</code></p><p class="ok">Permitido ahora: preparacion, handoff, dashboard, validacion y trabajo ligero.</p></div>
+<div class="card"><h2>MAIN-PC</h2><p><b>Estado:</b> <span class="warn">
+PENDING_UNTIL_HUMAN_SWITCH
+</span></p><p>No volver todavia salvo instruccion explicita.</p><ul><li>Cline real</li><li>Ollama/GPU</li><li>workers pesados</li><li>vinculacion real</li></ul></div>
+<div class="card"><h2>Writer lock</h2><p><b>Single active writer:</b> <span class="ok">
+True
+</span></p><p><b>Writer activo:</b> 
+CURRENT_PC_PREPARATION_ONLY
+</p><p><b>Conflicto:</b> <span class="ok">
+False
+</span></p></div>
+<div class="card"><h2>Repo</h2><p><b>Git detectado PC actual:</b> 
+False
+</p><p><b>Decision:</b> 
+NO_GO_CURRENT_PC_REPO_NOT_DETECTED
+</p><p><b>MAIN-PC repo:</b> <span class="warn">PENDING</span></p></div>
+<div class="card"><h2>Sync seguro</h2><p><b>Git:</b> fuente de verdad del codigo.</p><p><b>Shared:</b> puente de handoff/evidencias.</p><p class="bad">No usar shared como repo vivo. No secretos. No git remoto automatico.</p></div>
+<div class="card"><h2>Siguiente</h2><ul><li>E06 cerrar workflow dual-PC</li><li>Crear manifest y NEXT_OBJECTIVE</li><li>Despues decidir si ir a MAIN-PC</li></ul></div>
+</div></body></html>

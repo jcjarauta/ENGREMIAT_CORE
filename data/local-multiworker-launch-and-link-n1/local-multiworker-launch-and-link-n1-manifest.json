@@ -1,0 +1,133 @@
+﻿{
+    "objective":  "ENGREMIAT_LOCAL_MULTIWORKER_LAUNCH_AND_LINK_009A_N1",
+    "stage":  "E04",
+    "level":  "N1_LOCAL_PARTIAL_READINESS",
+    "status":  "CLOSED_PARTIAL",
+    "created_at_utc":  "2026-06-16T12:41:53.5992356Z",
+    "purpose":  "Consolidar desde esta maquina el registry, policies, dashboard y readiness parcial sin exigir MAIN-PC encendido.",
+    "artifacts":  [
+                      {
+                          "path":  "data/local-multiworker-launch-and-link-n1/node-registry-schema.json",
+                          "exists":  true,
+                          "size_bytes":  2075
+                      },
+                      {
+                          "path":  "data/local-multiworker-launch-and-link-n1/node-roles-model.json",
+                          "exists":  true,
+                          "size_bytes":  1993
+                      },
+                      {
+                          "path":  "data/local-multiworker-launch-and-link-n1/local-machine-profile.json",
+                          "exists":  true,
+                          "size_bytes":  626
+                      },
+                      {
+                          "path":  "data/local-multiworker-launch-and-link-n1/nodes-registry.json",
+                          "exists":  true,
+                          "size_bytes":  13754
+                      },
+                      {
+                          "path":  "data/local-multiworker-launch-and-link-n1/human-surfaces-policy.json",
+                          "exists":  true,
+                          "size_bytes":  1753
+                      },
+                      {
+                          "path":  "data/local-multiworker-launch-and-link-n1/human-surfaces-index.json",
+                          "exists":  true,
+                          "size_bytes":  2846
+                      },
+                      {
+                          "path":  "data/local-multiworker-launch-and-link-n1/cline-safe-use-policy.json",
+                          "exists":  true,
+                          "size_bytes":  1727
+                      },
+                      {
+                          "path":  "data/local-multiworker-launch-and-link-n1/ollama-safe-use-policy.json",
+                          "exists":  true,
+                          "size_bytes":  1420
+                      },
+                      {
+                          "path":  "data/local-multiworker-launch-and-link-n1/dashboard-data.json",
+                          "exists":  true,
+                          "size_bytes":  30716
+                      },
+                      {
+                          "path":  "data/local-multiworker-launch-and-link-n1/local-launch-plan.json",
+                          "exists":  true,
+                          "size_bytes":  2422
+                      },
+                      {
+                          "path":  "data/local-multiworker-launch-and-link-n1/local-readiness-rules.json",
+                          "exists":  true,
+                          "size_bytes":  2479
+                      },
+                      {
+                          "path":  "reports/local-multiworker-launch-and-link-n1/e01-local-registry-validation-report.json",
+                          "exists":  true,
+                          "size_bytes":  755
+                      },
+                      {
+                          "path":  "reports/local-multiworker-launch-and-link-n1/e02-local-policies-validation-report.json",
+                          "exists":  true,
+                          "size_bytes":  1524
+                      },
+                      {
+                          "path":  "reports/local-multiworker-launch-and-link-n1/e03-dashboard-launcher-validation-report.json",
+                          "exists":  true,
+                          "size_bytes":  1172
+                      },
+                      {
+                          "path":  "reports/local-multiworker-launch-and-link-n1/e04-local-readiness-partial-report.json",
+                          "exists":  true,
+                          "size_bytes":  1012
+                      },
+                      {
+                          "path":  "dashboard/local-multiworker-launch-and-link-n1/index.html",
+                          "exists":  true,
+                          "size_bytes":  5223
+                      },
+                      {
+                          "path":  "tools/local-multiworker-launch-and-link-n1/Test-LocalMultiworkerRegistryN1.ps1",
+                          "exists":  true,
+                          "size_bytes":  3307
+                      },
+                      {
+                          "path":  "tools/local-multiworker-launch-and-link-n1/Test-LocalPoliciesN1.ps1",
+                          "exists":  true,
+                          "size_bytes":  3837
+                      },
+                      {
+                          "path":  "tools/local-multiworker-launch-and-link-n1/Open-LocalMultiworkerSurfacesN1.ps1",
+                          "exists":  true,
+                          "size_bytes":  1949
+                      },
+                      {
+                          "path":  "tools/local-multiworker-launch-and-link-n1/Test-LocalDashboardAndLauncherN1.ps1",
+                          "exists":  true,
+                          "size_bytes":  3230
+                      }
+                  ],
+    "missing_artifacts":  [
+
+                          ],
+    "decisions":  {
+                      "readiness_decision":  "GO_LOCAL_READINESS_PARTIAL",
+                      "main_pc_required_for_local_prep":  false,
+                      "main_pc_required_for_full_test":  true,
+                      "recommended_next":  "Encender MAIN-PC para Nivel 2 si se quiere prueba multiworker completa; o usar N1 como preparacion local."
+                  },
+    "safety":  {
+                   "remote_execution":  false,
+                   "ssh":  false,
+                   "network_write":  false,
+                   "browser_opened":  false,
+                   "cline_task_creation":  false,
+                   "cline_prompt_sent":  false,
+                   "ollama_required":  false,
+                   "inference_executed":  false,
+                   "apply_executed":  false,
+                   "git_write":  false,
+                   "git_commit":  false,
+                   "git_push":  false
+               }
+}

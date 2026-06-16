@@ -1,0 +1,33 @@
+﻿{
+    "schema_id":  "memory-node.schema.v1",
+    "required":  [
+                     "id",
+                     "type",
+                     "label",
+                     "path",
+                     "created_at"
+                 ],
+    "types":  [
+                  "Objective",
+                  "Stage",
+                  "Block",
+                  "Step",
+                  "Artifact",
+                  "Error",
+                  "Decision",
+                  "Gate",
+                  "Worker",
+                  "Evidence",
+                  "Page",
+                  "Map",
+                  "Demo"
+              ],
+    "fields":  {
+                   "id":  "string unique",
+                   "type":  "node type",
+                   "label":  "human label",
+                   "path":  "source path",
+                   "created_at":  "iso datetime",
+                   "metadata":  "object"
+               }
+}

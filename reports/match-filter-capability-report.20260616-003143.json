@@ -1,0 +1,145 @@
+﻿{
+    "objective":  "ENGREMIAT_CORE_MVP_001",
+    "stage":  "E03",
+    "step":  "P03.1.1",
+    "timestamp":  "2026-06-16 00:31:43",
+    "valid_candidates":  [
+                             {
+                                 "task_id":  "TASK-DEFINE-CONTRACTS-001",
+                                 "worker_id":  "WORKER-MAIN-COORDINATOR",
+                                 "availability":  "AVAILABLE",
+                                 "reasons":  [
+                                                 "CAPABILITY_MATCH",
+                                                 "AVAILABLE_OR_LIMITED",
+                                                 "RISK_LOW"
+                                             ]
+                             },
+                             {
+                                 "task_id":  "TASK-BUILD-EVENT-LEDGER-001",
+                                 "worker_id":  "WORKER-MAIN-COORDINATOR",
+                                 "availability":  "AVAILABLE",
+                                 "reasons":  [
+                                                 "CAPABILITY_MATCH",
+                                                 "AVAILABLE_OR_LIMITED",
+                                                 "RISK_LOW"
+                                             ]
+                             },
+                             {
+                                 "task_id":  "TASK-MATCHING-V0-001",
+                                 "worker_id":  "WORKER-MAIN-COORDINATOR",
+                                 "availability":  "AVAILABLE",
+                                 "reasons":  [
+                                                 "CAPABILITY_MATCH",
+                                                 "AVAILABLE_OR_LIMITED",
+                                                 "RISK_LOW"
+                                             ]
+                             }
+                         ],
+    "blocked_candidates":  [
+                               {
+                                   "task_id":  "TASK-DEFINE-CONTRACTS-001",
+                                   "worker_id":  "WORKER-RPI-BACKUP",
+                                   "availability":  "AVAILABLE",
+                                   "reasons":  [
+                                                   "MISSING_CAPABILITY:DATA.SCHEMA_DEFINITION|DATA.DOCUMENTATION"
+                                               ]
+                               },
+                               {
+                                   "task_id":  "TASK-DEFINE-CONTRACTS-001",
+                                   "worker_id":  "WORKER-OLDPC-TEST",
+                                   "availability":  "AVAILABLE_LIMITED",
+                                   "reasons":  [
+                                                   "MISSING_CAPABILITY:DATA.SCHEMA_DEFINITION|DATA.DOCUMENTATION"
+                                               ]
+                               },
+                               {
+                                   "task_id":  "TASK-DEFINE-CONTRACTS-001",
+                                   "worker_id":  "WORKER-HUMAN-APPROVAL",
+                                   "availability":  "AVAILABLE_LIMITED",
+                                   "reasons":  [
+                                                   "MISSING_CAPABILITY:DATA.SCHEMA_DEFINITION|DATA.DOCUMENTATION"
+                                               ]
+                               },
+                               {
+                                   "task_id":  "TASK-BUILD-EVENT-LEDGER-001",
+                                   "worker_id":  "WORKER-RPI-BACKUP",
+                                   "availability":  "AVAILABLE",
+                                   "reasons":  [
+                                                   "MISSING_CAPABILITY:DATA.EVENT_LEDGER"
+                                               ]
+                               },
+                               {
+                                   "task_id":  "TASK-BUILD-EVENT-LEDGER-001",
+                                   "worker_id":  "WORKER-OLDPC-TEST",
+                                   "availability":  "AVAILABLE_LIMITED",
+                                   "reasons":  [
+                                                   "MISSING_CAPABILITY:DATA.EVENT_LEDGER"
+                                               ]
+                               },
+                               {
+                                   "task_id":  "TASK-BUILD-EVENT-LEDGER-001",
+                                   "worker_id":  "WORKER-HUMAN-APPROVAL",
+                                   "availability":  "AVAILABLE_LIMITED",
+                                   "reasons":  [
+                                                   "MISSING_CAPABILITY:DATA.EVENT_LEDGER"
+                                               ]
+                               },
+                               {
+                                   "task_id":  "TASK-MATCHING-V0-001",
+                                   "worker_id":  "WORKER-RPI-BACKUP",
+                                   "availability":  "AVAILABLE",
+                                   "reasons":  [
+                                                   "MISSING_CAPABILITY:MATCHING.DETERMINISTIC"
+                                               ]
+                               },
+                               {
+                                   "task_id":  "TASK-MATCHING-V0-001",
+                                   "worker_id":  "WORKER-OLDPC-TEST",
+                                   "availability":  "AVAILABLE_LIMITED",
+                                   "reasons":  [
+                                                   "MISSING_CAPABILITY:MATCHING.DETERMINISTIC"
+                                               ]
+                               },
+                               {
+                                   "task_id":  "TASK-MATCHING-V0-001",
+                                   "worker_id":  "WORKER-HUMAN-APPROVAL",
+                                   "availability":  "AVAILABLE_LIMITED",
+                                   "reasons":  [
+                                                   "MISSING_CAPABILITY:MATCHING.DETERMINISTIC"
+                                               ]
+                               },
+                               {
+                                   "task_id":  "TASK-EVIDENCE-CLOSE-001",
+                                   "worker_id":  "WORKER-MAIN-COORDINATOR",
+                                   "availability":  "AVAILABLE",
+                                   "reasons":  [
+                                                   "MISSING_CAPABILITY:DATA.EVIDENCE_STORAGE|HUMAN.APPROVAL"
+                                               ]
+                               },
+                               {
+                                   "task_id":  "TASK-EVIDENCE-CLOSE-001",
+                                   "worker_id":  "WORKER-RPI-BACKUP",
+                                   "availability":  "AVAILABLE",
+                                   "reasons":  [
+                                                   "MISSING_CAPABILITY:HUMAN.APPROVAL"
+                                               ]
+                               },
+                               {
+                                   "task_id":  "TASK-EVIDENCE-CLOSE-001",
+                                   "worker_id":  "WORKER-OLDPC-TEST",
+                                   "availability":  "AVAILABLE_LIMITED",
+                                   "reasons":  [
+                                                   "MISSING_CAPABILITY:DATA.EVIDENCE_STORAGE|HUMAN.APPROVAL"
+                                               ]
+                               },
+                               {
+                                   "task_id":  "TASK-EVIDENCE-CLOSE-001",
+                                   "worker_id":  "WORKER-HUMAN-APPROVAL",
+                                   "availability":  "AVAILABLE_LIMITED",
+                                   "reasons":  [
+                                                   "MISSING_CAPABILITY:DATA.EVIDENCE_STORAGE"
+                                               ]
+                               }
+                           ],
+    "status":  "OK"
+}

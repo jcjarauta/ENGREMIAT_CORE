@@ -1,0 +1,25 @@
+﻿{
+    "objective":  "ENGREMIAT_LOCAL_MULTIWORKER_LAUNCH_AND_LINK_009A_N1",
+    "stage":  "E01",
+    "schema_exists":  true,
+    "roles_exists":  true,
+    "profile_exists":  true,
+    "registry_exists":  true,
+    "nodes_total":  6,
+    "current_machine_active_count":  1,
+    "errors":  [
+
+               ],
+    "remote_execution":  false,
+    "ssh":  false,
+    "network_write":  false,
+    "git_write":  false,
+    "apply_executed":  false,
+    "worker_real_execution":  false,
+    "main_pc_required_for_local_prep":  false,
+    "main_pc_required_for_full_test":  true,
+    "validation_ok":  true,
+    "readiness":  100,
+    "decision":  "GO_E01_LOCAL_NODE_REGISTRY_N1_READY",
+    "next":  "E02_LOCAL_POLICIES_AND_LIMITS"
+}

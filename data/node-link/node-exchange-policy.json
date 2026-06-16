@@ -1,0 +1,38 @@
+﻿{
+    "objective_id":  "ENGREMIAT_LOCAL_NODE_LINK_004A",
+    "stage":  "E03",
+    "exchange_mode":  "LOCAL_FIRST_MANUAL_OR_SHARED_FOLDER_LATER",
+    "old_pc_role":  "DEV_CONTROL_NODE",
+    "main_pc_role":  "COMPUTE_WORKER_NODE",
+    "main_pc_can_be_off":  true,
+    "network_required_now":  false,
+    "shared_folder_created":  false,
+    "git_remote_used":  false,
+    "usb_manual_allowed":  true,
+    "future_shared_folder_allowed_after_gate":  true,
+    "allowed_now":  [
+                        "create_local_inbox",
+                        "create_local_outbox",
+                        "create_sample_packet",
+                        "manual_copy_later"
+                    ],
+    "blocked_now":  [
+                        "open_firewall",
+                        "create_windows_share",
+                        "remote_write",
+                        "remote_execution",
+                        "ollama_inference",
+                        "auto_apply",
+                        "git_push",
+                        "git_fetch",
+                        "git_merge"
+                    ],
+    "security":  {
+                     "firewall_changed":  false,
+                     "services_changed":  false,
+                     "network_changed":  false,
+                     "external_network":  false,
+                     "remote_execution":  false
+                 },
+    "next":  "E04_CANAL_DE_SERVICIOS_CONTROLADO"
+}

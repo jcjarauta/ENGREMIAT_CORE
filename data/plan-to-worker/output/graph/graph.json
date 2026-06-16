@@ -1,0 +1,192 @@
+﻿{
+    "objective_id":  "ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002",
+    "stage":  "E06",
+    "nodes_count":  12,
+    "edges_count":  11,
+    "nodes":  [
+                  {
+                      "id":  "ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002",
+                      "type":  "objective",
+                      "label":  "ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002",
+                      "meta":  {
+                                   "stage":  "E06"
+                               }
+                  },
+                  {
+                      "id":  "stage:UNASSIGNED_STAGE",
+                      "type":  "stage",
+                      "label":  "UNASSIGNED_STAGE",
+                      "meta":  {
+                                   "name":  ""
+                               }
+                  },
+                  {
+                      "id":  "block:UNASSIGNED_BLOCK",
+                      "type":  "block",
+                      "label":  "UNASSIGNED_BLOCK",
+                      "meta":  {
+                                   "name":  ""
+                               }
+                  },
+                  {
+                      "id":  "step:ITEM-001",
+                      "type":  "step",
+                      "label":  "ITEM-001",
+                      "meta":  {
+                                   "priority":  "Media",
+                                   "title":  "ITEM-001",
+                                   "status":  "PENDING",
+                                   "risk":  "LOW"
+                               }
+                  },
+                  {
+                      "id":  "artifact:UNDEFINED_ARTIFACT",
+                      "type":  "artifact",
+                      "label":  "UNDEFINED_ARTIFACT",
+                      "meta":  {
+                                   "format":  ""
+                               }
+                  },
+                  {
+                      "id":  "worker:cline",
+                      "type":  "worker",
+                      "label":  "cline",
+                      "meta":  {
+                                   "prepared":  true,
+                                   "request_path":  "data/plan-to-worker/adapters/cline/request.json",
+                                   "real_execution":  false
+                               }
+                  },
+                  {
+                      "id":  "worker:ollama",
+                      "type":  "worker",
+                      "label":  "ollama",
+                      "meta":  {
+                                   "prepared":  true,
+                                   "request_path":  "data/plan-to-worker/adapters/ollama/request.json",
+                                   "real_execution":  false
+                               }
+                  },
+                  {
+                      "id":  "worker:openclaw",
+                      "type":  "worker",
+                      "label":  "openclaw",
+                      "meta":  {
+                                   "prepared":  true,
+                                   "request_path":  "data/plan-to-worker/adapters/openclaw/request.json",
+                                   "real_execution":  false
+                               }
+                  },
+                  {
+                      "id":  "worker:generic",
+                      "type":  "worker",
+                      "label":  "generic",
+                      "meta":  {
+                                   "prepared":  true,
+                                   "request_path":  "data/plan-to-worker/adapters/generic/request.json",
+                                   "real_execution":  false
+                               }
+                  },
+                  {
+                      "id":  "system:engremiat-action",
+                      "type":  "system_output",
+                      "label":  "engremiat-action.json",
+                      "meta":  {
+                                   "path":  "data/plan-to-worker/output/system/engremiat-action.json"
+                               }
+                  },
+                  {
+                      "id":  "decision:system",
+                      "type":  "decision",
+                      "label":  "decision-package.json",
+                      "meta":  {
+                                   "decision":  "PREPARED_NOT_EXECUTED",
+                                   "path":  "data/plan-to-worker/output/system/decision-package.json"
+                               }
+                  },
+                  {
+                      "id":  "evidence:manifest",
+                      "type":  "evidence",
+                      "label":  "evidence-manifest.json",
+                      "meta":  {
+                                   "items_count":  11,
+                                   "path":  "data/plan-to-worker/output/system/evidence-manifest.json"
+                               }
+                  }
+              ],
+    "edges":  [
+                  {
+                      "from":  "ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002",
+                      "to":  "stage:UNASSIGNED_STAGE",
+                      "type":  "CONTAINS",
+                      "label":  "objective contains stage"
+                  },
+                  {
+                      "from":  "stage:UNASSIGNED_STAGE",
+                      "to":  "block:UNASSIGNED_BLOCK",
+                      "type":  "CONTAINS",
+                      "label":  "stage contains block"
+                  },
+                  {
+                      "from":  "block:UNASSIGNED_BLOCK",
+                      "to":  "step:ITEM-001",
+                      "type":  "CONTAINS",
+                      "label":  "block contains step"
+                  },
+                  {
+                      "from":  "step:ITEM-001",
+                      "to":  "artifact:UNDEFINED_ARTIFACT",
+                      "type":  "GENERATES",
+                      "label":  "step generates artifact"
+                  },
+                  {
+                      "from":  "ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002",
+                      "to":  "worker:cline",
+                      "type":  "CONSUMED_BY",
+                      "label":  "objective can be consumed by worker adapter"
+                  },
+                  {
+                      "from":  "ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002",
+                      "to":  "worker:ollama",
+                      "type":  "CONSUMED_BY",
+                      "label":  "objective can be consumed by worker adapter"
+                  },
+                  {
+                      "from":  "ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002",
+                      "to":  "worker:openclaw",
+                      "type":  "CONSUMED_BY",
+                      "label":  "objective can be consumed by worker adapter"
+                  },
+                  {
+                      "from":  "ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002",
+                      "to":  "worker:generic",
+                      "type":  "CONSUMED_BY",
+                      "label":  "objective can be consumed by worker adapter"
+                  },
+                  {
+                      "from":  "ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002",
+                      "to":  "system:engremiat-action",
+                      "type":  "GENERATES",
+                      "label":  "generates system action"
+                  },
+                  {
+                      "from":  "system:engremiat-action",
+                      "to":  "decision:system",
+                      "type":  "VALIDATES",
+                      "label":  "system action has decision"
+                  },
+                  {
+                      "from":  "decision:system",
+                      "to":  "evidence:manifest",
+                      "type":  "PRODUCES_EVIDENCE",
+                      "label":  "decision produces evidence"
+                  }
+              ],
+    "policy":  {
+                   "external_network":  false,
+                   "git_write":  false,
+                   "worker_real_execution":  false,
+                   "database_required":  false
+               },
+    "created_at":  "2026-06-16T11:45:34"
+}

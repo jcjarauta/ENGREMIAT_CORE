@@ -1,0 +1,59 @@
+﻿{
+    "objective_id":  "ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002",
+    "stage":  "E03",
+    "status":  "E03_VALIDATED",
+    "artifacts":  [
+                      {
+                          "path":  "tools/plan-to-worker/Build-CanonicalWorkItems.ps1",
+                          "sha256":  "baaca71bb3ece23007bccc87e6fc9f94162d1c38eeda7016d07b22ccae800ebe",
+                          "type":  "PowerShell",
+                          "step":  "P03.1.1"
+                      },
+                      {
+                          "path":  "data/plan-to-worker/output/canonical-work-items.json",
+                          "sha256":  "07720d19455f0f8ae0bbebfa8d372b26b9b3f7f4c9b00e9fdc6b7c22aa1c1060",
+                          "type":  "JSON",
+                          "step":  "P03.1.2"
+                      },
+                      {
+                          "path":  "tools/plan-to-worker/Build-CanonicalQueues.ps1",
+                          "sha256":  "f34a2f7e9001a48cf3cad10c8cec23db0e723a0484f31a0a8de2e7fed216999d",
+                          "type":  "PowerShell",
+                          "step":  "P03.2.1"
+                      },
+                      {
+                          "path":  "data/plan-to-worker/output/canonical-worker-queue.json",
+                          "sha256":  "d511a33ef84f3448e7c06e022e55c169390c4ff602286daffd88bf353a8fc68f",
+                          "type":  "JSON",
+                          "step":  "P03.2.2"
+                      },
+                      {
+                          "path":  "tools/plan-to-worker/Test-CanonicalOutput.ps1",
+                          "sha256":  "ab088d17b6b2f4347369b898771cb5f731e3e572bfbef5420cfc4244083fa333",
+                          "type":  "PowerShell",
+                          "step":  "P03.3.1"
+                      },
+                      {
+                          "path":  "reports/plan-to-worker/consolidation/e03-canonical-output-smoke-report.json",
+                          "sha256":  "a7641977f82d97af3ec72ac0363a06343c6c9b3a2dd75b98e2e9b08725629423",
+                          "type":  "JSON",
+                          "step":  "P03.3.2"
+                      },
+                      {
+                          "path":  "data/plan-to-worker/output/canonical-project-map.json",
+                          "sha256":  "1d99af22dbe70f9e55041e769dc158bb6397314aea386a7203b55f86da3cb480",
+                          "type":  "JSON",
+                          "step":  "P03.2.2"
+                      },
+                      {
+                          "path":  "data/plan-to-worker/output/canonical-readiness.json",
+                          "sha256":  "11b8a5a979f2938ee6d06a5c25ccc61869d9fcaada5efea81d5db4b88b9ca93b",
+                          "type":  "JSON",
+                          "step":  "P03.2.2"
+                      }
+                  ],
+    "score":  100,
+    "decision":  "GO",
+    "next":  "E04_ADAPTERS_PREPARADOS_PARA_WORKERS",
+    "created_at":  "2026-06-16T11:41:44"
+}

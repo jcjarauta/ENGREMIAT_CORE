@@ -1,0 +1,46 @@
+﻿{
+    "objective":  "ENGREMIAT_DUAL_PC_DEVELOPMENT_WORKFLOW_009B",
+    "stage":  "E06",
+    "rules_id":  "DUAL-PC-READINESS-RULES-009B-E06",
+    "created_at_utc":  "2026-06-16T13:12:43.5208674Z",
+    "decisions":  {
+                      "GO_CURRENT_PC_PREP":  "PC actual puede seguir preparando dashboards, handoffs, reports, policies y trabajo ligero.",
+                      "NEED_MAIN_PC_FOR_LINKING":  "Se requiere volver a MAIN-PC para vinculacion real, Cline real proposal-only y/o Ollama/GPU.",
+                      "NO_GO_REPAIR":  "Falta algun artefacto critico, hay conflicto de escritor o la seguridad no es valida."
+                  },
+    "conditions":  {
+                       "current_pc_prep_ready":  [
+                                                     "E01 validation_ok = true",
+                                                     "E02 validation_ok = true",
+                                                     "E04 validation_ok = true",
+                                                     "E05 validation_ok = true",
+                                                     "single_active_writer = true",
+                                                     "no remote_execution",
+                                                     "no git_write",
+                                                     "no auto_apply",
+                                                     "no shared_repo_edit",
+                                                     "dashboards and handoff artifacts present"
+                                                 ],
+                       "need_main_pc_for_linking":  [
+                                                        "MAIN-PC not yet linked",
+                                                        "real Cline/Ollama linking requested",
+                                                        "full multiworker test requested"
+                                                    ],
+                       "no_go_repair":  [
+                                            "missing required artifacts",
+                                            "writer_conflict = true",
+                                            "remote_execution = true",
+                                            "git_write = true",
+                                            "auto_apply = true",
+                                            "shared_repo_edit = true"
+                                        ]
+                   },
+    "safety":  {
+                   "main_pc_touched":  false,
+                   "remote_execution":  false,
+                   "git_write":  false,
+                   "auto_apply":  false,
+                   "shared_repo_edit":  false,
+                   "secret_values_read":  false
+               }
+}

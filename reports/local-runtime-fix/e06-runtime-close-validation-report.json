@@ -1,0 +1,41 @@
+﻿{
+    "objective_id":  "ENGREMIAT_LOCAL_RUNTIME_FIX_004",
+    "stage":  "E06",
+    "status":  "E06_LOCAL_RUNTIME_FIX_CLOSED",
+    "readiness":  100,
+    "decision":  "GO_RUNTIME_READY_CONTROLLED",
+    "artifacts":  [
+                      {
+                          "path":  "tools/runtime/Build-LocalRuntimeDashboard.ps1",
+                          "sha256":  "eb3980870f9b8ed687d08c0e99d8d9329efa7566b541ab188262b9d8274bb237",
+                          "step":  "P06.1.1"
+                      },
+                      {
+                          "path":  "dashboard/local-runtime/index.html",
+                          "sha256":  "85ec9375ad60cc1440546ab799a5c87d9d8c91a49ec6a4cf4cb31729abe35052",
+                          "step":  "P06.1.2"
+                      },
+                      {
+                          "path":  "tools/runtime/Build-LocalRuntimeEvidence.ps1",
+                          "sha256":  "9773368652dbaee5303f228557b351e4d3a254e199ec7e56817024af783284b1",
+                          "step":  "P06.2.1"
+                      },
+                      {
+                          "path":  "data/local-runtime-fix/runtime-evidence-manifest.json",
+                          "sha256":  "45b1e6c974fc5b0094203f7e11b3fa7f5e670feb039893a540edb4d9b2730e20",
+                          "step":  "P06.2.2"
+                      },
+                      {
+                          "path":  "docs/LOCAL_RUNTIME_FIX_CLOSE_REPORT.md",
+                          "sha256":  "45a4369e967fc239302cc79c648b7e921d57c854702750a8cc0742d17a6c7a6f",
+                          "step":  "P06.3.1"
+                      },
+                      {
+                          "path":  "docs/NEXT_OBJECTIVE_CONNECT_CONTROLLED_WORKERS.md",
+                          "sha256":  "cf5dc25eb3dc8408009b1274f05b9031f0201bdf47f1a4854922e0ad8b62de23",
+                          "step":  "P06.3.2"
+                      }
+                  ],
+    "next":  "CONNECT_CONTROLLED_WORKER_ADAPTERS_OR_RETURN_REMOTE_OLLAMA_WHEN_MAIN_PC_ON",
+    "created_at":  "2026-06-16T13:19:56"
+}

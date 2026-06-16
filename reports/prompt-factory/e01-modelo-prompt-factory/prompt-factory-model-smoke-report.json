@@ -1,0 +1,83 @@
+﻿{
+    "objective_id":  "ENGREMIAT_CORE_MVP_PROMPT_FACTORY_001",
+    "stage_id":  "E01",
+    "repair":  "E01-SMOKE-SCORE-REPAIR-001",
+    "block_id":  "B01.3",
+    "step_id":  "P01.3.2",
+    "status":  "OK",
+    "validation_passed":  true,
+    "score":  100,
+    "threshold":  90,
+    "checks":  [
+                   {
+                       "id":  "exists_prompt-task.schema.json",
+                       "ok":  true,
+                       "points":  8,
+                       "message":  "data\\prompt-factory\\schemas\\prompt-task.schema.json"
+                   },
+                   {
+                       "id":  "json_prompt-task.schema.json",
+                       "ok":  true,
+                       "points":  8,
+                       "message":  "data\\prompt-factory\\schemas\\prompt-task.schema.json"
+                   },
+                   {
+                       "id":  "required_prompt-task.schema.json",
+                       "ok":  true,
+                       "points":  8,
+                       "message":  "data\\prompt-factory\\schemas\\prompt-task.schema.json"
+                   },
+                   {
+                       "id":  "exists_prompt-context.schema.json",
+                       "ok":  true,
+                       "points":  8,
+                       "message":  "data\\prompt-factory\\schemas\\prompt-context.schema.json"
+                   },
+                   {
+                       "id":  "json_prompt-context.schema.json",
+                       "ok":  true,
+                       "points":  8,
+                       "message":  "data\\prompt-factory\\schemas\\prompt-context.schema.json"
+                   },
+                   {
+                       "id":  "required_prompt-context.schema.json",
+                       "ok":  true,
+                       "points":  8,
+                       "message":  "data\\prompt-factory\\schemas\\prompt-context.schema.json"
+                   },
+                   {
+                       "id":  "exists_worker-output.schema.json",
+                       "ok":  true,
+                       "points":  8,
+                       "message":  "data\\prompt-factory\\schemas\\worker-output.schema.json"
+                   },
+                   {
+                       "id":  "json_worker-output.schema.json",
+                       "ok":  true,
+                       "points":  8,
+                       "message":  "data\\prompt-factory\\schemas\\worker-output.schema.json"
+                   },
+                   {
+                       "id":  "required_worker-output.schema.json",
+                       "ok":  true,
+                       "points":  8,
+                       "message":  "data\\prompt-factory\\schemas\\worker-output.schema.json"
+                   },
+                   {
+                       "id":  "contract_exists",
+                       "ok":  true,
+                       "points":  10,
+                       "message":  "docs/prompt-factory/PROMPT_FACTORY_CONTRACT.md"
+                   },
+                   {
+                       "id":  "contract_limits",
+                       "ok":  true,
+                       "points":  18,
+                       "message":  "docs/prompt-factory/PROMPT_FACTORY_CONTRACT.md"
+                   }
+               ],
+    "external_network":  false,
+    "git":  false,
+    "next":  "E02_LECTOR_DE_PLAN_DE_DESARROLLO",
+    "checked_at":  "2026-06-16T10:34:27"
+}

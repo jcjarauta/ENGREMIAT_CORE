@@ -1,0 +1,50 @@
+﻿{
+    "objective":  "ENGREMIAT_LOCAL_MULTIWORKER_LAUNCH_AND_LINK_009A_N1",
+    "stage":  "E03",
+    "plan_id":  "LOCAL-LAUNCH-PLAN-N1",
+    "mode_default":  "preview",
+    "browser_opened_by_default":  false,
+    "ordered_surfaces":  [
+                             {
+                                 "order":  1,
+                                 "surface":  "dashboard/local-multiworker-launch-and-link-n1/index.html",
+                                 "purpose":  "Ver readiness parcial N1",
+                                 "action":  "manual_open_or_preview"
+                             },
+                             {
+                                 "order":  2,
+                                 "surface":  "dashboard/kanban-human-control/index.html",
+                                 "purpose":  "Ver Kanban 007 si existe",
+                                 "action":  "manual_open_optional"
+                             },
+                             {
+                                 "order":  3,
+                                 "surface":  "dashboard/cline-real-proposal-no-apply/proposal-review.html",
+                                 "purpose":  "Ver review 008 si existe",
+                                 "action":  "manual_open_optional"
+                             },
+                             {
+                                 "order":  4,
+                                 "surface":  "ENGREMIAT_FIRST_REAL_CLINE_PROPOSAL_TASK_009",
+                                 "purpose":  "Preparar 009 tras readiness",
+                                 "action":  "do_not_start_automatically"
+                             }
+                         ],
+    "forbidden_actions":  [
+                              "create_cline_task",
+                              "send_prompt",
+                              "run_ollama_inference",
+                              "browser_automation",
+                              "remote_execution",
+                              "git_write",
+                              "apply_executed"
+                          ],
+    "safety":  {
+                   "browser_opened":  false,
+                   "cline_executed":  false,
+                   "ollama_executed":  false,
+                   "remote_execution":  false,
+                   "git_write":  false,
+                   "apply_executed":  false
+               }
+}

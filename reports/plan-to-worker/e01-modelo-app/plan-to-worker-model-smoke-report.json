@@ -1,0 +1,34 @@
+﻿{
+    "objective_id":  "ENGREMIAT_PLAN_TO_WORKER_APP_001",
+    "stage":  "E01",
+    "repair":  "R3_NO_ALIAS",
+    "blocks":  [
+                   "B01.1",
+                   "B01.2",
+                   "B01.3"
+               ],
+    "steps":  [
+                  "P01.1.1",
+                  "P01.1.2",
+                  "P01.2.1",
+                  "P01.2.2",
+                  "P01.3.1",
+                  "P01.3.2"
+              ],
+    "contract":  true,
+    "boundaries":  true,
+    "schemas":  true,
+    "validator":  true,
+    "smoke":  true,
+    "score":  100,
+    "decision":  "GO",
+    "problems":  [
+
+                 ],
+    "external_network":  false,
+    "git_write":  false,
+    "worker_real_execution":  false,
+    "report":  "reports/plan-to-worker/e01-modelo-app/plan-to-worker-model-smoke-report.json",
+    "next":  "E02_IMPORTADOR_PLAN_SHEETS",
+    "created_at":  "2026-06-16T11:10:47"
+}

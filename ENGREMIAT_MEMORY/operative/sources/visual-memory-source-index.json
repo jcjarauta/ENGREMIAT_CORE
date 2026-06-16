@@ -1,0 +1,54 @@
+﻿{
+    "objective_id":  "ENGREMIAT_DEV_VISUAL_MEMORY_OPERATIVE_002",
+    "stage_id":  "E01",
+    "block_id":  "B01.1",
+    "step_id":  "P01.1.1",
+    "created_at":  "2026-06-16T10:09:15",
+    "read_only":  true,
+    "sources":  [
+                    {
+                        "source_id":  "reports",
+                        "path":  "reports",
+                        "kind":  "reports",
+                        "pattern":  "*.json",
+                        "exists":  true
+                    },
+                    {
+                        "source_id":  "manifests",
+                        "path":  "manifests",
+                        "kind":  "manifests",
+                        "pattern":  "*.json",
+                        "exists":  true
+                    },
+                    {
+                        "source_id":  "artifact_registry",
+                        "path":  "data/registry/artifact-registry.jsonl",
+                        "kind":  "registry",
+                        "pattern":  "*.jsonl",
+                        "exists":  true
+                    },
+                    {
+                        "source_id":  "context_snapshot",
+                        "path":  "data/dev/context-snapshot.json",
+                        "kind":  "context",
+                        "pattern":  "*.json",
+                        "exists":  true
+                    },
+                    {
+                        "source_id":  "gates",
+                        "path":  "data/gates",
+                        "kind":  "gates",
+                        "pattern":  "*.json*",
+                        "exists":  true
+                    },
+                    {
+                        "source_id":  "dashboard_memory",
+                        "path":  "ENGREMIAT_MEMORY/dashboard/memory",
+                        "kind":  "dashboard",
+                        "pattern":  "*.json;*.html",
+                        "exists":  true
+                    }
+                ],
+    "external_network":  false,
+    "notes":  "Indice local de fuentes. No modifica las fuentes originales."
+}

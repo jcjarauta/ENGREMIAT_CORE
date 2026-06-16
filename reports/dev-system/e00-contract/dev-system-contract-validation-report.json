@@ -1,0 +1,41 @@
+﻿{
+    "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+    "stage_id":  "E00",
+    "blocks":  [
+                   "B00.1",
+                   "B00.2"
+               ],
+    "steps":  [
+                  "P00.1.1",
+                  "P00.1.2",
+                  "P00.2.1",
+                  "P00.2.2"
+              ],
+    "status":  "OK",
+    "validation_passed":  true,
+    "missing_fields":  [
+
+                       ],
+    "files":  [
+                  {
+                      "path":  "data/dev/dev-system-contract.json",
+                      "exists":  true,
+                      "sha256":  "2d3f4a29438209900dc339fc2bd6e81a60ea8172e889541f616dc10930b312b0"
+                  },
+                  {
+                      "path":  "docs/DEV_SYSTEM_GUIDE.md",
+                      "exists":  true,
+                      "sha256":  "ff490abbf81bd2f35f155c55c85d2989587f7bdff7910340adead55e752b776a"
+                  },
+                  {
+                      "path":  "data/dev/dev-system-policy.json",
+                      "exists":  true,
+                      "sha256":  "1bc8482a9eac6656d4b8a8121f0b1fef252d6a3e8cbb444c089cc4238c48b514"
+                  }
+              ],
+    "risk":  "LOW",
+    "agrupable":  "SI",
+    "external_network":  false,
+    "git":  false,
+    "next":  "E01_DEV_ARTIFACT_REGISTRY"
+}

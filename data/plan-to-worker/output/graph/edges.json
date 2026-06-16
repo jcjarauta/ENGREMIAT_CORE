@@ -1,0 +1,74 @@
+﻿{
+    "objective_id":  "ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002",
+    "stage":  "E06",
+    "edges":  [
+                  {
+                      "from":  "ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002",
+                      "to":  "stage:UNASSIGNED_STAGE",
+                      "type":  "CONTAINS",
+                      "label":  "objective contains stage"
+                  },
+                  {
+                      "from":  "stage:UNASSIGNED_STAGE",
+                      "to":  "block:UNASSIGNED_BLOCK",
+                      "type":  "CONTAINS",
+                      "label":  "stage contains block"
+                  },
+                  {
+                      "from":  "block:UNASSIGNED_BLOCK",
+                      "to":  "step:ITEM-001",
+                      "type":  "CONTAINS",
+                      "label":  "block contains step"
+                  },
+                  {
+                      "from":  "step:ITEM-001",
+                      "to":  "artifact:UNDEFINED_ARTIFACT",
+                      "type":  "GENERATES",
+                      "label":  "step generates artifact"
+                  },
+                  {
+                      "from":  "ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002",
+                      "to":  "worker:cline",
+                      "type":  "CONSUMED_BY",
+                      "label":  "objective can be consumed by worker adapter"
+                  },
+                  {
+                      "from":  "ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002",
+                      "to":  "worker:ollama",
+                      "type":  "CONSUMED_BY",
+                      "label":  "objective can be consumed by worker adapter"
+                  },
+                  {
+                      "from":  "ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002",
+                      "to":  "worker:openclaw",
+                      "type":  "CONSUMED_BY",
+                      "label":  "objective can be consumed by worker adapter"
+                  },
+                  {
+                      "from":  "ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002",
+                      "to":  "worker:generic",
+                      "type":  "CONSUMED_BY",
+                      "label":  "objective can be consumed by worker adapter"
+                  },
+                  {
+                      "from":  "ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002",
+                      "to":  "system:engremiat-action",
+                      "type":  "GENERATES",
+                      "label":  "generates system action"
+                  },
+                  {
+                      "from":  "system:engremiat-action",
+                      "to":  "decision:system",
+                      "type":  "VALIDATES",
+                      "label":  "system action has decision"
+                  },
+                  {
+                      "from":  "decision:system",
+                      "to":  "evidence:manifest",
+                      "type":  "PRODUCES_EVIDENCE",
+                      "label":  "decision produces evidence"
+                  }
+              ],
+    "count":  11,
+    "created_at":  "2026-06-16T11:45:34"
+}

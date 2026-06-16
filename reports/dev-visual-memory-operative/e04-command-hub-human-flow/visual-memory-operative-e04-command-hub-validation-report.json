@@ -1,0 +1,29 @@
+﻿{
+    "objective_id":  "ENGREMIAT_DEV_VISUAL_MEMORY_OPERATIVE_002",
+    "stage_id":  "E04",
+    "blocks":  [
+                   "B04.1",
+                   "B04.2",
+                   "B04.3"
+               ],
+    "steps":  [
+                  "P04.1.1",
+                  "P04.1.2",
+                  "P04.2.1",
+                  "P04.2.2",
+                  "P04.3.1",
+                  "P04.3.2"
+              ],
+    "status":  "OK",
+    "validation_passed":  true,
+    "eng_ps1":  "eng.ps1",
+    "invoke":  "tools/memory/Invoke-VisualMemoryCommand.ps1",
+    "daily_flow":  "ENGREMIAT_MEMORY/VISUAL_MEMORY_DAILY_FLOW.md",
+    "operator_guide":  "ENGREMIAT_MEMORY/VISUAL_MEMORY_OPERATOR_GUIDE.md",
+    "commands_doc":  "docs/ENG_COMMANDS.md",
+    "smoke_report":  "reports/dev-visual-memory-operative/e04-command-hub-human-flow/visual-memory-command-smoke-report.json",
+    "external_network":  false,
+    "git":  false,
+    "risk":  "LOW",
+    "next":  "E05_GRAFO_TECNICO_LOCAL_CONSULTABLE"
+}

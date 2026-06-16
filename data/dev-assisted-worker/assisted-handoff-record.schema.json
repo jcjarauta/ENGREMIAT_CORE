@@ -1,0 +1,38 @@
+﻿{
+    "schema_id":  "assisted-handoff-record.schema.v1",
+    "objective_id":  "ENGREMIAT_DEV_ASSISTED_WORKER_ADAPTER_001",
+    "stage_id":  "E02",
+    "block_id":  "B02.1",
+    "required":  [
+                     "handoff_id",
+                     "task_id",
+                     "worker_target",
+                     "mode",
+                     "prompt_path",
+                     "created_at",
+                     "status",
+                     "evidence_expected",
+                     "external_execution",
+                     "human_action_required"
+                 ],
+    "properties":  {
+                       "handoff_id":  "stable handoff id",
+                       "task_id":  "AgentTaskPackage task id",
+                       "worker_target":  "CLINE_OR_OLLAMA",
+                       "mode":  "PREPARED_ONLY|MANUAL_HANDOFF|PROPOSAL_ONLY|LOCAL_AUTHORIZED",
+                       "prompt_path":  "local prompt file path",
+                       "created_at":  "local ISO datetime",
+                       "status":  "PREPARED|EXPORTED|SENT_MANUAL|RESPONSE_PENDING|COMPLETED|REJECTED|EXPIRED|BLOCKED",
+                       "evidence_expected":  "array of expected returned artifacts",
+                       "external_execution":  "false by default",
+                       "human_action_required":  "true when manual handoff is needed"
+                   },
+    "validation_rules":  [
+                             "handoff_id_required",
+                             "task_id_required",
+                             "prompt_path_exists",
+                             "status_controlled",
+                             "external_execution_false_by_default",
+                             "evidence_expected_declared"
+                         ]
+}

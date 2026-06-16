@@ -1,0 +1,20 @@
+﻿{
+    "objective_id":  "ENGREMIAT_DEV_ASSISTED_WORKER_ADAPTER_001",
+    "stage_id":  "E03",
+    "block_id":  "B03.3",
+    "steps":  [
+                  "P03.3.1",
+                  "P03.3.2"
+              ],
+    "status":  "OK",
+    "validation_passed":  true,
+    "evidence_manifest":  "data/dev-assisted-worker/evidence/assisted-worker-evidence-manifest.json",
+    "proposal":  "data/dev-assisted-worker/results/AW-TASK-FIXTURE-001/agent-result-proposal.json",
+    "review_request":  "data/dev-assisted-worker/results/assisted-worker-review-request.json",
+    "context_updated":  true,
+    "readiness_note":  "Propuesta importada, pendiente de revisión humana en E04.",
+    "external_execution":  false,
+    "git":  false,
+    "risk":  "LOW",
+    "next":  "E04_HUMAN_GATE_CONTROLLED_APPLY_AND_CLOSE"
+}

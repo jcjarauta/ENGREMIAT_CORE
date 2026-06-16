@@ -1,0 +1,47 @@
+﻿{
+    "objective_id":  "ENGREMIAT_LOCAL_NODE_LINK_004A",
+    "stage":  "E04",
+    "status":  "E04_CONTROLLED_SERVICES_CONTRACT_READY",
+    "readiness":  100,
+    "decision":  "GO",
+    "main_pc_can_be_off":  true,
+    "main_pc_host":  "DESKTOP-PVRVE56",
+    "main_pc_ip":  "192.168.1.67",
+    "firewall_changed":  false,
+    "services_changed":  false,
+    "inference":  false,
+    "artifacts":  [
+                      {
+                          "path":  "data/node-link/main-pc-services-contract.json",
+                          "sha256":  "3d4b7df76f62423615ae90a7bc011f0592e0ec614517023c04198e48351e5f94",
+                          "step":  "P04.1.1"
+                      },
+                      {
+                          "path":  "docs/MAIN_PC_SERVICES_GUIDE.md",
+                          "sha256":  "1f513603ce9f800ec4cd212fff28d3f29542c2d8719b933c15bd867a736c169e",
+                          "step":  "P04.1.2"
+                      },
+                      {
+                          "path":  "tools/node-link/Test-MainPcServiceProbe.ps1",
+                          "sha256":  "5a8a3855e6ff74de02a63c6d9f571f3426837def4f22216f1a4391e26258398e",
+                          "step":  "P04.2.1"
+                      },
+                      {
+                          "path":  "reports/node-link/main-pc-service-probe-report.json",
+                          "sha256":  "2b9e276820cf07a71d64c7318bd9079220d51133fb2c62836fb8add8863525c0",
+                          "step":  "P04.2.2"
+                      },
+                      {
+                          "path":  "data/node-link/remote-ollama-node-link-bridge.json",
+                          "sha256":  "40efd016ab877a8e8e736d12ed1de656736a0353a16f43e3431588f5979343f6",
+                          "step":  "P04.3.1"
+                      },
+                      {
+                          "path":  "reports/node-link/e04-services-smoke-report.json",
+                          "sha256":  "13c6ba685bce16366ffd2403476b9f2a6d3e4406cedf5ce682fe9d307d9e91fc",
+                          "step":  "P04.3.2"
+                      }
+                  ],
+    "next":  "E05_CIERRE_DE_RED_INICIAL",
+    "created_at":  "2026-06-16T12:59:32"
+}

@@ -1,0 +1,76 @@
+﻿{
+    "objective_id":  "ENGREMIAT_DEV_ASSISTED_WORKER_ADAPTER_001",
+    "stage_id":  "E00",
+    "block_id":  "B00.2",
+    "status":  "DRAFT_VALIDATED",
+    "default_mode":  "PROPOSAL_ONLY",
+    "human_gate_before_apply":  true,
+    "proposal_only_by_default":  true,
+    "no_remote":  true,
+    "no_secrets":  true,
+    "no_git_remote":  true,
+    "no_external_network":  true,
+    "allowed_paths":  [
+                          "tools/",
+                          "data/dev/",
+                          "data/dev-assisted-worker/",
+                          "data/registry/",
+                          "data/gates/",
+                          "data/errors/",
+                          "docs/",
+                          "reports/",
+                          "manifests/"
+                      ],
+    "forbidden_paths":  [
+                            ".git/",
+                            ".env",
+                            "secrets/",
+                            "node_modules/",
+                            "dist/",
+                            "vendor/"
+                        ],
+    "allowed_actions":  [
+                            "READ_LOCAL_CONTEXT",
+                            "GENERATE_PROMPT",
+                            "PROPOSE_PATCH",
+                            "GENERATE_DOC",
+                            "GENERATE_TEST_PLAN",
+                            "SUMMARIZE_EVIDENCE"
+                        ],
+    "forbidden_actions":  [
+                              "GIT_PUSH",
+                              "GIT_FETCH",
+                              "GIT_MERGE",
+                              "READ_SECRETS",
+                              "WRITE_WITHOUT_GATE",
+                              "RUN_EXTERNAL_NETWORK",
+                              "APPLY_WITHOUT_REVIEW",
+                              "DELETE_CRITICAL",
+                              "CLOSE_STEP_WITHOUT_EVIDENCE"
+                          ],
+    "gate_required_for":  [
+                              "LOCAL_AUTHORIZED",
+                              "APPLY_PATCH",
+                              "WRITE_SOURCE",
+                              "WRITE_TOOL",
+                              "DELETE_FILE",
+                              "RUN_COMMAND",
+                              "CHANGE_PERMISSION",
+                              "ACCESS_EXTERNAL_WORKER",
+                              "IMPORT_AGENT_RESULT_FOR_APPLY"
+                          ],
+    "fail_closed_decisions":  [
+                                  "NO_GO",
+                                  "BLOCKED",
+                                  "REQUIRES_HUMAN_REVIEW"
+                              ],
+    "validation_rules":  [
+                             "contract_required",
+                             "policy_required",
+                             "modes_required",
+                             "forbidden_actions_not_allowed",
+                             "forbidden_paths_declared",
+                             "gate_required_before_apply",
+                             "proposal_only_by_default"
+                         ]
+}

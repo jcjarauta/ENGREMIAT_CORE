@@ -1,0 +1,12 @@
+﻿{
+    "enabled":  false,
+    "node_id":  "MAIN-PC",
+    "role":  "AI_COMPUTE_NODE",
+    "base_url":  "http://REPLACE_WITH_MAIN_PC_IP:11434",
+    "probe_path":  "/api/tags",
+    "probe_allowed":  false,
+    "inference_allowed":  false,
+    "model_download_allowed":  false,
+    "old_pc_local_ollama_install":  false,
+    "notes":  "Copiar este archivo a remote-ollama-target.local.json, sustituir IP y poner enabled=true/probe_allowed=true solo cuando MAIN-PC este preparado."
+}

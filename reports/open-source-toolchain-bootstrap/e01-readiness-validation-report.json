@@ -1,0 +1,48 @@
+﻿{
+    "objective_id":  "ENGREMIAT_OPEN_SOURCE_TOOLCHAIN_BOOTSTRAP_003",
+    "stage":  "E01",
+    "status":  "E01_VALIDATED",
+    "artifacts":  [
+                      {
+                          "path":  "tools/toolchain/Test-OpenSourceToolchainReadiness.ps1",
+                          "sha256":  "dbbae67648ab0018018ce4897d785721378b2fe5c1a1d4c84b5563d29fff007a",
+                          "type":  "PowerShell",
+                          "step":  "P01.1.1"
+                      },
+                      {
+                          "path":  "reports/open-source-toolchain-bootstrap/toolchain-readiness-report.json",
+                          "sha256":  "95399bfafae9b3b3d5583adfa9b8a33ee5496b76d774fd99b4bd15b9711fd43d",
+                          "type":  "JSON",
+                          "step":  "P01.1.2"
+                      },
+                      {
+                          "path":  "data/open-source-toolchain-bootstrap/install-plan.safe.json",
+                          "sha256":  "5c4f5f918c5cd06f4bab6c4700bf9391ec1b6d7856ab9d3ec6ecdd73135fcb21",
+                          "type":  "JSON",
+                          "step":  "P01.2.1"
+                      },
+                      {
+                          "path":  "docs/TOOLCHAIN_BOOTSTRAP_PLAN.md",
+                          "sha256":  "0570f67a322dd93bbdb876292948a1b297205912db753a05cb94acc3768247b1",
+                          "type":  "Markdown",
+                          "step":  "P01.2.2"
+                      },
+                      {
+                          "path":  "tools/toolchain/Test-ToolchainReadiness.ps1",
+                          "sha256":  "25a54fc72b4a982a92b797df5096b64dcd7dab3c068020d14e89f80379e20095",
+                          "type":  "PowerShell",
+                          "step":  "P01.3.1"
+                      },
+                      {
+                          "path":  "reports/open-source-toolchain-bootstrap/e01-readiness-smoke-report.json",
+                          "sha256":  "c62692ba5a67ed055ceceb92051ba883ef970ea8cc1bc70858bfbb55e93f65e4",
+                          "type":  "JSON",
+                          "step":  "P01.3.2"
+                      }
+                  ],
+    "readiness":  20,
+    "score":  100,
+    "decision":  "GO",
+    "next":  "E02_INSTALACION_CORE_MINIMA",
+    "created_at":  "2026-06-16T11:58:00"
+}

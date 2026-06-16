@@ -1,0 +1,29 @@
+﻿{
+    "schema_id":  "memory-edge.schema.v1",
+    "required":  [
+                     "id",
+                     "type",
+                     "source",
+                     "target",
+                     "created_at"
+                 ],
+    "types":  [
+                  "contains",
+                  "depends_on",
+                  "produces",
+                  "fixes",
+                  "blocks",
+                  "validates",
+                  "authorizes",
+                  "supersedes",
+                  "links_to"
+              ],
+    "fields":  {
+                   "id":  "string unique",
+                   "type":  "edge type",
+                   "source":  "source node id",
+                   "target":  "target node id",
+                   "created_at":  "iso datetime",
+                   "metadata":  "object"
+               }
+}

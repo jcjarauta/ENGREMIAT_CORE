@@ -1,0 +1,37 @@
+﻿{
+    "template_id":  "MAIN-PC-REPO-READINESS-TEMPLATE-009B-E03",
+    "objective":  "ENGREMIAT_DUAL_PC_DEVELOPMENT_WORKFLOW_009B",
+    "stage":  "E03",
+    "purpose":  "Rellenar o generar desde MAIN-PC cuando el humano vuelva a MAIN-PC.",
+    "machine_name":  "MAIN_PC",
+    "cwd":  "",
+    "git_root":  "",
+    "branch":  "",
+    "head":  "",
+    "dirty_status":  "",
+    "remote_sync":  "UNKNOWN_UNTIL_MAIN_PC_CHECK",
+    "writer_lock":  {
+                        "single_active_writer":  true,
+                        "writer_conflict":  false,
+                        "active_writer":  "MAIN_PC_AFTER_HANDOFF"
+                    },
+    "safe_to_write":  false,
+    "required_before_main_pc_write":  [
+                                          "validar git root",
+                                          "validar branch/head",
+                                          "revisar dirty status",
+                                          "leer handoff",
+                                          "confirmar single active writer",
+                                          "no usar shared workspace como repo"
+                                      ],
+    "safety":  {
+                   "main_pc_pending":  true,
+                   "git_read_only":  true,
+                   "git_write":  false,
+                   "git_fetch_auto":  false,
+                   "git_push_auto":  false,
+                   "git_merge_auto":  false,
+                   "remote_execution":  false,
+                   "shared_repo_edit":  false
+               }
+}

@@ -1,0 +1,41 @@
+﻿{
+    "schema_id":  "readiness-report.schema.v1",
+    "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
+    "stage_id":  "E05",
+    "block_id":  "B05.1",
+    "required":  [
+                     "objective_id",
+                     "scope",
+                     "totals",
+                     "validated_steps",
+                     "artifacts_expected",
+                     "artifacts_found",
+                     "gates_pending",
+                     "errors_open",
+                     "blockers",
+                     "readiness",
+                     "decision",
+                     "created_at"
+                 ],
+    "properties":  {
+                       "objective_id":  "objective or MVP id",
+                       "scope":  "current|objective|stage|block",
+                       "totals":  "expected and detected totals",
+                       "validated_steps":  "validated step count or list",
+                       "artifacts_expected":  "expected artifact count or list",
+                       "artifacts_found":  "found and registered artifact count or list",
+                       "gates_pending":  "pending gate count",
+                       "errors_open":  "open error count",
+                       "blockers":  "blocking reasons",
+                       "readiness":  "percentage number 0..100",
+                       "decision":  "GO|NO_GO|NEEDS_REVIEW",
+                       "created_at":  "local ISO datetime"
+                   },
+    "decision_rules":  [
+                           "NO_GO if missing required artifacts",
+                           "NO_GO if gates_pending greater than zero for closure",
+                           "NO_GO if errors_open greater than zero",
+                           "NEEDS_REVIEW if readiness below 100",
+                           "GO only if complete and no blockers"
+                       ]
+}

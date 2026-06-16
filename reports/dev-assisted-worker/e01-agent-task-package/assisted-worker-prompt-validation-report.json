@@ -1,0 +1,18 @@
+﻿{
+    "objective_id":  "ENGREMIAT_DEV_ASSISTED_WORKER_ADAPTER_001",
+    "stage_id":  "E01",
+    "block_id":  "B01.3",
+    "steps":  [
+                  "P01.3.1",
+                  "P01.3.2"
+              ],
+    "status":  "OK",
+    "validation_passed":  true,
+    "template":  "docs/assisted-worker-prompt-template.md",
+    "sample":  "docs/assisted-worker-prompt.sample.md",
+    "note":  "El prompt menciona rutas prohibidas solo como límites de seguridad, no como rutas permitidas.",
+    "external_network":  false,
+    "git":  false,
+    "risk":  "LOW",
+    "next":  "E02_CONTROLLED_HANDOFF"
+}

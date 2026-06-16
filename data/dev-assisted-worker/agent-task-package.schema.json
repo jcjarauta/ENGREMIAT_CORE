@@ -1,0 +1,49 @@
+﻿{
+    "schema_id":  "agent-task-package.schema.v1",
+    "objective_id":  "ENGREMIAT_DEV_ASSISTED_WORKER_ADAPTER_001",
+    "stage_id":  "E01",
+    "block_id":  "B01.1",
+    "required":  [
+                     "task_id",
+                     "objective_id",
+                     "stage_id",
+                     "block_id",
+                     "step_id",
+                     "worker_target",
+                     "mode",
+                     "context",
+                     "allowed_paths",
+                     "forbidden_paths",
+                     "allowed_actions",
+                     "forbidden_actions",
+                     "expected_output",
+                     "gate_policy",
+                     "created_at"
+                 ],
+    "properties":  {
+                       "task_id":  "stable task id",
+                       "objective_id":  "source objective",
+                       "stage_id":  "source stage",
+                       "block_id":  "source block",
+                       "step_id":  "source step",
+                       "worker_target":  "CLINE_OR_OLLAMA",
+                       "mode":  "PREPARED_ONLY|MANUAL_HANDOFF|PROPOSAL_ONLY|LOCAL_AUTHORIZED",
+                       "context":  "minimal bounded context",
+                       "allowed_paths":  "paths worker may inspect/propose for",
+                       "forbidden_paths":  "paths worker must not touch",
+                       "allowed_actions":  "proposal-safe actions",
+                       "forbidden_actions":  "blocked actions",
+                       "expected_output":  "required files/objects returned by worker",
+                       "gate_policy":  "human approval rules",
+                       "created_at":  "local ISO datetime"
+                   },
+    "validation_rules":  [
+                             "required_fields_present",
+                             "mode_declared",
+                             "allowed_paths_not_empty",
+                             "forbidden_paths_not_empty",
+                             "forbidden_actions_not_allowed",
+                             "expected_output_declared",
+                             "gate_policy_declared"
+                         ]
+}

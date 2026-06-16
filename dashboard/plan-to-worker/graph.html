@@ -1,0 +1,40 @@
+﻿<!doctype html>
+<html><head><meta charset="utf-8"><title>ENGREMIAT Plan Graph</title><style>body{font-family:Segoe UI,Arial;margin:24px;background:#101418;color:#e9eef5}h1,h2{color:#8fd3ff}.card{border:1px solid #34495e;border-radius:10px;padding:14px;margin:12px 0;background:#17202a}table{width:100%;border-collapse:collapse}td,th{border-bottom:1px solid #2c3e50;padding:6px;text-align:left}.ok{color:#7CFC98}.warn{color:#ffd166}</style></head><body>
+<h1>ENGREMIAT PLAN TO WORKER — GRAPH VIEW</h1>
+<div class="card"><b>Objective:</b> 
+ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002
+<br><b>Stage:</b> 
+E06
+<br><b>Nodes:</b> 
+12
+<br><b>Edges:</b> 
+11
+<br><b>Policy:</b> external_network=False · git_write=False · worker_real_execution=False</div>
+<h2>Nodos</h2><table><tr><th>Tipo</th><th>ID</th><th>Etiqueta</th></tr>
+<tr><td>objective</td><td>ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002</td><td>ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002</td></tr>
+<tr><td>stage</td><td>stage:UNASSIGNED_STAGE</td><td>UNASSIGNED_STAGE</td></tr>
+<tr><td>block</td><td>block:UNASSIGNED_BLOCK</td><td>UNASSIGNED_BLOCK</td></tr>
+<tr><td>step</td><td>step:ITEM-001</td><td>ITEM-001</td></tr>
+<tr><td>artifact</td><td>artifact:UNDEFINED_ARTIFACT</td><td>UNDEFINED_ARTIFACT</td></tr>
+<tr><td>worker</td><td>worker:cline</td><td>cline</td></tr>
+<tr><td>worker</td><td>worker:ollama</td><td>ollama</td></tr>
+<tr><td>worker</td><td>worker:openclaw</td><td>openclaw</td></tr>
+<tr><td>worker</td><td>worker:generic</td><td>generic</td></tr>
+<tr><td>system_output</td><td>system:engremiat-action</td><td>engremiat-action.json</td></tr>
+<tr><td>decision</td><td>decision:system</td><td>decision-package.json</td></tr>
+<tr><td>evidence</td><td>evidence:manifest</td><td>evidence-manifest.json</td></tr>
+</table>
+<h2>Relaciones</h2><table><tr><th>Tipo</th><th>Desde</th><th>Hasta</th></tr>
+<tr><td>CONTAINS</td><td>ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002</td><td>stage:UNASSIGNED_STAGE</td></tr>
+<tr><td>CONTAINS</td><td>stage:UNASSIGNED_STAGE</td><td>block:UNASSIGNED_BLOCK</td></tr>
+<tr><td>CONTAINS</td><td>block:UNASSIGNED_BLOCK</td><td>step:ITEM-001</td></tr>
+<tr><td>GENERATES</td><td>step:ITEM-001</td><td>artifact:UNDEFINED_ARTIFACT</td></tr>
+<tr><td>CONSUMED_BY</td><td>ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002</td><td>worker:cline</td></tr>
+<tr><td>CONSUMED_BY</td><td>ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002</td><td>worker:ollama</td></tr>
+<tr><td>CONSUMED_BY</td><td>ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002</td><td>worker:openclaw</td></tr>
+<tr><td>CONSUMED_BY</td><td>ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002</td><td>worker:generic</td></tr>
+<tr><td>GENERATES</td><td>ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002</td><td>system:engremiat-action</td></tr>
+<tr><td>VALIDATES</td><td>system:engremiat-action</td><td>decision:system</td></tr>
+<tr><td>PRODUCES_EVIDENCE</td><td>decision:system</td><td>evidence:manifest</td></tr>
+</table>
+</body></html>

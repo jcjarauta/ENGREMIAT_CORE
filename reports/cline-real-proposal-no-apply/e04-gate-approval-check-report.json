@@ -1,0 +1,19 @@
+﻿{
+    "objective":  "ENGREMIAT_CLINE_REAL_PROPOSAL_NO_APPLY_008",
+    "stage":  "E04",
+    "repair":  "PARAM_POSITION",
+    "gate_file":  "data/cline-real-proposal-no-apply/cline-task-creation-gate.json",
+    "gate_decision":  "DEFER",
+    "authorization_required":  true,
+    "required_human_phrase":  "AUTORIZO_CLINE_REAL_PROPOSAL_TASK_NO_APPLY_FOR_SPECIFIC_REQUEST",
+    "approved_for_real_task_creation":  false,
+    "reason":  "Gate is not explicitly approved; controlled NO_GO path required",
+    "launch_cline_task":  false,
+    "cline_task_created":  false,
+    "prompt_sent":  false,
+    "worker_real_execution":  false,
+    "auto_apply":  false,
+    "git_write":  false,
+    "decision":  "NO_GO_NO_EXPLICIT_HUMAN_AUTHORIZATION",
+    "next":  "STOP_WITH_RECEIPT_NO_GO"
+}

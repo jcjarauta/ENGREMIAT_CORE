@@ -1,0 +1,4 @@
+objective_id	stage_id	stage_name	block_id	block_name	step_id	step_title	artifact	depends_on	format	risk	requires_human	priority	status	notes
+ENGREMIAT_PLAN_TO_WORKER_APP_001	E02	Importador de plan Sheets	B02.1	Entrada de archivos	P02.1.1	Crear estructura input	data/plan-to-worker/input	P01.3.2	Folder	LOW	SI	Alta	PENDING	Punto de entrada del plan.
+ENGREMIAT_PLAN_TO_WORKER_APP_001	E02	Importador de plan Sheets	B02.1	Entrada de archivos	P02.1.2	Crear format-detector	tools/plan-to-worker/Detect-PlanFormat.ps1	P02.1.1	PowerShell	LOW	SI	Alta	PENDING	Evita errores al importar.
+ENGREMIAT_PLAN_TO_WORKER_APP_001	E02	Importador de plan Sheets	B02.2	Importacion tabular	P02.2.1	Crear Import-PlanTable	tools/plan-to-worker/Import-PlanTable.ps1	P02.1.2	PowerShell	LOW	SI	Alta	PENDING	Primera version sin depender de API Google.

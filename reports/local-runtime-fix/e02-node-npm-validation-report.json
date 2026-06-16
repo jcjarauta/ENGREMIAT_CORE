@@ -1,0 +1,49 @@
+﻿{
+    "objective_id":  "ENGREMIAT_LOCAL_RUNTIME_FIX_004",
+    "stage":  "E02",
+    "status":  "E02_NODE_NPM_VALIDATED_OR_GATED",
+    "artifacts":  [
+                      {
+                          "path":  "tools/runtime/Install-NodeManualOrWingetGate.ps1",
+                          "sha256":  "b894c9d16661ddc9c46ab31db3166c3b84fa94734659c53760bdae9f2eb8a60f",
+                          "type":  "PowerShell",
+                          "step":  "P02.1.1"
+                      },
+                      {
+                          "path":  "docs/NODE_INSTALL_GUIDE.md",
+                          "sha256":  "cc48156341ce03f5d1ff1b6c79d122f94e4a916759b6035d284b34c8268f95ed",
+                          "type":  "Markdown",
+                          "step":  "P02.1.2"
+                      },
+                      {
+                          "path":  "tools/runtime/Test-NodeNpmRuntime.ps1",
+                          "sha256":  "7d741dbbbe026e908da637ae7806834359008392fe8d3d9c77fc02be8c819b4d",
+                          "type":  "PowerShell",
+                          "step":  "P02.2.1"
+                      },
+                      {
+                          "path":  "reports/local-runtime-fix/node-npm-runtime-report.json",
+                          "sha256":  "bf2eac210843fceb8b3fba07dd1dfd5f0fcc3d22cc33716d001a2363307176d2",
+                          "type":  "JSON",
+                          "step":  "P02.2.2"
+                      },
+                      {
+                          "path":  "tools/runtime/Test-NodeNpmReadyForCline.ps1",
+                          "sha256":  "d77bdece176d774a1dce6b8353467675007f4ae3b48ebb6791aa3f2843623f80",
+                          "type":  "PowerShell",
+                          "step":  "P02.3.1"
+                      },
+                      {
+                          "path":  "reports/local-runtime-fix/e02-node-npm-smoke-report.json",
+                          "sha256":  "5ab5dda4a58bfcd61d677121567a8409b77d37764c154509224f54fe06aabf24",
+                          "type":  "JSON",
+                          "step":  "P02.3.2"
+                      }
+                  ],
+    "node_installed":  false,
+    "npm_installed":  false,
+    "score":  60,
+    "decision":  "NO_GO_NODE_NPM_REQUIRED",
+    "next":  "INSTALL_NODE_LTS_REOPEN_POWERSHELL_THEN_RERUN_E02",
+    "created_at":  "2026-06-16T12:16:07"
+}

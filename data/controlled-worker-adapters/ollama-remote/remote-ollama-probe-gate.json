@@ -1,0 +1,19 @@
+﻿{
+    "objective_id":  "ENGREMIAT_CONTROLLED_WORKER_ADAPTERS_005",
+    "stage":  "E05",
+    "gate_id":  "REMOTE-OLLAMA-PROBE-GATE-001",
+    "enabled":  false,
+    "decision":  "DEFER",
+    "human_confirmation":  false,
+    "allowed_method":  "GET",
+    "allowed_endpoint":  "/api/tags",
+    "allowed_url":  "http://192.168.1.67:11434/api/tags",
+    "ollama_generate_allowed":  false,
+    "ollama_chat_allowed":  false,
+    "model_pull_allowed":  false,
+    "inference_allowed":  false,
+    "worker_real_execution":  false,
+    "expires_at":  null,
+    "reason":  "Default safe state: MAIN-PC can remain off and no probe is executed until explicit human approval",
+    "created_at":  "2026-06-16T13:36:00"
+}

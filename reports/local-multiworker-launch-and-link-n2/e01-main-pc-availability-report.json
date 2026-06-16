@@ -1,0 +1,33 @@
+﻿{
+    "objective":  "ENGREMIAT_LOCAL_MULTIWORKER_LAUNCH_AND_LINK_009A_N2",
+    "stage":  "E01",
+    "required_artifacts":  [
+                               "data/local-multiworker-launch-and-link-n2/main-pc-check-request.json",
+                               "data/local-multiworker-launch-and-link-n2/main-pc-profile-template.json",
+                               "data/local-multiworker-launch-and-link-n2/main-pc-status.json",
+                               "data/local-multiworker-launch-and-link-n2/nodes-registry-n2.json"
+                           ],
+    "missing_artifacts":  [
+
+                          ],
+    "errors":  [
+
+               ],
+    "main_pc_availability":  "PENDING",
+    "evidence_found":  false,
+    "evidence_confirmed":  false,
+    "active_requires_evidence":  true,
+    "registry":  "data/local-multiworker-launch-and-link-n2/nodes-registry-n2.json",
+    "remote_execution":  false,
+    "ssh":  false,
+    "winrm":  false,
+    "network_probe":  false,
+    "network_write":  false,
+    "git_write":  false,
+    "apply_executed":  false,
+    "worker_real_execution":  false,
+    "validation_ok":  true,
+    "readiness":  100,
+    "decision":  "NO_GO_MAIN_PC_PENDING",
+    "next":  "PROVIDE_MAIN_PC_EVIDENCE_OR_STOP_N2"
+}

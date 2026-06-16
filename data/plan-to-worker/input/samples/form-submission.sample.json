@@ -1,0 +1,35 @@
+﻿{
+    "source":  "local_form",
+    "channel":  "manual",
+    "submitted_at":  "2026-06-16T11:40:39",
+    "payload":  {
+                    "objective_id":  "ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002",
+                    "title":  "Sample manual intake",
+                    "description":  "Entrada manual de prueba para consolidacion",
+                    "human_notes":  [
+                                        "sample local",
+                                        "sin red",
+                                        "sin worker real"
+                                    ],
+                    "items":  [
+                                  {
+                                      "stage_id":  "E02",
+                                      "block_id":  "B02.2",
+                                      "step_id":  "P02.2.1",
+                                      "title":  "Crear Import-PlanInput",
+                                      "artifact":  "tools/plan-to-worker/Import-PlanInput.ps1",
+                                      "depends_on":  "P02.1.2",
+                                      "format":  "PowerShell",
+                                      "risk":  "LOW",
+                                      "requires_human":  "SI",
+                                      "priority":  "Alta",
+                                      "status":  "PENDING",
+                                      "notes":  "Sustituye importaciones dispersas."
+                                  }
+                              ]
+                },
+    "attachments":  [
+
+                    ],
+    "external_network":  false
+}

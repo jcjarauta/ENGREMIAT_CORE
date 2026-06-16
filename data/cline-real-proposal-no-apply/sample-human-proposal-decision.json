@@ -1,0 +1,29 @@
+﻿{
+    "decision_id":  "HUMAN-PROPOSAL-DECISION-008-E06-SAMPLE",
+    "objective":  "ENGREMIAT_CLINE_REAL_PROPOSAL_NO_APPLY_008",
+    "stage":  "E06",
+    "decision":  "DEFER",
+    "allowed_decisions":  [
+                              "APPROVE",
+                              "DEFER",
+                              "REJECT",
+                              "REPAIR",
+                              "REVIEW_MORE"
+                          ],
+    "reason":  "Decision por defecto: no hay propuesta real aplicable o queda pendiente revision humana.",
+    "proposal":  "data/cline-real-proposal-no-apply/cline-proposal-normalized.json",
+    "apply_allowed_now":  false,
+    "apply_requires_separate_objective":  true,
+    "human_review_required":  true,
+    "safety":  {
+                   "proposal_only":  true,
+                   "apply_executed":  false,
+                   "auto_apply":  false,
+                   "source_write_by_worker":  false,
+                   "git_write":  false,
+                   "git_commit":  false,
+                   "git_push":  false,
+                   "remote_inference":  false,
+                   "ui_automation":  false
+               }
+}

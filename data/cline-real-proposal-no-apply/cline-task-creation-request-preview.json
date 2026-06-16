@@ -1,0 +1,36 @@
+﻿{
+    "request_id":  "CLINE-TASK-CREATION-REQUEST-PREVIEW-008-E03-001",
+    "objective":  "ENGREMIAT_CLINE_REAL_PROPOSAL_NO_APPLY_008",
+    "stage":  "E03",
+    "mode":  "PREVIEW_ONLY_NO_EXECUTE",
+    "gate":  "data/cline-real-proposal-no-apply/cline-task-creation-gate.json",
+    "candidate":  "data/cline-real-proposal-no-apply/cline-proposal-task-candidate.json",
+    "prompt_preview":  "data/cline-real-proposal-no-apply/cline-proposal-prompt-preview.md",
+    "requested_future_action":  "create_one_real_cline_task_proposal_only",
+    "execution_now":  false,
+    "decision":  "DEFER",
+    "no_go_reason":  "E03 prepara gate y request preview; no invoca Cline ni crea tarea real.",
+    "candidate_summary":  {
+                              "candidate_id":  "CLINE-PROPOSAL-NO-APPLY-008-CANDIDATE-001",
+                              "source_card_id":  "KANBAN-007-E06-CLOSE",
+                              "title":  "Primera tarea Cline real proposal-only desde Kanban 007",
+                              "purpose":  "Preparar una tarea Cline real para que proponga una mejora o siguiente paso, sin apply ni escritura de codigo."
+                          },
+    "prompt_preview_size_chars":  1573,
+    "safety":  {
+                   "proposal_only":  true,
+                   "human_review_required":  true,
+                   "cline_task_created":  false,
+                   "launch_cline_task":  false,
+                   "prompt_sent":  false,
+                   "worker_real_execution":  false,
+                   "auto_apply":  false,
+                   "apply_executed":  false,
+                   "source_write_by_worker":  false,
+                   "git_write":  false,
+                   "git_commit":  false,
+                   "git_push":  false,
+                   "remote_inference":  false,
+                   "ui_automation":  false
+               }
+}

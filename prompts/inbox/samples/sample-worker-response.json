@@ -1,0 +1,22 @@
+﻿{
+    "worker_id":  "sample-worker",
+    "task_id":  "PROMPT_NEXT_SAMPLE",
+    "decision":  "GO",
+    "summary":  "Respuesta simulada para validar inbox.",
+    "files_touched":  [
+
+                      ],
+    "tests_executed":  [
+                           "inbox smoke"
+                       ],
+    "risks":  [
+
+              ],
+    "evidence":  [
+                     "prompts/inbox/samples/sample-worker-response.json"
+                 ],
+    "validation_report":  "reports/prompt-factory/e05-outbox-inbox-handoff/worker-response-import-report.json",
+    "external_network":  false,
+    "git_write":  false,
+    "next":  "HUMAN_REVIEW"
+}

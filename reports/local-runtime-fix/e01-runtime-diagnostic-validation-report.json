@@ -1,0 +1,47 @@
+﻿{
+    "objective_id":  "ENGREMIAT_LOCAL_RUNTIME_FIX_004",
+    "stage":  "E01",
+    "status":  "E01_RUNTIME_DIAGNOSTIC_VALIDATED",
+    "artifacts":  [
+                      {
+                          "path":  "tools/runtime/Test-LocalRuntimePath.ps1",
+                          "sha256":  "5c1ff667ff2c181481f7bf96e7577e60a4b9782a342b20c72ffeeb3007b5eccc",
+                          "type":  "PowerShell",
+                          "step":  "P01.1.1"
+                      },
+                      {
+                          "path":  "reports/local-runtime-fix/path-diagnostic-report.json",
+                          "sha256":  "ab499fc7ecef862c5df5d889c254c68956efd36f704ec5d3a2a27b5a3139b56b",
+                          "type":  "JSON",
+                          "step":  "P01.1.2"
+                      },
+                      {
+                          "path":  "tools/runtime/Test-InstallerAvailability.ps1",
+                          "sha256":  "4e4a92f024060794daa5943669b4cff34a3775fe50dc6cebd09630640b65d8ef",
+                          "type":  "PowerShell",
+                          "step":  "P01.2.1"
+                      },
+                      {
+                          "path":  "reports/local-runtime-fix/installer-availability-report.json",
+                          "sha256":  "5a50da1fe94ac0dc5caf2136d3a72579fa4fa670fe57d176c51a055624cc1dd9",
+                          "type":  "JSON",
+                          "step":  "P01.2.2"
+                      },
+                      {
+                          "path":  "tools/runtime/Test-LocalRuntimeDiagnostic.ps1",
+                          "sha256":  "9c1bf622c75e3a162550865b628edd5664dc99828abcc496896855e44028c998",
+                          "type":  "PowerShell",
+                          "step":  "P01.3.1"
+                      },
+                      {
+                          "path":  "reports/local-runtime-fix/e01-runtime-diagnostic-smoke-report.json",
+                          "sha256":  "77cb2f8fae14160dada6957672b07c8fca6b45afc4ad847d485be1415d44e6bf",
+                          "type":  "JSON",
+                          "step":  "P01.3.2"
+                      }
+                  ],
+    "score":  100,
+    "decision":  "GO",
+    "next":  "E02_RESOLVER_NODEJS_Y_NPM",
+    "created_at":  "2026-06-16T12:14:35"
+}

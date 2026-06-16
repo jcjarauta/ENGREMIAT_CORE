@@ -1,0 +1,41 @@
+﻿{
+    "objective_id":  "ENGREMIAT_PLAN_TO_WORKER_APP_CONSOLIDATION_002",
+    "stage":  "E07",
+    "status":  "CONSOLIDATED_DASHBOARD_READY",
+    "readiness":  100,
+    "decision":  "GO",
+    "readiness_decision":  "GO",
+    "canonical_items_count":  1,
+    "worker_queue_count":  1,
+    "graph_nodes_count":  12,
+    "graph_edges_count":  11,
+    "adapters":  {
+                     "cline":  true,
+                     "ollama":  true,
+                     "openclaw":  true,
+                     "generic":  true
+                 },
+    "paths":  {
+                  "dashboard":  "dashboard/plan-to-worker/index.html",
+                  "graph_dashboard":  "dashboard/plan-to-worker/graph.html",
+                  "canonical_work_items":  "data/plan-to-worker/output/canonical-work-items.json",
+                  "worker_queue":  "data/plan-to-worker/output/canonical-worker-queue.json",
+                  "system_action":  "data/plan-to-worker/output/system/engremiat-action.json",
+                  "app_state":  "data/plan-to-worker/output/system/app-state.json",
+                  "graph":  "data/plan-to-worker/output/graph/graph.json"
+              },
+    "commands":  [
+                     ".\\eng.ps1 plan-status",
+                     ".\\eng.ps1 plan-next",
+                     ".\\eng.ps1 plan-prompt",
+                     ".\\eng.ps1 plan-inbox",
+                     ".\\eng.ps1 plan-open"
+                 ],
+    "limits":  {
+                   "external_network":  false,
+                   "git_write":  false,
+                   "worker_real_execution":  false,
+                   "auto_apply":  false
+               },
+    "created_at":  "2026-06-16T11:46:24"
+}

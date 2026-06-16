@@ -1,0 +1,28 @@
+﻿{
+    "objective_id":  "ENGREMIAT_DEV_ASSISTED_WORKER_ADAPTER_001",
+    "stage_id":  "E03",
+    "blocks":  [
+                   "B03.1",
+                   "B03.2"
+               ],
+    "steps":  [
+                  "P03.1.1",
+                  "P03.1.2",
+                  "P03.2.1",
+                  "P03.2.2"
+              ],
+    "status":  "OK",
+    "validation_passed":  true,
+    "schema":  "data/dev-assisted-worker/agent-result-proposal.schema.json",
+    "fixture":  "data/dev-assisted-worker/agent-result-proposal.fixture.json",
+    "tool":  "tools/eng-assisted-intake.ps1",
+    "imported":  "data/dev-assisted-worker/results/AW-TASK-FIXTURE-001/agent-result-proposal.json",
+    "review_request":  "data/dev-assisted-worker/results/assisted-worker-review-request.json",
+    "problems":  [
+
+                 ],
+    "external_execution":  false,
+    "git":  false,
+    "risk":  "LOW",
+    "next":  "P03.3.1_REGISTER_WORKER_EVIDENCE"
+}
