@@ -1,0 +1,38 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_ACTION_INSTANCE_018",
+    "stage":  "E04",
+    "created_at":  "2026-06-17T10:05:23.5476464+02:00",
+    "readiness":  100,
+    "decision":  "GO_E04_EXECUTION_PLAN_READY_BLOCKED_BY_GATE",
+    "next":  "E05_CIERRE_DE_INSTANCIA",
+    "gate":  "DEFER",
+    "status":  "READY_BLOCKED_BY_GATE",
+    "checks":  {
+                   "execution_plan_created":  true,
+                   "plan_receipt_created":  true,
+                   "postcheck_created":  true,
+                   "blocked_action_receipt_created":  true,
+                   "gate_defer":  true,
+                   "approved_false":  true,
+                   "one_boundary_only":  true,
+                   "apply_false":  true,
+                   "auto_apply_false":  true,
+                   "remote_execution_false":  true,
+                   "git_write_false":  true,
+                   "side_effects_false":  true,
+                   "unauthorized_writes_false":  true,
+                   "receipt_exists":  true
+               },
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "artifacts":  [
+                      "data/controlled-action-instance-018/controlled-action-instance-execution-plan.json",
+                      "data/controlled-action-instance-018/receipts/execution-plan-receipt.json",
+                      "reports/controlled-action-instance-018/e04-controlled-postcheck-report.json",
+                      "data/controlled-action-instance-018/receipts/blocked-action-receipt.json",
+                      "reports/controlled-action-instance-018/e04-execution-plan-readiness-report.json",
+                      "dashboard/controlled-actions-index.json"
+                  ]
+}

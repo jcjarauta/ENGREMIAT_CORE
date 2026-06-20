@@ -1,0 +1,31 @@
+﻿{
+    "objective":  "ENGREMIAT_REAL_CLINE_KANBAN_OLLAMA_TESTS_011",
+    "stage":  "E02",
+    "current_pc":  "DESKTOP-PVRVE56",
+    "repo_ready":  true,
+    "branch":  "main",
+    "head":  "0d35811",
+    "kanban_columns":  [
+                           "BACKLOG",
+                           "READY",
+                           "RUNNING",
+                           "REVIEW",
+                           "DONE",
+                           "BLOCKED"
+                       ],
+    "permitted_actions":  [
+                              "read",
+                              "review",
+                              "prepare",
+                              "handoff"
+                          ],
+    "forbidden_actions":  [
+                              "execute_workers",
+                              "remote_execution",
+                              "git_write",
+                              "auto_apply",
+                              "shared_repo_edit"
+                          ],
+    "browser_opened":  false,
+    "timestamp_utc":  "2026-06-16T14:34:48.7435492Z"
+}

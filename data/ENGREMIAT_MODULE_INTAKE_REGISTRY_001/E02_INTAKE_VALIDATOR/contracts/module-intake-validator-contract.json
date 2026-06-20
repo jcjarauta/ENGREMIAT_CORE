@@ -1,0 +1,24 @@
+{
+    "package_id":  "ENGREMIAT_MODULE_INTAKE_REGISTRY_001",
+    "stage":  "E02_INTAKE_VALIDATOR",
+    "artifact":  "module-intake-validator-contract.json",
+    "status":  "DEFINED",
+    "purpose":  "Validar que cualquier module.json nuevo cumple campos minimos, tipo permitido, decision permitida y limites de seguridad",
+    "input":  "module.json",
+    "output":  "module-intake-validation-report.json",
+    "blocked_actions":  [
+                            "core_changes",
+                            "external_network",
+                            "git_write",
+                            "real_integration_without_gate"
+                        ],
+    "validation_rules":  [
+                             "json_parse_ok",
+                             "required_fields_present",
+                             "module_type_allowed",
+                             "next_action_allowed",
+                             "boundaries_declared",
+                             "human_gates_declared",
+                             "artifacts_expected_declared"
+                         ]
+}

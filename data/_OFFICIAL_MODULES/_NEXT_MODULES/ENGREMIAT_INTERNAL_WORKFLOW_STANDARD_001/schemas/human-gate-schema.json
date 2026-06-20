@@ -1,0 +1,20 @@
+﻿{
+    "schema_id":  "human-gate-schema.v1",
+    "required":  [
+                     "gate_id",
+                     "scope",
+                     "required",
+                     "allowed_decisions",
+                     "current_decision",
+                     "evidence_required"
+                 ],
+    "allowed_decisions":  [
+                              "APPROVE",
+                              "REJECT",
+                              "BACKLOG",
+                              "REQUEST_CHANGES",
+                              "ARCHIVE",
+                              "OFFICIALIZE_LATER"
+                          ],
+    "principle":  "Ninguna herramienta real avanza sin gate cuando hay escritura real o integracion externa."
+}

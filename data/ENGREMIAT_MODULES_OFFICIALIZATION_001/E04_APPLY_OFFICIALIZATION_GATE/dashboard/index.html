@@ -1,0 +1,30 @@
+<html><head><meta charset="utf-8"><title>Officialization Gate</title><style>body{font-family:Segoe UI,Arial;background:#0f172a;color:#e2e8f0;padding:24px}.card{max-width:1200px;margin:auto;background:#111827;border:1px solid #334155;border-radius:18px;padding:20px}.warn{color:#facc15}.ok{color:#4ade80}pre{background:#020617;padding:14px;border-radius:12px;white-space:pre-wrap;overflow:auto}</style></head><body><div class="card"><h1>ENGREMIAT_MODULES_OFFICIALIZATION_001 · E04 Gate</h1><p class="warn">Apply pendiente de autorizacion explicita. No se ha copiado ni movido nada.</p><pre>{
+    "package_id":  "ENGREMIAT_MODULES_OFFICIALIZATION_001",
+    "stage":  "E04_APPLY_OFFICIALIZATION_GATE",
+    "artifact":  "apply-officialization-gate-contract.json",
+    "status":  "PENDING_EXPLICIT_HUMAN_AUTHORIZATION",
+    "purpose":  "Preparar gate para oficializar modulos en data/_OFFICIAL_MODULES sin aplicar todavia",
+    "required_phrase":  "AUTORIZO_OFFICIALIZE_MODULES_COPY_ONLY_NO_DELETE_NO_GIT_NO_CORE",
+    "allowed_if_authorized":  [
+                                  "create_data_OFFICIAL_MODULES",
+                                  "copy_module_folders",
+                                  "write_module_json_from_patches",
+                                  "write_rollback_manifest",
+                                  "write_apply_report"
+                              ],
+    "blocked_now":  [
+                        "copy_modules",
+                        "move_modules",
+                        "delete_sources",
+                        "git_write",
+                        "external_network",
+                        "core_changes"
+                    ],
+    "blocked_even_if_authorized":  [
+                                       "delete_sources",
+                                       "git_write",
+                                       "external_network",
+                                       "core_changes"
+                                   ],
+    "mode":  "GATE_ONLY_NO_APPLY"
+}</pre></div></body></html>

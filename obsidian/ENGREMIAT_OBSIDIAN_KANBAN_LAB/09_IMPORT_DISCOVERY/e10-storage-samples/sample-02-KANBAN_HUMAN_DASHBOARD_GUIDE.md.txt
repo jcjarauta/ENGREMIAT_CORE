@@ -1,0 +1,20 @@
+﻿PATH=C:\Users\pc\.cline\worktrees\07b15\ENGREMIAT_CORE\docs\KANBAN_HUMAN_DASHBOARD_GUIDE.md SCORE=87 SIZE=893 EXT=.md --- SAMPLE BEGIN ---
+# KANBAN HUMAN DASHBOARD GUIDE
+
+Objetivo: usar un tablero HTML local como superficie humana de control para ENGREMIAT_KANBAN_HUMAN_CONTROL_SURFACE_007.
+
+## Uso
+Abrir dashboard/kanban-human-control/index.html en el navegador. El dashboard no requiere servidor, no crea tarjetas reales y no lanza Cline.
+
+## Lectura de tarjetas
+Cada tarjeta muestra objetivo, etapa, bloque, paso, estado, riesgo, decision de gate, flags de seguridad, evidencia y siguiente accion.
+
+## Regla principal
+Kanban muestra estado humano desde evidencia canonica. La fuente canonica sigue siendo data/, reports/, docs/, receipts/ y manifests.
+
+## Seguridad esperada
+kanban_write=False; cline_task_created=False; worker_real_execution=False; auto_apply=False; git_write=False; remote_inference=False.
+
+## Siguiente etapa
+E04 preparara un adapter/export preview hacia Cline Kanban sin escritura real.
+--- SAMPLE END ---

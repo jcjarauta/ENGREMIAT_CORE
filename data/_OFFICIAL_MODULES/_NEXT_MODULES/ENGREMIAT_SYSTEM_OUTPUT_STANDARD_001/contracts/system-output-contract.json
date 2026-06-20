@@ -1,0 +1,26 @@
+﻿{
+    "contract_id":  "system-output-contract.v1",
+    "module_id":  "ENGREMIAT_SYSTEM_OUTPUT_STANDARD_001",
+    "principle":  "ENGREMIAT no devuelve texto libre como salida final: devuelve objetos output con id, tipo, fuente, evidencia, gate y estado.",
+    "canonical_outputs":  [
+                              "PROPOSAL",
+                              "DECISION",
+                              "TASK_PLAN",
+                              "RESOURCE_QUERY",
+                              "RESOURCE_SELECTION",
+                              "COMPOSITION_BLUEPRINT",
+                              "BUILD_PACKAGE",
+                              "EVIDENCE_REPORT",
+                              "GATE_REQUEST",
+                              "CLIENT_ASSEMBLY_PLAN",
+                              "DOCUMENTATION_PACKAGE"
+                          ],
+    "rules":  [
+                  "Todo output final debe estar envuelto en output_envelope",
+                  "Todo output debe declarar output_type",
+                  "Todo output accionable debe declarar gate",
+                  "Todo output generado por modelo debe pasar por contrato JSON compatible",
+                  "El composer core solo consume y produce outputs normalizados",
+                  "No hay dependencia de Ollama ni de ningun modelo concreto"
+              ]
+}

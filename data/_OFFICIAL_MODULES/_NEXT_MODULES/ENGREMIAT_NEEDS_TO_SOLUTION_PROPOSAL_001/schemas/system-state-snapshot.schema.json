@@ -1,0 +1,25 @@
+﻿{
+    "schema_id":  "system-state-snapshot.schema.v1",
+    "required":  [
+                     "snapshot_id",
+                     "generated_at",
+                     "modules",
+                     "resources",
+                     "reports",
+                     "signals",
+                     "health"
+                 ],
+    "fields":  [
+                   "snapshot_id",
+                   "generated_at",
+                   "modules_total",
+                   "resources_total",
+                   "reports_total",
+                   "latest_next_objectives",
+                   "capabilities_available",
+                   "capabilities_missing",
+                   "signals",
+                   "health",
+                   "source_paths"
+               ]
+}

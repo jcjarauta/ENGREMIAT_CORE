@@ -1,0 +1,35 @@
+﻿{
+    "package_id":  "ENGREMIAT_IMPROVEMENT_TO_EXECUTION_PIPELINE_001",
+    "status":  "PASS",
+    "mode":  "DRY_RUN_ONLY",
+    "source_proposal":  "TECH-PROP-001",
+    "actions":  [
+                    {
+                        "action_id":  "DRY-ACTION-001",
+                        "action":  "CREATE_CONTRACTS",
+                        "executes":  false,
+                        "requires_gate":  true
+                    },
+                    {
+                        "action_id":  "DRY-ACTION-002",
+                        "action":  "CREATE_TOOLS",
+                        "executes":  false,
+                        "requires_gate":  true
+                    },
+                    {
+                        "action_id":  "DRY-ACTION-003",
+                        "action":  "RUN_VALIDATION",
+                        "executes":  false,
+                        "requires_gate":  true
+                    }
+                ],
+    "gate_required":  true,
+    "allowed_decisions":  [
+                              "GO",
+                              "DEFER",
+                              "BLOCK"
+                          ],
+    "real_execution":  false,
+    "source_code_write":  false,
+    "git":  false
+}

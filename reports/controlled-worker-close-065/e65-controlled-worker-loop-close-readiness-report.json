@@ -1,0 +1,30 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_REAL_WORKER_DAILY_VALUE_LOOP_056_065",
+    "stage":  "E65",
+    "readiness":  100,
+    "decision":  "GO_E65_CONTROLLED_WORKER_LOOP_CLOSED",
+    "next":  "ENGREMIAT_MULTI_WORKER_ORCHESTRATION_AND_REAL_VALUE_PIPELINE_066_075",
+    "controlled_worker_loop_closed":  true,
+    "version":  "0.65.0-local",
+    "artifacts":  [
+                      "reports\\controlled-worker-close-065\\controlled-worker-evidence-summary.json",
+                      "data\\controlled-worker-close-065\\controlled-worker-loop-manifest.json",
+                      "docs\\CONTROLLED_WORKER_LOOP_CLOSE_REPORT.md",
+                      "docs\\NEXT_OBJECTIVE_AFTER_CONTROLLED_WORKER_LOOP.md",
+                      "dashboard\\controlled-worker-close\\index.html",
+                      "data\\controlled-worker-close-065\\receipts\\controlled-worker-loop-close-receipt.json"
+                  ],
+    "security":  {
+                     "apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "worker_executed":  false,
+                     "kanban_real_write":  false,
+                     "sensitive_actions_executed":  false,
+                     "close_local_only":  true,
+                     "human_decision_final":  true
+                 },
+    "created_at":  "2026-06-17T12:28:04"
+}

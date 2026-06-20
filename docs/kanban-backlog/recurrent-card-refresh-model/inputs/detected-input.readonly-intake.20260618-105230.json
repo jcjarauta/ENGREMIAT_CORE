@@ -1,0 +1,24 @@
+﻿{
+    "id":  "INPUT-READONLY-20260618-105230-001",
+    "source":  "openclaw",
+    "upstream_source":  "openwebui",
+    "upstream_thread_id":  "READONLY-INTAKE-SAMPLE-001",
+    "kind":  "project",
+    "title":  "Entrada real-readonly preparada para ENGREMIAT",
+    "summary":  "Probar que una conversacion o resumen puede entrar al sistema como archivo local sin ejecutar acciones reales. OpenClaw/OpenWebUI deben producir un paquete JSON compatible con el contrato readonly para que ENGREMIAT lo convierta en detected-input.",
+    "priority":  76,
+    "risk":  "LOW",
+    "target_consumers":  [
+                             "HUMAN",
+                             "CLINE_KANBAN",
+                             "OBSIDIAN",
+                             "OPENWEBUI"
+                         ],
+    "mode":  "READONLY_FILE_INTAKE",
+    "human_review_required":  true,
+    "execution_allowed":  false,
+    "native_kanban_write":  "disabled",
+    "obsidian_real_write":  "disabled",
+    "openwebui_api_called":  false,
+    "openclaw_api_called":  false
+}

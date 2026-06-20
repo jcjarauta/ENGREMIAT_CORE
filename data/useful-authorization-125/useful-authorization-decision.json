@@ -1,0 +1,20 @@
+﻿{
+    "schema":  "engremiat.useful_authorization_decision.v1",
+    "objective":  "ENGREMIAT_REAL_VALUE_TASK_EXECUTION_LOOP_122_131_REAL_USEFUL_OUTPUT",
+    "stage":  "E125",
+    "block":  "B125.1",
+    "step":  "P125.1.2",
+    "created_at":  "2026-06-17T14:27:18",
+    "authorization_id":  "USEFUL-AUTHORIZATION-125-001",
+    "human_decision":  "APPROVE",
+    "human_approved":  true,
+    "human_rejected":  false,
+    "execution_allowed_now":  true,
+    "editable_by_human":  true,
+    "reason":  "Human authorization granted explicitly for E126 useful local Markdown output apply.",
+    "next_if_approved":  "E126_USEFUL_OUTPUT_APPLY",
+    "next_if_rejected":  "E125_REVIEW_OR_ABORT",
+    "next_if_deferred":  "WAIT_FOR_HUMAN_DECISION",
+    "authorized_at":  "2026-06-17T14:29:20",
+    "authorization_phrase":  "AUTORIZO_E126_USEFUL_LOCAL_MARKDOWN_OUTPUT_APPLY"
+}

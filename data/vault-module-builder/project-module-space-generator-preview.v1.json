@@ -1,0 +1,31 @@
+﻿{
+    "package_id":  "ENGREMIAT_VAULT_MODULE_BUILDER_001",
+    "stage":  "E03_CREATE_PROJECT_MODULE_SPACE_GENERATOR_PREVIEW",
+    "status":  "PASS",
+    "generator":  "C:\\ENGREMIAT_CORE\\tools\\vault-module-builder\\Invoke-VaultModuleSpacePreview.ps1",
+    "demo_report":  "C:\\ENGREMIAT_CORE\\reports\\vault-module-builder\\space-generator-preview-demo-builder-project-space.json",
+    "demo_space_root":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\02_PROYECTOS\\PROJECT_demo-builder-project-space",
+    "supported_space_types":  [
+                                  "PROJECT_SPACE",
+                                  "MODULE_SPACE"
+                              ],
+    "outputs":  [
+                    "folder_tree",
+                    "markdown_notes",
+                    "frontmatter",
+                    "canvas",
+                    "preview_report"
+                ],
+    "safety":  {
+                   "local_only":  true,
+                   "preview_only":  true,
+                   "execute_now":  false,
+                   "worker_execution":  false,
+                   "kanban_write":  false,
+                   "clien_write":  false,
+                   "obsidian_app_automation":  false,
+                   "git_write":  false,
+                   "external_network":  false
+               },
+    "next":  "E04_CREATE_RELATION_AND_GROUP_ROUTER_PREVIEW"
+}

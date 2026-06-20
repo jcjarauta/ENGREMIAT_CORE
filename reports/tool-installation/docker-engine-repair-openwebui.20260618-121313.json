@@ -1,0 +1,28 @@
+﻿{
+    "package":  "DOCKER_ENGINE_REPAIR_AND_OPENWEBUI_START_001",
+    "created_at":  "2026-06-18T12:13:13",
+    "service_start":  {
+                          "ok":  false,
+                          "timeout":  false,
+                          "exit_code":  null,
+                          "out":  "\r\nNOMBRE_SERVICIO: com.docker.service \r\n        TIPO               : 10  WIN32_OWN_PROCESS  \r\n        ESTADO             : 2  START_PENDING \r\n                                (NOT_STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN)\r\n        CàD_SALIDA_WIN32   : 0  (0x0)\r\n        CàD_SALIDA_SERVICIO: 0  (0x0)\r\n        PUNTO_COMPROB.     : 0x0\r\n        INDICACIàN_INICIO  : 0x7d0\r\n        PID                : 9668\r\n        MARCAS         : \r\n",
+                          "err":  ""
+                      },
+    "context_use":  {
+                        "ok":  false,
+                        "timeout":  false,
+                        "exit_code":  null,
+                        "out":  "desktop-linux\n",
+                        "err":  "Current context is now \"desktop-linux\"\n"
+                    },
+    "docker_ready":  false,
+    "last_docker_message":  " TIMEOUT",
+    "compose":  "C:\\ENGREMIAT_TOOLS\\openwebui\\docker-compose.yml",
+    "pull":  null,
+    "up":  null,
+    "docker_ps":  null,
+    "container_started":  false,
+    "url":  "http://localhost:3000",
+    "decision":  "WARN_DOCKER_ENGINE_STILL_NOT_READY",
+    "next":  "OPEN_DOCKER_DESKTOP_TROUBLESHOOT_ENGINE"
+}

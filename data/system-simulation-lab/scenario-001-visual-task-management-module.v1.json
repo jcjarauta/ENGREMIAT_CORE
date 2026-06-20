@@ -1,0 +1,40 @@
+﻿{
+    "package_id":  "ENGREMIAT_SYSTEM_SIMULATION_LAB_001",
+    "stage":  "E04_CREATE_FIRST_SIMULATION_SCENARIO",
+    "status":  "PASS",
+    "scenario_id":  "SCENARIO_001_visual_task_management_module",
+    "lab_vault":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_SIMULATION_LAB",
+    "objective":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_SIMULATION_LAB\\01_OBJECTIVES\\OBJ_001_VISUAL_TASK_MANAGEMENT_MODULE.md",
+    "roadmap":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_SIMULATION_LAB\\02_ROADMAPS\\ROADMAP_001_VISUAL_TASK_MANAGEMENT_MODULE.md",
+    "tasks":  [
+                  "TASK_001",
+                  "TASK_002",
+                  "TASK_003"
+              ],
+    "workers":  [
+                    "SIM_WORKER_PLANNER",
+                    "SIM_WORKER_OBSIDIAN_BUILDER",
+                    "SIM_WORKER_VALIDATOR"
+                ],
+    "gate":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_SIMULATION_LAB\\05_HUMAN_GATES\\GATE_001_APPROVE_ROADMAP.md",
+    "evidences":  [
+                      "EV_001_SCOPE_NOTE",
+                      "EV_002_STRUCTURE_CANVAS",
+                      "EV_003_VALIDATION_REPORT"
+                  ],
+    "result":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_SIMULATION_LAB\\08_RESULTS\\SCENARIO_001_visual_task_management_module\\RESULT_001_SCENARIO_STATUS.md",
+    "learning":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_SIMULATION_LAB\\09_LEARNING\\LEARNING_001_SCENARIO_SETUP.md",
+    "canvas":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_SIMULATION_LAB\\10_CANVAS\\SCENARIO_001_CANVAS.canvas",
+    "state":  "created_not_executed",
+    "safety":  {
+                   "local_only":  true,
+                   "lab_vault_created":  true,
+                   "no_real_worker_execution":  true,
+                   "no_kanban_write":  true,
+                   "no_clien_write":  true,
+                   "no_git_write":  true,
+                   "no_external_network":  true,
+                   "obsidian_app_automation":  false
+               },
+    "next":  "E05_SIMULATE_HUMAN_ROADMAP_TASKS_CYCLE"
+}

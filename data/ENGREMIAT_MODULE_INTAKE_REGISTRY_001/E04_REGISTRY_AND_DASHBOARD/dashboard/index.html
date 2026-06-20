@@ -1,0 +1,32 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>ENGREMIAT Module Intake Registry</title><style>body{font-family:Segoe UI,Arial;background:#0f172a;color:#e2e8f0;margin:0;padding:24px}.wrap{max-width:1200px;margin:auto}.card{background:#111827;border:1px solid #334155;border-radius:18px;padding:20px}.ok{color:#4ade80}.warn{color:#facc15}table{width:100%;border-collapse:collapse;margin-top:14px}th,td{border-bottom:1px solid #334155;padding:10px;text-align:left}pre{background:#020617;padding:14px;border-radius:12px;white-space:pre-wrap;overflow:auto}</style></head><body><div class="wrap"><div class="card"><h1>ENGREMIAT Module Intake Registry</h1><p class="ok">Registro de entrada de modulos PASS.</p><table><thead><tr><th>Package</th><th>Module</th><th>Type</th><th>Status</th><th>Decision</th><th>Risk</th></tr></thead><tbody><tr><td>ENGREMIAT_MODULE_INTAKE_REGISTRY_001</td><td>ENG-MOD-INTAKE-001</td><td>REGISTRY</td><td>ACTIVE_LOCAL</td><td>DEVELOP</td><td class='ok'>LOW</td></tr><tr><td>ENGREMIAT_SAMPLE_CANONICAL_MODULE_001</td><td>ENG-SAMPLE-001</td><td>ADAPTER</td><td>SAMPLE_ARCHIVE</td><td>ARCHIVE</td><td class='ok'>LOW</td></tr></tbody></table><h2>Registry</h2><pre>{
+    "package_id":  "ENGREMIAT_MODULE_INTAKE_REGISTRY_001",
+    "artifact":  "module-intake-registry.v1.json",
+    "status":  "PASS",
+    "entries":  [
+                    {
+                        "package_id":  "ENGREMIAT_MODULE_INTAKE_REGISTRY_001",
+                        "module_id":  "ENG-MOD-INTAKE-001",
+                        "module_type":  "REGISTRY",
+                        "status":  "ACTIVE_LOCAL",
+                        "decision":  "DEVELOP",
+                        "source":  "module.json",
+                        "risk":  "LOW"
+                    },
+                    {
+                        "package_id":  "ENGREMIAT_SAMPLE_CANONICAL_MODULE_001",
+                        "module_id":  "ENG-SAMPLE-001",
+                        "module_type":  "ADAPTER",
+                        "status":  "SAMPLE_ARCHIVE",
+                        "decision":  "ARCHIVE",
+                        "source":  "E03_CANONICAL_SCAFFOLDER/templates/ENGREMIAT_SAMPLE_CANONICAL_MODULE_001/module.json",
+                        "risk":  "LOW"
+                    }
+                ],
+    "counts":  {
+                   "total":  2,
+                   "active":  1,
+                   "sample_archive":  1
+               },
+    "policy":  "Every future module must pass intake before development",
+    "next":  "E05_CLOSE_AND_NEXT"
+}</pre></div></div></body></html>

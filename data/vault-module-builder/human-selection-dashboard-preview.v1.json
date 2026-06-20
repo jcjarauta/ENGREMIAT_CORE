@@ -1,0 +1,55 @@
+﻿{
+    "package_id":  "ENGREMIAT_VAULT_MODULE_BUILDER_001",
+    "stage":  "E05_CREATE_HUMAN_SELECTION_DASHBOARD_PREVIEW",
+    "status":  "PASS",
+    "selector_id":  "human-selection-dashboard-preview.v1",
+    "objective":  "Permitir al humano elegir que quiere construir o ver dentro del builder sin ejecutar cambios reales.",
+    "actions":  [
+                    "CREATE_MASTER_VAULT",
+                    "CREATE_PROJECT_SPACE",
+                    "CREATE_MODULE_SPACE",
+                    "RELATE_MODULE_TO_VAULT",
+                    "OPEN_WORK_SURFACE"
+                ],
+    "space_types":  [
+                        "MASTER_VAULT",
+                        "PROJECT_SPACE",
+                        "MODULE_SPACE",
+                        "RELATION_SPACE",
+                        "WORK_SURFACE"
+                    ],
+    "groups":  [
+                   "G01_CORE",
+                   "G02_HUMAN_CONTROL",
+                   "G03_PROJECTS_MODULES",
+                   "G04_MEMORY_VISUAL",
+                   "G05_TASKS_KANBAN",
+                   "G06_WORKERS_EXECUTION_PREVIEW",
+                   "G07_EVIDENCE_RESULTS",
+                   "G08_SYSTEM_EVOLUTION"
+               ],
+    "surfaces":  [
+                     "CONTROL_HUB",
+                     "GROUPED_CANVAS",
+                     "PROJECT_CANVAS",
+                     "PENDING_GATES",
+                     "ACTIVE_CARDS",
+                     "RECENT_EVIDENCE",
+                     "WORKER_PROPOSALS",
+                     "MODULE_INDEX",
+                     "PROJECT_INDEX"
+                 ],
+    "sample_request":  "C:\\ENGREMIAT_CORE\\data\\vault-module-builder\\builder-request.preview.sample.json",
+    "router":  "C:\\ENGREMIAT_CORE\\tools\\vault-module-builder\\Invoke-VaultModuleRelationRouterPreview.ps1",
+    "safety":  {
+                   "local_only":  true,
+                   "preview_only":  true,
+                   "worker_execution":  false,
+                   "kanban_write":  false,
+                   "clien_write":  false,
+                   "obsidian_app_automation":  false,
+                   "git_write":  false,
+                   "external_network":  false
+               },
+    "next":  "E06_VALIDATE_BUILDER_WITH_SAMPLE_MODULE"
+}

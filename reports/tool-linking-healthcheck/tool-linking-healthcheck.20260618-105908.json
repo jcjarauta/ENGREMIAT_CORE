@@ -1,0 +1,136 @@
+﻿{
+    "package":  "TOOL_LINKING_HEALTHCHECK_RUN_002",
+    "created_at":  "2026-06-18T10:59:08",
+    "readiness":  100,
+    "decision":  "GO_TOOL_LINKING_HEALTHCHECK_READY",
+    "paths":  [
+                  {
+                      "key":  "core_root",
+                      "path":  "C:\\ENGREMIAT_CORE",
+                      "required":  true,
+                      "exists":  true,
+                      "status":  "OK"
+                  },
+                  {
+                      "key":  "tool_linking_map",
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\tool-linking-readiness\\TOOL_LINKING_READINESS_MAP.md",
+                      "required":  true,
+                      "exists":  true,
+                      "status":  "OK"
+                  },
+                  {
+                      "key":  "tool_linking_contract",
+                      "path":  "C:\\ENGREMIAT_CORE\\contracts\\tool-linking\\tool-linking-permissions-contract.json",
+                      "required":  true,
+                      "exists":  true,
+                      "status":  "OK"
+                  },
+                  {
+                      "key":  "readonly_inbox",
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\openwebui-openclaw-readonly-adapter\\inbox",
+                      "required":  true,
+                      "exists":  true,
+                      "status":  "OK"
+                  },
+                  {
+                      "key":  "readonly_intake_tool",
+                      "path":  "C:\\ENGREMIAT_CORE\\tools\\kanban-local\\Invoke-OpenWebUIOpenClawReadonlyIntake.ps1",
+                      "required":  true,
+                      "exists":  true,
+                      "status":  "OK"
+                  },
+                  {
+                      "key":  "openclaw_skill",
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\openclaw-skill-packet\\engremiat-readonly-intake-skill\\SKILL.md",
+                      "required":  true,
+                      "exists":  true,
+                      "status":  "OK"
+                  },
+                  {
+                      "key":  "openclaw_skill_contract",
+                      "path":  "C:\\ENGREMIAT_CORE\\contracts\\openclaw-skill-packet\\openclaw-readonly-intake-output-contract.json",
+                      "required":  true,
+                      "exists":  true,
+                      "status":  "OK"
+                  },
+                  {
+                      "key":  "recurrent_model_tool",
+                      "path":  "C:\\ENGREMIAT_CORE\\tools\\kanban-local\\Invoke-RecurrentCardRefreshModel.ps1",
+                      "required":  true,
+                      "exists":  true,
+                      "status":  "OK"
+                  },
+                  {
+                      "key":  "obsidian_export_tool",
+                      "path":  "C:\\ENGREMIAT_CORE\\tools\\kanban-local\\Export-ObsidianCandidatePack.ps1",
+                      "required":  true,
+                      "exists":  true,
+                      "status":  "OK"
+                  },
+                  {
+                      "key":  "obsidian_vault_gate_tool",
+                      "path":  "C:\\ENGREMIAT_CORE\\tools\\kanban-local\\Invoke-ObsidianVaultWriteGate.ps1",
+                      "required":  true,
+                      "exists":  true,
+                      "status":  "OK"
+                  },
+                  {
+                      "key":  "appendix_dashboard",
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\system-dashboard\\ENGREMIAT_APPENDIX_SYSTEM_DASHBOARD.html",
+                      "required":  true,
+                      "exists":  true,
+                      "status":  "OK"
+                  },
+                  {
+                      "key":  "system_kanban",
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\kanban-backlog\\system-view\\ENGREMIAT_SYSTEM_KANBAN.html",
+                      "required":  true,
+                      "exists":  true,
+                      "status":  "OK"
+                  },
+                  {
+                      "key":  "first_real_linking_sandbox_report",
+                      "path":  "C:\\ENGREMIAT_CORE\\reports\\tool-linking-sandbox\\FIRST_REAL_LINKING_SANDBOX_001.close-report.json",
+                      "required":  true,
+                      "exists":  true,
+                      "status":  "OK"
+                  },
+                  {
+                      "key":  "first_real_linking_sandbox_inbox",
+                      "path":  "C:\\ENGREMIAT_CORE\\runtime\\tool-linking-sandbox\\openclaw-openwebui-inbox",
+                      "required":  true,
+                      "exists":  true,
+                      "status":  "OK"
+                  },
+                  {
+                      "key":  "obsidian_vault_path_config_optional",
+                      "path":  "C:\\ENGREMIAT_CORE\\config\\obsidian-vault-path.txt",
+                      "required":  false,
+                      "exists":  false,
+                      "status":  "OPTIONAL_MISSING"
+                  }
+              ],
+    "counts":  {
+                   "inbox_json":  3,
+                   "processed_json":  6,
+                   "detected_inputs":  3,
+                   "recurrent_cards":  10,
+                   "obsidian_candidates":  10,
+                   "obsidian_export_notes":  4,
+                   "inline_batches":  5,
+                   "sandbox_inbox_json":  1,
+                   "sandbox_reports":  2
+               },
+    "missing_required":  [
+
+                         ],
+    "policy":  {
+                   "openwebui_api_called":  false,
+                   "openclaw_api_called":  false,
+                   "native_kanban_write":  "disabled",
+                   "obsidian_real_write":  "gated",
+                   "execution_allowed":  false,
+                   "mode":  "LOCAL_READONLY_HEALTHCHECK"
+               },
+    "next":  "DROP_REAL_OPENWEBUI_OR_OPENCLAW_JSON_IN_SANDBOX_INBOX"
+}

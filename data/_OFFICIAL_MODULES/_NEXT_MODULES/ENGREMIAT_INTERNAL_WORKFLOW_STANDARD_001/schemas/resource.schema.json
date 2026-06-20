@@ -1,0 +1,36 @@
+﻿{
+    "schema_id":  "resource.schema.v1",
+    "required":  [
+                     "resource_id",
+                     "resource_type",
+                     "source_project_id",
+                     "status",
+                     "location",
+                     "evidence"
+                 ],
+    "resource_types":  [
+                           "RESOURCE_MODULE",
+                           "RESOURCE_TEMPLATE",
+                           "RESOURCE_DOCUMENT",
+                           "RESOURCE_PROCESS",
+                           "RESOURCE_DATASET",
+                           "RESOURCE_METHOD",
+                           "RESOURCE_BUSINESS_PLAN",
+                           "RESOURCE_GRANT_APPLICATION",
+                           "RESOURCE_MANUAL"
+                       ],
+    "fields":  [
+                   "resource_id",
+                   "resource_type",
+                   "title",
+                   "description",
+                   "source_project_id",
+                   "source_task_id",
+                   "status",
+                   "location",
+                   "version",
+                   "dependencies",
+                   "evidence",
+                   "reuse_policy"
+               ]
+}

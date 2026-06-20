@@ -1,0 +1,37 @@
+{
+    "package_id":  "ENGREMIAT_MODULAR_PLATFORM_001",
+    "stage":  "E07",
+    "block":  "B07.1",
+    "purpose":  "Fijar la arquitectura modular como base de crecimiento",
+    "status":  "CLOSED",
+    "core_policy":  "frozen",
+    "architecture":  "local-first modular platform",
+    "registry":  "ENGREMIAT_MODULAR_PLATFORM_001 E01",
+    "adapter_layer":  "ENGREMIAT_MODULAR_PLATFORM_001 E02-E06",
+    "active_layers":  [
+                          "registry",
+                          "ingest",
+                          "normalizer",
+                          "queue",
+                          "control",
+                          "worker-bridge",
+                          "result-normalizer",
+                          "memory",
+                          "kanban-adapter",
+                          "operational-registry"
+                      ],
+    "closed_artifacts":  [
+                             "modular-platform-close-manifest.json",
+                             "modular-close-manifest.json",
+                             "modular-close-report.md",
+                             "next-modular-objective.md",
+                             "MODULAR_PLATFORM_MANUAL.md"
+                         ],
+    "decisions":  [
+                      "Core remains unchanged except punctual fixes",
+                      "Modules are identified by contract/version/state/dependencies",
+                      "Each module can be coupled, paused, replaced or detached",
+                      "Dashboards and evidence remain mandatory for control"
+                  ],
+    "next":  "E08"
+}

@@ -1,0 +1,66 @@
+<!doctype html><html lang='es'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><title>ENGREMIAT E02 Normalized Plan</title><style>body{font-family:Segoe UI,Arial,sans-serif;background:#0f172a;color:#e2e8f0;margin:0;padding:24px} .card{max-width:1100px;margin:auto;background:#111827;border:1px solid #334155;border-radius:18px;padding:20px} h1{margin:0 0 8px} .muted{color:#94a3b8} code,pre{background:#020617;padding:10px;border-radius:12px;overflow:auto;display:block}</style></head><body><div class='card'><h1>ENGREMIAT Modular Platform · E02</h1><p class='muted'>Entrada universal y normalización canónica del plan.</p><h2>Ingest</h2><pre>{
+    "module_id":  "ENG-MOD-ING-001",
+    "module_name":  "Plan Ingest Module",
+    "stage":  "E02",
+    "block":  "B02.1",
+    "purpose":  "Universal local intake for sheets and files",
+    "supported_formats":  [
+                              "sheet",
+                              "tsv",
+                              "csv",
+                              "json"
+                          ],
+    "parser_package":  "plan-ingest-package.json",
+    "validation_report":  "plan-ingest-validation-report.json",
+    "next":  "ENG-MOD-NRM-001"
+}</pre><h2>Normalizer</h2><pre>{
+    "module_id":  "ENG-MOD-NRM-001",
+    "module_name":  "Plan Normalizer",
+    "stage":  "E02",
+    "block":  "B02.2",
+    "purpose":  "Normalize intake into canonical modular structure",
+    "rules":  [
+                  {
+                      "field":  "objective",
+                      "required":  true
+                  },
+                  {
+                      "field":  "stage",
+                      "required":  true
+                  },
+                  {
+                      "field":  "block",
+                      "required":  true
+                  },
+                  {
+                      "field":  "step",
+                      "required":  true
+                  }
+              ],
+    "dashboard":  "normalized-plan-dashboard/index.html",
+    "next":  "B03"
+}</pre><h2>Validation</h2><pre>{
+    "package_id":  "ENGREMIAT_MODULAR_PLATFORM_001",
+    "stage":  "E02",
+    "status":  "PASS",
+    "validation":  {
+                       "no_git_write":  true,
+                       "local_first":  true,
+                       "ingest_report_ok":  true,
+                       "ingest_package_ok":  true,
+                       "rules_ok":  true,
+                       "normalization_contract_ok":  true,
+                       "dashboard_ok":  true,
+                       "ingest_contract_ok":  true,
+                       "no_external_network":  true
+                   },
+    "evidence":  [
+                     "plan-ingest-contract.json",
+                     "plan-ingest-package.json",
+                     "plan-ingest-validation-report.json",
+                     "plan-normalization-contract.json",
+                     "normalization-rules.json",
+                     "normalized-plan-dashboard/index.html"
+                 ],
+    "next":  "E03"
+}</pre></div></body></html>

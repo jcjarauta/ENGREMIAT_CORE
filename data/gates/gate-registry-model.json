@@ -1,0 +1,30 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_FINAL_026_035",
+    "stage":  "E29",
+    "created_at":  "2026-06-17T11:10:17.3211908+02:00",
+    "registry":  "gate-center",
+    "purpose":  "Centralizar gates humanos reales para evitar autorizaciones perdidas en logs.",
+    "required_fields":  [
+                            "gate_id",
+                            "objective",
+                            "stage",
+                            "block",
+                            "step",
+                            "action",
+                            "risk",
+                            "scope",
+                            "decision",
+                            "status",
+                            "created_at",
+                            "evidence",
+                            "expires_at"
+                        ],
+    "allowed_decisions":  [
+                              "DEFER",
+                              "APPROVE",
+                              "REJECT",
+                              "REPAIR",
+                              "CONTINUE"
+                          ],
+    "rule":  "Toda accion real, externa, MEDIUM/HIGH o apply requiere gate registrado antes de avanzar."
+}

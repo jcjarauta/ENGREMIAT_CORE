@@ -1,0 +1,25 @@
+﻿{
+    "objective":  "ENGREMIAT_KANBAN_VISIBLE_AND_OLLAMA_READY_013",
+    "stage":  "E03",
+    "ollama_required":  true,
+    "ollama_available":  true,
+    "ollama_version":  "ollama version is 0.30.8",
+    "models":  [
+                   "NAME         ID              SIZE      MODIFIED   ",
+                   "qwen3:14b    bdbd181c33f2    9.3 GB    3 days ago"
+               ],
+    "models_raw":  "NAME         ID              SIZE      MODIFIED   \r\nqwen3:14b    bdbd181c33f2    9.3 GB    3 days ago",
+    "policy_file":  "data\\kanban-visible-ollama-ready-013\\ollama-safe-policy.json",
+    "validation_ok":  true,
+    "errors":  [
+
+               ],
+    "readiness":  100,
+    "decision":  "GO_OLLAMA_READY",
+    "next":  "E04_CONTEXT_INTEGRATION",
+    "inference_executed":  false,
+    "auto_apply":  false,
+    "git_write":  false,
+    "remote_execution":  false,
+    "timestamp_utc":  "2026-06-17T04:43:03.6621736Z"
+}

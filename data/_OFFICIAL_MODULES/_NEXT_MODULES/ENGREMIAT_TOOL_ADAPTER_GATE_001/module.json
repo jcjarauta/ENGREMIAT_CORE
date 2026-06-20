@@ -1,0 +1,37 @@
+﻿{
+    "module_id":  "ENGREMIAT_TOOL_ADAPTER_GATE_001",
+    "name":  "Tool Adapter Capability Gate",
+    "status":  "CANDIDATE",
+    "kind":  "STANDARD_GATE",
+    "location":  "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_TOOL_ADAPTER_GATE_001",
+    "purpose":  "Definir gates por capacidad y mapeo posterior de herramientas para que ENGREMIAT pueda montar sistemas por caracteristicas cliente sin acoplarse a herramientas concretas.",
+    "approach":  "CAPABILITY_FIRST_TOOL_MAPPING_LATER",
+    "depends_on":  [
+                       "ENGREMIAT_INTERNAL_WORKFLOW_STANDARD_001"
+                   ],
+    "scope":  [
+                  "CAPABILITY",
+                  "PERMISSION",
+                  "RISK",
+                  "GATE",
+                  "TOOL_MAPPING_READY"
+              ],
+    "safety":  {
+                   "local_only":  true,
+                   "core_changes":  false,
+                   "real_tool_integration":  false,
+                   "git_write":  false,
+                   "network":  false,
+                   "ollama_inference":  false,
+                   "kanban_write":  false,
+                   "obsidian_write":  false,
+                   "sheets_write":  false,
+                   "agent_execute":  false
+               },
+    "stages_created":  [
+                           "E01_IDENTIDAD_Y_ALCANCE",
+                           "E02_CAPACIDADES_DEL_SISTEMA",
+                           "E03_GATES_POR_CAPACIDAD"
+                       ],
+    "next":  "E04_TOOL_MAPPING"
+}

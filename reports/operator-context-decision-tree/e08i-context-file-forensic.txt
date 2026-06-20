@@ -1,0 +1,67 @@
+﻿package=ENGREMIAT_OPERATOR_CONTEXT_AND_DECISION_TREE_001
+stage=E08I_READONLY_CONTEXT_FILE_FORENSIC
+file=C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-context.ps1
+parse_ok=True
+parse_error=
+
+line_count=85
+char_count=10799
+duplicate_functions=
+none
+override_markers_count=
+2
+
+--- FUNCTIONS ---
+6: L
+7: Ensure-State
+8: Get-State
+9: Save-State
+10: Get-AllProjects
+11: Get-Projects
+12: New-Project
+13: Select-Project
+14: Select-Module
+25: Show-EngProjectsStable
+52: Invoke-EngProjectsStable
+61: Invoke-EngContext
+
+--- SUSPECT LINES ---
+13: function Select-Project{Clear-Host;L "ABRIR PROYECTO" Cyan;L "Solo comandos de este paso: numero = entrar | n = nuevo proyecto | a = atras" DarkCyan;$projects=@(Get-Projects);$i=1;foreach($p in $projects){L (" ["+$i+"] Entrar: "+$p.Name+"  "+$p.LastWriteTime.ToString("yyyy-MM-dd HH:mm")) Green;$i++};L " [n] Nuevo proyecto" Green;L " [a] Atras" Yellow;$sel=(Read-Host "Elige accion").Trim().ToLowerInvariant();if($sel -in @("a","atras","atrás","volver","back","..","0")){$s=Get-State;$s.mode="global";$s.active_project="";$s.active_master_vault="";$s.active_module="";$s.active_module_vault="";$s.next="global";$s.last_command="abrir-proyecto-atras";Save-State $s;L "OK atras=global" Green;return};if($sel -eq "n"){$name=Read-Host "Nombre del proyecto";$project=New-Project $name}else{if(!($sel -match "^\d+$")){throw "seleccion_invalida=$sel"};$idx=[int]$sel-1;if($idx -lt 0 -or $idx -ge $projects.Count){throw "seleccion_fuera_de_rango=$sel"};$project=$projects[$idx].FullName};$s=Get-State;$s.mode="project";$s.active_project=$project;$s.active_master_vault=Join-Path $project "BOVEDA_PROYECTO";$s.active_module="";$s.active_module_vault="";$s.last_command="abrir-proyecto";$s.next="proyecto";Save-State $s;L ("OK active_project="+$project) Green}
+14: function Select-Module{param([switch]$Create);$s=Get-State;$project=[string]$s.active_project;if([string]::IsNullOrWhiteSpace($project)){throw "no_active_project"};$modsDir=Join-Path $project "MODULOS";New-Item -ItemType Directory -Force -Path $modsDir|Out-Null;if($Create){$name=(Read-Host "Nombre del modulo").Trim();if([string]::IsNullOrWhiteSpace($name)){throw "module_name_empty"};$safe=($name -replace "[^a-zA-Z0-9_-]","_");if($safe -notlike "MODULE_*"){$safe="MODULE_"+$safe};$modulePath=Join-Path $modsDir $safe;New-Item -ItemType Directory -Force -Path (Join-Path $modulePath "BOVEDA_MODULO")|Out-Null;$mj=Join-Path $modulePath "BOVEDA_MODULO\module.json";if(!(Test-Path $mj)){[ordered]@{module=$safe;lifecycle="ACTIVE_IN_PROJECT";library_status="NOT_READY";objective="";created_at=(Get-Date).ToString("s")}|ConvertTo-Json -Depth 20|Set-Content -LiteralPath $mj -Encoding UTF8}}else{Clear-Host;L "ENTRAR EN MODULO" Cyan;$mods=@(Get-ChildItem -LiteralPath $modsDir -Directory -ErrorAction SilentlyContinue|Where-Object{$_.Name -ne ".obsidian"}|Sort-Object Name);if($mods.Count -eq 0){throw "no_modules"};$i=1;foreach($m in $mods){L (" ["+$i+"] "+$m.Name) Green;$i++};L " [a] Atras" Yellow;$sel=(Read-Host "Elige modulo").Trim().ToLowerInvariant();if($sel -in @("a","atras","atrás","volver","back","..","0")){L "OK atras=proyecto" Green;return};if(!($sel -match "^\d+$")){throw "seleccion_invalida=$sel"};$idx=[int]$sel-1;if($idx -lt 0 -or $idx -ge $mods.Count){throw "seleccion_fuera_de_rango=$sel"};$modulePath=$mods[$idx].FullName;$safe=$mods[$idx].Name};$s=Get-State;$s.mode="module";$s.active_project=$project;$s.active_module=$safe;$s.active_module_vault=Join-Path $modulePath "BOVEDA_MODULO";$s.last_command="abrir-modulo";$s.next="modulo";Save-State $s;L ("OK active_module="+$safe) Green}
+17: if($cmd -eq "nuevo-proyecto"){$name=Read-Host "Nombre del proyecto";$p=New-Project $name;$s=Get-State;$s.mode="project";$s.active_project=$p;$s.active_master_vault=Join-Path $p "BOVEDA_PROYECTO";$s.active_module="";$s.active_module_vault="";$s.last_command="nuevo-proyecto";$s.next="proyecto";Save-State $s;L ("OK active_project="+$p) Green;exit}
+21: if($cmd -in @("projects","proyectos","ver-proyectos","list-projects","project-list")){Clear-Host;L "PROYECTOS" Cyan;$s=Get-State;$historical=@();if($s.PSObject.Properties.Name -contains "historical_projects" -and $s.historical_projects){$historical=@($s.historical_projects|ForEach-Object{[string]$_.path})};$projects=@(Get-AllProjects);if($projects.Count -eq 0){L "sin proyectos" Yellow}else{$i=1;foreach($p in $projects){$kind=if($historical -contains $p.FullName){"HISTORICO"}else{"ACTIVO"};$color=if($kind -eq "HISTORICO"){"DarkGray"}else{"Green"};L (" ["+$i+"] "+$p.Name+"  "+$p.LastWriteTime.ToString("yyyy-MM-dd HH:mm")+"  "+$kind) $color;$i++}};$s.mode="global";$s.last_command="proyectos";$s.next="abrir-proyecto";Save-State $s;exit}
+24: ## E08H_PROJECTS_SCREEN_STABLE_OVERRIDE_BEGIN
+25: function Show-EngProjectsStable {
+28:   Write-Host "PROYECTOS" -ForegroundColor Cyan
+37:   if($projects.Count -eq 0){ Write-Host " Sin proyectos registrados." -ForegroundColor Yellow }
+52: function Invoke-EngProjectsStable {
+55:     Show-EngProjectsStable -RootPath $RootPath
+56:     $choice = Read-Host "ENGREMIAT"
+61: function Invoke-EngContext {
+72:     Write-Host " [3] Ver proyectos"
+76:     $choice = Read-Host "ENGREMIAT"
+77:     if($choice -in @("3","v","V","proyectos","projects")){ $r=Invoke-EngProjectsStable -RootPath $RootPath; if($r -eq "QUIT"){ return }; continue }
+84: if($MyInvocation.InvocationName -ne "."){ Invoke-EngContext -RootPath "C:\ENGREMIAT_CORE" }
+85: ## E08H_PROJECTS_SCREEN_STABLE_OVERRIDE_END
+
+--- BACKUPS ---
+2026-06-19 21:08:47  eng-context.ps1.current-minimal-20260619-211022.bak  2822 bytes
+2026-06-19 21:06:44  eng-context.ps1.bak-20260619-210847  15039 bytes
+2026-06-19 21:05:31  eng-context.ps1.e08h-pre-fix-20260619-211127.bak  7485 bytes
+2026-06-19 21:05:31  eng-context.ps1.bak-e08e-20260619210644  7485 bytes
+2026-06-19 21:03:54  eng-context.ps1.bak-e08d-20260619210531  6943 bytes
+2026-06-19 21:02:47  eng-context.ps1.bak-e08c-20260619210354  6512 bytes
+2026-06-19 21:00:29  eng-context.ps1.bak-e08a-repair-20260619210208  6748 bytes
+2026-06-19 21:00:29  eng-context.ps1.bak-e08b-20260619210247  6748 bytes
+2026-06-19 21:00:29  eng-context.ps1.bak-e08a-20260619210139  6748 bytes
+2026-06-19 20:56:28  eng-context.ps1.bak-e08a-20260619210029  6419 bytes
+2026-06-19 20:54:37  eng-context.ps1.bak-e07z-20260619205628  5920 bytes
+2026-06-19 20:52:38  eng-context.ps1.bak-e07y-20260619205437  5716 bytes
+2026-06-19 20:51:29  eng-context.ps1.bak-e07v-20260619205238  5714 bytes
+2026-06-19 20:49:20  eng-context.ps1.bak-e07u-20260619205129  15369 bytes
+2026-06-19 20:39:27  eng-context.ps1.bak-e07t-20260619204920  15386 bytes
+2026-06-19 20:23:04  eng-context.ps1.bak-e07q-20260619203927  15310 bytes
+2026-06-19 20:16:35  eng-context.ps1.bak-e07k-20260619202304  15248 bytes
+2026-06-19 20:00:22  eng-context.ps1.bak-e07j-20260619201635  15246 bytes
+2026-06-19 19:17:24  eng-context.ps1.bak-e07j-20260619200022  15233 bytes
+2026-06-19 19:04:23  eng-context.ps1.bak-e05c-20260619191724  14194 bytes

@@ -1,0 +1,32 @@
+﻿{
+    "contract_id":  "tool-adapter-contract.v1",
+    "module_id":  "ENGREMIAT_INTERNAL_WORKFLOW_STANDARD_001",
+    "principle":  "Las herramientas son adaptadores; ENGREMIAT conserva contratos, estados, gates, evidencias y fuente de verdad.",
+    "required_fields":  [
+                            "adapter_id",
+                            "tool_name",
+                            "adapter_role",
+                            "allowed_inputs",
+                            "allowed_outputs",
+                            "writes_allowed",
+                            "gate_required",
+                            "evidence_required"
+                        ],
+    "allowed_roles":  [
+                          "INPUT_ADAPTER",
+                          "OUTPUT_ADAPTER",
+                          "WORKER_ADAPTER",
+                          "MEMORY_ADAPTER",
+                          "CONTROL_SURFACE",
+                          "INFERENCE_ENGINE",
+                          "EXECUTION_ASSISTANT",
+                          "DOCUMENTATION_SURFACE"
+                      ],
+    "rules":  [
+                  "No escritura real sin gate humano",
+                  "No inferencia real sin gate cuando modifique estado",
+                  "No adjuntos sin evidence record",
+                  "No outputs sin task_id o project_id",
+                  "No tool debe ser fuente unica de verdad"
+              ]
+}

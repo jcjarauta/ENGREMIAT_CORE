@@ -1,0 +1,28 @@
+﻿{
+    "package_id":  "ENGREMIAT_UX_SYSTEM_001",
+    "stage":  "E37_CANONICAL_CONSOLE_PALETTE",
+    "status":  "PASS",
+    "palette_policy":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\canonical-console-palette-policy.json",
+    "palette_doc":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\canonical-console-palette-policy.md",
+    "helper_template":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\templates\\ENGREMIAT-CONSOLE-PALETTE.ps1",
+    "validated_launchers":  [
+                                {
+                                    "file":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-MEMORY-DOCUMENTATION-CENTER-NORMALIZED.ps1",
+                                    "parse_ok":  true,
+                                    "has_cyan":  true,
+                                    "has_green":  true,
+                                    "has_yellow":  true,
+                                    "has_darkgray":  true
+                                },
+                                {
+                                    "file":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-DATA-INTAKE-CENTER-NORMALIZED.ps1",
+                                    "parse_ok":  true,
+                                    "has_cyan":  false,
+                                    "has_green":  true,
+                                    "has_yellow":  true,
+                                    "has_darkgray":  true
+                                }
+                            ],
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e37-canonical-console-palette-20260620-101049.json",
+    "next":  "E38_APPLY_PALETTE_HELPER_TO_NORMALIZED_LAUNCHERS"
+}

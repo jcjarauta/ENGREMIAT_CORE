@@ -1,0 +1,26 @@
+{
+    "package_id":  "ENGREMIAT_OPERATIONAL_MASTER_PANEL_001",
+    "stage":  "E05_HUMAN_DECISION_GATE",
+    "artifact":  "human-decision-gate.json",
+    "status":  "DEFINED",
+    "purpose":  "Preparar decisiones humanas siguientes sin ejecutar integraciones reales",
+    "allowed_decisions":  [
+                              "PAUSAR_Y_CONSERVAR_BASE_MODULAR",
+                              "PREPARAR_KANBAN_REAL_GATED",
+                              "CREAR_007E_PANEL_MAESTRO_OPERATIVO",
+                              "PREPARAR_OLLAMA_STRUCTURED_OUTPUTS_ADAPTER",
+                              "PREPARAR_TELEGRAM_GATED",
+                              "CERRAR_MODULO"
+                          ],
+    "default_decision":  "CREAR_007E_PANEL_MAESTRO_OPERATIVO",
+    "blocked_actions":  [
+                            "core_changes",
+                            "external_network",
+                            "git_write",
+                            "real_integration",
+                            "kanban_real_write",
+                            "telegram_real_send",
+                            "ollama_real_inference"
+                        ],
+    "human_authorization_required_for_any_real_integration":  true
+}

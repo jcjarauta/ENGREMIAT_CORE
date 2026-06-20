@@ -1,0 +1,18 @@
+﻿{
+    "gate_id":  "GATE-SAVE-HUMAN-PROJECT-INTAKE-001",
+    "package_id":  "ENGREMIAT_PROJECT_BUILDER_TO_WORKER_LOOP_001",
+    "stage":  "E02_BUILD_HUMAN_PROJECT_INTAKE_DASHBOARD",
+    "decision":  "DEFER",
+    "human_confirmation":  false,
+    "save_intake_allowed":  false,
+    "required_phrase":  "AUTORIZO_GUARDAR_PROJECT_INTAKE_DRAFT",
+    "note":  "E02 only prepares the dashboard and template. E03 will save an intake draft only after explicit human authorization.",
+    "safety":  {
+                   "card_write":  false,
+                   "materialize_cards":  false,
+                   "ollama_real_execution":  false,
+                   "worker_real_execution":  false,
+                   "git":  false,
+                   "network_external":  false
+               }
+}

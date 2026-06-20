@@ -1,0 +1,132 @@
+﻿$ErrorActionPreference="Stop"
+[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+
+$Core="C:\ENGREMIAT_CORE"
+$ToolDir=Join-Path $Core "tools\desktop-terminal-operator"
+$LauncherDir=Join-Path $Core "tools\launcher"
+$NavDir=Join-Path $Core "reports\navigation"
+
+function W($m,$c="White"){ Write-Host $m -ForegroundColor $c }
+
+function ActiveProject(){
+  $j=Join-Path $Core "data\desktop-terminal-operator\active-project.json"
+  $t=Join-Path $Core "data\desktop-terminal-operator\active-project.txt"
+  if(Test-Path $j){
+    try{
+      $x=Get-Content $j -Raw | ConvertFrom-Json
+      if($x.active_project -and (Test-Path ([string]$x.active_project))){ return [string]$x.active_project }
+    }catch{}
+  }
+  if(Test-Path $t){
+    $y=(Get-Content $t -Raw).Trim()
+    if(Test-Path $y){ return $y }
+  }
+  return ""
+}
+
+function CountDirs($p){
+  if(Test-Path $p){ return @(Get-ChildItem $p -Directory -ErrorAction SilentlyContinue).Count }
+  return 0
+}
+
+function ScreenRow($id,$label,$file,$role,$parent,$status){
+  $path=Join-Path $ToolDir $file
+  return [pscustomobject]@{
+    id=$id
+    label=$label
+    file=$file
+    path=$path
+    exists=(Test-Path $path)
+    role=$role
+    parent=$parent
+    status=$status
+  }
+}
+
+$p=ActiveProject
+$projectName=if($p){ Split-Path $p -Leaf }else{ "" }
+$projectModules=if($p){ CountDirs (Join-Path $p "MODULOS") }else{0}
+$libraryActive=CountDirs (Join-Path $Core "library\modules")
+$libraryHistoric=CountDirs (Join-Path $Core "library\modules_historico")
+
+$screens=@(
+  (ScreenRow "inicio" "Inicio raíz" "ENGREMIAT-INICIO.ps1" "launcher" "-" "ROOT"),
+  (ScreenRow "modules" "Módulos del proyecto" "eng-project-modules-screen.ps1" "project_modules" "inicio" "OPERATIVE"),
+  (ScreenRow "library" "Biblioteca de módulos" "eng-module-library-screen.ps1" "module_library" "inicio/modules" "OPERATIVE"),
+  (ScreenRow "workspace" "Workspace de módulo" "eng-module-workspace-screen.ps1" "module_workspace" "inicio/library/modules" "OPERATIVE"),
+  (ScreenRow "cards" "Tarjetas de módulo" "eng-module-cards-screen.ps1" "module_cards" "workspace" "OPERATIVE"),
+  (ScreenRow "graph" "Grafo de módulos" "eng-refresh-project-module-graph.ps1" "graph_refresh" "inicio/modules" "MAINTENANCE")
+)
+
+$tree=[pscustomobject]@{
+  generated_at=(Get-Date).ToString("s")
+  core=$Core
+  active_project=$p
+  active_project_name=$projectName
+  counters=[pscustomobject]@{
+    project_modules=$projectModules
+    library_active=$libraryActive
+    library_historic=$libraryHistoric
+  }
+  navigation=@(
+    [pscustomobject]@{ from="inicio"; command="1"; to="last_focus"; purpose="continuar último foco" },
+    [pscustomobject]@{ from="inicio"; command="u"; to="workspace_recent_module"; purpose="abrir workspace del último módulo" },
+    [pscustomobject]@{ from="inicio"; command="k"; to="cards_recent_module"; purpose="abrir tarjetas del último módulo" },
+    [pscustomobject]@{ from="inicio"; command="4"; to="modules"; purpose="gestionar módulos del proyecto activo" },
+    [pscustomobject]@{ from="inicio"; command="5"; to="library"; purpose="gestionar biblioteca de módulos" },
+    [pscustomobject]@{ from="inicio"; command="6"; to="workspace"; purpose="seleccionar y trabajar módulo" },
+    [pscustomobject]@{ from="inicio"; command="7"; to="cards"; purpose="entrar directo a tarjetas" },
+    [pscustomobject]@{ from="inicio"; command="8"; to="graph"; purpose="refrescar relaciones" },
+    [pscustomobject]@{ from="workspace"; command="2"; to="cards"; purpose="tarjetas avanzadas del módulo" },
+    [pscustomobject]@{ from="library_item"; command="w"; to="workspace"; purpose="abrir workspace desde ficha de módulo" }
+  )
+  screens=$screens
+  recommendations=@(
+    "Mantener inicio como raíz ligera, no como pantalla profunda.",
+    "Crear pantalla avanzada de tareas equivalente a tarjetas.",
+    "Actualizar grafo para incluir tarjetas/tareas además de módulos.",
+    "Normalizar patrón de pantallas: lista, ficha, crear, desactivar, historizar, borrar, vincular, buscar.",
+    "Añadir árbol de navegación visible y revisable desde inicio."
+  )
+}
+
+$json=Join-Path $NavDir ("navigation-tree-"+(Get-Date -Format "yyyyMMdd-HHmmss")+".json")
+$md=Join-Path $NavDir ("navigation-tree-"+(Get-Date -Format "yyyyMMdd-HHmmss")+".md")
+$latestJson=Join-Path $NavDir "navigation-tree-latest.json"
+$latestMd=Join-Path $NavDir "navigation-tree-latest.md"
+
+$tree | ConvertTo-Json -Depth 40 | Set-Content $json -Encoding UTF8
+$tree | ConvertTo-Json -Depth 40 | Set-Content $latestJson -Encoding UTF8
+
+$lines=@()
+$lines += "# ENGREMIAT - Árbol de navegación"
+$lines += ""
+$lines += "- Generado: $($tree.generated_at)"
+$lines += "- Proyecto activo: $projectName"
+$lines += "- Módulos proyecto: $projectModules"
+$lines += "- Biblioteca: $libraryActive activos / $libraryHistoric históricos"
+$lines += ""
+$lines += "## Pantallas"
+foreach($s in $screens){
+  $ok=if($s.exists){"OK"}else{"MISS"}
+  $lines += "- [$ok] **$($s.label)** (`$($s.id)`) → `$($s.path)`"
+}
+$lines += ""
+$lines += "## Rutas"
+foreach($n in $tree.navigation){
+  $lines += "- `$($n.from)` -- `$($n.command)` --> `$($n.to)` · $($n.purpose)"
+}
+$lines += ""
+$lines += "## Recomendaciones"
+foreach($r in $tree.recommendations){ $lines += "- $r" }
+
+$lines | Set-Content $md -Encoding UTF8
+$lines | Set-Content $latestMd -Encoding UTF8
+
+W "==== ARBOL DE NAVEGACION ENGREMIAT ====" Cyan
+W "status=PASS" Green
+W "screens=$(@($screens | Where-Object {$_.exists}).Count)/$($screens.Count)" Green
+W "json=$json" Green
+W "md=$md" Green
+W "latest_json=$latestJson" DarkCyan
+W "latest_md=$latestMd" DarkCyan

@@ -1,0 +1,36 @@
+﻿{
+    "objective":  "ENGREMIAT_KANBAN_REAL_SETUP_012",
+    "stage":  "E02",
+    "schema_id":  "KANBAN-CARD-SCHEMA-012-E02",
+    "required_fields":  [
+                            "objective",
+                            "stage",
+                            "block",
+                            "step",
+                            "state",
+                            "risk",
+                            "required",
+                            "priority",
+                            "status",
+                            "notes",
+                            "next_action"
+                        ],
+    "states":  [
+                   "BACKLOG",
+                   "READY",
+                   "GATED",
+                   "RUNNING",
+                   "REVIEW",
+                   "DEFERRED",
+                   "DONE",
+                   "BLOCKED"
+               ],
+    "safety":  {
+                   "kanban_is_view":  true,
+                   "execution_engine":  false,
+                   "git_write":  false,
+                   "remote_execution":  false,
+                   "auto_apply":  false,
+                   "shared_repo_edit":  false
+               }
+}

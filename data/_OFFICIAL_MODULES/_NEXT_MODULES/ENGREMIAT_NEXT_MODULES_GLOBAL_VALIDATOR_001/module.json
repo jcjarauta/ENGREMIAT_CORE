@@ -1,0 +1,25 @@
+﻿{
+    "module_id":  "ENGREMIAT_NEXT_MODULES_GLOBAL_VALIDATOR_001",
+    "name":  "Next Modules Global Validator",
+    "status":  "CANDIDATE",
+    "kind":  "VALIDATOR",
+    "location":  "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_NEXT_MODULES_GLOBAL_VALIDATOR_001",
+    "purpose":  "Validar globalmente los modulos candidatos alojados en data/_OFFICIAL_MODULES/_NEXT_MODULES.",
+    "checks":  [
+                   "module.json exists",
+                   "module_id matches folder",
+                   "candidate not active",
+                   "has contract/schema/gate/report dirs",
+                   "detect duplicate module_id",
+                   "detect missing safety flags"
+               ],
+    "safety":  {
+                   "local_only":  true,
+                   "core_changes":  false,
+                   "real_module_activation":  false,
+                   "git_write":  false,
+                   "network":  false,
+                   "real_sheets_write":  false
+               },
+    "next_after_close":  "ENGREMIAT_SHEETS_REAL_GATE_INTEGRATION_001"
+}

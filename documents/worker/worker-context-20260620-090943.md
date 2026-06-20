@@ -1,0 +1,15 @@
+﻿# ENGREMIAT - Contexto para worker
+
+Core: C:\ENGREMIAT_CORE
+Proyecto activo: ENGREMIAT_PROJECT_prueba14_20260620-022106
+Ruta proyecto: C:\Users\pc\Desktop\ENGREMIAT_OPERATOR\ENGREMIAT_PROJECT_prueba14_20260620-022106
+Módulos proyecto: 10
+Biblioteca: 2 activos / 8 inactivos / 2 históricos
+
+Siguiente recomendado: E24A_CREATE_MODULE_TASKS_MANAGEMENT_SCREEN
+
+Normas:
+- No usar red.
+- No hacer commit/push salvo autorización explícita.
+- Generar evidencias locales.
+- Mantener PowerShell completo y validado.

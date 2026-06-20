@@ -1,0 +1,19 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_ACTION_REPLICATION_016",
+    "stage":  "E01",
+    "block":  "B01.1",
+    "step":  "P01.1.1",
+    "selected_case":  "single_candidate_only",
+    "purpose":  "Definir una sola propuesta o caso minimo para repetir el patron de accion controlada.",
+    "limits":  {
+                   "no_apply":  true,
+                   "git_write":  false,
+                   "remote_execution":  false,
+                   "auto_apply":  false,
+                   "single_card":  true
+               },
+    "expected_result":  "Patron candidato confirmado.",
+    "artifact":  "data/controlled-action-replication-016/controlled-action-replication-scope.json",
+    "safety_note":  "Una sola frontera.",
+    "timestamp_utc":  "2026-06-17T06:24:25.9617898Z"
+}

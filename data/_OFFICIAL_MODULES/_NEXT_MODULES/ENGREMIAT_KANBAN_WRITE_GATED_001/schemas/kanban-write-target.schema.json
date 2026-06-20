@@ -1,0 +1,15 @@
+﻿{
+    "required":  [
+                     "target_type",
+                     "target_path",
+                     "external",
+                     "authorization_required",
+                     "write_mode"
+                 ],
+    "allowed_target_types":  [
+                                 "LOCAL_ARTIFACT",
+                                 "GOOGLE_SHEETS",
+                                 "CLINE_KANBAN",
+                                 "TSV_MANUAL_COPY"
+                             ]
+}

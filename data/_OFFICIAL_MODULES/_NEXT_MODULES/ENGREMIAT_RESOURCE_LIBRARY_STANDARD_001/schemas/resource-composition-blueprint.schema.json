@@ -1,0 +1,28 @@
+﻿{
+    "schema_id":  "resource-composition-blueprint.schema.v1",
+    "required":  [
+                     "blueprint_id",
+                     "objective",
+                     "requested_capabilities",
+                     "selected_resources",
+                     "composition_steps",
+                     "evidence_required",
+                     "gate"
+                 ],
+    "fields":  [
+                   "blueprint_id",
+                   "client_id",
+                   "project_id",
+                   "objective",
+                   "requested_capabilities",
+                   "constraints",
+                   "selected_resources",
+                   "missing_resources",
+                   "composition_steps",
+                   "expected_outputs",
+                   "risks",
+                   "evidence_required",
+                   "validation_status",
+                   "gate"
+               ]
+}

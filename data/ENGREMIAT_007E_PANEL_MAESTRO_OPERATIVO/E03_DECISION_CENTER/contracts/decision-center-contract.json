@@ -1,0 +1,20 @@
+{
+    "package_id":  "ENGREMIAT_007E_PANEL_MAESTRO_OPERATIVO",
+    "stage":  "E03_DECISION_CENTER",
+    "artifact":  "decision-center-contract.json",
+    "status":  "DEFINED",
+    "purpose":  "Concentrar decisiones humanas siguientes sin ejecutar integraciones reales",
+    "input":  "operational-timeline.json",
+    "output":  "decision-center.json",
+    "blocked_actions":  [
+                            "core_changes",
+                            "external_network",
+                            "git_write",
+                            "real_integration",
+                            "kanban_real_write",
+                            "telegram_real_send",
+                            "ollama_real_inference",
+                            "worker_real_execution"
+                        ],
+    "human_gate_required_for_real_integrations":  true
+}

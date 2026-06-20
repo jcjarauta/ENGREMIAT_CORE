@@ -1,0 +1,12 @@
+﻿{
+    "mapping_id":  "OLLAMA_RESPONSE_MAPPING_V1",
+    "from":  "OLLAMA_RAW_RESPONSE",
+    "to":  "MODEL_RESPONSE_NORMALIZED",
+    "fields":  {
+                   "response":  "normalized_output.content",
+                   "model":  "adapter_metadata.model",
+                   "created_at":  "evidence.timestamp_utc",
+                   "done":  "adapter_metadata.done"
+               },
+    "unknown_fields_policy":  "preserve_in_metadata"
+}

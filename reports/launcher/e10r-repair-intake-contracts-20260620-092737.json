@@ -1,0 +1,18 @@
+﻿{
+    "package_id":  "ENGREMIAT_DATA_INTAKE_001",
+    "stage":  "E10R_REPAIR_INTAKE_CONTRACTS",
+    "status":  "PASS",
+    "created_contracts":  [
+                              {
+                                  "path":  "C:\\ENGREMIAT_CORE\\documents\\intake\\contracts\\intake-source-contract.json",
+                                  "status":  "PASS"
+                              },
+                              {
+                                  "path":  "C:\\ENGREMIAT_CORE\\documents\\intake\\contracts\\normalized-profile-contract.json",
+                                  "status":  "PASS"
+                              }
+                          ],
+    "manual_test":  "INICIO [15] \u003e Centro Documental [17] \u003e Data Intake [1] \u003e [b] \u003e Centro Documental [15]",
+    "next":  "RETRY_E10_VALIDATE_AND_RUN_MANUAL_ROUTE",
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e10r-repair-intake-contracts-20260620-092737.json"
+}

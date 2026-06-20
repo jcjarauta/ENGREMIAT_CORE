@@ -1,0 +1,35 @@
+﻿{
+    "objective":  "ENGREMIAT_HUMAN_USABLE_DAILY_WORKBENCH_086_095",
+    "stage":  "E90",
+    "gate":  "PREVIEW_TO_APPLY_AUTHORIZATION_GATE",
+    "gate_locked":  true,
+    "authorization_status":  "PENDING_EXPLICIT_HUMAN_AUTHORIZATION",
+    "human_approval_required":  true,
+    "real_apply_allowed":  false,
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "unlock_conditions":  [
+                              "EXPLICIT_HUMAN_APPROVAL",
+                              "PREVIEW_REVIEWED",
+                              "TARGET_FILES_DECLARED",
+                              "ROLLBACK_PLAN_PRESENT",
+                              "POSTCHECK_PLAN_PRESENT",
+                              "RECEIPT_PLAN_PRESENT",
+                              "NO_PENDING_ERR",
+                              "NO_PENDING_NO_GO"
+                          ],
+    "denied_conditions":  [
+                              "auto_apply_true",
+                              "remote_execution_true",
+                              "external_network_true",
+                              "worker_executed_true",
+                              "kanban_real_write_true",
+                              "git_write_true_without_authorization"
+                          ],
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "kanban_real_write":  false,
+    "created_utc":  "2026-06-17T11:13:06.9062023Z"
+}

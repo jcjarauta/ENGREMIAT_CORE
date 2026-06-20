@@ -1,0 +1,37 @@
+﻿{
+    "project_id":  "PROJECT-GRANT-001",
+    "name":  "Memoria de subvencion",
+    "project_type":  "GRANT_APPLICATION",
+    "objective":  "Preparar documento base para convocatoria.",
+    "status":  "DRAFT",
+    "tasks":  [
+                  "TASK-GRANT-001",
+                  "TASK-GRANT-002"
+              ],
+    "workers":  [
+                    "HUMAN-WORKER-001",
+                    "AI-ASSISTANT-LOCAL-001"
+                ],
+    "inputs":  [
+                   {
+                       "type":  "PDF",
+                       "path":  "evidence/input/bases-convocatoria.pdf"
+                   }
+               ],
+    "outputs":  [
+                    {
+                        "type":  "GRANT_APPLICATION",
+                        "path":  "resources/grants/grant-application-draft.md"
+                    }
+                ],
+    "resources":  [
+
+                  ],
+    "evidence":  [
+
+                 ],
+    "gate":  {
+                 "required":  true,
+                 "current_decision":  "HUMAN_REVIEW_REQUIRED"
+             }
+}

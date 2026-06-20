@@ -1,0 +1,58 @@
+﻿{
+    "policy_id":  "output-evidence-policy.v1",
+    "default_required":  [
+                             "source",
+                             "validation_status",
+                             "created_at"
+                         ],
+    "by_output_type":  [
+                           {
+                               "type":  "PROPOSAL",
+                               "required":  [
+                                                "need_id",
+                                                "rationale",
+                                                "proposal_report"
+                                            ]
+                           },
+                           {
+                               "type":  "DECISION",
+                               "required":  [
+                                                "target_output_id",
+                                                "human_actor",
+                                                "decision_reason"
+                                            ]
+                           },
+                           {
+                               "type":  "TASK_PLAN",
+                               "required":  [
+                                                "source_proposal_id",
+                                                "task_list",
+                                                "gate"
+                                            ]
+                           },
+                           {
+                               "type":  "RESOURCE_QUERY",
+                               "required":  [
+                                                "objective",
+                                                "requested_capabilities"
+                                            ]
+                           },
+                           {
+                               "type":  "COMPOSITION_BLUEPRINT",
+                               "required":  [
+                                                "selected_resources",
+                                                "compatibility_check",
+                                                "gate"
+                                            ]
+                           },
+                           {
+                               "type":  "BUILD_PACKAGE",
+                               "required":  [
+                                                "source_blueprint_id",
+                                                "dry_run",
+                                                "execution_policy",
+                                                "gate"
+                                            ]
+                           }
+                       ]
+}

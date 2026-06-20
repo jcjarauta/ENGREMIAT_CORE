@@ -1,0 +1,15 @@
+﻿{
+    "package_id":  "ENGREMIAT_OPERATOR_CONTEXT_AND_DECISION_TREE_001",
+    "stage":  "E07Z_CONTEXT_CENTRAL_COMMAND_ALIAS_NORMALIZER",
+    "status":  "PASS",
+    "readiness":  100,
+    "fixed":  [
+                  "create-module_alias",
+                  "open-project_alias",
+                  "create-project_alias",
+                  "open-module_alias",
+                  "library_alias",
+                  "central_alias_normalizer"
+              ],
+    "next":  "retest_project_2_create_module"
+}

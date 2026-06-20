@@ -1,0 +1,21 @@
+﻿{
+    "policy_id":  "observation-policy.v1",
+    "default_mode":  "READ_ONLY_LOCAL",
+    "allowed":  [
+                    "read json",
+                    "read markdown",
+                    "count modules",
+                    "count resources",
+                    "scan reports",
+                    "scan NEXT_OBJECTIVE"
+                ],
+    "blocked":  [
+                    "network",
+                    "ollama inference",
+                    "git write",
+                    "core changes",
+                    "tool execution",
+                    "resource publication"
+                ],
+    "evidence":  "observation report"
+}

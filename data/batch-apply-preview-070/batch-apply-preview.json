@@ -1,0 +1,70 @@
+﻿{
+    "objective":  "ENGREMIAT_MULTI_WORKER_ORCHESTRATION_AND_REAL_VALUE_PIPELINE_066_075",
+    "stage":  "E70",
+    "batch_id":  "E70_BATCH_APPLY_PREVIEW_001",
+    "mode":  "PREVIEW_ONLY",
+    "selected_proposals":  [
+                               "MW-PROPOSAL-PLANNER-001",
+                               "MW-PROPOSAL-BUILDER-001",
+                               "MW-PROPOSAL-DOCS-001"
+                           ],
+    "planned_changes":  [
+                            {
+                                "proposal_id":  "MW-PROPOSAL-PLANNER-001",
+                                "role_id":  "PLANNER",
+                                "suggested_change":  "Crear modelo de pipeline de valor multi-worker",
+                                "target_files":  [
+                                                     "data/value-pipeline-071/value-pipeline-model.json"
+                                                 ],
+                                "risk":  "MEDIUM",
+                                "rollback_required":  true,
+                                "postcheck_required":  true,
+                                "apply_executed":  false
+                            },
+                            {
+                                "proposal_id":  "MW-PROPOSAL-BUILDER-001",
+                                "role_id":  "BUILDER",
+                                "suggested_change":  "Crear preview de lote sin modificar archivos objetivo",
+                                "target_files":  [
+                                                     "data/batch-apply-preview-070/batch-apply-preview.json"
+                                                 ],
+                                "risk":  "MEDIUM",
+                                "rollback_required":  true,
+                                "postcheck_required":  true,
+                                "apply_executed":  false
+                            },
+                            {
+                                "proposal_id":  "MW-PROPOSAL-DOCS-001",
+                                "role_id":  "DOCS",
+                                "suggested_change":  "Crear guia breve para decision multi-worker",
+                                "target_files":  [
+                                                     "docs/MULTI_WORKER_ARBITRATION_GUIDE.md"
+                                                 ],
+                                "risk":  "LOW",
+                                "rollback_required":  false,
+                                "postcheck_required":  true,
+                                "apply_executed":  false
+                            }
+                        ],
+    "target_files":  [
+                         "data/value-pipeline-071/value-pipeline-model.json",
+                         "data/batch-apply-preview-070/batch-apply-preview.json",
+                         "docs/MULTI_WORKER_ARBITRATION_GUIDE.md"
+                     ],
+    "duplicate_target_files":  [
+
+                               ],
+    "risk":  "MEDIUM",
+    "rollback_required":  true,
+    "postcheck_required":  true,
+    "human_gate_required":  true,
+    "real_apply_allowed":  false,
+    "apply_executed":  false,
+    "batch_apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "created_at":  "2026-06-17T12:39:16"
+}

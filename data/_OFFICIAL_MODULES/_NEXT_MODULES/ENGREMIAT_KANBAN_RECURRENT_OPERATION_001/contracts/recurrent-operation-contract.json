@@ -1,0 +1,20 @@
+﻿{
+    "package_id":  "ENGREMIAT_KANBAN_RECURRENT_OPERATION_001",
+    "contract":  "KANBAN_RECURRENT_OPERATION_V1",
+    "mode":  "SIMULATED_SCHEDULE_ONLY",
+    "source_loop":  "ENGREMIAT_KANBAN_OPERATION_LOOP_001",
+    "allowed_without_gate":  [
+                                 "snapshot",
+                                 "proposal",
+                                 "schedule_preview",
+                                 "safe_blocked_result",
+                                 "dashboard"
+                             ],
+    "blocked_without_gate":  [
+                                 "real_scheduler_create",
+                                 "external_write",
+                                 "api_call",
+                                 "git_commit",
+                                 "auto_execute"
+                             ]
+}

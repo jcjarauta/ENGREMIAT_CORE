@@ -1,0 +1,30 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_ACTION_TEMPLATE_017",
+    "stage":  "E03",
+    "samples":  [
+                    {
+                        "name":  "DEFER_SAMPLE",
+                        "decision":  "DEFER",
+                        "human_confirmation":  false,
+                        "execution_allowed":  false,
+                        "approved":  false,
+                        "expected":  "BLOCKED_BY_DEFAULT"
+                    },
+                    {
+                        "name":  "APPROVE_SAMPLE",
+                        "decision":  "APPROVE",
+                        "human_confirmation":  true,
+                        "execution_allowed":  true,
+                        "approved":  true,
+                        "expected":  "ALLOWED_BY_GATE_BUT_NO_AUTO_APPLY"
+                    },
+                    {
+                        "name":  "REJECT_SAMPLE",
+                        "decision":  "REJECT",
+                        "human_confirmation":  true,
+                        "execution_allowed":  false,
+                        "approved":  false,
+                        "expected":  "BLOCKED_BY_REJECTION"
+                    }
+                ]
+}

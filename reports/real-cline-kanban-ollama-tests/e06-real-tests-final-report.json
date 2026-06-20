@@ -1,0 +1,21 @@
+﻿{
+    "objective":  "ENGREMIAT_REAL_CLINE_KANBAN_OLLAMA_TESTS_011",
+    "stage":  "E06",
+    "readiness":  70,
+    "decision":  "NO_GO_REPAIR",
+    "next":  "REPAIR_OR_COMPLETE_REAL_TESTS",
+    "missing_artifacts":  [
+                              "reports/real-cline-kanban-ollama-tests/e01-service-inventory-report.json"
+                          ],
+    "decision_file":  "data/real-cline-kanban-ollama-tests/sample-human-proposal-decision.json",
+    "manifest":  "data/real-cline-kanban-ollama-tests/real-cline-kanban-ollama-tests-manifest.json",
+    "close_report":  "docs/REAL_CLINE_KANBAN_OLLAMA_TESTS_CLOSE_REPORT.md",
+    "next_objective":  "docs/NEXT_OBJECTIVE_REAL_TESTS_CONTINUE_OR_REPAIR.md",
+    "no_apply":  true,
+    "git_write":  false,
+    "remote_execution":  false,
+    "auto_apply":  false,
+    "shared_repo_edit":  false,
+    "browser_opened":  false,
+    "timestamp_utc":  "2026-06-16T19:48:56.4831127Z"
+}

@@ -1,0 +1,69 @@
+﻿{
+    "package_id":  "ENGREMIAT_REAL_INTAKE_IMPORTER_001",
+    "stage":  "RUN_IMPORT_REAL_HUMAN_INTAKE_JSON",
+    "roadmap_id":  "real-intake-roadmap-preview.20260619-100319",
+    "status":  "PREVIEW_ONLY",
+    "source_intake":  "C:\\ENGREMIAT_CORE\\data\\real-intake-importer\\real-human-intake.accepted.20260619-100319.json",
+    "project_name":  "Primer intake real para construir roadmap automático en ENGREMIAT",
+    "priority":  "ALTA",
+    "authorization_level":  "PREVIEW_ONLY",
+    "human_need":  "Necesitamos una forma sencilla de introducir una idea humana de proyecto y convertirla en una estructura ordenada de desarrollo, sin depender de navegador, memoria dispersa ni prompts largos repetidos.",
+    "desired_result":  "Obtener un intake exportable en JSON y Markdown que pueda alimentar una propuesta de roadmap revisable por el humano antes de preparar cualquier worker o automatización.",
+    "constraints":  "Solo local.\nSin backend.\nSin red.\nSin worker real.\nSin Git.\nSin ejecución automática.\nExportación manual.\nDebe ser comprensible para humano y útil para generar roadmap.",
+    "available_resources":  "C:\\ENGREMIAT_CORE\nDashboard local de intake real\nPaquete cerrado ENGREMIAT_PROJECT_BUILDER_TO_WORKER_LOOP_001\nOllama local disponible para fases futuras\nCline/Kanban disponible para organización futura\nPowerShell como operador local",
+    "success_criteria":  "La UI abre correctamente.\nEl formulario permite rellenar todos los campos.\nEl botón Generar intake produce JSON válido.\nEl JSON contiene safety.local_only=true.\nEl JSON contiene worker_execution=false.\nEl JSON contiene execute_now=false.\nEl Markdown descargado resume correctamente el proyecto.\nEl resultado permite pasar a una etapa E02 de roadmap preview.",
+    "proposed_stages":  [
+                            {
+                                "stage_id":  "E01",
+                                "name":  "Normalizar intake real",
+                                "goal":  "Guardar el JSON exportado como intake aceptado y canónico.",
+                                "output":  "real-human-intake.accepted.latest.json",
+                                "risk":  "LOW",
+                                "human_gate":  "PASS"
+                            },
+                            {
+                                "stage_id":  "E02",
+                                "name":  "Roadmap preview",
+                                "goal":  "Convertir el intake en etapas revisables antes de worker.",
+                                "output":  "real-intake-roadmap-preview.latest.json",
+                                "risk":  "LOW",
+                                "human_gate":  "REVIEW"
+                            },
+                            {
+                                "stage_id":  "E03",
+                                "name":  "Gate humano",
+                                "goal":  "Aprobar, editar, rechazar o aplazar el roadmap.",
+                                "output":  "real-roadmap-approval-gate.json",
+                                "risk":  "LOW",
+                                "human_gate":  "REQUIRED"
+                            },
+                            {
+                                "stage_id":  "E04",
+                                "name":  "Worker packet preview",
+                                "goal":  "Preparar paquete para worker sin ejecución real.",
+                                "output":  "real-worker-packet-preview.json",
+                                "risk":  "MEDIUM",
+                                "human_gate":  "REQUIRED"
+                            },
+                            {
+                                "stage_id":  "E05",
+                                "name":  "Dry-run controlado",
+                                "goal":  "Simular la ejecución y mantener NO_GO sin autorización explícita.",
+                                "output":  "controlled-dry-run-result.json",
+                                "risk":  "MEDIUM",
+                                "human_gate":  "REQUIRED"
+                            }
+                        ],
+    "safety":  {
+                   "local_only":  true,
+                   "preview_only":  true,
+                   "execute_now":  false,
+                   "worker_execution":  false,
+                   "network":  false,
+                   "git_write":  false,
+                   "external_ai":  false,
+                   "manual_review_required":  true
+               },
+    "decision":  "GO_ROADMAP_PREVIEW_ONLY",
+    "next":  "E02_BUILD_REAL_ROADMAP_REVIEW_DASHBOARD"
+}

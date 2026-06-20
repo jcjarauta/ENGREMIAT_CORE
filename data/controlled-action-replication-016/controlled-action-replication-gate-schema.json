@@ -1,0 +1,23 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_ACTION_REPLICATION_016",
+    "stage":  "E02",
+    "block":  "B02.1",
+    "step":  "P02.1.1",
+    "gate_id":  "CONTROLLED-ACTION-REPLICATION-GATE-001",
+    "default_decision":  "DEFER",
+    "allowed_decisions":  [
+                              "APPROVE",
+                              "DEFER",
+                              "REJECT",
+                              "REPAIR"
+                          ],
+    "human_confirmation_required":  true,
+    "execution_allowed_on_approve":  true,
+    "allow_apply":  false,
+    "git_write":  false,
+    "remote_execution":  false,
+    "auto_apply":  false,
+    "single_card":  true,
+    "notes":  "DEFER por defecto.",
+    "timestamp_utc":  "2026-06-17T06:25:11.1040560Z"
+}

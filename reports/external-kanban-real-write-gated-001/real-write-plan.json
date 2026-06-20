@@ -1,0 +1,60 @@
+﻿{
+    "package_id":  "ENGREMIAT_EXTERNAL_KANBAN_REAL_WRITE_GATED_001",
+    "stage":  "E05",
+    "status":  "PASS",
+    "mode":  "DRY_RUN_PLAN",
+    "operations_count":  5,
+    "external_write_executed":  false,
+    "operations":  [
+                       {
+                           "operation_id":  "REAL-WRITE-PLAN-0001",
+                           "target":  "MANUAL_TSV_REVIEW",
+                           "card_id":  "KANBAN-SEED-0017",
+                           "action":  "MANUAL_EXPORT",
+                           "execute":  false,
+                           "authorization_required":  "AUTORIZO_EXTERNAL_KANBAN_REAL_WRITE_GATED",
+                           "title":  "VALIDATION: e06-close-validation-report.json",
+                           "priority_score":  58
+                       },
+                       {
+                           "operation_id":  "REAL-WRITE-PLAN-0002",
+                           "target":  "MANUAL_TSV_REVIEW",
+                           "card_id":  "KANBAN-SEED-0018",
+                           "action":  "MANUAL_EXPORT",
+                           "execute":  false,
+                           "authorization_required":  "AUTORIZO_EXTERNAL_KANBAN_REAL_WRITE_GATED",
+                           "title":  "VALIDATION: modular-baseline-validation-report.json",
+                           "priority_score":  58
+                       },
+                       {
+                           "operation_id":  "REAL-WRITE-PLAN-0003",
+                           "target":  "MANUAL_TSV_REVIEW",
+                           "card_id":  "KANBAN-SEED-0019",
+                           "action":  "MANUAL_EXPORT",
+                           "execute":  false,
+                           "authorization_required":  "AUTORIZO_EXTERNAL_KANBAN_REAL_WRITE_GATED",
+                           "title":  "VALIDATION: state-module-validation-report.json",
+                           "priority_score":  58
+                       },
+                       {
+                           "operation_id":  "REAL-WRITE-PLAN-0004",
+                           "target":  "MANUAL_TSV_REVIEW",
+                           "card_id":  "KANBAN-SEED-0014",
+                           "action":  "MANUAL_EXPORT",
+                           "execute":  false,
+                           "authorization_required":  "AUTORIZO_EXTERNAL_KANBAN_REAL_WRITE_GATED",
+                           "title":  "VALIDATION: e03-gate-validation-report.json",
+                           "priority_score":  58
+                       },
+                       {
+                           "operation_id":  "REAL-WRITE-PLAN-0005",
+                           "target":  "MANUAL_TSV_REVIEW",
+                           "card_id":  "KANBAN-SEED-0015",
+                           "action":  "MANUAL_EXPORT",
+                           "execute":  false,
+                           "authorization_required":  "AUTORIZO_EXTERNAL_KANBAN_REAL_WRITE_GATED",
+                           "title":  "VALIDATION: e04-simulation-validation-report.json",
+                           "priority_score":  58
+                       }
+                   ]
+}

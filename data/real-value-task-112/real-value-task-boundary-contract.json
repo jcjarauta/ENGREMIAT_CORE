@@ -1,0 +1,52 @@
+﻿{
+    "objective":  "ENGREMIAT_REAL_VALUE_TASK_EXECUTION_LOOP_112_121",
+    "stage":  "E112",
+    "contract":  "REAL_VALUE_TASK_BOUNDARY_CONTRACT",
+    "version":  "1.12.0-local",
+    "purpose":  "Impedir que una tarea de valor real derive en auto apply, worker autonomo, red externa, git write o Kanban real write.",
+    "allowed_scope":  [
+                          "local_files_only",
+                          "safe_test_artifacts",
+                          "explicit_human_decision",
+                          "preview_before_apply",
+                          "rollback_required",
+                          "postcheck_required",
+                          "receipt_required"
+                      ],
+    "blocked_actions":  [
+                            "AUTO_APPLY",
+                            "APPLY_WITHOUT_GATE",
+                            "REMOTE_EXECUTION",
+                            "EXTERNAL_NETWORK",
+                            "WORKER_EXECUTION",
+                            "KANBAN_REAL_WRITE",
+                            "GIT_WRITE",
+                            "MODIFY_SECRETS",
+                            "MODIFY_SOURCE_CODE_WITHOUT_SCOPE"
+                        ],
+    "authorization_required_for":  [
+                                       "controlled_local_apply",
+                                       "kanban_real_write",
+                                       "git_write",
+                                       "external_network",
+                                       "worker_execution",
+                                       "source_code_write"
+                                   ],
+    "success_requires":  [
+                             "observable_value",
+                             "evidence_record",
+                             "postcheck_or_safe_no_go",
+                             "human_readable_close_report"
+                         ],
+    "default_decision":  "DEFER",
+    "gate_locked_by_default":  true,
+    "task_executes":  false,
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "kanban_real_write":  false,
+    "created_utc":  "2026-06-17T12:05:29.1496091Z"
+}

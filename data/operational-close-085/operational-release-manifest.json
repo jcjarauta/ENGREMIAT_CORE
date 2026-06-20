@@ -1,0 +1,87 @@
+﻿{
+    "objective":  "ENGREMIAT_NEXT_REAL_VALUE_OPERATIONALIZATION_076_085",
+    "stage":  "E85",
+    "version":  "0.85.0-local",
+    "release":  "NEXT_REAL_VALUE_OPERATIONALIZATION_076_085",
+    "created_utc":  "2026-06-17T11:01:40.4505436Z",
+    "stages":  [
+                   "E76 Operational Value Queue",
+                   "E77 Human Daily Console",
+                   "E78 Worker Proposal Intake V2",
+                   "E79 Evidence-to-Decision Loop",
+                   "E80 Local Apply Lab V3",
+                   "E81 Value Metrics",
+                   "E82 Kanban Authorized Bridge Preview",
+                   "E83 Release Controls",
+                   "E84 Regression",
+                   "E85 Close"
+               ],
+    "evidence_summary":  "reports\\operational-close-085\\operational-evidence-summary.json",
+    "artifacts":  [
+                      {
+                          "path":  "reports\\operational-value-076\\e76-operational-value-readiness-report.json",
+                          "exists":  true,
+                          "json_valid":  true,
+                          "status":  "OK"
+                      },
+                      {
+                          "path":  "reports\\human-daily-console-077\\e77-human-daily-console-readiness-report.json",
+                          "exists":  true,
+                          "json_valid":  true,
+                          "status":  "OK"
+                      },
+                      {
+                          "path":  "reports\\worker-proposal-intake-078\\e78-worker-proposal-intake-readiness-report.json",
+                          "exists":  true,
+                          "json_valid":  true,
+                          "status":  "OK"
+                      },
+                      {
+                          "path":  "reports\\evidence-decision-loop-079\\e79-evidence-decision-loop-readiness-report.json",
+                          "exists":  true,
+                          "json_valid":  true,
+                          "status":  "OK"
+                      },
+                      {
+                          "path":  "reports\\local-apply-lab-080\\e80-local-apply-lab-readiness-report.json",
+                          "exists":  true,
+                          "json_valid":  true,
+                          "status":  "OK"
+                      },
+                      {
+                          "path":  "reports\\value-metrics-081\\e81-value-metrics-readiness-report.json",
+                          "exists":  true,
+                          "json_valid":  true,
+                          "status":  "OK"
+                      },
+                      {
+                          "path":  "reports\\kanban-bridge-preview-082\\e82-kanban-bridge-preview-readiness-report.json",
+                          "exists":  true,
+                          "json_valid":  true,
+                          "status":  "OK"
+                      },
+                      {
+                          "path":  "reports\\release-controls-083\\e83-release-controls-readiness-report.json",
+                          "exists":  true,
+                          "json_valid":  true,
+                          "status":  "OK"
+                      },
+                      {
+                          "path":  "reports\\operational-regression-084\\e84-operational-regression-readiness-report.json",
+                          "exists":  true,
+                          "json_valid":  true,
+                          "status":  "OK"
+                      }
+                  ],
+    "human_governed":  true,
+    "operationalized":  true,
+    "real_execution_enabled":  false,
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "kanban_real_write":  false,
+    "release_ready":  true
+}

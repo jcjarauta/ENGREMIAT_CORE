@@ -1,0 +1,36 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_OPERATIVE_WORKER_FLOW_019_025",
+    "stage":  "E23",
+    "created_at":  "2026-06-17T10:51:13.7548190+02:00",
+    "readiness":  70,
+    "decision":  "NO_GO_E23_HUMAN_APPROVAL_REQUIRED_BEFORE_REAL_APPLY",
+    "next":  "WAIT_EXPLICIT_HUMAN_APPROVAL_FOR_FIRST_USEFUL_LOCAL_CHANGE",
+    "checks":  {
+                   "final_apply_gate_created":  true,
+                   "authorization_receipt_created":  true,
+                   "minimal_change_prepared":  true,
+                   "apply_receipt_created":  true,
+                   "validation_created":  true,
+                   "rollback_receipt_created":  true,
+                   "approval_false":  true,
+                   "apply_false":  true,
+                   "auto_apply_false":  true,
+                   "remote_execution_false":  true,
+                   "git_write_false":  true,
+                   "side_effects_false":  true,
+                   "unauthorized_writes_false":  true,
+                   "rollback_ready":  true
+               },
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "artifacts":  [
+                      "data/first-useful-local-change-023/final-apply-gate.json",
+                      "data/first-useful-local-change-023/receipts/final-apply-authorization-receipt.json",
+                      "data/first-useful-local-change-023/applied-minimal-change.json",
+                      "data/first-useful-local-change-023/receipts/first-useful-local-change-receipt.json",
+                      "reports/first-useful-local-change-023/e23-local-change-validation-report.json",
+                      "data/first-useful-local-change-023/receipts/rollback-readiness-receipt.json"
+                  ]
+}

@@ -1,0 +1,19 @@
+﻿{
+    "schema_id":  "resource-dependency-model.v1",
+    "dependency_types":  [
+                             "REQUIRES",
+                             "OPTIONAL",
+                             "REPLACES",
+                             "EXTENDS",
+                             "INCOMPATIBLE_WITH",
+                             "COMPOSES_WITH"
+                         ],
+    "fields":  [
+                   "resource_id",
+                   "dependency_resource_id",
+                   "dependency_type",
+                   "reason",
+                   "required_version",
+                   "compatibility_status"
+               ]
+}

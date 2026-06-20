@@ -1,0 +1,69 @@
+﻿{
+    "package_id":  "ENGREMIAT_DESKTOP_TERMINAL_OPERATOR_001",
+    "stage":  "E03_OPERATOR_BOOT_STATUS",
+    "status":  "PASS",
+    "readiness":  100,
+    "decision":  "GO_OPERATOR_BOOT_STATUS_VALIDATED",
+    "boot_status":  "C:\\ENGREMIAT_CORE\\data\\desktop-terminal-operator\\operator-boot-status.v1.json",
+    "status_command":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-status.ps1",
+    "boot_command":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-boot-status.ps1",
+    "commands":  12,
+    "checks":  [
+                   {
+                       "id":  "ENGREMIAT_TERMINAL_OPERATOR.cmd_exists",
+                       "ok":  true,
+                       "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_TERMINAL_OPERATOR.cmd"
+                   },
+                   {
+                       "id":  "ENGREMIAT_TERMINAL_OPERATOR.lnk_exists",
+                       "ok":  true,
+                       "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_TERMINAL_OPERATOR.lnk"
+                   },
+                   {
+                       "id":  "Start-EngremiatDesktopOperator.ps1_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1"
+                   },
+                   {
+                       "id":  "eng-status.ps1_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-status.ps1"
+                   },
+                   {
+                       "id":  "eng-boot-status.ps1_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-boot-status.ps1"
+                   },
+                   {
+                       "id":  "command-map.json_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\data\\desktop-terminal-operator\\command-map.json"
+                   },
+                   {
+                       "id":  "BOVEDA_PROJECT_ENGREMIAT_SIMULATION_LAB_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_SIMULATION_LAB"
+                   },
+                   {
+                       "id":  "start_script_resolves_root_from_scriptdir",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1"
+                   },
+                   {
+                       "id":  "commands_count_ge_10",
+                       "ok":  true,
+                       "count":  12
+                   }
+               ],
+    "failed_checks":  [
+
+                      ],
+    "safety":  {
+                   "local_only":  true,
+                   "status_only":  true,
+                   "no_real_worker_execution":  true,
+                   "no_git_write":  true,
+                   "no_external_network":  true
+               },
+    "next":  "E04_COMMAND_ROUTER"
+}

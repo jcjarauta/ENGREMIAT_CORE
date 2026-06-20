@@ -1,0 +1,23 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_APPLY_OR_REPAIR_014",
+    "stage":  "E05",
+    "readiness":  100,
+    "decision":  "GO_E05_CLOSED",
+    "next":  "NEXT_OBJECTIVE_AFTER_CONTROLLED_APPLY_OR_REPAIR",
+    "receipt_file":  "data\\controlled-apply-or-repair-014\\receipts\\controlled-action-receipt.json",
+    "postcheck_file":  "reports\\controlled-apply-or-repair-014\\e04-controlled-postcheck-report.json",
+    "gate_file":  "data\\controlled-apply-or-repair-014\\sample-human-gate-decision.json",
+    "validation_ok":  true,
+    "artifacts":  [
+                      "reports\\controlled-apply-or-repair-014\\e04-controlled-postcheck-report.json",
+                      "data\\controlled-apply-or-repair-014\\controlled-action-receipt.json",
+                      "data\\controlled-apply-or-repair-014\\controlled-apply-or-repair-014-manifest.json",
+                      "docs\\CONTROLLED_APPLY_OR_REPAIR_CLOSE_REPORT.md",
+                      "docs\\NEXT_OBJECTIVE_AFTER_CONTROLLED_APPLY_OR_REPAIR.md"
+                  ],
+    "no_apply":  true,
+    "git_write":  false,
+    "remote_execution":  false,
+    "auto_apply":  false,
+    "timestamp_utc":  "2026-06-17T06:02:56.6144721Z"
+}

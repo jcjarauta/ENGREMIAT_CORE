@@ -1,0 +1,25 @@
+﻿{
+    "package_id":  "ENGREMIAT_OBSIDIAN_SYSTEM_BRIDGE_001",
+    "stage":  "E12_REGISTER_CLINE_KANBAN_SIDEBAR_NO_GO",
+    "status":  "PASS",
+    "cline_kanban_running":  true,
+    "cline_kanban_url":  "http://127.0.0.1:3484/engremiat-core",
+    "sidebar_result":  "KANBAN_SIDEBAR_CARD_CREATION_NOT_AVAILABLE",
+    "sidebar_card_creation":  "NO_GO",
+    "ai_sdk_warning_seen":  true,
+    "manual_step_to_cline_kanban_avoided":  false,
+    "alive_routes":  [
+                         "MARKDOWN_KANBAN_EXTENSION",
+                         "CLINE_MCP_SERVER",
+                         "CLINE_CLI_HEADLESS",
+                         "ENGREMIAT_LOCAL_KANBAN"
+                     ],
+    "summary":  "C:\\ENGREMIAT_CORE\\data\\obsidian-system-bridge-001\\evaluation\\E12_CLINE_KANBAN_SIDEBAR_NO_GO.md",
+    "write_to_cline":  false,
+    "browser":  false,
+    "api_called":  false,
+    "git":  false,
+    "network":  false,
+    "worker_real_execution":  false,
+    "next":  "E13_VALIDATE_MARKDOWN_KANBAN_VISUAL_RESULT_OR_BUILD_LOCAL_KANBAN_FALLBACK"
+}

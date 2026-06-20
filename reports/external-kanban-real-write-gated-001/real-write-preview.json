@@ -1,0 +1,75 @@
+﻿{
+    "package_id":  "ENGREMIAT_EXTERNAL_KANBAN_REAL_WRITE_GATED_001",
+    "status":  "PASS",
+    "source_cards":  25,
+    "selected_cards":  5,
+    "target":  "MANUAL_TSV_REVIEW",
+    "external_write_executed":  false,
+    "cards":  [
+                  {
+                      "rank":  1,
+                      "card_id":  "KANBAN-SEED-0017",
+                      "priority_score":  58,
+                      "title":  "VALIDATION: e06-close-validation-report.json",
+                      "type":  "VALIDATION",
+                      "column":  "VALIDATION",
+                      "source_path":  "C:\\ENGREMIAT_CORE\\reports\\controlled-worker-adapters\\e06-close-validation-report.json",
+                      "reasons":  [
+                                      "VALIDATION: mejora fiabilidad"
+                                  ],
+                      "target_status":  "PREVIEW_ONLY_NO_EXTERNAL_WRITE"
+                  },
+                  {
+                      "rank":  2,
+                      "card_id":  "KANBAN-SEED-0018",
+                      "priority_score":  58,
+                      "title":  "VALIDATION: modular-baseline-validation-report.json",
+                      "type":  "VALIDATION",
+                      "column":  "VALIDATION",
+                      "source_path":  "C:\\ENGREMIAT_CORE\\reports\\core-consolidation-205\\modular-baseline-validation-report.json",
+                      "reasons":  [
+                                      "VALIDATION: mejora fiabilidad"
+                                  ],
+                      "target_status":  "PREVIEW_ONLY_NO_EXTERNAL_WRITE"
+                  },
+                  {
+                      "rank":  3,
+                      "card_id":  "KANBAN-SEED-0019",
+                      "priority_score":  58,
+                      "title":  "VALIDATION: state-module-validation-report.json",
+                      "type":  "VALIDATION",
+                      "column":  "VALIDATION",
+                      "source_path":  "C:\\ENGREMIAT_CORE\\reports\\core-consolidation-206\\state-module-validation-report.json",
+                      "reasons":  [
+                                      "VALIDATION: mejora fiabilidad"
+                                  ],
+                      "target_status":  "PREVIEW_ONLY_NO_EXTERNAL_WRITE"
+                  },
+                  {
+                      "rank":  4,
+                      "card_id":  "KANBAN-SEED-0014",
+                      "priority_score":  58,
+                      "title":  "VALIDATION: e03-gate-validation-report.json",
+                      "type":  "VALIDATION",
+                      "column":  "VALIDATION",
+                      "source_path":  "C:\\ENGREMIAT_CORE\\reports\\controlled-worker-adapters\\e03-gate-validation-report.json",
+                      "reasons":  [
+                                      "VALIDATION: mejora fiabilidad"
+                                  ],
+                      "target_status":  "PREVIEW_ONLY_NO_EXTERNAL_WRITE"
+                  },
+                  {
+                      "rank":  5,
+                      "card_id":  "KANBAN-SEED-0015",
+                      "priority_score":  58,
+                      "title":  "VALIDATION: e04-simulation-validation-report.json",
+                      "type":  "VALIDATION",
+                      "column":  "VALIDATION",
+                      "source_path":  "C:\\ENGREMIAT_CORE\\reports\\controlled-worker-adapters\\e04-simulation-validation-report.json",
+                      "reasons":  [
+                                      "VALIDATION: mejora fiabilidad"
+                                  ],
+                      "target_status":  "PREVIEW_ONLY_NO_EXTERNAL_WRITE"
+                  }
+              ]
+}

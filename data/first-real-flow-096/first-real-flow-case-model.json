@@ -1,0 +1,28 @@
+﻿{
+    "objective":  "ENGREMIAT_FIRST_REAL_CONTROLLED_VALUE_FLOW",
+    "stage":  "E96",
+    "name":  "Real Flow Scope",
+    "version":  "0.96.0-local",
+    "purpose":  "Definir el primer flujo real controlado de valor extremo a extremo sobre un caso pequeno, verificable y reversible.",
+    "case_id":  "FRF-096-001",
+    "case_title":  "Primer flujo real controlado local",
+    "flow_steps":  [
+                       "human_need_intake",
+                       "proposal_and_preview",
+                       "human_authorization_gate",
+                       "controlled_local_apply_or_no_go",
+                       "evidence_and_close"
+                   ],
+    "value_hypothesis":  "Demostrar que ENGREMIAT puede transformar una necesidad humana en propuesta, preview, decision, apply local controlado o NO_GO seguro y evidencia final.",
+    "scope":  "LOCAL_ONLY_SAFE_ARTIFACTS",
+    "real_world_value":  "Validar el sistema operativo humano-maquina con un flujo verificable, no solo infraestructura.",
+    "flow_executes":  false,
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "kanban_real_write":  false,
+    "created_utc":  "2026-06-17T11:23:54.0165523Z"
+}

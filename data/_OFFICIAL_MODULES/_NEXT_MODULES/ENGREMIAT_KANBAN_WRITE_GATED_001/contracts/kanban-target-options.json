@@ -1,0 +1,25 @@
+﻿{
+    "targets":  [
+                    {
+                        "external":  false,
+                        "status":  "DEFAULT_SAFE",
+                        "target_type":  "LOCAL_ARTIFACT"
+                    },
+                    {
+                        "external":  true,
+                        "status":  "FUTURE_GATED",
+                        "target_type":  "GOOGLE_SHEETS"
+                    },
+                    {
+                        "external":  true,
+                        "status":  "FUTURE_GATED",
+                        "target_type":  "CLINE_KANBAN"
+                    },
+                    {
+                        "external":  false,
+                        "status":  "SAFE_EXPORT",
+                        "target_type":  "TSV_MANUAL_COPY"
+                    }
+                ],
+    "default":  "LOCAL_ARTIFACT"
+}

@@ -1,0 +1,18 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_ACTION_REPLICATION_016",
+    "stage":  "E02",
+    "readiness":  100,
+    "decision":  "GO_E02_GATE_READY",
+    "next":  "E03_DRY_RUN_CONTROLLED",
+    "validation_ok":  true,
+    "errors":  [
+
+               ],
+    "schema_file":  "data\\controlled-action-replication-016\\controlled-action-replication-gate-schema.json",
+    "sample_file":  "data\\controlled-action-replication-016\\sample-human-gate-decision.json",
+    "no_apply":  true,
+    "git_write":  false,
+    "remote_execution":  false,
+    "auto_apply":  false,
+    "timestamp_utc":  "2026-06-17T06:25:12.2394663Z"
+}

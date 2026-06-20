@@ -1,0 +1,14 @@
+﻿{
+    "policy_id":  "authorization-expiry-policy.v1",
+    "default_expiry":  "single_run",
+    "high_risk_expiry":  "single_action",
+    "critical_expiry":  "literal_authorization_per_action",
+    "renewal_requires":  "new_human_confirmation",
+    "never_permanent_for":  [
+                                "EXECUTE",
+                                "AGENT_EXECUTE",
+                                "WRITE_OFFICIAL",
+                                "PUBLISH_RESOURCE",
+                                "REMOTE_ACTION"
+                            ]
+}

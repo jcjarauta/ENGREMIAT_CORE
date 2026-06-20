@@ -1,0 +1,44 @@
+﻿{
+    "package_id":  "ENGREMIAT_PROJECT_START_FLOW_001",
+    "stage":  "E01R_ADD_OPERATIVE_CONTROL_TO_MODULE_VAULT",
+    "status":  "PASS",
+    "readiness":  100,
+    "decision":  "GO_MODULE_VAULT_OPERATIVE_CONTROL_ADDED",
+    "builder":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-module-vault-builder.ps1",
+    "latest_project":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706",
+    "latest_module_vault":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO",
+    "patched_new_project":  true,
+    "checks":  [
+                   {
+                       "id":  "builder_parse_ok",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-module-vault-builder.ps1"
+                   },
+                   {
+                       "id":  "latest_module_operational_control",
+                       "ok":  true,
+                       "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO"
+                   },
+                   {
+                       "id":  "latest_module_gates",
+                       "ok":  true,
+                       "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO"
+                   },
+                   {
+                       "id":  "latest_module_work_surfaces",
+                       "ok":  true,
+                       "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO"
+                   }
+               ],
+    "failed_checks":  [
+
+                      ],
+    "safety":  {
+                   "local_only":  true,
+                   "adds_module_operational_control":  true,
+                   "no_worker_real":  true,
+                   "no_git":  true,
+                   "no_network":  true
+               },
+    "next":  "OPEN_MODULE_VAULT_AND_VERIFY_OPERATIVE_GRAPH"
+}

@@ -1,0 +1,35 @@
+﻿<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>ENGREMIAT · Human Selection Dashboard Preview</title><style>body{font-family:Segoe UI,Arial;margin:24px;background:#111827;color:#e5e7eb}.card{border:1px solid #374151;border-radius:14px;padding:16px;margin:12px 0;background:#1f2937}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}.ok{color:#22c55e}.warn{color:#facc15}label{display:block;margin-bottom:6px}input,select,textarea{width:100%;box-sizing:border-box;background:#0f172a;color:#e5e7eb;border:1px solid #334155;border-radius:8px;padding:8px}textarea{height:78px}pre{white-space:pre-wrap;background:#0f172a;color:#93c5fd;border:1px solid #334155;border-radius:12px;padding:12px}code{color:#93c5fd}</style></head><body>
+<h1>ENGREMIAT · Selector humano del builder</h1>
+<div class="card"><b class="ok">E05 PASS · dashboard selector preview</b><p class="warn">No ejecuta cambios reales. Genera una petición preview copiable.</p></div>
+<div class="card grid"><div><label>Acción humana</label><select id="action"></select></div><div><label>Tipo de espacio</label><select id="space"></select></div><div><label>Grupo oficial</label><select id="group"></select></div><div><label>Superficie</label><select id="surface"></select></div></div>
+<div class="card grid"><div><label>Nombre</label><input id="name" value="Nuevo modulo ENGREMIAT"></div><div><label>Parent</label><input id="parent" value="02_PROYECTOS/PROJECT_demo-builder-project-space"></div><div><label>Related to</label><input id="related" value="G04_MEMORY_VISUAL"></div></div>
+<div class="card"><label>Intención</label><textarea id="intent">Crear modulo agrupado y relacionable dentro de una boveda o proyecto</textarea></div>
+<div class="card"><h2>builder_request.preview.json</h2><pre id="out"></pre></div>
+<div class="card"><h2>Siguiente</h2><p><code>E06_VALIDATE_BUILDER_WITH_SAMPLE_MODULE</code></p></div>
+<script>
+const actions=["CREATE_MASTER_VAULT","CREATE_PROJECT_SPACE","CREATE_MODULE_SPACE","RELATE_MODULE_TO_VAULT","OPEN_WORK_SURFACE"];
+const spaces=["MASTER_VAULT","PROJECT_SPACE","MODULE_SPACE","RELATION_SPACE","WORK_SURFACE"];
+const groups=["G01_CORE","G02_HUMAN_CONTROL","G03_PROJECTS_MODULES","G04_MEMORY_VISUAL","G05_TASKS_KANBAN","G06_WORKERS_EXECUTION_PREVIEW","G07_EVIDENCE_RESULTS","G08_SYSTEM_EVOLUTION"];
+const surfaces=["CONTROL_HUB","GROUPED_CANVAS","PROJECT_CANVAS","PENDING_GATES","ACTIVE_CARDS","RECENT_EVIDENCE","WORKER_PROPOSALS","MODULE_INDEX","PROJECT_INDEX"];
+function fill(id,items){const el=document.getElementById(id);items.forEach(x=>{const o=document.createElement('option');o.value=x;o.textContent=x;el.appendChild(o);});}
+function build(){
+ const req={
+  request_id:'builder-request-preview-'+new Date().toISOString().replace(/[:.]/g,'-'),
+  status:'PREVIEW_DRAFT',
+  human_decision:document.getElementById('action').value,
+  name:document.getElementById('name').value||'Nuevo espacio ENGREMIAT',
+  intent:document.getElementById('intent').value||'Definir intencion humana',
+  space_type:document.getElementById('space').value,
+  parent:document.getElementById('parent').value,
+  related_to:document.getElementById('related').value,
+  preferred_surface:document.getElementById('surface').value,
+  selected_group:document.getElementById('group').value,
+  execute_now:false,
+  safety:{local_only:true,preview_only:true,worker_execution:false,kanban_write:false,clien_write:false,obsidian_app_automation:false,git_write:false,external_network:false}
+ };
+ document.getElementById('out').textContent=JSON.stringify(req,null,2);
+}
+window.onload=()=>{fill('action',actions);fill('space',spaces);fill('group',groups);fill('surface',surfaces);build();['action','space','group','surface','name','intent','parent','related'].forEach(id=>document.getElementById(id).addEventListener('input',build));};
+</script>
+</body></html>

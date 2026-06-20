@@ -1,0 +1,54 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_REAL_WORKER_DAILY_VALUE_LOOP_056_065",
+    "stage":  "E56",
+    "stage_name":  "Worker Real Input Gate",
+    "purpose":  "Preparar gate para una unica interaccion real con worker",
+    "contract_id":  "E56_WORKER_REAL_INPUT_CONTRACT",
+    "worker_role":  "assisted_worker_proposes_only",
+    "allowed_now":  [
+                        "create prompt packet",
+                        "create execution gate",
+                        "prepare human copy/paste packet",
+                        "record readiness"
+                    ],
+    "forbidden_now":  [
+                          "execute worker",
+                          "call external network",
+                          "auto_send_prompt",
+                          "auto_apply",
+                          "remote_execution",
+                          "git_write",
+                          "kanban_real_write",
+                          "source_code_mutation"
+                      ],
+    "task_scope":  {
+                       "task_id":  "E56_SINGLE_REAL_WORKER_TASK_001",
+                       "title":  "Proponer mejora controlada del daily value loop",
+                       "expected_response":  "Propuesta estructurada con resumen, riesgos, archivos sugeridos, criterios GO/NO_GO y no apply",
+                       "max_scope":  "una propuesta, una respuesta, sin ejecucion"
+                   },
+    "required_worker_output_fields":  [
+                                          "proposal_id",
+                                          "summary",
+                                          "suggested_change",
+                                          "risk",
+                                          "required_files",
+                                          "expected_value",
+                                          "safety_flags",
+                                          "recommended_human_decision"
+                                      ],
+    "security":  {
+                     "apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "worker_executed":  false,
+                     "worker_real_execution_authorized":  false,
+                     "human_gate_required":  true,
+                     "default_decision":  "DEFER",
+                     "sensitive_actions_executed":  false
+                 },
+    "next":  "E57_WORKER_RESPONSE_CAPTURE",
+    "created_at":  "2026-06-17T12:11:55"
+}

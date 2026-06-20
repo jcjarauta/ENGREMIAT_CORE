@@ -1,0 +1,31 @@
+{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_003E",
+    "stage":  "E01",
+    "block":  "B01.1",
+    "artifact":  "scope-contract.json",
+    "status":  "DEFINED",
+    "purpose":  "Definir alcance operativo, frontera de construccion local y relacion con la base modular previa",
+    "includes":  [
+                     "module_scope",
+                     "module_families",
+                     "graph_seed",
+                     "boundary_rules",
+                     "validation_rules",
+                     "dashboard"
+                 ],
+    "excludes":  [
+                     "core_redesign",
+                     "external_network",
+                     "git_write",
+                     "real_module_activation",
+                     "remote_worker_execution"
+                 ],
+    "authorization":  "LOCAL_WRITE_GRANTED_BY_USER",
+    "control":  {
+                    "local_first":  true,
+                    "no_core_changes":  true,
+                    "no_external_network":  true,
+                    "no_git_write":  true,
+                    "no_activation":  true
+                }
+}

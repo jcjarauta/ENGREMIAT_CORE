@@ -1,0 +1,117 @@
+﻿{
+    "package_id":  "ENGREMIAT_DATA_INTAKE_001",
+    "stage":  "E18_SMOKE_DATA_INTAKE_UI",
+    "status":  "PASS",
+    "readiness":  100,
+    "launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-DATA-INTAKE-CENTER.ps1",
+    "sources":  3,
+    "profiles":  5,
+    "checks":  [
+                   {
+                       "check":  "parse",
+                       "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-DATA-INTAKE-CENTER.ps1",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "parse",
+                       "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-MEMORY-DOCUMENTATION-CENTER.ps1",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "parse",
+                       "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO.ps1",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "menu_marker",
+                       "marker":  "usar fuente demo",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "menu_marker",
+                       "marker":  "crear ficha manual editable",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "menu_marker",
+                       "marker":  "importar TXT/MD desde inbox",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "menu_marker",
+                       "marker":  "importar JSON desde inbox",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "menu_marker",
+                       "marker":  "abrir carpeta inbox",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "menu_marker",
+                       "marker":  "abrir carpeta normalized",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "menu_marker",
+                       "marker":  "ver estado intake",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "menu_marker",
+                       "marker":  "abrir contratos intake",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "menu_marker",
+                       "marker":  "[b] volver",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "menu_marker",
+                       "marker":  "DATA_INTAKE",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "json_output",
+                       "path":  "documents\\intake\\ENGREMIAT_DATA_INTAKE_V1_MANIFEST.json",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "json_output",
+                       "path":  "documents\\intake\\contracts\\intake-source-contract.json",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "json_output",
+                       "path":  "documents\\intake\\contracts\\normalized-profile-contract.json",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "json_output",
+                       "path":  "documents\\intake\\contracts\\intake-output-consumer-map.json",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "json_output",
+                       "path":  "documents\\intake\\connections\\intake-latest-pointers.json",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "json_output",
+                       "path":  "documents\\grants\\grant-call-profile-latest.json",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "human_smoke_notes",
+                       "path":  "C:\\ENGREMIAT_CORE\\documents\\intake\\reports\\DATA_INTAKE_UI_SMOKE_LATEST.md",
+                       "status":  "PASS"
+                   }
+               ],
+    "manual_smoke_notes":  "C:\\ENGREMIAT_CORE\\documents\\intake\\reports\\DATA_INTAKE_UI_SMOKE_LATEST.md",
+    "network_used":  false,
+    "external_ai_used":  false,
+    "commit_done":  false,
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e18-smoke-data-intake-ui-20260620-093739.json",
+    "next":  "HUMAN_RUN_DATA_INTAKE_UI_OR_DECIDE_NEXT_OBJECTIVE"
+}

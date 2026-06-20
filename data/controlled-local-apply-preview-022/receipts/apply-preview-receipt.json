@@ -1,0 +1,17 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_OPERATIVE_WORKER_FLOW_019_025",
+    "stage":  "E22",
+    "created_at":  "2026-06-17T10:50:15.1831933+02:00",
+    "receipt_type":  "APPLY_PREVIEW_RECEIPT",
+    "scope":  "data/controlled-local-apply-preview-022/apply-preview-scope.json",
+    "change_plan":  "data/controlled-local-apply-preview-022/proposed-change-plan.json",
+    "expected_diff":  "data/controlled-local-apply-preview-022/expected-diff-preview.json",
+    "rollback_plan":  "data/controlled-local-apply-preview-022/rollback-plan.json",
+    "postcheck":  "reports/controlled-local-apply-preview-022/e22-apply-preview-postcheck-report.json",
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "decision":  "NO_GO_E22_APPLY_PREVIEW_READY_BUT_HUMAN_APPROVAL_REQUIRED",
+    "next":  "WAIT_HUMAN_APPROVAL_BEFORE_E23"
+}

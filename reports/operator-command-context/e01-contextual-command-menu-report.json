@@ -1,0 +1,39 @@
+﻿{
+    "package_id":  "ENGREMIAT_OPERATOR_COMMAND_CONTEXT_001",
+    "stage":  "E01_CONTEXTUAL_COMMAND_MENU",
+    "status":  "PASS",
+    "readiness":  100,
+    "decision":  "GO_CONTEXTUAL_COMMAND_MENU_READY",
+    "router":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-router.ps1",
+    "help":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\ENGREMIAT_OPERATOR_HELP.md",
+    "visible_global":  [
+                           "estado",
+                           "ayuda",
+                           "comandos",
+                           "ultimo",
+                           "abrir-dashboard",
+                           "nuevo-proyecto",
+                           "salir"
+                       ],
+    "visible_when_project_active":  [
+                                        "revisar-proyecto",
+                                        "nuevo-modulo"
+                                    ],
+    "hidden_technical":  [
+                             "abrir-lab",
+                             "nuevo-proyecto-preview"
+                         ],
+    "retired_aliases":  [
+                            "rp",
+                            "nm"
+                        ],
+    "router_smoke":  "COMANDOS ENGREMIAT\r\n\r\nGlobales\r\n - estado\r\n - ayuda\r\n - comandos\r\n - ultimo\r\n - abrir-dashboard\r\n - nuevo-proyecto\r\n - salir\r\n\r\nProyecto activo: ENGREMIAT_PROJECT_nuevo-proyecto_20260619-162809\r\n - revisar-proyecto\r\n - nuevo-modulo\r\n",
+    "safety":  {
+                   "local_only":  true,
+                   "router_rewrite":  true,
+                   "no_worker_real":  true,
+                   "no_git":  true,
+                   "no_network":  true
+               },
+    "next":  "RUN_comandos_AND_VERIFY_MENU_IS_CONTEXTUAL"
+}

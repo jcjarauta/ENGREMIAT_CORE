@@ -1,0 +1,34 @@
+﻿{
+    "package":  "ENGREMIAT_TEMPLATE_IMPROVEMENT_001",
+    "stage":  "E06_SANDBOX_TEST_NEW_PROJECT_AND_MODULE_FROM_CLEAN_TEMPLATES",
+    "status":  "WARN",
+    "project":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\\ENGREMIAT_PROJECT_p3_20260619-224903",
+    "sandbox":  "C:\\ENGREMIAT_CORE\\tmp\\template-test\\P_20260619-231652",
+    "official_master":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\\ENGREMIAT_PROJECT_p3_20260619-224903\\BOVEDA_PROYECTO\\00_PLANTILLA_MAESTRA_OFICIAL",
+    "module_ref":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\\ENGREMIAT_PROJECT_p3_20260619-224903\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO\\00_PLANTILLA_MAESTRA_REFERENCIA",
+    "sandbox_master":  "C:\\ENGREMIAT_CORE\\tmp\\template-test\\P_20260619-231652\\PROJECT_TEST\\BOVEDA_PROYECTO\\00_PLANTILLA_MAESTRA_OFICIAL",
+    "sandbox_module_ref":  "C:\\ENGREMIAT_CORE\\tmp\\template-test\\P_20260619-231652\\PROJECT_TEST\\MODULOS\\MODULE_test\\BOVEDA_MODULO\\00_PLANTILLA_MAESTRA_REFERENCIA",
+    "master_files":  8,
+    "module_ref_files":  7,
+    "checks":  {
+                   "sandbox_project_exists":  true,
+                   "sandbox_master_files":  8,
+                   "sandbox_module_ref_files":  7,
+                   "master_has_readme":  true,
+                   "master_has_project_template_short":  true,
+                   "master_has_project_template_operator":  false,
+                   "module_has_module_template_short":  true,
+                   "module_has_module_template_operator":  false,
+                   "module_has_module_json_operator":  false
+               },
+    "warnings":  [
+                     "master_missing_operator_00_CONTROL_project_template",
+                     "module_ref_missing_operator_00_CONTROL_module_template",
+                     "simulated_module_missing_operator_00_CONTROL_module_json"
+                 ],
+    "copy_master_log":  "C:\\ENGREMIAT_CORE\\reports\\template-improvement\\robocopy-copy-master-to-sandbox-20260619-231652.log",
+    "copy_module_log":  "C:\\ENGREMIAT_CORE\\reports\\template-improvement\\robocopy-copy-module-ref-to-sandbox-20260619-231652.log",
+    "human_summary":  "C:\\ENGREMIAT_CORE\\tmp\\template-test\\P_20260619-231652\\E06_SANDBOX_TEST_SUMMARY.md",
+    "operator_state_changed":  false,
+    "next":  "E07_REPAIR_CLEAN_TEMPLATES_TO_OPERATOR_CONTRACT_00_CONTROL"
+}

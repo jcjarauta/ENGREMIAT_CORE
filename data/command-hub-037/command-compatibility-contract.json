@@ -1,0 +1,43 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_HUMAN_USABLE_036_045",
+    "stage":  "E37",
+    "contract":  "command-compatibility-contract",
+    "must_preserve":  [
+                          "start",
+                          "status",
+                          "next",
+                          "readiness",
+                          "gates",
+                          "artifacts",
+                          "context",
+                          "errors",
+                          "docs",
+                          "dashboard",
+                          "mvp-open"
+                      ],
+    "new_human_aliases":  [
+                              "prompt",
+                              "inbox",
+                              "review",
+                              "approve"
+                          ],
+    "rules":  [
+                  "No apply libre",
+                  "No auto_apply",
+                  "No remote execution",
+                  "No git write",
+                  "Gate humano antes de acciones sensibles",
+                  "Kanban es superficie humana de control, no motor de ejecucion",
+                  "Cline/Ollama proponen; humano decide; ENGREMIAT registra"
+              ],
+    "approve_behavior":  "Solo muestra gate pendiente; no ejecuta cambios",
+    "security":  {
+                     "apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "sensitive_actions_executed":  false,
+                     "human_gate_required_for_sensitive_actions":  true
+                 }
+}

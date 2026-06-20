@@ -1,0 +1,17 @@
+﻿{
+    "view_id":  "RECENT_EVIDENCE",
+    "title":  "Evidencias recientes",
+    "object_type":  "evidence",
+    "filter":  "type = evidence",
+    "group_by":  "evidence_kind",
+    "sort":  "created_at desc",
+    "columns":  [
+                    "evidence_id",
+                    "project_id",
+                    "status",
+                    "evidence_kind",
+                    "source_path",
+                    "created_at"
+                ],
+    "preview_only":  true
+}

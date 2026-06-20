@@ -1,0 +1,23 @@
+﻿{
+    "objective":  "ENGREMIAT_POST_MVP_OPERATIONAL_DAILY_LOOP_046_055",
+    "stage":  "E53",
+    "audit_id":  "E53_RECEIPTS_ROLLBACK_STANDARD_AUDIT",
+    "required_artifacts":  [
+                               "data\\receipts-rollback-053\\daily-receipt-standard.json",
+                               "data\\receipts-rollback-053\\rollback-standard.json",
+                               "data\\receipts-rollback-053\\daily-postcheck-standard.json",
+                               "data\\receipts-rollback-053\\receipts\\receipts-rollback-standard-receipt.json"
+                           ],
+    "missing":  [
+
+                ],
+    "json_ok":  true,
+    "policy_ok":  true,
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "decision":  "GO_E53_STANDARDS_AUDIT_OK",
+    "created_at":  "2026-06-17T12:03:50"
+}

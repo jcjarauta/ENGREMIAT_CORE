@@ -1,0 +1,61 @@
+﻿param([string]$ProjectPath="",[string]$ModuleName="",[string]$Objective="",[string]$ModuleType="",[switch]$NoPause)
+$ErrorActionPreference="Stop"
+[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+function W([string]$m,[string]$c="Gray"){Write-Host $m -ForegroundColor $c}
+function B([string]$t,[object[]]$l,[string]$c="Cyan"){Write-Host "";Write-Host "==== $t ====" -ForegroundColor $c;foreach($x in $l){Write-Host ([string]$x) -ForegroundColor $c}}
+function D([string]$p){[System.IO.Directory]::CreateDirectory($p)|Out-Null}
+function Slug([string]$s){$x=($s -replace "[^a-zA-Z0-9_-]","-").Trim("-");if([string]::IsNullOrWhiteSpace($x)){return "modulo"};return $x.ToLowerInvariant()}
+function AddLine([string]$file,[string]$line){D (Split-Path -Parent $file);$arr=@();if(Test-Path -LiteralPath $file){$arr=@(Get-Content -LiteralPath $file -Encoding UTF8)};if(($arr -join "`n") -notlike "*$line*"){$arr=@($arr+$line);Set-Content -LiteralPath $file -Encoding UTF8 -Value $arr}}
+try{
+  $root="C:\ENGREMIAT_CORE"
+  $reports=Join-Path $root "reports\operator-module-blueprint"
+  D $reports
+  if([string]::IsNullOrWhiteSpace($ProjectPath)-or!(Test-Path -LiteralPath $ProjectPath)){throw "project_missing=$ProjectPath"}
+  B "AÑADIR MODULO" @((Split-Path -Leaf $ProjectPath),"No copia plantilla maestra: crea unidad operativa limpia") "Cyan"
+  if([string]::IsNullOrWhiteSpace($ModuleName)){$ModuleName=Read-Host "Nombre corto del modulo"}
+  if([string]::IsNullOrWhiteSpace($Objective)){$Objective=Read-Host "Objetivo breve"}
+  if([string]::IsNullOrWhiteSpace($ModuleType)){$ModuleType=Read-Host "Tipo modulo humano/tecnico/worker/documentacion/integracion"}
+  if([string]::IsNullOrWhiteSpace($ModuleName)){$ModuleName="nuevo-modulo"}
+  if([string]::IsNullOrWhiteSpace($Objective)){$Objective="Modulo operativo del proyecto"}
+  if([string]::IsNullOrWhiteSpace($ModuleType)){$ModuleType="tecnico"}
+  $slug=Slug $ModuleName
+  $projectName=Split-Path -Leaf $ProjectPath
+  $projectId="PROJECT-"+($projectName -replace "^ENGREMIAT_PROJECT_","")
+  $moduleId="MODULE-"+$slug+"-"+(Get-Date -Format "yyyyMMddHHmmss")
+  $moduleRoot=Join-Path $ProjectPath ("MODULOS\MODULE_"+$slug)
+  $vault=Join-Path $moduleRoot "BOVEDA_MODULO"
+  foreach($d in @("00_CONTROL","01_HOME","02_TARJETAS","03_PROCESO","04_GATES","05_EVIDENCIAS","06_RESULTADOS","07_WORKERS","08_RELACIONES")){D (Join-Path $vault $d)}
+  $moduleJson=Join-Path $vault "00_CONTROL\module.json"
+  $cardsJson=Join-Path $vault "00_CONTROL\module-cards.json"
+  $relsJson=Join-Path $vault "00_CONTROL\module-relations.json"
+  $cardsTsv=Join-Path $vault "02_TARJETAS\cards.tsv"
+  [ordered]@{module_id=$moduleId;project_id=$projectId;slug=$slug;name=$ModuleName;objective=$Objective;module_type=$ModuleType;status="active";created_at=(Get-Date).ToString("s");cards_file=$cardsTsv;relations_file=$relsJson;runtime_shape="operational_module_not_master_copy"}|ConvertTo-Json -Depth 40|Set-Content -LiteralPath $moduleJson -Encoding UTF8
+  $cards=@()
+  $cards+=[ordered]@{card_id=("CARD-"+$slug+"-001");module_id=$moduleId;project_id=$projectId;title="Definir alcance";type="humana";status="pending";priority="high";depends_on="";expected_evidence="Alcance validado";candidate_worker="humano";risk="medio"}
+  $cards+=[ordered]@{card_id=("CARD-"+$slug+"-002");module_id=$moduleId;project_id=$projectId;title="Preparar estructura";type="asistida";status="pending";priority="high";depends_on=("CARD-"+$slug+"-001");expected_evidence="Estructura creada";candidate_worker="chatgpt";risk="medio"}
+  $cards+=[ordered]@{card_id=("CARD-"+$slug+"-003");module_id=$moduleId;project_id=$projectId;title="Validar evidencia";type="evidencia";status="pending";priority="medium";depends_on=("CARD-"+$slug+"-002");expected_evidence="Evidencia comprobada";candidate_worker="humano";risk="bajo"}
+  $cards+=[ordered]@{card_id=("CARD-"+$slug+"-004");module_id=$moduleId;project_id=$projectId;title="Cerrar modulo";type="gate";status="pending";priority="medium";depends_on=("CARD-"+$slug+"-003");expected_evidence="Gate de cierre";candidate_worker="humano";risk="bajo"}
+  $cards|ConvertTo-Json -Depth 40|Set-Content -LiteralPath $cardsJson -Encoding UTF8
+  $tsv=New-Object System.Collections.Generic.List[string]
+  $tsv.Add("card_id`tmodule_id`tproject_id`ttitle`ttype`tstatus`tpriority`tdepends_on`texpected_evidence`tcandidate_worker`trisk")
+  foreach($c in $cards){$tsv.Add("$($c.card_id)`t$($c.module_id)`t$($c.project_id)`t$($c.title)`t$($c.type)`t$($c.status)`t$($c.priority)`t$($c.depends_on)`t$($c.expected_evidence)`t$($c.candidate_worker)`t$($c.risk)")}
+  Set-Content -LiteralPath $cardsTsv -Encoding UTF8 -Value $tsv
+  $rels=@([ordered]@{relation_id=("REL-"+$slug+"-PROJECT-001");from_id=$moduleId;to_id=$projectId;relation_type="belongs_to";reason="Modulo pertenece al proyecto";evidence="module.json";status="active"},[ordered]@{relation_id=("REL-"+$slug+"-CARDS-001");from_id=$moduleId;to_id=("CARD-"+$slug+"-001");relation_type="contains";reason="Modulo contiene tarjetas";evidence="cards.tsv";status="active"},[ordered]@{relation_id=("REL-"+$slug+"-GATE-001");from_id=("CARD-"+$slug+"-004");to_id=("GATE-"+$slug+"-001");relation_type="requires_gate";reason="Cierre requiere validacion";evidence="MODULE_GATES.md";status="pending"})
+  $rels|ConvertTo-Json -Depth 40|Set-Content -LiteralPath $relsJson -Encoding UTF8
+  Set-Content -LiteralPath (Join-Path $vault "01_HOME\MODULE_HOME.md") -Encoding UTF8 -Value @("# MODULE_HOME","","## Identidad","- module_id: $moduleId","- nombre: $ModuleName","- tipo: $ModuleType","","## Objetivo",$Objective,"","## Puentes","- [[MODULE_CARDS]]","- [[MODULE_PROCESS]]","- [[MODULE_GATES]]","- [[MODULE_EVIDENCE]]","- [[MODULE_RESULTS]]","- [[MODULE_WORKERS]]","- [[MODULE_GRAPH]]","- [[PROJECT_HOME]]","- [[SYSTEM_GROUPING_MODEL]]")
+  Set-Content -LiteralPath (Join-Path $vault "02_TARJETAS\MODULE_CARDS.md") -Encoding UTF8 -Value @("# MODULE_CARDS","","## Tarjetas iniciales","- CARD-$slug-001 Definir alcance","- CARD-$slug-002 Preparar estructura","- CARD-$slug-003 Validar evidencia","- CARD-$slug-004 Cerrar modulo","","Ver cards.tsv y module-cards.json.")
+  Set-Content -LiteralPath (Join-Path $vault "03_PROCESO\MODULE_PROCESS.md") -Encoding UTF8 -Value @("# MODULE_PROCESS","","1. Definir alcance.","2. Preparar estructura.","3. Validar evidencia.","4. Cerrar modulo.")
+  Set-Content -LiteralPath (Join-Path $vault "04_GATES\MODULE_GATES.md") -Encoding UTF8 -Value @("# MODULE_GATES","","- GATE-$slug-001 Cierre humano del modulo.")
+  Set-Content -LiteralPath (Join-Path $vault "05_EVIDENCIAS\MODULE_EVIDENCE.md") -Encoding UTF8 -Value @("# MODULE_EVIDENCE","","- EVID-$slug-001 Evidencia minima del modulo.")
+  Set-Content -LiteralPath (Join-Path $vault "06_RESULTADOS\MODULE_RESULTS.md") -Encoding UTF8 -Value @("# MODULE_RESULTS","","Resultados esperados del modulo.")
+  Set-Content -LiteralPath (Join-Path $vault "07_WORKERS\MODULE_WORKERS.md") -Encoding UTF8 -Value @("# MODULE_WORKERS","","Workers candidatos y limites.")
+  Set-Content -LiteralPath (Join-Path $vault "08_RELACIONES\MODULE_GRAPH.md") -Encoding UTF8 -Value @("# MODULE_GRAPH","","## Relaciones","- [[MODULE_HOME]]","- [[MODULE_CARDS]]","- [[PROJECT_HOME]]","- [[SYSTEM_GROUPING_MODEL]]")
+  AddLine (Join-Path $ProjectPath "BOVEDA_PROYECTO\00_PLANTILLA_MAESTRA_OFICIAL\03_MODULOS\MODULES_INDEX.md") ("- [["+$moduleId+"|MODULE_"+$slug+"]] - "+$Objective)
+  AddLine (Join-Path $ProjectPath "BOVEDA_PROYECTO\00_PLANTILLA_MAESTRA_OFICIAL\04_TAREAS\TASKS_INDEX.md") ("- CARD-"+$slug+"-001 / CARD-"+$slug+"-002 / CARD-"+$slug+"-003 / CARD-"+$slug+"-004")
+  AddLine (Join-Path $ProjectPath "BOVEDA_PROYECTO\00_PLANTILLA_MAESTRA_OFICIAL\11_AGRUPACION_MANUAL\SYSTEM_GROUPING_MODEL.md") ("- MODULE_"+$slug+" | "+$ModuleType+" | "+$Objective)
+  $report=Join-Path $reports ("add-module-"+$slug+"-"+(Get-Date -Format "yyyyMMdd-HHmmss")+".json")
+  [ordered]@{status="PASS";project=$ProjectPath;module_root=$moduleRoot;vault=$vault;module_id=$moduleId;cards=4;relations=3;runtime_shape="operational_module_not_master_copy"}|ConvertTo-Json -Depth 40|Set-Content -LiteralPath $report -Encoding UTF8
+  B "OK MODULO CREADO" @("status=PASS","module=$moduleRoot","module_id=$moduleId","cards=4","relations=3","report=$report") "Green"
+  Start-Process explorer.exe $moduleRoot
+  if(-not $NoPause){Read-Host "Enter para volver"}
+}catch{B "ERR AÑADIR MODULO" @("status=FAIL",$_.Exception.Message) "Red";if(-not $NoPause){Read-Host "Enter para volver"};exit 1}

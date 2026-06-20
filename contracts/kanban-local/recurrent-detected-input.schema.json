@@ -1,0 +1,69 @@
+﻿{
+    "$schema":  "https://json-schema.org/draft/2020-12/schema",
+    "title":  "ENGREMIAT Recurrent Detected Input",
+    "type":  "object",
+    "required":  [
+                     "id",
+                     "source",
+                     "kind",
+                     "title",
+                     "summary",
+                     "priority",
+                     "risk",
+                     "target_consumers"
+                 ],
+    "properties":  {
+                       "id":  {
+                                  "type":  "string"
+                              },
+                       "source":  {
+                                      "type":  "string",
+                                      "enum":  [
+                                                   "human",
+                                                   "openwebui",
+                                                   "openclaw",
+                                                   "ollama",
+                                                   "obsidian",
+                                                   "cline",
+                                                   "system"
+                                               ]
+                                  },
+                       "kind":  {
+                                    "type":  "string",
+                                    "enum":  [
+                                                 "need",
+                                                 "capability",
+                                                 "project",
+                                                 "evidence",
+                                                 "blocker",
+                                                 "decision",
+                                                 "memory"
+                                             ]
+                                },
+                       "title":  {
+                                     "type":  "string"
+                                 },
+                       "summary":  {
+                                       "type":  "string"
+                                   },
+                       "priority":  {
+                                        "type":  "integer",
+                                        "minimum":  0,
+                                        "maximum":  100
+                                    },
+                       "risk":  {
+                                    "type":  "string",
+                                    "enum":  [
+                                                 "LOW",
+                                                 "MEDIUM",
+                                                 "HIGH"
+                                             ]
+                                },
+                       "target_consumers":  {
+                                                "type":  "array",
+                                                "items":  {
+                                                              "type":  "string"
+                                                          }
+                                            }
+                   }
+}

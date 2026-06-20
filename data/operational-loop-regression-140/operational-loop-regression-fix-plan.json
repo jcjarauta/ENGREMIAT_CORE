@@ -1,0 +1,22 @@
+﻿{
+    "schema":  "engremiat.operational_loop_regression_fix_plan.v1",
+    "objective":  "ENGREMIAT_REAL_VALUE_TASK_EXECUTION_LOOP_132_141_OPERATIONAL_USEFUL_TASK",
+    "stage":  "E140",
+    "block":  "B140.1",
+    "step":  "P140.1.2",
+    "created_at":  "2026-06-17T14:52:57",
+    "fix_required":  false,
+    "safe_fixes_only":  true,
+    "allowed_fix_scope":  "RECREATE_MISSING_LOCAL_ARTIFACTS_ONLY",
+    "forbidden_actions":  [
+                              "network",
+                              "git_write",
+                              "external_execution",
+                              "destructive_delete",
+                              "modify_unrelated_files"
+                          ],
+    "missing_paths":  [
+
+                      ],
+    "recommended_next":  "NO_FIX_REQUIRED"
+}

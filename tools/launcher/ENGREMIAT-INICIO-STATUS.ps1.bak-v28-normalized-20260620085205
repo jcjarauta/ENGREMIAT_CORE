@@ -1,0 +1,167 @@
+﻿$ErrorActionPreference="Stop"
+[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+
+$Core="C:\ENGREMIAT_CORE"
+$ToolDir=Join-Path $Core "tools\desktop-terminal-operator"
+$FocusFile=Join-Path $Core "data\desktop-terminal-operator\last-focus.json"
+$LogFile=Join-Path $Core "reports\launcher\last-inicio-log.txt"
+$StatusFile=Join-Path $Core "reports\launcher\last-inicio-status.json"
+
+function W($m,$c="White"){ Write-Host $m -ForegroundColor $c }
+
+function ActiveProject(){
+  $j=Join-Path $Core "data\desktop-terminal-operator\active-project.json"
+  $t=Join-Path $Core "data\desktop-terminal-operator\active-project.txt"
+
+  if(Test-Path $j){
+    try{
+      $x=Get-Content $j -Raw | ConvertFrom-Json
+      if($x.active_project -and (Test-Path ([string]$x.active_project))){ return [string]$x.active_project }
+    }catch{}
+  }
+
+  if(Test-Path $t){
+    $y=(Get-Content $t -Raw).Trim()
+    if(Test-Path $y){ return $y }
+  }
+
+  return ""
+}
+
+function ReadFocus(){
+  if(Test-Path $FocusFile){
+    try{ return Get-Content $FocusFile -Raw | ConvertFrom-Json }catch{}
+  }
+  return [pscustomobject]@{ screen="none"; project=""; module=""; note="sin foco guardado"; updated_at="" }
+}
+
+function ReadModuleStatus($dir){
+  $mj=Join-Path $dir "module.json"
+  if(Test-Path $mj){
+    try{
+      $j=Get-Content $mj -Raw | ConvertFrom-Json
+      if($j.status){ return [string]$j.status }
+    }catch{}
+  }
+  return "ACTIVO"
+}
+
+function GetSnapshot(){
+  $p=ActiveProject
+  $projectModules=0
+  $libraryActive=0
+  $libraryInactive=0
+  $libraryHistoric=0
+  $recentModule=""
+  $recentModulePath=""
+  $recentSource=""
+  $recentTime=""
+
+  if($p){
+    $modsDir=Join-Path $p "MODULOS"
+    if(Test-Path $modsDir){ $projectModules=@(Get-ChildItem $modsDir -Directory -ErrorAction SilentlyContinue).Count }
+  }
+
+  $libA=Join-Path $Core "library\modules"
+  $libH=Join-Path $Core "library\modules_historico"
+
+  if(Test-Path $libA){
+    foreach($m in (Get-ChildItem $libA -Directory -ErrorAction SilentlyContinue)){
+      $st=ReadModuleStatus $m.FullName
+      if($st -eq "INACTIVO"){ $libraryInactive++ } else { $libraryActive++ }
+    }
+  }
+
+  if(Test-Path $libH){ $libraryHistoric=@(Get-ChildItem $libH -Directory -ErrorAction SilentlyContinue).Count }
+
+  $candidates=@()
+
+  if($p){
+    $modsDir=Join-Path $p "MODULOS"
+    if(Test-Path $modsDir){
+      foreach($m in (Get-ChildItem $modsDir -Directory -ErrorAction SilentlyContinue)){
+        $ws=Join-Path $m.FullName "_workspace"
+        if(Test-Path $ws){
+          $candidates += [pscustomobject]@{ module=$m.Name; path=$m.FullName; source="PROYECTO"; time=(Get-Item $ws).LastWriteTime }
+        }
+      }
+    }
+  }
+
+  foreach($root in @($libA,$libH)){
+    if(Test-Path $root){
+      foreach($m in (Get-ChildItem $root -Directory -ErrorAction SilentlyContinue)){
+        $ws=Join-Path $m.FullName "_workspace"
+        if(Test-Path $ws){
+          $source=if($root -like "*modules_historico"){"BIB_HIST"}else{"BIBLIOTECA"}
+          $candidates += [pscustomobject]@{ module=$m.Name; path=$m.FullName; source=$source; time=(Get-Item $ws).LastWriteTime }
+        }
+      }
+    }
+  }
+
+  $recent=$candidates | Sort-Object time -Descending | Select-Object -First 1
+  if($recent){
+    $recentModule=$recent.module
+    $recentModulePath=$recent.path
+    $recentSource=$recent.source
+    $recentTime=$recent.time.ToString("s")
+  }
+
+  $screens=@(
+    @{ name="modules"; path=(Join-Path $ToolDir "eng-project-modules-screen.ps1") },
+    @{ name="library"; path=(Join-Path $ToolDir "eng-module-library-screen.ps1") },
+    @{ name="workspace"; path=(Join-Path $ToolDir "eng-module-workspace-screen.ps1") },
+    @{ name="cards"; path=(Join-Path $ToolDir "eng-module-cards-screen.ps1") },
+    @{ name="graph"; path=(Join-Path $ToolDir "eng-refresh-project-module-graph.ps1") }
+  )
+
+  $screenStatus=@()
+  foreach($s in $screens){
+    $screenStatus += [pscustomobject]@{
+      name=$s.name
+      exists=(Test-Path $s.path)
+      path=$s.path
+    }
+  }
+
+  return [pscustomobject]@{
+    generated_at=(Get-Date).ToString("s")
+    core=$Core
+    project=$p
+    project_name=if($p){Split-Path $p -Leaf}else{""}
+    project_modules=$projectModules
+    library_active=$libraryActive
+    library_inactive=$libraryInactive
+    library_historic=$libraryHistoric
+    last_focus=ReadFocus
+    recent_module=$recentModule
+    recent_module_source=$recentSource
+    recent_module_path=$recentModulePath
+    recent_module_time=$recentTime
+    screens=$screenStatus
+    log_file=$LogFile
+    status_file=$StatusFile
+  }
+}
+
+$snap=GetSnapshot
+New-Item -ItemType Directory -Force -Path (Split-Path $StatusFile) | Out-Null
+$snap | ConvertTo-Json -Depth 40 | Set-Content $StatusFile -Encoding UTF8
+
+W "==== ENGREMIAT INICIO STATUS ====" Cyan
+W ("generated_at={0}" -f $snap.generated_at) DarkGray
+W ("project={0}" -f $snap.project_name) Green
+W ("modules={0}" -f $snap.project_modules) White
+W ("library={0} active / {1} inactive / {2} historic" -f $snap.library_active,$snap.library_inactive,$snap.library_historic) White
+W ("last_focus={0} | {1}" -f $snap.last_focus.screen,$snap.last_focus.note) DarkCyan
+W ("recent_module={0} [{1}]" -f $(if($snap.recent_module){$snap.recent_module}else{"-"}),$(if($snap.recent_module_source){$snap.recent_module_source}else{"-"})) Yellow
+W ""
+W "SCREENS" Cyan
+foreach($s in $snap.screens){
+  if($s.exists){ W ("OK   {0}  {1}" -f $s.name,$s.path) Green }
+  else{ W ("MISS {0}  {1}" -f $s.name,$s.path) Yellow }
+}
+W ""
+W "COPIABLE_JSON=$StatusFile" Magenta
+W "LOG=$LogFile" Magenta

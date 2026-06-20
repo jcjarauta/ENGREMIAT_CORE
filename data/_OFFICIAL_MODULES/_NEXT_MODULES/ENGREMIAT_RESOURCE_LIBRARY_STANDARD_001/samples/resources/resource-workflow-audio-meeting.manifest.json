@@ -1,0 +1,32 @@
+﻿{
+    "resource_id":  "RESOURCE-WORKFLOW-AUDIO-MEETING-001",
+    "resource_type":  "RESOURCE_WORKFLOW",
+    "status":  "DRAFT",
+    "title":  "Audio Meeting To Tasks Workflow",
+    "description":  "Workflow ejemplo para transformar reunion de audio en resumen, decisiones, tareas y evidencias.",
+    "domain":  "operations",
+    "version":  "0.1.0",
+    "capabilities":  [
+                         "KNOWLEDGE_EXTRACTION",
+                         "TASK_ORCHESTRATION",
+                         "EVIDENCE_TRACKING"
+                     ],
+    "dependencies":  [
+
+                     ],
+    "location":  "samples/resources/audio-meeting-workflow",
+    "evidence":  [
+                     "sample-audio-meeting-task.json"
+                 ],
+    "quality":  {
+                    "readiness_score":  70,
+                    "reuse_score":  85,
+                    "evidence_score":  50,
+                    "overall_score":  68
+                },
+    "reuse_policy":  "ADAPT_OR_EXTEND",
+    "gate":  {
+                 "required":  true,
+                 "decision":  "HUMAN_REVIEW_REQUIRED"
+             }
+}

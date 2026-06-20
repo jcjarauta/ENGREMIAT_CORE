@@ -1,0 +1,73 @@
+﻿{
+    "package_id":  "ENGREMIAT_LOCAL_KANBAN_EXECUTION_CYCLE_001",
+    "stage":  "E02_SELECT_NEXT_OPERABLE_CARD_DRY_RUN",
+    "decision":  "OPERABLE_CARD_SELECTED_FOR_CYCLE_DRY_RUN",
+    "selected":  {
+                     "id":  "CARD-001",
+                     "title":  "Crear backlog visible",
+                     "column":  "DOING",
+                     "status":  "DOING",
+                     "priority":  "HIGH",
+                     "score":  103,
+                     "path":  "C:\\ENGREMIAT_CORE\\obsidian\\ENGREMIAT_OBSIDIAN_KANBAN_LAB\\12_MARKDOWN_KANBAN_TEST\\cards\\CARD-001.md",
+                     "last_transition_id":  "TRANSITION-CARD-001-20260619-083051"
+                 },
+    "cards":  [
+                  {
+                      "id":  "CARD-001",
+                      "title":  "Crear backlog visible",
+                      "source_need":  "NEED-001",
+                      "status":  "DOING",
+                      "recommended_column":  "DOING",
+                      "priority":  "HIGH",
+                      "kanban_decision":  "GO",
+                      "human_reviewed":  "true",
+                      "last_transition_id":  "TRANSITION-CARD-001-20260619-083051",
+                      "operable":  true,
+                      "score":  103,
+                      "path":  "C:\\ENGREMIAT_CORE\\obsidian\\ENGREMIAT_OBSIDIAN_KANBAN_LAB\\12_MARKDOWN_KANBAN_TEST\\cards\\CARD-001.md"
+                  },
+                  {
+                      "id":  "CARD-002",
+                      "title":  "Crear regla de prioridad simple",
+                      "source_need":  "NEED-002",
+                      "status":  "BACKLOG",
+                      "recommended_column":  "BACKLOG",
+                      "priority":  "MEDIUM",
+                      "kanban_decision":  "PENDING",
+                      "human_reviewed":  "false",
+                      "last_transition_id":  "",
+                      "operable":  false,
+                      "score":  5,
+                      "path":  "C:\\ENGREMIAT_CORE\\obsidian\\ENGREMIAT_OBSIDIAN_KANBAN_LAB\\12_MARKDOWN_KANBAN_TEST\\cards\\CARD-002.md"
+                  },
+                  {
+                      "id":  "CARD-003",
+                      "title":  "Crear evidencia de ejecución",
+                      "source_need":  "NEED-003",
+                      "status":  "DOING",
+                      "recommended_column":  "DOING",
+                      "priority":  "MEDIUM",
+                      "kanban_decision":  "GO",
+                      "human_reviewed":  "true",
+                      "last_transition_id":  "",
+                      "operable":  true,
+                      "score":  100,
+                      "path":  "C:\\ENGREMIAT_CORE\\obsidian\\ENGREMIAT_OBSIDIAN_KANBAN_LAB\\12_MARKDOWN_KANBAN_TEST\\cards\\CARD-003.md"
+                  }
+              ],
+    "policy":  {
+                   "required_kanban_decision":  "GO",
+                   "required_human_reviewed":  "true",
+                   "preferred_columns":  [
+                                             "DOING",
+                                             "NEXT",
+                                             "REVIEW"
+                                         ],
+                   "excluded_columns":  [
+                                            "DONE",
+                                            "BLOCKED"
+                                        ]
+               },
+    "created_at":  "2026-06-19T08:35:07"
+}

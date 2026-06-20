@@ -1,0 +1,20 @@
+{
+    "package_id":  "ENGREMIAT_MODULES_OFFICIALIZATION_001",
+    "stage":  "E06B_REPAIR_OFFICIAL_MODULES_STRUCTURE",
+    "artifact":  "official-modules-structure-repair-contract.json",
+    "status":  "DEFINED",
+    "purpose":  "Reparar estructura canonica de modulos oficializados sin borrar fuentes ni usar git",
+    "allowed_actions":  [
+                            "create_missing_standard_dirs",
+                            "repair_missing_or_invalid_module_json",
+                            "create_missing_readme",
+                            "write_reports"
+                        ],
+    "blocked_actions":  [
+                            "delete_sources",
+                            "move_sources",
+                            "git_write",
+                            "external_network",
+                            "core_changes"
+                        ]
+}

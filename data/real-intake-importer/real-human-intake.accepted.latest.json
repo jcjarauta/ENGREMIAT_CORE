@@ -1,0 +1,24 @@
+﻿{
+  "package_id": "ENGREMIAT_REAL_HUMAN_INTAKE_UI_001",
+  "schema": "real-human-intake.v1",
+  "created_at": "2026-06-19T08:02:23.632Z",
+  "project_name": "Primer intake real para construir roadmap automático en ENGREMIAT",
+  "human_need": "Necesitamos una forma sencilla de introducir una idea humana de proyecto y convertirla en una estructura ordenada de desarrollo, sin depender de navegador, memoria dispersa ni prompts largos repetidos.",
+  "desired_result": "Obtener un intake exportable en JSON y Markdown que pueda alimentar una propuesta de roadmap revisable por el humano antes de preparar cualquier worker o automatización.",
+  "constraints": "Solo local.\nSin backend.\nSin red.\nSin worker real.\nSin Git.\nSin ejecución automática.\nExportación manual.\nDebe ser comprensible para humano y útil para generar roadmap.",
+  "available_resources": "C:\\ENGREMIAT_CORE\nDashboard local de intake real\nPaquete cerrado ENGREMIAT_PROJECT_BUILDER_TO_WORKER_LOOP_001\nOllama local disponible para fases futuras\nCline/Kanban disponible para organización futura\nPowerShell como operador local",
+  "priority": "ALTA",
+  "success_criteria": "La UI abre correctamente.\nEl formulario permite rellenar todos los campos.\nEl botón Generar intake produce JSON válido.\nEl JSON contiene safety.local_only=true.\nEl JSON contiene worker_execution=false.\nEl JSON contiene execute_now=false.\nEl Markdown descargado resume correctamente el proyecto.\nEl resultado permite pasar a una etapa E02 de roadmap preview.",
+  "authorization_level": "PREVIEW_ONLY",
+  "notes": "Esta prueba no debe ejecutar nada. Solo queremos validar si el intake humano es suficientemente claro para alimentar el siguiente paso: generar roadmap desde intake real.",
+  "safety": {
+    "local_only": true,
+    "manual_export_only": true,
+    "backend": false,
+    "network": false,
+    "worker_execution": false,
+    "git_write": false,
+    "execute_now": false
+  },
+  "next": "E02_GENERATE_ROADMAP_FROM_REAL_INTAKE_PREVIEW"
+}

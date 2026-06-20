@@ -1,0 +1,47 @@
+﻿{
+    "edges":  [
+                  {
+                      "toNode":  "roadmap",
+                      "fromNode":  "objective",
+                      "toSide":  "left",
+                      "id":  "e1",
+                      "fromSide":  "right"
+                  },
+                  {
+                      "toNode":  "gate",
+                      "fromNode":  "roadmap",
+                      "toSide":  "left",
+                      "id":  "e2",
+                      "fromSide":  "right"
+                  }
+              ],
+    "nodes":  [
+                  {
+                      "id":  "objective",
+                      "width":  360,
+                      "height":  220,
+                      "y":  0,
+                      "type":  "file",
+                      "x":  0,
+                      "file":  "01_OBJECTIVES/SIM_PROJECT_20260619-152304_prueba1_OBJECTIVE.md"
+                  },
+                  {
+                      "id":  "roadmap",
+                      "width":  360,
+                      "height":  220,
+                      "y":  0,
+                      "type":  "file",
+                      "x":  420,
+                      "file":  "02_ROADMAPS/SIM_PROJECT_20260619-152304_prueba1_ROADMAP.md"
+                  },
+                  {
+                      "id":  "gate",
+                      "width":  360,
+                      "height":  220,
+                      "y":  0,
+                      "type":  "file",
+                      "x":  840,
+                      "file":  "05_HUMAN_GATES/SIM_PROJECT_20260619-152304_prueba1_GATE_REVIEW_PROJECT_START.md"
+                  }
+              ]
+}

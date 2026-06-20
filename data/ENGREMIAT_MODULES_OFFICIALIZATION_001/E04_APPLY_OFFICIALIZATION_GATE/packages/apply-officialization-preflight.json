@@ -1,0 +1,18 @@
+{
+    "package_id":  "ENGREMIAT_MODULES_OFFICIALIZATION_001",
+    "stage":  "E04_APPLY_OFFICIALIZATION_GATE",
+    "status":  "PASS_GATE_PREPARED",
+    "authorization_status":  "PENDING_EXPLICIT_HUMAN_AUTHORIZATION",
+    "checks":  {
+                   "previous_e03_pass":  true,
+                   "identity_patches_ready":  true,
+                   "apply_executed":  false,
+                   "copy_executed":  false,
+                   "move_executed":  false,
+                   "delete_executed":  false,
+                   "git_write":  false,
+                   "external_network":  false,
+                   "core_changes":  false
+               },
+    "next":  "Esperar frase literal de autorizacion o cerrar sin apply"
+}

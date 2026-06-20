@@ -1,0 +1,28 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_OPERATIVE_WORKER_FLOW_019_025",
+    "stage":  "E21",
+    "created_at":  "2026-06-17T10:49:07.2360653+02:00",
+    "readiness":  70,
+    "decision":  "NO_GO_E21_HUMAN_DECISION_REQUIRED",
+    "next":  "WAIT_HUMAN_DECISION_BEFORE_E22",
+    "human_decision":  "DEFER",
+    "worker_decision":  "GO",
+    "checks":  {
+                   "human_review_package_created":  true,
+                   "human_review_note_created":  true,
+                   "human_decision_gate_created":  true,
+                   "decision_receipt_created":  true,
+                   "worker_response_seen":  true,
+                   "human_decision_defer":  true,
+                   "approved_for_apply_preview_false":  true,
+                   "apply_false":  true,
+                   "auto_apply_false":  true,
+                   "remote_execution_false":  true,
+                   "git_write_false":  true
+               },
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "status":  "BLOCKED_PENDING_HUMAN_DECISION"
+}

@@ -1,0 +1,3 @@
+﻿
+## Agrupacion manual
+[[SYSTEM_GROUPING_MODEL]] debe conectar con [[PROJECT_HOME]], [[ROADMAP_MODEL]], [[MODULES_INDEX]], [[TASK_MODEL]], [[WORKER_MODEL]], [[HUMAN_GATE_MODEL]], [[EVIDENCE_MODEL]] y [[DECISION_MODEL]].

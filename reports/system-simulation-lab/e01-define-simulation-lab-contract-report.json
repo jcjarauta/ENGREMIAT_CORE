@@ -1,0 +1,24 @@
+﻿{
+    "package_id":  "ENGREMIAT_SYSTEM_SIMULATION_LAB_001",
+    "stage":  "E01_DEFINE_SIMULATION_LAB_CONTRACT",
+    "status":  "PASS",
+    "contract":  "C:\\ENGREMIAT_CORE\\data\\system-simulation-lab\\simulation-lab-contract.v1.json",
+    "actors":  4,
+    "objects":  7,
+    "cycle_steps":  8,
+    "first_scenario":  "SCENARIO_001_visual_task_management_module",
+    "dashboard":  "C:\\ENGREMIAT_CORE\\dashboard\\system-simulation-lab\\e01-define-simulation-lab-contract.html",
+    "guide":  "C:\\ENGREMIAT_CORE\\docs\\system-simulation-lab\\E01_DEFINE_SIMULATION_LAB_CONTRACT.md",
+    "safety":  {
+                   "local_only":  true,
+                   "contract_only":  true,
+                   "no_lab_vault_creation_yet":  true,
+                   "no_real_worker_execution":  true,
+                   "no_kanban_write":  true,
+                   "no_clien_write":  true,
+                   "no_git_write":  true,
+                   "no_external_network":  true,
+                   "obsidian_app_automation":  false
+               },
+    "next":  "E02_CREATE_BOVEDA_PROJECT_ENGREMIAT_SIMULATION_LAB"
+}

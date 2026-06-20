@@ -1,0 +1,27 @@
+﻿{
+    "package_id":  "ENGREMIAT_UX_SYSTEM_001",
+    "stage":  "E65_CONNECT_PROJECTS_VIEW_TO_LOCAL_HEARTBEAT_SIGNAL_READONLY",
+    "created_at":  "2026-06-20T10:37:37",
+    "status":  "PASS",
+    "decision":  "Projects view reads local heartbeat/project-signal readonly",
+    "signals":  [
+                    "documents/worker-sync/worker-heartbeat-latest.json",
+                    "documents/worker-sync/project-signal-latest.json"
+                ],
+    "matching":  [
+                     "project_id equals project folder name",
+                     "project_id contained in folder name",
+                     "project_path equals project path"
+                 ],
+    "overrides":  [
+                      "phase",
+                      "progress_pct",
+                      "state as worker",
+                      "next_action",
+                      "blocked_reason"
+                  ],
+    "safe_policy":  "readonly, no worker execution, no network, no git",
+    "launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1",
+    "backup":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\backup-projects-center-before-e65-20260620-103737.ps1",
+    "next":  "RUN_PROJECTS_HEARTBEAT_SIGNAL_READONLY_TEST"
+}

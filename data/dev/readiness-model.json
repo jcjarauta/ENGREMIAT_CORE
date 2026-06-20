@@ -1,0 +1,25 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_FINAL_026_035",
+    "stage":  "E30",
+    "created_at":  "2026-06-17T11:11:35.6186662+02:00",
+    "purpose":  "Calcular readiness objetivo, etapa y bloque con decision GO, NO_GO o NEEDS_REVIEW.",
+    "inputs":  [
+                   "artifact registry",
+                   "context snapshot",
+                   "gate center",
+                   "reports",
+                   "expected artifacts"
+               ],
+    "score_rules":  {
+                        "artifacts":  "40",
+                        "gates":  "25",
+                        "errors":  "15",
+                        "safety":  "20"
+                    },
+    "decisions":  [
+                      "GO",
+                      "NO_GO",
+                      "NEEDS_REVIEW"
+                  ],
+    "fail_closed":  true
+}

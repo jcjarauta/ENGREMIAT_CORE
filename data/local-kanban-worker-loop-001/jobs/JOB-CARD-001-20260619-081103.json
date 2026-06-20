@@ -1,0 +1,14 @@
+﻿{
+    "job_id":  "JOB-CARD-001-20260619-081103",
+    "card_id":  "CARD-001",
+    "title":  "Crear backlog visible",
+    "source_need":  "NEED-001",
+    "column":  "NEXT",
+    "priority":  "HIGH",
+    "decision":  "GO",
+    "human_reviewed":  "true",
+    "transport":  "mock",
+    "authorized_real_worker":  false,
+    "prompt":  "# DESTINO: WORKER\ncard_id: CARD-001\ntitle: Crear backlog visible\nsource_need: NEED-001\ncolumn: NEXT\npriority: HIGH\ndecision: GO\nhuman_reviewed: true\n\nINSTRUCCION: responde solo con propuesta y evidencia esperada. No ejecutes comandos. No escribas archivos. No uses git.\n\nFORMATO:\nWORKER_RESPONSE_BEGIN\ncard_id: CARD-001\nstatus: PROPOSAL_ONLY\nsummary:\nproposal_steps:\nexpected_files:\nexpected_evidence:\nrisks:\nhuman_validation_needed: true\nnext_recommended_action:\nWORKER_RESPONSE_END",
+    "created_at":  "2026-06-19T08:11:03"
+}

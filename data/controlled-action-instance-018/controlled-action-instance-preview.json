@@ -1,0 +1,28 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_ACTION_INSTANCE_018",
+    "stage":  "E01",
+    "created_at":  "2026-06-17T09:58:36.5084083+02:00",
+    "mode":  "PREVIEW_ONLY",
+    "gate":  "DEFER",
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "human_confirmation":  false,
+    "execution_allowed":  false,
+    "planned_pipeline":  [
+                             "E01_instance_preview",
+                             "E02_human_gate",
+                             "E03_dry_run",
+                             "E04_execution_plan_and_postcheck",
+                             "E05_close"
+                         ],
+    "directories":  {
+                        "data":  "data/controlled-action-instance-018",
+                        "reports":  "reports/controlled-action-instance-018",
+                        "receipts":  "data\\controlled-action-instance-018\\receipts",
+                        "docs":  "docs",
+                        "dashboard":  "dashboard"
+                    },
+    "status":  "INSTANCE_PREVIEW_CREATED_NO_EXECUTION"
+}

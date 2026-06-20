@@ -1,0 +1,15 @@
+﻿{
+    "package_id":  "ENGREMIAT_KANBAN_OPERATION_LOOP_001",
+    "contract":  "KANBAN_OPERATION_LOOP_V1",
+    "states":  [
+                   "SCAN",
+                   "PRIORITIZE",
+                   "PROPOSE",
+                   "GATE",
+                   "EXECUTE",
+                   "VALIDATE",
+                   "CLOSE"
+               ],
+    "default_execution":  "SAFE_BLOCKED",
+    "no_gate_no_execution":  true
+}

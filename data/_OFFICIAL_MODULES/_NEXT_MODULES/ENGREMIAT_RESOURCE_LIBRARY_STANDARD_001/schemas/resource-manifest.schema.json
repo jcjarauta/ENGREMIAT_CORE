@@ -1,0 +1,43 @@
+﻿{
+    "schema_id":  "resource-manifest.schema.v1",
+    "required":  [
+                     "resource_id",
+                     "resource_type",
+                     "status",
+                     "title",
+                     "description",
+                     "version",
+                     "capabilities",
+                     "dependencies",
+                     "location",
+                     "evidence",
+                     "quality",
+                     "reuse_policy",
+                     "gate"
+                 ],
+    "fields":  [
+                   "resource_id",
+                   "resource_type",
+                   "status",
+                   "title",
+                   "description",
+                   "domain",
+                   "version",
+                   "source_project_id",
+                   "source_task_id",
+                   "source_worker_id",
+                   "capabilities",
+                   "dependencies",
+                   "compatible_with",
+                   "incompatible_with",
+                   "inputs",
+                   "outputs",
+                   "location",
+                   "evidence",
+                   "quality",
+                   "reuse_policy",
+                   "created_at",
+                   "updated_at",
+                   "gate"
+               ]
+}

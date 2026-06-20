@@ -1,0 +1,17 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_REAL_WORKER_DAILY_VALUE_LOOP_056_065",
+    "stage":  "E60",
+    "rollback_id":  "E60_CONTROLLED_APPLY_V2_ROLLBACK_PLAN_001",
+    "target_path":  "data\\controlled-apply-v2-060\\controlled-apply-v2-output.json",
+    "previous_state_exists":  false,
+    "rollback_reference":  "data\\controlled-apply-v2-060\\controlled-apply-v2-output.rollback-before.json",
+    "rollback_instruction":  "delete controlled-apply-v2-output.json",
+    "rollback_tested":  false,
+    "rollback_executed":  false,
+    "requires_human_decision_for_rollback":  true,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "created_at":  "2026-06-17T12:22:51"
+}

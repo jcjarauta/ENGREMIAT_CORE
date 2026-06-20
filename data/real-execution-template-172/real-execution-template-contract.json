@@ -1,0 +1,42 @@
+﻿{
+    "objective_id":  "DEFINE_REAL_EXECUTION_TEMPLATE_STANDARD_MVP_172_175",
+    "stage":  "E172",
+    "block":  "B172.1",
+    "step":  "P172.1.1",
+    "name":  "real-execution-template-contract",
+    "purpose":  "Normalize minimum fields, restrictions and common rules for a real execution cycle",
+    "local_only":  true,
+    "external_network":  false,
+    "git_write":  false,
+    "kanban_real_write":  false,
+    "cline_real_write":  false,
+    "auto_apply":  false,
+    "destructive_actions":  false,
+    "human_authorization_required":  true,
+    "required_inputs":  [
+                            "objective_id",
+                            "stage",
+                            "candidate_task_id",
+                            "prompt_path",
+                            "execution_gate",
+                            "result_path",
+                            "receipt_path",
+                            "postcheck_path"
+                        ],
+    "required_outputs":  [
+                             "request_package",
+                             "result_artifact",
+                             "receipt",
+                             "postcheck",
+                             "readiness_report"
+                         ],
+    "rules":  [
+                  "single task only",
+                  "single prompt only",
+                  "single real call only",
+                  "evidence first",
+                  "human gated",
+                  "rollback logical only"
+              ],
+    "created_at":  "2026-06-17T17:59:50.2318808+02:00"
+}

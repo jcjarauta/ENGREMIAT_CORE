@@ -1,0 +1,17 @@
+﻿{
+    "schema_id":  "permission-levels.v1",
+    "levels":  [
+                   "READ_ONLY",
+                   "DRY_RUN",
+                   "PROPOSE",
+                   "WRITE",
+                   "EXECUTE",
+                   "ADMIN"
+               ],
+    "default":  "READ_ONLY",
+    "escalation_requires_gate":  [
+                                     "WRITE",
+                                     "EXECUTE",
+                                     "ADMIN"
+                                 ]
+}

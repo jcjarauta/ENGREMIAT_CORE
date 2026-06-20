@@ -1,0 +1,31 @@
+﻿{
+    "catalog_id":  "state-source-catalog.v1",
+    "sources":  [
+                    {
+                        "name":  "reports",
+                        "path":  "reports",
+                        "read":  "json reports"
+                    },
+                    {
+                        "name":  "_NEXT_MODULES",
+                        "path":  "data/_OFFICIAL_MODULES/_NEXT_MODULES",
+                        "read":  "candidate modules"
+                    },
+                    {
+                        "name":  "_OFFICIAL_MODULES",
+                        "path":  "data/_OFFICIAL_MODULES",
+                        "read":  "official modules"
+                    },
+                    {
+                        "name":  "resource_library_index",
+                        "path":  "data/_OFFICIAL_MODULES/_NEXT_MODULES/ENGREMIAT_RESOURCE_LIBRARY_STANDARD_001/library/index/resource-library-index.json",
+                        "read":  "resource index"
+                    },
+                    {
+                        "name":  "next_objectives",
+                        "path":  "data/_OFFICIAL_MODULES/_NEXT_MODULES/*/NEXT_OBJECTIVE.md",
+                        "read":  "future objectives"
+                    }
+                ],
+    "policy":  "read-only local"
+}

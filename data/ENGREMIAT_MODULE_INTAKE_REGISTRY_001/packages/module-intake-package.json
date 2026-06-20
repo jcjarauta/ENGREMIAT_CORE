@@ -1,0 +1,51 @@
+{
+    "package_id":  "ENGREMIAT_MODULE_INTAKE_REGISTRY_001",
+    "stage":  "E01_INTAKE_FOUNDATION",
+    "artifact":  "module-intake-package.json",
+    "status":  "PASS",
+    "canonical_folder":  "data/\u003cPACKAGE_ID\u003e/",
+    "canonical_structure":  [
+                                "module.json",
+                                "README.md",
+                                "contracts",
+                                "schemas",
+                                "packages",
+                                "reports",
+                                "dashboard",
+                                "docs",
+                                "stages"
+                            ],
+    "template":  {
+                     "package_id":  "EXAMPLE_MODULE_001",
+                     "module_id":  "ENG-XXX-001",
+                     "module_name":  "Example Module",
+                     "module_type":  "ADAPTER",
+                     "version":  "1.0.0",
+                     "status":  "DRAFT",
+                     "purpose":  "Describe module purpose",
+                     "depends_on":  [
+
+                                    ],
+                     "inputs":  [
+
+                                ],
+                     "outputs":  [
+
+                                 ],
+                     "boundaries":  [
+                                        "local_first",
+                                        "no_core_changes"
+                                    ],
+                     "risks":  [
+
+                               ],
+                     "human_gates":  [
+
+                                     ],
+                     "artifacts_expected":  [
+                                                "module.json",
+                                                "README.md"
+                                            ],
+                     "next_action":  "DEVELOP"
+                 }
+}

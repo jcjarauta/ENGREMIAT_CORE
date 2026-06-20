@@ -1,0 +1,37 @@
+﻿{
+    "package_id":  "ENGREMIAT_UX_SYSTEM_001",
+    "stage":  "E45_CLOSE_DOCCENTER_TO_DATAINTAKE_NORMALIZED_TEST",
+    "closed_at":  "2026-06-20T10:19:27",
+    "status":  "PASS",
+    "readiness":  100,
+    "human_validation":  "Centro Documental normalizado abre Data Intake normalizado y muestra estado correctamente",
+    "validated_flow":  [
+                           "DOCUMENTACION [3] Convocatorias y fichas",
+                           "CONVOCATORIAS [4] Data Intake normalizado",
+                           "DATA_INTAKE [7] Estado Data Intake"
+                       ],
+    "artifacts":  {
+                      "documentation_center_normalized":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-MEMORY-DOCUMENTATION-CENTER-NORMALIZED.ps1",
+                      "data_intake_normalized":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-DATA-INTAKE-CENTER-NORMALIZED.ps1",
+                      "active_profile":  "C:\\ENGREMIAT_CORE\\documents\\grants\\grant-call-profile-latest.json",
+                      "normalized_profiles_dir":  "C:\\ENGREMIAT_CORE\\documents\\intake\\normalized"
+                  },
+    "validated":  [
+                      "header limpio en Centro Documental",
+                      "header limpio en Data Intake",
+                      "conexion a launcher normalizado",
+                      "estado Data Intake OK",
+                      "perfiles normalizados visibles",
+                      "paleta UX disponible",
+                      "numeracion local por pantalla"
+                  ],
+    "pending":  [
+                    "probar handler JSON [4] si se necesita",
+                    "decidir si sustituir accesos legacy principales",
+                    "continuar roadmap de normalizacion del resto de launchers"
+                ],
+    "next":  "E46_DECIDE_REPLACE_LEGACY_ENTRY_OR_CONTINUE_SYSTEM_NORMALIZATION_ROADMAP",
+    "network_used":  false,
+    "external_ai_used":  false,
+    "commit_done":  false
+}

@@ -1,0 +1,48 @@
+﻿{
+    "package_id":  "ENGREMIAT_REAL_INTAKE_IMPORTER_001",
+    "stage":  "E04_BUILD_REAL_CONTROLLED_DRY_RUN_FROM_WORKER_PACKET",
+    "result_id":  "real-controlled-dry-run-result.latest.v1",
+    "status":  "PASS",
+    "decision":  "NO_GO_EXECUTION_NOT_AUTHORIZED",
+    "checks":  [
+                   {
+                       "check":  "previous_stage_pass",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "packet_present",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "execute_now_false",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "worker_execution_false",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "worker_authorization_not_granted",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "network_false",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "git_write_false",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "external_ai_false",
+                       "status":  "PASS"
+                   }
+               ],
+    "execute_now":  false,
+    "worker_execution":  false,
+    "worker_authorization":  "NOT_GRANTED",
+    "authorization_status":  "NOT_GRANTED",
+    "network":  false,
+    "git_write":  false,
+    "created_at":  "2026-06-19T10:06:03"
+}

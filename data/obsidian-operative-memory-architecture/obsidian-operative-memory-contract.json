@@ -1,0 +1,120 @@
+﻿{
+    "package_id":  "ENGREMIAT_OBSIDIAN_OPERATIVE_MEMORY_ARCHITECTURE_001",
+    "stage":  "E01_DEFINE_GLOBAL_OBSIDIAN_MEMORY_CONTRACT",
+    "contract_id":  "obsidian-operative-memory-contract.v1",
+    "purpose":  "Definir la arquitectura global de Obsidian como memoria operativa, relacional y navegable de ENGREMIAT",
+    "source_principles":  [
+                              "LOCAL_FIRST",
+                              "EVIDENCE_FIRST",
+                              "FAIL_CLOSED",
+                              "HUMAN_GATE_BEFORE_APPLY",
+                              "PROPOSAL_ONLY_BY_DEFAULT",
+                              "NO_REMOTE_BY_DEFAULT",
+                              "ONE_CONTROL_SPACE"
+                          ],
+    "vault":  {
+                  "mode":  "single_main_vault_with_project_spaces",
+                  "root":  "obsidian-vault-preview/ENGREMIAT_OBSIDIAN_VAULT",
+                  "role":  "human_operational_memory_not_canonical_execution_engine",
+                  "canonical_sources":  [
+                                            "data",
+                                            "reports",
+                                            "manifests",
+                                            "exports",
+                                            "dashboard"
+                                        ],
+                  "obsidian_role":  [
+                                        "index_humano",
+                                        "memoria_navegable",
+                                        "mapa_relacional",
+                                        "vista_de_decisiones",
+                                        "puente_de_continuidad"
+                                    ]
+              },
+    "global_folders":  [
+                           "00_CONTROL_OPERATIVO",
+                           "01_SISTEMA_ENGREMIAT",
+                           "02_PROYECTOS",
+                           "03_WORKERS",
+                           "04_GATES_DECISIONES",
+                           "05_EVIDENCIAS",
+                           "06_KANBAN_TAREAS",
+                           "07_OBSIDIAN_GRAPH",
+                           "08_PLANTILLAS",
+                           "09_ARCHIVO"
+                       ],
+    "project_space":  {
+                          "path":  "02_PROYECTOS/PROJECT_\u003cslug\u003e",
+                          "folders":  [
+                                          "00_INDEX",
+                                          "01_INTAKE",
+                                          "02_ROADMAP",
+                                          "03_TAREAS",
+                                          "04_GATES_DECISIONES",
+                                          "05_EVIDENCIAS",
+                                          "06_WORKERS",
+                                          "07_RESULTADOS",
+                                          "08_RELACIONES"
+                                      ]
+                      },
+    "note_types":  [
+                       "project",
+                       "intake",
+                       "roadmap",
+                       "stage",
+                       "task_card",
+                       "gate",
+                       "decision",
+                       "evidence",
+                       "report",
+                       "dashboard",
+                       "worker_packet",
+                       "worker_response",
+                       "dry_run",
+                       "result",
+                       "risk",
+                       "blocker",
+                       "module",
+                       "node"
+                   ],
+    "relation_types":  [
+                           "CONTAINS",
+                           "DEPENDS_ON",
+                           "GENERATES",
+                           "VALIDATES",
+                           "REQUIRES_GATE",
+                           "PRODUCES_EVIDENCE",
+                           "CONSUMED_BY",
+                           "VISUALIZES",
+                           "BLOCKS",
+                           "APPROVES",
+                           "DEFERRED_BY"
+                       ],
+    "required_views":  [
+                           "ACTIVE_PROJECTS",
+                           "PENDING_GATES",
+                           "ACTIVE_CARDS",
+                           "BLOCKED_CARDS",
+                           "RECENT_EVIDENCE",
+                           "WORKER_PROPOSALS"
+                       ],
+    "required_canvas":  [
+                            "CONTROL_HUB.canvas",
+                            "SYSTEM_CANVAS.canvas",
+                            "PROJECT_CANVAS.canvas"
+                        ],
+    "safety":  {
+                   "local_only":  true,
+                   "obsidian_write_preview_only":  true,
+                   "execute_now":  false,
+                   "worker_execution":  false,
+                   "kanban_write":  false,
+                   "clien_write":  false,
+                   "browser_automation":  false,
+                   "git_write":  false,
+                   "external_network":  false,
+                   "auto_apply":  false,
+                   "read_secrets":  false
+               },
+    "next":  "E02_DEFINE_OBSIDIAN_OBJECT_TAXONOMY_AND_FRONTMATTER"
+}

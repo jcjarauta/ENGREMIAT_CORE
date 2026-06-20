@@ -1,0 +1,23 @@
+﻿{
+    "contract_id":  "engremiat-real-card-lifecycle-panel-v1",
+    "package_id":  "ENGREMIAT_REAL_CARD_LIFECYCLE_PANEL_001",
+    "purpose":  "Human visual panel for card lifecycle from Obsidian creation to worker evidence, gate and applied transition",
+    "lifecycle_states":  [
+                             "CREATED",
+                             "READY",
+                             "WORKER_SENT",
+                             "EVIDENCE_READY",
+                             "GATE_PENDING",
+                             "APPLIED",
+                             "REVIEW_OR_DONE"
+                         ],
+    "safety":  {
+                   "readonly_panel":  true,
+                   "card_write":  false,
+                   "worker_execution":  false,
+                   "git":  false,
+                   "network_external":  false,
+                   "write_to_cline":  false
+               },
+    "next":  "E02_ADD_LIFECYCLE_ACTION_BUTTONS_GATED"
+}

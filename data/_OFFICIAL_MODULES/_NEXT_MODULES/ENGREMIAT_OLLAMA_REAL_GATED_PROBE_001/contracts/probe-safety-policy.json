@@ -1,0 +1,14 @@
+﻿{
+    "policy_id":  "REAL_GATED_PROBE_SAFETY_V1",
+    "max_calls":  1,
+    "allowed_base_url":  "http://127.0.0.1:11434",
+    "allowed_endpoint":  "/api/generate",
+    "allowed_model":  "qwen3:14b",
+    "timeout_seconds":  60,
+    "stream":  false,
+    "num_predict_max":  32,
+    "prompt_policy":  "SHORT_NON_SENSITIVE_TECHNICAL_SMOKE",
+    "external_network":  false,
+    "write_external_tools":  false,
+    "git":  false
+}

@@ -1,0 +1,93 @@
+<html><head><meta charset='utf-8'><title>NEXT 003E E03 Activation Rollback Planner</title><style>body{font-family:Segoe UI,Arial;background:#0f172a;color:#e2e8f0;padding:24px}.card{max-width:1200px;margin:auto;background:#111827;border:1px solid #334155;border-radius:18px;padding:20px}pre{background:#020617;padding:14px;border-radius:12px;white-space:pre-wrap;overflow:auto}.warn{color:#facc15}</style></head><body><div class='card'><h1>NEXT_ENGREMIAT_MODULAR_PLATFORM_003E · E03</h1><p class='warn'>PLAN ONLY: no module activation executed.</p><h2>Activation planner</h2><pre>{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_003E",
+    "stage":  "E03",
+    "block":  "B03.1",
+    "artifact":  "activation-planner-contract.json",
+    "status":  "DEFINED",
+    "purpose":  "Crear planes de activacion, pausa y verificacion sin ejecutar modulos reales",
+    "input":  "selector-dependency-engine-package.json",
+    "output":  "activation-plan-package.json",
+    "rules":  [
+                  "plan_only",
+                  "human_gate_required_before_real_activation",
+                  "snapshot_before_state_change",
+                  "validate_each_step",
+                  "stop_on_failure"
+              ],
+    "control":  {
+                    "local_first":  true,
+                    "no_core_changes":  true,
+                    "no_external_network":  true,
+                    "no_git_write":  true,
+                    "no_real_activation":  true
+                }
+}</pre><h2>Rollback policy</h2><pre>{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_003E",
+    "stage":  "E03",
+    "block":  "B03.2",
+    "artifact":  "swap-rollback-policy.json",
+    "status":  "DEFINED",
+    "purpose":  "Definir sustitucion, retirada, rollback y recuperacion sin activar cambios reales",
+    "actions":  [
+                    "prepare_swap",
+                    "pause_old_module",
+                    "stage_new_module",
+                    "validate_new_module",
+                    "rollback_to_previous_snapshot",
+                    "detach_if_safe",
+                    "retire_if_confirmed"
+                ],
+    "requirements":  [
+                         "previous_snapshot",
+                         "compatibility_record",
+                         "human_gate",
+                         "validation_report",
+                         "rollback_path"
+                     ],
+    "control":  {
+                    "rollback_required":  true,
+                    "no_destructive_action":  true,
+                    "local_only":  true
+                }
+}</pre><h2>Safety gate</h2><pre>{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_003E",
+    "stage":  "E03",
+    "block":  "B03.3",
+    "artifact":  "activation-safety-gate.json",
+    "status":  "DEFINED",
+    "gate":  "PENDING_HUMAN_AUTHORIZATION_FOR_REAL_ACTIVATION",
+    "allowed_now":  [
+                        "write_local_plan",
+                        "write_local_policy",
+                        "write_local_dashboard",
+                        "validate_artifacts"
+                    ],
+    "blocked_now":  [
+                        "activate_module",
+                        "pause_real_module",
+                        "detach_real_module",
+                        "write_git",
+                        "external_network",
+                        "modify_core"
+                    ],
+    "decision":  "PLAN_ONLY_PASS"
+}</pre><h2>Validation</h2><pre>{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_003E",
+    "stage":  "E03_ACTIVATION_AND_ROLLBACK_PLANNER",
+    "status":  "PASS",
+    "authorization":  "LOCAL_WRITE_GRANTED_BY_USER",
+    "checks":  {
+                   "previous_stage_pass":  true,
+                   "activation_contract_ok":  true,
+                   "rollback_policy_ok":  true,
+                   "safety_gate_ok":  true,
+                   "activation_plan_created":  true,
+                   "planned_steps_count":  6,
+                   "real_activation_executed":  false,
+                   "local_write_only":  true,
+                   "no_core_changes":  true,
+                   "no_external_network":  true,
+                   "no_git_write":  true
+               },
+    "next":  "E04_OBSERVABILITY_AND_CLOSE"
+}</pre></div></body></html>

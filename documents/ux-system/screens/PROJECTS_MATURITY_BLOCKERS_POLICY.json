@@ -1,0 +1,25 @@
+﻿{
+    "package_id":  "ENGREMIAT_UX_SYSTEM_001",
+    "stage":  "E57_PROJECTS_MATURITY_AND_BLOCKERS_VIEW",
+    "created_at":  "2026-06-20T10:29:59",
+    "status":  "PASS",
+    "decision":  "Convertir listado de proyectos en cartera con madurez y bloqueos",
+    "maturity_formula":  [
+                             "project.json 20",
+                             "MODULOS dir 20",
+                             "modulos hasta 25",
+                             "reports hasta 15",
+                             "docs hasta 10",
+                             "actividad reciente hasta 10"
+                         ],
+    "blockers":  [
+                     "sin_project_json",
+                     "sin_modulos_dir",
+                     "sin_modulos",
+                     "sin_reports",
+                     "sin_actividad_7d"
+                 ],
+    "launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1",
+    "backup":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\backup-projects-center-before-e57-20260620-102959.ps1",
+    "next":  "RUN_PROJECTS_MATURITY_BLOCKERS_TEST"
+}

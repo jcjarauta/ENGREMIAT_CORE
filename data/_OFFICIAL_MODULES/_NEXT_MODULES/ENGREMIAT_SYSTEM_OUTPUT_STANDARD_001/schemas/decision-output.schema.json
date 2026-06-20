@@ -1,0 +1,29 @@
+﻿{
+    "schema_id":  "decision-output.schema.v1",
+    "required":  [
+                     "decision_id",
+                     "target_output_id",
+                     "decision",
+                     "decided_by",
+                     "created_at"
+                 ],
+    "allowed_decisions":  [
+                              "APPROVE",
+                              "REJECT",
+                              "BACKLOG",
+                              "REQUEST_CHANGES",
+                              "ARCHIVE",
+                              "EXPIRE"
+                          ],
+    "fields":  [
+                   "decision_id",
+                   "target_output_id",
+                   "decision",
+                   "reason",
+                   "decided_by",
+                   "scope",
+                   "expires",
+                   "evidence",
+                   "created_at"
+               ]
+}

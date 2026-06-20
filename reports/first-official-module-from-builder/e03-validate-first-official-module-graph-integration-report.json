@@ -1,0 +1,131 @@
+﻿{
+    "package_id":  "ENGREMIAT_FIRST_OFFICIAL_MODULE_FROM_BUILDER_001",
+    "stage":  "E03_VALIDATE_FIRST_OFFICIAL_MODULE_GRAPH_INTEGRATION",
+    "status":  "PASS",
+    "vault_path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146",
+    "module_id":  "MODULE_arquitectura_global_engremiat",
+    "module_folder":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\03_MODULOS\\MODULE_arquitectura_global_engremiat",
+    "readiness":  70,
+    "decision":  "NO_GO_REPAIR_FIRST_MODULE_INTEGRATION",
+    "checks":  [
+                   {
+                       "id":  "module_folder_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\03_MODULOS\\MODULE_arquitectura_global_engremiat"
+                   },
+                   {
+                       "id":  "module_index_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\03_MODULOS\\MODULE_arquitectura_global_engremiat\\MODULE_arquitectura_global_engremiat_INDEX.md"
+                   },
+                   {
+                       "id":  "readme_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\03_MODULOS\\MODULE_arquitectura_global_engremiat\\README.md"
+                   },
+                   {
+                       "id":  "evidence_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\03_MODULOS\\MODULE_arquitectura_global_engremiat\\EVIDENCE.md"
+                   },
+                   {
+                       "id":  "contract_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\03_MODULOS\\MODULE_arquitectura_global_engremiat\\module-contract.json"
+                   },
+                   {
+                       "id":  "canvas_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\03_MODULOS\\MODULE_arquitectura_global_engremiat\\MODULE_CANVAS.canvas"
+                   },
+                   {
+                       "id":  "home_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\HOME.md"
+                   },
+                   {
+                       "id":  "graph_map_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\00_CONTROL_OPERATIVO\\GRAPH_NAVIGATION_MAP.md"
+                   },
+                   {
+                       "id":  "modules_index_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\03_MODULOS\\03_MODULOS_INDEX.md"
+                   },
+                   {
+                       "id":  "graph_selector_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\00_CONTROL_OPERATIVO\\GRAPH_VIEW_SELECTOR.md"
+                   },
+                   {
+                       "id":  "home_links_module",
+                       "ok":  false
+                   },
+                   {
+                       "id":  "graph_map_links_module",
+                       "ok":  false
+                   },
+                   {
+                       "id":  "modules_index_links_module",
+                       "ok":  false
+                   },
+                   {
+                       "id":  "module_index_has_frontmatter",
+                       "ok":  true
+                   },
+                   {
+                       "id":  "module_index_has_module_tag",
+                       "ok":  true
+                   },
+                   {
+                       "id":  "module_index_has_architecture_tag",
+                       "ok":  true
+                   },
+                   {
+                       "id":  "selector_has_module_view",
+                       "ok":  true
+                   },
+                   {
+                       "id":  "canvas_valid_minimum_nodes_edges",
+                       "ok":  true,
+                       "nodes":  4,
+                       "edges":  3
+                   },
+                   {
+                       "id":  "contract_matches_module",
+                       "ok":  true
+                   }
+               ],
+    "failed_checks":  [
+                          {
+                              "id":  "home_links_module",
+                              "ok":  false
+                          },
+                          {
+                              "id":  "graph_map_links_module",
+                              "ok":  false
+                          },
+                          {
+                              "id":  "modules_index_links_module",
+                              "ok":  false
+                          }
+                      ],
+    "canvas_nodes":  4,
+    "canvas_edges":  3,
+    "safety":  {
+                   "local_only":  true,
+                   "new_vault_only":  true,
+                   "template_write":  false,
+                   "preview_only":  true,
+                   "obsidian_app_automation":  false,
+                   "worker_execution":  false,
+                   "kanban_write":  false,
+                   "clien_write":  false,
+                   "git_write":  false,
+                   "external_network":  false
+               },
+    "next":  "REPAIR_FIRST_OFFICIAL_MODULE_GRAPH_INTEGRATION",
+    "dashboard":  "C:\\ENGREMIAT_CORE\\dashboard\\first-official-module-from-builder\\e03-validate-first-official-module-graph-integration.html",
+    "guide":  "C:\\ENGREMIAT_CORE\\docs\\first-official-module-from-builder\\E03_VALIDATE_FIRST_OFFICIAL_MODULE_GRAPH_INTEGRATION.md"
+}

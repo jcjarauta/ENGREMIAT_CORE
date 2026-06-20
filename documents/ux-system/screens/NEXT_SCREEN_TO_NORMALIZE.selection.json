@@ -1,0 +1,31 @@
+﻿{
+    "selection_id":  "ENGREMIAT_NEXT_SCREEN_NORMALIZATION_SELECTION",
+    "created_at":  "2026-06-20T10:06:50",
+    "selected_target":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-DATA-INTAKE-CENTER.ps1",
+    "selected_target_relative":  "tools\\launcher\\ENGREMIAT-DATA-INTAKE-CENTER.ps1",
+    "normalized_target":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-DATA-INTAKE-CENTER-NORMALIZED.ps1",
+    "screen_name":  "ENGREMIAT_DATA_INTAKE_CENTER",
+    "priority":  "HIGH_PRIORITY",
+    "reason":  [
+                   "options=14 legacy_numbers=2 score=75"
+               ],
+    "parse_ok":  true,
+    "parse_error":  "",
+    "visible_options":  [
+                            "[1].Value}};return \u0027No definido\u0027}",
+                            "[15] Memoria y documentacion \u003e [17] Data Intake / Entrada de datos y fichas\u0027 DarkGray;W \u0027Rol: productor y normalizador local de fichas estructuradas\u0027 Gray;if($sub){W $sub Yellow};W \u0027\u0027}",
+                            "[1] -eq \u0027No definido\u0027){$pending+=$kv[0]}};if($criteria.Count -eq 0){$pending+=\u0027criterios\u0027};if($docs.Count -eq 0){$pending+=\u0027documentacion_requerida\u0027};$found=@($entity,$territory,$deadline,$amount,$objective,$beneficiaries,$summary)|Where-Object{$_ -ne \u0027No definido\u0027};$confidence=if($found.Count -ge 6 -and $criteria.Count -gt 0 -and $docs.Count -gt 0){\u0027medium\u0027}elseif($found.Count -ge 3){\u0027low\u0027}else{\u0027none\u0027};$src=[ordered]@{source_id=\u0027intake-\u0027+$mode+\u0027-\u0027+$stamp;source_type=$mode;source_path=$sourceFile;created_at=(Get-Date).ToString(\u0027s\u0027);status=\u0027normalized\u0027;human_review_required=($pending.Count -gt 0);title=[IO.Path]::GetFileNameWithoutExtension($sourceFile);raw_text_length=$raw.Length};$profile=[ordered]@{profile_id=\u0027grant-call-profile-from-\u0027+$mode+\u0027-latest\u0027;profile_type=\u0027grant_call\u0027;schema=\u0027ENGREMIAT_NORMALIZED_PROFILE_CONTRACT_V1\u0027;created_at=(Get-Date).ToString(\u0027s\u0027);status=if($pending.Count -eq 0){\u0027ready\u0027}else{\u0027pending_review\u0027};human_review_required=($pending.Count -gt 0);confidence=$confidence;source=$src;titulo=[IO.Path]::GetFileNameWithoutExtension($sourceFile);convocatoria_nombre=[IO.Path]::GetFileNameWithoutExtension($sourceFile);entidad_convocante=$entity;entity=$entity;territorio=$territory;territory=$territory;fecha_limite=$deadline;deadline=$deadline;importe_maximo=$amount;amount=$amount;objetivo_convocatoria=$objective;beneficiarios=$beneficiaries;criterios=$criteria;criteria=$criteria;documentacion_requerida=$docs;required_documents=$docs;resumen=$summary;summary=$summary;encaje_engremiat=\u0027Ficha generada por Data Intake local.\u0027;pending_fields=$pending;metadata=[ordered]@{producer=\u0027ENGREMIAT-DATA-INTAKE-CENTER\u0027;local_first=$true;network_used=$false;external_ai_used=$false}};$sourcePath=Join-Path $Base (\u0027profiles\\intake-source-\u0027+$mode+\u0027-latest.json\u0027);$profilePath=Join-Path $Base (\u0027normalized\\grant-call-profile-from-\u0027+$mode+\u0027-latest.json\u0027);$active=Join-Path $Core \u0027documents\\grants\\grant-call-profile-latest.json\u0027;J $src $sourcePath;J $profile $profilePath;Copy-Item $profilePath $active -Force;Header \u0027TXT/MD IMPORTADO Y NORMALIZADO\u0027;W (\u0027OK fuente_registrada=True modo=\u0027+$mode+\u0027 confidence=\u0027+$confidence+\u0027 pendientes=\u0027+$pending.Count) Green;W $profilePath Cyan}",
+                            "[3].\u0027)|Set-Content $t -Encoding UTF8;Start-Process notepad.exe $t;Header \u0027TXT/MD PENDIENTE\u0027;W \u0027PENDING plantilla_txt_creada=True\u0027 Yellow;P;return};$f=$files|Select-Object -First 1;$raw=Get-Content $f.FullName -Raw;if($raw -match \u0027PEGA AQUI EL TEXTO\u0027 -or $raw.Trim().Length -lt 80){Start-Process notepad.exe $f.FullName;Header \u0027TXT/MD INSUFICIENTE\u0027;W \u0027PENDING pega_texto_y_guarda=True\u0027 Yellow;P;return};NormalizeTextSource $f.FullName $raw \u0027txt_md\u0027;P}",
+                            "[1] activar ficha demo completa\u0027;W \u0027[2] crear/abrir ficha manual editable\u0027;W \u0027[3] importar TXT/MD desde inbox y normalizar\u0027;W \u0027[4] importar JSON desde inbox como ficha activa\u0027;W \u0027[5] abrir carpeta inbox de entradas\u0027;W \u0027[6] abrir carpeta normalized de fichas\u0027;W \u0027[7] ver estado de Data Intake\u0027;W \u0027[8] abrir contratos Data Intake\u0027;W \u0027[b] volver al Centro Documental\u0027;W \u0027\u0027;W \u0027[Enter] refrescar | b = volver | ? = ayuda\u0027 DarkGray;W \u0027\u0027;$op=Read-Host \u0027DATA_INTAKE\u0027;switch($op){\u00271\u0027{DemoProfile};\u00272\u0027{ManualProfile};\u00273\u0027{ImportTxtMd};\u00274\u0027{ImportJson};\u00275\u0027{OpenInbox};\u00276\u0027{OpenNormalized};\u00277\u0027{Status};\u00278\u0027{OpenContracts};\u0027b\u0027{return};\u0027?\u0027{Header \u0027AYUDA\u0027;W \u0027Data Intake produce fichas. Centro Documental las consume. No se usa red, IA externa ni scraping.\u0027;P};\u0027\u0027{continue};default{W \u0027Opcion no reconocida\u0027 Yellow;Start-Sleep -Milliseconds 700}}}}"
+                        ],
+    "visible_options_count":  5,
+    "legacy_numbers":  [
+                           15,
+                           17
+                       ],
+    "read_host_count":  2,
+    "method":  "crear launcher paralelo normalizado, aplicar numeros locales, preservar legacy, cablear una frontera por fase",
+    "risk":  "LOW_READONLY_SELECTION",
+    "write_launcher_now":  false,
+    "next":  "E34_CREATE_PARALLEL_NORMALIZED_SCREEN_BLUEPRINT"
+}

@@ -1,0 +1,72 @@
+﻿{
+    "package_id":  "ENGREMIAT_OBSIDIAN_OPERATIVE_MEMORY_ARCHITECTURE_001",
+    "stage":  "E08_CLOSE_OBSIDIAN_OPERATIVE_MEMORY_ARCHITECTURE",
+    "status":  "PASS",
+    "closed":  true,
+    "readiness":  95,
+    "decision":  "GO_CLOSE_WITH_MINOR_LINK_WARNINGS",
+    "vault":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT",
+    "project_root":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\02_PROYECTOS\\PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia",
+    "stages":  [
+                   {
+                       "report":  "C:\\ENGREMIAT_CORE\\reports\\obsidian-operative-memory-architecture\\e01-define-global-obsidian-memory-contract-report.json",
+                       "status":  "PASS",
+                       "stage":  "E01_DEFINE_GLOBAL_OBSIDIAN_MEMORY_CONTRACT"
+                   },
+                   {
+                       "report":  "C:\\ENGREMIAT_CORE\\reports\\obsidian-operative-memory-architecture\\e02-define-obsidian-object-taxonomy-and-frontmatter-report.json",
+                       "status":  "PASS",
+                       "stage":  "E02_DEFINE_OBSIDIAN_OBJECT_TAXONOMY_AND_FRONTMATTER"
+                   },
+                   {
+                       "report":  "C:\\ENGREMIAT_CORE\\reports\\obsidian-operative-memory-architecture\\e03-create-obsidian-markdown-templates-with-yaml-report.json",
+                       "status":  "PASS",
+                       "stage":  "E03_CREATE_OBSIDIAN_MARKDOWN_TEMPLATES_WITH_YAML"
+                   },
+                   {
+                       "report":  "C:\\ENGREMIAT_CORE\\reports\\obsidian-operative-memory-architecture\\e04-create-obsidian-bases-and-operative-indexes-report.json",
+                       "status":  "PASS",
+                       "stage":  "E04_CREATE_OBSIDIAN_BASES_AND_OPERATIVE_INDEXES_REPAIR"
+                   },
+                   {
+                       "report":  "C:\\ENGREMIAT_CORE\\reports\\obsidian-operative-memory-architecture\\e05-create-obsidian-canvas-global-and-project-maps-report.json",
+                       "status":  "PASS",
+                       "stage":  "E05_CREATE_OBSIDIAN_CANVAS_GLOBAL_AND_PROJECT_MAPS"
+                   },
+                   {
+                       "report":  "C:\\ENGREMIAT_CORE\\reports\\obsidian-operative-memory-architecture\\e06-generate-obsidian-project-preview-from-last-workflow-report.json",
+                       "status":  "PASS",
+                       "stage":  "E06_GENERATE_OBSIDIAN_PROJECT_PREVIEW_FROM_LAST_WORKFLOW"
+                   },
+                   {
+                       "report":  "C:\\ENGREMIAT_CORE\\reports\\obsidian-operative-memory-architecture\\e07-validate-obsidian-navigation-and-links-report.json",
+                       "status":  "PASS",
+                       "stage":  "E07_VALIDATE_OBSIDIAN_NAVIGATION_AND_LINKS"
+                   }
+               ],
+    "metrics":  {
+                    "projects":  2,
+                    "markdown_files":  62,
+                    "canvas_files":  4,
+                    "base_preview_files":  6,
+                    "json_view_files":  6,
+                    "e07_markdown_files":  23,
+                    "e07_wikilinks":  41,
+                    "e07_warnings":  4,
+                    "e07_canvas_nodes":  9,
+                    "e07_canvas_edges":  9
+                },
+    "safety":  {
+                   "local_only":  true,
+                   "preview_only":  true,
+                   "execute_now":  false,
+                   "worker_execution":  false,
+                   "kanban_write":  false,
+                   "clien_write":  false,
+                   "browser_automation":  false,
+                   "git_write":  false,
+                   "external_network":  false,
+                   "auto_apply":  false
+               },
+    "next":  "PAUSE_AND_REVIEW_OBSIDIAN_VAULT_OR_START_REAL_OBSIDIAN_OPEN_TEST"
+}

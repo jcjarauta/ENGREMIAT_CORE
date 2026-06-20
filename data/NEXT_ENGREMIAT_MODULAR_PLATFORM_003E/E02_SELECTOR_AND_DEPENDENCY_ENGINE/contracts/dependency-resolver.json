@@ -1,0 +1,31 @@
+{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_003E",
+    "stage":  "E02",
+    "block":  "B02.2",
+    "artifact":  "dependency-resolver.json",
+    "status":  "DEFINED",
+    "purpose":  "Resolver dependencias, conflictos, bloqueos y orden estable antes de cualquier activacion futura",
+    "dependency_rules":  [
+                             "registry_before_catalog",
+                             "catalog_before_selector",
+                             "selector_before_orchestrator",
+                             "orchestrator_before_observability",
+                             "blocked_conflicts_stop_plan"
+                         ],
+    "priority_rules":  [
+                           "Alta before Media",
+                           "explicit_human_priority_over_default",
+                           "dependency_order_over_priority"
+                       ],
+    "outputs":  [
+                    "resolved_order",
+                    "blocked_conflicts",
+                    "missing_dependencies",
+                    "activation_plan_seed"
+                ],
+    "control":  {
+                    "deterministic_order":  true,
+                    "stop_on_conflict":  true,
+                    "local_only":  true
+                }
+}

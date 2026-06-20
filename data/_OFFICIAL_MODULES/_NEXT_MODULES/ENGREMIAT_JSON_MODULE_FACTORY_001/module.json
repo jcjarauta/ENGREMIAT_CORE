@@ -1,0 +1,26 @@
+﻿{
+    "module_id":  "ENGREMIAT_JSON_MODULE_FACTORY_001",
+    "name":  "JSON Module Factory",
+    "status":  "CANDIDATE",
+    "kind":  "ACOPLABLE_DESACOPLABLE",
+    "location":  "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_JSON_MODULE_FACTORY_001",
+    "purpose":  "Consumir un module-init-json generado por ENGREMIAT_SHEETS_MODULE_INITIATOR_001 y crear estructura local candidata de modulo en data/_OFFICIAL_MODULES/_NEXT_MODULES.",
+    "consumes":  "module-init-json",
+    "produces":  "candidate module folder skeleton",
+    "safety":  {
+                   "local_only":  true,
+                   "core_changes":  false,
+                   "real_module_activation":  false,
+                   "real_intake_write":  false,
+                   "git_write":  false,
+                   "network":  false,
+                   "external_api":  false
+               },
+    "stages":  [
+                   "E01_MODULE_IDENTITY_AND_FACTORY_CONTRACT",
+                   "E02_MODULE_INIT_JSON_SCHEMA",
+                   "E03_FACTORY_DRY_RUN_SCRIPT",
+                   "E04_SAMPLE_FACTORY_OUTPUT",
+                   "E05_VALIDATE_AND_CLOSE"
+               ]
+}

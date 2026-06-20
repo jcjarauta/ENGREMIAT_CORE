@@ -1,0 +1,25 @@
+{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_005E",
+    "state_id":  "module-activation-state",
+    "mode":  "CONTROLLED_LOCAL_APPLY_ARTIFACT_STATE",
+    "winner":  "COMP_CORE_CONTROL",
+    "modules":  [
+                    {
+                        "module":  "REGISTRY",
+                        "state":  "applied_artifact_only"
+                    },
+                    {
+                        "module":  "QUEUE",
+                        "state":  "applied_artifact_only"
+                    },
+                    {
+                        "module":  "CONTROL",
+                        "state":  "applied_artifact_only"
+                    },
+                    {
+                        "module":  "MEMORY",
+                        "state":  "applied_artifact_only"
+                    }
+                ],
+    "real_activation":  false
+}

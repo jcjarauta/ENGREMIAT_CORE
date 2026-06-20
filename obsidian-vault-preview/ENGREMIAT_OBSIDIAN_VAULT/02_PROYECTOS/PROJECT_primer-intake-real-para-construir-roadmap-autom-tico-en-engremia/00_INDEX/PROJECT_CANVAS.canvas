@@ -1,0 +1,24 @@
+{
+	"nodes":[
+		{"id":"p-roadmap","type":"file","file":"02_PROYECTOS/PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia/02_ROADMAP/ROADMAP_IA_LOCAL.md","x":800,"y":-300,"width":280,"height":100,"color":"3"},
+		{"id":"p-intake","type":"file","file":"02_PROYECTOS/PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia/01_INTAKE/INTAKE_NORMALIZADO.md","x":400,"y":-260,"width":280,"height":100,"color":"2"},
+		{"id":"p-tasks","type":"file","file":"02_PROYECTOS/PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia/03_TAREAS/TASKS_INDEX.md","x":1360,"y":-210,"width":280,"height":100,"color":"4"},
+		{"id":"p-gates","type":"file","file":"02_PROYECTOS/PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia/04_GATES_DECISIONES/GATES_INDEX.md","x":1880,"y":-350,"width":280,"height":100,"color":"5"},
+		{"id":"p-worker","type":"file","file":"02_PROYECTOS/PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia/06_WORKERS/WORKER_PACKET.md","x":2280,"y":-160,"width":280,"height":100,"color":"6"},
+		{"id":"p-dry","type":"file","file":"02_PROYECTOS/PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia/06_WORKERS/DRY_RUN.md","x":2360,"y":190,"width":280,"height":100,"color":"1"},
+		{"id":"p-evidence","type":"file","file":"02_PROYECTOS/PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia/05_EVIDENCIAS/EVIDENCE_INDEX.md","x":3280,"y":-50,"width":280,"height":680,"color":"2"},
+		{"id":"p-index","type":"file","file":"02_PROYECTOS/PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia/00_INDEX/PROJECT_INDEX.md","x":200,"y":-1160,"width":280,"height":100,"color":"1"},
+		{"id":"p-result","type":"file","file":"02_PROYECTOS/PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia/07_RESULTADOS/RESULT_SUMMARY.md","x":3560,"y":-1260,"width":280,"height":400,"color":"3"}
+	],
+	"edges":[
+		{"id":"e1","fromNode":"p-index","fromSide":"right","toNode":"p-intake","toSide":"left","label":"contiene"},
+		{"id":"e2","fromNode":"p-intake","fromSide":"right","toNode":"p-roadmap","toSide":"left","label":"genera"},
+		{"id":"e3","fromNode":"p-roadmap","fromSide":"right","toNode":"p-tasks","toSide":"left","label":"desglosa"},
+		{"id":"e4","fromNode":"p-tasks","fromSide":"right","toNode":"p-gates","toSide":"left","label":"requiere"},
+		{"id":"e5","fromNode":"p-gates","fromSide":"right","toNode":"p-worker","toSide":"left","label":"autoriza"},
+		{"id":"e6","fromNode":"p-worker","fromSide":"right","toNode":"p-dry","toSide":"left","label":"simula"},
+		{"id":"e7","fromNode":"p-dry","fromSide":"right","toNode":"p-evidence","toSide":"left","label":"produce"},
+		{"id":"e8","fromNode":"p-evidence","fromSide":"right","toNode":"p-result","toSide":"left","label":"valida"},
+		{"id":"e9","fromNode":"p-result","fromSide":"right","toNode":"p-index","toSide":"left","label":"actualiza"}
+	]
+}

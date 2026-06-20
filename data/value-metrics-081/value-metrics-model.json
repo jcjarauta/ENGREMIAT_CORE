@@ -1,0 +1,38 @@
+﻿{
+    "objective":  "ENGREMIAT_NEXT_REAL_VALUE_OPERATIONALIZATION_076_085",
+    "stage":  "E81",
+    "name":  "Value Metrics",
+    "version":  "0.81.0-local",
+    "purpose":  "Medir valor diario, friccion humana y utilidad operativa sin ejecutar acciones automaticamente.",
+    "metrics_executes":  false,
+    "human_review_required":  true,
+    "categories":  [
+                       "daily_value",
+                       "human_friction",
+                       "decision_quality",
+                       "evidence_quality",
+                       "operational_usefulness",
+                       "blocked_work"
+                   ],
+    "scale":  {
+                  "min":  0,
+                  "max":  5,
+                  "meaning":  "0 sin valor observable, 5 valor alto observable"
+              },
+    "required_fields":  [
+                            "metric_id",
+                            "category",
+                            "score",
+                            "note",
+                            "evidence_ref",
+                            "human_review_required"
+                        ],
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "kanban_real_write":  false,
+    "created_utc":  "2026-06-17T10:57:16.7738893Z"
+}

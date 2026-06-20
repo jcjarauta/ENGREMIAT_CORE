@@ -1,0 +1,35 @@
+﻿{
+    "objective":  "ENGREMIAT_NEXT_REAL_VALUE_OPERATIONALIZATION_076_085",
+    "stage":  "E80",
+    "gate":  "LOCAL_APPLY_AUTHORIZATION_GATE_V3",
+    "gate_locked":  true,
+    "authorization_status":  "PENDING_EXPLICIT_HUMAN_AUTHORIZATION",
+    "human_approval_required":  true,
+    "real_apply_allowed":  false,
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "unlock_conditions":  [
+                              "EXPLICIT_HUMAN_APPROVAL",
+                              "TARGET_FILES_DECLARED",
+                              "ROLLBACK_PLAN_PRESENT",
+                              "POSTCHECK_PLAN_PRESENT",
+                              "RECEIPT_PLAN_PRESENT",
+                              "NO_PENDING_ERR",
+                              "NO_PENDING_NO_GO"
+                          ],
+    "blocked_actions":  [
+                            "APPLY_REAL_CHANGES",
+                            "AUTO_APPLY",
+                            "REMOTE_EXECUTION",
+                            "EXTERNAL_NETWORK",
+                            "GIT_WRITE",
+                            "KANBAN_REAL_WRITE",
+                            "WORKER_EXECUTION"
+                        ],
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "kanban_real_write":  false,
+    "created_utc":  "2026-06-17T10:55:18.7176768Z"
+}

@@ -1,0 +1,35 @@
+﻿{
+    "proposal_id":  "SOLUTION-PROPOSAL-001",
+    "need_id":  "NEED-COMPOSITION-001",
+    "need_type":  "COMPOSITION_GAP",
+    "recommended_solution":  "ENGREMIAT_RESOURCE_COMPOSER_OLLAMA_READY_001",
+    "proposal_type":  "CREATE_NEXT_MODULE",
+    "required_capabilities":  [
+                                  "RESOURCE_COMPOSITION",
+                                  "RESOURCE_SEARCH",
+                                  "BLUEPRINT_GENERATION"
+                              ],
+    "required_resources":  [
+                               "ENGREMIAT_RESOURCE_LIBRARY_STANDARD_001",
+                               "ENGREMIAT_TOOL_ADAPTER_GATE_001"
+                           ],
+    "missing_resources":  [
+                              "RESOURCE_COMPOSER"
+                          ],
+    "expected_outputs":  [
+                             "composer-query",
+                             "composition-blueprint",
+                             "proposal-report"
+                         ],
+    "priority":  "HIGH",
+    "risk":  "MEDIUM",
+    "gates":  [
+                  "HUMAN_REVIEW_REQUIRED"
+              ],
+    "evidence":  [
+                     "needs-detection-report.json",
+                     "solution-proposal-report.json"
+                 ],
+    "next_action":  "CREATE_RESOURCE_COMPOSER_OLLAMA_READY_001",
+    "status":  "PROPOSED"
+}

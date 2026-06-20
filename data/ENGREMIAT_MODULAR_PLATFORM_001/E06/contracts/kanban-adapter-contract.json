@@ -1,0 +1,28 @@
+{
+    "package_id":  "ENGREMIAT_MODULAR_PLATFORM_001",
+    "stage":  "E06",
+    "block":  "B06.1",
+    "module_id":  "ENG-MOD-KAN-001",
+    "module_name":  "Kanban Adapter",
+    "purpose":  "Sincronizar tareas con un tablero operativo",
+    "depends_on":  "ENG-MOD-QUE-001",
+    "state":  "planned",
+    "adapter_model":  {
+                          "visual_operation":  true,
+                          "sync_in":  true,
+                          "sync_out":  true,
+                          "blocked_items_visible":  true,
+                          "optional_acople":  true
+                      },
+    "control":  {
+                    "local_first":  true,
+                    "no_external_network":  true,
+                    "no_git_write":  true,
+                    "human_validation_required":  true
+                },
+    "acceptance_criteria":  [
+                                "El tablero refleja lo que entra",
+                                "El tablero refleja lo que sale",
+                                "Los bloqueos quedan visibles"
+                            ]
+}

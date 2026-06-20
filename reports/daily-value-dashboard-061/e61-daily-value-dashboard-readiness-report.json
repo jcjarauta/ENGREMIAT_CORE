@@ -1,0 +1,31 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_REAL_WORKER_DAILY_VALUE_LOOP_056_065",
+    "stage":  "E61",
+    "readiness":  100,
+    "decision":  "GO_E61_DAILY_VALUE_DASHBOARD_V2_READY",
+    "next":  "E62_KANBAN_WRITE_SIMULATION_WITH_ROLLBACK",
+    "daily_value_dashboard_ready":  true,
+    "dashboard":  "dashboard\\daily-value\\index.html",
+    "ready_sources":  5,
+    "missing_sources":  [
+                            "reports/proposal-quality-058/proposal-quality-check-report.json"
+                        ],
+    "artifacts":  [
+                      "data\\daily-value-dashboard-061\\daily-value-dashboard-model.json",
+                      "data\\daily-value-dashboard-061\\daily-value-dashboard-index.json",
+                      "dashboard\\daily-value\\index.html",
+                      "data\\daily-value-dashboard-061\\receipts\\daily-value-dashboard-receipt.json"
+                  ],
+    "security":  {
+                     "apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "worker_executed":  false,
+                     "dashboard_view_only":  true,
+                     "sensitive_actions_executed":  false,
+                     "human_decision_final":  true
+                 },
+    "created_at":  "2026-06-17T12:24:14"
+}

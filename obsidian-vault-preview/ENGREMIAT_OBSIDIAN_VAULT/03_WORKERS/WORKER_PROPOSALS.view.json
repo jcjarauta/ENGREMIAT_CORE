@@ -1,0 +1,17 @@
+﻿{
+    "view_id":  "WORKER_PROPOSALS",
+    "title":  "Propuestas worker",
+    "object_type":  "worker_packet",
+    "filter":  "type = worker_packet OR type = worker_response",
+    "group_by":  "worker",
+    "sort":  "updated_at desc",
+    "columns":  [
+                    "worker_packet_id",
+                    "project_id",
+                    "worker",
+                    "status",
+                    "execution_allowed",
+                    "source_path"
+                ],
+    "preview_only":  true
+}

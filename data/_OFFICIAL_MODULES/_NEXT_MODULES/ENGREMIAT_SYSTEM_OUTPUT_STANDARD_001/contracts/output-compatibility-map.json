@@ -1,0 +1,34 @@
+﻿{
+    "contract_id":  "output-compatibility-map.v1",
+    "compatible_with":  [
+                            {
+                                "module":  "ENGREMIAT_NEEDS_TO_SOLUTION_PROPOSAL_001",
+                                "outputs":  [
+                                                "PROPOSAL",
+                                                "RESOURCE_QUERY"
+                                            ]
+                            },
+                            {
+                                "module":  "ENGREMIAT_RESOURCE_LIBRARY_STANDARD_001",
+                                "outputs":  [
+                                                "RESOURCE_QUERY",
+                                                "COMPOSITION_BLUEPRINT"
+                                            ]
+                            },
+                            {
+                                "module":  "ENGREMIAT_TOOL_ADAPTER_GATE_001",
+                                "outputs":  [
+                                                "GATE_REQUEST",
+                                                "DECISION"
+                                            ]
+                            },
+                            {
+                                "module":  "ENGREMIAT_RESOURCE_COMPOSER_CORE_001",
+                                "outputs":  [
+                                                "COMPOSITION_BLUEPRINT",
+                                                "BUILD_PACKAGE"
+                                            ]
+                            }
+                        ],
+    "rule":  "Composer core must consume resource_query and produce composition_blueprint/build_package without model lock-in."
+}

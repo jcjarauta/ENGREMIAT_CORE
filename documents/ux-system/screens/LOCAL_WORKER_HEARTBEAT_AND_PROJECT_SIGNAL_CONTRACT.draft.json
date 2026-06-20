@@ -1,0 +1,33 @@
+﻿{
+    "contract_id":  "LOCAL_WORKER_HEARTBEAT_AND_PROJECT_SIGNAL_CONTRACT_DRAFT",
+    "created_at":  "2026-06-20T10:35:21",
+    "purpose":  "Preparar lectura casi en tiempo real de trabajo de workers en vistas de terminal",
+    "files":  {
+                  "heartbeat":  "reports/workers/worker-heartbeat-latest.json",
+                  "events":  "reports/workers/worker-events.jsonl",
+                  "project_signal":  "reports/project-signal-latest.json",
+                  "lock":  ".engremiat/locks/worker.lock"
+              },
+    "heartbeat_fields":  [
+                             "worker_id",
+                             "project_id",
+                             "task_id",
+                             "state",
+                             "current_step",
+                             "progress_pct",
+                             "blocked_reason",
+                             "next_action",
+                             "heartbeat_at"
+                         ],
+    "states":  [
+                   "IDLE",
+                   "QUEUED",
+                   "RUNNING",
+                   "WAITING_HUMAN",
+                   "BLOCKED",
+                   "DONE",
+                   "ERROR"
+               ],
+    "read_policy":  "readonly; no ejecutar workers; solo leer señales locales",
+    "next":  "E63_DEFINE_LOCAL_WORKER_HEARTBEAT_AND_PROJECT_SIGNAL_CONTRACT"
+}

@@ -1,0 +1,26 @@
+﻿{
+    "contract_id":  "model-output-adapter-contract.v1",
+    "principle":  "Cualquier modelo debe devolver JSON compatible con output-envelope y nunca ejecutar acciones directamente.",
+    "supported_model_sources":  [
+                                    "OLLAMA",
+                                    "OPENAI",
+                                    "LM_STUDIO",
+                                    "LLAMA_CPP",
+                                    "OPENWEBUI",
+                                    "MANUAL_HUMAN"
+                                ],
+    "required_response":  [
+                              "output_type",
+                              "payload",
+                              "confidence",
+                              "limitations",
+                              "evidence"
+                          ],
+    "blocked":  [
+                    "free_text_final_output",
+                    "direct_execution",
+                    "unvalidated_blueprint",
+                    "secret_exposure"
+                ],
+    "normalization":  "model_response -\u003e MODEL_RESPONSE_NORMALIZED -\u003e system output after validation"
+}

@@ -1,0 +1,49 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_OPERATIVE_WORKER_FLOW_019_025",
+    "stage":  "E24",
+    "created_at":  "2026-06-17T10:52:25.7984894+02:00",
+    "sources":  [
+                    {
+                        "id":  "e19",
+                        "label":  "Controlled Worker Task",
+                        "path":  "reports/controlled-worker-task-019/e19-controlled-worker-task-readiness-report.json",
+                        "exists":  true
+                    },
+                    {
+                        "id":  "e20",
+                        "label":  "Worker Response Import",
+                        "path":  "reports/worker-response-import-020/worker-response-validation-report.json",
+                        "exists":  true
+                    },
+                    {
+                        "id":  "e21",
+                        "label":  "Human Review Gate",
+                        "path":  "reports/human-review-gate-021/e21-human-review-readiness-report.json",
+                        "exists":  true
+                    },
+                    {
+                        "id":  "e22",
+                        "label":  "Controlled Local Apply Preview",
+                        "path":  "reports/controlled-local-apply-preview-022/e22-apply-preview-postcheck-report.json",
+                        "exists":  true
+                    },
+                    {
+                        "id":  "e23",
+                        "label":  "First Useful Local Change",
+                        "path":  "reports/first-useful-local-change-023/e23-readiness-report.json",
+                        "exists":  true
+                    },
+                    {
+                        "id":  "prompt",
+                        "label":  "WORKER_PROMPT",
+                        "path":  "prompts/outbox/WORKER_PROMPT.md",
+                        "exists":  true
+                    },
+                    {
+                        "id":  "inbox",
+                        "label":  "prompts inbox",
+                        "path":  "prompts/inbox",
+                        "exists":  true
+                    }
+                ]
+}

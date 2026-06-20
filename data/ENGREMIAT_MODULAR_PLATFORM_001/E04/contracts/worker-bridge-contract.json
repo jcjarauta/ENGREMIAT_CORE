@@ -1,0 +1,32 @@
+{
+    "package_id":  "ENGREMIAT_MODULAR_PLATFORM_001",
+    "stage":  "E04",
+    "block":  "B04.1",
+    "module_id":  "ENG-MOD-WRK-001",
+    "module_name":  "Worker Bridge",
+    "purpose":  "Convertir una tarea seleccionada en prompt y contexto reproducible",
+    "depends_on":  "ENG-MOD-QUE-001",
+    "state":  "planned",
+    "bridge_model":  {
+                         "input":  "selected_task",
+                         "output":  "reproducible_worker_prompt_and_context",
+                         "targets":  [
+                                         "Cline",
+                                         "Ollama",
+                                         "worker-assisted"
+                                     ],
+                         "traceability":  true
+                     },
+    "control":  {
+                    "local_first":  true,
+                    "no_external_network":  true,
+                    "no_git_write":  true,
+                    "human_validation_required":  true,
+                    "security_boundary":  "prompt_only_no_execution"
+                },
+    "acceptance_criteria":  [
+                                "La tarea se convierte en contexto limpio",
+                                "El prompt es reproducible",
+                                "El puente respeta límites de seguridad"
+                            ]
+}

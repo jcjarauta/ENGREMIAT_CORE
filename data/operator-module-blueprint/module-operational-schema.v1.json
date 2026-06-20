@@ -1,0 +1,52 @@
+﻿{
+    "module_json_required":  [
+                                 "module_id",
+                                 "project_id",
+                                 "slug",
+                                 "name",
+                                 "objective",
+                                 "module_type",
+                                 "status",
+                                 "created_at",
+                                 "cards_file",
+                                 "relations_file"
+                             ],
+    "card_required":  [
+                          "card_id",
+                          "module_id",
+                          "project_id",
+                          "title",
+                          "type",
+                          "status",
+                          "priority",
+                          "depends_on",
+                          "expected_evidence",
+                          "candidate_worker",
+                          "risk"
+                      ],
+    "relation_required":  [
+                              "relation_id",
+                              "from_id",
+                              "to_id",
+                              "relation_type",
+                              "reason",
+                              "evidence",
+                              "status"
+                          ],
+    "valid_status":  [
+                         "pending",
+                         "active",
+                         "blocked",
+                         "done",
+                         "archived"
+                     ],
+    "valid_card_type":  [
+                            "humana",
+                            "asistida",
+                            "automatizable",
+                            "gate",
+                            "evidencia",
+                            "decision",
+                            "worker"
+                        ]
+}

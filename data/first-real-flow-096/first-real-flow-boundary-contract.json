@@ -1,0 +1,47 @@
+﻿{
+    "objective":  "ENGREMIAT_FIRST_REAL_CONTROLLED_VALUE_FLOW",
+    "stage":  "E96",
+    "contract":  "FIRST_REAL_FLOW_BOUNDARY_CONTRACT",
+    "version":  "0.96.0-local",
+    "purpose":  "Fijar limites del primer flujo real controlado para impedir apply libre, autonomia worker, Kanban real write o acciones externas.",
+    "allowed_scope":  [
+                          "local_files_only",
+                          "safe_test_artifact",
+                          "explicit_human_decision",
+                          "preview_before_apply",
+                          "rollback_required",
+                          "postcheck_required",
+                          "receipt_required"
+                      ],
+    "blocked_actions":  [
+                            "AUTO_APPLY",
+                            "APPLY_WITHOUT_GATE",
+                            "REMOTE_EXECUTION",
+                            "EXTERNAL_NETWORK",
+                            "WORKER_EXECUTION",
+                            "KANBAN_REAL_WRITE",
+                            "GIT_WRITE",
+                            "AUTOMATIC_PROMPT_CHAINING"
+                        ],
+    "authorization_required_for":  [
+                                       "controlled_local_apply",
+                                       "kanban_real_write",
+                                       "git_write",
+                                       "external_network",
+                                       "worker_execution"
+                                   ],
+    "default_decision":  "DEFER",
+    "gate_locked_by_default":  true,
+    "rollback_required":  true,
+    "postcheck_required":  true,
+    "receipt_required":  true,
+    "flow_executes":  false,
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "kanban_real_write":  false,
+    "created_utc":  "2026-06-17T11:23:54.0165523Z"
+}

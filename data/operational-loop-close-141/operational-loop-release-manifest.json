@@ -1,0 +1,60 @@
+﻿{
+    "schema":  "engremiat.operational_loop_release_manifest.v1",
+    "objective":  "ENGREMIAT_REAL_VALUE_TASK_EXECUTION_LOOP_132_141_OPERATIONAL_USEFUL_TASK",
+    "stage":  "E141",
+    "block":  "B141.1",
+    "step":  "P141.1.2",
+    "created_at":  "2026-06-17T14:54:29",
+    "release_id":  "OPERATIONAL-LOOP-RELEASE-141-001",
+    "status":  "CLOSED",
+    "artifacts":  [
+                      {
+                          "path":  "reports/operational-task-132/e132-operational-task-readiness-report.json",
+                          "exists":  true,
+                          "size_bytes":  1031
+                      },
+                      {
+                          "path":  "reports/operational-input-133/e133-operational-input-readiness-report.json",
+                          "exists":  true,
+                          "size_bytes":  986
+                      },
+                      {
+                          "path":  "reports/operational-proposal-134/e134-operational-proposal-readiness-report.json",
+                          "exists":  true,
+                          "size_bytes":  1003
+                      },
+                      {
+                          "path":  "reports/operational-authorization-135/e135-operational-authorization-readiness-report.json",
+                          "exists":  true,
+                          "size_bytes":  1061
+                      },
+                      {
+                          "path":  "reports/operational-apply-136/e136-operational-apply-readiness-report.json",
+                          "exists":  true,
+                          "size_bytes":  1128
+                      },
+                      {
+                          "path":  "reports/operational-postcheck-137/e137-operational-postcheck-readiness-report.json",
+                          "exists":  true,
+                          "size_bytes":  1024
+                      },
+                      {
+                          "path":  "reports/operational-evidence-138/e138-operational-evidence-readiness-report.json",
+                          "exists":  true,
+                          "size_bytes":  994
+                      },
+                      {
+                          "path":  "reports/operational-dashboard-refresh-139/e139-operational-dashboard-readiness-report.json",
+                          "exists":  true,
+                          "size_bytes":  1020
+                      },
+                      {
+                          "path":  "reports/operational-loop-regression-140/e140-operational-loop-regression-readiness-report.json",
+                          "exists":  true,
+                          "size_bytes":  989
+                      }
+                  ],
+    "primary_artifact":  "data/operational-apply-136/OPERATIONAL_ARTIFACT.md",
+    "recommended_integration":  "Integrar el artefacto operativo como plantilla/protocolo reutilizable para iniciar tareas reales pequenas dentro de ENGREMIAT_CORE.",
+    "next_objective":  "ENGREMIAT_OPERATIONAL_ARTIFACT_INTEGRATION_142_151"
+}

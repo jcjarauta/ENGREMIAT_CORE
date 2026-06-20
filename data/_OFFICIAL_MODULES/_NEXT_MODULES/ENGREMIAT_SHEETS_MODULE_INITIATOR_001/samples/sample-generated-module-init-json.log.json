@@ -1,0 +1,28 @@
+﻿{
+    "module_id":  "ENGREMIAT_EXAMPLE_FROM_SHEETS_001",
+    "name":  "Example From Sheets",
+    "kind":  "ACOPLABLE_DESACOPLABLE",
+    "status":  "CANDIDATE",
+    "target_path":  "data/_OFFICIAL_MODULES/_NEXT_MODULES/ENGREMIAT_EXAMPLE_FROM_SHEETS_001",
+    "purpose":  "Crear un modulo candidato desde una fila humana de Sheets.",
+    "problem":  "Necesitamos iniciar modulos de forma sistematica sin escribir manualmente todos los JSON.",
+    "expected_output":  "JSON canonico de inicio de modulo listo para repositorio.",
+    "source_task_packet_id":  "TASK-PACKET-DEMO-001",
+    "priority":  "MEDIUM",
+    "risk":  "LOW",
+    "dependencies":  [
+                         "ENGREMIAT_MODULE_INTAKE_REGISTRY_001",
+                         "ENGREMIAT_OFFICIAL_MODULES_NEXT_MODULES_DIR_001"
+                     ],
+    "gates":  {
+                  "human_gate":  "REQUIRED",
+                  "requires_core_change":  false,
+                  "requires_real_write":  false,
+                  "requires_external_api":  false
+              },
+    "decision":  "CREATE_CANDIDATE_JSON",
+    "notes":  "Fila de ejemplo generada por ENGREMIAT_SHEETS_MODULE_INITIATOR_001",
+    "generated_by":  "ENGREMIAT_SHEETS_MODULE_INITIATOR_001",
+    "generated_at":  "2026-06-17T22:20:59",
+    "dry_run":  true
+}

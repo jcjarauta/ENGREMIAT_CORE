@@ -1,0 +1,47 @@
+﻿{
+    "package_id":  "ENGREMIAT_KANBAN_ROADMAP_CARD_EXPORT_PREVIEW_001",
+    "stage":  "E04_BUILD_KANBAN_IMPORT_GATE_OR_CLOSE_PREVIEW",
+    "gate_id":  "kanban-import-gate.v1",
+    "status":  "CLOSED_PREVIEW_ONLY",
+    "decision":  "NO_GO_REAL_KANBAN_WRITE_NOT_AUTHORIZED",
+    "cards":  6,
+    "json":  "C:\\ENGREMIAT_CORE\\data\\kanban-roadmap-card-export-preview\\kanban-roadmap-cards.preview.json",
+    "tsv":  "C:\\ENGREMIAT_CORE\\exports\\kanban-roadmap-card-export-preview\\kanban-roadmap-cards.preview.tsv",
+    "markdown":  "C:\\ENGREMIAT_CORE\\exports\\kanban-roadmap-card-export-preview\\kanban-roadmap-cards.preview.md",
+    "review":  "C:\\ENGREMIAT_CORE\\data\\kanban-roadmap-card-export-preview\\kanban-import-review.pending.json",
+    "receipt":  "C:\\ENGREMIAT_CORE\\data\\kanban-roadmap-card-export-preview\\kanban-import-review-receipt.pending.json",
+    "allowed_future_decisions":  [
+                                     {
+                                         "decision":  "APPROVE_MANUAL_COPY_ONLY",
+                                         "meaning":  "Permitir al humano copiar manualmente el TSV/Markdown sin automatizacion",
+                                         "risk":  "LOW"
+                                     },
+                                     {
+                                         "decision":  "APPROVE_KANBAN_REAL_WRITE_LAB",
+                                         "meaning":  "Abrir objetivo separado para laboratorio de escritura real Kanban/Cline",
+                                         "risk":  "HIGH"
+                                     },
+                                     {
+                                         "decision":  "EDIT_CARDS_PREVIEW",
+                                         "meaning":  "Editar tarjetas localmente y regenerar preview",
+                                         "risk":  "LOW"
+                                     },
+                                     {
+                                         "decision":  "DEFER",
+                                         "meaning":  "Aparcar exportacion",
+                                         "risk":  "LOW"
+                                     }
+                                 ],
+    "safety":  {
+                   "preview_only":  true,
+                   "local_only":  true,
+                   "write_kanban":  false,
+                   "clien_write":  false,
+                   "browser_automation":  false,
+                   "worker_execution":  false,
+                   "execute_now":  false,
+                   "git_write":  false,
+                   "auto_apply":  false
+               },
+    "next_recommendation":  "PAUSE_AND_REVIEW_OR_START_KANBAN_REAL_WRITE_LAB_WITH_EXPLICIT_AUTHORIZATION"
+}

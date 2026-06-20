@@ -1,0 +1,42 @@
+﻿{
+    "objective":  "ENGREMIAT_SAFE_LOCAL_APPLY_AND_KANBAN_AUTHORIZATION_102_111",
+    "stage":  "E107",
+    "name":  "Kanban Write Authorization Contract",
+    "version":  "1.07.0-local",
+    "purpose":  "Definir contrato de escritura Kanban autorizada sin write real por defecto.",
+    "kanban_write_mode":  "CONTRACT_ONLY",
+    "kanban_real_write":  false,
+    "real_write_executed":  false,
+    "human_authorization_required":  true,
+    "authorization_phrase_required":  "AUTORIZO_KANBAN_WRITE_CONTROLADO",
+    "dry_run_required_before_real_write":  true,
+    "rollback_required_for_future_write":  true,
+    "postcheck_required_for_future_write":  true,
+    "receipt_required_for_future_write":  true,
+    "allowed_future_scope":  [
+                                 "single_card_or_scoped_batch",
+                                 "explicit_human_authorization",
+                                 "field_mapping_verified",
+                                 "rollback_pack_present",
+                                 "postcheck_present",
+                                 "receipt_present",
+                                 "no_pending_err",
+                                 "no_pending_no_go"
+                             ],
+    "blocked_actions":  [
+                            "KANBAN_REAL_WRITE_WITHOUT_GATE",
+                            "AUTO_WRITE",
+                            "REMOTE_EXECUTION",
+                            "EXTERNAL_NETWORK",
+                            "WORKER_EXECUTION",
+                            "GIT_WRITE",
+                            "AUTO_APPLY"
+                        ],
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "created_utc":  "2026-06-17T11:39:35.7120463Z"
+}

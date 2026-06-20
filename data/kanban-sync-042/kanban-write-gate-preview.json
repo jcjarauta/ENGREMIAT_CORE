@@ -1,0 +1,17 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_HUMAN_USABLE_036_045",
+    "stage":  "E42",
+    "gate_id":  "E42_KANBAN_WRITE_GATE_PREVIEW",
+    "status":  "PREVIEW_ONLY_NOT_AUTHORIZED_FOR_REAL_WRITE",
+    "kanban_real_write":  false,
+    "write_requires_explicit_human_gate":  true,
+    "allowed_now":  "read_from_evidence_and_render_local_dashboard",
+    "forbidden_now":  [
+                          "write_to_external_kanban",
+                          "task_move",
+                          "auto_execute",
+                          "remote_execution",
+                          "git_write"
+                      ],
+    "created_at":  "2026-06-17T11:45:25"
+}

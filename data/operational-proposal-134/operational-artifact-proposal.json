@@ -1,0 +1,41 @@
+﻿{
+    "schema":  "engremiat.operational_artifact_proposal.v1",
+    "objective":  "ENGREMIAT_REAL_VALUE_TASK_EXECUTION_LOOP_132_141_OPERATIONAL_USEFUL_TASK",
+    "stage":  "E134",
+    "block":  "B134.1",
+    "step":  "P134.1.1",
+    "created_at":  "2026-06-17T14:44:39",
+    "proposal_id":  "OPERATIONAL-ARTIFACT-PROPOSAL-134-001",
+    "source_readiness":  "reports/operational-input-133/e133-operational-input-readiness-report.json",
+    "source_readiness_found":  true,
+    "input_package_found":  true,
+    "input_draft_found":  true,
+    "contract_found":  true,
+    "proposal_status":  "PROPOSED",
+    "execution_mode":  "CONTROLLED_PROPOSAL_ONLY",
+    "execution_authorized":  false,
+    "execution_allowed_now":  false,
+    "title":  "Generate first reusable operational artifact",
+    "purpose":  "Convert the operational input draft into a reusable Markdown protocol after explicit authorization.",
+    "target_artifact":  "data/operational-apply-136/OPERATIONAL_ARTIFACT.md",
+    "expected_value":  "A reusable operational guide with purpose, usage conditions, inputs, steps, validation and next action.",
+    "source_excerpt":  "# Operational Input Draft\n\n## Proposito operativo\nCrear un artefacto reutilizable que convierta el aprendizaje del loop util anterior en una guia practica para ejecutar futuras tareas humano-maquina con menos friccion.\n\n## Cuando usarlo\nUsar este artefacto cuando se quiera preparar una tarea operativa pequena, local, autorizada por humano y con evidencia verificable.\n\n## Inputs necesarios\n- Objetivo operativo concreto.\n- Output esperado.\n- Limites de seguridad.\n- Criterios de validacion.\n- Siguiente paso recomendado.\n\n## Pasos operativos\n1. Definir la tarea concreta.\n2. Capturar input editable.\n3. Crear propuesta y preview.\n4. Pedir autorizacion humana.\n5. Generar artefacto local.\n6. Validar",
+    "required_authorizations":  [
+                                    "E135_HUMAN_APPROVAL_BEFORE_OPERATIONAL_APPLY"
+                                ],
+    "risks":  [
+                  {
+                      "risk":  "ARTIFACT_USED_WITHOUT_REVIEW",
+                      "level":  "MEDIUM",
+                      "mitigation":  "E135 human authorization and E137 postcheck required"
+                  },
+                  {
+                      "risk":  "SCOPE_EXPANSION",
+                      "level":  "HIGH",
+                      "mitigation":  "Local Markdown operational artifact only"
+                  }
+              ],
+    "local_only":  true,
+    "network_used":  false,
+    "git_write":  false
+}

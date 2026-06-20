@@ -1,0 +1,59 @@
+﻿{
+    "mapping_id":  "obsidian-local-kanban-field-mapping-v1",
+    "source":  "Obsidian Markdown/YAML frontmatter",
+    "target":  "Engremiat Local Kanban / worker prompt",
+    "write_to_cline_kanban":  false,
+    "required_fields":  [
+                            "object_type",
+                            "id",
+                            "title",
+                            "source_need",
+                            "status",
+                            "priority",
+                            "kanban_decision",
+                            "human_reviewed",
+                            "recommended_column"
+                        ],
+    "allowed_values":  {
+                           "object_type":  [
+                                               "kanban_candidate"
+                                           ],
+                           "status":  [
+                                          "BACKLOG",
+                                          "NEXT",
+                                          "DOING",
+                                          "DONE"
+                                      ],
+                           "priority":  [
+                                            "LOW",
+                                            "MEDIUM",
+                                            "HIGH"
+                                        ],
+                           "kanban_decision":  [
+                                                   "PENDING",
+                                                   "GO",
+                                                   "ADJUST",
+                                                   "STOP"
+                                               ],
+                           "human_reviewed":  [
+                                                  "true",
+                                                  "false"
+                                              ],
+                           "recommended_column":  [
+                                                      "BACKLOG",
+                                                      "NEXT",
+                                                      "DOING",
+                                                      "DONE"
+                                                  ]
+                       },
+    "field_map":  {
+                      "id":  "card.id",
+                      "title":  "card.title",
+                      "source_need":  "card.origin",
+                      "status":  "card.status",
+                      "priority":  "card.priority",
+                      "kanban_decision":  "card.decision",
+                      "human_reviewed":  "card.reviewed",
+                      "recommended_column":  "kanban.column"
+                  }
+}

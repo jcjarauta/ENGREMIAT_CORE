@@ -1,0 +1,27 @@
+{
+    "package_id":  "ENGREMIAT_MODULAR_PLATFORM_001",
+    "stage":  "E05",
+    "block":  "B05.1",
+    "module_id":  "ENG-MOD-RES-001",
+    "module_name":  "Result Normalizer",
+    "purpose":  "Normalizar la salida y convertirla en memoria útil",
+    "depends_on":  "ENG-MOD-WRK-001",
+    "state":  "planned",
+    "output_model":  {
+                         "normalize_human":  true,
+                         "normalize_machine":  true,
+                         "traceability":  true,
+                         "memory_ready":  true
+                     },
+    "control":  {
+                    "local_first":  true,
+                    "no_external_network":  true,
+                    "no_git_write":  true,
+                    "human_validation_required":  true
+                },
+    "acceptance_criteria":  [
+                                "La salida queda estandarizada",
+                                "El resultado es trazable",
+                                "La memoria queda separada del core y no frágil"
+                            ]
+}

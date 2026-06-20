@@ -1,0 +1,74 @@
+﻿{
+    "objective":  "ENGREMIAT_MULTI_WORKER_ORCHESTRATION_AND_REAL_VALUE_PIPELINE_066_075",
+    "stage":  "E71",
+    "index_id":  "E71_VALUE_PIPELINE_INDEX",
+    "sources":  [
+                    {
+                        "name":  "role_map",
+                        "stage":  "E66",
+                        "path":  "data/multi-worker-066/multi-worker-role-map.json",
+                        "type":  "JSON",
+                        "exists":  true
+                    },
+                    {
+                        "name":  "worker_queue",
+                        "stage":  "E67",
+                        "path":  "data/worker-queue-067/worker-queue-items.jsonl",
+                        "type":  "JSONL",
+                        "exists":  true
+                    },
+                    {
+                        "name":  "proposal_samples",
+                        "stage":  "E68",
+                        "path":  "data/proposal-merge-068/proposal-samples.jsonl",
+                        "type":  "JSONL",
+                        "exists":  true
+                    },
+                    {
+                        "name":  "conflict_check",
+                        "stage":  "E68",
+                        "path":  "reports/proposal-merge-068/proposal-conflict-check-report.json",
+                        "type":  "JSON",
+                        "exists":  false
+                    },
+                    {
+                        "name":  "arbitration_gate",
+                        "stage":  "E69",
+                        "path":  "data/arbitration-069/arbitration-gate.json",
+                        "type":  "JSON",
+                        "exists":  true
+                    },
+                    {
+                        "name":  "batch_preview",
+                        "stage":  "E70",
+                        "path":  "data/batch-apply-preview-070/batch-apply-preview.json",
+                        "type":  "JSON",
+                        "exists":  true
+                    },
+                    {
+                        "name":  "batch_gate",
+                        "stage":  "E70",
+                        "path":  "data/batch-apply-preview-070/batch-apply-gate.json",
+                        "type":  "JSON",
+                        "exists":  true
+                    }
+                ],
+    "ready_sources":  6,
+    "missing_sources":  [
+                            "reports/proposal-merge-068/proposal-conflict-check-report.json"
+                        ],
+    "security":  {
+                     "apply_executed":  false,
+                     "batch_apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "worker_executed":  false,
+                     "dashboard_view_only":  true,
+                     "pipeline_executes":  false,
+                     "sensitive_actions_executed":  false,
+                     "human_decision_required":  true
+                 },
+    "created_at":  "2026-06-17T12:40:25"
+}

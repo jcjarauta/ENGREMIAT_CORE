@@ -1,0 +1,38 @@
+{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_005E",
+    "mode":  "CONTROLLED_LOCAL_ACTIVATION_DESIGN_ONLY",
+    "winner_from_004E":  "COMP_CORE_CONTROL",
+    "steps":  [
+                  {
+                      "id":  "S01",
+                      "name":  "snapshot_before_apply",
+                      "executes_now":  false,
+                      "evidence":  "snapshot-plan.json"
+                  },
+                  {
+                      "id":  "S02",
+                      "name":  "local_apply_plan",
+                      "executes_now":  false,
+                      "evidence":  "local-apply-plan.json"
+                  },
+                  {
+                      "id":  "S03",
+                      "name":  "rollback_plan",
+                      "executes_now":  false,
+                      "evidence":  "rollback-plan.json"
+                  },
+                  {
+                      "id":  "S04",
+                      "name":  "post_apply_validation_plan",
+                      "executes_now":  false,
+                      "evidence":  "post-apply-validation-plan.json"
+                  },
+                  {
+                      "id":  "S05",
+                      "name":  "human_gate",
+                      "executes_now":  false,
+                      "evidence":  "human-gate-005e.json"
+                  }
+              ],
+    "next":  "E02_LOCAL_APPLY_DRY_RUN"
+}

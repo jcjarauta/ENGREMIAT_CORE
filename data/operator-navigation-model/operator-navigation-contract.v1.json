@@ -1,0 +1,118 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_NAVIGATION_MODEL_001",
+    "stage":  "E02B_DEFINE_OPERATOR_NAVIGATION_CONTRACT_SAFE_MD",
+    "version":  "navigation-contract.v1",
+    "created_at":  "2026-06-19T21:27:47",
+    "principles":  [
+                       "Every visible operator screen must be redrawable with empty Enter.",
+                       "Every persistent screen must show contextual help.",
+                       "Every persistent screen must provide an explicit back command.",
+                       "Quick actions may return to parent immediately, but parent must redraw full menu.",
+                       "No child command should leave parent prompt without redrawing context.",
+                       "Navigation behavior must be declared as SCREEN, ACTION, SELECTOR or FLOW."
+                   ],
+    "classes":  {
+                    "SCREEN":  {
+                                   "description":  "Persistent screen with its own loop.",
+                                   "required":  [
+                                                    "Clear-Host before draw",
+                                                    "Empty Enter refreshes",
+                                                    "refrescar/refresh/f5 refreshes",
+                                                    "b/a/atras/back/volver/0 returns",
+                                                    "visible help line",
+                                                    "no visible q except root exit screens"
+                                                ]
+                               },
+                    "ACTION":  {
+                                   "description":  "One-shot action that prints result and returns.",
+                                   "required":  [
+                                                    "Parent redraws full menu after action",
+                                                    "No orphan ENGREMIAT prompt",
+                                                    "No internal infinite loop"
+                                                ]
+                               },
+                    "SELECTOR":  {
+                                     "description":  "Screen asking for a selection.",
+                                     "required":  [
+                                                      "Empty Enter refreshes or redraws selector",
+                                                      "b/a/atras/back/volver/0 returns",
+                                                      "invalid selection redraws same selector"
+                                                  ]
+                                 },
+                    "FLOW":  {
+                                 "description":  "Multi-step navigation or dispatcher.",
+                                 "required":  [
+                                                  "Own state transitions explicit",
+                                                  "Every child return causes parent redraw",
+                                                  "Back behavior declared per level"
+                                              ]
+                             }
+                },
+    "commands":  {
+                     "global":  {
+                                    "abrir_proyecto":  "SELECTOR",
+                                    "nuevo_proyecto":  "FLOW",
+                                    "ver_proyectos":  "SCREEN",
+                                    "estado_compacto":  "SCREEN",
+                                    "salir":  "ACTION"
+                                },
+                     "project":  {
+                                     "entrar_modulo":  "SELECTOR",
+                                     "crear_modulo":  "FLOW",
+                                     "biblioteca_modulos":  "SCREEN",
+                                     "revisar_proyecto":  "SCREEN",
+                                     "atras":  "ACTION"
+                                 },
+                     "module":  {
+                                    "contrato":  "SCREEN",
+                                    "tareas":  "SCREEN",
+                                    "evidencias":  "SCREEN",
+                                    "gates":  "SCREEN",
+                                    "smoke":  "ACTION",
+                                    "editar_artefacto":  "SELECTOR",
+                                    "definir_objetivo":  "FLOW",
+                                    "cerrar_modulo":  "ACTION",
+                                    "promover_biblioteca":  "ACTION",
+                                    "atras":  "ACTION"
+                                }
+                 },
+    "ux_help":  "refrescar/f5/Enter = redibujar pantalla | ? = ayuda | comandos = menu actual",
+    "aliases":  {
+                    "refresh":  [
+                                    "",
+                                    "refrescar",
+                                    "refresh",
+                                    "f5",
+                                    "menu",
+                                    "comandos"
+                                ],
+                    "back":  [
+                                 "b",
+                                 "a",
+                                 "atras",
+                                 "atrás",
+                                 "back",
+                                 "volver",
+                                 "0"
+                             ],
+                    "help":  [
+                                 "?",
+                                 "ayuda"
+                             ],
+                    "exit":  [
+                                 "q",
+                                 "salir",
+                                 "exit"
+                             ]
+                },
+    "e01_audit_summary":  {
+                              "files_scanned":  1,
+                              "screen_count":  1,
+                              "selector_count":  1,
+                              "flow_count":  1,
+                              "action_count":  1,
+                              "risk_medium":  1,
+                              "risk_high":  0
+                          },
+    "next_stage":  "E03_CREATE_NAVIGATION_HELPERS_SAFE"
+}

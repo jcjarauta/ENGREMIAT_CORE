@@ -1,0 +1,168 @@
+﻿{
+    "nodes":  [
+                  {
+                      "id":  "p-index",
+                      "x":  0,
+                      "y":  0,
+                      "width":  280,
+                      "height":  100,
+                      "type":  "file",
+                      "file":  "02_PROYECTOS/PROJECT_TEMPLATE_SPACE/00_INDEX/PROJECT_INDEX.md",
+                      "color":  "1"
+                  },
+                  {
+                      "id":  "p-intake",
+                      "x":  360,
+                      "y":  "-160",
+                      "width":  280,
+                      "height":  100,
+                      "type":  "file",
+                      "file":  "02_PROYECTOS/PROJECT_TEMPLATE_SPACE/01_INTAKE/INTAKE_NORMALIZADO.md",
+                      "color":  "2"
+                  },
+                  {
+                      "id":  "p-roadmap",
+                      "x":  720,
+                      "y":  "-160",
+                      "width":  280,
+                      "height":  100,
+                      "type":  "file",
+                      "file":  "02_PROYECTOS/PROJECT_TEMPLATE_SPACE/02_ROADMAP/ROADMAP_IA_LOCAL.md",
+                      "color":  "3"
+                  },
+                  {
+                      "id":  "p-tasks",
+                      "x":  1080,
+                      "y":  "-160",
+                      "width":  280,
+                      "height":  100,
+                      "type":  "file",
+                      "file":  "02_PROYECTOS/PROJECT_TEMPLATE_SPACE/03_TAREAS/TASKS_INDEX.md",
+                      "color":  "4"
+                  },
+                  {
+                      "id":  "p-gate",
+                      "x":  720,
+                      "y":  20,
+                      "width":  280,
+                      "height":  100,
+                      "type":  "file",
+                      "file":  "02_PROYECTOS/PROJECT_TEMPLATE_SPACE/04_GATES_DECISIONES/GATE_WORKER_EXECUTION.md",
+                      "color":  "5"
+                  },
+                  {
+                      "id":  "p-worker",
+                      "x":  1080,
+                      "y":  20,
+                      "width":  280,
+                      "height":  100,
+                      "type":  "file",
+                      "file":  "02_PROYECTOS/PROJECT_TEMPLATE_SPACE/06_WORKERS/WORKER_PACKET.md",
+                      "color":  "6"
+                  },
+                  {
+                      "id":  "p-dry",
+                      "x":  1440,
+                      "y":  20,
+                      "width":  280,
+                      "height":  100,
+                      "type":  "file",
+                      "file":  "02_PROYECTOS/PROJECT_TEMPLATE_SPACE/06_WORKERS/DRY_RUN.md",
+                      "color":  "1"
+                  },
+                  {
+                      "id":  "p-evidence",
+                      "x":  1440,
+                      "y":  "-160",
+                      "width":  280,
+                      "height":  100,
+                      "type":  "file",
+                      "file":  "02_PROYECTOS/PROJECT_TEMPLATE_SPACE/05_EVIDENCIAS/EVIDENCE_INDEX.md",
+                      "color":  "2"
+                  },
+                  {
+                      "id":  "p-result",
+                      "x":  1800,
+                      "y":  "-70",
+                      "width":  280,
+                      "height":  100,
+                      "type":  "file",
+                      "file":  "02_PROYECTOS/PROJECT_TEMPLATE_SPACE/07_RESULTADOS/RESULT_SUMMARY.md",
+                      "color":  "3"
+                  }
+              ],
+    "edges":  [
+                  {
+                      "id":  "pe1",
+                      "fromNode":  "p-index",
+                      "fromSide":  "right",
+                      "toNode":  "p-intake",
+                      "toSide":  "left",
+                      "label":  "contiene"
+                  },
+                  {
+                      "id":  "pe2",
+                      "fromNode":  "p-intake",
+                      "fromSide":  "right",
+                      "toNode":  "p-roadmap",
+                      "toSide":  "left",
+                      "label":  "genera"
+                  },
+                  {
+                      "id":  "pe3",
+                      "fromNode":  "p-roadmap",
+                      "fromSide":  "right",
+                      "toNode":  "p-tasks",
+                      "toSide":  "left",
+                      "label":  "desglosa"
+                  },
+                  {
+                      "id":  "pe4",
+                      "fromNode":  "p-tasks",
+                      "fromSide":  "right",
+                      "toNode":  "p-gate",
+                      "toSide":  "left",
+                      "label":  "requiere gate"
+                  },
+                  {
+                      "id":  "pe5",
+                      "fromNode":  "p-gate",
+                      "fromSide":  "right",
+                      "toNode":  "p-worker",
+                      "toSide":  "left",
+                      "label":  "autoriza"
+                  },
+                  {
+                      "id":  "pe6",
+                      "fromNode":  "p-worker",
+                      "fromSide":  "right",
+                      "toNode":  "p-dry",
+                      "toSide":  "left",
+                      "label":  "simula"
+                  },
+                  {
+                      "id":  "pe7",
+                      "fromNode":  "p-dry",
+                      "fromSide":  "right",
+                      "toNode":  "p-evidence",
+                      "toSide":  "left",
+                      "label":  "produce"
+                  },
+                  {
+                      "id":  "pe8",
+                      "fromNode":  "p-evidence",
+                      "fromSide":  "right",
+                      "toNode":  "p-result",
+                      "toSide":  "left",
+                      "label":  "valida"
+                  },
+                  {
+                      "id":  "pe9",
+                      "fromNode":  "p-result",
+                      "fromSide":  "right",
+                      "toNode":  "p-index",
+                      "toSide":  "left",
+                      "label":  "actualiza estado"
+                  }
+              ]
+}

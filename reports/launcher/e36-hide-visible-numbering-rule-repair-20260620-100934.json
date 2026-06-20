@@ -1,0 +1,31 @@
+﻿{
+    "package_id":  "ENGREMIAT_UX_SYSTEM_001",
+    "stage":  "E36_HIDE_VISIBLE_NUMBERING_RULE_REPAIR",
+    "status":  "PASS",
+    "changed":  [
+                    {
+                        "file":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-DATA-INTAKE-CENTER-NORMALIZED.ps1",
+                        "backup":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\backup-before-e36-repair-ENGREMIAT-DATA-INTAKE-CENTER-NORMALIZED-20260620-100934.ps1",
+                        "removed_lines":  1,
+                        "changed":  true
+                    },
+                    {
+                        "file":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-MEMORY-DOCUMENTATION-CENTER-NORMALIZED.ps1",
+                        "backup":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\backup-before-e36-repair-ENGREMIAT-MEMORY-DOCUMENTATION-CENTER-NORMALIZED-20260620-100934.ps1",
+                        "removed_lines":  1,
+                        "changed":  true
+                    },
+                    {
+                        "file":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\templates\\ENGREMIAT-CANONICAL-SCREEN-TEMPLATE.ps1",
+                        "backup":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\backup-before-e36-repair-ENGREMIAT-CANONICAL-SCREEN-TEMPLATE-20260620-100934.ps1",
+                        "removed_lines":  0,
+                        "changed":  false
+                    }
+                ],
+    "missing":  [
+
+                ],
+    "policy":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\canonical-screen-visual-cleanliness-policy.json",
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e36-hide-visible-numbering-rule-repair-20260620-100934.json",
+    "next":  "RUN_DATA_INTAKE_NORMALIZED_CLEAN_HEADER_TEST"
+}

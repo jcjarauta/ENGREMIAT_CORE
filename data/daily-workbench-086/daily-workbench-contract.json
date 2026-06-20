@@ -1,0 +1,41 @@
+﻿{
+    "objective":  "ENGREMIAT_HUMAN_USABLE_DAILY_WORKBENCH_086_095",
+    "stage":  "E86",
+    "contract":  "DAILY_WORKBENCH_CONTRACT",
+    "purpose":  "Contrato de uso diario sin ejecucion real por defecto.",
+    "allowed_human_actions":  [
+                                  "OPEN_DASHBOARD",
+                                  "REVIEW_INBOX",
+                                  "REVIEW_EVIDENCE",
+                                  "DEFER",
+                                  "REQUEST_REPAIR",
+                                  "APPROVE_FOR_PREVIEW",
+                                  "MARK_BLOCKED",
+                                  "MARK_DONE_MANUAL"
+                              ],
+    "blocked_machine_actions":  [
+                                    "AUTO_APPROVE",
+                                    "AUTO_APPLY",
+                                    "REMOTE_EXECUTION",
+                                    "EXTERNAL_NETWORK",
+                                    "WORKER_EXECUTION",
+                                    "KANBAN_REAL_WRITE",
+                                    "GIT_WRITE",
+                                    "AUTOMATIC_PROMPT_CHAINING"
+                                ],
+    "requires_reason_for":  [
+                                "APPROVE_FOR_PREVIEW",
+                                "REQUEST_REPAIR",
+                                "MARK_BLOCKED"
+                            ],
+    "human_gate_required":  true,
+    "workbench_executes":  false,
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "kanban_real_write":  false,
+    "created_utc":  "2026-06-17T11:10:02.9463593Z"
+}

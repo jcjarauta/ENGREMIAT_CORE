@@ -1,0 +1,23 @@
+﻿{
+    "output_id":  "OUT-RESOURCEQUERY-001",
+    "output_type":  "RESOURCE_QUERY",
+    "source":  "ENGREMIAT_RESOURCE_COMPOSER_CORE_001",
+    "status":  "DRAFT",
+    "payload":  {
+                    "query_id":  "RQ-001",
+                    "objective":  "Buscar recursos para composer core",
+                    "requested_capabilities":  [
+                                                   "RESOURCE_LIBRARY",
+                                                   "COMPOSITION_READY"
+                                               ],
+                    "minimum_quality_score":  60
+                },
+    "evidence":  [
+                     "sample"
+                 ],
+    "gate":  {
+                 "required":  false,
+                 "decision":  "DRY_RUN"
+             },
+    "created_at":  "2026-06-18T07:07:02"
+}

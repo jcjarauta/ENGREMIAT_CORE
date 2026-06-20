@@ -1,0 +1,35 @@
+﻿{
+    "package_id":  "ENGREMIAT_PROJECT_START_FLOW_001",
+    "stage":  "E01I_REPAIR_SYSTEM_DASHBOARD_DIR",
+    "status":  "PASS",
+    "readiness":  100,
+    "decision":  "GO_SYSTEM_DASHBOARD_DIR_REPAIRED",
+    "script":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-new-project.ps1",
+    "latest_project":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-153711",
+    "latest_dashboard":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-153711\\_system\\dashboard",
+    "checks":  [
+                   {
+                       "id":  "script_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-new-project.ps1"
+                   },
+                   {
+                       "id":  "script_parse_ok",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-new-project.ps1"
+                   },
+                   {
+                       "id":  "latest_dashboard_dir_repaired_if_project_exists",
+                       "ok":  true,
+                       "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-153711\\_system\\dashboard"
+                   }
+               ],
+    "safety":  {
+                   "local_only":  true,
+                   "patch_only":  true,
+                   "no_worker_real":  true,
+                   "no_git":  true,
+                   "no_network":  true
+               },
+    "next":  "RUN_NUEVO_PROYECTO_AGAIN_OR_CONTINUE_E02_COMMAND_REVISAR_PROYECTO_IF_PROJECT_OK"
+}

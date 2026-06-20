@@ -1,0 +1,35 @@
+﻿{
+    "package_id":  "ENGREMIAT_NEXT_MODULES_GLOBAL_VALIDATOR_001",
+    "stage":  "E03_CLOSE_GLOBAL_VALIDATOR",
+    "status":  "PASS",
+    "readiness":  100,
+    "closed":  true,
+    "module_dir":  "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_NEXT_MODULES_GLOBAL_VALIDATOR_001",
+    "validator":  "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_NEXT_MODULES_GLOBAL_VALIDATOR_001\\tools\\Invoke-NextModulesGlobalValidator.ps1",
+    "global_report":  "C:\\ENGREMIAT_CORE\\reports\\next-modules-global-validator-001\\next-modules-global-validation-report.json",
+    "modules_scanned":  4,
+    "errors":  0,
+    "warnings":  3,
+    "warning_policy":  "warnings_allowed_for_candidate_dirs_if_no_errors",
+    "evidence":  [
+                     "C:\\ENGREMIAT_CORE\\reports\\next-modules-global-validator-001\\e01-create-global-validator-report.json",
+                     "C:\\ENGREMIAT_CORE\\reports\\next-modules-global-validator-001\\e02-run-global-validator-report.json",
+                     "C:\\ENGREMIAT_CORE\\reports\\next-modules-global-validator-001\\next-modules-global-validation-report.json",
+                     "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_NEXT_MODULES_GLOBAL_VALIDATOR_001\\tools\\Invoke-NextModulesGlobalValidator.ps1",
+                     "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_NEXT_MODULES_GLOBAL_VALIDATOR_001\\contracts\\next-modules-global-validator-contract.json",
+                     "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_NEXT_MODULES_GLOBAL_VALIDATOR_001\\module.json"
+                 ],
+    "missing":  [
+
+                ],
+    "policy":  {
+                   "local_only":  true,
+                   "core_changes":  false,
+                   "real_module_activation":  false,
+                   "git_write":  false,
+                   "network":  false,
+                   "real_sheets_write":  false
+               },
+    "result":  "Validador global de _NEXT_MODULES creado, ejecutado y cerrado; errores bloqueantes cero.",
+    "next":  "ENGREMIAT_SHEETS_REAL_GATE_INTEGRATION_001"
+}

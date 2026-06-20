@@ -1,0 +1,31 @@
+﻿{
+    "resource_id":  "RESOURCE-TEMPLATE-MODULE-INITIATOR-001",
+    "resource_type":  "RESOURCE_TEMPLATE",
+    "status":  "CANDIDATE",
+    "title":  "Sheets Module Initiator Template",
+    "description":  "Plantilla de fila Sheets para generar JSON de inicio de modulo.",
+    "domain":  "operations",
+    "version":  "0.1.0",
+    "capabilities":  [
+                         "DOCUMENT_WORKFLOW",
+                         "MODULE_FACTORY"
+                     ],
+    "dependencies":  [
+                         "ENGREMIAT_SHEETS_MODULE_INITIATOR_001"
+                     ],
+    "location":  "data/_OFFICIAL_MODULES/_NEXT_MODULES/ENGREMIAT_SHEETS_MODULE_INITIATOR_001",
+    "evidence":  [
+                     "e05-close-sheets-module-initiator-report.json"
+                 ],
+    "quality":  {
+                    "readiness_score":  100,
+                    "reuse_score":  85,
+                    "evidence_score":  85,
+                    "overall_score":  90
+                },
+    "reuse_policy":  "COPY_OR_ADAPT",
+    "gate":  {
+                 "required":  true,
+                 "decision":  "BACKLOG"
+             }
+}

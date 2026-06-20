@@ -1,0 +1,27 @@
+﻿{
+    "package_id":  "ENGREMIAT_DATA_INTAKE_001",
+    "stage":  "E20_GRANT_PROFILE_ALIAS_COMPAT",
+    "status":  "PASS",
+    "active_profile":  "C:\\ENGREMIAT_CORE\\documents\\grants\\grant-call-profile-latest.json",
+    "backup":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\backup-grant-call-profile-latest-before-e20-20260620-094302.json",
+    "required_fields":  [
+                            "nombre_convocatoria",
+                            "entidad_convocante",
+                            "territorio",
+                            "fecha_limite",
+                            "objetivo_convocatoria",
+                            "lineas_prioritarias",
+                            "importe_solicitado",
+                            "cofinanciacion",
+                            "beneficiarios",
+                            "indicadores_requeridos",
+                            "documentacion_requerida",
+                            "criterios_valoracion",
+                            "tono"
+                        ],
+    "missing":  [
+
+                ],
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e20-grant-profile-alias-compat-20260620-094302.json",
+    "next":  "RETRY_DOCUMENTACION_15_GENERAR_DOSSIER_ADAPTADO"
+}

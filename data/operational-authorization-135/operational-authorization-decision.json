@@ -1,0 +1,20 @@
+﻿{
+    "schema":  "engremiat.operational_authorization_decision.v1",
+    "objective":  "ENGREMIAT_REAL_VALUE_TASK_EXECUTION_LOOP_132_141_OPERATIONAL_USEFUL_TASK",
+    "stage":  "E135",
+    "block":  "B135.1",
+    "step":  "P135.1.2",
+    "created_at":  "2026-06-17T14:45:45",
+    "authorization_id":  "OPERATIONAL-AUTHORIZATION-135-001",
+    "human_decision":  "APPROVE",
+    "human_approved":  true,
+    "human_rejected":  false,
+    "execution_allowed_now":  true,
+    "editable_by_human":  true,
+    "reason":  "Human authorization granted explicitly for E136 operational local Markdown artifact apply.",
+    "next_if_approved":  "E136_OPERATIONAL_ARTIFACT_APPLY",
+    "next_if_rejected":  "E135_REVIEW_OR_ABORT",
+    "next_if_deferred":  "WAIT_FOR_HUMAN_DECISION",
+    "authorized_at":  "2026-06-17T14:47:26",
+    "authorization_phrase":  "AUTORIZO_E136_OPERATIONAL_LOCAL_MARKDOWN_ARTIFACT_APPLY"
+}

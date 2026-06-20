@@ -1,0 +1,40 @@
+﻿{
+    "objective":  "ENGREMIAT_FIRST_REAL_CONTROLLED_VALUE_FLOW",
+    "stage":  "E98",
+    "preview_id":  "FRV-098-001",
+    "case_id":  "FRF-096-001",
+    "proposal_id":  "FRP-098-001",
+    "need_id":  "HN-097-001",
+    "preview_only":  true,
+    "execution_status":  "NOT_EXECUTED",
+    "would_do":  [
+                     "Crear paquete de autorizacion humana en E99",
+                     "Preparar apply local controlado o NO_GO seguro en E100",
+                     "Consolidar evidencia final en E101"
+                 ],
+    "would_not_do":  [
+                         "No apply real",
+                         "No auto_apply",
+                         "No remote_execution",
+                         "No external_network",
+                         "No worker_execution",
+                         "No Kanban real write",
+                         "No git_write"
+                     ],
+    "required_before_apply":  [
+                                  "EXPLICIT_HUMAN_AUTHORIZATION",
+                                  "ROLLBACK_PLAN",
+                                  "POSTCHECK_PLAN",
+                                  "RECEIPT",
+                                  "NO_PENDING_ERR",
+                                  "NO_PENDING_NO_GO"
+                              ],
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "kanban_real_write":  false,
+    "created_utc":  "2026-06-17T11:25:28.8849074Z"
+}

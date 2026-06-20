@@ -1,0 +1,38 @@
+﻿{
+    "package_id":  "ENGREMIAT_IMPROVEMENT_TO_EXECUTION_PIPELINE_001",
+    "proposal_id":  "TECH-PROP-001",
+    "status":  "PASS",
+    "title":  "Convertir mejora KANBAN-SEED-0017 en bloque tecnico gobernado",
+    "objective":  "Generar un paquete dry-run que pueda convertirse en desarrollo real solo tras gate humano.",
+    "candidate_files":  [
+                            "contracts/*.json",
+                            "schemas/*.json",
+                            "rules/*.json",
+                            "tools/*.ps1",
+                            "reports/*.json",
+                            "HUMAN_MACHINE_MANUAL.md",
+                            "README.md",
+                            "NEXT_OBJECTIVE.md"
+                        ],
+    "steps":  [
+                  "analizar mejora",
+                  "definir propuesta tecnica",
+                  "crear plan TSV",
+                  "preparar paquete dry-run",
+                  "crear gate humano",
+                  "validar sin ejecutar"
+              ],
+    "gates":  [
+                  "GO",
+                  "DEFER",
+                  "BLOCK"
+              ],
+    "expected_evidence":  [
+                              "analysis",
+                              "proposal",
+                              "plan",
+                              "dry-run package",
+                              "validation report"
+                          ],
+    "real_execution":  false
+}

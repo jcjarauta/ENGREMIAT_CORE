@@ -1,0 +1,45 @@
+{
+    "objective_id":  "KTP-SO-DRYRUN-001",
+    "module_id":  "ENG-KTP-001",
+    "task_id":  "TASK-SO-001",
+    "title":  "Convertir entrada humana en paquete de tarea estructurado",
+    "context":  "Simulacion local de structured output. No se ha llamado a Ollama ni OpenWebUI.",
+    "requirements":  [
+                         "mantener JSON estricto",
+                         "evitar texto libre no validado",
+                         "generar salida compatible con Obsidian y Cline/Kanban"
+                     ],
+    "constraints":  [
+                        "local_first",
+                        "dry_run_only",
+                        "no_network",
+                        "no_real_inference",
+                        "no_real_write"
+                    ],
+    "inputs":  [
+                   "human_prompt_sample",
+                   "structured_schema"
+               ],
+    "outputs":  [
+                    "structured-output-task-packet.json",
+                    "obsidian_projection_seed",
+                    "cline_kanban_projection_seed"
+                ],
+    "acceptance_criteria":  [
+                                "cumple campos requeridos",
+                                "risk_level valido",
+                                "kanban_status valido",
+                                "human_gate_required declarado",
+                                "evidence_expected declarado"
+                            ],
+    "risk_level":  "LOW",
+    "human_gate_required":  true,
+    "kanban_status":  "READY",
+    "clien_prompt":  "Actua como Cline/Kanban worker. Usa exclusivamente el task packet validado. Devuelve evidencia estructurada y no ejecutes acciones externas sin gate.",
+    "evidence_expected":  [
+                              "structured-output-task-packet.json",
+                              "structured-output-validation-report.json",
+                              "projection-ready-report.json"
+                          ],
+    "next_action":  "E04_OBSIDIAN_MARKDOWN_YAML_EXPORT"
+}

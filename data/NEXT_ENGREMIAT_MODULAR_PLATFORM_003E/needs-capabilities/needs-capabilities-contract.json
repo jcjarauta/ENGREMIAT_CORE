@@ -1,0 +1,164 @@
+{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_003E",
+    "mode":  "readonly",
+    "status":  "NEEDS_CAPABILITIES_DEFINED",
+    "purpose":  "Profundizar en necesidades y capacidades antes de ejecucion operativa",
+    "boundary":  "Readonly design only: no core changes, no external network, no git write, no module activation",
+    "needs":  [
+                  {
+                      "stage":  "E01",
+                      "block":  "B01.1",
+                      "type":  "NECESIDAD",
+                      "element":  "Alcance y frontera",
+                      "description":  "Definir que entra y que no entra en la nueva capa modular.",
+                      "priority":  "Alta",
+                      "evidence":  "next-scope-contract.json"
+                  },
+                  {
+                      "stage":  "E01",
+                      "block":  "B01.2",
+                      "type":  "NECESIDAD",
+                      "element":  "Separacion del core",
+                      "description":  "Garantizar que la nueva capa no toca el core congelado salvo correcciones puntuales.",
+                      "priority":  "Alta",
+                      "evidence":  "next-boundary-policy.json"
+                  },
+                  {
+                      "stage":  "E02",
+                      "block":  "B02.1",
+                      "type":  "NECESIDAD",
+                      "element":  "Seleccion por objetivo",
+                      "description":  "Elegir modulos segun objetivo del sistema, estado y compatibilidad.",
+                      "priority":  "Alta",
+                      "evidence":  "module-selector-contract.json"
+                  },
+                  {
+                      "stage":  "E02",
+                      "block":  "B02.2",
+                      "type":  "NECESIDAD",
+                      "element":  "Resolucion de dependencias",
+                      "description":  "Resolver dependencias, bloqueos y prioridades antes de activar nada.",
+                      "priority":  "Alta",
+                      "evidence":  "dependency-resolver-rules.json"
+                  },
+                  {
+                      "stage":  "E03",
+                      "block":  "B03.1",
+                      "type":  "NECESIDAD",
+                      "element":  "Orquestacion segura",
+                      "description":  "Activar, pausar, sustituir o retirar modulos con trazabilidad.",
+                      "priority":  "Alta",
+                      "evidence":  "activation-plan.json"
+                  },
+                  {
+                      "stage":  "E03",
+                      "block":  "B03.2",
+                      "type":  "NECESIDAD",
+                      "element":  "Rollback explicito",
+                      "description":  "Volver atras si una sustitucion o activacion no es segura.",
+                      "priority":  "Alta",
+                      "evidence":  "swap-policy.json"
+                  },
+                  {
+                      "stage":  "E04",
+                      "block":  "B04.1",
+                      "type":  "NECESIDAD",
+                      "element":  "Visibilidad humana",
+                      "description":  "Mostrar el estado real de la expansion modular de forma clara.",
+                      "priority":  "Alta",
+                      "evidence":  "expansion-dashboard/index.html"
+                  },
+                  {
+                      "stage":  "E04",
+                      "block":  "B04.2",
+                      "type":  "NECESIDAD",
+                      "element":  "Cierre y continuidad",
+                      "description":  "Terminar la capa dejando preparado el siguiente objetivo logico.",
+                      "priority":  "Alta",
+                      "evidence":  "modular-expansion-close-report.md"
+                  }
+              ],
+    "capabilities":  [
+                         {
+                             "stage":  "E01",
+                             "block":  "B01.1",
+                             "type":  "CAPACIDAD",
+                             "element":  "Catalogo de familias",
+                             "description":  "Clasificar modulos por familia, rol, capa y funcion operativa.",
+                             "priority":  "Alta",
+                             "evidence":  "module-family-schema.json"
+                         },
+                         {
+                             "stage":  "E01",
+                             "block":  "B01.2",
+                             "type":  "CAPACIDAD",
+                             "element":  "Matriz de compatibilidad",
+                             "description":  "Relacionar modulo, version, capa, objetivo y compatibilidad funcional.",
+                             "priority":  "Alta",
+                             "evidence":  "compatibility-matrix.json"
+                         },
+                         {
+                             "stage":  "E02",
+                             "block":  "B02.1",
+                             "type":  "CAPACIDAD",
+                             "element":  "Composicion modular",
+                             "description":  "Construir una solucion a partir de piezas compatibles y activables.",
+                             "priority":  "Alta",
+                             "evidence":  "selected_modules"
+                         },
+                         {
+                             "stage":  "E02",
+                             "block":  "B02.2",
+                             "type":  "CAPACIDAD",
+                             "element":  "Orden estable de activacion",
+                             "description":  "Definir secuencia segura para activar modulos sin romper el sistema.",
+                             "priority":  "Alta",
+                             "evidence":  "resolved_order"
+                         },
+                         {
+                             "stage":  "E03",
+                             "block":  "B03.1",
+                             "type":  "CAPACIDAD",
+                             "element":  "Plan de activacion",
+                             "description":  "Generar pasos claros de activacion, validacion y registro.",
+                             "priority":  "Alta",
+                             "evidence":  "activation_plan_seed"
+                         },
+                         {
+                             "stage":  "E03",
+                             "block":  "B03.2",
+                             "type":  "CAPACIDAD",
+                             "element":  "Sustitucion trazable",
+                             "description":  "Registrar que modulo sustituye a cual, por que y con que compatibilidad.",
+                             "priority":  "Alta",
+                             "evidence":  "module_swap_record"
+                         },
+                         {
+                             "stage":  "E04",
+                             "block":  "B04.1",
+                             "type":  "CAPACIDAD",
+                             "element":  "Estado operacional visible",
+                             "description":  "Ver modulos activos, pausados, desacoplados y sustituidos.",
+                             "priority":  "Media",
+                             "evidence":  "operational_view"
+                         },
+                         {
+                             "stage":  "E04",
+                             "block":  "B04.2",
+                             "type":  "CAPACIDAD",
+                             "element":  "Contexto transferible",
+                             "description":  "Dejar la capa lista para continuidad en otra conversacion o iteracion.",
+                             "priority":  "Alta",
+                             "evidence":  "next-objective.md"
+                         }
+                     ],
+    "design_principles":  [
+                              "frontera clara",
+                              "compatibilidad antes que activacion",
+                              "gobierno visible",
+                              "rollback explicito",
+                              "memoria separable",
+                              "contexto transferible"
+                          ],
+    "next":  "Convertir esta matriz en plan tecnico ejecutable cuando se autorice construccion local"
+}

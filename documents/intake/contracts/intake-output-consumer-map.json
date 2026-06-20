@@ -1,0 +1,53 @@
+﻿{
+    "contract_id":  "ENGREMIAT_INTAKE_OUTPUT_CONSUMER_MAP_V1",
+    "created_at":  "2026-06-20T09:35:30",
+    "principle":  "Data Intake produce fichas; otros centros consumen fichas",
+    "local_first":  true,
+    "network_allowed":  false,
+    "external_ai_allowed":  false,
+    "producers":  [
+                      "Data Intake Center"
+                  ],
+    "current_consumers":  [
+                              {
+                                  "consumer":  "Centro Documental",
+                                  "status":  "active",
+                                  "input":  "documents/grants/grant-call-profile-latest.json",
+                                  "outputs":  [
+                                                  "dossier-subvenciones-adaptado-latest.md"
+                                              ]
+                              }
+                          ],
+    "future_consumers":  [
+                             {
+                                 "consumer":  "Task Center",
+                                 "status":  "future",
+                                 "input":  "normalized profile",
+                                 "purpose":  "convertir ficha en tareas"
+                             },
+                             {
+                                 "consumer":  "Module Center",
+                                 "status":  "future",
+                                 "input":  "normalized profile",
+                                 "purpose":  "convertir necesidades en modulos"
+                             },
+                             {
+                                 "consumer":  "Evidence Center",
+                                 "status":  "future",
+                                 "input":  "source/profile",
+                                 "purpose":  "trazar evidencias"
+                             },
+                             {
+                                 "consumer":  "Worker/Ollama/Cline",
+                                 "status":  "future_requires_gate",
+                                 "input":  "reviewed profile",
+                                 "purpose":  "proponer acciones controladas"
+                             }
+                         ],
+    "rules":  [
+                  "Centro Documental no importa fuentes brutas",
+                  "Data Intake no genera dossiers finales",
+                  "Perfiles latest pueden activar ficha documental",
+                  "Cualquier consumidor futuro debe leer contratos y respetar human_review_required"
+              ]
+}

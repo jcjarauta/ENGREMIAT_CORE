@@ -1,0 +1,264 @@
+﻿{
+    "package_id":  "ENGREMIAT_OBSIDIAN_GROUPED_ARCHITECTURE_001",
+    "stage":  "E05_CREATE_GROUPED_ARCHITECTURE_OFFICIALIZATION_PLAN",
+    "status":  "PASS",
+    "official_architecture_id":  "engremiat-official-grouped-architecture.v1",
+    "decision":  "ADOPT_GROUPED_OBSIDIAN_ARCHITECTURE_AS_OFFICIAL_PREVIEW_BASE",
+    "readiness":  100,
+    "groups":  [
+                   {
+                       "id":  "G01_CORE",
+                       "name":  "ENGREMIAT CORE",
+                       "purpose":  "Fuente canonica, contratos, reports, manifests, dashboards y estado reconstruible",
+                       "contains":  [
+                                        "data",
+                                        "reports",
+                                        "exports",
+                                        "dashboard",
+                                        "contracts"
+                                    ]
+                   },
+                   {
+                       "id":  "G02_HUMAN_CONTROL",
+                       "name":  "CONTROL HUMANO",
+                       "purpose":  "Panel humano, decisiones, gates, revisiones y autorizaciones",
+                       "contains":  [
+                                        "00_CONTROL_OPERATIVO",
+                                        "04_GATES_DECISIONES"
+                                    ]
+                   },
+                   {
+                       "id":  "G03_PROJECTS_MODULES",
+                       "name":  "PROYECTOS Y MODULOS",
+                       "purpose":  "Project spaces, module spaces y lineas de trabajo agrupables",
+                       "contains":  [
+                                        "02_PROYECTOS",
+                                        "modules",
+                                        "PROJECT_*"
+                                    ]
+                   },
+                   {
+                       "id":  "G04_MEMORY_VISUAL",
+                       "name":  "MEMORIA VISUAL",
+                       "purpose":  "Obsidian, Canvas, grafo, enlaces, indices y vistas",
+                       "contains":  [
+                                        "07_OBSIDIAN_GRAPH",
+                                        "08_RELACIONES",
+                                        "bases",
+                                        "canvas"
+                                    ]
+                   },
+                   {
+                       "id":  "G05_TASKS_KANBAN",
+                       "name":  "TAREAS Y KANBAN PREVIEW",
+                       "purpose":  "Tarjetas, backlog, lanes, prioridades y trabajo humano visible",
+                       "contains":  [
+                                        "03_TAREAS",
+                                        "06_KANBAN_TAREAS"
+                                    ]
+                   },
+                   {
+                       "id":  "G06_WORKERS_EXECUTION_PREVIEW",
+                       "name":  "WORKERS Y EJECUCION PREVIEW",
+                       "purpose":  "Worker packets, dry-runs, propuestas y ejecucion bloqueada por gate",
+                       "contains":  [
+                                        "06_WORKERS",
+                                        "dry_run",
+                                        "worker_packet"
+                                    ]
+                   },
+                   {
+                       "id":  "G07_EVIDENCE_RESULTS",
+                       "name":  "EVIDENCIAS Y RESULTADOS",
+                       "purpose":  "Pruebas, receipts, reports de cierre, readiness y resultados",
+                       "contains":  [
+                                        "05_EVIDENCIAS",
+                                        "07_RESULTADOS"
+                                    ]
+                   },
+                   {
+                       "id":  "G08_SYSTEM_EVOLUTION",
+                       "name":  "EVOLUCION DEL SISTEMA",
+                       "purpose":  "Backlog de arquitectura, decisiones estrategicas, modulos futuros y aprendizaje",
+                       "contains":  [
+                                        "01_SISTEMA_ENGREMIAT",
+                                        "09_ARCHIVO",
+                                        "NEXT_OBJECTIVE"
+                                    ]
+                   }
+               ],
+    "builder_choices":  [
+                            {
+                                "id":  "CREATE_MASTER_VAULT",
+                                "label":  "Construir boveda maestra",
+                                "scope":  "global",
+                                "creates":  [
+                                                "vault_root",
+                                                "control_hub",
+                                                "system_map",
+                                                "projects_index",
+                                                "grouped_canvas"
+                                            ],
+                                "requires":  [
+                                                 "human_name",
+                                                 "purpose"
+                                             ],
+                                "default_group":  "G01_CORE"
+                            },
+                            {
+                                "id":  "CREATE_PROJECT_SPACE",
+                                "label":  "Construir project space",
+                                "scope":  "project",
+                                "creates":  [
+                                                "00_INDEX",
+                                                "01_INTAKE",
+                                                "02_ROADMAP",
+                                                "03_TAREAS",
+                                                "04_GATES_DECISIONES",
+                                                "05_EVIDENCIAS",
+                                                "06_WORKERS",
+                                                "07_RESULTADOS",
+                                                "08_RELACIONES",
+                                                "PROJECT_CANVAS"
+                                            ],
+                                "requires":  [
+                                                 "project_name",
+                                                 "parent_vault",
+                                                 "human_goal"
+                                             ],
+                                "default_group":  "G03_PROJECTS_MODULES"
+                            },
+                            {
+                                "id":  "CREATE_MODULE_SPACE",
+                                "label":  "Construir modulo relacionado",
+                                "scope":  "module",
+                                "creates":  [
+                                                "module_index",
+                                                "module_contract",
+                                                "module_tasks",
+                                                "module_gates",
+                                                "module_evidence",
+                                                "module_canvas"
+                                            ],
+                                "requires":  [
+                                                 "module_name",
+                                                 "parent_vault",
+                                                 "related_group",
+                                                 "related_modules"
+                                             ],
+                                "default_group":  "G03_PROJECTS_MODULES"
+                            },
+                            {
+                                "id":  "RELATE_MODULE_TO_VAULT",
+                                "label":  "Relacionar modulo con boveda concreta",
+                                "scope":  "relation",
+                                "creates":  [
+                                                "relation_note",
+                                                "canvas_edge",
+                                                "index_update"
+                                            ],
+                                "requires":  [
+                                                 "module_id",
+                                                 "vault_id",
+                                                 "relation_type"
+                                             ],
+                                "default_group":  "G04_MEMORY_VISUAL"
+                            },
+                            {
+                                "id":  "OPEN_WORK_SURFACE",
+                                "label":  "Elegir donde trabajar",
+                                "scope":  "view",
+                                "creates":  [
+                                                "work_surface_pointer",
+                                                "dashboard_view",
+                                                "next_action"
+                                            ],
+                                "requires":  [
+                                                 "surface_type",
+                                                 "target_project_or_module"
+                                             ],
+                                "default_group":  "G02_HUMAN_CONTROL"
+                            }
+                        ],
+    "decision_surface_actions":  [
+                                     {
+                                         "action_id":  "CREATE_MASTER_VAULT",
+                                         "label":  "Construir boveda maestra",
+                                         "scope":  "global",
+                                         "default_group":  "G01_CORE",
+                                         "mode":  "PREVIEW_ONLY",
+                                         "enabled":  true,
+                                         "requires_human_gate":  true,
+                                         "write_real":  false
+                                     },
+                                     {
+                                         "action_id":  "CREATE_PROJECT_SPACE",
+                                         "label":  "Construir project space",
+                                         "scope":  "project",
+                                         "default_group":  "G03_PROJECTS_MODULES",
+                                         "mode":  "PREVIEW_ONLY",
+                                         "enabled":  true,
+                                         "requires_human_gate":  true,
+                                         "write_real":  false
+                                     },
+                                     {
+                                         "action_id":  "CREATE_MODULE_SPACE",
+                                         "label":  "Construir modulo relacionado",
+                                         "scope":  "module",
+                                         "default_group":  "G03_PROJECTS_MODULES",
+                                         "mode":  "PREVIEW_ONLY",
+                                         "enabled":  true,
+                                         "requires_human_gate":  true,
+                                         "write_real":  false
+                                     },
+                                     {
+                                         "action_id":  "RELATE_MODULE_TO_VAULT",
+                                         "label":  "Relacionar modulo con boveda concreta",
+                                         "scope":  "relation",
+                                         "default_group":  "G04_MEMORY_VISUAL",
+                                         "mode":  "PREVIEW_ONLY",
+                                         "enabled":  true,
+                                         "requires_human_gate":  true,
+                                         "write_real":  false
+                                     },
+                                     {
+                                         "action_id":  "OPEN_WORK_SURFACE",
+                                         "label":  "Elegir donde trabajar",
+                                         "scope":  "view",
+                                         "default_group":  "G02_HUMAN_CONTROL",
+                                         "mode":  "PREVIEW_ONLY",
+                                         "enabled":  true,
+                                         "requires_human_gate":  true,
+                                         "write_real":  false
+                                     }
+                                 ],
+    "adoption_rules":  [
+                           "Todo modulo/proyecto debe pertenecer a un grupo oficial",
+                           "Todo modulo/proyecto debe tener index, intake/contexto, roadmap/proposito, tareas, gates, evidencias, resultados y relaciones",
+                           "Obsidian es memoria visual y navegacion, no motor de ejecucion",
+                           "Dashboard operativo decide intencion y superficie de trabajo",
+                           "Worker, Kanban/Cline write, Git y red siguen bloqueados por gate explicito",
+                           "La fuente canonica sigue siendo data/reports/exports/dashboard/manifests",
+                           "Cada cierre debe proponer siguiente objetivo y actualizar memoria visual"
+                       ],
+    "canonical_role_map":  {
+                               "ENGREMIAT_CORE":  "fuente_canonica_estado_y_evidencia",
+                               "OBSIDIAN":  "memoria_visual_relacional_y_navegacion_humana",
+                               "DASHBOARD":  "superficie_de_decision_y_revision",
+                               "KANBAN_PREVIEW":  "vision_de_tareas_sin_escritura_real",
+                               "OLLAMA":  "propuesta_local_preview",
+                               "WORKERS":  "ejecucion_futura_bajo_gate"
+                           },
+    "safety":  {
+                   "local_only":  true,
+                   "preview_only":  true,
+                   "execute_now":  false,
+                   "worker_execution":  false,
+                   "kanban_write":  false,
+                   "clien_write":  false,
+                   "obsidian_app_automation":  false,
+                   "git_write":  false,
+                   "external_network":  false
+               },
+    "next":  "E06_CLOSE_GROUPED_ARCHITECTURE_AND_DEFINE_NEXT_OBJECTIVE"
+}

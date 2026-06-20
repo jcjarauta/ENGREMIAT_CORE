@@ -1,0 +1,29 @@
+﻿{
+    "package_id":  "ENGREMIAT_UX_SYSTEM_001",
+    "stage":  "E67B_DECOUPLE_OBSIDIAN_SYNC_AND_CAPTURE_PROJECTS_VIEW",
+    "created_at":  "2026-06-20T10:42:33",
+    "status":  "PASS",
+    "decision":  "Obsidian sync queda como exportacion Markdown/YAML local, sin depender de funcion/plugin activado por defecto",
+    "rules":  [
+                  "ENGREMIAT escribe archivos Markdown/YAML",
+                  "Obsidian solo visualiza si el humano abre o sincroniza la carpeta",
+                  "La vista de proyectos lee heartbeat/project-signal local",
+                  "No ejecutar funciones internas de Obsidian desde ENGREMIAT"
+              ],
+    "result":  {
+                   "project":  "ENGREMIAT_PROJECT_heartbeat_demo",
+                   "phase":  "MARKDOWN_SYNC",
+                   "score":  42,
+                   "worker":  "RUNNING",
+                   "block":  "OK",
+                   "next":  "validar markdown local compatible con Obsidian",
+                   "source":  "heartbeat",
+                   "cause":  "signal_ok"
+               },
+    "node":  "C:\\ENGREMIAT_CORE\\documents\\obsidian-sync\\heartbeat-demo\\ENGREMIAT_PROJECT_heartbeat_demo.md",
+    "probe":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e67b-probe-projects-view-20260620-104231.ps1",
+    "stdout":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e67b-probe-stdout-20260620-104231.txt",
+    "stderr":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e67b-probe-stderr-20260620-104231.txt",
+    "backup":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\backup-projects-center-before-e67b-20260620-104231.ps1",
+    "next":  "RUN_INTERACTIVE_PROJECTS_VIEW_AGAIN"
+}

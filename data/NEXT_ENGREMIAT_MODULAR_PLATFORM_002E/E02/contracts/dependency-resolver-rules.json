@@ -1,0 +1,25 @@
+{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_002E",
+    "stage":  "E02",
+    "block":  "B02.2",
+    "module_id":  "ENG-MOD-SEL-001",
+    "module_name":  "Dependency Resolver",
+    "purpose":  "Resolver dependencias, conflictos y orden de activación",
+    "rules":  [
+                  "dependencies_first",
+                  "conflicts_block_activation",
+                  "priority_breaks_ties",
+                  "version_range_must_match",
+                  "pause_before_swap_if_required"
+              ],
+    "outputs":  [
+                    "resolved_order",
+                    "blocked_conflicts",
+                    "activation_plan_seed"
+                ],
+    "acceptance_criteria":  [
+                                "Orden estable",
+                                "Conflictos visibles",
+                                "Dependencias resueltas antes de activar"
+                            ]
+}

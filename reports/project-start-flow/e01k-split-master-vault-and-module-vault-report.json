@@ -1,0 +1,19 @@
+﻿{
+    "package_id":  "ENGREMIAT_PROJECT_START_FLOW_001",
+    "stage":  "E01K_SPLIT_MASTER_VAULT_AND_MODULE_VAULT",
+    "status":  "PASS",
+    "readiness":  100,
+    "decision":  "GO_NUEVO_PROYECTO_SPLIT_MASTER_AND_MODULE_VAULT_READY",
+    "script":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-new-project.ps1",
+    "safety":  {
+                   "local_only":  true,
+                   "full_rewrite":  true,
+                   "creates_master_vault":  true,
+                   "creates_separate_module_vault":  true,
+                   "links_master_to_module":  true,
+                   "no_worker_real":  true,
+                   "no_git":  true,
+                   "no_network":  true
+               },
+    "next":  "RUN_NUEVO_PROYECTO_AND_VERIFY_MASTER_LINKS_TO_MODULE_VAULT"
+}

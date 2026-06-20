@@ -1,0 +1,11 @@
+﻿{
+    "schema_id":  "resource-version-model.v1",
+    "version_format":  "MAJOR.MINOR.PATCH",
+    "initial_version":  "0.1.0",
+    "rules":  [
+                  "MAJOR cambios incompatibles",
+                  "MINOR mejora compatible",
+                  "PATCH correccion menor",
+                  "Toda version nueva conserva source_resource_id si deriva de otro recurso"
+              ]
+}

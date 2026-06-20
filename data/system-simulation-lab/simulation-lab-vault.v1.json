@@ -1,0 +1,23 @@
+﻿{
+    "package_id":  "ENGREMIAT_SYSTEM_SIMULATION_LAB_001",
+    "stage":  "E02_CREATE_BOVEDA_PROJECT_ENGREMIAT_SIMULATION_LAB",
+    "status":  "PASS",
+    "lab_vault":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_SIMULATION_LAB",
+    "contract":  "C:\\ENGREMIAT_CORE\\data\\system-simulation-lab\\simulation-lab-contract.v1.json",
+    "canvas":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_SIMULATION_LAB\\10_CANVAS\\SIMULATION_LAB_CANVAS.canvas",
+    "dirs":  12,
+    "indexes":  9,
+    "canvas_nodes":  9,
+    "canvas_edges":  9,
+    "safety":  {
+                   "local_only":  true,
+                   "lab_vault_created":  true,
+                   "no_real_worker_execution":  true,
+                   "no_kanban_write":  true,
+                   "no_clien_write":  true,
+                   "no_git_write":  true,
+                   "no_external_network":  true,
+                   "obsidian_app_automation":  false
+               },
+    "next":  "E03_CREATE_SIMULATION_OBJECT_MODEL_NOTES"
+}

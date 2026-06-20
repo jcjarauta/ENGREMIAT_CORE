@@ -1,0 +1,51 @@
+﻿{
+    "package_id":  "ENGREMIAT_OBSIDIAN_HIERARCHICAL_VAULTS_001",
+    "stage":  "E02_PREPARE_PROJECT_VAULT_TEMPLATE_REPAIR_HASH_KEY",
+    "status":  "PASS",
+    "template_name":  "ENGREMIAT_PROJECT_VAULT_TEMPLATE",
+    "template_path":  "C:\\ENGREMIAT_CORE\\templates\\obsidian-project-vault-template\\ENGREMIAT_PROJECT_VAULT_TEMPLATE",
+    "based_on_contract":  "C:\\ENGREMIAT_CORE\\data\\obsidian-hierarchical-vaults\\hierarchical-vaults-contract.v1.json",
+    "role":  "project_vault_template",
+    "dirs":  [
+                 "00_PROJECT_CONTROL",
+                 "01_ROADMAP",
+                 "02_MODULES",
+                 "03_DECISIONS",
+                 "04_EVIDENCE",
+                 "05_CANVAS",
+                 "06_REPORTS",
+                 "07_WORK_SURFACES",
+                 ".obsidian"
+             ],
+    "files":  [
+                  "PROJECT_HOME.md",
+                  "00_PROJECT_CONTROL/PROJECT_STATUS.md",
+                  "00_PROJECT_CONTROL/PROJECT_GRAPH_VIEW_SELECTOR.md",
+                  "01_ROADMAP/ROADMAP_INDEX.md",
+                  "02_MODULES/PROJECT_MODULES_INDEX.md",
+                  "03_DECISIONS/PROJECT_DECISIONS_INDEX.md",
+                  "04_EVIDENCE/PROJECT_EVIDENCE_INDEX.md",
+                  "06_REPORTS/PROJECT_REPORTS_INDEX.md"
+              ],
+    "canvas":  "05_CANVAS/PROJECT_CANVAS.canvas",
+    "graph_config":  ".obsidian/graph.json",
+    "rules":  [
+                  "project_vault_contains_roadmap_modules_decisions_evidence",
+                  "master_keeps_cards_and_links_only",
+                  "module_deep_content_can_split_later",
+                  "technical_artifacts_need_human_bridge"
+              ],
+    "safety":  {
+                   "local_only":  true,
+                   "template_write":  true,
+                   "no_project_vault_creation":  true,
+                   "no_content_move":  true,
+                   "obsidian_app_automation":  false,
+                   "worker_execution":  false,
+                   "kanban_write":  false,
+                   "clien_write":  false,
+                   "git_write":  false,
+                   "external_network":  false
+               },
+    "next":  "E03_CREATE_BOVEDA_PROJECT_ENGREMIAT_CORE_FROM_TEMPLATE"
+}

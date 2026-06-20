@@ -1,0 +1,27 @@
+﻿{
+    "package_id":  "ENGREMIAT_PROJECT_BUILDER_TO_WORKER_LOOP_001",
+    "stage":  "E02_BUILD_HUMAN_PROJECT_INTAKE_DASHBOARD",
+    "purpose":  "Recoger una idea/proyecto humano, convertirla en intake estructurado y preparar el puente hacia roadmap aprobado y worker controlado",
+    "human_inputs":  [
+                         "nombre_proyecto",
+                         "problema_o_necesidad",
+                         "resultado_deseado",
+                         "restricciones",
+                         "recursos_disponibles",
+                         "prioridad",
+                         "criterio_de_exito",
+                         "nivel_de_autorizacion"
+                     ],
+    "flow":  [
+                 "humano_describe_proyecto",
+                 "sistema_propone_roadmap",
+                 "humano_aprueba_o_corrige",
+                 "worker_desarrolla_con_normas",
+                 "worker_devuelve_resultado_y_evidencia"
+             ],
+    "write_policy":  "LOCAL_ONLY_READINESS_NO_WORKER_EXECUTION",
+    "worker_real_execution":  false,
+    "git_write":  false,
+    "network":  false,
+    "next":  "E03_BUILD_ROADMAP_PROPOSAL_MODEL"
+}

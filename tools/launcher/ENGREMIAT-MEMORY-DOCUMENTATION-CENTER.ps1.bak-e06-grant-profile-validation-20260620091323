@@ -1,0 +1,813 @@
+﻿param()
+
+$ErrorActionPreference = "Stop"
+[Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
+
+$Core = "C:\ENGREMIAT_CORE"
+$DocDir = Join-Path $Core "documents"
+$ReportDir = Join-Path $Core "reports\launcher"
+New-Item -ItemType Directory -Force -Path $DocDir,$ReportDir | Out-Null
+foreach($d in @("technical","executive","development","grants","partners","clients","worker","exports")){
+  New-Item -ItemType Directory -Force -Path (Join-Path $DocDir $d) | Out-Null
+}
+
+function W($m,$c="White"){ Write-Host $m -ForegroundColor $c }
+function Pause-Eng(){ [void](Read-Host "Enter") }
+
+function Get-ActiveProject {
+  $j = Join-Path $Core "data\desktop-terminal-operator\active-project.json"
+  $t = Join-Path $Core "data\desktop-terminal-operator\active-project.txt"
+  if(Test-Path $j){
+    try{
+      $x = Get-Content $j -Raw | ConvertFrom-Json
+      if($x.active_project -and (Test-Path ([string]$x.active_project))){ return [string]$x.active_project }
+    } catch {}
+  }
+  if(Test-Path $t){
+    $v = (Get-Content $t -Raw).Trim()
+    if(Test-Path $v){ return $v }
+  }
+  return ""
+}
+
+function Normalize-Status($s){
+  $v = ([string]$s).Trim().ToUpperInvariant()
+  if($v -eq "ACTIVE" -or $v -eq "ACTIVO"){ return "ACTIVO" }
+  if($v -eq "INACTIVE" -or $v -eq "INACTIVO" -or $v -eq "DISABLED" -or $v -eq "DESACTIVADO"){ return "INACTIVO" }
+  if($v -eq "HISTORIC" -or $v -eq "HISTORICAL" -or $v -eq "HISTORICO" -or $v -eq "HISTÓRICO"){ return "HISTORICO" }
+  if([string]::IsNullOrWhiteSpace($v)){ return "ACTIVO" }
+  return $v
+}
+
+function Get-ModuleStatus($dir){
+  $mj = Join-Path $dir "module.json"
+  if(Test-Path $mj){
+    try{
+      $x = Get-Content $mj -Raw | ConvertFrom-Json
+      if($x.status){ return Normalize-Status $x.status }
+    } catch {}
+  }
+  return "ACTIVO"
+}
+
+function Count-Dirs($path){
+  if(Test-Path $path){ return @((Get-ChildItem $path -Directory -ErrorAction SilentlyContinue)).Count }
+  return 0
+}
+
+function Get-LibraryCounts {
+  $lib = Join-Path $Core "library\modules"
+  $hist = Join-Path $Core "library\modules_historico"
+  $active = 0
+  $inactive = 0
+  if(Test-Path $lib){
+    foreach($d in Get-ChildItem $lib -Directory -ErrorAction SilentlyContinue){
+      if((Get-ModuleStatus $d.FullName) -eq "INACTIVO"){ $inactive++ } else { $active++ }
+    }
+  }
+  return [pscustomobject]@{
+    active = $active
+    inactive = $inactive
+    historic = Count-Dirs $hist
+  }
+}
+
+function Get-Context {
+  $p = Get-ActiveProject
+  $projectName = "NO_DETECTADO"
+  $modules = 0
+  if($p){
+    $projectName = Split-Path $p -Leaf
+    $modules = Count-Dirs (Join-Path $p "MODULOS")
+  }
+  $lib = Get-LibraryCounts
+  return [pscustomobject]@{
+    generated = (Get-Date).ToString("s")
+    core = $Core
+    project_path = $p
+    project_name = $projectName
+    project_modules = $modules
+    library_active = $lib.active
+    library_inactive = $lib.inactive
+    library_historic = $lib.historic
+    next = "E24A_CREATE_MODULE_TASKS_MANAGEMENT_SCREEN"
+  }
+}
+
+function Save-Doc($folder,$name,$lines){
+  $targetDir = Join-Path $DocDir $folder
+  New-Item -ItemType Directory -Force -Path $targetDir | Out-Null
+  $latest = Join-Path $targetDir ($name + "-latest.md")
+  $versioned = Join-Path $targetDir ($name + "-" + (Get-Date -Format "yyyyMMdd-HHmmss") + ".md")
+  $lines | Set-Content $latest -Encoding UTF8
+  $lines | Set-Content $versioned -Encoding UTF8
+  return [pscustomobject]@{ name=$name; latest=$latest; versioned=$versioned }
+}
+
+function Build-Docs {
+  $ctx = Get-Context
+  $contextPath = Join-Path $DocDir "document-context-latest.json"
+  $ctx | ConvertTo-Json -Depth 50 | Set-Content $contextPath -Encoding UTF8
+
+  $docs = @()
+
+  $technical = @(
+    "# ENGREMIAT - Memoria técnica",
+    "",
+    "Generado: $($ctx.generated)",
+    "Core: $($ctx.core)",
+    "Proyecto activo: $($ctx.project_name)",
+    "Ruta proyecto: $($ctx.project_path)",
+    "Módulos proyecto: $($ctx.project_modules)",
+    "Biblioteca: $($ctx.library_active) activos / $($ctx.library_inactive) inactivos / $($ctx.library_historic) históricos",
+    "",
+    "## Siguiente técnico recomendado",
+    "- $($ctx.next)"
+  )
+  $docs += Save-Doc "technical" "memoria-tecnica" $technical
+
+  $executive = @(
+    "# ENGREMIAT - Resumen humano",
+    "",
+    "Engremiat dispone de una raíz de inicio estable para navegar por el sistema, revisar estado, abrir módulos, consultar memoria viva y generar documentación.",
+    "",
+    "## Estado actual",
+    "- Proyecto activo: $($ctx.project_name)",
+    "- Módulos del proyecto: $($ctx.project_modules)",
+    "- Biblioteca: $($ctx.library_active) activos / $($ctx.library_inactive) inactivos / $($ctx.library_historic) históricos",
+    "",
+    "## Qué aporta",
+    "- Reduce fricción humana.",
+    "- Ordena navegación, memoria y diagnóstico.",
+    "- Prepara documentación reutilizable para informes, subvenciones, partners, clientes y workers."
+  )
+  $docs += Save-Doc "executive" "resumen-humano" $executive
+
+  $development = @(
+    "# ENGREMIAT - Informe de desarrollo",
+    "",
+    "## Validaciones actuales",
+    "- Inicio operativo.",
+    "- Selectores workspace/tarjetas normalizados.",
+    "- Árbol, rutas, ayuda, estado técnico, estado copiable, status externo y último log revisados.",
+    "- Centro documental creado con exportación local-first preparada.",
+    "",
+    "## Pendiente",
+    "- Crear pantalla avanzada de tareas.",
+    "- Vincular worker local para redacción asistida.",
+    "- Añadir exportación PDF cuando el pipeline DOCX/HTML esté validado."
+  )
+  $docs += Save-Doc "development" "informe-desarrollo" $development
+
+  $grant = @(
+    "# ENGREMIAT - Dossier base para subvenciones",
+    "",
+    "## 1. Resumen ejecutivo",
+    "Engremiat es una infraestructura local-first para transformar conocimiento disperso en memoria viva, documentación útil y trabajo trazable. El sistema organiza proyectos mediante módulos, rutas, reports, diario de desarrollo, dossiers reutilizables y futura colaboración con workers locales.",
+    "",
+    "Su objetivo es reducir la fricción humana en la coordinación, documentación, continuidad y justificación de proyectos comunitarios, cooperativos, tecnológicos y de economía circular. La propuesta permite generar evidencias y documentos desde el propio estado operativo del sistema.",
+    "",
+    "## 2. Problema detectado",
+    "Muchos proyectos con vocación social, comunitaria o innovadora no fracasan por falta de ideas, sino por pérdida de continuidad, falta de documentación, dispersión de tareas, dificultad para justificar impacto y dependencia excesiva de memoria humana no estructurada.",
+    "",
+    "Esta situación provoca:",
+    "- Dificultad para retomar el trabajo entre sesiones.",
+    "- Pérdida de decisiones, aprendizajes y evidencias.",
+    "- Problemas para preparar subvenciones o memorias justificativas.",
+    "- Baja trazabilidad entre necesidades, acciones, recursos y resultados.",
+    "- Dependencia de personas concretas para sostener el conocimiento del proyecto.",
+    "",
+    "## 3. Solución propuesta",
+    "Engremiat propone una base operativa local-first que organiza el proyecto en módulos, genera memoria viva, produce documentación desde evidencias reales y prepara la incorporación progresiva de workers locales para apoyar redacción, análisis y ejecución asistida.",
+    "",
+    "La solución se compone de:",
+    "- Inicio humano estable para navegar el sistema.",
+    "- Módulos de proyecto y biblioteca reutilizable.",
+    "- Workspace y tarjetas por módulo.",
+    "- Árbol de navegación y rutas recomendadas.",
+    "- Estado técnico, status externo y logs.",
+    "- Centro de memoria y documentación.",
+    "- Dossiers para subvenciones, partners, clientes y contexto worker.",
+    "- Exportación documental local-first con fallback Markdown y futura conexión Pandoc.",
+    "",
+    "## 4. Innovación",
+    "- Memoria viva generada desde reports, estado real y diario de desarrollo.",
+    "- Documentación automática sin depender inicialmente de servicios externos.",
+    "- Arquitectura modular reutilizable y auditable.",
+    "- Separación entre memoria técnica, resumen humano, informes y dossiers por destinatario.",
+    "- Preparación para workers locales con reglas de seguridad.",
+    "- Enfoque local-first: control humano, trazabilidad y autonomía.",
+    "- Capacidad futura de exportar a Markdown, HTML, DOCX, PDF y paquetes documentales.",
+    "",
+    "## 5. Objetivos generales",
+    "- Construir una infraestructura de coordinación modular para proyectos complejos.",
+    "- Reducir la carga humana repetitiva en documentación y continuidad.",
+    "- Facilitar la preparación de informes, memorias y subvenciones.",
+    "- Mejorar la trazabilidad entre decisiones, módulos, tareas, evidencias y documentos.",
+    "- Preparar una base replicable para entidades, comunidades, partners y clientes.",
+    "",
+    "## 6. Objetivos específicos",
+    "- Consolidar el inicio como raíz estable del sistema.",
+    "- Convertir la memoria viva en documentación accionable.",
+    "- Crear dossiers adaptables a subvenciones, partners y clientes.",
+    "- Exportar documentos en formatos presentables mediante herramientas open source.",
+    "- Conectar en fases posteriores un worker local para redacción asistida.",
+    "- Vincular módulos, tarjetas y tareas con evidencias verificables.",
+    "",
+    "## 7. Beneficiarios potenciales",
+    "- Proyectos de economía circular y transición ecológica.",
+    "- Cooperativas, asociaciones y entidades comunitarias.",
+    "- Equipos pequeños con necesidad de coordinación y documentación.",
+    "- Iniciativas con dificultad administrativa para justificar impacto.",
+    "- Redes locales que necesiten compartir conocimiento, recursos y tareas.",
+    "- Personas o colectivos con alta capacidad de acción pero baja capacidad de sistematización.",
+    "",
+    "## 8. Metodología de trabajo",
+    "La metodología se basa en ciclos cortos de construcción, validación humana y generación de evidencias. Cada mejora del sistema queda registrada mediante reports, logs y documentación generada.",
+    "",
+    "Fases metodológicas:",
+    "- Detectar necesidad o fricción operativa.",
+    "- Crear o ajustar módulo/pantalla/script.",
+    "- Validar comportamiento en terminal.",
+    "- Registrar report y estado.",
+    "- Actualizar memoria viva.",
+    "- Generar documentación reutilizable.",
+    "- Revisar con humano antes de ampliar automatización.",
+    "",
+    "## 9. Estado actual de desarrollo",
+    "- Proyecto activo: $($ctx.project_name)",
+    "- Módulos actuales del proyecto: $($ctx.project_modules)",
+    "- Biblioteca de módulos: $($ctx.library_active) activos / $($ctx.library_inactive) inactivos / $($ctx.library_historic) históricos",
+    "- Inicio humano estable creado.",
+    "- Selectores de workspace y tarjetas normalizados.",
+    "- Árbol de navegación y rutas recomendadas revisadas.",
+    "- Ayuda, estado técnico, estado copiable, status externo y último log normalizados.",
+    "- Centro documental local-first creado.",
+    "- Exportación documental validada en modo fallback Markdown.",
+    "",
+    "## 10. Resultados actuales",
+    "- Navegación inicial consolidada.",
+    "- Diagnóstico interno legible.",
+    "- Conteos coherentes de módulos y biblioteca.",
+    "- Memoria y documentación agrupadas en una pantalla propia.",
+    "- Generación de documentos Markdown para distintos destinatarios.",
+    "- Carpeta de exports preparada.",
+    "- Detección de Pandoc preparada sin instalación automática.",
+    "",
+    "## 11. Impacto esperado",
+    "- Reducción del tiempo necesario para reconstruir contexto.",
+    "- Mejora de la capacidad de justificar avances y decisiones.",
+    "- Mayor continuidad entre sesiones de trabajo.",
+    "- Documentación más rápida para convocatorias y colaboraciones.",
+    "- Base replicable para proyectos comunitarios y cooperativos.",
+    "- Preparación para automatización responsable con supervisión humana.",
+    "",
+    "## 12. Indicadores propuestos",
+    "- Número de módulos creados y activos.",
+    "- Número de documentos generados.",
+    "- Número de reports PASS generados.",
+    "- Tiempo estimado ahorrado en reconstrucción de contexto.",
+    "- Número de decisiones registradas.",
+    "- Número de tareas vinculadas a módulos.",
+    "- Número de dossiers exportados.",
+    "- Número de evidencias reutilizables para justificación.",
+    "",
+    "## 13. Cronograma orientativo",
+    "### Fase 1 — Base operativa",
+    "- Inicio humano estable.",
+    "- Menús normalizados.",
+    "- Estado, árbol y rutas revisadas.",
+    "",
+    "### Fase 2 — Memoria y documentación",
+    "- Centro documental.",
+    "- Dossiers base.",
+    "- Exportación Markdown / HTML / DOCX.",
+    "",
+    "### Fase 3 — Tareas y evidencias",
+    "- Pantalla avanzada de tareas por módulo.",
+    "- Vinculación entre tarjetas, tareas, tipos, enlaces y evidencias.",
+    "",
+    "### Fase 4 — Worker local",
+    "- Redacción asistida.",
+    "- Resúmenes automáticos.",
+    "- Adaptación por convocatoria o destinatario.",
+    "",
+    "### Fase 5 — Escalado",
+    "- Plantillas por subvención.",
+    "- Exportación PDF/DOCX profesional.",
+    "- Integración con partners y pilotos reales.",
+    "",
+    "## 14. Presupuesto orientativo pendiente de definir",
+    "Este dossier aún no incorpora presupuesto cerrado. La estructura presupuestaria futura debería contemplar:",
+    "- Desarrollo técnico.",
+    "- Documentación y diseño de plantillas.",
+    "- Infraestructura local y backup.",
+    "- Validación con usuarios o entidades piloto.",
+    "- Integración de herramientas open source.",
+    "- Acompañamiento, formación y soporte.",
+    "- Evaluación de impacto y justificación.",
+    "",
+    "## 15. Riesgos y mitigación",
+    "### Riesgo: exceso de complejidad técnica",
+    "Mitigación: desarrollo por fases, una frontera técnica por bloque y validación humana.",
+    "",
+    "### Riesgo: dependencia de herramientas externas",
+    "Mitigación: local-first, fallback Markdown y conexión opcional a herramientas open source.",
+    "",
+    "### Riesgo: documentación demasiado técnica",
+    "Mitigación: separar memoria técnica, resumen humano y dossiers por destinatario.",
+    "",
+    "### Riesgo: automatización prematura",
+    "Mitigación: worker desactivado por defecto y activación solo con autorización explícita.",
+    "",
+    "## 16. Sostenibilidad",
+    "Engremiat está diseñado para crecer de forma modular. Cada nueva función puede documentarse, reutilizarse y conectarse a otras capas sin depender de una única herramienta. El enfoque local-first permite mantener control de datos, reducir costes iniciales y evolucionar hacia automatización cuando el sistema esté preparado.",
+    "",
+    "## 17. Escalabilidad",
+    "La arquitectura permite pasar de un proyecto individual a múltiples proyectos, módulos, bibliotecas reutilizables, plantillas documentales y workers especializados. En fases posteriores, el sistema puede ampliarse a Telegram, dashboards, exportaciones avanzadas, formularios guiados y gestión documental colaborativa.",
+    "",
+    "## 18. Partners potenciales",
+    "- Entidades sociales o comunitarias para pilotos.",
+    "- Cooperativas y proyectos de economía circular.",
+    "- Administraciones locales interesadas en innovación social.",
+    "- Equipos técnicos open source.",
+    "- Espacios de formación y acompañamiento digital.",
+    "- Organizaciones con necesidad de trazabilidad documental.",
+    "",
+    "## 19. Herramientas open source conectables",
+    "- Pandoc para exportación DOCX/HTML/PDF.",
+    "- Quarto para informes más elaborados.",
+    "- LibreOffice u OnlyOffice para revisión humana.",
+    "- Docassemble para formularios guiados de subvención.",
+    "- Docling para lectura estructurada de documentos externos.",
+    "- Ollama/Cline como capa worker local en fases posteriores.",
+    "",
+    "## 20. Evidencias disponibles",
+    "- Reports locales generados por el sistema.",
+    "- Estado copiable JSON.",
+    "- Último log de inicio.",
+    "- Memoria viva Markdown.",
+    "- Documentos Markdown generados.",
+    "- Carpeta exports con fallback documental.",
+    "- Árbol de navegación y rutas recomendadas.",
+    "",
+    "## 21. Necesidades futuras",
+    "- Plantillas específicas por convocatoria.",
+    "- Exportación DOCX/PDF validada con Pandoc.",
+    "- Generador de anexos.",
+    "- Panel de selección de destinatario y tono.",
+    "- Worker local para reescritura asistida.",
+    "- Conexión con base de conocimiento o documentos externos.",
+    "",
+    "## 22. Próximo hito técnico",
+    "Consolidar la pantalla avanzada de tareas por módulo para vincular módulos, tarjetas, tareas, tipos, enlaces, evidencias y decisiones. Este hito permitirá que la documentación no solo explique el sistema, sino que se alimente directamente del trabajo operativo.",
+    "",
+    "## 23. Encaje con subvenciones",
+    "Engremiat puede presentarse como herramienta de apoyo a transformación digital, innovación social, economía circular, gestión del conocimiento, cooperación territorial, automatización responsable y fortalecimiento de capacidades comunitarias.",
+    "",
+    "## 24. Frase de síntesis",
+    "Engremiat convierte conocimiento disperso en memoria viva, documentación útil y trabajo trazable."
+  )
+  $docs += Save-Doc "grants" "dossier-subvenciones-base" $grant
+
+  $partners = @(
+    "# ENGREMIAT - Dossier base para partners",
+    "",
+    "Engremiat es una plataforma modular para coordinación, memoria viva, documentación y futura ejecución asistida por workers.",
+    "",
+    "## Qué aporta",
+    "- Orden del proyecto y sus módulos.",
+    "- Documentación reutilizable.",
+    "- Trazabilidad de decisiones y avances.",
+    "- Preparación para pilotos colaborativos."
+  )
+  $docs += Save-Doc "partners" "dossier-partners-base" $partners
+
+  $clients = @(
+    "# ENGREMIAT - Dossier base para clientes / usuarios",
+    "",
+    "Engremiat ayuda a ordenar un proyecto, convertir ideas en módulos, revisar el estado y mantener documentación viva sin perder el hilo.",
+    "",
+    "## Beneficios",
+    "- Menos dispersión.",
+    "- Más trazabilidad.",
+    "- Mejor continuidad entre sesiones.",
+    "- Preparación para automatización asistida."
+  )
+  $docs += Save-Doc "clients" "dossier-clientes-base" $clients
+
+  $worker = @(
+    "# ENGREMIAT - Contexto para worker",
+    "",
+    "Core: $($ctx.core)",
+    "Proyecto activo: $($ctx.project_name)",
+    "Ruta proyecto: $($ctx.project_path)",
+    "Módulos proyecto: $($ctx.project_modules)",
+    "Biblioteca: $($ctx.library_active) activos / $($ctx.library_inactive) inactivos / $($ctx.library_historic) históricos",
+    "",
+    "Siguiente recomendado: $($ctx.next)",
+    "",
+    "Normas:",
+    "- No usar red.",
+    "- No hacer commit/push salvo autorización explícita.",
+    "- Generar evidencias locales.",
+    "- Mantener PowerShell completo y validado."
+  )
+  $docs += Save-Doc "worker" "worker-context" $worker
+
+  $report = Join-Path $ReportDir ("memory-documentation-center-safe-" + (Get-Date -Format "yyyyMMdd-HHmmss") + ".json")
+  [pscustomobject]@{
+    package = "ENGREMIAT_MEMORY_DOCUMENTATION_CENTER_SAFE_REWRITE"
+    status = "PASS"
+    generated = (Get-Date).ToString("s")
+    context = $contextPath
+    documents = $docs
+    next = "PROBAR_EXPORTACION_PANDOC"
+  } | ConvertTo-Json -Depth 50 | Set-Content $report -Encoding UTF8
+
+  return [pscustomobject]@{ context=$contextPath; documents=$docs; report=$report }
+}
+
+function Find-Pandoc {
+  $cmd = Get-Command pandoc -ErrorAction SilentlyContinue
+  if($cmd -and $cmd.Source){ return $cmd.Source }
+  return ""
+}
+
+function Export-Docs {
+  $pandoc = Find-Pandoc
+  $exportDir = Join-Path $DocDir "exports"
+  New-Item -ItemType Directory -Force -Path $exportDir | Out-Null
+  $sources = @(
+    "grants\dossier-subvenciones-base-latest.md",
+    "partners\dossier-partners-base-latest.md",
+    "clients\dossier-clientes-base-latest.md",
+    "development\informe-desarrollo-latest.md",
+    "executive\resumen-humano-latest.md",
+    "technical\memoria-tecnica-latest.md"
+  )
+
+  $results = @()
+  foreach($rel in $sources){
+    $src = Join-Path $DocDir $rel
+    $base = [IO.Path]::GetFileNameWithoutExtension($src)
+    if(-not(Test-Path $src)){
+      $results += [pscustomobject]@{ status="MISS_SOURCE"; source=$src; html=""; docx=""; message="Genera primero [1]." }
+      continue
+    }
+
+    if($pandoc){
+      $html = Join-Path $exportDir ($base + ".html")
+      $docx = Join-Path $exportDir ($base + ".docx")
+      try{
+        & $pandoc $src -o $html --standalone
+        $code1 = $LASTEXITCODE
+        & $pandoc $src -o $docx
+        $code2 = $LASTEXITCODE
+        if($code1 -eq 0 -and $code2 -eq 0){
+          $results += [pscustomobject]@{ status="EXPORTED"; source=$src; html=$html; docx=$docx; message="OK" }
+        } else {
+          $results += [pscustomobject]@{ status="EXPORT_ERROR"; source=$src; html=$html; docx=$docx; message="pandoc exit html=$code1 docx=$code2" }
+        }
+      } catch {
+        $results += [pscustomobject]@{ status="EXPORT_ERROR"; source=$src; html=$html; docx=$docx; message=$_.Exception.Message }
+      }
+    } else {
+      $fallback = Join-Path $exportDir ([IO.Path]::GetFileName($src))
+      Copy-Item $src $fallback -Force
+      $results += [pscustomobject]@{ status="PANDOC_NOT_FOUND_MD_COPIED"; source=$src; html=""; docx=""; message="Pandoc no detectado. Markdown copiado a exports." }
+    }
+  }
+
+  $note = Join-Path $exportDir "README-pandoc-install.md"
+  @(
+    "# Exportación documental Engremiat",
+    "",
+    "Estado pandoc: " + $(if($pandoc){"DETECTADO: $pandoc"}else{"NO_DETECTADO"}),
+    "",
+    "Comprobación:",
+    "pandoc --version"
+  ) | Set-Content $note -Encoding UTF8
+
+  $report = Join-Path $ReportDir ("document-export-pandoc-safe-" + (Get-Date -Format "yyyyMMdd-HHmmss") + ".json")
+  [pscustomobject]@{
+    package = "ENGREMIAT_DOCUMENT_EXPORT_SAFE"
+    status = "PASS"
+    pandoc_detected = [bool]$pandoc
+    pandoc_path = $pandoc
+    exports_dir = $exportDir
+    install_note = $note
+    results = $results
+  } | ConvertTo-Json -Depth 50 | Set-Content $report -Encoding UTF8
+
+  return [pscustomobject]@{ pandoc=$pandoc; results=$results; exports=$exportDir; report=$report; note=$note }
+}
+
+function Get-GrantProfilePath {
+  return (Join-Path $DocDir "grants\grant-call-profile-latest.json")
+}
+
+function New-DefaultGrantProfile {
+  return [ordered]@{
+    nombre_convocatoria = "PENDIENTE_DEFINIR"
+    entidad_convocante = "PENDIENTE_DEFINIR"
+    territorio = "PENDIENTE_DEFINIR"
+    fecha_limite = "PENDIENTE_DEFINIR"
+    objetivo_convocatoria = "PENDIENTE_DEFINIR"
+    lineas_prioritarias = @(
+      "innovacion social",
+      "transformacion digital",
+      "economia circular",
+      "gestion del conocimiento",
+      "fortalecimiento comunitario"
+    )
+    importe_solicitado = "PENDIENTE_DEFINIR"
+    cofinanciacion = "PENDIENTE_DEFINIR"
+    beneficiarios = @(
+      "proyectos comunitarios",
+      "cooperativas",
+      "asociaciones",
+      "equipos pequenos con necesidad de documentacion y continuidad"
+    )
+    indicadores_requeridos = @(
+      "modulos creados",
+      "documentos generados",
+      "reports PASS",
+      "evidencias reutilizables",
+      "tareas vinculadas a modulos"
+    )
+    documentacion_requerida = @(
+      "memoria tecnica",
+      "memoria economica",
+      "cronograma",
+      "presupuesto",
+      "anexos",
+      "evidencias"
+    )
+    criterios_valoracion = @(
+      "impacto",
+      "innovacion",
+      "viabilidad",
+      "sostenibilidad",
+      "replicabilidad",
+      "capacidad de justificacion"
+    )
+    tono = "institucional claro"
+    notas_humanas = "Completar esta ficha con los datos reales de la convocatoria antes de generar el dossier adaptado."
+  }
+}
+
+function Ensure-GrantProfile {
+  $path = Get-GrantProfilePath
+  if(-not(Test-Path $path)){
+    $profile = New-DefaultGrantProfile
+    $profile | ConvertTo-Json -Depth 30 | Set-Content $path -Encoding UTF8
+  }
+  return $path
+}
+
+function Edit-GrantProfile {
+  $path = Ensure-GrantProfile
+  Start-Process notepad.exe $path
+  Clear-Host
+  W "==== FICHA DE CONVOCATORIA ====" Cyan
+  W ""
+  W "[OK] ficha creada/abierta" Green
+  W ("archivo: {0}" -f $path) Green
+  W ""
+  W "Edita los campos reales de la convocatoria y guarda el JSON." Yellow
+  W ""
+  W "[Enter] volver" Cyan
+  W ""
+  [void](Read-Host "CONVOCATORIA")
+}
+
+function Read-GrantProfile {
+  $path = Ensure-GrantProfile
+  try {
+    return (Get-Content $path -Raw | ConvertFrom-Json)
+  } catch {
+    throw "grant_profile_json_invalido=$path"
+  }
+}
+
+function Join-ProfileList($v) {
+  if($null -eq $v){ return "- PENDIENTE_DEFINIR" }
+  if($v -is [System.Array]){
+    $out = @()
+    foreach($x in $v){ $out += ("- " + [string]$x) }
+    return ($out -join "`r`n")
+  }
+  return ("- " + [string]$v)
+}
+
+function Generate-AdaptedGrantDossier {
+  $ctx = Get-Context
+  $profile = Read-GrantProfile
+  $stamp = Get-Date -Format "yyyyMMdd-HHmmss"
+  $folder = Join-Path $DocDir "grants"
+  New-Item -ItemType Directory -Force -Path $folder | Out-Null
+
+  $latest = Join-Path $folder "dossier-subvenciones-adaptado-latest.md"
+  $versioned = Join-Path $folder ("dossier-subvenciones-adaptado-" + $stamp + ".md")
+
+  $lines = @(
+    "# ENGREMIAT - Dossier adaptado a convocatoria",
+    "",
+    "## 1. Identificacion de la convocatoria",
+    "- Convocatoria: $($profile.nombre_convocatoria)",
+    "- Entidad convocante: $($profile.entidad_convocante)",
+    "- Territorio: $($profile.territorio)",
+    "- Fecha limite: $($profile.fecha_limite)",
+    "- Importe solicitado: $($profile.importe_solicitado)",
+    "- Cofinanciacion: $($profile.cofinanciacion)",
+    "- Tono documental: $($profile.tono)",
+    "",
+    "## 2. Objetivo de la convocatoria",
+    "$($profile.objetivo_convocatoria)",
+    "",
+    "## 3. Encaje de Engremiat",
+    "Engremiat encaja con esta convocatoria como infraestructura local-first para convertir conocimiento disperso en memoria viva, documentacion util, evidencias trazables y trabajo operativo por modulos.",
+    "",
+    "La propuesta se alinea con las lineas prioritarias indicadas porque combina innovacion social, transformacion digital, gestion del conocimiento, economia circular, trazabilidad documental y preparacion para automatizacion responsable.",
+    "",
+    "## 4. Lineas prioritarias relacionadas",
+    (Join-ProfileList $profile.lineas_prioritarias),
+    "",
+    "## 5. Beneficiarios propuestos",
+    (Join-ProfileList $profile.beneficiarios),
+    "",
+    "## 6. Propuesta tecnica resumida",
+    "El proyecto desarrolla una base operativa modular que permite registrar avances, decisiones, evidencias, documentos y contexto de trabajo. Actualmente cuenta con inicio humano estable, modulos de proyecto, biblioteca, selectores normalizados, arbol de navegacion, rutas recomendadas, estado tecnico, memoria viva y centro documental.",
+    "",
+    "## 7. Estado actual verificable",
+    "- Proyecto activo: $($ctx.project_name)",
+    "- Modulos actuales del proyecto: $($ctx.project_modules)",
+    "- Biblioteca: $($ctx.library_active) activos / $($ctx.library_inactive) inactivos / $($ctx.library_historic) historicos",
+    "- Centro documental operativo.",
+    "- Exportacion local-first validada en fallback Markdown.",
+    "",
+    "## 8. Indicadores requeridos / propuestos",
+    (Join-ProfileList $profile.indicadores_requeridos),
+    "",
+    "## 9. Documentacion requerida",
+    (Join-ProfileList $profile.documentacion_requerida),
+    "",
+    "## 10. Criterios de valoracion y respuesta",
+    (Join-ProfileList $profile.criterios_valoracion),
+    "",
+    "## 11. Impacto esperado",
+    "- Reduccion de tiempo dedicado a reconstruir contexto.",
+    "- Mayor trazabilidad entre decisiones, tareas, evidencias y documentos.",
+    "- Mejora de la capacidad de preparar memorias justificativas.",
+    "- Base replicable para entidades comunitarias, cooperativas y proyectos de economia circular.",
+    "- Preparacion para colaboracion con workers locales bajo supervision humana.",
+    "",
+    "## 12. Metodologia de ejecucion",
+    "- Desarrollo por fases cortas.",
+    "- Validacion humana de cada bloque funcional.",
+    "- Registro local de evidencias.",
+    "- Generacion de reports y memoria viva.",
+    "- Produccion de documentos adaptados al destinatario.",
+    "- Ampliacion progresiva hacia tareas, anexos, exportacion DOCX/PDF y worker local.",
+    "",
+    "## 13. Riesgos y mitigacion",
+    "- Complejidad tecnica: mitigada con desarrollo por fases y una frontera tecnica por paso.",
+    "- Dependencia de herramientas externas: mitigada con local-first y fallback Markdown.",
+    "- Documentacion generica: mitigada con ficha de convocatoria editable.",
+    "- Automatizacion prematura: mitigada con worker desactivado por defecto.",
+    "",
+    "## 14. Notas humanas de convocatoria",
+    "$($profile.notas_humanas)",
+    "",
+    "## 15. Siguiente accion recomendada",
+    "Completar la ficha de convocatoria con datos reales, generar anexos, definir presupuesto y adaptar el lenguaje a los criterios concretos de valoracion."
+  )
+
+  $lines | Set-Content $latest -Encoding UTF8
+  $lines | Set-Content $versioned -Encoding UTF8
+
+  $report = Join-Path $ReportDir ("grant-adapted-dossier-" + $stamp + ".json")
+  [pscustomobject]@{
+    package = "ENGREMIAT_GRANT_CALL_PROFILE_E05_ADAPTED_DOSSIER"
+    status = "PASS"
+    profile = (Get-GrantProfilePath)
+    latest = $latest
+    versioned = $versioned
+    next = "REVISAR_DOSSIER_ADAPTADO"
+  } | ConvertTo-Json -Depth 30 | Set-Content $report -Encoding UTF8
+
+  Clear-Host
+  W "==== DOSSIER ADAPTADO GENERADO ====" Cyan
+  W ""
+  W ("[OK] dossier: {0}" -f $latest) Green
+  W ("[OK] version: {0}" -f $versioned) Green
+  W ("[OK] report:  {0}" -f $report) Green
+  W ""
+  W "[Enter] volver" Cyan
+  W ""
+  [void](Read-Host "DOSSIER_ADAPTADO")
+}
+function Open-Folder($p){ if(Test-Path $p){ Start-Process explorer.exe $p } }
+function Open-Latest($rel){ $p=Join-Path $DocDir $rel; if(Test-Path $p){ Start-Process notepad.exe $p } else { W "NO_GO documento_no_existe. Genera primero [1]." Yellow; Pause-Eng } }
+
+function Show-Tooling {
+  Clear-Host
+  W "==== HERRAMIENTAS DOCUMENTALES ====" Cyan
+  W ""
+  $pandoc = Find-Pandoc
+  if($pandoc){ W "[OK] pandoc detectado" Green; W ("ruta: {0}" -f $pandoc) DarkCyan }
+  else{ W "[MISS] pandoc no detectado" Yellow; W "Exportación DOCX/HTML automática no disponible todavía." White }
+  W ""
+  W ("Carpeta exports: {0}" -f (Join-Path $DocDir "exports")) Green
+  W ""
+  W "[Enter] volver" Cyan
+  W ""
+  [void](Read-Host "HERRAMIENTAS")
+}
+
+function Show-Export($r){
+  Clear-Host
+  W "==== EXPORTACIÓN DOCUMENTAL ====" Cyan
+  W ""
+  if($r.pandoc){ W ("[OK] pandoc: {0}" -f $r.pandoc) Green } else { W "[WARN] pandoc no detectado; se copiaron Markdown a exports." Yellow }
+  W ""
+  foreach($x in $r.results){
+    W ("[{0}] {1}" -f $x.status,$x.source) $(if($x.status -eq "EXPORTED"){"Green"}elseif($x.status -like "PANDOC_NOT_FOUND*"){"Yellow"}else{"Red"})
+    if($x.html){ W ("  HTML: {0}" -f $x.html) DarkCyan }
+    if($x.docx){ W ("  DOCX: {0}" -f $x.docx) DarkCyan }
+    if($x.message -and $x.message -ne "OK"){ W ("  nota: {0}" -f $x.message) Yellow }
+  }
+  W ""
+  W ("exports: {0}" -f $r.exports) Green
+  W ("report:  {0}" -f $r.report) Green
+  W ""
+  W "[Enter] volver" Cyan
+  W ""
+  [void](Read-Host "EXPORTAR")
+}
+
+function Show-Main {
+  Clear-Host
+  W "==== MEMORIA Y DOCUMENTACIÓN ====" Cyan
+  W ""
+  W "Centro local-first para memoria viva, informes, dossiers, contexto worker y exportación documental." DarkCyan
+  W ""
+  W "[1] generar paquete documental completo" White
+  W "[2] abrir memoria técnica" White
+  W "[3] abrir resumen humano" White
+  W "[4] abrir informe de desarrollo" White
+  W "[5] abrir dossier subvenciones" White
+  W "[6] abrir dossier partners" White
+  W "[7] abrir dossier clientes" White
+  W "[8] abrir contexto worker" White
+  W "[9] abrir carpeta documents" White
+  W "[10] abrir contexto JSON" White
+  W "[11] exportar documentos DOCX/HTML con Pandoc" White
+  W "[12] abrir carpeta exports" White
+  W "[13] verificar herramientas documentales" White
+  W "[14] crear/editar ficha de convocatoria" White
+  W "[15] generar dossier adaptado a convocatoria" White
+  W "[b] atrás | [Enter] refrescar" Cyan
+  W ""
+}
+
+while($true){
+  Show-Main
+  $cmd = Read-Host "DOCUMENTACION"
+  if([string]::IsNullOrWhiteSpace($cmd)){ continue }
+  if($cmd -eq "b"){ return }
+  if($cmd -eq "1"){
+    $r = Build-Docs
+    Clear-Host
+    W "==== DOCUMENTOS GENERADOS ====" Cyan
+    W ""
+    foreach($d in $r.documents){ W ("[OK] {0}: {1}" -f $d.name,$d.latest) Green }
+    W ""
+    W ("contexto: {0}" -f $r.context) Green
+    W ("report:   {0}" -f $r.report) Green
+    W ""
+    W "[Enter] volver" Cyan
+    W ""
+    [void](Read-Host "DOCUMENTOS")
+    continue
+  }
+  if($cmd -eq "2"){ Open-Latest "technical\memoria-tecnica-latest.md"; continue }
+  if($cmd -eq "3"){ Open-Latest "executive\resumen-humano-latest.md"; continue }
+  if($cmd -eq "4"){ Open-Latest "development\informe-desarrollo-latest.md"; continue }
+  if($cmd -eq "5"){ Open-Latest "grants\dossier-subvenciones-base-latest.md"; continue }
+  if($cmd -eq "6"){ Open-Latest "partners\dossier-partners-base-latest.md"; continue }
+  if($cmd -eq "7"){ Open-Latest "clients\dossier-clientes-base-latest.md"; continue }
+  if($cmd -eq "8"){ Open-Latest "worker\worker-context-latest.md"; continue }
+  if($cmd -eq "9"){ Open-Folder $DocDir; continue }
+  if($cmd -eq "10"){ Open-Latest "document-context-latest.json"; continue }
+  if($cmd -eq "11"){ $r=Export-Docs; Show-Export $r; continue }
+  if($cmd -eq "12"){ Open-Folder (Join-Path $DocDir "exports"); continue }
+  if($cmd -eq "13"){ Show-Tooling; continue }
+  if($cmd -eq "14"){ Edit-GrantProfile; continue }
+  if($cmd -eq "15"){ Generate-AdaptedGrantDossier; continue }
+  W "WARN comando_no_reconocido" Yellow
+  Pause-Eng
+}
+
+

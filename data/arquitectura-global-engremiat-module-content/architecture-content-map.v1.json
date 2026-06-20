@@ -1,0 +1,103 @@
+﻿{
+    "package_id":  "DEFINE_ARCHITECTURA_GLOBAL_ENGREMIAT_MODULE_CONTENT_001",
+    "stage":  "E01_DEFINE_ARCHITECTURE_CONTENT_MAP",
+    "status":  "PASS",
+    "vault_path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146",
+    "module_id":  "MODULE_arquitectura_global_engremiat",
+    "module_folder":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\03_MODULOS\\MODULE_arquitectura_global_engremiat",
+    "layers":  [
+                   {
+                       "id":  "L01_CORE",
+                       "name":  "Core local",
+                       "purpose":  "Identidad, contratos, estado, eventos, memoria y reglas base."
+                   },
+                   {
+                       "id":  "L02_HUMAN_CONTROL",
+                       "name":  "Control humano",
+                       "purpose":  "Superficies de decision, gates, dashboards y validacion humana."
+                   },
+                   {
+                       "id":  "L03_VISUAL_MEMORY",
+                       "name":  "Memoria visual Obsidian",
+                       "purpose":  "Bovedas, grafos, grupos, vistas, indices y relaciones navegables."
+                   },
+                   {
+                       "id":  "L04_PROJECT_MODULE_BUILDER",
+                       "name":  "Builder de proyectos y modulos",
+                       "purpose":  "Crear espacios gobernados para proyectos, modulos y superficies."
+                   },
+                   {
+                       "id":  "L05_WORKER_LOOP",
+                       "name":  "Loop de workers",
+                       "purpose":  "Preparar ejecucion asistida futura sin activarla por defecto."
+                   },
+                   {
+                       "id":  "L06_EVIDENCE_REPORTING",
+                       "name":  "Evidencia y reportes",
+                       "purpose":  "Trazabilidad, dashboards, manifestos, auditorias y cierres."
+                   }
+               ],
+    "boundaries":  [
+                       {
+                           "id":  "B01_NO_EXECUTION_BY_DEFAULT",
+                           "rule":  "Nada ejecuta workers sin autorizacion explicita."
+                       },
+                       {
+                           "id":  "B02_OBSIDIAN_IS_VISUAL_MEMORY",
+                           "rule":  "Obsidian organiza y visualiza; no es motor de ejecucion."
+                       },
+                       {
+                           "id":  "B03_CANONICAL_DATA_OUTSIDE_OBSIDIAN",
+                           "rule":  "Datos canonicos siguen en data/reports/dashboard/docs; Obsidian enlaza y explica."
+                       },
+                       {
+                           "id":  "B04_MODULES_REQUIRE_INDEX_AND_GROUP",
+                           "rule":  "Todo modulo necesita indice, grupo, vista, evidencia y estado."
+                       }
+                   ],
+    "flows":  [
+                  {
+                      "id":  "F01_HUMAN_PROJECT_TO_ROADMAP",
+                      "name":  "Humano propone proyecto -\u003e sistema propone roadmap -\u003e humano aprueba."
+                  },
+                  {
+                      "id":  "F02_ROADMAP_TO_MODULE_SPACE",
+                      "name":  "Roadmap aprobado -\u003e builder crea modulo/espacio de trabajo."
+                  },
+                  {
+                      "id":  "F03_MODULE_TO_WORKER_PACKET",
+                      "name":  "Modulo estructurado -\u003e paquete controlado para worker futuro."
+                  },
+                  {
+                      "id":  "F04_EVIDENCE_TO_MEMORY",
+                      "name":  "Resultado/evidencia -\u003e reporte canonico -\u003e nota Obsidian -\u003e grafo."
+                  }
+              ],
+    "decisions":  [
+                      {
+                          "id":  "D01_BOVEDA_MASTER_ADOPTED",
+                          "decision":  "BOVEDA_ENGREMIAT_MASTER queda como base operativa visual."
+                      },
+                      {
+                          "id":  "D02_FIRST_MODULE_ADOPTED",
+                          "decision":  "MODULE_arquitectura_global_engremiat queda como primer modulo oficial preview."
+                      },
+                      {
+                          "id":  "D03_PREVIEW_ONLY",
+                          "decision":  "Contenido actual sin ejecucion real, sin git, sin red externa."
+                      }
+                  ],
+    "safety":  {
+                   "local_only":  true,
+                   "new_vault_only":  true,
+                   "preview_only":  true,
+                   "template_write":  false,
+                   "obsidian_app_automation":  false,
+                   "worker_execution":  false,
+                   "kanban_write":  false,
+                   "clien_write":  false,
+                   "git_write":  false,
+                   "external_network":  false
+               },
+    "next":  "E02_CREATE_ARCHITECTURE_LAYER_NOTES_AND_CANVAS"
+}

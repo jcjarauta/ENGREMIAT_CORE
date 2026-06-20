@@ -1,0 +1,44 @@
+﻿{
+    "package_id":  "ENGREMIAT_PROJECT_BUILDER_TO_WORKER_LOOP_001",
+    "stage":  "E06_BUILD_APPROVED_EXECUTION_RECEIPT_MODEL",
+    "model_id":  "approved-execution-receipt-model.v1",
+    "purpose":  "Definir el recibo que tendria que existir antes de pasar de preview a ejecucion controlada",
+    "current_status":  "MODEL_ONLY_NOT_APPROVED",
+    "source_packet":  "worker-packet-preview.json",
+    "required_human_fields":  [
+                                  "human_decision",
+                                  "approved_scope",
+                                  "approved_operations",
+                                  "explicit_authorization_phrase",
+                                  "risk_acknowledgement",
+                                  "rollback_expectation",
+                                  "evidence_required",
+                                  "approved_at"
+                              ],
+    "allowed_decisions":  [
+                              "APPROVE_CONTROLLED_EXECUTION",
+                              "EDIT_PACKET",
+                              "REJECT_EXECUTION",
+                              "DEFER_EXECUTION"
+                          ],
+    "approval_rules":  {
+                           "must_reference_packet_id":  "worker-packet-preview.v1",
+                           "must_keep_local_only":  true,
+                           "must_define_scope":  true,
+                           "must_define_rollback":  true,
+                           "must_define_evidence":  true,
+                           "must_not_enable_network":  true,
+                           "must_not_enable_git_write":  true,
+                           "must_not_execute_immediately":  true
+                       },
+    "safety_default":  {
+                           "receipt_status":  "PENDING",
+                           "execute_now":  false,
+                           "worker_execution":  false,
+                           "network":  false,
+                           "git_write":  false,
+                           "external_ai":  false,
+                           "authorization_status":  "NOT_GRANTED"
+                       },
+    "next":  "E07_BUILD_CONTROLLED_EXECUTION_DRY_RUN_PLAN"
+}

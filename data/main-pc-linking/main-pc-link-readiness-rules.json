@@ -1,0 +1,44 @@
+﻿{
+    "objective":  "ENGREMIAT_MAIN_PC_REAL_LINKING_010",
+    "stage":  "E06",
+    "rules_id":  "MAIN-PC-LINK-READINESS-RULES-010-E06",
+    "decisions":  {
+                      "GO_PREP":  "El flujo esta listo para seguir preparando desde MAIN-PC.",
+                      "NEED_LINKING":  "Falta completar o confirmar el vinculo real en MAIN-PC.",
+                      "NO_GO_REPAIR":  "Faltan artefactos o hay conflicto/seguridad invalida."
+                  },
+    "conditions":  {
+                       "current_pc_ready":  [
+                                                "E02 validado",
+                                                "E03 validado",
+                                                "E04 validado",
+                                                "E05 validado",
+                                                "single_active_writer=true",
+                                                "no remote_execution",
+                                                "no git_write",
+                                                "no auto_apply",
+                                                "no shared_repo_edit"
+                                            ],
+                       "need_linking":  [
+                                            "MAIN-PC ya es el nodo principal",
+                                            "Cline/Ollama real disponible o pendiente de activar manualmente",
+                                            "se requiere continuidad de vinculo real"
+                                        ],
+                       "no_go_repair":  [
+                                            "missing artifacts",
+                                            "writer_conflict=true",
+                                            "remote_execution=true",
+                                            "git_write=true",
+                                            "auto_apply=true",
+                                            "shared_repo_edit=true"
+                                        ]
+                   },
+    "safety":  {
+                   "main_pc_touched":  true,
+                   "remote_execution":  false,
+                   "git_write":  false,
+                   "auto_apply":  false,
+                   "shared_repo_edit":  false,
+                   "secret_values_read":  false
+               }
+}

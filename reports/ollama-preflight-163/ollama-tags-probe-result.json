@@ -1,0 +1,40 @@
+﻿{
+    "objective_id":  "DEFINE_REAL_CONTROLLED_FILE_TO_OLLAMA_EXECUTION_MVP_162_171",
+    "stage":  "E163",
+    "endpoint":  "http://127.0.0.1:11434/api/tags",
+    "method":  "GET",
+    "execution_allowed":  false,
+    "generate_prohibited":  true,
+    "probe_ok":  true,
+    "model_count":  1,
+    "raw_result":  {
+                       "models":  [
+                                      {
+                                          "name":  "qwen3:14b",
+                                          "model":  "qwen3:14b",
+                                          "modified_at":  "2026-06-13T18:17:46.1337178+02:00",
+                                          "size":  9276198565,
+                                          "digest":  "bdbd181c33f2ed1b31c972991882db3cf4d192569092138a7d29e973cd9debe8",
+                                          "details":  {
+                                                          "parent_model":  "",
+                                                          "format":  "gguf",
+                                                          "family":  "qwen3",
+                                                          "families":  [
+                                                                           "qwen3"
+                                                                       ],
+                                                          "parameter_size":  "14.8B",
+                                                          "quantization_level":  "Q4_K_M",
+                                                          "context_length":  40960,
+                                                          "embedding_length":  5120
+                                                      },
+                                          "capabilities":  [
+                                                               "completion",
+                                                               "tools",
+                                                               "thinking"
+                                                           ]
+                                      }
+                                  ]
+                   },
+    "error":  null,
+    "checked_at":  "2026-06-17T17:08:07.0164362+02:00"
+}

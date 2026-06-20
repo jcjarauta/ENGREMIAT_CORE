@@ -1,0 +1,86 @@
+﻿{
+    "objective":  "ENGREMIAT_HUMAN_USABLE_DAILY_WORKBENCH_086_095",
+    "stage":  "E95",
+    "version":  "0.95.0-local",
+    "release":  "HUMAN_USABLE_DAILY_WORKBENCH_086_095",
+    "created_utc":  "2026-06-17T11:17:42.1695764Z",
+    "stages":  [
+                   "E86 Daily Workbench Model",
+                   "E87 Unified Human Inbox",
+                   "E88 Decision Shortcuts",
+                   "E89 Evidence Browser",
+                   "E90 Preview-to-Apply Gate",
+                   "E91 Friction Reduction",
+                   "E92 Dashboard Index V2",
+                   "E93 Manual",
+                   "E94 Regression",
+                   "E95 Close"
+               ],
+    "evidence_summary":  "reports\\workbench-close-095\\workbench-evidence-summary.json",
+    "artifacts":  [
+                      {
+                          "path":  "reports\\daily-workbench-086\\e86-daily-workbench-readiness-report.json",
+                          "exists":  true,
+                          "json_valid":  true,
+                          "status":  "OK"
+                      },
+                      {
+                          "path":  "reports\\unified-human-inbox-087\\e87-unified-human-inbox-readiness-report.json",
+                          "exists":  true,
+                          "json_valid":  true,
+                          "status":  "OK"
+                      },
+                      {
+                          "path":  "reports\\decision-shortcuts-088\\e88-decision-shortcuts-readiness-report.json",
+                          "exists":  true,
+                          "json_valid":  true,
+                          "status":  "OK"
+                      },
+                      {
+                          "path":  "reports\\evidence-browser-089\\e89-evidence-browser-readiness-report.json",
+                          "exists":  true,
+                          "json_valid":  true,
+                          "status":  "OK"
+                      },
+                      {
+                          "path":  "reports\\preview-apply-gate-090\\e90-preview-to-apply-readiness-report.json",
+                          "exists":  true,
+                          "json_valid":  true,
+                          "status":  "OK"
+                      },
+                      {
+                          "path":  "reports\\friction-reduction-091\\e91-friction-reduction-readiness-report.json",
+                          "exists":  true,
+                          "json_valid":  true,
+                          "status":  "OK"
+                      },
+                      {
+                          "path":  "reports\\dashboard-index-092\\e92-dashboard-index-readiness-report.json",
+                          "exists":  true,
+                          "json_valid":  true,
+                          "status":  "OK"
+                      },
+                      {
+                          "path":  "reports\\manual-093\\e93-manual-readiness-report.json",
+                          "exists":  true,
+                          "json_valid":  true,
+                          "status":  "OK"
+                      },
+                      {
+                          "path":  "reports\\workbench-regression-094\\e94-workbench-regression-readiness-report.json",
+                          "exists":  true,
+                          "json_valid":  true,
+                          "status":  "OK"
+                      }
+                  ],
+    "human_governed":  true,
+    "daily_workbench_ready":  true,
+    "real_execution_enabled":  false,
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "kanban_real_write":  false
+}

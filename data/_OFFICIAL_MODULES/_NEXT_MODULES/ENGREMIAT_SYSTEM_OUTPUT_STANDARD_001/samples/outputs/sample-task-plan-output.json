@@ -1,0 +1,26 @@
+﻿{
+    "output_id":  "OUT-TASKPLAN-001",
+    "output_type":  "TASK_PLAN",
+    "source":  "ENGREMIAT_SYSTEM_OUTPUT_STANDARD_001",
+    "status":  "DRAFT",
+    "payload":  {
+                    "task_plan_id":  "TASKPLAN-001",
+                    "project_id":  "PROJECT-COMPOSER-CORE-001",
+                    "objective":  "Construir composer core",
+                    "tasks":  [
+                                  "Crear contrato",
+                                  "Crear query",
+                                  "Crear selector",
+                                  "Crear blueprint",
+                                  "Validar"
+                              ]
+                },
+    "evidence":  [
+                     "sample"
+                 ],
+    "gate":  {
+                 "required":  true,
+                 "decision":  "HUMAN_REVIEW_REQUIRED"
+             },
+    "created_at":  "2026-06-18T07:07:02"
+}

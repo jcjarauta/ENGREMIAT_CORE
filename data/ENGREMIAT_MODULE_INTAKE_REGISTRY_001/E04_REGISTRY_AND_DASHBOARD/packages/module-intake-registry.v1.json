@@ -1,0 +1,32 @@
+{
+    "package_id":  "ENGREMIAT_MODULE_INTAKE_REGISTRY_001",
+    "artifact":  "module-intake-registry.v1.json",
+    "status":  "PASS",
+    "entries":  [
+                    {
+                        "package_id":  "ENGREMIAT_MODULE_INTAKE_REGISTRY_001",
+                        "module_id":  "ENG-MOD-INTAKE-001",
+                        "module_type":  "REGISTRY",
+                        "status":  "ACTIVE_LOCAL",
+                        "decision":  "DEVELOP",
+                        "source":  "module.json",
+                        "risk":  "LOW"
+                    },
+                    {
+                        "package_id":  "ENGREMIAT_SAMPLE_CANONICAL_MODULE_001",
+                        "module_id":  "ENG-SAMPLE-001",
+                        "module_type":  "ADAPTER",
+                        "status":  "SAMPLE_ARCHIVE",
+                        "decision":  "ARCHIVE",
+                        "source":  "E03_CANONICAL_SCAFFOLDER/templates/ENGREMIAT_SAMPLE_CANONICAL_MODULE_001/module.json",
+                        "risk":  "LOW"
+                    }
+                ],
+    "counts":  {
+                   "total":  2,
+                   "active":  1,
+                   "sample_archive":  1
+               },
+    "policy":  "Every future module must pass intake before development",
+    "next":  "E05_CLOSE_AND_NEXT"
+}

@@ -1,0 +1,77 @@
+<html><head><meta charset="utf-8"><title>NEXT 004E Composition Gate</title><style>body{font-family:Segoe UI,Arial;background:#0f172a;color:#e2e8f0;padding:24px}.card{max-width:1200px;margin:auto;background:#111827;border:1px solid #334155;border-radius:18px;padding:20px}table{width:100%;border-collapse:collapse}th,td{border-bottom:1px solid #334155;padding:10px;text-align:left}pre{background:#020617;padding:14px;border-radius:12px;white-space:pre-wrap;overflow:auto}.ok{color:#4ade80}.warn{color:#facc15}</style></head><body><div class="card"><h1>NEXT_ENGREMIAT_MODULAR_PLATFORM_004E · E03</h1><p class="ok">Composition comparison PASS. Winner: COMP_CORE_CONTROL</p><p class="warn">Gate preparado: no activacion real ejecutada.</p><pre>{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_004E",
+    "stage":  "E03",
+    "status":  "PASS",
+    "winner":  "COMP_CORE_CONTROL",
+    "winner_score":  100,
+    "compositions":  [
+                         {
+                             "composition_id":  "COMP_CORE_CONTROL",
+                             "objective":  "Control humano basico",
+                             "modules":  [
+                                             "REGISTRY",
+                                             "QUEUE",
+                                             "CONTROL",
+                                             "MEMORY"
+                                         ],
+                             "risk":  "LOW",
+                             "score":  100,
+                             "decision":  "GO_SIMULATED",
+                             "reasons":  [
+                                             "stability=35",
+                                             "traceability=25",
+                                             "human_control=20",
+                                             "coupling_risk=10",
+                                             "readiness=10"
+                                         ]
+                         },
+                         {
+                             "composition_id":  "COMP_WORKER_ASSISTED",
+                             "objective":  "Puente a worker asistido",
+                             "modules":  [
+                                             "REGISTRY",
+                                             "QUEUE",
+                                             "WORKER_BRIDGE",
+                                             "RESULT_NORMALIZER",
+                                             "MEMORY"
+                                         ],
+                             "risk":  "MEDIUM",
+                             "score":  83,
+                             "decision":  "GO_WITH_REVIEW",
+                             "reasons":  [
+                                             "stability=27",
+                                             "traceability=25",
+                                             "human_control=15",
+                                             "coupling_risk=6",
+                                             "readiness=10"
+                                         ]
+                         },
+                         {
+                             "composition_id":  "COMP_VISUAL_OPS",
+                             "objective":  "Operacion visual con Kanban",
+                             "modules":  [
+                                             "REGISTRY",
+                                             "QUEUE",
+                                             "KANBAN_ADAPTER",
+                                             "OPERATIONAL_REGISTRY",
+                                             "MEMORY"
+                                         ],
+                             "risk":  "MEDIUM",
+                             "score":  88,
+                             "decision":  "GO_WITH_REVIEW",
+                             "reasons":  [
+                                             "stability=27",
+                                             "traceability=25",
+                                             "human_control=20",
+                                             "coupling_risk=6",
+                                             "readiness=10"
+                                         ]
+                         }
+                     ],
+    "recommendation":  {
+                           "decision":  "APPROVE_SIMULATED_WINNER_FOR_PLANNING_ONLY",
+                           "composition_id":  "COMP_CORE_CONTROL",
+                           "reason":  "Mayor score simulado segun estabilidad, trazabilidad, control humano, riesgo de acople y readiness",
+                           "real_activation_executed":  false
+                       }
+}</pre></div></body></html>

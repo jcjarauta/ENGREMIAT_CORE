@@ -1,0 +1,67 @@
+﻿{
+    "package_id":  "ENGREMIAT_OBSIDIAN_HIERARCHICAL_VAULTS_001",
+    "stage":  "E02_PREPARE_PROJECT_VAULT_TEMPLATE_REPAIR_HASH_KEY",
+    "status":  "PASS",
+    "template_path":  "C:\\ENGREMIAT_CORE\\templates\\obsidian-project-vault-template\\ENGREMIAT_PROJECT_VAULT_TEMPLATE",
+    "manifest":  "C:\\ENGREMIAT_CORE\\data\\obsidian-hierarchical-vaults\\project-vault-template.v1.json",
+    "dirs":  9,
+    "files":  8,
+    "changes_count":  10,
+    "changes":  [
+                    {
+                        "kind":  "created_template_file",
+                        "path":  "C:\\ENGREMIAT_CORE\\templates\\obsidian-project-vault-template\\ENGREMIAT_PROJECT_VAULT_TEMPLATE\\PROJECT_HOME.md"
+                    },
+                    {
+                        "kind":  "created_template_file",
+                        "path":  "C:\\ENGREMIAT_CORE\\templates\\obsidian-project-vault-template\\ENGREMIAT_PROJECT_VAULT_TEMPLATE\\00_PROJECT_CONTROL\\PROJECT_STATUS.md"
+                    },
+                    {
+                        "kind":  "created_template_file",
+                        "path":  "C:\\ENGREMIAT_CORE\\templates\\obsidian-project-vault-template\\ENGREMIAT_PROJECT_VAULT_TEMPLATE\\00_PROJECT_CONTROL\\PROJECT_GRAPH_VIEW_SELECTOR.md"
+                    },
+                    {
+                        "kind":  "created_template_file",
+                        "path":  "C:\\ENGREMIAT_CORE\\templates\\obsidian-project-vault-template\\ENGREMIAT_PROJECT_VAULT_TEMPLATE\\01_ROADMAP\\ROADMAP_INDEX.md"
+                    },
+                    {
+                        "kind":  "created_template_file",
+                        "path":  "C:\\ENGREMIAT_CORE\\templates\\obsidian-project-vault-template\\ENGREMIAT_PROJECT_VAULT_TEMPLATE\\02_MODULES\\PROJECT_MODULES_INDEX.md"
+                    },
+                    {
+                        "kind":  "created_template_file",
+                        "path":  "C:\\ENGREMIAT_CORE\\templates\\obsidian-project-vault-template\\ENGREMIAT_PROJECT_VAULT_TEMPLATE\\03_DECISIONS\\PROJECT_DECISIONS_INDEX.md"
+                    },
+                    {
+                        "kind":  "created_template_file",
+                        "path":  "C:\\ENGREMIAT_CORE\\templates\\obsidian-project-vault-template\\ENGREMIAT_PROJECT_VAULT_TEMPLATE\\04_EVIDENCE\\PROJECT_EVIDENCE_INDEX.md"
+                    },
+                    {
+                        "kind":  "created_template_file",
+                        "path":  "C:\\ENGREMIAT_CORE\\templates\\obsidian-project-vault-template\\ENGREMIAT_PROJECT_VAULT_TEMPLATE\\06_REPORTS\\PROJECT_REPORTS_INDEX.md"
+                    },
+                    {
+                        "kind":  "created_project_template_canvas",
+                        "path":  "C:\\ENGREMIAT_CORE\\templates\\obsidian-project-vault-template\\ENGREMIAT_PROJECT_VAULT_TEMPLATE\\05_CANVAS\\PROJECT_CANVAS.canvas"
+                    },
+                    {
+                        "kind":  "created_project_template_graph_config",
+                        "path":  "C:\\ENGREMIAT_CORE\\templates\\obsidian-project-vault-template\\ENGREMIAT_PROJECT_VAULT_TEMPLATE\\.obsidian\\graph.json"
+                    }
+                ],
+    "dashboard":  "C:\\ENGREMIAT_CORE\\dashboard\\obsidian-hierarchical-vaults\\e02-prepare-project-vault-template.html",
+    "guide":  "C:\\ENGREMIAT_CORE\\docs\\obsidian-hierarchical-vaults\\E02_PREPARE_PROJECT_VAULT_TEMPLATE.md",
+    "safety":  {
+                   "local_only":  true,
+                   "template_write":  true,
+                   "no_project_vault_creation":  true,
+                   "no_content_move":  true,
+                   "obsidian_app_automation":  false,
+                   "worker_execution":  false,
+                   "kanban_write":  false,
+                   "clien_write":  false,
+                   "git_write":  false,
+                   "external_network":  false
+               },
+    "next":  "E03_CREATE_BOVEDA_PROJECT_ENGREMIAT_CORE_FROM_TEMPLATE"
+}

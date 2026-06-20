@@ -1,0 +1,21 @@
+﻿{
+    "package_id":  "ENGREMIAT_OBSIDIAN_KANBAN_LAB_001",
+    "stage":  "E03C_READ_CARD_DIRECT_AND_SIMULATE_RESULT",
+    "status":  "PASS",
+    "approved_card":  "CARD-001",
+    "decision":  "GO",
+    "human_reviewed":  "true",
+    "export_tsv":  "C:\\ENGREMIAT_CORE\\obsidian\\ENGREMIAT_OBSIDIAN_KANBAN_LAB\\04_EXPORT\\kanban-export-approved.tsv",
+    "prompt":  "C:\\ENGREMIAT_CORE\\obsidian\\ENGREMIAT_OBSIDIAN_KANBAN_LAB\\04_EXPORT\\CLINE_KANBAN_APPROVED_PROMPT.md",
+    "result":  "05_CLINE_RESULT/CARD-001_RESULT.md",
+    "review":  "06_REVIEW/LAB_REVIEW.md",
+    "diagnostic":  "C:\\ENGREMIAT_CORE\\obsidian\\ENGREMIAT_OBSIDIAN_KANBAN_LAB\\07_SYSTEM_READ\\E03C_CARD_DIRECT_DIAGNOSTIC.tsv",
+    "cycle":  "NEED-001 -\u003e CARD-001 -\u003e GO -\u003e EXPORT -\u003e RESULT",
+    "cline_write":  false,
+    "browser":  false,
+    "api_called":  false,
+    "git":  false,
+    "network":  false,
+    "worker_real_execution":  false,
+    "next":  "MANUAL_REVIEW_LAB_CYCLE_AND_DECIDE_GO_ADJUST_STOP"
+}

@@ -1,0 +1,46 @@
+{
+    "package_id":  "006E_VALIDACION_OPERATIVA_VISUAL",
+    "status":  "DEFINED",
+    "purpose":  "Validar visualmente la cadena modular 001-004E-005E-manuales-cierre documental antes de nuevas integraciones",
+    "mode":  "LOCAL_VISUAL_VALIDATION_ONLY",
+    "blocked_actions":  [
+                            "core_changes",
+                            "external_network",
+                            "git_write",
+                            "real_module_activation",
+                            "kanban_real_write"
+                        ],
+    "allowed_actions":  [
+                            "read_local_reports",
+                            "write_visual_dashboard",
+                            "write_validation_report",
+                            "write_next_decision"
+                        ],
+    "sources":  [
+                    {
+                        "id":  "001_BASE",
+                        "path":  "data\\ENGREMIAT_MODULAR_PLATFORM_001\\_001_POST_CLOSE_AUDIT\\reports\\post-close-audit-report.json",
+                        "exists":  true
+                    },
+                    {
+                        "id":  "004E_SIM",
+                        "path":  "data\\NEXT_ENGREMIAT_MODULAR_PLATFORM_004E\\E04_SIMULATION_CLOSE_AND_NEXT\\reports\\simulation-readiness-report.json",
+                        "exists":  true
+                    },
+                    {
+                        "id":  "005E_APPLY",
+                        "path":  "data\\NEXT_ENGREMIAT_MODULAR_PLATFORM_005E\\E05_POST_APPLY_VALIDATION_AND_CLOSE\\reports\\post-apply-readiness-report.json",
+                        "exists":  true
+                    },
+                    {
+                        "id":  "MANUALS",
+                        "path":  "data\\ENGREMIAT_MODULAR_PLATFORM_MANUALS_001\\reports\\manuals-consolidation-report.json",
+                        "exists":  true
+                    },
+                    {
+                        "id":  "CIERRE_DOC",
+                        "path":  "data\\CIERRE_DOCUMENTAL_001\\reports\\cierre-documental-report.json",
+                        "exists":  true
+                    }
+                ]
+}

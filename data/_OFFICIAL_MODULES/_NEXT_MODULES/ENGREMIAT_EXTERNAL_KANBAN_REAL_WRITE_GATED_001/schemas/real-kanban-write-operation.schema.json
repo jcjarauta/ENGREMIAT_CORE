@@ -1,0 +1,16 @@
+﻿{
+    "required":  [
+                     "operation_id",
+                     "target",
+                     "card_id",
+                     "action",
+                     "execute",
+                     "authorization"
+                 ],
+    "allowed_actions":  [
+                            "CREATE_CARD",
+                            "UPDATE_CARD",
+                            "MANUAL_EXPORT"
+                        ],
+    "auditable":  true
+}

@@ -1,0 +1,34 @@
+﻿{
+    "objective":  "ENGREMIAT_MAIN_PC_REAL_LINKING_010",
+    "stage":  "E04",
+    "policy_id":  "MAIN-PC-SHARED-WORKSPACE-BRIDGE-POLICY-010-E04",
+    "share_root":  "C:\\ENGREMIAT_SHARED",
+    "control_root":  "C:\\ENGREMIAT_SHARED\\_CONTROL",
+    "purpose":  "Puente de handoff, prompts, reports, evidence y receipts entre PCs",
+    "allowed_use":  [
+                        "handoff manual",
+                        "prompts revisables",
+                        "reports",
+                        "evidence no sensible",
+                        "receipts",
+                        "control manifests"
+                    ],
+    "forbidden_use":  [
+                          "repo vivo",
+                          "editar codigo como workspace principal",
+                          "guardar secretos",
+                          "guardar tokens",
+                          ".env",
+                          "auto_execution",
+                          "git_write_from_shared",
+                          "auto_apply"
+                      ],
+    "safety":  {
+                   "shared_repo_edit":  false,
+                   "secret_storage_allowed":  false,
+                   "auto_execution_from_shared":  false,
+                   "git_write_from_shared":  false,
+                   "apply_from_shared":  false,
+                   "remote_execution":  false
+               }
+}

@@ -1,0 +1,27 @@
+﻿{
+    "package_id":  "ENGREMIAT_JSON_MODULE_FACTORY_001",
+    "stage":  "E04_SAMPLE_FACTORY_OUTPUT",
+    "status":  "PASS",
+    "readiness":  100,
+    "sample_json":  "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_SHEETS_MODULE_INITIATOR_001\\samples\\sample-generated-module-init-json.log.json",
+    "factory_script":  "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_JSON_MODULE_FACTORY_001\\factory-dry-run\\Invoke-JsonModuleFactoryDryRun.ps1",
+    "created_candidate_dir":  "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_EXAMPLE_FROM_SHEETS_001",
+    "expected_files":  [
+                           "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_EXAMPLE_FROM_SHEETS_001\\module.json",
+                           "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_EXAMPLE_FROM_SHEETS_001\\README.md",
+                           "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_EXAMPLE_FROM_SHEETS_001\\contracts\\module-contract.json",
+                           "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_EXAMPLE_FROM_SHEETS_001\\schemas\\module-schema.json",
+                           "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_EXAMPLE_FROM_SHEETS_001\\gates\\module-gate.json",
+                           "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_EXAMPLE_FROM_SHEETS_001\\reports\\factory-dry-run-result.json"
+                       ],
+    "missing":  [
+
+                ],
+    "module_id":  "ENGREMIAT_EXAMPLE_FROM_SHEETS_001",
+    "active":  false,
+    "real_module_activation":  false,
+    "core_changes":  false,
+    "git_write":  false,
+    "network":  false,
+    "next":  "E05_VALIDATE_AND_CLOSE"
+}

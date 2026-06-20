@@ -1,0 +1,14 @@
+﻿{
+    "package_id":  "ENGREMIAT_OPERATOR_CONTEXT_AND_DECISION_TREE_001",
+    "stage":  "E06C_CLOSE_MODULE_OBJECTIVE",
+    "status":  "PASS",
+    "readiness":  100,
+    "helper":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-module-close.ps1",
+    "changed":  [
+                    "module_menu_adds_close",
+                    "close_requires_objective",
+                    "close_requires_last_smoke_pass",
+                    "close_updates_module_json_evidence_gates_state"
+                ],
+    "next":  "test_module_8_cerrar_modulo"
+}

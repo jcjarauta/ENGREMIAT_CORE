@@ -1,0 +1,22 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_ACTION_TEMPLATE_017",
+    "stage":  "E01",
+    "created_at":  "2026-06-17T08:49:29.5194230+02:00",
+    "readiness":  100,
+    "decision":  "GO_E01_CONTRACT_READY",
+    "next":  "E02_GENERADOR_DE_OBJETIVOS",
+    "checks":  {
+                   "scope_exists":  true,
+                   "safety_exists":  true,
+                   "schema_exists":  true,
+                   "sample_exists":  true,
+                   "default_gate_is_defer":  true,
+                   "auto_apply_blocked":  true,
+                   "remote_execution_blocked":  true,
+                   "apply_executed_false":  true,
+                   "required_fields_count":  10
+               },
+    "git_write":  false,
+    "remote_execution":  false,
+    "auto_apply":  false
+}

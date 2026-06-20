@@ -1,0 +1,35 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_ACTION_TEMPLATE_017",
+    "stage":  "E05",
+    "created_at":  "2026-06-17T08:54:52.8552291+02:00",
+    "readiness":  100,
+    "decision":  "GO_E05_CLOSED_CONTROLLED_ACTION_TEMPLATE_READY",
+    "next":  "NEXT_OBJECTIVE_CONTROLLED_ACTION_INSTANCE_018",
+    "gate":  "DEFER",
+    "status":  "CLOSED",
+    "checks":  {
+                   "generated_test_preview_created":  true,
+                   "instantiation_report_created":  true,
+                   "manual_created":  true,
+                   "close_report_created":  true,
+                   "next_objective_created":  true,
+                   "preview_only":  true,
+                   "gate_defer":  true,
+                   "apply_false":  true,
+                   "auto_apply_false":  true,
+                   "remote_execution_false":  true,
+                   "git_write_false":  true
+               },
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "artifacts":  [
+                      "data/controlled-action-template-017/generated-test-objective-018-preview.json",
+                      "reports/controlled-action-template-017/e05-instantiation-report.json",
+                      "docs/CONTROLLED_ACTION_TEMPLATE_MANUAL.md",
+                      "docs/CONTROLLED_ACTION_TEMPLATE_CLOSE_REPORT.md",
+                      "docs/NEXT_OBJECTIVE_AFTER_CONTROLLED_ACTION_TEMPLATE.md",
+                      "reports/controlled-action-template-017/e05-close-readiness-report.json"
+                  ]
+}

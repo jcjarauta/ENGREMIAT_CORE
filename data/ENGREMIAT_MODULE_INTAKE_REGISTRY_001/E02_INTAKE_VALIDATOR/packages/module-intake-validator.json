@@ -1,0 +1,47 @@
+{
+    "package_id":  "ENGREMIAT_MODULE_INTAKE_REGISTRY_001",
+    "stage":  "E02_INTAKE_VALIDATOR",
+    "artifact":  "module-intake-validator.json",
+    "status":  "PASS",
+    "rules":  [
+                  "json_parse_ok",
+                  "required_fields_present",
+                  "module_type_allowed",
+                  "next_action_allowed",
+                  "boundaries_declared",
+                  "human_gates_declared",
+                  "artifacts_expected_declared"
+              ],
+    "allowed_module_types":  [
+                                 "CORE",
+                                 "ADAPTER",
+                                 "PANEL",
+                                 "KNOWLEDGE",
+                                 "WORKER",
+                                 "INTERFACE",
+                                 "STORAGE",
+                                 "INTEGRATION",
+                                 "SIMULATOR",
+                                 "MANUALS",
+                                 "REGISTRY"
+                             ],
+    "allowed_next_actions":  [
+                                 "DEVELOP",
+                                 "PAUSE",
+                                 "MERGE_WITH_EXISTING",
+                                 "REJECT",
+                                 "ARCHIVE"
+                             ],
+    "sample_result":  {
+                          "sample_package_id":  "ENGREMIAT_KNOWLEDGE_TO_TASK_PACKET_001",
+                          "valid":  true,
+                          "missing_fields":  [
+
+                                             ],
+                          "module_type_allowed":  true,
+                          "next_action_allowed":  true,
+                          "boundaries_count":  4,
+                          "human_gates_count":  2,
+                          "artifacts_expected_count":  5
+                      }
+}

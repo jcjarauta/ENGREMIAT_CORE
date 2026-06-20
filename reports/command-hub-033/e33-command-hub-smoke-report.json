@@ -1,0 +1,56 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_FINAL_026_035",
+    "stage":  "E33",
+    "created_at":  "2026-06-17T11:14:58.0671975+02:00",
+    "results":  [
+                    {
+                        "command":  "status",
+                        "ok":  false,
+                        "output":  "En C:\\ENGREMIAT_CORE\\eng.ps1: 2 Carácter: 20"
+                    },
+                    {
+                        "command":  "next",
+                        "ok":  false,
+                        "output":  "En C:\\ENGREMIAT_CORE\\eng.ps1: 2 Carácter: 20"
+                    },
+                    {
+                        "command":  "readiness",
+                        "ok":  false,
+                        "output":  "En C:\\ENGREMIAT_CORE\\eng.ps1: 2 Carácter: 20"
+                    },
+                    {
+                        "command":  "gates",
+                        "ok":  false,
+                        "output":  "En C:\\ENGREMIAT_CORE\\eng.ps1: 2 Carácter: 20"
+                    },
+                    {
+                        "command":  "artifacts",
+                        "ok":  false,
+                        "output":  "En C:\\ENGREMIAT_CORE\\eng.ps1: 2 Carácter: 20"
+                    },
+                    {
+                        "command":  "context",
+                        "ok":  false,
+                        "output":  "En C:\\ENGREMIAT_CORE\\eng.ps1: 2 Carácter: 20"
+                    },
+                    {
+                        "command":  "errors",
+                        "ok":  false,
+                        "output":  "En C:\\ENGREMIAT_CORE\\eng.ps1: 2 Carácter: 20"
+                    }
+                ],
+    "checks":  {
+                   "contract_created":  true,
+                   "eng_ps1_created":  true,
+                   "eng_commands_created":  true,
+                   "smoke_created":  true,
+                   "daily_routine_created":  true,
+                   "mvp_open_present":  true,
+                   "status_smoke_ok":  false,
+                   "next_smoke_ok":  false,
+                   "apply_executed":  false,
+                   "auto_apply":  false,
+                   "remote_execution":  false,
+                   "git_write":  false
+               }
+}

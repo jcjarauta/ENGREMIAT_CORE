@@ -1,0 +1,22 @@
+﻿{
+    "objective":  "ENGREMIAT_SAFE_LOCAL_APPLY_AND_KANBAN_AUTHORIZATION_102_111",
+    "stage":  "E106",
+    "dry_run_id":  "CAD-106-001",
+    "target_path":  "data\\safe-apply-runtime-106\\controlled-local-apply-target.json",
+    "dry_run_only":  true,
+    "would_create_or_update":  "safe local test artifact",
+    "requires_authorization_phrase":  "AUTORIZO_APPLY_LOCAL_CONTROLADO",
+    "authorization_decision_path":  "data\\human-authorization-105\\human-authorization-decision.json",
+    "authorization_status":  "PENDING_EXPLICIT_HUMAN_AUTHORIZATION",
+    "rollback_pack":  "data\\rollback-pack-103\\rollback-pack.json",
+    "postcheck_tool":  "tools\\eng-postcheck-runner.ps1",
+    "receipt_required":  true,
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "kanban_real_write":  false,
+    "created_utc":  "2026-06-17T11:38:43.9158391Z"
+}

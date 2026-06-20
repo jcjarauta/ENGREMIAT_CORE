@@ -1,0 +1,24 @@
+﻿{
+    "objective":  "ENGREMIAT_FIRST_REAL_CLINE_PROPOSAL_TASK_009",
+    "stage":  "E01",
+    "scope_id":  "FIRST_CLINE_PROPOSAL_SCOPE_009-E01",
+    "purpose":  "Enviar la primera propuesta real a Cline sin apply ni Git write.",
+    "allowed_actions":  [
+                            "create proposal",
+                            "preview prompt",
+                            "validate output"
+                        ],
+    "forbidden_actions":  [
+                              "apply",
+                              "git write",
+                              "remote execution",
+                              "auto_apply"
+                          ],
+    "expected_result":  "Alcance seguro documentado.",
+    "task_creation":  true,
+    "prompt_sent":  false,
+    "auto_apply":  false,
+    "git_write":  false,
+    "remote_execution":  false,
+    "timestamp_utc":  "2026-06-16T19:53:23.6343887Z"
+}

@@ -1,0 +1,21 @@
+﻿{
+    "package_id":  "ENGREMIAT_IMPROVEMENT_TO_EXECUTION_PIPELINE_001",
+    "status":  "PASS",
+    "card_id":  "KANBAN-SEED-0017",
+    "title":  "VALIDATION: e06-close-validation-report.json",
+    "priority_score":  58,
+    "source_path":  "C:\\ENGREMIAT_CORE\\reports\\controlled-worker-adapters\\e06-close-validation-report.json",
+    "problem":  "La tarjeta prioritaria necesita convertirse en trabajo tecnico accionable antes de ejecutar nada.",
+    "why_now":  [
+                    "VALIDATION: mejora fiabilidad"
+                ],
+    "expected_value":  "Reducir friccion entre mejora detectada y desarrollo ejecutable.",
+    "risk":  "Ejecutar sin plan o sin gate podria romper gobernanza.",
+    "constraints":  [
+                        "readonly",
+                        "dry-run",
+                        "no source write",
+                        "no git",
+                        "no api"
+                    ]
+}

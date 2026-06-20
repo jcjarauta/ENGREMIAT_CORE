@@ -1,0 +1,20 @@
+﻿{
+    "schema":  "engremiat.useful_rollback_drill_report.v1",
+    "objective":  "ENGREMIAT_REAL_VALUE_TASK_EXECUTION_LOOP_122_131_REAL_USEFUL_OUTPUT",
+    "stage":  "E127",
+    "block":  "B127.1",
+    "step":  "P127.1.2",
+    "created_at":  "2026-06-17T14:30:04",
+    "drill_mode":  "NON_DESTRUCTIVE_SIMULATION_ONLY",
+    "rollback_pack_found":  true,
+    "rollback_target":  "data/useful-apply-126/useful-output.md",
+    "rollback_target_exists":  true,
+    "would_delete_targets":  [
+                                 "data/useful-apply-126/useful-output.md",
+                                 "data/useful-apply-126/useful-apply-result.json"
+                             ],
+    "executed_delete":  false,
+    "drill_passed":  true,
+    "safe_reversible":  true,
+    "destructive_actions":  false
+}

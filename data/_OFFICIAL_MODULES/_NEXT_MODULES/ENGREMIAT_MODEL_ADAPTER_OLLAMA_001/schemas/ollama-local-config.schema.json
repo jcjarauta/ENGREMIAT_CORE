@@ -1,0 +1,16 @@
+﻿{
+    "schema":  "ollama-local-config",
+    "required":  [
+                     "base_url",
+                     "allowed_models",
+                     "default_model",
+                     "timeout_seconds",
+                     "real_inference_enabled"
+                 ],
+    "defaults":  {
+                     "base_url":  "http://127.0.0.1:11434",
+                     "default_model":  "qwen3:14b",
+                     "timeout_seconds":  60,
+                     "real_inference_enabled":  false
+                 }
+}

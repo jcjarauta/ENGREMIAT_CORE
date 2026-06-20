@@ -1,0 +1,3 @@
+﻿# NEXT · RESOURCE_LIBRARY
+
+Siguiente paso recomendado: RESOURCE_CLASSIFICATION

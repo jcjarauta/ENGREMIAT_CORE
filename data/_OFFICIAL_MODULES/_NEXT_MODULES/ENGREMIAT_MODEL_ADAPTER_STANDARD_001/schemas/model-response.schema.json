@@ -1,0 +1,20 @@
+﻿{
+    "schema":  "model-response",
+    "required":  [
+                     "response_id",
+                     "request_id",
+                     "mode",
+                     "status",
+                     "normalized_output",
+                     "evidence",
+                     "adapter_metadata"
+                 ],
+    "status_values":  [
+                          "MOCK_PASS",
+                          "DRY_RUN_PASS",
+                          "REAL_GATED_PASS",
+                          "WARN",
+                          "ERR"
+                      ],
+    "real_inference_executed_field_required":  true
+}

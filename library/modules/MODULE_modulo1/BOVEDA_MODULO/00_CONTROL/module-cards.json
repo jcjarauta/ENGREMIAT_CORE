@@ -1,0 +1,54 @@
+﻿[
+    {
+        "card_id":  "CARD-modulo1-001",
+        "module_id":  "MODULE-modulo1-20260620021125",
+        "project_id":  "PROJECT-nuevo-proyecto_20260619-161706",
+        "title":  "Definir alcance",
+        "type":  "humana",
+        "status":  "pending",
+        "priority":  "high",
+        "depends_on":  "",
+        "expected_evidence":  "Alcance validado",
+        "candidate_worker":  "humano",
+        "risk":  "medio"
+    },
+    {
+        "card_id":  "CARD-modulo1-002",
+        "module_id":  "MODULE-modulo1-20260620021125",
+        "project_id":  "PROJECT-nuevo-proyecto_20260619-161706",
+        "title":  "Preparar estructura",
+        "type":  "asistida",
+        "status":  "pending",
+        "priority":  "high",
+        "depends_on":  "CARD-modulo1-001",
+        "expected_evidence":  "Estructura creada",
+        "candidate_worker":  "chatgpt",
+        "risk":  "medio"
+    },
+    {
+        "card_id":  "CARD-modulo1-003",
+        "module_id":  "MODULE-modulo1-20260620021125",
+        "project_id":  "PROJECT-nuevo-proyecto_20260619-161706",
+        "title":  "Validar evidencia",
+        "type":  "evidencia",
+        "status":  "pending",
+        "priority":  "medium",
+        "depends_on":  "CARD-modulo1-002",
+        "expected_evidence":  "Evidencia comprobada",
+        "candidate_worker":  "humano",
+        "risk":  "bajo"
+    },
+    {
+        "card_id":  "CARD-modulo1-004",
+        "module_id":  "MODULE-modulo1-20260620021125",
+        "project_id":  "PROJECT-nuevo-proyecto_20260619-161706",
+        "title":  "Cerrar modulo",
+        "type":  "gate",
+        "status":  "pending",
+        "priority":  "medium",
+        "depends_on":  "CARD-modulo1-003",
+        "expected_evidence":  "Gate de cierre",
+        "candidate_worker":  "humano",
+        "risk":  "bajo"
+    }
+]

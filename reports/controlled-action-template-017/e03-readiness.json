@@ -1,0 +1,18 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_ACTION_TEMPLATE_017",
+    "stage":  "E03",
+    "created_at":  "2026-06-17T08:53:04.7324458+02:00",
+    "readiness":  100,
+    "decision":  "GO_E03_HUMAN_GATE_READY",
+    "next":  "E04_PIPELINE_REUSABLE",
+    "gate":  "DEFER",
+    "status":  "READY",
+    "artifacts":  [
+                      "data/controlled-action-template-017/controlled-action-gate-contract.json",
+                      "data/controlled-action-template-017/gate-samples.json",
+                      "tools/controlled-action-template-017/Test-ControlledActionGate.ps1",
+                      "reports/controlled-action-template-017/e03-gate-test-report.json",
+                      "docs/CONTROLLED_ACTION_HUMAN_GATE_CHECKLIST.md",
+                      "reports/controlled-action-template-017/e03-readiness.json"
+                  ]
+}

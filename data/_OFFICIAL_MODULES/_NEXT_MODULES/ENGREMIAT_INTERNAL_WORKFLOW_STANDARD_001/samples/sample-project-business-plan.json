@@ -1,0 +1,38 @@
+﻿{
+    "project_id":  "PROJECT-BUSINESS-PLAN-001",
+    "name":  "Business plan economia circular",
+    "project_type":  "BUSINESS_PLAN",
+    "objective":  "Crear plan de negocio reutilizable.",
+    "status":  "DRAFT",
+    "tasks":  [
+                  "TASK-BP-001",
+                  "TASK-BP-002",
+                  "TASK-BP-003"
+              ],
+    "workers":  [
+                    "HUMAN-WORKER-001",
+                    "AI-ASSISTANT-LOCAL-001"
+                ],
+    "inputs":  [
+                   {
+                       "type":  "MARKDOWN",
+                       "path":  "obsidian/ideas/business-plan-notes.md"
+                   }
+               ],
+    "outputs":  [
+                    {
+                        "type":  "BUSINESS_PLAN",
+                        "path":  "resources/business-plans/business-plan-v1.md"
+                    }
+                ],
+    "resources":  [
+
+                  ],
+    "evidence":  [
+
+                 ],
+    "gate":  {
+                 "required":  true,
+                 "current_decision":  "HUMAN_REVIEW_REQUIRED"
+             }
+}

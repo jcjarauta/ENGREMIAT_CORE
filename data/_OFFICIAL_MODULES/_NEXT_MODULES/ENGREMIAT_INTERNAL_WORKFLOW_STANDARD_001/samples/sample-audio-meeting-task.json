@@ -1,0 +1,36 @@
+﻿{
+    "task_id":  "TASK-AUDIO-MEETING-001",
+    "project_id":  "PROJECT-GRANT-001",
+    "task_type":  "AUDIO_MEETING_TASK",
+    "objective":  "Convertir reunion de audio en resumen decisiones tareas y evidencias.",
+    "assigned_worker":  "AI-ASSISTANT-LOCAL-001",
+    "inputs":  [
+                   {
+                       "type":  "AUDIO",
+                       "path":  "evidence/audio/meeting-001.mp3"
+                   },
+                   {
+                       "type":  "TRANSCRIPT",
+                       "path":  "evidence/transcripts/meeting-001.md"
+                   }
+               ],
+    "expected_output":  "Resumen decisiones tareas derivadas y evidence records.",
+    "outputs":  [
+                    {
+                        "type":  "SUMMARY",
+                        "path":  "outputs/meeting-001-summary.md"
+                    },
+                    {
+                        "type":  "TASK_LIST",
+                        "path":  "outputs/meeting-001-derived-tasks.json"
+                    }
+                ],
+    "status":  "DRAFT",
+    "gate":  {
+                 "required":  true,
+                 "current_decision":  "HUMAN_REVIEW_REQUIRED"
+             },
+    "evidence":  [
+
+                 ]
+}

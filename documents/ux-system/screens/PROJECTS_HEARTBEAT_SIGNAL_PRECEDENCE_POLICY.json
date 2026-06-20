@@ -1,0 +1,16 @@
+﻿{
+    "package_id":  "ENGREMIAT_UX_SYSTEM_001",
+    "stage":  "E66E_REPAIR_HEARTBEAT_PRECEDENCE_VALIDATION",
+    "created_at":  "2026-06-20T10:40:29",
+    "status":  "PASS",
+    "decision":  "Reparada validacion y consolidada precedencia de project_signal/heartbeat",
+    "rules":  [
+                  "project_signal se evalua antes que heartbeat",
+                  "blocked_reason fuerza BLOCK",
+                  "signal.block OK limpia bloqueo estructural",
+                  "RUNNING/DONE sin blocked_reason se muestran OK"
+              ],
+    "launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1",
+    "backup":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\backup-projects-center-before-e66e-20260620-104029.ps1",
+    "next":  "E66F_PROBE_HEARTBEAT_PRECEDENCE_RESULT"
+}

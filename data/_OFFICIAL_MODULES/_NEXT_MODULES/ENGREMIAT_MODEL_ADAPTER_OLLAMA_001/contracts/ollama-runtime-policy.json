@@ -1,0 +1,19 @@
+﻿{
+    "policy_id":  "OLLAMA_RUNTIME_POLICY_V1",
+    "local_only":  true,
+    "allowed_base_url":  "http://127.0.0.1:11434",
+    "real_inference_default":  false,
+    "blocked_without_gate":  [
+                                 "api_generate",
+                                 "api_chat",
+                                 "prompt_send",
+                                 "remote_model_call"
+                             ],
+    "allowed_without_gate":  [
+                                 "mock_payload_build",
+                                 "schema_validation",
+                                 "local_config_read",
+                                 "availability_readonly_future"
+                             ],
+    "literal_authorization_required":  "AUTORIZO_OLLAMA_REAL_INFERENCE_GATED"
+}

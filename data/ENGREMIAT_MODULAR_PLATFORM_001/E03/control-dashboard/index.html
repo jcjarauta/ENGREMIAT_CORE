@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang='es'>
+<head>
+<meta charset='utf-8' />
+<meta name='viewport' content='width=device-width, initial-scale=1' />
+<title>ENGREMIAT E03 Control Dashboard</title>
+<style>body{font-family:Segoe UI,Arial,sans-serif;background:#0f172a;color:#e2e8f0;margin:0;padding:24px}.card{max-width:1200px;margin:auto;background:#111827;border:1px solid #334155;border-radius:18px;padding:20px;box-shadow:0 12px 36px rgba(0,0,0,.25)}h1,h2{margin:0 0 8px}.muted{color:#94a3b8}pre{background:#020617;padding:14px;border-radius:12px;overflow:auto;white-space:pre-wrap}table{width:100%;border-collapse:collapse}th,td{border-bottom:1px solid #334155;padding:10px 8px;text-align:left}.ok{color:#4ade80}</style>
+</head>
+<body>
+<div class='card'>
+<h1>ENGREMIAT Modular Platform · E03</h1>
+<p class='muted'>Queue & control modules with human gate and operational visibility.</p>
+<h2>Queue Manager</h2>
+<pre>{
+    "package_id":  "ENGREMIAT_MODULAR_PLATFORM_001",
+    "stage":  "E03",
+    "block":  "B03.1",
+    "module_id":  "ENG-MOD-QUE-001",
+    "module_name":  "Queue Manager",
+    "purpose":  "Colocar pasos normalizados en cola y priorizar ejecución",
+    "depends_on":  "ENG-MOD-NRM-001",
+    "state":  "planned",
+    "queue_model":  {
+                        "supports_priority":  true,
+                        "supports_blocking":  true,
+                        "supports_dependencies":  true,
+                        "supports_pause_resume":  true,
+                        "supports_reordering":  false
+                    },
+    "control":  {
+                    "local_first":  true,
+                    "no_external_network":  true,
+                    "no_git_write":  true,
+                    "human_validation_required":  true
+                },
+    "acceptance_criteria":  [
+                                "Los pasos normalizados entran en cola",
+                                "Se respeta prioridad y dependencia",
+                                "La cola no rompe el orden canónico"
+                            ]
+}</pre>
+<h2>Control Surface</h2>
+<pre>{
+    "package_id":  "ENGREMIAT_MODULAR_PLATFORM_001",
+    "stage":  "E03",
+    "block":  "B03.2",
+    "module_id":  "ENG-MOD-CTL-001",
+    "module_name":  "Operative Control Surface",
+    "purpose":  "Crear espacio de control para el humano",
+    "depends_on":  "ENG-MOD-QUE-001",
+    "state":  "planned",
+    "control":  {
+                    "human_gate_required":  true,
+                    "visible_queue":  true,
+                    "visible_blockers":  true,
+                    "visible_next_action":  true
+                },
+    "acceptance_criteria":  [
+                                "El humano ve cola y bloqueos",
+                                "El gate puede iniciar o pausar módulos",
+                                "La acción siguiente queda visible"
+                            ]
+}</pre>
+<h2>Human Gate</h2>
+<pre>{
+    "gate_id":  "ENG-MOD-CTL-001",
+    "stage":  "E03",
+    "block":  "P03.2.2",
+    "purpose":  "Definir el gate humano para iniciar o pausar módulos",
+    "allowed_actions":  [
+                            "start",
+                            "pause",
+                            "hold",
+                            "approve_next",
+                            "reject_next"
+                        ],
+    "decision_fields":  [
+                            "decision",
+                            "reason",
+                            "actor",
+                            "timestamp"
+                        ],
+    "rules":  {
+                  "no_auto_approve":  true,
+                  "human_required_for_state_change":  true,
+                  "local_evidence_required":  true,
+                  "no_external_network":  true,
+                  "no_git_write":  true
+              }
+}</pre>
+<h2>Validation</h2>
+<pre>{
+    "package_id":  "ENG-MOD-QUE-001",
+    "stage":  "E03",
+    "block":  "P03.1.2",
+    "status":  "PASS",
+    "checks":  {
+                   "contract_exists":  true,
+                   "package_exists":  true,
+                   "dependency_model_ok":  true,
+                   "priority_model_ok":  true,
+                   "blocking_model_ok":  true,
+                   "local_first":  true,
+                   "no_external_network":  true,
+                   "no_git_write":  true
+               },
+    "evidence":  [
+                     "queue-manager-contract.json",
+                     "queue-engine-package.json"
+                 ],
+    "next":  "B03.2"
+}</pre>
+<h2>Artifacts</h2>
+<table><thead><tr><th>File</th><th>Status</th></tr></thead><tbody>
+<tr><td>queue-manager-contract.json</td><td class='ok'>ok</td></tr>
+<tr><td>queue-engine-package.json</td><td class='ok'>ok</td></tr>
+<tr><td>queue-validation-report.json</td><td class='ok'>ok</td></tr>
+<tr><td>control-surface-contract.json</td><td class='ok'>ok</td></tr>
+<tr><td>control-dashboard/index.html</td><td class='ok'>ok</td></tr>
+<tr><td>human-gate-contract.json</td><td class='ok'>ok</td></tr>
+</tbody></table>
+</div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+﻿{
+    "nodes":  [
+                  {
+                      "id":  "index",
+                      "x":  0,
+                      "y":  0,
+                      "width":  250,
+                      "height":  90,
+                      "type":  "file",
+                      "file":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\02_PROYECTOS\\PROJECT_demo-builder-project-space\\00_INDEX\\INDEX.md"
+                  },
+                  {
+                      "id":  "intake",
+                      "x":  340,
+                      "y":  -140,
+                      "width":  250,
+                      "height":  90,
+                      "type":  "file",
+                      "file":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\02_PROYECTOS\\PROJECT_demo-builder-project-space\\01_INTAKE\\INTAKE.md"
+                  },
+                  {
+                      "id":  "roadmap",
+                      "x":  340,
+                      "y":  0,
+                      "width":  250,
+                      "height":  90,
+                      "type":  "file",
+                      "file":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\02_PROYECTOS\\PROJECT_demo-builder-project-space\\02_ROADMAP\\ROADMAP.md"
+                  },
+                  {
+                      "id":  "tasks",
+                      "x":  340,
+                      "y":  140,
+                      "width":  250,
+                      "height":  90,
+                      "type":  "file",
+                      "file":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\02_PROYECTOS\\PROJECT_demo-builder-project-space\\03_TAREAS\\TASKS.md"
+                  },
+                  {
+                      "id":  "gates",
+                      "x":  680,
+                      "y":  -70,
+                      "width":  250,
+                      "height":  90,
+                      "type":  "file",
+                      "file":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\02_PROYECTOS\\PROJECT_demo-builder-project-space\\04_GATES_DECISIONES\\GATES.md"
+                  },
+                  {
+                      "id":  "evidence",
+                      "x":  680,
+                      "y":  70,
+                      "width":  250,
+                      "height":  90,
+                      "type":  "file",
+                      "file":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\02_PROYECTOS\\PROJECT_demo-builder-project-space\\05_EVIDENCIAS\\EVIDENCE.md"
+                  }
+              ],
+    "edges":  [
+                  {
+                      "id":  "e1",
+                      "fromNode":  "index",
+                      "fromSide":  "right",
+                      "toNode":  "intake",
+                      "toSide":  "left",
+                      "label":  "contexto"
+                  },
+                  {
+                      "id":  "e2",
+                      "fromNode":  "index",
+                      "fromSide":  "right",
+                      "toNode":  "roadmap",
+                      "toSide":  "left",
+                      "label":  "plan"
+                  },
+                  {
+                      "id":  "e3",
+                      "fromNode":  "roadmap",
+                      "fromSide":  "right",
+                      "toNode":  "tasks",
+                      "toSide":  "left",
+                      "label":  "tareas"
+                  },
+                  {
+                      "id":  "e4",
+                      "fromNode":  "tasks",
+                      "fromSide":  "right",
+                      "toNode":  "gates",
+                      "toSide":  "left",
+                      "label":  "gate"
+                  },
+                  {
+                      "id":  "e5",
+                      "fromNode":  "gates",
+                      "fromSide":  "right",
+                      "toNode":  "evidence",
+                      "toSide":  "left",
+                      "label":  "evidencia"
+                  }
+              ]
+}

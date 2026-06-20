@@ -1,0 +1,16 @@
+﻿{
+    "package_id":  "ENGREMIAT_LOCAL_KANBAN_EXECUTION_CYCLE_001",
+    "stage":  "E04_RUN_CARD_EXECUTION_CYCLE_WORKER_MOCK",
+    "status":  "PASS",
+    "cycle_id":  "CYCLE-CARD-001-20260619-083550",
+    "card_id":  "CARD-001",
+    "transport":  "mock",
+    "worker_status":  "PROPOSAL_ONLY",
+    "started_at":  "2026-06-19T08:40:56",
+    "ended_at":  "2026-06-19T08:40:57",
+    "dispatcher":  "C:\\ENGREMIAT_CORE\\tools\\local-kanban-worker-loop\\Invoke-LocalKanbanWorkerLoop.ps1",
+    "dispatcher_output":  "OK worker_loop card_id=CARD-001 transport=mock status=PROPOSAL_ONLY job=C:\\ENGREMIAT_CORE\\data\\local-kanban-worker-loop-001\\jobs\\JOB-CARD-001-MOCK-20260619-084057.json response=C:\\ENGREMIAT_CORE\\data\\local-kanban-worker-loop-001\\responses\\JOB-CARD-001-MOCK-20260619-084057.worker-response.md evidence=C:\\ENGREMIAT_CORE\\data\\local-kanban-worker-loop-001\\evidence\\JOB-CARD-001-MOCK-20260619-084057.evidence.md",
+    "worker_response":  "C:\\ENGREMIAT_CORE\\data\\local-kanban-worker-loop-001\\responses\\JOB-CARD-001-MOCK-20260619-084057.worker-response.md",
+    "worker_evidence":  "C:\\ENGREMIAT_CORE\\data\\local-kanban-worker-loop-001\\evidence\\JOB-CARD-001-MOCK-20260619-084057.evidence.md",
+    "next":  "E05_ANALYZE_CYCLE_EVIDENCE_AND_PROPOSE_TRANSITION_DRY_RUN"
+}

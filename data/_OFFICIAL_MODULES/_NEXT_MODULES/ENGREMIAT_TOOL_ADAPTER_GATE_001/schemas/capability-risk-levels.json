@@ -1,0 +1,21 @@
+﻿{
+    "schema_id":  "capability-risk-levels.v1",
+    "levels":  [
+                   "LOW",
+                   "MEDIUM",
+                   "HIGH",
+                   "CRITICAL"
+               ],
+    "blocking":  [
+                     "CRITICAL"
+                 ],
+    "requires_evidence":  [
+                              "MEDIUM",
+                              "HIGH",
+                              "CRITICAL"
+                          ],
+    "requires_human_gate":  [
+                                "HIGH",
+                                "CRITICAL"
+                            ]
+}

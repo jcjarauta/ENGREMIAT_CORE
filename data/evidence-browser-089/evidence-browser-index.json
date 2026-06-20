@@ -1,0 +1,82 @@
+﻿{
+    "objective":  "ENGREMIAT_HUMAN_USABLE_DAILY_WORKBENCH_086_095",
+    "stage":  "E89",
+    "name":  "Evidence Browser",
+    "version":  "0.89.0-local",
+    "purpose":  "Crear navegador local de evidencias humanas para contexto rapido sin abrir multiples rutas manualmente.",
+    "browser_executes":  false,
+    "human_review_required":  true,
+    "sources":  [
+                    {
+                        "path":  "reports\\daily-workbench-086\\e86-daily-workbench-readiness-report.json",
+                        "exists":  true,
+                        "kind":  "json"
+                    },
+                    {
+                        "path":  "reports\\unified-human-inbox-087\\e87-unified-human-inbox-readiness-report.json",
+                        "exists":  true,
+                        "kind":  "json"
+                    },
+                    {
+                        "path":  "reports\\decision-shortcuts-088\\e88-decision-shortcuts-readiness-report.json",
+                        "exists":  true,
+                        "kind":  "json"
+                    },
+                    {
+                        "path":  "data\\daily-workbench-086\\daily-workbench-model.json",
+                        "exists":  true,
+                        "kind":  "json"
+                    },
+                    {
+                        "path":  "data\\unified-human-inbox-087\\unified-human-inbox-model.json",
+                        "exists":  true,
+                        "kind":  "json"
+                    },
+                    {
+                        "path":  "data\\decision-shortcuts-088\\decision-shortcuts-contract.json",
+                        "exists":  true,
+                        "kind":  "json"
+                    },
+                    {
+                        "path":  "dashboard\\daily-workbench\\index.html",
+                        "exists":  true,
+                        "kind":  "dashboard"
+                    },
+                    {
+                        "path":  "dashboard\\unified-human-inbox\\index.html",
+                        "exists":  true,
+                        "kind":  "dashboard"
+                    }
+                ],
+    "categories":  [
+                       "readiness",
+                       "model",
+                       "contract",
+                       "dashboard",
+                       "decision_ledger",
+                       "receipt"
+                   ],
+    "allowed_human_actions":  [
+                                  "OPEN_LOCAL_FILE",
+                                  "REVIEW_EVIDENCE",
+                                  "DEFER",
+                                  "REQUEST_REPAIR",
+                                  "MARK_DONE_MANUAL"
+                              ],
+    "blocked_machine_actions":  [
+                                    "AUTO_APPLY",
+                                    "REMOTE_EXECUTION",
+                                    "EXTERNAL_NETWORK",
+                                    "WORKER_EXECUTION",
+                                    "KANBAN_REAL_WRITE",
+                                    "GIT_WRITE"
+                                ],
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "kanban_real_write":  false,
+    "created_utc":  "2026-06-17T11:12:28.5303837Z"
+}

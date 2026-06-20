@@ -1,0 +1,27 @@
+﻿{
+    "package":  "ENGREMIAT_TEMPLATE_IMPROVEMENT_001",
+    "stage":  "E07_REPAIR_CLEAN_TEMPLATES_TO_OPERATOR_CONTRACT_00_CONTROL",
+    "status":  "PASS",
+    "project":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\\ENGREMIAT_PROJECT_p3_20260619-224903",
+    "official_master":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\\ENGREMIAT_PROJECT_p3_20260619-224903\\BOVEDA_PROYECTO\\00_PLANTILLA_MAESTRA_OFICIAL",
+    "module_ref":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\\ENGREMIAT_PROJECT_p3_20260619-224903\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO\\00_PLANTILLA_MAESTRA_REFERENCIA",
+    "backup_master":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e07-20260619-231838",
+    "backup_module":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\module-ref-before-e07-20260619-231838",
+    "backup_master_log":  "C:\\ENGREMIAT_CORE\\reports\\template-improvement\\robocopy-backup-master-e07-20260619-231838.log",
+    "backup_module_log":  "C:\\ENGREMIAT_CORE\\reports\\template-improvement\\robocopy-backup-module-e07-20260619-231838.log",
+    "official_master_files":  9,
+    "module_ref_files":  9,
+    "master_checks":  {
+                          "has_00_CONTROL":  true,
+                          "has_project_template":  true,
+                          "has_00_CTL_compat":  true
+                      },
+    "module_checks":  {
+                          "has_00_CONTROL":  true,
+                          "has_module_template":  true,
+                          "has_module_json_template":  true,
+                          "has_00_CTL_compat":  true
+                      },
+    "freeze_validator_after":  "PASS",
+    "next":  "E08_SANDBOX_TEST_OPERATOR_CONTRACT_AFTER_00_CONTROL_REPAIR"
+}

@@ -1,0 +1,40 @@
+﻿{
+    "profile_id":  "tool-adapter-profiles.v1",
+    "profiles":  [
+                     {
+                         "tool":  "OpenWebUI",
+                         "role":  "CONTROL_SURFACE",
+                         "default_mode":  "PROPOSE"
+                     },
+                     {
+                         "tool":  "Ollama",
+                         "role":  "INFERENCE_ENGINE",
+                         "default_mode":  "DRY_RUN"
+                     },
+                     {
+                         "tool":  "OpenClaw",
+                         "role":  "EXECUTION_ASSISTANT",
+                         "default_mode":  "GATED_EXECUTE"
+                     },
+                     {
+                         "tool":  "Cline",
+                         "role":  "EXECUTION_ASSISTANT",
+                         "default_mode":  "GATED_EXECUTE"
+                     },
+                     {
+                         "tool":  "Kanban",
+                         "role":  "CONTROL_SURFACE",
+                         "default_mode":  "GATED_WRITE"
+                     },
+                     {
+                         "tool":  "Obsidian",
+                         "role":  "MEMORY_ADAPTER",
+                         "default_mode":  "GATED_WRITE"
+                     },
+                     {
+                         "tool":  "Sheets",
+                         "role":  "INPUT_ADAPTER",
+                         "default_mode":  "GATED_WRITE"
+                     }
+                 ]
+}

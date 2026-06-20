@@ -1,0 +1,21 @@
+﻿{
+    "package_id":  "ENGREMIAT_PROJECT_START_FLOW_001",
+    "stage":  "E01L_USE_MASTER_TEMPLATE_AND_SPLIT_MODULE_VAULTS",
+    "status":  "PASS",
+    "readiness":  100,
+    "decision":  "GO_NUEVO_PROYECTO_USES_MASTER_TEMPLATE_AND_SPLITS_MODULES",
+    "script":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-new-project.ps1",
+    "template_source":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146",
+    "safety":  {
+                   "local_only":  true,
+                   "uses_existing_master_template":  true,
+                   "creates_master_vault":  true,
+                   "creates_separate_module_vault":  true,
+                   "splits_modules_from_master":  true,
+                   "links_master_to_module":  true,
+                   "no_worker_real":  true,
+                   "no_git":  true,
+                   "no_network":  true
+               },
+    "next":  "RUN_NUEVO_PROYECTO_AND_VERIFY_MASTER_VAULT_PLUS_MODULE_VAULT"
+}

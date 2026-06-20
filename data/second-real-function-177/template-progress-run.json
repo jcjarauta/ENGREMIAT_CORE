@@ -1,0 +1,21 @@
+﻿{
+    "objective_id":  "DEFINE_SECOND_REAL_FUNCTION_WITH_TEMPLATE_MVP_176_179",
+    "stage":  "E177",
+    "block":  "B177.2",
+    "step":  "P177.2.1",
+    "name":  "template-progress-run",
+    "purpose":  "Normalize visible loading for long terminal operations",
+    "ui":  [
+               "Write-Progress",
+               "spinner",
+               "elapsed seconds",
+               "timeout"
+           ],
+    "behavior":  [
+                     "visible while waiting",
+                     "clean completion",
+                     "no false freeze"
+                 ],
+    "timeout_seconds":  180,
+    "created_at":  "2026-06-17T18:09:06.4623236+02:00"
+}

@@ -1,0 +1,23 @@
+{
+    "package_id":  "ENGREMIAT_MODULES_OFFICIALIZATION_001",
+    "stage":  "E03_PREPARE_IDENTITY_PATCHES_NO_APPLY",
+    "artifact":  "identity-patches-contract.json",
+    "status":  "DEFINED",
+    "purpose":  "Preparar module.json inferidos para modulos sin identidad, sin escribirlos aun en las carpetas fuente ni mover nada",
+    "mode":  "PATCHES_ONLY_NO_APPLY",
+    "blocked_actions":  [
+                            "write_into_source_modules",
+                            "copy_modules",
+                            "move_modules",
+                            "delete_sources",
+                            "git_write",
+                            "external_network",
+                            "core_changes"
+                        ],
+    "allowed_actions":  [
+                            "write_identity_patches_under_officialization_package",
+                            "write_reports",
+                            "write_dashboard"
+                        ],
+    "next":  "E04_APPLY_OFFICIALIZATION_GATE"
+}

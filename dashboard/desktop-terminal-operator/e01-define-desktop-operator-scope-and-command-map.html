@@ -1,0 +1,15 @@
+﻿<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>ENGREMIAT - Desktop Operator E01</title><style>body{font-family:Segoe UI,Arial;margin:24px;background:#111827;color:#e5e7eb}.card{border:1px solid #374151;border-radius:14px;padding:16px;margin:12px 0;background:#1f2937}.ok{color:#22c55e}table{width:100%;border-collapse:collapse;background:#0f172a;font-size:13px}td,th{border:1px solid #334155;padding:8px;text-align:left;vertical-align:top}code{color:#93c5fd}</style></head><body>
+<h1>ENGREMIAT - Desktop Terminal Operator</h1>
+<div class="card"><b class="ok">E01 PASS</b><p>Readiness: <code>
+100
+</code></p><p>Decision: <code>
+GO_DESKTOP_OPERATOR_SCOPE_AND_COMMAND_MAP_DEFINED
+</code></p></div>
+<div class="card"><h2>Comandos</h2><table><thead><tr><th>Comando</th><th>Funcion</th><th>Riesgo</th><th>Gate</th></tr></thead><tbody>
+<tr><td>estado</td><td>Mostrar estado del workspace, Simulation Lab, ultimos reportes y siguiente paso.</td><td>LOW</td><td>NO</td></tr><tr><td>ayuda</td><td>Mostrar comandos disponibles y reglas de uso.</td><td>LOW</td><td>NO</td></tr><tr><td>nuevo-proyecto</td><td>Iniciar proyecto desde terminal: titulo, objetivo, limites y criterio de aceptacion.</td><td>MEDIUM</td><td>SI</td></tr><tr><td>revisar-proyecto</td><td>Registrar decision humana APPROVE/ADJUST/BLOCK sobre roadmap inicial.</td><td>MEDIUM</td><td>SI</td></tr><tr><td>simular-worker</td><td>Ejecutar worker simulado sobre tareas listas y producir evidencias.</td><td>MEDIUM</td><td>SI</td></tr><tr><td>validar-resultado</td><td>Registrar decision humana ACCEPT/ADJUST/REJECT sobre resultado simulado.</td><td>MEDIUM</td><td>SI</td></tr><tr><td>cerrar-ciclo</td><td>Cerrar ciclo con readiness, evidencias, aprendizaje y siguiente paso.</td><td>LOW</td><td>NO</td></tr><tr><td>abrir-lab</td><td>Abrir carpeta de la boveda Simulation Lab.</td><td>LOW</td><td>NO</td></tr><tr><td>abrir-dashboard</td><td>Abrir ultimo dashboard generado.</td><td>LOW</td><td>NO</td></tr><tr><td>crear-modulo</td><td>Convertir objetivo/proyecto aprobado en propuesta de modulo.</td><td>MEDIUM</td><td>SI</td></tr><tr><td>smoke-worker</td><td>Preparar o ejecutar smoke worker controlado en sandbox cuando exista autorizacion.</td><td>HIGH</td><td>SI</td></tr><tr><td>salir</td><td>Salir del operador.</td><td>LOW</td><td>NO</td></tr>
+</tbody></table></div>
+<div class="card"><h2>Siguiente</h2><p><code>
+E02_CREATE_DESKTOP_LAUNCHER
+</code></p></div>
+</body></html>

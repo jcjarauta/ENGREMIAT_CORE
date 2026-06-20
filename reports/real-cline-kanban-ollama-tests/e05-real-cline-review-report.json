@@ -1,0 +1,20 @@
+﻿{
+    "objective":  "ENGREMIAT_REAL_CLINE_KANBAN_OLLAMA_TESTS_011",
+    "stage":  "E05",
+    "capture_request":  "data/real-cline-kanban-ollama-tests/cline-output-capture-request.json",
+    "raw_output":  "data/real-cline-kanban-ollama-tests/cline-proposal-raw-output.json",
+    "normalizer":  "tools/real-cline-kanban-ollama-tests/Normalize-RealClineProposalOutput.ps1",
+    "normalized":  "data/real-cline-kanban-ollama-tests/real-cline-proposal-normalized.json",
+    "review_html":  "dashboard/real-cline-kanban-ollama-tests/proposal-review.html",
+    "output_status":  "PENDING_OUTPUT",
+    "captured":  false,
+    "normalized_ok":  true,
+    "dashboard_ready":  true,
+    "apply_executed":  false,
+    "git_write":  false,
+    "remote_execution":  false,
+    "readiness":  100,
+    "decision":  "GO_E05_REVIEW_READY",
+    "next":  "E06_DECISION_AND_CLOSE",
+    "timestamp_utc":  "2026-06-16T14:38:00.3003281Z"
+}

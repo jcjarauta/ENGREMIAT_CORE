@@ -1,0 +1,48 @@
+﻿{
+    "contract_id":  "ENGREMIAT_NORMALIZED_PROFILE_CONTRACT_V1",
+    "purpose":  "Ficha estructurada consumible por Centro Documental y futuros centros de tareas/modulos/evidencias",
+    "local_first":  true,
+    "network_allowed":  false,
+    "external_ai_allowed":  false,
+    "required_fields":  [
+                            "profile_id",
+                            "profile_type",
+                            "source",
+                            "created_at",
+                            "status",
+                            "human_review_required",
+                            "fields"
+                        ],
+    "profile_types":  [
+                          "grant_call",
+                          "partner",
+                          "client",
+                          "project_need",
+                          "module_need",
+                          "evidence_source"
+                      ],
+    "fields":  {
+                   "profile_id":  "Identificador estable",
+                   "profile_type":  "Tipo de ficha",
+                   "source":  "Referencia al intake source",
+                   "title":  "Titulo normalizado",
+                   "entity":  "Entidad convocante o fuente",
+                   "deadline":  "Fecha limite si existe",
+                   "territory":  "Territorio",
+                   "amount":  "Importe",
+                   "criteria":  "Criterios",
+                   "required_documents":  "Documentacion requerida",
+                   "summary":  "Resumen humano",
+                   "confidence":  "none|low|medium|high",
+                   "status":  "draft|pending_review|ready|archived",
+                   "human_review_required":  "true si hay campos pendientes o baja confianza",
+                   "pending_fields":  "Lista de campos pendientes"
+               },
+    "consumers":  [
+                      "Centro Documental",
+                      "Task Center futuro",
+                      "Module Center futuro",
+                      "Evidence Center futuro"
+                  ],
+    "version":  "1.0.0"
+}

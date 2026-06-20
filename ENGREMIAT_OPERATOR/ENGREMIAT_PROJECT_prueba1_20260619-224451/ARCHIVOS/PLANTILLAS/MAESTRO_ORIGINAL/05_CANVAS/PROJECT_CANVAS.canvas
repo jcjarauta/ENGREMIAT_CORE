@@ -1,0 +1,84 @@
+﻿{
+    "nodes":  [
+                  {
+                      "id":  "home",
+                      "type":  "file",
+                      "file":  "PROJECT_HOME.md",
+                      "x":  0,
+                      "y":  0,
+                      "width":  340,
+                      "height":  150,
+                      "color":  "1"
+                  },
+                  {
+                      "id":  "roadmap",
+                      "type":  "file",
+                      "file":  "01_ROADMAP/ROADMAP_INDEX.md",
+                      "x":  -420,
+                      "y":  240,
+                      "width":  320,
+                      "height":  140,
+                      "color":  "2"
+                  },
+                  {
+                      "id":  "modules",
+                      "type":  "file",
+                      "file":  "02_MODULES/PROJECT_MODULES_INDEX.md",
+                      "x":  0,
+                      "y":  260,
+                      "width":  320,
+                      "height":  140,
+                      "color":  "3"
+                  },
+                  {
+                      "id":  "decisions",
+                      "type":  "file",
+                      "file":  "03_DECISIONS/PROJECT_DECISIONS_INDEX.md",
+                      "x":  420,
+                      "y":  240,
+                      "width":  320,
+                      "height":  140,
+                      "color":  "4"
+                  },
+                  {
+                      "id":  "evidence",
+                      "type":  "file",
+                      "file":  "04_EVIDENCE/PROJECT_EVIDENCE_INDEX.md",
+                      "x":  0,
+                      "y":  500,
+                      "width":  320,
+                      "height":  140,
+                      "color":  "5"
+                  }
+              ],
+    "edges":  [
+                  {
+                      "id":  "e1",
+                      "fromNode":  "home",
+                      "fromSide":  "bottom",
+                      "toNode":  "roadmap",
+                      "toSide":  "top"
+                  },
+                  {
+                      "id":  "e2",
+                      "fromNode":  "home",
+                      "fromSide":  "bottom",
+                      "toNode":  "modules",
+                      "toSide":  "top"
+                  },
+                  {
+                      "id":  "e3",
+                      "fromNode":  "home",
+                      "fromSide":  "bottom",
+                      "toNode":  "decisions",
+                      "toSide":  "top"
+                  },
+                  {
+                      "id":  "e4",
+                      "fromNode":  "modules",
+                      "fromSide":  "bottom",
+                      "toNode":  "evidence",
+                      "toSide":  "top"
+                  }
+              ]
+}

@@ -1,0 +1,22 @@
+﻿{
+    "schema":  "engremiat.operational_observed_value_summary.v1",
+    "objective":  "ENGREMIAT_REAL_VALUE_TASK_EXECUTION_LOOP_132_141_OPERATIONAL_USEFUL_TASK",
+    "stage":  "E138",
+    "block":  "B138.1",
+    "step":  "P138.1.2",
+    "created_at":  "2026-06-17T14:49:11",
+    "observed_value":  "A reusable operational Markdown artifact was generated locally after explicit authorization and validated by postcheck.",
+    "human_utility":  "The artifact can guide future human-machine operational tasks with purpose, inputs, steps, validation, safety and next action.",
+    "operational_utility":  "Transforms continuity output into a reusable protocol for executing small controlled ENGREMIAT tasks.",
+    "utility_score":  100,
+    "evidence_strength":  "HIGH",
+    "source_artifacts":  [
+                             "C:\\ENGREMIAT_CORE\\reports\\operational-postcheck-137\\e137-operational-postcheck-readiness-report.json",
+                             "C:\\ENGREMIAT_CORE\\reports\\operational-postcheck-137\\operational-artifact-validation-report.json",
+                             "C:\\ENGREMIAT_CORE\\data\\operational-apply-136\\OPERATIONAL_ARTIFACT.md"
+                         ],
+    "ledger":  "data/operational-evidence-138/operational-evidence-ledger.jsonl",
+    "artifact_excerpt":  "# Operational Reusable Artifact\n\n## Purpose\nProvide a reusable human-machine protocol for preparing and executing small operational ENGREMIAT tasks with explicit authorization, evidence and rollback discipline.\n\n## When to use\nUse this artifact when a future task must move beyond a summary document and produce a reusable project artifact while remaining local-only, reversible and human-governed.\n\n## Inputs\n- Concrete operational objective.\n- Expected reusable artifact.\n- Human-editable input draft.\n- Safety limits.\n- Validation criteria.\n- Next action.\n\n## Operational steps\n1. Define the operational task and its reusable output.\n2. Capture local editable input.\n3. Build proposal, expected evidence and preview.\n4. Require human authorization with explicit phrase.\n5. Apply only the approved local artifact creation.\n6. Run postcheck and non-destructive rollback drill.\n7. Register evidence a",
+    "real_world_side_effects":  "NONE",
+    "next":  "E139_DASHBOARD_REFRESH"
+}

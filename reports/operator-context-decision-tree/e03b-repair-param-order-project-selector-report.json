@@ -1,0 +1,22 @@
+﻿{
+    "package_id":  "ENGREMIAT_OPERATOR_CONTEXT_AND_DECISION_TREE_001",
+    "stage":  "E03B_REPAIR_PARAM_ORDER_PROJECT_SELECTOR",
+    "status":  "PASS",
+    "readiness":  100,
+    "fixed":  "param_first_line",
+    "files":  [
+                  "C:\\ENGREMIAT_CORE\\tools\\operator-context\\proyectos.ps1",
+                  "C:\\ENGREMIAT_CORE\\tools\\operator-context\\abrir-proyecto.ps1"
+              ],
+    "parse":  [
+                  {
+                      "file":  "C:\\ENGREMIAT_CORE\\tools\\operator-context\\proyectos.ps1",
+                      "parse":  "OK"
+                  },
+                  {
+                      "file":  "C:\\ENGREMIAT_CORE\\tools\\operator-context\\abrir-proyecto.ps1",
+                      "parse":  "OK"
+                  }
+              ],
+    "next":  "E04_PROJECT_MODULE_TARGET_DECISION"
+}

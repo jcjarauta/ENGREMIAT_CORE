@@ -1,0 +1,48 @@
+﻿{
+    "package_id":  "ENGREMIAT_DESKTOP_TERMINAL_OPERATOR_001",
+    "stage":  "E01_DEFINE_DESKTOP_OPERATOR_SCOPE_AND_COMMAND_MAP",
+    "status":  "PASS",
+    "objective":  "Crear un operador terminal de escritorio para iniciar ENGREMIAT con un clic, cargar contexto, mostrar estado y ejecutar comandos humanos reutilizables.",
+    "operator_id":  "ENGREMIAT_DESKTOP_TERMINAL_OPERATOR",
+    "mode":  "development_test_terminal_first",
+    "workspace":  "C:\\ENGREMIAT_CORE",
+    "principles":  [
+                       "one_click_desktop_entry",
+                       "terminal_first_before_dashboard_telegram_openclaw",
+                       "human_gate_before_real_execution",
+                       "simulation_lab_before_real_workers",
+                       "local_first",
+                       "compact_logs",
+                       "commands_as_future_interface_contract"
+                   ],
+    "in_scope":  [
+                     "desktop_launcher_next_stage",
+                     "terminal_boot_status",
+                     "command_router",
+                     "project_start_flow",
+                     "simulation_lab_access",
+                     "module_builder_preparation",
+                     "smoke_worker_preparation"
+                 ],
+    "out_of_scope":  [
+                         "real_worker_execution",
+                         "git_write",
+                         "external_network",
+                         "telegram_write",
+                         "cline_kanban_write",
+                         "openclaw_integration",
+                         "dashboard_app_layer"
+                     ],
+    "safety":  {
+                   "local_only":  true,
+                   "scope_only":  true,
+                   "no_desktop_launcher_creation_yet":  true,
+                   "no_real_worker_execution":  true,
+                   "no_git_write":  true,
+                   "no_external_network":  true,
+                   "no_telegram":  true,
+                   "no_cline_write":  true,
+                   "no_openclaw":  true
+               },
+    "next":  "E02_CREATE_DESKTOP_LAUNCHER"
+}

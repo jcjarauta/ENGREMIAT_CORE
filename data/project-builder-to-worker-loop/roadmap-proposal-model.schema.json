@@ -1,0 +1,60 @@
+﻿{
+    "package_id":  "ENGREMIAT_PROJECT_BUILDER_TO_WORKER_LOOP_001",
+    "stage":  "E03_BUILD_ROADMAP_PROPOSAL_MODEL",
+    "schema_id":  "roadmap-proposal-model.v1",
+    "purpose":  "Convertir un intake humano en una propuesta de roadmap aprobable antes de activar cualquier worker",
+    "input_contract":  "human-project-intake-contract.json",
+    "output":  "roadmap-proposal.json",
+    "required_sections":  [
+                              "project_identity",
+                              "human_need",
+                              "desired_result",
+                              "constraints",
+                              "success_criteria",
+                              "proposed_stages",
+                              "human_gate",
+                              "worker_packet_preview",
+                              "risk_register",
+                              "evidence_plan",
+                              "next_action"
+                          ],
+    "proposal_rules":  {
+                           "local_only":  true,
+                           "worker_execution":  false,
+                           "network":  false,
+                           "git_write":  false,
+                           "requires_human_approval_before_worker":  true,
+                           "one_frontier_per_stage":  true,
+                           "evidence_required":  true
+                       },
+    "stage_template":  [
+                           {
+                               "stage_id":  "E01",
+                               "name":  "Intake normalizado",
+                               "goal":  "Aclarar necesidad, resultado y restricciones",
+                               "risk":  "LOW",
+                               "human_gate":  "APPROVE_OR_EDIT"
+                           },
+                           {
+                               "stage_id":  "E02",
+                               "name":  "Roadmap ejecutable",
+                               "goal":  "Ordenar fases, bloques y pasos",
+                               "risk":  "LOW",
+                               "human_gate":  "APPROVE_OR_EDIT"
+                           },
+                           {
+                               "stage_id":  "E03",
+                               "name":  "Worker packet preview",
+                               "goal":  "Preparar paquete para worker sin ejecutarlo",
+                               "risk":  "MEDIUM",
+                               "human_gate":  "APPROVE_REQUIRED"
+                           },
+                           {
+                               "stage_id":  "E04",
+                               "name":  "Ejecucion controlada futura",
+                               "goal":  "Activar worker solo tras aprobacion humana explicita",
+                               "risk":  "HIGH",
+                               "human_gate":  "EXPLICIT_AUTHORIZATION_REQUIRED"
+                           }
+                       ]
+}

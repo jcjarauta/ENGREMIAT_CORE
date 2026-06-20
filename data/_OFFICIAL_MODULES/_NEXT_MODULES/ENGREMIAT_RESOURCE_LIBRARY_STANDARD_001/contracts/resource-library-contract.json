@@ -1,0 +1,14 @@
+﻿{
+    "contract_id":  "resource-library-contract.v1",
+    "module_id":  "ENGREMIAT_RESOURCE_LIBRARY_STANDARD_001",
+    "principle":  "Todo output util puede convertirse en recurso reutilizable si tiene manifest, version, evidencia, calidad y gate.",
+    "resource_definition":  "Activo reutilizable producido por proyecto, tarea, worker o modulo, preparado para ser buscado, validado, versionado y compuesto.",
+    "rules":  [
+                  "Ningun recurso entra en biblioteca oficial sin evidencia",
+                  "Todo recurso debe tener manifest canonico",
+                  "Todo recurso debe declarar tipo, capacidades, dependencias, compatibilidad y version",
+                  "La IA puede proponer composiciones; ENGREMIAT valida; el humano autoriza",
+                  "La biblioteca separa candidatos de recursos oficiales",
+                  "La reutilizacion debe indicar copiar, adaptar o versionar"
+              ]
+}

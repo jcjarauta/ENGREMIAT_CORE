@@ -1,0 +1,802 @@
+﻿{
+    "package":  "KANBAN_NATIVE_IMPORT_DISCOVERY_001",
+    "created_at":  "2026-06-18T10:11:57",
+    "root":  "C:\\ENGREMIAT_CORE",
+    "kanban_url":  "http://127.0.0.1:3484/engremiat-core",
+    "seed_cards_count":  25,
+    "http_probes":  [
+                        {
+                            "url":  "http://127.0.0.1:3484",
+                            "status":  200,
+                            "length":  1445,
+                            "content_type":  "text/html; charset=utf-8",
+                            "has_api_signal":  true,
+                            "snippet":  "\u003c!doctype html\u003e \u003chtml lang=\"en\"\u003e \u003chead\u003e \u003cmeta charset=\"UTF-8\" /\u003e \u003cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0\" /\u003e \u003clink rel=\"icon\" href=\u0027data:image/svg+xml,\u003csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 92 95%22\u003e\u003cpath fill=%22%23E6E"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:3484/engremiat-core",
+                            "status":  200,
+                            "length":  1445,
+                            "content_type":  "text/html; charset=utf-8",
+                            "has_api_signal":  true,
+                            "snippet":  "\u003c!doctype html\u003e \u003chtml lang=\"en\"\u003e \u003chead\u003e \u003cmeta charset=\"UTF-8\" /\u003e \u003cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0\" /\u003e \u003clink rel=\"icon\" href=\u0027data:image/svg+xml,\u003csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 92 95%22\u003e\u003cpath fill=%22%23E6E"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:3484/api",
+                            "status":  200,
+                            "length":  1445,
+                            "content_type":  "text/html; charset=utf-8",
+                            "has_api_signal":  true,
+                            "snippet":  "\u003c!doctype html\u003e \u003chtml lang=\"en\"\u003e \u003chead\u003e \u003cmeta charset=\"UTF-8\" /\u003e \u003cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0\" /\u003e \u003clink rel=\"icon\" href=\u0027data:image/svg+xml,\u003csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 92 95%22\u003e\u003cpath fill=%22%23E6E"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:3484/api/projects",
+                            "status":  "ERR",
+                            "error":  "Error en el servidor remoto: (404) No se encontró."
+                        },
+                        {
+                            "url":  "http://127.0.0.1:3484/api/tasks",
+                            "status":  "ERR",
+                            "error":  "Error en el servidor remoto: (404) No se encontró."
+                        },
+                        {
+                            "url":  "http://127.0.0.1:3484/api/kanban",
+                            "status":  "ERR",
+                            "error":  "Error en el servidor remoto: (404) No se encontró."
+                        },
+                        {
+                            "url":  "http://127.0.0.1:3484/api/boards",
+                            "status":  "ERR",
+                            "error":  "Error en el servidor remoto: (404) No se encontró."
+                        },
+                        {
+                            "url":  "http://127.0.0.1:3484/projects",
+                            "status":  200,
+                            "length":  1445,
+                            "content_type":  "text/html; charset=utf-8",
+                            "has_api_signal":  true,
+                            "snippet":  "\u003c!doctype html\u003e \u003chtml lang=\"en\"\u003e \u003chead\u003e \u003cmeta charset=\"UTF-8\" /\u003e \u003cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0\" /\u003e \u003clink rel=\"icon\" href=\u0027data:image/svg+xml,\u003csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 92 95%22\u003e\u003cpath fill=%22%23E6E"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:3484/tasks",
+                            "status":  200,
+                            "length":  1445,
+                            "content_type":  "text/html; charset=utf-8",
+                            "has_api_signal":  true,
+                            "snippet":  "\u003c!doctype html\u003e \u003chtml lang=\"en\"\u003e \u003chead\u003e \u003cmeta charset=\"UTF-8\" /\u003e \u003cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0\" /\u003e \u003clink rel=\"icon\" href=\u0027data:image/svg+xml,\u003csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 92 95%22\u003e\u003cpath fill=%22%23E6E"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:3484/kanban",
+                            "status":  200,
+                            "length":  1445,
+                            "content_type":  "text/html; charset=utf-8",
+                            "has_api_signal":  true,
+                            "snippet":  "\u003c!doctype html\u003e \u003chtml lang=\"en\"\u003e \u003chead\u003e \u003cmeta charset=\"UTF-8\" /\u003e \u003cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0\" /\u003e \u003clink rel=\"icon\" href=\u0027data:image/svg+xml,\u003csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 92 95%22\u003e\u003cpath fill=%22%23E6E"
+                        }
+                    ],
+    "code_signals_count":  584,
+    "code_signals":  [
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@sap-ai-sdk\\ai-api\\dist\\client\\AI_CORE_API\\schema\\kpi-array-of-column-names.js",
+                             "length":  64,
+                             "modified":  "2026-06-17T06:54:40",
+                             "signals":  "column"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\simple-git\\dist\\src\\lib\\tasks\\move.d.ts",
+                             "length":  181,
+                             "modified":  "2026-06-17T06:54:38",
+                             "signals":  "moveTask"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@sap-ai-sdk\\ai-api\\dist\\client\\AI_CORE_API\\schema\\kpi-column-name.d.ts",
+                             "length":  199,
+                             "modified":  "2026-06-17T06:54:42",
+                             "signals":  "column"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@sap-ai-sdk\\ai-api\\dist\\client\\AI_CORE_API\\schema\\bcknd-argo-cd-repository-creation-response-message.d.ts",
+                             "length":  211,
+                             "modified":  "2026-06-17T06:54:42",
+                             "signals":  "board"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@sap-ai-sdk\\ai-api\\dist\\client\\AI_CORE_API\\schema\\kpi-column-name.js",
+                             "length":  216,
+                             "modified":  "2026-06-17T06:54:40",
+                             "signals":  "column"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@sap-ai-sdk\\ai-api\\dist\\client\\AI_CORE_API\\schema\\bcknd-argo-cd-repository-deletion-response-message.d.ts",
+                             "length":  217,
+                             "modified":  "2026-06-17T06:54:42",
+                             "signals":  "board"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@cline\\shared\\dist\\hooks\\contracts.d.ts",
+                             "length":  220,
+                             "modified":  "2026-06-17T06:54:37",
+                             "signals":  "review"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@sap-ai-sdk\\ai-api\\dist\\client\\AI_CORE_API\\schema\\kpi-array-of-column-names.d.ts",
+                             "length":  235,
+                             "modified":  "2026-06-17T06:54:42",
+                             "signals":  "Column"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\simple-git\\dist\\src\\lib\\tasks\\config.d.ts",
+                             "length":  270,
+                             "modified":  "2026-06-17T06:54:37",
+                             "signals":  "worktree"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@ai-sdk\\google\\src\\google-generative-ai-video-settings.ts",
+                             "length":  276,
+                             "modified":  "2026-06-17T06:54:38",
+                             "signals":  "review"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@sap-ai-sdk\\ai-api\\dist\\client\\AI_CORE_API\\schema\\kpi-result-set.d.ts",
+                             "length":  340,
+                             "modified":  "2026-06-17T06:54:42",
+                             "signals":  "Column"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@ai-sdk\\google-vertex\\src\\google-vertex-image-settings.ts",
+                             "length":  353,
+                             "modified":  "2026-06-17T06:54:38",
+                             "signals":  "review"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@ai-sdk\\google-vertex\\src\\google-vertex-video-settings.ts",
+                             "length":  395,
+                             "modified":  "2026-06-17T06:54:38",
+                             "signals":  "review"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@sap-ai-sdk\\ai-api\\dist\\client\\AI_CORE_API\\schema\\bcknd-argo-cd-repository-details.d.ts",
+                             "length":  437,
+                             "modified":  "2026-06-17T06:54:42",
+                             "signals":  "board"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@ai-sdk\\google\\src\\google-generative-ai-image-settings.ts",
+                             "length":  560,
+                             "modified":  "2026-06-17T06:54:38",
+                             "signals":  "review"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@ai-sdk\\google\\src\\interactions\\google-interactions-agent.ts",
+                             "length":  608,
+                             "modified":  "2026-06-17T06:54:38",
+                             "signals":  "review"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@modelcontextprotocol\\sdk\\dist\\esm\\experimental\\tasks\\types.js",
+                             "length":  769,
+                             "modified":  "2026-06-17T06:54:39",
+                             "signals":  "CreateTask"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@sap-ai-sdk\\ai-api\\dist\\client\\AI_CORE_API\\kpi-api.d.ts",
+                             "length":  826,
+                             "modified":  "2026-06-17T06:54:42",
+                             "signals":  "Column"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@sap-ai-sdk\\ai-api\\dist\\client\\AI_CORE_API\\schema\\bcknd-resource-group.d.ts",
+                             "length":  831,
+                             "modified":  "2026-06-17T06:54:42",
+                             "signals":  "board"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@cline\\core\\dist\\extensions\\tools\\team\\runtime.d.ts",
+                             "length":  921,
+                             "modified":  "2026-06-17T06:54:38",
+                             "signals":  "Review"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@sap-ai-sdk\\ai-api\\dist\\client\\AI_CORE_API\\kpi-api.js",
+                             "length":  934,
+                             "modified":  "2026-06-17T06:54:40",
+                             "signals":  "column"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@cline\\cli-windows-x64\\cline-hub\\webview\\assets\\chunk-L5ZTLDWV-PlvJtGeH.js",
+                             "length":  952,
+                             "modified":  "2026-06-18T09:14:43",
+                             "signals":  "column"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@cline\\cli-windows-x64\\cline-hub\\webview\\assets\\chunk-L5ZTLDWV-PlvJtGeH.js",
+                             "length":  952,
+                             "modified":  "2026-06-18T09:14:43",
+                             "signals":  "column"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@ai-sdk\\gateway\\src\\gateway-video-model-settings.ts",
+                             "length":  965,
+                             "modified":  "2026-06-17T06:54:38",
+                             "signals":  "review"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@ai-sdk\\openai\\src\\internal\\index.ts",
+                             "length":  1009,
+                             "modified":  "2026-06-17T06:54:39",
+                             "signals":  "review"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@modelcontextprotocol\\sdk\\dist\\cjs\\experimental\\tasks\\types.d.ts",
+                             "length":  1032,
+                             "modified":  "2026-06-17T06:54:41",
+                             "signals":  "CreateTask"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@modelcontextprotocol\\sdk\\dist\\esm\\experimental\\tasks\\types.d.ts",
+                             "length":  1032,
+                             "modified":  "2026-06-17T06:54:41",
+                             "signals":  "CreateTask"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@sap-ai-sdk\\ai-api\\dist\\client\\AI_CORE_API\\schema\\bcknd-internal-resource-group.d.ts",
+                             "length":  1047,
+                             "modified":  "2026-06-17T06:54:42",
+                             "signals":  "board"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@ai-sdk\\google-vertex\\src\\google-vertex-options.ts",
+                             "length":  1078,
+                             "modified":  "2026-06-17T06:54:38",
+                             "signals":  "review"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@cline\\core\\dist\\types\\sessions.d.ts",
+                             "length":  1182,
+                             "modified":  "2026-06-17T06:54:40",
+                             "signals":  "checkpoint"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@cline\\core\\dist\\session\\checkpoint-restore.d.ts",
+                             "length":  1220,
+                             "modified":  "2026-06-17T06:54:40",
+                             "signals":  "Checkpoint,Worktree"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@cline\\core\\dist\\types\\common.d.ts",
+                             "length":  1252,
+                             "modified":  "2026-06-17T06:54:40",
+                             "signals":  "kanban"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@opencode-ai\\sdk\\package.json",
+                             "length":  1314,
+                             "modified":  "2026-06-17T06:54:36",
+                             "signals":  "review"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\hono\\dist\\types\\jsx\\types.d.ts",
+                             "length":  1353,
+                             "modified":  "2026-06-17T06:54:41",
+                             "signals":  "board"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@ai-sdk\\provider\\src\\language-model\\v3\\language-model-v3-tool-result.ts",
+                             "length":  1362,
+                             "modified":  "2026-06-17T06:54:38",
+                             "signals":  "review"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\async\\priorityQueue.js",
+                             "length":  1442,
+                             "modified":  "2026-06-17T06:54:38",
+                             "signals":  "createTask"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@cline\\core\\dist\\hub\\server\\hub-client-contributions.d.ts",
+                             "length":  1472,
+                             "modified":  "2026-06-17T06:54:39",
+                             "signals":  "CHECKPOINT"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@cline\\core\\dist\\runtime\\host\\local\\agent-event-bridge.d.ts",
+                             "length":  1584,
+                             "modified":  "2026-06-17T06:54:39",
+                             "signals":  "backLog"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@cline\\core\\dist\\extensions\\tools\\helpers.d.ts",
+                             "length":  1628,
+                             "modified":  "2026-06-17T06:54:38",
+                             "signals":  "review"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\hono\\dist\\types\\middleware\\secure-headers\\permissions-policy.d.ts",
+                             "length":  1725,
+                             "modified":  "2026-06-17T06:54:41",
+                             "signals":  "board"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\yaml\\browser\\dist\\compose\\resolve-block-seq.js",
+                             "length":  1740,
+                             "modified":  "2026-06-17T06:54:38",
+                             "signals":  "column"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@cline\\core\\dist\\session\\session-snapshot.d.ts",
+                             "length":  1768,
+                             "modified":  "2026-06-17T06:54:40",
+                             "signals":  "Checkpoint"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\yaml\\dist\\compose\\resolve-block-seq.js",
+                             "length":  1812,
+                             "modified":  "2026-06-17T06:54:38",
+                             "signals":  "column"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@cline\\shared\\dist\\rpc\\team-progress.d.ts",
+                             "length":  1951,
+                             "modified":  "2026-06-17T06:54:38",
+                             "signals":  "review"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@cline\\core\\dist\\hooks\\checkpoint-hooks.d.ts",
+                             "length":  1970,
+                             "modified":  "2026-06-17T06:54:38",
+                             "signals":  "checkpoint"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\yaml\\browser\\dist\\errors.js",
+                             "length":  2023,
+                             "modified":  "2026-06-17T06:54:37",
+                             "signals":  "column"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@cline\\core\\dist\\extensions\\tools\\team\\team-tools.d.ts",
+                             "length":  2036,
+                             "modified":  "2026-06-17T06:54:38",
+                             "signals":  "review"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\yaml\\dist\\errors.js",
+                             "length":  2118,
+                             "modified":  "2026-06-17T06:54:37",
+                             "signals":  "column"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@simple-git\\argv-parser\\dist\\src\\args\\parse-argv.types.d.ts",
+                             "length":  2124,
+                             "modified":  "2026-06-17T06:54:37",
+                             "signals":  "worktree"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@ai-sdk\\google-vertex\\src\\google-vertex-embedding-options.ts",
+                             "length":  2289,
+                             "modified":  "2026-06-17T06:54:38",
+                             "signals":  "review"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@cline\\core\\dist\\session\\session-versioning-service.d.ts",
+                             "length":  2578,
+                             "modified":  "2026-06-17T06:54:40",
+                             "signals":  "Checkpoint"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@ai-sdk\\google\\src\\google-generative-ai-embedding-options.ts",
+                             "length":  2585,
+                             "modified":  "2026-06-17T06:54:38",
+                             "signals":  "review"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@ai-sdk\\anthropic\\src\\tool\\computer_20241022.ts",
+                             "length":  2634,
+                             "modified":  "2026-06-17T06:54:38",
+                             "signals":  "board"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\triple-beam\\.nyc_output\\c579bf8f-6820-47a5-b2da-a11267eb8435.json",
+                             "length":  2657,
+                             "modified":  "2026-06-17T06:54:36",
+                             "signals":  "column"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@anthropic-ai\\sdk\\tools\\agent-toolset\\skills.d.ts",
+                             "length":  2819,
+                             "modified":  "2026-06-17T06:54:42",
+                             "signals":  "review"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@cline\\shared\\dist\\extensions\\context.d.ts",
+                             "length":  2827,
+                             "modified":  "2026-06-17T06:54:37",
+                             "signals":  "kanban"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@modelcontextprotocol\\sdk\\dist\\cjs\\experimental\\tasks\\mcp-server.d.ts",
+                             "length":  2973,
+                             "modified":  "2026-06-17T06:54:41",
+                             "signals":  "createTask"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@modelcontextprotocol\\sdk\\dist\\esm\\experimental\\tasks\\mcp-server.d.ts",
+                             "length":  2973,
+                             "modified":  "2026-06-17T06:54:41",
+                             "signals":  "createTask"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@modelcontextprotocol\\sdk\\dist\\cjs\\experimental\\tasks\\types.js",
+                             "length":  3202,
+                             "modified":  "2026-06-17T06:54:39",
+                             "signals":  "CreateTask"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@sap-ai-sdk\\ai-api\\dist\\client\\AI_CORE_API\\repository-api.d.ts",
+                             "length":  3214,
+                             "modified":  "2026-06-17T06:54:42",
+                             "signals":  "board"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\stack-trace\\lib\\stack-trace.js",
+                             "length":  3385,
+                             "modified":  "2026-06-17T06:54:36",
+                             "signals":  "column"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@cline\\core\\dist\\hooks\\subprocess.d.ts",
+                             "length":  3430,
+                             "modified":  "2026-06-17T06:54:38",
+                             "signals":  "review"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@sap-ai-sdk\\ai-api\\dist\\client\\AI_CORE_API\\repository-api.js",
+                             "length":  3442,
+                             "modified":  "2026-06-17T06:54:40",
+                             "signals":  "board"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@cline\\core\\dist\\session\\models\\session-row.d.ts",
+                             "length":  3527,
+                             "modified":  "2026-06-17T06:54:40",
+                             "signals":  "COLUMN"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\jiti\\lib\\jiti-hooks.mjs",
+                             "length":  3563,
+                             "modified":  "2026-06-17T06:54:37",
+                             "signals":  "column"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@ai-sdk\\openai\\src\\tool\\web-search-preview.ts",
+                             "length":  3599,
+                             "modified":  "2026-06-17T06:54:39",
+                             "signals":  "review"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@aws-sdk\\nested-clients\\dist-types\\submodules\\sso-oidc\\index.d.ts",
+                             "length":  3605,
+                             "modified":  "2026-06-17T06:54:40",
+                             "signals":  "review"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@ai-sdk\\openai\\src\\tool\\file-search.ts",
+                             "length":  3655,
+                             "modified":  "2026-06-17T06:54:39",
+                             "signals":  "board"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@aws-sdk\\nested-clients\\dist-types\\submodules\\sso-oidc\\SSOOIDC.d.ts",
+                             "length":  3828,
+                             "modified":  "2026-06-17T06:54:40",
+                             "signals":  "review"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@smithy\\core\\dist-types\\submodules\\endpoints\\middleware-endpoint\\resolveEndpointConfig.d.ts",
+                             "length":  3993,
+                             "modified":  "2026-06-17T06:54:41",
+                             "signals":  "board"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@modelcontextprotocol\\sdk\\dist\\cjs\\experimental\\tasks\\stores\\in-memory.d.ts",
+                             "length":  4104,
+                             "modified":  "2026-06-17T06:54:41",
+                             "signals":  "CreateTask,updateTask"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@modelcontextprotocol\\sdk\\dist\\esm\\experimental\\tasks\\stores\\in-memory.d.ts",
+                             "length":  4104,
+                             "modified":  "2026-06-17T06:54:41",
+                             "signals":  "CreateTask,updateTask"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@cline\\shared\\dist\\llms\\model-info.d.ts",
+                             "length":  4308,
+                             "modified":  "2026-06-17T06:54:37",
+                             "signals":  "review"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@cline\\core\\dist\\hub\\client\\session-client.d.ts",
+                             "length":  4435,
+                             "modified":  "2026-06-17T06:54:38",
+                             "signals":  "checkpoint"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\mime-types\\index.js",
+                             "length":  4546,
+                             "modified":  "2026-06-17T06:54:36",
+                             "signals":  "review"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\ajv\\lib\\runtime\\parseJson.ts",
+                             "length":  4553,
+                             "modified":  "2026-06-17T06:54:40",
+                             "signals":  "column"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@aws-sdk\\nested-clients\\dist-types\\submodules\\signin\\models\\models_0.d.ts",
+                             "length":  4568,
+                             "modified":  "2026-06-17T06:54:40",
+                             "signals":  "board"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\jiti\\package.json",
+                             "length":  4784,
+                             "modified":  "2026-06-17T06:54:37",
+                             "signals":  "review"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@ai-sdk\\anthropic\\src\\tool\\computer_20250124.ts",
+                             "length":  4812,
+                             "modified":  "2026-06-17T06:54:38",
+                             "signals":  "board"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\hono\\dist\\jsx\\utils.js",
+                             "length":  4841,
+                             "modified":  "2026-06-17T06:54:40",
+                             "signals":  "column"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\yaml\\browser\\dist\\compose\\resolve-block-map.js",
+                             "length":  4915,
+                             "modified":  "2026-06-17T06:54:38",
+                             "signals":  "column"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\yaml\\dist\\compose\\resolve-block-map.js",
+                             "length":  5071,
+                             "modified":  "2026-06-17T06:54:38",
+                             "signals":  "column"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@types\\node\\globals.d.ts",
+                             "length":  5132,
+                             "modified":  "2026-06-17T06:54:37",
+                             "signals":  "Column"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@cline\\core\\dist\\types.d.ts",
+                             "length":  5225,
+                             "modified":  "2026-06-17T06:54:40",
+                             "signals":  "Checkpoint"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@cline\\cli-windows-x64\\cline-hub\\webview\\assets\\dax-8Zbmoo6g.js",
+                             "length":  5358,
+                             "modified":  "2026-06-18T09:14:43",
+                             "signals":  "COLUMN"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@cline\\cli-windows-x64\\cline-hub\\webview\\assets\\dax-BkyTk9wS.js",
+                             "length":  5358,
+                             "modified":  "2026-06-18T09:14:43",
+                             "signals":  "COLUMN"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@cline\\cli-windows-x64\\cline-hub\\webview\\assets\\dax-8Zbmoo6g.js",
+                             "length":  5358,
+                             "modified":  "2026-06-18T09:14:43",
+                             "signals":  "COLUMN"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@cline\\cli-windows-x64\\cline-hub\\webview\\assets\\dax-BkyTk9wS.js",
+                             "length":  5358,
+                             "modified":  "2026-06-18T09:14:43",
+                             "signals":  "COLUMN"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\ajv\\dist\\runtime\\parseJson.js",
+                             "length":  5401,
+                             "modified":  "2026-06-17T06:54:38",
+                             "signals":  "column"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\node-forge\\lib\\random.js",
+                             "length":  5438,
+                             "modified":  "2026-06-17T06:54:37",
+                             "signals":  "board"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@cline\\shared\\dist\\team\\types.d.ts",
+                             "length":  5472,
+                             "modified":  "2026-06-17T06:54:38",
+                             "signals":  "review"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\axios\\lib\\core\\AxiosError.js",
+                             "length":  5560,
+                             "modified":  "2026-06-17T06:54:37",
+                             "signals":  "column"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@cline\\core\\dist\\types\\chat-schema.d.ts",
+                             "length":  5602,
+                             "modified":  "2026-06-17T06:54:40",
+                             "signals":  "checkpoint"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@ai-sdk\\anthropic\\src\\tool\\computer_20251124.ts",
+                             "length":  5664,
+                             "modified":  "2026-06-17T06:54:38",
+                             "signals":  "board"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@ai-sdk\\gateway\\src\\gateway-language-model-settings.ts",
+                             "length":  5677,
+                             "modified":  "2026-06-17T06:54:37",
+                             "signals":  "review"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@cline\\shared\\dist\\prompt\\system.d.ts",
+                             "length":  5683,
+                             "modified":  "2026-06-17T06:54:38",
+                             "signals":  "Review"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@anthropic-ai\\sdk\\resources\\messages\\messages.mjs",
+                             "length":  5771,
+                             "modified":  "2026-06-17T06:54:41",
+                             "signals":  "review"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@ai-sdk\\openai\\src\\openai-tools.ts",
+                             "length":  5904,
+                             "modified":  "2026-06-17T06:54:39",
+                             "signals":  "review"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\hono\\dist\\cjs\\jsx\\utils.js",
+                             "length":  6028,
+                             "modified":  "2026-06-17T06:54:40",
+                             "signals":  "column"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@anthropic-ai\\sdk\\resources\\messages\\messages.js",
+                             "length":  6062,
+                             "modified":  "2026-06-17T06:54:38",
+                             "signals":  "review"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@opentelemetry\\api\\build\\esm\\metrics\\Metric.d.ts",
+                             "length":  6114,
+                             "modified":  "2026-06-17T06:54:41",
+                             "signals":  "checkpoint"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@opentelemetry\\api\\build\\src\\metrics\\Metric.d.ts",
+                             "length":  6114,
+                             "modified":  "2026-06-17T06:54:41",
+                             "signals":  "checkpoint"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@opentelemetry\\api\\build\\esnext\\metrics\\Metric.d.ts",
+                             "length":  6114,
+                             "modified":  "2026-06-17T06:54:41",
+                             "signals":  "checkpoint"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@cline\\core\\dist\\types\\config.d.ts",
+                             "length":  6214,
+                             "modified":  "2026-06-17T06:54:40",
+                             "signals":  "checkpoint"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@types\\node\\wasi.d.ts",
+                             "length":  6250,
+                             "modified":  "2026-06-17T06:54:37",
+                             "signals":  "review"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@anthropic-ai\\claude-agent-sdk\\assistant.d.ts",
+                             "length":  6261,
+                             "modified":  "2026-06-17T06:54:38",
+                             "signals":  "Checkpoint"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@cline\\shared\\dist\\db\\index.js",
+                             "length":  6277,
+                             "modified":  "2026-06-17T06:54:37",
+                             "signals":  "column"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@types\\node\\readline\\promises.d.ts",
+                             "length":  6418,
+                             "modified":  "2026-06-17T06:54:37",
+                             "signals":  "column"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@modelcontextprotocol\\sdk\\package.json",
+                             "length":  6432,
+                             "modified":  "2026-06-17T06:54:39",
+                             "signals":  "review"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@opentelemetry\\exporter-metrics-otlp-http\\node_modules\\@opentelemetry\\sdk-metrics\\build\\esm\\aggregator\\Histogram.js",
+                             "length":  6751,
+                             "modified":  "2026-06-17T06:54:38",
+                             "signals":  "Checkpoint"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@opentelemetry\\otlp-transformer\\node_modules\\@opentelemetry\\sdk-metrics\\build\\esnext\\aggregator\\Histogram.js",
+                             "length":  6751,
+                             "modified":  "2026-06-17T06:54:38",
+                             "signals":  "Checkpoint"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@opentelemetry\\otlp-transformer\\node_modules\\@opentelemetry\\sdk-metrics\\build\\esm\\aggregator\\Histogram.js",
+                             "length":  6751,
+                             "modified":  "2026-06-17T06:54:38",
+                             "signals":  "Checkpoint"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@opentelemetry\\exporter-metrics-otlp-http\\node_modules\\@opentelemetry\\sdk-metrics\\build\\esnext\\aggregator\\Histogram.js",
+                             "length":  6751,
+                             "modified":  "2026-06-17T06:54:38",
+                             "signals":  "Checkpoint"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@opentelemetry\\sdk-metrics\\build\\esm\\aggregator\\Histogram.js",
+                             "length":  6751,
+                             "modified":  "2026-06-17T06:54:38",
+                             "signals":  "Checkpoint"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@opentelemetry\\sdk-metrics\\build\\esnext\\aggregator\\Histogram.js",
+                             "length":  6751,
+                             "modified":  "2026-06-17T06:54:38",
+                             "signals":  "Checkpoint"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@ai-sdk\\openai\\src\\chat\\openai-chat-options.ts",
+                             "length":  6783,
+                             "modified":  "2026-06-17T06:54:39",
+                             "signals":  "review"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\winston\\lib\\winston\\exception-handler.js",
+                             "length":  6909,
+                             "modified":  "2026-06-17T06:54:37",
+                             "signals":  "Column"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\winston\\lib\\winston\\rejection-handler.js",
+                             "length":  6982,
+                             "modified":  "2026-06-17T06:54:37",
+                             "signals":  "Column"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@opentelemetry\\exporter-metrics-otlp-http\\node_modules\\@opentelemetry\\sdk-metrics\\build\\src\\aggregator\\Histogram.js",
+                             "length":  7048,
+                             "modified":  "2026-06-17T06:54:38",
+                             "signals":  "Checkpoint"
+                         },
+                         {
+                             "path":  "C:\\Users\\pc\\AppData\\Roaming\\npm\\node_modules\\cline\\node_modules\\@opentelemetry\\sdk-metrics\\build\\src\\aggregator\\Histogram.js",
+                             "length":  7048,
+                             "modified":  "2026-06-17T06:54:38",
+                             "signals":  "Checkpoint"
+                         }
+                     ],
+    "decision":  "POSSIBLE_CODE_PATH_FOUND_REQUIRES_REVIEW",
+    "next":  "IF_API_FOUND_PREPARE_DRY_RUN_IMPORT_ELSE_USE_ORCHESTRATION_BOARD_AS_VISUAL_BACKLOG"
+}

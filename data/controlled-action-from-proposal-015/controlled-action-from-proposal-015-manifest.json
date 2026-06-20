@@ -1,0 +1,23 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_ACTION_FROM_PROPOSAL_015",
+    "stage":  "E05",
+    "readiness":  100,
+    "decision":  "GO_E05_CLOSED",
+    "next":  "NEXT_OBJECTIVE_AFTER_CONTROLLED_ACTION_FROM_PROPOSAL",
+    "receipt_file":  "data\\controlled-action-from-proposal-015\\receipts\\controlled-action-receipt.json",
+    "postcheck_file":  "reports\\controlled-action-from-proposal-015\\e04-controlled-postcheck-report.json",
+    "gate_file":  "data\\controlled-action-from-proposal-015\\sample-human-gate-decision.json",
+    "validation_ok":  true,
+    "artifacts":  [
+                      "reports\\controlled-action-from-proposal-015\\e04-controlled-postcheck-report.json",
+                      "data\\controlled-action-from-proposal-015\\receipts\\controlled-action-receipt.json",
+                      "data\\controlled-action-from-proposal-015\\controlled-action-from-proposal-015-manifest.json",
+                      "docs\\CONTROLLED_ACTION_FROM_PROPOSAL_CLOSE_REPORT.md",
+                      "docs\\NEXT_OBJECTIVE_AFTER_CONTROLLED_ACTION_FROM_PROPOSAL.md"
+                  ],
+    "no_apply":  true,
+    "git_write":  false,
+    "remote_execution":  false,
+    "auto_apply":  false,
+    "timestamp_utc":  "2026-06-17T06:17:48.9772359Z"
+}

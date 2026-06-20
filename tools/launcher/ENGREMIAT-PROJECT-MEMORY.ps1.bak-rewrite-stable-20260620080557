@@ -1,0 +1,356 @@
+﻿$ErrorActionPreference="Stop"
+[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+
+$Core="C:\ENGREMIAT_CORE"
+$ToolDir=Join-Path $Core "tools\desktop-terminal-operator"
+$LauncherDir=Join-Path $Core "tools\launcher"
+$MemoryDir=Join-Path $Core "memory\project-memory"
+$ReportsDir=Join-Path $Core "reports"
+$FocusFile=Join-Path $Core "data\desktop-terminal-operator\last-focus.json"
+
+function W($m,$c="White"){ Write-Host $m -ForegroundColor $c }
+function P(){ [void](Read-Host "Enter") }
+function Now(){ return (Get-Date).ToString("s") }
+
+function ActiveProject(){
+  $j=Join-Path $Core "data\desktop-terminal-operator\active-project.json"
+  $t=Join-Path $Core "data\desktop-terminal-operator\active-project.txt"
+
+  if(Test-Path $j){
+    try{
+      $x=Get-Content $j -Raw | ConvertFrom-Json
+      if($x.active_project -and (Test-Path ([string]$x.active_project))){ return [string]$x.active_project }
+    }catch{}
+  }
+
+  if(Test-Path $t){
+    $y=(Get-Content $t -Raw).Trim()
+    if(Test-Path $y){ return $y }
+  }
+
+  return ""
+}
+
+function ReadJsonOrNull($path){
+  if(Test-Path $path){
+    try{ return Get-Content $path -Raw | ConvertFrom-Json }catch{}
+  }
+  return $null
+}
+
+function SaveJson($path,$obj){
+  New-Item -ItemType Directory -Force -Path (Split-Path $path) | Out-Null
+  $obj | ConvertTo-Json -Depth 80 | Set-Content $path -Encoding UTF8
+}
+
+function LatestReports($limit){
+  if(-not(Test-Path $ReportsDir)){ return @() }
+  return @(Get-ChildItem $ReportsDir -Recurse -File -Include *.json -ErrorAction SilentlyContinue |
+    Sort-Object LastWriteTime -Descending |
+    Select-Object -First $limit |
+    ForEach-Object {
+      $status="UNKNOWN"
+      $stage=""
+      $package=""
+      try{
+        $j=Get-Content $_.FullName -Raw | ConvertFrom-Json
+        if($j.status){ $status=[string]$j.status }
+        if($j.stage){ $stage=[string]$j.stage }
+        if($j.package){ $package=[string]$j.package }
+      }catch{}
+      [pscustomobject]@{
+        name=$_.Name
+        path=$_.FullName
+        updated=$_.LastWriteTime.ToString("s")
+        status=$status
+        package=$package
+        stage=$stage
+      }
+    })
+}
+
+function ScreenInventory(){
+  $screens=@(
+    @{ id="inicio"; label="Inicio"; path=(Join-Path $Core "tools\launcher\ENGREMIAT-INICIO.ps1") },
+    @{ id="navigation_tree"; label="Árbol navegación"; path=(Join-Path $Core "tools\launcher\ENGREMIAT-NAVIGATION-TREE.ps1") },
+    @{ id="navigation_viewer"; label="Visor árbol"; path=(Join-Path $Core "tools\launcher\ENGREMIAT-NAVIGATION-VIEWER.ps1") },
+    @{ id="status"; label="Status inicio"; path=(Join-Path $Core "tools\launcher\ENGREMIAT-INICIO-STATUS.ps1") },
+    @{ id="memory"; label="Memoria proyecto"; path=(Join-Path $Core "tools\launcher\ENGREMIAT-PROJECT-MEMORY.ps1") },
+    @{ id="modules"; label="Módulos proyecto"; path=(Join-Path $ToolDir "eng-project-modules-screen.ps1") },
+    @{ id="library"; label="Biblioteca módulos"; path=(Join-Path $ToolDir "eng-module-library-screen.ps1") },
+    @{ id="workspace"; label="Workspace módulo"; path=(Join-Path $ToolDir "eng-module-workspace-screen.ps1") },
+    @{ id="cards"; label="Tarjetas módulo"; path=(Join-Path $ToolDir "eng-module-cards-screen.ps1") },
+    @{ id="graph"; label="Grafo módulos"; path=(Join-Path $ToolDir "eng-refresh-project-module-graph.ps1") }
+  )
+
+  return @($screens | ForEach-Object {
+    [pscustomobject]@{
+      id=$_.id
+      label=$_.label
+      path=$_.path
+      exists=(Test-Path $_.path)
+    }
+  })
+}
+
+function ProjectCounters($project){
+  $mods=0
+  $libActive=0
+  $libInactive=0
+  $libHistoric=0
+  $cards=0
+  $tasks=0
+
+  if($project){
+    $modsDir=Join-Path $project "MODULOS"
+    if(Test-Path $modsDir){ $mods=@(Get-ChildItem $modsDir -Directory -ErrorAction SilentlyContinue).Count }
+  }
+
+  $libA=Join-Path $Core "library\modules"
+  $libH=Join-Path $Core "library\modules_historico"
+
+  if(Test-Path $libA){
+    foreach($m in (Get-ChildItem $libA -Directory -ErrorAction SilentlyContinue)){
+      $st="ACTIVO"
+      $mj=Join-Path $m.FullName "module.json"
+      if(Test-Path $mj){
+        try{
+          $j=Get-Content $mj -Raw | ConvertFrom-Json
+          if($j.status){ $st=[string]$j.status }
+        }catch{}
+      }
+      if($st -eq "INACTIVO"){ $libInactive++ } else { $libActive++ }
+
+      $cardsPath=Join-Path $m.FullName "_workspace\tarjetas\tarjetas.json"
+      if(Test-Path $cardsPath){
+        try{ $cards += @((Get-Content $cardsPath -Raw | ConvertFrom-Json).items).Count }catch{}
+      }
+
+      $tasksPath=Join-Path $m.FullName "_workspace\tareas\tareas.json"
+      if(Test-Path $tasksPath){
+        try{ $tasks += @((Get-Content $tasksPath -Raw | ConvertFrom-Json).items).Count }catch{}
+      }
+    }
+  }
+
+  if(Test-Path $libH){ $libHistoric=@(Get-ChildItem $libH -Directory -ErrorAction SilentlyContinue).Count }
+
+  return [pscustomobject]@{
+    project_modules=$mods
+    library_active=$libActive
+    library_inactive=$libInactive
+    library_historic=$libHistoric
+    known_cards=$cards
+    known_tasks=$tasks
+  }
+}
+
+function BuildMemory(){
+  $project=ActiveProject
+  $focus=ReadJsonOrNull $FocusFile
+  if(-not $focus){
+    $focus=[pscustomobject]@{ screen="none"; note="sin foco guardado"; module=""; updated_at="" }
+  }
+
+  $screens=ScreenInventory
+  $reports=LatestReports 30
+  $counters=ProjectCounters $project
+
+  $built=@(
+    "Inicio V9 normalizado con números únicos.",
+    "Diagnóstico externo de inicio con status JSON copiable.",
+    "Árbol de navegación y visor desde inicio.",
+    "Pantalla de módulos del proyecto.",
+    "Biblioteca de módulos con activos, inactivos e históricos.",
+    "Workspace operativo de módulo.",
+    "Pantalla avanzada de tarjetas de módulo.",
+    "Refresco de grafo de módulos."
+  )
+
+  $learned=@(
+    "El inicio debe ser raíz ligera, no pantalla profunda.",
+    "En inicio solo números para navegar; q para salir y Enter para refrescar.",
+    "Las pantallas profundas pueden usar letras para acciones internas.",
+    "El patrón repetible es: lista numerada, ficha, crear, desactivar, historizar, borrar, buscar y vincular.",
+    "Necesitamos memoria persistente para saber qué se construyó, qué se aprendió y cómo continuar.",
+    "Los scripts PowerShell deben evitar try dentro de expresiones y parches frágiles."
+  )
+
+  $pending=@(
+    "Crear pantalla avanzada de tareas equivalente a tarjetas.",
+    "Vincular tarjetas con tareas de forma bidireccional.",
+    "Extender grafo para incluir tarjetas, tareas, tipos y enlaces.",
+    "Consolidar prompts de continuidad para ChatGPT, Ollama y Cline.",
+    "Normalizar árbol de navegación completo tras cada nueva pantalla."
+  )
+
+  return [pscustomobject]@{
+    generated_at=Now
+    core=$Core
+    active_project=$project
+    active_project_name=if($project){Split-Path $project -Leaf}else{""}
+    counters=$counters
+    last_focus=$focus
+    screens=$screens
+    latest_reports=$reports
+    built=$built
+    learned=$learned
+    pending=$pending
+    continuation=[pscustomobject]@{
+      recommended_next="E24A_CREATE_MODULE_TASKS_MANAGEMENT_SCREEN"
+      reason="Completar el patrón tarjetas -> tareas antes de extender grafo."
+    }
+  }
+}
+
+function WriteMemoryFiles($memory){
+  New-Item -ItemType Directory -Force -Path $MemoryDir | Out-Null
+
+  $json=Join-Path $MemoryDir ("project-memory-"+(Get-Date -Format "yyyyMMdd-HHmmss")+".json")
+  $md=Join-Path $MemoryDir ("project-memory-"+(Get-Date -Format "yyyyMMdd-HHmmss")+".md")
+  $prompt=Join-Path $MemoryDir ("continuation-prompt-"+(Get-Date -Format "yyyyMMdd-HHmmss")+".md")
+
+  $latestJson=Join-Path $MemoryDir "project-memory-latest.json"
+  $latestMd=Join-Path $MemoryDir "project-memory-latest.md"
+  $latestPrompt=Join-Path $MemoryDir "continuation-prompt-latest.md"
+  $ollamaPrompt=Join-Path $MemoryDir "ollama-worker-prompt-latest.md"
+
+  SaveJson $json $memory
+  SaveJson $latestJson $memory
+
+  $lines=@()
+  $lines += "# ENGREMIAT - Memoria del proyecto"
+  $lines += ""
+  $lines += "- Generado: $($memory.generated_at)"
+  $lines += "- Proyecto activo: $($memory.active_project_name)"
+  $lines += "- Módulos proyecto: $($memory.counters.project_modules)"
+  $lines += "- Biblioteca: $($memory.counters.library_active) activos / $($memory.counters.library_inactive) inactivos / $($memory.counters.library_historic) históricos"
+  $lines += "- Tarjetas conocidas: $($memory.counters.known_cards)"
+  $lines += "- Tareas conocidas: $($memory.counters.known_tasks)"
+  $lines += ""
+  $lines += "## Qué se ha construido"
+  foreach($x in $memory.built){ $lines += "- $x" }
+  $lines += ""
+  $lines += "## Qué se ha aprendido"
+  foreach($x in $memory.learned){ $lines += "- $x" }
+  $lines += ""
+  $lines += "## Pendiente recomendado"
+  foreach($x in $memory.pending){ $lines += "- $x" }
+  $lines += ""
+  $lines += "## Pantallas"
+  foreach($s in $memory.screens){
+    $ok=if($s.exists){"OK"}else{"MISS"}
+    $lines += "- [$ok] $($s.label): `$($s.path)`"
+  }
+  $lines += ""
+  $lines += "## Siguiente recomendado"
+  $lines += "- $($memory.continuation.recommended_next): $($memory.continuation.reason)"
+
+  $lines | Set-Content $md -Encoding UTF8
+  $lines | Set-Content $latestMd -Encoding UTF8
+
+  $promptLines=@()
+  $promptLines += "CONTEXTO ENGREMIAT PARA CONTINUAR DESARROLLO"
+  $promptLines += ""
+  $promptLines += "Actúa como experto en ENGREMIAT / operador local PowerShell."
+  $promptLines += "Estado actual:"
+  $promptLines += "- Proyecto activo: $($memory.active_project_name)"
+  $promptLines += "- Inicio normalizado V9 con números únicos."
+  $promptLines += "- Pantallas operativas: módulos, biblioteca, workspace, tarjetas, grafo, navegación y memoria."
+  $promptLines += "- Patrón UX: números para abrir elementos/secciones; letras solo para acciones internas en pantallas profundas."
+  $promptLines += ""
+  $promptLines += "Construido:"
+  foreach($x in $memory.built){ $promptLines += "- $x" }
+  $promptLines += ""
+  $promptLines += "Aprendido / normas activas:"
+  foreach($x in $memory.learned){ $promptLines += "- $x" }
+  $promptLines += ""
+  $promptLines += "Siguiente recomendado:"
+  $promptLines += "$($memory.continuation.recommended_next)"
+  $promptLines += ""
+  $promptLines += "Objetivo siguiente:"
+  $promptLines += "Crear pantalla avanzada de tareas equivalente a tarjetas y conectarla al workspace del módulo."
+  $promptLines += ""
+  $promptLines += "Formato esperado:"
+  $promptLines += "- Breve explicación."
+  $promptLines += "- Script PowerShell completo."
+  $promptLines += "- Validación de parse."
+  $promptLines += "- Sin pedir confirmación si el siguiente paso es claro."
+  $promptLines += "- Mantener estabilidad antes que inteligencia."
+
+  $promptLines | Set-Content $prompt -Encoding UTF8
+  $promptLines | Set-Content $latestPrompt -Encoding UTF8
+
+  $ollama=@()
+  $ollama += "WORKER PROMPT - ENGREMIAT"
+  $ollama += ""
+  $ollama += "Rol: worker local controlado. No ejecutes acciones externas. Propón cambios pequeños, estables y verificables."
+  $ollama += "Tarea recomendada: $($memory.continuation.recommended_next)"
+  $ollama += "Objetivo: crear o revisar pantalla avanzada de tareas de módulo siguiendo el patrón ya usado en tarjetas."
+  $ollama += ""
+  $ollama += "Contrato de salida:"
+  $ollama += "- Resumen de cambios propuestos."
+  $ollama += "- Archivos afectados."
+  $ollama += "- Riesgos."
+  $ollama += "- Script o diff propuesto, si aplica."
+  $ollama += "- Validación esperada."
+  $ollama += ""
+  $ollama += "Contexto construido:"
+  foreach($x in $memory.built){ $ollama += "- $x" }
+
+  $ollama | Set-Content $ollamaPrompt -Encoding UTF8
+
+  return [pscustomobject]@{
+    json=$json
+    md=$md
+    prompt=$prompt
+    latest_json=$latestJson
+    latest_md=$latestMd
+    latest_prompt=$latestPrompt
+    ollama_prompt=$ollamaPrompt
+  }
+}
+
+function GenerateMemory(){
+  $memory=BuildMemory
+  return WriteMemoryFiles $memory
+}
+
+function ShowMemorySummary(){
+  $out=GenerateMemory
+  $memory=Get-Content $out.latest_json -Raw | ConvertFrom-Json
+
+  Clear-Host
+  W "==== MEMORIA DEL PROYECTO ====" Cyan
+  W ("Proyecto activo: {0}" -f $memory.active_project_name) Green
+  W ("Módulos proyecto: {0}" -f $memory.counters.project_modules) White
+  W ("Biblioteca: {0} activos / {1} inactivos / {2} históricos" -f $memory.counters.library_active,$memory.counters.library_inactive,$memory.counters.library_historic) White
+  W ("Tarjetas conocidas: {0} | Tareas conocidas: {1}" -f $memory.counters.known_cards,$memory.counters.known_tasks) White
+  W ""
+  W "CONSTRUIDO" Yellow
+  foreach($x in $memory.built){ W (" - {0}" -f $x) White }
+  W ""
+  W "APRENDIDO" Yellow
+  foreach($x in $memory.learned){ W (" - {0}" -f $x) DarkGray }
+  W ""
+  W "SIGUIENTE" Yellow
+  W (" - {0}: {1}" -f $memory.continuation.recommended_next,$memory.continuation.reason) Green
+  W ""
+  W "1 = abrir memoria MD | 2 = prompt ChatGPT | 3 = prompt Ollama | 4 = regenerar | b = atras" Cyan
+
+  $cmd=Read-Host "MEMORIA"
+  if($cmd -eq "1"){ Start-Process notepad.exe $out.latest_md }
+  elseif($cmd -eq "2"){ Start-Process notepad.exe $out.latest_prompt }
+  elseif($cmd -eq "3"){ Start-Process notepad.exe $out.ollama_prompt }
+  elseif($cmd -eq "4"){ GenerateMemory | Out-Null; W "OK memoria_regenerada" Green; P }
+}
+
+function Main(){
+  while($true){
+    ShowMemorySummary
+    $cmd=Read-Host "MEMORIA_MENU"
+    if($cmd -eq "b"){ return }
+  }
+}
+
+Main

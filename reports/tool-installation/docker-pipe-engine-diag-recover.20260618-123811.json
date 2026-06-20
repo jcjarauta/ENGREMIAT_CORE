@@ -1,0 +1,89 @@
+﻿{
+    "package":  "DOCKER_PIPE_ENGINE_DIAG_AND_RECOVER_001",
+    "created_at":  "2026-06-18T12:38:11",
+    "pipe_linux":  "\\\\.\\pipe\\dockerDesktopLinuxEngine",
+    "pipe_default":  "\\\\.\\pipe\\docker_engine",
+    "pipes_before":  {
+
+                     },
+    "pipes_after":  [
+                        "dockerBackendApiServer",
+                        "dockerEthernetVpnkit",
+                        "dockerControlInit",
+                        "docker_engine",
+                        "dockerDesktopEngine",
+                        "dockerDesktopLinuxEngine",
+                        "dockerDesktopWindowsEngine",
+                        "docker_cli",
+                        "dockerHTTPProxy",
+                        "dockerEthernet",
+                        "dockerEthernetQemu",
+                        "dockerVolumeContents",
+                        "dockerStats",
+                        "docker_engine_linux",
+                        "dockerDiagnosticd",
+                        "dockerDnsForwarder",
+                        "dockerFilesystemEvent",
+                        "dockerWsl2BootstrapExposePorts",
+                        "dockerWSLCrossDistroService",
+                        "dockerAPIProxyControl",
+                        "dockerContainerFilesystem",
+                        "dockerDebugSocketforwarder",
+                        "dockerPerfSocketforwarder",
+                        "dockerMutagenConduit",
+                        "dockerExtensionManagerAPI",
+                        "dockerModulesManagerAPI",
+                        "dockerTools",
+                        "dockerWindowsAPIProxyControl",
+                        "dockerDesktopBuildServer",
+                        "docker_sandboxes_sandboxd",
+                        "dockerAgent",
+                        "dockerVolume"
+                    ],
+    "service_before":  {
+                           "ok":  false,
+                           "timeout":  false,
+                           "exit_code":  null,
+                           "out":  "\r\nNOMBRE_DE_SERVICIO: com.docker.service \r\n        TIPO                         : 10  WIN32_OWN_PROCESS  \r\n        ESTADO                       : 1  STOPPED \r\n        CàDIGO_DE_SALIDA_DE_WIN32    : 1077  (0x435)\r\n        CàDIGO_DE_SALIDA_DEL_SERVICIO: 0  (0x0)\r\n        PUNTO_DE_CONTROL             : 0x0\r\n        ESPERA                       : 0x0\r\n",
+                           "err":  ""
+                       },
+    "service_start":  {
+                          "ok":  false,
+                          "timeout":  false,
+                          "exit_code":  null,
+                          "out":  "\r\nNOMBRE_SERVICIO: com.docker.service \r\n        TIPO               : 10  WIN32_OWN_PROCESS  \r\n        ESTADO             : 2  START_PENDING \r\n                                (NOT_STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN)\r\n        CàD_SALIDA_WIN32   : 0  (0x0)\r\n        CàD_SALIDA_SERVICIO: 0  (0x0)\r\n        PUNTO_COMPROB.     : 0x0\r\n        INDICACIàN_INICIO  : 0x7d0\r\n        PID                : 16844\r\n        MARCAS         : \r\n",
+                          "err":  ""
+                      },
+    "wsl_before":  {
+                       "ok":  false,
+                       "timeout":  false,
+                       "exit_code":  null,
+                       "out":  " \u0000 \u0000N\u0000A\u0000M\u0000E\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000S\u0000T\u0000A\u0000T\u0000E\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000V\u0000E\u0000R\u0000S\u0000I\u0000O\u0000N\u0000\r\u0000\n\u0000*\u0000 \u0000d\u0000o\u0000c\u0000k\u0000e\u0000r\u0000-\u0000d\u0000e\u0000s\u0000k\u0000t\u0000o\u0000p\u0000 \u0000 \u0000 \u0000 \u0000S\u0000t\u0000o\u0000p\u0000p\u0000e\u0000d\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u00002\u0000\r\u0000\n\u0000",
+                       "err":  ""
+                   },
+    "wsl_after":  {
+                      "ok":  false,
+                      "timeout":  false,
+                      "exit_code":  null,
+                      "out":  " \u0000 \u0000N\u0000A\u0000M\u0000E\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000S\u0000T\u0000A\u0000T\u0000E\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000V\u0000E\u0000R\u0000S\u0000I\u0000O\u0000N\u0000\r\u0000\n\u0000*\u0000 \u0000d\u0000o\u0000c\u0000k\u0000e\u0000r\u0000-\u0000d\u0000e\u0000s\u0000k\u0000t\u0000o\u0000p\u0000 \u0000 \u0000 \u0000 \u0000R\u0000u\u0000n\u0000n\u0000i\u0000n\u0000g\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u00002\u0000\r\u0000\n\u0000",
+                      "err":  ""
+                  },
+    "context_before":  {
+                           "ok":  false,
+                           "timeout":  false,
+                           "exit_code":  null,
+                           "out":  "NAME              DESCRIPTION                               DOCKER ENDPOINT                             ERROR\ndefault           Current DOCKER_HOST based configuration   npipe:////./pipe/docker_engine              \ndesktop-linux *   Docker Desktop                            npipe:////./pipe/dockerDesktopLinuxEngine   \n",
+                           "err":  ""
+                       },
+    "pipe_ready":  true,
+    "docker_info":  {
+                        "ok":  false,
+                        "timeout":  false,
+                        "exit_code":  null,
+                        "out":  "\"29.5.3\"\n",
+                        "err":  ""
+                    },
+    "server_ready":  false,
+    "decision":  "WARN_PIPE_EXISTS_BUT_DOCKER_INFO_FAILS",
+    "next":  "RESTART_DOCKER_DESKTOP_FROM_TROUBLESHOOT"
+}

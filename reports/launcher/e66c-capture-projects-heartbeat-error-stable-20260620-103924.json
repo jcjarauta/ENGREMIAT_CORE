@@ -1,0 +1,25 @@
+﻿{
+    "package_id":  "ENGREMIAT_UX_SYSTEM_001",
+    "stage":  "E66C_CAPTURE_PROJECTS_HEARTBEAT_ERROR_STABLE",
+    "status":  "PASS",
+    "exit_code":  0,
+    "probe":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e66c-probe-projects-functions-20260620-103924.ps1",
+    "stdout":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e66c-probe-stdout-20260620-103924.txt",
+    "stderr":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e66c-probe-stderr-20260620-103924.txt",
+    "result":  {
+                   "project":  "ENGREMIAT_PROJECT_heartbeat_demo",
+                   "phase":  "OBSIDIAN_SYNC",
+                   "score":  42,
+                   "worker":  "RUNNING",
+                   "block":  "BLOCK",
+                   "next":  "validar nodo markdown en obsidian-sync",
+                   "source":  "heartbeat",
+                   "cause":  "sin_modulos"
+               },
+    "error":  "",
+    "projects_launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1",
+    "heartbeat":  "C:\\ENGREMIAT_CORE\\documents\\worker-sync\\worker-heartbeat-latest.json",
+    "project_signal":  "C:\\ENGREMIAT_CORE\\documents\\worker-sync\\project-signal-latest.json",
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e66c-capture-projects-heartbeat-error-stable-20260620-103924.json",
+    "next":  "RUN_INTERACTIVE_PROJECTS_VIEW_AGAIN"
+}

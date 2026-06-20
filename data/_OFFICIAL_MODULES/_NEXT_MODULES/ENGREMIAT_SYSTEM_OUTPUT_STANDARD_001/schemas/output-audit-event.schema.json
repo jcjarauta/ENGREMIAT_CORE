@@ -1,0 +1,25 @@
+﻿{
+    "schema_id":  "output-audit-event.schema.v1",
+    "required":  [
+                     "event_id",
+                     "output_id",
+                     "output_type",
+                     "source",
+                     "status",
+                     "timestamp"
+                 ],
+    "fields":  [
+                   "event_id",
+                   "output_id",
+                   "output_type",
+                   "source_module",
+                   "source_tool",
+                   "source_model",
+                   "human_actor",
+                   "validation_status",
+                   "gate_status",
+                   "decision",
+                   "evidence",
+                   "timestamp"
+               ]
+}

@@ -1,0 +1,21 @@
+{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_005E",
+    "stage":  "E02_LOCAL_APPLY_DRY_RUN",
+    "status":  "DEFINED",
+    "purpose":  "Simular apply local controlado sin activar modulos reales",
+    "mode":  "DRY_RUN_ONLY",
+    "allowed_now":  [
+                        "read_previous_plan",
+                        "write_dry_run_artifacts",
+                        "validate_apply_steps",
+                        "generate_dashboard"
+                    ],
+    "blocked_now":  [
+                        "real_apply",
+                        "core_changes",
+                        "external_network",
+                        "git_write",
+                        "remote_worker_execution"
+                    ],
+    "human_gate_required_for_real_apply":  true
+}

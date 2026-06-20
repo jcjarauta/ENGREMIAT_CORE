@@ -1,0 +1,28 @@
+﻿[
+    {
+        "card_id":  "KB-PREVIEW-001",
+        "lane":  "BACKLOG",
+        "title":  "Revisar roadmap IA local",
+        "description":  "Validar que el roadmap generado por Ollama representa bien el proyecto humano.",
+        "source":  "ollama-roadmap-preview.latest.json",
+        "priority":  "ALTA",
+        "risk":  "LOW",
+        "human_gate":  "REVIEW_REQUIRED",
+        "status":  "PENDING",
+        "evidence":  "dashboard de revisión",
+        "next_action":  "aprobar, editar o diferir"
+    },
+    {
+        "card_id":  "KB-PREVIEW-002",
+        "lane":  "GATED_PREVIEW",
+        "title":  "Preparar worker packet preview",
+        "description":  "Convertir el roadmap aprobado en paquete de trabajo sin ejecución real.",
+        "source":  "ollama-roadmap-worker-packet-preview.json",
+        "priority":  "MEDIA",
+        "risk":  "MEDIUM",
+        "human_gate":  "AUTHORIZATION_REQUIRED",
+        "status":  "NO_GO",
+        "evidence":  "worker packet preview",
+        "next_action":  "mantener bloqueado hasta autorización"
+    }
+]

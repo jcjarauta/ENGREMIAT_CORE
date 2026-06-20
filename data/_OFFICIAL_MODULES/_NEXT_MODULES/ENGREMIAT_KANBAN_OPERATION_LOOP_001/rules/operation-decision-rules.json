@@ -1,0 +1,10 @@
+﻿{
+    "select":  "top_priority_recommendation",
+    "default_decision":  "PENDING",
+    "allowed_human_decisions":  [
+                                    "GO",
+                                    "DEFER",
+                                    "BLOCK"
+                                ],
+    "execute_without_decision":  false
+}

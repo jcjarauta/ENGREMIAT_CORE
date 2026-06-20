@@ -1,0 +1,33 @@
+﻿{
+    "objective":  "ENGREMIAT_MULTI_WORKER_ORCHESTRATION_AND_REAL_VALUE_PIPELINE_066_075",
+    "stage":  "E71",
+    "readiness":  100,
+    "decision":  "GO_E71_VALUE_PIPELINE_DASHBOARD_READY",
+    "next":  "E72_KANBAN_REAL_WRITE_AUTHORIZATION_LAB",
+    "value_pipeline_ready":  true,
+    "dashboard":  "dashboard\\value-pipeline\\index.html",
+    "ready_sources":  6,
+    "missing_sources":  [
+                            "reports/proposal-merge-068/proposal-conflict-check-report.json"
+                        ],
+    "artifacts":  [
+                      "data\\value-pipeline-071\\value-pipeline-model.json",
+                      "data\\value-pipeline-071\\value-pipeline-index.json",
+                      "dashboard\\value-pipeline\\index.html",
+                      "data\\value-pipeline-071\\receipts\\value-pipeline-dashboard-receipt.json"
+                  ],
+    "security":  {
+                     "apply_executed":  false,
+                     "batch_apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "worker_executed":  false,
+                     "dashboard_view_only":  true,
+                     "pipeline_executes":  false,
+                     "sensitive_actions_executed":  false,
+                     "human_decision_required":  true
+                 },
+    "created_at":  "2026-06-17T12:40:25"
+}

@@ -1,0 +1,40 @@
+﻿{
+    "rules_id":  "need-detection-rules.v1",
+    "rules":  [
+                  {
+                      "rule_id":  "R001",
+                      "need_type":  "COMPOSITION_GAP",
+                      "if":  "resource_library_exists AND composer_missing",
+                      "then":  "need_resource_composer",
+                      "priority":  "HIGH"
+                  },
+                  {
+                      "rule_id":  "R002",
+                      "need_type":  "MISSING_RESOURCE",
+                      "if":  "next_objective_mentions_resource AND resource_missing",
+                      "then":  "need_missing_resource",
+                      "priority":  "MEDIUM"
+                  },
+                  {
+                      "rule_id":  "R003",
+                      "need_type":  "MISSING_VALIDATOR",
+                      "if":  "module_without_validator",
+                      "then":  "need_validator",
+                      "priority":  "HIGH"
+                  },
+                  {
+                      "rule_id":  "R004",
+                      "need_type":  "DOCUMENTATION_GAP",
+                      "if":  "closed_module_without_manual",
+                      "then":  "need_manual",
+                      "priority":  "MEDIUM"
+                  },
+                  {
+                      "rule_id":  "R005",
+                      "need_type":  "SYSTEM_REPRODUCTION_GAP",
+                      "if":  "factory_library_gates_ready AND composer_missing",
+                      "then":  "need_composer_before_ollama",
+                      "priority":  "HIGH"
+                  }
+              ]
+}

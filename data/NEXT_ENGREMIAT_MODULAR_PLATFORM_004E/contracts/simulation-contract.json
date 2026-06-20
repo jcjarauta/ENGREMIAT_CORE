@@ -1,0 +1,20 @@
+{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_004E",
+    "mode":  "LOCAL_SIMULATION_ONLY",
+    "status":  "DEFINED",
+    "purpose":  "Simular composiciones modulares usando ENGREMIAT_MODULAR_PLATFORM_001 como base congelada",
+    "source_base":  "ENGREMIAT_MODULAR_PLATFORM_001",
+    "blocked_actions":  [
+                            "core_changes",
+                            "external_network",
+                            "git_write",
+                            "real_module_activation",
+                            "remote_worker_execution"
+                        ],
+    "allowed_actions":  [
+                            "read_base_audit",
+                            "write_local_simulation_artifacts",
+                            "score_compositions",
+                            "generate_dashboard"
+                        ]
+}

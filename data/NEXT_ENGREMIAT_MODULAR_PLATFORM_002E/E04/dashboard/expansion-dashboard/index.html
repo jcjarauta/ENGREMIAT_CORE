@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang='es'>
+<head>
+<meta charset='utf-8'/>
+<meta name='viewport' content='width=device-width, initial-scale=1'/>
+<title>ENGREMIAT NEXT Modular Platform 002E</title>
+<style>
+body{font-family:Segoe UI,Arial,sans-serif;background:#0f172a;color:#e2e8f0;margin:0;padding:24px}
+.card{max-width:1200px;margin:auto;background:#111827;border:1px solid #334155;border-radius:18px;padding:20px;box-shadow:0 12px 36px rgba(0,0,0,.25)}
+h1,h2{margin:0 0 8px}
+.muted{color:#94a3b8}
+pre{background:#020617;padding:14px;border-radius:12px;overflow:auto;white-space:pre-wrap}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.box{border:1px solid #334155;border-radius:14px;padding:14px;background:#0b1220}
+.ok{color:#4ade80}
+</style>
+</head>
+<body>
+<div class='card'>
+<h1>ENGREMIAT NEXT Modular Platform 002E</h1>
+<p class='muted'>Expansion, composition, orchestration and closure for the next modular layer.</p>
+<div class='grid'>
+<div class='box'><h2>E01</h2><pre>{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_002E",
+    "stage":  "E01",
+    "block":  "B01.1",
+    "module_id":  "ENG-MOD-REG-001",
+    "module_name":  "Module Catalog Expansion",
+    "purpose":  "Extender el registro maestro con catálogo de capas, familias y roles",
+    "model":  {
+                  "layer_catalog":  true,
+                  "family_catalog":  true,
+                  "role_catalog":  true,
+                  "relation_catalog":  true,
+                  "local_first":  true
+              },
+    "fields":  [
+                   "family_id",
+                   "family_name",
+                   "layer",
+                   "role",
+                   "description",
+                   "parent_family_id",
+                   "compatibility_tags",
+                   "state",
+                   "versioning_policy"
+               ],
+    "acceptance_criteria":  [
+                                "Clasifica módulos por familia",
+                                "Relaciona capas y roles",
+                                "Mantiene compatibilidad trazable"
+                            ]
+}</pre><pre>{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_002E",
+    "stage":  "E01",
+    "block":  "B01.2",
+    "module_id":  "ENG-MOD-REG-001",
+    "module_name":  "Compatibility and Scope Matrix",
+    "purpose":  "Definir compatibilidad entre módulos, capas y objetivos de negocio",
+    "model":  {
+                  "module_compatibility":  true,
+                  "layer_compatibility":  true,
+                  "objective_scope":  true,
+                  "dependency_scope":  true,
+                  "swap_scope":  true
+              },
+    "dimensions":  [
+                       "module",
+                       "version",
+                       "layer",
+                       "objective",
+                       "state",
+                       "dependency",
+                       "risk"
+                   ],
+    "acceptance_criteria":  [
+                                "Evita acoples frágiles",
+                                "Permite filtrado por objetivo",
+                                "Protege el alcance operativo"
+                            ]
+}</pre></div>
+<div class='box'><h2>E02</h2><pre>{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_002E",
+    "stage":  "E02",
+    "block":  "B02.1",
+    "module_id":  "ENG-MOD-SEL-001",
+    "module_name":  "Module Selector",
+    "purpose":  "Construir el selector de módulos según objetivo, estado y compatibilidad",
+    "inputs":  [
+                   "objective",
+                   "state",
+                   "compatibility",
+                   "layer"
+               ],
+    "outputs":  [
+                    "selected_modules",
+                    "selection_reason",
+                    "blocked_modules"
+                ],
+    "control":  {
+                    "local_first":  true,
+                    "no_external_network":  true,
+                    "human_validation_required":  true
+                },
+    "acceptance_criteria":  [
+                                "Selecciona por objetivo",
+                                "Respeta compatibilidad",
+                                "Explica exclusiones"
+                            ]
+}</pre><pre>{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_002E",
+    "stage":  "E02",
+    "block":  "B02.2",
+    "module_id":  "ENG-MOD-SEL-001",
+    "module_name":  "Dependency Resolver",
+    "purpose":  "Resolver dependencias, conflictos y orden de activación",
+    "rules":  [
+                  "dependencies_first",
+                  "conflicts_block_activation",
+                  "priority_breaks_ties",
+                  "version_range_must_match",
+                  "pause_before_swap_if_required"
+              ],
+    "outputs":  [
+                    "resolved_order",
+                    "blocked_conflicts",
+                    "activation_plan_seed"
+                ],
+    "acceptance_criteria":  [
+                                "Orden estable",
+                                "Conflictos visibles",
+                                "Dependencias resueltas antes de activar"
+                            ]
+}</pre></div>
+<div class='box'><h2>E03</h2><pre>{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_002E",
+    "stage":  "E03",
+    "block":  "B03.1",
+    "module_id":  "ENG-MOD-ACT-001",
+    "module_name":  "Activation Plan Builder",
+    "purpose":  "Crear planes de activación y desactivación controlados",
+    "steps":  [
+                  "select",
+                  "validate",
+                  "stage",
+                  "activate",
+                  "verify",
+                  "record"
+              ],
+    "evidence":  [
+                     "activation_plan.json",
+                     "validation_snapshot.json",
+                     "result_package.json"
+                 ],
+    "control":  {
+                    "local_first":  true,
+                    "no_external_network":  true,
+                    "no_git_write":  true,
+                    "human_gate_required":  true
+                },
+    "acceptance_criteria":  [
+                                "Plan reproducible",
+                                "Paso a paso visible",
+                                "Evidencia trazable"
+                            ]
+}</pre><pre>{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_002E",
+    "stage":  "E03",
+    "block":  "B03.2",
+    "module_id":  "ENG-MOD-SWP-001",
+    "module_name":  "Swap and Rollback Manager",
+    "purpose":  "Gestionar sustitución, rollback y retirada de módulos",
+    "policy":  {
+                   "swap_allowed":  true,
+                   "rollback_allowed":  true,
+                   "retire_allowed":  true,
+                   "compatibility_required":  true,
+                   "state_snapshot_required":  true
+               },
+    "actions":  [
+                    "replace",
+                    "rollback",
+                    "pause",
+                    "retire",
+                    "detach"
+                ],
+    "acceptance_criteria":  [
+                                "Swap seguro por defecto",
+                                "Rollback explícito",
+                                "Retirada trazable"
+                            ]
+}</pre></div>
+</div>
+</div>
+</body>
+</html>

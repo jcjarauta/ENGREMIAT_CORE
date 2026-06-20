@@ -1,0 +1,41 @@
+﻿{
+    "schema":  "engremiat.useful_output_proposal.v1",
+    "objective":  "ENGREMIAT_REAL_VALUE_TASK_EXECUTION_LOOP_122_131_REAL_USEFUL_OUTPUT",
+    "stage":  "E124",
+    "block":  "B124.1",
+    "step":  "P124.1.1",
+    "created_at":  "2026-06-17T14:25:43",
+    "proposal_id":  "USEFUL-OUTPUT-PROPOSAL-124-001",
+    "source_readiness":  "reports/useful-input-123/e123-useful-input-readiness-report.json",
+    "source_readiness_found":  true,
+    "input_package_found":  true,
+    "input_draft_found":  true,
+    "contract_found":  true,
+    "proposal_status":  "PROPOSED",
+    "execution_mode":  "CONTROLLED_PROPOSAL_ONLY",
+    "execution_authorized":  false,
+    "execution_allowed_now":  false,
+    "title":  "Generate first useful local Markdown output",
+    "purpose":  "Convert the editable input draft into a human-readable useful output after explicit authorization.",
+    "target_output":  "data/useful-apply-126/useful-output.md",
+    "expected_value":  "A reusable continuity document that summarizes context, human use, source context, and next action.",
+    "source_excerpt":  "# Useful Input Draft\n\n## Contexto\nVenimos de cerrar ENGREMIAT_REAL_VALUE_TASK_EXECUTION_LOOP_112_121 con loop completo validado: propuesta, autorizacion, apply local reversible, postcheck, rollback drill, evidencia, dashboard, regresion y cierre.\n\n## Necesidad humana\nConvertir la evidencia tecnica del ciclo anterior en un output util, legible y accionable para mantener contexto y preparar el siguiente ciclo de trabajo.\n\n## Output esperado\nCrear un documento Markdown util que resuma el estado, ex",
+    "required_authorizations":  [
+                                    "E125_HUMAN_APPROVAL_BEFORE_USEFUL_APPLY"
+                                ],
+    "risks":  [
+                  {
+                      "risk":  "OUTPUT_COULD_BE_TREATED_AS_FINAL_WITHOUT_REVIEW",
+                      "level":  "MEDIUM",
+                      "mitigation":  "Human authorization and postcheck required"
+                  },
+                  {
+                      "risk":  "SCOPE_EXPANSION",
+                      "level":  "HIGH",
+                      "mitigation":  "Local Markdown output only"
+                  }
+              ],
+    "local_only":  true,
+    "network_used":  false,
+    "git_write":  false
+}

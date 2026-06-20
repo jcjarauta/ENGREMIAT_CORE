@@ -1,0 +1,24 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_FINAL_026_035",
+    "stage":  "E31",
+    "created_at":  "2026-06-17T11:12:34.7808940+02:00",
+    "memory":  "error-memory",
+    "purpose":  "Registrar errores recurrentes y reglas de prevencion para no repetir fallos tecnicos.",
+    "required_fields":  [
+                            "error_id",
+                            "error_signature",
+                            "where",
+                            "root_cause",
+                            "repair_used",
+                            "files_affected",
+                            "prevention_rule",
+                            "status",
+                            "created_at"
+                        ],
+    "rules":  [
+                  "registrar errores recurrentes",
+                  "convertir reparacion en prevention_rule",
+                  "consultar hints antes de repetir scripts complejos",
+                  "fail_closed ante error"
+              ]
+}

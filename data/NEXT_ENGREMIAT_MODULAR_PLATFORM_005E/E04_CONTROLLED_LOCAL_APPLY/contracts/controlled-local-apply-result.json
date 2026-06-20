@@ -1,0 +1,15 @@
+{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_005E",
+    "stage":  "E04_CONTROLLED_LOCAL_APPLY",
+    "artifact":  "controlled-local-apply-result.json",
+    "status":  "APPLIED_LOCAL_ARTIFACTS_ONLY",
+    "authorization":  "AUTORIZO_005E_LOCAL_APPLY_CONTROLLED_NO_GIT_NO_NETWORK_NO_CORE",
+    "applied_changes":  [
+                            "created applied-state/module-activation-state.json",
+                            "created applied-state/composition-state.json",
+                            "created reports/controlled-local-apply-report.json",
+                            "created rollback package"
+                        ],
+    "real_module_activation_executed":  false,
+    "meaning":  "Apply local controlado registra estado simulado/aplicado en artefactos, sin activar modulos reales ni tocar core"
+}

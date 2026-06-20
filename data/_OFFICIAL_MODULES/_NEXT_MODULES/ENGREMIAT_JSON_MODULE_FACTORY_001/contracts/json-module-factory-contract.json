@@ -1,0 +1,43 @@
+﻿{
+    "contract_id":  "json-module-factory-contract.v1",
+    "module_id":  "ENGREMIAT_JSON_MODULE_FACTORY_001",
+    "input_json_required":  [
+                                "module_id",
+                                "name",
+                                "kind",
+                                "status",
+                                "target_path",
+                                "purpose",
+                                "expected_output",
+                                "priority",
+                                "risk",
+                                "gates",
+                                "decision"
+                            ],
+    "output_structure":  [
+                             "module.json",
+                             "README.md",
+                             "contracts/module-contract.json",
+                             "schemas/module-schema.json",
+                             "evidence/",
+                             "reports/",
+                             "gates/module-gate.json"
+                         ],
+    "allowed_input_decisions":  [
+                                    "CREATE_CANDIDATE_JSON"
+                                ],
+    "blocked_if":  [
+                       "requires_core_change=true",
+                       "requires_real_write=true",
+                       "requires_external_api=true",
+                       "decision!=CREATE_CANDIDATE_JSON"
+                   ],
+    "rules":  [
+                  "Crear solo estructura local candidata",
+                  "No activar modulo",
+                  "No escribir en intake real",
+                  "No tocar core",
+                  "No usar Git",
+                  "No red externa"
+              ]
+}

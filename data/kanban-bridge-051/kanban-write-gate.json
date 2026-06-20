@@ -1,0 +1,25 @@
+﻿{
+    "objective":  "ENGREMIAT_POST_MVP_OPERATIONAL_DAILY_LOOP_046_055",
+    "stage":  "E51",
+    "gate_id":  "E51_KANBAN_WRITE_GATE_001",
+    "status":  "LOCKED_PREVIEW_ONLY",
+    "authorized":  false,
+    "default_decision":  "DEFER",
+    "allowed_decisions":  [
+                              "APPROVE_PREVIEW_ONLY",
+                              "APPROVE_REAL_WRITE_FUTURE",
+                              "REPAIR",
+                              "DEFER",
+                              "REJECT"
+                          ],
+    "current_decision":  "DEFER",
+    "reason":  "No escritura real Kanban en E51; solo preview local",
+    "kanban_real_write":  false,
+    "requires_explicit_human_authorization_for_real_write":  true,
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "created_at":  "2026-06-17T12:01:43"
+}

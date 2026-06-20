@@ -1,0 +1,26 @@
+﻿{
+    "objective":  "ENGREMIAT_POST_MVP_OPERATIONAL_DAILY_LOOP_046_055",
+    "stage":  "E47",
+    "readiness":  100,
+    "decision":  "GO_E47_OPERATIONAL_INBOX_READY",
+    "next":  "E48_DECISION_HISTORY",
+    "operational_inbox_ready":  true,
+    "items_count":  3,
+    "artifacts":  [
+                      "data\\operational-inbox-047\\operational-inbox-model.json",
+                      "data\\operational-inbox-047\\inbox-items.jsonl",
+                      "dashboard\\operational-inbox\\index.html",
+                      "data\\operational-inbox-047\\receipts\\operational-inbox-receipt.json"
+                  ],
+    "security":  {
+                     "apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "sensitive_actions_executed":  false,
+                     "inbox_local_only":  true,
+                     "human_decision_final":  true
+                 },
+    "created_at":  "2026-06-17T11:57:26"
+}

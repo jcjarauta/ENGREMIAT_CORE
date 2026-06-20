@@ -1,0 +1,25 @@
+﻿{
+    "objective":  "ENGREMIAT_NEXT_REAL_VALUE_OPERATIONALIZATION_076_085",
+    "stage":  "E76",
+    "name":  "Operational Value Queue",
+    "version":  "0.76.0-local",
+    "purpose":  "Convertir el pipeline en cola diaria de valor operativo sin ejecutar tareas automaticamente.",
+    "queue_executes":  false,
+    "daily_value_oriented":  true,
+    "human_governed":  true,
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "kanban_real_write":  false,
+    "allowed_status":  [
+                           "PENDING",
+                           "READY_FOR_HUMAN_REVIEW",
+                           "DEFERRED",
+                           "APPROVED_FOR_FUTURE_PREVIEW",
+                           "BLOCKED"
+                       ],
+    "created_utc":  "2026-06-17T10:51:51.1618790Z"
+}

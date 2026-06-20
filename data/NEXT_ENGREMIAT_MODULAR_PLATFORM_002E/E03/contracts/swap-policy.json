@@ -1,0 +1,27 @@
+{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_002E",
+    "stage":  "E03",
+    "block":  "B03.2",
+    "module_id":  "ENG-MOD-SWP-001",
+    "module_name":  "Swap and Rollback Manager",
+    "purpose":  "Gestionar sustitución, rollback y retirada de módulos",
+    "policy":  {
+                   "swap_allowed":  true,
+                   "rollback_allowed":  true,
+                   "retire_allowed":  true,
+                   "compatibility_required":  true,
+                   "state_snapshot_required":  true
+               },
+    "actions":  [
+                    "replace",
+                    "rollback",
+                    "pause",
+                    "retire",
+                    "detach"
+                ],
+    "acceptance_criteria":  [
+                                "Swap seguro por defecto",
+                                "Rollback explícito",
+                                "Retirada trazable"
+                            ]
+}

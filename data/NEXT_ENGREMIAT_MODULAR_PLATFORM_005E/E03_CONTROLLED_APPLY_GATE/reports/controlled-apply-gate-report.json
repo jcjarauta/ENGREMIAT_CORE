@@ -1,0 +1,19 @@
+{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_005E",
+    "stage":  "E03_CONTROLLED_APPLY_GATE",
+    "status":  "PASS_GATE_PREPARED",
+    "authorization_status":  "PENDING_EXPLICIT_HUMAN_AUTHORIZATION",
+    "real_apply_executed":  false,
+    "checks":  {
+                   "previous_dry_run_pass":  true,
+                   "snapshot_plan_exists":  true,
+                   "rollback_required":  true,
+                   "human_gate_prepared":  true,
+                   "authorization_missing":  true,
+                   "real_apply_executed":  false,
+                   "no_core_changes":  true,
+                   "no_external_network":  true,
+                   "no_git_write":  true
+               },
+    "next":  "E04_CONTROLLED_LOCAL_APPLY_ONLY_IF_AUTHORIZED"
+}

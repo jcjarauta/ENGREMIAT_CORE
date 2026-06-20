@@ -1,0 +1,176 @@
+﻿{
+    "nodes":  [
+                  {
+                      "id":  "n-human",
+                      "x":  0,
+                      "y":  0,
+                      "width":  260,
+                      "height":  100,
+                      "type":  "text",
+                      "text":  "HUMANO`nDefine intención, revisa gates y decide.",
+                      "color":  "1"
+                  },
+                  {
+                      "id":  "n-control",
+                      "x":  360,
+                      "y":  0,
+                      "width":  280,
+                      "height":  100,
+                      "type":  "text",
+                      "text":  "CONTROL HUB`nUn solo espacio operativo humano.",
+                      "color":  "2"
+                  },
+                  {
+                      "id":  "n-intake",
+                      "x":  720,
+                      "y":  "-120",
+                      "width":  260,
+                      "height":  100,
+                      "type":  "text",
+                      "text":  "INTAKE`nRecoge y normaliza intención.",
+                      "color":  "3"
+                  },
+                  {
+                      "id":  "n-ollama",
+                      "x":  720,
+                      "y":  40,
+                      "width":  260,
+                      "height":  100,
+                      "type":  "text",
+                      "text":  "OLLAMA LOCAL`nPropone roadmap y estructura.",
+                      "color":  "4"
+                  },
+                  {
+                      "id":  "n-kanban",
+                      "x":  1080,
+                      "y":  "-120",
+                      "width":  260,
+                      "height":  100,
+                      "type":  "text",
+                      "text":  "KANBAN`nVista humana de tarjetas.",
+                      "color":  "5"
+                  },
+                  {
+                      "id":  "n-obsidian",
+                      "x":  1080,
+                      "y":  40,
+                      "width":  260,
+                      "height":  100,
+                      "type":  "text",
+                      "text":  "OBSIDIAN`nMemoria relacional navegable.",
+                      "color":  "6"
+                  },
+                  {
+                      "id":  "n-worker",
+                      "x":  1440,
+                      "y":  "-120",
+                      "width":  260,
+                      "height":  100,
+                      "type":  "text",
+                      "text":  "WORKERS`nCline/Ollama/otros bajo gate.",
+                      "color":  "1"
+                  },
+                  {
+                      "id":  "n-evidence",
+                      "x":  1440,
+                      "y":  40,
+                      "width":  260,
+                      "height":  100,
+                      "type":  "text",
+                      "text":  "EVIDENCIA`nReports, receipts, manifests.",
+                      "color":  "2"
+                  },
+                  {
+                      "id":  "n-core",
+                      "x":  720,
+                      "y":  220,
+                      "width":  300,
+                      "height":  100,
+                      "type":  "text",
+                      "text":  "ENGREMIAT CORE`nFuente canónica: data/reports/exports/dashboard.",
+                      "color":  "3"
+                  }
+              ],
+    "edges":  [
+                  {
+                      "id":  "e1",
+                      "fromNode":  "n-human",
+                      "fromSide":  "right",
+                      "toNode":  "n-control",
+                      "toSide":  "left",
+                      "label":  "opera"
+                  },
+                  {
+                      "id":  "e2",
+                      "fromNode":  "n-control",
+                      "fromSide":  "right",
+                      "toNode":  "n-intake",
+                      "toSide":  "left",
+                      "label":  "crea"
+                  },
+                  {
+                      "id":  "e3",
+                      "fromNode":  "n-intake",
+                      "fromSide":  "right",
+                      "toNode":  "n-ollama",
+                      "toSide":  "left",
+                      "label":  "normaliza"
+                  },
+                  {
+                      "id":  "e4",
+                      "fromNode":  "n-ollama",
+                      "fromSide":  "right",
+                      "toNode":  "n-kanban",
+                      "toSide":  "left",
+                      "label":  "genera tarjetas"
+                  },
+                  {
+                      "id":  "e5",
+                      "fromNode":  "n-ollama",
+                      "fromSide":  "right",
+                      "toNode":  "n-obsidian",
+                      "toSide":  "left",
+                      "label":  "genera memoria"
+                  },
+                  {
+                      "id":  "e6",
+                      "fromNode":  "n-kanban",
+                      "fromSide":  "right",
+                      "toNode":  "n-worker",
+                      "toSide":  "left",
+                      "label":  "selecciona tarea"
+                  },
+                  {
+                      "id":  "e7",
+                      "fromNode":  "n-worker",
+                      "fromSide":  "right",
+                      "toNode":  "n-evidence",
+                      "toSide":  "left",
+                      "label":  "devuelve receipt"
+                  },
+                  {
+                      "id":  "e8",
+                      "fromNode":  "n-evidence",
+                      "fromSide":  "right",
+                      "toNode":  "n-obsidian",
+                      "toSide":  "left",
+                      "label":  "enlaza"
+                  },
+                  {
+                      "id":  "e9",
+                      "fromNode":  "n-core",
+                      "fromSide":  "right",
+                      "toNode":  "n-control",
+                      "toSide":  "left",
+                      "label":  "estado"
+                  },
+                  {
+                      "id":  "e10",
+                      "fromNode":  "n-core",
+                      "fromSide":  "right",
+                      "toNode":  "n-obsidian",
+                      "toSide":  "left",
+                      "label":  "fuente canónica"
+                  }
+              ]
+}

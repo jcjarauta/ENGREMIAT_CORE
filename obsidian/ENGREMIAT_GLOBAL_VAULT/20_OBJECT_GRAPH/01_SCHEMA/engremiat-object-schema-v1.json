@@ -1,0 +1,72 @@
+﻿{
+    "schema_id":  "ENGREMIAT_OBSIDIAN_OBJECT_SCHEMA_V1",
+    "purpose":  "Objeto comun para representar piezas operativas ENGREMIAT en Obsidian",
+    "required_fields":  [
+                            "id",
+                            "type",
+                            "title",
+                            "status",
+                            "scope",
+                            "priority",
+                            "risk",
+                            "depends_on",
+                            "related_modules",
+                            "related_workers",
+                            "related_skills",
+                            "outputs",
+                            "evidence",
+                            "gates",
+                            "next_action"
+                        ],
+    "types":  [
+                  "system_need",
+                  "module",
+                  "worker",
+                  "skill",
+                  "bundle",
+                  "gate",
+                  "evidence",
+                  "decision",
+                  "context_pack"
+              ],
+    "statuses":  [
+                     "IDEA",
+                     "READY",
+                     "BLOCKED",
+                     "LEARNING",
+                     "IN_PROGRESS",
+                     "DONE",
+                     "DEFER",
+                     "NO_GO"
+                 ],
+    "scopes":  [
+                   "core",
+                   "module",
+                   "worker",
+                   "ui",
+                   "knowledge",
+                   "automation",
+                   "evidence",
+                   "governance"
+               ],
+    "risk_levels":  [
+                        "LOW",
+                        "MEDIUM",
+                        "HIGH"
+                    ],
+    "rules":  [
+                  "Cada objeto debe tener id estable",
+                  "Cada objeto debe poder enlazarse con otros objetos",
+                  "Kanban debe derivarse de objetos Obsidian, no al reves",
+                  "Cline solo debe recibir paquetes desde objetos visibles",
+                  "IA local consulta paquetes autocontenidos, no knowledge ruidoso"
+              ],
+    "safety":  {
+                   "analysis_only":  true,
+                   "git":  false,
+                   "network":  false,
+                   "worker_real_execution":  false,
+                   "auto_apply":  false
+               },
+    "created_at":  "2026-06-18T20:59:29"
+}

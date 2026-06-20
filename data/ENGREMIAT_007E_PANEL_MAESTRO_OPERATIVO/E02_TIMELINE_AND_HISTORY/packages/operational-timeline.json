@@ -1,0 +1,79 @@
+{
+    "package_id":  "ENGREMIAT_007E_PANEL_MAESTRO_OPERATIVO",
+    "stage":  "E02_TIMELINE_AND_HISTORY",
+    "artifact":  "operational-timeline.json",
+    "status":  "PASS",
+    "events":  [
+                   {
+                       "order":  1,
+                       "package_id":  "ENGREMIAT_MODULAR_PLATFORM_001",
+                       "label":  "Base modular congelada",
+                       "status":  "CLOSED",
+                       "type":  "foundation",
+                       "result":  "registry_ingest_queue_control_worker_memory_kanban_close"
+                   },
+                   {
+                       "order":  2,
+                       "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_004E",
+                       "label":  "Simulador composicion modular",
+                       "status":  "CLOSED",
+                       "type":  "simulation",
+                       "result":  "winner_COMP_CORE_CONTROL"
+                   },
+                   {
+                       "order":  3,
+                       "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_005E",
+                       "label":  "Apply local controlado",
+                       "status":  "CLOSED",
+                       "type":  "controlled_apply",
+                       "result":  "artifact_apply_no_real_activation"
+                   },
+                   {
+                       "order":  4,
+                       "package_id":  "ENGREMIAT_MODULAR_PLATFORM_MANUALS_001",
+                       "label":  "Manuales consolidados",
+                       "status":  "CLOSED",
+                       "type":  "manuals",
+                       "result":  "human_machine_context"
+                   },
+                   {
+                       "order":  5,
+                       "package_id":  "CIERRE_DOCUMENTAL_001",
+                       "label":  "Cierre documental",
+                       "status":  "CLOSED",
+                       "type":  "documentation_close",
+                       "result":  "context_ready"
+                   },
+                   {
+                       "order":  6,
+                       "package_id":  "006E_VALIDACION_OPERATIVA_VISUAL",
+                       "label":  "Validacion visual",
+                       "status":  "PASS",
+                       "type":  "visual_validation",
+                       "result":  "readiness_100"
+                   },
+                   {
+                       "order":  7,
+                       "package_id":  "ENGREMIAT_OPERATIONAL_MASTER_PANEL_001",
+                       "label":  "Panel maestro base",
+                       "status":  "CLOSED",
+                       "type":  "master_panel",
+                       "result":  "readiness_100"
+                   },
+                   {
+                       "order":  8,
+                       "package_id":  "ENGREMIAT_007E_PANEL_MAESTRO_OPERATIVO",
+                       "label":  "Panel maestro operativo",
+                       "status":  "IN_PROGRESS",
+                       "type":  "operational_panel",
+                       "result":  "timeline_and_history"
+                   }
+               ],
+    "summary":  {
+                    "events_count":  8,
+                    "closed_count":  6,
+                    "pass_count":  1,
+                    "in_progress_count":  1,
+                    "next":  "E03_DECISION_CENTER"
+                }
+}

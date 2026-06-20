@@ -1,0 +1,26 @@
+{
+    "package_id":  "ENGREMIAT_KNOWLEDGE_TO_TASK_PACKET_001",
+    "stage":  "E03_STRUCTURED_OUTPUT_DRY_RUN",
+    "artifact":  "structured-output-dry-run-contract.json",
+    "status":  "DEFINED",
+    "purpose":  "Simular una salida structured output de Ollama/OpenWebUI sin inferencia real y validarla contra task-packet-schema",
+    "mode":  "DRY_RUN_ONLY",
+    "input":  "task-packet-schema.json",
+    "output":  "structured-output-task-packet.json",
+    "blocked_actions":  [
+                            "real_ollama_inference",
+                            "openwebui_call",
+                            "external_network",
+                            "git_write",
+                            "core_changes",
+                            "real_obsidian_write",
+                            "real_kanban_write",
+                            "real_cline_send"
+                        ],
+    "allowed_actions":  [
+                            "write_local_sample_json",
+                            "validate_local_sample",
+                            "write_report",
+                            "write_dashboard"
+                        ]
+}

@@ -1,0 +1,51 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_REAL_WORKER_DAILY_VALUE_LOOP_056_065",
+    "stage":  "E62",
+    "stage_name":  "Kanban Write Simulation With Rollback",
+    "purpose":  "Simular escritura Kanban con rollback sin tocar Kanban real",
+    "model_id":  "E62_KANBAN_WRITE_SIMULATION_MODEL",
+    "simulation_only":  true,
+    "real_kanban_target":  false,
+    "source":  "dashboard/daily-value/index.html and local evidence",
+    "allowed_now":  [
+                        "create local simulated board state",
+                        "create simulated write result",
+                        "create rollback simulation"
+                    ],
+    "forbidden_now":  [
+                          "external_kanban_write",
+                          "kanban_real_write",
+                          "remote_execution",
+                          "external_network",
+                          "git_write",
+                          "auto_apply"
+                      ],
+    "simulated_actions":  [
+                              {
+                                  "from":  "READY",
+                                  "card":  "E62",
+                                  "to":  "DONE",
+                                  "action":  "move_card"
+                              },
+                              {
+                                  "from":  "PENDING",
+                                  "card":  "E63",
+                                  "to":  "NEXT",
+                                  "action":  "set_next"
+                              }
+                          ],
+    "security":  {
+                     "apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "kanban_real_write":  false,
+                     "kanban_write_simulated":  true,
+                     "sensitive_actions_executed":  false,
+                     "rollback_ready":  true,
+                     "human_gate_required_for_real_write":  true
+                 },
+    "next":  "E63_RELEASE_MANIFEST_AND_VERSIONING",
+    "created_at":  "2026-06-17T12:25:13"
+}

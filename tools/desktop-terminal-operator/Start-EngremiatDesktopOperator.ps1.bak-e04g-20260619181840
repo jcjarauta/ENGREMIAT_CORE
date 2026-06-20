@@ -1,0 +1,14 @@
+﻿$ErrorActionPreference="Stop"
+[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+$ScriptDir=Split-Path -Parent $MyInvocation.MyCommand.Path
+$Root=(Resolve-Path (Join-Path $ScriptDir "..\..")).Path
+Set-Location -LiteralPath $Root
+$Router=Join-Path $Root "tools\desktop-terminal-operator\eng-router.ps1"
+Clear-Host
+Write-Host "ENGREMIAT TERMINAL OPERATOR" -ForegroundColor Cyan
+Write-Host ("Workspace: "+$Root) -ForegroundColor DarkCyan
+Write-Host ""
+& powershell -NoProfile -ExecutionPolicy Bypass -File $Router estado
+Write-Host ""
+while($true){$cmd=(Read-Host (& { try { $state=Join-Path $Root "data\operator-state\active-context.json"; if(Test-Path -LiteralPath $state){ $s=Get-Content -LiteralPath $state -Raw -Encoding UTF8|ConvertFrom-Json; if($s.active_project){ $n=Split-Path ([string]$s.active_project) -Leaf; if($n){ return ("ENGREMIAT["+$n+"]") } } } } catch {}; return "ENGREMIAT" })).Trim();if($cmd.ToLower() -in @("salir","exit","q")){break};if([string]::IsNullOrWhiteSpace($cmd)){$cmd="estado"};& powershell -NoProfile -ExecutionPolicy Bypass -File $Router $cmd;Write-Host ""}
+

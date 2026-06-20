@@ -1,0 +1,12 @@
+{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_005E",
+    "artifact":  "controlled-local-rollback-package.json",
+    "status":  "READY",
+    "rollback_actions":  [
+                             "delete applied-state/module-activation-state.json",
+                             "delete applied-state/composition-state.json",
+                             "mark apply report as reverted",
+                             "restore pre-apply snapshot reference"
+                         ],
+    "requires":  "explicit rollback authorization if used"
+}

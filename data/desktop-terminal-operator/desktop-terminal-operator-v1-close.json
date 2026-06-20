@@ -1,0 +1,93 @@
+﻿{
+    "package_id":  "ENGREMIAT_DESKTOP_TERMINAL_OPERATOR_001",
+    "stage":  "E06_CLOSE_OPERATOR_V1",
+    "status":  "PASS",
+    "readiness":  100,
+    "decision":  "GO_DESKTOP_TERMINAL_OPERATOR_V1_CLOSED",
+    "cmd_launcher":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_TERMINAL_OPERATOR.cmd",
+    "lnk_launcher":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_TERMINAL_OPERATOR.lnk",
+    "router":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-router.ps1",
+    "start_script":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1",
+    "help":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\ENGREMIAT_OPERATOR_HELP.md",
+    "close_md":  "C:\\ENGREMIAT_CORE\\docs\\desktop-terminal-operator\\DESKTOP_TERMINAL_OPERATOR_V1_CLOSE.md",
+    "commands":  [
+                     "estado",
+                     "ayuda",
+                     "comandos",
+                     "ultimo",
+                     "nuevo-proyecto-preview"
+                 ],
+    "checks":  [
+                   {
+                       "id":  "ENGREMIAT_TERMINAL_OPERATOR.cmd_exists",
+                       "ok":  true,
+                       "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_TERMINAL_OPERATOR.cmd"
+                   },
+                   {
+                       "id":  "ENGREMIAT_TERMINAL_OPERATOR.lnk_exists",
+                       "ok":  true,
+                       "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_TERMINAL_OPERATOR.lnk"
+                   },
+                   {
+                       "id":  "eng-router.ps1_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-router.ps1"
+                   },
+                   {
+                       "id":  "Start-EngremiatDesktopOperator.ps1_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1"
+                   },
+                   {
+                       "id":  "ENGREMIAT_OPERATOR_HELP.md_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\ENGREMIAT_OPERATOR_HELP.md"
+                   },
+                   {
+                       "id":  "router_parse_ok",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-router.ps1"
+                   },
+                   {
+                       "id":  "start_script_parse_ok",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1"
+                   },
+                   {
+                       "id":  "command_estado_ok",
+                       "ok":  true,
+                       "command":  "estado"
+                   },
+                   {
+                       "id":  "command_ayuda_ok",
+                       "ok":  true,
+                       "command":  "ayuda"
+                   },
+                   {
+                       "id":  "command_comandos_ok",
+                       "ok":  true,
+                       "command":  "comandos"
+                   },
+                   {
+                       "id":  "command_ultimo_ok",
+                       "ok":  true,
+                       "command":  "ultimo"
+                   },
+                   {
+                       "id":  "command_nuevo-proyecto-preview_ok",
+                       "ok":  true,
+                       "command":  "nuevo-proyecto-preview"
+                   }
+               ],
+    "failed_checks":  [
+
+                      ],
+    "safety":  {
+                   "local_only":  true,
+                   "closed_operator_v1":  true,
+                   "no_real_worker_execution":  true,
+                   "no_git_write":  true,
+                   "no_external_network":  true
+               },
+    "next":  "ENGREMIAT_PROJECT_START_FLOW_001_E01_COMMAND_NUEVO_PROYECTO"
+}

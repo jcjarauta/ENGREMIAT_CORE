@@ -1,0 +1,43 @@
+﻿{
+    "package_id":  "ENGREMIAT_TOOL_CALIBRATION_AUTOMATION_CONTROLLER_001",
+    "purpose":  "Automatizar procesos de calibracion asistida entre Obsidian bundles, OpenWebUI/Ollama y decision humana",
+    "mode":  "ASSISTED_CALIBRATION_ONLY",
+    "allowed_actions":  [
+                            "scan_local_bundles",
+                            "prepare_prompt_pack",
+                            "open_files_for_human",
+                            "register_ai_response_pasted_by_human",
+                            "score_response_quality",
+                            "recommend_reduce_refine_accept",
+                            "write_next_local_proposal"
+                        ],
+    "blocked_actions":  [
+                            "call_ollama_automatically",
+                            "call_openwebui_api",
+                            "network",
+                            "git_write",
+                            "worker_real_execution",
+                            "auto_apply",
+                            "modify_original_bundles_without_gate",
+                            "browser_automation_without_gate"
+                        ],
+    "safety":  {
+                   "analysis_only":  true,
+                   "git":  false,
+                   "network":  false,
+                   "external_execution":  false,
+                   "worker_real_execution":  false,
+                   "auto_apply":  false,
+                   "human_gate_required":  true
+               },
+    "states":  [
+                   "PACK_PREPARED",
+                   "HUMAN_VALIDATION_PENDING",
+                   "AI_RESPONSE_REGISTERED",
+                   "QUALITY_SCORED",
+                   "REFINE_PROPOSED",
+                   "ACCEPTED_FOR_DRAFT",
+                   "NO_GO_NEEDS_CONTEXT"
+               ],
+    "created_at":  "2026-06-18T20:39:30"
+}

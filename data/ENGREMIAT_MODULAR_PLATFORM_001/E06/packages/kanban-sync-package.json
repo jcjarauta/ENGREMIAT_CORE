@@ -1,0 +1,18 @@
+{
+    "package_id":  "ENG-MOD-KAN-001",
+    "stage":  "E06",
+    "block":  "P06.1.1",
+    "name":  "Kanban sync package",
+    "purpose":  "Definir el paquete de sincronización con el tablero",
+    "artifacts":  [
+                      "contracts/kanban-adapter-contract.json",
+                      "packages/kanban-sync-package.json",
+                      "reports/kanban-adapter-dashboard/index.html"
+                  ],
+    "state":  "planned",
+    "control":  {
+                    "local_first":  true,
+                    "no_external_network":  true,
+                    "no_git_write":  true
+                }
+}

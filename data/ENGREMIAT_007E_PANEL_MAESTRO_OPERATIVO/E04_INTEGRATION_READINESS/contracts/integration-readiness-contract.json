@@ -1,0 +1,17 @@
+{
+    "package_id":  "ENGREMIAT_007E_PANEL_MAESTRO_OPERATIVO",
+    "stage":  "E04_INTEGRATION_READINESS",
+    "artifact":  "integration-readiness-contract.json",
+    "status":  "DEFINED",
+    "purpose":  "Medir readiness de integraciones futuras sin ejecutarlas",
+    "blocked_actions":  [
+                            "core_changes",
+                            "external_network",
+                            "git_write",
+                            "real_integration",
+                            "real_inference",
+                            "kanban_write",
+                            "telegram_send",
+                            "worker_execution"
+                        ]
+}

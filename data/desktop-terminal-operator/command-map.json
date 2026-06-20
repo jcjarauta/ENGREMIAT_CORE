@@ -1,0 +1,131 @@
+﻿{
+    "package_id":  "ENGREMIAT_DESKTOP_TERMINAL_OPERATOR_001",
+    "stage":  "E01_DEFINE_DESKTOP_OPERATOR_SCOPE_AND_COMMAND_MAP",
+    "status":  "PASS",
+    "commands":  [
+                     {
+                         "command":  "estado",
+                         "alias":  [
+                                       "status"
+                                   ],
+                         "purpose":  "Mostrar estado del workspace, Simulation Lab, ultimos reportes y siguiente paso.",
+                         "risk":  "LOW",
+                         "gate":  "NO",
+                         "implementation_stage":  "E03_OPERATOR_BOOT_STATUS"
+                     },
+                     {
+                         "command":  "ayuda",
+                         "alias":  [
+                                       "help",
+                                       "?"
+                                   ],
+                         "purpose":  "Mostrar comandos disponibles y reglas de uso.",
+                         "risk":  "LOW",
+                         "gate":  "NO",
+                         "implementation_stage":  "E05_HELP_AND_LOGS"
+                     },
+                     {
+                         "command":  "nuevo-proyecto",
+                         "alias":  [
+                                       "np"
+                                   ],
+                         "purpose":  "Iniciar proyecto desde terminal: titulo, objetivo, limites y criterio de aceptacion.",
+                         "risk":  "MEDIUM",
+                         "gate":  "SI",
+                         "implementation_stage":  "PROJECT_START_FLOW_E01"
+                     },
+                     {
+                         "command":  "revisar-proyecto",
+                         "alias":  [
+                                       "revisar"
+                                   ],
+                         "purpose":  "Registrar decision humana APPROVE/ADJUST/BLOCK sobre roadmap inicial.",
+                         "risk":  "MEDIUM",
+                         "gate":  "SI",
+                         "implementation_stage":  "PROJECT_START_FLOW_E02"
+                     },
+                     {
+                         "command":  "simular-worker",
+                         "alias":  [
+                                       "worker-fake"
+                                   ],
+                         "purpose":  "Ejecutar worker simulado sobre tareas listas y producir evidencias.",
+                         "risk":  "MEDIUM",
+                         "gate":  "SI",
+                         "implementation_stage":  "PROJECT_START_FLOW_E03"
+                     },
+                     {
+                         "command":  "validar-resultado",
+                         "alias":  [
+                                       "validar"
+                                   ],
+                         "purpose":  "Registrar decision humana ACCEPT/ADJUST/REJECT sobre resultado simulado.",
+                         "risk":  "MEDIUM",
+                         "gate":  "SI",
+                         "implementation_stage":  "PROJECT_START_FLOW_E04"
+                     },
+                     {
+                         "command":  "cerrar-ciclo",
+                         "alias":  [
+                                       "cerrar"
+                                   ],
+                         "purpose":  "Cerrar ciclo con readiness, evidencias, aprendizaje y siguiente paso.",
+                         "risk":  "LOW",
+                         "gate":  "NO",
+                         "implementation_stage":  "PROJECT_START_FLOW_E05"
+                     },
+                     {
+                         "command":  "abrir-lab",
+                         "alias":  [
+                                       "lab"
+                                   ],
+                         "purpose":  "Abrir carpeta de la boveda Simulation Lab.",
+                         "risk":  "LOW",
+                         "gate":  "NO",
+                         "implementation_stage":  "E04_COMMAND_ROUTER"
+                     },
+                     {
+                         "command":  "abrir-dashboard",
+                         "alias":  [
+                                       "dash"
+                                   ],
+                         "purpose":  "Abrir ultimo dashboard generado.",
+                         "risk":  "LOW",
+                         "gate":  "NO",
+                         "implementation_stage":  "E04_COMMAND_ROUTER"
+                     },
+                     {
+                         "command":  "crear-modulo",
+                         "alias":  [
+                                       "modulo"
+                                   ],
+                         "purpose":  "Convertir objetivo/proyecto aprobado en propuesta de modulo.",
+                         "risk":  "MEDIUM",
+                         "gate":  "SI",
+                         "implementation_stage":  "MODULE_BUILDER_E01"
+                     },
+                     {
+                         "command":  "smoke-worker",
+                         "alias":  [
+                                       "smoke"
+                                   ],
+                         "purpose":  "Preparar o ejecutar smoke worker controlado en sandbox cuando exista autorizacion.",
+                         "risk":  "HIGH",
+                         "gate":  "SI",
+                         "implementation_stage":  "SMOKE_WORKER_SYSTEM_E01"
+                     },
+                     {
+                         "command":  "salir",
+                         "alias":  [
+                                       "exit",
+                                       "q"
+                                   ],
+                         "purpose":  "Salir del operador.",
+                         "risk":  "LOW",
+                         "gate":  "NO",
+                         "implementation_stage":  "E04_COMMAND_ROUTER"
+                     }
+                 ],
+    "count":  12,
+    "next":  "E02_CREATE_DESKTOP_LAUNCHER"
+}

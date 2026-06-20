@@ -1,0 +1,23 @@
+﻿{
+    "package_id":  "ENGREMIAT_MODEL_ADAPTER_OLLAMA_001",
+    "stage":  "E08",
+    "status":  "PASS",
+    "closed":  true,
+    "readiness":  100,
+    "local_only":  true,
+    "mock_only":  true,
+    "availability_readonly":  true,
+    "gate_prepared":  true,
+    "runner_blocked_by_default":  true,
+    "real_inference":  false,
+    "endpoint_generate_called":  false,
+    "network_scope":  "LOCALHOST_READONLY_ONLY",
+    "git":  false,
+    "missing":  [
+
+                ],
+    "parse_errors":  [
+
+                     ],
+    "next":  "ENGREMIAT_OLLAMA_REAL_GATED_PROBE_001"
+}

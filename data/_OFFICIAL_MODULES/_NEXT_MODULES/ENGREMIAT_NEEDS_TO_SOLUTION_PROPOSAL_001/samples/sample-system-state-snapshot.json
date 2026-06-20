@@ -1,0 +1,52 @@
+﻿{
+    "snapshot_id":  "SAMPLE-SYSTEM-SNAPSHOT-001",
+    "generated_at":  "2026-06-18T06:51:54",
+    "modules_total":  8,
+    "resources_total":  5,
+    "reports_total":  20,
+    "latest_next_objectives":  [
+                                   "ENGREMIAT_RESOURCE_COMPOSER_OLLAMA_READY_001"
+                               ],
+    "capabilities_available":  [
+                                   "MODULE_FACTORY",
+                                   "CAPABILITY_GATES",
+                                   "RESOURCE_LIBRARY",
+                                   "WORKFLOW_STANDARD"
+                               ],
+    "capabilities_missing":  [
+                                 "RESOURCE_COMPOSITION",
+                                 "OLLAMA_READY_COMPOSER"
+                             ],
+    "signals":  [
+                    {
+                        "signal_id":  "SIG-001",
+                        "signal_type":  "NEXT_OBJECTIVE",
+                        "source":  "RESOURCE_LIBRARY_STANDARD",
+                        "severity":  "INFO",
+                        "message":  "Composer recomendado como siguiente"
+                    },
+                    {
+                        "signal_id":  "SIG-002",
+                        "signal_type":  "RESOURCE_MISSING",
+                        "source":  "resource_library",
+                        "severity":  "WARN",
+                        "message":  "No existe recurso composer"
+                    }
+                ],
+    "health":  {
+                   "modularity":  90,
+                   "workflow_standard":  100,
+                   "capability_gates":  100,
+                   "resource_library":  100,
+                   "composition":  20,
+                   "documentation":  85,
+                   "validation":  90,
+                   "evidence":  80,
+                   "client_assembly":  40,
+                   "automation_readiness":  45
+               },
+    "source_paths":  [
+                         "reports",
+                         "data/_OFFICIAL_MODULES/_NEXT_MODULES"
+                     ]
+}

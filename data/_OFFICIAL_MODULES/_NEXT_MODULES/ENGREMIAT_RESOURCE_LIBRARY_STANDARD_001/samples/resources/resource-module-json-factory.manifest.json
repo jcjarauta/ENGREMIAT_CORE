@@ -1,0 +1,31 @@
+﻿{
+    "resource_id":  "RESOURCE-MODULE-JSON-FACTORY-001",
+    "resource_type":  "RESOURCE_MODULE",
+    "status":  "CANDIDATE",
+    "title":  "JSON Module Factory",
+    "description":  "Factory local dry-run para crear esqueletos de modulo desde JSON.",
+    "domain":  "software",
+    "version":  "0.1.0",
+    "capabilities":  [
+                         "MODULE_FACTORY",
+                         "COMPOSITION_READY"
+                     ],
+    "dependencies":  [
+                         "ENGREMIAT_JSON_MODULE_FACTORY_001"
+                     ],
+    "location":  "data/_OFFICIAL_MODULES/_NEXT_MODULES/ENGREMIAT_JSON_MODULE_FACTORY_001",
+    "evidence":  [
+                     "e05-close-json-module-factory-report.json"
+                 ],
+    "quality":  {
+                    "readiness_score":  100,
+                    "reuse_score":  90,
+                    "evidence_score":  90,
+                    "overall_score":  93
+                },
+    "reuse_policy":  "REFERENCE_OR_EXTEND",
+    "gate":  {
+                 "required":  true,
+                 "decision":  "BACKLOG"
+             }
+}

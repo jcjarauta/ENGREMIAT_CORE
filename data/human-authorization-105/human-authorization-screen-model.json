@@ -1,0 +1,31 @@
+﻿{
+    "objective":  "ENGREMIAT_SAFE_LOCAL_APPLY_AND_KANBAN_AUTHORIZATION_102_111",
+    "stage":  "E105",
+    "name":  "Human Authorization Screen",
+    "version":  "1.05.0-local",
+    "purpose":  "Crear pantalla y contrato de autorizacion humana explicita para apply local seguro.",
+    "authorization_screen_executes":  false,
+    "human_decision_required":  true,
+    "default_decision":  "DEFER",
+    "allowed_decisions":  [
+                              "APPROVE_CONTROLLED_LOCAL_APPLY",
+                              "DEFER",
+                              "REJECT",
+                              "REQUEST_REPAIR"
+                          ],
+    "target_path":  "data/safe-apply-runtime-106/controlled-local-apply-target.json",
+    "requires_reason":  true,
+    "requires_rollback_pack":  true,
+    "requires_postcheck":  true,
+    "requires_receipt":  true,
+    "auto_approve":  false,
+    "real_apply_allowed":  false,
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "kanban_real_write":  false,
+    "created_utc":  "2026-06-17T11:36:59.4471235Z"
+}

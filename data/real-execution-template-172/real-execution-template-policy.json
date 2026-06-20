@@ -1,0 +1,24 @@
+﻿{
+    "objective_id":  "DEFINE_REAL_EXECUTION_TEMPLATE_STANDARD_MVP_172_175",
+    "stage":  "E172",
+    "block":  "B172.1",
+    "step":  "P172.1.2",
+    "name":  "real-execution-template-policy",
+    "scope":  "Template safety boundaries",
+    "allowed":  [
+                    "local file I/O",
+                    "local progress display",
+                    "local process monitoring",
+                    "evidence generation"
+                ],
+    "blocked":  [
+                    "external network",
+                    "git writes",
+                    "real kanban writes",
+                    "real cline writes",
+                    "destructive actions",
+                    "multi-task execution"
+                ],
+    "default_decision":  "DEFER",
+    "created_at":  "2026-06-17T17:59:50.2318808+02:00"
+}

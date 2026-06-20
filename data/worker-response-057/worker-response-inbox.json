@@ -1,0 +1,37 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_REAL_WORKER_DAILY_VALUE_LOOP_056_065",
+    "stage":  "E57",
+    "stage_name":  "Worker Response Capture",
+    "purpose":  "Recibir, guardar e importar respuesta real del worker sin ejecucion",
+    "inbox_id":  "E57_WORKER_RESPONSE_INBOX",
+    "input_modes":  [
+                        "manual_paste_file",
+                        "sample_fallback",
+                        "local_markdown",
+                        "local_json"
+                    ],
+    "default_input":  "data/worker-response-057/worker-response-sample.md",
+    "imported_dir":  "data/worker-response-057/imported",
+    "rules":  [
+                  "No ejecutar respuesta worker",
+                  "No aplicar cambios",
+                  "No auto_apply",
+                  "No remote_execution",
+                  "No git_write",
+                  "No red externa",
+                  "Guardar respuesta como evidencia revisable"
+              ],
+    "security":  {
+                     "apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "worker_executed":  false,
+                     "import_only":  true,
+                     "human_decision_required":  true,
+                     "sensitive_actions_executed":  false
+                 },
+    "next":  "E58_PROPOSAL_QUALITY_CHECKER",
+    "created_at":  "2026-06-17T12:20:01"
+}

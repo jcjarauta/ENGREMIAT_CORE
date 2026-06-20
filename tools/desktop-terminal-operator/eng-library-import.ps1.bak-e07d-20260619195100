@@ -1,0 +1,41 @@
+﻿$ErrorActionPreference="Stop"
+[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+$Root=(Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
+$StatePath=Join-Path $Root "data\operator-state\active-context.json"
+$LibRoot=Join-Path $Root "library\reusable-modules"
+$ReportDir=Join-Path $Root "reports\operator-context-decision-tree"
+function L($m,$c="Gray"){Write-Host $m -ForegroundColor $c}
+function SafeName($x){return (([string]$x) -replace "[^A-Za-z0-9_\-]","_")}
+function CopyModuleTree($src,$dst){if(!(Test-Path -LiteralPath $src)){throw "missing_source=$src"};if(Test-Path -LiteralPath $dst){throw "destination_exists=$dst"};New-Item -ItemType Directory -Force -Path $dst|Out-Null;try{Get-ChildItem -LiteralPath $src -Force|ForEach-Object{Copy-Item -LiteralPath $_.FullName -Destination $dst -Recurse -Force};if(!(Test-Path -LiteralPath (Join-Path $dst "BOVEDA_MODULO"))){throw "copy_failed_missing_BOVEDA_MODULO=$dst"}}catch{if(Test-Path -LiteralPath $dst){Remove-Item -LiteralPath $dst -Recurse -Force -ErrorAction SilentlyContinue};throw}}
+if(!(Test-Path -LiteralPath $StatePath)){throw "no_active_context"}
+$s=Get-Content -LiteralPath $StatePath -Raw -Encoding UTF8|ConvertFrom-Json
+if([string]::IsNullOrWhiteSpace([string]$s.active_project)){throw "no_active_project"}
+$project=[string]$s.active_project
+if(!(Test-Path -LiteralPath $project)){throw "active_project_missing=$project"}
+$modsDir=Join-Path $project "MODULOS"
+New-Item -ItemType Directory -Force -Path $modsDir,$ReportDir|Out-Null
+$index=Join-Path $LibRoot "library-index.json"
+$mods=@()
+if(Test-Path -LiteralPath $index){try{$idx=Get-Content -LiteralPath $index -Raw -Encoding UTF8|ConvertFrom-Json;if($idx.modules){$mods=@($idx.modules)}}catch{$mods=@()}}
+if(@($mods).Count -eq 0){$mods=Get-ChildItem -LiteralPath $LibRoot -Directory -ErrorAction SilentlyContinue|Where-Object{Test-Path (Join-Path $_.FullName "BOVEDA_MODULO\module.json")}|ForEach-Object{$mj=Get-Content -LiteralPath (Join-Path $_.FullName "BOVEDA_MODULO\module.json") -Raw -Encoding UTF8|ConvertFrom-Json;[pscustomobject]@{id=$mj.id;name=$mj.name;path=$_.FullName;objective=$mj.objective;status=$mj.library_status}}}
+if(@($mods).Count -eq 0){throw "library_empty=$LibRoot"}
+L "BIBLIOTECA MODULOS REUTILIZABLES" Cyan
+$i=1;$mods|ForEach-Object{L (" ["+$i+"] "+$_.id+" :: "+$_.name) Green;L ("     "+$_.objective) DarkGray;$i++}
+L " [all] importar todos" Yellow
+L " [0] cancelar" Yellow
+$choice=(Read-Host "Elige modulo(s): 1,3 o all").Trim().ToLowerInvariant()
+if($choice -in @("0","q","cancelar")){L "CANCEL biblioteca_import=False" Yellow;exit}
+if($choice -eq "all"){$selected=@(1..@($mods).Count)}else{$selected=@($choice -split ","|ForEach-Object{$_.Trim()}|Where-Object{$_ -match "^\d+$"}|ForEach-Object{[int]$_})}
+if(@($selected).Count -eq 0){throw "empty_selection"}
+$imported=@()
+foreach($n in $selected){if($n -lt 1 -or $n -gt @($mods).Count){throw "selection_out_of_range=$n"};$m=$mods[$n-1];$src=[string]$m.path;if([string]::IsNullOrWhiteSpace($src)){$src=Join-Path $LibRoot ([string]$m.id)};$base=SafeName $m.id;$dest=Join-Path $modsDir $base;if(Test-Path -LiteralPath $dest){$dest=Join-Path $modsDir ($base+"_import_"+(Get-Date -Format yyyyMMddHHmmss))};CopyModuleTree $src $dest;$vault=Join-Path $dest "BOVEDA_MODULO";$mjPath=Join-Path $vault "module.json";if(!(Test-Path -LiteralPath $mjPath)){throw "missing_imported_module_json=$mjPath"};$mj=Get-Content -LiteralPath $mjPath -Raw -Encoding UTF8|ConvertFrom-Json;$mj|Add-Member -Force -NotePropertyName id -NotePropertyValue (Split-Path $dest -Leaf);$mj|Add-Member -Force -NotePropertyName project_binding -NotePropertyValue $project;$mj|Add-Member -Force -NotePropertyName lifecycle -NotePropertyValue "ACTIVE_IN_PROJECT";$mj|Add-Member -Force -NotePropertyName objective_status -NotePropertyValue "IMPORTED_TEMPLATE";$mj|Add-Member -Force -NotePropertyName reusable -NotePropertyValue $false;$mj|Add-Member -Force -NotePropertyName library_status -NotePropertyValue "REUSED_IN_PROJECT";$mj|Add-Member -Force -NotePropertyName library_source_path -NotePropertyValue $src;$mj|Add-Member -Force -NotePropertyName imported_at -NotePropertyValue (Get-Date).ToString("s");$mj|ConvertTo-Json -Depth 30|Set-Content -LiteralPath $mjPath -Encoding UTF8;$imported+=[pscustomobject]@{id=(Split-Path $dest -Leaf);source=$src;dest=$dest;vault=$vault}}
+if(@($imported).Count -eq 1){$s|Add-Member -Force -NotePropertyName active_module -NotePropertyValue $imported[0].id;$s|Add-Member -Force -NotePropertyName active_module_vault -NotePropertyValue $imported[0].vault;$s|Add-Member -Force -NotePropertyName mode -NotePropertyValue "module";$s|Add-Member -Force -NotePropertyName active_module_context -NotePropertyValue ([pscustomobject]@{lifecycle="ACTIVE_IN_PROJECT";objective_status="IMPORTED_TEMPLATE";library_status="REUSED_IN_PROJECT";source="library";path=$imported[0].dest;vault=$imported[0].vault})}else{$s|Add-Member -Force -NotePropertyName mode -NotePropertyValue "project";$s|Add-Member -Force -NotePropertyName active_module -NotePropertyValue "";$s|Add-Member -Force -NotePropertyName active_module_vault -NotePropertyValue ""}
+$s|ConvertTo-Json -Depth 100|Set-Content -LiteralPath $StatePath -Encoding UTF8
+$report=Join-Path $ReportDir ("e07b-library-import-"+(Get-Date -Format yyyyMMddHHmmss)+".json")
+[pscustomobject]@{package_id="ENGREMIAT_OPERATOR_CONTEXT_AND_DECISION_TREE_001";stage="E07B_ADD_LIBRARY_MENU_AND_IMPORT_MODULES";status="PASS";project=$project;imported_count=@($imported).Count;imported=$imported;mode=$s.mode;active_module=$s.active_module}|ConvertTo-Json -Depth 20|Set-Content -LiteralPath $report -Encoding UTF8
+L "OK biblioteca_import=True" Green
+L ("project="+$project) Cyan
+L ("imported_count="+@($imported).Count) Cyan
+$imported|ForEach-Object{L ("OK module="+$_.id+" dest="+$_.dest) Green}
+L ("report="+$report) Cyan
+L "NEXT si importaste uno: entraras al modulo; si importaste varios: abrir-modulo" Magenta

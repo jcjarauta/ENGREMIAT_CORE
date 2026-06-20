@@ -1,0 +1,27 @@
+﻿REAL MINIMAL PLAN 002
+
+Objective:
+- Validate that the unified entry point remains stable with a second distinct minimal real plan.
+
+Goal:
+- Recheck the full flow with a different small local case.
+
+Inputs:
+- primary: compact second real plan
+- support: short support note
+
+Expected output:
+- launcher summary
+- launcher receipt
+- launcher postcheck
+
+Restrictions:
+- local only
+- no external network
+- no Git writes
+- no real Kanban writes
+- no real Cline writes
+- no destructive actions
+
+Close criteria:
+- Plan -> Run -> artifacts exist -> output is readable

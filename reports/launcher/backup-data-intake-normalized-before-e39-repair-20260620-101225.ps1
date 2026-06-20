@@ -1,0 +1,34 @@
+﻿$ErrorActionPreference="Stop"
+[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+$Core="C:\ENGREMIAT_CORE"
+function W([string]$m,[string]$c="Gray"){try{Write-Host $m -ForegroundColor $c}catch{Write-Host $m}}
+function UX([string]$m,[string]$role='info'){
+  $c = switch($role){
+    'title' {'Cyan'}
+    'route' {'DarkGray'}
+    'role' {'Gray'}
+    'principle' {'DarkGray'}
+    'section' {'Yellow'}
+    'ok' {'Green'}
+    'warn' {'Yellow'}
+    'err' {'Red'}
+    'next' {'Cyan'}
+    'muted' {'DarkGray'}
+    default {'Gray'}
+  }
+  try{Write-Host $m -ForegroundColor $c}catch{Write-Host $m}
+}
+function UXOk([string]$m){UX ('[OK] '+$m) 'ok'}
+function UXWarn([string]$m){UX ('[WARN] '+$m) 'warn'}
+function UXErr([string]$m){UX ('[ERR] '+$m) 'err'}
+function UXNext([string]$m){UX ('[NEXT] '+$m) 'next'}
+function P(){Write-Host "";Read-Host "[Enter] volver / refrescar"|Out-Null}
+function EnsureDir([string]$p){New-Item -ItemType Directory -Force -Path $p|Out-Null}
+function OpenPath([string]$p,[string]$title){EnsureDir $p;Start-Process explorer.exe $p;Header $title;W "[OK] abierto: $p" Green;P}
+function EnsureDemoProfile(){EnsureDir (Join-Path $Core "documents\grants");$p=Join-Path $Core "documents\grants\grant-call-profile-latest.json";if(!(Test-Path $p)){$o=[ordered]@{nombre_convocatoria="Convocatoria demo de innovacion social y economia circular";entidad_convocante="Entidad publica demo";territorio="Catalunya / España";fecha_limite="2026-12-31";objetivo_convocatoria="Financiar proyectos piloto con impacto social, economia circular y digitalizacion local.";lineas_prioritarias=@("Economia circular","Innovacion social","Digitalizacion local");importe_solicitado="50000 EUR";cofinanciacion="No requerida / pendiente de bases especificas";beneficiarios="Comunidades locales, entidades sociales y administraciones colaboradoras.";indicadores_requeridos=@("Personas beneficiarias","Tareas completadas","Evidencias documentadas");documentacion_requerida=@("Memoria tecnica","Presupuesto","Cronograma","Indicadores");criterios_valoracion=@("Innovacion social","Impacto medible","Viabilidad tecnica");tono="tecnico, claro, institucional y orientado a impacto";status="ready";human_review_required=$false;pending_fields=@()};$o|ConvertTo-Json -Depth 60|Set-Content $p -Encoding UTF8};Header "FICHA DEMO ACTIVA";W "[OK] ficha activa: $p" Green;P}
+function EditManualProfile(){EnsureDir (Join-Path $Core "documents\grants");$p=Join-Path $Core "documents\grants\grant-call-profile-latest.json";if(!(Test-Path $p)){EnsureDemoProfile};Start-Process notepad.exe $p;Header "FICHA MANUAL EDITABLE";W "[OK] abierto: $p" Green;P}
+function ImportTxtMd(){Header "IMPORTAR TXT/MD";W "Blueprint normalizado: handler real pendiente de migrar desde launcher legacy." Yellow;W "Usa temporalmente el Data Intake funcional si necesitas esta importacion ahora." DarkGray;P}
+function ImportJson(){Header "IMPORTAR JSON";W "Blueprint normalizado: handler real pendiente de migrar desde launcher legacy." Yellow;W "Usa temporalmente el Data Intake funcional si necesitas esta importacion ahora." DarkGray;P}
+function ShowStatus(){Header "ESTADO DATA INTAKE";$paths=@((Join-Path $Core "documents\intake\inbox"),(Join-Path $Core "documents\intake\normalized"),(Join-Path $Core "documents\grants\grant-call-profile-latest.json"));foreach($p in $paths){if(Test-Path $p){W "[OK] $p" Green}else{W "[MISS] $p" Yellow}};P}
+function Menu(){while($true){Header;W "[1] activar ficha demo completa";W "[2] crear/abrir ficha manual editable";W "[3] importar TXT/MD desde inbox y normalizar";W "[4] importar JSON desde inbox como ficha activa";W "[5] abrir carpeta inbox de entradas";W "[6] abrir carpeta normalized de fichas";W "[7] ver estado de Data Intake";W "[8] abrir contratos Data Intake";W "";W "[b] volver al Centro Documental | [Enter] refrescar | ? = ayuda" DarkGray;W "";$op=Read-Host "DATA_INTAKE";switch($op){"1"{EnsureDemoProfile};"2"{EditManualProfile};"3"{ImportTxtMd};"4"{ImportJson};"5"{OpenPath (Join-Path $Core "documents\intake\inbox") "INBOX DE ENTRADAS"};"6"{OpenPath (Join-Path $Core "documents\intake\normalized") "FICHAS NORMALIZED"};"7"{ShowStatus};"8"{OpenPath (Join-Path $Core "documents\intake\contracts") "CONTRATOS DATA INTAKE"};"b"{return};""{continue};"?"{Header "AYUDA DATA INTAKE";W "Pantalla normalizada paralela. Numeros locales [1]-[8]. Legacy preservado.";P};default{W "Opcion no reconocida" Yellow;Start-Sleep -Milliseconds 700}}}}
+Menu

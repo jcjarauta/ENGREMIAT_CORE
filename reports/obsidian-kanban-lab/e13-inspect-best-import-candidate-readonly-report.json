@@ -1,0 +1,28 @@
+﻿{
+    "package_id":  "ENGREMIAT_OBSIDIAN_KANBAN_LAB_001",
+    "stage":  "E13_INSPECT_BEST_IMPORT_CANDIDATE_READONLY",
+    "status":  "PASS",
+    "target":  "C:\\Users\\pc\\.cline\\kanban\\workspaces\\engremiat-core\\board.json",
+    "size":  4761,
+    "read_mode":  "text",
+    "score":  130,
+    "signals":  [
+                    "path_kanban",
+                    "path_board",
+                    "has_columns",
+                    "has_cards",
+                    "has_kanban_column_names",
+                    "has_lab_card"
+                ],
+    "decision":  "FILE_BASED_IMPORT_ADAPTER_CANDIDATE_STRONG",
+    "sample":  "10_IMPORT_ADAPTER_PREVIEW/E13_BEST_CANDIDATE_SAMPLE.txt",
+    "summary":  "10_IMPORT_ADAPTER_PREVIEW/E13_BEST_CANDIDATE_DECISION.md",
+    "read_only":  true,
+    "write_to_cline":  false,
+    "browser":  false,
+    "api_called":  false,
+    "git":  false,
+    "network":  false,
+    "worker_real_execution":  false,
+    "next":  "E14_BUILD_SPECIFIC_IMPORT_ADAPTER_DRY_RUN"
+}

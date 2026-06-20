@@ -1,0 +1,43 @@
+﻿{
+    "package_id":  "ENGREMIAT_NEW_VAULT_FROM_MASTER_TEMPLATE_001",
+    "stage":  "E09_LINK_MANUAL_GRAPH_GROUPS_NOTE_AND_HIDE_AUX_NOISE_REPAIR_HOME_VAR",
+    "status":  "PASS",
+    "vault_path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146",
+    "manual_note":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\00_CONTROL_OPERATIVO\\GRAPH_GROUPS_MANUAL_APPLY.md",
+    "changes_count":  5,
+    "changes":  [
+                    {
+                        "kind":  "rewrote_manual_groups_note_as_auxiliary_linked_note",
+                        "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\00_CONTROL_OPERATIVO\\GRAPH_GROUPS_MANUAL_APPLY.md"
+                    },
+                    {
+                        "kind":  "linked_manual_note_from_GRAPH_VIEW_SELECTOR",
+                        "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\00_CONTROL_OPERATIVO\\GRAPH_VIEW_SELECTOR.md"
+                    },
+                    {
+                        "kind":  "linked_manual_note_from_CONTROL_INDEX",
+                        "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\00_CONTROL_OPERATIVO\\00_CONTROL_OPERATIVO_INDEX.md"
+                    },
+                    {
+                        "kind":  "updated_graph_filter_to_hide_auxiliary_notes_by_default",
+                        "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\.obsidian\\graph.json"
+                    },
+                    {
+                        "kind":  "updated_graph_filter_to_hide_auxiliary_notes_by_default",
+                        "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\.obsidian\\localgraph.json"
+                    }
+                ],
+    "decision":  "GO_MANUAL_GROUPS_NOTE_LINKED_AND_AUXILIARY_NOISE_HIDDEN",
+    "safety":  {
+                   "local_only":  true,
+                   "new_vault_only":  true,
+                   "template_write":  false,
+                   "obsidian_app_automation":  false,
+                   "worker_execution":  false,
+                   "kanban_write":  false,
+                   "clien_write":  false,
+                   "git_write":  false,
+                   "external_network":  false
+               },
+    "next":  "REFRESH_GRAPH_VIEW_AND_VALIDATE_NO_ORPHAN_MANUAL_GROUPS_NODE"
+}

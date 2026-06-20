@@ -1,0 +1,20 @@
+﻿{
+    "package_id":  "ENGREMIAT_MODEL_ADAPTER_OLLAMA_001",
+    "tool":  "Invoke-OllamaAdapterMock",
+    "status":  "PASS",
+    "mode":  "MOCK",
+    "local_only":  true,
+    "real_inference":  false,
+    "endpoint_called":  false,
+    "network":  false,
+    "normalized_response":  {
+                                "output_type":  "MODEL_RESPONSE_NORMALIZED",
+                                "content":  "Mock Ollama adapter response. No endpoint call executed."
+                            },
+    "evidence":  {
+                     "model_name":  "qwen3:14b",
+                     "real_inference_executed":  false,
+                     "ollama_call_executed":  false,
+                     "safety":  "MOCK_ONLY"
+                 }
+}

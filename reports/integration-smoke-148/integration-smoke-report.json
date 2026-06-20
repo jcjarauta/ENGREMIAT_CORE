@@ -1,0 +1,44 @@
+﻿{
+    "schema":  "engremiat.integration_smoke_report.v1",
+    "objective":  "ENGREMIAT_OPERATIONAL_ARTIFACT_INTEGRATION_142_151",
+    "stage":  "E148",
+    "created_at":  "2026-06-17T16:34:27",
+    "checks":  [
+                   {
+                       "check":  "reports/operational-control-147/e147-operational-control-readiness-report.json",
+                       "passed":  true,
+                       "size_bytes":  1049
+                   },
+                   {
+                       "check":  "data/operational-apply-136/OPERATIONAL_ARTIFACT.md",
+                       "passed":  true,
+                       "size_bytes":  2589
+                   },
+                   {
+                       "check":  "templates/REUSABLE_OPERATIONAL_TEMPLATE.md",
+                       "passed":  true,
+                       "size_bytes":  2533
+                   },
+                   {
+                       "check":  "data/operational-launch-146/NEXT_OPERATIONAL_TASK_DRAFT.md",
+                       "passed":  true,
+                       "size_bytes":  1256
+                   },
+                   {
+                       "check":  "tools/operational/open-operational-artifact.ps1",
+                       "passed":  true,
+                       "size_bytes":  422
+                   },
+                   {
+                       "check":  "dashboard/operational-control/index.html",
+                       "passed":  true,
+                       "size_bytes":  1530
+                   }
+               ],
+    "passed_count":  6,
+    "failed_count":  0,
+    "smoke_passed":  true,
+    "real_task_started":  false,
+    "network_used":  false,
+    "git_write":  false
+}

@@ -1,0 +1,107 @@
+﻿{
+    "package_id":  "ENGREMIAT_OPERATOR_CONTEXT_AND_DECISION_TREE_001",
+    "stage":  "E07G_CLOSE_LIBRARY_REUSE_FLOW_VALIDATION",
+    "status":  "PASS",
+    "readiness":  100,
+    "validated":  [
+                      "library_seed",
+                      "library_index",
+                      "project_library_menu",
+                      "module_import",
+                      "ascii_cmd",
+                      "home_start_launcher_contract"
+                  ],
+    "checks":  [
+                   {
+                       "check":  "exists_Start-EngremiatDesktopOperator.ps1",
+                       "ok":  true,
+                       "detail":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1"
+                   },
+                   {
+                       "check":  "exists_engremiat-operator.cmd",
+                       "ok":  true,
+                       "detail":  "C:\\ENGREMIAT_CORE\\engremiat-operator.cmd"
+                   },
+                   {
+                       "check":  "exists_active-context.json",
+                       "ok":  true,
+                       "detail":  "C:\\ENGREMIAT_CORE\\data\\operator-state\\active-context.json"
+                   },
+                   {
+                       "check":  "exists_reusable-modules",
+                       "ok":  true,
+                       "detail":  "C:\\ENGREMIAT_CORE\\library\\reusable-modules"
+                   },
+                   {
+                       "check":  "exists_library-index.json",
+                       "ok":  true,
+                       "detail":  "C:\\ENGREMIAT_CORE\\library\\reusable-modules\\library-index.json"
+                   },
+                   {
+                       "check":  "cmd_no_utf8_bom",
+                       "ok":  true,
+                       "detail":  "C:\\ENGREMIAT_CORE\\engremiat-operator.cmd"
+                   },
+                   {
+                       "check":  "launcher_refresh_does_not_auto_enter_state",
+                       "ok":  true,
+                       "detail":  "Refresh-Screen home-safe"
+                   },
+                   {
+                       "check":  "launcher_has_project_library_menu",
+                       "ok":  true,
+                       "detail":  "project menu option 4"
+                   },
+                   {
+                       "check":  "launcher_has_module_actions_1_to_9",
+                       "ok":  true,
+                       "detail":  "module menu complete"
+                   },
+                   {
+                       "check":  "launcher_parse_ok",
+                       "ok":  true,
+                       "detail":  "OK"
+                   },
+                   {
+                       "check":  "library_index_has_modules",
+                       "ok":  true,
+                       "detail":  "modules=4"
+                   },
+                   {
+                       "check":  "library_module_MODULE_tareas_tarjetas",
+                       "ok":  true,
+                       "detail":  "C:\\ENGREMIAT_CORE\\library\\reusable-modules\\MODULE_tareas_tarjetas\\BOVEDA_MODULO\\module.json"
+                   },
+                   {
+                       "check":  "library_module_MODULE_contrato_objetivo",
+                       "ok":  true,
+                       "detail":  "C:\\ENGREMIAT_CORE\\library\\reusable-modules\\MODULE_contrato_objetivo\\BOVEDA_MODULO\\module.json"
+                   },
+                   {
+                       "check":  "library_module_MODULE_smoke_validacion",
+                       "ok":  true,
+                       "detail":  "C:\\ENGREMIAT_CORE\\library\\reusable-modules\\MODULE_smoke_validacion\\BOVEDA_MODULO\\module.json"
+                   },
+                   {
+                       "check":  "library_module_MODULE_biblioteca_reutilizable",
+                       "ok":  true,
+                       "detail":  "C:\\ENGREMIAT_CORE\\library\\reusable-modules\\MODULE_biblioteca_reutilizable\\BOVEDA_MODULO\\module.json"
+                   },
+                   {
+                       "check":  "last_library_import_report_exists",
+                       "ok":  true,
+                       "detail":  "C:\\ENGREMIAT_CORE\\reports\\operator-context-decision-tree\\e07b-library-import-20260619194903.json"
+                   },
+                   {
+                       "check":  "last_import_count_ge_1",
+                       "ok":  true,
+                       "detail":  "imported_count=1"
+                   },
+                   {
+                       "check":  "imported_module_exists_MODULE_tareas_tarjetas",
+                       "ok":  true,
+                       "detail":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706\\MODULOS\\MODULE_tareas_tarjetas\\BOVEDA_MODULO"
+                   }
+               ],
+    "next":  "E08_NEW_PROJECT_WITH_LIBRARY_MODULE_SELECTION"
+}

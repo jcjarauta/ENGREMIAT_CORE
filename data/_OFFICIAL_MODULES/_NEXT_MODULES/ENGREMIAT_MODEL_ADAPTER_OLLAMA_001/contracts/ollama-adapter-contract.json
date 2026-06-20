@@ -1,0 +1,10 @@
+﻿{
+    "module_id":  "ENGREMIAT_MODEL_ADAPTER_OLLAMA_001",
+    "implements":  "ENGREMIAT_MODEL_ADAPTER_STANDARD_001",
+    "input":  "MODEL_REQUEST",
+    "internal_payload":  "OLLAMA_PAYLOAD",
+    "output":  "MODEL_RESPONSE_NORMALIZED",
+    "default_mode":  "MOCK",
+    "real_inference_requires_literal_gate":  true,
+    "composer_core_dependency":  false
+}

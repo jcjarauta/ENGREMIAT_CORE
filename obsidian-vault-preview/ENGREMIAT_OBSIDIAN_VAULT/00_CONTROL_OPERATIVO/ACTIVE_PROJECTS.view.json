@@ -1,0 +1,17 @@
+﻿{
+    "view_id":  "ACTIVE_PROJECTS",
+    "title":  "Proyectos activos",
+    "object_type":  "project",
+    "filter":  "status != closed",
+    "group_by":  "status",
+    "sort":  "priority desc, updated_at desc",
+    "columns":  [
+                    "project_id",
+                    "title",
+                    "status",
+                    "readiness",
+                    "decision",
+                    "next_action"
+                ],
+    "preview_only":  true
+}

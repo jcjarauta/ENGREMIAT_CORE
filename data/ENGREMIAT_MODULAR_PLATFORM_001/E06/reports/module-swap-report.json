@@ -1,0 +1,22 @@
+{
+    "package_id":  "ENG-MOD-OPS-001",
+    "stage":  "E06",
+    "block":  "P06.2.2",
+    "name":  "Module swap report",
+    "purpose":  "Registrar sustitución, actualización o retirada de un módulo",
+    "fields":  [
+                   "old_module_id",
+                   "new_module_id",
+                   "action",
+                   "reason",
+                   "compatibility",
+                   "actor",
+                   "timestamp"
+               ],
+    "state":  "planned",
+    "control":  {
+                    "local_first":  true,
+                    "no_external_network":  true,
+                    "no_git_write":  true
+                }
+}

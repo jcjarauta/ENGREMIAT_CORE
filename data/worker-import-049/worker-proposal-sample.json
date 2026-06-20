@@ -1,0 +1,20 @@
+﻿{
+    "proposal_id":  "WORKER-PROPOSAL-E49-SAMPLE-001",
+    "source_worker":  "safe_local_sample_no_worker_execution",
+    "title":  "Propuesta de mejora del loop diario",
+    "summary":  "Añadir al dashboard operativo una vista unificada de estado, inbox, decisiones, worker y memoria en E50.",
+    "risk":  "MEDIUM",
+    "recommended_decision":  "REVIEW",
+    "requires_human_gate":  true,
+    "expected_outputs":  [
+                             "operational-dashboard-model.json",
+                             "operational-dashboard-index.json",
+                             "dashboard/operational/index.html"
+                         ],
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "created_at":  "2026-06-17T11:59:30"
+}

@@ -1,0 +1,320 @@
+﻿{
+    "package_id":  "ENGREMIAT_OBSIDIAN_OPERATIVE_MEMORY_ARCHITECTURE_001",
+    "stage":  "E02_DEFINE_OBSIDIAN_OBJECT_TAXONOMY_AND_FRONTMATTER",
+    "taxonomy_id":  "obsidian-object-taxonomy.v1",
+    "principle":  "Cada nota Obsidian representa un objeto operativo enlazable, no texto suelto",
+    "objects":  [
+                    {
+                        "type":  "project",
+                        "folder":  "02_PROYECTOS/PROJECT_\u003cslug\u003e/00_INDEX",
+                        "required":  [
+                                         "type",
+                                         "project_id",
+                                         "title",
+                                         "status",
+                                         "readiness",
+                                         "decision",
+                                         "next_action",
+                                         "tags"
+                                     ],
+                        "relations":  [
+                                          "HAS_INTAKE",
+                                          "HAS_ROADMAP",
+                                          "HAS_TASKS",
+                                          "HAS_GATES",
+                                          "HAS_EVIDENCE"
+                                      ]
+                    },
+                    {
+                        "type":  "intake",
+                        "folder":  "02_PROYECTOS/PROJECT_\u003cslug\u003e/01_INTAKE",
+                        "required":  [
+                                         "type",
+                                         "project_id",
+                                         "intake_id",
+                                         "status",
+                                         "source",
+                                         "created_at",
+                                         "tags"
+                                     ],
+                        "relations":  [
+                                          "NORMALIZES",
+                                          "GENERATES_ROADMAP"
+                                      ]
+                    },
+                    {
+                        "type":  "roadmap",
+                        "folder":  "02_PROYECTOS/PROJECT_\u003cslug\u003e/02_ROADMAP",
+                        "required":  [
+                                         "type",
+                                         "project_id",
+                                         "roadmap_id",
+                                         "status",
+                                         "model",
+                                         "decision",
+                                         "tags"
+                                     ],
+                        "relations":  [
+                                          "GENERATES_TASKS",
+                                          "REQUIRES_GATE"
+                                      ]
+                    },
+                    {
+                        "type":  "task_card",
+                        "folder":  "02_PROYECTOS/PROJECT_\u003cslug\u003e/03_TAREAS",
+                        "required":  [
+                                         "type",
+                                         "project_id",
+                                         "card_id",
+                                         "lane",
+                                         "status",
+                                         "priority",
+                                         "risk",
+                                         "gate",
+                                         "next_action",
+                                         "tags"
+                                     ],
+                        "relations":  [
+                                          "DEPENDS_ON",
+                                          "REQUIRES_GATE",
+                                          "PRODUCES_EVIDENCE"
+                                      ]
+                    },
+                    {
+                        "type":  "gate",
+                        "folder":  "02_PROYECTOS/PROJECT_\u003cslug\u003e/04_GATES_DECISIONES",
+                        "required":  [
+                                         "type",
+                                         "project_id",
+                                         "gate_id",
+                                         "status",
+                                         "decision",
+                                         "authorization_status",
+                                         "requires_human",
+                                         "tags"
+                                     ],
+                        "relations":  [
+                                          "BLOCKS",
+                                          "APPROVES",
+                                          "DEFERRED_BY"
+                                      ]
+                    },
+                    {
+                        "type":  "decision",
+                        "folder":  "02_PROYECTOS/PROJECT_\u003cslug\u003e/04_GATES_DECISIONES",
+                        "required":  [
+                                         "type",
+                                         "project_id",
+                                         "decision_id",
+                                         "status",
+                                         "decision",
+                                         "reason",
+                                         "created_at",
+                                         "tags"
+                                     ],
+                        "relations":  [
+                                          "DECIDES",
+                                          "UNBLOCKS",
+                                          "REJECTS"
+                                      ]
+                    },
+                    {
+                        "type":  "evidence",
+                        "folder":  "02_PROYECTOS/PROJECT_\u003cslug\u003e/05_EVIDENCIAS",
+                        "required":  [
+                                         "type",
+                                         "project_id",
+                                         "evidence_id",
+                                         "status",
+                                         "source_path",
+                                         "evidence_kind",
+                                         "created_at",
+                                         "tags"
+                                     ],
+                        "relations":  [
+                                          "PROVES",
+                                          "VALIDATES",
+                                          "SUPPORTS_DECISION"
+                                      ]
+                    },
+                    {
+                        "type":  "worker_packet",
+                        "folder":  "02_PROYECTOS/PROJECT_\u003cslug\u003e/06_WORKERS",
+                        "required":  [
+                                         "type",
+                                         "project_id",
+                                         "worker_packet_id",
+                                         "worker",
+                                         "status",
+                                         "execution_allowed",
+                                         "tags"
+                                     ],
+                        "relations":  [
+                                          "CONSUMED_BY",
+                                          "REQUIRES_GATE",
+                                          "PRODUCES_RESPONSE"
+                                      ]
+                    },
+                    {
+                        "type":  "dry_run",
+                        "folder":  "02_PROYECTOS/PROJECT_\u003cslug\u003e/06_WORKERS",
+                        "required":  [
+                                         "type",
+                                         "project_id",
+                                         "dry_run_id",
+                                         "status",
+                                         "decision",
+                                         "execute_now",
+                                         "tags"
+                                     ],
+                        "relations":  [
+                                          "SIMULATES",
+                                          "BLOCKS_EXECUTION",
+                                          "PRODUCES_EVIDENCE"
+                                      ]
+                    },
+                    {
+                        "type":  "result",
+                        "folder":  "02_PROYECTOS/PROJECT_\u003cslug\u003e/07_RESULTADOS",
+                        "required":  [
+                                         "type",
+                                         "project_id",
+                                         "result_id",
+                                         "status",
+                                         "decision",
+                                         "readiness",
+                                         "tags"
+                                     ],
+                        "relations":  [
+                                          "CLOSES",
+                                          "PRODUCES_EVIDENCE",
+                                          "UPDATES_STATUS"
+                                      ]
+                    },
+                    {
+                        "type":  "module",
+                        "folder":  "01_SISTEMA_ENGREMIAT",
+                        "required":  [
+                                         "type",
+                                         "module_id",
+                                         "status",
+                                         "role",
+                                         "depends_on",
+                                         "tags"
+                                     ],
+                        "relations":  [
+                                          "DEPENDS_ON",
+                                          "PROVIDES",
+                                          "CONSUMED_BY"
+                                      ]
+                    },
+                    {
+                        "type":  "node",
+                        "folder":  "01_SISTEMA_ENGREMIAT",
+                        "required":  [
+                                         "type",
+                                         "node_id",
+                                         "status",
+                                         "role",
+                                         "capabilities",
+                                         "tags"
+                                     ],
+                        "relations":  [
+                                          "HOSTS",
+                                          "EXECUTES",
+                                          "PROVIDES_CAPABILITY"
+                                      ]
+                    }
+                ],
+    "common_frontmatter":  {
+                               "required_all":  [
+                                                    "type",
+                                                    "status",
+                                                    "tags"
+                                                ],
+                               "recommended_all":  [
+                                                       "created_at",
+                                                       "updated_at",
+                                                       "source_path",
+                                                       "readiness",
+                                                       "decision",
+                                                       "next_action"
+                                                   ],
+                               "status_values":  [
+                                                     "draft",
+                                                     "pending",
+                                                     "review",
+                                                     "approved",
+                                                     "defer",
+                                                     "blocked",
+                                                     "no_go",
+                                                     "done",
+                                                     "closed"
+                                                 ],
+                               "risk_values":  [
+                                                   "low",
+                                                   "medium",
+                                                   "high"
+                                               ],
+                               "priority_values":  [
+                                                       "baja",
+                                                       "media",
+                                                       "alta",
+                                                       "critica"
+                                                   ],
+                               "decision_values":  [
+                                                       "PENDING",
+                                                       "WAIT_HUMAN_REVIEW",
+                                                       "APPROVE",
+                                                       "DEFER",
+                                                       "REJECT",
+                                                       "REPAIR",
+                                                       "NO_GO",
+                                                       "GO",
+                                                       "CLOSED"
+                                                   ]
+                           },
+    "tag_model":  {
+                      "families":  [
+                                       "engremiat/\u003cobject\u003e",
+                                       "status/\u003cstate\u003e",
+                                       "risk/\u003clevel\u003e",
+                                       "priority/\u003clevel\u003e",
+                                       "gate/\u003cstate\u003e",
+                                       "worker/\u003cname\u003e"
+                                   ],
+                      "base_tags":  [
+                                        "engremiat/project",
+                                        "engremiat/intake",
+                                        "engremiat/roadmap",
+                                        "engremiat/task",
+                                        "engremiat/gate",
+                                        "engremiat/decision",
+                                        "engremiat/evidence",
+                                        "engremiat/worker",
+                                        "engremiat/dryrun",
+                                        "engremiat/result",
+                                        "status/pending",
+                                        "status/review",
+                                        "status/no-go",
+                                        "status/done",
+                                        "risk/low",
+                                        "risk/medium",
+                                        "risk/high"
+                                    ]
+                  },
+    "safety":  {
+                   "local_only":  true,
+                   "obsidian_write_preview_only":  true,
+                   "execute_now":  false,
+                   "worker_execution":  false,
+                   "kanban_write":  false,
+                   "clien_write":  false,
+                   "browser_automation":  false,
+                   "git_write":  false,
+                   "external_network":  false,
+                   "auto_apply":  false,
+                   "read_secrets":  false
+               },
+    "next":  "E03_CREATE_OBSIDIAN_MARKDOWN_TEMPLATES_WITH_YAML"
+}

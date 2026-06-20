@@ -1,0 +1,57 @@
+﻿PATH=C:\Users\pc\.cline\worktrees\07b15\ENGREMIAT_CORE\tools\kanban-human-control\Build-KanbanHumanDashboard.ps1
+SCORE=66
+SIZE=7293
+--- SAMPLE BEGIN ---
+$ErrorActionPreference="Stop"
+[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+function Esc($v){return [System.Net.WebUtility]::HtmlEncode([string]$v)}
+function Rel($p){if([string]::IsNullOrWhiteSpace($p)){return "#"};return "../../"+(([string]$p).Replace("\","/"))}
+function J($o,[string]$p){$d=Split-Path $p -Parent;if($d){New-Item -ItemType Directory -Force -Path $d|Out-Null};$o|ConvertTo-Json -Depth 80|Set-Content -Path $p -Encoding UTF8}
+$objective="ENGREMIAT_KANBAN_HUMAN_CONTROL_SURFACE_007"
+$boardPath="data/kanban-human-control/kanban-board.json"
+$outPath="dashboard/kanban-human-control/index.html"
+$reportPath="reports/kanban-human-control/e03-kanban-dashboard-validation-report.json"
+if(-not (Test-Path $boardPath)){throw "Falta board canonico: $boardPath"}
+$board=Get-Content $boardPath -Raw | ConvertFrom-Json
+$cards=@($board.cards)
+$columns=@($board.columns)
+$sb=[System.Text.StringBuilder]::new()
+$null=$sb.AppendLine("<!doctype html>")
+$null=$sb.AppendLine("<html lang=""es"">")
+$null=$sb.AppendLine("<head>")
+$null=$sb.AppendLine("<meta charset=""utf-8"">")
+$null=$sb.AppendLine("<meta name=""viewport"" content=""width=device-width, initial-scale=1"">")
+$null=$sb.AppendLine("<title>ENGREMIAT Kanban Human Control Surface 007</title>")
+$null=$sb.AppendLine("<style>body{font-family:Segoe UI,Arial,sans-serif;margin:0;background:#101418;color:#eef3f7}header{padding:18px 22px;background:#18212b;border-bottom:1px solid #2b3a48}h1{margin:0 0 6px 0;font-size:22px}.meta{color:#a9bac8;font-size:13px}.summary{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.pill{border:1px solid #34495b;border-radius:999px;padding:5px 10px;background:#202b36;font-size:12px}.board{display:flex;gap:14px;overflow-x:auto;padding:18px}.col{min-width:280px;max-width:320px;background:#151c23;border:1px solid #2a3946;border-radius:12px;padding:12px}.col h2{font-size:15px;margin:0 0 10px 0;display:flex;justify-content:space-between}.card{background:#202a34;border:1px solid #3b4b5a;border-radius:10px;margin-bottom:12px;padding:12px;box-shadow:0 2px 10px rgba(0,0,0,.18)}.card h3{font-size:15px;margin:0 0 7px 0}.small{font-size:12px;color:#bfd0dd}.flags{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-top:9px}.flag{font-size:11px;border-radius:6px;padding:4px 6px;background:#13202a;border:1px solid #314557}.ok{color:#9ff0bd}.warn{color:#ffe08a}.risk{font-weight:700}.evidence{margin-top:9px}.evidence a{display:block;color:#8fd0ff;text-decoration:none;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.next{margin-top:9px;padding:7px;border-left:3px solid #9cc9ff;background:#16212b;font-size:12px}.footer{padding:12px 22px;color:#9fb3c3;border-top:1px solid #2b3a48}</style>")
+$null=$sb.AppendLine("</head>")
+$null=$sb.AppendLine("<body>")
+$null=$sb.AppendLine("<header>")
+$null=$sb.AppendLine("<h1>ENGREMIAT Kanban Human Control Surface 007</h1>")
+$null=$sb.AppendLine("<div class=""meta"">Dashboard local generado desde evidencia canonica. Kanban es vista humana, no fuente canonica ni motor de ejecucion.</div>")
+$null=$sb.AppendLine("<div class=""summary"">")
+$null=$sb.AppendLine("<span class=""pill"">objective="+(Esc $objective)+"</span>")
+$null=$sb.AppendLine("<span class=""pill"">cards="+$cards.Count+"</span>")
+$null=$sb.AppendLine("<span class=""pill"">columns="+$columns.Count+"</span>")
+$null=$sb.AppendLine("<span class=""pill"">kanban_write=False</span>")
+$null=$sb.AppendLine("<span class=""pill"">worker_real_execution=False</span>")
+$null=$sb.AppendLine("<span class=""pill"">auto_apply=False</span>")
+$null=$sb.AppendLine("</div>")
+$null=$sb.AppendLine("</header>")
+$null=$sb.AppendLine("<main class=""board"">")
+foreach($col in $columns){$cc=@($cards|Where-Object{$_.status -eq $col});$null=$sb.AppendLine("<section class=""col"">");$null=$sb.AppendLine("<h2><span>"+(Esc $col)+"</span><span>"+$cc.Count+"</span></h2>");foreach($card in $cc){$null=$sb.AppendLine("<article class=""card"">");$null=$sb.AppendLine("<h3>"+(Esc $card.title)+"</h3>");$null=$sb.AppendLine("<div class=""small"">"+(Esc $card.objective)+"</div>");$null=$sb.AppendLine("<div class=""small"">stage="+(Esc $card.stage.id)+" · block="+(Esc $card.block.id)+" · step="+(Esc $card.step.id)+"</div>");$null=$sb.AppendLine("<p class=""small"">"+(Esc $card.description)+"</p>");$null=$sb.AppendLine("<div class=""small risk"">risk="+(Esc $card.risk)+" · decision="+(Esc $card.gate.decision)+"</div>");$null=$sb.AppendLine("<div class=""flags"">");$null=$sb.AppendLine("<div class=""flag ok"">authorization_required="+(Esc $card.gate.authorization_required)+"</div>");$null=$sb.AppendLine("<div class=""flag ok"">worker_real_execution="+(Esc $card.safety.worker_real_execution)+"</div>");$null=$sb.AppendLine("<div class=""flag ok"">auto_apply="+(Esc $card.safety.auto_apply)+"</div>");$null=$sb.AppendLine("<div class=""flag ok"">kanban_write="+(Esc $card.safety.kanban_write)+"</div>");$null=$sb.AppendLine("</div>");$null=$sb.AppendLine("<div class=""evidence""><strong class=""small"">Evidencia</strong>");foreach($ev in @($card.evidence)){if($ev){$href=Rel $ev;$null=$sb.AppendLine("<a href="""+$href+""" target=""_blank"">"+(Esc $ev)+"</a>")}};$null=$sb.AppendLine("</div>");$null=$sb.AppendLine("<div class=""next"">Siguiente: "+(Esc $card.next_action.recommended)+"</div>");$null=$sb.AppendLine("</article>")};$null=$sb.AppendLine("</section>")}
+$null=$sb.AppendLine("</main>")
+$null=$sb.AppendLine("<div class=""footer"">Generado desde "+(Esc $boardPath)+" · Sin servidor · Sin Cline real · Sin escritura Kanban real.</div>")
+$null=$sb.AppendLine("</body></html>")
+New-Item -ItemType Directory -Force -Path (Split-Path $outPath -Parent) | Out-Null
+$html=$sb.ToString()
+Set-Content -Path $outPath -Value $html -Encoding UTF8
+$hasColumns=($html -match "<section class=""col"">")
+$hasCards=($html -match "<article class=""card"">")
+$hasFlags=($html -match "worker_real_execution" -and $html -match "auto_apply" -and $html -match "kanban_write")
+$hasEvidence=($html -match "Evidencia" -and $html -match "href=")
+$ok=((Test-Path $outPath) -and ((Get-Item $outPath).Length -gt 1000) -and $hasColumns -and $hasCards -and $hasFlags -and $hasEvidence)
+$report=[ordered]@{objective=$objective;stage="E03";blocks="B03.1-B03.3";steps=6;board_file=$boardPath;dashboard_file=$outPath;cards_count=$cards.Count;columns_count=$columns.Count;html_size_bytes=($(if(Test-Path $outPath){(Get-Item $outPath).Length}else{0}));has_columns=$hasColumns;has_cards=$hasCards;has_gate_flags=$hasFlags;has_evidence_links=$hasEvidence;kanban_write=$false;cline_task_created=$false;worker_real_execution=$false;auto_apply=$false;git_write=$false;remote_inference=$false;readiness=($(if($ok){100}else{70}));decision=($(if($ok){"GO_E03_HUMAN_HTML_DASHBOARD_VALIDATED"}else{"NO_GO_E03_REPAIR_REQUIRED"}));next=($(if($ok){"E04_ADAPTER_CLINE_KANBAN_PREVIEW"}else{"REPAIR_E03_HUMAN_HTML_DASHBOARD"}))}
+J $report $reportPath
+if(-not $ok){throw "E03 validation failed"}
+Write-Host ("OK objective="+$objective+" stage=E03 cards="+$cards.Count+" columns="+$columns.Count+" readiness="+$report.readiness+" decision="+$report.decision+" dashboard="+$outPath+" report="+$reportPath+" next="+$report.next) -ForegroundColor Green
+--- SAMPLE END ---

@@ -1,0 +1,68 @@
+﻿{
+    "package_id":  "ENGREMIAT_OBSIDIAN_OPERATIVE_MEMORY_ARCHITECTURE_001",
+    "stage":  "E04_CREATE_OBSIDIAN_BASES_AND_OPERATIVE_INDEXES_REPAIR",
+    "status":  "PASS",
+    "repair":  "stable_base_preview_no_experimental_syntax",
+    "spec":  "C:\\ENGREMIAT_CORE\\data\\obsidian-operative-memory-architecture\\obsidian-operative-base-view-specs.json",
+    "views":  [
+                  {
+                      "id":  "ACTIVE_PROJECTS",
+                      "base":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\00_CONTROL_OPERATIVO\\ACTIVE_PROJECTS.base",
+                      "json":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\00_CONTROL_OPERATIVO\\ACTIVE_PROJECTS.view.json",
+                      "fallback":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\00_CONTROL_OPERATIVO\\ACTIVE_PROJECTS.md",
+                      "status":  "CREATED"
+                  },
+                  {
+                      "id":  "PENDING_GATES",
+                      "base":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\00_CONTROL_OPERATIVO\\PENDING_GATES.base",
+                      "json":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\00_CONTROL_OPERATIVO\\PENDING_GATES.view.json",
+                      "fallback":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\00_CONTROL_OPERATIVO\\PENDING_GATES.md",
+                      "status":  "CREATED"
+                  },
+                  {
+                      "id":  "ACTIVE_CARDS",
+                      "base":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\06_KANBAN_TAREAS\\ACTIVE_CARDS.base",
+                      "json":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\06_KANBAN_TAREAS\\ACTIVE_CARDS.view.json",
+                      "fallback":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\06_KANBAN_TAREAS\\ACTIVE_CARDS.md",
+                      "status":  "CREATED"
+                  },
+                  {
+                      "id":  "BLOCKED_CARDS",
+                      "base":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\06_KANBAN_TAREAS\\BLOCKED_CARDS.base",
+                      "json":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\06_KANBAN_TAREAS\\BLOCKED_CARDS.view.json",
+                      "fallback":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\06_KANBAN_TAREAS\\BLOCKED_CARDS.md",
+                      "status":  "CREATED"
+                  },
+                  {
+                      "id":  "RECENT_EVIDENCE",
+                      "base":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\05_EVIDENCIAS\\RECENT_EVIDENCE.base",
+                      "json":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\05_EVIDENCIAS\\RECENT_EVIDENCE.view.json",
+                      "fallback":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\05_EVIDENCIAS\\RECENT_EVIDENCE.md",
+                      "status":  "CREATED"
+                  },
+                  {
+                      "id":  "WORKER_PROPOSALS",
+                      "base":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\03_WORKERS\\WORKER_PROPOSALS.base",
+                      "json":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\03_WORKERS\\WORKER_PROPOSALS.view.json",
+                      "fallback":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\03_WORKERS\\WORKER_PROPOSALS.md",
+                      "status":  "CREATED"
+                  }
+              ],
+    "control_hub":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\00_CONTROL_OPERATIVO\\CONTROL_HUB.md",
+    "system_status":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\00_CONTROL_OPERATIVO\\SYSTEM_STATUS.md",
+    "guide":  "C:\\ENGREMIAT_CORE\\docs\\obsidian-operative-memory-architecture\\OBSIDIAN_BASES_AND_INDEXES_E04_GUIDE.md",
+    "dashboard":  "C:\\ENGREMIAT_CORE\\dashboard\\obsidian-operative-memory-architecture\\obsidian-bases-and-operative-indexes.html",
+    "views_created":  6,
+    "decision":  "GO_OBSIDIAN_BASES_AND_INDEXES_READY",
+    "next":  "E05_CREATE_OBSIDIAN_CANVAS_GLOBAL_AND_PROJECT_MAPS",
+    "safety":  {
+                   "local_only":  true,
+                   "preview_only":  true,
+                   "execute_now":  false,
+                   "worker_execution":  false,
+                   "kanban_write":  false,
+                   "clien_write":  false,
+                   "git_write":  false,
+                   "external_network":  false
+               }
+}

@@ -1,0 +1,18 @@
+﻿{
+    "package_id":  "ENGREMIAT_CLINE_KANBAN_BACKLOG_REFRESH_001",
+    "contract":  "CLINE_KANBAN_BACKLOG_REFRESH_V1",
+    "mode":  "MANUAL_EXPORT_ONLY",
+    "inputs":  [
+                   "priority-ranking-output.json",
+                   "execution-package-dry-run.json"
+               ],
+    "outputs":  [
+                    "backlog-refresh-output.json",
+                    "cline-kanban-import.tsv",
+                    "cline-kanban-prompt.md",
+                    "dashboard/index.html"
+                ],
+    "no_browser":  true,
+    "no_cline_execution":  true,
+    "no_git":  true
+}

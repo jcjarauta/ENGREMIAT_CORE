@@ -1,0 +1,14 @@
+﻿{
+    "package_id":  "ENGREMIAT_OPERATOR_CONTEXT_AND_DECISION_TREE_001",
+    "stage":  "E04H_PROMPT_CHANGES_ONLY_AFTER_OPEN_PROJECT_IN_SESSION",
+    "status":  "PASS",
+    "readiness":  100,
+    "launcher":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1",
+    "backup":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1.bak-e04h-20260619182202",
+    "behavior":  "prompt_default_until_abrir-proyecto_in_current_session",
+    "expected":  [
+                     "inicio: ENGREMIAT:",
+                     "despues abrir-proyecto: ENGREMIAT[nombre-proyecto]:"
+                 ],
+    "next":  "relaunch_and_test"
+}

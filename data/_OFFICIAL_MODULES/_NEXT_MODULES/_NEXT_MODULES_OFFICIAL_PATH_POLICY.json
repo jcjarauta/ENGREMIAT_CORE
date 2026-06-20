@@ -1,0 +1,21 @@
+﻿{
+    "package_id":  "ENGREMIAT_OFFICIAL_MODULES_NEXT_MODULES_DIR_001",
+    "stage":  "E01_CREATE_AND_OFFICIALIZE_NEXT_MODULES_DIR",
+    "official_modules_root":  "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES",
+    "new_modules_official_staging_path":  "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES",
+    "purpose":  "Ruta oficial local para alojar proximos modulos candidatos/oficializables antes de integrarlos como modulos oficiales definitivos.",
+    "rules":  [
+                  "Todo modulo futuro debe entrar primero por ENGREMIAT_MODULE_INTAKE_REGISTRY_001",
+                  "Los nuevos modulos se alojaran en data/_OFFICIAL_MODULES/_NEXT_MODULES",
+                  "No mover ni modificar modulos oficializados existentes sin gate explicito",
+                  "No crear modulo real sin decision humana CREATE_MODULE_LATER o equivalente",
+                  "Mantener module.json, contrato, schema, evidencias y cierre por modulo"
+              ],
+    "safety":  {
+                   "local_only":  true,
+                   "core_changes":  false,
+                   "git_write":  false,
+                   "network":  false,
+                   "real_external_integration":  false
+               }
+}

@@ -1,0 +1,37 @@
+﻿{
+    "objective":  "ENGREMIAT_POST_MVP_OPERATIONAL_DAILY_LOOP_046_055",
+    "stage":  "E50",
+    "stage_name":  "Operational Dashboard",
+    "purpose":  "Unificar estado diario, inbox, decisiones, worker y memoria",
+    "dashboard_role":  "central_daily_human_control_surface",
+    "dashboard_path":  "dashboard/operational/index.html",
+    "sections":  [
+                     "estado_diario",
+                     "inbox_operativo",
+                     "historial_decisiones",
+                     "worker_import_preview",
+                     "memoria_visual",
+                     "kanban_preview",
+                     "siguiente_paso"
+                 ],
+    "rules":  [
+                  "Vista humana central",
+                  "No ejecuta acciones",
+                  "No aplica cambios",
+                  "No escribe Kanban",
+                  "No red externa",
+                  "No git write"
+              ],
+    "security":  {
+                     "apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "sensitive_actions_executed":  false,
+                     "dashboard_view_only":  true,
+                     "human_decision_final":  true
+                 },
+    "next":  "E51_CONTROLLED_KANBAN_BRIDGE",
+    "created_at":  "2026-06-17T12:00:36"
+}

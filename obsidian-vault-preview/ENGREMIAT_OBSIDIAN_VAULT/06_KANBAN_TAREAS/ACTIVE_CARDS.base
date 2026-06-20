@@ -1,0 +1,17 @@
+﻿ENGREMIAT_BASE_PREVIEW
+view_id: ACTIVE_CARDS
+title: Tarjetas activas
+object_type: task_card
+filter: status != done AND status != closed
+group_by: lane
+sort: priority desc, risk desc
+columns:
+- card_id
+- project_id
+- lane
+- status
+- priority
+- risk
+- gate
+- next_action
+note: Preview de especificacion para Obsidian Bases. No ejecuta nada.

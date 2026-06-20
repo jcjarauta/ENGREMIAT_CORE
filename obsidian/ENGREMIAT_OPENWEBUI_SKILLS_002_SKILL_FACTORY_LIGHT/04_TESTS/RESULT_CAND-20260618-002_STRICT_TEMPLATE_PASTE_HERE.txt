@@ -1,0 +1,8 @@
+﻿Resultado OpenWebUI strict template:
+
+candidate_id: CAND-20260618-002 proposed_skill_id: SKILL_CAPTURE_TO_CANDIDATE name: Convertir captura útil en candidata de skill source: openwebui_manual_test human_problem: Convertir una captura útil en ficha de candidata sin oficializar prematuramente. trigger_phrase: Convierte esta captura en candidata de skill ENGREMIAT usando el schema de Skill Factory Light. expected_output: Ficha de candidata con campos obligatorios, test_status PENDING, decision CANDIDATE y next de test manual. source_files: OPENWEBUI_IMPORT_BUNDLE_CAND-20260618-002_STRICT_TEMPLATE.md test_status: PENDING decision: CANDIDATE next: Ejecutar test manual PASS/WARN/FAIL antes de oficializar.
+
+Decision humana: PASS
+
+Notas:
+La respuesta cumple la plantilla estricta: candidate_id, proposed_skill_id, campos obligatorios, test_status PENDING, decision CANDIDATE y next manual.

@@ -1,0 +1,32 @@
+{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_002E",
+    "stage":  "E03",
+    "block":  "B03.1",
+    "module_id":  "ENG-MOD-ACT-001",
+    "module_name":  "Activation Plan Builder",
+    "purpose":  "Crear planes de activación y desactivación controlados",
+    "steps":  [
+                  "select",
+                  "validate",
+                  "stage",
+                  "activate",
+                  "verify",
+                  "record"
+              ],
+    "evidence":  [
+                     "activation_plan.json",
+                     "validation_snapshot.json",
+                     "result_package.json"
+                 ],
+    "control":  {
+                    "local_first":  true,
+                    "no_external_network":  true,
+                    "no_git_write":  true,
+                    "human_gate_required":  true
+                },
+    "acceptance_criteria":  [
+                                "Plan reproducible",
+                                "Paso a paso visible",
+                                "Evidencia trazable"
+                            ]
+}

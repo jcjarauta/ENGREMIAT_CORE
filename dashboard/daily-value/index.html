@@ -1,0 +1,22 @@
+﻿<!doctype html><html lang="es"><head><meta charset="utf-8"><title>ENGREMIAT E61 Daily Value Dashboard V2</title><style>body{font-family:Segoe UI,Arial,sans-serif;background:#101014;color:#eee;margin:28px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.card{background:#1d1d24;border:1px solid #444;border-radius:12px;padding:16px}.ok{color:#7CFC98}.warn{color:#FFD45A}.bad{color:#FF7777}table{border-collapse:collapse;width:100%;margin-top:10px}td,th{border:1px solid #444;padding:8px}code{color:#9FE1FF}pre{white-space:pre-wrap;background:#0b0b0f;border:1px solid #333;padding:12px;border-radius:10px;max-height:320px;overflow:auto}</style></head><body><h1>ENGREMIAT E61 · Daily Value Dashboard V2</h1><p><span class="ok">Valor diario visible</span> · view_only=true · apply=false en dashboard · auto_apply=false · remote=false · git_write=false</p><div class="grid"><div class="card"><h2>Quality check</h2><p>Decision: <b>NOT_AVAILABLE</b></p><p>Score: <b>N/A</b></p></div><div class="card"><h2>Decision humana</h2><p>Gate: <b>DEFER_FOR_HUMAN_REVIEW</b></p><p>Approve no aplica cambios en E59.</p></div><div class="card"><h2>Controlled Apply V2</h2><p>apply_executed en E60: <b>True</b></p><p>El sistema deja un artefacto claro que conecta propuesta worker, quality check, decision humana y apply local reversible.</p></div><div class="card"><h2>Postcheck</h2><p>Decision: <b>GO_E60_POSTCHECK_OK</b></p><p>Rollback requerido y trazado.</p></div></div><div class="card"><h2>Respuesta/propuesta worker</h2><pre># WORKER_RESPONSE_SAMPLE
+
+proposal_id: WORKER-SAMPLE-E57-001
+summary: Propuesta segura para mejorar el loop diario mostrando en el dashboard operational una tarjeta de &quot;accion recomendada del dia&quot;.
+suggested_change: Crear una fuente local simple que lea production-output.json y muestre la recomendacion diaria en dashboard/daily-value en una etapa posterior.
+risk: MEDIUM
+required_files:
+- data/daily-production-052/production-output.json
+- dashboard/daily-value/index.html
+expected_value: El humano ve rapidamente la accion util recomendada sin buscar en JSON.
+safety_flags:
+- apply_executed=false
+- auto_apply=false
+- remote_execution=false
+- git_write=false
+- external_network=false
+rollback_needed: true
+postcheck_needed: true
+recommended_human_decision: REVIEW
+
+Notas: Esta respuesta es sample fallback seguro. No debe ejecutarse como cambio.
+</pre></div><div class="card"><h2>Fuentes del ciclo</h2><table><tr><th>Nombre</th><th>Tipo</th><th>Existe</th><th>Ruta</th></tr><tr><td>worker_prompt_gate</td><td>JSON</td><td>True</td><td><code>data/worker-real-056/worker-real-execution-gate.json</code></td></tr><tr><td>worker_response_sample</td><td>Markdown</td><td>True</td><td><code>data/worker-response-057/worker-response-sample.md</code></td></tr><tr><td>proposal_quality</td><td>JSON</td><td>False</td><td><code>reports/proposal-quality-058/proposal-quality-check-report.json</code></td></tr><tr><td>approval_gate</td><td>JSON</td><td>True</td><td><code>data/approval-console-059/proposal-approval-gate.json</code></td></tr><tr><td>controlled_apply_v2</td><td>JSON</td><td>True</td><td><code>data/controlled-apply-v2-060/controlled-apply-v2-output.json</code></td></tr><tr><td>apply_v2_postcheck</td><td>JSON</td><td>True</td><td><code>reports/controlled-apply-v2-060/e60-controlled-apply-v2-postcheck-report.json</code></td></tr></table></div><p class="warn">Siguiente: E62_KANBAN_WRITE_SIMULATION_WITH_ROLLBACK</p></body></html>

@@ -1,0 +1,25 @@
+﻿{
+    "receipt_id":  "E01-READONLY-STRUCTURE-RECEIPT",
+    "package_id":  "ENGREMIAT_PROJECT_BUILDER_TO_WORKER_LOOP_001",
+    "stage":  "E01_PREPARE_READONLY_STRUCTURE",
+    "created_at":  "2026-06-19T09:39:46",
+    "files_created":  [
+                          "C:\\ENGREMIAT_CORE\\data\\project-builder-to-worker-loop-001\\contracts\\project-builder-loop-contract.v1.json",
+                          "C:\\ENGREMIAT_CORE\\data\\project-builder-to-worker-loop-001\\input\\project-intake.sample.json",
+                          "C:\\ENGREMIAT_CORE\\data\\project-builder-to-worker-loop-001\\prompts\\ollama-project-builder-prompt-template.md",
+                          "C:\\ENGREMIAT_CORE\\data\\project-builder-to-worker-loop-001\\mock-ollama\\mock-ollama-project-roadmap-proposal.json",
+                          "C:\\ENGREMIAT_CORE\\data\\project-builder-to-worker-loop-001\\normalized\\normalized-project-roadmap.json",
+                          "C:\\ENGREMIAT_CORE\\data\\project-builder-to-worker-loop-001\\normalized\\cards-preview.json",
+                          "C:\\ENGREMIAT_CORE\\data\\project-builder-to-worker-loop-001\\normalized\\canonical-worker-queue-preview.json",
+                          "C:\\ENGREMIAT_CORE\\data\\project-builder-to-worker-loop-001\\review\\roadmap-review-package.json",
+                          "C:\\ENGREMIAT_CORE\\data\\project-builder-to-worker-loop-001\\gates\\gate-roadmap-approval.json"
+                      ],
+    "effects":  {
+                    "ollama_real_execution":  false,
+                    "worker_real_execution":  false,
+                    "materialize_cards":  false,
+                    "card_write":  false,
+                    "git":  false,
+                    "network_external":  false
+                }
+}

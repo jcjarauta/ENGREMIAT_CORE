@@ -1,0 +1,470 @@
+﻿{
+    "nodes":  [
+                  {
+                      "id":  "group-core",
+                      "x":  "-80",
+                      "y":  "-120",
+                      "width":  440,
+                      "height":  280,
+                      "type":  "group",
+                      "label":  "G01 · ENGREMIAT CORE",
+                      "color":  "1"
+                  },
+                  {
+                      "id":  "core-data",
+                      "x":  0,
+                      "y":  "-40",
+                      "width":  160,
+                      "height":  70,
+                      "type":  "text",
+                      "text":  "data\ncontratos / fuentes",
+                      "color":  "1"
+                  },
+                  {
+                      "id":  "core-reports",
+                      "x":  180,
+                      "y":  "-40",
+                      "width":  160,
+                      "height":  70,
+                      "type":  "text",
+                      "text":  "reports\nevidencia canonica",
+                      "color":  "1"
+                  },
+                  {
+                      "id":  "core-dashboard",
+                      "x":  90,
+                      "y":  60,
+                      "width":  160,
+                      "height":  70,
+                      "type":  "text",
+                      "text":  "dashboard\nlectura humana",
+                      "color":  "1"
+                  },
+                  {
+                      "id":  "group-control",
+                      "x":  440,
+                      "y":  "-260",
+                      "width":  440,
+                      "height":  280,
+                      "type":  "group",
+                      "label":  "G02 · CONTROL HUMANO",
+                      "color":  "2"
+                  },
+                  {
+                      "id":  "control-gates",
+                      "x":  520,
+                      "y":  "-180",
+                      "width":  160,
+                      "height":  70,
+                      "type":  "text",
+                      "text":  "gates\nautorizacion",
+                      "color":  "2"
+                  },
+                  {
+                      "id":  "control-decisions",
+                      "x":  700,
+                      "y":  "-180",
+                      "width":  160,
+                      "height":  70,
+                      "type":  "text",
+                      "text":  "decisiones\nhumano decide",
+                      "color":  "2"
+                  },
+                  {
+                      "id":  "control-hub",
+                      "x":  610,
+                      "y":  "-80",
+                      "width":  160,
+                      "height":  70,
+                      "type":  "text",
+                      "text":  "control hub\nsuperficie",
+                      "color":  "2"
+                  },
+                  {
+                      "id":  "group-projects",
+                      "x":  440,
+                      "y":  80,
+                      "width":  440,
+                      "height":  300,
+                      "type":  "group",
+                      "label":  "G03 · PROYECTOS / MODULOS",
+                      "color":  "3"
+                  },
+                  {
+                      "id":  "project-master",
+                      "x":  520,
+                      "y":  160,
+                      "width":  160,
+                      "height":  70,
+                      "type":  "text",
+                      "text":  "boveda maestra\nvision global",
+                      "color":  "3"
+                  },
+                  {
+                      "id":  "project-module",
+                      "x":  700,
+                      "y":  160,
+                      "width":  160,
+                      "height":  70,
+                      "type":  "text",
+                      "text":  "modulo\nrelacionable",
+                      "color":  "3"
+                  },
+                  {
+                      "id":  "project-space",
+                      "x":  610,
+                      "y":  260,
+                      "width":  160,
+                      "height":  70,
+                      "type":  "text",
+                      "text":  "project space\ntrabajo concreto",
+                      "color":  "3"
+                  },
+                  {
+                      "id":  "group-memory",
+                      "x":  960,
+                      "y":  80,
+                      "width":  440,
+                      "height":  300,
+                      "type":  "group",
+                      "label":  "G04 · MEMORIA VISUAL",
+                      "color":  "4"
+                  },
+                  {
+                      "id":  "memory-obsidian",
+                      "x":  1040,
+                      "y":  160,
+                      "width":  160,
+                      "height":  70,
+                      "type":  "text",
+                      "text":  "obsidian\nmemoria viva",
+                      "color":  "4"
+                  },
+                  {
+                      "id":  "memory-canvas",
+                      "x":  1220,
+                      "y":  160,
+                      "width":  160,
+                      "height":  70,
+                      "type":  "text",
+                      "text":  "canvas\ngrupos / mapas",
+                      "color":  "4"
+                  },
+                  {
+                      "id":  "memory-links",
+                      "x":  1130,
+                      "y":  260,
+                      "width":  160,
+                      "height":  70,
+                      "type":  "text",
+                      "text":  "wikilinks\nrelaciones",
+                      "color":  "4"
+                  },
+                  {
+                      "id":  "group-kanban",
+                      "x":  960,
+                      "y":  "-260",
+                      "width":  440,
+                      "height":  280,
+                      "type":  "group",
+                      "label":  "G05 · TAREAS / KANBAN PREVIEW",
+                      "color":  "5"
+                  },
+                  {
+                      "id":  "kanban-cards",
+                      "x":  1040,
+                      "y":  "-180",
+                      "width":  160,
+                      "height":  70,
+                      "type":  "text",
+                      "text":  "tarjetas\nbacklog",
+                      "color":  "5"
+                  },
+                  {
+                      "id":  "kanban-lanes",
+                      "x":  1220,
+                      "y":  "-180",
+                      "width":  160,
+                      "height":  70,
+                      "type":  "text",
+                      "text":  "lanes\nprioridad",
+                      "color":  "5"
+                  },
+                  {
+                      "id":  "kanban-human",
+                      "x":  1130,
+                      "y":  "-80",
+                      "width":  160,
+                      "height":  70,
+                      "type":  "text",
+                      "text":  "vista humana\nsin escritura real",
+                      "color":  "5"
+                  },
+                  {
+                      "id":  "group-workers",
+                      "x":  1480,
+                      "y":  "-260",
+                      "width":  440,
+                      "height":  280,
+                      "type":  "group",
+                      "label":  "G06 · WORKERS PREVIEW",
+                      "color":  "6"
+                  },
+                  {
+                      "id":  "worker-packet",
+                      "x":  1560,
+                      "y":  "-180",
+                      "width":  160,
+                      "height":  70,
+                      "type":  "text",
+                      "text":  "worker packet\npropuesta",
+                      "color":  "6"
+                  },
+                  {
+                      "id":  "worker-dryrun",
+                      "x":  1740,
+                      "y":  "-180",
+                      "width":  160,
+                      "height":  70,
+                      "type":  "text",
+                      "text":  "dry-run\nNO_GO por defecto",
+                      "color":  "6"
+                  },
+                  {
+                      "id":  "worker-gate",
+                      "x":  1650,
+                      "y":  "-80",
+                      "width":  160,
+                      "height":  70,
+                      "type":  "text",
+                      "text":  "gate\nejecucion bloqueada",
+                      "color":  "6"
+                  },
+                  {
+                      "id":  "group-evidence",
+                      "x":  1480,
+                      "y":  80,
+                      "width":  440,
+                      "height":  300,
+                      "type":  "group",
+                      "label":  "G07 · EVIDENCIAS / RESULTADOS",
+                      "color":  "1"
+                  },
+                  {
+                      "id":  "evidence-receipts",
+                      "x":  1560,
+                      "y":  160,
+                      "width":  160,
+                      "height":  70,
+                      "type":  "text",
+                      "text":  "receipts\npruebas",
+                      "color":  "1"
+                  },
+                  {
+                      "id":  "evidence-results",
+                      "x":  1740,
+                      "y":  160,
+                      "width":  160,
+                      "height":  70,
+                      "type":  "text",
+                      "text":  "resultados\nreadiness",
+                      "color":  "1"
+                  },
+                  {
+                      "id":  "evidence-close",
+                      "x":  1650,
+                      "y":  260,
+                      "width":  160,
+                      "height":  70,
+                      "type":  "text",
+                      "text":  "cierres\nsiguiente objetivo",
+                      "color":  "1"
+                  },
+                  {
+                      "id":  "group-evolution",
+                      "x":  2000,
+                      "y":  "-80",
+                      "width":  440,
+                      "height":  300,
+                      "type":  "group",
+                      "label":  "G08 · EVOLUCION DEL SISTEMA",
+                      "color":  "2"
+                  },
+                  {
+                      "id":  "evo-backlog",
+                      "x":  2080,
+                      "y":  0,
+                      "width":  160,
+                      "height":  70,
+                      "type":  "text",
+                      "text":  "backlog\nnecesidades",
+                      "color":  "2"
+                  },
+                  {
+                      "id":  "evo-architecture",
+                      "x":  2260,
+                      "y":  0,
+                      "width":  160,
+                      "height":  70,
+                      "type":  "text",
+                      "text":  "arquitectura oficial\niteracion",
+                      "color":  "2"
+                  },
+                  {
+                      "id":  "evo-next",
+                      "x":  2170,
+                      "y":  100,
+                      "width":  160,
+                      "height":  70,
+                      "type":  "text",
+                      "text":  "next objective\nplanifica",
+                      "color":  "2"
+                  }
+              ],
+    "edges":  [
+                  {
+                      "id":  "e01",
+                      "fromNode":  "core-data",
+                      "fromSide":  "right",
+                      "toNode":  "control-hub",
+                      "toSide":  "left",
+                      "label":  "estado operativo"
+                  },
+                  {
+                      "id":  "e02",
+                      "fromNode":  "control-hub",
+                      "fromSide":  "right",
+                      "toNode":  "project-master",
+                      "toSide":  "left",
+                      "label":  "crear/ubicar"
+                  },
+                  {
+                      "id":  "e03",
+                      "fromNode":  "project-master",
+                      "fromSide":  "right",
+                      "toNode":  "project-module",
+                      "toSide":  "left",
+                      "label":  "contiene"
+                  },
+                  {
+                      "id":  "e04",
+                      "fromNode":  "project-module",
+                      "fromSide":  "right",
+                      "toNode":  "project-space",
+                      "toSide":  "left",
+                      "label":  "estructura"
+                  },
+                  {
+                      "id":  "e05",
+                      "fromNode":  "project-space",
+                      "fromSide":  "right",
+                      "toNode":  "memory-obsidian",
+                      "toSide":  "left",
+                      "label":  "se documenta"
+                  },
+                  {
+                      "id":  "e06",
+                      "fromNode":  "memory-obsidian",
+                      "fromSide":  "right",
+                      "toNode":  "memory-canvas",
+                      "toSide":  "left",
+                      "label":  "visualiza"
+                  },
+                  {
+                      "id":  "e07",
+                      "fromNode":  "memory-canvas",
+                      "fromSide":  "right",
+                      "toNode":  "memory-links",
+                      "toSide":  "left",
+                      "label":  "relaciona"
+                  },
+                  {
+                      "id":  "e08",
+                      "fromNode":  "project-space",
+                      "fromSide":  "right",
+                      "toNode":  "kanban-cards",
+                      "toSide":  "left",
+                      "label":  "genera tareas"
+                  },
+                  {
+                      "id":  "e09",
+                      "fromNode":  "kanban-cards",
+                      "fromSide":  "right",
+                      "toNode":  "kanban-human",
+                      "toSide":  "left",
+                      "label":  "humano prioriza"
+                  },
+                  {
+                      "id":  "e10",
+                      "fromNode":  "kanban-human",
+                      "fromSide":  "right",
+                      "toNode":  "worker-packet",
+                      "toSide":  "left",
+                      "label":  "prepara propuesta"
+                  },
+                  {
+                      "id":  "e11",
+                      "fromNode":  "worker-packet",
+                      "fromSide":  "right",
+                      "toNode":  "worker-gate",
+                      "toSide":  "left",
+                      "label":  "requiere autorizacion"
+                  },
+                  {
+                      "id":  "e12",
+                      "fromNode":  "worker-gate",
+                      "fromSide":  "right",
+                      "toNode":  "worker-dryrun",
+                      "toSide":  "left",
+                      "label":  "simula"
+                  },
+                  {
+                      "id":  "e13",
+                      "fromNode":  "worker-dryrun",
+                      "fromSide":  "right",
+                      "toNode":  "evidence-receipts",
+                      "toSide":  "left",
+                      "label":  "produce evidencia"
+                  },
+                  {
+                      "id":  "e14",
+                      "fromNode":  "evidence-receipts",
+                      "fromSide":  "right",
+                      "toNode":  "evidence-results",
+                      "toSide":  "left",
+                      "label":  "valida"
+                  },
+                  {
+                      "id":  "e15",
+                      "fromNode":  "evidence-results",
+                      "fromSide":  "right",
+                      "toNode":  "evidence-close",
+                      "toSide":  "left",
+                      "label":  "cierra"
+                  },
+                  {
+                      "id":  "e16",
+                      "fromNode":  "evidence-close",
+                      "fromSide":  "right",
+                      "toNode":  "evo-backlog",
+                      "toSide":  "left",
+                      "label":  "aprendizaje"
+                  },
+                  {
+                      "id":  "e17",
+                      "fromNode":  "evo-backlog",
+                      "fromSide":  "right",
+                      "toNode":  "evo-architecture",
+                      "toSide":  "left",
+                      "label":  "refina"
+                  },
+                  {
+                      "id":  "e18",
+                      "fromNode":  "evo-architecture",
+                      "fromSide":  "right",
+                      "toNode":  "core-data",
+                      "toSide":  "left",
+                      "label":  "actualiza contrato"
+                  }
+              ]
+}

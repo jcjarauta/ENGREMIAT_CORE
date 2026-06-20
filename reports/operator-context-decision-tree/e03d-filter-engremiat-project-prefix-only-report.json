@@ -1,0 +1,15 @@
+﻿{
+    "package_id":  "ENGREMIAT_OPERATOR_CONTEXT_AND_DECISION_TREE_001",
+    "stage":  "E03D_FILTER_ENGREMIAT_PROJECT_PREFIX_ONLY",
+    "status":  "PASS",
+    "readiness":  100,
+    "mode":  "ENGREMIAT_PROJECT_PREFIX_ONLY",
+    "projects":  4,
+    "registry":  "C:\\ENGREMIAT_CORE\\data\\operator-state\\project-registry.json",
+    "registry_copy":  "C:\\ENGREMIAT_CORE\\data\\operator-state\\engremiat-project-registry.json",
+    "commands":  [
+                     "C:\\ENGREMIAT_CORE\\tools\\operator-context\\proyectos.ps1",
+                     "C:\\ENGREMIAT_CORE\\tools\\operator-context\\abrir-proyecto.ps1"
+                 ],
+    "next":  "E04_PROJECT_MODULE_TARGET_DECISION"
+}

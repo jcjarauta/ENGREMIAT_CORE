@@ -1,0 +1,34 @@
+﻿{
+    "package_id":  "ENGREMIAT_OPENCLAW_INTEGRATION_STRATEGY_001_B06_PREFLIGHT_INSTALLATION_CHECK_NO_INSTALL",
+    "status":  "PASS",
+    "decision":  "GO_PREFLIGHT_ONLY",
+    "openclaw_installed":  false,
+    "openclaw_executed":  false,
+    "install_performed":  false,
+    "docker_found":  true,
+    "node_found":  true,
+    "npm_found":  true,
+    "winget_found":  true,
+    "ports":  [
+                  {
+                      "port":  3000,
+                      "open":  true
+                  },
+                  {
+                      "port":  11434,
+                      "open":  true
+                  },
+                  {
+                      "port":  5432,
+                      "open":  true
+                  }
+              ],
+    "input_files":  2,
+    "possible_secret_hits":  0,
+    "warnings":  [
+
+                 ],
+    "install_authorization_required":  true,
+    "install_auth_phrase":  "AUTORIZO_INSTALAR_OPENCLAW_READONLY_LAB_001_SIN_SECRETOS_SIN_TELEGRAM",
+    "next":  "PAUSE_AND_DECIDE_INSTALL_OR_RETURN_TO_SKILLS"
+}

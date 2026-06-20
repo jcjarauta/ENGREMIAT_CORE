@@ -1,0 +1,12 @@
+ENGREMIAT_PACKAGE_BEGIN package=ENGREMIAT_RECURRENT_CARD_REFRESH_RUN_001
+ENGREMIAT_STEP_BEGIN step_id=RUN_RECURRENT_REFRESH operation=LOCAL_FILE_READ_WRITE risk=LOW mode=DRY_RUN no_exec=True native_kanban_write=False obsidian_real_write=False openwebui_real=False timeout_seconds=90
+OK input=C:\ENGREMIAT_CORE\docs\kanban-backlog\recurrent-card-refresh-model\inputs\detected-input.readonly-intake.20260618-105743.json
+OK cards=3
+OK index=C:\ENGREMIAT_CORE\docs\kanban-backlog\recurrent-card-refresh-model\INDEX.md
+OK inline_batch=C:\ENGREMIAT_CORE\docs\kanban-backlog\recurrent-card-refresh-model\inline-batches\RECURRENT_INLINE_BATCH_20260618-105744.md
+OK manifest=C:\ENGREMIAT_CORE\docs\kanban-backlog\recurrent-card-refresh-model\recurrent-card-refresh-manifest.json
+OK report=C:\ENGREMIAT_CORE\reports\recurrent-card-refresh-model\recurrent-card-refresh-run-20260618-105744.json
+DECISION=GO_RECURRENT_CARD_REFRESH_DRY_RUN_READY
+NEXT=PASTE_INLINE_BATCH_TO_CLINE_OR_BUILD_OPENCLAW_INPUT_ADAPTER
+ENGREMIAT_STEP_END step_id=RUN_RECURRENT_REFRESH status=PASS
+ENGREMIAT_PACKAGE_END package=ENGREMIAT_RECURRENT_CARD_REFRESH_RUN_001

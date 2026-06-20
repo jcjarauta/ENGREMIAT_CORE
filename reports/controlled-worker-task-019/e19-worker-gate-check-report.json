@@ -1,0 +1,28 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_OPERATIVE_WORKER_FLOW_019_025",
+    "stage":  "E19",
+    "created_at":  "2026-06-17T10:47:02.7521922+02:00",
+    "readiness":  100,
+    "decision":  "GO_E19_WORKER_GATE_READY_BLOCKED_BY_DEFAULT",
+    "next":  "P19_3_1_CREATE_WORKER_PROMPT",
+    "checks":  {
+                   "boundaries_created":  true,
+                   "gate_created":  true,
+                   "gate_defer":  true,
+                   "human_confirmation_false":  true,
+                   "worker_execution_allowed_false":  true,
+                   "approved_false":  true,
+                   "apply_false":  true,
+                   "auto_apply_false":  true,
+                   "remote_execution_false":  true,
+                   "git_write_false":  true,
+                   "external_network_false":  true,
+                   "read_secrets_false":  true
+               },
+    "gate":  "DEFER",
+    "worker_real_execution":  false,
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false
+}

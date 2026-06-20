@@ -1,0 +1,29 @@
+﻿{
+    "request_id":  "KANBAN-SURFACE-INVENTORY-REQUEST-012-E01",
+    "objective":  "ENGREMIAT_KANBAN_REAL_SETUP_012",
+    "stage":  "E01",
+    "must_detect":  [
+                        "git_root",
+                        "branch",
+                        "head",
+                        "main_pc_ready",
+                        "old_pc_ready"
+                    ],
+    "forbidden":  [
+                      "fetch",
+                      "push",
+                      "apply",
+                      "remote_execution",
+                      "git_write"
+                  ],
+    "expected_decision":  [
+                              "GO_MAIN_PC_READY",
+                              "NO_GO"
+                          ],
+    "safety":  {
+                   "git_write":  false,
+                   "remote_execution":  false,
+                   "auto_apply":  false,
+                   "shared_repo_edit":  false
+               }
+}

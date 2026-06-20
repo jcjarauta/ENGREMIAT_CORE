@@ -1,0 +1,20 @@
+﻿{
+    "package_id":  "ENGREMIAT_OPERATOR_CONTEXT_AND_DECISION_TREE_001",
+    "stage":  "E02_CREATE_ACTIVE_CONTEXT_STATE",
+    "status":  "PASS",
+    "readiness":  100,
+    "decision":  "GO_ACTIVE_CONTEXT_STATE_READY",
+    "state_file":  "C:\\ENGREMIAT_CORE\\data\\operator-state\\active-context.json",
+    "context_script":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-context.ps1",
+    "router":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-router.ps1",
+    "router_smoke":  "COMANDOS ENGREMIAT\r\n\r\nGlobales\r\n - estado\r\n - ayuda\r\n - comandos\r\n - proyectos\r\n - abrir-proyecto\r\n - nuevo-proyecto\r\n - ultimo\r\n - dashboard\r\n - salir\r\n",
+    "safety":  {
+                   "local_only":  true,
+                   "context_state":  true,
+                   "router_contextual":  true,
+                   "no_worker_real":  true,
+                   "no_git":  true,
+                   "no_network":  true
+               },
+    "next":  "RUN_proyectos_THEN_abrir-proyecto"
+}

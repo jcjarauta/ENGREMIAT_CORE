@@ -1,0 +1,94 @@
+﻿{
+    "package_id":  "ENGREMIAT_PROJECT_BUILDER_TO_WORKER_LOOP_001",
+    "stage":  "E03_BUILD_ROADMAP_PROPOSAL_MODEL",
+    "proposal_id":  "roadmap-proposal.preview.v1",
+    "status":  "DRAFT_PREVIEW",
+    "source":  "human_project_intake_sample",
+    "project_identity":  {
+                             "name":  "Proyecto humano pendiente de completar",
+                             "owner":  "human",
+                             "mode":  "builder_to_worker_loop"
+                         },
+    "human_need":  "Pendiente de entrada humana real",
+    "desired_result":  "Roadmap aprobado y paquete worker preparado",
+    "constraints":  [
+                        "LOCAL_ONLY",
+                        "NO_WORKER_EXECUTION",
+                        "NO_NETWORK",
+                        "NO_GIT_WRITE",
+                        "HUMAN_GATE_REQUIRED"
+                    ],
+    "success_criteria":  [
+                             "roadmap_proposal_created",
+                             "human_gate_visible",
+                             "worker_packet_not_executed",
+                             "evidence_plan_ready"
+                         ],
+    "proposed_stages":  [
+                            {
+                                "stage_id":  "E01",
+                                "name":  "Intake normalizado",
+                                "goal":  "Aclarar necesidad, resultado y restricciones",
+                                "risk":  "LOW",
+                                "human_gate":  "APPROVE_OR_EDIT"
+                            },
+                            {
+                                "stage_id":  "E02",
+                                "name":  "Roadmap ejecutable",
+                                "goal":  "Ordenar fases, bloques y pasos",
+                                "risk":  "LOW",
+                                "human_gate":  "APPROVE_OR_EDIT"
+                            },
+                            {
+                                "stage_id":  "E03",
+                                "name":  "Worker packet preview",
+                                "goal":  "Preparar paquete para worker sin ejecutarlo",
+                                "risk":  "MEDIUM",
+                                "human_gate":  "APPROVE_REQUIRED"
+                            },
+                            {
+                                "stage_id":  "E04",
+                                "name":  "Ejecucion controlada futura",
+                                "goal":  "Activar worker solo tras aprobacion humana explicita",
+                                "risk":  "HIGH",
+                                "human_gate":  "EXPLICIT_AUTHORIZATION_REQUIRED"
+                            }
+                        ],
+    "human_gate":  {
+                       "gate_id":  "ROADMAP_APPROVAL_GATE",
+                       "status":  "PENDING_HUMAN_REVIEW",
+                       "allowed_decisions":  [
+                                                 "APPROVE",
+                                                 "EDIT",
+                                                 "REJECT",
+                                                 "DEFER"
+                                             ],
+                       "required_before":  "worker_packet_execution"
+                   },
+    "worker_packet_preview":  {
+                                  "created":  true,
+                                  "execute_now":  false,
+                                  "authorization_required":  true,
+                                  "authorization_status":  "PENDING_EXPLICIT_HUMAN_AUTHORIZATION"
+                              },
+    "risk_register":  [
+                          {
+                              "risk":  "roadmap_too_broad",
+                              "mitigation":  "dividir_en_fronteras_tecnicas"
+                          },
+                          {
+                              "risk":  "worker_executes_without_gate",
+                              "mitigation":  "execution_false_by_default"
+                          },
+                          {
+                              "risk":  "human_context_missing",
+                              "mitigation":  "intake_fields_required"
+                          }
+                      ],
+    "evidence_plan":  [
+                          "roadmap-proposal-model.schema.json",
+                          "roadmap-proposal.preview.json",
+                          "e03-build-roadmap-proposal-model-report.json"
+                      ],
+    "next_action":  "E04_BUILD_HUMAN_APPROVAL_GATE"
+}

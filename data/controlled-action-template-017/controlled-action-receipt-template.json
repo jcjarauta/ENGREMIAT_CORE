@@ -1,0 +1,30 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_ACTION_TEMPLATE_017",
+    "stage":  "E04",
+    "template":  "controlled-action-receipt-template",
+    "purpose":  "Registrar ejecucion o bloqueo",
+    "required":  true,
+    "created_even_when_blocked":  true,
+    "fields":  [
+                   "objective",
+                   "stage",
+                   "action",
+                   "gate",
+                   "approved",
+                   "apply_executed",
+                   "blocked",
+                   "block_reason",
+                   "artifacts",
+                   "timestamp"
+               ],
+    "default_values":  {
+                           "gate":  "DEFER",
+                           "approved":  false,
+                           "apply_executed":  false,
+                           "blocked":  true,
+                           "auto_apply":  false,
+                           "remote_execution":  false,
+                           "git_write":  false
+                       },
+    "status":  "TEMPLATE_READY"
+}

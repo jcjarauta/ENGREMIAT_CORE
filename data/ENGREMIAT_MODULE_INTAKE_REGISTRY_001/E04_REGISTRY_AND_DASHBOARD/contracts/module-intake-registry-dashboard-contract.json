@@ -1,0 +1,23 @@
+{
+    "package_id":  "ENGREMIAT_MODULE_INTAKE_REGISTRY_001",
+    "stage":  "E04_REGISTRY_AND_DASHBOARD",
+    "artifact":  "module-intake-registry-dashboard-contract.json",
+    "status":  "DEFINED",
+    "purpose":  "Registrar entradas de modulos y mostrar estado, tipo, decision y riesgo para control humano",
+    "inputs":  [
+                   "module-intake-registry.json",
+                   "sample scaffold",
+                   "module.json"
+               ],
+    "outputs":  [
+                    "module-intake-registry.v1.json",
+                    "intake-dashboard/index.html",
+                    "e04-registry-dashboard-report.json"
+                ],
+    "blocked_actions":  [
+                            "core_changes",
+                            "external_network",
+                            "git_write",
+                            "real_integration_without_gate"
+                        ]
+}

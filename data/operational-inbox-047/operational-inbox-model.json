@@ -1,0 +1,44 @@
+﻿{
+    "objective":  "ENGREMIAT_POST_MVP_OPERATIONAL_DAILY_LOOP_046_055",
+    "stage":  "E47",
+    "stage_name":  "Operational Inbox",
+    "purpose":  "Crear bandeja diaria persistente de propuestas, decisiones y tareas",
+    "inbox_role":  "local_human_operational_surface",
+    "item_types":  [
+                       "proposal",
+                       "decision",
+                       "task",
+                       "evidence",
+                       "warning"
+                   ],
+    "statuses":  [
+                     "NEW",
+                     "REVIEW",
+                     "DEFERRED",
+                     "APPROVED",
+                     "REPAIR",
+                     "REJECTED",
+                     "DONE"
+                 ],
+    "default_status":  "NEW",
+    "source_of_truth":  "data/operational-inbox-047/inbox-items.jsonl",
+    "rules":  [
+                  "No ejecuta items",
+                  "No aplica cambios",
+                  "No escribe Kanban real",
+                  "No red externa",
+                  "El humano decide"
+              ],
+    "security":  {
+                     "apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "sensitive_actions_executed":  false,
+                     "inbox_local_only":  true,
+                     "human_decision_final":  true
+                 },
+    "next":  "E48_DECISION_HISTORY",
+    "created_at":  "2026-06-17T11:57:26"
+}

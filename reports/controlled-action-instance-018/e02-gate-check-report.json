@@ -1,0 +1,27 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_ACTION_INSTANCE_018",
+    "stage":  "E02",
+    "created_at":  "2026-06-17T09:59:45.7889948+02:00",
+    "readiness":  100,
+    "decision":  "GO_E02_INSTANCE_GATE_READY_BLOCKED_BY_DEFAULT",
+    "next":  "E03_DRY_RUN_DE_INSTANCIA",
+    "gate":  "DEFER",
+    "checks":  {
+                   "gate_created":  true,
+                   "sample_created":  true,
+                   "default_decision_defer":  true,
+                   "human_confirmation_false":  true,
+                   "execution_allowed_false":  true,
+                   "approved_false":  true,
+                   "apply_false":  true,
+                   "auto_apply_false":  true,
+                   "remote_execution_false":  true,
+                   "git_write_false":  true,
+                   "blocked_by_default":  true
+               },
+    "approved":  false,
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false
+}

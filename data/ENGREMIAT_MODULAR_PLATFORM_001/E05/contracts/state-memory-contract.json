@@ -1,0 +1,28 @@
+{
+    "package_id":  "ENGREMIAT_MODULAR_PLATFORM_001",
+    "stage":  "E05",
+    "block":  "B05.2",
+    "module_id":  "ENG-MOD-MEM-001",
+    "module_name":  "State Memory Layer",
+    "purpose":  "Guardar estados, eventos, dependencias y cierres",
+    "depends_on":  "ENG-MOD-RES-001",
+    "state":  "planned",
+    "memory_model":  {
+                         "stores_states":  true,
+                         "stores_events":  true,
+                         "stores_dependencies":  true,
+                         "stores_closures":  true,
+                         "separable_from_core":  true
+                     },
+    "control":  {
+                    "local_first":  true,
+                    "no_external_network":  true,
+                    "no_git_write":  true,
+                    "human_validation_required":  true
+                },
+    "acceptance_criteria":  [
+                                "La memoria es estructurada",
+                                "No se acopla al core de forma frágil",
+                                "Es compatible y separable"
+                            ]
+}

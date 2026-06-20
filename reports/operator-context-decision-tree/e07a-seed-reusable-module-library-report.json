@@ -1,0 +1,43 @@
+﻿{
+    "package_id":  "ENGREMIAT_OPERATOR_CONTEXT_AND_DECISION_TREE_001",
+    "stage":  "E07A_SEED_REUSABLE_MODULE_LIBRARY",
+    "status":  "PASS",
+    "readiness":  100,
+    "created_modules":  4,
+    "library_index":  "C:\\ENGREMIAT_CORE\\library\\reusable-modules\\library-index.json",
+    "modules":  [
+                    {
+                        "id":  "MODULE_tareas_tarjetas",
+                        "name":  "Tareas y tarjetas",
+                        "path":  "C:\\ENGREMIAT_CORE\\library\\reusable-modules\\MODULE_tareas_tarjetas",
+                        "vault":  "C:\\ENGREMIAT_CORE\\library\\reusable-modules\\MODULE_tareas_tarjetas\\BOVEDA_MODULO",
+                        "objective":  "Gestionar tareas del proyecto como tarjetas reutilizables con estado, prioridad y evidencia.",
+                        "status":  "AVAILABLE_FOR_PROJECT_REUSE"
+                    },
+                    {
+                        "id":  "MODULE_contrato_objetivo",
+                        "name":  "Contrato y objetivo",
+                        "path":  "C:\\ENGREMIAT_CORE\\library\\reusable-modules\\MODULE_contrato_objetivo",
+                        "vault":  "C:\\ENGREMIAT_CORE\\library\\reusable-modules\\MODULE_contrato_objetivo\\BOVEDA_MODULO",
+                        "objective":  "Definir contrato minimo de modulo con objetivo, alcance, criterios de cierre y trazabilidad.",
+                        "status":  "AVAILABLE_FOR_PROJECT_REUSE"
+                    },
+                    {
+                        "id":  "MODULE_smoke_validacion",
+                        "name":  "Smoke y validacion",
+                        "path":  "C:\\ENGREMIAT_CORE\\library\\reusable-modules\\MODULE_smoke_validacion",
+                        "vault":  "C:\\ENGREMIAT_CORE\\library\\reusable-modules\\MODULE_smoke_validacion\\BOVEDA_MODULO",
+                        "objective":  "Preparar validaciones minimas repetibles para comprobar artefactos, estado y evidencias del modulo.",
+                        "status":  "AVAILABLE_FOR_PROJECT_REUSE"
+                    },
+                    {
+                        "id":  "MODULE_biblioteca_reutilizable",
+                        "name":  "Biblioteca reutilizable",
+                        "path":  "C:\\ENGREMIAT_CORE\\library\\reusable-modules\\MODULE_biblioteca_reutilizable",
+                        "vault":  "C:\\ENGREMIAT_CORE\\library\\reusable-modules\\MODULE_biblioteca_reutilizable\\BOVEDA_MODULO",
+                        "objective":  "Promover modulos cerrados a biblioteca, indexarlos y reutilizarlos en nuevos proyectos.",
+                        "status":  "AVAILABLE_FOR_PROJECT_REUSE"
+                    }
+                ],
+    "next":  "E07B_ADD_LIBRARY_MENU_AND_SELECT_REUSABLE_MODULES_FOR_PROJECT"
+}

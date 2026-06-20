@@ -1,0 +1,44 @@
+{
+    "objective_id":  "KTP-DRYRUN-001",
+    "module_id":  "ENG-KTP-001",
+    "task_id":  "TASK-KTP-001",
+    "title":  "Preparar paquete de tarea estructurado para Cline/Kanban",
+    "context":  "Dry-run local sin inferencia real, sin escritura Obsidian real y sin Kanban real.",
+    "requirements":  [
+                         "JSON validable",
+                         "Markdown/YAML legible",
+                         "TSV exportable",
+                         "prompt reproducible"
+                     ],
+    "constraints":  [
+                        "local_first",
+                        "no_network",
+                        "no_git_write",
+                        "no_real_integration"
+                    ],
+    "inputs":  [
+                   "human_input_sample",
+                   "structured_json_sample"
+               ],
+    "outputs":  [
+                    "task_packet_json",
+                    "obsidian_note",
+                    "cline_kanban_tsv"
+                ],
+    "acceptance_criteria":  [
+                                "campos requeridos presentes",
+                                "risk_level valido",
+                                "kanban_status valido",
+                                "evidencia esperada declarada"
+                            ],
+    "risk_level":  "LOW",
+    "human_gate_required":  true,
+    "kanban_status":  "BACKLOG",
+    "clien_prompt":  "Actua como worker asistido. Ejecuta solo el paquete validado y devuelve evidencia estructurada. No uses red ni Git sin autorizacion.",
+    "evidence_expected":  [
+                              "validation-report.json",
+                              "task-packet.json",
+                              "cline-kanban-export.tsv"
+                          ],
+    "next_action":  "E02_TASK_PACKET_SCHEMA_AND_VALIDATOR"
+}

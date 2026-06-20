@@ -1,0 +1,21 @@
+﻿{
+    "schema":  "engremiat.e144_operational_command_readiness_report.v1",
+    "objective":  "ENGREMIAT_OPERATIONAL_ARTIFACT_INTEGRATION_142_151",
+    "stage":  "E144",
+    "block":  "B144.2",
+    "step":  "P144.2.2",
+    "created_at":  "2026-06-17T16:29:17",
+    "model_valid":  true,
+    "script_valid":  true,
+    "validation_valid":  true,
+    "target_artifact_found":  true,
+    "command_ready":  true,
+    "readiness_score":  100,
+    "decision":  "GO_TO_E145_TEMPLATE_EXTRACTION",
+    "artifacts":  [
+                      "C:\\ENGREMIAT_CORE\\data\\operational-command-144\\operational-command-model.json",
+                      "C:\\ENGREMIAT_CORE\\tools\\operational\\open-operational-artifact.ps1",
+                      "C:\\ENGREMIAT_CORE\\reports\\operational-command-144\\operational-command-validation-report.json"
+                  ],
+    "next":  "E145_TEMPLATE_EXTRACTION"
+}

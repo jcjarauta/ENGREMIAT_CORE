@@ -1,0 +1,69 @@
+﻿{
+    "contract_id":  "obsidian-object-contract-v1",
+    "package_id":  "ENGREMIAT_OBSIDIAN_SYSTEM_BRIDGE_001",
+    "version":  "1.0.0",
+    "purpose":  "Define a stable Markdown/YAML object contract so Engremiat can read human decisions edited in Obsidian.",
+    "required_fields":  [
+                            "object_type",
+                            "id",
+                            "title",
+                            "status"
+                        ],
+    "recommended_fields":  [
+                               "source_need",
+                               "priority",
+                               "kanban_decision",
+                               "human_reviewed",
+                               "recommended_column",
+                               "tags"
+                           ],
+    "allowed_object_types":  [
+                                 "need",
+                                 "kanban_candidate",
+                                 "kanban_result",
+                                 "decision",
+                                 "evidence",
+                                 "module",
+                                 "package_close",
+                                 "manual_kanban_card",
+                                 "lab_review"
+                             ],
+    "allowed_status":  [
+                           "DRAFT",
+                           "REVIEW",
+                           "CANDIDATE",
+                           "READY",
+                           "ACTIVE",
+                           "BLOCKED",
+                           "DONE",
+                           "CLOSED"
+                       ],
+    "allowed_kanban_decision":  [
+                                    "PENDING",
+                                    "GO",
+                                    "ADJUST",
+                                    "STOP"
+                                ],
+    "allowed_recommended_column":  [
+                                       "BACKLOG",
+                                       "READY",
+                                       "NEXT",
+                                       "DOING",
+                                       "DONE"
+                                   ],
+    "read_policy":  {
+                        "source":  "Markdown files with YAML frontmatter",
+                        "write_back":  "disabled_by_default",
+                        "tsv_dependency":  "avoid",
+                        "manual_human_edit":  "allowed",
+                        "validation":  "strict fields, tolerant missing optional fields"
+                    },
+    "safety":  {
+                   "write_to_cline":  false,
+                   "browser":  false,
+                   "api_called":  false,
+                   "network":  false,
+                   "worker_real_execution":  false,
+                   "git":  false
+               }
+}

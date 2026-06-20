@@ -1,0 +1,45 @@
+﻿{
+    "schema":  "engremiat.real_task_preview.v1",
+    "objective":  "ENGREMIAT_REAL_VALUE_TASK_EXECUTION_LOOP_112_121",
+    "stage":  "E114",
+    "block":  "B114.2",
+    "step":  "P114.2.1",
+    "preview_id":  "REAL-TASK-PREVIEW-114-001",
+    "proposal_id":  "REAL-TASK-PROPOSAL-114-001",
+    "created_at":  "2026-06-17T14:10:02",
+    "risk_level":  "HIGH",
+    "preview_only":  true,
+    "execution_allowed_now":  false,
+    "commands_executed":  [
+
+                          ],
+    "files_expected_to_create":  [
+                                     "data/real-task-proposal-114/real-task-proposal.json",
+                                     "data/real-task-proposal-114/real-task-expected-evidence.json",
+                                     "data/real-task-proposal-114/real-task-preview.json",
+                                     "reports/real-task-proposal-114/e114-proposal-readiness-report.json"
+                                 ],
+    "files_expected_to_change":  [
+
+                                 ],
+    "side_effects":  [
+                         "LOCAL_JSON_ARTIFACTS_ONLY"
+                     ],
+    "actions_preview":  [
+                            {
+                                "order":  1,
+                                "action":  "Create controlled proposal package",
+                                "executes_real_task":  false
+                            },
+                            {
+                                "order":  2,
+                                "action":  "Define expected evidence",
+                                "executes_real_task":  false
+                            },
+                            {
+                                "order":  3,
+                                "action":  "Prepare authorization gate for E115",
+                                "executes_real_task":  false
+                            }
+                        ]
+}

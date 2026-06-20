@@ -1,0 +1,92 @@
+﻿{
+    "package_id":  "ENGREMIAT_REAL_INTAKE_IMPORTER_001",
+    "stage":  "E04_BUILD_REAL_CONTROLLED_DRY_RUN_FROM_WORKER_PACKET",
+    "dry_run_id":  "real-controlled-dry-run-from-worker-packet.v1",
+    "status":  "PASS_PREVIEW_ONLY",
+    "decision":  "NO_GO_EXECUTION_NOT_AUTHORIZED",
+    "purpose":  "Simular la ejecucion controlada derivada del worker packet preview sin ejecutar worker real ni escribir cambios",
+    "source_packet":  "C:\\ENGREMIAT_CORE\\data\\real-intake-importer\\real-worker-packet-preview.json",
+    "source_intake":  "C:\\ENGREMIAT_CORE\\data\\real-intake-importer\\real-human-intake.accepted.latest.json",
+    "source_roadmap":  "C:\\ENGREMIAT_CORE\\data\\real-intake-importer\\real-intake-roadmap-preview.latest.json",
+    "project_name":  "Primer intake real para construir roadmap automático en ENGREMIAT",
+    "mode":  {
+                 "dry_run":  true,
+                 "preview_only":  true,
+                 "execute_now":  false,
+                 "worker_execution":  false,
+                 "authorization_status":  "NOT_GRANTED",
+                 "worker_authorization":  "NOT_GRANTED",
+                 "network":  false,
+                 "git_write":  false,
+                 "external_ai":  false,
+                 "local_only":  true
+             },
+    "simulated_steps":  [
+                            {
+                                "step_id":  "DRY01",
+                                "operation":  "READ_ACCEPTED_INTAKE",
+                                "risk":  "LOW",
+                                "would_execute":  false,
+                                "result":  "PASS_CONTEXT_AVAILABLE"
+                            },
+                            {
+                                "step_id":  "DRY02",
+                                "operation":  "READ_ROADMAP_PREVIEW",
+                                "risk":  "LOW",
+                                "would_execute":  false,
+                                "result":  "PASS_ROADMAP_AVAILABLE"
+                            },
+                            {
+                                "step_id":  "DRY03",
+                                "operation":  "READ_WORKER_PACKET_PREVIEW",
+                                "risk":  "LOW",
+                                "would_execute":  false,
+                                "result":  "PASS_PACKET_AVAILABLE"
+                            },
+                            {
+                                "step_id":  "DRY04",
+                                "operation":  "VALIDATE_AUTHORIZATION",
+                                "risk":  "MEDIUM",
+                                "would_execute":  false,
+                                "result":  "NO_GO_AUTHORIZATION_NOT_GRANTED"
+                            },
+                            {
+                                "step_id":  "DRY05",
+                                "operation":  "CHECK_FORBIDDEN_OPERATIONS",
+                                "risk":  "MEDIUM",
+                                "would_execute":  false,
+                                "result":  "PASS_FORBIDDEN_OPERATIONS_BLOCKED"
+                            },
+                            {
+                                "step_id":  "DRY06",
+                                "operation":  "RETURN_EVIDENCE_PLAN",
+                                "risk":  "LOW",
+                                "would_execute":  false,
+                                "result":  "PASS_EVIDENCE_PLAN_READY"
+                            }
+                        ],
+    "forbidden_operations":  [
+                                 "EXECUTE_WORKER",
+                                 "WRITE_PROJECT_CODE",
+                                 "RUN_COMMANDS",
+                                 "CALL_NETWORK",
+                                 "CALL_EXTERNAL_AI",
+                                 "GIT_COMMIT",
+                                 "GIT_PUSH",
+                                 "MODIFY_SYSTEM",
+                                 "AUTO_APPLY"
+                             ],
+    "evidence_plan":  [
+                          "real-controlled-dry-run-from-worker-packet.json",
+                          "real-controlled-dry-run-dashboard.html",
+                          "e04-build-real-controlled-dry-run-report.json"
+                      ],
+    "go_conditions_missing":  [
+                                  "explicit_human_authorization",
+                                  "approved_scope",
+                                  "approved_operations",
+                                  "rollback_plan",
+                                  "execution_receipt"
+                              ],
+    "next":  "E05_CLOSE_REAL_INTAKE_IMPORTER_PREVIEW_CHAIN"
+}

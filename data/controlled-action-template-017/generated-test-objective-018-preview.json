@@ -1,0 +1,31 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_ACTION_GENERATED_TEST_018",
+    "source_template":  "ENGREMIAT_CONTROLLED_ACTION_TEMPLATE_017",
+    "created_at":  "2026-06-17T08:54:52.8552291+02:00",
+    "mode":  "PREVIEW_ONLY",
+    "gate":  "DEFER",
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "human_confirmation":  false,
+    "execution_allowed":  false,
+    "planned_pipeline":  [
+                             "scope",
+                             "safety_rules",
+                             "gate",
+                             "dry_run",
+                             "execution_plan",
+                             "receipt",
+                             "postcheck",
+                             "close_report",
+                             "next_objective"
+                         ],
+    "directories":  {
+                        "data":  "data/controlled-action-generated-test-018",
+                        "reports":  "reports/controlled-action-generated-test-018",
+                        "tools":  "tools/controlled-action-generated-test-018",
+                        "receipts":  "data/controlled-action-generated-test-018/receipts"
+                    },
+    "status":  "GENERATED_TEST_OBJECTIVE_PREVIEW_ONLY"
+}

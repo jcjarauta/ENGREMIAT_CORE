@@ -1,0 +1,25 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_OPERATIVE_WORKER_FLOW_019_025",
+    "stage":  "E25",
+    "created_at":  "2026-06-17T10:54:47.6831079+02:00",
+    "readiness":  100,
+    "decision":  "GO_E25_MVP_OPERATIVE_CLOSED",
+    "next":  "NEXT_OBJECTIVE_MVP_OPERATIVE_APPLY_AUTHORIZED_026",
+    "checks":  {
+                   "evidence_summary_created":  true,
+                   "manifest_created":  true,
+                   "manual_created":  true,
+                   "demo_created":  true,
+                   "close_report_created":  true,
+                   "next_objective_created":  true,
+                   "dashboard_exists":  true,
+                   "apply_false":  true,
+                   "auto_apply_false":  true,
+                   "remote_execution_false":  true,
+                   "git_write_false":  true
+               },
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false
+}

@@ -1,0 +1,100 @@
+﻿{
+    "package_id":  "ENGREMIAT_OPERATOR_CONTEXT_AND_DECISION_TREE_001",
+    "stage":  "E04Y_AUDIT_COMMAND_HIERARCHY_READONLY",
+    "status":  "PASS",
+    "readiness":  100,
+    "readonly":  true,
+    "router_commands":  [
+                            "..",
+                            "?",
+                            "abrir",
+                            "abrir-dashboard",
+                            "abrir-modulo",
+                            "abrir-proyecto",
+                            "atras",
+                            "ayuda",
+                            "back",
+                            "comandos",
+                            "contrato",
+                            "dashboard",
+                            "estado",
+                            "evidencias",
+                            "exit",
+                            "gates",
+                            "help",
+                            "menu-proyecto",
+                            "modulo",
+                            "modulos",
+                            "nuevo-modulo",
+                            "nuevo-proyecto",
+                            "preparar-smoke",
+                            "proyecto",
+                            "proyectos",
+                            "q",
+                            "revisar-proyecto",
+                            "salir",
+                            "tareas",
+                            "ultimo",
+                            "volver"
+                        ],
+    "context_commands":  [
+                             "create-module",
+                             "modules",
+                             "module-view",
+                             "open-module",
+                             "open-project",
+                             "project-menu",
+                             "projects",
+                             "show"
+                         ],
+    "active_mode":  "module",
+    "active_project":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706",
+    "active_module":  "MODULE_inicio",
+    "proposal":  {
+                     "GLOBAL":  [
+                                    "estado",
+                                    "ayuda",
+                                    "proyectos",
+                                    "abrir-proyecto",
+                                    "nuevo-proyecto",
+                                    "ultimo",
+                                    "dashboard",
+                                    "salir"
+                                ],
+                     "PROJECT":  [
+                                     "proyecto",
+                                     "menu",
+                                     "modulos",
+                                     "abrir-modulo",
+                                     "nuevo-modulo",
+                                     "revisar-proyecto",
+                                     "atras"
+                                 ],
+                     "MODULE":  [
+                                    "modulo",
+                                    "contrato",
+                                    "tareas",
+                                    "evidencias",
+                                    "gates",
+                                    "preparar-smoke",
+                                    "cerrar-modulo",
+                                    "promover-modulo",
+                                    "atras"
+                                ],
+                     "ALIASES_TO_NORMALIZE":  [
+                                                  "abrir proyecto -\u003e abrir-proyecto",
+                                                  "abrir modulo -\u003e abrir-modulo",
+                                                  "volver/back/.. -\u003e atras"
+                                              ],
+                     "HIDE_FROM_USER":  [
+                                            "menu-proyecto",
+                                            "project-menu",
+                                            "modules",
+                                            "open-project",
+                                            "open-module",
+                                            "create-module",
+                                            "module-view"
+                                        ]
+                 },
+    "next":  "E04Z_REWRITE_COMMAND_HIERARCHY_STABLE"
+}

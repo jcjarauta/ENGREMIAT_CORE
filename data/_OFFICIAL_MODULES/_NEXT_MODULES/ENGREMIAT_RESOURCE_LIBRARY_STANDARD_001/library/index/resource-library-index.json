@@ -1,0 +1,100 @@
+﻿{
+    "index_id":  "resource-library-index.v1",
+    "generated_at":  "2026-06-18T06:34:31",
+    "resources":  [
+                      {
+                          "resource_id":  "RESOURCE-BUSINESS-PLAN-TEMPLATE-001",
+                          "resource_type":  "RESOURCE_BUSINESS_PLAN",
+                          "status":  "DRAFT",
+                          "title":  "Business Plan Base Template",
+                          "domain":  "business",
+                          "capabilities":  [
+                                               "BUSINESS_PLAN_WORKFLOW",
+                                               "DOCUMENT_WORKFLOW",
+                                               "RESOURCE_LIBRARY"
+                                           ],
+                          "version":  "0.1.0",
+                          "location":  "samples/resources/business-plan-template",
+                          "quality_score":  60,
+                          "evidence_status":  "HAS_EVIDENCE_REF",
+                          "manifest":  "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_RESOURCE_LIBRARY_STANDARD_001\\samples\\resources\\resource-business-plan-template.manifest.json"
+                      },
+                      {
+                          "resource_id":  "RESOURCE-GRANT-APPLICATION-TEMPLATE-001",
+                          "resource_type":  "RESOURCE_GRANT_APPLICATION",
+                          "status":  "DRAFT",
+                          "title":  "Grant Application Base Template",
+                          "domain":  "grants",
+                          "capabilities":  [
+                                               "GRANT_DOCUMENT_WORKFLOW",
+                                               "DOCUMENT_WORKFLOW",
+                                               "HUMAN_GATE_REVIEW"
+                                           ],
+                          "version":  "0.1.0",
+                          "location":  "samples/resources/grant-application-template",
+                          "quality_score":  60,
+                          "evidence_status":  "HAS_EVIDENCE_REF",
+                          "manifest":  "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_RESOURCE_LIBRARY_STANDARD_001\\samples\\resources\\resource-grant-application-template.manifest.json"
+                      },
+                      {
+                          "resource_id":  "RESOURCE-MODULE-JSON-FACTORY-001",
+                          "resource_type":  "RESOURCE_MODULE",
+                          "status":  "CANDIDATE",
+                          "title":  "JSON Module Factory",
+                          "domain":  "software",
+                          "capabilities":  [
+                                               "MODULE_FACTORY",
+                                               "COMPOSITION_READY"
+                                           ],
+                          "version":  "0.1.0",
+                          "location":  "data/_OFFICIAL_MODULES/_NEXT_MODULES/ENGREMIAT_JSON_MODULE_FACTORY_001",
+                          "quality_score":  93,
+                          "evidence_status":  "HAS_EVIDENCE_REF",
+                          "manifest":  "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_RESOURCE_LIBRARY_STANDARD_001\\samples\\resources\\resource-module-json-factory.manifest.json"
+                      },
+                      {
+                          "resource_id":  "RESOURCE-TEMPLATE-MODULE-INITIATOR-001",
+                          "resource_type":  "RESOURCE_TEMPLATE",
+                          "status":  "CANDIDATE",
+                          "title":  "Sheets Module Initiator Template",
+                          "domain":  "operations",
+                          "capabilities":  [
+                                               "DOCUMENT_WORKFLOW",
+                                               "MODULE_FACTORY"
+                                           ],
+                          "version":  "0.1.0",
+                          "location":  "data/_OFFICIAL_MODULES/_NEXT_MODULES/ENGREMIAT_SHEETS_MODULE_INITIATOR_001",
+                          "quality_score":  90,
+                          "evidence_status":  "HAS_EVIDENCE_REF",
+                          "manifest":  "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_RESOURCE_LIBRARY_STANDARD_001\\samples\\resources\\resource-template-module-initiator.manifest.json"
+                      },
+                      {
+                          "resource_id":  "RESOURCE-WORKFLOW-AUDIO-MEETING-001",
+                          "resource_type":  "RESOURCE_WORKFLOW",
+                          "status":  "DRAFT",
+                          "title":  "Audio Meeting To Tasks Workflow",
+                          "domain":  "operations",
+                          "capabilities":  [
+                                               "KNOWLEDGE_EXTRACTION",
+                                               "TASK_ORCHESTRATION",
+                                               "EVIDENCE_TRACKING"
+                                           ],
+                          "version":  "0.1.0",
+                          "location":  "samples/resources/audio-meeting-workflow",
+                          "quality_score":  68,
+                          "evidence_status":  "HAS_EVIDENCE_REF",
+                          "manifest":  "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_RESOURCE_LIBRARY_STANDARD_001\\samples\\resources\\resource-workflow-audio-meeting.manifest.json"
+                      }
+                  ],
+    "summary":  {
+                    "resources_total":  5,
+                    "by_status":  {
+                                      "status":  "",
+                                      "count":  5
+                                  },
+                    "by_type":  {
+                                    "type":  "",
+                                    "count":  5
+                                }
+                }
+}

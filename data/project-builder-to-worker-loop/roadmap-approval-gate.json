@@ -1,0 +1,57 @@
+﻿{
+    "package_id":  "ENGREMIAT_PROJECT_BUILDER_TO_WORKER_LOOP_001",
+    "stage":  "E04_BUILD_HUMAN_APPROVAL_GATE",
+    "gate_id":  "ROADMAP_APPROVAL_GATE",
+    "status":  "PENDING_HUMAN_REVIEW",
+    "purpose":  "Permitir que el humano apruebe, edite, rechace o aplace el roadmap antes de preparar cualquier worker ejecutable",
+    "source_proposal":  "roadmap-proposal.preview.json",
+    "allowed_decisions":  [
+                              {
+                                  "decision":  "APPROVE",
+                                  "meaning":  "Aceptar roadmap y permitir preparar worker packet preview en la siguiente etapa",
+                                  "next":  "E05_BUILD_WORKER_PACKET_PREVIEW"
+                              },
+                              {
+                                  "decision":  "EDIT",
+                                  "meaning":  "Modificar intake/roadmap y regenerar propuesta",
+                                  "next":  "E03_BUILD_ROADMAP_PROPOSAL_MODEL_REPAIR"
+                              },
+                              {
+                                  "decision":  "REJECT",
+                                  "meaning":  "Cerrar propuesta sin preparar worker",
+                                  "next":  "E04_CLOSE_REJECTED"
+                              },
+                              {
+                                  "decision":  "DEFER",
+                                  "meaning":  "Mantener propuesta aparcada sin ejecución",
+                                  "next":  "E04_CLOSE_DEFERRED"
+                              }
+                          ],
+    "safety":  {
+                   "local_only":  true,
+                   "worker_execution":  false,
+                   "execute_now":  false,
+                   "network":  false,
+                   "git_write":  false,
+                   "requires_explicit_human_authorization":  true,
+                   "authorization_status":  "PENDING_EXPLICIT_HUMAN_AUTHORIZATION"
+               },
+    "human_review_checklist":  [
+                                   "La necesidad humana esta clara",
+                                   "El resultado deseado es verificable",
+                                   "Las restricciones estan registradas",
+                                   "El roadmap no es demasiado amplio",
+                                   "Hay una frontera tecnica por etapa",
+                                   "No se ejecuta worker real",
+                                   "La siguiente etapa solo prepara preview"
+                               ],
+    "receipt_template":  {
+                             "gate_id":  "ROADMAP_APPROVAL_GATE",
+                             "human_decision":  "PENDING",
+                             "reviewed_by":  "human",
+                             "reviewed_at":  "PENDING",
+                             "notes":  "PENDING",
+                             "worker_authorization":  "NOT_GRANTED"
+                         },
+    "next":  "E05_BUILD_WORKER_PACKET_PREVIEW_AFTER_APPROVAL"
+}

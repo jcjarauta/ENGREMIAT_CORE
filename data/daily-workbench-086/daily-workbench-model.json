@@ -1,0 +1,41 @@
+﻿{
+    "objective":  "ENGREMIAT_HUMAN_USABLE_DAILY_WORKBENCH_086_095",
+    "stage":  "E86",
+    "name":  "Daily Workbench Model",
+    "version":  "0.86.0-local",
+    "purpose":  "Definir la mesa diaria humana como entrada unica de trabajo para revisar inbox, decisiones, evidencias, previews y bloqueos.",
+    "single_human_entrypoint":  true,
+    "workbench_executes":  false,
+    "human_governed":  true,
+    "default_decision":  "DEFER",
+    "sections":  [
+                     "today_status",
+                     "unified_inbox_preview",
+                     "pending_decisions",
+                     "evidence_shortcuts",
+                     "preview_apply_gate",
+                     "blocked_items",
+                     "next_safe_action"
+                 ],
+    "source_context":  [
+                           "ENGREMIAT_NEXT_REAL_VALUE_OPERATIONALIZATION_076_085",
+                           "E76 operational value queue",
+                           "E77 human daily console",
+                           "E78 worker proposal intake",
+                           "E79 evidence decision loop",
+                           "E80 local apply lab",
+                           "E81 value metrics",
+                           "E82 kanban bridge preview",
+                           "E83 release controls",
+                           "E84 regression",
+                           "E85 close"
+                       ],
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "kanban_real_write":  false,
+    "created_utc":  "2026-06-17T11:10:02.9463593Z"
+}

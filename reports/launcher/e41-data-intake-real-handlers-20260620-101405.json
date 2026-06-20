@@ -1,0 +1,13 @@
+﻿{
+    "package_id":  "ENGREMIAT_UX_SYSTEM_001",
+    "stage":  "E41_MIGRATE_DATA_INTAKE_REAL_HANDLERS",
+    "status":  "PASS",
+    "launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-DATA-INTAKE-CENTER-NORMALIZED.ps1",
+    "backup":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\backup-data-intake-normalized-before-e41-20260620-101405.ps1",
+    "handlers_migrated":  [
+                              "3 TXT/MD import heuristic",
+                              "4 JSON import active profile"
+                          ],
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e41-data-intake-real-handlers-20260620-101405.json",
+    "next":  "RUN_DATA_INTAKE_NORMALIZED_REAL_HANDLERS_TEST"
+}

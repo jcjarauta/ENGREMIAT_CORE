@@ -1,0 +1,25 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_ACTION_TEMPLATE_017",
+    "stage":  "E04",
+    "template":  "controlled-action-dry-run-template",
+    "purpose":  "Preview antes de cualquier ejecucion",
+    "default_mode":  "DRY_RUN",
+    "gate":  "DEFER",
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "required_inputs":  [
+                            "objective",
+                            "scope",
+                            "gate",
+                            "requested_action",
+                            "expected_artifacts"
+                        ],
+    "outputs":  [
+                    "request_preview",
+                    "dry_run_report",
+                    "next_gate_decision"
+                ],
+    "status":  "TEMPLATE_READY"
+}

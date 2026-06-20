@@ -1,0 +1,18 @@
+﻿{
+    "intake_id":  "PROJECT-INTAKE-SAMPLE-001",
+    "status":  "DRAFT",
+    "project_title":  "Crear módulo para convertir necesidades en tareas ejecutables por workers",
+    "human_description":  "El humano quiere describir un proyecto y que Engremiat proponga roadmap, tareas, cards y workers adecuados.",
+    "objective":  "Construir un ciclo proyecto -\u003e roadmap -\u003e aprobación humana -\u003e cards -\u003e worker -\u003e evidencia -\u003e revisión humana.",
+    "expected_result":  "Dashboard operativo donde el humano pueda aprobar roadmap y convertirlo en tareas/cards controladas.",
+    "constraints":  [
+                        "usar normalización consolidada",
+                        "no crear cards reales sin gate",
+                        "no ejecutar worker real en E01",
+                        "mantener proposal-only",
+                        "evidencia y dashboard obligatorios"
+                    ],
+    "priority":  "HIGH",
+    "detail_level":  "MVP_READABLE",
+    "created_by":  "human_or_dashboard"
+}

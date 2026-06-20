@@ -1,0 +1,17 @@
+﻿{
+    "package_id":  "ENGREMIAT_MODULE_CREATION_FLOW_001",
+    "stage":  "E02_SELECT_TARGET_PROJECT_FOR_NUEVO_MODULO",
+    "status":  "PASS",
+    "readiness":  100,
+    "decision":  "GO_NUEVO_MODULO_PROJECT_SELECTION_READY",
+    "script":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-new-module.ps1",
+    "router_smoke":  "COMANDOS ENGREMIAT\r\n\r\nGlobales\r\n - estado\r\n - ayuda\r\n - comandos\r\n - ultimo\r\n - abrir-dashboard\r\n - nuevo-proyecto\r\n - salir\r\n\r\nProyecto activo: ENGREMIAT_PROJECT_nuevo-proyecto_20260619-162809\r\n - revisar-proyecto\r\n - nuevo-modulo\r\n",
+    "safety":  {
+                   "local_only":  true,
+                   "interactive_project_selection":  true,
+                   "no_worker_real":  true,
+                   "no_git":  true,
+                   "no_network":  true
+               },
+    "next":  "RUN_nuevo-modulo_AND_SELECT_PROJECT"
+}

@@ -1,0 +1,22 @@
+﻿{
+    "module":  "ENGREMIAT_KNOWLEDGE_TO_TASK_PACKET_001",
+    "stage":  "E04_OBSIDIAN_MARKDOWN_YAML_EXPORT",
+    "export_mode":  "DRY_RUN_LOCAL_ONLY",
+    "required_frontmatter":  [
+                                 "id",
+                                 "type",
+                                 "status",
+                                 "source",
+                                 "created_at",
+                                 "tags",
+                                 "links",
+                                 "task_packet_id"
+                             ],
+    "forbidden_actions":  [
+                              "real_obsidian_write",
+                              "network",
+                              "git_write",
+                              "ollama_inference",
+                              "kanban_write"
+                          ]
+}

@@ -1,0 +1,20 @@
+{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_004E",
+    "stage":  "E03",
+    "artifact":  "composition-human-gate-contract.json",
+    "status":  "DEFINED",
+    "purpose":  "Comparar composiciones simuladas y dejar decision humana preparada sin activacion real",
+    "allowed_decisions":  [
+                              "APPROVE_SIMULATED_WINNER",
+                              "HOLD_FOR_REVIEW",
+                              "REJECT_AND_REPLAN"
+                          ],
+    "default_decision":  "HOLD_FOR_REVIEW",
+    "blocked_actions":  [
+                            "core_changes",
+                            "external_network",
+                            "git_write",
+                            "real_module_activation"
+                        ],
+    "human_authorization_required_for_next_real_activation":  true
+}

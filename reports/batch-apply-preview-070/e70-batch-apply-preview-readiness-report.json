@@ -1,0 +1,30 @@
+﻿{
+    "objective":  "ENGREMIAT_MULTI_WORKER_ORCHESTRATION_AND_REAL_VALUE_PIPELINE_066_075",
+    "stage":  "E70",
+    "readiness":  100,
+    "decision":  "GO_E70_CONTROLLED_APPLY_BATCH_PREVIEW_READY",
+    "next":  "E71_VALUE_PIPELINE_DASHBOARD",
+    "batch_apply_preview_ready":  true,
+    "preview_only":  true,
+    "real_apply_allowed":  false,
+    "artifacts":  [
+                      "data\\batch-apply-preview-070\\batch-apply-preview-model.json",
+                      "data\\batch-apply-preview-070\\batch-apply-gate.json",
+                      "data\\batch-apply-preview-070\\batch-apply-preview.json",
+                      "reports\\batch-apply-preview-070\\e70-batch-apply-preview-postcheck-report.json",
+                      "data\\batch-apply-preview-070\\receipts\\batch-apply-preview-receipt.json"
+                  ],
+    "security":  {
+                     "apply_executed":  false,
+                     "batch_apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "worker_executed":  false,
+                     "batch_preview_only":  true,
+                     "human_gate_required":  true,
+                     "sensitive_actions_executed":  false
+                 },
+    "created_at":  "2026-06-17T12:39:16"
+}

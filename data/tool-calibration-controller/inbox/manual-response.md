@@ -1,0 +1,2 @@
+﻿qwen3:14b response:
+The provided context does not contain actionable or specific information related to the validation criteria. The sources only include titles or bundle identifiers without substantive content. To proceed, additional details about the bundle content or specific examples fulfilling the criteria would be required. The current context is insufficient to determine compliance with the validation objectives.

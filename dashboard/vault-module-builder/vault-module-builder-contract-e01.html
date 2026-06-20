@@ -1,0 +1,17 @@
+﻿<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>ENGREMIAT · Vault Module Builder Contract</title><style>body{font-family:Segoe UI,Arial;margin:24px;background:#111827;color:#e5e7eb}.card{border:1px solid #374151;border-radius:14px;padding:16px;margin:12px 0;background:#1f2937}.ok{color:#22c55e}.warn{color:#facc15}table{width:100%;border-collapse:collapse;background:#0f172a}td,th{border:1px solid #334155;padding:8px;text-align:left;vertical-align:top}code{color:#93c5fd}li{margin:6px 0}</style></head><body>
+<h1>ENGREMIAT · Vault Module Builder</h1>
+<div class="card"><b class="ok">E01 PASS · contrato definido</b><p>Space types: <code>
+5
+</code> · outputs: <code>
+8
+</code></p></div>
+<div class="card"><h2>Tipos de espacio</h2><table><thead><tr><th>ID</th><th>Label</th><th>Grupo</th><th>Ruta</th></tr></thead><tbody>
+<tr><td>MASTER_VAULT</td><td>Boveda maestra ENGREMIAT</td><td>G01_CORE</td><td>obsidian-vault-preview/ENGREMIAT_OBSIDIAN_VAULT</td></tr><tr><td>PROJECT_SPACE</td><td>Project space</td><td>G03_PROJECTS_MODULES</td><td>02_PROYECTOS/PROJECT_&lt;slug&gt;</td></tr><tr><td>MODULE_SPACE</td><td>Modulo ENGREMIAT relacionado</td><td>G03_PROJECTS_MODULES</td><td>02_PROYECTOS/&lt;parent&gt;/08_RELACIONES/MODULE_&lt;slug&gt;</td></tr><tr><td>RELATION_SPACE</td><td>Relacion entre boveda/proyecto/modulo</td><td>G04_MEMORY_VISUAL</td><td>&lt;target&gt;/08_RELACIONES/REL_&lt;slug&gt;</td></tr><tr><td>WORK_SURFACE</td><td>Superficie humana de trabajo</td><td>G02_HUMAN_CONTROL</td><td>00_CONTROL_OPERATIVO/SURFACE_&lt;slug&gt;</td></tr>
+</tbody></table></div>
+<div class="card"><h2>Reglas</h2><ul>
+<li>Todo espacio debe declarar grupo oficial</li><li>Todo project/module space debe tener index, intake/contexto, roadmap, tareas, gates, evidencias, workers/resultados y relaciones</li><li>Todo builder empieza en preview_only=true</li><li>Toda ejecucion real queda bloqueada por gate explicito</li><li>Obsidian visualiza y relaciona; no ejecuta</li><li>data/reports/dashboard siguen siendo fuente canonica</li><li>Cada salida debe incluir decision, readiness, safety y next</li>
+</ul></div>
+<div class="card"><h2>Seguridad</h2><p class="warn">preview_only=true · sin worker/Kanban/Cline/Git/red</p></div>
+<div class="card"><h2>Siguiente</h2><p><code>E02_CREATE_MASTER_VAULT_TEMPLATE_PACKET</code></p></div>
+</body></html>

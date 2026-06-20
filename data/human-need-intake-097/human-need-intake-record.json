@@ -1,0 +1,37 @@
+﻿{
+    "objective":  "ENGREMIAT_FIRST_REAL_CONTROLLED_VALUE_FLOW",
+    "stage":  "E97",
+    "need_id":  "HN-097-001",
+    "case_id":  "FRF-096-001",
+    "title":  "Validar primer flujo real controlado de ENGREMIAT",
+    "description":  "Necesidad humana inicial: demostrar que ENGREMIAT puede tomar una necesidad, generar propuesta, preview, gate de autorizacion, apply local controlado o NO_GO seguro y evidencia final.",
+    "expected_value":  "Obtener valor observable del sistema, no solo infraestructura.",
+    "constraints":  [
+                        "LOCAL_ONLY",
+                        "NO_AUTO_APPLY",
+                        "NO_EXTERNAL_NETWORK",
+                        "NO_WORKER_EXECUTION",
+                        "NO_KANBAN_REAL_WRITE",
+                        "NO_GIT_WRITE"
+                    ],
+    "success_criteria":  [
+                             "need_registered",
+                             "proposal_created",
+                             "preview_created",
+                             "human_gate_created",
+                             "controlled_apply_or_safe_no_go_recorded",
+                             "final_evidence_created"
+                         ],
+    "risk":  "MEDIUM",
+    "status":  "READY_FOR_PROPOSAL",
+    "human_owner":  "human_operator",
+    "need_executes":  false,
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "kanban_real_write":  false,
+    "created_utc":  "2026-06-17T11:24:39.3997536Z"
+}

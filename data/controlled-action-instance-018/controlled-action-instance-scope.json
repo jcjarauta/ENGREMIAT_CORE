@@ -1,0 +1,23 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_ACTION_INSTANCE_018",
+    "stage":  "E01",
+    "source_template":  "ENGREMIAT_CONTROLLED_ACTION_TEMPLATE_017",
+    "purpose":  "Crear primera instancia desde plantilla 017 en modo preview sin apply",
+    "mode":  "PREVIEW_ONLY",
+    "gate":  "DEFER",
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "human_confirmation":  false,
+    "execution_allowed":  false,
+    "limits":  [
+                   "no_apply",
+                   "no_remote_execution",
+                   "no_git_write",
+                   "no_auto_apply",
+                   "human_gate_required_before_sensitive_action"
+               ],
+    "machine_role":  "PREPARES_INSTANCE_PREVIEW",
+    "human_role":  "REVIEWS_AND_DECIDES"
+}

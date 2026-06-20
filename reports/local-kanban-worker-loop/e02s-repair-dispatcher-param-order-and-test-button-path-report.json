@@ -1,0 +1,16 @@
+﻿{
+    "package_id":  "ENGREMIAT_LOCAL_KANBAN_WORKER_LOOP_001",
+    "stage":  "E02S_REPAIR_DISPATCHER_PARAM_ORDER_AND_TEST_BUTTON_PATH",
+    "status":  "PASS",
+    "dispatcher":  "C:\\ENGREMIAT_CORE\\tools\\local-kanban-worker-loop\\Invoke-LocalKanbanWorkerLoop.ps1",
+    "direct_mock_test":  "PASS",
+    "test_output":  "OK worker_loop card_id=CARD-003 transport=mock job=C:\\ENGREMIAT_CORE\\data\\local-kanban-worker-loop-001\\jobs\\JOB-CARD-003-20260619-080934.json response=C:\\ENGREMIAT_CORE\\data\\local-kanban-worker-loop-001\\responses\\JOB-CARD-003-20260619-080934.worker-response.md evidence=C:\\ENGREMIAT_CORE\\data\\local-kanban-worker-loop-001\\evidence\\JOB-CARD-003-20260619-080934.evidence.md",
+    "note":  "Si el bridge sigue abierto, basta reintentar el botón del dashboard. Si no, relanzar OPEN_DASHBOARD_WITH_WORKER_BRIDGE.ps1",
+    "write_to_cline":  false,
+    "browser":  false,
+    "api_called":  "localhost_ready",
+    "git":  false,
+    "network_external":  false,
+    "worker_real_execution":  false,
+    "next":  "RETRY_DASHBOARD_SEND_TO_WORKER_MOCK_BUTTON"
+}

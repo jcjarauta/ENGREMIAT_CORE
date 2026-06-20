@@ -1,0 +1,24 @@
+﻿{
+    "package_id":  "ENGREMIAT_REAL_INTAKE_IMPORTER_001",
+    "stage":  "E01_CREATE_INTERACTIVE_INTAKE_IMPORTER",
+    "contract_id":  "real-intake-importer.v1",
+    "purpose":  "Importar un JSON exportado por la UI real de intake, validarlo y generar roadmap preview local",
+    "script":  "C:\\ENGREMIAT_CORE\\tools\\real-intake-importer\\Invoke-RealHumanIntakeImport.ps1",
+    "input":  "Ruta local al JSON exportado desde dashboard/real-human-intake-ui/index.html",
+    "outputs":  [
+                    "real-human-intake.accepted.latest.json",
+                    "real-intake-roadmap-preview.latest.json",
+                    "real-intake-roadmap-preview.latest.html",
+                    "real-intake-import-report.latest.json"
+                ],
+    "safety":  {
+                   "interactive_path_prompt":  true,
+                   "local_only":  true,
+                   "network":  false,
+                   "worker_execution":  false,
+                   "git_write":  false,
+                   "execute_now":  false,
+                   "external_ai":  false
+               },
+    "next":  "RUN_IMPORTER_WITH_EXPORTED_JSON"
+}

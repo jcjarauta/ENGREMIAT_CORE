@@ -1,0 +1,29 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_OPERATIVE_WORKER_FLOW_019_025",
+    "stage":  "E20",
+    "created_at":  "2026-06-17T10:48:06.3424434+02:00",
+    "readiness":  100,
+    "decision":  "GO_E20_WORKER_RESPONSE_IMPORT_READY",
+    "next":  "E21_HUMAN_REVIEW_GATE",
+    "checks":  {
+                   "schema_created":  true,
+                   "sample_created":  true,
+                   "importer_created":  true,
+                   "imported_response_created":  true,
+                   "has_summary":  true,
+                   "has_proposed_files":  true,
+                   "has_proposed_content":  true,
+                   "has_validation_commands":  true,
+                   "has_evidence_paths":  true,
+                   "decision_valid":  true,
+                   "apply_false":  true,
+                   "auto_apply_false":  true,
+                   "remote_execution_false":  true,
+                   "git_write_false":  true
+               },
+    "worker_decision":  "GO",
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false
+}

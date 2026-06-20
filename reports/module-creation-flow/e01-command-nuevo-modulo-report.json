@@ -1,0 +1,19 @@
+﻿{
+    "package_id":  "ENGREMIAT_MODULE_CREATION_FLOW_001",
+    "stage":  "E01_COMMAND_NUEVO_MODULO",
+    "status":  "PASS",
+    "readiness":  100,
+    "decision":  "GO_COMMAND_NUEVO_MODULO_READY",
+    "script":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-new-module.ps1",
+    "router":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-router.ps1",
+    "router_smoke":  "COMANDOS ENGREMIAT\r\n - estado\r\n - ayuda\r\n - comandos\r\n - ultimo\r\n - abrir-lab\r\n - abrir-dashboard\r\n - nuevo-proyecto\r\n - nuevo-proyecto-preview\r\n - revisar-proyecto\r\n - rp\r\n - nuevo-modulo\r\n - nm\r\n - salir\r\n",
+    "safety":  {
+                   "local_only":  true,
+                   "creates_module_vault":  true,
+                   "links_master":  true,
+                   "worker_real":  false,
+                   "git":  false,
+                   "network":  false
+               },
+    "next":  "RUN_nuevo-modulo_FROM_OPERATOR"
+}

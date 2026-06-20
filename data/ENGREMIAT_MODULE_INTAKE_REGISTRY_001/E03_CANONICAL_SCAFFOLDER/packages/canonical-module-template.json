@@ -1,0 +1,42 @@
+{
+    "package_id":  "\u003cPACKAGE_ID\u003e",
+    "module_id":  "\u003cMODULE_ID\u003e",
+    "module_name":  "\u003cMODULE_NAME\u003e",
+    "module_type":  "\u003cMODULE_TYPE\u003e",
+    "version":  "1.0.0",
+    "status":  "DRAFT",
+    "purpose":  "\u003cPURPOSE\u003e",
+    "depends_on":  [
+
+                   ],
+    "inputs":  [
+
+               ],
+    "outputs":  [
+
+                ],
+    "boundaries":  [
+                       "local_first",
+                       "no_core_changes",
+                       "no_external_network_by_default",
+                       "no_git_write_by_default"
+                   ],
+    "risks":  [
+
+              ],
+    "human_gates":  [
+
+                    ],
+    "artifacts_expected":  [
+                               "module.json",
+                               "README.md",
+                               "contracts",
+                               "schemas",
+                               "packages",
+                               "reports",
+                               "dashboard",
+                               "docs",
+                               "stages"
+                           ],
+    "next_action":  "DEVELOP"
+}

@@ -1,0 +1,26 @@
+﻿{
+    "objective":  "ENGREMIAT_HUMAN_USABLE_DAILY_WORKBENCH_086_095",
+    "stage":  "E92",
+    "name":  "Dashboard Index V2",
+    "version":  "0.92.0-local",
+    "purpose":  "Unificar dashboards en un indice operativo humano para navegacion unica.",
+    "index_executes":  false,
+    "single_visual_entrypoint":  true,
+    "dashboard_count":  8,
+    "blocked_machine_actions":  [
+                                    "AUTO_APPLY",
+                                    "REMOTE_EXECUTION",
+                                    "EXTERNAL_NETWORK",
+                                    "WORKER_EXECUTION",
+                                    "KANBAN_REAL_WRITE",
+                                    "GIT_WRITE"
+                                ],
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "kanban_real_write":  false,
+    "created_utc":  "2026-06-17T11:14:38.3270833Z"
+}

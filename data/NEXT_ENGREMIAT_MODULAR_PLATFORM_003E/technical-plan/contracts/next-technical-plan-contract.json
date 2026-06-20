@@ -1,0 +1,51 @@
+{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_003E",
+    "mode":  "local_write_authorized",
+    "status":  "TECHNICAL_PLAN_DEFINED",
+    "source":  "needs-capabilities-contract.json",
+    "authorization":  "LOCAL_WRITE_GRANTED_BY_USER",
+    "boundary":  "local files only; no core changes; no external network; no git write; no module activation",
+    "stages":  [
+                   {
+                       "stage":  "E01",
+                       "name":  "Scope graph foundation",
+                       "goal":  "Convertir alcance, frontera y catalogo en contratos tecnicos",
+                       "blocks":  [
+                                      "B01.1 scope contract",
+                                      "B01.2 boundary policy",
+                                      "B01.3 module graph seed"
+                                  ]
+                   },
+                   {
+                       "stage":  "E02",
+                       "name":  "Selector and dependency engine",
+                       "goal":  "Convertir seleccion y dependencias en reglas tecnicas verificables",
+                       "blocks":  [
+                                      "B02.1 selector contract",
+                                      "B02.2 dependency resolver",
+                                      "B02.3 conflict report"
+                                  ]
+                   },
+                   {
+                       "stage":  "E03",
+                       "name":  "Activation and rollback planner",
+                       "goal":  "Crear planes tecnicos de activacion, pausa, swap y rollback sin ejecutar modulos",
+                       "blocks":  [
+                                      "B03.1 activation planner",
+                                      "B03.2 swap rollback policy",
+                                      "B03.3 safety gate"
+                                  ]
+                   },
+                   {
+                       "stage":  "E04",
+                       "name":  "Observability and close",
+                       "goal":  "Dejar dashboard, reporte de cierre y siguiente objetivo",
+                       "blocks":  [
+                                      "B04.1 technical dashboard",
+                                      "B04.2 close report",
+                                      "B04.3 next objective"
+                                  ]
+                   }
+               ],
+    "next":  "Crear E01 tecnica: scope-contract, boundary-policy y module-graph-seed"
+}

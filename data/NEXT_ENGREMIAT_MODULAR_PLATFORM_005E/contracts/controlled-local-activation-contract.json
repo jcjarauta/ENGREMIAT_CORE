@@ -1,0 +1,22 @@
+{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_005E",
+    "stage":  "E01_CONTROLLED_LOCAL_ACTIVATION_DESIGN",
+    "status":  "DEFINED",
+    "purpose":  "Disenar activacion local controlada desde simulacion 004E, sin ejecutar activacion real por defecto",
+    "source":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_004E",
+    "allowed_now":  [
+                        "write_local_contracts",
+                        "write_local_apply_plan",
+                        "write_local_rollback_plan",
+                        "write_dashboard",
+                        "validate_artifacts"
+                    ],
+    "blocked_now":  [
+                        "real_module_activation",
+                        "core_changes",
+                        "external_network",
+                        "git_write",
+                        "remote_worker_execution"
+                    ],
+    "human_gate_required_for_real_apply":  true
+}

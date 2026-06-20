@@ -1,0 +1,281 @@
+﻿{
+    "generated_at":  "2026-06-20T08:41:38",
+    "core":  "C:\\ENGREMIAT_CORE",
+    "active_project":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\\ENGREMIAT_PROJECT_prueba14_20260620-022106",
+    "active_project_name":  "ENGREMIAT_PROJECT_prueba14_20260620-022106",
+    "counters":  {
+                     "project_modules":  10,
+                     "library_active":  10,
+                     "library_historic":  2
+                 },
+    "screens":  [
+                    {
+                        "id":  "inicio",
+                        "label":  "Inicio raíz",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO.ps1",
+                        "exists":  true,
+                        "role":  "launcher",
+                        "parent":  "-"
+                    },
+                    {
+                        "id":  "modules",
+                        "label":  "Módulos del proyecto",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-project-modules-screen.ps1",
+                        "exists":  true,
+                        "role":  "project_modules",
+                        "parent":  "inicio"
+                    },
+                    {
+                        "id":  "library",
+                        "label":  "Biblioteca de módulos",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-module-library-screen.ps1",
+                        "exists":  true,
+                        "role":  "module_library",
+                        "parent":  "inicio"
+                    },
+                    {
+                        "id":  "workspace",
+                        "label":  "Workspace de módulo",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-module-workspace-screen.ps1",
+                        "exists":  true,
+                        "role":  "module_workspace",
+                        "parent":  "inicio/modules/library"
+                    },
+                    {
+                        "id":  "cards",
+                        "label":  "Tarjetas de módulo",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-module-cards-screen.ps1",
+                        "exists":  true,
+                        "role":  "module_cards",
+                        "parent":  "workspace"
+                    },
+                    {
+                        "id":  "graph",
+                        "label":  "Grafo de módulos",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-refresh-project-module-graph.ps1",
+                        "exists":  true,
+                        "role":  "graph_refresh",
+                        "parent":  "inicio"
+                    },
+                    {
+                        "id":  "navigation_tree",
+                        "label":  "Generador árbol navegación",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-NAVIGATION-TREE.ps1",
+                        "exists":  true,
+                        "role":  "navigation",
+                        "parent":  "inicio"
+                    },
+                    {
+                        "id":  "navigation_viewer",
+                        "label":  "Visor árbol navegación",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-NAVIGATION-VIEWER.ps1",
+                        "exists":  true,
+                        "role":  "navigation",
+                        "parent":  "inicio"
+                    },
+                    {
+                        "id":  "navigation_safe",
+                        "label":  "Árbol seguro",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-NAVIGATION-SAFE.ps1",
+                        "exists":  true,
+                        "role":  "navigation_safe",
+                        "parent":  "inicio"
+                    },
+                    {
+                        "id":  "memory_generate",
+                        "label":  "Generador memoria viva",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECT-MEMORY-GENERATE.ps1",
+                        "exists":  true,
+                        "role":  "memory",
+                        "parent":  "inicio"
+                    },
+                    {
+                        "id":  "diary_add",
+                        "label":  "Añadir entrada diario",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECT-DIARY-ADD.ps1",
+                        "exists":  true,
+                        "role":  "memory",
+                        "parent":  "inicio"
+                    },
+                    {
+                        "id":  "status",
+                        "label":  "Status externo inicio",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO-STATUS.ps1",
+                        "exists":  true,
+                        "role":  "diagnostic",
+                        "parent":  "inicio"
+                    }
+                ],
+    "navigation":  [
+                       {
+                           "from":  "inicio",
+                           "command":  "1",
+                           "to":  "smart_start",
+                           "purpose":  "acción recomendada contextual",
+                           "section":  "CONTINUAR"
+                       },
+                       {
+                           "from":  "inicio",
+                           "command":  "2",
+                           "to":  "modules",
+                           "purpose":  "módulos del proyecto activo",
+                           "section":  "TRABAJO"
+                       },
+                       {
+                           "from":  "inicio",
+                           "command":  "3",
+                           "to":  "library",
+                           "purpose":  "biblioteca de módulos",
+                           "section":  "TRABAJO"
+                       },
+                       {
+                           "from":  "inicio",
+                           "command":  "4",
+                           "to":  "workspace",
+                           "purpose":  "workspace de módulo",
+                           "section":  "TRABAJO"
+                       },
+                       {
+                           "from":  "inicio",
+                           "command":  "5",
+                           "to":  "cards",
+                           "purpose":  "tarjetas de módulo",
+                           "section":  "TRABAJO"
+                       },
+                       {
+                           "from":  "inicio",
+                           "command":  "6",
+                           "to":  "project_folder",
+                           "purpose":  "abrir carpeta del proyecto activo",
+                           "section":  "TRABAJO"
+                       },
+                       {
+                           "from":  "inicio",
+                           "command":  "7",
+                           "to":  "human_start_dashboard",
+                           "purpose":  "dashboard humano / operador visual",
+                           "section":  "TRABAJO"
+                       },
+                       {
+                           "from":  "inicio",
+                           "command":  "8",
+                           "to":  "navigation_safe",
+                           "purpose":  "árbol de navegación seguro",
+                           "section":  "REVISAR"
+                       },
+                       {
+                           "from":  "inicio",
+                           "command":  "9",
+                           "to":  "routes_help",
+                           "purpose":  "rutas recomendadas",
+                           "section":  "REVISAR"
+                       },
+                       {
+                           "from":  "inicio",
+                           "command":  "10",
+                           "to":  "help",
+                           "purpose":  "ayuda",
+                           "section":  "REVISAR"
+                       },
+                       {
+                           "from":  "inicio",
+                           "command":  "11",
+                           "to":  "technical_status",
+                           "purpose":  "estado técnico",
+                           "section":  "DIAGNOSTICO"
+                       },
+                       {
+                           "from":  "inicio",
+                           "command":  "12",
+                           "to":  "copyable_status",
+                           "purpose":  "estado copiable",
+                           "section":  "DIAGNOSTICO"
+                       },
+                       {
+                           "from":  "inicio",
+                           "command":  "13",
+                           "to":  "external_status",
+                           "purpose":  "status externo",
+                           "section":  "DIAGNOSTICO"
+                       },
+                       {
+                           "from":  "inicio",
+                           "command":  "14",
+                           "to":  "last_log",
+                           "purpose":  "último log",
+                           "section":  "DIAGNOSTICO"
+                       },
+                       {
+                           "from":  "inicio",
+                           "command":  "15",
+                           "to":  "live_memory",
+                           "purpose":  "generar/abrir memoria viva",
+                           "section":  "MEMORIA"
+                       },
+                       {
+                           "from":  "inicio",
+                           "command":  "16",
+                           "to":  "chatgpt_prompt",
+                           "purpose":  "generar/abrir prompt continuidad ChatGPT",
+                           "section":  "MEMORIA"
+                       },
+                       {
+                           "from":  "inicio",
+                           "command":  "17",
+                           "to":  "worker_prompt",
+                           "purpose":  "generar/abrir prompt worker Ollama/Cline",
+                           "section":  "MEMORIA"
+                       },
+                       {
+                           "from":  "inicio",
+                           "command":  "18",
+                           "to":  "development_diary",
+                           "purpose":  "abrir diario de desarrollo",
+                           "section":  "MEMORIA"
+                       },
+                       {
+                           "from":  "inicio",
+                           "command":  "19",
+                           "to":  "add_diary_entry",
+                           "purpose":  "añadir entrada al diario",
+                           "section":  "MEMORIA"
+                       },
+                       {
+                           "from":  "inicio",
+                           "command":  "20",
+                           "to":  "graph_refresh",
+                           "purpose":  "refrescar grafo de módulos",
+                           "section":  "MANTENIMIENTO"
+                       },
+                       {
+                           "from":  "inicio",
+                           "command":  "21",
+                           "to":  "core_folder",
+                           "purpose":  "abrir C:\\ENGREMIAT_CORE",
+                           "section":  "MANTENIMIENTO"
+                       },
+                       {
+                           "from":  "workspace",
+                           "command":  "2",
+                           "to":  "cards",
+                           "purpose":  "tarjetas avanzadas del módulo",
+                           "section":  "WORKSPACE"
+                       },
+                       {
+                           "from":  "library_item",
+                           "command":  "w",
+                           "to":  "workspace",
+                           "purpose":  "abrir workspace desde ficha de módulo",
+                           "section":  "BIBLIOTECA"
+                       }
+                   ],
+    "recommendations":  [
+                            "Mantener inicio como raíz ligera con solo números.",
+                            "Mantener acciones internas con letras solo dentro de pantallas profundas.",
+                            "Crear pantalla avanzada de tareas equivalente a tarjetas.",
+                            "Vincular tarjeta ↔ tarea ↔ tipo ↔ enlace.",
+                            "Extender grafo para incluir memoria, diario, tarjetas y tareas.",
+                            "Regenerar memoria viva tras cambios importantes."
+                        ],
+    "next":  "E24A_CREATE_MODULE_TASKS_MANAGEMENT_SCREEN"
+}

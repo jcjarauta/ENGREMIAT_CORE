@@ -1,0 +1,72 @@
+﻿TARGET=C:\Users\pc\.cline\kanban\workspaces\engremiat-core\board.json SIZE=4761 EXT=.json READ_MODE=text SCORE=130 SIGNALS=path_kanban,path_board,has_columns,has_cards,has_kanban_column_names,has_lab_card DECISION=FILE_BASED_IMPORT_ADAPTER_CANDIDATE_STRONG --- SAMPLE BEGIN --- {
+  "columns": [
+    {
+      "id": "backlog",
+      "title": "Backlog",
+      "cards": []
+    },
+    {
+      "id": "in_progress",
+      "title": "In Progress",
+      "cards": [
+        {
+          "id": "65c2a",
+          "title": "KANBAN_UI_NOT_AVAILABLE",
+          "prompt": "KANBAN_UI_NOT_AVAILABLE\n\nNo se dispone de acceso a la interfaz Kanban para crear o manipular tarjetas directamente.",
+          "startInPlanMode": false,
+          "autoReviewEnabled": false,
+          "autoReviewMode": "commit",
+          "baseRef": "main",
+          "createdAt": 1781846180325,
+          "updatedAt": 1781846183158
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Review",
+      "cards": [
+        {
+          "id": "c4546",
+          "title": "## Instrucción principal",
+          "prompt": "## Instrucción principal\n\nCrea o prepara en la interfaz Kanban visible una única tarjeta:\n\nTítulo:\nCARD-001 · Crear backlog visible\n\nColumna:\nNEXT\n\nDescripción:\nTarjeta aprobada por revisión humana en Obsidian. Origen: NEED-001.\n\nCriterio de terminado:\n- La tarjeta es visible en el tablero Kanban.\n- Está en la columna NEXT.\n- El origen NEED-001 aparece en la descripción.\n- No se ejecutan comandos.\n- No se modifican archivos del proyecto.\n- No se activa auto-approve.\n\n## Importante\n\nNo propongas crear archivos Markdown en carpetas. Esta prueba no busca documentación ni archivos. Busca comprobar si puedes operar o preparar una tarjeta visible en la UI Kanban.\n\n## Si no puedes crear tarjetas en la UI Kanban\n\nResponde exactamente:\n\nKANBAN_UI_NOT_AVAILABLE\n\ny explica en una sola frase qué acceso falta.\n\n## Si necesitas confirmación humana\n\nPide confirmación antes de crear la tarjeta visible.",
+          "startInPlanMode": false,
+          "autoReviewEnabled": false,
+          "autoReviewMode": "commit",
+          "baseRef": "main",
+          "createdAt": 1781846228485,
+          "updatedAt": 1781846249144
+        },
+        {
+          "id": "07b15",
+          "title": "Objetivo: crear manualmente en Kanban la tarjeta aprobada por revisión humana en…",
+          "prompt": "Objetivo: crear manualmente en Kanban la tarjeta aprobada por revisión humana en Obsidian.\n\nReglas:\n- No ejecutar comandos.\n- No modificar archivos del proyecto.\n- No auto-approve.\n- Crear una tarjeta visible solo si el humano confirma.\n\n## Tarjeta aprobada\n### CARD-001 · Crear backlog visible\n- Columna sugerida: NEXT\n- Origen: NEED-001\n- Criterio de terminado: tarjeta visible, entendible y trazable a su necesidad origen.",
+          "startInPlanMode": false,
+          "autoReviewEnabled": false,
+          "autoReviewMode": "commit",
+          "baseRef": "main",
+          "createdAt": 1781845953728,
+          "updatedAt": 1781846163161
+        }
+      ]
+    },
+    {
+      "id": "trash",
+      "title": "Done",
+      "cards": [
+        {
+          "id": "c3412",
+          "title": "ENGREMIAT_SEED_25_BATCH_001_READONLY_REVIEW",
+          "prompt": "ENGREMIAT_SEED_25_BATCH_001_READONLY_REVIEW\n\nOBJETIVO:\nRevisar el primer lote de 5 tarjetas del backlog orquestador local para empezar a usar Cline/Kanban como apoyo visual y espacio de decisión humana, sin automatizar ejecución.\n\nARCHIVOS A LEER:\n\n* docs/kanban-backlog/seed-25/KANBAN-SEED-0001.md\n* docs/kanban-backlog/seed-25/KANBAN-SEED-0002.md\n* docs/kanban-backlog/seed-25/KANBAN-SEED-0003.md\n* docs/kanban-backlog/seed-25/KANBAN-SEED-0004.md\n* docs/kanban-backlog/seed-25/KANBAN-SEED-0005.md\n\nREGLAS:\n\n* No modificar archivos.\n* No crear archivos.\n* No ejecutar comandos.\n* No generar código.\n* No generar HTML.\n* No inventar datos.\n* No aplicar cambios.\n* Solo leer las 5 tarjetas y devolver revisión.\n\nTAREA:\nLee las 5 tarjetas indicadas y responde con:\n\n1. Existencia de cada archivo.\n2. Tabla breve con ID, lane, prioridad, tipo, título y status.\n3. Qué tienen en común estas 5 tarjetas.\n4. Qué valor aportan al sistema.\n5. Qué tarjeta revisarías primero y por qué.\n6. Qué decisión humana sería necesaria antes de convertir alguna en acción real.\n7. Riesgos detectados.\n8. Decisión final: PASS, WARN o NO_GO.\n9. Confirmación explícita de que no has modificado, creado ni ejecutado nada.\n\nCRITERIO DE ÉXITO:\nLa respuesta debe confirmar que Cline/Kanban puede trabajar por lotes pequeños sobre el backlog local, usando las tarjetas como apoyo visual y orquestador humano, sin automatizar ejecución.",
+          "startInPlanMode": false,
+          "autoReviewEnabled": false,
+          "autoReviewMode": "commit",
+          "baseRef": "main",
+          "createdAt": 1781770565214,
+          "updatedAt": 1781773901679
+        }
+      ]
+    }
+  ],
+  "dependencies": []
+} --- SAMPLE END ---

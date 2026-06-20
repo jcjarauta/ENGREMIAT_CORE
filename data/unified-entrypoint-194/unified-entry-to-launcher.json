@@ -1,0 +1,27 @@
+﻿{
+    "objective_id":  "DEFINE_UNIFIED_ENTRYPOINT_PLAN_LAUNCHER_MVP_192_195",
+    "stage":  "E194",
+    "block":  "B194.1",
+    "step":  "P194.1.1",
+    "name":  "unified-entry-to-launcher",
+    "purpose":  "Compact entry request prepared for reusable launcher handoff",
+    "template_references":  [
+                                "DEFINE_PLAN_INTAKE_STANDARD_MVP_188_191",
+                                "DEFINE_REAL_EXECUTION_LAUNCHER_REUSABLE_MVP_184_187"
+                            ],
+    "plan_contract_path":  "C:\\ENGREMIAT_CORE\\data\\plan-intake-188\\plan-intake-contract.json",
+    "plan_preview_path":  "C:\\ENGREMIAT_CORE\\data\\plan-intake-189\\plan-preview.md",
+    "launcher_path":  "C:\\ENGREMIAT_CORE\\data\\real-execution-launcher-186\\real-execution-launcher.ps1",
+    "candidate_plan_id":  "UNIFIED_ENTRY_SAMPLE_001",
+    "candidate_title":  "Sample plan to validate the unified entry point",
+    "launcher_mode":  "Plan",
+    "local_only":  true,
+    "external_network":  false,
+    "git_write":  false,
+    "kanban_real_write":  false,
+    "cline_real_write":  false,
+    "auto_apply":  false,
+    "destructive_actions":  false,
+    "human_authorization_required":  true,
+    "created_at":  "2026-06-17T18:55:40.7526372+02:00"
+}

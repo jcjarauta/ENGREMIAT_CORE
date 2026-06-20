@@ -1,0 +1,14 @@
+﻿{
+    "mapping_id":  "NORMALIZED_OUTPUT_MAPPING_V1",
+    "maps_to":  "ENGREMIAT_SYSTEM_OUTPUT_STANDARD_001",
+    "allowed_output_types":  [
+                                 "MODEL_RESPONSE_NORMALIZED",
+                                 "PROPOSAL",
+                                 "TASK_PLAN",
+                                 "RESOURCE_QUERY",
+                                 "COMPOSITION_BLUEPRINT",
+                                 "EVIDENCE_REPORT",
+                                 "GATE_REQUEST"
+                             ],
+    "unknown_output_policy":  "WARN_AND_WRAP_AS_MODEL_RESPONSE_NORMALIZED"
+}

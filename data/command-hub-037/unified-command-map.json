@@ -1,0 +1,158 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_HUMAN_USABLE_036_045",
+    "stage":  "E37",
+    "created_at":  "2026-06-17T11:39:55",
+    "purpose":  "Command Hub Unificado Real",
+    "command_hub":  "eng.ps1",
+    "commands":  [
+                     {
+                         "command":  "start",
+                         "description":  "Abrir pantalla inicial humana",
+                         "aliases":  [
+                                         "home",
+                                         "inicio"
+                                     ],
+                         "sensitive":  false,
+                         "category":  "core"
+                     },
+                     {
+                         "command":  "status",
+                         "description":  "Mostrar estado operativo",
+                         "aliases":  [
+                                         "estado"
+                                     ],
+                         "sensitive":  false,
+                         "category":  "core"
+                     },
+                     {
+                         "command":  "next",
+                         "description":  "Mostrar siguiente paso lógico",
+                         "aliases":  [
+                                         "siguiente"
+                                     ],
+                         "sensitive":  false,
+                         "category":  "core"
+                     },
+                     {
+                         "command":  "readiness",
+                         "description":  "Mostrar readiness",
+                         "aliases":  [
+                                         "ready"
+                                     ],
+                         "sensitive":  false,
+                         "category":  "core"
+                     },
+                     {
+                         "command":  "gates",
+                         "description":  "Listar gates humanos",
+                         "aliases":  [
+                                         "gate"
+                                     ],
+                         "sensitive":  false,
+                         "category":  "control"
+                     },
+                     {
+                         "command":  "artifacts",
+                         "description":  "Listar artefactos principales",
+                         "aliases":  [
+                                         "artefactos"
+                                     ],
+                         "sensitive":  false,
+                         "category":  "evidence"
+                     },
+                     {
+                         "command":  "context",
+                         "description":  "Mostrar contexto local",
+                         "aliases":  [
+                                         "ctx"
+                                     ],
+                         "sensitive":  false,
+                         "category":  "memory"
+                     },
+                     {
+                         "command":  "errors",
+                         "description":  "Mostrar errores reportados",
+                         "aliases":  [
+                                         "err"
+                                     ],
+                         "sensitive":  false,
+                         "category":  "diagnostic"
+                     },
+                     {
+                         "command":  "docs",
+                         "description":  "Abrir o mostrar documentación humana",
+                         "aliases":  [
+                                         "manual",
+                                         "help",
+                                         "ayuda"
+                                     ],
+                         "sensitive":  false,
+                         "category":  "docs"
+                     },
+                     {
+                         "command":  "dashboard",
+                         "description":  "Abrir dashboard principal",
+                         "aliases":  [
+                                         "panel"
+                                     ],
+                         "sensitive":  false,
+                         "category":  "visual"
+                     },
+                     {
+                         "command":  "mvp-open",
+                         "description":  "Abrir panel MVP/human start",
+                         "aliases":  [
+                                         "open-mvp"
+                                     ],
+                         "sensitive":  false,
+                         "category":  "visual"
+                     },
+                     {
+                         "command":  "prompt",
+                         "description":  "Preparar prompt para worker asistido sin enviarlo",
+                         "aliases":  [
+                                         "plan-prompt",
+                                         "worker-prompt"
+                                     ],
+                         "sensitive":  false,
+                         "category":  "worker"
+                     },
+                     {
+                         "command":  "inbox",
+                         "description":  "Ver bandeja local de propuestas/evidencias",
+                         "aliases":  [
+                                         "bandeja"
+                                     ],
+                         "sensitive":  false,
+                         "category":  "worker"
+                     },
+                     {
+                         "command":  "review",
+                         "description":  "Revisar propuesta antes de decisión humana",
+                         "aliases":  [
+                                         "revisar"
+                                     ],
+                         "sensitive":  false,
+                         "category":  "decision"
+                     },
+                     {
+                         "command":  "approve",
+                         "description":  "Registrar intención de aprobación solo como gate, sin apply",
+                         "aliases":  [
+                                         "aprobar"
+                                     ],
+                         "sensitive":  true,
+                         "category":  "decision"
+                     }
+                 ],
+    "security":  {
+                     "apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "sensitive_actions_executed":  false,
+                     "human_gate_required_for_sensitive_actions":  true
+                 },
+    "next":  "E38_PLAN_PROMPT_WORKER_ROUNDTRIP"
+}

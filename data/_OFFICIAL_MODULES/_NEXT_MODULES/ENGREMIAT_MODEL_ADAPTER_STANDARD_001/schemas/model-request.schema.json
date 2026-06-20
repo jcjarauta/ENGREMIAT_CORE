@@ -1,0 +1,25 @@
+﻿{
+    "schema":  "model-request",
+    "required":  [
+                     "request_id",
+                     "mode",
+                     "task",
+                     "prompt_envelope",
+                     "constraints",
+                     "expected_output_type"
+                 ],
+    "properties":  {
+                       "request_id":  "string",
+                       "mode":  [
+                                    "DRY_RUN",
+                                    "MOCK",
+                                    "REAL_GATED"
+                                ],
+                       "task":  "object",
+                       "prompt_envelope":  "object",
+                       "context":  "array",
+                       "constraints":  "object",
+                       "expected_output_type":  "string",
+                       "gate_id":  "string_optional"
+                   }
+}

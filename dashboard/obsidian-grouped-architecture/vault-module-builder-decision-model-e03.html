@@ -1,0 +1,14 @@
+﻿<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>ENGREMIAT · Vault Module Builder Decision Model</title><style>body{font-family:Segoe UI,Arial;margin:24px;background:#111827;color:#e5e7eb}.card{border:1px solid #374151;border-radius:14px;padding:16px;margin:12px 0;background:#1f2937}.ok{color:#22c55e}.warn{color:#facc15}table{width:100%;border-collapse:collapse;background:#0f172a}td,th{border:1px solid #334155;padding:8px;text-align:left;vertical-align:top}code{color:#93c5fd}</style></head><body>
+<h1>ENGREMIAT · Modelo de decisión constructor</h1>
+<div class="card"><b class="ok">E03 PASS · modelo definido</b><p>Opciones humanas: <code>
+5
+</code> · superficies: <code>
+10
+</code></p></div>
+<div class="card"><h2>Decisiones</h2><table><thead><tr><th>ID</th><th>Label</th><th>Scope</th><th>Grupo</th></tr></thead><tbody>
+<tr><td>CREATE_MASTER_VAULT</td><td>Construir boveda maestra</td><td>global</td><td>G01_CORE</td></tr><tr><td>CREATE_PROJECT_SPACE</td><td>Construir project space</td><td>project</td><td>G03_PROJECTS_MODULES</td></tr><tr><td>CREATE_MODULE_SPACE</td><td>Construir modulo relacionado</td><td>module</td><td>G03_PROJECTS_MODULES</td></tr><tr><td>RELATE_MODULE_TO_VAULT</td><td>Relacionar modulo con boveda concreta</td><td>relation</td><td>G04_MEMORY_VISUAL</td></tr><tr><td>OPEN_WORK_SURFACE</td><td>Elegir donde trabajar</td><td>view</td><td>G02_HUMAN_CONTROL</td></tr>
+</tbody></table></div>
+<div class="card"><h2>Seguridad</h2><p class="warn">preview_only=true · worker_execution=false · kanban_write=false · clien_write=false · git_write=false</p></div>
+<div class="card"><h2>Siguiente</h2><p><code>E04_CREATE_DASHBOARD_DECISION_SURFACE_PREVIEW</code></p></div>
+</body></html>

@@ -1,0 +1,21 @@
+{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_003E",
+    "stage":  "E01",
+    "artifact":  "scope-graph-validation-rules.json",
+    "required_artifacts":  [
+                               "scope-contract.json",
+                               "boundary-policy.json",
+                               "module-family-catalog.json",
+                               "module-graph-seed.json",
+                               "scope-graph-validation-report.json",
+                               "dashboard/index.html"
+                           ],
+    "checks":  [
+                   "files_exist",
+                   "json_parse_ok",
+                   "scope_has_includes_and_excludes",
+                   "boundary_blocks_core_network_git_activation",
+                   "graph_has_nodes_and_edges",
+                   "families_declared"
+               ]
+}

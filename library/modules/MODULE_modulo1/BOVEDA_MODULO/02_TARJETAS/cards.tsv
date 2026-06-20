@@ -1,0 +1,5 @@
+﻿card_id	module_id	project_id	title	type	status	priority	depends_on	expected_evidence	candidate_worker	risk
+CARD-modulo1-001	MODULE-modulo1-20260620021125	PROJECT-nuevo-proyecto_20260619-161706	Definir alcance	humana	pending	high		Alcance validado	humano	medio
+CARD-modulo1-002	MODULE-modulo1-20260620021125	PROJECT-nuevo-proyecto_20260619-161706	Preparar estructura	asistida	pending	high	CARD-modulo1-001	Estructura creada	chatgpt	medio
+CARD-modulo1-003	MODULE-modulo1-20260620021125	PROJECT-nuevo-proyecto_20260619-161706	Validar evidencia	evidencia	pending	medium	CARD-modulo1-002	Evidencia comprobada	humano	bajo
+CARD-modulo1-004	MODULE-modulo1-20260620021125	PROJECT-nuevo-proyecto_20260619-161706	Cerrar modulo	gate	pending	medium	CARD-modulo1-003	Gate de cierre	humano	bajo

@@ -1,0 +1,19 @@
+﻿{
+    "package":  "ENGREMIAT_MODULE_ADD_FLOW",
+    "stage":  "E21Q_LIBRARY_MANAGEMENT_WORKSPACE",
+    "status":  "PASS",
+    "library_screen":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-module-library-screen.ps1",
+    "main_screen":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-project-modules-screen.ps1",
+    "workflow":  "l biblioteca -\u003e e editar biblioteca -\u003e m gestionar modulos -\u003e numero -\u003e h historico",
+    "features":  [
+                     "project_reference_in_library",
+                     "library_counts",
+                     "search",
+                     "manage_active_historic_all",
+                     "archive_from_edit_workspace",
+                     "reactivate",
+                     "delete_with_confirmation",
+                     "import_to_project"
+                 ],
+    "next":  "abrir_modulos_l_e_m_y_mandar_modulo_a_historico"
+}

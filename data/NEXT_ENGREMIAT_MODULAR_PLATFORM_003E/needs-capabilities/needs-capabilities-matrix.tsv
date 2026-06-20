@@ -1,0 +1,17 @@
+package_idstageblocktipoelementodescripcionprioridadevidencia
+NEXT_ENGREMIAT_MODULAR_PLATFORM_003E	E01	B01.1	NECESIDAD	Alcance y frontera	Definir que entra y que no entra en la nueva capa modular.	Alta	next-scope-contract.json
+NEXT_ENGREMIAT_MODULAR_PLATFORM_003E	E01	B01.2	NECESIDAD	Separacion del core	Garantizar que la nueva capa no toca el core congelado salvo correcciones puntuales.	Alta	next-boundary-policy.json
+NEXT_ENGREMIAT_MODULAR_PLATFORM_003E	E01	B01.1	CAPACIDAD	Catalogo de familias	Clasificar modulos por familia, rol, capa y funcion operativa.	Alta	module-family-schema.json
+NEXT_ENGREMIAT_MODULAR_PLATFORM_003E	E01	B01.2	CAPACIDAD	Matriz de compatibilidad	Relacionar modulo, version, capa, objetivo y compatibilidad funcional.	Alta	compatibility-matrix.json
+NEXT_ENGREMIAT_MODULAR_PLATFORM_003E	E02	B02.1	NECESIDAD	Seleccion por objetivo	Elegir modulos segun objetivo del sistema, estado y compatibilidad.	Alta	module-selector-contract.json
+NEXT_ENGREMIAT_MODULAR_PLATFORM_003E	E02	B02.2	NECESIDAD	Resolucion de dependencias	Resolver dependencias, bloqueos y prioridades antes de activar nada.	Alta	dependency-resolver-rules.json
+NEXT_ENGREMIAT_MODULAR_PLATFORM_003E	E02	B02.1	CAPACIDAD	Composicion modular	Construir una solucion a partir de piezas compatibles y activables.	Alta	selected_modules
+NEXT_ENGREMIAT_MODULAR_PLATFORM_003E	E02	B02.2	CAPACIDAD	Orden estable de activacion	Definir secuencia segura para activar modulos sin romper el sistema.	Alta	resolved_order
+NEXT_ENGREMIAT_MODULAR_PLATFORM_003E	E03	B03.1	NECESIDAD	Orquestacion segura	Activar, pausar, sustituir o retirar modulos con trazabilidad.	Alta	activation-plan.json
+NEXT_ENGREMIAT_MODULAR_PLATFORM_003E	E03	B03.2	NECESIDAD	Rollback explicito	Volver atras si una sustitucion o activacion no es segura.	Alta	swap-policy.json
+NEXT_ENGREMIAT_MODULAR_PLATFORM_003E	E03	B03.1	CAPACIDAD	Plan de activacion	Generar pasos claros de activacion, validacion y registro.	Alta	activation_plan_seed
+NEXT_ENGREMIAT_MODULAR_PLATFORM_003E	E03	B03.2	CAPACIDAD	Sustitucion trazable	Registrar que modulo sustituye a cual, por que y con que compatibilidad.	Alta	module_swap_record
+NEXT_ENGREMIAT_MODULAR_PLATFORM_003E	E04	B04.1	NECESIDAD	Visibilidad humana	Mostrar el estado real de la expansion modular de forma clara.	Alta	expansion-dashboard/index.html
+NEXT_ENGREMIAT_MODULAR_PLATFORM_003E	E04	B04.2	NECESIDAD	Cierre y continuidad	Terminar la capa dejando preparado el siguiente objetivo logico.	Alta	modular-expansion-close-report.md
+NEXT_ENGREMIAT_MODULAR_PLATFORM_003E	E04	B04.1	CAPACIDAD	Estado operacional visible	Ver modulos activos, pausados, desacoplados y sustituidos.	Media	operational_view
+NEXT_ENGREMIAT_MODULAR_PLATFORM_003E	E04	B04.2	CAPACIDAD	Contexto transferible	Dejar la capa lista para continuidad en otra conversacion o iteracion.	Alta	next-objective.md

@@ -1,0 +1,40 @@
+{
+    "package_id":  "ENGREMIAT_SAMPLE_CANONICAL_MODULE_001",
+    "module_id":  "ENG-SAMPLE-001",
+    "module_name":  "Sample Canonical Module",
+    "module_type":  "ADAPTER",
+    "version":  "1.0.0",
+    "status":  "DRAFT",
+    "purpose":  "Modulo de ejemplo para validar scaffold canonico",
+    "depends_on":  [
+                       "ENGREMIAT_MODULE_INTAKE_REGISTRY_001"
+                   ],
+    "inputs":  [
+                   "sample_input"
+               ],
+    "outputs":  [
+                    "sample_output"
+                ],
+    "boundaries":  [
+                       "local_first",
+                       "no_core_changes"
+                   ],
+    "risks":  [
+                  "sample_only"
+              ],
+    "human_gates":  [
+                        "REAL_EXECUTION_GATE"
+                    ],
+    "artifacts_expected":  [
+                               "module.json",
+                               "README.md",
+                               "contracts",
+                               "schemas",
+                               "packages",
+                               "reports",
+                               "dashboard",
+                               "docs",
+                               "stages"
+                           ],
+    "next_action":  "ARCHIVE"
+}

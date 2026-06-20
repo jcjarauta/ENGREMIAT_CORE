@@ -1,0 +1,24 @@
+﻿{
+    "objective":  "ENGREMIAT_REAL_CLINE_KANBAN_OLLAMA_TESTS_011",
+    "stage":  "E03",
+    "service_name":  "Ollama",
+    "available":  true,
+    "optional":  true,
+    "limitations":  [
+                        "No remote execution",
+                        "No automatic inference required for readiness",
+                        "Read-only detection only"
+                    ],
+    "model_names":  [
+                        "qwen3:14b"
+                    ],
+    "source":  "ollama process detected",
+    "timestamp_utc":  "2026-06-16T14:36:10.7771858Z",
+    "safety":  {
+                   "inference_executed":  false,
+                   "remote_execution":  false,
+                   "git_write":  false,
+                   "auto_apply":  false,
+                   "shared_repo_edit":  false
+               }
+}

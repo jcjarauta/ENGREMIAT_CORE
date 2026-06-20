@@ -1,0 +1,58 @@
+﻿{
+    "profile_id":  "grant-call-profile-from-pdf-registered-only-latest",
+    "profile_type":  "grant_call",
+    "schema":  "ENGREMIAT_NORMALIZED_PROFILE_CONTRACT_V1",
+    "created_at":  "2026-06-20T09:34:50",
+    "status":  "pending_review",
+    "human_review_required":  true,
+    "confidence":  "none",
+    "source":  {
+                   "source_id":  "intake-pdf-20260620-093450",
+                   "source_type":  "pdf_registered_only",
+                   "source_path":  "C:\\ENGREMIAT_CORE\\documents\\intake\\inbox\\pdf\\convocatoria-demo-registered-only.pdf",
+                   "created_at":  "2026-06-20T09:34:50",
+                   "status":  "registered_no_extraction",
+                   "human_review_required":  true,
+                   "title":  "convocatoria-demo-registered-only",
+                   "file_name":  "convocatoria-demo-registered-only.pdf",
+                   "file_size_bytes":  635,
+                   "pdf_header":  "%PDF-",
+                   "notes":  "PDF local registrado. E14 no realiza OCR ni extraccion de texto."
+               },
+    "titulo":  "convocatoria-demo-registered-only",
+    "convocatoria_nombre":  "convocatoria-demo-registered-only",
+    "entidad_convocante":  "No definido",
+    "territorio":  "No definido",
+    "fecha_limite":  "No definido",
+    "importe_maximo":  "No definido",
+    "modalidad":  "No definido",
+    "objetivo_convocatoria":  "No definido",
+    "encaje_engremiat":  "PDF registrado como entrada local. Extraccion pendiente de herramienta futura autorizada.",
+    "beneficiarios":  "No definido",
+    "criterios":  [
+
+                  ],
+    "documentacion_requerida":  [
+
+                                ],
+    "resumen":  "Ficha pendiente creada desde PDF local registrado. No se ha extraido contenido.",
+    "pending_fields":  [
+                           "entidad_convocante",
+                           "territorio",
+                           "fecha_limite",
+                           "importe_maximo",
+                           "objetivo_convocatoria",
+                           "beneficiarios",
+                           "criterios",
+                           "documentacion_requerida"
+                       ],
+    "metadata":  {
+                     "producer":  "ENGREMIAT-DATA-INTAKE-CENTER",
+                     "stage":  "E14_PREPARE_PDF_LOCAL_NO_OCR",
+                     "local_first":  true,
+                     "network_used":  false,
+                     "external_ai_used":  false,
+                     "ocr_used":  false,
+                     "text_extraction_used":  false
+                 }
+}

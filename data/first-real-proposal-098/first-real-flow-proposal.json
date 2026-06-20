@@ -1,0 +1,36 @@
+﻿{
+    "objective":  "ENGREMIAT_FIRST_REAL_CONTROLLED_VALUE_FLOW",
+    "stage":  "E98",
+    "proposal_id":  "FRP-098-001",
+    "case_id":  "FRF-096-001",
+    "need_id":  "HN-097-001",
+    "title":  "Propuesta controlada para validar primer flujo real",
+    "summary":  "Convertir la necesidad humana registrada en un preview local seguro, antes de cualquier autorizacion o apply.",
+    "source_need":  "data\\human-need-intake-097\\human-need-intake-record.json",
+    "recommended_action":  "CREATE_PREVIEW_ONLY_PACKAGE",
+    "target_artifacts":  [
+                             "data/first-real-proposal-098/first-real-flow-preview.json"
+                         ],
+    "risk":  "MEDIUM",
+    "requires_human_decision":  true,
+    "expected_value":  "Obtener valor observable del sistema, no solo infraestructura.",
+    "success_criteria":  [
+                             "need_registered",
+                             "proposal_created",
+                             "preview_created",
+                             "human_gate_created",
+                             "controlled_apply_or_safe_no_go_recorded",
+                             "final_evidence_created"
+                         ],
+    "safety_flags":  {
+                         "proposal_executes":  false,
+                         "apply_executed":  false,
+                         "auto_apply":  false,
+                         "remote_execution":  false,
+                         "git_write":  false,
+                         "external_network":  false,
+                         "worker_executed":  false,
+                         "kanban_real_write":  false
+                     },
+    "created_utc":  "2026-06-17T11:25:28.8849074Z"
+}

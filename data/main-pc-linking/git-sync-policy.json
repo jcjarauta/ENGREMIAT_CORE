@@ -1,0 +1,54 @@
+﻿{
+    "objective":  "ENGREMIAT_MAIN_PC_REAL_LINKING_010",
+    "stage":  "E04",
+    "policy_id":  "MAIN-PC-GIT-SYNC-POLICY-010-E04",
+    "source_of_truth":  "GIT",
+    "allowed_readonly_commands":  [
+                                      "git status --short",
+                                      "git branch --show-current",
+                                      "git rev-parse --short HEAD",
+                                      "git rev-parse --show-toplevel",
+                                      "git remote get-url origin"
+                                  ],
+    "governed_manual_commands":  [
+                                     "git fetch",
+                                     "git pull",
+                                     "git push",
+                                     "git merge",
+                                     "git rebase"
+                                 ],
+    "forbidden_automatic_commands":  [
+                                         "git fetch auto",
+                                         "git pull auto",
+                                         "git push auto",
+                                         "git merge auto",
+                                         "git rebase auto",
+                                         "git commit auto",
+                                         "git add ."
+                                     ],
+    "before_switch_pc":  [
+                             "finish current block",
+                             "create handoff",
+                             "review git status",
+                             "ensure single_active_writer"
+                         ],
+    "after_switch_pc":  [
+                            "read handoff",
+                            "validate local repo",
+                            "confirm branch and HEAD",
+                            "confirm writer lock"
+                        ],
+    "safety":  {
+                   "git_read_only":  true,
+                   "git_write":  false,
+                   "git_fetch":  false,
+                   "git_pull":  false,
+                   "git_push":  false,
+                   "git_merge":  false,
+                   "git_commit":  false,
+                   "git_remote_auto":  false,
+                   "shared_repo_edit":  false,
+                   "auto_apply":  false,
+                   "remote_execution":  false
+               }
+}

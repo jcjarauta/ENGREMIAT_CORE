@@ -1,0 +1,32 @@
+﻿{
+    "objective":  "ENGREMIAT_REAL_CLINE_KANBAN_OLLAMA_TESTS_011",
+    "stage":  "E01",
+    "schema_id":  "MAIN-PC-REAL-TEST-PREFLIGHT-SCHEMA-011-E01",
+    "required_fields":  [
+                            "machine_name",
+                            "cwd",
+                            "git_root",
+                            "branch",
+                            "head",
+                            "dirty_status",
+                            "origin",
+                            "cline_found",
+                            "kanban_found",
+                            "ollama_found",
+                            "browser_opened",
+                            "remote_execution",
+                            "git_write",
+                            "auto_apply",
+                            "shared_repo_edit",
+                            "timestamp_utc"
+                        ],
+    "safety":  {
+                   "git_read_only":  true,
+                   "git_write":  false,
+                   "git_remote_auto":  false,
+                   "remote_execution":  false,
+                   "auto_apply":  false,
+                   "shared_repo_edit":  false,
+                   "secret_values_read":  false
+               }
+}

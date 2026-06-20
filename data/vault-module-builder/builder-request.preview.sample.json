@@ -1,0 +1,23 @@
+﻿{
+    "request_id":  "builder-request-preview-sample",
+    "status":  "PREVIEW_DRAFT",
+    "human_decision":  "CREATE_MODULE_SPACE",
+    "name":  "Nuevo modulo ENGREMIAT",
+    "intent":  "Crear modulo agrupado y relacionable dentro de una boveda o proyecto",
+    "space_type":  "MODULE_SPACE",
+    "parent":  "02_PROYECTOS/PROJECT_demo-builder-project-space",
+    "related_to":  "G04_MEMORY_VISUAL",
+    "preferred_surface":  "GROUPED_CANVAS",
+    "selected_group":  "G03_PROJECTS_MODULES",
+    "execute_now":  false,
+    "safety":  {
+                   "local_only":  true,
+                   "preview_only":  true,
+                   "worker_execution":  false,
+                   "kanban_write":  false,
+                   "clien_write":  false,
+                   "obsidian_app_automation":  false,
+                   "git_write":  false,
+                   "external_network":  false
+               }
+}

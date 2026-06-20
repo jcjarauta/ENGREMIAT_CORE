@@ -1,0 +1,73 @@
+﻿{
+    "package":  "TOOL_LINKING_INITIAL_OBJECTIVE_CLOSE_001",
+    "created_at":  "2026-06-18T11:05:25",
+    "artifacts":  [
+                      {
+                          "key":  "healthcheck",
+                          "exists":  true,
+                          "decision":  "GO_TOOL_LINKING_HEALTHCHECK_READY",
+                          "next":  "DROP_REAL_OPENWEBUI_OR_OPENCLAW_JSON_IN_SANDBOX_INBOX",
+                          "path":  "C:\\ENGREMIAT_CORE\\reports\\tool-linking-healthcheck\\tool-linking-healthcheck.20260618-105908.json"
+                      },
+                      {
+                          "key":  "sandbox",
+                          "exists":  true,
+                          "decision":  "GO_FIRST_REAL_LINKING_SANDBOX_READY",
+                          "next":  "DROP_REAL_OPENWEBUI_OR_OPENCLAW_JSON_IN_SANDBOX_INBOX",
+                          "path":  "C:\\ENGREMIAT_CORE\\reports\\tool-linking-sandbox\\FIRST_REAL_LINKING_SANDBOX_001.close-report.json"
+                      },
+                      {
+                          "key":  "queue_cleanup",
+                          "exists":  true,
+                          "decision":  "GO_TOOL_LINKING_QUEUE_CLEANUP_READY",
+                          "next":  "DROP_NEXT_REAL_JSON_OR_REVIEW_INLINE_BATCH",
+                          "path":  "C:\\ENGREMIAT_CORE\\reports\\tool-linking-queue-cleanup\\TOOL_LINKING_QUEUE_CLEANUP_001.close-report.json"
+                      },
+                      {
+                          "key":  "openclaw_skill_packet",
+                          "exists":  true,
+                          "decision":  "GO_OPENCLAW_SKILL_PACKET_READY",
+                          "next":  "INSTALL_OR_REGISTER_SKILL_IN_OPENCLAW_WHEN_READY_OR_BUILD_HEALTHCHECK",
+                          "path":  "C:\\ENGREMIAT_CORE\\reports\\openclaw-skill-packet\\openclaw-skill-packet-report.json"
+                      },
+                      {
+                          "key":  "readonly_adapter",
+                          "exists":  true,
+                          "decision":  "GO_OPENWEBUI_OPENCLAW_REAL_READONLY_ADAPTER_READY",
+                          "next":  "BUILD_OPENCLAW_SKILL_PACKET_FOR_READONLY_INTAKE",
+                          "path":  "C:\\ENGREMIAT_CORE\\reports\\openwebui-openclaw-readonly-adapter\\OPENWEBUI_OPENCLAW_REAL_READONLY_ADAPTER_001.close-report.json"
+                      },
+                      {
+                          "key":  "recurrent_manifest",
+                          "exists":  true,
+                          "decision":  "GO_RECURRENT_CARD_REFRESH_DRY_RUN_READY",
+                          "next":  "PASTE_INLINE_BATCH_TO_CLINE_OR_BUILD_OPENCLAW_INPUT_ADAPTER",
+                          "path":  "C:\\ENGREMIAT_CORE\\docs\\kanban-backlog\\recurrent-card-refresh-model\\recurrent-card-refresh-manifest.json"
+                      },
+                      {
+                          "key":  "obsidian_vault_gate",
+                          "exists":  true,
+                          "decision":  "GO_OBSIDIAN_VAULT_WRITE_GATE_READY",
+                          "next":  "WAIT_FOR_HUMAN_VAULT_PATH_AND_AUTHORIZATION_OR_CONTINUE_TO_SYSTEM_DASHBOARD",
+                          "path":  "C:\\ENGREMIAT_CORE\\reports\\obsidian-vault-write-gate\\OBSIDIAN_VAULT_WRITE_GATE_001.close-report.json"
+                      }
+                  ],
+    "counts":  {
+                   "sandbox_inbox_json":  0,
+                   "readonly_inbox_json":  0,
+                   "readonly_processed_json":  18,
+                   "detected_inputs":  5,
+                   "recurrent_cards":  22,
+                   "inline_batches":  7,
+                   "obsidian_candidates":  22,
+                   "obsidian_export_notes":  4
+               },
+    "queue_clean":  true,
+    "manual":  "C:\\ENGREMIAT_CORE\\docs\\tool-linking-final\\TOOL_LINKING_INITIAL_OPERATING_MANUAL.md",
+    "run_command_file":  "C:\\ENGREMIAT_CORE\\docs\\tool-linking-final\\RUN_TOOL_LINKING_CYCLE.ps1",
+    "dashboard":  "C:\\ENGREMIAT_CORE\\docs\\system-dashboard\\ENGREMIAT_TOOL_LINKING_DASHBOARD.html",
+    "command":  "powershell -NoProfile -ExecutionPolicy Bypass -File C:\\ENGREMIAT_CORE\\tools\\kanban-local\\Invoke-ToolLinkingSandboxIntake.ps1 -Root C:\\ENGREMIAT_CORE -RunRecurrentModel -OpenPrompt",
+    "drop_dir":  "C:\\ENGREMIAT_CORE\\runtime\\tool-linking-sandbox\\openclaw-openwebui-inbox",
+    "decision":  "GO_TOOL_LINKING_INITIAL_OBJECTIVE_READY",
+    "next":  "CHOOSE_OPENCLAW_REAL_SKILL_OR_OPENWEBUI_READONLY_EXPORT_OR_OBSIDIAN_VAULT_GATE"
+}

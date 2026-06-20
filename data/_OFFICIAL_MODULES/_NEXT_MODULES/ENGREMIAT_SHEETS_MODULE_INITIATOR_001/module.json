@@ -1,0 +1,28 @@
+﻿{
+    "module_id":  "ENGREMIAT_SHEETS_MODULE_INITIATOR_001",
+    "name":  "Sheets Module Initiator",
+    "status":  "CANDIDATE",
+    "kind":  "ACOPLABLE_DESACOPLABLE",
+    "location":  "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_SHEETS_MODULE_INITIATOR_001",
+    "purpose":  "Definir una tabla en Google Sheets con encabezados ENGREMIAT para que el humano rellene celdas y Apps Script genere el JSON necesario para iniciar un modulo en el repositorio.",
+    "interfaces":  {
+                       "input":  "Google Sheets row",
+                       "output":  "module-init-json log",
+                       "repo_consumer":  "future local PowerShell JSON module factory"
+                   },
+    "safety":  {
+                   "local_only":  true,
+                   "core_changes":  false,
+                   "real_sheets_write":  false,
+                   "apps_script_execution":  false,
+                   "git_write":  false,
+                   "network":  false
+               },
+    "stages":  [
+                   "E01_MODULE_IDENTITY_AND_CONTRACT",
+                   "E02_SHEETS_HEADERS_AND_JSON_SCHEMA",
+                   "E03_APPS_SCRIPT_DRY_RUN_GENERATOR",
+                   "E04_SAMPLE_ROW_AND_LOG_JSON",
+                   "E05_VALIDATE_AND_CLOSE"
+               ]
+}

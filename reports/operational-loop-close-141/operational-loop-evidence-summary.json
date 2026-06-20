@@ -1,0 +1,65 @@
+﻿{
+    "schema":  "engremiat.operational_loop_evidence_summary.v1",
+    "objective":  "ENGREMIAT_REAL_VALUE_TASK_EXECUTION_LOOP_132_141_OPERATIONAL_USEFUL_TASK",
+    "stage":  "E141",
+    "block":  "B141.1",
+    "step":  "P141.1.1",
+    "created_at":  "2026-06-17T14:54:29",
+    "closed_stages":  "E132-E140",
+    "evidence_count":  9,
+    "missing_count":  0,
+    "evidence":  [
+                     {
+                         "path":  "reports/operational-task-132/e132-operational-task-readiness-report.json",
+                         "exists":  true,
+                         "size_bytes":  1031
+                     },
+                     {
+                         "path":  "reports/operational-input-133/e133-operational-input-readiness-report.json",
+                         "exists":  true,
+                         "size_bytes":  986
+                     },
+                     {
+                         "path":  "reports/operational-proposal-134/e134-operational-proposal-readiness-report.json",
+                         "exists":  true,
+                         "size_bytes":  1003
+                     },
+                     {
+                         "path":  "reports/operational-authorization-135/e135-operational-authorization-readiness-report.json",
+                         "exists":  true,
+                         "size_bytes":  1061
+                     },
+                     {
+                         "path":  "reports/operational-apply-136/e136-operational-apply-readiness-report.json",
+                         "exists":  true,
+                         "size_bytes":  1128
+                     },
+                     {
+                         "path":  "reports/operational-postcheck-137/e137-operational-postcheck-readiness-report.json",
+                         "exists":  true,
+                         "size_bytes":  1024
+                     },
+                     {
+                         "path":  "reports/operational-evidence-138/e138-operational-evidence-readiness-report.json",
+                         "exists":  true,
+                         "size_bytes":  994
+                     },
+                     {
+                         "path":  "reports/operational-dashboard-refresh-139/e139-operational-dashboard-readiness-report.json",
+                         "exists":  true,
+                         "size_bytes":  1020
+                     },
+                     {
+                         "path":  "reports/operational-loop-regression-140/e140-operational-loop-regression-readiness-report.json",
+                         "exists":  true,
+                         "size_bytes":  989
+                     }
+                 ],
+    "operational_artifact_found":  true,
+    "operational_artifact_path":  "data/operational-apply-136/OPERATIONAL_ARTIFACT.md",
+    "loop_result":  "OPERATIONAL_USEFUL_TASK_LOOP_COMPLETED_WITH_TRACEABLE_LOCAL_EVIDENCE",
+    "safe_state":  true,
+    "network_used":  false,
+    "git_write":  false,
+    "destructive_actions":  false
+}

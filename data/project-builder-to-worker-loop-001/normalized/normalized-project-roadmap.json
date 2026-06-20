@@ -1,0 +1,126 @@
+﻿{
+    "package_id":  "ENGREMIAT_PROJECT_BUILDER_TO_WORKER_LOOP_001",
+    "normalization_status":  "NORMALIZED_FROM_MOCK_PROPOSAL",
+    "source":  "C:\\ENGREMIAT_CORE\\data\\project-builder-to-worker-loop-001\\mock-ollama\\mock-ollama-project-roadmap-proposal.json",
+    "project":  {
+                    "id":  "PROJECT-BUILDER-SAMPLE-001",
+                    "title":  "Crear módulo para convertir necesidades en tareas ejecutables por workers",
+                    "objective":  "Construir un ciclo proyecto -\u003e roadmap -\u003e aprobación humana -\u003e cards -\u003e worker -\u003e evidencia -\u003e revisión humana.",
+                    "success_criteria":  [
+                                             "roadmap normalizado disponible",
+                                             "cards preview generadas",
+                                             "gate humano preparado",
+                                             "worker request preview generado",
+                                             "dashboard de revisión disponible"
+                                         ]
+                },
+    "phases":  [
+                   {
+                       "id":  "PHASE-001",
+                       "title":  "Intake y normalización",
+                       "goal":  "Capturar intención humana y convertirla en estructura Engremiat."
+                   },
+                   {
+                       "id":  "PHASE-002",
+                       "title":  "Roadmap y revisión humana",
+                       "goal":  "Mostrar fases, tareas, riesgos y evidencias para aprobación."
+                   },
+                   {
+                       "id":  "PHASE-003",
+                       "title":  "Cards y worker loop",
+                       "goal":  "Materializar cards aprobadas y ejecutar tareas bajo gate."
+                   }
+               ],
+    "tasks":  [
+                  {
+                      "id":  "TASK-001",
+                      "phase":  "PHASE-001",
+                      "title":  "Crear contrato de intake",
+                      "risk":  "LOW",
+                      "evidence":  "contract json validado"
+                  },
+                  {
+                      "id":  "TASK-002",
+                      "phase":  "PHASE-002",
+                      "title":  "Mostrar roadmap en dashboard",
+                      "risk":  "MEDIUM",
+                      "evidence":  "dashboard html visible"
+                  },
+                  {
+                      "id":  "TASK-003",
+                      "phase":  "PHASE-003",
+                      "title":  "Preparar primera card preview",
+                      "risk":  "MEDIUM",
+                      "evidence":  "card preview sin escritura real"
+                  }
+              ],
+    "cards_preview":  [
+                          {
+                              "id":  "CARD-PREVIEW-001",
+                              "from_task":  "TASK-001",
+                              "title":  "Definir intake normalizado",
+                              "status":  "PREVIEW",
+                              "recommended_column":  "NEXT",
+                              "requires_gate":  true
+                          },
+                          {
+                              "id":  "CARD-PREVIEW-002",
+                              "from_task":  "TASK-002",
+                              "title":  "Construir dashboard de roadmap",
+                              "status":  "PREVIEW",
+                              "recommended_column":  "NEXT",
+                              "requires_gate":  true
+                          },
+                          {
+                              "id":  "CARD-PREVIEW-003",
+                              "from_task":  "TASK-003",
+                              "title":  "Generar cards Obsidian desde roadmap aprobado",
+                              "status":  "PREVIEW",
+                              "recommended_column":  "NEXT",
+                              "requires_gate":  true
+                          }
+                      ],
+    "worker_queue_preview":  [
+                                 {
+                                     "queue_id":  "WQ-PREVIEW-001",
+                                     "card_id":  "CARD-PREVIEW-001",
+                                     "adapter":  "mock_or_ollama",
+                                     "status":  "PREPARED_NOT_EXECUTED",
+                                     "worker_real_execution":  false
+                                 },
+                                 {
+                                     "queue_id":  "WQ-PREVIEW-002",
+                                     "card_id":  "CARD-PREVIEW-002",
+                                     "adapter":  "mock_or_ollama",
+                                     "status":  "PREPARED_NOT_EXECUTED",
+                                     "worker_real_execution":  false
+                                 }
+                             ],
+    "gates":  [
+                  {
+                      "gate_id":  "GATE-ROADMAP-APPROVAL-001",
+                      "decision":  "DEFER",
+                      "human_confirmation":  false,
+                      "materialize_cards_allowed":  false
+                  },
+                  {
+                      "gate_id":  "GATE-WORKER-EXECUTION-001",
+                      "decision":  "DEFER",
+                      "human_confirmation":  false,
+                      "worker_execution_allowed":  false
+                  }
+              ],
+    "safety":  {
+                   "readonly_structure":  true,
+                   "proposal_only":  true,
+                   "ollama_real_execution":  false,
+                   "worker_real_execution":  false,
+                   "materialize_cards":  false,
+                   "card_write":  false,
+                   "write_to_cline":  false,
+                   "git":  false,
+                   "network_external":  false,
+                   "auto_apply":  false,
+                   "human_gate_required":  true
+               }
+}

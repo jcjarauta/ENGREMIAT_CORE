@@ -1,0 +1,21 @@
+﻿{
+    "model_id":  "gap-analysis-model.v1",
+    "compares":  [
+                     "desired_capabilities",
+                     "available_capabilities",
+                     "required_resources",
+                     "available_resources",
+                     "required_modules",
+                     "available_modules",
+                     "health_dimensions"
+                 ],
+    "gap_types":  [
+                      "capability_gap",
+                      "resource_gap",
+                      "module_gap",
+                      "evidence_gap",
+                      "validation_gap",
+                      "composition_gap"
+                  ],
+    "output":  "need candidates"
+}

@@ -1,0 +1,61 @@
+{
+    "package_id":  "ENGREMIAT_OPERATIONAL_MASTER_PANEL_001",
+    "stage":  "E02_LOCAL_STATE_COLLECTOR",
+    "artifact":  "local-state-collector-package.json",
+    "status":  "PASS",
+    "source_count":  6,
+    "found_count":  6,
+    "missing_count":  0,
+    "sources":  [
+                    {
+                        "id":  "MODULAR_001",
+                        "label":  "Base modular",
+                        "path":  "data\\ENGREMIAT_MODULAR_PLATFORM_001\\_001_POST_CLOSE_AUDIT\\reports\\post-close-audit-report.json",
+                        "exists":  true,
+                        "status":  "FOUND",
+                        "required":  true
+                    },
+                    {
+                        "id":  "SIM_004E",
+                        "label":  "Simulador modular",
+                        "path":  "data\\NEXT_ENGREMIAT_MODULAR_PLATFORM_004E\\E04_SIMULATION_CLOSE_AND_NEXT\\reports\\simulation-readiness-report.json",
+                        "exists":  true,
+                        "status":  "FOUND",
+                        "required":  true
+                    },
+                    {
+                        "id":  "APPLY_005E",
+                        "label":  "Apply local controlado",
+                        "path":  "data\\NEXT_ENGREMIAT_MODULAR_PLATFORM_005E\\E05_POST_APPLY_VALIDATION_AND_CLOSE\\reports\\post-apply-readiness-report.json",
+                        "exists":  true,
+                        "status":  "FOUND",
+                        "required":  true
+                    },
+                    {
+                        "id":  "MANUALS_001",
+                        "label":  "Manuales consolidados",
+                        "path":  "data\\ENGREMIAT_MODULAR_PLATFORM_MANUALS_001\\reports\\manuals-consolidation-report.json",
+                        "exists":  true,
+                        "status":  "FOUND",
+                        "required":  true
+                    },
+                    {
+                        "id":  "CIERRE_DOC_001",
+                        "label":  "Cierre documental",
+                        "path":  "data\\CIERRE_DOCUMENTAL_001\\reports\\cierre-documental-report.json",
+                        "exists":  true,
+                        "status":  "FOUND",
+                        "required":  true
+                    },
+                    {
+                        "id":  "VISUAL_006E",
+                        "label":  "Validacion visual",
+                        "path":  "data\\006E_VALIDACION_OPERATIVA_VISUAL\\reports\\visual-readiness-report.json",
+                        "exists":  true,
+                        "status":  "FOUND",
+                        "required":  true
+                    }
+                ],
+    "collector_mode":  "readonly_inputs_local_outputs",
+    "next":  "E03_OPERATIONAL_STATE_MODEL"
+}

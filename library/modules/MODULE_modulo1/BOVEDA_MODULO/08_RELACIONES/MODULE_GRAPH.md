@@ -1,0 +1,7 @@
+﻿# MODULE_GRAPH
+
+## Relaciones
+- [[MODULE_HOME]]
+- [[MODULE_CARDS]]
+- [[PROJECT_HOME]]
+- [[SYSTEM_GROUPING_MODEL]]

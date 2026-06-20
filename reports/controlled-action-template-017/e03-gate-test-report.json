@@ -1,0 +1,63 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_ACTION_TEMPLATE_017",
+    "stage":  "E03",
+    "created_at":  "2026-06-17T08:53:04.7324458+02:00",
+    "readiness":  100,
+    "decision":  "GO_E03_HUMAN_GATE_READY",
+    "next":  "E04_PIPELINE_REUSABLE",
+    "tests":  {
+                  "defer":  {
+                                "decision":  "DEFER",
+                                "human_confirmation":  false,
+                                "execution_allowed":  false,
+                                "approved":  false,
+                                "gate":  "DEFER",
+                                "apply_executed":  false,
+                                "auto_apply":  false,
+                                "remote_execution":  false,
+                                "git_write":  false,
+                                "status":  "BLOCKED_BY_GATE"
+                            },
+                  "approve":  {
+                                  "decision":  "APPROVE",
+                                  "human_confirmation":  true,
+                                  "execution_allowed":  true,
+                                  "approved":  true,
+                                  "gate":  "APPROVE",
+                                  "apply_executed":  false,
+                                  "auto_apply":  false,
+                                  "remote_execution":  false,
+                                  "git_write":  false,
+                                  "status":  "GATE_APPROVED_NO_AUTO_APPLY"
+                              },
+                  "reject":  {
+                                 "decision":  "REJECT",
+                                 "human_confirmation":  true,
+                                 "execution_allowed":  false,
+                                 "approved":  false,
+                                 "gate":  "DEFER",
+                                 "apply_executed":  false,
+                                 "auto_apply":  false,
+                                 "remote_execution":  false,
+                                 "git_write":  false,
+                                 "status":  "BLOCKED_BY_GATE"
+                             }
+              },
+    "checks":  {
+                   "gate_contract_created":  true,
+                   "gate_samples_created":  true,
+                   "checker_created":  true,
+                   "defer_blocks":  true,
+                   "approve_requires_three_conditions":  true,
+                   "reject_blocks":  true,
+                   "default_gate_defer":  true,
+                   "auto_apply_false":  true,
+                   "remote_execution_false":  true,
+                   "git_write_false":  true,
+                   "apply_executed_false":  true
+               },
+    "git_write":  false,
+    "remote_execution":  false,
+    "auto_apply":  false,
+    "apply_executed":  false
+}

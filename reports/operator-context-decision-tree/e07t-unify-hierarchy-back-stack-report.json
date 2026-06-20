@@ -1,0 +1,24 @@
+﻿{
+    "package_id":  "ENGREMIAT_OPERATOR_CONTEXT_AND_DECISION_TREE_001",
+    "stage":  "E07T_UNIFY_HIERARCHY_BACK_STACK",
+    "status":  "PASS",
+    "readiness":  100,
+    "hierarchy":  [
+                      "GLOBAL",
+                      "ABRIR_PROYECTO",
+                      "PROYECTO",
+                      "MODULO"
+                  ],
+    "back_rules":  [
+                       "MODULO_to_PROYECTO",
+                       "PROYECTO_to_ABRIR_PROYECTO",
+                       "ABRIR_PROYECTO_to_GLOBAL"
+                   ],
+    "changed":  [
+                    "project_back_opens_previous_selector",
+                    "module_back_returns_project",
+                    "labels_normalized_to_atras",
+                    "duplicate_project_work_screen_deprecated"
+                ],
+    "next":  "relaunch_and_test_back_hierarchy"
+}

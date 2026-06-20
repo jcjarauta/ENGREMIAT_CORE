@@ -1,0 +1,54 @@
+﻿{
+    "candidate_id":  "MODULE-CANDIDATE-TASK-PACKET-DEMO-001",
+    "candidate_status":  "CANDIDATE_PENDING_HUMAN_DECISION",
+    "source":  {
+                   "task_packet_id":  "TASK-PACKET-DEMO-001",
+                   "source_package":  "ENGREMIAT_KNOWLEDGE_TO_TASK_PACKET_001",
+                   "source_file":  "data/knowledge-to-task-packet-001/task-packet-demo-source.json"
+               },
+    "module_candidate":  {
+                             "module_id_proposal":  "ENGREMIAT_TASK_PACKET_DEMO_001",
+                             "name":  "Paquete demo de conocimiento a tarea",
+                             "description":  "Export local en Markdown con YAML frontmatter, sin escritura real en Obsidian.",
+                             "purpose":  "Convertir conocimiento validado en candidatura de modulo gobernada por intake.",
+                             "status":  "PROPOSED"
+                         },
+    "classification":  {
+                           "tags":  [
+                                        "engremiat",
+                                        "task-packet",
+                                        "obsidian-dry-run"
+                                    ],
+                           "priority":  "MEDIUM",
+                           "risk":  "LOW"
+                       },
+    "traceability":  {
+                         "links":  [
+                                       "ENGREMIAT_MODULE_INTAKE_REGISTRY_001",
+                                       "data/_OFFICIAL_MODULES"
+                                   ],
+                         "created_at":  "2026-06-17T22:07:28",
+                         "created_by_stage":  "E03_DRY_RUN_CANDIDATE_GENERATOR"
+                     },
+    "safety_policy":  {
+                          "local_only":  true,
+                          "core_changes":  false,
+                          "real_module_creation":  false,
+                          "real_intake_write":  false,
+                          "git_write":  false,
+                          "network":  false,
+                          "ollama_inference":  false,
+                          "obsidian_write":  false,
+                          "kanban_write":  false,
+                          "cline_write":  false
+                      },
+    "human_decision":  {
+                           "required":  true,
+                           "allowed_decisions":  [
+                                                     "CREATE_MODULE_LATER",
+                                                     "REJECT",
+                                                     "BACKLOG"
+                                                 ],
+                           "current_decision":  "PENDING"
+                       }
+}

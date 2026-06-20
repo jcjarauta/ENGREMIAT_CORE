@@ -1,0 +1,36 @@
+﻿{
+    "schema_id":  "need.schema.v1",
+    "required":  [
+                     "need_id",
+                     "need_type",
+                     "title",
+                     "description",
+                     "signals",
+                     "related_capabilities",
+                     "available_resources",
+                     "missing_resources",
+                     "priority",
+                     "recommended_next_action",
+                     "gate"
+                 ],
+    "fields":  [
+                   "need_id",
+                   "need_type",
+                   "title",
+                   "description",
+                   "source_snapshot",
+                   "signals",
+                   "gap",
+                   "related_capabilities",
+                   "available_resources",
+                   "missing_resources",
+                   "blocked_by",
+                   "opportunity",
+                   "priority",
+                   "impact",
+                   "recommended_next_action",
+                   "evidence",
+                   "gate",
+                   "status"
+               ]
+}

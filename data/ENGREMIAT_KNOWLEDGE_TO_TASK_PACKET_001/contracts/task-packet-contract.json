@@ -1,0 +1,31 @@
+{
+    "package_id":  "ENGREMIAT_KNOWLEDGE_TO_TASK_PACKET_001",
+    "stage":  "E01_INTAKE_AND_IDENTITY",
+    "artifact":  "task-packet-contract.json",
+    "status":  "DEFINED",
+    "purpose":  "Definir paquete intermedio estable para transformar conocimiento en tarea accionable",
+    "pipeline":  [
+                     "human_or_openwebui_input",
+                     "structured_json_validation",
+                     "obsidian_markdown_yaml_projection",
+                     "task_packet_generation",
+                     "cline_kanban_export_dry_run",
+                     "human_gate_before_real_write"
+                 ],
+    "blocked_actions":  [
+                            "external_network",
+                            "git_write",
+                            "core_changes",
+                            "real_ollama_inference",
+                            "real_obsidian_write",
+                            "real_kanban_write",
+                            "real_cline_send"
+                        ],
+    "allowed_actions":  [
+                            "write_local_contracts",
+                            "write_local_schemas",
+                            "write_dry_run_packets",
+                            "write_dashboard",
+                            "write_reports"
+                        ]
+}

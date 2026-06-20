@@ -1,0 +1,20 @@
+﻿{
+    "policy_id":  "MODEL_ADAPTER_SAFETY_POLICY_V1",
+    "local_first":  true,
+    "network_default":  false,
+    "real_model_call_default":  false,
+    "forbidden_without_gate":  [
+                                   "INFER_REAL",
+                                   "CALL_REMOTE_MODEL",
+                                   "SEND_PROMPT_TO_EXTERNAL_TOOL",
+                                   "WRITE_OUTPUT_TO_EXTERNAL_SYSTEM"
+                               ],
+    "allowed_without_gate":  [
+                                 "VALIDATE_SCHEMA",
+                                 "BUILD_PROMPT_ENVELOPE",
+                                 "MOCK_RESPONSE",
+                                 "NORMALIZE_OUTPUT",
+                                 "WRITE_LOCAL_REPORT"
+                             ],
+    "human_gate_required":  true
+}

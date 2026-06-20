@@ -1,0 +1,128 @@
+﻿{
+    "package_id":  "ENGREMIAT_NEW_VAULT_FROM_MASTER_TEMPLATE_001",
+    "stage":  "E04_DEFINE_GRAPH_GROUPS_AND_VIEW_SELECTOR_REPAIR_HOME_VAR",
+    "status":  "PASS",
+    "vault_path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146",
+    "groups":  [
+                   {
+                       "id":  "G00_HOME_NAV",
+                       "name":  "Home y navegacion",
+                       "query":  "file:HOME OR file:GRAPH_NAVIGATION_MAP OR file:GRAPH_VIEW_SELECTOR OR tag:#engremiat/navigation",
+                       "color":  39423
+                   },
+                   {
+                       "id":  "G01_CORE",
+                       "name":  "Sistema Engremiat",
+                       "query":  "path:01_SISTEMA_ENGREMIAT OR tag:#engremiat/system OR tag:#engremiat/home",
+                       "color":  6737151
+                   },
+                   {
+                       "id":  "G02_CONTROL",
+                       "name":  "Control operativo",
+                       "query":  "path:00_CONTROL_OPERATIVO OR path:04_GATES_DECISIONES OR tag:#engremiat/control",
+                       "color":  16763904
+                   },
+                   {
+                       "id":  "G03_PROJECTS",
+                       "name":  "Proyectos",
+                       "query":  "path:02_PROYECTOS OR file:PROJECT_INDEX OR tag:#engremiat/project",
+                       "color":  3381759
+                   },
+                   {
+                       "id":  "G04_MODULES",
+                       "name":  "Modulos",
+                       "query":  "path:03_MODULOS OR file:MODULE_INDEX OR tag:#engremiat/module",
+                       "color":  8978431
+                   },
+                   {
+                       "id":  "G05_WORKERS",
+                       "name":  "Workers",
+                       "query":  "path:06_WORKERS OR tag:#engremiat/worker",
+                       "color":  16744448
+                   },
+                   {
+                       "id":  "G06_EVIDENCE",
+                       "name":  "Evidencias",
+                       "query":  "path:05_EVIDENCIAS OR tag:#engremiat/evidence",
+                       "color":  16724787
+                   },
+                   {
+                       "id":  "G07_GRAPH_CANVAS",
+                       "name":  "Grafo y canvas",
+                       "query":  "path:07_OBSIDIAN_GRAPH OR file:MASTER_GROUPED_CANVAS.canvas OR tag:#engremiat/graph",
+                       "color":  10040012
+                   },
+                   {
+                       "id":  "G08_SURFACES",
+                       "name":  "Superficies de trabajo",
+                       "query":  "path:10_SUPERFICIES_TRABAJO OR file:WORK_SURFACE_INDEX OR tag:#engremiat/work-surface",
+                       "color":  44975
+                   }
+               ],
+    "views":  [
+                  {
+                      "id":  "VIEW_CLEAN_GENERAL",
+                      "name":  "Vista limpia general",
+                      "filter":  "-path:.obsidian -path:_AUDIT_REVIEW -path:STUBS -file:app.json -file:appearance.json -file:graph.json -file:workspace.json"
+                  },
+                  {
+                      "id":  "VIEW_NAVIGATION",
+                      "name":  "Navegacion",
+                      "filter":  "file:HOME OR file:GRAPH_NAVIGATION_MAP OR file:GRAPH_VIEW_SELECTOR OR tag:#engremiat/navigation"
+                  },
+                  {
+                      "id":  "VIEW_SYSTEM",
+                      "name":  "Sistema",
+                      "filter":  "path:01_SISTEMA_ENGREMIAT OR tag:#engremiat/system"
+                  },
+                  {
+                      "id":  "VIEW_CONTROL",
+                      "name":  "Control y gates",
+                      "filter":  "path:00_CONTROL_OPERATIVO OR path:04_GATES_DECISIONES OR tag:#engremiat/control"
+                  },
+                  {
+                      "id":  "VIEW_PROJECTS",
+                      "name":  "Proyectos",
+                      "filter":  "path:02_PROYECTOS OR file:PROJECT_INDEX OR tag:#engremiat/project"
+                  },
+                  {
+                      "id":  "VIEW_MODULES",
+                      "name":  "Modulos",
+                      "filter":  "path:03_MODULOS OR file:MODULE_INDEX OR tag:#engremiat/module"
+                  },
+                  {
+                      "id":  "VIEW_WORKERS",
+                      "name":  "Workers",
+                      "filter":  "path:06_WORKERS OR tag:#engremiat/worker"
+                  },
+                  {
+                      "id":  "VIEW_EVIDENCE",
+                      "name":  "Evidencias",
+                      "filter":  "path:05_EVIDENCIAS OR tag:#engremiat/evidence"
+                  },
+                  {
+                      "id":  "VIEW_GRAPH_CANVAS",
+                      "name":  "Grafo y canvas",
+                      "filter":  "path:07_OBSIDIAN_GRAPH OR file:MASTER_GROUPED_CANVAS.canvas OR tag:#engremiat/graph"
+                  }
+              ],
+    "default_filter":  "-path:.obsidian -path:_AUDIT_REVIEW -path:STUBS -file:app.json -file:appearance.json -file:graph.json -file:workspace.json",
+    "graph_json":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\.obsidian\\graph.json",
+    "selector_note":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\00_CONTROL_OPERATIVO\\GRAPH_VIEW_SELECTOR.md",
+    "safety":  {
+                   "local_only":  true,
+                   "new_vault_only":  true,
+                   "template_write":  false,
+                   "preview_only":  true,
+                   "obsidian_app_automation":  false,
+                   "worker_execution":  false,
+                   "kanban_write":  false,
+                   "clien_write":  false,
+                   "git_write":  false,
+                   "external_network":  false
+               },
+    "next":  "VALIDATE_GRAPH_GROUPS_AND_VIEW_SELECTOR_IN_OBSIDIAN",
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\new-vault-from-master-template\\e04-define-graph-groups-and-view-selector-report.json",
+    "dashboard":  "C:\\ENGREMIAT_CORE\\dashboard\\new-vault-from-master-template\\new-vault-graph-groups-and-view-selector-e04.html",
+    "guide":  "C:\\ENGREMIAT_CORE\\docs\\new-vault-from-master-template\\NEW_VAULT_GRAPH_GROUPS_AND_VIEW_SELECTOR_E04.md"
+}

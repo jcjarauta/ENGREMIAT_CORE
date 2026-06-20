@@ -1,0 +1,9 @@
+﻿<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ENGREMIAT Human Approval Gate</title><style>body{font-family:Segoe UI,Arial,sans-serif;margin:24px;background:#111827;color:#e5e7eb}.card{border:1px solid #374151;border-radius:14px;padding:16px;margin:12px 0;background:#1f2937}.ok{color:#22c55e}.warn{color:#facc15}.bad{color:#fb7185}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.btn{padding:14px;border-radius:12px;background:#0f172a;border:1px solid #334155}code{color:#93c5fd}</style></head><body>
+<h1>ENGREMIAT · Human Approval Gate</h1>
+<div class="card"><b class="warn">E04 · PENDING_HUMAN_REVIEW</b><p>El roadmap queda bloqueado hasta decision humana. No se ejecuta worker real.</p></div>
+<div class="card"><h2>Decisiones posibles</h2><div class="grid"><div class="btn"><b class="ok">APPROVE</b><br>Permite preparar worker packet preview.</div><div class="btn"><b class="warn">EDIT</b><br>Regenera roadmap con cambios.</div><div class="btn"><b class="bad">REJECT</b><br>Cierra la propuesta.</div><div class="btn"><b class="warn">DEFER</b><br>Aparca la propuesta.</div></div></div>
+<div class="card"><h2>Checklist humano</h2><ul><li>Necesidad clara</li><li>Resultado verificable</li><li>Restricciones registradas</li><li>Roadmap no demasiado amplio</li><li>Una frontera tecnica por etapa</li><li>Sin worker real</li></ul></div>
+<div class="card"><h2>Seguridad</h2><p>LOCAL_ONLY · NO_NETWORK · NO_GIT_WRITE · WORKER_EXECUTION_FALSE · AUTHORIZATION_PENDING</p></div>
+<div class="card"><h2>Artefactos</h2><p><code>data/project-builder-to-worker-loop/roadmap-approval-gate.json</code></p><p><code>data/project-builder-to-worker-loop/roadmap-approval-receipt.pending.json</code></p></div>
+</body></html>

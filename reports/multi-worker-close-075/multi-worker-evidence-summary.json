@@ -1,0 +1,63 @@
+﻿{
+    "objective":  "ENGREMIAT_MULTI_WORKER_ORCHESTRATION_AND_REAL_VALUE_PIPELINE_066_075",
+    "stage":  "E75",
+    "summary":  "MULTI_WORKER_EVIDENCE_SUMMARY_E66_E74",
+    "created_utc":  "2026-06-17T10:45:23.2350939Z",
+    "evidence_total":  9,
+    "missing_count":  0,
+    "checks":  [
+                   {
+                       "path":  "reports\\multi-worker-066\\e66-multi-worker-role-readiness-report.json",
+                       "exists":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "reports\\worker-queue-067\\e67-worker-queue-readiness-report.json",
+                       "exists":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "reports\\proposal-merge-068\\e68-proposal-merge-readiness-report.json",
+                       "exists":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "reports\\arbitration-069\\e69-arbitration-readiness-report.json",
+                       "exists":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "reports\\batch-apply-preview-070\\e70-batch-apply-preview-readiness-report.json",
+                       "exists":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "reports\\value-pipeline-071\\e71-value-pipeline-readiness-report.json",
+                       "exists":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "reports\\kanban-real-write-lab-072\\e72-kanban-real-write-lab-readiness-report.json",
+                       "exists":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "reports\\release-governance-073\\e73-release-governance-readiness-report.json",
+                       "exists":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "reports\\pipeline-hardening-074\\e74-pipeline-hardening-readiness-report.json",
+                       "exists":  true,
+                       "status":  "OK"
+                   }
+               ],
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "kanban_real_write":  false,
+    "status":  "OK"
+}

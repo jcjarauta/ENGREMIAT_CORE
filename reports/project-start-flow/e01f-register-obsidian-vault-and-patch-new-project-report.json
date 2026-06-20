@@ -1,0 +1,42 @@
+﻿{
+    "package_id":  "ENGREMIAT_PROJECT_START_FLOW_001",
+    "stage":  "E01F_REGISTER_OBSIDIAN_VAULT_AND_PATCH_NEW_PROJECT",
+    "status":  "PASS",
+    "readiness":  100,
+    "decision":  "GO_OBSIDIAN_VAULT_REGISTRATION_READY",
+    "latest_project":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_prueba2_20260619-153101",
+    "registered":  {
+                       "vault":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_prueba2_20260619-153101\\BOVEDA_MAESTRA",
+                       "vault_name":  "ENGREMIAT_PROJECT_prueba2_20260619-153101",
+                       "registry":  "C:\\Users\\pc\\AppData\\Roaming\\obsidian\\obsidian.json",
+                       "backup":  "C:\\Users\\pc\\AppData\\Roaming\\obsidian\\obsidian.json.bak-engremiat-20260619-153211",
+                       "open_cmd":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_prueba2_20260619-153101\\ABRIR_BOVEDA_OBSIDIAN.cmd"
+                   },
+    "script":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-new-project.ps1",
+    "checks":  [
+                   {
+                       "id":  "latest_vault_detected_or_no_previous_project",
+                       "ok":  true,
+                       "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_prueba2_20260619-153101\\BOVEDA_MAESTRA"
+                   },
+                   {
+                       "id":  "latest_vault_registered_if_present",
+                       "ok":  true,
+                       "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_prueba2_20260619-153101\\BOVEDA_MAESTRA"
+                   },
+                   {
+                       "id":  "new_project_script_parse_ok",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-new-project.ps1"
+                   }
+               ],
+    "safety":  {
+                   "local_only":  true,
+                   "updates_obsidian_local_registry":  true,
+                   "registry_backup":  true,
+                   "no_worker_real":  true,
+                   "no_git":  true,
+                   "no_network":  true
+               },
+    "next":  "RUN_NUEVO_PROYECTO_AGAIN_OR_OPEN_LAST_PROJECT_ABRIR_BOVEDA_OBSIDIAN_CMD"
+}

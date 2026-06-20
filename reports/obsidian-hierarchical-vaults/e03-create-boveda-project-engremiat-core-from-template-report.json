@@ -1,0 +1,95 @@
+﻿{
+    "package_id":  "ENGREMIAT_OBSIDIAN_HIERARCHICAL_VAULTS_001",
+    "stage":  "E03_CREATE_BOVEDA_PROJECT_ENGREMIAT_CORE_FROM_TEMPLATE_REPAIR_HOME_VAR",
+    "status":  "PASS",
+    "project_vault":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_CORE",
+    "project_id":  "PROJECT_engremiat_core",
+    "readiness":  100,
+    "decision":  "GO_BOVEDA_PROJECT_ENGREMIAT_CORE_CREATED",
+    "checks":  [
+                   {
+                       "id":  "PROJECT_HOME.md",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_CORE\\PROJECT_HOME.md"
+                   },
+                   {
+                       "id":  "00_PROJECT_CONTROL\\PROJECT_STATUS.md",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_CORE\\00_PROJECT_CONTROL\\PROJECT_STATUS.md"
+                   },
+                   {
+                       "id":  "00_PROJECT_CONTROL\\PROJECT_GRAPH_VIEW_SELECTOR.md",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_CORE\\00_PROJECT_CONTROL\\PROJECT_GRAPH_VIEW_SELECTOR.md"
+                   },
+                   {
+                       "id":  "01_ROADMAP\\ROADMAP_INDEX.md",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_CORE\\01_ROADMAP\\ROADMAP_INDEX.md"
+                   },
+                   {
+                       "id":  "02_MODULES\\PROJECT_MODULES_INDEX.md",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_CORE\\02_MODULES\\PROJECT_MODULES_INDEX.md"
+                   },
+                   {
+                       "id":  "03_DECISIONS\\PROJECT_DECISIONS_INDEX.md",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_CORE\\03_DECISIONS\\PROJECT_DECISIONS_INDEX.md"
+                   },
+                   {
+                       "id":  "04_EVIDENCE\\PROJECT_EVIDENCE_INDEX.md",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_CORE\\04_EVIDENCE\\PROJECT_EVIDENCE_INDEX.md"
+                   },
+                   {
+                       "id":  "05_CANVAS\\PROJECT_CANVAS.canvas",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_CORE\\05_CANVAS\\PROJECT_CANVAS.canvas"
+                   },
+                   {
+                       "id":  "06_REPORTS\\PROJECT_REPORTS_INDEX.md",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_CORE\\06_REPORTS\\PROJECT_REPORTS_INDEX.md"
+                   },
+                   {
+                       "id":  ".obsidian\\graph.json",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_CORE\\.obsidian\\graph.json"
+                   }
+               ],
+    "failed_checks":  [
+
+                      ],
+    "changes":  [
+                    {
+                        "kind":  "created_project_vault_from_template_repaired_home_var",
+                        "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_CORE"
+                    },
+                    {
+                        "kind":  "customized_project_status",
+                        "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_CORE\\00_PROJECT_CONTROL\\PROJECT_STATUS.md"
+                    },
+                    {
+                        "kind":  "customized_project_home",
+                        "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_CORE\\PROJECT_HOME.md"
+                    }
+                ],
+    "changes_count":  3,
+    "manifest":  "C:\\ENGREMIAT_CORE\\data\\obsidian-hierarchical-vaults\\boveda-project-engremiat-core.v1.json",
+    "safety":  {
+                   "local_only":  true,
+                   "project_vault_created":  true,
+                   "master_write":  false,
+                   "module_move":  false,
+                   "obsidian_app_automation":  false,
+                   "worker_execution":  false,
+                   "kanban_write":  false,
+                   "clien_write":  false,
+                   "git_write":  false,
+                   "external_network":  false
+               },
+    "next":  "E04_CREATE_MASTER_PROJECT_LINK_REGISTRY",
+    "dashboard":  "C:\\ENGREMIAT_CORE\\dashboard\\obsidian-hierarchical-vaults\\e03-create-boveda-project-engremiat-core-from-template.html",
+    "guide":  "C:\\ENGREMIAT_CORE\\docs\\obsidian-hierarchical-vaults\\E03_CREATE_BOVEDA_PROJECT_ENGREMIAT_CORE_FROM_TEMPLATE.md"
+}

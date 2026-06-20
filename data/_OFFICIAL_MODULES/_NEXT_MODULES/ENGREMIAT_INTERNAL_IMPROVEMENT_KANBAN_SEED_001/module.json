@@ -1,0 +1,17 @@
+﻿{
+    "module_id":  "ENGREMIAT_INTERNAL_IMPROVEMENT_KANBAN_SEED_001",
+    "version":  "0.1.0",
+    "status":  "CANDIDATE",
+    "purpose":  "Seed Kanban interno desde autoevaluacion real del sistema",
+    "scope":  "READ_ONLY_LOCAL_KANBAN_SEED",
+    "reads":  [
+                  "reports",
+                  "_NEXT_MODULES"
+              ],
+    "writes":  [
+                   "local_reports_only"
+               ],
+    "kanban_real_write":  false,
+    "git":  false,
+    "network":  false
+}

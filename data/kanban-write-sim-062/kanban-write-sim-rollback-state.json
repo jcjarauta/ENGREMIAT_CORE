@@ -1,0 +1,62 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_REAL_WORKER_DAILY_VALUE_LOOP_056_065",
+    "stage":  "E62",
+    "rollback_id":  "E62_KANBAN_WRITE_SIM_ROLLBACK_STATE",
+    "rollback_mode":  "restore_simulated_before_state",
+    "before_state":  [
+                         {
+                             "status":  "DONE",
+                             "title":  "Worker Real Input Gate",
+                             "id":  "E56"
+                         },
+                         {
+                             "status":  "DONE",
+                             "title":  "Worker Response Capture",
+                             "id":  "E57"
+                         },
+                         {
+                             "status":  "DONE",
+                             "title":  "Proposal Quality Checker",
+                             "id":  "E58"
+                         },
+                         {
+                             "status":  "DONE",
+                             "title":  "Human Approval Console Upgrade",
+                             "id":  "E59"
+                         },
+                         {
+                             "status":  "DONE",
+                             "title":  "Controlled Local Apply V2",
+                             "id":  "E60"
+                         },
+                         {
+                             "status":  "DONE",
+                             "title":  "Daily Value Dashboard V2",
+                             "id":  "E61"
+                         },
+                         {
+                             "status":  "READY",
+                             "title":  "Kanban Write Simulation With Rollback",
+                             "id":  "E62"
+                         },
+                         {
+                             "status":  "PENDING",
+                             "title":  "Release Manifest And Versioning",
+                             "id":  "E63"
+                         },
+                         {
+                             "status":  "PENDING",
+                             "title":  "Operator Hardening",
+                             "id":  "E64"
+                         },
+                         {
+                             "status":  "PENDING",
+                             "title":  "Controlled Worker Loop Close",
+                             "id":  "E65"
+                         }
+                     ],
+    "rollback_executed":  false,
+    "real_kanban_touched":  false,
+    "kanban_real_write":  false,
+    "created_at":  "2026-06-17T12:25:13"
+}

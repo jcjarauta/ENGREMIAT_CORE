@@ -1,0 +1,19 @@
+﻿---
+type: repaired_note
+status: ready
+source_repair: 
+E01_REPAIR_OBSIDIAN_LINK_WARNINGS_AND_REVALUE_NEXT_OBJECTIVE
+tags:
+  - engremiat/repaired
+---
+# Links
+
+- [[../00_INDEX/PROJECT_INDEX]]
+- [[../01_INTAKE/INTAKE_NORMALIZADO]]
+- [[../02_ROADMAP/ROADMAP_IA_LOCAL]]
+- [[../03_TAREAS/TASKS_INDEX]]
+- [[../04_GATES_DECISIONES/GATES_INDEX]]
+- [[../05_EVIDENCIAS/EVIDENCE_INDEX]]
+- [[../06_WORKERS/WORKER_PACKET]]
+- [[../07_RESULTADOS/RESULT_SUMMARY]]
+

@@ -1,0 +1,30 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_ACTION_INSTANCE_018",
+    "stage":  "E05",
+    "created_at":  "2026-06-17T10:06:27.7785714+02:00",
+    "template_reference":  "ENGREMIAT_CONTROLLED_ACTION_TEMPLATE_017",
+    "instance_status":  "CLOSED_PREVIEW_DRY_RUN_PLAN_BLOCKED_BY_GATE",
+    "template_reusability_validated":  true,
+    "matched_pipeline":  [
+                             "E01_instance_preview",
+                             "E02_human_gate",
+                             "E03_dry_run",
+                             "E04_execution_plan_and_postcheck",
+                             "E05_close"
+                         ],
+    "security_inherited":  [
+                               "gate_DEFER",
+                               "preview_first",
+                               "receipt_required",
+                               "postcheck_required",
+                               "no_auto_apply",
+                               "no_remote_execution",
+                               "no_git_write_without_authorization"
+                           ],
+    "result":  "Instance 018 validates template 017 as reusable controlled-action pipeline.",
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "gate":  "DEFER"
+}

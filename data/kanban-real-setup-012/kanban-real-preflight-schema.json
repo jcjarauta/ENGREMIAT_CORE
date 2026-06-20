@@ -1,0 +1,30 @@
+﻿{
+    "objective":  "ENGREMIAT_KANBAN_REAL_SETUP_012",
+    "stage":  "E01",
+    "schema_id":  "KANBAN-REAL-PREFLIGHT-SCHEMA-012-E01",
+    "required_fields":  [
+                            "machine_name",
+                            "cwd",
+                            "git_root",
+                            "branch",
+                            "head",
+                            "dirty_status",
+                            "origin",
+                            "main_pc_ready",
+                            "old_pc_ready",
+                            "browser_opened",
+                            "remote_execution",
+                            "git_write",
+                            "auto_apply",
+                            "shared_repo_edit",
+                            "timestamp_utc"
+                        ],
+    "safety":  {
+                   "git_read_only":  true,
+                   "git_write":  false,
+                   "remote_execution":  false,
+                   "auto_apply":  false,
+                   "shared_repo_edit":  false,
+                   "browser_opened":  false
+               }
+}

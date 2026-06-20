@@ -1,0 +1,34 @@
+﻿{
+    "objective":  "ENGREMIAT_SAFE_LOCAL_APPLY_AND_KANBAN_AUTHORIZATION_102_111",
+    "stage":  "E105",
+    "contract":  "HUMAN_AUTHORIZATION_DECISION_CONTRACT",
+    "version":  "1.05.0-local",
+    "purpose":  "Formalizar que ninguna accion real ocurre sin decision humana explicita.",
+    "decision_schema":  {
+                            "decision_id":  "string",
+                            "decision":  "APPROVE_CONTROLLED_LOCAL_APPLY|DEFER|REJECT|REQUEST_REPAIR",
+                            "reason":  "string_required",
+                            "target_path":  "string",
+                            "authorization_phrase":  "string_required_for_approve"
+                        },
+    "approve_requires":  [
+                             "decision=APPROVE_CONTROLLED_LOCAL_APPLY",
+                             "authorization_phrase=AUTORIZO_APPLY_LOCAL_CONTROLADO",
+                             "rollback_pack_ready=true",
+                             "postcheck_ready=true",
+                             "receipt_ready=true",
+                             "target_in_scope=true"
+                         ],
+    "default_decision":  "DEFER",
+    "auto_approve":  false,
+    "authorization_screen_executes":  false,
+    "real_apply_allowed":  false,
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "kanban_real_write":  false,
+    "created_utc":  "2026-06-17T11:36:59.4471235Z"
+}

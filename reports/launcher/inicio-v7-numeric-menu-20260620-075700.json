@@ -1,0 +1,31 @@
+﻿{
+    "package":  "ENGREMIAT_INICIO_V7_NUMERIC_MENU",
+    "status":  "PASS",
+    "start_ps1":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO.ps1",
+    "rule":  "solo_numeros_para_navegar_en_inicio",
+    "kept_special":  [
+                         "q salir",
+                         "Enter refrescar"
+                     ],
+    "mapping":  {
+                    "18":  "abrir core",
+                    "4":  "operador principal",
+                    "15":  "status externo",
+                    "7":  "biblioteca modulos",
+                    "10":  "arbol navegacion",
+                    "12":  "ayuda",
+                    "8":  "workspace modulo",
+                    "3":  "tarjetas ultimo modulo",
+                    "1":  "continuar ultimo foco",
+                    "5":  "carpeta proyecto activo",
+                    "16":  "refrescar grafo",
+                    "14":  "estado copiable",
+                    "2":  "workspace ultimo modulo",
+                    "6":  "modulos proyecto",
+                    "17":  "estado tecnico",
+                    "13":  "ultimo log",
+                    "11":  "rutas recomendadas",
+                    "9":  "tarjetas modulo"
+                },
+    "next":  "abrir_inicio_y_validar_solo_numeros"
+}

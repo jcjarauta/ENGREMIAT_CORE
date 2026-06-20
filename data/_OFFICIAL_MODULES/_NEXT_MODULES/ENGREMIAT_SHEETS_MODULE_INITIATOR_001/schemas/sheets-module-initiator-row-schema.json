@@ -1,0 +1,122 @@
+﻿{
+    "schema_id":  "sheets-module-initiator-row-schema.v1",
+    "module_id":  "ENGREMIAT_SHEETS_MODULE_INITIATOR_001",
+    "stage":  "E02_SHEETS_HEADERS_AND_JSON_SCHEMA",
+    "sheet_name":  "ENG_MODULE_INITIATOR",
+    "headers":  [
+                    "module_id",
+                    "module_name",
+                    "module_type",
+                    "purpose",
+                    "problem",
+                    "expected_output",
+                    "source_task_packet_id",
+                    "priority",
+                    "risk",
+                    "dependencies",
+                    "requires_core_change",
+                    "requires_real_write",
+                    "requires_external_api",
+                    "human_gate",
+                    "target_path",
+                    "status",
+                    "decision",
+                    "notes",
+                    "generated_json_log",
+                    "validation_status",
+                    "validation_errors",
+                    "created_at",
+                    "created_by"
+                ],
+    "required":  [
+                     "module_id",
+                     "module_name",
+                     "module_type",
+                     "purpose",
+                     "expected_output",
+                     "priority",
+                     "risk",
+                     "requires_core_change",
+                     "requires_real_write",
+                     "requires_external_api",
+                     "human_gate",
+                     "status",
+                     "decision"
+                 ],
+    "enums":  {
+                  "module_type":  [
+                                      "ACOPLABLE_DESACOPLABLE",
+                                      "ADAPTER",
+                                      "WORKER",
+                                      "INTERFACE",
+                                      "VALIDATOR",
+                                      "DASHBOARD",
+                                      "REGISTRY"
+                                  ],
+                  "priority":  [
+                                   "LOW",
+                                   "MEDIUM",
+                                   "HIGH"
+                               ],
+                  "risk":  [
+                               "LOW",
+                               "MEDIUM",
+                               "HIGH"
+                           ],
+                  "requires_core_change":  [
+                                               "FALSE",
+                                               "TRUE"
+                                           ],
+                  "requires_real_write":  [
+                                              "FALSE",
+                                              "TRUE"
+                                          ],
+                  "requires_external_api":  [
+                                                "FALSE",
+                                                "TRUE"
+                                            ],
+                  "human_gate":  [
+                                     "REQUIRED",
+                                     "NOT_REQUIRED"
+                                 ],
+                  "status":  [
+                                 "DRAFT",
+                                 "READY_FOR_JSON",
+                                 "BLOCKED",
+                                 "EXPORTED"
+                             ],
+                  "decision":  [
+                                   "CREATE_CANDIDATE_JSON",
+                                   "BACKLOG",
+                                   "REJECT"
+                               ]
+              },
+    "output_json":  {
+                        "module_id":  "module_id",
+                        "name":  "module_name",
+                        "kind":  "module_type",
+                        "purpose":  "purpose",
+                        "problem":  "problem",
+                        "expected_output":  "expected_output",
+                        "source_task_packet_id":  "source_task_packet_id",
+                        "priority":  "priority",
+                        "risk":  "risk",
+                        "dependencies":  "dependencies split by comma",
+                        "target_path":  "target_path or data/_OFFICIAL_MODULES/_NEXT_MODULES/\u003cmodule_id\u003e",
+                        "gates":  {
+                                      "human_gate":  "human_gate",
+                                      "requires_core_change":  "requires_core_change",
+                                      "requires_real_write":  "requires_real_write",
+                                      "requires_external_api":  "requires_external_api"
+                                  },
+                        "decision":  "decision",
+                        "notes":  "notes"
+                    },
+    "safety":  {
+                   "real_sheets_write":  false,
+                   "apps_script_execution":  false,
+                   "core_changes":  false,
+                   "git_write":  false,
+                   "network":  false
+               }
+}

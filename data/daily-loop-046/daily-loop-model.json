@@ -1,0 +1,63 @@
+﻿{
+    "objective":  "ENGREMIAT_POST_MVP_OPERATIONAL_DAILY_LOOP_046_055",
+    "stage":  "E46",
+    "stage_name":  "Daily Loop Base",
+    "purpose":  "Convertir el MVP humano usable en rutina diaria operativa",
+    "daily_entrypoint":  ".\\eng.ps1 daily",
+    "routine":  [
+                    {
+                        "expected":  "resumen operativo local",
+                        "command":  ".\\eng.ps1 daily",
+                        "name":  "Abrir estado diario",
+                        "order":  1
+                    },
+                    {
+                        "expected":  "estado del sistema",
+                        "command":  ".\\eng.ps1 status",
+                        "name":  "Revisar estado",
+                        "order":  2
+                    },
+                    {
+                        "expected":  "siguiente accion",
+                        "command":  ".\\eng.ps1 next",
+                        "name":  "Ver siguiente paso",
+                        "order":  3
+                    },
+                    {
+                        "expected":  "propuestas/evidencias",
+                        "command":  ".\\eng.ps1 inbox",
+                        "name":  "Revisar inbox",
+                        "order":  4
+                    },
+                    {
+                        "expected":  "decision humana pendiente",
+                        "command":  ".\\eng.ps1 review",
+                        "name":  "Revisar decision",
+                        "order":  5
+                    },
+                    {
+                        "expected":  "receipt de decision",
+                        "command":  ".\\tools\\eng-decision.ps1 -Decision DEFER -Reason \"daily_review\"",
+                        "name":  "Registrar decision segura",
+                        "order":  6
+                    }
+                ],
+    "outputs":  [
+                    "data/daily-loop-046/daily-loop-model.json",
+                    "docs/DAILY_ROUTINE.md",
+                    "eng.ps1",
+                    "reports/daily-loop-046/e46-daily-loop-readiness-report.json"
+                ],
+    "security":  {
+                     "apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "sensitive_actions_executed":  false,
+                     "daily_loop_local_only":  true,
+                     "human_decision_final":  true
+                 },
+    "next":  "E47_OPERATIONAL_INBOX",
+    "created_at":  "2026-06-17T11:56:31"
+}

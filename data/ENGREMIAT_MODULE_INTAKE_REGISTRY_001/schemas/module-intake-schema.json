@@ -1,0 +1,89 @@
+{
+    "package_id":  "ENGREMIAT_MODULE_INTAKE_REGISTRY_001",
+    "artifact":  "module-intake-schema.json",
+    "type":  "object",
+    "required":  [
+                     "package_id",
+                     "module_id",
+                     "module_name",
+                     "module_type",
+                     "version",
+                     "status",
+                     "purpose",
+                     "depends_on",
+                     "inputs",
+                     "outputs",
+                     "boundaries",
+                     "risks",
+                     "human_gates",
+                     "artifacts_expected",
+                     "next_action"
+                 ],
+    "properties":  {
+                       "package_id":  {
+                                          "type":  "string"
+                                      },
+                       "module_id":  {
+                                         "type":  "string"
+                                     },
+                       "module_name":  {
+                                           "type":  "string"
+                                       },
+                       "module_type":  {
+                                           "type":  "string",
+                                           "enum":  [
+                                                        "CORE",
+                                                        "ADAPTER",
+                                                        "PANEL",
+                                                        "KNOWLEDGE",
+                                                        "WORKER",
+                                                        "INTERFACE",
+                                                        "STORAGE",
+                                                        "INTEGRATION",
+                                                        "SIMULATOR",
+                                                        "MANUALS",
+                                                        "REGISTRY"
+                                                    ]
+                                       },
+                       "version":  {
+                                       "type":  "string"
+                                   },
+                       "status":  {
+                                      "type":  "string"
+                                  },
+                       "purpose":  {
+                                       "type":  "string"
+                                   },
+                       "depends_on":  {
+                                          "type":  "array"
+                                      },
+                       "inputs":  {
+                                      "type":  "array"
+                                  },
+                       "outputs":  {
+                                       "type":  "array"
+                                   },
+                       "boundaries":  {
+                                          "type":  "array"
+                                      },
+                       "risks":  {
+                                     "type":  "array"
+                                 },
+                       "human_gates":  {
+                                           "type":  "array"
+                                       },
+                       "artifacts_expected":  {
+                                                  "type":  "array"
+                                              },
+                       "next_action":  {
+                                           "type":  "string",
+                                           "enum":  [
+                                                        "DEVELOP",
+                                                        "PAUSE",
+                                                        "MERGE_WITH_EXISTING",
+                                                        "REJECT",
+                                                        "ARCHIVE"
+                                                    ]
+                                       }
+                   }
+}

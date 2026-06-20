@@ -1,0 +1,59 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_REAL_WORKER_DAILY_VALUE_LOOP_056_065",
+    "stage":  "E61",
+    "index_id":  "E61_DAILY_VALUE_DASHBOARD_INDEX",
+    "sources":  [
+                    {
+                        "name":  "worker_prompt_gate",
+                        "path":  "data/worker-real-056/worker-real-execution-gate.json",
+                        "type":  "JSON",
+                        "exists":  true
+                    },
+                    {
+                        "name":  "worker_response_sample",
+                        "path":  "data/worker-response-057/worker-response-sample.md",
+                        "type":  "Markdown",
+                        "exists":  true
+                    },
+                    {
+                        "name":  "proposal_quality",
+                        "path":  "reports/proposal-quality-058/proposal-quality-check-report.json",
+                        "type":  "JSON",
+                        "exists":  false
+                    },
+                    {
+                        "name":  "approval_gate",
+                        "path":  "data/approval-console-059/proposal-approval-gate.json",
+                        "type":  "JSON",
+                        "exists":  true
+                    },
+                    {
+                        "name":  "controlled_apply_v2",
+                        "path":  "data/controlled-apply-v2-060/controlled-apply-v2-output.json",
+                        "type":  "JSON",
+                        "exists":  true
+                    },
+                    {
+                        "name":  "apply_v2_postcheck",
+                        "path":  "reports/controlled-apply-v2-060/e60-controlled-apply-v2-postcheck-report.json",
+                        "type":  "JSON",
+                        "exists":  true
+                    }
+                ],
+    "ready_sources":  5,
+    "missing_sources":  [
+                            "reports/proposal-quality-058/proposal-quality-check-report.json"
+                        ],
+    "security":  {
+                     "apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "worker_executed":  false,
+                     "dashboard_view_only":  true,
+                     "sensitive_actions_executed":  false,
+                     "human_decision_final":  true
+                 },
+    "created_at":  "2026-06-17T12:24:14"
+}

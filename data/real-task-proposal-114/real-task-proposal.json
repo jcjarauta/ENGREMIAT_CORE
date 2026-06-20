@@ -1,0 +1,52 @@
+﻿{
+    "schema":  "engremiat.real_task_proposal.v1",
+    "objective":  "ENGREMIAT_REAL_VALUE_TASK_EXECUTION_LOOP_112_121",
+    "stage":  "E114",
+    "block":  "B114.1",
+    "step":  "P114.1.1",
+    "proposal_id":  "REAL-TASK-PROPOSAL-114-001",
+    "source_previous_step":  "P113.2.2",
+    "proposal_status":  "PROPOSED",
+    "execution_mode":  "CONTROLLED_PROPOSAL_ONLY",
+    "execution_authorized":  false,
+    "execution_started":  false,
+    "execution_completed":  false,
+    "created_at":  "2026-06-17T14:10:02",
+    "task":  {
+                 "task_id":  "REAL-VALUE-TASK-114-001",
+                 "title":  "Convertir tarea en propuesta ejecutable controlada",
+                 "objective":  "Crear paquete de propuesta controlada antes de autorización y ejecución",
+                 "source":  "real-value-task-execution-loop"
+             },
+    "required_authorizations":  [
+                                    "HUMAN_APPROVAL_BEFORE_EXECUTION",
+                                    "E115_AUTHORIZATION_GATE"
+                                ],
+    "expected_outputs":  [
+                             "real-task-proposal.json",
+                             "real-task-expected-evidence.json",
+                             "real-task-preview.json",
+                             "e114-proposal-readiness-report.json"
+                         ],
+    "risks":  [
+                  {
+                      "risk":  "PREVIEW_COULD_BE_CONFUSED_WITH_EXECUTION",
+                      "level":  "MEDIUM",
+                      "mitigation":  "execution_allowed_now=false and no commands executed"
+                  },
+                  {
+                      "risk":  "INSUFFICIENT_EVIDENCE_FOR_CLOSURE",
+                      "level":  "MEDIUM",
+                      "mitigation":  "expected evidence contract required"
+                  }
+              ],
+    "rollback_strategy":  {
+                              "required":  false,
+                              "reason":  "No real execution, only local JSON artifacts created",
+                              "safe_delete_paths":  [
+                                                        "data/real-task-proposal-114",
+                                                        "reports/real-task-proposal-114"
+                                                    ]
+                          },
+    "readiness_state":  "PENDING_READINESS"
+}

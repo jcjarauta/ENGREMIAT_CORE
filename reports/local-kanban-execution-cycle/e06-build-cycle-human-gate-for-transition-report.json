@@ -1,0 +1,20 @@
+﻿{
+    "package_id":  "ENGREMIAT_LOCAL_KANBAN_EXECUTION_CYCLE_001",
+    "stage":  "E06_BUILD_CYCLE_HUMAN_GATE_FOR_TRANSITION",
+    "status":  "PASS",
+    "cycle_id":  "CYCLE-CARD-001-20260619-083550",
+    "card_id":  "CARD-001",
+    "from_column":  "DOING",
+    "to_column":  "REVIEW",
+    "gate":  "C:\\ENGREMIAT_CORE\\data\\local-kanban-execution-cycle-001\\gates\\CYCLE-CARD-001-20260619-083550.human-gate.md",
+    "apply_script":  "C:\\ENGREMIAT_CORE\\tools\\local-kanban-execution-cycle\\Apply-CycleTransition-WithGate.ps1",
+    "authorization_phrase":  "AUTORIZO_APLICAR_TRANSICION_DE_CICLO_KANBAN_LOCAL_CON_BACKUP",
+    "card_write":  false,
+    "write_to_cline":  false,
+    "browser":  false,
+    "api_called":  false,
+    "git":  false,
+    "network_external":  false,
+    "worker_real_execution":  false,
+    "next":  "HUMAN_AUTHORIZE_E07_APPLY_CYCLE_TRANSITION_WITH_BACKUP"
+}

@@ -1,0 +1,85 @@
+﻿PATH=C:\Users\pc\.cline\worktrees\07b15\ENGREMIAT_CORE\data\kanban-human-control\kanban-board.json
+SCORE=71
+SIZE=13977
+--- SAMPLE BEGIN ---
+{
+    "objective":  "ENGREMIAT_KANBAN_HUMAN_CONTROL_SURFACE_007",
+    "stage":  "E06",
+    "generated_at_utc":  "2026-06-16T12:13:34.4738533Z",
+    "source":  "data/kanban-human-control/kanban-human-control-manifest.json",
+    "columns":  [
+                    "BACKLOG",
+                    "READY",
+                    "GATED",
+                    "RUNNING",
+                    "REVIEW",
+                    "DEFERRED",
+                    "DONE",
+                    "BLOCKED"
+                ],
+    "counters":  {
+                     "BACKLOG":  0,
+                     "READY":  1,
+                     "GATED":  0,
+                     "RUNNING":  0,
+                     "REVIEW":  0,
+                     "DEFERRED":  0,
+                     "DONE":  3,
+                     "BLOCKED":  0
+                 },
+    "cards":  [
+                  {
+                      "card_id":  "KANBAN-005-E06",
+                      "objective":  "ENGREMIAT_CONTROLLED_WORKER_ADAPTERS_005",
+                      "stage":  {
+                                    "id":  "E06",
+                                    "name":  "Controlled Worker Adapters"
+                                },
+                      "block":  {
+                                    "id":  "CLOSE",
+                                    "name":  "Evidence derived card"
+                                },
+                      "step":  {
+                                   "id":  "ADAPTERS_READY",
+                                   "name":  "Controlled Worker Adapters"
+                               },
+                      "title":  "Controlled Worker Adapters",
+                      "description":  "Tarjeta generada desde evidencia canonica local para ENGREMIAT_CONTROLLED_WORKER_ADAPTERS_005",
+                      "status":  "DONE",
+                      "risk":  "LOW",
+                      "gate":  {
+                                   "authorization_required":  false,
+                                   "decision":  "NOT_REQUIRED_VIEW_ONLY",
+                                   "reason":  "Generacion local de tarjeta desde evidencia"
+                               },
+                      "worker":  {
+                                     "assigned":  "NONE",
+                                     "worker_real_execution":  false
+                                 },
+                      "evidence":  [
+                                       "data/controlled-worker-adapters/controlled-worker-adapters-manifest.json",
+                                       "data/controlled-worker-adapters/controlled-worker-policy.json",
+                                       "data/controlled-worker-adapters/fake-worker-response.json",
+                                       "data/controlled-worker-adapters/sample-human-gate-decision.json",
+                                       "data/controlled-worker-adapters/worker-adapter-contract.json",
+                                       "data/controlled-worker-adapters/worker-execution-gate-schema.json",
+                                       "data/controlled-worker-adapters/cline/cline-adapter-contract.json",
+                                       "data/controlled-worker-adapters/cline/sample-cline-request.json",
+                                       "data/controlled-worker-adapters/ollama-remote/remote-ollama-probe-gate.json",
+                                       "data/controlled-worker-adapters/ollama-remote/remote-ollama-safe-probe-plan.json",
+                                       "data/controlled-worker-adapters/receipts/sample-worker-receipt.json",
+                                       "reports/controlled-worker-adapters/e01-contract-smoke-report.json"
+                                   ],
+                      "next_action":  {
+                                          "recommended":  "006_GATED_WORKER_EXECUTION",
+                                          "requires_human_review":  true
+                                      },
+                      "safety":  {
+                                     "kanban_write":  false,
+                                     "cline_task_created":  false,
+                                     "worker_real_execution":  false,
+                                     "auto_apply":  false,
+                                     "git_write":  false,
+                                     "remote_inference":  false
+                                 }
+--- SAMPLE END ---

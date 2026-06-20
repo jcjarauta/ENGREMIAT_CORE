@@ -1,0 +1,362 @@
+﻿{
+    "generated_at":  "2026-06-20T08:53:46",
+    "mode":  "LIVE_MEMORY_FROM_REPORTS_AND_DIARY",
+    "core":  "C:\\ENGREMIAT_CORE",
+    "active_project":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\\ENGREMIAT_PROJECT_prueba14_20260620-022106",
+    "active_project_name":  "ENGREMIAT_PROJECT_prueba14_20260620-022106",
+    "counters":  {
+                     "project_modules":  10,
+                     "library_active":  2,
+                     "library_inactive":  8,
+                     "library_historic":  2
+                 },
+    "screens":  [
+                    {
+                        "id":  "inicio",
+                        "label":  "Inicio",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO.ps1",
+                        "exists":  true
+                    },
+                    {
+                        "id":  "memory_generate",
+                        "label":  "Generador memoria viva",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECT-MEMORY-GENERATE.ps1",
+                        "exists":  true
+                    },
+                    {
+                        "id":  "diary_add",
+                        "label":  "Añadir diario",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECT-DIARY-ADD.ps1",
+                        "exists":  true
+                    },
+                    {
+                        "id":  "navigation_tree",
+                        "label":  "Árbol navegación",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-NAVIGATION-TREE.ps1",
+                        "exists":  true
+                    },
+                    {
+                        "id":  "navigation_viewer",
+                        "label":  "Visor árbol",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-NAVIGATION-VIEWER.ps1",
+                        "exists":  true
+                    },
+                    {
+                        "id":  "modules",
+                        "label":  "Módulos proyecto",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-project-modules-screen.ps1",
+                        "exists":  true
+                    },
+                    {
+                        "id":  "library",
+                        "label":  "Biblioteca módulos",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-module-library-screen.ps1",
+                        "exists":  true
+                    },
+                    {
+                        "id":  "workspace",
+                        "label":  "Workspace módulo",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-module-workspace-screen.ps1",
+                        "exists":  true
+                    },
+                    {
+                        "id":  "cards",
+                        "label":  "Tarjetas módulo",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-module-cards-screen.ps1",
+                        "exists":  true
+                    },
+                    {
+                        "id":  "graph",
+                        "label":  "Grafo módulos",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-refresh-project-module-graph.ps1",
+                        "exists":  true
+                    }
+                ],
+    "latest_reports":  [
+                           {
+                               "name":  "inicio-v29-last-log-normalized-20260620-085312.json",
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\inicio-v29-last-log-normalized-20260620-085312.json",
+                               "updated":  "2026-06-20T08:53:12",
+                               "status":  "PASS",
+                               "package":  "ENGREMIAT_INICIO_V29_LAST_LOG_NORMALIZED",
+                               "stage":  "",
+                               "next":  "probar_14_de_nuevo_y_revisar_memoria_15_19",
+                               "summary":  "inicio=C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO.ps1"
+                           },
+                           {
+                               "name":  "inicio-v28-external-status-screen-20260620-085205.json",
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\inicio-v28-external-status-screen-20260620-085205.json",
+                               "updated":  "2026-06-20T08:52:05",
+                               "status":  "PASS",
+                               "package":  "ENGREMIAT_INICIO_V28_EXTERNAL_STATUS_SCREEN",
+                               "stage":  "",
+                               "next":  "probar_13_de_nuevo_y_continuar_14",
+                               "summary":  "inicio=C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO.ps1"
+                           },
+                           {
+                               "name":  "last-inicio-status.json",
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\last-inicio-status.json",
+                               "updated":  "2026-06-20T08:51:01",
+                               "status":  "UNKNOWN",
+                               "package":  "",
+                               "stage":  "",
+                               "next":  "",
+                               "summary":  ""
+                           },
+                           {
+                               "name":  "inicio-v27-copyable-status-normalized-20260620-085017.json",
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\inicio-v27-copyable-status-normalized-20260620-085017.json",
+                               "updated":  "2026-06-20T08:50:17",
+                               "status":  "PASS",
+                               "package":  "ENGREMIAT_INICIO_V27_COPYABLE_STATUS_NORMALIZED",
+                               "stage":  "",
+                               "next":  "probar_12_de_nuevo_y_continuar_13_14",
+                               "summary":  "inicio=C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO.ps1"
+                           },
+                           {
+                               "name":  "inicio-v26-status-normalized-20260620-084909.json",
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\inicio-v26-status-normalized-20260620-084909.json",
+                               "updated":  "2026-06-20T08:49:09",
+                               "status":  "PASS",
+                               "package":  "ENGREMIAT_INICIO_V26_STATUS_NORMALIZED",
+                               "stage":  "",
+                               "next":  "probar_opcion_11_de_nuevo_y_continuar_12_14",
+                               "summary":  "inicio=C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO.ps1"
+                           },
+                           {
+                               "name":  "inicio-v25-help-normalized-20260620-084640.json",
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\inicio-v25-help-normalized-20260620-084640.json",
+                               "updated":  "2026-06-20T08:46:40",
+                               "status":  "PASS",
+                               "package":  "ENGREMIAT_INICIO_V25_HELP_NORMALIZED",
+                               "stage":  "",
+                               "next":  "probar_opcion_10_de_nuevo_y_continuar_11_14",
+                               "summary":  "inicio=C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO.ps1"
+                           },
+                           {
+                               "name":  "inicio-v24-routes-normalized-20260620-084513.json",
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\inicio-v24-routes-normalized-20260620-084513.json",
+                               "updated":  "2026-06-20T08:45:13",
+                               "status":  "PASS",
+                               "package":  "ENGREMIAT_INICIO_V24_ROUTES_NORMALIZED",
+                               "stage":  "",
+                               "next":  "probar_opcion_9_de_nuevo",
+                               "summary":  "inicio=C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO.ps1"
+                           },
+                           {
+                               "name":  "navigation-tree-latest.json",
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\navigation\\navigation-tree-latest.json",
+                               "updated":  "2026-06-20T08:44:19",
+                               "status":  "UNKNOWN",
+                               "package":  "",
+                               "stage":  "",
+                               "next":  "E24A_CREATE_MODULE_TASKS_MANAGEMENT_SCREEN",
+                               "summary":  ""
+                           },
+                           {
+                               "name":  "navigation-v25-prompt-spacing-20260620-084406.json",
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\navigation\\navigation-v25-prompt-spacing-20260620-084406.json",
+                               "updated":  "2026-06-20T08:44:06",
+                               "status":  "PASS",
+                               "package":  "ENGREMIAT_NAVIGATION_V25_PROMPT_SPACING",
+                               "stage":  "",
+                               "next":  "probar_inicio_8_de_nuevo",
+                               "summary":  ""
+                           },
+                           {
+                               "name":  "navigation-v24-brackets-counts-20260620-084247.json",
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\navigation\\navigation-v24-brackets-counts-20260620-084247.json",
+                               "updated":  "2026-06-20T08:42:47",
+                               "status":  "PASS",
+                               "package":  "ENGREMIAT_NAVIGATION_V24_BRACKETS_AND_COUNTS",
+                               "stage":  "",
+                               "next":  "probar_inicio_8_de_nuevo",
+                               "summary":  ""
+                           },
+                           {
+                               "name":  "navigation-tree-20260620-084138.json",
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\navigation\\navigation-tree-20260620-084138.json",
+                               "updated":  "2026-06-20T08:41:38",
+                               "status":  "UNKNOWN",
+                               "package":  "",
+                               "stage":  "",
+                               "next":  "E24A_CREATE_MODULE_TASKS_MANAGEMENT_SCREEN",
+                               "summary":  ""
+                           },
+                           {
+                               "name":  "inicio-v23-fast-access-brackets-20260620-084125.json",
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\inicio-v23-fast-access-brackets-20260620-084125.json",
+                               "updated":  "2026-06-20T08:41:25",
+                               "status":  "PASS",
+                               "package":  "ENGREMIAT_INICIO_V23_FAST_ACCESS_BRACKETS",
+                               "stage":  "",
+                               "next":  "revisar_inicio_v23_y_continuar_opciones_8_14",
+                               "summary":  "inicio=C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO.ps1"
+                           },
+                           {
+                               "name":  "inicio-v22-focus-label-20260620-084008.json",
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\inicio-v22-focus-label-20260620-084008.json",
+                               "updated":  "2026-06-20T08:40:08",
+                               "status":  "PASS",
+                               "package":  "ENGREMIAT_INICIO_V22_FOCUS_LABEL",
+                               "stage":  "",
+                               "next":  "revisar_inicio_v22_y_continuar_opciones_8_14",
+                               "summary":  "inicio=C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO.ps1"
+                           },
+                           {
+                               "name":  "inicio-v21-bracket-index-20260620-083919.json",
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\inicio-v21-bracket-index-20260620-083919.json",
+                               "updated":  "2026-06-20T08:39:19",
+                               "status":  "PASS",
+                               "package":  "ENGREMIAT_INICIO_V21_BRACKET_INDEX",
+                               "stage":  "",
+                               "next":  "revisar_inicio_v21_y_continuar_8_14",
+                               "summary":  "inicio=C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO.ps1"
+                           },
+                           {
+                               "name":  "inicio-v20-option7-dashboard-text-20260620-083805.json",
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\inicio-v20-option7-dashboard-text-20260620-083805.json",
+                               "updated":  "2026-06-20T08:38:05",
+                               "status":  "PASS",
+                               "package":  "ENGREMIAT_INICIO_V20_OPTION7_DASHBOARD_TEXT",
+                               "stage":  "",
+                               "next":  "probar_inicio_7_y_continuar_revision_8_14",
+                               "summary":  "inicio=C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO.ps1"
+                           },
+                           {
+                               "name":  "selectors-status-display-normalized-20260620-083557.json",
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\selectors-status-display-normalized-20260620-083557.json",
+                               "updated":  "2026-06-20T08:35:57",
+                               "status":  "PASS",
+                               "package":  "ENGREMIAT_SELECTORS_STATUS_DISPLAY_NORMALIZED",
+                               "stage":  "",
+                               "next":  "probar_4_y_5_status_activo_unificado",
+                               "summary":  ""
+                           },
+                           {
+                               "name":  "selectors-param-first-fix-20260620-083423.json",
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\selectors-param-first-fix-20260620-083423.json",
+                               "updated":  "2026-06-20T08:34:23",
+                               "status":  "PASS",
+                               "package":  "ENGREMIAT_SELECTORS_PARAM_FIRST_FIX",
+                               "stage":  "",
+                               "next":  "probar_inicio_4_y_5",
+                               "summary":  ""
+                           },
+                           {
+                               "name":  "inicio-v19-safe-selectors-20260620-083324.json",
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\inicio-v19-safe-selectors-20260620-083324.json",
+                               "updated":  "2026-06-20T08:33:24",
+                               "status":  "PASS",
+                               "package":  "ENGREMIAT_INICIO_V19_SAFE_SELECTORS",
+                               "stage":  "",
+                               "next":  "probar_4_y_si_falla_pegar_last_selector_error",
+                               "summary":  "inicio=C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO.ps1"
+                           },
+                           {
+                               "name":  "inicio-v18-normalized-selectors-20260620-083210.json",
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\inicio-v18-normalized-selectors-20260620-083210.json",
+                               "updated":  "2026-06-20T08:32:10",
+                               "status":  "PASS",
+                               "package":  "ENGREMIAT_INICIO_V18_NORMALIZED_SELECTORS",
+                               "stage":  "",
+                               "next":  "probar_4_y_5",
+                               "summary":  "inicio=C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO.ps1"
+                           },
+                           {
+                               "name":  "inicio-v17-visual-clean-20260620-082614.json",
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\inicio-v17-visual-clean-20260620-082614.json",
+                               "updated":  "2026-06-20T08:26:14",
+                               "status":  "PASS",
+                               "package":  "ENGREMIAT_INICIO_V17_VISUAL_CLEAN",
+                               "stage":  "",
+                               "next":  "revisar_portada_inicio_v17",
+                               "summary":  "inicio=C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO.ps1"
+                           },
+                           {
+                               "name":  "inicio-v16-resolve-recent-module-20260620-082310.json",
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\inicio-v16-resolve-recent-module-20260620-082310.json",
+                               "updated":  "2026-06-20T08:23:10",
+                               "status":  "PASS",
+                               "package":  "ENGREMIAT_INICIO_V16_RESOLVE_RECENT_MODULE",
+                               "stage":  "",
+                               "next":  "probar_opcion_1_debe_abrir_workspace_directo",
+                               "summary":  "inicio=C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO.ps1"
+                           },
+                           {
+                               "name":  "inicio-v15-direct-recent-module-20260620-082216.json",
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\inicio-v15-direct-recent-module-20260620-082216.json",
+                               "updated":  "2026-06-20T08:22:16",
+                               "status":  "PASS",
+                               "package":  "ENGREMIAT_INICIO_V15_DIRECT_RECENT_MODULE",
+                               "stage":  "",
+                               "next":  "probar_opcion_1_desde_inicio",
+                               "summary":  "inicio=C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO.ps1"
+                           },
+                           {
+                               "name":  "navigation-audit-20260620-081832.json",
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\navigation\\navigation-audit-20260620-081832.json",
+                               "updated":  "2026-06-20T08:18:32",
+                               "status":  "PASS",
+                               "package":  "ENGREMIAT_NAVIGATION_AUDIT",
+                               "stage":  "",
+                               "next":  "",
+                               "summary":  ""
+                           },
+                           {
+                               "name":  "navigation-audit-latest.json",
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\navigation\\navigation-audit-latest.json",
+                               "updated":  "2026-06-20T08:18:32",
+                               "status":  "PASS",
+                               "package":  "ENGREMIAT_NAVIGATION_AUDIT",
+                               "stage":  "",
+                               "next":  "",
+                               "summary":  ""
+                           },
+                           {
+                               "name":  "navigation-tree-20260620-081715.json",
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\navigation\\navigation-tree-20260620-081715.json",
+                               "updated":  "2026-06-20T08:17:15",
+                               "status":  "UNKNOWN",
+                               "package":  "",
+                               "stage":  "",
+                               "next":  "E24A_CREATE_MODULE_TASKS_MANAGEMENT_SCREEN",
+                               "summary":  ""
+                           }
+                       ],
+    "diary_recent":  {
+                         "time":  "2026-06-20T08:18:32",
+                         "title":  "Auditoría del árbol de navegación",
+                         "summary":  "Se revisó el árbol: inicio, memoria y diagnóstico están bien; faltan tareas, tipos/enlaces como vistas y grafo extendido.",
+                         "learned":  "El árbol debe mostrar no solo rutas existentes, también huecos pendientes para no perder contexto.",
+                         "next":  "E24A_CREATE_MODULE_TASKS_MANAGEMENT_SCREEN",
+                         "source":  "navigation_audit"
+                     },
+    "built":  [
+                  "Report PASS: ENGREMIAT_INICIO_V29_LAST_LOG_NORMALIZED",
+                  "Report PASS: ENGREMIAT_INICIO_V28_EXTERNAL_STATUS_SCREEN",
+                  "Report PASS: ENGREMIAT_INICIO_V27_COPYABLE_STATUS_NORMALIZED",
+                  "Report PASS: ENGREMIAT_INICIO_V26_STATUS_NORMALIZED",
+                  "Report PASS: ENGREMIAT_INICIO_V25_HELP_NORMALIZED",
+                  "Report PASS: ENGREMIAT_INICIO_V24_ROUTES_NORMALIZED",
+                  "Report PASS: ENGREMIAT_NAVIGATION_V25_PROMPT_SPACING",
+                  "Report PASS: ENGREMIAT_NAVIGATION_V24_BRACKETS_AND_COUNTS",
+                  "Report PASS: ENGREMIAT_INICIO_V23_FAST_ACCESS_BRACKETS",
+                  "Report PASS: ENGREMIAT_INICIO_V22_FOCUS_LABEL",
+                  "Report PASS: ENGREMIAT_INICIO_V21_BRACKET_INDEX",
+                  "Report PASS: ENGREMIAT_INICIO_V20_OPTION7_DASHBOARD_TEXT"
+              ],
+    "learned":  "El árbol debe mostrar no solo rutas existentes, también huecos pendientes para no perder contexto.",
+    "pending":  [
+                    "NEXT desde report: probar_14_de_nuevo_y_revisar_memoria_15_19",
+                    "NEXT desde report: probar_13_de_nuevo_y_continuar_14",
+                    "NEXT desde report: probar_12_de_nuevo_y_continuar_13_14",
+                    "NEXT desde report: probar_opcion_11_de_nuevo_y_continuar_12_14",
+                    "NEXT desde report: probar_opcion_10_de_nuevo_y_continuar_11_14",
+                    "NEXT desde report: probar_opcion_9_de_nuevo",
+                    "NEXT desde report: E24A_CREATE_MODULE_TASKS_MANAGEMENT_SCREEN",
+                    "NEXT desde report: probar_inicio_8_de_nuevo",
+                    "E24A_CREATE_MODULE_TASKS_MANAGEMENT_SCREEN"
+                ],
+    "recommended_next":  "NEXT desde report: probar_14_de_nuevo_y_revisar_memoria_15_19"
+}

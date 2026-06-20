@@ -1,0 +1,17 @@
+﻿{
+    "model_id":  "need-priority-model.v1",
+    "factors":  [
+                    "impact",
+                    "blocker",
+                    "dependency_depth",
+                    "strategic_value",
+                    "reuse_value",
+                    "risk"
+                ],
+    "scores":  {
+                   "HIGH":  90,
+                   "MEDIUM":  60,
+                   "LOW":  30
+               },
+    "decision":  "Prioridad alta si bloquea reproduccion, composer, validacion o biblioteca."
+}

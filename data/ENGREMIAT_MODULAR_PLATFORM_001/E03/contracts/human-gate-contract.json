@@ -1,0 +1,26 @@
+{
+    "gate_id":  "ENG-MOD-CTL-001",
+    "stage":  "E03",
+    "block":  "P03.2.2",
+    "purpose":  "Definir el gate humano para iniciar o pausar módulos",
+    "allowed_actions":  [
+                            "start",
+                            "pause",
+                            "hold",
+                            "approve_next",
+                            "reject_next"
+                        ],
+    "decision_fields":  [
+                            "decision",
+                            "reason",
+                            "actor",
+                            "timestamp"
+                        ],
+    "rules":  {
+                  "no_auto_approve":  true,
+                  "human_required_for_state_change":  true,
+                  "local_evidence_required":  true,
+                  "no_external_network":  true,
+                  "no_git_write":  true
+              }
+}

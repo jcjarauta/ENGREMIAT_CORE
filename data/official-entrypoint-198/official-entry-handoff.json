@@ -1,0 +1,19 @@
+﻿{
+    "objective_id":  "DEFINE_UNIFIED_ENTRYPOINT_OFFICIAL_INGRESS_MVP",
+    "stage":  "E198",
+    "block":  "B198.1",
+    "step":  "P198.1.2",
+    "name":  "official-entry-handoff",
+    "purpose":  "Package the handoff from official ingress to reusable launcher",
+    "entry_to_launcher_path":  "C:\\ENGREMIAT_CORE\\data\\official-entrypoint-198\\official-entry-to-launcher.json",
+    "official_contract_path":  "C:\\ENGREMIAT_CORE\\data\\official-entrypoint-196\\official-entrypoint-contract.json",
+    "official_preview_path":  "C:\\ENGREMIAT_CORE\\data\\official-entrypoint-197\\official-entry-preview.md",
+    "launcher_path":  "C:\\ENGREMIAT_CORE\\data\\real-execution-launcher-186\\real-execution-launcher.ps1",
+    "handoff_status":  "READY_FOR_LAUNCHER",
+    "template_references":  [
+                                "DEFINE_UNIFIED_ENTRYPOINT_PLAN_LAUNCHER_MVP_192_195",
+                                "DEFINE_REAL_EXECUTION_LAUNCHER_REUSABLE_MVP_184_187",
+                                "DEFINE_PLAN_INTAKE_STANDARD_MVP_188_191"
+                            ],
+    "created_at":  "2026-06-17T19:25:12.9922144+02:00"
+}

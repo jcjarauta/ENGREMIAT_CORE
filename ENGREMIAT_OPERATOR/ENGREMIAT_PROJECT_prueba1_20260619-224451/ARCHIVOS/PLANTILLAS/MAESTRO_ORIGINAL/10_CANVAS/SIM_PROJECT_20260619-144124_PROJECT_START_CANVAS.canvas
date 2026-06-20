@@ -1,0 +1,101 @@
+﻿{
+    "nodes":  [
+                  {
+                      "id":  "intake",
+                      "type":  "file",
+                      "file":  "01_OBJECTIVES/SIM_PROJECT_20260619-144124_INTAKE.md",
+                      "x":  -700,
+                      "y":  0,
+                      "width":  340,
+                      "height":  160,
+                      "color":  "2"
+                  },
+                  {
+                      "id":  "roadmap",
+                      "type":  "file",
+                      "file":  "02_ROADMAPS/SIM_PROJECT_20260619-144124_ROADMAP_PROPOSAL.md",
+                      "x":  -300,
+                      "y":  0,
+                      "width":  340,
+                      "height":  160,
+                      "color":  "2"
+                  },
+                  {
+                      "id":  "task1",
+                      "type":  "file",
+                      "file":  "03_SIMULATED_TASKS/SIM_PROJECT_20260619-144124_TASK_001_DEFINE_SCOPE.md",
+                      "x":  100,
+                      "y":  -180,
+                      "width":  320,
+                      "height":  140,
+                      "color":  "3"
+                  },
+                  {
+                      "id":  "task2",
+                      "type":  "file",
+                      "file":  "03_SIMULATED_TASKS/SIM_PROJECT_20260619-144124_TASK_002_PREPARE_STRUCTURE.md",
+                      "x":  100,
+                      "y":  0,
+                      "width":  320,
+                      "height":  140,
+                      "color":  "3"
+                  },
+                  {
+                      "id":  "task3",
+                      "type":  "file",
+                      "file":  "03_SIMULATED_TASKS/SIM_PROJECT_20260619-144124_TASK_003_VALIDATE_FIRST_EVIDENCE.md",
+                      "x":  100,
+                      "y":  180,
+                      "width":  320,
+                      "height":  140,
+                      "color":  "3"
+                  },
+                  {
+                      "id":  "gate",
+                      "type":  "file",
+                      "file":  "05_HUMAN_GATES/SIM_PROJECT_20260619-144124_GATE_APPROVE_ROADMAP.md",
+                      "x":  520,
+                      "y":  0,
+                      "width":  340,
+                      "height":  160,
+                      "color":  "5"
+                  }
+              ],
+    "edges":  [
+                  {
+                      "id":  "e1",
+                      "fromNode":  "intake",
+                      "fromSide":  "right",
+                      "toNode":  "roadmap",
+                      "toSide":  "left"
+                  },
+                  {
+                      "id":  "e2",
+                      "fromNode":  "roadmap",
+                      "fromSide":  "right",
+                      "toNode":  "task1",
+                      "toSide":  "left"
+                  },
+                  {
+                      "id":  "e3",
+                      "fromNode":  "roadmap",
+                      "fromSide":  "right",
+                      "toNode":  "task2",
+                      "toSide":  "left"
+                  },
+                  {
+                      "id":  "e4",
+                      "fromNode":  "roadmap",
+                      "fromSide":  "right",
+                      "toNode":  "task3",
+                      "toSide":  "left"
+                  },
+                  {
+                      "id":  "e5",
+                      "fromNode":  "roadmap",
+                      "fromSide":  "right",
+                      "toNode":  "gate",
+                      "toSide":  "left"
+                  }
+              ]
+}

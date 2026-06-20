@@ -1,0 +1,40 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ollama Execution Gate</title>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;background:#0f172a;color:#e2e8f0;margin:0;padding:24px}
+    .card{max-width:960px;margin:0 auto;background:#111827;border:1px solid #334155;border-radius:18px;padding:24px;box-shadow:0 12px 40px rgba(0,0,0,.25)}
+    h1{margin:0 0 8px 0;font-size:28px}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:#1f2937;border:1px solid #475569;margin-right:8px;font-size:12px}
+    .warn{background:#3f1d1d;border-color:#7f1d1d}
+    pre{white-space:pre-wrap;background:#0b1220;border:1px solid #334155;border-radius:14px;padding:16px;overflow:auto}
+    .muted{color:#94a3b8}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Ollama Execution Gate</h1>
+    <div>
+      <span class="pill warn">DEFER</span>
+      <span class="pill">execution_allowed=false</span>
+      <span class="pill">human_authorization_required=true</span>
+    </div>
+    <p class="muted">Este panel sólo documenta el bloqueo por defecto. No habilita generación real.</p>
+    <pre id="data"></pre>
+  </div>
+  <script>
+    const data = {
+      objective_id: 'DEFINE_REAL_CONTROLLED_FILE_TO_OLLAMA_EXECUTION_MVP_162_171',
+      stage: 'E164',
+      decision: 'DEFER',
+      execution_allowed: false,
+      reason: 'Blocked by default until explicit human authorization is provided for E166',
+      prohibited_actions: ['ollama /api/generate','git_write','kanban_real_write','cline_real_write','external_network','destructive_actions']
+    };
+    document.getElementById('data').textContent = JSON.stringify(data, null, 2);
+  </script>
+</body>
+</html>

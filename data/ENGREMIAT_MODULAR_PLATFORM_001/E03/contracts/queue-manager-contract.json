@@ -1,0 +1,28 @@
+{
+    "package_id":  "ENGREMIAT_MODULAR_PLATFORM_001",
+    "stage":  "E03",
+    "block":  "B03.1",
+    "module_id":  "ENG-MOD-QUE-001",
+    "module_name":  "Queue Manager",
+    "purpose":  "Colocar pasos normalizados en cola y priorizar ejecución",
+    "depends_on":  "ENG-MOD-NRM-001",
+    "state":  "planned",
+    "queue_model":  {
+                        "supports_priority":  true,
+                        "supports_blocking":  true,
+                        "supports_dependencies":  true,
+                        "supports_pause_resume":  true,
+                        "supports_reordering":  false
+                    },
+    "control":  {
+                    "local_first":  true,
+                    "no_external_network":  true,
+                    "no_git_write":  true,
+                    "human_validation_required":  true
+                },
+    "acceptance_criteria":  [
+                                "Los pasos normalizados entran en cola",
+                                "Se respeta prioridad y dependencia",
+                                "La cola no rompe el orden canónico"
+                            ]
+}

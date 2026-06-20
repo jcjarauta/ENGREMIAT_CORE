@@ -1,0 +1,20 @@
+﻿{
+    "thread_id":  "OPENCLAW-SKILL-EXAMPLE-001",
+    "source":  "openwebui",
+    "via":  "openclaw",
+    "title":  "Convertir conversación OpenWebUI en tarjeta ENGREMIAT",
+    "user_intent":  "Transformar una conversación o propuesta de OpenWebUI en entrada revisable para ENGREMIAT.",
+    "assistant_summary":  "OpenClaw debe producir un JSON compatible con el readonly inbox. ENGREMIAT generará detected-input, tarjeta consumible, nota Obsidian candidata y prompt inline.",
+    "proposed_kind":  "project",
+    "priority":  80,
+    "risk":  "LOW",
+    "target_consumers":  [
+                             "HUMAN",
+                             "CLINE_KANBAN",
+                             "OBSIDIAN",
+                             "OPENWEBUI"
+                         ],
+    "execution_allowed":  false,
+    "native_kanban_write":  "disabled",
+    "obsidian_real_write":  "disabled"
+}

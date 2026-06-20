@@ -1,0 +1,27 @@
+﻿{
+    "name":  "Demo Relation Router",
+    "slug":  "demo-relation-router",
+    "space_type":  "MODULE_SPACE",
+    "intent":  "Validar router preview de relaciones y grupos",
+    "group":  "G03_PROJECTS_MODULES",
+    "parent":  "02_PROYECTOS/PROJECT_demo-builder-project-space",
+    "related_to":  "G04_MEMORY_VISUAL",
+    "preferred_surface":  "GROUPED_CANVAS",
+    "target_root":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\02_PROYECTOS\\PROJECT_demo-builder-project-space\\08_RELACIONES\\MODULE_demo-relation-router",
+    "planned_outputs":  [
+                            "relation_note",
+                            "group_assignment",
+                            "index_update_preview",
+                            "canvas_edge_preview",
+                            "dashboard_pointer"
+                        ],
+    "safety":  {
+                   "local_only":  true,
+                   "preview_only":  true,
+                   "worker_execution":  false,
+                   "kanban_write":  false,
+                   "clien_write":  false,
+                   "git_write":  false,
+                   "external_network":  false
+               }
+}

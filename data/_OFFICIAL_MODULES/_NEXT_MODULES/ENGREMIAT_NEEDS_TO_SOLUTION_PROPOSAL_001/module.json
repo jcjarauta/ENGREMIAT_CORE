@@ -1,0 +1,38 @@
+﻿{
+    "module_id":  "ENGREMIAT_NEEDS_TO_SOLUTION_PROPOSAL_001",
+    "name":  "Needs To Solution Proposal",
+    "status":  "CANDIDATE",
+    "kind":  "DETECTOR_PROPOSAL_STANDARD",
+    "location":  "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_NEEDS_TO_SOLUTION_PROPOSAL_001",
+    "purpose":  "Detectar necesidades internas de ENGREMIAT y proponer soluciones gobernadas antes de componer recursos o ejecutar herramientas reales.",
+    "principle":  "El sistema observa estado local, detecta gaps, propone soluciones y el humano decide; no ejecuta.",
+    "depends_on":  [
+                       "ENGREMIAT_INTERNAL_WORKFLOW_STANDARD_001",
+                       "ENGREMIAT_TOOL_ADAPTER_GATE_001",
+                       "ENGREMIAT_RESOURCE_LIBRARY_STANDARD_001"
+                   ],
+    "scope":  [
+                  "NEED",
+                  "SIGNAL",
+                  "GAP",
+                  "STATE_SNAPSHOT",
+                  "HEALTH_DIMENSION",
+                  "SOLUTION_PROPOSAL_READY"
+              ],
+    "safety":  {
+                   "local_only":  true,
+                   "read_only_observation":  true,
+                   "core_changes":  false,
+                   "real_tool_integration":  false,
+                   "git_write":  false,
+                   "network":  false,
+                   "ollama_inference":  false,
+                   "proposal_execution":  false
+               },
+    "stages_created":  [
+                           "E01_IDENTIDAD_Y_ALCANCE",
+                           "E02_MODELO_DE_NECESIDADES",
+                           "E03_FUENTES_DE_ESTADO"
+                       ],
+    "next":  "E04_LOCAL_NEEDS_DETECTOR"
+}

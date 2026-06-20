@@ -1,0 +1,50 @@
+﻿{
+    "objective":  "ENGREMIAT_POST_MVP_OPERATIONAL_DAILY_LOOP_046_055",
+    "stage":  "E54",
+    "scenario_id":  "E54_OPERATIONAL_DAILY_LOOP_DEMO",
+    "title":  "Demo operativa del loop diario post-MVP",
+    "steps":  [
+                  {
+                      "expected":  "estado diario",
+                      "command":  ".\\eng.ps1 daily",
+                      "order":  1
+                  },
+                  {
+                      "expected":  "panel central",
+                      "path":  "dashboard/operational/index.html",
+                      "order":  2
+                  },
+                  {
+                      "expected":  "inbox operativo",
+                      "path":  "dashboard/operational-inbox/index.html",
+                      "order":  3
+                  },
+                  {
+                      "expected":  "historial decisiones",
+                      "path":  "dashboard/decision-history/index.html",
+                      "order":  4
+                  },
+                  {
+                      "expected":  "salida util diaria",
+                      "path":  "data/daily-production-052/production-output.json",
+                      "order":  5
+                  },
+                  {
+                      "expected":  "estandar seguridad",
+                      "path":  "data/receipts-rollback-053/daily-receipt-standard.json",
+                      "order":  6
+                  }
+              ],
+    "security":  {
+                     "apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "sensitive_actions_executed":  false,
+                     "demo_local_only":  true,
+                     "human_decision_final":  true
+                 },
+    "next":  "E55_POST_MVP_CLOSE_AND_NEXT_RELEASE",
+    "created_at":  "2026-06-17T12:04:46"
+}

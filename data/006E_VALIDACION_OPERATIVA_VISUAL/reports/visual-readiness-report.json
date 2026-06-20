@@ -1,0 +1,18 @@
+{
+    "package_id":  "006E_VALIDACION_OPERATIVA_VISUAL",
+    "status":  "PASS",
+    "readiness":  100,
+    "checks":  {
+                   "base_001_exists":  true,
+                   "simulation_004e_exists":  true,
+                   "apply_005e_exists":  true,
+                   "manuals_exist":  true,
+                   "documental_close_exists":  true,
+                   "dashboard_created":  true,
+                   "core_changes":  false,
+                   "external_network":  false,
+                   "git_write":  false,
+                   "real_module_activation":  false
+               },
+    "decision":  "READY_FOR_HUMAN_DECISION_KANBAN_REAL_OR_PAUSE"
+}

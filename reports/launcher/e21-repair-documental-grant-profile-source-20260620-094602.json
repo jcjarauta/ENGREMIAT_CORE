@@ -1,0 +1,43 @@
+﻿{
+    "package_id":  "ENGREMIAT_DATA_INTAKE_001",
+    "stage":  "E21_REPAIR_DOCUMENTAL_GRANT_PROFILE_SOURCE",
+    "status":  "PASS",
+    "written_profiles":  [
+                             "C:\\ENGREMIAT_CORE\\documents\\grants\\grant-call-profile-latest.json",
+                             "C:\\ENGREMIAT_CORE\\documents\\grants\\grant-call-profile.json",
+                             "C:\\ENGREMIAT_CORE\\documents\\grants\\grant-profile-latest.json",
+                             "C:\\ENGREMIAT_CORE\\documents\\grants\\grant-call-active.json",
+                             "C:\\ENGREMIAT_CORE\\documents\\grants\\grant-call-profile-active.json",
+                             "C:\\ENGREMIAT_CORE\\documents\\grant-call-profile-latest.json",
+                             "C:\\ENGREMIAT_CORE\\documents\\grant-call-profile.json",
+                             "C:\\ENGREMIAT_CORE\\documents\\intake\\normalized\\grant-call-profile-documental-compatible-latest.json",
+                             "C:\\ENGREMIAT_CORE\\grants\\grant-call-profile-latest.json",
+                             "C:\\ENGREMIAT_CORE\\grants\\grant-call-profile-demo.json"
+                         ],
+    "detected_doc_center_json_paths":  [
+                                           "C:\\ENGREMIAT_CORE\\grants\\grant-call-profile-latest.json",
+                                           "C:\\ENGREMIAT_CORE\\grants\\grant-call-profile-latest.json",
+                                           "C:\\ENGREMIAT_CORE\\grants\\grant-call-profile-demo.json"
+                                       ],
+    "required_fields":  [
+                            "nombre_convocatoria",
+                            "entidad_convocante",
+                            "territorio",
+                            "fecha_limite",
+                            "objetivo_convocatoria",
+                            "lineas_prioritarias",
+                            "importe_solicitado",
+                            "cofinanciacion",
+                            "beneficiarios",
+                            "indicadores_requeridos",
+                            "documentacion_requerida",
+                            "criterios_valoracion",
+                            "tono"
+                        ],
+    "missing":  [
+
+                ],
+    "active_profile":  "C:\\ENGREMIAT_CORE\\documents\\grants\\grant-call-profile-latest.json",
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e21-repair-documental-grant-profile-source-20260620-094602.json",
+    "next":  "RETRY_DOCUMENTACION_15_GENERAR_DOSSIER_ADAPTADO"
+}

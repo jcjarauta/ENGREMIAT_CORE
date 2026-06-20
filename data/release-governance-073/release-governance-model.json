@@ -1,0 +1,30 @@
+﻿{
+    "objective":  "ENGREMIAT_MULTI_WORKER_ORCHESTRATION_AND_REAL_VALUE_PIPELINE_066_075",
+    "stage":  "E73",
+    "name":  "Release Governance",
+    "version":  "0.73.0-local",
+    "purpose":  "Definir gobernanza de release multi-worker con control humano, gates, evidencias, rollback y postchecks.",
+    "release_safe":  true,
+    "human_governed":  true,
+    "workers_execute":  false,
+    "worker_to_worker_autonomy":  false,
+    "automatic_prompt_chaining":  false,
+    "automatic_tool_execution":  false,
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "kanban_real_write":  false,
+    "required_gates":  [
+                           "human_release_review",
+                           "evidence_complete",
+                           "receipts_present",
+                           "rollback_ready",
+                           "postchecks_passed",
+                           "no_pending_err",
+                           "no_pending_no_go"
+                       ],
+    "created_utc":  "2026-06-17T10:44:01.0928042Z"
+}

@@ -1,0 +1,25 @@
+﻿{
+    "package":  "ENGREMIAT_TEMPLATE_IMPROVEMENT_001",
+    "stage":  "E09B_BUILD_MANUAL_GROUPING_LAYER_STAGING_NO_APPLY",
+    "status":  "STAGING_NOT_APPLIED",
+    "created_at":  "2026-06-19T23:51:15",
+    "master_patch":  [
+                         "11_AGRUPACION_MANUAL/SYSTEM_GROUPING_MODEL.md",
+                         "00_HOME append",
+                         "00_GRAPH append"
+                     ],
+    "module_patch":  [
+                         "06_RELACIONES/MODULE_GROUPING_MODEL.md",
+                         "00_HOME append"
+                     ],
+    "source_candidates_tsv":  "C:\\ENGREMIAT_CORE\\reports\\template-improvement\\e09a2-find-manual-grouping-control\\e09a2-manual-grouping-control-candidates.tsv",
+    "target_master":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\\ENGREMIAT_PROJECT_p3_20260619-224903\\BOVEDA_PROYECTO\\00_PLANTILLA_MAESTRA_OFICIAL",
+    "target_module_ref":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\\ENGREMIAT_PROJECT_p3_20260619-224903\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO\\00_PLANTILLA_MAESTRA_REFERENCIA",
+    "apply_policy":  "NO_APPLY_WITHOUT_GATE",
+    "protected":  [
+                      "MODULE_inicio real",
+                      "operator-state",
+                      "operator scripts",
+                      "Git"
+                  ]
+}

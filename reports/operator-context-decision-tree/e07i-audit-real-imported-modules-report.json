@@ -1,0 +1,75 @@
+﻿{
+    "package_id":  "ENGREMIAT_OPERATOR_CONTEXT_AND_DECISION_TREE_001",
+    "stage":  "E07I_AUDIT_REAL_IMPORTED_MODULES",
+    "status":  "PASS",
+    "project":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706",
+    "mods_count":  5,
+    "from_library_count":  1,
+    "modules":  [
+                    {
+                        "name":  ".obsidian",
+                        "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706\\MODULOS\\.obsidian",
+                        "vault_exists":  false,
+                        "module_json_exists":  false,
+                        "lifecycle":  "NO_MODULE_JSON",
+                        "library_status":  "",
+                        "from_library":  false,
+                        "library_source_path":  "",
+                        "objective":  ""
+                    },
+                    {
+                        "name":  "MODULE_inicio",
+                        "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706\\MODULOS\\MODULE_inicio",
+                        "vault_exists":  true,
+                        "module_json_exists":  true,
+                        "lifecycle":  "OBJECTIVE_COMPLETED",
+                        "library_status":  "PROMOTED_TO_LIBRARY_CANDIDATE",
+                        "from_library":  false,
+                        "library_source_path":  "",
+                        "objective":  "uso de tareas/tarjetas"
+                    },
+                    {
+                        "name":  "MODULE_modulo2",
+                        "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706\\MODULOS\\MODULE_modulo2",
+                        "vault_exists":  true,
+                        "module_json_exists":  true,
+                        "lifecycle":  "ACTIVE_IN_PROJECT",
+                        "library_status":  "NOT_READY",
+                        "from_library":  false,
+                        "library_source_path":  "",
+                        "objective":  ""
+                    },
+                    {
+                        "name":  "MODULE_modulo3",
+                        "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706\\MODULOS\\MODULE_modulo3",
+                        "vault_exists":  true,
+                        "module_json_exists":  true,
+                        "lifecycle":  "ACTIVE_IN_PROJECT",
+                        "library_status":  "NOT_READY",
+                        "from_library":  false,
+                        "library_source_path":  "",
+                        "objective":  ""
+                    },
+                    {
+                        "name":  "MODULE_tareas_tarjetas",
+                        "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706\\MODULOS\\MODULE_tareas_tarjetas",
+                        "vault_exists":  true,
+                        "module_json_exists":  true,
+                        "lifecycle":  "ACTIVE_IN_PROJECT",
+                        "library_status":  "REUSED_IN_PROJECT",
+                        "from_library":  true,
+                        "library_source_path":  "C:\\ENGREMIAT_CORE\\library\\reusable-modules\\MODULE_tareas_tarjetas",
+                        "objective":  "Gestionar tareas del proyecto como tarjetas reutilizables con estado, prioridad y evidencia."
+                    }
+                ],
+    "last_import_report":  "C:\\ENGREMIAT_CORE\\reports\\operator-context-decision-tree\\e07b-library-import-20260619194903.json",
+    "reported_imports":  [
+                             {
+                                 "id":  "MODULE_tareas_tarjetas",
+                                 "source":  "C:\\ENGREMIAT_CORE\\library\\reusable-modules\\MODULE_tareas_tarjetas",
+                                 "dest":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706\\MODULOS\\MODULE_tareas_tarjetas",
+                                 "vault":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706\\MODULOS\\MODULE_tareas_tarjetas\\BOVEDA_MODULO"
+                             }
+                         ],
+    "next":  "E07J_FIX_PROJECT_MODULES_VIEW_IF_NEEDED"
+}

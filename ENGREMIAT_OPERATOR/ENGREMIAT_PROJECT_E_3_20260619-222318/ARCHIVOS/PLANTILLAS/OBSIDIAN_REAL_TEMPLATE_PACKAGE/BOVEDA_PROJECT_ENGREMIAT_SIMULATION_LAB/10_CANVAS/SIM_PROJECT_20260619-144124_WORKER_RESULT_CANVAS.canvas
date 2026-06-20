@@ -1,0 +1,135 @@
+﻿{
+    "nodes":  [
+                  {
+                      "id":  "r1",
+                      "type":  "file",
+                      "file":  "04_SIMULATED_WORKERS/RUNS/SIM_PROJECT_20260619-144124/RUN_001_SIM_WORKER_PLANNER.md",
+                      "x":  -760,
+                      "y":  -180,
+                      "width":  330,
+                      "height":  140,
+                      "color":  "4"
+                  },
+                  {
+                      "id":  "r2",
+                      "type":  "file",
+                      "file":  "04_SIMULATED_WORKERS/RUNS/SIM_PROJECT_20260619-144124/RUN_002_SIM_WORKER_OBSIDIAN_BUILDER.md",
+                      "x":  -760,
+                      "y":  0,
+                      "width":  330,
+                      "height":  140,
+                      "color":  "4"
+                  },
+                  {
+                      "id":  "r3",
+                      "type":  "file",
+                      "file":  "04_SIMULATED_WORKERS/RUNS/SIM_PROJECT_20260619-144124/RUN_003_SIM_WORKER_VALIDATOR.md",
+                      "x":  -760,
+                      "y":  180,
+                      "width":  330,
+                      "height":  140,
+                      "color":  "4"
+                  },
+                  {
+                      "id":  "ev1",
+                      "type":  "file",
+                      "file":  "07_EVIDENCE/SIM_PROJECT_20260619-144124/EV_SCOPE.md",
+                      "x":  -340,
+                      "y":  -180,
+                      "width":  330,
+                      "height":  140,
+                      "color":  "6"
+                  },
+                  {
+                      "id":  "ev2",
+                      "type":  "file",
+                      "file":  "07_EVIDENCE/SIM_PROJECT_20260619-144124/EV_STRUCTURE.md",
+                      "x":  -340,
+                      "y":  0,
+                      "width":  330,
+                      "height":  140,
+                      "color":  "6"
+                  },
+                  {
+                      "id":  "ev3",
+                      "type":  "file",
+                      "file":  "07_EVIDENCE/SIM_PROJECT_20260619-144124/EV_VALIDATION.md",
+                      "x":  -340,
+                      "y":  180,
+                      "width":  330,
+                      "height":  140,
+                      "color":  "6"
+                  },
+                  {
+                      "id":  "result",
+                      "type":  "file",
+                      "file":  "08_RESULTS/SIM_PROJECT_20260619-144124/RESULT_PROJECT_START_SIMULATION.md",
+                      "x":  100,
+                      "y":  0,
+                      "width":  360,
+                      "height":  160,
+                      "color":  "2"
+                  },
+                  {
+                      "id":  "gate",
+                      "type":  "file",
+                      "file":  "05_HUMAN_GATES/SIM_PROJECT_20260619-144124_GATE_VALIDATE_RESULT.md",
+                      "x":  560,
+                      "y":  0,
+                      "width":  360,
+                      "height":  160,
+                      "color":  "5"
+                  }
+              ],
+    "edges":  [
+                  {
+                      "id":  "e1",
+                      "fromNode":  "r1",
+                      "fromSide":  "right",
+                      "toNode":  "ev1",
+                      "toSide":  "left"
+                  },
+                  {
+                      "id":  "e2",
+                      "fromNode":  "r2",
+                      "fromSide":  "right",
+                      "toNode":  "ev2",
+                      "toSide":  "left"
+                  },
+                  {
+                      "id":  "e3",
+                      "fromNode":  "r3",
+                      "fromSide":  "right",
+                      "toNode":  "ev3",
+                      "toSide":  "left"
+                  },
+                  {
+                      "id":  "e4",
+                      "fromNode":  "ev1",
+                      "fromSide":  "right",
+                      "toNode":  "result",
+                      "toSide":  "left"
+                  },
+                  {
+                      "id":  "e5",
+                      "fromNode":  "ev2",
+                      "fromSide":  "right",
+                      "toNode":  "result",
+                      "toSide":  "left"
+                  },
+                  {
+                      "id":  "e6",
+                      "fromNode":  "ev3",
+                      "fromSide":  "right",
+                      "toNode":  "result",
+                      "toSide":  "left"
+                  },
+                  {
+                      "id":  "e7",
+                      "fromNode":  "result",
+                      "fromSide":  "right",
+                      "toNode":  "gate",
+                      "toSide":  "left"
+                  }
+              ]
+}

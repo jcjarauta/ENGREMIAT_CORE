@@ -1,0 +1,37 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_FINAL_026_035",
+    "stage":  "E32",
+    "created_at":  "2026-06-17T11:13:57.5322501+02:00",
+    "sources":  [
+                    {
+                        "doc":  "docs/CURRENT_CONTEXT.md",
+                        "source":  "data/dev/context-snapshot.json",
+                        "exists":  true
+                    },
+                    {
+                        "doc":  "docs/ARTIFACT_INDEX.md",
+                        "source":  "data/registry/artifact-registry-latest.json",
+                        "exists":  true
+                    },
+                    {
+                        "doc":  "docs/GATE_INDEX.md",
+                        "source":  "data/gates/pending-gates.json",
+                        "exists":  true
+                    },
+                    {
+                        "doc":  "docs/ERROR_PLAYBOOK.md",
+                        "source":  "data/errors/error-memory.jsonl",
+                        "exists":  true
+                    },
+                    {
+                        "doc":  "docs/READINESS.md",
+                        "source":  "reports/readiness/current-readiness.json",
+                        "exists":  true
+                    },
+                    {
+                        "doc":  "docs/DEVELOPMENT_LOG.md",
+                        "source":  "reports/*",
+                        "exists":  true
+                    }
+                ]
+}

@@ -1,0 +1,16 @@
+{
+    "package_id":  "ENGREMIAT_007E_PANEL_MAESTRO_OPERATIVO",
+    "stage":  "E03_DECISION_CENTER",
+    "status":  "PASS",
+    "checks":  {
+                   "previous_e02_pass":  true,
+                   "decision_center_created":  true,
+                   "decisions_count":  6,
+                   "recommended_decision_set":  true,
+                   "real_integration_executed":  false,
+                   "core_changes":  false,
+                   "external_network":  false,
+                   "git_write":  false
+               },
+    "next":  "E04_INTEGRATION_READINESS"
+}

@@ -1,0 +1,12 @@
+﻿{
+    "package_id":  "ENGREMIAT_OPERATOR_CONTEXT_AND_DECISION_TREE_001",
+    "stage":  "E08D_VER_PROYECTOS_SHOW_ACTIVE_AND_HISTORICAL",
+    "status":  "PASS",
+    "readiness":  100,
+    "changed":  [
+                    "ver_proyectos_uses_Get-AllProjects",
+                    "abrir_proyecto_keeps_Get-Projects_filtered",
+                    "projects_marked_ACTIVO_or_HISTORICO"
+                ],
+    "next":  "retest_global_3_ver_proyectos"
+}

@@ -1,0 +1,17 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_ACTION_EXAMPLE_000",
+    "stage":  "E00",
+    "gate":  "DEFER",
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "human_confirmation":  false,
+    "execution_allowed":  false,
+    "artifacts":  [
+                      "data/example/scope.json",
+                      "reports/example/readiness.json"
+                  ],
+    "decision":  "NO_GO_GATE_REQUIRED",
+    "next":  "WAIT_HUMAN_DECISION"
+}

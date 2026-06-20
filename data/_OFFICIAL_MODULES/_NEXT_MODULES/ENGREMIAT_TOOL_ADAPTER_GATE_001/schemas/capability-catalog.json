@@ -1,0 +1,102 @@
+﻿{
+    "schema_id":  "capability-catalog.v1",
+    "module_id":  "ENGREMIAT_TOOL_ADAPTER_GATE_001",
+    "capabilities":  [
+                         {
+                             "capability":  "READ",
+                             "risk":  "LOW",
+                             "default_permission":  "READ_ONLY",
+                             "gate_required":  false
+                         },
+                         {
+                             "capability":  "WRITE",
+                             "risk":  "HIGH",
+                             "default_permission":  "WRITE",
+                             "gate_required":  true
+                         },
+                         {
+                             "capability":  "EXECUTE",
+                             "risk":  "CRITICAL",
+                             "default_permission":  "EXECUTE",
+                             "gate_required":  true
+                         },
+                         {
+                             "capability":  "INFER",
+                             "risk":  "MEDIUM",
+                             "default_permission":  "PROPOSE",
+                             "gate_required":  "IF_STATE_IMPACT"
+                         },
+                         {
+                             "capability":  "PLAN",
+                             "risk":  "LOW",
+                             "default_permission":  "PROPOSE",
+                             "gate_required":  false
+                         },
+                         {
+                             "capability":  "CLASSIFY",
+                             "risk":  "LOW",
+                             "default_permission":  "PROPOSE",
+                             "gate_required":  false
+                         },
+                         {
+                             "capability":  "CREATE_PROJECT",
+                             "risk":  "MEDIUM",
+                             "default_permission":  "WRITE",
+                             "gate_required":  "IF_REAL_WRITE"
+                         },
+                         {
+                             "capability":  "CREATE_TASK",
+                             "risk":  "MEDIUM",
+                             "default_permission":  "WRITE",
+                             "gate_required":  "IF_REAL_WRITE"
+                         },
+                         {
+                             "capability":  "CLOSE_TASK",
+                             "risk":  "MEDIUM",
+                             "default_permission":  "WRITE",
+                             "gate_required":  true
+                         },
+                         {
+                             "capability":  "CREATE_RESOURCE",
+                             "risk":  "HIGH",
+                             "default_permission":  "WRITE",
+                             "gate_required":  true
+                         },
+                         {
+                             "capability":  "OFFICIALIZE_RESOURCE",
+                             "risk":  "CRITICAL",
+                             "default_permission":  "ADMIN",
+                             "gate_required":  true
+                         },
+                         {
+                             "capability":  "PUBLISH_RESOURCE",
+                             "risk":  "CRITICAL",
+                             "default_permission":  "ADMIN",
+                             "gate_required":  true
+                         },
+                         {
+                             "capability":  "IMPORT_EXTERNAL",
+                             "risk":  "HIGH",
+                             "default_permission":  "WRITE",
+                             "gate_required":  true
+                         },
+                         {
+                             "capability":  "EXPORT_EXTERNAL",
+                             "risk":  "HIGH",
+                             "default_permission":  "WRITE",
+                             "gate_required":  true
+                         },
+                         {
+                             "capability":  "AGENT_EXECUTE",
+                             "risk":  "CRITICAL",
+                             "default_permission":  "EXECUTE",
+                             "gate_required":  true
+                         },
+                         {
+                             "capability":  "SCRIPT_RUN",
+                             "risk":  "HIGH",
+                             "default_permission":  "EXECUTE",
+                             "gate_required":  true
+                         }
+                     ]
+}

@@ -1,0 +1,20 @@
+﻿{
+    "module_id":  "ENGREMIAT_SHEETS_MODULE_INITIATOR_001",
+    "stage":  "E03_APPS_SCRIPT_DRY_RUN_GENERATOR",
+    "script":  "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_SHEETS_MODULE_INITIATOR_001\\apps-script-dry-run\\ENG_MODULE_INITIATOR_DRY_RUN.gs",
+    "function_name":  "ENGREMIAT_generateModuleInitJsonDryRun",
+    "input":  "row object generated from ENG_MODULE_INITIATOR sheet headers",
+    "output":  [
+                   "validation_status",
+                   "validation_errors",
+                   "generated_json_log"
+               ],
+    "execution_policy":  "LOCAL_FILE_ONLY_NOT_DEPLOYED",
+    "safety":  {
+                   "real_sheets_write":  false,
+                   "apps_script_execution":  false,
+                   "network":  false,
+                   "git_write":  false,
+                   "core_changes":  false
+               }
+}

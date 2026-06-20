@@ -1,0 +1,29 @@
+﻿{
+    "objective":  "ENGREMIAT_MULTI_WORKER_ORCHESTRATION_AND_REAL_VALUE_PIPELINE_066_075",
+    "stage":  "E69",
+    "readiness":  100,
+    "decision":  "GO_E69_HUMAN_ARBITRATION_CONSOLE_READY",
+    "next":  "E70_CONTROLLED_APPLY_BATCH_PREVIEW",
+    "arbitration_console_ready":  true,
+    "default_decision":  "DEFER",
+    "proposals_count":  4,
+    "artifacts":  [
+                      "data\\arbitration-069\\arbitration-model.json",
+                      "data\\arbitration-069\\arbitration-gate.json",
+                      "dashboard\\arbitration\\index.html",
+                      "data\\arbitration-069\\receipts\\arbitration-console-receipt.json"
+                  ],
+    "security":  {
+                     "apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "worker_executed":  false,
+                     "arbitration_executes":  false,
+                     "human_decision_required":  true,
+                     "default_decision":  "DEFER",
+                     "sensitive_actions_executed":  false
+                 },
+    "created_at":  "2026-06-17T12:38:15"
+}

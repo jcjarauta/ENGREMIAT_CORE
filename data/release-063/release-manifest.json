@@ -1,0 +1,147 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_REAL_WORKER_DAILY_VALUE_LOOP_056_065",
+    "stage":  "E63",
+    "release_id":  "ENGREMIAT_RELEASE_056_065_E63",
+    "release_name":  "Controlled Real Worker Daily Value Loop",
+    "version":  "0.63.0-local",
+    "purpose":  "Documentar manifest, version y changelog de la release controlada worker diaria",
+    "covered_stages":  [
+                           "E56",
+                           "E57",
+                           "E58",
+                           "E59",
+                           "E60",
+                           "E61",
+                           "E62",
+                           "E63"
+                       ],
+    "artifacts":  [
+                      {
+                          "path":  "data/worker-real-056/worker-real-input-contract.json",
+                          "exists":  true
+                      },
+                      {
+                          "path":  "data/worker-real-056/worker-real-execution-gate.json",
+                          "exists":  true
+                      },
+                      {
+                          "path":  "prompts/outbox/WORKER_REAL_PROMPT_PACKET.md",
+                          "exists":  true
+                      },
+                      {
+                          "path":  "reports/worker-real-056/e56-worker-real-input-readiness-report.json",
+                          "exists":  true
+                      },
+                      {
+                          "path":  "data/worker-response-057/worker-response-inbox.json",
+                          "exists":  true
+                      },
+                      {
+                          "path":  "data/worker-response-057/worker-response-sample.md",
+                          "exists":  true
+                      },
+                      {
+                          "path":  "tools/eng-worker-response-import.ps1",
+                          "exists":  true
+                      },
+                      {
+                          "path":  "reports/worker-response-057/e57-worker-response-readiness-report.json",
+                          "exists":  true
+                      },
+                      {
+                          "path":  "data/proposal-quality-058/proposal-quality-model.json",
+                          "exists":  true
+                      },
+                      {
+                          "path":  "docs/PROPOSAL_QUALITY_CHECKLIST.md",
+                          "exists":  true
+                      },
+                      {
+                          "path":  "tools/eng-proposal-check.ps1",
+                          "exists":  true
+                      },
+                      {
+                          "path":  "reports/proposal-quality-058/e58-proposal-quality-readiness-report.json",
+                          "exists":  true
+                      },
+                      {
+                          "path":  "data/approval-console-059/approval-console-upgrade-model.json",
+                          "exists":  true
+                      },
+                      {
+                          "path":  "data/approval-console-059/proposal-approval-gate.json",
+                          "exists":  true
+                      },
+                      {
+                          "path":  "dashboard/approval-console/index.html",
+                          "exists":  true
+                      },
+                      {
+                          "path":  "reports/approval-console-059/e59-approval-console-readiness-report.json",
+                          "exists":  true
+                      },
+                      {
+                          "path":  "data/controlled-apply-v2-060/controlled-apply-v2-gate.json",
+                          "exists":  true
+                      },
+                      {
+                          "path":  "data/controlled-apply-v2-060/controlled-apply-v2-rollback-plan.json",
+                          "exists":  true
+                      },
+                      {
+                          "path":  "data/controlled-apply-v2-060/controlled-apply-v2-output.json",
+                          "exists":  true
+                      },
+                      {
+                          "path":  "reports/controlled-apply-v2-060/e60-controlled-apply-v2-readiness-report.json",
+                          "exists":  true
+                      },
+                      {
+                          "path":  "data/daily-value-dashboard-061/daily-value-dashboard-model.json",
+                          "exists":  true
+                      },
+                      {
+                          "path":  "data/daily-value-dashboard-061/daily-value-dashboard-index.json",
+                          "exists":  true
+                      },
+                      {
+                          "path":  "dashboard/daily-value/index.html",
+                          "exists":  true
+                      },
+                      {
+                          "path":  "reports/daily-value-dashboard-061/e61-daily-value-dashboard-readiness-report.json",
+                          "exists":  true
+                      },
+                      {
+                          "path":  "data/kanban-write-sim-062/kanban-write-simulation-model.json",
+                          "exists":  true
+                      },
+                      {
+                          "path":  "data/kanban-write-sim-062/kanban-write-sim-gate.json",
+                          "exists":  true
+                      },
+                      {
+                          "path":  "data/kanban-write-sim-062/kanban-write-sim-result.json",
+                          "exists":  true
+                      },
+                      {
+                          "path":  "reports/kanban-write-sim-062/e62-kanban-write-sim-readiness-report.json",
+                          "exists":  true
+                      }
+                  ],
+    "missing_artifacts":  [
+
+                          ],
+    "security":  {
+                     "apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "worker_executed":  false,
+                     "release_docs_only":  true,
+                     "sensitive_actions_executed":  false
+                 },
+    "next":  "E64_OPERATOR_HARDENING",
+    "created_at":  "2026-06-17T12:26:00"
+}

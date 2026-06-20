@@ -1,0 +1,31 @@
+﻿{
+    "package":  "OPENWEBUI_DOCKER_PREP_001",
+    "created_at":  "2026-06-18T11:21:31",
+    "docker_status":  "DOCKER_ENGINE_NOT_READY",
+    "docker_info":  {
+                        "ok":  false,
+                        "timeout":  false,
+                        "exit_code":  null,
+                        "out":  "\"\"",
+                        "err":  "failed to connect to the docker API at npipe:////./pipe/docker_engine; check if the path is correct and if the daemon is running: open //./pipe/docker_engine: El sistema no puede encontrar el archivo especificado."
+                    },
+    "openwebui":  {
+                      "root":  "C:\\ENGREMIAT_TOOLS\\openwebui",
+                      "compose":  "C:\\ENGREMIAT_TOOLS\\openwebui\\docker-compose.yml",
+                      "data":  "C:\\ENGREMIAT_TOOLS\\openwebui\\data",
+                      "start_script":  "C:\\ENGREMIAT_TOOLS\\openwebui\\start-openwebui.ps1",
+                      "stop_script":  "C:\\ENGREMIAT_TOOLS\\openwebui\\stop-openwebui.ps1",
+                      "url":  "http://localhost:3000",
+                      "container":  "engremiat-open-webui",
+                      "image":  "ghcr.io/open-webui/open-webui:main",
+                      "ollama_base_url":  "http://host.docker.internal:11434"
+                  },
+    "policy":  {
+                   "container_started":  false,
+                   "openwebui_api_called":  false,
+                   "browser_automation":  false,
+                   "data_persistent":  true
+               },
+    "decision":  "WARN_DOCKER_ENGINE_NOT_READY",
+    "next":  "OPEN_DOCKER_DESKTOP_AND_RERUN_PREP"
+}

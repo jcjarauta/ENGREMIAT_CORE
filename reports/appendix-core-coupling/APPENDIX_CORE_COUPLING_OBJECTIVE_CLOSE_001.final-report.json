@@ -1,0 +1,64 @@
+﻿{
+    "package":  "APPENDIX_CORE_COUPLING_REPAIR_AND_CLOSE_001",
+    "created_at":  "2026-06-18T10:50:58",
+    "authorization":  "EXPLICIT_HUMAN_AUTHORIZATION_GRANTED_UNTIL_OBJECTIVE_COMPLETE",
+    "artifacts":  [
+                      {
+                          "key":  "card_bridge",
+                          "exists":  true,
+                          "decision":  "GO_CONSUMABLE_CARD_BRIDGE_READY",
+                          "next":  "BUILD_RECURRENT_CARD_REFRESH_MODEL",
+                          "path":  "C:\\ENGREMIAT_CORE\\reports\\kanban-consumable-card-bridge\\consumable-card-bridge-close-report.json"
+                      },
+                      {
+                          "key":  "recurrent_model",
+                          "exists":  true,
+                          "decision":  "GO_RECURRENT_CARD_REFRESH_MODEL_READY",
+                          "next":  "BUILD_OPENWEBUI_OPENCLAW_TO_DETECTED_INPUT_ADAPTER",
+                          "path":  "C:\\ENGREMIAT_CORE\\reports\\recurrent-card-refresh-model\\ENGREMIAT_RECURRENT_CARD_REFRESH_MODEL_001.close-report.json"
+                      },
+                      {
+                          "key":  "openwebui_openclaw_adapter",
+                          "exists":  true,
+                          "decision":  "GO_OPENWEBUI_OPENCLAW_ADAPTER_REPAIRED_AND_FULL_CYCLE_READY",
+                          "next":  "CLINE_REVIEW_GENERATED_INLINE_BATCH_OR_BUILD_OBSIDIAN_EXPORT_ADAPTER",
+                          "path":  "C:\\ENGREMIAT_CORE\\reports\\openwebui-openclaw-adapter\\OPENWEBUI_OPENCLAW_ADAPTER_REPAIR_001.close-report.json"
+                      },
+                      {
+                          "key":  "obsidian_export_adapter",
+                          "exists":  true,
+                          "decision":  "GO_OBSIDIAN_CANDIDATE_EXPORT_ADAPTER_READY",
+                          "next":  "BUILD_OBSIDIAN_VAULT_WRITE_GATE_OR_REVIEW_CLINE_INLINE_BATCH",
+                          "path":  "C:\\ENGREMIAT_CORE\\reports\\obsidian-export-adapter\\OBSIDIAN_CANDIDATE_EXPORT_ADAPTER_001.close-report.json"
+                      },
+                      {
+                          "key":  "obsidian_vault_gate",
+                          "exists":  true,
+                          "decision":  "GO_OBSIDIAN_VAULT_WRITE_GATE_READY",
+                          "next":  "WAIT_FOR_HUMAN_VAULT_PATH_AND_AUTHORIZATION_OR_CONTINUE_TO_SYSTEM_DASHBOARD",
+                          "path":  "C:\\ENGREMIAT_CORE\\reports\\obsidian-vault-write-gate\\OBSIDIAN_VAULT_WRITE_GATE_001.close-report.json"
+                      },
+                      {
+                          "key":  "system_dashboard",
+                          "exists":  true,
+                          "decision":  "",
+                          "next":  "",
+                          "path":  "C:\\ENGREMIAT_CORE\\docs\\system-dashboard\\ENGREMIAT_APPENDIX_SYSTEM_DASHBOARD.html"
+                      },
+                      {
+                          "key":  "system_kanban",
+                          "exists":  true,
+                          "decision":  "",
+                          "next":  "",
+                          "path":  "C:\\ENGREMIAT_CORE\\docs\\kanban-backlog\\system-view\\ENGREMIAT_SYSTEM_KANBAN.html"
+                      }
+                  ],
+    "missing":  [
+
+                ],
+    "ready":  true,
+    "summary":  "C:\\ENGREMIAT_CORE\\docs\\appendix-core-coupling\\APPENDIX_CORE_COUPLING_OBJECTIVE_CLOSE_FINAL.md",
+    "repaired":  "system_dashboard",
+    "decision":  "GO_OBJECTIVE_APPENDIX_CORE_COUPLING_READY",
+    "next":  "CHOOSE_OBSIDIAN_VAULT_APPLY_OR_OPENWEBUI_OPENCLAW_REAL_READONLY_ADAPTER"
+}

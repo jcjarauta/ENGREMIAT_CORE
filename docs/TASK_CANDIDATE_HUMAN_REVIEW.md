@@ -1,32 +1,27 @@
 ﻿# TASK CANDIDATE HUMAN REVIEW
 
-Objective: ENGREMIAT_CLINE_REAL_PROPOSAL_NO_APPLY_008
+## Objetivo
+ENGREMIAT_REAL_CLINE_KANBAN_OLLAMA_TESTS_011
 
-## Que se prepara
-Una primera tarea Cline real orientada solo a propuesta. Todavia no se crea la tarea real.
+## Fase objetivo
+E01 — Preflight real de MAIN-PC
 
-## Tarjeta origen
-Card ID: 
-KANBAN-007-E06-CLOSE
-Title: 
-Cerrar Kanban Human Control Surface 007
-Status: 
-DONE
-Risk: 
-LOW
-Next action: 
-ENGREMIAT_CLINE_REAL_PROPOSAL_NO_APPLY_008
+## Resumen
+Validar MAIN-PC, repo local, Kanban y Ollama antes de crear la primera prueba real de Cline.
 
-## Que se enviaria a Cline
-Un prompt controlado para pedir una propuesta estructurada, no una ejecucion.
+## Límites
+- proposal-only
+- no apply
+- no git write
+- no remote execution
+- no auto_apply
 
-## Limites
-- proposal_only=True
-- auto_apply=False
-- git_write=False
-- source_write_by_worker=False
-- human_review_required=True
-- cline_task_created=False en esta etapa
+## Fuente
+- dashboard: dashboard/kanban-human-control/index.html
+- report: reports/kanban-real-setup-012/e06-kanban-real-setup-final-report.json
+- board_closed: True
+- board_readiness: 100
+- board_decision: GO_KANBAN_REAL_READY
 
-## Decision humana futura
-E03 preparara un gate. Sin autorizacion explicita no se crea la tarea real.
+## Decisión humana
+DEFER / APPROVE antes de crear la tarea real.

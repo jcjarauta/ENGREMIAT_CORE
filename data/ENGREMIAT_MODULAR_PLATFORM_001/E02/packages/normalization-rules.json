@@ -1,0 +1,27 @@
+{
+    "module_id":  "ENG-MOD-NRM-001",
+    "module_name":  "Plan Normalizer",
+    "stage":  "E02",
+    "block":  "B02.2",
+    "purpose":  "Normalize intake into canonical modular structure",
+    "rules":  [
+                  {
+                      "field":  "objective",
+                      "required":  true
+                  },
+                  {
+                      "field":  "stage",
+                      "required":  true
+                  },
+                  {
+                      "field":  "block",
+                      "required":  true
+                  },
+                  {
+                      "field":  "step",
+                      "required":  true
+                  }
+              ],
+    "dashboard":  "normalized-plan-dashboard/index.html",
+    "next":  "B03"
+}

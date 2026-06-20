@@ -1,0 +1,50 @@
+﻿{
+    "objective":  "ENGREMIAT_MULTI_WORKER_ORCHESTRATION_AND_REAL_VALUE_PIPELINE_066_075",
+    "stage":  "E70",
+    "stage_name":  "Controlled Apply Batch Preview",
+    "purpose":  "Preparar batch apply preview sin aplicar lote real",
+    "model_id":  "E70_BATCH_APPLY_PREVIEW_MODEL",
+    "batch_role":  "preview_only_no_execution",
+    "source_arbitration":  "data/arbitration-069/arbitration-gate.json",
+    "source_proposals":  "data/proposal-merge-068/proposal-samples.jsonl",
+    "allowed_now":  [
+                        "read proposals",
+                        "build batch preview",
+                        "estimate touched files",
+                        "detect rollback needs",
+                        "prepare human decision input"
+                    ],
+    "forbidden_now":  [
+                          "execute batch",
+                          "modify files",
+                          "auto_apply",
+                          "remote_execution",
+                          "git_write",
+                          "external_network",
+                          "kanban_real_write"
+                      ],
+    "required_preview_fields":  [
+                                    "batch_id",
+                                    "selected_proposals",
+                                    "planned_changes",
+                                    "target_files",
+                                    "risk",
+                                    "rollback_required",
+                                    "postcheck_required",
+                                    "human_gate_required"
+                                ],
+    "security":  {
+                     "apply_executed":  false,
+                     "batch_apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "worker_executed":  false,
+                     "batch_preview_only":  true,
+                     "human_gate_required":  true,
+                     "sensitive_actions_executed":  false
+                 },
+    "next":  "E71_VALUE_PIPELINE_DASHBOARD",
+    "created_at":  "2026-06-17T12:39:16"
+}

@@ -1,0 +1,25 @@
+﻿{
+    "objective_id":  "DEFINE_THIRD_REAL_FUNCTION_WITH_TEMPLATE_MVP_180_183",
+    "stage":  "E180",
+    "block":  "B180.1",
+    "step":  "P180.1.1",
+    "name":  "selected-third-function",
+    "candidate_task_id":  "THIRD_REAL_FUNCTION_DUAL_INPUT_001",
+    "candidate_title":  "Validate template reuse with one primary input and one supporting input",
+    "status":  "READY",
+    "selection_reason":  "Adds one controlled layer of complexity by using a main file and a secondary support file while keeping the pattern minimal and local",
+    "template_reference":  "DEFINE_REAL_EXECUTION_TEMPLATE_STANDARD_MVP_172_175",
+    "main_input_name":  "primary-input",
+    "support_input_name":  "secondary-support-input",
+    "constraints":  [
+                        "local_only",
+                        "external_network=false",
+                        "git_write=false",
+                        "kanban_real_write=false",
+                        "cline_real_write=false",
+                        "auto_apply=false",
+                        "destructive_actions=false",
+                        "human_authorization_required=true"
+                    ],
+    "created_at":  "2026-06-17T18:14:58.7833353+02:00"
+}

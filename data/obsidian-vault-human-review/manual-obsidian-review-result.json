@@ -1,0 +1,27 @@
+﻿{
+    "package_id":  "ENGREMIAT_OBSIDIAN_VAULT_HUMAN_REVIEW_001",
+    "stage":  "E02_CAPTURE_MANUAL_OBSIDIAN_REVIEW_RESULT_FROM_SCREENSHOT",
+    "status":  "PASS",
+    "vault":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT",
+    "project_root":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\02_PROYECTOS\\PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia",
+    "opened_in_obsidian":  "si_visual_confirmed_by_screenshot",
+    "navigation_review":  "parcial",
+    "canvas_review":  "parcial_visual_graph_visible",
+    "links_review":  "parcial_pending_warning_repair",
+    "notes":  "Captura visual recibida: Obsidian abre la bóveda y muestra grafo con nodos y relaciones visibles. No se verifica aún navegación individual de todos los wikilinks; quedan warnings previos a reparar.",
+    "decision":  "HUMAN_REVIEW_PARTIAL",
+    "readiness":  90,
+    "safety":  {
+                   "local_only":  true,
+                   "manual_review_only":  true,
+                   "execute_now":  false,
+                   "obsidian_app_automation":  false,
+                   "worker_execution":  false,
+                   "kanban_write":  false,
+                   "clien_write":  false,
+                   "browser_automation":  false,
+                   "git_write":  false,
+                   "external_network":  false
+               },
+    "next":  "REPAIR_OBSIDIAN_PREVIEW_NAVIGATION_WARNINGS"
+}

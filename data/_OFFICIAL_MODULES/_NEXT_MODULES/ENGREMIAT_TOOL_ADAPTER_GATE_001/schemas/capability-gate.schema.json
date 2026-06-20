@@ -1,0 +1,37 @@
+﻿{
+    "schema_id":  "capability-gate.schema.v1",
+    "required":  [
+                     "gate_id",
+                     "capability",
+                     "permission_level",
+                     "risk",
+                     "gate_required",
+                     "allowed_decisions",
+                     "evidence_required",
+                     "expires"
+                 ],
+    "allowed_decisions":  [
+                              "APPROVE",
+                              "REJECT",
+                              "BACKLOG",
+                              "REQUEST_CHANGES",
+                              "EXPIRE"
+                          ],
+    "fields":  [
+                   "gate_id",
+                   "capability",
+                   "tool_id",
+                   "project_id",
+                   "task_id",
+                   "worker_id",
+                   "permission_level",
+                   "risk",
+                   "requested_action",
+                   "gate_required",
+                   "human_authorization",
+                   "evidence_required",
+                   "rollback_required",
+                   "expires",
+                   "status"
+               ]
+}

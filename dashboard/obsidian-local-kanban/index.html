@@ -1,0 +1,230 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ENGREMIAT · Obsidian Local Kanban Operativo</title>
+<style>
+body{font-family:Segoe UI,Arial,sans-serif;margin:0;background:#0f172a;color:#e5e7eb}
+header{padding:18px 22px;background:#111827;border-bottom:1px solid #334155}
+h1{margin:0;font-size:22px}.sub{color:#93c5fd;margin-top:6px}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;padding:12px 18px;background:#162033;border-bottom:1px solid #334155}
+.toolbar input,.toolbar select,.toolbar button{background:#0b1220;color:#e5e7eb;border:1px solid #475569;border-radius:8px;padding:8px}
+.toolbar button{cursor:pointer}.stats{padding:12px 18px;color:#bfdbfe}
+.board{display:grid;grid-template-columns:repeat(4,minmax(230px,1fr));gap:14px;padding:16px}
+.col{background:#1f2937;border:1px solid #374151;border-radius:12px;min-height:330px;padding:12px}
+.col h2{font-size:15px;margin:0 0 12px;color:#bfdbfe}
+.card{background:#0b1220;border:1px solid #475569;border-radius:10px;margin:10px 0;padding:12px;box-shadow:0 2px 8px rgba(0,0,0,.25);cursor:pointer}
+.card:hover{border-color:#93c5fd}.id{font-weight:700;color:#facc15}.title{font-size:15px;margin-top:5px}
+.meta{font-size:12px;color:#cbd5e1;margin-top:8px;line-height:1.45}
+.badge{display:inline-block;padding:2px 7px;border-radius:999px;background:#334155;margin-right:4px}.ok{background:#14532d}.pending{background:#713f12}
+.drawer{position:fixed;right:0;top:0;width:420px;max-width:95vw;height:100vh;background:#020617;border-left:1px solid #475569;box-shadow:-8px 0 30px rgba(0,0,0,.4);padding:18px;display:none;overflow:auto}
+.drawer.open{display:block}.drawer h2{color:#facc15}.path{font-family:Consolas,monospace;font-size:11px;color:#93c5fd;word-break:break-all}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.actions button,.actions a{background:#1d4ed8;color:white;border:0;border-radius:8px;padding:8px 10px;text-decoration:none;cursor:pointer}.actions .secondary{background:#334155}
+.foot{padding:14px 22px;color:#94a3b8;border-top:1px solid #334155}
+@media(max-width:1000px){.board{grid-template-columns:1fr}.drawer{position:static;width:auto;height:auto}}
+</style>
+</head>
+<body>
+<header><h1>ENGREMIAT · Obsidian Local Kanban Operativo</h1><div class="sub">Tablero generado desde objetos Markdown/YAML de Obsidian. Cline queda como worker posterior, no como tablero principal.</div></header>
+<section class="toolbar"><input id="q" placeholder="Buscar id, título, origen..." oninput="render()"><select id="decision" onchange="render()"><option value="">Todas las decisiones</option><option>GO</option><option>PENDING</option><option>ADJUST</option><option>STOP</option></select><select id="reviewed" onchange="render()"><option value="">Review cualquiera</option><option value="true">reviewed=true</option><option value="false">reviewed=false</option></select><select id="priority" onchange="render()"><option value="">Prioridad cualquiera</option><option>HIGH</option><option>MEDIUM</option><option>LOW</option></select><button onclick="location.reload()">Refresh</button><button onclick="copyAllPrompts()">Copiar prompts GO</button><button onclick="sendToWorkerMock()">Enviar visible GO a worker mock</button><button onclick="sendToOllamaWorkerGated()">Enviar visible GO a Ollama real</button></section>
+<div class="stats" id="stats"></div>
+<main class="board" id="board"></main>
+<aside class="drawer" id="drawer"><button class="secondary" onclick="closeDrawer()">Cerrar</button><div id="detail"></div></aside>
+<!-- ENGREMIAT_WORKER_EVIDENCE_BEGIN -->
+<section id="workerEvidencePanel" style="padding:16px 18px;border-top:1px solid #334155;background:#111827">
+<h2 style="color:#facc15;margin:0 0 8px">Worker responses / evidence</h2>
+<div style="color:#93c5fd;margin-bottom:12px">Últimas respuestas generadas por el circuito Kanban local → bridge → dispatcher → worker → evidencia.</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:12px">
+<article class="card"><div class="id">CARD-001 · ollama · PROPOSAL_ONLY</div><div class="meta">Última respuesta: 2026-06-19T08:22:08</div><pre style="white-space:pre-wrap;max-height:180px;overflow:auto;background:#020617;border:1px solid #334155;border-radius:8px;padding:8px;color:#bfdbfe">Thinking...
+Okay, I need to create a work proposal for the card CARD-001 titled &quot;Crear [K
+backlog visible&quot; based on the given requirements. Let&#39;s start by understand[10D[K
+understanding the task. The source need is NEED-001, which probably involve[7D[K
+involves making the backlog visible, maybe for a team or project. The prior[5D[K
+priority is high, so the solution needs to be effective and timely.
+
+First, the summary should clearly state the goal: creating a visible backlo[6D[K
+backlog. The proposal steps need to be actionable. Maybe start with gatheri[7D[K
+gathering requirements, then designing the backlog structure, followed by i[1D[K
+implementation and validation. 
+
+Expected files might include a backlog document, maybe a Gantt chart or a K[1D[K
+Kanban board. Evidence could be screenshots or a report showing the backlog[7D[K
+backlog&#39;s visibility. Risks could be lack of stakeholder input or unclear r[1D[K
+requirements. Human validation is needed, so the next action should be a re[2D[K
+review meeting.
+</pre><div class="actions"><a href="file:///C:/ENGREMIAT_CORE/data/local-kanban-worker-loop-001/responses/JOB-CARD-001-OLLAMA-20260619-082149.worker-response.md" target="_blank">Abrir response</a><a href="file:///C:/ENGREMIAT_CORE/data/local-kanban-worker-loop-001/evidence/JOB-CARD-001-OLLAMA-20260619-082149.evidence.md" target="_blank">Abrir evidence</a><a href="file:///C:/ENGREMIAT_CORE/data/local-kanban-worker-loop-001/jobs/JOB-CARD-001-OLLAMA-20260619-082149.json" target="_blank">Abrir job</a></div></article>
+<article class="card"><div class="id">CARD-001 · ollama · PROPOSAL_ONLY</div><div class="meta">Última respuesta: 2026-06-19T08:19:28</div><pre style="white-space:pre-wrap;max-height:180px;overflow:auto;background:#020617;border:1px solid #334155;border-radius:8px;padding:8px;color:#bfdbfe">Thinking...
+Okay, let&#39;s see. The user wants me to act as a local worker for ENGREMIAT a[1D[K
+and respond in Spanish. They specified not to execute commands, write files[5D[K
+files, use git, or the internet. The task is to create a backlog visible fo[2D[K
+for the card CARD-001, which is in the NEXT column with high priority and a[1D[K
+a decision to GO. The source need is NEED-001, and human review is already [K
+done.
+
+First, I need to make sure I follow the exact format they provided. The res[3D[K
+response must be between WORKER_RESPONSE_BEGIN and WORKER_RESPONSE_END, wit[3D[K
+with the specific fields. The summary should be concise, proposal_steps nee[3D[K
+need to outline the steps for creating a visible backlog, expected_files wo[2D[K
+would be the backlog document, expected_evidence could be a meeting note, r[1D[K
+risks might include lack of collaboration, and the next action would be to [K
+start the backlog creation.
+
+I need to ensure that all the required fields are included and that the lan[3D[K
+language is Spanish. Also, check that no markdown is used and that the stru[4D[K</pre><div class="actions"><a href="file:///C:/ENGREMIAT_CORE/data/local-kanban-worker-loop-001/responses/JOB-CARD-001-OLLAMA-20260619-081912.worker-response.md" target="_blank">Abrir response</a><a href="file:///C:/ENGREMIAT_CORE/data/local-kanban-worker-loop-001/evidence/JOB-CARD-001-OLLAMA-20260619-081912.evidence.md" target="_blank">Abrir evidence</a><a href="file:///C:/ENGREMIAT_CORE/data/local-kanban-worker-loop-001/jobs/JOB-CARD-001-OLLAMA-20260619-081912.json" target="_blank">Abrir job</a></div></article>
+<article class="card"><div class="id">CARD-001 · mock · PROPOSAL_ONLY</div><div class="meta">Última respuesta: 2026-06-19T08:17:45</div><pre style="white-space:pre-wrap;max-height:180px;overflow:auto;background:#020617;border:1px solid #334155;border-radius:8px;padding:8px;color:#bfdbfe">WORKER_RESPONSE_BEGIN
+card_id: 
+CARD-001
+status: PROPOSAL_ONLY
+summary: Mock worker valida transporte automatico para 
+CARD-001
+.
+proposal_steps:
+1. Leer tarjeta desde Obsidian Markdown/YAML.
+2. Crear job local.
+3. Capturar response.
+4. Generar evidencia.
+expected_files:
+- data/local-kanban-worker-loop-001/jobs/*.json
+- data/local-kanban-worker-loop-001/responses/*.worker-response.md
+- data/local-kanban-worker-loop-001/evidence/*.evidence.md
+expected_evidence:
+- job creado</pre><div class="actions"><a href="file:///C:/ENGREMIAT_CORE/data/local-kanban-worker-loop-001/responses/JOB-CARD-001-MOCK-20260619-081745.worker-response.md" target="_blank">Abrir response</a><a href="file:///C:/ENGREMIAT_CORE/data/local-kanban-worker-loop-001/evidence/JOB-CARD-001-MOCK-20260619-081745.evidence.md" target="_blank">Abrir evidence</a><a href="file:///C:/ENGREMIAT_CORE/data/local-kanban-worker-loop-001/jobs/JOB-CARD-001-MOCK-20260619-081745.json" target="_blank">Abrir job</a></div></article>
+<article class="card"><div class="id">CARD-001 · ollama · PROPOSAL_ONLY</div><div class="meta">Última respuesta: 2026-06-19T08:15:20</div><pre style="white-space:pre-wrap;max-height:180px;overflow:auto;background:#020617;border:1px solid #334155;border-radius:8px;padding:8px;color:#bfdbfe">Thinking...
+Okay, I need to create a work proposal for CARD-001 titled &quot;Crear backlog v[1D[K
+visible&quot; based on the provided structure. Let me start by understanding the[3D[K
+the requirements.
+
+First, the card is in the NEXT column with high priority and a decision to [K
+GO, so the proposal must be actionable and detailed. The source need is NEE[3D[K
+NEED-001, which I assume relates to backlog visibility, but since it&#39;s not [K
+specified, I&#39;ll focus on the given info.
+
+The summary should be concise. The proposal steps need to outline the proce[5D[K
+process. Expected files might include a backlog document, maybe a Gantt cha[3D[K
+chart or Kanban board. Evidence could be a completed backlog, meeting minut[5D[K
+minutes, and user feedback. Risks might involve lack of stakeholder input o[1D[K
+or unclear requirements. Human validation is needed, so the next action sho[3D[K
+should be a review meeting.
+
+I need to ensure all required fields are present and formatted correctly be[2D[K</pre><div class="actions"><a href="file:///C:/ENGREMIAT_CORE/data/local-kanban-worker-loop-001/responses/JOB-CARD-001-OLLAMA-20260619-081501.worker-response.md" target="_blank">Abrir response</a><a href="file:///C:/ENGREMIAT_CORE/data/local-kanban-worker-loop-001/evidence/JOB-CARD-001-OLLAMA-20260619-081501.evidence.md" target="_blank">Abrir evidence</a><a href="file:///C:/ENGREMIAT_CORE/data/local-kanban-worker-loop-001/jobs/JOB-CARD-001-OLLAMA-20260619-081501.json" target="_blank">Abrir job</a></div></article>
+<article class="card"><div class="id">CARD-001 · unknown · PROPOSAL_ONLY</div><div class="meta">Última respuesta: 2026-06-19T08:11:03</div><pre style="white-space:pre-wrap;max-height:180px;overflow:auto;background:#020617;border:1px solid #334155;border-radius:8px;padding:8px;color:#bfdbfe">WORKER_RESPONSE_BEGIN
+card_id: CARD-001
+status: PROPOSAL_ONLY
+summary: Mock worker valida que el transporte automatico funciona para CARD-001 sin ejecucion real.
+proposal_steps:
+1. Leer tarjeta desde Obsidian Markdown/YAML.
+2. Generar propuesta worker desde el job local.
+3. Capturar respuesta en responses.
+4. Convertir respuesta en evidencia.
+expected_files:
+- data/local-kanban-worker-loop-001/jobs/*.json
+- data/local-kanban-worker-loop-001/responses/*.worker-response.md
+- data/local-kanban-worker-loop-001/evidence/*.evidence.md
+expected_evidence:
+- job creado
+- response capturada
+- evidencia generada
+risks:</pre><div class="actions"><a href="file:///C:/ENGREMIAT_CORE/data/local-kanban-worker-loop-001/responses/JOB-CARD-001-20260619-081103.worker-response.md" target="_blank">Abrir response</a><a href="file:///C:/ENGREMIAT_CORE/data/local-kanban-worker-loop-001/evidence/JOB-CARD-001-20260619-081103.evidence.md" target="_blank">Abrir evidence</a><a href="file:///C:/ENGREMIAT_CORE/data/local-kanban-worker-loop-001/jobs/JOB-CARD-001-20260619-081103.json" target="_blank">Abrir job</a></div></article>
+<article class="card"><div class="id">CARD-003 · unknown · PROPOSAL_ONLY</div><div class="meta">Última respuesta: 2026-06-19T08:09:34</div><pre style="white-space:pre-wrap;max-height:180px;overflow:auto;background:#020617;border:1px solid #334155;border-radius:8px;padding:8px;color:#bfdbfe">WORKER_RESPONSE_BEGIN
+card_id: CARD-003
+status: PROPOSAL_ONLY
+summary: Mock worker valida que el transporte automatico funciona para CARD-003 sin ejecucion real.
+proposal_steps:
+1. Leer tarjeta desde Obsidian Markdown/YAML.
+2. Generar propuesta worker desde el job local.
+3. Capturar respuesta en responses.
+4. Convertir respuesta en evidencia.
+expected_files:
+- data/local-kanban-worker-loop-001/jobs/*.json
+- data/local-kanban-worker-loop-001/responses/*.worker-response.md
+- data/local-kanban-worker-loop-001/evidence/*.evidence.md
+expected_evidence:
+- job creado
+- response capturada
+- evidencia generada
+risks:</pre><div class="actions"><a href="file:///C:/ENGREMIAT_CORE/data/local-kanban-worker-loop-001/responses/JOB-CARD-003-20260619-080934.worker-response.md" target="_blank">Abrir response</a><a href="file:///C:/ENGREMIAT_CORE/data/local-kanban-worker-loop-001/evidence/JOB-CARD-003-20260619-080934.evidence.md" target="_blank">Abrir evidence</a><a href="file:///C:/ENGREMIAT_CORE/data/local-kanban-worker-loop-001/jobs/JOB-CARD-003-20260619-080934.json" target="_blank">Abrir job</a></div></article>
+</div>
+</section>
+<!-- ENGREMIAT_WORKER_EVIDENCE_END --><div class="foot">Operativo local: filtra, revisa, abre origen Markdown y copia prompts. Para escritura real en Obsidian se mantiene edición humana en Markdown/YAML.</div>
+<script>
+const CARDS = [{"id":"CARD-001","title":"Crear backlog visible","source_need":"NEED-001","status":"REVIEW","priority":"HIGH","kanban_decision":"GO","human_reviewed":"true","recommended_column":"REVIEW","lifecycle":"REVIEW_OR_DONE","last_cycle_id":"CYCLE-CARD-001-20260619-083550","last_transition_id":"CYCLE-TRANSITION-CARD-001-20260619-085002","path":"C:\\ENGREMIAT_CORE\\obsidian\\ENGREMIAT_OBSIDIAN_KANBAN_LAB\\12_MARKDOWN_KANBAN_TEST\\cards\\CARD-001.md","prompt":"TAREA: CARD-001 · Crear backlog visible\nORIGEN: NEED-001\nCOLUMNA: REVIEW\nREGLAS: no ejecutar comandos sin autorización; devolver propuesta y evidencia esperada."},{"id":"CARD-002","title":"Crear regla de prioridad simple","source_need":"NEED-002","status":"BACKLOG","priority":"MEDIUM","kanban_decision":"PENDING","human_reviewed":"false","recommended_column":"BACKLOG","lifecycle":"CREATED","last_cycle_id":"","last_transition_id":"","path":"C:\\ENGREMIAT_CORE\\obsidian\\ENGREMIAT_OBSIDIAN_KANBAN_LAB\\12_MARKDOWN_KANBAN_TEST\\cards\\CARD-002.md","prompt":"TAREA: CARD-002 · Crear regla de prioridad simple\nORIGEN: NEED-002\nCOLUMNA: BACKLOG\nREGLAS: no ejecutar comandos sin autorización; devolver propuesta y evidencia esperada."},{"id":"CARD-003","title":"Crear evidencia de ejecución","source_need":"NEED-003","status":"DOING","priority":"MEDIUM","kanban_decision":"GO","human_reviewed":"true","recommended_column":"DOING","lifecycle":"READY","last_cycle_id":"","last_transition_id":"","path":"C:\\ENGREMIAT_CORE\\obsidian\\ENGREMIAT_OBSIDIAN_KANBAN_LAB\\12_MARKDOWN_KANBAN_TEST\\cards\\CARD-003.md","prompt":"TAREA: CARD-003 · Crear evidencia de ejecución\nORIGEN: NEED-003\nCOLUMNA: DOING\nREGLAS: no ejecutar comandos sin autorización; devolver propuesta y evidencia esperada."},{"id":"CARD-004","title":"Nueva tarea real desde Obsidian","source_need":"NEED-HUMAN-REAL-001","status":"REVIEW","priority":"HIGH","kanban_decision":"GO","human_reviewed":"true","recommended_column":"REVIEW","lifecycle":"REVIEW_OR_DONE","last_cycle_id":"REAL-LIFECYCLE-CYCLE-CARD-004-20260619-091515","last_transition_id":"LIFECYCLE-TRANSITION-CARD-004-20260619-091855","path":"C:\\ENGREMIAT_CORE\\obsidian\\ENGREMIAT_OBSIDIAN_KANBAN_LAB\\12_MARKDOWN_KANBAN_TEST\\cards\\CARD-004.md","prompt":"TAREA: CARD-004 · Nueva tarea real desde Obsidian\nORIGEN: NEED-HUMAN-REAL-001\nCOLUMNA: REVIEW\nREGLAS: no ejecutar comandos sin autorización; devolver propuesta y evidencia esperada."}]; const COLS = ['BACKLOG','NEXT','DOING','REVIEW','DONE','BLOCKED'];
+function esc(s){return String(s ?? '').replace(/[&<>"']/g,function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m];});}
+function fileUrl(p){return 'file:///' + String(p || '').replaceAll('\\','/').replaceAll(' ','%20');}
+function filtered(){
+  var q=document.getElementById('q').value.toLowerCase();
+  var d=document.getElementById('decision').value;
+  var r=document.getElementById('reviewed').value;
+  var p=document.getElementById('priority').value;
+  return CARDS.filter(function(c){
+    return (!q || JSON.stringify(c).toLowerCase().indexOf(q)>=0) && (!d || c.kanban_decision===d) && (!r || c.human_reviewed===r) && (!p || c.priority===p);
+  });
+}
+function render(){
+  var fs=filtered();
+  document.getElementById('stats').textContent='Cards visibles: '+fs.length+' / '+CARDS.length+' · GO: '+CARDS.filter(function(c){return c.kanban_decision==='GO';}).length+' · reviewed: '+CARDS.filter(function(c){return c.human_reviewed==='true';}).length;
+  var html='';
+  COLS.forEach(function(col){
+    var items=fs.filter(function(c){return (c.recommended_column || c.status)===col;});
+    html+='<section class="col"><h2>'+esc(col)+' · '+items.length+'</h2>';
+    items.forEach(function(c){
+      html+='<article class="card" onclick="openDetail(\''+esc(c.id)+'\')"><div class="id">'+esc(c.id)+'</div><div class="title">'+esc(c.title)+'</div><div class="meta"><span class="badge">'+esc(c.priority)+'</span><span class="badge '+(c.human_reviewed==='true'?'ok':'pending')+'">reviewed='+esc(c.human_reviewed)+'</span><span class="badge">decision='+esc(c.kanban_decision)+'</span><br>Origen: '+esc(c.source_need)+'</div></article>';
+    });
+    html+='</section>';
+  });
+  document.getElementById('board').innerHTML=html;
+}
+function openDetail(id){
+  var c=CARDS.find(function(x){return x.id===id;});
+  if(!c){return;}
+  document.getElementById('detail').innerHTML='<h2>'+esc(c.id)+' · '+esc(c.title)+'</h2><p><b>Columna:</b> '+esc(c.recommended_column || c.status)+'</p><p><b>Origen:</b> '+esc(c.source_need)+'</p><p><b>Prioridad:</b> '+esc(c.priority)+'</p><p><b>Decisión:</b> '+esc(c.kanban_decision)+'</p><p><b>Human reviewed:</b> '+esc(c.human_reviewed)+'</p><p class="path">'+esc(c.path)+'</p><div class="actions"><a href="'+fileUrl(c.path)+'" target="_blank">Abrir Markdown</a><button onclick="copyPrompt(\''+esc(c.id)+'\')">Copiar prompt worker</button></div><h3>Prompt worker</h3><pre>'+esc(c.prompt)+'</pre>';
+  document.getElementById('drawer').classList.add('open');
+}
+function copyPrompt(id){var c=CARDS.find(function(x){return x.id===id;}); if(c){navigator.clipboard.writeText(c.prompt);}}
+function closeDrawer(){document.getElementById('drawer').classList.remove('open');}
+function copyAllPrompts(){var t=CARDS.filter(function(c){return c.kanban_decision==='GO' && c.human_reviewed==='true';}).map(function(c){return c.prompt;}).join('\n\n---\n\n');navigator.clipboard.writeText(t);}
+render();
+</script>
+<script>
+async function sendToWorkerMock(){
+  const visible = filtered().filter(c => c.kanban_decision === 'GO' && c.human_reviewed === 'true');
+  const card = visible[0] || CARDS.find(c => c.kanban_decision === 'GO' && c.human_reviewed === 'true') || CARDS[0];
+  if(!card){ alert('No hay tarjeta disponible'); return; }
+  try{
+    const r = await fetch('http://127.0.0.1:8766/run?card_id=' + encodeURIComponent(card.id));
+    const j = await r.json();
+    alert(j.ok ? ('Worker mock OK para ' + card.id) : ('Worker mock ERR: ' + JSON.stringify(j)));
+    console.log('ENGREMIAT worker mock result', j);
+  }catch(e){
+    alert('Bridge no disponible. Ejecuta Start-LocalKanbanWorkerBridge.ps1 y reintenta. Detalle: ' + e.message);
+  }
+}
+</script><script>
+async function sendToOllamaWorkerGated(){
+  const visible = filtered().filter(c => c.kanban_decision === 'GO' && c.human_reviewed === 'true');
+  const card = visible[0] || CARDS.find(c => c.kanban_decision === 'GO' && c.human_reviewed === 'true') || CARDS[0];
+  if(!card){ alert('No hay tarjeta disponible'); return; }
+  const auth = prompt('Esto ejecuta IA local real Ollama en modo PROPOSAL_ONLY. Escribe la frase de autorización:');
+  if(auth !== 'AUTORIZO_OLLAMA_WORKER_TRANSPORT_REAL_CARD_001_PROPOSAL_ONLY'){ alert('Autorización incorrecta o cancelada. No se ejecuta Ollama.'); return; }
+  try{
+    const r = await fetch('http://127.0.0.1:8766/run?transport=ollama&card_id=' + encodeURIComponent(card.id) + '&auth=' + encodeURIComponent(auth));
+    const j = await r.json();
+    alert(j.ok ? ('Ollama worker OK para ' + card.id) : ('Ollama worker ERR: ' + JSON.stringify(j)));
+    console.log('ENGREMIAT ollama worker result', j);
+  }catch(e){
+    alert('Bridge no disponible o error local. Detalle: ' + e.message);
+  }
+}
+</script></body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

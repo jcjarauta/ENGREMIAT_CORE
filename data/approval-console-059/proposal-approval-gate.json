@@ -1,0 +1,25 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_REAL_WORKER_DAILY_VALUE_LOOP_056_065",
+    "stage":  "E59",
+    "gate_id":  "E59_PROPOSAL_APPROVAL_GATE_001",
+    "status":  "OPEN_DEFAULT_DEFER",
+    "default_decision":  "DEFER_FOR_HUMAN_REVIEW",
+    "current_decision":  "DEFER_FOR_HUMAN_REVIEW",
+    "approval_authorizes_apply":  false,
+    "approval_authorizes_prepare_e60_only":  true,
+    "allowed_decisions":  [
+                              "APPROVE_FOR_CONTROLLED_APPLY_REVIEW",
+                              "REPAIR_PROPOSAL",
+                              "DEFER_FOR_HUMAN_REVIEW",
+                              "REJECT_PROPOSAL"
+                          ],
+    "reason":  "Default seguro hasta decision humana contextual",
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "proposal_executed":  false,
+    "created_at":  "2026-06-17T12:21:45"
+}

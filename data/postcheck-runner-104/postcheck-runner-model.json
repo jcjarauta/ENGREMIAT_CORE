@@ -1,0 +1,18 @@
+﻿{
+    "objective":  "ENGREMIAT_SAFE_LOCAL_APPLY_AND_KANBAN_AUTHORIZATION_102_111",
+    "stage":  "E104",
+    "name":  "Postcheck Runner",
+    "version":  "1.04.0-local",
+    "purpose":  "Crear postcheck local obligatorio posterior al apply para verificar target, receipt y rollback.",
+    "postcheck_required_after_apply":  true,
+    "target_path":  "data/safe-apply-runtime-106/controlled-local-apply-target.json",
+    "postcheck_executes_safe_readonly":  true,
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "kanban_real_write":  false,
+    "created_utc":  "2026-06-17T11:36:06.2979069Z"
+}

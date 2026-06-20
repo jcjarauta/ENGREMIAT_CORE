@@ -1,0 +1,29 @@
+﻿{
+    "package_id":  "ENGREMIAT_REAL_HUMAN_INTAKE_UI_001",
+    "stage":  "E01_CREATE_LOCAL_REAL_INTAKE_UI",
+    "contract_id":  "real-human-intake-ui.v1",
+    "purpose":  "Crear una interfaz local real para que el humano introduzca un proyecto y exporte un intake estructurado revisable",
+    "mode":  "LOCAL_STATIC_HTML_MANUAL_EXPORT",
+    "fields":  [
+                   "project_name",
+                   "human_need",
+                   "desired_result",
+                   "constraints",
+                   "available_resources",
+                   "priority",
+                   "success_criteria",
+                   "authorization_level",
+                   "notes"
+               ],
+    "safety":  {
+                   "local_only":  true,
+                   "browser_static_html":  true,
+                   "backend":  false,
+                   "network":  false,
+                   "worker_execution":  false,
+                   "git_write":  false,
+                   "auto_apply":  false,
+                   "manual_export_only":  true
+               },
+    "next":  "E02_GENERATE_REAL_INTAKE_SAMPLE_AND_EXPORT_VALIDATOR"
+}

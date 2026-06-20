@@ -1,0 +1,59 @@
+﻿{
+    "$schema":  "https://json-schema.org/draft/2020-12/schema",
+    "title":  "ENGREMIAT Controlled Action Template",
+    "type":  "object",
+    "required":  [
+                     "objective",
+                     "stage",
+                     "gate",
+                     "apply_executed",
+                     "auto_apply",
+                     "remote_execution",
+                     "git_write",
+                     "human_confirmation",
+                     "execution_allowed",
+                     "artifacts"
+                 ],
+    "properties":  {
+                       "objective":  {
+                                         "type":  "string"
+                                     },
+                       "stage":  {
+                                     "type":  "string"
+                                 },
+                       "gate":  {
+                                    "type":  "string",
+                                    "enum":  [
+                                                 "DEFER",
+                                                 "APPROVE",
+                                                 "REJECT"
+                                             ]
+                                },
+                       "apply_executed":  {
+                                              "type":  "boolean"
+                                          },
+                       "auto_apply":  {
+                                          "type":  "boolean",
+                                          "const":  false
+                                      },
+                       "remote_execution":  {
+                                                "type":  "boolean",
+                                                "const":  false
+                                            },
+                       "git_write":  {
+                                         "type":  "boolean"
+                                     },
+                       "human_confirmation":  {
+                                                  "type":  "boolean"
+                                              },
+                       "execution_allowed":  {
+                                                 "type":  "boolean"
+                                             },
+                       "artifacts":  {
+                                         "type":  "array",
+                                         "items":  {
+                                                       "type":  "string"
+                                                   }
+                                     }
+                   }
+}

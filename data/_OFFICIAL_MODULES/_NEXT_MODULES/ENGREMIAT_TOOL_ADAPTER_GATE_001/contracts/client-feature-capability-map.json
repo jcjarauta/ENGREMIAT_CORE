@@ -1,0 +1,48 @@
+﻿{
+    "map_id":  "client-feature-capability-map.v1",
+    "features":  [
+                     {
+                         "feature":  "PROJECT_MANAGEMENT",
+                         "capabilities":  [
+                                              "READ",
+                                              "PLAN",
+                                              "CREATE_PROJECT",
+                                              "CREATE_TASK",
+                                              "CLOSE_TASK"
+                                          ]
+                     },
+                     {
+                         "feature":  "LOCAL_AI_ASSISTANCE",
+                         "capabilities":  [
+                                              "READ",
+                                              "INFER",
+                                              "PLAN",
+                                              "CLASSIFY"
+                                          ]
+                     },
+                     {
+                         "feature":  "RESOURCE_LIBRARY",
+                         "capabilities":  [
+                                              "CREATE_RESOURCE",
+                                              "OFFICIALIZE_RESOURCE",
+                                              "PUBLISH_RESOURCE"
+                                          ]
+                     },
+                     {
+                         "feature":  "DOCUMENT_WORKFLOW",
+                         "capabilities":  [
+                                              "READ",
+                                              "WRITE",
+                                              "CREATE_RESOURCE"
+                                          ]
+                     },
+                     {
+                         "feature":  "AGENT_EXECUTION",
+                         "capabilities":  [
+                                              "AGENT_EXECUTE",
+                                              "SCRIPT_RUN",
+                                              "EXECUTE"
+                                          ]
+                     }
+                 ]
+}

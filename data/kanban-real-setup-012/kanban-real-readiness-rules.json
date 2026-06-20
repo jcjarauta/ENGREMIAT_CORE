@@ -1,0 +1,45 @@
+﻿{
+    "objective":  "ENGREMIAT_KANBAN_REAL_SETUP_012_REPAIR_013",
+    "stage":  "E03",
+    "rules_id":  "KANBAN-REAL-READINESS-RULES-012-REPAIR-013",
+    "decisions":  {
+                      "GO_PREP":  "Kanban real listo para continuar o cerrar limpio.",
+                      "NEED_LINKING":  "Falta enlazar algun artefacto de continuidad.",
+                      "NO_GO_REPAIR":  "Faltan artefactos, hay conflicto o falta seguridad."
+                  },
+    "conditions":  {
+                       "go_prep":  [
+                                       "kanban-board.json presente",
+                                       "dashboard HTML presente",
+                                       "launcher presente",
+                                       "guia presente",
+                                       "checklist presente",
+                                       "launcher preview seguro",
+                                       "browser_opened=false",
+                                       "un solo escritor activo",
+                                       "sin apply",
+                                       "sin git write",
+                                       "sin remote execution"
+                                   ],
+                       "need_linking":  [
+                                            "dashboard o launcher incompletos",
+                                            "handoff pendiente",
+                                            "old-pc o MAIN-PC no sincronizados"
+                                        ],
+                       "no_go_repair":  [
+                                            "faltan reportes clave",
+                                            "browser_opened=true",
+                                            "git_write=true",
+                                            "remote_execution=true",
+                                            "shared_repo_edit=true"
+                                        ]
+                   },
+    "safety":  {
+                   "browser_opened":  false,
+                   "remote_execution":  false,
+                   "git_write":  false,
+                   "auto_apply":  false,
+                   "shared_repo_edit":  false,
+                   "secret_values_read":  false
+               }
+}

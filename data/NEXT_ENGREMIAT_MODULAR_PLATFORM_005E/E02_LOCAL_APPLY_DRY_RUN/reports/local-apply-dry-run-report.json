@@ -1,0 +1,17 @@
+{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_005E",
+    "stage":  "E02_LOCAL_APPLY_DRY_RUN",
+    "status":  "PASS",
+    "checks":  {
+                   "previous_e01_pass":  true,
+                   "dry_run_contract_ok":  true,
+                   "snapshot_plan_ok":  true,
+                   "dry_run_steps_ok":  true,
+                   "rollback_still_required":  true,
+                   "real_apply_executed":  false,
+                   "no_core_changes":  true,
+                   "no_external_network":  true,
+                   "no_git_write":  true
+               },
+    "next":  "E03_CONTROLLED_APPLY_GATE"
+}

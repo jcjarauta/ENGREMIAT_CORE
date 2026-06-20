@@ -1,0 +1,40 @@
+﻿{
+    "module_id":  "ENGREMIAT_RESOURCE_LIBRARY_STANDARD_001",
+    "name":  "Resource Library Standard",
+    "status":  "CANDIDATE",
+    "kind":  "STANDARD_LIBRARY",
+    "location":  "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_RESOURCE_LIBRARY_STANDARD_001",
+    "purpose":  "Definir la biblioteca de recursos reutilizables de ENGREMIAT para almacenar, validar, versionar, buscar y componer piezas reutilizables como modulos, plantillas, documentos, business plans, subvenciones, workflows, datasets y manuales.",
+    "depends_on":  [
+                       "ENGREMIAT_INTERNAL_WORKFLOW_STANDARD_001",
+                       "ENGREMIAT_TOOL_ADAPTER_GATE_001"
+                   ],
+    "scope":  [
+                  "RESOURCE",
+                  "MANIFEST",
+                  "VERSION",
+                  "COMPATIBILITY",
+                  "COMPOSITION",
+                  "EVIDENCE",
+                  "QUALITY",
+                  "REUSE",
+                  "OFFICIALIZATION_GATE"
+              ],
+    "safety":  {
+                   "local_only":  true,
+                   "core_changes":  false,
+                   "real_tool_integration":  false,
+                   "git_write":  false,
+                   "network":  false,
+                   "ollama_inference":  false,
+                   "resource_publication":  false,
+                   "officialization":  false
+               },
+    "stages_created":  [
+                           "E01_IDENTIDAD_Y_ALCANCE",
+                           "E02_MODELO_DE_RECURSO",
+                           "E03_COMPATIBILIDAD_Y_COMPOSICION",
+                           "E04_EVIDENCIAS_Y_CALIDAD"
+                       ],
+    "next":  "E05_INDEX_AND_SEARCH"
+}

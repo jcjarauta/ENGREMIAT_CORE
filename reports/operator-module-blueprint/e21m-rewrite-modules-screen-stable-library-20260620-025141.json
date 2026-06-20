@@ -1,0 +1,16 @@
+﻿{
+    "package":  "ENGREMIAT_MODULE_ADD_FLOW",
+    "stage":  "E21M_REWRITE_MODULES_SCREEN_STABLE_LIBRARY",
+    "status":  "PASS",
+    "screen":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-project-modules-screen.ps1",
+    "fix":  "full_rewrite_no_regex_patch",
+    "library_actions":  [
+                            "n create",
+                            "p copy_from_project",
+                            "s scan_external",
+                            "i import",
+                            "h archive",
+                            "x delete"
+                        ],
+    "next":  "probar_l_biblioteca_y_n_p_s"
+}

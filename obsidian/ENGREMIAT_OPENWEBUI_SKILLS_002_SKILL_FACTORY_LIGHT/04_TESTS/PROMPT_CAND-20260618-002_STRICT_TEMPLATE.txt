@@ -1,0 +1,27 @@
+﻿Rellena la plantilla siguiente.
+
+REGLAS ESTRICTAS:
+- No expliques el proceso.
+- No devuelvas JSON.
+- No escribas introduccion ni cierre.
+- No oficialices la skill.
+- No uses PASS.
+- Mantén test_status: PENDING.
+- Mantén decision: CANDIDATE.
+- Devuelve SOLO la plantilla rellenada.
+
+CAPTURA A CONVERTIR:
+La respuesta de OpenWebUI sobre el estado ENGREMIAT fue útil porque resumió estado actual, último bloque, siguiente paso y riesgos. Queremos convertir este patrón en una candidata reutilizable para próximas capturas.
+
+PLANTILLA OBLIGATORIA:
+candidate_id: CAND-20260618-002
+proposed_skill_id: SKILL_CAPTURE_TO_CANDIDATE
+name:
+source: openwebui_manual_test
+human_problem:
+trigger_phrase:
+expected_output:
+source_files:
+test_status: PENDING
+decision: CANDIDATE
+next:

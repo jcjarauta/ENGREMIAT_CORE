@@ -1,0 +1,24 @@
+﻿{
+    "objective_id":  "DEFINE_REAL_EXECUTION_TEMPLATE_STANDARD_MVP_172_175",
+    "stage":  "E173",
+    "block":  "B173.1",
+    "step":  "P173.1.2",
+    "name":  "template-request",
+    "purpose":  "Minimum request ready for execution",
+    "fields":  [
+                   "objective_id",
+                   "stage",
+                   "candidate_task_id",
+                   "prompt_path",
+                   "execution_gate",
+                   "result_path",
+                   "receipt_path",
+                   "postcheck_path"
+               ],
+    "rules":  [
+                  "single task only",
+                  "single prompt only",
+                  "single real call only"
+              ],
+    "created_at":  "2026-06-17T18:00:54.4181172+02:00"
+}

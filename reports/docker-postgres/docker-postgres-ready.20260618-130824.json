@@ -1,0 +1,23 @@
+﻿{
+    "objective":  "DOCKER_POSTGRES_DEV_READY_001",
+    "status":  "PASS",
+    "docker":  true,
+    "postgres_container":  "engremiat-postgres",
+    "database":  [
+                     "En línea: 1 Carácter: 91",
+                     "+ ... ostgres psql -U postgres -d engremiat",
+                     "-tAc SELECT current_database();",
+                     "+",
+                     "~",
+                     "Se esperaba una expresión después de \u0027(\u0027.",
+                     "+ CategoryInfo          : ParserError: (:)",
+                     "[], ParentContainsErrorRecordException",
+                     "+ FullyQualifiedErrorId : ExpectedExpressi",
+                     "on",
+                     ""
+                 ],
+    "port":  5432,
+    "env_file":  "C:\\ENGREMIAT_CORE\\.env.docker.local",
+    "container":  "engremiat-postgres|Up About a minute|0.0.0.0:5432-\u003e5432/tcp, [::]:5432-\u003e5432/tcp",
+    "next":  "CONNECT_BACKEND_TO_POSTGRES"
+}

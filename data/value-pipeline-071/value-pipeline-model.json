@@ -1,0 +1,43 @@
+﻿{
+    "objective":  "ENGREMIAT_MULTI_WORKER_ORCHESTRATION_AND_REAL_VALUE_PIPELINE_066_075",
+    "stage":  "E71",
+    "stage_name":  "Value Pipeline Dashboard",
+    "purpose":  "Crear dashboard de pipeline multi-worker y valor real",
+    "model_id":  "E71_VALUE_PIPELINE_MODEL",
+    "pipeline_role":  "human_visible_value_pipeline_not_executor",
+    "dashboard_path":  "dashboard/value-pipeline/index.html",
+    "pipeline_steps":  [
+                           "roles",
+                           "queue",
+                           "proposal_merge",
+                           "conflict_check",
+                           "human_arbitration",
+                           "batch_preview",
+                           "next_lab"
+                       ],
+    "rules":  [
+                  "Dashboard no ejecuta",
+                  "Pipeline no aplica cambios",
+                  "Batch preview no aplica",
+                  "Kanban real write bloqueado",
+                  "No auto_apply",
+                  "No remote_execution",
+                  "No git_write",
+                  "Humano decide"
+              ],
+    "security":  {
+                     "apply_executed":  false,
+                     "batch_apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "worker_executed":  false,
+                     "dashboard_view_only":  true,
+                     "pipeline_executes":  false,
+                     "sensitive_actions_executed":  false,
+                     "human_decision_required":  true
+                 },
+    "next":  "E72_KANBAN_REAL_WRITE_AUTHORIZATION_LAB",
+    "created_at":  "2026-06-17T12:40:25"
+}

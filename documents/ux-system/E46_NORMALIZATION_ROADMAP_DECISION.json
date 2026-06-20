@@ -1,0 +1,27 @@
+﻿{
+    "decision_id":  "ENGREMIAT_UX_NORMALIZATION_DECISION_E46",
+    "created_at":  "2026-06-20T10:19:59",
+    "status":  "PASS",
+    "decision":  "CONTINUE_SYSTEM_NORMALIZATION_ROADMAP_BEFORE_REPLACING_LEGACY_ROOTS",
+    "reason":  [
+                   "Centro Documental normalizado funciona",
+                   "Data Intake normalizado funciona",
+                   "TXT/MD real validado",
+                   "conexion DocCenter-\u003eDataIntake normalizada validada",
+                   "aun conviene preservar legacy hasta normalizar mas pantallas"
+               ],
+    "rules":  [
+                  "legacy se conserva como respaldo",
+                  "normalizados se usan como referencia estable",
+                  "no sustituir raiz global hasta tener al menos 2 o 3 centros normalizados",
+                  "cada nueva pantalla debe tener header limpio, paleta UX, numeros locales y navegacion b Enter ?",
+                  "cada migracion se cierra con prueba humana"
+              ],
+    "reference_flow":  [
+                           "DOCUMENTACION [3] Convocatorias y fichas",
+                           "CONVOCATORIAS [4] Data Intake",
+                           "DATA_INTAKE [7] Estado",
+                           "DATA_INTAKE [3] TXT/MD"
+                       ],
+    "next":  "E47_SELECT_NEXT_ROADMAP_SCREEN_AFTER_DATA_INTAKE"
+}

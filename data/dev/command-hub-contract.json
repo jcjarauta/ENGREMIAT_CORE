@@ -1,0 +1,26 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_FINAL_026_035",
+    "stage":  "E33",
+    "created_at":  "2026-06-17T11:14:58.0671975+02:00",
+    "command_hub":  "eng.ps1",
+    "purpose":  "Unificar comandos antifriccion en un solo punto de entrada.",
+    "commands":  [
+                     "status",
+                     "next",
+                     "readiness",
+                     "gates",
+                     "artifacts",
+                     "context",
+                     "errors",
+                     "docs",
+                     "dashboard",
+                     "mvp-open"
+                 ],
+    "compact_output":  "OK tool=... objective=... stage=... readiness=... next=...",
+    "safety":  [
+                   "no remote execution",
+                   "no git write",
+                   "no auto apply",
+                   "fail closed"
+               ]
+}

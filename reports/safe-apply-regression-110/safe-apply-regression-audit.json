@@ -1,0 +1,188 @@
+﻿{
+    "objective":  "ENGREMIAT_SAFE_LOCAL_APPLY_AND_KANBAN_AUTHORIZATION_102_111",
+    "stage":  "E110",
+    "audit":  "SAFE_APPLY_AND_KANBAN_AUTHORIZATION_REGRESSION_E102_E109",
+    "created_utc":  "2026-06-17T11:42:10.9857225Z",
+    "critical_artifacts_total":  28,
+    "missing_artifacts_count":  0,
+    "invalid_json_count":  0,
+    "checks":  [
+                   {
+                       "path":  "reports\\apply-scope-102\\e102-apply-scope-readiness-report.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "reports\\rollback-pack-103\\e103-rollback-pack-readiness-report.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "reports\\postcheck-runner-104\\e104-postcheck-runner-readiness-report.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "reports\\human-authorization-105\\e105-human-authorization-readiness-report.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "reports\\controlled-apply-106\\e106-controlled-apply-readiness-report.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "reports\\kanban-write-authorization-107\\e107-kanban-write-authorization-readiness-report.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "reports\\kanban-dryrun-gate-108\\e108-kanban-dryrun-gate-readiness-report.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "reports\\safety-manual-109\\e109-safety-manual-readiness-report.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "data\\apply-scope-102\\apply-scope-model.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "data\\apply-scope-102\\apply-boundary-contract.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "data\\rollback-pack-103\\rollback-pack.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "tools\\eng-rollback-pack-validate.ps1",
+                       "exists":  true,
+                       "json_valid":  null,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "data\\postcheck-runner-104\\postcheck-runner-model.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "data\\postcheck-runner-104\\postcheck-checklist.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "tools\\eng-postcheck-runner.ps1",
+                       "exists":  true,
+                       "json_valid":  null,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "data\\human-authorization-105\\human-authorization-screen-model.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "data\\human-authorization-105\\human-authorization-decision-contract.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "data\\controlled-apply-106\\controlled-apply-final-dry-run.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "data\\controlled-apply-106\\controlled-apply-final-gate.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "data\\controlled-apply-106\\controlled-apply-result.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "data\\kanban-write-authorization-107\\kanban-write-authorization-model.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "data\\kanban-write-authorization-107\\kanban-write-field-contract.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "data\\kanban-write-authorization-107\\kanban-write-authorization-gate.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "data\\kanban-dryrun-gate-108\\kanban-final-dry-run.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "data\\kanban-dryrun-gate-108\\kanban-rollback-pack.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "data\\kanban-dryrun-gate-108\\kanban-write-gate-result.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "docs\\SAFE_APPLY_KANBAN_MANUAL.md",
+                       "exists":  true,
+                       "json_valid":  null,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "docs\\SAFE_APPLY_KANBAN_QUICKSTART.md",
+                       "exists":  true,
+                       "json_valid":  null,
+                       "status":  "OK"
+                   }
+               ],
+    "apply_or_kanban_real_write_detected":  false,
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "kanban_real_write":  false,
+    "status":  "OK"
+}

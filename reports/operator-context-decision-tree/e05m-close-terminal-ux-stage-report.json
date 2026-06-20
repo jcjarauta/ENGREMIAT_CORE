@@ -1,0 +1,110 @@
+﻿{
+    "package_id":  "ENGREMIAT_OPERATOR_CONTEXT_AND_DECISION_TREE_001",
+    "stage":  "E05M_CLOSE_TERMINAL_UX_STAGE",
+    "status":  "PASS",
+    "readiness":  100,
+    "validated":  [
+                      "compact_health",
+                      "global_project_module_menus",
+                      "shortcuts",
+                      "back_navigation",
+                      "module_artifacts",
+                      "module_smoke_evidence",
+                      "clean_refresh_after_action"
+                  ],
+    "active_project":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706",
+    "active_module":  "MODULE_inicio",
+    "checks":  [
+                   {
+                       "check":  "exists_Start-EngremiatDesktopOperator.ps1",
+                       "ok":  true,
+                       "detail":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1"
+                   },
+                   {
+                       "check":  "parse_Start-EngremiatDesktopOperator.ps1",
+                       "ok":  true,
+                       "detail":  "OK"
+                   },
+                   {
+                       "check":  "exists_eng-router.ps1",
+                       "ok":  true,
+                       "detail":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-router.ps1"
+                   },
+                   {
+                       "check":  "parse_eng-router.ps1",
+                       "ok":  true,
+                       "detail":  "OK"
+                   },
+                   {
+                       "check":  "exists_eng-context.ps1",
+                       "ok":  true,
+                       "detail":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-context.ps1"
+                   },
+                   {
+                       "check":  "parse_eng-context.ps1",
+                       "ok":  true,
+                       "detail":  "OK"
+                   },
+                   {
+                       "check":  "exists_eng-module-artifact.ps1",
+                       "ok":  true,
+                       "detail":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-module-artifact.ps1"
+                   },
+                   {
+                       "check":  "parse_eng-module-artifact.ps1",
+                       "ok":  true,
+                       "detail":  "OK"
+                   },
+                   {
+                       "check":  "exists_eng-module-smoke.ps1",
+                       "ok":  true,
+                       "detail":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-module-smoke.ps1"
+                   },
+                   {
+                       "check":  "parse_eng-module-smoke.ps1",
+                       "ok":  true,
+                       "detail":  "OK"
+                   },
+                   {
+                       "check":  "state_exists",
+                       "ok":  true,
+                       "detail":  "C:\\ENGREMIAT_CORE\\data\\operator-state\\active-context.json"
+                   },
+                   {
+                       "check":  "active_project_exists",
+                       "ok":  true,
+                       "detail":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706"
+                   },
+                   {
+                       "check":  "active_module_vault_exists",
+                       "ok":  true,
+                       "detail":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO"
+                   },
+                   {
+                       "check":  "artifact_module.json",
+                       "ok":  true,
+                       "detail":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO\\module.json"
+                   },
+                   {
+                       "check":  "artifact_CONTRATO.md",
+                       "ok":  true,
+                       "detail":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO\\CONTRATO.md"
+                   },
+                   {
+                       "check":  "artifact_TAREAS.md",
+                       "ok":  true,
+                       "detail":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO\\TAREAS.md"
+                   },
+                   {
+                       "check":  "artifact_EVIDENCIAS.md",
+                       "ok":  true,
+                       "detail":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO\\EVIDENCIAS.md"
+                   },
+                   {
+                       "check":  "artifact_GATES.md",
+                       "ok":  true,
+                       "detail":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO\\GATES.md"
+                   }
+               ],
+    "next":  "E06_MODULE_WORKFLOW_REAL_EDIT_CLOSE_PROMOTE"
+}

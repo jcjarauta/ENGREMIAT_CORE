@@ -1,0 +1,13 @@
+﻿{
+    "package_id":  "ENGREMIAT_INTERNAL_PRIORITY_ENGINE_001",
+    "contract":  "READ_ONLY_KANBAN_PRIORITY_ENGINE_V1",
+    "input":  "kanban-written-board.json",
+    "outputs":  [
+                    "priority-signals-report.json",
+                    "priority-ranking-output.json",
+                    "top-priority-recommendations.json",
+                    "priority-ranking.tsv"
+                ],
+    "modifies_source":  false,
+    "external_write":  false
+}

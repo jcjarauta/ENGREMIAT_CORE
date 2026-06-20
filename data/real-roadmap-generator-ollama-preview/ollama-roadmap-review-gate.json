@@ -1,0 +1,53 @@
+﻿{
+    "package_id":  "ENGREMIAT_REAL_ROADMAP_GENERATOR_WITH_LOCAL_OLLAMA_PREVIEW_001",
+    "stage":  "E03_BUILD_OLLAMA_ROADMAP_REVIEW_DASHBOARD_AND_GATE",
+    "gate_id":  "ollama-roadmap-review-gate.v1",
+    "status":  "PENDING_HUMAN_REVIEW",
+    "source_preview":  "C:\\ENGREMIAT_CORE\\data\\real-roadmap-generator-ollama-preview\\ollama-roadmap-preview.latest.json",
+    "project_name":  "Primer intake real para construir roadmap automático en ENGREMIAT",
+    "model":  "qwen3:14b",
+    "allowed_decisions":  [
+                              {
+                                  "decision":  "APPROVE_OLLAMA_ROADMAP_PREVIEW",
+                                  "meaning":  "Aceptar el roadmap generado por Ollama como base para worker packet preview futuro",
+                                  "next":  "E04_BUILD_OLLAMA_ROADMAP_WORKER_PACKET_PREVIEW"
+                              },
+                              {
+                                  "decision":  "EDIT_OLLAMA_ROADMAP_PREVIEW",
+                                  "meaning":  "Ajustar el roadmap o regenerar con cambios",
+                                  "next":  "E03_REGENERATE_OR_EDIT_ROADMAP_PREVIEW"
+                              },
+                              {
+                                  "decision":  "REJECT_OLLAMA_ROADMAP_PREVIEW",
+                                  "meaning":  "Descartar la propuesta generada",
+                                  "next":  "CLOSE_REJECTED"
+                              },
+                              {
+                                  "decision":  "DEFER_OLLAMA_ROADMAP_PREVIEW",
+                                  "meaning":  "Aparcar la propuesta para revisión posterior",
+                                  "next":  "CLOSE_DEFERRED"
+                              }
+                          ],
+    "review_checklist":  [
+                             "La respuesta de Ollama resume bien el proyecto",
+                             "Las etapas son accionables",
+                             "Las etapas no mezclan demasiadas fronteras técnicas",
+                             "Los riesgos están visibles",
+                             "Las evidencias son verificables",
+                             "El gate humano queda pendiente",
+                             "No hay auto-apply",
+                             "No hay worker real"
+                         ],
+    "safety":  {
+                   "local_only":  true,
+                   "ollama_local_only":  true,
+                   "review_only":  true,
+                   "external_ai":  false,
+                   "execute_now":  false,
+                   "worker_execution":  false,
+                   "git_write":  false,
+                   "auto_apply":  false,
+                   "authorization_status":  "NOT_GRANTED"
+               },
+    "next":  "E04_BUILD_OLLAMA_ROADMAP_WORKER_PACKET_PREVIEW"
+}

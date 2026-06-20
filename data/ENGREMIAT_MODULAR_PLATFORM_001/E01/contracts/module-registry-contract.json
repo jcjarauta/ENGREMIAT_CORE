@@ -1,0 +1,67 @@
+{
+    "package_id":  "ENGREMIAT_MODULAR_PLATFORM_001",
+    "stage":  "E01",
+    "block":  "B01.1",
+    "objective":  "Registry foundation",
+    "artifact":  "module-registry-contract.json",
+    "purpose":  "Define the canonical contract for the master module registry so every module can be coupled, decoupled, replaced, paused and resumed without touching the frozen core.",
+    "principles":  [
+                       "Local-first by default",
+                       "Core frozen except punctual corrections",
+                       "Stable identity before intelligence",
+                       "Explicit versioning and dependencies",
+                       "Controlled lifecycle with human evidence when needed",
+                       "No external network and no Git write by default"
+                   ],
+    "scope":  {
+                  "included":  [
+                                   "Module identity",
+                                   "Versioning",
+                                   "State management",
+                                   "Dependency declaration",
+                                   "Compatibility rules",
+                                   "Lifecycle control",
+                                   "Visual control space",
+                                   "Operational memory for the module set"
+                               ],
+                  "excluded":  [
+                                   "Core redesign",
+                                   "Remote execution",
+                                   "Uncontrolled auto-write actions",
+                                   "Hidden module state"
+                               ]
+              },
+    "registry_behavior":  {
+                              "coupling_model":  "Modules must declare identity, version, state, dependencies and compatibility before activation.",
+                              "decoupling_model":  "Any module can be detached by policy without breaking the registry contract.",
+                              "replacement_model":  "A module can be replaced only through explicit compatibility and lifecycle transition.",
+                              "pause_model":  "Paused modules remain visible, traceable and recoverable.",
+                              "memory_model":  "The registry keeps operational memory of current, paused, deprecated and retired modules."
+                          },
+    "required_artifacts":  [
+                               "module-registry-contract.json",
+                               "module-identity-schema.json",
+                               "module-registry-package.json",
+                               "module-lifecycle-policy.json",
+                               "module-lifecycle-report.json",
+                               "module-registry-dashboard/index.html"
+                           ],
+    "acceptance_criteria":  [
+                                "The registry is deterministic and local-first.",
+                                "The registry supports coupling and decoupling without core changes.",
+                                "Every module has identity, version, state and dependencies.",
+                                "Lifecycle changes are explicit and traceable.",
+                                "The dashboard shows the registry status and the lifecycle model."
+                            ],
+    "references":  {
+                       "identity_schema":  "schemas/module-identity-schema.json",
+                       "package":  "packages/module-registry-package.json",
+                       "lifecycle":  "policies/module-lifecycle-policy.json",
+                       "dashboard":  "module-registry-dashboard/index.html"
+                   },
+    "validation":  {
+                       "method":  "Local JSON parsing plus file existence checks.",
+                       "stop_on_error":  true,
+                       "evidence_required":  true
+                   }
+}

@@ -1,0 +1,11 @@
+﻿# CARDS_INDEX
+
+| card_id | type | status | priority | risk |
+|---|---|---|---|---|
+| CARD_PATTERN_VAULT | VAULT | PENDING | Alta | LOW |
+| CARD_PATTERN_PROJECT | PROJECT | PENDING | Alta | LOW |
+| CARD_PATTERN_SKILL | SKILL | PENDING | Alta | LOW |
+| CARD_PATTERN_BUNDLE | BUNDLE | PENDING | Alta | LOW |
+| CARD_PATTERN_TEST | TEST | PENDING | Alta | LOW |
+| CARD_PATTERN_GATE | GATE | PENDING | Alta | LOW |
+| CARD_PATTERN_DECISION | DECISION | PENDING | Alta | LOW |

@@ -1,0 +1,42 @@
+﻿{
+    "package":  "OPENCLAW_REAL_SKILL_INSTALL_READINESS_001",
+    "created_at":  "2026-06-18T11:06:38",
+    "skill_name":  "engremiat-readonly-intake",
+    "bundle":  "C:\\ENGREMIAT_CORE\\runtime\\tool-linking-sandbox\\openclaw-skill-install-bundle\\engremiat-readonly-intake",
+    "skill":  "C:\\ENGREMIAT_CORE\\runtime\\tool-linking-sandbox\\openclaw-skill-install-bundle\\engremiat-readonly-intake\\SKILL.md",
+    "contract":  "C:\\ENGREMIAT_CORE\\runtime\\tool-linking-sandbox\\openclaw-skill-install-bundle\\engremiat-readonly-intake\\openclaw-readonly-intake-output-contract.json",
+    "example":  "C:\\ENGREMIAT_CORE\\runtime\\tool-linking-sandbox\\openclaw-skill-install-bundle\\engremiat-readonly-intake\\openclaw-readonly-intake-output.example.json",
+    "openclaw_command_found":  false,
+    "openclaw_command":  "",
+    "candidate_paths":  [
+                            {
+                                "path":  "C:\\ENGREMIAT_CORE\\openclaw",
+                                "exists":  false
+                            },
+                            {
+                                "path":  "C:\\ENGREMIAT_CORE\\tools\\openclaw",
+                                "exists":  false
+                            },
+                            {
+                                "path":  "C:\\Users\\pc\\.openclaw",
+                                "exists":  false
+                            },
+                            {
+                                "path":  "C:\\Users\\pc\\AppData\\Roaming\\openclaw",
+                                "exists":  false
+                            },
+                            {
+                                "path":  "C:\\Users\\pc\\openclaw",
+                                "exists":  false
+                            }
+                        ],
+    "install_mode":  "PREP_ONLY",
+    "real_install_executed":  false,
+    "required_for_real_install":  [
+                                      "OpenClaw real path or skill directory",
+                                      "human authorization",
+                                      "copy target validation"
+                                  ],
+    "decision":  "GO_OPENCLAW_SKILL_INSTALL_BUNDLE_READY",
+    "next":  "PROVIDE_OPENCLAW_SKILL_DIRECTORY_OR_BUILD_OPENWEBUI_EXPORT_TEMPLATE"
+}

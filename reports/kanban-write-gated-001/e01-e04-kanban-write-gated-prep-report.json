@@ -1,0 +1,22 @@
+﻿{
+    "package_id":  "ENGREMIAT_KANBAN_WRITE_GATED_001",
+    "stages":  [
+                   "E01",
+                   "E02",
+                   "E03",
+                   "E04"
+               ],
+    "status":  "PASS",
+    "missing":  [
+
+                ],
+    "source_seed_cards":  264,
+    "selected_cards":  25,
+    "authorization_required":  "AUTORIZO_KANBAN_LOCAL_WRITE_GATED",
+    "authorization_status":  "PENDING",
+    "real_external_kanban_write":  false,
+    "local_write_executed":  false,
+    "git":  false,
+    "readiness":  50,
+    "next":  "E05_WRITE_DRY_RUN"
+}

@@ -1,0 +1,15 @@
+﻿{
+    "package_id":  "ENGREMIAT_OPERATOR_CONTEXT_AND_DECISION_TREE_001",
+    "stage":  "E07E_REWRITE_STABLE_LAUNCHER_AND_ASCII_CMD",
+    "status":  "PASS",
+    "readiness":  100,
+    "launcher":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1",
+    "cmd":  "C:\\ENGREMIAT_CORE\\engremiat-operator.cmd",
+    "changed":  [
+                    "stable_launcher_rewritten",
+                    "ascii_cmd_created",
+                    "project_library_menu_kept",
+                    "module_menu_1_to_9_kept"
+                ],
+    "next":  "run_C:\\ENGREMIAT_CORE\\engremiat-operator.cmd"
+}

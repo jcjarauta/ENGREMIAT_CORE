@@ -1,0 +1,26 @@
+﻿{
+    "objective":  "ENGREMIAT_NEXT_REAL_VALUE_OPERATIONALIZATION_076_085",
+    "stage":  "E80",
+    "dry_run":  "LOCAL_APPLY_DRY_RUN_V3",
+    "dry_run_only":  true,
+    "simulation_scope":  "local_preview_only",
+    "simulated_targets":  [
+                              "data/operational-value-076/operational-value-queue-items.jsonl",
+                              "data/evidence-decision-loop-079/evidence-decision-ledger.jsonl"
+                          ],
+    "simulated_action":  "WOULD_PREPARE_SCOPED_LOCAL_APPLY_PLAN_AFTER_HUMAN_AUTHORIZATION",
+    "execution_status":  "NOT_EXECUTED",
+    "real_apply_allowed":  false,
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "authorization_status":  "PENDING_EXPLICIT_HUMAN_AUTHORIZATION",
+    "rollback_required":  true,
+    "postcheck_required":  true,
+    "receipt_required":  true,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "kanban_real_write":  false,
+    "created_utc":  "2026-06-17T10:55:18.7176768Z"
+}

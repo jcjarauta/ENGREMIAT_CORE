@@ -1,0 +1,34 @@
+﻿{
+    "package":  "OPENCLAW_REAL_SKILL_INSTALL_READINESS_001",
+    "created_at":  "2026-06-18T11:06:38",
+    "bundle":  "C:\\ENGREMIAT_CORE\\runtime\\tool-linking-sandbox\\openclaw-skill-install-bundle\\engremiat-readonly-intake",
+    "manual":  "C:\\ENGREMIAT_CORE\\docs\\openclaw-real-skill-install-readiness\\OPENCLAW_REAL_SKILL_INSTALL_READINESS_MANUAL.md",
+    "handoff":  "C:\\ENGREMIAT_CORE\\docs\\openclaw-real-skill-install-readiness\\OPENCLAW_SKILL_INSTALL_HANDOFF.md",
+    "manifest":  "C:\\ENGREMIAT_CORE\\runtime\\tool-linking-sandbox\\openclaw-skill-install-bundle\\engremiat-readonly-intake\\engremiat-readonly-intake.install-manifest.json",
+    "openclaw_command_found":  false,
+    "candidate_paths":  [
+                            {
+                                "path":  "C:\\ENGREMIAT_CORE\\openclaw",
+                                "exists":  false
+                            },
+                            {
+                                "path":  "C:\\ENGREMIAT_CORE\\tools\\openclaw",
+                                "exists":  false
+                            },
+                            {
+                                "path":  "C:\\Users\\pc\\.openclaw",
+                                "exists":  false
+                            },
+                            {
+                                "path":  "C:\\Users\\pc\\AppData\\Roaming\\openclaw",
+                                "exists":  false
+                            },
+                            {
+                                "path":  "C:\\Users\\pc\\openclaw",
+                                "exists":  false
+                            }
+                        ],
+    "real_install_executed":  false,
+    "decision":  "GO_OPENCLAW_REAL_SKILL_INSTALL_READINESS_READY",
+    "next":  "PROVIDE_OPENCLAW_SKILL_DIRECTORY_OR_BUILD_OPENWEBUI_EXPORT_TEMPLATE"
+}

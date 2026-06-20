@@ -1,0 +1,23 @@
+﻿{
+    "objective":  "ENGREMIAT_REAL_CLINE_KANBAN_OLLAMA_TESTS_011",
+    "stage":  "E03",
+    "policy_id":  "OLLAMA-SAFE-POLICY-011-E03",
+    "inference_executed":  false,
+    "prompt_allowed":  true,
+    "output_reviewable":  true,
+    "available":  true,
+    "optional":  true,
+    "limitations":  [
+                        "No automatic inference",
+                        "No remote execution",
+                        "No Git write",
+                        "No apply"
+                    ],
+    "safety":  {
+                   "inference_executed":  false,
+                   "remote_execution":  false,
+                   "git_write":  false,
+                   "auto_apply":  false,
+                   "shared_repo_edit":  false
+               }
+}

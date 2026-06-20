@@ -1,0 +1,40 @@
+﻿{
+    "objective":  "ENGREMIAT_NEXT_REAL_VALUE_OPERATIONALIZATION_076_085",
+    "stage":  "E77",
+    "contract":  "DAILY_HUMAN_ACTION_CONTRACT",
+    "allowed_human_actions":  [
+                                  "REVIEW",
+                                  "APPROVE_FOR_PREVIEW",
+                                  "DEFER",
+                                  "REJECT",
+                                  "REQUEST_REPAIR",
+                                  "MARK_BLOCKED",
+                                  "MARK_DONE_MANUAL"
+                              ],
+    "denied_machine_actions":  [
+                                   "AUTO_APPROVE",
+                                   "AUTO_APPLY",
+                                   "REMOTE_EXECUTION",
+                                   "EXTERNAL_NETWORK",
+                                   "KANBAN_REAL_WRITE",
+                                   "WORKER_EXECUTION",
+                                   "GIT_WRITE"
+                               ],
+    "requires_reason_for":  [
+                                "APPROVE_FOR_PREVIEW",
+                                "REJECT",
+                                "REQUEST_REPAIR",
+                                "MARK_BLOCKED"
+                            ],
+    "default_decision":  "DEFER",
+    "human_gate_required":  true,
+    "console_executes":  false,
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "kanban_real_write":  false,
+    "created_utc":  "2026-06-17T10:53:02.2092076Z"
+}

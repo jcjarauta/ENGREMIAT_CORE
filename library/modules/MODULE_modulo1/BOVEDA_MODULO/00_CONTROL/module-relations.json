@@ -1,0 +1,29 @@
+﻿[
+    {
+        "relation_id":  "REL-modulo1-PROJECT-001",
+        "from_id":  "MODULE-modulo1-20260620021125",
+        "to_id":  "PROJECT-nuevo-proyecto_20260619-161706",
+        "relation_type":  "belongs_to",
+        "reason":  "Modulo pertenece al proyecto",
+        "evidence":  "module.json",
+        "status":  "active"
+    },
+    {
+        "relation_id":  "REL-modulo1-CARDS-001",
+        "from_id":  "MODULE-modulo1-20260620021125",
+        "to_id":  "CARD-modulo1-001",
+        "relation_type":  "contains",
+        "reason":  "Modulo contiene tarjetas",
+        "evidence":  "cards.tsv",
+        "status":  "active"
+    },
+    {
+        "relation_id":  "REL-modulo1-GATE-001",
+        "from_id":  "CARD-modulo1-004",
+        "to_id":  "GATE-modulo1-001",
+        "relation_type":  "requires_gate",
+        "reason":  "Cierre requiere validacion",
+        "evidence":  "MODULE_GATES.md",
+        "status":  "pending"
+    }
+]

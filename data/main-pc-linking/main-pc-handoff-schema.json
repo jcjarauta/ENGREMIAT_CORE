@@ -1,0 +1,25 @@
+﻿{
+    "objective":  "ENGREMIAT_MAIN_PC_REAL_LINKING_010",
+    "stage":  "E03",
+    "schema_id":  "MAIN-PC-HANDOFF-SCHEMA-010-E03",
+    "required_fields":  [
+                            "handoff_id",
+                            "objective",
+                            "active_stage",
+                            "current_pc",
+                            "target_pc",
+                            "writer_authority",
+                            "git_status_summary",
+                            "next_action",
+                            "evidence",
+                            "limits",
+                            "created_at_utc"
+                        ],
+    "safety":  {
+                   "main_pc_touched":  true,
+                   "remote_execution":  false,
+                   "git_write":  false,
+                   "git_remote_auto":  false,
+                   "secret_values_read":  false
+               }
+}

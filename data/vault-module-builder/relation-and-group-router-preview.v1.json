@@ -1,0 +1,35 @@
+﻿{
+    "package_id":  "ENGREMIAT_VAULT_MODULE_BUILDER_001",
+    "stage":  "E04_CREATE_RELATION_AND_GROUP_ROUTER_PREVIEW",
+    "status":  "PASS",
+    "router":  "C:\\ENGREMIAT_CORE\\tools\\vault-module-builder\\Invoke-VaultModuleRelationRouterPreview.ps1",
+    "demo_report":  "C:\\ENGREMIAT_CORE\\reports\\vault-module-builder\\relation-router-preview-demo-relation-router.json",
+    "demo_group":  "G03_PROJECTS_MODULES",
+    "demo_target_root":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\02_PROYECTOS\\PROJECT_demo-builder-project-space\\08_RELACIONES\\MODULE_demo-relation-router",
+    "supported_space_types":  [
+                                  "MASTER_VAULT",
+                                  "PROJECT_SPACE",
+                                  "MODULE_SPACE",
+                                  "RELATION_SPACE",
+                                  "WORK_SURFACE"
+                              ],
+    "routing_outputs":  [
+                            "group_assignment",
+                            "target_root",
+                            "relation_note",
+                            "route_canvas",
+                            "surface_pointer"
+                        ],
+    "safety":  {
+                   "local_only":  true,
+                   "preview_only":  true,
+                   "execute_now":  false,
+                   "worker_execution":  false,
+                   "kanban_write":  false,
+                   "clien_write":  false,
+                   "obsidian_app_automation":  false,
+                   "git_write":  false,
+                   "external_network":  false
+               },
+    "next":  "E05_CREATE_HUMAN_SELECTION_DASHBOARD_PREVIEW"
+}

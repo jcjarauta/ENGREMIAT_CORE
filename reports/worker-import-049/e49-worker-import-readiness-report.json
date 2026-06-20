@@ -1,0 +1,31 @@
+﻿{
+    "objective":  "ENGREMIAT_POST_MVP_OPERATIONAL_DAILY_LOOP_046_055",
+    "stage":  "E49",
+    "readiness":  100,
+    "decision":  "GO_E49_WORKER_IMPORT_REAL_PREVIEW_READY",
+    "next":  "E50_OPERATIONAL_DASHBOARD",
+    "worker_import_ready":  true,
+    "worker_executed":  false,
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "artifacts":  [
+                      "data\\worker-import-049\\worker-import-contract.json",
+                      "data\\worker-import-049\\worker-proposal-sample.json",
+                      "tools\\eng-worker-import.ps1",
+                      "reports\\worker-import-049\\e49-worker-import-preview-report.json",
+                      "data\\worker-import-049\\receipts\\worker-import-setup-receipt.json"
+                  ],
+    "security":  {
+                     "apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "worker_executed":  false,
+                     "import_only":  true,
+                     "human_decision_required":  true
+                 },
+    "created_at":  "2026-06-17T11:59:30"
+}

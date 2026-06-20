@@ -1,0 +1,122 @@
+﻿PATH=C:\Users\pc\.cline\worktrees\07b15\ENGREMIAT_CORE\data\kanban-human-control\kanban-human-control-manifest.json SCORE=80 SIZE=6690 EXT=.json --- SAMPLE BEGIN ---
+{
+    "objective":  "ENGREMIAT_KANBAN_HUMAN_CONTROL_SURFACE_007",
+    "stage":  "E06",
+    "status":  "CLOSED",
+    "created_at_utc":  "2026-06-16T12:13:34.4324948Z",
+    "purpose":  "Cerrar la superficie Kanban humana local y preparar el siguiente objetivo Cline real proposal no apply.",
+    "artifacts":  [
+                      {
+                          "path":  "data/kanban-human-control/kanban-card-schema.json",
+                          "exists":  true,
+                          "size_bytes":  2989
+                      },
+                      {
+                          "path":  "data/kanban-human-control/sample-kanban-card.json",
+                          "exists":  true,
+                          "size_bytes":  1950
+                      },
+                      {
+                          "path":  "data/kanban-human-control/evidence-sources.json",
+                          "exists":  true,
+                          "size_bytes":  1517
+                      },
+                      {
+                          "path":  "data/kanban-human-control/evidence-inventory.json",
+                          "exists":  true,
+                          "size_bytes":  222076
+                      },
+                      {
+                          "path":  "data/kanban-human-control/kanban-board.json",
+                          "exists":  true,
+                          "size_bytes":  11197
+                      },
+                      {
+                          "path":  "data/kanban-human-control/cline-kanban-adapter-contract.json",
+                          "exists":  true,
+                          "size_bytes":  2211
+                      },
+                      {
+                          "path":  "data/kanban-human-control/cline-kanban-export-preview.json",
+                          "exists":  true,
+                          "size_bytes":  9641
+                      },
+                      {
+                          "path":  "data/kanban-human-control/kanban-write-gate.json",
+                          "exists":  true,
+                          "size_bytes":  2097
+                      },
+                      {
+                          "path":  "data/kanban-human-control/kanban-write-request-preview.json",
+                          "exists":  true,
+                          "size_bytes":  4543
+                      },
+                      {
+                          "path":  "docs/KANBAN_CARD_MODEL_GUIDE.md",
+                          "exists":  true,
+                          "size_bytes":  1093
+                      },
+                      {
+                          "path":  "docs/KANBAN_HUMAN_DASHBOARD_GUIDE.md",
+                          "exists":  true,
+                          "size_bytes":  893
+                      },
+                      {
+                          "path":  "docs/CLINE_KANBAN_ADAPTER_GUIDE.md",
+                          "exists":  true,
+                          "size_bytes":  1178
+                      },
+                      {
+                          "path":  "docs/KANBAN_WRITE_GATE_GUIDE.md",
+                          "exists":  true,
+                          "size_bytes":  1144
+                      },
+                      {
+                          "path":  "reports/kanban-human-control/e01-kanban-card-schema-validation-report.json",
+                          "exists":  true,
+                          "size_bytes":  704
+                      },
+                      {
+                          "path":  "reports/kanban-human-control/e02-kanban-board-generation-report.json",
+                          "exists":  true,
+                          "size_bytes":  888
+                      },
+                      {
+                          "path":  "reports/kanban-human-control/e03-kanban-dashboard-validation-report.json",
+                          "exists":  true,
+                          "size_bytes":  798
+                      },
+                      {
+                          "path":  "reports/kanban-human-control/e04-cline-kanban-adapter-preview-report.json",
+                          "exists":  true,
+                          "size_bytes":  933
+                      },
+                      {
+                          "path":  "reports/kanban-human-control/e05-kanban-write-gate-validation-report.json",
+                          "exists":  true,
+                          "size_bytes":  1103
+                      },
+                      {
+                          "path":  "dashboard/kanban-human-control/index.html",
+                          "exists":  true,
+                          "size_bytes":  9944
+                      }
+                  ],
+    "missing_artifacts":  [
+
+                          ],
+    "stages_closed":  [
+                          "E01_CARD_MODEL",
+                          "E02_BOARD_FROM_EVIDENCE",
+                          "E03_HUMAN_HTML_DASHBOARD",
+                          "E04_CLINE_KANBAN_PREVIEW_ADAPTER",
+                          "E05_KANBAN_WRITE_GATE",
+                          "E06_CLOSE"
+                      ],
+    "decisions":  [
+                      {
+                          "id":  "D007-001",
+                          "decision":  "KANBAN_IS_HUMAN_CONTROL_SURFACE_ONLY",
+                          "detail":  "La fuente canonica sigue siendo data, reports, docs, receipts y manifests."
+                      },
+--- SAMPLE END ---

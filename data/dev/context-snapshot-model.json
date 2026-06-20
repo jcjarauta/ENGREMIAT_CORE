@@ -1,0 +1,19 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_FINAL_026_035",
+    "stage":  "E28",
+    "created_at":  "2026-06-17T11:09:17.2117831+02:00",
+    "purpose":  "Snapshot minimo para retomar desarrollo sin perdida de contexto.",
+    "required_fields":  [
+                            "active_objective",
+                            "active_stage",
+                            "last_validated_stage",
+                            "next_stage",
+                            "readiness",
+                            "gates_pending",
+                            "errors_open",
+                            "last_artifacts",
+                            "daily_commands",
+                            "safety"
+                        ],
+    "rule":  "Cada bloque debe poder reconstruir estado, evidencia y siguiente accion."
+}

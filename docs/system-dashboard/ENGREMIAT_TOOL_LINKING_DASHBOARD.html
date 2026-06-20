@@ -1,0 +1,24 @@
+﻿<html><head><meta charset='utf-8'><title>ENGREMIAT Tool Linking Dashboard</title><style>body{font-family:Segoe UI,Arial;margin:0;background:#0f172a;color:#e5e7eb}.top{background:#020617;padding:24px;border-bottom:1px solid #334155}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;padding:16px}.box{background:#1e293b;border:1px solid #334155;border-radius:14px;padding:14px}.ok{color:#86efac}.warn{color:#fde68a}.bad{color:#fca5a5}.next{color:#f0abfc;font-weight:700}.path{font-size:11px;color:#94a3b8;word-break:break-all}.pill{display:inline-block;background:#334155;border-radius:999px;padding:3px 8px;margin:3px;font-size:12px}.flow{font-size:18px;line-height:1.7}</style></head><body>
+<div class='top'><h1>ENGREMIAT · Tool Linking Dashboard</h1><p>Primer circuito de vinculación inicial de herramientas.</p><span class='pill ok'>QUEUE_CLEAN</span><span class='pill ok'>READONLY</span><span class='pill warn'>NO_REAL_API</span><span class='pill warn'>OBSIDIAN_GATED</span></div>
+<div class='grid'>
+<div class='box'><h2>Flujo validado</h2><div class='flow'>OpenWebUI/OpenClaw JSON<br>↓<br>Sandbox inbox<br>↓<br>Readonly intake<br>↓<br>Detected input<br>↓<br>Recurrent card<br>↓<br>Obsidian candidate<br>↓<br>Inline batch</div></div>
+<div class='box'><h2>Cola</h2>
+<p>Sandbox inbox: <b>0</b></p>
+<p>Readonly inbox: <b>0</b></p>
+<p>Processed JSON: <b>18</b></p>
+</div>
+<div class='box'><h2>Producción local</h2>
+<p>Detected inputs: <b>5</b></p>
+<p>Recurrent cards: <b>22</b></p>
+<p>Inline batches: <b>7</b></p>
+<p>Obsidian candidates: <b>22</b></p>
+</div>
+<div class='box'><h2>healthcheck</h2><p class='ok'>OK</p><p>decision: GO_TOOL_LINKING_HEALTHCHECK_READY</p><p class='next'>next: DROP_REAL_OPENWEBUI_OR_OPENCLAW_JSON_IN_SANDBOX_INBOX</p><p class='path'>C:\ENGREMIAT_CORE\reports\tool-linking-healthcheck\tool-linking-healthcheck.20260618-105908.json</p></div>
+<div class='box'><h2>sandbox</h2><p class='ok'>OK</p><p>decision: GO_FIRST_REAL_LINKING_SANDBOX_READY</p><p class='next'>next: DROP_REAL_OPENWEBUI_OR_OPENCLAW_JSON_IN_SANDBOX_INBOX</p><p class='path'>C:\ENGREMIAT_CORE\reports\tool-linking-sandbox\FIRST_REAL_LINKING_SANDBOX_001.close-report.json</p></div>
+<div class='box'><h2>queue_cleanup</h2><p class='ok'>OK</p><p>decision: GO_TOOL_LINKING_QUEUE_CLEANUP_READY</p><p class='next'>next: DROP_NEXT_REAL_JSON_OR_REVIEW_INLINE_BATCH</p><p class='path'>C:\ENGREMIAT_CORE\reports\tool-linking-queue-cleanup\TOOL_LINKING_QUEUE_CLEANUP_001.close-report.json</p></div>
+<div class='box'><h2>openclaw_skill_packet</h2><p class='ok'>OK</p><p>decision: GO_OPENCLAW_SKILL_PACKET_READY</p><p class='next'>next: INSTALL_OR_REGISTER_SKILL_IN_OPENCLAW_WHEN_READY_OR_BUILD_HEALTHCHECK</p><p class='path'>C:\ENGREMIAT_CORE\reports\openclaw-skill-packet\openclaw-skill-packet-report.json</p></div>
+<div class='box'><h2>readonly_adapter</h2><p class='ok'>OK</p><p>decision: GO_OPENWEBUI_OPENCLAW_REAL_READONLY_ADAPTER_READY</p><p class='next'>next: BUILD_OPENCLAW_SKILL_PACKET_FOR_READONLY_INTAKE</p><p class='path'>C:\ENGREMIAT_CORE\reports\openwebui-openclaw-readonly-adapter\OPENWEBUI_OPENCLAW_REAL_READONLY_ADAPTER_001.close-report.json</p></div>
+<div class='box'><h2>recurrent_manifest</h2><p class='ok'>OK</p><p>decision: GO_RECURRENT_CARD_REFRESH_DRY_RUN_READY</p><p class='next'>next: PASTE_INLINE_BATCH_TO_CLINE_OR_BUILD_OPENCLAW_INPUT_ADAPTER</p><p class='path'>C:\ENGREMIAT_CORE\docs\kanban-backlog\recurrent-card-refresh-model\recurrent-card-refresh-manifest.json</p></div>
+<div class='box'><h2>obsidian_vault_gate</h2><p class='ok'>OK</p><p>decision: GO_OBSIDIAN_VAULT_WRITE_GATE_READY</p><p class='next'>next: WAIT_FOR_HUMAN_VAULT_PATH_AND_AUTHORIZATION_OR_CONTINUE_TO_SYSTEM_DASHBOARD</p><p class='path'>C:\ENGREMIAT_CORE\reports\obsidian-vault-write-gate\OBSIDIAN_VAULT_WRITE_GATE_001.close-report.json</p></div>
+<div class='box'><h2>Siguiente decisión</h2><p class='next'>OPENCLAW_REAL_SKILL_INSTALL / OPENWEBUI_READONLY_EXPORT / OBSIDIAN_VAULT_PATH_GATE</p></div>
+</div></body></html>

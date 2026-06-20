@@ -1,0 +1,13 @@
+﻿param([string]$InventoryPath='data/kanban-real-setup-012/evidence-inventory.json',[string]$CardsPath='data/kanban-real-setup-012/cards.json',[string]$BoardPath='data/kanban-real-setup-012/kanban-board.json')
+$ErrorActionPreference='Stop'
+[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+function J($o,[string]$p){$d=Split-Path -Parent $p;if($d){New-Item -ItemType Directory -Force -Path $d|Out-Null};$o|ConvertTo-Json -Depth 100|Set-Content -LiteralPath $p -Encoding UTF8}
+if(-not(Test-Path $InventoryPath)){throw "Missing inventory: $InventoryPath"}
+$inv=Get-Content $InventoryPath -Raw | ConvertFrom-Json
+$cards=@([ordered]@{id='KANBAN-011-E06';objective='ENGREMIAT_REAL_CLINE_KANBAN_OLLAMA_TESTS_011';stage='E06';block='B06.3';step='P06.3.2';title='Cerrar ciclo real de pruebas';state='DONE';risk='LOW';required=$true;priority='Alta';status='DONE';next_action='Usar close report';source='reports/real-cline-kanban-ollama-tests/e06-real-tests-final-report.json'},[ordered]@{id='KANBAN-012-E01';objective='ENGREMIAT_KANBAN_REAL_SETUP_012';stage='E01';block='B01.3';step='P01.3.2';title='Preflight de superficies';state='DONE';risk='LOW';required=$true;priority='Alta';status='DONE';next_action='Validar modelo canónico';source='reports/kanban-real-setup-012/e01-kanban-real-preflight-report.json'},[ordered]@{id='KANBAN-012-E02';objective='ENGREMIAT_KANBAN_REAL_SETUP_012';stage='E02';block='B02.3';step='P02.3.2';title='Modelo canónico de Kanban';state='DONE';risk='LOW';required=$true;priority='Alta';status='DONE';next_action='Generar tablero desde evidencia';source='reports/kanban-real-setup-012/e02-kanban-model-validation-report.json'},[ordered]@{id='KANBAN-012-E03';objective='ENGREMIAT_KANBAN_REAL_SETUP_012';stage='E03';block='B03.3';step='P03.3.2';title='Generador de tablero';state='READY';risk='LOW';required=$true;priority='Alta';status='PENDING';next_action='Construir dashboard humano';source='reports/kanban-real-setup-012/e03-kanban-board-generation-report.json'})
+J $cards $CardsPath
+$counts=[ordered]@{BACKLOG=0;READY=0;GATED=0;RUNNING=0;REVIEW=0;DONE=0;DEFERRED=0;BLOCKED=0}
+foreach($c in $cards){if($counts.Contains($c.state)){$counts[$c.state]++}}
+$board=[ordered]@{objective='ENGREMIAT_KANBAN_REAL_SETUP_012';stage='E03';generated_from=$InventoryPath;columns=@('BACKLOG','READY','GATED','RUNNING','REVIEW','DONE','BLOCKED');cards=$cards;counts=$counts;timestamp_utc=(Get-Date).ToUniversalTime().ToString('o');safety=[ordered]@{kanban_is_view=$true;execution_engine=$false;git_write=$false;remote_execution=$false;auto_apply=$false;shared_repo_edit=$false}}
+J $board $BoardPath
+Write-Host ('BUILDER_OK cards=' + $cards.Count + ' board=' + $BoardPath) -ForegroundColor Green

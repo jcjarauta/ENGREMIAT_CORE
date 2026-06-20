@@ -1,0 +1,40 @@
+﻿{
+    "objective":  "ENGREMIAT_NEXT_REAL_VALUE_OPERATIONALIZATION_076_085",
+    "stage":  "E82",
+    "name":  "Kanban Authorized Bridge Preview",
+    "version":  "0.82.0-local",
+    "purpose":  "Preparar puente preview hacia Kanban autorizado sin escritura real ni API externa.",
+    "bridge_mode":  "PREVIEW_ONLY",
+    "kanban_real_write":  false,
+    "real_write_executed":  false,
+    "dry_run_only":  true,
+    "human_authorization_required":  true,
+    "gate_required_for_future_write":  true,
+    "rollback_required_for_future_write":  true,
+    "postcheck_required_for_future_write":  true,
+    "receipt_required_for_future_write":  true,
+    "allowed_future_scope":  [
+                                 "explicit_human_authorization",
+                                 "single_card_or_scoped_batch",
+                                 "field_mapping_verified",
+                                 "rollback_plan_present",
+                                 "postcheck_present",
+                                 "receipt_present"
+                             ],
+    "blocked_actions":  [
+                            "KANBAN_REAL_WRITE",
+                            "AUTO_WRITE",
+                            "REMOTE_EXECUTION",
+                            "EXTERNAL_NETWORK",
+                            "AUTO_APPLY",
+                            "WORKER_EXECUTION",
+                            "GIT_WRITE"
+                        ],
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "created_utc":  "2026-06-17T10:58:44.3784493Z"
+}

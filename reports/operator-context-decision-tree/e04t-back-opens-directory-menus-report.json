@@ -1,0 +1,12 @@
+﻿{
+    "package_id":  "ENGREMIAT_OPERATOR_CONTEXT_AND_DECISION_TREE_001",
+    "stage":  "E04T_BACK_OPENS_DIRECTORY_MENUS",
+    "status":  "PASS",
+    "readiness":  100,
+    "behavior":  [
+                     "atras_desde_modulo_abre_menu_de_proyecto",
+                     "atras_desde_proyecto_abre_selector_de_proyecto",
+                     "no_muestra_comandos_genericos"
+                 ],
+    "next":  "relaunch_test_atras"
+}

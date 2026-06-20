@@ -1,0 +1,106 @@
+﻿{
+    "nodes":  [
+                  {
+                      "id":  "home",
+                      "x":  0,
+                      "y":  0,
+                      "width":  260,
+                      "height":  100,
+                      "type":  "text",
+                      "text":  "HOME\nBóveda maestra",
+                      "color":  "1"
+                  },
+                  {
+                      "id":  "control",
+                      "x":  360,
+                      "y":  "-160",
+                      "width":  260,
+                      "height":  100,
+                      "type":  "text",
+                      "text":  "CONTROL HUMANO\nDecidir / revisar",
+                      "color":  "2"
+                  },
+                  {
+                      "id":  "architecture",
+                      "x":  360,
+                      "y":  0,
+                      "width":  260,
+                      "height":  100,
+                      "type":  "text",
+                      "text":  "ARQUITECTURA\nGrupos oficiales",
+                      "color":  "3"
+                  },
+                  {
+                      "id":  "projects",
+                      "x":  360,
+                      "y":  160,
+                      "width":  260,
+                      "height":  100,
+                      "type":  "text",
+                      "text":  "PROYECTOS / MÓDULOS\nEspacios de trabajo",
+                      "color":  "4"
+                  },
+                  {
+                      "id":  "evidence",
+                      "x":  720,
+                      "y":  0,
+                      "width":  260,
+                      "height":  100,
+                      "type":  "text",
+                      "text":  "EVIDENCIAS\nReports / readiness",
+                      "color":  "5"
+                  },
+                  {
+                      "id":  "evolution",
+                      "x":  1080,
+                      "y":  0,
+                      "width":  260,
+                      "height":  100,
+                      "type":  "text",
+                      "text":  "EVOLUCIÓN\nNext objectives",
+                      "color":  "6"
+                  }
+              ],
+    "edges":  [
+                  {
+                      "id":  "e1",
+                      "fromNode":  "home",
+                      "fromSide":  "right",
+                      "toNode":  "control",
+                      "toSide":  "left",
+                      "label":  "abre"
+                  },
+                  {
+                      "id":  "e2",
+                      "fromNode":  "home",
+                      "fromSide":  "right",
+                      "toNode":  "architecture",
+                      "toSide":  "left",
+                      "label":  "ordena"
+                  },
+                  {
+                      "id":  "e3",
+                      "fromNode":  "architecture",
+                      "fromSide":  "right",
+                      "toNode":  "projects",
+                      "toSide":  "left",
+                      "label":  "estructura"
+                  },
+                  {
+                      "id":  "e4",
+                      "fromNode":  "projects",
+                      "fromSide":  "right",
+                      "toNode":  "evidence",
+                      "toSide":  "left",
+                      "label":  "valida"
+                  },
+                  {
+                      "id":  "e5",
+                      "fromNode":  "evidence",
+                      "fromSide":  "right",
+                      "toNode":  "evolution",
+                      "toSide":  "left",
+                      "label":  "aprende"
+                  }
+              ]
+}

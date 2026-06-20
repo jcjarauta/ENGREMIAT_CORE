@@ -1,0 +1,67 @@
+﻿{
+    "objective":  "ENGREMIAT_POST_MVP_OPERATIONAL_DAILY_LOOP_046_055",
+    "stage":  "E53",
+    "standard_id":  "E53_DAILY_RECEIPT_STANDARD_V1",
+    "purpose":  "Normalizar receipts diarios para trazabilidad uniforme",
+    "required_fields":  [
+                            "receipt_id",
+                            "objective",
+                            "stage",
+                            "source_step",
+                            "operation",
+                            "decision",
+                            "artifacts",
+                            "apply_executed",
+                            "auto_apply",
+                            "remote_execution",
+                            "git_write",
+                            "external_network",
+                            "created_at"
+                        ],
+    "recommended_fields":  [
+                               "human_operator",
+                               "gate_id",
+                               "rollback_reference",
+                               "postcheck_report",
+                               "next",
+                               "notes"
+                           ],
+    "rules":  [
+                  "Cada accion diaria debe generar receipt",
+                  "Receipt no equivale a permiso de apply",
+                  "Toda accion sensible requiere gate",
+                  "No registrar secretos",
+                  "Usar rutas relativas cuando sea posible"
+              ],
+    "example":  {
+                    "receipt_id":  "RECEIPT-YYYYMMDD-HHMMSS",
+                    "objective":  "OBJECTIVE_ID",
+                    "stage":  "EXX",
+                    "source_step":  "PXX.X.X",
+                    "operation":  "LOCAL_SAFE_OPERATION",
+                    "decision":  "GO_OR_NO_GO",
+                    "artifacts":  [
+                                      "data/...",
+                                      "reports/..."
+                                  ],
+                    "apply_executed":  false,
+                    "auto_apply":  false,
+                    "remote_execution":  false,
+                    "git_write":  false,
+                    "external_network":  false,
+                    "created_at":  "ISO8601"
+                },
+    "security":  {
+                     "apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "sensitive_actions_executed":  false,
+                     "standards_only":  true,
+                     "human_gate_required":  true,
+                     "local_only":  true
+                 },
+    "next":  "E54_OPERATIONAL_DEMO_AND_MANUAL",
+    "created_at":  "2026-06-17T12:03:50"
+}

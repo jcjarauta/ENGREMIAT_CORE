@@ -1,0 +1,95 @@
+﻿{
+    "objective":  "ENGREMIAT_KANBAN_REAL_SETUP_012",
+    "stage":  "E03",
+    "generated_from":  "data/kanban-real-setup-012/evidence-inventory.json",
+    "columns":  [
+                    "BACKLOG",
+                    "READY",
+                    "GATED",
+                    "RUNNING",
+                    "REVIEW",
+                    "DONE",
+                    "BLOCKED"
+                ],
+    "cards":  [
+                  {
+                      "id":  "KANBAN-011-E06",
+                      "objective":  "ENGREMIAT_REAL_CLINE_KANBAN_OLLAMA_TESTS_011",
+                      "stage":  "E06",
+                      "block":  "B06.3",
+                      "step":  "P06.3.2",
+                      "title":  "Cerrar ciclo real de pruebas",
+                      "state":  "DONE",
+                      "risk":  "LOW",
+                      "required":  true,
+                      "priority":  "Alta",
+                      "status":  "DONE",
+                      "next_action":  "Usar close report",
+                      "source":  "reports/real-cline-kanban-ollama-tests/e06-real-tests-final-report.json"
+                  },
+                  {
+                      "id":  "KANBAN-012-E01",
+                      "objective":  "ENGREMIAT_KANBAN_REAL_SETUP_012",
+                      "stage":  "E01",
+                      "block":  "B01.3",
+                      "step":  "P01.3.2",
+                      "title":  "Preflight de superficies",
+                      "state":  "DONE",
+                      "risk":  "LOW",
+                      "required":  true,
+                      "priority":  "Alta",
+                      "status":  "DONE",
+                      "next_action":  "Validar modelo canónico",
+                      "source":  "reports/kanban-real-setup-012/e01-kanban-real-preflight-report.json"
+                  },
+                  {
+                      "id":  "KANBAN-012-E02",
+                      "objective":  "ENGREMIAT_KANBAN_REAL_SETUP_012",
+                      "stage":  "E02",
+                      "block":  "B02.3",
+                      "step":  "P02.3.2",
+                      "title":  "Modelo canónico de Kanban",
+                      "state":  "DONE",
+                      "risk":  "LOW",
+                      "required":  true,
+                      "priority":  "Alta",
+                      "status":  "DONE",
+                      "next_action":  "Generar tablero desde evidencia",
+                      "source":  "reports/kanban-real-setup-012/e02-kanban-model-validation-report.json"
+                  },
+                  {
+                      "id":  "KANBAN-012-E03",
+                      "objective":  "ENGREMIAT_KANBAN_REAL_SETUP_012",
+                      "stage":  "E03",
+                      "block":  "B03.3",
+                      "step":  "P03.3.2",
+                      "title":  "Generador de tablero",
+                      "state":  "READY",
+                      "risk":  "LOW",
+                      "required":  true,
+                      "priority":  "Alta",
+                      "status":  "PENDING",
+                      "next_action":  "Construir dashboard humano",
+                      "source":  "reports/kanban-real-setup-012/e03-kanban-board-generation-report.json"
+                  }
+              ],
+    "counts":  {
+                   "BACKLOG":  0,
+                   "READY":  1,
+                   "GATED":  0,
+                   "RUNNING":  0,
+                   "REVIEW":  0,
+                   "DONE":  3,
+                   "DEFERRED":  0,
+                   "BLOCKED":  0
+               },
+    "timestamp_utc":  "2026-06-16T14:47:56.3242453Z",
+    "safety":  {
+                   "kanban_is_view":  true,
+                   "execution_engine":  false,
+                   "git_write":  false,
+                   "remote_execution":  false,
+                   "auto_apply":  false,
+                   "shared_repo_edit":  false
+               }
+}

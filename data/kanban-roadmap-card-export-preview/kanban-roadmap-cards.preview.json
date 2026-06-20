@@ -1,0 +1,80 @@
+﻿[
+    {
+        "card_id":  "KB-001",
+        "lane":  "READY_FOR_REVIEW",
+        "title":  "Revisar roadmap generado por Ollama local",
+        "description":  "Validar que la propuesta generada por qwen3:14b representa correctamente la intención humana y las restricciones del proyecto.",
+        "source":  "ollama-roadmap-preview.latest.json",
+        "priority":  "ALTA",
+        "risk":  "LOW",
+        "human_gate":  "REVIEW_REQUIRED",
+        "status":  "PENDING",
+        "evidence":  "ollama-roadmap-review-dashboard.html",
+        "next_action":  "Aprobar, editar, rechazar o diferir roadmap"
+    },
+    {
+        "card_id":  "KB-002",
+        "lane":  "BACKLOG",
+        "title":  "Convertir roadmap en etapas accionables",
+        "description":  "Separar la propuesta en etapas pequeñas con una frontera técnica por etapa, salida esperada y validación.",
+        "source":  "ollama-roadmap-preview.latest.json",
+        "priority":  "ALTA",
+        "risk":  "MEDIUM",
+        "human_gate":  "REVIEW_REQUIRED",
+        "status":  "PENDING",
+        "evidence":  "kanban-roadmap-cards.preview.json",
+        "next_action":  "Revisar granularidad de tarjetas"
+    },
+    {
+        "card_id":  "KB-003",
+        "lane":  "GATED_PREVIEW",
+        "title":  "Preparar worker packet preview",
+        "description":  "Usar el roadmap aprobado como base para preparar un paquete de trabajo futuro sin ejecución real.",
+        "source":  "ollama-roadmap-worker-packet-preview.json",
+        "priority":  "MEDIA",
+        "risk":  "MEDIUM",
+        "human_gate":  "AUTHORIZATION_REQUIRED",
+        "status":  "NO_GO",
+        "evidence":  "worker packet preview",
+        "next_action":  "Mantener bloqueado hasta autorización explícita"
+    },
+    {
+        "card_id":  "KB-004",
+        "lane":  "GATED_PREVIEW",
+        "title":  "Dry-run de ejecución controlada",
+        "description":  "Simular ejecución de la propuesta y devolver NO_GO mientras no exista autorización humana explícita.",
+        "source":  "ollama-roadmap-controlled-dry-run.json",
+        "priority":  "MEDIA",
+        "risk":  "MEDIUM",
+        "human_gate":  "AUTHORIZATION_REQUIRED",
+        "status":  "NO_GO",
+        "evidence":  "dry-run dashboard",
+        "next_action":  "Validar condiciones de GO futuras"
+    },
+    {
+        "card_id":  "KB-005",
+        "lane":  "BACKLOG",
+        "title":  "Diseñar exportación real a Kanban/Cline",
+        "description":  "Definir el puente futuro entre tarjetas preview y escritura real en Kanban/Cline, con gate humano y sin automatización de navegador por defecto.",
+        "source":  "kanban-roadmap-card-export-contract.json",
+        "priority":  "MEDIA",
+        "risk":  "HIGH",
+        "human_gate":  "EXPLICIT_AUTHORIZATION_REQUIRED",
+        "status":  "PENDING",
+        "evidence":  "contrato de exportación",
+        "next_action":  "Preparar laboratorio de escritura real separado"
+    },
+    {
+        "card_id":  "KB-006",
+        "lane":  "DONE_PREVIEW",
+        "title":  "Mantener cadena segura sin ejecución",
+        "description":  "Confirmar que esta exportación solo produce archivos locales revisables y no escribe en Kanban real.",
+        "source":  "e02-build-kanban-card-exporter-preview-report.json",
+        "priority":  "ALTA",
+        "risk":  "LOW",
+        "human_gate":  "PASS",
+        "status":  "DONE_PREVIEW",
+        "evidence":  "JSON TSV Markdown HTML",
+        "next_action":  "Revisión humana"
+    }
+]

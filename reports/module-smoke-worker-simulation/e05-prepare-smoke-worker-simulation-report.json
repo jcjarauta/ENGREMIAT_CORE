@@ -1,0 +1,48 @@
+﻿{
+    "package_id":  "ENGREMIAT_MODULE_SMOKE_WORKER_SIMULATION_001",
+    "stage":  "E05_PREPARE_SMOKE_WORKER_SIMULATION",
+    "status":  "PASS",
+    "readiness":  100,
+    "decision":  "GO_SMOKE_WORKER_SIMULATION_PREPARED_NOT_EXECUTED",
+    "project_home":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-162809",
+    "module_vault":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-162809\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO",
+    "worker_plan":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-162809\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO\\00_CONTROL\\WORKERS\\SMOKE_WORKER_SIMULATION_PLAN.md",
+    "checks":  [
+                   {
+                       "id":  "worker_plan",
+                       "ok":  true,
+                       "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-162809\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO\\00_CONTROL\\WORKERS\\SMOKE_WORKER_SIMULATION_PLAN.md"
+                   },
+                   {
+                       "id":  "worker_json",
+                       "ok":  true,
+                       "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-162809\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO\\00_CONTROL\\WORKERS\\smoke-worker-simulation-plan.json"
+                   },
+                   {
+                       "id":  "gate_smoke",
+                       "ok":  true,
+                       "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-162809\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO\\00_CONTROL\\GATES\\GATE_SMOKE_WORKER_SIMULATION.md"
+                   },
+                   {
+                       "id":  "smoke_expected_evidence",
+                       "ok":  true,
+                       "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-162809\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO\\04_EVIDENCIAS\\SMOKE_EXPECTED_EVIDENCE.md"
+                   },
+                   {
+                       "id":  "result_placeholder",
+                       "ok":  true,
+                       "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-162809\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO\\05_RESULTADOS\\SMOKE_RESULT_PLACEHOLDER.md"
+                   }
+               ],
+    "failed_checks":  [
+
+                      ],
+    "safety":  {
+                   "local_only":  true,
+                   "worker_real":  false,
+                   "execution":  false,
+                   "git":  false,
+                   "network":  false
+               },
+    "next":  "E06_GATE_APPROVE_SMOKE_WORKER_SIMULATION"
+}

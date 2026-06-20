@@ -1,0 +1,61 @@
+﻿{
+    "contract_id":  "engremiat-local-kanban-card-execution-cycle-v1",
+    "package_id":  "ENGREMIAT_LOCAL_KANBAN_EXECUTION_CYCLE_001",
+    "purpose":  "Run one governed local Kanban card cycle from selection to worker response, evidence, transition proposal, optional gated state update and dashboard refresh",
+    "cycle_steps":  [
+                        "select_operable_card",
+                        "create_cycle_job",
+                        "dispatch_worker_mock_or_ollama_gated",
+                        "capture_response",
+                        "capture_evidence",
+                        "propose_transition",
+                        "human_gate",
+                        "apply_transition_with_backup",
+                        "rebuild_dashboard_json",
+                        "refresh_dashboard",
+                        "write_cycle_receipt"
+                    ],
+    "allowed_transports":  [
+                               "mock",
+                               "ollama_gated"
+                           ],
+    "default_transport":  "mock",
+    "real_worker_requires_authorization":  true,
+    "card_selection_policy":  {
+                                  "required_kanban_decision":  "GO",
+                                  "required_human_reviewed":  "true",
+                                  "preferred_columns":  [
+                                                            "DOING",
+                                                            "NEXT",
+                                                            "REVIEW"
+                                                        ],
+                                  "exclude_columns":  [
+                                                          "DONE",
+                                                          "BLOCKED"
+                                                      ]
+                              },
+    "state_transition_policy":  {
+                                    "NEXT_to_DOING":  "after worker dispatch/response evidence",
+                                    "DOING_to_REVIEW":  "after worker response evidence captured",
+                                    "REVIEW_to_DONE":  "after human validation",
+                                    "BLOCKED":  "only if risk/blocker detected"
+                                },
+    "safety":  {
+                   "write_to_cline_kanban":  false,
+                   "git_write":  false,
+                   "external_network":  false,
+                   "card_write_requires_backup":  true,
+                   "card_write_requires_human_gate":  true,
+                   "ollama_requires_phrase":  "AUTORIZO_OLLAMA_WORKER_TRANSPORT_REAL_CARD_001_PROPOSAL_ONLY",
+                   "state_update_requires_phrase":  "AUTORIZO_APLICAR_TRANSICIONES_KANBAN_LOCAL_CON_BACKUP"
+               },
+    "outputs":  [
+                    "cycle job json",
+                    "worker response md",
+                    "evidence md",
+                    "transition proposal json",
+                    "optional applied transition json",
+                    "dashboard refresh",
+                    "cycle close report"
+                ]
+}

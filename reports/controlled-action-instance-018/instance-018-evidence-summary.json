@@ -1,0 +1,38 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_ACTION_INSTANCE_018",
+    "stage":  "E05",
+    "created_at":  "2026-06-17T10:06:27.7785714+02:00",
+    "evidence_summary":  [
+                             "controlled-action-instance-scope.json",
+                             "template-reference.json",
+                             "controlled-action-instance-preview.json",
+                             "controlled-action-instance-gate.json",
+                             "controlled-action-instance-dry-run-request.json",
+                             "controlled-action-instance-dry-run-result.json",
+                             "controlled-action-instance-execution-plan.json",
+                             "initial-preview-receipt.json",
+                             "gate-receipt.json",
+                             "dry-run-receipt.json",
+                             "execution-plan-receipt.json",
+                             "blocked-action-receipt.json",
+                             "e01-instance-readiness-report.json",
+                             "e02-gate-readiness-report.json",
+                             "e03-dry-run-readiness-report.json",
+                             "e04-execution-plan-readiness-report.json"
+                         ],
+    "readiness_chain":  [
+                            "E01=100",
+                            "E02=100",
+                            "E03=100",
+                            "E04=100"
+                        ],
+    "safety_result":  {
+                          "gate":  "DEFER",
+                          "apply_executed":  false,
+                          "auto_apply":  false,
+                          "remote_execution":  false,
+                          "git_write":  false,
+                          "side_effects_detected":  false,
+                          "unauthorized_writes_detected":  false
+                      }
+}

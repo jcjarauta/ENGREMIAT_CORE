@@ -1,0 +1,30 @@
+﻿{
+    "request_id":  "SERVICE-INVENTORY-REQUEST-011-E01",
+    "objective":  "ENGREMIAT_REAL_CLINE_KANBAN_OLLAMA_TESTS_011",
+    "stage":  "E01",
+    "must_detect":  [
+                        "git_root",
+                        "branch",
+                        "head",
+                        "cline",
+                        "kanban",
+                        "ollama"
+                    ],
+    "forbidden":  [
+                      "fetch",
+                      "push",
+                      "apply",
+                      "remote_execution",
+                      "git_write"
+                  ],
+    "expected_decision":  [
+                              "GO_MAIN_PC_READY",
+                              "NO_GO"
+                          ],
+    "safety":  {
+                   "git_write":  false,
+                   "remote_execution":  false,
+                   "auto_apply":  false,
+                   "shared_repo_edit":  false
+               }
+}

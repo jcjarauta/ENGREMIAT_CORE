@@ -1,0 +1,32 @@
+﻿{
+    "objective_id":  "ENGREMIAT_FIRST_OFFICIAL_MODULE_FROM_BUILDER_001",
+    "status":  "RECOMMENDED",
+    "reason":  "El builder preview ya esta validado; toca usarlo para crear el primer modulo oficial y comprobar que sirve como rutina real de arquitectura.",
+    "proposed_module":  {
+                            "name":  "Arquitectura Global ENGREMIAT",
+                            "space_type":  "MODULE_SPACE",
+                            "parent":  "01_SISTEMA_ENGREMIAT",
+                            "related_to":  "G08_SYSTEM_EVOLUTION",
+                            "preferred_surface":  "GROUPED_CANVAS",
+                            "group":  "G03_PROJECTS_MODULES"
+                        },
+    "stages":  [
+                   "E01_DEFINE_FIRST_OFFICIAL_MODULE_REQUEST",
+                   "E02_ROUTE_MODULE_WITH_BUILDER",
+                   "E03_GENERATE_MODULE_SPACE_PREVIEW",
+                   "E04_LINK_MODULE_TO_MASTER_VAULT_INDEXES",
+                   "E05_VALIDATE_OBSIDIAN_GROUPS_AND_CANVAS",
+                   "E06_CLOSE_FIRST_OFFICIAL_MODULE"
+               ],
+    "safety":  {
+                   "local_only":  true,
+                   "preview_only":  true,
+                   "execute_now":  false,
+                   "worker_execution":  false,
+                   "kanban_write":  false,
+                   "clien_write":  false,
+                   "obsidian_app_automation":  false,
+                   "git_write":  false,
+                   "external_network":  false
+               }
+}

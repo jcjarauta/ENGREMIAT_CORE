@@ -1,0 +1,37 @@
+﻿{
+    "schema_id":  "evidence.schema.v1",
+    "required":  [
+                     "evidence_id",
+                     "evidence_type",
+                     "source",
+                     "path_or_reference",
+                     "validation_status"
+                 ],
+    "evidence_types":  [
+                           "AUDIO",
+                           "TRANSCRIPT",
+                           "PDF",
+                           "DOCX",
+                           "MARKDOWN",
+                           "JSON",
+                           "CSV",
+                           "IMAGE",
+                           "URL_REFERENCE",
+                           "OBSIDIAN_NOTE",
+                           "SHEET_ROW",
+                           "KANBAN_CARD",
+                           "SCRIPT_LOG",
+                           "REPORT"
+                       ],
+    "fields":  [
+                   "evidence_id",
+                   "evidence_type",
+                   "source",
+                   "path_or_reference",
+                   "checksum",
+                   "validation_status",
+                   "created_at",
+                   "created_by",
+                   "notes"
+               ]
+}

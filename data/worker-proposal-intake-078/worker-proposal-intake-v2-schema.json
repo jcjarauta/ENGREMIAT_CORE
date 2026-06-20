@@ -1,0 +1,49 @@
+﻿{
+    "objective":  "ENGREMIAT_NEXT_REAL_VALUE_OPERATIONALIZATION_076_085",
+    "stage":  "E78",
+    "schema":  "WORKER_PROPOSAL_INTAKE_V2",
+    "version":  "0.78.0-local",
+    "purpose":  "Normalizar entrada controlada de propuestas worker sin ejecucion autonoma.",
+    "required_fields":  [
+                            "proposal_id",
+                            "worker_role",
+                            "title",
+                            "summary",
+                            "target_artifacts",
+                            "risk",
+                            "requires_human_decision",
+                            "expected_evidence",
+                            "safety_flags"
+                        ],
+    "allowed_worker_roles":  [
+                                 "planner",
+                                 "critic",
+                                 "builder",
+                                 "docs",
+                                 "reviewer"
+                             ],
+    "allowed_risk":  [
+                         "LOW",
+                         "MEDIUM",
+                         "HIGH"
+                     ],
+    "denied_behaviors":  [
+                             "worker_to_worker_autonomy",
+                             "automatic_prompt_chaining",
+                             "automatic_tool_execution",
+                             "auto_apply",
+                             "remote_execution",
+                             "external_network",
+                             "git_write",
+                             "kanban_real_write"
+                         ],
+    "human_gate_required":  true,
+    "worker_executed":  false,
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "kanban_real_write":  false,
+    "created_utc":  "2026-06-17T10:53:56.0915758Z"
+}

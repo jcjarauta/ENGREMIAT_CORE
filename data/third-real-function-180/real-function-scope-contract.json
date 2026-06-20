@@ -1,0 +1,37 @@
+﻿{
+    "objective_id":  "DEFINE_THIRD_REAL_FUNCTION_WITH_TEMPLATE_MVP_180_183",
+    "stage":  "E180",
+    "block":  "B180.1",
+    "step":  "P180.1.2",
+    "name":  "real-function-scope-contract",
+    "purpose":  "Define scope, limits and success criteria for the third minimal real function",
+    "template_source":  "DEFINE_REAL_EXECUTION_TEMPLATE_STANDARD_MVP_172_175",
+    "candidate_path":  "C:\\ENGREMIAT_CORE\\data\\third-real-function-180\\selected-third-function.json",
+    "main_input":  "primary file",
+    "support_input":  "secondary support file",
+    "allowed":  [
+                    "local file reads",
+                    "local file writes",
+                    "visible loading",
+                    "receipt",
+                    "postcheck",
+                    "human review"
+                ],
+    "blocked":  [
+                    "external network",
+                    "git writes",
+                    "real kanban writes",
+                    "real cline writes",
+                    "destructive actions",
+                    "multi-task execution"
+                ],
+    "success_criteria":  [
+                             "single function only",
+                             "two inputs only",
+                             "single prompt only",
+                             "single real call only if needed",
+                             "evidence captured",
+                             "readiness closed"
+                         ],
+    "created_at":  "2026-06-17T18:14:58.7833353+02:00"
+}

@@ -1,0 +1,15 @@
+﻿ENGREMIAT_BASE_PREVIEW
+view_id: PENDING_GATES
+title: Gates pendientes
+object_type: gate
+filter: authorization_status = NOT_GRANTED OR decision = DEFER
+group_by: sensitive_action
+sort: created_at desc
+columns:
+- gate_id
+- project_id
+- status
+- decision
+- authorization_status
+- sensitive_action
+note: Preview de especificacion para Obsidian Bases. No ejecuta nada.

@@ -1,0 +1,164 @@
+﻿{
+    "schema_id":  "module-intake-candidate-schema.v1",
+    "package_id":  "ENGREMIAT_TASK_PACKET_TO_MODULE_INTAKE_001",
+    "stage":  "E02_CANDIDATE_INTAKE_SCHEMA",
+    "type":  "object",
+    "required":  [
+                     "candidate_id",
+                     "candidate_status",
+                     "source",
+                     "module_candidate",
+                     "classification",
+                     "traceability",
+                     "safety_policy",
+                     "human_decision"
+                 ],
+    "properties":  {
+                       "candidate_id":  {
+                                            "type":  "string",
+                                            "required":  true,
+                                            "example":  "MODULE-CANDIDATE-TASK-PACKET-DEMO-001"
+                                        },
+                       "candidate_status":  {
+                                                "type":  "string",
+                                                "enum":  [
+                                                             "CANDIDATE_PENDING_HUMAN_DECISION",
+                                                             "BACKLOG",
+                                                             "REJECTED",
+                                                             "APPROVED_FOR_MODULE_CREATION"
+                                                         ]
+                                            },
+                       "source":  {
+                                      "type":  "object",
+                                      "required":  [
+                                                       "task_packet_id",
+                                                       "source_package",
+                                                       "source_file"
+                                                   ],
+                                      "properties":  {
+                                                         "task_packet_id":  {
+                                                                                "type":  "string"
+                                                                            },
+                                                         "source_package":  {
+                                                                                "type":  "string"
+                                                                            },
+                                                         "source_file":  {
+                                                                             "type":  "string"
+                                                                         }
+                                                     }
+                                  },
+                       "module_candidate":  {
+                                                "type":  "object",
+                                                "required":  [
+                                                                 "module_id_proposal",
+                                                                 "name",
+                                                                 "description",
+                                                                 "purpose",
+                                                                 "status"
+                                                             ],
+                                                "properties":  {
+                                                                   "module_id_proposal":  {
+                                                                                              "type":  "string"
+                                                                                          },
+                                                                   "name":  {
+                                                                                "type":  "string"
+                                                                            },
+                                                                   "description":  {
+                                                                                       "type":  "string"
+                                                                                   },
+                                                                   "purpose":  {
+                                                                                   "type":  "string"
+                                                                               },
+                                                                   "status":  {
+                                                                                  "type":  "string",
+                                                                                  "enum":  [
+                                                                                               "PROPOSED",
+                                                                                               "DRAFT",
+                                                                                               "BLOCKED"
+                                                                                           ]
+                                                                              }
+                                                               }
+                                            },
+                       "classification":  {
+                                              "type":  "object",
+                                              "required":  [
+                                                               "tags",
+                                                               "priority",
+                                                               "risk"
+                                                           ],
+                                              "properties":  {
+                                                                 "tags":  {
+                                                                              "type":  "array",
+                                                                              "items":  "string"
+                                                                          },
+                                                                 "priority":  {
+                                                                                  "type":  "string",
+                                                                                  "enum":  [
+                                                                                               "LOW",
+                                                                                               "MEDIUM",
+                                                                                               "HIGH"
+                                                                                           ]
+                                                                              },
+                                                                 "risk":  {
+                                                                              "type":  "string",
+                                                                              "enum":  [
+                                                                                           "LOW",
+                                                                                           "MEDIUM",
+                                                                                           "HIGH"
+                                                                                       ]
+                                                                          }
+                                                             }
+                                          },
+                       "traceability":  {
+                                            "type":  "object",
+                                            "required":  [
+                                                             "links",
+                                                             "created_at",
+                                                             "created_by_stage"
+                                                         ],
+                                            "properties":  {
+                                                               "links":  {
+                                                                             "type":  "array",
+                                                                             "items":  "string"
+                                                                         },
+                                                               "created_at":  {
+                                                                                  "type":  "string"
+                                                                              },
+                                                               "created_by_stage":  {
+                                                                                        "type":  "string"
+                                                                                    }
+                                                           }
+                                        },
+                       "safety_policy":  {
+                                             "type":  "object",
+                                             "required":  [
+                                                              "local_only",
+                                                              "core_changes",
+                                                              "real_module_creation",
+                                                              "real_intake_write",
+                                                              "git_write",
+                                                              "network"
+                                                          ]
+                                         },
+                       "human_decision":  {
+                                              "type":  "object",
+                                              "required":  [
+                                                               "required",
+                                                               "allowed_decisions",
+                                                               "current_decision"
+                                                           ],
+                                              "properties":  {
+                                                                 "required":  {
+                                                                                  "type":  "boolean"
+                                                                              },
+                                                                 "allowed_decisions":  {
+                                                                                           "type":  "array",
+                                                                                           "items":  "string"
+                                                                                       },
+                                                                 "current_decision":  {
+                                                                                          "type":  "string"
+                                                                                      }
+                                                             }
+                                          }
+                   }
+}

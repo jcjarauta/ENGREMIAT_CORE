@@ -1,0 +1,440 @@
+﻿{
+    "package_id":  "ENGREMIAT_MASTER_VAULT_TEMPLATE_AUDIT_001",
+    "stage":  "E01_AUDIT_MASTER_VAULT_TEMPLATE_STRUCTURE_LINKS_AND_CONTENT_REPAIR_V2",
+    "status":  "PASS",
+    "global_score":  68,
+    "decision":  "NO_GO_REPAIR_BEFORE_FIRST_OFFICIAL_MODULE",
+    "targets":  [
+                    {
+                        "target_id":  "MASTER_TEMPLATE",
+                        "path":  "C:\\ENGREMIAT_CORE\\templates\\obsidian-master-vault-template\\ENGREMIAT_MASTER_VAULT_TEMPLATE",
+                        "status":  "PASS",
+                        "folders":  11,
+                        "md_files":  6,
+                        "canvas_files":  1,
+                        "missing_required_folders":  [
+
+                                                     ],
+                        "wikilinks":  3,
+                        "broken_links":  [
+
+                                         ],
+                        "invalid_links":  [
+
+                                          ],
+                        "frontmatter_bad":  [
+
+                                            ],
+                        "duplicate_titles":  [
+
+                                             ],
+                        "repeated_themes":  [
+
+                                            ],
+                        "orphan_notes":  [
+
+                                         ],
+                        "canvas_problems":  [
+
+                                            ],
+                        "score":  100,
+                        "decision":  "GO_TEMPLATE_COHERENT"
+                    },
+                    {
+                        "target_id":  "LIVE_PREVIEW_VAULT",
+                        "path":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT",
+                        "status":  "PASS",
+                        "folders":  11,
+                        "md_files":  82,
+                        "canvas_files":  10,
+                        "missing_required_folders":  [
+                                                         "03_MODULOS",
+                                                         "06_WORKERS",
+                                                         "10_SUPERFICIES_TRABAJO"
+                                                     ],
+                        "wikilinks":  107,
+                        "broken_links":  [
+                                             {
+                                                 "source":  "02_PROYECTOS\\PROJECT_demo-builder-project-space\\08_RELACIONES\\MODULE_modulo-validacion-builder-e06\\00_INDEX\\INDEX.md",
+                                                 "target":  "../01_INTAKE/INTAKE"
+                                             },
+                                             {
+                                                 "source":  "02_PROYECTOS\\PROJECT_demo-builder-project-space\\08_RELACIONES\\MODULE_modulo-validacion-builder-e06\\00_INDEX\\INDEX.md",
+                                                 "target":  "../04_GATES_DECISIONES/GATES"
+                                             },
+                                             {
+                                                 "source":  "02_PROYECTOS\\PROJECT_demo-builder-project-space\\08_RELACIONES\\MODULE_modulo-validacion-builder-e06\\00_INDEX\\INDEX.md",
+                                                 "target":  "../06_WORKERS/WORKERS"
+                                             },
+                                             {
+                                                 "source":  "08_PLANTILLAS\\TEMPLATE_DECISION.md",
+                                                 "target":  "GATES_INDEX"
+                                             },
+                                             {
+                                                 "source":  "08_PLANTILLAS\\TEMPLATE_INTAKE.md",
+                                                 "target":  "../00_INDEX/PROJECT_INDEX"
+                                             },
+                                             {
+                                                 "source":  "08_PLANTILLAS\\TEMPLATE_INTAKE.md",
+                                                 "target":  "../02_ROADMAP/ROADMAP_IA_LOCAL"
+                                             },
+                                             {
+                                                 "source":  "08_PLANTILLAS\\TEMPLATE_PROJECT.md",
+                                                 "target":  "../01_INTAKE/INTAKE_NORMALIZADO"
+                                             },
+                                             {
+                                                 "source":  "08_PLANTILLAS\\TEMPLATE_PROJECT.md",
+                                                 "target":  "../02_ROADMAP/ROADMAP_IA_LOCAL"
+                                             },
+                                             {
+                                                 "source":  "08_PLANTILLAS\\TEMPLATE_PROJECT.md",
+                                                 "target":  "../03_TAREAS/TASKS_INDEX"
+                                             },
+                                             {
+                                                 "source":  "08_PLANTILLAS\\TEMPLATE_PROJECT.md",
+                                                 "target":  "../04_GATES_DECISIONES/GATES_INDEX"
+                                             },
+                                             {
+                                                 "source":  "08_PLANTILLAS\\TEMPLATE_PROJECT.md",
+                                                 "target":  "../05_EVIDENCIAS/EVIDENCE_INDEX"
+                                             },
+                                             {
+                                                 "source":  "08_PLANTILLAS\\TEMPLATE_PROJECT.md",
+                                                 "target":  "../07_RESULTADOS/RESULT_SUMMARY"
+                                             },
+                                             {
+                                                 "source":  "08_PLANTILLAS\\TEMPLATE_PROJECT.md",
+                                                 "target":  "../04_GATES_DECISIONES/GATE_ROADMAP_APPROVAL"
+                                             },
+                                             {
+                                                 "source":  "08_PLANTILLAS\\TEMPLATE_PROJECT.md",
+                                                 "target":  "../04_GATES_DECISIONES/GATE_WORKER_EXECUTION"
+                                             },
+                                             {
+                                                 "source":  "08_PLANTILLAS\\TEMPLATE_PROJECT.md",
+                                                 "target":  "../05_EVIDENCIAS/EVIDENCE_INDEX"
+                                             },
+                                             {
+                                                 "source":  "08_PLANTILLAS\\TEMPLATE_ROADMAP.md",
+                                                 "target":  "../01_INTAKE/INTAKE_NORMALIZADO"
+                                             },
+                                             {
+                                                 "source":  "08_PLANTILLAS\\TEMPLATE_ROADMAP.md",
+                                                 "target":  "../03_TAREAS/TASKS_INDEX"
+                                             },
+                                             {
+                                                 "source":  "08_PLANTILLAS\\TEMPLATE_ROADMAP.md",
+                                                 "target":  "../04_GATES_DECISIONES/GATE_ROADMAP_APPROVAL"
+                                             },
+                                             {
+                                                 "source":  "08_PLANTILLAS\\TEMPLATE_WORKER_PACKET.md",
+                                                 "target":  "../04_GATES_DECISIONES/GATE_WORKER_EXECUTION"
+                                             }
+                                         ],
+                        "invalid_links":  [
+                                              {
+                                                  "source":  "00_CONTROL_OPERATIVO\\CONTROL_HUB.md",
+                                                  "target":  "../02_PROYECTOS/PROJECT_\nprimer-intake-real-para-construir-roadmap-autom-tico-en-engremia\n/00_INDEX/PROJECT_INDEX",
+                                                  "issue":  "invalid_target_chars"
+                                              },
+                                              {
+                                                  "source":  "02_PROYECTOS\\PROJECTS_INDEX.md",
+                                                  "target":  "PROJECT_\nprimer-intake-real-para-construir-roadmap-autom-tico-en-engremia\n/00_INDEX/PROJECT_INDEX",
+                                                  "issue":  "invalid_target_chars"
+                                              }
+                                          ],
+                        "frontmatter_bad":  [
+                                                {
+                                                    "relative":  "01_SISTEMA_ENGREMIAT\\CIERRE_ARQUITECTURA_AGRUPADA_Y_SIGUIENTE_OBJETIVO.md",
+                                                    "title":  "ENGREMIAT · Cierre arquitectura agrupada\r",
+                                                    "theme":  "engremiat cierre arquitectura agrupada",
+                                                    "frontmatter_ok":  false,
+                                                    "wikilinks":  0
+                                                },
+                                                {
+                                                    "relative":  "01_SISTEMA_ENGREMIAT\\CIERRE_VAULT_MODULE_BUILDER_Y_SIGUIENTE_OBJETIVO.md",
+                                                    "title":  "ENGREMIAT · Cierre Vault Module Builder\r",
+                                                    "theme":  "engremiat cierre vault module builder",
+                                                    "frontmatter_ok":  false,
+                                                    "wikilinks":  0
+                                                }
+                                            ],
+                        "duplicate_titles":  [
+                                                 {
+                                                     "title":  "Evidencias\r",
+                                                     "files":  [
+                                                                   "02_PROYECTOS\\PROJECT_demo-builder-project-space\\05_EVIDENCIAS\\EVIDENCE.md",
+                                                                   "02_PROYECTOS\\PROJECT_demo-builder-project-space\\08_RELACIONES\\MODULE_modulo-validacion-builder-e06\\05_EVIDENCIAS\\EVIDENCE.md"
+                                                               ]
+                                                 },
+                                                 {
+                                                     "title":  "Tasks index\r",
+                                                     "files":  [
+                                                                   "02_PROYECTOS\\PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia\\03_TAREAS\\TASKS_INDEX.md",
+                                                                   "02_PROYECTOS\\PROJECT_TEMPLATE_SPACE\\03_TAREAS\\TASKS_INDEX.md"
+                                                               ]
+                                                 },
+                                                 {
+                                                     "title":  "Tarjeta · \r",
+                                                     "files":  [
+                                                                   "02_PROYECTOS\\PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia\\03_TAREAS\\CARD_KB-001.md",
+                                                                   "02_PROYECTOS\\PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia\\03_TAREAS\\CARD_KB-002.md",
+                                                                   "02_PROYECTOS\\PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia\\03_TAREAS\\CARD_KB-003.md",
+                                                                   "02_PROYECTOS\\PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia\\03_TAREAS\\CARD_KB-004.md",
+                                                                   "02_PROYECTOS\\PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia\\03_TAREAS\\CARD_KB-005.md",
+                                                                   "02_PROYECTOS\\PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia\\03_TAREAS\\CARD_KB-006.md"
+                                                               ]
+                                                 },
+                                                 {
+                                                     "title":  "Gates index\r",
+                                                     "files":  [
+                                                                   "02_PROYECTOS\\PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia\\04_GATES_DECISIONES\\GATES_INDEX.md",
+                                                                   "02_PROYECTOS\\PROJECT_TEMPLATE_SPACE\\04_GATES_DECISIONES\\GATES_INDEX.md"
+                                                               ]
+                                                 },
+                                                 {
+                                                     "title":  "Intake normalizado\r",
+                                                     "files":  [
+                                                                   "02_PROYECTOS\\PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia\\01_INTAKE\\INTAKE_NORMALIZADO.md",
+                                                                   "02_PROYECTOS\\PROJECT_TEMPLATE_SPACE\\01_INTAKE\\INTAKE_NORMALIZADO.md",
+                                                                   "08_PLANTILLAS\\TEMPLATE_INTAKE.md"
+                                                               ]
+                                                 },
+                                                 {
+                                                     "title":  "Gates\r",
+                                                     "files":  [
+                                                                   "02_PROYECTOS\\PROJECT_demo-builder-project-space\\04_GATES_DECISIONES\\GATES.md",
+                                                                   "02_PROYECTOS\\PROJECT_demo-builder-project-space\\08_RELACIONES\\MODULE_modulo-validacion-builder-e06\\04_GATES\\GATES.md"
+                                                               ]
+                                                 },
+                                                 {
+                                                     "title":  "Roadmap preview\r",
+                                                     "files":  [
+                                                                   "02_PROYECTOS\\PROJECT_demo-builder-project-space\\02_ROADMAP\\ROADMAP.md",
+                                                                   "02_PROYECTOS\\PROJECT_demo-builder-project-space\\08_RELACIONES\\MODULE_modulo-validacion-builder-e06\\02_ROADMAP\\ROADMAP.md"
+                                                               ]
+                                                 },
+                                                 {
+                                                     "title":  "Tareas preview\r",
+                                                     "files":  [
+                                                                   "02_PROYECTOS\\PROJECT_demo-builder-project-space\\03_TAREAS\\TASKS.md",
+                                                                   "02_PROYECTOS\\PROJECT_demo-builder-project-space\\08_RELACIONES\\MODULE_modulo-validacion-builder-e06\\03_TAREAS\\TASKS.md"
+                                                               ]
+                                                 },
+                                                 {
+                                                     "title":  "Gate · \r",
+                                                     "files":  [
+                                                                   "02_PROYECTOS\\PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia\\04_GATES_DECISIONES\\GATE_KANBAN_REAL_WRITE.md",
+                                                                   "02_PROYECTOS\\PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia\\04_GATES_DECISIONES\\GATE_ROADMAP_APPROVAL.md",
+                                                                   "02_PROYECTOS\\PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia\\04_GATES_DECISIONES\\GATE_WORKER_EXECUTION.md"
+                                                               ]
+                                                 },
+                                                 {
+                                                     "title":  "Workers preview\r",
+                                                     "files":  [
+                                                                   "02_PROYECTOS\\PROJECT_demo-builder-project-space\\06_WORKERS\\WORKERS.md",
+                                                                   "02_PROYECTOS\\PROJECT_demo-builder-project-space\\08_RELACIONES\\MODULE_modulo-validacion-builder-e06\\06_RELACIONES\\WORKERS.md"
+                                                               ]
+                                                 },
+                                                 {
+                                                     "title":  "Roadmap IA local\r",
+                                                     "files":  [
+                                                                   "02_PROYECTOS\\PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia\\02_ROADMAP\\ROADMAP_IA_LOCAL.md",
+                                                                   "02_PROYECTOS\\PROJECT_TEMPLATE_SPACE\\02_ROADMAP\\ROADMAP_IA_LOCAL.md",
+                                                                   "08_PLANTILLAS\\TEMPLATE_ROADMAP.md"
+                                                               ]
+                                                 },
+                                                 {
+                                                     "title":  "Evidence index\r",
+                                                     "files":  [
+                                                                   "02_PROYECTOS\\PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia\\05_EVIDENCIAS\\EVIDENCE_INDEX.md",
+                                                                   "02_PROYECTOS\\PROJECT_TEMPLATE_SPACE\\05_EVIDENCIAS\\EVIDENCE_INDEX.md"
+                                                               ]
+                                                 },
+                                                 {
+                                                     "title":  "Route preview · \r",
+                                                     "files":  [
+                                                                   "07_OBSIDIAN_GRAPH\\RELATION_ROUTER_PREVIEW\\ROUTE_demo-relation-router.md",
+                                                                   "07_OBSIDIAN_GRAPH\\RELATION_ROUTER_PREVIEW\\ROUTE_modulo-validacion-builder-e06.md"
+                                                               ]
+                                                 },
+                                                 {
+                                                     "title":  "Intake / contexto\r",
+                                                     "files":  [
+                                                                   "02_PROYECTOS\\PROJECT_demo-builder-project-space\\01_INTAKE\\INTAKE.md",
+                                                                   "02_PROYECTOS\\PROJECT_demo-builder-project-space\\08_RELACIONES\\MODULE_modulo-validacion-builder-e06\\01_CONTRATO\\INTAKE.md"
+                                                               ]
+                                                 }
+                                             ],
+                        "repeated_themes":  [
+                                                {
+                                                    "theme":  "tasks index",
+                                                    "files":  [
+                                                                  "02_PROYECTOS\\PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia\\03_TAREAS\\TASKS_INDEX.md",
+                                                                  "02_PROYECTOS\\PROJECT_TEMPLATE_SPACE\\03_TAREAS\\TASKS_INDEX.md"
+                                                              ]
+                                                },
+                                                {
+                                                    "theme":  "gates",
+                                                    "files":  [
+                                                                  "02_PROYECTOS\\PROJECT_demo-builder-project-space\\04_GATES_DECISIONES\\GATES.md",
+                                                                  "02_PROYECTOS\\PROJECT_demo-builder-project-space\\08_RELACIONES\\MODULE_modulo-validacion-builder-e06\\04_GATES\\GATES.md"
+                                                              ]
+                                                },
+                                                {
+                                                    "theme":  "evidence index",
+                                                    "files":  [
+                                                                  "02_PROYECTOS\\PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia\\05_EVIDENCIAS\\EVIDENCE_INDEX.md",
+                                                                  "02_PROYECTOS\\PROJECT_TEMPLATE_SPACE\\05_EVIDENCIAS\\EVIDENCE_INDEX.md"
+                                                              ]
+                                                },
+                                                {
+                                                    "theme":  "evidencias",
+                                                    "files":  [
+                                                                  "02_PROYECTOS\\PROJECT_demo-builder-project-space\\05_EVIDENCIAS\\EVIDENCE.md",
+                                                                  "02_PROYECTOS\\PROJECT_demo-builder-project-space\\08_RELACIONES\\MODULE_modulo-validacion-builder-e06\\05_EVIDENCIAS\\EVIDENCE.md"
+                                                              ]
+                                                },
+                                                {
+                                                    "theme":  "gates index",
+                                                    "files":  [
+                                                                  "02_PROYECTOS\\PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia\\04_GATES_DECISIONES\\GATES_INDEX.md",
+                                                                  "02_PROYECTOS\\PROJECT_TEMPLATE_SPACE\\04_GATES_DECISIONES\\GATES_INDEX.md"
+                                                              ]
+                                                },
+                                                {
+                                                    "theme":  "intake contexto",
+                                                    "files":  [
+                                                                  "02_PROYECTOS\\PROJECT_demo-builder-project-space\\01_INTAKE\\INTAKE.md",
+                                                                  "02_PROYECTOS\\PROJECT_demo-builder-project-space\\08_RELACIONES\\MODULE_modulo-validacion-builder-e06\\01_CONTRATO\\INTAKE.md"
+                                                              ]
+                                                },
+                                                {
+                                                    "theme":  "roadmap ia local",
+                                                    "files":  [
+                                                                  "02_PROYECTOS\\PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia\\02_ROADMAP\\ROADMAP_IA_LOCAL.md",
+                                                                  "02_PROYECTOS\\PROJECT_TEMPLATE_SPACE\\02_ROADMAP\\ROADMAP_IA_LOCAL.md",
+                                                                  "08_PLANTILLAS\\TEMPLATE_ROADMAP.md"
+                                                              ]
+                                                },
+                                                {
+                                                    "theme":  "intake normalizado",
+                                                    "files":  [
+                                                                  "02_PROYECTOS\\PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia\\01_INTAKE\\INTAKE_NORMALIZADO.md",
+                                                                  "02_PROYECTOS\\PROJECT_TEMPLATE_SPACE\\01_INTAKE\\INTAKE_NORMALIZADO.md",
+                                                                  "08_PLANTILLAS\\TEMPLATE_INTAKE.md"
+                                                              ]
+                                                },
+                                                {
+                                                    "theme":  "tarjeta",
+                                                    "files":  [
+                                                                  "02_PROYECTOS\\PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia\\03_TAREAS\\CARD_KB-001.md",
+                                                                  "02_PROYECTOS\\PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia\\03_TAREAS\\CARD_KB-002.md",
+                                                                  "02_PROYECTOS\\PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia\\03_TAREAS\\CARD_KB-003.md",
+                                                                  "02_PROYECTOS\\PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia\\03_TAREAS\\CARD_KB-004.md",
+                                                                  "02_PROYECTOS\\PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia\\03_TAREAS\\CARD_KB-005.md",
+                                                                  "02_PROYECTOS\\PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia\\03_TAREAS\\CARD_KB-006.md"
+                                                              ]
+                                                },
+                                                {
+                                                    "theme":  "roadmap preview",
+                                                    "files":  [
+                                                                  "02_PROYECTOS\\PROJECT_demo-builder-project-space\\02_ROADMAP\\ROADMAP.md",
+                                                                  "02_PROYECTOS\\PROJECT_demo-builder-project-space\\08_RELACIONES\\MODULE_modulo-validacion-builder-e06\\02_ROADMAP\\ROADMAP.md"
+                                                              ]
+                                                },
+                                                {
+                                                    "theme":  "workers preview",
+                                                    "files":  [
+                                                                  "02_PROYECTOS\\PROJECT_demo-builder-project-space\\06_WORKERS\\WORKERS.md",
+                                                                  "02_PROYECTOS\\PROJECT_demo-builder-project-space\\08_RELACIONES\\MODULE_modulo-validacion-builder-e06\\06_RELACIONES\\WORKERS.md"
+                                                              ]
+                                                },
+                                                {
+                                                    "theme":  "route preview",
+                                                    "files":  [
+                                                                  "07_OBSIDIAN_GRAPH\\RELATION_ROUTER_PREVIEW\\ROUTE_demo-relation-router.md",
+                                                                  "07_OBSIDIAN_GRAPH\\RELATION_ROUTER_PREVIEW\\ROUTE_modulo-validacion-builder-e06.md"
+                                                              ]
+                                                },
+                                                {
+                                                    "theme":  "gate",
+                                                    "files":  [
+                                                                  "02_PROYECTOS\\PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia\\04_GATES_DECISIONES\\GATE_KANBAN_REAL_WRITE.md",
+                                                                  "02_PROYECTOS\\PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia\\04_GATES_DECISIONES\\GATE_ROADMAP_APPROVAL.md",
+                                                                  "02_PROYECTOS\\PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia\\04_GATES_DECISIONES\\GATE_WORKER_EXECUTION.md"
+                                                              ]
+                                                },
+                                                {
+                                                    "theme":  "tareas preview",
+                                                    "files":  [
+                                                                  "02_PROYECTOS\\PROJECT_demo-builder-project-space\\03_TAREAS\\TASKS.md",
+                                                                  "02_PROYECTOS\\PROJECT_demo-builder-project-space\\08_RELACIONES\\MODULE_modulo-validacion-builder-e06\\03_TAREAS\\TASKS.md"
+                                                              ]
+                                                },
+                                                {
+                                                    "theme":  "result summary",
+                                                    "files":  [
+                                                                  "02_PROYECTOS\\PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia\\07_RESULTADOS\\RESULT_SUMMARY.md",
+                                                                  "02_PROYECTOS\\PROJECT_TEMPLATE_SPACE\\07_RESULTADOS\\RESULT_SUMMARY.md"
+                                                              ]
+                                                }
+                                            ],
+                        "orphan_notes":  [
+                                             "00_CONTROL_OPERATIVO\\HOME.md",
+                                             "00_CONTROL_OPERATIVO\\SYSTEM_STATUS.md",
+                                             "01_SISTEMA_ENGREMIAT\\CIERRE_VAULT_MODULE_BUILDER_Y_SIGUIENTE_OBJETIVO.md",
+                                             "01_SISTEMA_ENGREMIAT\\SYSTEM_MAP.md",
+                                             "02_PROYECTOS\\PROJECT_demo-builder-project-space\\01_INTAKE\\INTAKE.md",
+                                             "02_PROYECTOS\\PROJECT_demo-builder-project-space\\02_ROADMAP\\ROADMAP.md",
+                                             "02_PROYECTOS\\PROJECT_demo-builder-project-space\\03_TAREAS\\TASKS.md",
+                                             "02_PROYECTOS\\PROJECT_demo-builder-project-space\\04_GATES_DECISIONES\\GATES.md",
+                                             "02_PROYECTOS\\PROJECT_demo-builder-project-space\\05_EVIDENCIAS\\EVIDENCE.md",
+                                             "02_PROYECTOS\\PROJECT_demo-builder-project-space\\06_WORKERS\\WORKERS.md",
+                                             "02_PROYECTOS\\PROJECT_demo-builder-project-space\\08_RELACIONES\\MODULE_modulo-validacion-builder-e06\\01_CONTRATO\\INTAKE.md",
+                                             "02_PROYECTOS\\PROJECT_demo-builder-project-space\\08_RELACIONES\\MODULE_modulo-validacion-builder-e06\\02_ROADMAP\\ROADMAP.md",
+                                             "02_PROYECTOS\\PROJECT_demo-builder-project-space\\08_RELACIONES\\MODULE_modulo-validacion-builder-e06\\03_TAREAS\\TASKS.md",
+                                             "02_PROYECTOS\\PROJECT_demo-builder-project-space\\08_RELACIONES\\MODULE_modulo-validacion-builder-e06\\04_GATES\\GATES.md",
+                                             "02_PROYECTOS\\PROJECT_demo-builder-project-space\\08_RELACIONES\\MODULE_modulo-validacion-builder-e06\\05_EVIDENCIAS\\EVIDENCE.md",
+                                             "02_PROYECTOS\\PROJECT_demo-builder-project-space\\08_RELACIONES\\MODULE_modulo-validacion-builder-e06\\06_RELACIONES\\WORKERS.md",
+                                             "02_PROYECTOS\\PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia\\01_INTAKE\\INTAKE_NORMALIZADO.md",
+                                             "02_PROYECTOS\\PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia\\02_ROADMAP\\ROADMAP_IA_LOCAL.md",
+                                             "02_PROYECTOS\\PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia\\06_WORKERS\\WORKER_PACKET.md",
+                                             "02_PROYECTOS\\PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia\\07_RESULTADOS\\RESULT_SUMMARY.md",
+                                             "02_PROYECTOS\\PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia\\08_RELACIONES\\LINKS.md",
+                                             "02_PROYECTOS\\PROJECT_TEMPLATE_SPACE\\01_INTAKE\\INTAKE_NORMALIZADO.md",
+                                             "02_PROYECTOS\\PROJECT_TEMPLATE_SPACE\\02_ROADMAP\\ROADMAP_IA_LOCAL.md",
+                                             "02_PROYECTOS\\PROJECT_TEMPLATE_SPACE\\06_WORKERS\\WORKER_PACKET.md",
+                                             "02_PROYECTOS\\PROJECT_TEMPLATE_SPACE\\07_RESULTADOS\\RESULT_SUMMARY.md",
+                                             "02_PROYECTOS\\PROJECT_TEMPLATE_SPACE\\08_RELACIONES\\PROJECT_GRAPH.md",
+                                             "03_WORKERS\\WORKER_PROPOSALS.md",
+                                             "05_EVIDENCIAS\\RECENT_EVIDENCE.md",
+                                             "06_KANBAN_TAREAS\\ACTIVE_CARDS.md",
+                                             "06_KANBAN_TAREAS\\BLOCKED_CARDS.md",
+                                             "07_OBSIDIAN_GRAPH\\RELATION_ROUTER_PREVIEW\\ROUTE_demo-relation-router.md",
+                                             "07_OBSIDIAN_GRAPH\\RELATION_ROUTER_PREVIEW\\ROUTE_modulo-validacion-builder-e06.md"
+                                         ],
+                        "canvas_problems":  [
+
+                                            ],
+                        "score":  37,
+                        "decision":  "NO_GO_TEMPLATE_NEEDS_REPAIR"
+                    }
+                ],
+    "safety":  {
+                   "local_only":  true,
+                   "read_only_audit":  true,
+                   "preview_only":  true,
+                   "execute_now":  false,
+                   "worker_execution":  false,
+                   "kanban_write":  false,
+                   "clien_write":  false,
+                   "obsidian_app_automation":  false,
+                   "git_write":  false,
+                   "external_network":  false
+               },
+    "next":  "REPAIR_MASTER_VAULT_TEMPLATE_INCOHERENCES",
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\master-vault-template-audit\\e01-audit-master-vault-template-structure-links-and-content-report.json",
+    "dashboard":  "C:\\ENGREMIAT_CORE\\dashboard\\master-vault-template-audit\\master-vault-template-audit-e01.html",
+    "guide":  "C:\\ENGREMIAT_CORE\\docs\\master-vault-template-audit\\MASTER_VAULT_TEMPLATE_AUDIT_E01.md"
+}

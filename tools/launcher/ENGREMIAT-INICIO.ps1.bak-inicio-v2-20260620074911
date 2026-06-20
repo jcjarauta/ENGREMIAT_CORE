@@ -1,0 +1,270 @@
+﻿$ErrorActionPreference="Stop"
+[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+
+$Core="C:\ENGREMIAT_CORE"
+$ToolDir=Join-Path $Core "tools\desktop-terminal-operator"
+
+function W($m,$c="White"){ Write-Host $m -ForegroundColor $c }
+function P(){ [void](Read-Host "Enter") }
+
+function ActiveProject(){
+  $j=Join-Path $Core "data\desktop-terminal-operator\active-project.json"
+  $t=Join-Path $Core "data\desktop-terminal-operator\active-project.txt"
+
+  if(Test-Path $j){
+    try{
+      $x=Get-Content $j -Raw | ConvertFrom-Json
+      if($x.active_project -and (Test-Path ([string]$x.active_project))){ return [string]$x.active_project }
+    }catch{}
+  }
+
+  if(Test-Path $t){
+    $y=(Get-Content $t -Raw).Trim()
+    if(Test-Path $y){ return $y }
+  }
+
+  return ""
+}
+
+function RunTool($name,$args=@()){
+  $path=Join-Path $ToolDir $name
+  if(-not(Test-Path $path)){
+    W "NO_GO herramienta_no_encontrada=$path" Red
+    P
+    return
+  }
+  & powershell -NoProfile -ExecutionPolicy Bypass -File $path @args
+}
+
+function OpenFolder($path){
+  if(Test-Path $path){ Start-Process explorer.exe $path }
+  else{ W "NO_GO carpeta_no_encontrada=$path" Yellow; P }
+}
+
+function Status(){
+  Clear-Host
+  $p=ActiveProject
+
+  W "==== ESTADO ACTUAL ENGREMIAT ====" Cyan
+  W "Core: $Core" White
+
+  if($p){
+    W "Proyecto activo: $(Split-Path $p -Leaf)" Green
+    W "Ruta: $p" DarkGray
+  } else {
+    W "Proyecto activo: NO_DETECTADO" Yellow
+  }
+
+  W ""
+  W "PANTALLAS" Yellow
+
+  $checks=@(
+    @{label="Inicio / operador"; file="eng-desktop-terminal-operator.ps1"},
+    @{label="Modulos proyecto"; file="eng-project-modules-screen.ps1"},
+    @{label="Biblioteca modulos"; file="eng-module-library-screen.ps1"},
+    @{label="Workspace modulo"; file="eng-module-workspace-screen.ps1"},
+    @{label="Tarjetas modulo"; file="eng-module-cards-screen.ps1"},
+    @{label="Grafo modulos"; file="eng-refresh-project-module-graph.ps1"}
+  )
+
+  foreach($c in $checks){
+    $path=Join-Path $ToolDir $c.file
+    if(Test-Path $path){ W (" OK   {0}" -f $c.label) Green }
+    else{ W (" MISS {0}" -f $c.label) Yellow }
+  }
+
+  W ""
+
+  if($p){
+    $modsDir=Join-Path $p "MODULOS"
+    $mods=if(Test-Path $modsDir){ @(Get-ChildItem $modsDir -Directory -ErrorAction SilentlyContinue).Count }else{0}
+    W "Modulos proyecto activo: $mods" White
+  }
+
+  $libA="C:\ENGREMIAT_CORE\library\modules"
+  $libH="C:\ENGREMIAT_CORE\library\modules_historico"
+  $act=if(Test-Path $libA){ @(Get-ChildItem $libA -Directory -ErrorAction SilentlyContinue).Count }else{0}
+  $his=if(Test-Path $libH){ @(Get-ChildItem $libH -Directory -ErrorAction SilentlyContinue).Count }else{0}
+  W "Biblioteca modulos: $act activos / $his historicos" White
+
+  P
+}
+
+function FindMainOperatorScripts(){
+  $roots=@(
+    (Join-Path $Core "tools\desktop-terminal-operator"),
+    (Join-Path $Core "tools"),
+    $Core
+  ) | Where-Object { Test-Path $_ }
+
+  $preferredNames=@(
+    "eng-desktop-terminal-operator.ps1",
+    "eng-terminal-operator.ps1",
+    "eng-operator.ps1",
+    "operator.ps1",
+    "eng.ps1",
+    "e.ps1"
+  )
+
+  $found=@()
+
+  foreach($root in $roots){
+    foreach($name in $preferredNames){
+      $p=Join-Path $root $name
+      if(Test-Path $p){
+        $found += [pscustomobject]@{ score=100; name=$name; path=$p; source="preferred" }
+      }
+    }
+  }
+
+  foreach($root in $roots){
+    Get-ChildItem $root -Filter "*.ps1" -Recurse -ErrorAction SilentlyContinue |
+      Where-Object {
+        $_.FullName -notlike "*\.git\*" -and
+        $_.Name -match "(operator|inicio|launcher|desktop|terminal|engremiat|eng)"
+      } |
+      ForEach-Object {
+        $score=10
+        if($_.Name -match "operator"){ $score+=40 }
+        if($_.Name -match "desktop"){ $score+=15 }
+        if($_.Name -match "terminal"){ $score+=15 }
+        if($_.Name -match "engremiat|eng"){ $score+=10 }
+        if($_.FullName -match "desktop-terminal-operator"){ $score+=20 }
+        $found += [pscustomobject]@{ score=$score; name=$_.Name; path=$_.FullName; source="scan" }
+      }
+  }
+
+  return @($found | Sort-Object score,name -Descending | Group-Object path | ForEach-Object { $_.Group | Select-Object -First 1 } | Sort-Object score -Descending)
+}
+
+function OpenMainOperator(){
+  $scripts=FindMainOperatorScripts
+
+  if(-not $scripts -or $scripts.Count -eq 0){
+    W "NO_GO no_se_encontro_operador_principal" Red
+    W "Sugerencia: usa 4 modulos, 5 biblioteca, 6 workspace o 7 tarjetas mientras reconstruimos el operador raiz." Yellow
+    P
+    return
+  }
+
+  $best=$scripts | Select-Object -First 1
+
+  if($best.score -ge 80){
+    W "OK abriendo_operador=$($best.path)" Green
+    & powershell -NoProfile -ExecutionPolicy Bypass -File $best.path
+    return
+  }
+
+  while($true){
+    Clear-Host
+    W "==== SELECCIONAR OPERADOR PRINCIPAL ====" Cyan
+    W "No hay operador principal canónico claro. Selecciona uno." Yellow
+    W "numero = abrir | b = atras | Enter = refrescar" Cyan
+    W ""
+
+    for($i=0;$i -lt $scripts.Count;$i++){
+      W ("[{0,-2}] score={1,-3} {2}" -f ($i+1),$scripts[$i].score,$scripts[$i].name) White
+      W ("     {0}" -f $scripts[$i].path) DarkGray
+    }
+
+    W ""
+    $cmd=Read-Host "OPERADOR"
+    if([string]::IsNullOrWhiteSpace($cmd)){ $scripts=FindMainOperatorScripts; continue }
+    if($cmd -eq "b"){ return }
+    if($cmd -as [int]){
+      $ix=[int]$cmd-1
+      if($ix -ge 0 -and $ix -lt $scripts.Count){
+        & powershell -NoProfile -ExecutionPolicy Bypass -File $scripts[$ix].path
+        return
+      }
+    }
+  }
+}
+function Main(){
+  while($true){
+    $p=ActiveProject
+
+    Clear-Host
+    W "==== ENGREMIAT INICIO ====" Cyan
+    W "Entrada actualizada al sistema operativo local" DarkCyan
+    W ""
+
+    if($p){ W "Proyecto activo: $(Split-Path $p -Leaf)" Green }
+    else{ W "Proyecto activo: NO_DETECTADO" Yellow }
+
+    W ""
+    W "INICIO / OPERADOR" Yellow
+    W "1 = abrir operador principal" White
+    W "2 = estado actual del sistema" White
+    W "3 = abrir carpeta proyecto activo" White
+
+    W ""
+    W "PROYECTO / MODULOS" Yellow
+    W "4 = modulos del proyecto activo" White
+    W "5 = biblioteca de modulos" White
+    W "6 = workspace de modulo" White
+    W "7 = tarjetas de modulo" White
+
+    W ""
+    W "MANTENIMIENTO" Yellow
+    W "8 = refrescar grafo de modulos" White
+    W "9 = abrir C:\ENGREMIAT_CORE" White
+
+    W ""
+    W "q = salir | Enter = refrescar" Cyan
+    W ""
+
+    $cmd=Read-Host "ENGREMIAT_INICIO"
+
+    if([string]::IsNullOrWhiteSpace($cmd)){ continue }
+    if($cmd -eq "q"){ return }
+
+    if($cmd -eq "1"){
+      OpenMainOperator
+      continue
+    }
+
+    if($cmd -eq "2"){ Status; continue }
+
+    if($cmd -eq "3"){
+      if($p){ OpenFolder $p }
+      else{ W "NO_GO proyecto_activo_no_detectado" Yellow; P }
+      continue
+    }
+
+    if($cmd -eq "4"){
+      if($p){ RunTool "eng-project-modules-screen.ps1" @("-ProjectPath",$p) }
+      else{ RunTool "eng-project-modules-screen.ps1" }
+      continue
+    }
+
+    if($cmd -eq "5"){
+      if($p){ RunTool "eng-module-library-screen.ps1" @("-ProjectPath",$p) }
+      else{ RunTool "eng-module-library-screen.ps1" }
+      continue
+    }
+
+    if($cmd -eq "6"){
+      if($p){ RunTool "eng-module-workspace-screen.ps1" @("-ProjectPath",$p) }
+      else{ RunTool "eng-module-workspace-screen.ps1" }
+      continue
+    }
+
+    if($cmd -eq "7"){
+      if($p){ RunTool "eng-module-cards-screen.ps1" @("-ProjectPath",$p) }
+      else{ RunTool "eng-module-cards-screen.ps1" }
+      continue
+    }
+
+    if($cmd -eq "8"){
+      if($p){ RunTool "eng-refresh-project-module-graph.ps1" @("-ProjectPath",$p) }
+      else{ RunTool "eng-refresh-project-module-graph.ps1" }
+      continue
+    }
+
+    if($cmd -eq "9"){ OpenFolder $Core; continue }
+  }
+}
+
+Main
+

@@ -1,0 +1,89 @@
+﻿{
+    "objective_id":  "DEFINE_EXPONENTIAL_OFFICIAL_INGRESS_STRESS_TEST_MVP_200_203",
+    "stage":  "E202",
+    "block":  "B202.2",
+    "step":  "P202.2.2",
+    "name":  "performance-dataset",
+    "purpose":  "Store benchmark metrics by round and hardware for the official ingress stress test",
+    "hardware":  {
+                     "machine_name":  "DESKTOP-PVRVE56",
+                     "os_caption":  "UNKNOWN",
+                     "os_version":  "UNKNOWN",
+                     "total_memory_gb":  null,
+                     "cpu_name":  "UNKNOWN",
+                     "cpu_cores":  null,
+                     "cpu_logical_processors":  null,
+                     "c_drive_free_gb":  null,
+                     "c_drive_size_gb":  null
+                 },
+    "benchmark_contract_path":  "C:\\ENGREMIAT_CORE\\data\\stress-test-202\\stress-test-contract.json",
+    "benchmark_runner_path":  "C:\\ENGREMIAT_CORE\\data\\stress-test-202\\benchmark-runner.json",
+    "rounds":  [
+                   {
+                       "round_index":  1,
+                       "round_label":  "baseline",
+                       "planned_plans":  1,
+                       "load_type":  "minimal",
+                       "status":  "DEFINED",
+                       "request_evidence":  [
+                                                {
+                                                    "path":  "C:\\ENGREMIAT_CORE\\data\\real-execution-launcher-186\\launcher-run\\launcher-summary.json",
+                                                    "exists":  true,
+                                                    "status":  "READY"
+                                                },
+                                                {
+                                                    "path":  "C:\\ENGREMIAT_CORE\\data\\real-execution-launcher-186\\launcher-run\\launcher-receipt.json",
+                                                    "exists":  true,
+                                                    "status":  "RECORDED"
+                                                },
+                                                {
+                                                    "path":  "C:\\ENGREMIAT_CORE\\data\\real-execution-launcher-186\\launcher-run\\launcher-postcheck.json",
+                                                    "exists":  true,
+                                                    "postcheck_ok":  true
+                                                }
+                                            ]
+                   }
+               ],
+    "metrics_summary":  {
+                            "round_count":  1,
+                            "launcher_ready":  "READY",
+                            "launcher_mode":  "Run",
+                            "candidate_task_id":  "UNIFIED_ENTRY_REAL_MINIMAL_PLAN_002",
+                            "receipt_status":  "RECORDED",
+                            "postcheck_ok":  true,
+                            "visible_loading":  "observed_in prior launcher runs",
+                            "errors_count":  0,
+                            "friction_signals":  [
+
+                                                 ],
+                            "stability_signals":  [
+                                                      "summary_present",
+                                                      "receipt_present",
+                                                      "postcheck_present",
+                                                      "round_001_present"
+                                                  ],
+                            "friction_summary":  "none",
+                            "stability_summary":  "summary_present,receipt_present,postcheck_present,round_001_present",
+                            "overall_status":  "PASS",
+                            "evidence_consistent":  false
+                        },
+    "artifacts":  {
+                      "launcher_summary_exists":  true,
+                      "launcher_receipt_exists":  true,
+                      "launcher_postcheck_exists":  true,
+                      "stress_round_001_exists":  true,
+                      "contract_exists":  false,
+                      "hardware_exists":  false,
+                      "benchmark_runner_exists":  false
+                  },
+    "evidence_paths":  {
+                           "stress_contract":  "C:\\ENGREMIAT_CORE\\data\\stress-test-202\\stress-test-contract.json",
+                           "hardware_baseline":  "C:\\ENGREMIAT_CORE\\data\\stress-test-202\\hardware-baseline.json",
+                           "stress_round_001":  "C:\\ENGREMIAT_CORE\\data\\stress-test-202\\stress-round-001.json",
+                           "benchmark_runner":  "C:\\ENGREMIAT_CORE\\data\\stress-test-202\\benchmark-runner.json",
+                           "launcher_summary":  "C:\\ENGREMIAT_CORE\\data\\real-execution-launcher-186\\launcher-run\\launcher-summary.json",
+                           "launcher_receipt":  "C:\\ENGREMIAT_CORE\\data\\real-execution-launcher-186\\launcher-run\\launcher-receipt.json",
+                           "launcher_postcheck":  "C:\\ENGREMIAT_CORE\\data\\real-execution-launcher-186\\launcher-run\\launcher-postcheck.json"
+                       },
+    "created_at":  "2026-06-17T19:41:44.5341941+02:00"
+}

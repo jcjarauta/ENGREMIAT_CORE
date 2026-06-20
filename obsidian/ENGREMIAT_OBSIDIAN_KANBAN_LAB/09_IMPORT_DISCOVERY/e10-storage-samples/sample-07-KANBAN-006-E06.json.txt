@@ -1,0 +1,57 @@
+﻿PATH=C:\Users\pc\.cline\worktrees\07b15\ENGREMIAT_CORE\data\kanban-human-control\cards\KANBAN-006-E06.json SCORE=80 SIZE=2601 EXT=.json --- SAMPLE BEGIN ---
+{
+    "card_id":  "KANBAN-006-E06",
+    "objective":  "ENGREMIAT_GATED_WORKER_EXECUTION_006",
+    "stage":  {
+                  "id":  "E06",
+                  "name":  "Gated Worker Execution"
+              },
+    "block":  {
+                  "id":  "CLOSE",
+                  "name":  "Evidence derived card"
+              },
+    "step":  {
+                 "id":  "READONLY_EXECUTION_CLOSED",
+                 "name":  "Gated Worker Execution"
+             },
+    "title":  "Gated Worker Execution",
+    "description":  "Tarjeta generada desde evidencia canonica local para ENGREMIAT_GATED_WORKER_EXECUTION_006",
+    "status":  "DONE",
+    "risk":  "LOW",
+    "gate":  {
+                 "authorization_required":  false,
+                 "decision":  "NOT_REQUIRED_VIEW_ONLY",
+                 "reason":  "Generacion local de tarjeta desde evidencia"
+             },
+    "worker":  {
+                   "assigned":  "NONE",
+                   "worker_real_execution":  false
+               },
+    "evidence":  [
+                     "data/gated-worker-execution/cline-readonly-dispatch-contract.json",
+                     "data/gated-worker-execution/cline-readonly-output.json",
+                     "data/gated-worker-execution/first-cline-readonly-request.json",
+                     "data/gated-worker-execution/first-gated-execution-scope.json",
+                     "data/gated-worker-execution/first-human-approve-readonly.json",
+                     "data/gated-worker-execution/gated-worker-execution-manifest.json",
+                     "data/gated-worker-execution/sample-proposal-decision.json",
+                     "data/gated-worker-execution/worker-proposal.json",
+                     "data/gated-worker-execution/receipts/first-real-worker-receipt.json",
+                     "reports/gated-worker-execution/cline-dispatch-preview.json",
+                     "reports/gated-worker-execution/e01-preflight-smoke-report.json",
+                     "reports/gated-worker-execution/e01-preflight-validation-report.json"
+                 ],
+    "next_action":  {
+                        "recommended":  "007_KANBAN_HUMAN_CONTROL_SURFACE",
+                        "requires_human_review":  true
+                    },
+    "safety":  {
+                   "kanban_write":  false,
+                   "cline_task_created":  false,
+                   "worker_real_execution":  false,
+                   "auto_apply":  false,
+                   "git_write":  false,
+                   "remote_inference":  false
+               }
+}
+--- SAMPLE END ---

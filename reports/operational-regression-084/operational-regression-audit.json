@@ -1,0 +1,127 @@
+﻿{
+    "objective":  "ENGREMIAT_NEXT_REAL_VALUE_OPERATIONALIZATION_076_085",
+    "stage":  "E84",
+    "audit":  "OPERATIONAL_REGRESSION_AUDIT_E76_E83",
+    "created_utc":  "2026-06-17T11:00:15.3432355Z",
+    "critical_artifacts_total":  18,
+    "missing_artifacts_count":  0,
+    "invalid_json_count":  0,
+    "checks":  [
+                   {
+                       "path":  "reports\\operational-value-076\\e76-operational-value-readiness-report.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "reports\\human-daily-console-077\\e77-human-daily-console-readiness-report.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "reports\\worker-proposal-intake-078\\e78-worker-proposal-intake-readiness-report.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "reports\\evidence-decision-loop-079\\e79-evidence-decision-loop-readiness-report.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "reports\\local-apply-lab-080\\e80-local-apply-lab-readiness-report.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "reports\\value-metrics-081\\e81-value-metrics-readiness-report.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "reports\\kanban-bridge-preview-082\\e82-kanban-bridge-preview-readiness-report.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "reports\\release-controls-083\\e83-release-controls-readiness-report.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "data\\operational-value-076\\operational-value-queue-model.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "data\\human-daily-console-077\\human-daily-console-model.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "data\\worker-proposal-intake-078\\worker-proposal-intake-v2-schema.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "data\\evidence-decision-loop-079\\evidence-decision-loop-model.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "data\\local-apply-lab-080\\local-apply-lab-v3-model.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "data\\value-metrics-081\\value-metrics-model.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "data\\kanban-bridge-preview-082\\kanban-authorized-bridge-contract.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "data\\release-controls-083\\operational-release-control-model.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "docs\\OPERATIONAL_RELEASE_CHECKLIST.md",
+                       "exists":  true,
+                       "json_valid":  null,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "dashboard\\operational-release\\index.html",
+                       "exists":  true,
+                       "json_valid":  null,
+                       "status":  "OK"
+                   }
+               ],
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "kanban_real_write":  false,
+    "status":  "OK"
+}

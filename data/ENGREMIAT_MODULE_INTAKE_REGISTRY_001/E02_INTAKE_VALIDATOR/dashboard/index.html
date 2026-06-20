@@ -1,0 +1,47 @@
+<html><head><meta charset="utf-8"><title>Module Intake Validator</title><style>body{font-family:Segoe UI,Arial;background:#0f172a;color:#e2e8f0;padding:24px}.card{max-width:1200px;margin:auto;background:#111827;border:1px solid #334155;border-radius:18px;padding:20px}.ok{color:#4ade80}pre{background:#020617;padding:14px;border-radius:12px;white-space:pre-wrap;overflow:auto}</style></head><body><div class="card"><h1>ENGREMIAT_MODULE_INTAKE_REGISTRY_001 · E02</h1><p class="ok">Intake validator PASS.</p><pre>{
+    "package_id":  "ENGREMIAT_MODULE_INTAKE_REGISTRY_001",
+    "stage":  "E02_INTAKE_VALIDATOR",
+    "artifact":  "module-intake-validator.json",
+    "status":  "PASS",
+    "rules":  [
+                  "json_parse_ok",
+                  "required_fields_present",
+                  "module_type_allowed",
+                  "next_action_allowed",
+                  "boundaries_declared",
+                  "human_gates_declared",
+                  "artifacts_expected_declared"
+              ],
+    "allowed_module_types":  [
+                                 "CORE",
+                                 "ADAPTER",
+                                 "PANEL",
+                                 "KNOWLEDGE",
+                                 "WORKER",
+                                 "INTERFACE",
+                                 "STORAGE",
+                                 "INTEGRATION",
+                                 "SIMULATOR",
+                                 "MANUALS",
+                                 "REGISTRY"
+                             ],
+    "allowed_next_actions":  [
+                                 "DEVELOP",
+                                 "PAUSE",
+                                 "MERGE_WITH_EXISTING",
+                                 "REJECT",
+                                 "ARCHIVE"
+                             ],
+    "sample_result":  {
+                          "sample_package_id":  "ENGREMIAT_KNOWLEDGE_TO_TASK_PACKET_001",
+                          "valid":  true,
+                          "missing_fields":  [
+
+                                             ],
+                          "module_type_allowed":  true,
+                          "next_action_allowed":  true,
+                          "boundaries_count":  4,
+                          "human_gates_count":  2,
+                          "artifacts_expected_count":  5
+                      }
+}</pre></div></body></html>

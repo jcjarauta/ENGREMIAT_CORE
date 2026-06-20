@@ -1,0 +1,17 @@
+﻿{
+    "contract_id":  "resource-compatibility-matrix.v1",
+    "rules":  [
+                  "Recursos con capability comun pueden componer si no hay incompatibilidad declarada",
+                  "Recursos oficiales prevalecen sobre candidatos",
+                  "Recursos superseded no se recomiendan salvo referencia historica",
+                  "Toda composicion requiere blueprint y validacion"
+              ],
+    "matrix_fields":  [
+                          "resource_id",
+                          "compatible_with",
+                          "incompatible_with",
+                          "required_capabilities",
+                          "provided_capabilities",
+                          "status"
+                      ]
+}

@@ -1,0 +1,262 @@
+﻿{
+    "package_id":  "ENGREMIAT_KANBAN_WRITE_GATED_001",
+    "stage":  "E05",
+    "status":  "PASS",
+    "mode":  "DRY_RUN",
+    "target":  "LOCAL_ARTIFACT_PREVIEW",
+    "real_write":  false,
+    "external_write":  false,
+    "actions_count":  25,
+    "actions":  [
+                    {
+                        "action_id":  "WRITE-DRYRUN-0001",
+                        "operation":  "UPSERT_CARD_LOCAL_ARTIFACT_PREVIEW",
+                        "executes":  false,
+                        "card_id":  "KANBAN-SEED-0001",
+                        "title":  "VALIDATION: e01-contract-validation-report.json",
+                        "column":  "VALIDATION",
+                        "type":  "VALIDATION",
+                        "source_path":  "C:\\ENGREMIAT_CORE\\reports\\cline-real-proposal-no-apply\\e01-contract-validation-report.json"
+                    },
+                    {
+                        "action_id":  "WRITE-DRYRUN-0002",
+                        "operation":  "UPSERT_CARD_LOCAL_ARTIFACT_PREVIEW",
+                        "executes":  false,
+                        "card_id":  "KANBAN-SEED-0002",
+                        "title":  "VALIDATION: e02-kanban-source-validation-report.json",
+                        "column":  "VALIDATION",
+                        "type":  "VALIDATION",
+                        "source_path":  "C:\\ENGREMIAT_CORE\\reports\\cline-real-proposal-no-apply\\e02-kanban-source-validation-report.json"
+                    },
+                    {
+                        "action_id":  "WRITE-DRYRUN-0003",
+                        "operation":  "UPSERT_CARD_LOCAL_ARTIFACT_PREVIEW",
+                        "executes":  false,
+                        "card_id":  "KANBAN-SEED-0003",
+                        "title":  "VALIDATION: e04-task-creation-validation-report.json",
+                        "column":  "VALIDATION",
+                        "type":  "VALIDATION",
+                        "source_path":  "C:\\ENGREMIAT_CORE\\reports\\cline-real-proposal-no-apply\\e04-task-creation-validation-report.json"
+                    },
+                    {
+                        "action_id":  "WRITE-DRYRUN-0004",
+                        "operation":  "UPSERT_CARD_LOCAL_ARTIFACT_PREVIEW",
+                        "executes":  false,
+                        "card_id":  "KANBAN-SEED-0004",
+                        "title":  "VALIDATION: e06-close-validation-report.json",
+                        "column":  "VALIDATION",
+                        "type":  "VALIDATION",
+                        "source_path":  "C:\\ENGREMIAT_CORE\\reports\\cline-real-proposal-no-apply\\e06-close-validation-report.json"
+                    },
+                    {
+                        "action_id":  "WRITE-DRYRUN-0005",
+                        "operation":  "UPSERT_CARD_LOCAL_ARTIFACT_PREVIEW",
+                        "executes":  false,
+                        "card_id":  "KANBAN-SEED-0005",
+                        "title":  "VALIDATION: e06-proposal-decision-validation-report.json",
+                        "column":  "VALIDATION",
+                        "type":  "VALIDATION",
+                        "source_path":  "C:\\ENGREMIAT_CORE\\reports\\cline-real-proposal-no-apply\\e06-proposal-decision-validation-report.json"
+                    },
+                    {
+                        "action_id":  "WRITE-DRYRUN-0006",
+                        "operation":  "UPSERT_CARD_LOCAL_ARTIFACT_PREVIEW",
+                        "executes":  false,
+                        "card_id":  "KANBAN-SEED-0006",
+                        "title":  "VALIDATION: e02-gate-validation-report.json",
+                        "column":  "VALIDATION",
+                        "type":  "VALIDATION",
+                        "source_path":  "C:\\ENGREMIAT_CORE\\reports\\controlled-action-from-proposal-015\\e02-gate-validation-report.json"
+                    },
+                    {
+                        "action_id":  "WRITE-DRYRUN-0007",
+                        "operation":  "UPSERT_CARD_LOCAL_ARTIFACT_PREVIEW",
+                        "executes":  false,
+                        "card_id":  "KANBAN-SEED-0007",
+                        "title":  "VALIDATION: e05-close-validation-report.json",
+                        "column":  "VALIDATION",
+                        "type":  "VALIDATION",
+                        "source_path":  "C:\\ENGREMIAT_CORE\\reports\\controlled-action-from-proposal-015\\e05-close-validation-report.json"
+                    },
+                    {
+                        "action_id":  "WRITE-DRYRUN-0008",
+                        "operation":  "UPSERT_CARD_LOCAL_ARTIFACT_PREVIEW",
+                        "executes":  false,
+                        "card_id":  "KANBAN-SEED-0008",
+                        "title":  "VALIDATION: e02-gate-validation-report.json",
+                        "column":  "VALIDATION",
+                        "type":  "VALIDATION",
+                        "source_path":  "C:\\ENGREMIAT_CORE\\reports\\controlled-action-replication-016\\e02-gate-validation-report.json"
+                    },
+                    {
+                        "action_id":  "WRITE-DRYRUN-0009",
+                        "operation":  "UPSERT_CARD_LOCAL_ARTIFACT_PREVIEW",
+                        "executes":  false,
+                        "card_id":  "KANBAN-SEED-0009",
+                        "title":  "VALIDATION: e02-generator-validation-report.json",
+                        "column":  "VALIDATION",
+                        "type":  "VALIDATION",
+                        "source_path":  "C:\\ENGREMIAT_CORE\\reports\\controlled-action-template-017\\e02-generator-validation-report.json"
+                    },
+                    {
+                        "action_id":  "WRITE-DRYRUN-0010",
+                        "operation":  "UPSERT_CARD_LOCAL_ARTIFACT_PREVIEW",
+                        "executes":  false,
+                        "card_id":  "KANBAN-SEED-0010",
+                        "title":  "VALIDATION: e02-gate-validation-report.json",
+                        "column":  "VALIDATION",
+                        "type":  "VALIDATION",
+                        "source_path":  "C:\\ENGREMIAT_CORE\\reports\\controlled-apply-or-repair-014\\e02-gate-validation-report.json"
+                    },
+                    {
+                        "action_id":  "WRITE-DRYRUN-0011",
+                        "operation":  "UPSERT_CARD_LOCAL_ARTIFACT_PREVIEW",
+                        "executes":  false,
+                        "card_id":  "KANBAN-SEED-0011",
+                        "title":  "VALIDATION: e05-close-validation-report.json",
+                        "column":  "VALIDATION",
+                        "type":  "VALIDATION",
+                        "source_path":  "C:\\ENGREMIAT_CORE\\reports\\controlled-apply-or-repair-014\\e05-close-validation-report.json"
+                    },
+                    {
+                        "action_id":  "WRITE-DRYRUN-0012",
+                        "operation":  "UPSERT_CARD_LOCAL_ARTIFACT_PREVIEW",
+                        "executes":  false,
+                        "card_id":  "KANBAN-SEED-0012",
+                        "title":  "VALIDATION: e01-contract-validation-report.json",
+                        "column":  "VALIDATION",
+                        "type":  "VALIDATION",
+                        "source_path":  "C:\\ENGREMIAT_CORE\\reports\\controlled-worker-adapters\\e01-contract-validation-report.json"
+                    },
+                    {
+                        "action_id":  "WRITE-DRYRUN-0013",
+                        "operation":  "UPSERT_CARD_LOCAL_ARTIFACT_PREVIEW",
+                        "executes":  false,
+                        "card_id":  "KANBAN-SEED-0013",
+                        "title":  "VALIDATION: e02-cline-dry-run-validation-report.json",
+                        "column":  "VALIDATION",
+                        "type":  "VALIDATION",
+                        "source_path":  "C:\\ENGREMIAT_CORE\\reports\\controlled-worker-adapters\\e02-cline-dry-run-validation-report.json"
+                    },
+                    {
+                        "action_id":  "WRITE-DRYRUN-0014",
+                        "operation":  "UPSERT_CARD_LOCAL_ARTIFACT_PREVIEW",
+                        "executes":  false,
+                        "card_id":  "KANBAN-SEED-0014",
+                        "title":  "VALIDATION: e03-gate-validation-report.json",
+                        "column":  "VALIDATION",
+                        "type":  "VALIDATION",
+                        "source_path":  "C:\\ENGREMIAT_CORE\\reports\\controlled-worker-adapters\\e03-gate-validation-report.json"
+                    },
+                    {
+                        "action_id":  "WRITE-DRYRUN-0015",
+                        "operation":  "UPSERT_CARD_LOCAL_ARTIFACT_PREVIEW",
+                        "executes":  false,
+                        "card_id":  "KANBAN-SEED-0015",
+                        "title":  "VALIDATION: e04-simulation-validation-report.json",
+                        "column":  "VALIDATION",
+                        "type":  "VALIDATION",
+                        "source_path":  "C:\\ENGREMIAT_CORE\\reports\\controlled-worker-adapters\\e04-simulation-validation-report.json"
+                    },
+                    {
+                        "action_id":  "WRITE-DRYRUN-0016",
+                        "operation":  "UPSERT_CARD_LOCAL_ARTIFACT_PREVIEW",
+                        "executes":  false,
+                        "card_id":  "KANBAN-SEED-0016",
+                        "title":  "VALIDATION: e05-remote-ollama-prepared-validation-report.json",
+                        "column":  "VALIDATION",
+                        "type":  "VALIDATION",
+                        "source_path":  "C:\\ENGREMIAT_CORE\\reports\\controlled-worker-adapters\\e05-remote-ollama-prepared-validation-report.json"
+                    },
+                    {
+                        "action_id":  "WRITE-DRYRUN-0017",
+                        "operation":  "UPSERT_CARD_LOCAL_ARTIFACT_PREVIEW",
+                        "executes":  false,
+                        "card_id":  "KANBAN-SEED-0017",
+                        "title":  "VALIDATION: e06-close-validation-report.json",
+                        "column":  "VALIDATION",
+                        "type":  "VALIDATION",
+                        "source_path":  "C:\\ENGREMIAT_CORE\\reports\\controlled-worker-adapters\\e06-close-validation-report.json"
+                    },
+                    {
+                        "action_id":  "WRITE-DRYRUN-0018",
+                        "operation":  "UPSERT_CARD_LOCAL_ARTIFACT_PREVIEW",
+                        "executes":  false,
+                        "card_id":  "KANBAN-SEED-0018",
+                        "title":  "VALIDATION: modular-baseline-validation-report.json",
+                        "column":  "VALIDATION",
+                        "type":  "VALIDATION",
+                        "source_path":  "C:\\ENGREMIAT_CORE\\reports\\core-consolidation-205\\modular-baseline-validation-report.json"
+                    },
+                    {
+                        "action_id":  "WRITE-DRYRUN-0019",
+                        "operation":  "UPSERT_CARD_LOCAL_ARTIFACT_PREVIEW",
+                        "executes":  false,
+                        "card_id":  "KANBAN-SEED-0019",
+                        "title":  "VALIDATION: state-module-validation-report.json",
+                        "column":  "VALIDATION",
+                        "type":  "VALIDATION",
+                        "source_path":  "C:\\ENGREMIAT_CORE\\reports\\core-consolidation-206\\state-module-validation-report.json"
+                    },
+                    {
+                        "action_id":  "WRITE-DRYRUN-0020",
+                        "operation":  "UPSERT_CARD_LOCAL_ARTIFACT_PREVIEW",
+                        "executes":  false,
+                        "card_id":  "KANBAN-SEED-0020",
+                        "title":  "VALIDATION: decision-shortcuts-validation-report.json",
+                        "column":  "VALIDATION",
+                        "type":  "VALIDATION",
+                        "source_path":  "C:\\ENGREMIAT_CORE\\reports\\decision-shortcuts-088\\decision-shortcuts-validation-report.json"
+                    },
+                    {
+                        "action_id":  "WRITE-DRYRUN-0021",
+                        "operation":  "UPSERT_CARD_LOCAL_ARTIFACT_PREVIEW",
+                        "executes":  false,
+                        "card_id":  "KANBAN-SEED-0021",
+                        "title":  "VALIDATION: assisted-worker-contract-validation-report.json",
+                        "column":  "VALIDATION",
+                        "type":  "VALIDATION",
+                        "source_path":  "C:\\ENGREMIAT_CORE\\reports\\dev-assisted-worker\\e00-contract\\assisted-worker-contract-validation-report.json"
+                    },
+                    {
+                        "action_id":  "WRITE-DRYRUN-0022",
+                        "operation":  "UPSERT_CARD_LOCAL_ARTIFACT_PREVIEW",
+                        "executes":  false,
+                        "card_id":  "KANBAN-SEED-0022",
+                        "title":  "VALIDATION: assisted-worker-modes-validation-report.json",
+                        "column":  "VALIDATION",
+                        "type":  "VALIDATION",
+                        "source_path":  "C:\\ENGREMIAT_CORE\\reports\\dev-assisted-worker\\e00-contract\\assisted-worker-modes-validation-report.json"
+                    },
+                    {
+                        "action_id":  "WRITE-DRYRUN-0023",
+                        "operation":  "UPSERT_CARD_LOCAL_ARTIFACT_PREVIEW",
+                        "executes":  false,
+                        "card_id":  "KANBAN-SEED-0023",
+                        "title":  "VALIDATION: assisted-task-builder-validation-report.json",
+                        "column":  "VALIDATION",
+                        "type":  "VALIDATION",
+                        "source_path":  "C:\\ENGREMIAT_CORE\\reports\\dev-assisted-worker\\e01-agent-task-package\\assisted-task-builder-validation-report.json"
+                    },
+                    {
+                        "action_id":  "WRITE-DRYRUN-0024",
+                        "operation":  "UPSERT_CARD_LOCAL_ARTIFACT_PREVIEW",
+                        "executes":  false,
+                        "card_id":  "KANBAN-SEED-0024",
+                        "title":  "VALIDATION: assisted-worker-prompt-validation-report.json",
+                        "column":  "VALIDATION",
+                        "type":  "VALIDATION",
+                        "source_path":  "C:\\ENGREMIAT_CORE\\reports\\dev-assisted-worker\\e01-agent-task-package\\assisted-worker-prompt-validation-report.json"
+                    },
+                    {
+                        "action_id":  "WRITE-DRYRUN-0025",
+                        "operation":  "UPSERT_CARD_LOCAL_ARTIFACT_PREVIEW",
+                        "executes":  false,
+                        "card_id":  "KANBAN-SEED-0025",
+                        "title":  "VALIDATION: assisted-handoff-validation-report.json",
+                        "column":  "VALIDATION",
+                        "type":  "VALIDATION",
+                        "source_path":  "C:\\ENGREMIAT_CORE\\reports\\dev-assisted-worker\\e02-controlled-handoff\\assisted-handoff-validation-report.json"
+                    }
+                ]
+}

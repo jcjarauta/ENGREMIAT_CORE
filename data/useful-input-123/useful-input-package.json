@@ -1,0 +1,26 @@
+﻿{
+    "schema":  "engremiat.useful_input_package.v1",
+    "objective":  "ENGREMIAT_REAL_VALUE_TASK_EXECUTION_LOOP_122_131_REAL_USEFUL_OUTPUT",
+    "stage":  "E123",
+    "block":  "B123.1",
+    "step":  "P123.1.1",
+    "created_at":  "2026-06-17T14:25:00",
+    "source_readiness":  "reports/useful-task-122/e122-useful-task-readiness-report.json",
+    "source_readiness_found":  true,
+    "intent_found":  true,
+    "contract_found":  true,
+    "input_id":  "USEFUL-INPUT-123-001",
+    "input_mode":  "LOCAL_EDITABLE_DRAFT",
+    "input_draft_path":  "data/useful-input-123/useful-input-draft.md",
+    "purpose":  "Capturar el contenido base humano que servira para producir el primer output util local.",
+    "minimum_required_sections":  [
+                                      "Contexto",
+                                      "Necesidad humana",
+                                      "Output esperado",
+                                      "Uso previsto",
+                                      "Siguiente accion"
+                                  ],
+    "local_only":  true,
+    "human_editable":  true,
+    "execution_allowed_now":  false
+}

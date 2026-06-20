@@ -1,0 +1,40 @@
+﻿{
+    "schema":  "engremiat.integration_contract.v1",
+    "objective":  "ENGREMIAT_OPERATIONAL_ARTIFACT_INTEGRATION_142_151",
+    "stage":  "E142",
+    "block":  "B142.1",
+    "step":  "P142.1.2",
+    "created_at":  "2026-06-17T16:27:31",
+    "integration_id":  "OPERATIONAL-INTEGRATION-142-001",
+    "source_artifact":  "data/operational-apply-136/OPERATIONAL_ARTIFACT.md",
+    "expected_outputs":  [
+                             "data/operational-integration-142/integration-intent.json",
+                             "data/operational-integration-142/integration-contract.json",
+                             "data/operational-integration-142/integration-scope.json",
+                             "reports/operational-integration-142/e142-integration-readiness-report.json"
+                         ],
+    "future_integration_targets":  [
+                                       "registry entry",
+                                       "open command script",
+                                       "reusable template",
+                                       "launch packet",
+                                       "human control dashboard",
+                                       "operational index"
+                                   ],
+    "acceptance_criteria":  [
+                                "Source operational artifact exists",
+                                "Integration artifacts are local JSON only in E142",
+                                "No network",
+                                "No git write",
+                                "No external execution",
+                                "No modification of source artifact"
+                            ],
+    "not_allowed":  [
+                        "network",
+                        "git write",
+                        "external execution",
+                        "destructive actions",
+                        "modifying existing source artifact",
+                        "launching a real task in E142"
+                    ]
+}

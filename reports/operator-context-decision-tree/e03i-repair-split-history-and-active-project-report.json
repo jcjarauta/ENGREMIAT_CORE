@@ -1,0 +1,21 @@
+﻿{
+    "package_id":  "ENGREMIAT_OPERATOR_CONTEXT_AND_DECISION_TREE_001",
+    "stage":  "E03I_REPAIR_SPLIT_HISTORY_AND_ACTIVE_PROJECT",
+    "status":  "PASS",
+    "readiness":  100,
+    "historical_projects":  [
+                                "ENGREMIAT_PROJECT_NUEVO_PROYECTO_20260619_164503",
+                                "ENGREMIAT_PROJECT_NUEVO_PROYECTO_20260619_162809"
+                            ],
+    "active_project":  "ENGREMIAT_PROJECT_NUEVO_PROYECTO_20260619_161706",
+    "active_path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706",
+    "commands":  [
+                     "C:\\ENGREMIAT_CORE\\tools\\operator-context\\proyectos.ps1",
+                     "C:\\ENGREMIAT_CORE\\tools\\operator-context\\abrir-proyecto.ps1"
+                 ],
+    "usage":  [
+                  "proyectos",
+                  "abrir-proyecto 3"
+              ],
+    "next":  "E04_PROJECT_MODULE_TARGET_DECISION"
+}

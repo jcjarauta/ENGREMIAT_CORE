@@ -1,0 +1,21 @@
+{
+    "package_id":  "ENG-MOD-MEM-001",
+    "stage":  "E05",
+    "block":  "P05.2.1",
+    "name":  "State registry",
+    "purpose":  "Registrar estados, módulos activos, dependencias y cierres",
+    "fields":  [
+                   "module_id",
+                   "state",
+                   "version",
+                   "dependencies",
+                   "close_reason",
+                   "timestamp"
+               ],
+    "state":  "planned",
+    "control":  {
+                    "local_first":  true,
+                    "no_external_network":  true,
+                    "no_git_write":  true
+                }
+}

@@ -1,0 +1,21 @@
+﻿{
+    "thread_id":  "REAL-LINKING-SANDBOX-SAMPLE-001",
+    "source":  "openwebui",
+    "via":  "openclaw",
+    "title":  "Sandbox real-readonly para vincular herramientas",
+    "user_intent":  "Probar el punto de entrada real-readonly donde OpenWebUI u OpenClaw dejan JSON local para que ENGREMIAT lo procese.",
+    "assistant_summary":  "Este sandbox no llama APIs reales ni ejecuta acciones. Solo deposita JSON local compatible con el readonly intake.",
+    "proposed_kind":  "project",
+    "priority":  84,
+    "risk":  "LOW",
+    "target_consumers":  [
+                             "HUMAN",
+                             "CLINE_KANBAN",
+                             "OBSIDIAN",
+                             "OPENWEBUI",
+                             "OPENCLAW"
+                         ],
+    "execution_allowed":  false,
+    "native_kanban_write":  "disabled",
+    "obsidian_real_write":  "disabled"
+}

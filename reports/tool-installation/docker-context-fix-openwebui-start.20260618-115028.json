@@ -1,0 +1,20 @@
+﻿{
+    "package":  "DOCKER_CONTEXT_FIX_AND_OPENWEBUI_START_001",
+    "created_at":  "2026-06-18T11:50:28",
+    "context_use":  {
+                        "ok":  false,
+                        "timeout":  false,
+                        "exit_code":  null,
+                        "out":  "desktop-linux\n",
+                        "err":  "Current context is now \"desktop-linux\"\n"
+                    },
+    "docker_ready":  false,
+    "last_docker_message":  "\"29.5.3\"\n ",
+    "openwebui_start_script":  "C:\\ENGREMIAT_TOOLS\\openwebui\\start-openwebui.ps1",
+    "openwebui_started":  false,
+    "openwebui_start_output":  "",
+    "docker_ps":  "",
+    "openwebui_url":  "http://localhost:3000",
+    "decision":  "WARN_DOCKER_ENGINE_STILL_NOT_READY",
+    "next":  "RESTART_DOCKER_DESKTOP_OR_CHECK_DOCKER_SETTINGS_WSL"
+}

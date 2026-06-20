@@ -1,0 +1,31 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_FINAL_026_035",
+    "stage":  "E28",
+    "created_at":  "2026-06-17T11:09:17.2117831+02:00",
+    "readiness":  100,
+    "decision":  "GO_E28_CONTEXT_SNAPSHOT_READY",
+    "next":  "E29_GATE_CENTER_INTEGRATION",
+    "checks":  {
+                   "model_created":  true,
+                   "snapshot_created":  true,
+                   "tool_created":  true,
+                   "current_context_created":  true,
+                   "last_context_created":  true,
+                   "local_first":  true,
+                   "auto_apply_false":  true,
+                   "remote_execution_false":  true,
+                   "git_write_false":  true
+               },
+    "artifacts":  [
+                      "data/dev/context-snapshot-model.json",
+                      "data/dev/context-snapshot.json",
+                      "tools/eng-context.ps1",
+                      "docs/CURRENT_CONTEXT.md",
+                      "reports/context/e28-context-readiness-report.json",
+                      "reports/context/last-context.txt"
+                  ],
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false
+}

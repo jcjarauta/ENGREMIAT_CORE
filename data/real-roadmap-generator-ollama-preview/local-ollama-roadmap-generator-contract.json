@@ -1,0 +1,39 @@
+﻿{
+    "package_id":  "ENGREMIAT_REAL_ROADMAP_GENERATOR_WITH_LOCAL_OLLAMA_PREVIEW_001",
+    "stage":  "E01_PREPARE_LOCAL_OLLAMA_ROADMAP_GENERATOR_CONTRACT",
+    "contract_id":  "local-ollama-roadmap-generator-preview.v1",
+    "purpose":  "Preparar un generador local de roadmap usando Ollama solo en modo preview, sin worker real, sin Git y sin auto-apply",
+    "input":  "data\\real-intake-importer\\real-human-intake.accepted.latest.json",
+    "model_default":  "qwen3:14b",
+    "ollama_endpoint":  "http://127.0.0.1:11434/api/generate",
+    "output_preview":  "data\\real-roadmap-generator-ollama-preview\\ollama-roadmap-preview.latest.json",
+    "safety":  {
+                   "local_only":  true,
+                   "ollama_local_only":  true,
+                   "external_ai":  false,
+                   "network_external":  false,
+                   "git_write":  false,
+                   "worker_execution":  false,
+                   "execute_now":  false,
+                   "auto_apply":  false,
+                   "manual_review_required":  true,
+                   "timeout_seconds":  120
+               },
+    "allowed_operations":  [
+                               "READ_LOCAL_INTAKE",
+                               "CALL_LOCAL_OLLAMA",
+                               "PARSE_MODEL_TEXT",
+                               "SAVE_PREVIEW",
+                               "OPEN_REVIEW_DASHBOARD"
+                           ],
+    "forbidden_operations":  [
+                                 "CALL_EXTERNAL_AI",
+                                 "CALL_PUBLIC_NETWORK",
+                                 "WRITE_PROJECT_CODE",
+                                 "EXECUTE_WORKER",
+                                 "GIT_COMMIT",
+                                 "GIT_PUSH",
+                                 "AUTO_APPLY"
+                             ],
+    "next":  "E02_CREATE_LOCAL_OLLAMA_ROADMAP_GENERATOR_SCRIPT"
+}

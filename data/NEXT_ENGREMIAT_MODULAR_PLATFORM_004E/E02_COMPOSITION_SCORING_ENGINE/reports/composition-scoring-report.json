@@ -1,0 +1,91 @@
+{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_004E",
+    "stage":  "E02_COMPOSITION_SCORING_ENGINE",
+    "status":  "PASS",
+    "rules":  {
+                  "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_004E",
+                  "stage":  "E02",
+                  "artifact":  "composition-scoring-rules.json",
+                  "status":  "DEFINED",
+                  "purpose":  "Puntuar composiciones modulares sin activacion real",
+                  "weights":  {
+                                  "stability":  35,
+                                  "traceability":  25,
+                                  "human_control":  20,
+                                  "coupling_risk":  10,
+                                  "readiness":  10
+                              },
+                  "blocked_actions":  [
+                                          "core_changes",
+                                          "external_network",
+                                          "git_write",
+                                          "real_module_activation"
+                                      ]
+              },
+    "scores":  [
+                   {
+                       "composition_id":  "COMP_CORE_CONTROL",
+                       "objective":  "Control humano basico",
+                       "modules":  [
+                                       "REGISTRY",
+                                       "QUEUE",
+                                       "CONTROL",
+                                       "MEMORY"
+                                   ],
+                       "risk":  "LOW",
+                       "score":  100,
+                       "decision":  "GO_SIMULATED",
+                       "reasons":  [
+                                       "stability=35",
+                                       "traceability=25",
+                                       "human_control=20",
+                                       "coupling_risk=10",
+                                       "readiness=10"
+                                   ]
+                   },
+                   {
+                       "composition_id":  "COMP_WORKER_ASSISTED",
+                       "objective":  "Puente a worker asistido",
+                       "modules":  [
+                                       "REGISTRY",
+                                       "QUEUE",
+                                       "WORKER_BRIDGE",
+                                       "RESULT_NORMALIZER",
+                                       "MEMORY"
+                                   ],
+                       "risk":  "MEDIUM",
+                       "score":  83,
+                       "decision":  "GO_WITH_REVIEW",
+                       "reasons":  [
+                                       "stability=27",
+                                       "traceability=25",
+                                       "human_control=15",
+                                       "coupling_risk=6",
+                                       "readiness=10"
+                                   ]
+                   },
+                   {
+                       "composition_id":  "COMP_VISUAL_OPS",
+                       "objective":  "Operacion visual con Kanban",
+                       "modules":  [
+                                       "REGISTRY",
+                                       "QUEUE",
+                                       "KANBAN_ADAPTER",
+                                       "OPERATIONAL_REGISTRY",
+                                       "MEMORY"
+                                   ],
+                       "risk":  "MEDIUM",
+                       "score":  88,
+                       "decision":  "GO_WITH_REVIEW",
+                       "reasons":  [
+                                       "stability=27",
+                                       "traceability=25",
+                                       "human_control=20",
+                                       "coupling_risk=6",
+                                       "readiness=10"
+                                   ]
+                   }
+               ],
+    "winner":  "COMP_VISUAL_OPS",
+    "next":  "E03_COMPOSITION_COMPARISON_AND_GATE"
+}

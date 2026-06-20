@@ -1,0 +1,23 @@
+{
+    "artifact":  "next-module-graph-seed.json",
+    "nodes":  [
+                  "registry",
+                  "catalog",
+                  "selector",
+                  "dependency_resolver",
+                  "activation_planner",
+                  "swap_rollback",
+                  "dashboard",
+                  "memory"
+              ],
+    "edges":  [
+                  "registry-\u003ecatalog",
+                  "catalog-\u003eselector",
+                  "selector-\u003edependency_resolver",
+                  "dependency_resolver-\u003eactivation_planner",
+                  "activation_planner-\u003eswap_rollback",
+                  "swap_rollback-\u003edashboard",
+                  "dashboard-\u003ememory"
+              ],
+    "status":  "SEED_DEFINED"
+}

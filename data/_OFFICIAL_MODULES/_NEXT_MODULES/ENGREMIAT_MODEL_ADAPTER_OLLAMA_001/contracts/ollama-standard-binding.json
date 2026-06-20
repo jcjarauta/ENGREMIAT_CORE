@@ -1,0 +1,12 @@
+﻿{
+    "binding_id":  "OLLAMA_STANDARD_BINDING_V1",
+    "standard":  "ENGREMIAT_MODEL_ADAPTER_STANDARD_001",
+    "uses_standard_schemas":  [
+                                  "model-request.schema.json",
+                                  "prompt-envelope.schema.json",
+                                  "model-response.schema.json",
+                                  "model-evidence.schema.json"
+                              ],
+    "ollama_is_concrete_adapter":  true,
+    "composer_core_independent":  true
+}

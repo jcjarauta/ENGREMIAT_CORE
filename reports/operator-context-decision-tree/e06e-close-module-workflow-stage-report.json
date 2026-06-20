@@ -1,0 +1,108 @@
+﻿{
+    "package_id":  "ENGREMIAT_OPERATOR_CONTEXT_AND_DECISION_TREE_001",
+    "stage":  "E06E_CLOSE_MODULE_WORKFLOW_REAL_EDIT_CLOSE_PROMOTE",
+    "status":  "PASS",
+    "readiness":  100,
+    "module":  "MODULE_inicio",
+    "objective":  "uso de tareas/tarjetas",
+    "lifecycle":  "OBJECTIVE_COMPLETED",
+    "library_status":  "PROMOTED_TO_LIBRARY_CANDIDATE",
+    "snapshot":  "C:\\ENGREMIAT_CORE\\library\\reusable-modules\\MODULE_inicio_20260619194233",
+    "validated":  [
+                      "edit_artifacts",
+                      "define_objective",
+                      "smoke_pass",
+                      "close_module",
+                      "promote_to_library_candidate",
+                      "evidence_trace",
+                      "gates_trace"
+                  ],
+    "checks":  [
+                   {
+                       "check":  "state_exists",
+                       "ok":  true,
+                       "detail":  "C:\\ENGREMIAT_CORE\\data\\operator-state\\active-context.json"
+                   },
+                   {
+                       "check":  "exists_BOVEDA_MODULO",
+                       "ok":  true,
+                       "detail":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO"
+                   },
+                   {
+                       "check":  "exists_module.json",
+                       "ok":  true,
+                       "detail":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO\\module.json"
+                   },
+                   {
+                       "check":  "exists_CONTRATO.md",
+                       "ok":  true,
+                       "detail":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO\\CONTRATO.md"
+                   },
+                   {
+                       "check":  "exists_TAREAS.md",
+                       "ok":  true,
+                       "detail":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO\\TAREAS.md"
+                   },
+                   {
+                       "check":  "exists_EVIDENCIAS.md",
+                       "ok":  true,
+                       "detail":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO\\EVIDENCIAS.md"
+                   },
+                   {
+                       "check":  "exists_GATES.md",
+                       "ok":  true,
+                       "detail":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO\\GATES.md"
+                   },
+                   {
+                       "check":  "lifecycle_objective_completed",
+                       "ok":  true,
+                       "detail":  "OBJECTIVE_COMPLETED"
+                   },
+                   {
+                       "check":  "objective_status_completed",
+                       "ok":  true,
+                       "detail":  "COMPLETED"
+                   },
+                   {
+                       "check":  "library_promoted_candidate",
+                       "ok":  true,
+                       "detail":  "PROMOTED_TO_LIBRARY_CANDIDATE"
+                   },
+                   {
+                       "check":  "reusable_true",
+                       "ok":  true,
+                       "detail":  "True"
+                   },
+                   {
+                       "check":  "snapshot_exists",
+                       "ok":  true,
+                       "detail":  "C:\\ENGREMIAT_CORE\\library\\reusable-modules\\MODULE_inicio_20260619194233"
+                   },
+                   {
+                       "check":  "evidence_has_close",
+                       "ok":  true,
+                       "detail":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO\\EVIDENCIAS.md"
+                   },
+                   {
+                       "check":  "evidence_has_promote",
+                       "ok":  true,
+                       "detail":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO\\EVIDENCIAS.md"
+                   },
+                   {
+                       "check":  "gates_has_close",
+                       "ok":  true,
+                       "detail":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO\\GATES.md"
+                   },
+                   {
+                       "check":  "gates_has_library",
+                       "ok":  true,
+                       "detail":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO\\GATES.md"
+                   },
+                   {
+                       "check":  "library_root_exists",
+                       "ok":  true,
+                       "detail":  "C:\\ENGREMIAT_CORE\\library\\reusable-modules"
+                   }
+               ],
+    "next":  "E07_PROJECT_LEVEL_TASK_CARD_WORKFLOW"
+}

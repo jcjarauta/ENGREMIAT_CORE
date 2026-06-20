@@ -1,0 +1,33 @@
+﻿{
+    "objective_id":  "ENGREMIAT_CORE_CONSOLIDATION_AND_MODULAR_BASELINE",
+    "stage":  "E207",
+    "block":  "B207.1",
+    "step":  "P207.1.1",
+    "name":  "core-close-manifest",
+    "purpose":  "Inventory of contracts, modules and active rules for the frozen core",
+    "frozen_core":  [
+                        "core-freeze-contract.json",
+                        "core-freeze-policy.json",
+                        "core-baseline-candidate.json"
+                    ],
+    "modular_layer":  [
+                          "modular-contract-schema.json",
+                          "module-registry-design.json"
+                      ],
+    "memory_layer":  [
+                         "state-memory-contract.json",
+                         "state-memory-package.json",
+                         "state-module-validation-report.json"
+                     ],
+    "active_rules":  [
+                         "core is frozen",
+                         "new behavior belongs to modules",
+                         "memory/state layer sits above the core",
+                         "launcher and ingress remain official",
+                         "human approval remains required for write gates"
+                     ],
+    "core_status":  "FROZEN_BASELINE",
+    "modular_status":  "READY",
+    "memory_status":  "READY",
+    "created_at":  "2026-06-17T19:56:34.2372324+02:00"
+}

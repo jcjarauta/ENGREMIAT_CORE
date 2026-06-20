@@ -1,0 +1,132 @@
+﻿{
+    "nodes":  [
+                  {
+                      "id":  "c-home",
+                      "x":  0,
+                      "y":  0,
+                      "width":  260,
+                      "height":  100,
+                      "type":  "file",
+                      "file":  "00_CONTROL_OPERATIVO/HOME.md",
+                      "color":  "1"
+                  },
+                  {
+                      "id":  "c-status",
+                      "x":  360,
+                      "y":  0,
+                      "width":  260,
+                      "height":  100,
+                      "type":  "file",
+                      "file":  "00_CONTROL_OPERATIVO/SYSTEM_STATUS.md",
+                      "color":  "2"
+                  },
+                  {
+                      "id":  "c-projects",
+                      "x":  720,
+                      "y":  "-120",
+                      "width":  260,
+                      "height":  100,
+                      "type":  "file",
+                      "file":  "00_CONTROL_OPERATIVO/ACTIVE_PROJECTS.md",
+                      "color":  "3"
+                  },
+                  {
+                      "id":  "c-gates",
+                      "x":  720,
+                      "y":  40,
+                      "width":  260,
+                      "height":  100,
+                      "type":  "file",
+                      "file":  "00_CONTROL_OPERATIVO/PENDING_GATES.md",
+                      "color":  "4"
+                  },
+                  {
+                      "id":  "c-cards",
+                      "x":  1080,
+                      "y":  "-120",
+                      "width":  260,
+                      "height":  100,
+                      "type":  "file",
+                      "file":  "06_KANBAN_TAREAS/ACTIVE_CARDS.md",
+                      "color":  "5"
+                  },
+                  {
+                      "id":  "c-evidence",
+                      "x":  1080,
+                      "y":  40,
+                      "width":  260,
+                      "height":  100,
+                      "type":  "file",
+                      "file":  "05_EVIDENCIAS/RECENT_EVIDENCE.md",
+                      "color":  "6"
+                  },
+                  {
+                      "id":  "c-workers",
+                      "x":  1440,
+                      "y":  "-40",
+                      "width":  260,
+                      "height":  100,
+                      "type":  "file",
+                      "file":  "03_WORKERS/WORKER_PROPOSALS.md",
+                      "color":  "1"
+                  }
+              ],
+    "edges":  [
+                  {
+                      "id":  "ce1",
+                      "fromNode":  "c-home",
+                      "fromSide":  "right",
+                      "toNode":  "c-status",
+                      "toSide":  "left",
+                      "label":  "muestra estado"
+                  },
+                  {
+                      "id":  "ce2",
+                      "fromNode":  "c-status",
+                      "fromSide":  "right",
+                      "toNode":  "c-projects",
+                      "toSide":  "left",
+                      "label":  "proyectos"
+                  },
+                  {
+                      "id":  "ce3",
+                      "fromNode":  "c-status",
+                      "fromSide":  "right",
+                      "toNode":  "c-gates",
+                      "toSide":  "left",
+                      "label":  "gates"
+                  },
+                  {
+                      "id":  "ce4",
+                      "fromNode":  "c-projects",
+                      "fromSide":  "right",
+                      "toNode":  "c-cards",
+                      "toSide":  "left",
+                      "label":  "tareas"
+                  },
+                  {
+                      "id":  "ce5",
+                      "fromNode":  "c-gates",
+                      "fromSide":  "right",
+                      "toNode":  "c-evidence",
+                      "toSide":  "left",
+                      "label":  "requiere evidencia"
+                  },
+                  {
+                      "id":  "ce6",
+                      "fromNode":  "c-cards",
+                      "fromSide":  "right",
+                      "toNode":  "c-workers",
+                      "toSide":  "left",
+                      "label":  "prepara worker"
+                  },
+                  {
+                      "id":  "ce7",
+                      "fromNode":  "c-workers",
+                      "fromSide":  "right",
+                      "toNode":  "c-evidence",
+                      "toSide":  "left",
+                      "label":  "produce evidencia"
+                  }
+              ]
+}

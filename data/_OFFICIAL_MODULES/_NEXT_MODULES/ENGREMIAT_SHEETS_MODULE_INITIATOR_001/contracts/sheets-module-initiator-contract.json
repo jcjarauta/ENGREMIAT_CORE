@@ -1,0 +1,37 @@
+﻿{
+    "contract_id":  "sheets-module-initiator-contract.v1",
+    "module_id":  "ENGREMIAT_SHEETS_MODULE_INITIATOR_001",
+    "input_columns":  [
+                          "module_id",
+                          "module_name",
+                          "module_type",
+                          "purpose",
+                          "problem",
+                          "expected_output",
+                          "source_task_packet_id",
+                          "priority",
+                          "risk",
+                          "dependencies",
+                          "requires_core_change",
+                          "requires_real_write",
+                          "requires_external_api",
+                          "human_gate",
+                          "target_path",
+                          "status",
+                          "decision",
+                          "notes"
+                      ],
+    "output_json":  "module-init-json",
+    "allowed_decisions":  [
+                              "CREATE_CANDIDATE_JSON",
+                              "BACKLOG",
+                              "REJECT"
+                          ],
+    "target_path":  "data/_OFFICIAL_MODULES/_NEXT_MODULES/\u003cmodule_id\u003e",
+    "rules":  [
+                  "Sheets es superficie humana, no fuente tecnica final",
+                  "Apps Script solo genera JSON/log en fase dry-run",
+                  "El repo crea estructura mediante factory local posterior",
+                  "Todo modulo futuro pasa por ENGREMIAT_MODULE_INTAKE_REGISTRY_001"
+              ]
+}

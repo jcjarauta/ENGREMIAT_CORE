@@ -1,0 +1,54 @@
+﻿{
+    "objective":  "ENGREMIAT_POST_MVP_OPERATIONAL_DAILY_LOOP_046_055",
+    "stage":  "E53",
+    "standard_id":  "E53_DAILY_POSTCHECK_STANDARD_V1",
+    "purpose":  "Normalizar validacion repetible tras cada operacion diaria",
+    "required_checks":  [
+                            "required_artifacts_exist",
+                            "json_artifacts_parse",
+                            "policy_flags_ok",
+                            "rollback_reference_exists",
+                            "no_remote_execution",
+                            "no_external_network",
+                            "no_git_write_unless_authorized",
+                            "no_auto_apply"
+                        ],
+    "decision_values":  [
+                            "GO_POSTCHECK_OK",
+                            "NO_GO_POSTCHECK_FAILED",
+                            "REPAIR_REQUIRED",
+                            "DEFER_FOR_HUMAN_REVIEW"
+                        ],
+    "rules":  [
+                  "Postcheck obligatorio despues de apply local",
+                  "Si falta rollback, decision NO_GO o REPAIR_REQUIRED",
+                  "Si hay remote_execution o auto_apply no autorizado, decision NO_GO",
+                  "El reporte debe quedar en reports/"
+              ],
+    "example":  {
+                    "postcheck_id":  "POSTCHECK-YYYYMMDD-HHMMSS",
+                    "required_artifacts":  [
+                                               "data/..."
+                                           ],
+                    "missing":  [
+
+                                ],
+                    "json_ok":  true,
+                    "policy_ok":  true,
+                    "rollback_ready":  true,
+                    "decision":  "GO_POSTCHECK_OK",
+                    "created_at":  "ISO8601"
+                },
+    "security":  {
+                     "apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "sensitive_actions_executed":  false,
+                     "standards_only":  true,
+                     "human_gate_required":  true,
+                     "local_only":  true
+                 },
+    "created_at":  "2026-06-17T12:03:50"
+}

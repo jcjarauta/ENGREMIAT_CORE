@@ -1,0 +1,41 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_HUMAN_USABLE_036_045",
+    "stage":  "E37",
+    "smoke":  "command-hub-static-smoke",
+    "required_commands":  [
+                              "start",
+                              "status",
+                              "next",
+                              "readiness",
+                              "gates",
+                              "artifacts",
+                              "context",
+                              "errors",
+                              "docs",
+                              "dashboard",
+                              "mvp-open",
+                              "prompt",
+                              "inbox",
+                              "review",
+                              "approve"
+                          ],
+    "missing_commands":  [
+
+                         ],
+    "required_files":  [
+                           "data\\command-hub-037\\unified-command-map.json",
+                           "data\\command-hub-037\\command-compatibility-contract.json",
+                           "eng.ps1",
+                           "docs/HUMAN_COMMANDS.md"
+                       ],
+    "missing_files":  [
+
+                      ],
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "decision":  "GO",
+    "created_at":  "2026-06-17T11:39:55"
+}

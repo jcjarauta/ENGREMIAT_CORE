@@ -1,0 +1,67 @@
+﻿{
+    "map_id":  "adapter-role-map.v1",
+    "tools":  [
+                  {
+                      "tool":  "OpenWebUI",
+                      "roles":  [
+                                    "CONTROL_SURFACE",
+                                    "INPUT_ADAPTER"
+                                ],
+                      "allowed":  "conversacion estructurada y revisión humana",
+                      "blocked":  "escritura libre en repo"
+                  },
+                  {
+                      "tool":  "Ollama",
+                      "roles":  [
+                                    "INFERENCE_ENGINE"
+                                ],
+                      "allowed":  "resumen clasificación generación propuesta",
+                      "blocked":  "decisión final sin gate"
+                  },
+                  {
+                      "tool":  "OpenClaw",
+                      "roles":  [
+                                    "EXECUTION_ASSISTANT",
+                                    "WORKER_ADAPTER"
+                                ],
+                      "allowed":  "asistencia de ejecución controlada",
+                      "blocked":  "acciones reales sin gate"
+                  },
+                  {
+                      "tool":  "Cline",
+                      "roles":  [
+                                    "EXECUTION_ASSISTANT",
+                                    "WORKER_ADAPTER"
+                                ],
+                      "allowed":  "tareas técnicas/documentales gobernadas",
+                      "blocked":  "auto-approve sin política"
+                  },
+                  {
+                      "tool":  "Kanban",
+                      "roles":  [
+                                    "CONTROL_SURFACE",
+                                    "OUTPUT_ADAPTER"
+                                ],
+                      "allowed":  "visualizar proyecto tareas estados bloqueos",
+                      "blocked":  "ser fuente técnica final"
+                  },
+                  {
+                      "tool":  "Obsidian",
+                      "roles":  [
+                                    "MEMORY_ADAPTER",
+                                    "DOCUMENTATION_SURFACE"
+                                ],
+                      "allowed":  "memoria notas documentación",
+                      "blocked":  "oficialización sin validador"
+                  },
+                  {
+                      "tool":  "Sheets",
+                      "roles":  [
+                                    "INPUT_ADAPTER",
+                                    "CONTROL_SURFACE"
+                                ],
+                      "allowed":  "entrada estructurada y logs JSON",
+                      "blocked":  "crear módulos activos directamente"
+                  }
+              ]
+}

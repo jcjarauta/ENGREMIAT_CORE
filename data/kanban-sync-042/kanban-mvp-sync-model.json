@@ -1,0 +1,32 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_HUMAN_USABLE_036_045",
+    "stage":  "E42",
+    "purpose":  "Mostrar estado real en Kanban/dashboard sin convertirlo en motor",
+    "kanban_role":  "human_visual_control_surface_only",
+    "source_of_truth":  "local evidence in data reports receipts dashboard",
+    "forbidden":  [
+                      "kanban_as_execution_engine",
+                      "real_kanban_write_without_gate",
+                      "auto_apply",
+                      "remote_execution",
+                      "git_write"
+                  ],
+    "columns":  [
+                    "DONE",
+                    "READY",
+                    "NEXT",
+                    "PENDING"
+                ],
+    "security":  {
+                     "apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "kanban_real_write":  false,
+                     "kanban_is_view_not_engine":  true,
+                     "human_gate_required_for_write":  true
+                 },
+    "next":  "E43_MVP_DEMO_FLOW",
+    "created_at":  "2026-06-17T11:45:25"
+}

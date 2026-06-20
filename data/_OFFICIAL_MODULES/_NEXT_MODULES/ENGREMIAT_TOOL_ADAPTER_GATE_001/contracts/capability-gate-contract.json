@@ -1,0 +1,16 @@
+﻿{
+    "contract_id":  "capability-gate-contract.v1",
+    "module_id":  "ENGREMIAT_TOOL_ADAPTER_GATE_001",
+    "principle":  "Las capacidades gobiernan; las herramientas heredan gates por capacidad.",
+    "canonical_rule":  "Ninguna herramienta real actua por si misma: solicita una capacidad, se evalua gate, se exige evidencia y decision cuando aplica.",
+    "capability_first":  true,
+    "tool_specific_gates":  false,
+    "rules":  [
+                  "Toda accion se modela como capability_request",
+                  "Toda capability tiene permiso, riesgo, evidencia esperada y gate",
+                  "Las herramientas se mapean a capacidades, no a permisos libres",
+                  "Las autorizaciones criticas caducan",
+                  "Las acciones destructivas requieren rollback o bloqueo",
+                  "El cliente selecciona caracteristicas; ENGREMIAT las traduce a capacidades"
+              ]
+}

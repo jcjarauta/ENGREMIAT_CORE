@@ -1,0 +1,47 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_OPERATIVE_WORKER_FLOW_019_025",
+    "stage":  "E19",
+    "step":  "P19.1.1",
+    "block":  "B19.1",
+    "title":  "Controlled Worker Task - worker task scope",
+    "created_at":  "2026-06-17T10:46:01.5099315+02:00",
+    "purpose":  "Definir primera tarea util gobernada para worker asistido, no NOOP.",
+    "worker_role":  "ASSISTED_WORKER_PROPOSES_ONLY",
+    "human_role":  "REVIEWS_DECIDES_APPROVES_OR_REPAIRS",
+    "task_type":  "USEFUL_LOCAL_DOCUMENTATION_OR_ARTIFACT_TASK",
+    "proposed_minimal_task":  {
+                                  "name":  "CREATE_WORKER_TASK_EVIDENCE_NOTE",
+                                  "description":  "Worker asistido debe proponer una nota tecnica breve y verificable para documentar el flujo MVP operativo, sin modificar codigo fuente ni ejecutar comandos.",
+                                  "expected_output":  "worker_task_evidence_note.md proposal and validation evidence",
+                                  "usefulness":  "Primer trabajo util: producir una pieza documental operativa revisable por humano."
+                              },
+    "boundaries":  {
+                       "gate":  "DEFER",
+                       "apply_executed":  false,
+                       "auto_apply":  false,
+                       "worker_real_execution":  false,
+                       "remote_execution":  false,
+                       "git_write":  false,
+                       "browser":  false,
+                       "clipboard":  false,
+                       "read_secrets":  false,
+                       "external_network":  false,
+                       "max_boundary":  "PROMPT_AND_PROPOSAL_ONLY"
+                   },
+    "required_evidence":  [
+                              "controlled-worker-task-scope.json",
+                              "controlled-worker-boundaries.json",
+                              "controlled-worker-gate.json",
+                              "WORKER_PROMPT.md",
+                              "worker-prompt-receipt.json"
+                          ],
+    "safety_rules":  [
+                         "No apply libre",
+                         "No worker real execution desde este paso",
+                         "No remote execution",
+                         "No git write",
+                         "No secretos",
+                         "Humano decide antes de cualquier accion sensible"
+                     ],
+    "status":  "SCOPE_CREATED_WORKER_NOT_EXECUTED"
+}

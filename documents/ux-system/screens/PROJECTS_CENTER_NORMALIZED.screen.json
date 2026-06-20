@@ -1,0 +1,20 @@
+﻿{
+    "screen_id":  "PROJECTS_CENTER_NORMALIZED",
+    "created_at":  "2026-06-20T10:25:10",
+    "title":  "PROYECTOS / CENTRO DE PROYECTOS",
+    "route":  "INICIO \u003e Proyectos",
+    "role":  "entrada humana principal para crear, abrir y operar proyectos",
+    "principle":  "proyectos primero, modulos despues, legacy como respaldo",
+    "launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1",
+    "backup":  null,
+    "actions":  [
+                    "ver proyectos",
+                    "abrir proyecto",
+                    "crear proyecto minimo",
+                    "modulos del proyecto",
+                    "abrir carpeta proyectos",
+                    "estado y ayuda"
+                ],
+    "safe_policy":  "local_only, no_git, no_network, no_legacy_replacement",
+    "next":  "E53_CONNECT_INICIO_TO_PROJECTS_CENTER_NORMALIZED"
+}

@@ -1,0 +1,60 @@
+﻿{
+    "schema":  "engremiat.useful_loop_release_manifest.v1",
+    "objective":  "ENGREMIAT_REAL_VALUE_TASK_EXECUTION_LOOP_122_131_REAL_USEFUL_OUTPUT",
+    "stage":  "E131",
+    "block":  "B131.1",
+    "step":  "P131.1.2",
+    "created_at":  "2026-06-17T14:35:52",
+    "release_id":  "USEFUL-LOOP-RELEASE-131-001",
+    "status":  "CLOSED",
+    "artifacts":  [
+                      {
+                          "path":  "reports/useful-task-122/e122-useful-task-readiness-report.json",
+                          "exists":  true,
+                          "size_bytes":  965
+                      },
+                      {
+                          "path":  "reports/useful-input-123/e123-useful-input-readiness-report.json",
+                          "exists":  true,
+                          "size_bytes":  922
+                      },
+                      {
+                          "path":  "reports/useful-proposal-124/e124-useful-proposal-readiness-report.json",
+                          "exists":  true,
+                          "size_bytes":  959
+                      },
+                      {
+                          "path":  "reports/useful-authorization-125/e125-useful-authorization-readiness-report.json",
+                          "exists":  true,
+                          "size_bytes":  1026
+                      },
+                      {
+                          "path":  "reports/useful-apply-126/e126-useful-apply-readiness-report.json",
+                          "exists":  true,
+                          "size_bytes":  1069
+                      },
+                      {
+                          "path":  "reports/useful-postcheck-127/e127-useful-postcheck-readiness-report.json",
+                          "exists":  true,
+                          "size_bytes":  976
+                      },
+                      {
+                          "path":  "reports/useful-evidence-128/e128-useful-evidence-readiness-report.json",
+                          "exists":  true,
+                          "size_bytes":  957
+                      },
+                      {
+                          "path":  "reports/useful-dashboard-refresh-129/e129-useful-dashboard-readiness-report.json",
+                          "exists":  true,
+                          "size_bytes":  973
+                      },
+                      {
+                          "path":  "reports/useful-loop-regression-130/e130-useful-loop-regression-readiness-report.json",
+                          "exists":  true,
+                          "size_bytes":  949
+                      }
+                  ],
+    "primary_output":  "data/useful-apply-126/useful-output.md",
+    "recommended_scale":  "Escalar desde output Markdown local útil hacia una tarea real operativa pequeña, con input humano editable y resultado reutilizable.",
+    "next_objective":  "ENGREMIAT_REAL_VALUE_TASK_EXECUTION_LOOP_132_141_OPERATIONAL_USEFUL_TASK"
+}

@@ -1,0 +1,59 @@
+{
+    "package_id":  "ENGREMIAT_OPERATIONAL_MASTER_PANEL_001",
+    "stage":  "E02_LOCAL_STATE_COLLECTOR",
+    "artifact":  "local-state-collector-contract.json",
+    "status":  "DEFINED",
+    "purpose":  "Leer estado local de modulos cerrados sin modificar fuentes",
+    "mode":  "READ_LOCAL_REPORTS_ONLY",
+    "sources":  [
+                    {
+                        "id":  "MODULAR_001",
+                        "label":  "Base modular",
+                        "path":  "data\\ENGREMIAT_MODULAR_PLATFORM_001\\_001_POST_CLOSE_AUDIT\\reports\\post-close-audit-report.json",
+                        "required":  true
+                    },
+                    {
+                        "id":  "SIM_004E",
+                        "label":  "Simulador modular",
+                        "path":  "data\\NEXT_ENGREMIAT_MODULAR_PLATFORM_004E\\E04_SIMULATION_CLOSE_AND_NEXT\\reports\\simulation-readiness-report.json",
+                        "required":  true
+                    },
+                    {
+                        "id":  "APPLY_005E",
+                        "label":  "Apply local controlado",
+                        "path":  "data\\NEXT_ENGREMIAT_MODULAR_PLATFORM_005E\\E05_POST_APPLY_VALIDATION_AND_CLOSE\\reports\\post-apply-readiness-report.json",
+                        "required":  true
+                    },
+                    {
+                        "id":  "MANUALS_001",
+                        "label":  "Manuales consolidados",
+                        "path":  "data\\ENGREMIAT_MODULAR_PLATFORM_MANUALS_001\\reports\\manuals-consolidation-report.json",
+                        "required":  true
+                    },
+                    {
+                        "id":  "CIERRE_DOC_001",
+                        "label":  "Cierre documental",
+                        "path":  "data\\CIERRE_DOCUMENTAL_001\\reports\\cierre-documental-report.json",
+                        "required":  true
+                    },
+                    {
+                        "id":  "VISUAL_006E",
+                        "label":  "Validacion visual",
+                        "path":  "data\\006E_VALIDACION_OPERATIVA_VISUAL\\reports\\visual-readiness-report.json",
+                        "required":  true
+                    }
+                ],
+    "blocked_actions":  [
+                            "core_changes",
+                            "external_network",
+                            "git_write",
+                            "real_integration",
+                            "source_mutation"
+                        ],
+    "allowed_actions":  [
+                            "read_local_reports",
+                            "write_collector_artifacts",
+                            "write_dashboard",
+                            "write_validation_report"
+                        ]
+}

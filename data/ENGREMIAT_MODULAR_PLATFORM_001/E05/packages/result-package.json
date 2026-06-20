@@ -1,0 +1,19 @@
+{
+    "package_id":  "ENG-MOD-RES-001",
+    "stage":  "E05",
+    "block":  "P05.1.1",
+    "name":  "Result package",
+    "purpose":  "Crear el paquete de resultado humano y máquina",
+    "artifacts":  [
+                      "contracts/result-normalizer-contract.json",
+                      "packages/result-package.json",
+                      "reports/memory-validation-report.json",
+                      "final-result-dashboard/index.html"
+                  ],
+    "state":  "planned",
+    "control":  {
+                    "local_first":  true,
+                    "no_external_network":  true,
+                    "no_git_write":  true
+                }
+}

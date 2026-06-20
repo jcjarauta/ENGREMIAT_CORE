@@ -1,0 +1,21 @@
+﻿{
+    "objective_id":  "DEFINE_THIRD_REAL_FUNCTION_WITH_TEMPLATE_MVP_180_183",
+    "stage":  "E181",
+    "block":  "B181.2",
+    "step":  "P181.2.1",
+    "name":  "template-progress-run",
+    "purpose":  "Formalize visible loading for long terminal operations",
+    "ui":  [
+               "Write-Progress",
+               "spinner",
+               "elapsed seconds",
+               "timeout"
+           ],
+    "behavior":  [
+                     "visible while waiting",
+                     "clean completion",
+                     "no false freeze"
+                 ],
+    "timeout_seconds":  180,
+    "created_at":  "2026-06-17T18:15:22.4982787+02:00"
+}

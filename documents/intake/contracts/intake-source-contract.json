@@ -1,0 +1,44 @@
+﻿{
+    "contract_id":  "ENGREMIAT_INTAKE_SOURCE_CONTRACT_V1",
+    "purpose":  "Describe una fuente de entrada local antes de normalizarla",
+    "local_first":  true,
+    "network_allowed":  false,
+    "external_ai_allowed":  false,
+    "source_types":  [
+                         "demo",
+                         "manual_form",
+                         "txt",
+                         "md",
+                         "json",
+                         "folder",
+                         "pdf_registered_only",
+                         "csv_future",
+                         "sheets_future",
+                         "drive_future",
+                         "web_future",
+                         "worker_future"
+                     ],
+    "required_fields":  [
+                            "source_id",
+                            "source_type",
+                            "source_path",
+                            "created_at",
+                            "status",
+                            "human_review_required"
+                        ],
+    "fields":  {
+                   "source_id":  "Identificador estable de la fuente",
+                   "source_type":  "Tipo de fuente",
+                   "source_path":  "Ruta local o referencia futura",
+                   "title":  "Titulo humano opcional",
+                   "raw_text_path":  "Ruta TXT/MD si aplica",
+                   "metadata":  "Metadatos no sensibles",
+                   "status":  "draft|ready|normalized|archived|error",
+                   "human_review_required":  "true por defecto si hay extraccion incompleta",
+                   "notes":  "Notas humanas"
+               },
+    "outputs":  [
+                    "normalized_profile_candidate"
+                ],
+    "version":  "1.0.0"
+}

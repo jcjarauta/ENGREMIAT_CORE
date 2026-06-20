@@ -1,0 +1,44 @@
+﻿[
+    {
+        "id":  "INPUT-OPENWEBUI-0001",
+        "source":  "openwebui",
+        "kind":  "need",
+        "title":  "Normalizar entrada conversacional hacia tarjeta consumible",
+        "summary":  "Una conversacion o resumen de OpenWebUI debe poder convertirse en una tarjeta consumible revisable por ENGREMIAT.",
+        "priority":  74,
+        "risk":  "LOW",
+        "target_consumers":  [
+                                 "HUMAN",
+                                 "CLINE_KANBAN",
+                                 "OBSIDIAN"
+                             ]
+    },
+    {
+        "id":  "INPUT-OBSIDIAN-0001",
+        "source":  "obsidian",
+        "kind":  "memory",
+        "title":  "Crear nota candidata desde tarjeta consumible",
+        "summary":  "Cada tarjeta consumible recurrente debe poder producir una nota candidata para memoria Obsidian sin escribir todavia en vault real.",
+        "priority":  70,
+        "risk":  "LOW",
+        "target_consumers":  [
+                                 "HUMAN",
+                                 "OBSIDIAN"
+                             ]
+    },
+    {
+        "id":  "INPUT-OPENCLAW-0001",
+        "source":  "openclaw",
+        "kind":  "project",
+        "title":  "Usar OpenClaw como punto medio entre OpenWebUI y Obsidian",
+        "summary":  "OpenClaw debe actuar como gateway de normalizacion y routing, alimentando tarjetas ENGREMIAT y notas candidatas.",
+        "priority":  78,
+        "risk":  "MEDIUM",
+        "target_consumers":  [
+                                 "HUMAN",
+                                 "OPENWEBUI",
+                                 "OBSIDIAN",
+                                 "CLINE_KANBAN"
+                             ]
+    }
+]

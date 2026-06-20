@@ -1,0 +1,38 @@
+﻿{
+    "package_id":  "ENGREMIAT_REAL_INTAKE_IMPORTER_001",
+    "stage":  "DIAGNOSE_EMPTY_OR_INVALID_EXPORTED_INTAKE",
+    "status":  "PASS",
+    "source":  "C:\\Users\\pc\\Downloads\\engremiat-real-human-intake.json",
+    "decision":  "REEXPORT_FROM_UI_REQUIRED",
+    "safety_ok":  true,
+    "checks":  [
+                   {
+                       "field":  "project_name",
+                       "status":  "MISSING",
+                       "length":  0
+                   },
+                   {
+                       "field":  "human_need",
+                       "status":  "MISSING",
+                       "length":  0
+                   },
+                   {
+                       "field":  "desired_result",
+                       "status":  "MISSING",
+                       "length":  0
+                   },
+                   {
+                       "field":  "success_criteria",
+                       "status":  "MISSING",
+                       "length":  0
+                   }
+               ],
+    "missing_fields":  [
+                           "project_name",
+                           "human_need",
+                           "desired_result",
+                           "success_criteria"
+                       ],
+    "repair_instruction":  "Abre la UI, rellena las casillas, pulsa Generar intake y despues Descargar JSON. Luego ejecuta de nuevo el importador con la ruta del nuevo JSON.",
+    "ui":  "C:\\ENGREMIAT_CORE\\dashboard\\real-human-intake-ui\\index.html"
+}

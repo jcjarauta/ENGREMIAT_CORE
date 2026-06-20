@@ -1,0 +1,18 @@
+﻿{
+    "contract_id":  "workflow-standard-link.v1",
+    "module_id":  "ENGREMIAT_TOOL_ADAPTER_GATE_001",
+    "depends_on":  "ENGREMIAT_INTERNAL_WORKFLOW_STANDARD_001",
+    "required_objects":  [
+                             "PROJECT",
+                             "TASK",
+                             "WORKER",
+                             "INPUT",
+                             "OUTPUT",
+                             "EVIDENCE",
+                             "RESOURCE",
+                             "GATE",
+                             "TOOL_ADAPTER"
+                         ],
+    "compatibility":  "Toda capability request debe poder vincularse a project_id task_id worker_id evidence_id o resource_id cuando aplique.",
+    "workflow_standard_path":  "data/_OFFICIAL_MODULES/_NEXT_MODULES/ENGREMIAT_INTERNAL_WORKFLOW_STANDARD_001"
+}

@@ -1,0 +1,8 @@
+﻿<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ENGREMIAT Approved Execution Receipt Model</title><style>body{font-family:Segoe UI,Arial,sans-serif;margin:24px;background:#111827;color:#e5e7eb}.card{border:1px solid #374151;border-radius:14px;padding:16px;margin:12px 0;background:#1f2937}.ok{color:#22c55e}.warn{color:#facc15}.bad{color:#fb7185}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}.box{padding:14px;border-radius:12px;background:#0f172a;border:1px solid #334155}code{color:#93c5fd}</style></head><body>
+<h1>ENGREMIAT · Approved Execution Receipt Model</h1>
+<div class="card"><b class="warn">E06 · MODEL_ONLY_NOT_APPROVED</b><p>Se define el recibo requerido para una futura ejecucion controlada. No aprueba ni ejecuta nada.</p></div>
+<div class="card"><h2>Campos humanos requeridos</h2><ul><li>decision humana</li><li>alcance aprobado</li><li>operaciones aprobadas</li><li>frase explicita de autorizacion</li><li>riesgos aceptados</li><li>rollback esperado</li><li>evidencia requerida</li></ul></div>
+<div class="card"><h2>Estado actual</h2><div class="grid"><div class="box"><b class="bad">authorization=NOT_GRANTED</b></div><div class="box"><b class="bad">execute_now=false</b></div><div class="box"><b class="ok">local_only=true</b></div><div class="box"><b class="warn">receipt=PENDING</b></div></div></div>
+<div class="card"><h2>Artefactos</h2><p><code>data/project-builder-to-worker-loop/approved-execution-receipt-model.json</code></p><p><code>data/project-builder-to-worker-loop/approved-execution-receipt.pending.json</code></p></div>
+</body></html>

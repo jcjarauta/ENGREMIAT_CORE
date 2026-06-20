@@ -1,0 +1,21 @@
+﻿{
+    "package_id":  "ENGREMIAT_SYSTEM_SIMULATION_LAB_001",
+    "stage":  "E11_SIMULATE_PROJECT_START_WORKER_RUN",
+    "status":  "PASS",
+    "project_id":  "SIM_PROJECT_20260619-144124",
+    "lab_vault":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_SIMULATION_LAB",
+    "worker_runs":  3,
+    "evidences_pass":  3,
+    "result":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_SIMULATION_LAB\\08_RESULTS\\SIM_PROJECT_20260619-144124\\RESULT_PROJECT_START_SIMULATION.md",
+    "gate":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_SIMULATION_LAB\\05_HUMAN_GATES\\SIM_PROJECT_20260619-144124_GATE_VALIDATE_RESULT.md",
+    "canvas":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_SIMULATION_LAB\\10_CANVAS\\SIM_PROJECT_20260619-144124_WORKER_RESULT_CANVAS.canvas",
+    "state":  "ready_for_human_result_validation",
+    "safety":  {
+                   "local_only":  true,
+                   "human_interactive_decision":  true,
+                   "no_real_worker_execution":  true,
+                   "no_git_write":  true,
+                   "no_external_network":  true
+               },
+    "next":  "HUMAN_VALIDATE_PROJECT_START_RESULT"
+}

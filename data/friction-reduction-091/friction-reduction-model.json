@@ -1,0 +1,64 @@
+﻿{
+    "objective":  "ENGREMIAT_HUMAN_USABLE_DAILY_WORKBENCH_086_095",
+    "stage":  "E91",
+    "name":  "Friction Reduction",
+    "version":  "0.91.0-local",
+    "purpose":  "Medir friccion humana actual y preparar reduccion segura de navegacion y uso diario.",
+    "friction_executes":  false,
+    "human_experience_focused":  true,
+    "scale":  {
+                  "min":  0,
+                  "max":  5,
+                  "meaning":  "0 sin friccion, 5 friccion alta"
+              },
+    "friction_points":  [
+                            {
+                                "id":  "FR-091-001",
+                                "area":  "navigation",
+                                "label":  "Demasiados dashboards separados",
+                                "score":  4,
+                                "impact":  "HIGH",
+                                "evidence":  "dashboard/daily-workbench/index.html"
+                            },
+                            {
+                                "id":  "FR-091-002",
+                                "area":  "decisions",
+                                "label":  "Decisiones todavia dispersas entre inbox y ledger",
+                                "score":  3,
+                                "impact":  "MEDIUM",
+                                "evidence":  "data/decision-shortcuts-088/ledger/decision-shortcuts-ledger.jsonl"
+                            },
+                            {
+                                "id":  "FR-091-003",
+                                "area":  "evidence",
+                                "label":  "Evidencias existen pero requieren navegar rutas",
+                                "score":  3,
+                                "impact":  "MEDIUM",
+                                "evidence":  "dashboard/evidence-browser/index.html"
+                            },
+                            {
+                                "id":  "FR-091-004",
+                                "area":  "apply_preview",
+                                "label":  "Apply real bloqueado correctamente pero el camino preview-to-apply aun es conceptual",
+                                "score":  2,
+                                "impact":  "MEDIUM",
+                                "evidence":  "data/preview-apply-gate-090/preview-to-apply-dry-run.json"
+                            }
+                        ],
+    "blocked_machine_actions":  [
+                                    "AUTO_APPLY",
+                                    "REMOTE_EXECUTION",
+                                    "EXTERNAL_NETWORK",
+                                    "WORKER_EXECUTION",
+                                    "KANBAN_REAL_WRITE",
+                                    "GIT_WRITE"
+                                ],
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "kanban_real_write":  false,
+    "created_utc":  "2026-06-17T11:13:52.7441577Z"
+}

@@ -1,0 +1,46 @@
+﻿{
+    "objective":  "ENGREMIAT_REAL_VALUE_TASK_EXECUTION_LOOP_112_121",
+    "stage":  "E113",
+    "task_id":  "RVT-113-001",
+    "criteria_id":  "RVT-113-CRITERIA",
+    "success_criteria":  [
+                             {
+                                 "id":  "SC-001",
+                                 "name":  "task_registered",
+                                 "required":  true
+                             },
+                             {
+                                 "id":  "SC-002",
+                                 "name":  "proposal_created",
+                                 "required":  true
+                             },
+                             {
+                                 "id":  "SC-003",
+                                 "name":  "preview_created",
+                                 "required":  true
+                             },
+                             {
+                                 "id":  "SC-004",
+                                 "name":  "human_authorization_recorded_or_safe_no_go",
+                                 "required":  true
+                             },
+                             {
+                                 "id":  "SC-005",
+                                 "name":  "controlled_apply_or_no_go_recorded",
+                                 "required":  true
+                             },
+                             {
+                                 "id":  "SC-006",
+                                 "name":  "postcheck_recorded",
+                                 "required":  true
+                             },
+                             {
+                                 "id":  "SC-007",
+                                 "name":  "evidence_updated",
+                                 "required":  true
+                             }
+                         ],
+    "value_metric":  "observable_local_artifact_or_safe_no_go_with_traceability",
+    "minimum_value_threshold":  "traceable_result_created",
+    "created_utc":  "2026-06-17T12:06:44.5684448Z"
+}

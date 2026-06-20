@@ -1,0 +1,22 @@
+﻿{
+    "contract_id":  "resource-reuse-policy.v1",
+    "reuse_modes":  [
+                        "COPY",
+                        "ADAPT",
+                        "EXTEND",
+                        "VERSION",
+                        "REFERENCE_ONLY"
+                    ],
+    "rules":  [
+                  "COPY si no cambia comportamiento",
+                  "ADAPT si cambia contexto cliente",
+                  "EXTEND si anade capacidad",
+                  "VERSION si mejora recurso base",
+                  "REFERENCE_ONLY si solo se cita como evidencia"
+              ],
+    "requires_gate_for":  [
+                              "EXTEND",
+                              "VERSION",
+                              "OFFICIAL_REUSE"
+                          ]
+}

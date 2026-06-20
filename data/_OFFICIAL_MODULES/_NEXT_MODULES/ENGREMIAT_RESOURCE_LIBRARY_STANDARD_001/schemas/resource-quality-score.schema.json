@@ -1,0 +1,23 @@
+﻿{
+    "schema_id":  "resource-quality-score.schema.v1",
+    "scores":  [
+                   "readiness_score",
+                   "reuse_score",
+                   "evidence_score",
+                   "compatibility_score",
+                   "documentation_score"
+               ],
+    "range":  "0-100",
+    "pass_threshold":  80,
+    "official_threshold":  90,
+    "fields":  [
+                   "resource_id",
+                   "readiness_score",
+                   "reuse_score",
+                   "evidence_score",
+                   "compatibility_score",
+                   "documentation_score",
+                   "overall_score",
+                   "decision"
+               ]
+}

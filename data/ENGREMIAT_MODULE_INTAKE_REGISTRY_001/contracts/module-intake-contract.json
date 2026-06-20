@@ -1,0 +1,60 @@
+{
+    "package_id":  "ENGREMIAT_MODULE_INTAKE_REGISTRY_001",
+    "stage":  "E01_INTAKE_FOUNDATION",
+    "artifact":  "module-intake-contract.json",
+    "status":  "DEFINED",
+    "purpose":  "Definir la puerta de entrada canonica para cualquier modulo futuro",
+    "flow":  [
+                 "intake",
+                 "classification",
+                 "identity",
+                 "contract",
+                 "canonical_folder",
+                 "validation",
+                 "registry",
+                 "next_action"
+             ],
+    "module_types":  [
+                         "CORE",
+                         "ADAPTER",
+                         "PANEL",
+                         "KNOWLEDGE",
+                         "WORKER",
+                         "INTERFACE",
+                         "STORAGE",
+                         "INTEGRATION",
+                         "SIMULATOR",
+                         "MANUALS",
+                         "REGISTRY"
+                     ],
+    "decisions":  [
+                      "DEVELOP",
+                      "PAUSE",
+                      "MERGE_WITH_EXISTING",
+                      "REJECT",
+                      "ARCHIVE"
+                  ],
+    "required_fields":  [
+                            "package_id",
+                            "module_id",
+                            "module_name",
+                            "module_type",
+                            "version",
+                            "status",
+                            "purpose",
+                            "depends_on",
+                            "inputs",
+                            "outputs",
+                            "boundaries",
+                            "risks",
+                            "human_gates",
+                            "artifacts_expected",
+                            "next_action"
+                        ],
+    "blocked_actions":  [
+                            "core_changes",
+                            "external_network",
+                            "git_write",
+                            "real_integration_without_gate"
+                        ]
+}

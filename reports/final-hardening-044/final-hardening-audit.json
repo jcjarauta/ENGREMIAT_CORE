@@ -1,0 +1,89 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_HUMAN_USABLE_036_045",
+    "stage":  "E44",
+    "audit_id":  "E44_FINAL_HARDENING_AUDIT",
+    "critical_items":  [
+                           {
+                               "path":  "eng.ps1",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "docs/HUMAN_COMMANDS.md",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "docs/MVP_DEMO_CHECKLIST.md",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "dashboard/human-start/index.html",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "dashboard/kanban-mvp/index.html",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "dashboard/mvp-demo/index.html",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "ENGREMIAT_MEMORY/dashboard/memory/index.html",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "data/command-hub-037/unified-command-map.json",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "data/roundtrip-038/roundtrip-plan.json",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "data/decision-console-039/active-decision-gate.json",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "data/controlled-apply-mvp-040/applied-change.json",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "reports/controlled-apply-mvp-040/e40-controlled-apply-postcheck-report.json",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "reports/mvp-demo-043/e43-demo-readiness-report.json",
+                               "exists":  true
+                           }
+                       ],
+    "missing":  [
+
+                ],
+    "commands_expected":  [
+                              "start",
+                              "status",
+                              "next",
+                              "readiness",
+                              "gates",
+                              "artifacts",
+                              "context",
+                              "errors",
+                              "docs",
+                              "dashboard",
+                              "mvp-open",
+                              "prompt",
+                              "inbox",
+                              "review",
+                              "approve"
+                          ],
+    "security":  {
+                     "apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "safe_local_fixes_only":  true,
+                     "sensitive_actions_executed":  false
+                 },
+    "created_at":  "2026-06-17T11:47:30"
+}

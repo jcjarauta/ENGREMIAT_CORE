@@ -1,0 +1,22 @@
+﻿{
+    "package_id":  "ENGREMIAT_OBSIDIAN_OBJECT_GRAPH_001",
+    "stage":  "E09_VISUAL_CLEANUP_AND_KANBAN_DECISION_GATE",
+    "status":  "PASS",
+    "need_cards":  25,
+    "cline_cards":  10,
+    "legend":  "12_VISUAL_GATE/GRAPH_LEGEND_AND_DECISION_GATE.md",
+    "wrappers":  2,
+    "graph_filter":  "-path:.json -path:.tsv",
+    "decision_options":  [
+                             "KANBAN_GO",
+                             "ADJUST",
+                             "STOP"
+                         ],
+    "cline_write":  false,
+    "browser":  false,
+    "api_called":  false,
+    "git":  false,
+    "network":  false,
+    "worker_real_execution":  false,
+    "next":  "HUMAN_DECIDE_KANBAN_GO_ADJUST_OR_STOP"
+}

@@ -1,0 +1,19 @@
+﻿{
+    "package_id":  "ENGREMIAT_KANBAN_WRITE_GATED_001",
+    "contract":  "KANBAN_WRITE_GATED_V1",
+    "source_seed":  "C:\\ENGREMIAT_CORE\\reports\\internal-improvement-kanban-seed-001\\kanban-seed-output.json",
+    "default_no_external_write":  true,
+    "allowed_without_auth":  [
+                                 "selection_preview",
+                                 "review_tsv",
+                                 "authorization_request",
+                                 "local_dry_run"
+                             ],
+    "blocked_without_auth":  [
+                                 "local_write",
+                                 "sheets_write",
+                                 "cline_kanban_write",
+                                 "external_kanban_write"
+                             ],
+    "required_authorization_for_local_write":  "AUTORIZO_KANBAN_LOCAL_WRITE_GATED"
+}

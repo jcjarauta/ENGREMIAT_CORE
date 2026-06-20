@@ -1,0 +1,70 @@
+﻿{
+    "nodes":  [
+                  {
+                      "id":  "human",
+                      "x":  0,
+                      "y":  0,
+                      "width":  240,
+                      "height":  90,
+                      "type":  "text",
+                      "text":  "Decisión humana\nMODULE_SPACE",
+                      "color":  "2"
+                  },
+                  {
+                      "id":  "group",
+                      "x":  340,
+                      "y":  0,
+                      "width":  240,
+                      "height":  90,
+                      "type":  "text",
+                      "text":  "Grupo oficial\nG03_PROJECTS_MODULES",
+                      "color":  "3"
+                  },
+                  {
+                      "id":  "target",
+                      "x":  680,
+                      "y":  0,
+                      "width":  300,
+                      "height":  90,
+                      "type":  "text",
+                      "text":  "Target root\nC:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\02_PROYECTOS\\PROJECT_demo-builder-project-space\\08_RELACIONES\\MODULE_demo-relation-router",
+                      "color":  "4"
+                  },
+                  {
+                      "id":  "surface",
+                      "x":  1040,
+                      "y":  0,
+                      "width":  260,
+                      "height":  90,
+                      "type":  "text",
+                      "text":  "Superficie\nGROUPED_CANVAS",
+                      "color":  "5"
+                  }
+              ],
+    "edges":  [
+                  {
+                      "id":  "e1",
+                      "fromNode":  "human",
+                      "fromSide":  "right",
+                      "toNode":  "group",
+                      "toSide":  "left",
+                      "label":  "agrupa"
+                  },
+                  {
+                      "id":  "e2",
+                      "fromNode":  "group",
+                      "fromSide":  "right",
+                      "toNode":  "target",
+                      "toSide":  "left",
+                      "label":  "ubica"
+                  },
+                  {
+                      "id":  "e3",
+                      "fromNode":  "target",
+                      "fromSide":  "right",
+                      "toNode":  "surface",
+                      "toSide":  "left",
+                      "label":  "muestra"
+                  }
+              ]
+}

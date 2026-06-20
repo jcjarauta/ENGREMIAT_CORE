@@ -1,0 +1,157 @@
+﻿{
+    "package_id":  "ENGREMIAT_OBSIDIAN_HIERARCHICAL_VAULTS_001",
+    "stage":  "E01_DEFINE_HIERARCHICAL_VAULTS_CONTRACT_READONLY",
+    "status":  "PASS",
+    "created_at":  "2026-06-19T14:13:11",
+    "objective":  "Definir una jerarquia de bovedas Obsidian para separar vision global, vision de proyecto y vision de modulo sin ruido visual.",
+    "current_master_vault":  {
+                                 "name":  "BOVEDA_ENGREMIAT_MASTER",
+                                 "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146",
+                                 "role":  "navigation_and_global_control",
+                                 "readiness":  100,
+                                 "decision":  "GO_BOVEDA_ENGREMIAT_MASTER_ADOPTED_AS_OPERATIVE_BASE"
+                             },
+    "hierarchy":  [
+                      {
+                          "level":  "L0_MASTER_VAULT",
+                          "name_pattern":  "BOVEDA_ENGREMIAT_MASTER",
+                          "role":  "Mapa global, tarjetas, indices, estado del sistema, relaciones entre proyectos y modulos.",
+                          "contains":  [
+                                           "PROJECT_CARDS",
+                                           "MODULE_CARDS",
+                                           "SYSTEM_INDEX",
+                                           "GLOBAL_DECISIONS",
+                                           "GLOBAL_DASHBOARD_LINKS"
+                                       ],
+                          "must_not_contain":  [
+                                                   "contenido_profundo_de_modulos",
+                                                   "detalle_operativo_extenso",
+                                                   "artefactos_tecnicos_sueltos_sin_nota_puente"
+                                               ]
+                      },
+                      {
+                          "level":  "L1_PROJECT_VAULT",
+                          "name_pattern":  "BOVEDA_PROJECT_\u003cproject_slug\u003e",
+                          "role":  "Trabajo visual del proyecto: roadmap, modulos necesarios, decisiones, evidencias y estado del proyecto.",
+                          "contains":  [
+                                           "PROJECT_HOME",
+                                           "ROADMAP",
+                                           "MODULES_INDEX",
+                                           "DECISIONS",
+                                           "EVIDENCE",
+                                           "PROJECT_CANVAS"
+                                       ],
+                          "must_not_contain":  [
+                                                   "todos_los_modulos_globales",
+                                                   "ruido_de_otros_proyectos"
+                                               ]
+                      },
+                      {
+                          "level":  "L2_MODULE_SPACE",
+                          "name_pattern":  "MODULE_\u003cmodule_slug\u003e",
+                          "role":  "Espacio de modulo dentro de una boveda de proyecto o modulo grande separado.",
+                          "contains":  [
+                                           "MODULE_HOME",
+                                           "MODULE_CONTRACT",
+                                           "MODULE_STATUS",
+                                           "MODULE_EVIDENCE",
+                                           "MODULE_CANVAS",
+                                           "LAYERS",
+                                           "FLOWS",
+                                           "DECISIONS"
+                                       ],
+                          "must_not_contain":  [
+                                                   "contenido_de_otros_modulos",
+                                                   "json_visible_sin_nota_humana_puente"
+                                               ]
+                      },
+                      {
+                          "level":  "L3_MODULE_VAULT_OPTIONAL",
+                          "name_pattern":  "BOVEDA_MODULE_\u003cmodule_slug\u003e",
+                          "role":  "Boveda propia solo para modulos grandes que saturan la vista del proyecto.",
+                          "contains":  [
+                                           "MODULE_HOME",
+                                           "DEEP_CANVAS",
+                                           "INTERNAL_ARCHITECTURE",
+                                           "EVIDENCE",
+                                           "REPORTS"
+                                       ],
+                          "must_not_contain":  [
+                                                   "ruido_del_master",
+                                                   "ruido_de_otros_modulos"
+                                               ]
+                      }
+                  ],
+    "routing_rules":  [
+                          {
+                              "id":  "R01_MASTER_IS_INDEX_NOT_WORKSPACE",
+                              "rule":  "La master enlaza y resume, pero no aloja contenido profundo."
+                          },
+                          {
+                              "id":  "R02_PROJECT_IS_WORKSPACE",
+                              "rule":  "La boveda de proyecto concentra roadmap, modulos del proyecto y evidencias del proyecto."
+                          },
+                          {
+                              "id":  "R03_MODULE_SPACE_IS_DETAIL",
+                              "rule":  "Cada modulo tiene indice, contrato, estado, evidencia, canvas y notas internas."
+                          },
+                          {
+                              "id":  "R04_BIG_MODULE_CAN_SPLIT",
+                              "rule":  "Un modulo puede tener boveda propia si supera umbral de ruido visual o profundidad."
+                          },
+                          {
+                              "id":  "R05_TECH_ARTIFACTS_NEED_BRIDGE",
+                              "rule":  "Todo JSON, reporte o artefacto tecnico visible necesita nota humana puente o filtro."
+                          }
+                      ],
+    "split_criteria":  [
+                           {
+                               "id":  "C01_VISUAL_NOISE",
+                               "criteria":  "Separar modulo si crea mas de 25 nodos visibles o mas de 5 huerfanos recurrentes."
+                           },
+                           {
+                               "id":  "C02_DEEP_CONTENT",
+                               "criteria":  "Separar modulo si necesita varias capas, canvas internos o documentacion extensa."
+                           },
+                           {
+                               "id":  "C03_REUSE",
+                               "criteria":  "Separar modulo si se reutiliza en varios proyectos."
+                           },
+                           {
+                               "id":  "C04_WORKER_SCOPE",
+                               "criteria":  "Separar modulo si sera trabajado por worker o flujo propio."
+                           }
+                       ],
+    "linking_model":  {
+                          "master_to_project":  "PROJECT_CARD con ruta local, estado, readiness, dashboard y enlace obsidian URI opcional futuro.",
+                          "project_to_module":  "MODULE_CARD o carpeta MODULE_\u003cslug\u003e enlazada desde PROJECT_HOME y MODULES_INDEX.",
+                          "module_to_master":  "Resumen/status del modulo vuelve a master como tarjeta, no como contenido profundo.",
+                          "technical_artifacts":  "Se enlazan desde nota humana puente y se ocultan o agrupan si generan ruido."
+                      },
+    "known_state":  {
+                        "known_first_module":  {
+                                                   "module_id":  "MODULE_arquitectura_global_engremiat",
+                                                   "module_folder":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\03_MODULOS\\MODULE_arquitectura_global_engremiat",
+                                                   "status":  "adopted_preview"
+                                               },
+                        "known_architecture_content":  {
+                                                           "module_id":  "MODULE_arquitectura_global_engremiat",
+                                                           "content_status":  "GO_ARCHITECTURE_MODULE_CONTENT_GRAPH_VALIDATED",
+                                                           "readiness":  100
+                                                       }
+                    },
+    "safety":  {
+                   "local_only":  true,
+                   "readonly_contract":  true,
+                   "no_vault_creation":  true,
+                   "no_content_move":  true,
+                   "template_write":  false,
+                   "obsidian_app_automation":  false,
+                   "worker_execution":  false,
+                   "kanban_write":  false,
+                   "clien_write":  false,
+                   "git_write":  false,
+                   "external_network":  false
+               },
+    "next":  "E02_PREPARE_PROJECT_VAULT_TEMPLATE"
+}

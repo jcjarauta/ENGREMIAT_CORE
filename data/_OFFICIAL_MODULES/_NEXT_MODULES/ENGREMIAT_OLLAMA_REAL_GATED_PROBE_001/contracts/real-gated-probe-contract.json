@@ -1,0 +1,11 @@
+﻿{
+    "probe_id":  "ENGREMIAT_OLLAMA_REAL_GATED_PROBE_001",
+    "adapter":  "ENGREMIAT_MODEL_ADAPTER_OLLAMA_001",
+    "standard":  "ENGREMIAT_MODEL_ADAPTER_STANDARD_001",
+    "allowed_endpoint":  "http://127.0.0.1:11434/api/generate",
+    "allowed_model":  "qwen3:14b",
+    "max_calls":  1,
+    "stream":  false,
+    "num_predict_max":  32,
+    "requires_literal_authorization":  "AUTORIZO_OLLAMA_REAL_INFERENCE_GATED"
+}

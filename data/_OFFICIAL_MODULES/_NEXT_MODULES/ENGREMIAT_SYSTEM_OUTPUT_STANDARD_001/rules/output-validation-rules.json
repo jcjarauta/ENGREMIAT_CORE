@@ -1,0 +1,12 @@
+﻿{
+    "rules_id":  "output-validation-rules.v1",
+    "rules":  [
+                  "output_id required",
+                  "output_type must be in catalog",
+                  "payload required",
+                  "actionable outputs require gate",
+                  "model outputs require model-output-adapter-contract",
+                  "final outputs require evidence",
+                  "build_package cannot execute directly"
+              ]
+}

@@ -1,0 +1,37 @@
+﻿{
+    "package_id":  "ENGREMIAT_UX_SYSTEM_001",
+    "stage":  "E62_CLOSE_PROJECTS_PROCESS_UX_VIEW",
+    "created_at":  "2026-06-20T10:35:21",
+    "status":  "PASS",
+    "readiness":  100,
+    "human_validation":  "Vista cartera viva de proyectos validada en terminal",
+    "validated_view":  {
+                           "columns":  [
+                                           "N",
+                                           "NOMBRE",
+                                           "FASE",
+                                           "PROGRESO",
+                                           "WORKER",
+                                           "BLOQ",
+                                           "NEXT"
+                                       ],
+                           "summary":  [
+                                           "Total",
+                                           "OK",
+                                           "WARN",
+                                           "BLOCK",
+                                           "RUN",
+                                           "WAIT"
+                                       ],
+                           "progress_visual":  "barra [###-------]",
+                           "worker_signal_now":  "heuristica local por lock/error/actividad reciente",
+                           "refresh":  "Enter manual"
+                       },
+    "current_limitations":  [
+                                "WORKER aun no lee heartbeat real normalizado",
+                                "NEXT es heuristico",
+                                "reports=0 genera generar evidencia como siguiente accion",
+                                "no hay detalle expandido por fila todavia"
+                            ],
+    "next":  "E63_DEFINE_LOCAL_WORKER_HEARTBEAT_AND_PROJECT_SIGNAL_CONTRACT"
+}

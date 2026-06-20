@@ -1,0 +1,59 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_HUMAN_USABLE_036_045",
+    "stage":  "E38",
+    "plan_id":  "E38_ROUNDTRIP_PLAN_001",
+    "selected_step":  {
+                          "id":  "E39_PREVIEW_DECISION_CONSOLE_PROPOSAL",
+                          "description":  "Worker debe proponer estructura de consola humana de decision para revisar/aceptar/rechazar propuestas sin apply",
+                          "risk":  "MEDIUM",
+                          "requires_human_gate":  true
+                      },
+    "steps":  [
+                  {
+                      "status":  "DONE",
+                      "id":  "P38.1.1",
+                      "action":  "Crear scope",
+                      "artifact":  "data/roundtrip-038/roundtrip-scope.json"
+                  },
+                  {
+                      "status":  "DONE",
+                      "id":  "P38.1.2",
+                      "action":  "Crear plan",
+                      "artifact":  "data/roundtrip-038/roundtrip-plan.json"
+                  },
+                  {
+                      "status":  "PENDING",
+                      "id":  "P38.2.1",
+                      "action":  "Crear prompt worker",
+                      "artifact":  "prompts/outbox/ROUNDTRIP_WORKER_PROMPT.md"
+                  },
+                  {
+                      "status":  "PENDING",
+                      "id":  "P38.2.2",
+                      "action":  "Crear receipt prompt",
+                      "artifact":  "data/roundtrip-038/receipts/roundtrip-prompt-receipt.json"
+                  },
+                  {
+                      "status":  "PENDING",
+                      "id":  "P38.3.1",
+                      "action":  "Importar respuesta worker o sample seguro",
+                      "artifact":  "reports/roundtrip-038/e38-roundtrip-import-report.json"
+                  },
+                  {
+                      "status":  "PENDING",
+                      "id":  "P38.3.2",
+                      "action":  "Crear readiness",
+                      "artifact":  "reports/roundtrip-038/e38-roundtrip-readiness-report.json"
+                  }
+              ],
+    "security":  {
+                     "apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "sensitive_actions_executed":  false,
+                     "human_gate_required":  true,
+                     "worker_execution":  false
+                 }
+}

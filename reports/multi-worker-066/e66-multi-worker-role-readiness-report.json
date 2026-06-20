@@ -1,0 +1,31 @@
+﻿{
+    "objective":  "ENGREMIAT_MULTI_WORKER_ORCHESTRATION_AND_REAL_VALUE_PIPELINE_066_075",
+    "stage":  "E66",
+    "readiness":  100,
+    "decision":  "GO_E66_MULTI_WORKER_ROLE_MAP_READY",
+    "next":  "E67_WORKER_QUEUE_LOCAL",
+    "multi_worker_roles_ready":  true,
+    "roles_count":  4,
+    "artifacts":  [
+                      "data\\multi-worker-066\\multi-worker-role-map.json",
+                      "data\\multi-worker-066\\multi-worker-boundaries-contract.json",
+                      "data\\multi-worker-066\\receipts\\multi-worker-role-map-receipt.json",
+                      "prompts\\outbox\\multi-worker\\planner.md",
+                      "prompts\\outbox\\multi-worker\\critic.md",
+                      "prompts\\outbox\\multi-worker\\builder.md",
+                      "prompts\\outbox\\multi-worker\\docs.md"
+                  ],
+    "security":  {
+                     "apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "worker_executed":  false,
+                     "multi_agent_autonomy":  false,
+                     "orchestration_execution":  false,
+                     "human_decision_required":  true,
+                     "sensitive_actions_executed":  false
+                 },
+    "created_at":  "2026-06-17T12:35:14"
+}

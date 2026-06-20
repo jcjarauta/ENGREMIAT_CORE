@@ -1,0 +1,20 @@
+﻿{
+    "schema":  "engremiat.task_authorization_decision.v1",
+    "objective":  "ENGREMIAT_REAL_VALUE_TASK_EXECUTION_LOOP_112_121",
+    "stage":  "E115",
+    "block":  "B115.1",
+    "step":  "P115.1.2",
+    "authorization_id":  "TASK-AUTHORIZATION-115-001",
+    "created_at":  "2026-06-17T14:10:46",
+    "human_decision":  "APPROVE",
+    "human_approved":  true,
+    "human_rejected":  false,
+    "execution_allowed_now":  true,
+    "reason":  "Human authorization granted explicitly in chat for E116 controlled local reversible apply.",
+    "editable_by_human":  true,
+    "next_if_approved":  "E116_CONTROLLED_EXECUTION",
+    "next_if_rejected":  "E115_REVIEW_OR_ABORT",
+    "next_if_deferred":  "WAIT_FOR_HUMAN_DECISION",
+    "authorized_at":  "2026-06-17T14:13:20",
+    "authorization_phrase":  "AUTORIZO_E116_CONTROLLED_LOCAL_REVERSIBLE_APPLY"
+}

@@ -1,0 +1,36 @@
+﻿{
+    "project_id":  "PROJECT-SOFTWARE-001",
+    "name":  "Modulo software candidato",
+    "project_type":  "SOFTWARE",
+    "objective":  "Crear un modulo candidato desde JSON.",
+    "status":  "READY",
+    "tasks":  [
+                  "TASK-SOFTWARE-001"
+              ],
+    "workers":  [
+                    "HUMAN-WORKER-001",
+                    "AI-ASSISTANT-LOCAL-001"
+                ],
+    "inputs":  [
+                   {
+                       "type":  "JSON",
+                       "path":  "samples/module-init-json.example.json"
+                   }
+               ],
+    "outputs":  [
+                    {
+                        "type":  "RESOURCE_MODULE",
+                        "path":  "data/_OFFICIAL_MODULES/_NEXT_MODULES/ENGREMIAT_EXAMPLE_FROM_SHEETS_001"
+                    }
+                ],
+    "resources":  [
+                      "RESOURCE-MODULE-001"
+                  ],
+    "evidence":  [
+                     "EVIDENCE-SCRIPT-LOG-001"
+                 ],
+    "gate":  {
+                 "required":  true,
+                 "current_decision":  "BACKLOG"
+             }
+}

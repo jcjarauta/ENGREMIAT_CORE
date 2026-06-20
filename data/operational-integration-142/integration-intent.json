@@ -1,0 +1,18 @@
+﻿{
+    "schema":  "engremiat.integration_intent.v1",
+    "objective":  "ENGREMIAT_OPERATIONAL_ARTIFACT_INTEGRATION_142_151",
+    "stage":  "E142",
+    "block":  "B142.1",
+    "step":  "P142.1.1",
+    "created_at":  "2026-06-17T16:27:31",
+    "source_previous_objective":  "ENGREMIAT_REAL_VALUE_TASK_EXECUTION_LOOP_132_141_OPERATIONAL_USEFUL_TASK",
+    "source_artifact":  "data/operational-apply-136/OPERATIONAL_ARTIFACT.md",
+    "source_artifact_found":  true,
+    "title":  "Integrar artefacto operativo como recurso reutilizable",
+    "intent":  "Registrar, indexar y hacer accesible el artefacto operativo para iniciar futuras tareas humano-maquina con menos friccion.",
+    "human_value":  "El humano podra abrir, consultar y reutilizar el protocolo operativo desde un indice, un dashboard y un comando local.",
+    "integration_value":  "Convierte un artefacto aislado en un recurso operativo del sistema ENGREMIAT_CORE.",
+    "local_only":  true,
+    "no_real_task_execution":  true,
+    "requires_human_authorization_before_any_sensitive_action":  true
+}

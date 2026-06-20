@@ -1,0 +1,163 @@
+﻿{
+    "package_id":  "DEFINE_ARCHITECTURA_GLOBAL_ENGREMIAT_MODULE_CONTENT_001",
+    "stage":  "E03_VALIDATE_ARCHITECTURE_MODULE_CONTENT_GRAPH",
+    "status":  "PASS",
+    "vault_path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146",
+    "module_id":  "MODULE_arquitectura_global_engremiat",
+    "module_folder":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\03_MODULOS\\MODULE_arquitectura_global_engremiat",
+    "content_dir":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\03_MODULOS\\MODULE_arquitectura_global_engremiat\\01_ARQUITECTURA",
+    "readiness":  70,
+    "decision":  "NO_GO_REPAIR_ARCHITECTURE_CONTENT_GRAPH",
+    "checks":  [
+                   {
+                       "id":  "content_dir_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\03_MODULOS\\MODULE_arquitectura_global_engremiat\\01_ARQUITECTURA"
+                   },
+                   {
+                       "id":  "module_index_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\03_MODULOS\\MODULE_arquitectura_global_engremiat\\MODULE_arquitectura_global_engremiat_INDEX.md"
+                   },
+                   {
+                       "id":  "content_map_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\03_MODULOS\\MODULE_arquitectura_global_engremiat\\ARCHITECTURE_CONTENT_MAP.md"
+                   },
+                   {
+                       "id":  "boundaries_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\03_MODULOS\\MODULE_arquitectura_global_engremiat\\01_ARQUITECTURA\\ARCHITECTURE_BOUNDARIES.md"
+                   },
+                   {
+                       "id":  "flows_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\03_MODULOS\\MODULE_arquitectura_global_engremiat\\01_ARQUITECTURA\\ARCHITECTURE_FLOWS.md"
+                   },
+                   {
+                       "id":  "decisions_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\03_MODULOS\\MODULE_arquitectura_global_engremiat\\01_ARQUITECTURA\\ARCHITECTURE_DECISIONS.md"
+                   },
+                   {
+                       "id":  "canvas_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\03_MODULOS\\MODULE_arquitectura_global_engremiat\\ARCHITECTURE_GLOBAL_CANVAS.canvas"
+                   },
+                   {
+                       "id":  "module_canvas_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\03_MODULOS\\MODULE_arquitectura_global_engremiat\\MODULE_CANVAS.canvas"
+                   },
+                   {
+                       "id":  "status_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\03_MODULOS\\MODULE_arquitectura_global_engremiat\\MODULE_STATUS.md"
+                   },
+                   {
+                       "id":  "six_layer_notes_exist",
+                       "ok":  true,
+                       "count":  6
+                   },
+                   {
+                       "id":  "layer_notes_have_required_tags",
+                       "ok":  true,
+                       "bad":  [
+
+                               ]
+                   },
+                   {
+                       "id":  "module_index_links_content_map",
+                       "ok":  false
+                   },
+                   {
+                       "id":  "module_index_links_boundaries",
+                       "ok":  false
+                   },
+                   {
+                       "id":  "module_index_links_flows",
+                       "ok":  false
+                   },
+                   {
+                       "id":  "module_index_links_decisions",
+                       "ok":  false
+                   },
+                   {
+                       "id":  "module_index_links_global_canvas",
+                       "ok":  false
+                   },
+                   {
+                       "id":  "content_map_has_layers_section",
+                       "ok":  true
+                   },
+                   {
+                       "id":  "content_map_has_boundaries_section",
+                       "ok":  true
+                   },
+                   {
+                       "id":  "content_map_has_flows_section",
+                       "ok":  true
+                   },
+                   {
+                       "id":  "content_map_has_decisions_section",
+                       "ok":  true
+                   },
+                   {
+                       "id":  "architecture_canvas_valid_minimum",
+                       "ok":  true,
+                       "nodes":  10,
+                       "edges":  9
+                   },
+                   {
+                       "id":  "architecture_canvas_links_key_notes",
+                       "ok":  true
+                   },
+                   {
+                       "id":  "no_unsafe_file_uri_syntax_in_module_notes",
+                       "ok":  true,
+                       "bad":  [
+
+                               ]
+                   }
+               ],
+    "failed_checks":  [
+                          {
+                              "id":  "module_index_links_content_map",
+                              "ok":  false
+                          },
+                          {
+                              "id":  "module_index_links_boundaries",
+                              "ok":  false
+                          },
+                          {
+                              "id":  "module_index_links_flows",
+                              "ok":  false
+                          },
+                          {
+                              "id":  "module_index_links_decisions",
+                              "ok":  false
+                          },
+                          {
+                              "id":  "module_index_links_global_canvas",
+                              "ok":  false
+                          }
+                      ],
+    "layer_notes":  6,
+    "canvas_nodes":  10,
+    "canvas_edges":  9,
+    "safety":  {
+                   "local_only":  true,
+                   "new_vault_only":  true,
+                   "preview_only":  true,
+                   "template_write":  false,
+                   "obsidian_app_automation":  false,
+                   "worker_execution":  false,
+                   "kanban_write":  false,
+                   "clien_write":  false,
+                   "git_write":  false,
+                   "external_network":  false
+               },
+    "next":  "REPAIR_ARCHITECTURE_MODULE_CONTENT_GRAPH",
+    "dashboard":  "C:\\ENGREMIAT_CORE\\dashboard\\arquitectura-global-engremiat-module-content\\e03-validate-architecture-module-content-graph.html",
+    "guide":  "C:\\ENGREMIAT_CORE\\docs\\arquitectura-global-engremiat-module-content\\E03_VALIDATE_ARCHITECTURE_MODULE_CONTENT_GRAPH.md"
+}

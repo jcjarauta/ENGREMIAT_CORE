@@ -1,0 +1,30 @@
+﻿{
+    "objective":  "ENGREMIAT_FIRST_REAL_CONTROLLED_VALUE_FLOW",
+    "stage":  "E101",
+    "flow_id":  "FRF-096-101",
+    "evidences":  [
+                      "reports\\first-real-flow-096\\e96-first-real-flow-scope-readiness-report.json",
+                      "reports\\human-need-intake-097\\e97-human-need-intake-readiness-report.json",
+                      "reports\\first-real-proposal-098\\e98-first-real-proposal-readiness-report.json",
+                      "reports\\first-real-authorization-099\\e99-first-real-authorization-readiness-report.json",
+                      "reports\\controlled-local-apply-100\\e100-controlled-local-apply-readiness-report.json"
+                  ],
+    "stages_closed":  [
+                          "E96",
+                          "E97",
+                          "E98",
+                          "E99",
+                          "E100"
+                      ],
+    "human_need_registered":  true,
+    "proposal_created":  true,
+    "preview_created":  true,
+    "authorization_gate_created":  true,
+    "controlled_apply_executed":  false,
+    "safe_no_go":  true,
+    "observable_value":  "ENGREMIAT completo un flujo necesidad→propuesta→preview→gate→resultado con evidencia trazable.",
+    "apply_executed":  false,
+    "git_write":  false,
+    "kanban_real_write":  false,
+    "created_utc":  "2026-06-17T11:27:57.3196317Z"
+}

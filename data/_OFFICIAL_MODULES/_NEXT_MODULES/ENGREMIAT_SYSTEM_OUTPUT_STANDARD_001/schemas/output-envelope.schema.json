@@ -1,0 +1,32 @@
+﻿{
+    "schema_id":  "output-envelope.schema.v1",
+    "required":  [
+                     "output_id",
+                     "output_type",
+                     "source",
+                     "status",
+                     "payload",
+                     "evidence",
+                     "gate",
+                     "created_at"
+                 ],
+    "fields":  [
+                   "output_id",
+                   "output_type",
+                   "source",
+                   "source_module",
+                   "source_tool",
+                   "source_model",
+                   "project_id",
+                   "task_id",
+                   "need_id",
+                   "proposal_id",
+                   "status",
+                   "payload",
+                   "evidence",
+                   "gate",
+                   "validation",
+                   "created_at",
+                   "created_by"
+               ]
+}

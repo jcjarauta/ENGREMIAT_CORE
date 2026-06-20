@@ -1,0 +1,196 @@
+﻿$ErrorActionPreference="Stop"
+[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+$Root=(Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
+Set-Location -LiteralPath $Root
+$StateDir=Join-Path $Root "data\operator-state"
+$StateFile=Join-Path $StateDir "active-context.json"
+
+function L($m,$c="Gray"){Write-Host $m -ForegroundColor $c}
+function D($p){if(!(Test-Path -LiteralPath $p)){New-Item -ItemType Directory -Force -Path $p|Out-Null}}
+function J($p,$o){$d=Split-Path $p -Parent;D $d;$o|ConvertTo-Json -Depth 100|Set-Content -LiteralPath $p -Encoding UTF8}
+function Slug($v){$s=([string]$v).Trim().ToLowerInvariant();$s=$s -replace '[^a-z0-9áéíóúüñ_-]+','-';$s=$s -replace '-+','-';$s=$s.Trim('-');if([string]::IsNullOrWhiteSpace($s)){$s="modulo"};return $s}
+
+function LoadState(){
+  D $StateDir
+  if(!(Test-Path -LiteralPath $StateFile)){
+    J $StateFile ([ordered]@{mode="global";active_project="";active_master_vault="";active_module="";active_module_vault="";historical_projects=@();last_command="init";next="abrir-proyecto_or_nuevo-proyecto";updated_at=(Get-Date).ToString("s");safety=[ordered]@{local_only=$true;worker_real=$false;git=$false;network=$false}})
+  }
+  return (Get-Content -LiteralPath $StateFile -Raw -Encoding UTF8|ConvertFrom-Json)
+}
+function SaveState($s){$s|Add-Member -Force -NotePropertyName updated_at -NotePropertyValue (Get-Date).ToString("s");J $StateFile $s}
+function Projects(){$desktop=[Environment]::GetFolderPath("Desktop");return @(Get-ChildItem -LiteralPath $desktop -Directory -Filter "ENGREMIAT_PROJECT_*" -ErrorAction SilentlyContinue|Where-Object{Test-Path -LiteralPath (Join-Path $_.FullName "BOVEDA_MAESTRA")}|Sort-Object LastWriteTime -Descending)}
+function Modules($project){$mroot=Join-Path $project "MODULOS";if(!(Test-Path -LiteralPath $mroot)){return @()};return @(Get-ChildItem -LiteralPath $mroot -Directory -Filter "MODULE_*" -ErrorAction SilentlyContinue|Where-Object{Test-Path -LiteralPath (Join-Path $_.FullName "BOVEDA_MODULO")}|Sort-Object Name)}
+function EnsureHistoryForTest($s,$all){if(!($s.PSObject.Properties.Name -contains "historical_projects")){$s|Add-Member -Force -NotePropertyName historical_projects -NotePropertyValue @()};if(@($s.historical_projects).Count -eq 0 -and @($all).Count -ge 3){$hist=@($all[0],$all[1]);$s|Add-Member -Force -NotePropertyName historical_projects -NotePropertyValue @($hist|ForEach-Object{[pscustomobject]@{name=$_.Name;path=$_.FullName;status="HISTORICAL"}});SaveState $s};return (LoadState)}
+function HistoricalPaths($s){if($s.PSObject.Properties.Name -contains "historical_projects" -and $s.historical_projects){return @($s.historical_projects|ForEach-Object{if($_.path){[string]$_.path}else{[string]$_}})};return @()}
+
+function SetActiveModuleContext($s,$m){
+  $s.mode="module"
+  $s.active_module=$m.Name
+  $s.active_module_vault=Join-Path $m.FullName "BOVEDA_MODULO"
+  $s.last_command="abrir-modulo"
+  $s.next="contrato_or_tareas_or_evidencias"
+  $s|Add-Member -Force -NotePropertyName active_module_context -NotePropertyValue ([pscustomobject]@{module_name=$m.Name;project_path=$s.active_project;module_path=$m.FullName;module_vault=$s.active_module_vault;lifecycle="ACTIVE_IN_PROJECT";objective_status="IN_PROGRESS";reusable=$false;library_status="NOT_READY";historical_status="NOT_HISTORICAL";updated_at=(Get-Date).ToString("s")})
+  SaveState $s
+  L ("OK active_module="+$m.Name+" next="+$s.next) Green
+  return $s
+}
+
+function SelectModule($s,$arg=""){
+  $ms=Modules $s.active_project
+  if(@($ms).Count -eq 0){L "WARN no_modules_found; crea un modulo nuevo" Yellow;return $s}
+  L "SELECCIONA MODULO ACTIVO" Cyan
+  for($i=0;$i -lt @($ms).Count;$i++){L (" ["+($i+1)+"] "+$ms[$i].Name) Green}
+  $sel=$arg
+  if([string]::IsNullOrWhiteSpace($sel)){$sel=Read-Host "Numero de modulo"}
+  [int]$n=0
+  if(![int]::TryParse($sel,[ref]$n)){throw "invalid_module_selection"}
+  if($n -lt 1 -or $n -gt @($ms).Count){throw "module_selection_out_of_range"}
+  return (SetActiveModuleContext $s $ms[$n-1])
+}
+
+function CreateModuleInActiveProject($s){
+  if([string]::IsNullOrWhiteSpace([string]$s.active_project)){throw "no_active_project"}
+  $name=Read-Host "Nombre del modulo"
+  $slug=Slug $name
+  $moduleName="MODULE_$slug"
+  $modulesRoot=Join-Path $s.active_project "MODULOS"
+  $modulePath=Join-Path $modulesRoot $moduleName
+  $template=Join-Path $modulesRoot "MODULE_inicio"
+
+  if(Test-Path -LiteralPath $modulePath){throw "module_already_exists=$modulePath"}
+  if(Test-Path -LiteralPath $template){
+    Copy-Item -LiteralPath $template -Destination $modulePath -Recurse -Force
+    L ("OK cloned_from_template="+$template) Cyan
+  }else{
+    D (Join-Path $modulePath "BOVEDA_MODULO")
+    D (Join-Path $modulePath "_system")
+    L "WARN template_MODULE_inicio_not_found_created_minimal" Yellow
+  }
+
+  $vault=Join-Path $modulePath "BOVEDA_MODULO"
+  D $vault
+
+  $meta=[ordered]@{
+    module_id=$moduleName
+    name=$name
+    project_path=$s.active_project
+    module_path=$modulePath
+    module_vault=$vault
+    cloned_from=($(if(Test-Path -LiteralPath $template){'"MODULE_inicio"'}else{'"NONE_MINIMAL"'}))
+    lifecycle="ACTIVE_IN_PROJECT"
+    objective_status="IN_PROGRESS"
+    reusable=$false
+    library_status="NOT_READY"
+    created_at=(Get-Date).ToString("s")
+  }
+  J (Join-Path $vault "module.json") $meta
+
+  $contract=Join-Path $vault "CONTRATO.md"
+  if(Test-Path -LiteralPath $contract){
+    Add-Content -LiteralPath $contract -Encoding UTF8 -Value "
+---
+Modulo clonado/adaptado: $moduleName
+Proyecto vinculado: $($s.active_project)
+Estado: ACTIVE_IN_PROJECT
+"
+  }else{
+    Set-Content -LiteralPath $contract -Encoding UTF8 -Value "# CONTRATO $moduleName
+
+Proyecto vinculado: $($s.active_project)
+Estado: ACTIVE_IN_PROJECT
+"
+  }
+
+  L ("OK created_module="+$moduleName) Green
+  L ("created_in_project="+$s.active_project) Cyan
+  L ("module_path="+$modulePath) Cyan
+  L ("module_vault="+$vault) Cyan
+  Start-Process explorer.exe -ArgumentList @($modulePath)
+  return (SetActiveModuleContext (LoadState) (Get-Item -LiteralPath $modulePath))
+}
+
+function ProjectModuleGate($s){
+  $ms=Modules $s.active_project
+  L "TRABAJO DEL PROYECTO" Cyan
+  if(@($ms).Count -gt 0){L " [1] Entrar en modulo existente" Green}else{L " [1] Entrar en modulo existente (no hay modulos)" DarkYellow}
+  L " [2] Crear modulo nuevo en este proyecto" Green
+  L " [0] Atras / cambiar proyecto" Yellow
+  $sel=Read-Host "Elige accion"
+  $selNorm=([string]$sel).Trim().ToLowerInvariant()
+
+  if($selNorm -eq "0" -or $selNorm -eq "atras" -or $selNorm -eq "atrás" -or $selNorm -eq "volver" -or $selNorm -eq "back" -or $selNorm -eq ".."){
+    $s.mode="global"
+    $s.active_project=""
+    $s.active_master_vault=""
+    $s.active_module=""
+    $s.active_module_vault=""
+    $s.next="abrir-proyecto_or_nuevo-proyecto"
+    SaveState $s
+    L "OK atras=proyecto_a_global" Green
+    L "NEXT abrir-proyecto o nuevo-proyecto" Magenta
+    return $s
+  }
+
+  if($selNorm -eq "1"){
+    if(@($ms).Count -eq 0){L "WARN no_modules_found; creando modulo nuevo" Yellow;return (CreateModuleInActiveProject $s)}
+    return (SelectModule $s "")
+  }
+
+  if($selNorm -eq "2"){
+    return (CreateModuleInActiveProject $s)
+  }
+
+  L "WARN accion_no_valida; usa 1, 2 o 0" Yellow
+  return (ProjectModuleGate $s)
+}
+function ModuleView(){
+  $s=LoadState
+  if([string]::IsNullOrWhiteSpace([string]$s.active_project)){throw "no_active_project"}
+  if([string]::IsNullOrWhiteSpace([string]$s.active_module)){throw "no_active_module"}
+  $projectName=Split-Path ([string]$s.active_project) -Leaf
+  $moduleName=[string]$s.active_module
+  $moduleVault=[string]$s.active_module_vault
+  $modulePath=""
+  if($moduleVault){$modulePath=Split-Path $moduleVault -Parent}
+  $life="ACTIVE_IN_PROJECT";$objective="IN_PROGRESS";$library="NOT_READY";$reusable="False"
+  if($s.PSObject.Properties.Name -contains "active_module_context" -and $s.active_module_context){
+    if($s.active_module_context.lifecycle){$life=[string]$s.active_module_context.lifecycle}
+    if($s.active_module_context.objective_status){$objective=[string]$s.active_module_context.objective_status}
+    if($s.active_module_context.library_status){$library=[string]$s.active_module_context.library_status}
+    if($null -ne $s.active_module_context.reusable){$reusable=[string]$s.active_module_context.reusable}
+  }
+  $contract=Join-Path $moduleVault "CONTRATO.md";$tasks=Join-Path $moduleVault "TAREAS.md";$evidence=Join-Path $moduleVault "EVIDENCIAS.md";$gates=Join-Path $moduleVault "GATES.md"
+  L "MODULO ACTIVO" Cyan
+  L ("project="+$projectName) Green
+  L ("module="+$moduleName) Green
+  L ("lifecycle="+$life) Yellow
+  L ("objective_status="+$objective) Yellow
+  L ("reusable="+$reusable) Yellow
+  L ("library_status="+$library) Yellow
+  L ("project_path="+$s.active_project) DarkCyan
+  L ("module_path="+$modulePath) DarkCyan
+  L ("module_vault="+$moduleVault) DarkCyan
+  L "ARTEFACTOS" Cyan
+  L ("contract="+$contract+" exists="+(Test-Path -LiteralPath $contract)) Gray
+  L ("tasks="+$tasks+" exists="+(Test-Path -LiteralPath $tasks)) Gray
+  L ("evidence="+$evidence+" exists="+(Test-Path -LiteralPath $evidence)) Gray
+  L ("gates="+$gates+" exists="+(Test-Path -LiteralPath $gates)) Gray
+  L "NEXT revisar contrato/tareas/evidencias o definir cierre de objetivo del modulo" Magenta
+}
+
+$cmd=if($args.Count -gt 0){([string]$args[0]).Trim().ToLowerInvariant()}else{"show"}
+$cmdArg=if($args.Count -gt 1){([string]$args[1]).Trim()}else{""}
+
+if($cmd -eq "show"){$s=LoadState;L "CONTEXTO ENGREMIAT" Cyan;L ("mode="+$s.mode) Green;L ("active_project="+$s.active_project) Green;L ("active_module="+$s.active_module) Green;L ("next="+$s.next) Yellow;exit}
+elseif($cmd -eq "projects"){$all=Projects;if(@($all).Count -eq 0){L "WARN no_projects_found" Yellow;exit};$s=EnsureHistoryForTest (LoadState) $all;$histPaths=HistoricalPaths $s;$active=[string]$s.active_project;L "PROYECTOS HISTORICOS / DISPONIBLES" Cyan;for($i=0;$i -lt @($all).Count;$i++){$tag="";if($all[$i].FullName -eq $active){$tag=" ACTIVE"}elseif($histPaths -contains $all[$i].FullName){$tag=" HISTORICO"};L (" ["+($i+1)+"] "+$all[$i].Name+"  "+$all[$i].LastWriteTime.ToString("yyyy-MM-dd HH:mm")+$tag) Green};exit}
+elseif($cmd -eq "open-project"){$all=Projects;if(@($all).Count -eq 0){throw "no_projects_found"};$s=EnsureHistoryForTest (LoadState) $all;$histPaths=HistoricalPaths $s;$ps=@($all|Where-Object{$histPaths -notcontains $_.FullName});if(@($ps).Count -eq 0){$ps=@($all)};L "SELECCIONA PROYECTO ACTIVO" Cyan;for($i=0;$i -lt @($ps).Count;$i++){L (" ["+($i+1)+"] "+$ps[$i].Name+"  "+$ps[$i].LastWriteTime.ToString("yyyy-MM-dd HH:mm")) Green};$sel=$cmdArg;if([string]::IsNullOrWhiteSpace($sel)){$sel=Read-Host "Numero de proyecto"};[int]$n=0;if(![int]::TryParse($sel,[ref]$n)){throw "invalid_project_selection"};if($n -lt 1 -or $n -gt @($ps).Count){throw "project_selection_out_of_range"};$p=$ps[$n-1].FullName;$s=LoadState;$s.mode="project";$s.active_project=$p;$s.active_master_vault=Join-Path $p "BOVEDA_MAESTRA";$s.active_module="";$s.active_module_vault="";$s.last_command="abrir-proyecto";$s.next="entrar_modulo_o_crear_modulo_en_proyecto_activo";SaveState $s;L ("OK active_project="+$p) Green;$s=ProjectModuleGate $s;exit}
+elseif($cmd -eq "project-menu"){$s=LoadState;if([string]::IsNullOrWhiteSpace($s.active_project)){throw "no_active_project"};$s=ProjectModuleGate $s;exit}
+elseif($cmd -eq "modules"){$s=LoadState;if([string]::IsNullOrWhiteSpace($s.active_project)){throw "no_active_project"};$ms=Modules $s.active_project;if(@($ms).Count -eq 0){L "WARN no_modules_found" Yellow;exit};L "MODULOS DEL PROYECTO ACTIVO" Cyan;for($i=0;$i -lt @($ms).Count;$i++){L (" ["+($i+1)+"] "+$ms[$i].Name) Green};exit}
+elseif($cmd -eq "open-module"){$s=LoadState;if([string]::IsNullOrWhiteSpace($s.active_project)){throw "no_active_project"};$s=SelectModule $s $cmdArg;exit}
+elseif($cmd -eq "create-module"){$s=LoadState;if([string]::IsNullOrWhiteSpace($s.active_project)){throw "no_active_project"};$s=CreateModuleInActiveProject $s;exit}
+elseif($cmd -eq "module-view"){ModuleView;exit}
+else{throw "unknown_context_command=$cmd"}
+
+
+
+

@@ -1,0 +1,50 @@
+﻿{
+    "screen":  "DOCUMENTATION_CENTER_NORMALIZED",
+    "updated_at":  "2026-06-20T10:03:28",
+    "policy":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\canonical-local-command-numbering-policy.json",
+    "local_numbering_applied":  true,
+    "screens":  [
+                    {
+                        "screen":  "DOCUMENTACION",
+                        "visible":  [
+                                        "[1] Memoria viva",
+                                        "[2] Dossiers",
+                                        "[3] Convocatorias y fichas",
+                                        "[4] Contexto worker / continuidad",
+                                        "[5] Exportaciones y herramientas",
+                                        "[6] Carpetas y archivos",
+                                        "[7] Estado y ayuda"
+                                    ]
+                    },
+                    {
+                        "screen":  "DOSSIERS",
+                        "visible":  [
+                                        "[1] dossier subvenciones",
+                                        "[2] dossier partners",
+                                        "[3] dossier clientes",
+                                        "[4] dossier adaptado"
+                                    ],
+                        "legacy_map":  [
+                                           "1=\u003e5",
+                                           "2=\u003e6",
+                                           "3=\u003e7",
+                                           "4=\u003e15"
+                                       ]
+                    },
+                    {
+                        "screen":  "CONVOCATORIAS",
+                        "visible":  [
+                                        "[1] ficha",
+                                        "[2] dossier adaptado",
+                                        "[3] asistente",
+                                        "[4] Data Intake"
+                                    ],
+                        "legacy_map":  [
+                                           "1=\u003e14",
+                                           "2=\u003e15",
+                                           "3=\u003e16",
+                                           "4=\u003e17"
+                                       ]
+                    }
+                ]
+}

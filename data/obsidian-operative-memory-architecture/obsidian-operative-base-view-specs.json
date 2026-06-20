@@ -1,0 +1,126 @@
+﻿{
+    "package_id":  "ENGREMIAT_OBSIDIAN_OPERATIVE_MEMORY_ARCHITECTURE_001",
+    "stage":  "E04_CREATE_OBSIDIAN_BASES_AND_OPERATIVE_INDEXES_REPAIR",
+    "view_specs":  [
+                       {
+                           "id":  "ACTIVE_PROJECTS",
+                           "title":  "Proyectos activos",
+                           "folder":  "00_CONTROL_OPERATIVO",
+                           "file":  "ACTIVE_PROJECTS",
+                           "object_type":  "project",
+                           "filter":  "status != closed",
+                           "group_by":  "status",
+                           "sort":  "priority desc, updated_at desc",
+                           "columns":  [
+                                           "project_id",
+                                           "title",
+                                           "status",
+                                           "readiness",
+                                           "decision",
+                                           "next_action"
+                                       ]
+                       },
+                       {
+                           "id":  "PENDING_GATES",
+                           "title":  "Gates pendientes",
+                           "folder":  "00_CONTROL_OPERATIVO",
+                           "file":  "PENDING_GATES",
+                           "object_type":  "gate",
+                           "filter":  "authorization_status = NOT_GRANTED OR decision = DEFER",
+                           "group_by":  "sensitive_action",
+                           "sort":  "created_at desc",
+                           "columns":  [
+                                           "gate_id",
+                                           "project_id",
+                                           "status",
+                                           "decision",
+                                           "authorization_status",
+                                           "sensitive_action"
+                                       ]
+                       },
+                       {
+                           "id":  "ACTIVE_CARDS",
+                           "title":  "Tarjetas activas",
+                           "folder":  "06_KANBAN_TAREAS",
+                           "file":  "ACTIVE_CARDS",
+                           "object_type":  "task_card",
+                           "filter":  "status != done AND status != closed",
+                           "group_by":  "lane",
+                           "sort":  "priority desc, risk desc",
+                           "columns":  [
+                                           "card_id",
+                                           "project_id",
+                                           "lane",
+                                           "status",
+                                           "priority",
+                                           "risk",
+                                           "gate",
+                                           "next_action"
+                                       ]
+                       },
+                       {
+                           "id":  "BLOCKED_CARDS",
+                           "title":  "Tarjetas bloqueadas",
+                           "folder":  "06_KANBAN_TAREAS",
+                           "file":  "BLOCKED_CARDS",
+                           "object_type":  "task_card",
+                           "filter":  "status = blocked OR gate = REVIEW_REQUIRED",
+                           "group_by":  "gate",
+                           "sort":  "risk desc",
+                           "columns":  [
+                                           "card_id",
+                                           "project_id",
+                                           "status",
+                                           "risk",
+                                           "gate",
+                                           "next_action"
+                                       ]
+                       },
+                       {
+                           "id":  "RECENT_EVIDENCE",
+                           "title":  "Evidencias recientes",
+                           "folder":  "05_EVIDENCIAS",
+                           "file":  "RECENT_EVIDENCE",
+                           "object_type":  "evidence",
+                           "filter":  "type = evidence",
+                           "group_by":  "evidence_kind",
+                           "sort":  "created_at desc",
+                           "columns":  [
+                                           "evidence_id",
+                                           "project_id",
+                                           "status",
+                                           "evidence_kind",
+                                           "source_path",
+                                           "created_at"
+                                       ]
+                       },
+                       {
+                           "id":  "WORKER_PROPOSALS",
+                           "title":  "Propuestas worker",
+                           "folder":  "03_WORKERS",
+                           "file":  "WORKER_PROPOSALS",
+                           "object_type":  "worker_packet",
+                           "filter":  "type = worker_packet OR type = worker_response",
+                           "group_by":  "worker",
+                           "sort":  "updated_at desc",
+                           "columns":  [
+                                           "worker_packet_id",
+                                           "project_id",
+                                           "worker",
+                                           "status",
+                                           "execution_allowed",
+                                           "source_path"
+                                       ]
+                       }
+                   ],
+    "safety":  {
+                   "local_only":  true,
+                   "preview_only":  true,
+                   "execute_now":  false,
+                   "worker_execution":  false,
+                   "kanban_write":  false,
+                   "clien_write":  false,
+                   "git_write":  false,
+                   "external_network":  false
+               }
+}

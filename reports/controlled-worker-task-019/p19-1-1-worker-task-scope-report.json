@@ -1,0 +1,27 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_OPERATIVE_WORKER_FLOW_019_025",
+    "stage":  "E19",
+    "step":  "P19.1.1",
+    "created_at":  "2026-06-17T10:46:01.5099315+02:00",
+    "readiness":  100,
+    "decision":  "GO_P19_1_1_WORKER_TASK_SCOPE_CREATED",
+    "next":  "P19_1_2_CREATE_WORKER_BOUNDARIES",
+    "checks":  {
+                   "scope_created":  true,
+                   "gate_defer":  true,
+                   "apply_false":  true,
+                   "auto_apply_false":  true,
+                   "worker_real_execution_false":  true,
+                   "remote_execution_false":  true,
+                   "git_write_false":  true,
+                   "external_network_false":  true,
+                   "read_secrets_false":  true
+               },
+    "gate":  "DEFER",
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "worker_real_execution":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "artifact":  "data/controlled-worker-task-019/controlled-worker-task-scope.json"
+}

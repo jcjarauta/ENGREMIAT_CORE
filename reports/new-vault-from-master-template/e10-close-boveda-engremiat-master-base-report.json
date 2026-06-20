@@ -1,0 +1,86 @@
+﻿{
+    "package_id":  "ENGREMIAT_NEW_VAULT_FROM_MASTER_TEMPLATE_001",
+    "stage":  "E10_CLOSE_BOVEDA_ENGREMIAT_MASTER_BASE",
+    "status":  "PASS",
+    "vault_name":  "BOVEDA_ENGREMIAT_MASTER",
+    "vault_path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146",
+    "readiness":  100,
+    "decision":  "GO_BOVEDA_ENGREMIAT_MASTER_ADOPTED_AS_OPERATIVE_BASE",
+    "md_files":  23,
+    "canvas_files":  1,
+    "index_files":  14,
+    "checks":  [
+                   {
+                       "id":  "HOME",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\HOME.md"
+                   },
+                   {
+                       "id":  "GRAPH_NAVIGATION_MAP",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\00_CONTROL_OPERATIVO\\GRAPH_NAVIGATION_MAP.md"
+                   },
+                   {
+                       "id":  "GRAPH_VIEW_SELECTOR",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\00_CONTROL_OPERATIVO\\GRAPH_VIEW_SELECTOR.md"
+                   },
+                   {
+                       "id":  "GRAPH_GROUPS_MANUAL_APPLY",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\00_CONTROL_OPERATIVO\\GRAPH_GROUPS_MANUAL_APPLY.md"
+                   },
+                   {
+                       "id":  "CONTROL_INDEX",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\00_CONTROL_OPERATIVO\\00_CONTROL_OPERATIVO_INDEX.md"
+                   },
+                   {
+                       "id":  "GRAPH_JSON",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\.obsidian\\graph.json"
+                   },
+                   {
+                       "id":  "LOCALGRAPH_JSON",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\.obsidian\\localgraph.json"
+                   }
+               ],
+    "failed_checks":  [
+
+                      ],
+    "accepted_capabilities":  [
+                                  "estructura_base",
+                                  "navegacion_HOME",
+                                  "indices_normalizados",
+                                  "graph_navigation_map",
+                                  "graph_view_selector",
+                                  "grupos_obsidian_manualizados",
+                                  "vista_por_grupos",
+                                  "base_para_modulos_oficiales"
+                              ],
+    "limits":  [
+                   "no_worker_execution",
+                   "no_kanban_write",
+                   "no_clien_write",
+                   "no_git_write",
+                   "no_external_network"
+               ],
+    "safety":  {
+                   "local_only":  true,
+                   "new_vault_only":  true,
+                   "template_write":  false,
+                   "preview_only":  true,
+                   "obsidian_app_automation":  false,
+                   "worker_execution":  false,
+                   "kanban_write":  false,
+                   "clien_write":  false,
+                   "git_write":  false,
+                   "external_network":  false
+               },
+    "next":  "START_ENGREMIAT_FIRST_OFFICIAL_MODULE_FROM_BUILDER_001",
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\new-vault-from-master-template\\e10-close-boveda-engremiat-master-base-report.json",
+    "dashboard":  "C:\\ENGREMIAT_CORE\\dashboard\\new-vault-from-master-template\\e10-close-boveda-engremiat-master-base.html",
+    "guide":  "C:\\ENGREMIAT_CORE\\docs\\new-vault-from-master-template\\E10_CLOSE_BOVEDA_ENGREMIAT_MASTER_BASE.md",
+    "status_note":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\00_CONTROL_OPERATIVO\\BOVEDA_ENGREMIAT_MASTER_STATUS.md"
+}

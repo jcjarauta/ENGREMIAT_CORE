@@ -1,0 +1,92 @@
+﻿{
+    "package_id":  "ENGREMIAT_NEW_VAULT_FROM_MASTER_TEMPLATE_001",
+    "stage":  "E06_REPAIR_AND_CLOSE_GRAPH_GROUPS_SELECTOR",
+    "status":  "PASS",
+    "vault_path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146",
+    "readiness":  100,
+    "decision":  "GO_NEW_VAULT_READY_FOR_FIRST_OFFICIAL_MODULE",
+    "repairs":  [
+                    {
+                        "kind":  "selector_refreshed_with_all_groups_and_views",
+                        "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\00_CONTROL_OPERATIVO\\GRAPH_VIEW_SELECTOR.md",
+                        "groups":  9,
+                        "views":  9
+                    },
+                    {
+                        "kind":  "graph_json_and_localgraph_refreshed",
+                        "graph":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\.obsidian\\graph.json",
+                        "localgraph":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\.obsidian\\localgraph.json",
+                        "color_groups":  9
+                    }
+                ],
+    "repairs_count":  2,
+    "checks":  [
+                   {
+                       "id":  "selector_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\00_CONTROL_OPERATIVO\\GRAPH_VIEW_SELECTOR.md"
+                   },
+                   {
+                       "id":  "graph_json_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\.obsidian\\graph.json"
+                   },
+                   {
+                       "id":  "localgraph_json_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\.obsidian\\localgraph.json"
+                   },
+                   {
+                       "id":  "groups_count_9",
+                       "ok":  true,
+                       "count":  9
+                   },
+                   {
+                       "id":  "views_count_9",
+                       "ok":  true,
+                       "count":  9
+                   },
+                   {
+                       "id":  "selector_mentions_all_views",
+                       "ok":  true,
+                       "count":  9
+                   },
+                   {
+                       "id":  "selector_mentions_all_groups",
+                       "ok":  true,
+                       "count":  9
+                   },
+                   {
+                       "id":  "home_links_selector",
+                       "ok":  true
+                   },
+                   {
+                       "id":  "graph_color_groups_9",
+                       "ok":  true,
+                       "count":  9
+                   },
+                   {
+                       "id":  "graph_default_filter_set",
+                       "ok":  true,
+                       "filter":  "-path:.obsidian -path:_AUDIT_REVIEW -path:STUBS -file:app.json -file:appearance.json -file:graph.json -file:workspace.json"
+                   }
+               ],
+    "failed_checks":  [
+
+                      ],
+    "groups":  9,
+    "views":  9,
+    "safety":  {
+                   "local_only":  true,
+                   "new_vault_only":  true,
+                   "template_write":  false,
+                   "preview_only":  true,
+                   "obsidian_app_automation":  false,
+                   "worker_execution":  false,
+                   "kanban_write":  false,
+                   "clien_write":  false,
+                   "git_write":  false,
+                   "external_network":  false
+               },
+    "next":  "START_ENGREMIAT_FIRST_OFFICIAL_MODULE_FROM_BUILDER_001"
+}

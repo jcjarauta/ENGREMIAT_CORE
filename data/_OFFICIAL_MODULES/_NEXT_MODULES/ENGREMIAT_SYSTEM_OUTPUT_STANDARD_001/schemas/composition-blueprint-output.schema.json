@@ -1,0 +1,28 @@
+﻿{
+    "schema_id":  "composition-blueprint-output.schema.v1",
+    "required":  [
+                     "blueprint_id",
+                     "objective",
+                     "selected_resources",
+                     "composition_steps",
+                     "validation",
+                     "gate"
+                 ],
+    "fields":  [
+                   "blueprint_id",
+                   "query_id",
+                   "client_id",
+                   "project_id",
+                   "objective",
+                   "requested_capabilities",
+                   "selected_resources",
+                   "missing_resources",
+                   "composition_steps",
+                   "expected_outputs",
+                   "risks",
+                   "evidence_required",
+                   "validation",
+                   "gate",
+                   "status"
+               ]
+}

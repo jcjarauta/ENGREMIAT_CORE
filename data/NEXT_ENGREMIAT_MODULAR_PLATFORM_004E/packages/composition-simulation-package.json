@@ -1,0 +1,51 @@
+{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_004E",
+    "stage":  "E01_SIMULATOR_BOOTSTRAP",
+    "status":  "PASS",
+    "base_frozen":  "ENGREMIAT_MODULAR_PLATFORM_001",
+    "compositions":  [
+                         {
+                             "composition_id":  "COMP_CORE_CONTROL",
+                             "objective":  "Control humano basico",
+                             "modules":  [
+                                             "REGISTRY",
+                                             "QUEUE",
+                                             "CONTROL",
+                                             "MEMORY"
+                                         ],
+                             "score":  92,
+                             "risk":  "LOW",
+                             "decision":  "GO_SIMULATED"
+                         },
+                         {
+                             "composition_id":  "COMP_WORKER_ASSISTED",
+                             "objective":  "Puente a worker asistido",
+                             "modules":  [
+                                             "REGISTRY",
+                                             "QUEUE",
+                                             "WORKER_BRIDGE",
+                                             "RESULT_NORMALIZER",
+                                             "MEMORY"
+                                         ],
+                             "score":  88,
+                             "risk":  "MEDIUM",
+                             "decision":  "GO_SIMULATED"
+                         },
+                         {
+                             "composition_id":  "COMP_VISUAL_OPS",
+                             "objective":  "Operacion visual con Kanban",
+                             "modules":  [
+                                             "REGISTRY",
+                                             "QUEUE",
+                                             "KANBAN_ADAPTER",
+                                             "OPERATIONAL_REGISTRY",
+                                             "MEMORY"
+                                         ],
+                             "score":  84,
+                             "risk":  "MEDIUM",
+                             "decision":  "GO_SIMULATED"
+                         }
+                     ],
+    "winner":  "COMP_CORE_CONTROL",
+    "next":  "E02_COMPOSITION_SCORING_ENGINE"
+}

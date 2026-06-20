@@ -1,0 +1,13 @@
+﻿{
+    "binding_id":  "MODEL_CONTEXT_BINDING_V1",
+    "accepted_context_sources":  [
+                                     "SYSTEM_OUTPUT_STANDARD",
+                                     "COMPOSITION_BLUEPRINT",
+                                     "BUILD_PACKAGE",
+                                     "EVIDENCE_REPORT",
+                                     "TASK_PLAN"
+                                 ],
+    "adapter_reads_only":  true,
+    "composer_core_dependency":  "context_only_not_runtime_dependency",
+    "normalization_required":  true
+}

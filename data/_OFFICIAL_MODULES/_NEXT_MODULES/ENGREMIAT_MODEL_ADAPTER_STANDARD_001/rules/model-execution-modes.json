@@ -1,0 +1,15 @@
+﻿{
+    "default":  "MOCK",
+    "modes":  {
+                  "DRY_RUN":  {
+                                  "real_inference":  false
+                              },
+                  "MOCK":  {
+                               "real_inference":  false
+                           },
+                  "REAL_GATED":  {
+                                     "gate_required":  true,
+                                     "real_inference":  true
+                                 }
+              }
+}

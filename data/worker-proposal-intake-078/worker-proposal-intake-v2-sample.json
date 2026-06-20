@@ -1,0 +1,27 @@
+﻿{
+    "proposal_id":  "WPI78-SAMPLE-001",
+    "worker_role":  "planner",
+    "title":  "Preparar propuesta operativa diaria",
+    "summary":  "Propuesta de ejemplo para intake controlado V2 sin ejecutar acciones.",
+    "target_artifacts":  [
+                             "data/operational-value-076/operational-value-queue-items.jsonl"
+                         ],
+    "risk":  "MEDIUM",
+    "requires_human_decision":  true,
+    "expected_evidence":  [
+                              "proposal_summary",
+                              "target_artifacts",
+                              "rollback_note",
+                              "postcheck_note"
+                          ],
+    "safety_flags":  {
+                         "worker_executed":  false,
+                         "apply_executed":  false,
+                         "auto_apply":  false,
+                         "remote_execution":  false,
+                         "git_write":  false,
+                         "external_network":  false,
+                         "kanban_real_write":  false
+                     },
+    "created_utc":  "2026-06-17T10:53:56.0915758Z"
+}

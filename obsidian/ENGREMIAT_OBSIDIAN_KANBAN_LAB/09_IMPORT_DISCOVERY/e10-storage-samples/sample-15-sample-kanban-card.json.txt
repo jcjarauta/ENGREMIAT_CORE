@@ -1,0 +1,49 @@
+﻿PATH=C:\Users\pc\.cline\worktrees\07b15\ENGREMIAT_CORE\data\kanban-human-control\sample-kanban-card.json SCORE=80 SIZE=1950 EXT=.json --- SAMPLE BEGIN ---
+{
+    "card_id":  "KANBAN-007-E01-B01-P01-001",
+    "objective":  "ENGREMIAT_KANBAN_HUMAN_CONTROL_SURFACE_007",
+    "stage":  {
+                  "id":  "E01",
+                  "name":  "Modelo canonico de tarjeta Kanban"
+              },
+    "block":  {
+                  "id":  "B01.1",
+                  "name":  "Contrato de tarjeta"
+              },
+    "step":  {
+                 "id":  "P01.1.1",
+                 "name":  "Crear schema de tarjeta"
+             },
+    "title":  "Crear modelo canonico de tarjeta Kanban",
+    "description":  "Generar schema y ejemplo base para representar objetivos, etapas, gates, workers, proposals y decisiones como tarjetas humanas.",
+    "status":  "READY",
+    "risk":  "LOW",
+    "gate":  {
+                 "authorization_required":  false,
+                 "decision":  "NOT_REQUIRED_LOCAL_MODEL_ONLY",
+                 "reason":  "Solo escritura local de artefactos canonicos"
+             },
+    "worker":  {
+                   "assigned":  "NONE",
+                   "worker_real_execution":  false
+               },
+    "evidence":  [
+                     "data/kanban-human-control/kanban-card-schema.json",
+                     "data/kanban-human-control/sample-kanban-card.json",
+                     "docs/KANBAN_CARD_MODEL_GUIDE.md",
+                     "reports/kanban-human-control/e01-kanban-card-schema-validation-report.json"
+                 ],
+    "next_action":  {
+                        "recommended":  "E02_BUILD_KANBAN_BOARD_FROM_EVIDENCE",
+                        "requires_human_review":  true
+                    },
+    "safety":  {
+                   "kanban_write":  false,
+                   "cline_task_created":  false,
+                   "worker_real_execution":  false,
+                   "auto_apply":  false,
+                   "git_write":  false,
+                   "remote_inference":  false
+               }
+}
+--- SAMPLE END ---

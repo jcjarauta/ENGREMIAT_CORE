@@ -1,0 +1,106 @@
+﻿{
+    "package_id":  "ENGREMIAT_UX_SYSTEM_001",
+    "stage":  "E63_DEFINE_LOCAL_WORKER_HEARTBEAT_AND_OBSIDIAN_SYNC_CONTRACT",
+    "created_at":  "2026-06-20T10:36:31",
+    "status":  "PASS",
+    "purpose":  "Definir señal viva local para conectar workers, cartera de proyectos, terminal UX y Obsidian sync",
+    "terminology":  {
+                        "canonical":  "heartbeat",
+                        "accepted_alias":  [
+                                               "heartbreak si el usuario lo usa conversacionalmente"
+                                           ],
+                        "meaning":  "pulso local readonly del estado actual de un worker o proyecto"
+                    },
+    "layers":  {
+                   "heartbeat":  {
+                                     "role":  "pulso atomico del worker",
+                                     "scope":  "worker/proyecto/tarea",
+                                     "format":  "JSON latest + JSONL events",
+                                     "files":  [
+                                                   "reports/workers/worker-heartbeat-latest.json",
+                                                   "reports/workers/worker-events.jsonl"
+                                               ]
+                                 },
+                   "project_signal":  {
+                                          "role":  "resumen operativo por proyecto",
+                                          "scope":  "proyecto",
+                                          "format":  "JSON latest",
+                                          "files":  [
+                                                        "reports/project-signal-latest.json"
+                                                    ]
+                                      },
+                   "terminal_view":  {
+                                         "role":  "representacion compacta en pantalla",
+                                         "scope":  "humano",
+                                         "columns":  [
+                                                         "N",
+                                                         "NOMBRE",
+                                                         "FASE",
+                                                         "PROGRESO",
+                                                         "WORKER",
+                                                         "BLOQ",
+                                                         "NEXT"
+                                                     ]
+                                     },
+                   "obsidian_sync":  {
+                                         "role":  "representacion persistente y grafica",
+                                         "scope":  "vault/markdown/yaml",
+                                         "files":  [
+                                                       "obsidian/PROJECT.md",
+                                                       "obsidian/WORKER.md",
+                                                       "obsidian/TASK.md",
+                                                       "obsidian/SIGNAL.md"
+                                                   ]
+                                     }
+               },
+    "heartbeat_fields":  [
+                             "schema_version",
+                             "signal_id",
+                             "project_id",
+                             "project_path",
+                             "worker_id",
+                             "task_id",
+                             "state",
+                             "phase",
+                             "current_step",
+                             "progress_pct",
+                             "blocked_reason",
+                             "next_action",
+                             "evidence_path",
+                             "heartbeat_at",
+                             "expires_at",
+                             "source",
+                             "readonly"
+                         ],
+    "states":  [
+                   "IDLE",
+                   "QUEUED",
+                   "RUNNING",
+                   "WAITING_HUMAN",
+                   "BLOCKED",
+                   "DONE",
+                   "ERROR"
+               ],
+    "obsidian_mapping":  {
+                             "project_node":  "@project",
+                             "worker_node":  "@worker",
+                             "task_node":  "@task",
+                             "signal_node":  "@signal",
+                             "edges":  [
+                                           "project HAS_WORKER worker",
+                                           "worker WORKS_ON task",
+                                           "task BELONGS_TO project",
+                                           "signal UPDATES project",
+                                           "signal BLOCKS task when blocked_reason exists"
+                                       ]
+                         },
+    "sync_policy":  {
+                        "mode":  "readonly_export",
+                        "no_worker_execution":  true,
+                        "no_git":  true,
+                        "no_network":  true,
+                        "safe_to_run_often":  true,
+                        "conflict_policy":  "latest heartbeat regenerates markdown; source JSON remains canonical"
+                    },
+    "next":  "E64_CREATE_HEARTBEAT_OBSIDIAN_SYNC_DRY_RUN"
+}

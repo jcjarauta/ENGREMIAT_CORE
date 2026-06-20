@@ -1,0 +1,13 @@
+﻿{
+    "package":  "ENGREMIAT_MODULE_WORKSPACE_FLOW",
+    "stage":  "E22C_WORKSPACE_MODULE_SELECTOR",
+    "status":  "PASS",
+    "workspace_screen":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-module-workspace-screen.ps1",
+    "fix":  "ModulePath_optional_with_selector",
+    "sources":  [
+                    "project_modules",
+                    "library_active",
+                    "library_historic"
+                ],
+    "next":  "abrir_workspace_directo_sin_ModulePath_y_elegir_modulo"
+}

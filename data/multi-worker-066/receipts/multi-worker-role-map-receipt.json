@@ -1,0 +1,21 @@
+﻿{
+    "objective":  "ENGREMIAT_MULTI_WORKER_ORCHESTRATION_AND_REAL_VALUE_PIPELINE_066_075",
+    "stage":  "E66",
+    "receipt_id":  "E66_MULTI_WORKER_ROLE_MAP_RECEIPT",
+    "role_map":  "data\\multi-worker-066\\multi-worker-role-map.json",
+    "contract":  "data\\multi-worker-066\\multi-worker-boundaries-contract.json",
+    "prompt_dir":  "prompts/outbox/multi-worker",
+    "roles":  [
+                  "PLANNER",
+                  "CRITIC",
+                  "BUILDER",
+                  "DOCS"
+              ],
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "created_at":  "2026-06-17T12:35:14"
+}

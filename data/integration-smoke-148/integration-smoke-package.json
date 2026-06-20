@@ -1,0 +1,19 @@
+﻿{
+    "schema":  "engremiat.integration_smoke_package.v1",
+    "objective":  "ENGREMIAT_OPERATIONAL_ARTIFACT_INTEGRATION_142_151",
+    "stage":  "E148",
+    "created_at":  "2026-06-17T16:34:27",
+    "mode":  "READ_ONLY_INTEGRATION_SMOKE",
+    "required":  [
+                     "reports/operational-control-147/e147-operational-control-readiness-report.json",
+                     "data/operational-apply-136/OPERATIONAL_ARTIFACT.md",
+                     "templates/REUSABLE_OPERATIONAL_TEMPLATE.md",
+                     "data/operational-launch-146/NEXT_OPERATIONAL_TASK_DRAFT.md",
+                     "tools/operational/open-operational-artifact.ps1",
+                     "dashboard/operational-control/index.html"
+                 ],
+    "real_task_started":  false,
+    "network_used":  false,
+    "git_write":  false,
+    "destructive_actions":  false
+}

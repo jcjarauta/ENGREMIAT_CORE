@@ -1,0 +1,99 @@
+﻿{
+    "package":  "DOCKER_ENDPOINT_PROBE_001",
+    "created_at":  "2026-06-18T12:54:23",
+    "results":  [
+                    {
+                        "endpoint":  "npipe:////./pipe/docker_engine",
+                        "ok":  false,
+                        "timeout":  false,
+                        "out":  "\"29.5.3\"\n",
+                        "err":  "",
+                        "exit_code":  null
+                    },
+                    {
+                        "endpoint":  "npipe:////./pipe/dockerDesktopLinuxEngine",
+                        "ok":  false,
+                        "timeout":  false,
+                        "out":  "\"29.5.3\"\n",
+                        "err":  "",
+                        "exit_code":  null
+                    },
+                    {
+                        "endpoint":  "npipe:////./pipe/dockerDesktopEngine",
+                        "ok":  false,
+                        "timeout":  false,
+                        "out":  "\"29.5.3\"\n",
+                        "err":  "",
+                        "exit_code":  null
+                    },
+                    {
+                        "endpoint":  "npipe:////./pipe/docker_engine_linux",
+                        "ok":  false,
+                        "timeout":  false,
+                        "out":  "\"29.5.3\"\n",
+                        "err":  "",
+                        "exit_code":  null
+                    },
+                    {
+                        "endpoint":  "npipe:////./pipe/dockerDesktopWindowsEngine",
+                        "ok":  false,
+                        "timeout":  false,
+                        "out":  "\"\"\n",
+                        "err":  "request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopWindowsEngine/v1.54/info, check if the server supports the requested API version\n",
+                        "exit_code":  null
+                    }
+                ],
+    "winner":  {
+
+               },
+    "context":  {
+                    "ok":  false,
+                    "timeout":  false,
+                    "out":  "NAME              DESCRIPTION                               DOCKER ENDPOINT                             ERROR\ndefault           Current DOCKER_HOST based configuration   npipe:////./pipe/docker_engine              \ndesktop-linux *   Docker Desktop                            npipe:////./pipe/dockerDesktopLinuxEngine   \n",
+                    "err":  "",
+                    "exit_code":  null
+                },
+    "wsl":  {
+                "ok":  false,
+                "timeout":  false,
+                "out":  " \u0000 \u0000N\u0000A\u0000M\u0000E\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000S\u0000T\u0000A\u0000T\u0000E\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000V\u0000E\u0000R\u0000S\u0000I\u0000O\u0000N\u0000\r\u0000\n\u0000*\u0000 \u0000d\u0000o\u0000c\u0000k\u0000e\u0000r\u0000-\u0000d\u0000e\u0000s\u0000k\u0000t\u0000o\u0000p\u0000 \u0000 \u0000 \u0000 \u0000R\u0000u\u0000n\u0000n\u0000i\u0000n\u0000g\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u00002\u0000\r\u0000\n\u0000",
+                "err":  "",
+                "exit_code":  null
+            },
+    "pipes":  [
+                  "dockerBackendApiServer",
+                  "dockerEthernetVpnkit",
+                  "dockerControlInit",
+                  "docker_engine",
+                  "dockerDesktopEngine",
+                  "dockerDesktopLinuxEngine",
+                  "dockerDesktopWindowsEngine",
+                  "docker_cli",
+                  "dockerHTTPProxy",
+                  "dockerEthernet",
+                  "dockerEthernetQemu",
+                  "dockerVolumeContents",
+                  "dockerStats",
+                  "docker_engine_linux",
+                  "dockerDiagnosticd",
+                  "dockerDnsForwarder",
+                  "dockerFilesystemEvent",
+                  "dockerWsl2BootstrapExposePorts",
+                  "dockerWSLCrossDistroService",
+                  "dockerAPIProxyControl",
+                  "dockerContainerFilesystem",
+                  "dockerDebugSocketforwarder",
+                  "dockerPerfSocketforwarder",
+                  "dockerMutagenConduit",
+                  "dockerExtensionManagerAPI",
+                  "dockerModulesManagerAPI",
+                  "dockerTools",
+                  "dockerWindowsAPIProxyControl",
+                  "dockerVolume",
+                  "dockerDesktopBuildServer",
+                  "docker_sandboxes_sandboxd",
+                  "dockerAgent"
+              ],
+    "decision":  "WARN_NO_DOCKER_ENDPOINT_RESPONDS",
+    "next":  "CHECK_DOCKER_SETTINGS_OR_REINSTALL_DOCKER_DESKTOP"
+}

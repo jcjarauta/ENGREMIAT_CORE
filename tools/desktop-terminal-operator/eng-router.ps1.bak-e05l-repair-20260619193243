@@ -1,0 +1,185 @@
+﻿$ErrorActionPreference="Stop"
+[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+$Root=(Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
+Set-Location -LiteralPath $Root
+
+function L($m,$c="Gray"){Write-Host $m -ForegroundColor $c}
+
+function RunScript($name){
+  $p=Join-Path $PSScriptRoot $name
+  if(!(Test-Path -LiteralPath $p)){throw "missing_script=$p"}
+  & powershell -NoProfile -ExecutionPolicy Bypass -File $p
+}
+
+function Ctx($sub,$arg=""){
+  $p=Join-Path $PSScriptRoot "eng-context.ps1"
+  if(!(Test-Path -LiteralPath $p)){throw "missing_context=$p"}
+  if([string]::IsNullOrWhiteSpace($arg)){
+    & powershell -NoProfile -ExecutionPolicy Bypass -File $p $sub
+  }else{
+    & powershell -NoProfile -ExecutionPolicy Bypass -File $p $sub $arg
+  }
+}
+
+function State(){
+  try{
+    $p=Join-Path $Root "data\operator-state\active-context.json"
+    if(Test-Path -LiteralPath $p){
+      return (Get-Content -LiteralPath $p -Raw -Encoding UTF8|ConvertFrom-Json)
+    }
+  }catch{}
+  return $null
+}
+
+function HasActiveProject(){
+  $s=State
+  return ($s -and ![string]::IsNullOrWhiteSpace([string]$s.active_project))
+}
+
+function HasActiveModule(){
+  $s=State
+  return ($s -and ![string]::IsNullOrWhiteSpace([string]$s.active_module))
+}
+
+function ShowGlobalMenu(){
+  L "GLOBAL" Cyan
+  L " [1] Abrir proyecto     p" Green
+  L " [2] Nuevo proyecto     n" Green
+  L " [3] Ver proyectos" Green
+  L " [4] Estado compacto    e" Green
+  L " [0] Salir              q" Yellow
+  L "" Gray
+  L "refrescar/f5/Enter = redibujar pantalla | ? = ayuda | comandos = menu actual" DarkGray
+}
+
+function ShowProjectMenu(){
+  L "PROYECTO" Cyan
+  L " [1] Entrar en modulo   m" Green
+  L " [2] Crear modulo       n" Green
+  L " [3] Revisar proyecto   r" Green
+  L " [0] Atras              a" Yellow
+  L "" Gray
+  L "refrescar/f5/Enter = redibujar pantalla | ? = ayuda | comandos = menu actual" DarkGray
+}
+
+function ShowModuleMenu(){
+  L "MODULO" Cyan
+  L " [1] Contrato           c" Green
+  L " [2] Tareas             t" Green
+  L " [3] Evidencias         ev" Green
+  L " [4] Gates              g" Green
+  L " [5] Smoke              s" Green
+  L " [0] Atras              a" Yellow
+  L "" Gray
+  L "refrescar/f5/Enter = redibujar pantalla | ? = ayuda | comandos = menu actual" DarkGray
+}
+
+function ShowCommands(){
+  if(HasActiveModule){ShowModuleMenu;return}
+  if(HasActiveProject){ShowProjectMenu;return}
+  ShowGlobalMenu
+}
+
+function RunModuleArtifact($kind){
+  if(!(HasActiveModule)){L "WARN abre primero un modulo" Yellow;exit}
+  & powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot "eng-module-artifact.ps1") $kind
+  L "" Gray
+  ShowModuleMenu
+  exit
+}
+
+function RunModuleSmoke(){
+  if(!(HasActiveModule)){L "WARN abre primero un modulo" Yellow;exit}
+  & powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot "eng-module-smoke.ps1")
+  L "" Gray
+  ShowModuleMenu
+  exit
+}
+
+$raw=if($args.Count -gt 0){([string]$args[0]).Trim()}else{"ayuda"}
+$raw=$raw -replace '^\s+|\s+$',''
+$parts=@($raw -split "\s+",2)
+$cmd=$parts[0].Trim().ToLowerInvariant()
+$cmdArg=if($parts.Count -gt 1){$parts[1].Trim()}else{""}
+
+if($cmd -eq "abrir" -and $cmdArg -eq "proyecto"){$cmd="abrir-proyecto";$cmdArg=""}
+elseif($cmd -eq "abrir" -and $cmdArg -eq "modulo"){$cmd="abrir-modulo";$cmdArg=""}
+
+if($cmd -eq "estado"){
+  RunScript "eng-status.ps1";exit
+}
+elseif($cmd -eq "ayuda" -or $cmd -eq "help" -or $cmd -eq "?"){
+  ShowCommands;exit
+}
+elseif($cmd -eq "comandos" -or $cmd -eq "menu"){
+  ShowCommands;exit
+}
+elseif($cmd -eq "proyectos"){
+  Ctx "projects";exit
+}
+elseif($cmd -eq "abrir-proyecto"){
+  Ctx "open-project" $cmdArg;exit
+}
+elseif($cmd -eq "nuevo-proyecto"){
+  RunScript "eng-new-project.ps1";exit
+}
+elseif($cmd -eq "proyecto"){
+  Ctx "show";exit
+}
+elseif($cmd -eq "menu-proyecto"){
+  Ctx "project-menu";exit
+}
+elseif($cmd -eq "modulos"){
+  Ctx "modules";exit
+}
+elseif($cmd -eq "abrir-modulo"){
+  Ctx "open-module" $cmdArg;exit
+}
+elseif($cmd -eq "nuevo-modulo"){
+  if(!(HasActiveProject)){L "WARN abre primero un proyecto con abrir-proyecto" Yellow;exit}
+  Ctx "create-module";exit
+}
+elseif($cmd -eq "modulo"){
+  if(!(HasActiveModule)){L "WARN abre primero un modulo" Yellow;exit}
+  Ctx "module-view";L "" Gray;exit
+}
+elseif($cmd -eq "contrato"){
+  RunModuleArtifact "contrato"
+}
+elseif($cmd -eq "tareas"){
+  RunModuleArtifact "tareas"
+}
+elseif($cmd -eq "evidencias"){
+  RunModuleArtifact "evidencias"
+}
+elseif($cmd -eq "gates"){
+  RunModuleArtifact "gates"
+}
+elseif($cmd -eq "preparar-smoke"){
+  RunModuleSmoke
+}
+elseif($cmd -eq "revisar-proyecto"){
+  if(!(HasActiveProject)){L "WARN abre primero un proyecto con abrir-proyecto" Yellow;exit}
+  RunScript "eng-review-project.ps1";exit
+}
+elseif($cmd -eq "ultimo"){
+  Get-ChildItem -LiteralPath (Join-Path $Root "reports") -Recurse -File -Filter "*.json" -ErrorAction SilentlyContinue|Sort-Object LastWriteTime -Descending|Select-Object -First 8|ForEach-Object{L $_.FullName Yellow}
+  exit
+}
+elseif($cmd -eq "dashboard" -or $cmd -eq "abrir-dashboard"){
+  $h=Get-ChildItem -LiteralPath (Join-Path $Root "dashboard") -Recurse -File -Filter "*.html" -ErrorAction SilentlyContinue|Sort-Object LastWriteTime -Descending|Select-Object -First 1
+  if($h){Start-Process $h.FullName;L ("OK dashboard="+$h.FullName) Green}else{L "WARN no_dashboard_found" Yellow}
+  exit
+}
+elseif($cmd -eq "atras" -or $cmd -eq "volver" -or $cmd -eq "back" -or $cmd -eq ".."){
+  L "INFO atras se gestiona en el operador interactivo" Cyan;exit
+}
+elseif($cmd -eq "salir" -or $cmd -eq "exit" -or $cmd -eq "q"){
+  L "Saliendo ENGREMIAT." Cyan;exit
+}
+else{
+  L ("WARN comando_no_reconocido="+$raw) Yellow
+  ShowCommands
+  exit 0
+}
+

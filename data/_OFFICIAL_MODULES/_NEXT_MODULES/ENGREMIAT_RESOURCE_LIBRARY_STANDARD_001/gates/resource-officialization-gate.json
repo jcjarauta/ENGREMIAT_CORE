@@ -1,0 +1,24 @@
+﻿{
+    "gate_id":  "resource-officialization-gate.v1",
+    "capability":  "OFFICIALIZE_RESOURCE",
+    "risk":  "CRITICAL",
+    "required":  [
+                     "resource_manifest",
+                     "validation_report",
+                     "quality_score",
+                     "human_approval",
+                     "rollback_or_archive_plan"
+                 ],
+    "allowed_decisions":  [
+                              "OFFICIALIZE",
+                              "BACKLOG",
+                              "REJECT",
+                              "REQUEST_CHANGES"
+                          ],
+    "blocked_if":  [
+                       "missing_evidence",
+                       "quality_below_threshold",
+                       "no_human_approval",
+                       "incompatible_dependencies"
+                   ]
+}

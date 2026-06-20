@@ -1,0 +1,35 @@
+﻿{
+    "blueprint_id":  "SAMPLE-COMPOSITION-GRANT-AI-LOCAL-001",
+    "objective":  "Montar sistema base para gestion de subvenciones con IA local y control humano.",
+    "requested_capabilities":  [
+                                   "PROJECT_MANAGEMENT",
+                                   "GRANT_DOCUMENT_WORKFLOW",
+                                   "LOCAL_AI_ASSISTANCE",
+                                   "HUMAN_GATE_REVIEW",
+                                   "RESOURCE_LIBRARY"
+                               ],
+    "selected_resources":  [
+                               "RESOURCE-GRANT-APPLICATION-TEMPLATE-001",
+                               "RESOURCE-WORKFLOW-AUDIO-MEETING-001",
+                               "RESOURCE-TEMPLATE-MODULE-INITIATOR-001"
+                           ],
+    "missing_resources":  [
+                              "RESOURCE-OLLAMA-ADAPTER",
+                              "RESOURCE-OBSIDIAN-MEMORY_ADAPTER"
+                          ],
+    "composition_steps":  [
+                              "Crear proyecto grant",
+                              "Importar plantilla",
+                              "Configurar tareas",
+                              "Activar gates",
+                              "Generar evidencias"
+                          ],
+    "evidence_required":  [
+                              "composition_report",
+                              "human_approval"
+                          ],
+    "gate":  {
+                 "required":  true,
+                 "decision":  "BACKLOG"
+             }
+}

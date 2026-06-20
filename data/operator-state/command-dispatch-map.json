@@ -1,0 +1,19 @@
+﻿{
+    "package_id":  "ENGREMIAT_OPERATOR_CONTEXT_AND_DECISION_TREE_001",
+    "stage":  "E03K_AUDIT_AND_BIND_PROJECT_COMMANDS",
+    "commands":  [
+                     {
+                         "command":  "proyectos",
+                         "role":  "LIST_HISTORICAL_AND_AVAILABLE_PROJECTS",
+                         "script":  "tools/operator-context/proyectos.ps1",
+                         "args":  "none"
+                     },
+                     {
+                         "command":  "abrir-proyecto",
+                         "role":  "SELECT_ACTIVE_PROJECT",
+                         "script":  "tools/operator-context/abrir-proyecto.ps1",
+                         "args":  "number_or_id"
+                     }
+                 ],
+    "rule":  "single_canonical_project_open_command"
+}

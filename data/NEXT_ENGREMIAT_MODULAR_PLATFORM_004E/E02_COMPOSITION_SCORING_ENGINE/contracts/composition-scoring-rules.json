@@ -1,0 +1,20 @@
+{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_004E",
+    "stage":  "E02",
+    "artifact":  "composition-scoring-rules.json",
+    "status":  "DEFINED",
+    "purpose":  "Puntuar composiciones modulares sin activacion real",
+    "weights":  {
+                    "stability":  35,
+                    "traceability":  25,
+                    "human_control":  20,
+                    "coupling_risk":  10,
+                    "readiness":  10
+                },
+    "blocked_actions":  [
+                            "core_changes",
+                            "external_network",
+                            "git_write",
+                            "real_module_activation"
+                        ]
+}

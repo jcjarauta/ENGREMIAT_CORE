@@ -1,0 +1,15 @@
+{
+    "package_id":  "ENGREMIAT_007E_PANEL_MAESTRO_OPERATIVO",
+    "stage":  "E02_TIMELINE_AND_HISTORY",
+    "artifact":  "timeline-contract.json",
+    "status":  "DEFINED",
+    "purpose":  "Crear timeline historico operativo de modulos, cierres y decisiones",
+    "input":  "local closed packages and previous panel state",
+    "output":  "operational-timeline.json",
+    "blocked_actions":  [
+                            "core_changes",
+                            "external_network",
+                            "git_write",
+                            "real_integration"
+                        ]
+}

@@ -1,0 +1,20 @@
+﻿{
+    "objective":  "ENGREMIAT_KANBAN_VISIBLE_AND_OLLAMA_READY_013",
+    "stage":  "E05",
+    "step":  "P05.2.1",
+    "capture_source":  "Cline proposal output",
+    "expected_source":  [
+                            "raw output",
+                            "receipt",
+                            "dispatch report",
+                            "gate decision"
+                        ],
+    "limits":  {
+                   "no_apply":  true,
+                   "no_git_write":  true,
+                   "no_remote_execution":  true,
+                   "no_secret_read":  true
+               },
+    "status":  "REQUEST_CREATED",
+    "timestamp_utc":  "2026-06-17T04:44:43.2800130Z"
+}

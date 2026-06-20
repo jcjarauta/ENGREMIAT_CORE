@@ -1,0 +1,51 @@
+{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_003E",
+    "stage":  "E01",
+    "artifact":  "module-family-catalog.json",
+    "families":  [
+                     {
+                         "family_id":  "REGISTRY",
+                         "role":  "source_of_truth",
+                         "layer":  "foundation",
+                         "modules":  [
+                                         "ENG-MOD-REG-001"
+                                     ]
+                     },
+                     {
+                         "family_id":  "CATALOG",
+                         "role":  "classification",
+                         "layer":  "expansion",
+                         "modules":  [
+                                         "module-family-schema",
+                                         "compatibility-matrix"
+                                     ]
+                     },
+                     {
+                         "family_id":  "SELECTOR",
+                         "role":  "composition",
+                         "layer":  "composition",
+                         "modules":  [
+                                         "module-selector",
+                                         "dependency-resolver"
+                                     ]
+                     },
+                     {
+                         "family_id":  "ORCHESTRATOR",
+                         "role":  "activation_planning",
+                         "layer":  "orchestration",
+                         "modules":  [
+                                         "activation-planner",
+                                         "swap-rollback"
+                                     ]
+                     },
+                     {
+                         "family_id":  "OBSERVABILITY",
+                         "role":  "human_visibility",
+                         "layer":  "control",
+                         "modules":  [
+                                         "technical-dashboard",
+                                         "close-report"
+                                     ]
+                     }
+                 ]
+}

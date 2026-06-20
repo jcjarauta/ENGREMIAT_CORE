@@ -1,0 +1,17 @@
+﻿<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Plan Preview Dashboard</title><style>body{font-family:Arial,sans-serif;background:#0f172a;color:#e2e8f0;margin:24px}.card{max-width:1000px;margin:auto;background:#111827;border:1px solid #334155;border-radius:18px;padding:24px}pre{white-space:pre-wrap;background:#0b1220;border:1px solid #334155;border-radius:14px;padding:16px;overflow:auto}.pill{display:inline-block;padding:4px 10px;border-radius:999px;background:#1f2937;border:1px solid #475569;margin-right:8px}</style></head>
+<body><div class="card"><h1>Plan Intake Dashboard</h1><p><span class="pill">E189</span><span class="pill">READONLY</span><span class="pill">READY</span></p><pre id="o"></pre></div><script>const data = {
+  "objective_id": "DEFINE_PLAN_INTAKE_STANDARD_MVP_188_191",
+  "stage": "E189",
+  "status": "READY",
+  "focus": "Plan intake standard preview",
+  "files": [
+    "plan-intake-contract.json",
+    "plan-intake-policy.json",
+    "plan-candidate.json",
+    "plan-preview.md",
+    "plan-preview-layout.json",
+    "plan-validation-report.json"
+  ]
+}; document.getElementById("o").textContent = JSON.stringify(data, null, 2);</script></body></html>

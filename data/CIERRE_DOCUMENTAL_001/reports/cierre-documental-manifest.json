@@ -1,0 +1,36 @@
+{
+    "package_id":  "CIERRE_DOCUMENTAL_001",
+    "status":  "PASS",
+    "purpose":  "Cerrar documentalmente la etapa modular 001-005E antes de abrir 006E",
+    "sources":  [
+                    {
+                        "source":  "data\\ENGREMIAT_MODULAR_PLATFORM_001",
+                        "exists":  true
+                    },
+                    {
+                        "source":  "data\\NEXT_ENGREMIAT_MODULAR_PLATFORM_004E",
+                        "exists":  true
+                    },
+                    {
+                        "source":  "data\\NEXT_ENGREMIAT_MODULAR_PLATFORM_005E",
+                        "exists":  true
+                    },
+                    {
+                        "source":  "data\\ENGREMIAT_MODULAR_PLATFORM_MANUALS_001",
+                        "exists":  true
+                    }
+                ],
+    "closed_chain":  [
+                         "ENGREMIAT_MODULAR_PLATFORM_001",
+                         "NEXT_ENGREMIAT_MODULAR_PLATFORM_004E",
+                         "NEXT_ENGREMIAT_MODULAR_PLATFORM_005E",
+                         "ENGREMIAT_MODULAR_PLATFORM_MANUALS_001"
+                     ],
+    "decision":  "DOCUMENTATION_CLOSED_READY_FOR_006E_IF_DESIRED",
+    "limits":  [
+                   "no_core_changes",
+                   "no_external_network",
+                   "no_git_write",
+                   "no_real_module_activation"
+               ]
+}

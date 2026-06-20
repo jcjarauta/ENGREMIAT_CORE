@@ -1,0 +1,64 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_HUMAN_USABLE_036_045",
+    "stage":  "E41",
+    "purpose":  "Sincronizar reports, receipts, gates, artifacts y decisiones con memoria visual",
+    "memory_root":  "ENGREMIAT_MEMORY",
+    "sources":  [
+                    {
+                        "path":  "data/human-start-036",
+                        "files":  3
+                    },
+                    {
+                        "path":  "reports/human-start-036",
+                        "files":  1
+                    },
+                    {
+                        "path":  "data/command-hub-037",
+                        "files":  3
+                    },
+                    {
+                        "path":  "reports/command-hub-037",
+                        "files":  2
+                    },
+                    {
+                        "path":  "data/roundtrip-038",
+                        "files":  3
+                    },
+                    {
+                        "path":  "reports/roundtrip-038",
+                        "files":  2
+                    },
+                    {
+                        "path":  "data/decision-console-039",
+                        "files":  3
+                    },
+                    {
+                        "path":  "reports/decision-console-039",
+                        "files":  1
+                    },
+                    {
+                        "path":  "data/controlled-apply-mvp-040",
+                        "files":  6
+                    },
+                    {
+                        "path":  "reports/controlled-apply-mvp-040",
+                        "files":  2
+                    }
+                ],
+    "outputs":  [
+                    "ENGREMIAT_MEMORY/events/final-mvp-events.jsonl",
+                    "ENGREMIAT_MEMORY/dashboard/memory/index.html",
+                    "ENGREMIAT_MEMORY/maps/FINAL_MVP_MAP.md"
+                ],
+    "security":  {
+                     "apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "sensitive_actions_executed":  false,
+                     "memory_write_local_only":  true
+                 },
+    "next":  "E42_KANBAN_MVP_SYNC_PREVIEW",
+    "created_at":  "2026-06-17T11:44:37"
+}

@@ -1,0 +1,172 @@
+﻿{
+    "nodes":  [
+                  {
+                      "id":  "task1",
+                      "type":  "file",
+                      "file":  "03_SIMULATED_TASKS/TASK_001_DEFINE_MODULE_SCOPE.md",
+                      "x":  -760,
+                      "y":  -180,
+                      "width":  330,
+                      "height":  140,
+                      "color":  "3"
+                  },
+                  {
+                      "id":  "task2",
+                      "type":  "file",
+                      "file":  "03_SIMULATED_TASKS/TASK_002_CREATE_VISUAL_STRUCTURE.md",
+                      "x":  -760,
+                      "y":  0,
+                      "width":  330,
+                      "height":  140,
+                      "color":  "3"
+                  },
+                  {
+                      "id":  "task3",
+                      "type":  "file",
+                      "file":  "03_SIMULATED_TASKS/TASK_003_VALIDATE_EVIDENCE.md",
+                      "x":  -760,
+                      "y":  180,
+                      "width":  330,
+                      "height":  140,
+                      "color":  "3"
+                  },
+                  {
+                      "id":  "run1",
+                      "type":  "file",
+                      "file":  "04_SIMULATED_WORKERS/RUNS/RUN_001_SIM_WORKER_PLANNER.md",
+                      "x":  -360,
+                      "y":  -180,
+                      "width":  330,
+                      "height":  140,
+                      "color":  "4"
+                  },
+                  {
+                      "id":  "run2",
+                      "type":  "file",
+                      "file":  "04_SIMULATED_WORKERS/RUNS/RUN_002_SIM_WORKER_OBSIDIAN_BUILDER.md",
+                      "x":  -360,
+                      "y":  0,
+                      "width":  330,
+                      "height":  140,
+                      "color":  "4"
+                  },
+                  {
+                      "id":  "run3",
+                      "type":  "file",
+                      "file":  "04_SIMULATED_WORKERS/RUNS/RUN_003_SIM_WORKER_VALIDATOR.md",
+                      "x":  -360,
+                      "y":  180,
+                      "width":  330,
+                      "height":  140,
+                      "color":  "4"
+                  },
+                  {
+                      "id":  "ev1",
+                      "type":  "file",
+                      "file":  "07_EVIDENCE/EV_001_SCOPE_NOTE.md",
+                      "x":  40,
+                      "y":  -180,
+                      "width":  330,
+                      "height":  140,
+                      "color":  "6"
+                  },
+                  {
+                      "id":  "ev2",
+                      "type":  "file",
+                      "file":  "07_EVIDENCE/EV_002_STRUCTURE_CANVAS.md",
+                      "x":  40,
+                      "y":  0,
+                      "width":  330,
+                      "height":  140,
+                      "color":  "6"
+                  },
+                  {
+                      "id":  "ev3",
+                      "type":  "file",
+                      "file":  "07_EVIDENCE/EV_003_VALIDATION_REPORT.md",
+                      "x":  40,
+                      "y":  180,
+                      "width":  330,
+                      "height":  140,
+                      "color":  "6"
+                  },
+                  {
+                      "id":  "result",
+                      "type":  "file",
+                      "file":  "08_RESULTS/SCENARIO_001_visual_task_management_module/RESULT_002_WORKER_SIMULATION_OUTPUT.md",
+                      "x":  460,
+                      "y":  0,
+                      "width":  350,
+                      "height":  160,
+                      "color":  "2"
+                  },
+                  {
+                      "id":  "gate",
+                      "type":  "file",
+                      "file":  "05_HUMAN_GATES/GATE_002_ACCEPT_SIMULATED_RESULT.md",
+                      "x":  880,
+                      "y":  0,
+                      "width":  350,
+                      "height":  160,
+                      "color":  "5"
+                  }
+              ],
+    "edges":  [
+                  {
+                      "id":  "e1",
+                      "fromNode":  "task1",
+                      "fromSide":  "right",
+                      "toNode":  "run1",
+                      "toSide":  "left"
+                  },
+                  {
+                      "id":  "e2",
+                      "fromNode":  "task2",
+                      "fromSide":  "right",
+                      "toNode":  "run2",
+                      "toSide":  "left"
+                  },
+                  {
+                      "id":  "e3",
+                      "fromNode":  "task3",
+                      "fromSide":  "right",
+                      "toNode":  "run3",
+                      "toSide":  "left"
+                  },
+                  {
+                      "id":  "e4",
+                      "fromNode":  "run1",
+                      "fromSide":  "right",
+                      "toNode":  "ev1",
+                      "toSide":  "left"
+                  },
+                  {
+                      "id":  "e5",
+                      "fromNode":  "run2",
+                      "fromSide":  "right",
+                      "toNode":  "ev2",
+                      "toSide":  "left"
+                  },
+                  {
+                      "id":  "e6",
+                      "fromNode":  "run3",
+                      "fromSide":  "right",
+                      "toNode":  "ev3",
+                      "toSide":  "left"
+                  },
+                  {
+                      "id":  "e7",
+                      "fromNode":  "ev2",
+                      "fromSide":  "right",
+                      "toNode":  "result",
+                      "toSide":  "left"
+                  },
+                  {
+                      "id":  "e8",
+                      "fromNode":  "result",
+                      "fromSide":  "right",
+                      "toNode":  "gate",
+                      "toSide":  "left"
+                  }
+              ]
+}

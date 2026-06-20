@@ -1,0 +1,15 @@
+{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_005E",
+    "artifact":  "snapshot-plan.json",
+    "status":  "DEFINED",
+    "purpose":  "Planificar snapshot previo a cualquier apply real futuro",
+    "snapshot_targets":  [
+                             "state_registry",
+                             "module_registry",
+                             "dashboards",
+                             "manifests",
+                             "reports"
+                         ],
+    "executes_now":  false,
+    "required_before_real_apply":  true
+}

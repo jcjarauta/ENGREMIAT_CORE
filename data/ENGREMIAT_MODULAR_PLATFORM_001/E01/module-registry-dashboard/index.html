@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ENGREMIAT Module Registry Dashboard</title>
+  <style>
+    :root { color-scheme: dark; --bg:#0b1020; --card:#121a2e; --text:#e8ecf6; --muted:#aab3c5; --ok:#55d18a; --line:#24304a; --accent:#7aa2ff; }
+    body { margin:0; font-family:Segoe UI, Arial, sans-serif; background:linear-gradient(180deg,#0b1020,#10192d); color:var(--text); }
+    .wrap { max-width:1200px; margin:0 auto; padding:24px; }
+    .hero { padding:24px; border:1px solid var(--line); border-radius:18px; background:rgba(18,26,46,.9); box-shadow:0 12px 36px rgba(0,0,0,.25); }
+    h1 { margin:0 0 8px; font-size:28px; }
+    p { margin:0; color:var(--muted); line-height:1.5; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; margin-top:18px; }
+    .card { border:1px solid var(--line); border-radius:16px; background:var(--card); padding:16px; }
+    .label { color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .value { font-size:18px; font-weight:700; }
+    .ok { color:var(--ok); }
+    table { width:100%; border-collapse:collapse; margin-top:8px; }
+    th, td { text-align:left; border-bottom:1px solid var(--line); padding:10px 8px; vertical-align:top; }
+    th { color:var(--muted); font-weight:600; }
+    code { background:#0b1020; padding:2px 6px; border-radius:8px; }
+    .summary { white-space:pre-wrap; background:#0b1020; border:1px solid var(--line); padding:14px; border-radius:12px; overflow:auto; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <h1>ENGREMIAT Module Registry Dashboard</h1>
+      <p>Registro maestro de módulos para acoplar, desacoplar, pausar, sustituir y mantener memoria operativa sin tocar el core congelado.</p>
+      <div class="grid">
+        <div class="card"><div class="label">Package</div><div class="value">ENGREMIAT_MODULAR_PLATFORM_001</div></div>
+        <div class="card"><div class="label">Stage</div><div class="value">E01</div></div>
+        <div class="card"><div class="label">Block</div><div class="value">B01.1</div></div>
+        <div class="card"><div class="label">Status</div><div class="value ok">VALIDATED</div></div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="label">Lifecycle states</div>
+        <table>
+          <thead><tr><th>State</th></tr></thead>
+          <tbody>
+            <tr><td><code>planned</code></td></tr>
+<tr><td><code>active</code></td></tr>
+<tr><td><code>paused</code></td></tr>
+<tr><td><code>deprecated</code></td></tr>
+<tr><td><code>retired</code></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <div class="label">Artifacts</div>
+        <table>
+          <thead><tr><th>Name</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td><code>module-registry-contract.json</code></td><td class='ok'>ok</td></tr>
+<tr><td><code>module-identity-schema.json</code></td><td class='ok'>ok</td></tr>
+<tr><td><code>module-registry-package.json</code></td><td class='ok'>ok</td></tr>
+<tr><td><code>module-lifecycle-policy.json</code></td><td class='ok'>ok</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px;">
+      <div class="label">Registry summary</div>
+      <div class="summary" id="summary">{
+    "package_id":  "ENGREMIAT_MODULAR_PLATFORM_001",
+    "stage":  "E01",
+    "block":  "B01.1",
+    "objective":  "Registry foundation",
+    "status":  "VALIDATED",
+    "mode":  "local-first",
+    "core_policy":  "frozen",
+    "artifacts":  [
+                      {
+                          "name":  "module-registry-contract.json",
+                          "path":  "C:\\ENGREMIAT_CORE\\data\\ENGREMIAT_MODULAR_PLATFORM_001\\E01\\contracts\\module-registry-contract.json",
+                          "status":  "ok"
+                      },
+                      {
+                          "name":  "module-identity-schema.json",
+                          "path":  "C:\\ENGREMIAT_CORE\\data\\ENGREMIAT_MODULAR_PLATFORM_001\\E01\\schemas\\module-identity-schema.json",
+                          "status":  "ok"
+                      },
+                      {
+                          "name":  "module-registry-package.json",
+                          "path":  "C:\\ENGREMIAT_CORE\\data\\ENGREMIAT_MODULAR_PLATFORM_001\\E01\\packages\\module-registry-package.json",
+                          "status":  "ok"
+                      },
+                      {
+                          "name":  "module-lifecycle-policy.json",
+                          "path":  "C:\\ENGREMIAT_CORE\\data\\ENGREMIAT_MODULAR_PLATFORM_001\\E01\\policies\\module-lifecycle-policy.json",
+                          "status":  "ok"
+                      }
+                  ],
+    "lifecycle_states":  [
+                             "planned",
+                             "active",
+                             "paused",
+                             "deprecated",
+                             "retired"
+                         ],
+    "next_step":  "B01.2 -\u003e create lifecycle report and finalize dashboard evidence"
+}</div>
+    </div>
+  </div>
+</body>
+</html>

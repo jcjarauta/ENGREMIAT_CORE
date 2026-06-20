@@ -1,0 +1,19 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_APPLY_OR_REPAIR_014",
+    "stage":  "E01",
+    "block":  "B01.1",
+    "step":  "P01.1.1",
+    "selected_case":  "single_candidate_only",
+    "purpose":  "Decidir si la nueva etapa ira por reparacion o por apply controlado con una sola tarjeta de trabajo.",
+    "limits":  {
+                   "no_apply":  true,
+                   "git_write":  false,
+                   "remote_execution":  false,
+                   "auto_apply":  false,
+                   "single_card":  true
+               },
+    "expected_result":  "Ruta de etapa decidida y acotada.",
+    "artifact":  "data/controlled-apply-or-repair-014/controlled-apply-or-repair-scope.json",
+    "safety_note":  "Una sola frontera.",
+    "timestamp_utc":  "2026-06-17T06:00:07.2688974Z"
+}

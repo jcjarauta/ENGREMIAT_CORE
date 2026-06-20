@@ -1,0 +1,59 @@
+﻿{
+    "package_id":  "ENGREMIAT_PROJECT_BUILDER_TO_WORKER_LOOP_001",
+    "stage":  "E05_BUILD_WORKER_PACKET_PREVIEW_AFTER_APPROVAL",
+    "packet_id":  "worker-packet-preview.v1",
+    "status":  "PREVIEW_ONLY",
+    "purpose":  "Preparar un paquete revisable para worker sin ejecutarlo y sin conceder autorizacion real",
+    "source_proposal":  "roadmap-proposal.preview.json",
+    "source_gate":  "roadmap-approval-gate.json",
+    "execution":  {
+                      "execute_now":  false,
+                      "worker_execution":  false,
+                      "authorization_required":  true,
+                      "worker_authorization":  "NOT_GRANTED",
+                      "authorization_status":  "PENDING_EXPLICIT_HUMAN_AUTHORIZATION",
+                      "network":  false,
+                      "git_write":  false,
+                      "local_only":  true
+                  },
+    "task_contract":  {
+                          "task_type":  "PROJECT_ROADMAP_TO_WORKER_TASK",
+                          "input":  "roadmap_proposal_preview",
+                          "expected_output":  "worker_result_with_evidence_after_future_authorization",
+                          "allowed_operations":  [
+                                                     "READ_LOCAL_CONTEXT",
+                                                     "PLAN_STEPS",
+                                                     "PROPOSE_FILES",
+                                                     "PROPOSE_VALIDATIONS",
+                                                     "RETURN_EVIDENCE_PLAN"
+                                                 ],
+                          "forbidden_operations":  [
+                                                       "EXECUTE_WORKER",
+                                                       "WRITE_PROJECT_CODE",
+                                                       "CALL_NETWORK",
+                                                       "CALL_EXTERNAL_AI",
+                                                       "GIT_COMMIT",
+                                                       "GIT_PUSH",
+                                                       "MODIFY_SYSTEM"
+                                                   ]
+                      },
+    "worker_instructions":  [
+                                "Leer intake y roadmap preview",
+                                "Mantener una frontera tecnica por paso",
+                                "No ejecutar cambios reales",
+                                "Devolver plan, riesgos, evidencias esperadas y comando propuesto solo tras gate humano futuro",
+                                "Detenerse si falta autorizacion explicita"
+                            ],
+    "evidence_required":  [
+                              "worker-packet-preview.json",
+                              "worker-packet-preview.dashboard.html",
+                              "e05-build-worker-packet-preview-report.json"
+                          ],
+    "human_gate":  {
+                       "required_before_execution":  true,
+                       "current_decision":  "PENDING",
+                       "allowed_future_decision":  "APPROVE_WORKER_PREVIEW_FOR_CONTROLLED_EXECUTION",
+                       "receipt_required":  true
+                   },
+    "next":  "E06_BUILD_APPROVED_EXECUTION_RECEIPT_MODEL"
+}

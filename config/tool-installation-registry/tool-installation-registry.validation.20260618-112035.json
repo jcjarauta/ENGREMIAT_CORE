@@ -1,0 +1,71 @@
+﻿{
+    "package":  "BASE_STACK_VALIDATION_CMD_SAFE_001",
+    "created_at":  "2026-06-18T11:20:35",
+    "checks":  [
+                   {
+                       "key":  "git",
+                       "cmd":  "git --version",
+                       "path":  "C:\\Program Files\\Git\\cmd\\git.exe",
+                       "available":  true,
+                       "version":  "git version 2.54.0.windows.1",
+                       "timeout":  false,
+                       "exit_code":  null
+                   },
+                   {
+                       "key":  "node",
+                       "cmd":  "node --version",
+                       "path":  "C:\\Program Files\\nodejs\\node.exe",
+                       "available":  true,
+                       "version":  "v24.16.0",
+                       "timeout":  false,
+                       "exit_code":  null
+                   },
+                   {
+                       "key":  "npm",
+                       "cmd":  "npm --version",
+                       "path":  "C:\\Program Files\\nodejs\\npm.ps1",
+                       "available":  true,
+                       "version":  "11.13.0",
+                       "timeout":  false,
+                       "exit_code":  null
+                   },
+                   {
+                       "key":  "python",
+                       "cmd":  "python --version",
+                       "path":  "C:\\Users\\pc\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+                       "available":  true,
+                       "version":  "Python 3.11.9",
+                       "timeout":  false,
+                       "exit_code":  null
+                   },
+                   {
+                       "key":  "code",
+                       "cmd":  "code --version",
+                       "path":  "C:\\Users\\pc\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\code.cmd",
+                       "available":  true,
+                       "version":  "1.124.2",
+                       "timeout":  false,
+                       "exit_code":  null
+                   },
+                   {
+                       "key":  "docker",
+                       "cmd":  "docker --version",
+                       "path":  "C:\\Program Files\\Docker\\Docker\\resources\\bin\\docker.exe",
+                       "available":  true,
+                       "version":  "Docker version 29.5.3, build d1c06ef",
+                       "timeout":  false,
+                       "exit_code":  null
+                   },
+                   {
+                       "key":  "ollama",
+                       "cmd":  "ollama --version",
+                       "path":  "C:\\Users\\pc\\AppData\\Local\\Programs\\Ollama\\ollama.exe",
+                       "available":  true,
+                       "version":  "ollama version is 0.30.9",
+                       "timeout":  false,
+                       "exit_code":  null
+                   }
+               ],
+    "decision":  "GO_BASE_STACK_CORE_READY",
+    "next":  "VALIDATE_DOCKER_DESKTOP_AND_PREPARE_OPENWEBUI"
+}

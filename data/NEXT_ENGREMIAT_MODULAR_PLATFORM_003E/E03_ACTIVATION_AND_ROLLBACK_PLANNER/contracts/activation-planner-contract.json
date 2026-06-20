@@ -1,0 +1,24 @@
+{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_003E",
+    "stage":  "E03",
+    "block":  "B03.1",
+    "artifact":  "activation-planner-contract.json",
+    "status":  "DEFINED",
+    "purpose":  "Crear planes de activacion, pausa y verificacion sin ejecutar modulos reales",
+    "input":  "selector-dependency-engine-package.json",
+    "output":  "activation-plan-package.json",
+    "rules":  [
+                  "plan_only",
+                  "human_gate_required_before_real_activation",
+                  "snapshot_before_state_change",
+                  "validate_each_step",
+                  "stop_on_failure"
+              ],
+    "control":  {
+                    "local_first":  true,
+                    "no_core_changes":  true,
+                    "no_external_network":  true,
+                    "no_git_write":  true,
+                    "no_real_activation":  true
+                }
+}

@@ -1,0 +1,12 @@
+﻿Resultado OpenWebUI retest:
+
+El proceso para convertir una captura en una candidata de skill ENGREMIAT, según el contexto proporcionado, implica estructurar la información en un esquema reutilizable basado en reglas canónicas. Por ejemplo, se requiere definir nombre, descripción, entradas/salidas, pasos y reglas específicas, como se muestra en la captura de PROMPT_CAND-20260618-002_REPAIRED.txt.
+
+Este enfoque garantiza que las skills sean coherentes con el roadmap definido y evite la introducción de nuevas funcionalidades hasta que se cierren bloques críticos con status=PASS o WARN seguro. Además, se enfatiza la validación manual y la importación de paquetes mediante un estado operativo estructurado.
+
+Si la captura no incluye datos suficientes, se debe generar una candidata con status=WARN_IMPROVABLE_BUT_USEFUL y proponer mejoras.
+
+Decision humana: WARN
+
+Notas:
+Mejora conceptual, pero no cumple salida estricta de schema. Falta ficha literal con candidate_id, proposed_skill_id, test_status, decision y next.

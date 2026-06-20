@@ -1,0 +1,27 @@
+﻿{
+    "package":  "FIRST_REAL_LINKING_SANDBOX_001",
+    "sandbox":  "C:\\ENGREMIAT_CORE\\runtime\\tool-linking-sandbox",
+    "inbox":  "C:\\ENGREMIAT_CORE\\runtime\\tool-linking-sandbox\\openclaw-openwebui-inbox",
+    "outbox":  "C:\\ENGREMIAT_CORE\\runtime\\tool-linking-sandbox\\engremiat-processed-outbox",
+    "logs":  "C:\\ENGREMIAT_CORE\\runtime\\tool-linking-sandbox\\logs",
+    "archive":  "C:\\ENGREMIAT_CORE\\runtime\\tool-linking-sandbox\\archive",
+    "accepted_input":  "OpenWebUI/OpenClaw readonly JSON packet",
+    "forbidden":  [
+                      "api_call_real",
+                      "browser_automation",
+                      "native_kanban_write",
+                      "obsidian_vault_write",
+                      "command_execution_from_input",
+                      "agent_start"
+                  ],
+    "allowed":  [
+                    "local_json_drop",
+                    "local_readonly_intake",
+                    "detected_input_generation",
+                    "recurrent_card_generation",
+                    "obsidian_candidate_generation",
+                    "inline_batch_generation",
+                    "human_review"
+                ],
+    "decision":  "GO_FIRST_REAL_LINKING_SANDBOX_CONTRACT_READY"
+}

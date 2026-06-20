@@ -1,0 +1,13 @@
+﻿{
+    "schema":  "ollama-response",
+    "expected_fields":  [
+                            "model",
+                            "created_at",
+                            "response",
+                            "done"
+                        ],
+    "minimum_valid_response":  [
+                                   "response"
+                               ],
+    "normalize_empty_response_as":  "WARN"
+}

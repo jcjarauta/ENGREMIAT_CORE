@@ -1,0 +1,42 @@
+﻿{
+    "package":  "ENGREMIAT_TEMPLATE_IMPROVEMENT_001",
+    "stage":  "E09D_VALIDATE_NEW_OPERATOR_PROJECT_FROM_TEMPLATE_V2",
+    "status":  "WARN",
+    "new_project":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR",
+    "master":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\\BOVEDA_PROYECTO\\00_PLANTILLA_MAESTRA_OFICIAL",
+    "module_inicio":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\\MODULOS\\MODULE_inicio",
+    "module_ref":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO\\00_PLANTILLA_MAESTRA_REFERENCIA",
+    "checks":  {
+                   "master_exists":  false,
+                   "master_files":  0,
+                   "module_inicio_exists":  false,
+                   "module_ref_exists":  false,
+                   "module_ref_files":  0,
+                   "required_missing":  14,
+                   "json_errors":  0
+               },
+    "missing_required":  [
+                             "BOVEDA_PROYECTO\\00_PLANTILLA_MAESTRA_OFICIAL\\00_HOME\\PROJECT_HOME.md",
+                             "BOVEDA_PROYECTO\\00_PLANTILLA_MAESTRA_OFICIAL\\00_HOME\\GRAPH_INDEX.md",
+                             "BOVEDA_PROYECTO\\00_PLANTILLA_MAESTRA_OFICIAL\\00_CONTROL\\project.template.json",
+                             "BOVEDA_PROYECTO\\00_PLANTILLA_MAESTRA_OFICIAL\\01_OBJETIVO\\OBJECTIVE_MODEL.md",
+                             "BOVEDA_PROYECTO\\00_PLANTILLA_MAESTRA_OFICIAL\\02_ROADMAP\\ROADMAP_MODEL.md",
+                             "BOVEDA_PROYECTO\\00_PLANTILLA_MAESTRA_OFICIAL\\03_MODULOS\\MODULES_INDEX.md",
+                             "BOVEDA_PROYECTO\\00_PLANTILLA_MAESTRA_OFICIAL\\04_TAREAS\\TASK_MODEL.md",
+                             "BOVEDA_PROYECTO\\00_PLANTILLA_MAESTRA_OFICIAL\\05_GATES_HUMANOS\\HUMAN_GATE_MODEL.md",
+                             "BOVEDA_PROYECTO\\00_PLANTILLA_MAESTRA_OFICIAL\\06_EVIDENCIAS\\EVIDENCE_MODEL.md",
+                             "BOVEDA_PROYECTO\\00_PLANTILLA_MAESTRA_OFICIAL\\07_WORKERS\\WORKER_MODEL.md",
+                             "BOVEDA_PROYECTO\\00_PLANTILLA_MAESTRA_OFICIAL\\08_RESULTADOS\\RESULT_MODEL.md",
+                             "BOVEDA_PROYECTO\\00_PLANTILLA_MAESTRA_OFICIAL\\09_DECISIONES\\DECISION_MODEL.md",
+                             "BOVEDA_PROYECTO\\00_PLANTILLA_MAESTRA_OFICIAL\\10_CANVAS\\PROJECT_CANVAS.canvas",
+                             "BOVEDA_PROYECTO\\00_PLANTILLA_MAESTRA_OFICIAL\\11_AGRUPACION_MANUAL\\SYSTEM_GROUPING_MODEL.md"
+                         ],
+    "json_errors":  [
+
+                    ],
+    "summary":  "C:\\ENGREMIAT_CORE\\reports\\template-improvement\\e09d-validate-new-operator-project\\E09D_VALIDATE_NEW_OPERATOR_PROJECT_SUMMARY.md",
+    "operator_state_changed":  false,
+    "official_templates_changed":  false,
+    "module_inicio_changed":  false,
+    "next":  "REVIEW_OPERATOR_PROJECT_CREATION_TEMPLATE_SOURCE"
+}

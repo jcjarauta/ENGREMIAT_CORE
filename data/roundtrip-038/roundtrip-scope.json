@@ -1,0 +1,40 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_HUMAN_USABLE_036_045",
+    "stage":  "E38",
+    "stage_name":  "Plan Prompt Worker Roundtrip",
+    "purpose":  "Ejecutar ciclo completo con un paso real del plan sin apply",
+    "real_task":  "Preparar propuesta worker para E39 Human Decision Console",
+    "limits":  [
+                   "Una sola tarea real",
+                   "No ejecutar respuesta worker",
+                   "No modificar codigo fuente por propuesta",
+                   "No auto_apply",
+                   "No remote execution",
+                   "No git write",
+                   "Importar sample seguro si no hay respuesta worker"
+               ],
+    "input_context":  [
+                          "E36 Human Start Screen cerrado",
+                          "E37 Command Hub Unificado Real preparado",
+                          "eng.ps1 contiene prompt,inbox,review,approve"
+                      ],
+    "expected_outputs":  [
+                             "roundtrip-scope.json",
+                             "roundtrip-plan.json",
+                             "ROUNDTRIP_WORKER_PROMPT.md",
+                             "roundtrip-prompt-receipt.json",
+                             "e38-roundtrip-import-report.json",
+                             "e38-roundtrip-readiness-report.json"
+                         ],
+    "security":  {
+                     "apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "sensitive_actions_executed":  false,
+                     "human_gate_required":  true,
+                     "worker_execution":  false
+                 },
+    "next":  "E39_HUMAN_DECISION_CONSOLE"
+}

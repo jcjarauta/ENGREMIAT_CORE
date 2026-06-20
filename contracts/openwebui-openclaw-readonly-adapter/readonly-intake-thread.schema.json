@@ -1,0 +1,78 @@
+﻿{
+    "$schema":  "https://json-schema.org/draft/2020-12/schema",
+    "title":  "ENGREMIAT OpenWebUI/OpenClaw Readonly Intake Thread",
+    "type":  "object",
+    "required":  [
+                     "thread_id",
+                     "source",
+                     "via",
+                     "title",
+                     "user_intent",
+                     "assistant_summary",
+                     "proposed_kind",
+                     "priority",
+                     "risk",
+                     "target_consumers"
+                 ],
+    "properties":  {
+                       "thread_id":  {
+                                         "type":  "string"
+                                     },
+                       "source":  {
+                                      "type":  "string",
+                                      "enum":  [
+                                                   "openwebui",
+                                                   "openclaw",
+                                                   "manual"
+                                               ]
+                                  },
+                       "via":  {
+                                   "type":  "string",
+                                   "enum":  [
+                                                "openclaw",
+                                                "manual",
+                                                "file_drop"
+                                            ]
+                               },
+                       "title":  {
+                                     "type":  "string"
+                                 },
+                       "user_intent":  {
+                                           "type":  "string"
+                                       },
+                       "assistant_summary":  {
+                                                 "type":  "string"
+                                             },
+                       "proposed_kind":  {
+                                             "type":  "string",
+                                             "enum":  [
+                                                          "need",
+                                                          "capability",
+                                                          "project",
+                                                          "evidence",
+                                                          "blocker",
+                                                          "decision",
+                                                          "memory"
+                                                      ]
+                                         },
+                       "priority":  {
+                                        "type":  "integer",
+                                        "minimum":  0,
+                                        "maximum":  100
+                                    },
+                       "risk":  {
+                                    "type":  "string",
+                                    "enum":  [
+                                                 "LOW",
+                                                 "MEDIUM",
+                                                 "HIGH"
+                                             ]
+                                },
+                       "target_consumers":  {
+                                                "type":  "array",
+                                                "items":  {
+                                                              "type":  "string"
+                                                          }
+                                            }
+                   }
+}

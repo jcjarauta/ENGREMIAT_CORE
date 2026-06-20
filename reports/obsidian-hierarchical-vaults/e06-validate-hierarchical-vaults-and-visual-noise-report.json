@@ -1,0 +1,162 @@
+﻿{
+    "package_id":  "ENGREMIAT_OBSIDIAN_HIERARCHICAL_VAULTS_001",
+    "stage":  "E06_VALIDATE_HIERARCHICAL_VAULTS_AND_VISUAL_NOISE",
+    "status":  "PASS",
+    "closed":  true,
+    "readiness":  100,
+    "decision":  "GO_HIERARCHICAL_VAULTS_STRATEGY_ADOPTED",
+    "master_vault":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146",
+    "project_vault":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_CORE",
+    "project_module_space":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_CORE\\02_MODULES\\MODULE_arquitectura_global_engremiat",
+    "source_module_id":  "MODULE_arquitectura_global_engremiat",
+    "hierarchy":  {
+                      "L0_MASTER":  "BOVEDA_ENGREMIAT_MASTER",
+                      "L1_PROJECT":  "BOVEDA_PROJECT_ENGREMIAT_CORE",
+                      "L2_MODULE_SPACE":  "MODULE_arquitectura_global_engremiat",
+                      "L3_MODULE_VAULT":  "optional_future"
+                  },
+    "noise":  {
+                  "project_vault_md_files":  13,
+                  "project_vault_canvas_files":  2,
+                  "project_module_md_files":  4,
+                  "project_module_canvas_files":  1,
+                  "visual_noise_decision":  "OK_LIGHTWEIGHT_PROJECT_VIEW"
+              },
+    "checks":  [
+                   {
+                       "id":  "master_vault_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146"
+                   },
+                   {
+                       "id":  "project_vault_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_CORE"
+                   },
+                   {
+                       "id":  "project_card_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\02_PROYECTOS\\PROJECT_CARD_engremiat_core.md"
+                   },
+                   {
+                       "id":  "project_module_space_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_CORE\\02_MODULES\\MODULE_arquitectura_global_engremiat"
+                   },
+                   {
+                       "id":  "master_project_registry_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\02_PROYECTOS\\PROJECT_VAULTS_REGISTRY.md"
+                   },
+                   {
+                       "id":  "project_home_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_CORE\\PROJECT_HOME.md"
+                   },
+                   {
+                       "id":  "project_status_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_CORE\\00_PROJECT_CONTROL\\PROJECT_STATUS.md"
+                   },
+                   {
+                       "id":  "project_master_link_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_CORE\\00_PROJECT_CONTROL\\MASTER_LINK.md"
+                   },
+                   {
+                       "id":  "project_modules_index_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_CORE\\02_MODULES\\PROJECT_MODULES_INDEX.md"
+                   },
+                   {
+                       "id":  "project_module_card_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_CORE\\02_MODULES\\MODULE_arquitectura_global_engremiat\\MODULE_CARD.md"
+                   },
+                   {
+                       "id":  "project_module_status_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_CORE\\02_MODULES\\MODULE_arquitectura_global_engremiat\\MODULE_PROJECT_STATUS.md"
+                   },
+                   {
+                       "id":  "project_module_view_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_CORE\\02_MODULES\\MODULE_arquitectura_global_engremiat\\MODULE_PROJECT_VIEW.md"
+                   },
+                   {
+                       "id":  "project_module_evidence_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_CORE\\02_MODULES\\MODULE_arquitectura_global_engremiat\\MODULE_PROJECT_EVIDENCE.md"
+                   },
+                   {
+                       "id":  "project_module_canvas_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_CORE\\02_MODULES\\MODULE_arquitectura_global_engremiat\\MODULE_PROJECT_CANVAS.canvas"
+                   },
+                   {
+                       "id":  "project_graph_config_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_CORE\\.obsidian\\graph.json"
+                   },
+                   {
+                       "id":  "master_links_project_card",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\HOME.md"
+                   },
+                   {
+                       "id":  "project_links_master_backlink",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_CORE\\PROJECT_HOME.md"
+                   },
+                   {
+                       "id":  "project_links_module_card",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_CORE\\PROJECT_HOME.md"
+                   },
+                   {
+                       "id":  "modules_index_links_module_card",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_CORE\\02_MODULES\\PROJECT_MODULES_INDEX.md"
+                   },
+                   {
+                       "id":  "project_visual_noise_lightweight",
+                       "ok":  true,
+                       "project_md":  13,
+                       "module_md":  4
+                   },
+                   {
+                       "id":  "project_module_canvas_valid",
+                       "ok":  true,
+                       "nodes":  5,
+                       "edges":  4
+                   }
+               ],
+    "failed_checks":  [
+
+                      ],
+    "accepted_rules":  [
+                           "master_keeps_cards_and_registry",
+                           "project_vault_keeps_project_context",
+                           "module_space_is_lightweight_linked_summary",
+                           "deep_module_content_not_moved",
+                           "technical_artifacts_need_human_bridge"
+                       ],
+    "safety":  {
+                   "local_only":  true,
+                   "master_write":  "cards_registry_only",
+                   "project_vault_write":  "lightweight_module_space",
+                   "source_module_move":  false,
+                   "source_module_delete":  false,
+                   "obsidian_app_automation":  false,
+                   "worker_execution":  false,
+                   "kanban_write":  false,
+                   "clien_write":  false,
+                   "git_write":  false,
+                   "external_network":  false
+               },
+    "next":  "PAUSE_AND_DECIDE_NEXT_MODULE_OR_PROJECT_VAULT_OPERATION",
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\obsidian-hierarchical-vaults\\e06-validate-hierarchical-vaults-and-visual-noise-report.json",
+    "dashboard":  "C:\\ENGREMIAT_CORE\\dashboard\\obsidian-hierarchical-vaults\\e06-validate-hierarchical-vaults-and-visual-noise.html",
+    "guide":  "C:\\ENGREMIAT_CORE\\docs\\obsidian-hierarchical-vaults\\E06_VALIDATE_HIERARCHICAL_VAULTS_AND_VISUAL_NOISE.md",
+    "status_note":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_CORE\\00_PROJECT_CONTROL\\HIERARCHICAL_VAULT_STATUS.md"
+}

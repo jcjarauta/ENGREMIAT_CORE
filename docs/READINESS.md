@@ -1,12 +1,23 @@
 ﻿# READINESS
 
-Generado desde `data/dev/readiness.json`.
+Generated: 
+2026-06-17T11:11:35.6186662+02:00
 
-objective=ENGREMIAT_DEV_SYSTEM_001
-readiness=100
-decision=GO
-gates_pending=0
-errors_open=0
+## Current
+```text
+objective=
+ENGREMIAT_MVP_FINAL_026_035
+stage=
+E30
+readiness=
+90
+decision=
+NEEDS_REVIEW
+pending_gates=
+1
+next=
+REVIEW_GATES_OR_MISSING_ARTIFACTS
+```
 
-## Blockers
-- none
+## Rule
+GO solo si no hay gates pendientes y los artefactos clave existen. NEEDS_REVIEW permite revisar, pero no aplicar acciones reales.

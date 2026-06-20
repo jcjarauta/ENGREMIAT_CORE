@@ -1,0 +1,139 @@
+{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_003E",
+    "stage":  "E03",
+    "artifact":  "activation-plan-package.json",
+    "status":  "PLAN_READY_NO_EXECUTION",
+    "activation_steps":  [
+                             {
+                                 "step":  1,
+                                 "module_id":  "ENG-MOD-REG-001",
+                                 "operation":  "PLAN_ACTIVATION_ONLY",
+                                 "requires":  [
+                                                  "dependency_ready",
+                                                  "compatibility_ok",
+                                                  "human_gate_for_real_execution"
+                                              ],
+                                 "evidence":  "planned",
+                                 "rollback":  "restore_previous_snapshot_if_real_execution_is_later_authorized",
+                                 "executes_now":  false
+                             },
+                             {
+                                 "step":  2,
+                                 "module_id":  "ENG-MOD-CAT-001",
+                                 "operation":  "PLAN_ACTIVATION_ONLY",
+                                 "requires":  [
+                                                  "dependency_ready",
+                                                  "compatibility_ok",
+                                                  "human_gate_for_real_execution"
+                                              ],
+                                 "evidence":  "planned",
+                                 "rollback":  "restore_previous_snapshot_if_real_execution_is_later_authorized",
+                                 "executes_now":  false
+                             },
+                             {
+                                 "step":  3,
+                                 "module_id":  "ENG-MOD-SEL-001",
+                                 "operation":  "PLAN_ACTIVATION_ONLY",
+                                 "requires":  [
+                                                  "dependency_ready",
+                                                  "compatibility_ok",
+                                                  "human_gate_for_real_execution"
+                                              ],
+                                 "evidence":  "planned",
+                                 "rollback":  "restore_previous_snapshot_if_real_execution_is_later_authorized",
+                                 "executes_now":  false
+                             },
+                             {
+                                 "step":  4,
+                                 "module_id":  "ENG-MOD-DEP-001",
+                                 "operation":  "PLAN_ACTIVATION_ONLY",
+                                 "requires":  [
+                                                  "dependency_ready",
+                                                  "compatibility_ok",
+                                                  "human_gate_for_real_execution"
+                                              ],
+                                 "evidence":  "planned",
+                                 "rollback":  "restore_previous_snapshot_if_real_execution_is_later_authorized",
+                                 "executes_now":  false
+                             },
+                             {
+                                 "step":  5,
+                                 "module_id":  "ENG-MOD-ACT-001",
+                                 "operation":  "PLAN_ACTIVATION_ONLY",
+                                 "requires":  [
+                                                  "dependency_ready",
+                                                  "compatibility_ok",
+                                                  "human_gate_for_real_execution"
+                                              ],
+                                 "evidence":  "planned",
+                                 "rollback":  "restore_previous_snapshot_if_real_execution_is_later_authorized",
+                                 "executes_now":  false
+                             },
+                             {
+                                 "step":  6,
+                                 "module_id":  "ENG-MOD-OBS-001",
+                                 "operation":  "PLAN_ACTIVATION_ONLY",
+                                 "requires":  [
+                                                  "dependency_ready",
+                                                  "compatibility_ok",
+                                                  "human_gate_for_real_execution"
+                                              ],
+                                 "evidence":  "planned",
+                                 "rollback":  "restore_previous_snapshot_if_real_execution_is_later_authorized",
+                                 "executes_now":  false
+                             }
+                         ],
+    "safety_gate":  {
+                        "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_003E",
+                        "stage":  "E03",
+                        "block":  "B03.3",
+                        "artifact":  "activation-safety-gate.json",
+                        "status":  "DEFINED",
+                        "gate":  "PENDING_HUMAN_AUTHORIZATION_FOR_REAL_ACTIVATION",
+                        "allowed_now":  [
+                                            "write_local_plan",
+                                            "write_local_policy",
+                                            "write_local_dashboard",
+                                            "validate_artifacts"
+                                        ],
+                        "blocked_now":  [
+                                            "activate_module",
+                                            "pause_real_module",
+                                            "detach_real_module",
+                                            "write_git",
+                                            "external_network",
+                                            "modify_core"
+                                        ],
+                        "decision":  "PLAN_ONLY_PASS"
+                    },
+    "rollback_policy":  {
+                            "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_003E",
+                            "stage":  "E03",
+                            "block":  "B03.2",
+                            "artifact":  "swap-rollback-policy.json",
+                            "status":  "DEFINED",
+                            "purpose":  "Definir sustitucion, retirada, rollback y recuperacion sin activar cambios reales",
+                            "actions":  [
+                                            "prepare_swap",
+                                            "pause_old_module",
+                                            "stage_new_module",
+                                            "validate_new_module",
+                                            "rollback_to_previous_snapshot",
+                                            "detach_if_safe",
+                                            "retire_if_confirmed"
+                                        ],
+                            "requirements":  [
+                                                 "previous_snapshot",
+                                                 "compatibility_record",
+                                                 "human_gate",
+                                                 "validation_report",
+                                                 "rollback_path"
+                                             ],
+                            "control":  {
+                                            "rollback_required":  true,
+                                            "no_destructive_action":  true,
+                                            "local_only":  true
+                                        }
+                        },
+    "next":  "E04_OBSERVABILITY_AND_CLOSE"
+}

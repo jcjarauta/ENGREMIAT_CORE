@@ -1,0 +1,45 @@
+﻿---
+type: graph_navigation_map
+status: active
+tags:
+  - engremiat/graph
+  - engremiat/navigation
+---
+# ENGREMIAT · Graph Navigation Map
+
+Este mapa reduce nodos `INDEX` repetidos y centraliza navegación visual.
+
+## Entrada principal
+- [[HOME]]
+
+## Índices normalizados
+- [[.obsidian/app.json]]
+- [[.obsidian/appearance.json]]
+- [[.obsidian/core-plugins.json]]
+- [[.obsidian/graph.json]]
+- [[.obsidian/workspace.json]]
+- [[00_CONTROL_OPERATIVO/00_CONTROL_OPERATIVO_INDEX]]
+- [[00_CONTROL_OPERATIVO/CONTROL_HUB]]
+- [[00_CONTROL_OPERATIVO/GRAPH_NAVIGATION_MAP]]
+- [[00_CONTROL_OPERATIVO/VAULT_BOOT_STATUS]]
+- [[01_SISTEMA_ENGREMIAT/01_SISTEMA_ENGREMIAT_INDEX]]
+- [[01_SISTEMA_ENGREMIAT/ARQUITECTURA_OFICIAL_AGRUPADA]]
+- [[02_PROYECTOS/02_PROYECTOS_INDEX]]
+- [[02_PROYECTOS/PROJECT_INDEX]]
+- [[03_MODULOS/03_MODULOS_INDEX]]
+- [[03_MODULOS/MODULE_INDEX]]
+- [[04_GATES_DECISIONES/04_GATES_DECISIONES_INDEX]]
+- [[05_EVIDENCIAS/05_EVIDENCIAS_INDEX]]
+- [[06_WORKERS/06_WORKERS_INDEX]]
+- [[07_OBSIDIAN_GRAPH/07_OBSIDIAN_GRAPH_INDEX]]
+- [[07_OBSIDIAN_GRAPH/MASTER_GROUPED_CANVAS.canvas]]
+- [[08_PLANTILLAS/08_PLANTILLAS_INDEX]]
+- [[09_ARCHIVO/09_ARCHIVO_INDEX]]
+- [[10_SUPERFICIES_TRABAJO/10_SUPERFICIES_TRABAJO_INDEX]]
+- [[10_SUPERFICIES_TRABAJO/WORK_SURFACE_INDEX]]
+- [[HOME]]
+- [[README_ENGREMIAT_VAULT]]
+
+## Bovedas de proyecto
+- [[02_PROYECTOS/PROJECT_VAULTS_REGISTRY]]
+

@@ -1,0 +1,57 @@
+﻿{
+    "package_id":  "ENGREMIAT_REAL_INTAKE_IMPORTER_001",
+    "stage":  "E03_BUILD_REAL_WORKER_PACKET_PREVIEW_AFTER_HUMAN_REVIEW",
+    "packet_id":  "real-worker-packet-preview.v1",
+    "status":  "PREVIEW_ONLY",
+    "source_intake":  "C:\\ENGREMIAT_CORE\\data\\real-intake-importer\\real-human-intake.accepted.latest.json",
+    "source_roadmap":  "C:\\ENGREMIAT_CORE\\data\\real-intake-importer\\real-intake-roadmap-preview.latest.json",
+    "source_gate":  "C:\\ENGREMIAT_CORE\\data\\real-intake-importer\\real-roadmap-review-gate.json",
+    "source_receipt":  "C:\\ENGREMIAT_CORE\\data\\real-intake-importer\\real-roadmap-review-receipt.pending.json",
+    "project_name":  "Primer intake real para construir roadmap automático en ENGREMIAT",
+    "purpose":  "Preparar un paquete revisable para worker a partir del intake real y roadmap preview, sin ejecutar worker ni conceder autorizacion",
+    "worker_task":  {
+                        "task_type":  "REAL_INTAKE_TO_CONTROLLED_DEVELOPMENT_PLAN",
+                        "objective":  "Convertir el intake real en una propuesta de desarrollo ejecutable por etapas, pendiente de aprobacion humana",
+                        "input_summary":  "Necesitamos una forma sencilla de introducir una idea humana de proyecto y convertirla en una estructura ordenada de desarrollo, sin depender de navegador, memoria dispersa ni prompts largos repetidos.",
+                        "desired_result":  "Obtener un intake exportable en JSON y Markdown que pueda alimentar una propuesta de roadmap revisable por el humano antes de preparar cualquier worker o automatización.",
+                        "constraints":  "Solo local.\nSin backend.\nSin red.\nSin worker real.\nSin Git.\nSin ejecución automática.\nExportación manual.\nDebe ser comprensible para humano y útil para generar roadmap.",
+                        "success_criteria":  "La UI abre correctamente.\nEl formulario permite rellenar todos los campos.\nEl botón Generar intake produce JSON válido.\nEl JSON contiene safety.local_only=true.\nEl JSON contiene worker_execution=false.\nEl JSON contiene execute_now=false.\nEl Markdown descargado resume correctamente el proyecto.\nEl resultado permite pasar a una etapa E02 de roadmap preview."
+                    },
+    "allowed_operations":  [
+                               "READ_ACCEPTED_INTAKE",
+                               "READ_ROADMAP_PREVIEW",
+                               "PROPOSE_DEVELOPMENT_STEPS",
+                               "PROPOSE_FILES",
+                               "PROPOSE_VALIDATIONS",
+                               "RETURN_EVIDENCE_PLAN"
+                           ],
+    "forbidden_operations":  [
+                                 "EXECUTE_WORKER",
+                                 "WRITE_PROJECT_CODE",
+                                 "RUN_COMMANDS",
+                                 "CALL_NETWORK",
+                                 "CALL_EXTERNAL_AI",
+                                 "GIT_COMMIT",
+                                 "GIT_PUSH",
+                                 "MODIFY_SYSTEM",
+                                 "AUTO_APPLY"
+                             ],
+    "execution":  {
+                      "preview_only":  true,
+                      "execute_now":  false,
+                      "worker_execution":  false,
+                      "authorization_required":  true,
+                      "authorization_status":  "NOT_GRANTED",
+                      "worker_authorization":  "NOT_GRANTED",
+                      "network":  false,
+                      "git_write":  false,
+                      "external_ai":  false,
+                      "local_only":  true
+                  },
+    "evidence_plan":  [
+                          "real-worker-packet-preview.json",
+                          "real-worker-packet-preview-dashboard.html",
+                          "e03-build-real-worker-packet-preview-report.json"
+                      ],
+    "next":  "E04_BUILD_REAL_CONTROLLED_DRY_RUN_FROM_WORKER_PACKET"
+}

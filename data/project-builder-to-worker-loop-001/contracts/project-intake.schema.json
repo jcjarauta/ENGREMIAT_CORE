@@ -1,0 +1,36 @@
+﻿{
+    "schema_id":  "engremiat-project-intake-v1",
+    "package_id":  "ENGREMIAT_PROJECT_BUILDER_TO_WORKER_LOOP_001",
+    "purpose":  "Human project intake normalized before Ollama proposal and Engremiat roadmap generation.",
+    "required_fields":  [
+                            "project_title",
+                            "human_description",
+                            "objective",
+                            "expected_result",
+                            "constraints",
+                            "priority",
+                            "detail_level"
+                        ],
+    "allowed_priority":  [
+                             "LOW",
+                             "MEDIUM",
+                             "HIGH",
+                             "CRITICAL"
+                         ],
+    "allowed_detail_level":  [
+                                 "LIGHT",
+                                 "MVP_READABLE",
+                                 "DETAILED",
+                                 "TECHNICAL"
+                             ],
+    "output_status":  "DRAFT_PREVIEW_ONLY",
+    "safety":  {
+                   "writes_real_intake":  false,
+                   "materialize_cards":  false,
+                   "ollama_real_execution":  false,
+                   "worker_real_execution":  false,
+                   "git":  false,
+                   "network_external":  false,
+                   "human_gate_required_before_save":  true
+               }
+}

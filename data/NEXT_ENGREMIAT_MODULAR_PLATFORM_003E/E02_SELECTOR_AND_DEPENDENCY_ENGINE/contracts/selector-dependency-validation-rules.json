@@ -1,0 +1,25 @@
+{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_003E",
+    "stage":  "E02",
+    "artifact":  "selector-dependency-validation-rules.json",
+    "required_artifacts":  [
+                               "selector-contract.json",
+                               "dependency-resolver.json",
+                               "selector-dependency-engine-package.json",
+                               "selector-dependency-validation-report.json",
+                               "dashboard/index.html"
+                           ],
+    "checks":  [
+                   "previous_stage_pass",
+                   "files_exist",
+                   "json_parse_ok",
+                   "selected_modules_not_empty",
+                   "resolved_order_not_empty",
+                   "no_missing_dependencies",
+                   "no_blocked_conflicts",
+                   "no_core_changes",
+                   "no_external_network",
+                   "no_git_write",
+                   "no_activation"
+               ]
+}

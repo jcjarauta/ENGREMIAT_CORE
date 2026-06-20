@@ -1,0 +1,26 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_REAL_WORKER_DAILY_VALUE_LOOP_056_065",
+    "stage":  "E62",
+    "postcheck_id":  "E62_KANBAN_WRITE_SIM_POSTCHECK",
+    "required_artifacts":  [
+                               "data\\kanban-write-sim-062\\kanban-write-simulation-model.json",
+                               "data\\kanban-write-sim-062\\kanban-write-sim-gate.json",
+                               "data\\kanban-write-sim-062\\kanban-write-sim-result.json",
+                               "data\\kanban-write-sim-062\\kanban-write-sim-rollback-state.json",
+                               "data\\kanban-write-sim-062\\receipts\\kanban-write-sim-receipt.json"
+                           ],
+    "missing":  [
+
+                ],
+    "json_ok":  true,
+    "policy_ok":  true,
+    "rollback_ready":  true,
+    "real_kanban_touched":  false,
+    "kanban_real_write":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "decision":  "GO_E62_SIM_POSTCHECK_OK",
+    "created_at":  "2026-06-17T12:25:13"
+}

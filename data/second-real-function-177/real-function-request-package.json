@@ -1,0 +1,51 @@
+﻿{
+    "objective_id":  "DEFINE_SECOND_REAL_FUNCTION_WITH_TEMPLATE_MVP_176_179",
+    "stage":  "E177",
+    "block":  "B177.1",
+    "step":  "P177.1.1",
+    "name":  "real-function-request-package",
+    "purpose":  "Prepare a compact request reusing the real execution template",
+    "template_reference":  "DEFINE_REAL_EXECUTION_TEMPLATE_STANDARD_MVP_172_175",
+    "selected_candidate":  {
+                               "objective_id":  "DEFINE_SECOND_REAL_FUNCTION_WITH_TEMPLATE_MVP_176_179",
+                               "stage":  "E176",
+                               "block":  "B176.1",
+                               "step":  "P176.1.1",
+                               "name":  "selected-second-function",
+                               "candidate_task_id":  "SECOND_REAL_FUNCTION_TEMPLATE_REUSE_001",
+                               "candidate_title":  "Validate template reuse on a second minimal local function",
+                               "status":  "READY",
+                               "selection_reason":  "Small local case chosen to verify that the execution template from E172-E175 is reusable without rebuilding the pattern",
+                               "template_reference":  "DEFINE_REAL_EXECUTION_TEMPLATE_STANDARD_MVP_172_175",
+                               "constraints":  [
+                                                   "local_only",
+                                                   "external_network=false",
+                                                   "git_write=false",
+                                                   "kanban_real_write=false",
+                                                   "cline_real_write=false",
+                                                   "auto_apply=false",
+                                                   "destructive_actions=false",
+                                                   "human_authorization_required=true"
+                                               ],
+                               "created_at":  "2026-06-17T18:08:36.1971168+02:00"
+                           },
+    "files":  [
+                  "real-function-request-package.json",
+                  "real-function-request.json"
+              ],
+    "inputs":  [
+                   "candidate_task_id",
+                   "prompt_path",
+                   "execution_gate",
+                   "result_path",
+                   "receipt_path",
+                   "postcheck_path"
+               ],
+    "rules":  [
+                  "single task only",
+                  "single prompt only",
+                  "compact request",
+                  "path references only"
+              ],
+    "created_at":  "2026-06-17T18:09:06.4623236+02:00"
+}

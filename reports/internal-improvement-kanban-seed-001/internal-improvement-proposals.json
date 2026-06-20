@@ -1,0 +1,25 @@
+﻿{
+    "package_id":  "ENGREMIAT_INTERNAL_IMPROVEMENT_KANBAN_SEED_001",
+    "status":  "PASS",
+    "proposals":  [
+                      {
+                          "priority":  "HIGH",
+                          "title":  "Conectar seed read-only con Kanban write gated",
+                          "id":  "IMP-001",
+                          "gate_required":  true
+                      },
+                      {
+                          "priority":  "MEDIUM",
+                          "title":  "Añadir scoring de prioridad de tarjetas por readiness y riesgo",
+                          "id":  "IMP-002",
+                          "gate_required":  false
+                      },
+                      {
+                          "priority":  "MEDIUM",
+                          "title":  "Crear vista grafo modulo-dependencias desde source_path",
+                          "id":  "IMP-003",
+                          "gate_required":  false
+                      }
+                  ],
+    "source":  "kanban-seed-validation-report.json"
+}

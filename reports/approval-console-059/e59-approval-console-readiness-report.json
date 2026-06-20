@@ -1,0 +1,28 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_REAL_WORKER_DAILY_VALUE_LOOP_056_065",
+    "stage":  "E59",
+    "readiness":  100,
+    "decision":  "GO_E59_HUMAN_APPROVAL_CONSOLE_UPGRADE_READY",
+    "next":  "E60_CONTROLLED_LOCAL_APPLY_V2",
+    "approval_console_ready":  true,
+    "approve_does_not_apply":  true,
+    "artifacts":  [
+                      "data\\approval-console-059\\approval-console-upgrade-model.json",
+                      "data\\approval-console-059\\proposal-approval-gate.json",
+                      "dashboard\\approval-console\\index.html",
+                      "data\\approval-console-059\\receipts\\approval-console-upgrade-receipt.json"
+                  ],
+    "security":  {
+                     "apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "worker_executed":  false,
+                     "proposal_executed":  false,
+                     "approve_does_not_apply":  true,
+                     "human_decision_required":  true,
+                     "sensitive_actions_executed":  false
+                 },
+    "created_at":  "2026-06-17T12:21:45"
+}

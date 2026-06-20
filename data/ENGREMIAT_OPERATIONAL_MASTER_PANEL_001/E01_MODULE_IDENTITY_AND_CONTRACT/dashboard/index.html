@@ -1,0 +1,48 @@
+<html><head><meta charset="utf-8"><title>ENG OMP 001 E01</title><style>body{font-family:Segoe UI,Arial;background:#0f172a;color:#e2e8f0;padding:24px}.card{max-width:1200px;margin:auto;background:#111827;border:1px solid #334155;border-radius:18px;padding:20px}.ok{color:#4ade80}pre{background:#020617;padding:14px;border-radius:12px;white-space:pre-wrap;overflow:auto}</style></head><body><div class="card"><h1>ENGREMIAT_OPERATIONAL_MASTER_PANEL_001 · E01</h1><p class="ok">Identidad y contrato definidos.</p><pre>{
+    "package_id":  "ENGREMIAT_OPERATIONAL_MASTER_PANEL_001",
+    "stage":  "E01",
+    "artifact":  "module-identity-contract.json",
+    "status":  "PASS",
+    "identity":  {
+                     "package_id":  "ENGREMIAT_OPERATIONAL_MASTER_PANEL_001",
+                     "stage":  "E01_MODULE_IDENTITY_AND_CONTRACT",
+                     "module_id":  "ENG-OMP-001",
+                     "module_name":  "Operational Master Panel",
+                     "status":  "DEFINED",
+                     "role":  "human_operational_surface",
+                     "purpose":  "Ser la superficie maestra de control humano para estado, readiness, gates, riesgos y siguiente accion",
+                     "depends_on":  [
+                                        "ENGREMIAT_MODULAR_PLATFORM_001",
+                                        "NEXT_ENGREMIAT_MODULAR_PLATFORM_004E",
+                                        "NEXT_ENGREMIAT_MODULAR_PLATFORM_005E",
+                                        "ENGREMIAT_MODULAR_PLATFORM_MANUALS_001",
+                                        "CIERRE_DOCUMENTAL_001",
+                                        "006E_VALIDACION_OPERATIVA_VISUAL"
+                                    ],
+                     "compatibility":  {
+                                           "core":  "frozen",
+                                           "mode":  "local_readonly_first",
+                                           "integrations":  "gated_future_only"
+                                       },
+                     "control":  {
+                                     "core_changes":  false,
+                                     "external_network":  false,
+                                     "git_write":  false,
+                                     "real_integration":  false,
+                                     "human_gate_required":  true
+                                 }
+                 },
+    "acceptance_criteria":  [
+                                "identidad canonica definida",
+                                "dependencias declaradas",
+                                "limites de seguridad visibles",
+                                "fin de desarrollo del modulo definido"
+                            ],
+    "finish_definition":  [
+                              "collector local creado",
+                              "estado operacional normalizado",
+                              "dashboard maestro creado",
+                              "gate humano preparado",
+                              "cierre y siguiente objetivo generados"
+                          ]
+}</pre></div></body></html>

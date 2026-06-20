@@ -1,0 +1,12 @@
+﻿{
+    "column_rules":  {
+                         "DONE":  "closed true or status PASS readiness 100",
+                         "VALIDATION":  "validation report",
+                         "GATED":  "gate or authorization pending",
+                         "READY":  "NEXT_OBJECTIVE",
+                         "BACKLOG":  "manual or module candidate",
+                         "BLOCKED":  "ERR or NO_GO"
+                     },
+    "id_prefix":  "KANBAN-SEED",
+    "one_card_per_source":  true
+}

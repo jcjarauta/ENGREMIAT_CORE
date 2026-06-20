@@ -1,0 +1,41 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_NAVIGATION_MODEL_001",
+    "stage":  "E11J_REPAIR_ACTIVE_MODULE_PATH_AND_CLOSE_CLEAN",
+    "status":  "PASS",
+    "closed_at":  "2026-06-19T23:08:03",
+    "state_backup":  "C:\\ENGREMIAT_CORE\\data\\desktop-terminal-operator\\operator-state.v1.json.e11j-pre-active-module-path-repair-20260619-230802.bak",
+    "active_project":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\\ENGREMIAT_PROJECT_p3_20260619-224903",
+    "active_module_before":  "MODULE_mejorar-plantilla-maestra-y-pantilla-modulo-inicial",
+    "active_module_after":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\\ENGREMIAT_PROJECT_p3_20260619-224903\\MODULOS\\MODULE_mejorar-plantilla-maestra-y-pantilla-modulo-inicial",
+    "active_module_vault":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\\ENGREMIAT_PROJECT_p3_20260619-224903\\MODULOS\\MODULE_mejorar-plantilla-maestra-y-pantilla-modulo-inicial\\BOVEDA_MODULO",
+    "official_master_template":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\\ENGREMIAT_PROJECT_p3_20260619-224903\\BOVEDA_PROYECTO\\00_PLANTILLA_MAESTRA_OFICIAL",
+    "module_json":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\\ENGREMIAT_PROJECT_p3_20260619-224903\\MODULOS\\MODULE_mejorar-plantilla-maestra-y-pantilla-modulo-inicial\\BOVEDA_MODULO\\00_CONTROL\\module.json",
+    "checks":  {
+                   "freeze_validator":  "PASS",
+                   "active_project_exists":  true,
+                   "official_master_exists":  true,
+                   "active_module_exists":  true,
+                   "active_module_vault_exists":  true,
+                   "active_module_json_exists":  true,
+                   "operator_visual_confirmed_by_human":  true
+               },
+    "closed_capabilities":  [
+                                "GLOBAL navigation stable",
+                                "PROJECT navigation stable",
+                                "MODULE navigation stable",
+                                "location bar active",
+                                "empty Enter refresh contract frozen",
+                                "back/help/menu contracts frozen",
+                                "new project from official master template",
+                                "MODULE_inicio available",
+                                "safe module creation extension",
+                                "safe module selector extension",
+                                "readonly project review extension",
+                                "protected extension map"
+                            ],
+    "next_recommended":  [
+                             "Mejorar plantilla maestra oficial y plantilla de modulo inicial desde el modulo activo",
+                             "Despues EXT03_MODULE_LIBRARY_SAFE",
+                             "Normalizar modulos WARN si se quieren conservar como biblioteca real"
+                         ]
+}

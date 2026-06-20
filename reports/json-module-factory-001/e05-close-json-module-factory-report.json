@@ -1,0 +1,40 @@
+﻿{
+    "package_id":  "ENGREMIAT_JSON_MODULE_FACTORY_001",
+    "stage":  "E05_VALIDATE_AND_CLOSE",
+    "status":  "PASS",
+    "readiness":  100,
+    "closed":  true,
+    "module_dir":  "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_JSON_MODULE_FACTORY_001",
+    "sample_candidate_dir":  "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_EXAMPLE_FROM_SHEETS_001",
+    "sample_candidate_active":  false,
+    "sample_gate_active":  false,
+    "evidence":  [
+                     "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_JSON_MODULE_FACTORY_001\\module.json",
+                     "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_JSON_MODULE_FACTORY_001\\contracts\\json-module-factory-contract.json",
+                     "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_JSON_MODULE_FACTORY_001\\schemas\\module-init-json-schema.json",
+                     "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_JSON_MODULE_FACTORY_001\\factory-dry-run\\Invoke-JsonModuleFactoryDryRun.ps1",
+                     "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_JSON_MODULE_FACTORY_001\\factory-dry-run\\factory-dry-run-contract.json",
+                     "C:\\ENGREMIAT_CORE\\reports\\json-module-factory-001\\e01-module-identity-and-factory-contract-report.json",
+                     "C:\\ENGREMIAT_CORE\\reports\\json-module-factory-001\\e02-module-init-json-schema-report.json",
+                     "C:\\ENGREMIAT_CORE\\reports\\json-module-factory-001\\e03-factory-dry-run-script-report.json",
+                     "C:\\ENGREMIAT_CORE\\reports\\json-module-factory-001\\e04-sample-factory-output-report.json",
+                     "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_EXAMPLE_FROM_SHEETS_001\\module.json",
+                     "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_EXAMPLE_FROM_SHEETS_001\\contracts\\module-contract.json",
+                     "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_EXAMPLE_FROM_SHEETS_001\\schemas\\module-schema.json",
+                     "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_EXAMPLE_FROM_SHEETS_001\\gates\\module-gate.json",
+                     "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_EXAMPLE_FROM_SHEETS_001\\reports\\factory-dry-run-result.json"
+                 ],
+    "missing":  [
+
+                ],
+    "policy":  {
+                   "local_only":  true,
+                   "core_changes":  false,
+                   "real_module_activation":  false,
+                   "real_intake_write":  false,
+                   "git_write":  false,
+                   "network":  false
+               },
+    "result":  "Factory local dry-run capaz de consumir module-init-json y crear esqueleto de modulo candidato en _NEXT_MODULES sin activarlo.",
+    "next":  "PAUSE_AND_DECIDE_REAL_MODULE_FACTORY_GATE_OR_SHEETS_INTEGRATION"
+}

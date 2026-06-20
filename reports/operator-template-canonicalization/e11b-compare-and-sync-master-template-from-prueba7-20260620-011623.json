@@ -1,0 +1,30 @@
+﻿{
+    "status":  "PASS",
+    "source_prueba7_master":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\\ENGREMIAT_PROJECT_prueba-7_20260620-004632\\BOVEDA_PROYECTO\\00_PLANTILLA_MAESTRA_OFICIAL",
+    "target_prueba11_master":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\\ENGREMIAT_PROJECT_prueba11_20260620-011017\\BOVEDA_PROYECTO\\00_PLANTILLA_MAESTRA_OFICIAL",
+    "core_master_template":  "C:\\ENGREMIAT_CORE\\templates\\MASTER_PROJECT_TEMPLATE_V2",
+    "before_compare":  {
+                           "source_files":  40,
+                           "target_files":  40,
+                           "same":  40,
+                           "missing_in_prueba11":  0,
+                           "extra_in_prueba11":  0,
+                           "different":  0,
+                           "diff_tsv":  "C:\\ENGREMIAT_CORE\\reports\\operator-template-canonicalization\\e11b-prueba7-vs-prueba11-master-diff-20260620-011623.tsv"
+                       },
+    "backups":  {
+                    "prueba11_master":  "C:\\ENGREMIAT_CORE\\backups\\operator-template-canonicalization\\PRUEBA11_MASTER_BEFORE_SYNC_E11B_20260620-011623",
+                    "core_master":  "C:\\ENGREMIAT_CORE\\backups\\operator-template-canonicalization\\CORE_MASTER_TEMPLATE_V2_BEFORE_SYNC_E11B_20260620-011623"
+                },
+    "sync_logs":  {
+                      "prueba11":  "C:\\ENGREMIAT_CORE\\reports\\operator-template-canonicalization\\robocopy-sync-prueba11-master-from-prueba7-20260620-011624.log",
+                      "core":  "C:\\ENGREMIAT_CORE\\reports\\operator-template-canonicalization\\robocopy-sync-core-master-from-prueba7-20260620-011624.log"
+                  },
+    "after_validate":  {
+                           "prueba11_equals_prueba7":  true,
+                           "core_equals_prueba7":  true,
+                           "files":  40
+                       },
+    "registry":  "C:\\ENGREMIAT_CORE\\templates\\ENGREMIAT_TEMPLATE_REGISTRY_V2.json",
+    "next":  "test_n_again_create_project_from_core_template_equal_to_prueba7"
+}

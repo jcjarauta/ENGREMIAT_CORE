@@ -1,0 +1,12 @@
+﻿{
+    "package_id":  "ENGREMIAT_OPERATOR_CONTEXT_AND_DECISION_TREE_001",
+    "stage":  "E07V_FIX_CONTEXT_PARAM_AT_TOP_AND_CLEAN_STATE",
+    "status":  "PASS",
+    "readiness":  100,
+    "fixed":  [
+                  "eng_context_param_moved_to_top",
+                  "stale_active_module_context_removed",
+                  "state_reset_to_global_selector"
+              ],
+    "next":  "relaunch_and_test_global_to_project_to_module_back"
+}

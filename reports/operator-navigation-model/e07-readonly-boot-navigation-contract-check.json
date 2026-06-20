@@ -1,0 +1,67 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_NAVIGATION_MODEL_001",
+    "stage":  "E07_READONLY_BOOT_AND_NAVIGATION_CONTRACT_CHECK",
+    "status":  "PASS",
+    "readonly":  true,
+    "checks":  [
+                   {
+                       "check":  "parse_launcher",
+                       "ok":  true,
+                       "detail":  "OK"
+                   },
+                   {
+                       "check":  "parse_router",
+                       "ok":  true,
+                       "detail":  "OK"
+                   },
+                   {
+                       "check":  "parse_context",
+                       "ok":  true,
+                       "detail":  "OK"
+                   },
+                   {
+                       "check":  "parse_status",
+                       "ok":  true,
+                       "detail":  "OK"
+                   },
+                   {
+                       "check":  "launcher_has_global_project_module_levels",
+                       "ok":  true,
+                       "detail":  "menu levels"
+                   },
+                   {
+                       "check":  "launcher_enter_refresh",
+                       "ok":  true,
+                       "detail":  "Enter refresh"
+                   },
+                   {
+                       "check":  "launcher_back_levels",
+                       "ok":  true,
+                       "detail":  "back levels"
+                   },
+                   {
+                       "check":  "router_context_commands",
+                       "ok":  true,
+                       "detail":  "router context dispatch"
+                   },
+                   {
+                       "check":  "context_project_selector",
+                       "ok":  true,
+                       "detail":  "project selector"
+                   },
+                   {
+                       "check":  "context_module_selector",
+                       "ok":  true,
+                       "detail":  "module selector"
+                   },
+                   {
+                       "check":  "status_screen_refresh_back",
+                       "ok":  true,
+                       "detail":  "status screen"
+                   }
+               ],
+    "failed":  [
+
+               ],
+    "next":  "MANUAL_TEST_OPERATOR_NAVIGATION"
+}

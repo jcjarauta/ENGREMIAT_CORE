@@ -1,0 +1,42 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_HUMAN_USABLE_036_045",
+    "stage":  "E39",
+    "name":  "Human Decision Console",
+    "purpose":  "Crear consola simple para APPROVE, REPAIR, DEFER y REJECT",
+    "allowed_decisions":  [
+                              "APPROVE",
+                              "REPAIR",
+                              "DEFER",
+                              "REJECT"
+                          ],
+    "default_decision":  "DEFER",
+    "decision_policy":  {
+                            "APPROVE":  "Autoriza continuar a apply controlado futuro, sin ejecutar apply en E39",
+                            "REPAIR":  "Devuelve propuesta a reparación",
+                            "DEFER":  "Aplaza decisión sin bloquear trazabilidad",
+                            "REJECT":  "Rechaza propuesta y registra motivo"
+                        },
+    "required_fields":  [
+                            "decision_id",
+                            "proposal_id",
+                            "decision",
+                            "reason",
+                            "operator",
+                            "created_at",
+                            "apply_executed",
+                            "auto_apply",
+                            "remote_execution",
+                            "git_write"
+                        ],
+    "security":  {
+                     "apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "sensitive_actions_executed":  false,
+                     "human_gate_required":  true,
+                     "default_decision":  "DEFER"
+                 },
+    "next":  "E40_CONTROLLED_APPLY_MVP"
+}

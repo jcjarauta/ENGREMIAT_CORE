@@ -1,0 +1,22 @@
+﻿{
+    "schema_id":  "resource-composer-query.schema.v1",
+    "required":  [
+                     "query_id",
+                     "objective",
+                     "requested_capabilities",
+                     "constraints"
+                 ],
+    "fields":  [
+                   "query_id",
+                   "client_id",
+                   "project_id",
+                   "objective",
+                   "requested_capabilities",
+                   "preferred_resource_types",
+                   "constraints",
+                   "excluded_resources",
+                   "minimum_quality_score",
+                   "output_format"
+               ],
+    "purpose":  "Permitir que Ollama/OpenWebUI pidan piezas por necesidad sin componer libremente."
+}

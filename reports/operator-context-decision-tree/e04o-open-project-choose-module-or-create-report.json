@@ -1,0 +1,13 @@
+﻿{
+    "package_id":  "ENGREMIAT_OPERATOR_CONTEXT_AND_DECISION_TREE_001",
+    "stage":  "E04O_OPEN_PROJECT_CHOOSE_MODULE_OR_CREATE",
+    "status":  "PASS",
+    "readiness":  100,
+    "behavior":  "abrir-proyecto_abre_menu_entrar_modulo_o_crear_modulo",
+    "options":  [
+                    "1 entrar modulo existente",
+                    "2 crear modulo nuevo",
+                    "0 quedar en proyecto"
+                ],
+    "next":  "relaunch_test_abrir-proyecto"
+}

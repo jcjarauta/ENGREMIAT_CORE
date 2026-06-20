@@ -1,0 +1,389 @@
+﻿param([string]$ProjectPath="")
+$ErrorActionPreference="Stop"
+
+function W($m,$c="White"){ Write-Host $m -ForegroundColor $c }
+function P(){ [void](Read-Host "Enter") }
+function SafeName($s){ (($s.Trim()) -replace "[^\w\.-]","_") }
+
+function ActiveProject([string]$p){
+  if($p -and (Test-Path $p)){ return $p }
+  $j="C:\ENGREMIAT_CORE\data\desktop-terminal-operator\active-project.json"
+  $t="C:\ENGREMIAT_CORE\data\desktop-terminal-operator\active-project.txt"
+  if(Test-Path $j){
+    $x=Get-Content $j -Raw | ConvertFrom-Json
+    if($x.active_project -and (Test-Path ([string]$x.active_project))){ return [string]$x.active_project }
+  }
+  if(Test-Path $t){
+    $y=(Get-Content $t -Raw).Trim()
+    if(Test-Path $y){ return $y }
+  }
+  throw "active_project_missing"
+}
+
+function ReadMod($dir){
+  $mj=Join-Path $dir "module.json"
+  if(Test-Path $mj){
+    try { return Get-Content $mj -Raw | ConvertFrom-Json }
+    catch { return [pscustomobject]@{ id=(Split-Path $dir -Leaf); name=(Split-Path $dir -Leaf); status="INVALID_JSON"; type="operational_module"; relations=@() } }
+  }
+  return [pscustomobject]@{ id=(Split-Path $dir -Leaf); name=(Split-Path $dir -Leaf); status="ACTIVO"; type="operational_module"; relations=@() }
+}
+
+function SaveMod($dir,$j){
+  $mj=Join-Path $dir "module.json"
+  if(-not $j.id){ $j | Add-Member -NotePropertyName id -NotePropertyValue (Split-Path $dir -Leaf) -Force }
+  if(-not $j.name){ $j | Add-Member -NotePropertyName name -NotePropertyValue (Split-Path $dir -Leaf) -Force }
+  $j | Add-Member -NotePropertyName updated_at -NotePropertyValue (Get-Date).ToString("s") -Force
+  $j | ConvertTo-Json -Depth 40 | Set-Content $mj -Encoding UTF8
+}
+
+function ModStatus($dir){
+  $j=ReadMod $dir
+  if($j.status){ return ([string]$j.status).ToUpper() }
+  return "ACTIVO"
+}
+
+function RefreshGraph($p){
+  $r=Join-Path $PSScriptRoot "eng-refresh-project-module-graph.ps1"
+  if(Test-Path $r){ & powershell -NoProfile -ExecutionPolicy Bypass -File $r -ProjectPath $p | Out-Null }
+}
+
+function ProjectRows($p,$view){
+  $modsDir=Join-Path $p "MODULOS"
+  New-Item -ItemType Directory -Force -Path $modsDir | Out-Null
+  $rows=@()
+  foreach($m in (Get-ChildItem $modsDir -Directory -ErrorAction SilentlyContinue | Sort-Object Name)){
+    $s=ModStatus $m.FullName
+    if($view -eq "TODOS" -or ($view -eq "ACTIVOS" -and $s -notmatch "HIST") -or ($view -eq "HISTORICOS" -and $s -match "HIST")){
+      $rows += [pscustomobject]@{ dir=$m; status=$s }
+    }
+  }
+  return $rows
+}
+
+function LibraryRows($view){
+  New-Item -ItemType Directory -Force -Path "C:\ENGREMIAT_CORE\library\modules","C:\ENGREMIAT_CORE\library\modules_historico" | Out-Null
+  $roots = if($view -eq "HISTORICOS"){ @("C:\ENGREMIAT_CORE\library\modules_historico") } elseif($view -eq "TODOS"){ @("C:\ENGREMIAT_CORE\library\modules","C:\ENGREMIAT_CORE\library\modules_historico") } else { @("C:\ENGREMIAT_CORE\library\modules") }
+  $rows=@()
+  foreach($root in $roots){
+    foreach($m in (Get-ChildItem $root -Directory -ErrorAction SilentlyContinue | Sort-Object LastWriteTime -Descending)){
+      $s=if($root -like "*modules_historico*"){"HISTORICO"}else{ModStatus $m.FullName}
+      $rows += [pscustomobject]@{ dir=$m; status=$s; root=$root }
+    }
+  }
+  return $rows
+}
+
+function AddProjectModule($p){
+  Clear-Host; W "==== NUEVO MODULO ====" Cyan
+  $name=Read-Host "nombre_modulo"
+  if([string]::IsNullOrWhiteSpace($name)){ return }
+  $a=Join-Path $PSScriptRoot "eng-add-module-safe.ps1"
+  if(Test-Path $a){ & powershell -NoProfile -ExecutionPolicy Bypass -File $a -ProjectPath $p -ModuleName $name }
+  else{
+    $safe=SafeName $name
+    $dst=Join-Path (Join-Path $p "MODULOS") $safe
+    if(Test-Path $dst){ W "WARN modulo_ya_existe=$dst" Yellow; P; return }
+    New-Item -ItemType Directory -Force -Path $dst | Out-Null
+    [pscustomobject]@{id=$safe;name=$name;type="operational_module";status="ACTIVO";created_at=(Get-Date).ToString("s")} | ConvertTo-Json -Depth 20 | Set-Content (Join-Path $dst "module.json") -Encoding UTF8
+    Set-Content (Join-Path $dst "README.md") -Encoding UTF8 -Value @("# $name","","Modulo operativo.")
+  }
+  RefreshGraph $p
+  P
+}
+
+function NewLibraryModule(){
+  Clear-Host; W "==== NUEVO MODULO DE BIBLIOTECA ====" Cyan
+  $name=Read-Host "nombre_modulo_biblioteca"
+  if([string]::IsNullOrWhiteSpace($name)){ return }
+  $safe=SafeName $name
+  $dst=Join-Path "C:\ENGREMIAT_CORE\library\modules" $safe
+  if(Test-Path $dst){ W "WARN modulo_ya_existe_en_biblioteca=$dst" Yellow; P; return }
+  New-Item -ItemType Directory -Force -Path $dst | Out-Null
+  [pscustomobject]@{id=$safe;name=$name;type="library_module";status="ACTIVO";created_at=(Get-Date).ToString("s");source="library"} | ConvertTo-Json -Depth 20 | Set-Content (Join-Path $dst "module.json") -Encoding UTF8
+  Set-Content (Join-Path $dst "README.md") -Encoding UTF8 -Value @("# $name","","Modulo creado en biblioteca.")
+  W "OK modulo_biblioteca_creado=$dst" Green
+  P
+}
+
+function CopyProjectModulesToLibrary($p){
+  Clear-Host; W "==== COPIAR MODULOS DEL PROYECTO A BIBLIOTECA ====" Cyan
+  $mods=Get-ChildItem (Join-Path $p "MODULOS") -Directory -ErrorAction SilentlyContinue | Sort-Object Name
+  if(-not $mods){ W "sin_modulos_en_proyecto" Yellow; P; return }
+  for($i=0;$i -lt $mods.Count;$i++){ W (" [{0}] {1}" -f ($i+1),$mods[$i].Name) Yellow }
+  W ""; W "numero = copiar uno | t = copiar todos | b = atras" Cyan
+  $cmd=Read-Host "COPIAR"
+  if($cmd -eq "b"){ return }
+  $sel=@()
+  if($cmd -eq "t"){ $sel=$mods }
+  elseif($cmd -as [int]){
+    $ix=[int]$cmd-1
+    if($ix -ge 0 -and $ix -lt $mods.Count){ $sel=@($mods[$ix]) }
+  }
+  foreach($m in $sel){
+    $dst=Join-Path "C:\ENGREMIAT_CORE\library\modules" $m.Name
+    if(Test-Path $dst){ $dst=$dst+"_"+(Get-Date -Format "yyyyMMddHHmmss") }
+    Copy-Item $m.FullName $dst -Recurse -Force
+    $j=ReadMod $dst
+    $j | Add-Member -NotePropertyName status -NotePropertyValue "ACTIVO" -Force
+    $j | Add-Member -NotePropertyName source_project -NotePropertyValue $p -Force
+    SaveMod $dst $j
+    W "OK copiado=$($m.Name)" Green
+  }
+  P
+}
+
+function ScanExternalModulesToLibrary(){
+  Clear-Host; W "==== ESCANEAR CANDIDATOS EXTERNOS ====" Cyan
+  $roots=@("C:\ENGREMIAT_CORE\templates","C:\ENGREMIAT_CORE\staging","C:\ENGREMIAT_CORE\backups","C:\Users\pc\Desktop") | Where-Object { Test-Path $_ }
+  $c=Get-ChildItem $roots -Recurse -Directory -ErrorAction SilentlyContinue | Where-Object {
+    (($_.Name -like "MODULE_*") -or (Test-Path (Join-Path $_.FullName "module.json"))) -and
+    ($_.FullName -notlike "C:\ENGREMIAT_CORE\library\modules*") -and
+    ($_.FullName -notlike "C:\ENGREMIAT_CORE\library\modules_historico*")
+  } | Sort-Object LastWriteTime -Descending | Select-Object -First 60
+  if(-not $c){ W "sin_candidatos" Yellow; P; return }
+  for($i=0;$i -lt $c.Count;$i++){ W (" [{0}] {1}" -f ($i+1),$c[$i].Name) Yellow; W ("     {0}" -f $c[$i].FullName) DarkGray }
+  W ""; W "numero = copiar a biblioteca | b = atras" Cyan
+  $cmd=Read-Host "SCAN"
+  if($cmd -eq "b"){ return }
+  if($cmd -as [int]){
+    $ix=[int]$cmd-1
+    if($ix -ge 0 -and $ix -lt $c.Count){
+      $dst=Join-Path "C:\ENGREMIAT_CORE\library\modules" $c[$ix].Name
+      if(Test-Path $dst){ $dst=$dst+"_"+(Get-Date -Format "yyyyMMddHHmmss") }
+      Copy-Item $c[$ix].FullName $dst -Recurse -Force
+      $j=ReadMod $dst
+      $j | Add-Member -NotePropertyName status -NotePropertyValue "ACTIVO" -Force
+      $j | Add-Member -NotePropertyName source_external -NotePropertyValue $c[$ix].FullName -Force
+      SaveMod $dst $j
+      W "OK candidato_copiado=$dst" Green
+      P
+    }
+  }
+}
+
+function ImportLibraryItem($p,$row){
+  $modsDir=Join-Path $p "MODULOS"
+  New-Item -ItemType Directory -Force -Path $modsDir | Out-Null
+  $dst=Join-Path $modsDir $row.dir.Name
+  if(Test-Path $dst){ W "WARN modulo_ya_existe_en_proyecto=$dst" Yellow; P; return }
+  Copy-Item $row.dir.FullName $dst -Recurse -Force
+  $j=ReadMod $dst
+  $j | Add-Member -NotePropertyName status -NotePropertyValue "ACTIVO" -Force
+  SaveMod $dst $j
+  RefreshGraph $p
+  W "OK modulo_importado=$($row.dir.Name)" Green
+  P
+}
+
+function ArchiveLibraryItem($row){
+  $hist="C:\ENGREMIAT_CORE\library\modules_historico"
+  New-Item -ItemType Directory -Force -Path $hist | Out-Null
+  $dst=Join-Path $hist $row.dir.Name
+  if(Test-Path $dst){ $dst=$dst+"_"+(Get-Date -Format "yyyyMMddHHmmss") }
+  Move-Item $row.dir.FullName $dst -Force
+  $j=ReadMod $dst
+  $j | Add-Member -NotePropertyName status -NotePropertyValue "HISTORICO" -Force
+  SaveMod $dst $j
+  W "OK biblioteca_historico=$dst" Green
+  P
+}
+
+function DeleteLibraryItem($row){
+  Clear-Host; W "==== BORRAR MODULO DE BIBLIOTECA ====" Red
+  W $row.dir.FullName Yellow
+  $c=Read-Host "escribe BORRAR para confirmar"
+  if($c -ne "BORRAR"){ W "CANCELADO" Yellow; P; return }
+  Remove-Item $row.dir.FullName -Recurse -Force
+  W "OK modulo_borrado_de_biblioteca" Green
+  P
+}
+
+function LibraryItemMenu($p,$row){
+  while($true){
+    Clear-Host
+    W "==== MODULO DE BIBLIOTECA ====" Cyan
+    W ("nombre: {0}" -f $row.dir.Name) White
+    W ("estado: {0}" -f $row.status) Green
+    W ("ruta: {0}" -f $row.dir.FullName) DarkCyan
+    W ""
+    W "i = importar | o = abrir | h = mandar a historico | x = borrar | j = ver json | b = atras" Cyan
+    $cmd=Read-Host "BIB_MOD"
+    if($cmd -eq "b"){ return }
+    if($cmd -eq "i"){ ImportLibraryItem $p $row; return }
+    if($cmd -eq "o"){ Start-Process explorer.exe $row.dir.FullName; continue }
+    if($cmd -eq "h"){ ArchiveLibraryItem $row; return }
+    if($cmd -eq "x"){ DeleteLibraryItem $row; return }
+    if($cmd -eq "j"){
+      Clear-Host
+      $mj=Join-Path $row.dir.FullName "module.json"
+      if(Test-Path $mj){ Get-Content $mj -Raw | Write-Host } else { W "sin module.json" Yellow }
+      P
+    }
+  }
+}
+
+function LibraryEditScreen($p){
+  while($true){
+    Clear-Host
+    W "==== EDITAR BIBLIOTECA DE MODULOS ====" Cyan
+    W "n  = nuevo modulo biblioteca" White
+    W "p  = copiar modulos del proyecto activo a biblioteca" White
+    W "s  = escanear candidatos externos y copiar a biblioteca" White
+    W "oa = abrir biblioteca activa" White
+    W "oh = abrir biblioteca historica" White
+    W "b  = atras" White
+    W ""
+    $cmd=Read-Host "EDITAR_BIBLIOTECA"
+    if($cmd -eq "b"){return}
+    if($cmd -eq "n"){NewLibraryModule; continue}
+    if($cmd -eq "p"){CopyProjectModulesToLibrary $p; continue}
+    if($cmd -eq "s"){ScanExternalModulesToLibrary; continue}
+    if($cmd -eq "oa"){Start-Process explorer.exe "C:\ENGREMIAT_CORE\library\modules"; continue}
+    if($cmd -eq "oh"){Start-Process explorer.exe "C:\ENGREMIAT_CORE\library\modules_historico"; continue}
+  }
+}
+
+function LibraryItemMenu($p,$row){
+  while($true){
+    Clear-Host
+    W "==== MODULO DE BIBLIOTECA ====" Cyan
+    W ("nombre: {0}" -f $row.dir.Name) White
+    W ("estado: {0}" -f $row.status) Green
+    W ("ruta: {0}" -f $row.dir.FullName) DarkCyan
+    W ""
+    if($row.status -match "HIST"){ W "i = importar | r = reactivar | o = abrir | x = borrar | j = ver json | b = atras" Cyan } else { W "i = importar | h = historico | o = abrir | x = borrar | j = ver json | b = atras" Cyan }
+    $cmd=Read-Host "BIB_MOD"
+    if($cmd -eq "b"){return}
+    if($cmd -eq "i"){ImportLibraryItem $p $row; return}
+    if($cmd -eq "o"){Start-Process explorer.exe $row.dir.FullName; continue}
+    if($cmd -eq "h" -and $row.status -notmatch "HIST"){ArchiveLibraryItem $row; return}
+    if($cmd -eq "r" -and $row.status -match "HIST"){ $dst=Join-Path "C:\ENGREMIAT_CORE\library\modules" $row.dir.Name; if(Test-Path $dst){$dst=$dst+"_"+(Get-Date -Format "yyyyMMddHHmmss")}; Move-Item $row.dir.FullName $dst -Force; $j=ReadMod $dst; $j|Add-Member -NotePropertyName status -NotePropertyValue "ACTIVO" -Force; SaveMod $dst $j; W "OK biblioteca_reactivado=$dst" Green; P; return }
+    if($cmd -eq "x"){DeleteLibraryItem $row; return}
+    if($cmd -eq "j"){Clear-Host; $mj=Join-Path $row.dir.FullName "module.json"; if(Test-Path $mj){Get-Content $mj -Raw|Write-Host}else{W "sin module.json" Yellow}; P}
+  }
+}
+
+function LibraryScreen($p){
+  $view="ACTIVOS"
+  while($true){
+    $rows=LibraryRows $view
+    Clear-Host
+    W "==== BIBLIOTECA DE MODULOS ====" Cyan
+    W ("VISTA: {0}" -f $view) Magenta
+    W "numero = abrir modulo | a = activos | h = historicos | t = todos | e = editar biblioteca | b = atras | Enter = refrescar" Cyan
+    W ""
+    if(-not $rows){ W "No hay modulos en esta vista." DarkYellow; W "Usa e para entrar en editar biblioteca." DarkCyan }
+    for($i=0; $i -lt $rows.Count; $i++){ W (" [{0}] {1}  {2}" -f ($i+1),$rows[$i].dir.Name,$rows[$i].status) $(if($rows[$i].status -match "HIST"){"DarkYellow"}else{"Green"}) }
+    W ""
+    $cmd=Read-Host "BIBLIOTECA"
+    if([string]::IsNullOrWhiteSpace($cmd)){continue}
+    if($cmd -eq "b"){return}
+    if($cmd -eq "a"){$view="ACTIVOS"; continue}
+    if($cmd -eq "h"){$view="HISTORICOS"; continue}
+    if($cmd -eq "t"){$view="TODOS"; continue}
+    if($cmd -eq "e"){LibraryEditScreen $p; continue}
+    if($cmd -as [int]){ $ix=[int]$cmd-1; if($ix -ge 0 -and $ix -lt $rows.Count){LibraryItemMenu $p $rows[$ix]}else{W "WARN modulo_no_existe_en_lista_actual" Yellow; P} }
+  }
+}
+
+function CreateRelation($p,$fromDir){
+  $rows=ProjectRows $p "TODOS"
+  Clear-Host; W "==== CREAR RELACION ====" Cyan
+  W ("origen: {0}" -f (Split-Path $fromDir -Leaf)) Green
+  for($i=0;$i -lt $rows.Count;$i++){
+    if($rows[$i].dir.FullName -ne $fromDir){ W (" [{0}] {1}  {2}" -f ($i+1),$rows[$i].dir.Name,$rows[$i].status) Yellow }
+  }
+  $sel=Read-Host "numero_destino"
+  if(-not($sel -as [int])){ return }
+  $ix=[int]$sel-1
+  if($ix -lt 0 -or $ix -ge $rows.Count -or $rows[$ix].dir.FullName -eq $fromDir){ return }
+  $rel=Read-Host "tipo_relacion"
+  if([string]::IsNullOrWhiteSpace($rel)){ $rel="relates_to" }
+  $j=ReadMod $fromDir
+  $rels=@()
+  if($j.relations){ $rels += @($j.relations) }
+  $rels += [pscustomobject]@{ to=$rows[$ix].dir.Name; relation=$rel; created_at=(Get-Date).ToString("s") }
+  $j | Add-Member -NotePropertyName relations -NotePropertyValue $rels -Force
+  SaveMod $fromDir $j
+  RefreshGraph $p
+  W "OK relacion_creada" Green
+  P
+}
+
+function DeleteProjectModule($p,$dir){
+  Clear-Host; W "==== BORRAR MODULO DEL PROYECTO ====" Red
+  W $dir Yellow
+  W "Esto borra el modulo del proyecto activo, no de la biblioteca." Yellow
+  $c=Read-Host "escribe BORRAR para confirmar"
+  if($c -ne "BORRAR"){ W "CANCELADO" Yellow; P; return }
+  Remove-Item $dir -Recurse -Force
+  RefreshGraph $p
+  W "OK modulo_borrado_del_proyecto" Green
+  P
+}
+
+function ProjectModuleMenu($p,$row){
+  while($true){
+    $dir=$row.dir.FullName
+    $j=ReadMod $dir
+    Clear-Host
+    W "==== MODULO DEL PROYECTO ====" Cyan
+    W ("nombre: {0}" -f $row.dir.Name) White
+    W ("estado: {0}" -f (ModStatus $dir)) Green
+    W ("ruta: {0}" -f $dir) DarkCyan
+    W ""
+    W "RELACIONES" Cyan
+    if($j.relations){ foreach($r in @($j.relations)){ W (" - {0} : {1}" -f $r.to,$r.relation) Yellow } }
+    else { W " - sin relaciones" DarkGray }
+    W ""
+    W "o = abrir | j = ver json | h = historico | r = reactivar | c = copiar a biblioteca | e = relacionar | x = borrar del proyecto | b = atras" Cyan
+    $cmd=Read-Host "MODULO"
+    if($cmd -eq "b"){ return }
+    if($cmd -eq "o"){ Start-Process explorer.exe $dir; continue }
+    if($cmd -eq "j"){ Clear-Host; $mj=Join-Path $dir "module.json"; if(Test-Path $mj){ Get-Content $mj -Raw | Write-Host }else{ W "sin module.json" Yellow }; P; continue }
+    if($cmd -eq "h"){ $j | Add-Member -NotePropertyName status -NotePropertyValue "HISTORICO" -Force; SaveMod $dir $j; RefreshGraph $p; W "OK status=HISTORICO" Green; P; return }
+    if($cmd -eq "r"){ $j | Add-Member -NotePropertyName status -NotePropertyValue "ACTIVO" -Force; SaveMod $dir $j; RefreshGraph $p; W "OK status=ACTIVO" Green; P; return }
+    if($cmd -eq "c"){ $dst=Join-Path "C:\ENGREMIAT_CORE\library\modules" $row.dir.Name; if(Test-Path $dst){ $dst=$dst+"_"+(Get-Date -Format "yyyyMMddHHmmss") }; Copy-Item $dir $dst -Recurse -Force; W "OK copiado_a_biblioteca=$dst" Green; P; continue }
+    if($cmd -eq "e"){ CreateRelation $p $dir; return }
+    if($cmd -eq "x"){ DeleteProjectModule $p $dir; return }
+  }
+}
+
+function Main($p){
+  $view="ACTIVOS"
+  while($true){
+    RefreshGraph $p
+    $rows=ProjectRows $p $view
+    Clear-Host
+    W "==== MODULOS DEL PROYECTO ====" Cyan
+    W (Split-Path $p -Leaf) White
+    W (Join-Path $p "MODULOS") DarkCyan
+    W ""
+    W ("VISTA: {0}" -f $view) Magenta
+    W "numero = abrir modulo | a = activos | h = historicos | t = todos | n = nuevo modulo | l = biblioteca/importar | b = atras | Enter = refrescar" Cyan
+    W ""
+    for($i=0;$i -lt $rows.Count;$i++){
+      W (" [{0}] {1}  {2}" -f ($i+1),$rows[$i].dir.Name,$rows[$i].status) $(if($rows[$i].status -match "HIST"){"DarkYellow"}elseif($rows[$i].status -eq "INVALID_JSON"){"Red"}else{"Green"})
+    }
+    W ""
+    $cmd=Read-Host "MODULOS"
+    if([string]::IsNullOrWhiteSpace($cmd)){ continue }
+    if($cmd -eq "b"){ break }
+    if($cmd -eq "a"){ $view="ACTIVOS"; continue }
+    if($cmd -eq "h"){ $view="HISTORICOS"; continue }
+    if($cmd -eq "t"){ $view="TODOS"; continue }
+    if($cmd -eq "n"){ AddProjectModule $p; continue }
+    if($cmd -eq "l"){ LibraryScreen $p; continue }
+    if($cmd -as [int]){
+      $ix=[int]$cmd-1
+      if($ix -ge 0 -and $ix -lt $rows.Count){ ProjectModuleMenu $p $rows[$ix] }
+      else { W "WARN modulo_no_existe_en_lista_actual" Yellow; P }
+    }
+  }
+}
+
+$ProjectPath=ActiveProject $ProjectPath
+Main $ProjectPath
+
+

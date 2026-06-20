@@ -1,0 +1,38 @@
+﻿{
+    "objective":  "ENGREMIAT_REAL_VALUE_TASK_EXECUTION_LOOP_112_121",
+    "stage":  "E112",
+    "name":  "Real Value Task Model",
+    "version":  "1.12.0-local",
+    "purpose":  "Definir una tarea pequena de valor real, verificable, local-first y gobernada por humano.",
+    "task_model_id":  "RVT-112-MODEL",
+    "task_scale":  "SMALL_VERIFIABLE_LOCAL_TASK",
+    "value_definition":  "Debe producir una evidencia observable o una mejora local concreta, sin auto_apply ni ejecucion externa.",
+    "allowed_task_types":  [
+                               "CREATE_SAFE_LOCAL_ARTIFACT",
+                               "UPDATE_LOCAL_DASHBOARD_ENTRY",
+                               "ADD_LOCAL_EVIDENCE_RECORD",
+                               "PREPARE_HUMAN_REVIEW_PACKET"
+                           ],
+    "required_flow":  [
+                          "task_intake",
+                          "success_criteria",
+                          "proposal",
+                          "preview",
+                          "human_authorization",
+                          "controlled_apply_or_no_go",
+                          "postcheck",
+                          "evidence_update",
+                          "dashboard_refresh",
+                          "close"
+                      ],
+    "default_decision":  "DEFER",
+    "task_executes":  false,
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "kanban_real_write":  false,
+    "created_utc":  "2026-06-17T12:05:29.1496091Z"
+}

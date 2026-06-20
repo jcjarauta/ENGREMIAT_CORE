@@ -1,0 +1,29 @@
+﻿{
+    "package_id":  "ENGREMIAT_PROJECT_BUILDER_TO_WORKER_LOOP_001",
+    "stage":  "E05_BUILD_WORKER_PACKET_PREVIEW_AFTER_APPROVAL",
+    "manifest_id":  "worker-packet-preview-manifest.v1",
+    "files":  [
+                  "C:\\ENGREMIAT_CORE\\data\\project-builder-to-worker-loop\\worker-packet-preview.json",
+                  "C:\\ENGREMIAT_CORE\\data\\project-builder-to-worker-loop\\roadmap-proposal.preview.json",
+                  "C:\\ENGREMIAT_CORE\\data\\project-builder-to-worker-loop\\roadmap-approval-gate.json"
+              ],
+    "checks":  [
+                   {
+                       "check":  "execute_now_false",
+                       "expected":  true
+                   },
+                   {
+                       "check":  "worker_authorization_not_granted",
+                       "expected":  true
+                   },
+                   {
+                       "check":  "no_network",
+                       "expected":  true
+                   },
+                   {
+                       "check":  "no_git_write",
+                       "expected":  true
+                   }
+               ],
+    "status":  "PREVIEW_ONLY"
+}

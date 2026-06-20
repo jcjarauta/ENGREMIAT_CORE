@@ -1,0 +1,22 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_ACTION_TEMPLATE_017",
+    "stage":  "E04",
+    "template":  "controlled-action-postcheck-template",
+    "purpose":  "Detectar efectos colaterales y escrituras no autorizadas",
+    "required":  true,
+    "checks":  [
+                   "apply_executed_is_false_unless_gate_approved",
+                   "auto_apply_false",
+                   "remote_execution_false",
+                   "git_write_false_unless_authorized",
+                   "receipt_exists",
+                   "unauthorized_writes_false",
+                   "side_effects_false"
+               ],
+    "default_result":  {
+                           "side_effects_detected":  false,
+                           "unauthorized_writes_detected":  false,
+                           "postcheck_status":  "SAFE_BLOCKED_OR_VERIFIED"
+                       },
+    "status":  "TEMPLATE_READY"
+}

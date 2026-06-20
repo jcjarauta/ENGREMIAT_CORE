@@ -1,0 +1,95 @@
+﻿{
+    "map_id":  "tool-capability-map.v1",
+    "principle":  "Las herramientas heredan gates por capacidad.",
+    "tools":  [
+                  {
+                      "tool":  "OpenWebUI",
+                      "capabilities":  [
+                                           "READ",
+                                           "PLAN",
+                                           "CLASSIFY",
+                                           "CREATE_TASK"
+                                       ],
+                      "blocked":  [
+                                      "WRITE",
+                                      "EXECUTE",
+                                      "OFFICIALIZE_RESOURCE"
+                                  ]
+                  },
+                  {
+                      "tool":  "Ollama",
+                      "capabilities":  [
+                                           "READ",
+                                           "INFER",
+                                           "PLAN",
+                                           "CLASSIFY"
+                                       ],
+                      "blocked":  [
+                                      "WRITE",
+                                      "EXECUTE",
+                                      "PUBLISH_RESOURCE"
+                                  ]
+                  },
+                  {
+                      "tool":  "OpenClaw",
+                      "capabilities":  [
+                                           "READ",
+                                           "PLAN",
+                                           "AGENT_EXECUTE",
+                                           "SCRIPT_RUN"
+                                       ],
+                      "blocked":  [
+                                      "WRITE_WITHOUT_GATE",
+                                      "EXECUTE_WITHOUT_GATE"
+                                  ]
+                  },
+                  {
+                      "tool":  "Cline",
+                      "capabilities":  [
+                                           "READ",
+                                           "PLAN",
+                                           "CREATE_TASK",
+                                           "SCRIPT_RUN",
+                                           "AGENT_EXECUTE"
+                                       ],
+                      "blocked":  [
+                                      "AUTO_APPROVE_WITHOUT_GATE"
+                                  ]
+                  },
+                  {
+                      "tool":  "Kanban",
+                      "capabilities":  [
+                                           "READ",
+                                           "CREATE_TASK",
+                                           "CLOSE_TASK",
+                                           "PLAN"
+                                       ],
+                      "blocked":  [
+                                      "SOURCE_OF_TRUTH_FINAL"
+                                  ]
+                  },
+                  {
+                      "tool":  "Obsidian",
+                      "capabilities":  [
+                                           "READ",
+                                           "WRITE",
+                                           "CREATE_RESOURCE"
+                                       ],
+                      "blocked":  [
+                                      "OFFICIALIZE_RESOURCE_WITHOUT_GATE"
+                                  ]
+                  },
+                  {
+                      "tool":  "Sheets",
+                      "capabilities":  [
+                                           "READ",
+                                           "WRITE",
+                                           "CREATE_PROJECT",
+                                           "CREATE_TASK"
+                                       ],
+                      "blocked":  [
+                                      "MODULE_ACTIVATION_DIRECT"
+                                  ]
+                  }
+              ]
+}

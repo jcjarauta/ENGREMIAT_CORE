@@ -1,0 +1,17 @@
+﻿{
+    "module_id":  "ENGREMIAT_EXAMPLE_FROM_SHEETS_001",
+    "contract_id":  "ENGREMIAT_EXAMPLE_FROM_SHEETS_001.contract.v1",
+    "purpose":  "Crear un modulo candidato desde una fila humana de Sheets.",
+    "rules":  [
+                  "No activo hasta gate humano",
+                  "No core changes",
+                  "No Git write",
+                  "No red externa"
+              ],
+    "gates":  {
+                  "human_gate":  "REQUIRED",
+                  "requires_core_change":  false,
+                  "requires_real_write":  false,
+                  "requires_external_api":  false
+              }
+}

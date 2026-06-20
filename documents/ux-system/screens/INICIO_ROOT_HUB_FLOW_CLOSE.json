@@ -1,0 +1,36 @@
+﻿{
+    "package_id":  "ENGREMIAT_UX_SYSTEM_001",
+    "stage":  "E50_CLOSE_INICIO_ROOT_HUB_FLOW",
+    "closed_at":  "2026-06-20T10:23:40",
+    "status":  "PASS",
+    "readiness":  100,
+    "human_validation":  "Inicio normalizado abre flujo documental hasta Data Intake normalizado y estado OK",
+    "validated_flow":  [
+                           "INICIO [2] Memoria y documentacion",
+                           "DOCUMENTACION [3] Convocatorias y fichas",
+                           "CONVOCATORIAS [4] Data Intake",
+                           "DATA_INTAKE [7] Estado"
+                       ],
+    "artifacts":  {
+                      "inicio_normalized":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO-NORMALIZED.ps1",
+                      "documentation_center_normalized":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-MEMORY-DOCUMENTATION-CENTER-NORMALIZED.ps1",
+                      "data_intake_normalized":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-DATA-INTAKE-CENTER-NORMALIZED.ps1",
+                      "active_profile":  "C:\\ENGREMIAT_CORE\\documents\\grants\\grant-call-profile-latest.json",
+                      "normalized_profiles_dir":  "C:\\ENGREMIAT_CORE\\documents\\intake\\normalized"
+                  },
+    "validated":  [
+                      "hub raiz por bloques",
+                      "header limpio",
+                      "paleta UX",
+                      "numeracion local por pantalla",
+                      "conexion Inicio -\u003e Centro Documental normalizado",
+                      "conexion Centro Documental -\u003e Data Intake normalizado",
+                      "estado Data Intake OK",
+                      "perfiles normalizados visibles"
+                  ],
+    "decision":  "Mantener legacy como respaldo; usar este flujo como referencia estable para normalizar los siguientes bloques",
+    "next":  "E51_SELECT_NEXT_ROOT_HUB_BLOCK_TO_WIRE",
+    "network_used":  false,
+    "external_ai_used":  false,
+    "commit_done":  false
+}

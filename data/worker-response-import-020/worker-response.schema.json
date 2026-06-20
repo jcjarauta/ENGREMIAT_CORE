@@ -1,0 +1,53 @@
+﻿{
+    "$schema":  "https://json-schema.org/draft/2020-12/schema",
+    "title":  "ENGREMIAT Worker Response Schema",
+    "type":  "object",
+    "required":  [
+                     "summary",
+                     "proposed_files",
+                     "proposed_content",
+                     "validation_commands",
+                     "evidence_paths",
+                     "risks",
+                     "decision"
+                 ],
+    "properties":  {
+                       "summary":  {
+                                       "type":  "string"
+                                   },
+                       "proposed_files":  {
+                                              "type":  "array",
+                                              "items":  {
+                                                            "type":  "string"
+                                                        }
+                                          },
+                       "proposed_content":  {
+                                                "type":  "string"
+                                            },
+                       "validation_commands":  {
+                                                   "type":  "array",
+                                                   "items":  {
+                                                                 "type":  "string"
+                                                             }
+                                               },
+                       "evidence_paths":  {
+                                              "type":  "array",
+                                              "items":  {
+                                                            "type":  "string"
+                                                        }
+                                          },
+                       "risks":  {
+                                     "type":  "array",
+                                     "items":  {
+                                                   "type":  "string"
+                                               }
+                                 },
+                       "decision":  {
+                                        "type":  "string",
+                                        "enum":  [
+                                                     "GO",
+                                                     "NO_GO"
+                                                 ]
+                                    }
+                   }
+}

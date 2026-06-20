@@ -1,0 +1,25 @@
+﻿{
+    "schema_id":  "build-package-output.schema.v1",
+    "required":  [
+                     "build_package_id",
+                     "source_blueprint_id",
+                     "package_items",
+                     "execution_policy",
+                     "gate"
+                 ],
+    "fields":  [
+                   "build_package_id",
+                   "source_blueprint_id",
+                   "package_items",
+                   "files_to_create",
+                   "tasks_to_create",
+                   "resources_to_link",
+                   "manual_steps",
+                   "execution_policy",
+                   "dry_run",
+                   "evidence_plan",
+                   "gate",
+                   "status"
+               ],
+    "rule":  "Prepara montaje sin ejecucion real."
+}

@@ -1,0 +1,18 @@
+﻿{
+    "summary":  "Worker propone nota tecnica segura y revisable.",
+    "proposed_files":  [
+                           "docs/WORKER_TASK_EVIDENCE_NOTE.md"
+                       ],
+    "proposed_content":  "# WORKER TASK EVIDENCE NOTE",
+    "validation_commands":  [
+                                "Test-Path docs/WORKER_TASK_EVIDENCE_NOTE.md"
+                            ],
+    "evidence_paths":  [
+                           "docs/WORKER_TASK_EVIDENCE_NOTE.md",
+                           "reports/worker-response-import-020/worker-response-validation-report.json"
+                       ],
+    "risks":  [
+                  "No aplicar sin gate humano."
+              ],
+    "decision":  "GO"
+}

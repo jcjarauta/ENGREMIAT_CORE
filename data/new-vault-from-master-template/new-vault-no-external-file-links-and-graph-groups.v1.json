@@ -1,0 +1,44 @@
+﻿{
+    "package_id":  "ENGREMIAT_NEW_VAULT_FROM_MASTER_TEMPLATE_001",
+    "stage":  "E07_FIX_OBSIDIAN_EXTERNAL_FILE_LINKS_AND_GROUPS",
+    "status":  "PASS",
+    "vault_path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146",
+    "groups":  9,
+    "views":  9,
+    "unsafe_file_syntax_remaining":  1,
+    "unsafe_files":  [
+                         "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\00_CONTROL_OPERATIVO\\GRAPH_VIEW_SELECTOR.md"
+                     ],
+    "changes":  [
+                    {
+                        "kind":  "removed_external_file_syntax_from_markdown",
+                        "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\00_CONTROL_OPERATIVO\\GRAPH_VIEW_SELECTOR.md"
+                    },
+                    {
+                        "kind":  "rewrote_obsidian_graph_groups_safe_queries",
+                        "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\.obsidian\\graph.json",
+                        "groups":  9
+                    },
+                    {
+                        "kind":  "rewrote_selector_without_file_uri_syntax",
+                        "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\00_CONTROL_OPERATIVO\\GRAPH_VIEW_SELECTOR.md"
+                    }
+                ],
+    "changes_count":  3,
+    "graph_json":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\.obsidian\\graph.json",
+    "selector":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\00_CONTROL_OPERATIVO\\GRAPH_VIEW_SELECTOR.md",
+    "manual_note":  "Close and reopen the Obsidian vault if Groups panel is still empty.",
+    "safety":  {
+                   "local_only":  true,
+                   "new_vault_only":  true,
+                   "template_write":  false,
+                   "preview_only":  true,
+                   "obsidian_app_automation":  false,
+                   "worker_execution":  false,
+                   "kanban_write":  false,
+                   "clien_write":  false,
+                   "git_write":  false,
+                   "external_network":  false
+               },
+    "next":  "REOPEN_OBSIDIAN_VAULT_AND_VALIDATE_GROUPS_PANEL"
+}

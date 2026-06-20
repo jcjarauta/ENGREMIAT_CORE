@@ -1,0 +1,31 @@
+﻿{
+    "status":  "PASS_READONLY",
+    "prueba7_vs_prueba11":  {
+                                "Name":  "prueba7_vs_prueba11",
+                                "Source":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\\ENGREMIAT_PROJECT_prueba-7_20260620-004632\\BOVEDA_PROYECTO\\00_PLANTILLA_MAESTRA_OFICIAL",
+                                "Target":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\\ENGREMIAT_PROJECT_prueba11_20260620-011017\\BOVEDA_PROYECTO\\00_PLANTILLA_MAESTRA_OFICIAL",
+                                "Same":  40,
+                                "Missing":  0,
+                                "Extra":  0,
+                                "Different":  0,
+                                "Tsv":  "C:\\ENGREMIAT_CORE\\reports\\operator-template-canonicalization\\e12-prueba7-vs-prueba11-exact-diff-20260620-012232.tsv",
+                                "SourceFiles":  40,
+                                "TargetFiles":  40,
+                                "Exact":  true
+                            },
+    "prueba7_vs_core":  {
+                            "Name":  "prueba7_vs_core",
+                            "Source":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\\ENGREMIAT_PROJECT_prueba-7_20260620-004632\\BOVEDA_PROYECTO\\00_PLANTILLA_MAESTRA_OFICIAL",
+                            "Target":  "C:\\ENGREMIAT_CORE\\templates\\MASTER_PROJECT_TEMPLATE_V2",
+                            "Same":  40,
+                            "Missing":  0,
+                            "Extra":  0,
+                            "Different":  0,
+                            "Tsv":  "C:\\ENGREMIAT_CORE\\reports\\operator-template-canonicalization\\e12-prueba7-vs-core-exact-diff-20260620-012232.tsv",
+                            "SourceFiles":  40,
+                            "TargetFiles":  40,
+                            "Exact":  true
+                        },
+    "summary":  "C:\\ENGREMIAT_CORE\\reports\\operator-template-canonicalization\\E12_EXACT_DIFF_AUDIT_20260620-012232.md",
+    "next":  "review_tsv_then_sync_exact_or_exclude_volatiles"
+}

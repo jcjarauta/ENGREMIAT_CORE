@@ -1,0 +1,17 @@
+﻿{
+    "include_patterns":  [
+                             "*validation-report.json",
+                             "*close*.json",
+                             "*feedback*.json",
+                             "NEXT_OBJECTIVE.md",
+                             "HUMAN_MACHINE_MANUAL.md",
+                             "module.json"
+                         ],
+    "exclude_dirs":  [
+                         ".git",
+                         "node_modules",
+                         "dist"
+                     ],
+    "max_files":  5000,
+    "readonly":  true
+}

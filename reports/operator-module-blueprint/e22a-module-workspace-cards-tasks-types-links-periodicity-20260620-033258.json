@@ -1,0 +1,18 @@
+﻿{
+    "package":  "ENGREMIAT_MODULE_WORKSPACE_FLOW",
+    "stage":  "E22A_CREATE_MODULE_WORKSPACE_SCREEN",
+    "status":  "PASS",
+    "workspace_screen":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-module-workspace-screen.ps1",
+    "library_screen":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-module-library-screen.ps1",
+    "new_command":  "BIB_MOD w espacio de trabajo",
+    "collections":  [
+                        "tarjetas",
+                        "tareas",
+                        "tipos",
+                        "enlaces",
+                        "periodicidad",
+                        "estado"
+                    ],
+    "pattern":  "same_numbered_screen_pattern_for_module_subresources",
+    "next":  "abrir_ficha_modulo_biblioteca_y_pulsar_w"
+}

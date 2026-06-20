@@ -1,0 +1,30 @@
+﻿{
+    "objective_id":  "DEFINE_REAL_CONTROLLED_FILE_TO_OLLAMA_EXECUTION_MVP_162_171",
+    "stage":  "E162",
+    "status":  "READY",
+    "readiness":  100,
+    "decision":  "DEFER",
+    "execution_allowed":  false,
+    "local_only":  true,
+    "external_network":  false,
+    "git_write":  false,
+    "kanban_real_write":  false,
+    "cline_real_write":  false,
+    "auto_apply":  false,
+    "destructive_actions":  false,
+    "ready_task_found":  true,
+    "scope_contract_created":  true,
+    "safety_policy_created":  true,
+    "selected_ready_task_created":  true,
+    "next":  "E163 Ollama Preflight",
+    "blockers":  [
+                     "Real Ollama execution is not allowed in E162.",
+                     "E166 will require explicit authorization."
+                 ],
+    "outputs":  [
+                    "C:\\ENGREMIAT_CORE\\data\\real-ollama-execution-162\\real-ollama-execution-contract.json",
+                    "C:\\ENGREMIAT_CORE\\data\\real-ollama-execution-162\\real-execution-safety-policy.json",
+                    "C:\\ENGREMIAT_CORE\\data\\real-ollama-execution-162\\selected-ready-task.json",
+                    "C:\\ENGREMIAT_CORE\\reports\\real-ollama-execution-162\\e162-real-execution-scope-readiness-report.json"
+                ]
+}

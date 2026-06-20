@@ -1,0 +1,20 @@
+﻿{
+    "package_id":  "ENGREMIAT_MODULE_CREATION_FLOW_001",
+    "stage":  "E01_COMMAND_NUEVO_MODULO_RUNTIME",
+    "status":  "PASS",
+    "readiness":  100,
+    "decision":  "GO_NEW_MODULE_CREATED_AND_LINKED",
+    "project_home":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-162809",
+    "master_vault":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-162809\\BOVEDA_MAESTRA",
+    "module_id":  "MODULE_modulo1",
+    "module_home":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-162809\\MODULOS\\MODULE_modulo1",
+    "module_vault":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-162809\\MODULOS\\MODULE_modulo1\\BOVEDA_MODULO",
+    "open_cmd":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-162809\\MODULOS\\MODULE_modulo1\\ABRIR_BOVEDA_MODULO.cmd",
+    "safety":  {
+                   "local_only":  true,
+                   "worker_real":  false,
+                   "git":  false,
+                   "network":  false
+               },
+    "next":  "revisar-modulo"
+}

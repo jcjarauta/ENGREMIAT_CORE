@@ -1,0 +1,38 @@
+﻿$ErrorActionPreference="Stop"
+[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+$Root=(Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
+Set-Location -LiteralPath $Root
+function L($m,$c="Gray"){Write-Host $m -ForegroundColor $c}
+function RunScript($name){$p=Join-Path $PSScriptRoot $name;if(!(Test-Path -LiteralPath $p)){throw "missing_script $p"};& powershell -NoProfile -ExecutionPolicy Bypass -File $p}
+function Ctx($sub){& powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot "eng-context.ps1") $sub}
+function HasActiveProject(){ $s=Get-Content -LiteralPath (Join-Path $Root "data\operator-state\active-context.json") -Raw -Encoding UTF8|ConvertFrom-Json; return ![string]::IsNullOrWhiteSpace($s.active_project) }
+function HasActiveModule(){ $s=Get-Content -LiteralPath (Join-Path $Root "data\operator-state\active-context.json") -Raw -Encoding UTF8|ConvertFrom-Json; return ![string]::IsNullOrWhiteSpace($s.active_module_vault) }
+function ShowCommands(){
+  L "COMANDOS ENGREMIAT" Cyan
+  L "" Gray
+  L "Globales" Cyan
+  @("estado","ayuda","comandos","proyectos","abrir-proyecto","nuevo-proyecto","ultimo","dashboard","salir")|ForEach-Object{L (" - "+$_) Green}
+  if(HasActiveProject){L "" Gray;L "Proyecto activo" Cyan;@("proyecto","abrir-master","revisar-proyecto","modulos","abrir-modulo","nuevo-modulo")|ForEach-Object{L (" - "+$_) Green}}
+  if(HasActiveModule){L "" Gray;L "Modulo activo" Cyan;@("modulo","abrir-modulo","contrato","tareas","evidencias","gates","preparar-smoke")|ForEach-Object{L (" - "+$_) Green}}
+}
+$cmd=if($args.Count -gt 0){([string]$args[0]).Trim().ToLowerInvariant()}else{"ayuda"}
+if($cmd -eq "estado"){RunScript "eng-status.ps1";exit}
+elseif($cmd -eq "ayuda" -or $cmd -eq "help" -or $cmd -eq "?"){Get-Content -LiteralPath (Join-Path $PSScriptRoot "ENGREMIAT_OPERATOR_HELP.md") -Encoding UTF8;exit}
+elseif($cmd -eq "comandos"){ShowCommands;exit}
+elseif($cmd -eq "proyectos"){Ctx "projects";exit}
+elseif($cmd -eq "abrir-proyecto"){Ctx "open-project";exit}
+elseif($cmd -eq "proyecto"){Ctx "show";exit}
+elseif($cmd -eq "modulos"){Ctx "modules";exit}
+elseif($cmd -eq "abrir-modulo"){Ctx "open-module";exit}
+elseif($cmd -eq "ultimo"){Get-ChildItem -LiteralPath (Join-Path $Root "reports") -Recurse -File -Filter "*.json" -ErrorAction SilentlyContinue|Sort-Object LastWriteTime -Descending|Select-Object -First 8|ForEach-Object{L $_.FullName Yellow};exit}
+elseif($cmd -eq "dashboard" -or $cmd -eq "abrir-dashboard"){$h=Get-ChildItem -LiteralPath (Join-Path $Root "dashboard") -Recurse -File -Filter "*.html" -ErrorAction SilentlyContinue|Sort-Object LastWriteTime -Descending|Select-Object -First 1;if($h){Start-Process $h.FullName;L ("OK dashboard="+$h.FullName) Green}else{L "WARN no_dashboard_found" Yellow};exit}
+elseif($cmd -eq "nuevo-proyecto"){RunScript "eng-new-project.ps1";exit}
+elseif($cmd -eq "revisar-proyecto"){if(!(HasActiveProject)){L "WARN abre primero un proyecto con abrir-proyecto" Yellow;exit};RunScript "eng-review-project.ps1";exit}
+elseif($cmd -eq "nuevo-modulo"){if(!(HasActiveProject)){L "WARN abre primero un proyecto con abrir-proyecto" Yellow;exit};RunScript "eng-new-module.ps1";exit}
+elseif($cmd -eq "contrato"){if(!(HasActiveModule)){L "WARN abre primero un modulo con abrir-modulo" Yellow;exit};L "NEXT contrato: usar flujo E03/E04 existente sobre modulo activo" Cyan;exit}
+elseif($cmd -eq "tareas"){if(!(HasActiveModule)){L "WARN abre primero un modulo con abrir-modulo" Yellow;exit};L "NEXT tareas: generar o revisar tareas del modulo activo" Cyan;exit}
+elseif($cmd -eq "evidencias"){if(!(HasActiveModule)){L "WARN abre primero un modulo con abrir-modulo" Yellow;exit};L "NEXT evidencias: revisar evidencias del modulo activo" Cyan;exit}
+elseif($cmd -eq "gates"){if(!(HasActiveModule)){L "WARN abre primero un modulo con abrir-modulo" Yellow;exit};L "NEXT gates: revisar gates del modulo activo" Cyan;exit}
+elseif($cmd -eq "preparar-smoke"){if(!(HasActiveModule)){L "WARN abre primero un modulo con abrir-modulo" Yellow;exit};L "NEXT preparar-smoke: usar gate antes de simulacion" Cyan;exit}
+elseif($cmd -eq "salir" -or $cmd -eq "exit" -or $cmd -eq "q"){L "Saliendo ENGREMIAT." Cyan;exit}
+else{L ("WARN comando_no_reconocido="+$cmd) Yellow;ShowCommands;exit 0}

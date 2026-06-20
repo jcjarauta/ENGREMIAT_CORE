@@ -1,0 +1,64 @@
+﻿{
+    "package":  "DOCKER_CLI_ENGINE_DIAG_001",
+    "created_at":  "2026-06-18T11:48:52",
+    "checks":  {
+                   "docker_version":  {
+                                          "ok":  false,
+                                          "timeout":  false,
+                                          "exit_code":  null,
+                                          "out":  "Client:\n Version:           29.5.3\n API version:       1.54\n Go version:        go1.26.4\n Git commit:        d1c06ef\n Built:             Wed Jun  3 18:03:06 2026\n OS/Arch:           windows/amd64\n Context:           desktop-linux\n\nServer: Docker Desktop 4.78.0 (229452)\n Engine:\n  Version:          29.5.3\n  API version:      1.54 (minimum version 1.40)\n  Go version:       go1.26.4\n  Git commit:       285b471\n  Built:            Wed Jun  3 17:59:56 2026\n  OS/Arch:          linux/amd64\n  Experimental:     false\n containerd:\n  Version:          v2.2.4\n  GitCommit:        193637f7ee8ae5f5aa5248f49e7baa3e6164966e\n runc:\n  Version:          1.3.5\n  GitCommit:        v1.3.5-0-g488fc13e\n docker-init:\n  Version:          0.19.0\n  GitCommit:        de40ad0\n",
+                                          "err":  ""
+                                      },
+                   "docker_info":  {
+                                       "ok":  false,
+                                       "timeout":  false,
+                                       "exit_code":  null,
+                                       "out":  "Client:\n Version:    29.5.3\n Context:    desktop-linux\n Debug Mode: false\n Plugins:\n  agent: Docker AI Agent Runner (Docker Inc.)\n    Version:  v1.73.0\n    Path:     C:\\Program Files\\Docker\\cli-plugins\\docker-agent.exe\n  ai: Docker AI Agent - Ask Gordon (Docker Inc.)\n    Version:  v1.25.0\n    Path:     C:\\Program Files\\Docker\\cli-plugins\\docker-ai.exe\n  buildx: Docker Buildx (Docker Inc.)\n    Version:  v0.34.1-desktop.1\n    Path:     C:\\Program Files\\Docker\\cli-plugins\\docker-buildx.exe\n  compose: Docker Compose (Docker Inc.)\n    Version:  v5.1.4\n    Path:     C:\\Program Files\\Docker\\cli-plugins\\docker-compose.exe\n  debug: Get a shell into any image or container (Docker Inc.)\n    Version:  0.0.47\n    Path:     C:\\Program Files\\Docker\\cli-plugins\\docker-debug.exe\n  desktop: Docker Desktop commands (Docker Inc.)\n    Version:  v0.3.0\n    Path:     C:\\Program Files\\Docker\\cli-plugins\\docker-desktop.exe\n  dhi: CLI for managing Docker Hardened Images (Docker Inc.)\n    Version:  v0.0.4\n    Path:     C:\\Program Files\\Docker\\cli-plugins\\docker-dhi.exe\n  extension: Manages Docker extensions (Docker Inc.)\n    Version:  v0.2.31\n    Path:     C:\\Program Files\\Docker\\cli-plugins\\docker-extension.exe\n  init: Creates Docker-related starter files for your project (Docker Inc.)\n    Version:  v1.4.0\n    Path:     C:\\Program Files\\Docker\\cli-plugins\\docker-init.exe\n  mcp: Docker MCP Plugin (Docker Inc.)\n    Version:  v0.42.2\n    Path:     C:\\Program Files\\Docker\\cli-plugins\\docker-mcp.exe\n  model: Docker Model Runner (Docker Inc.)\n    Version:  v1.2.1\n    Path:     C:\\Program Files\\Docker\\cli-plugins\\docker-model.exe\n  offload: Docker Offload (Docker Inc.)\n    Version:  v0.6.3\n    Path:     C:\\Program Files\\Docker\\cli-plugins\\docker-offload.exe\n  pass: Docker Pass Secrets Manager Plugin (beta) (Docker Inc.)\n    Version:  v0.1.4\n    Path:     C:\\Program Files\\Docker\\cli-plugins\\docker-pass.exe\n  sandbox: Docker Sandbox (Docker Inc.)\n    Version:  v0.12.0\n    Path:     C:\\Program Files\\Docker\\cli-plugins\\docker-sandbox.exe\n  scout: Docker Scout (Docker Inc.)\n    Version:  v1.21.0\n    Path:     C:\\Program Files\\Docker\\cli-plugins\\docker-scout.exe\n\nServer:\n Containers: 0\n  Running: 0\n  Paused: 0\n  Stopped: 0\n Images: 0\n Server Version: 29.5.3\n Storage Driver: overlayfs\n  driver-type: io.containerd.snapshotter.v1\n Logging Driver: json-file\n Cgroup Driver: cgroupfs\n Cgroup Version: 2\n Plugins:\n  Volume: local\n  Network: bridge host ipvlan macvlan null overlay\n  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog\n CDI spec directories:\n  /etc/cdi\n  /var/run/cdi\n Discovered Devices:\n  cdi: docker.com/gpu=webgpu\n Swarm: inactive\n Runtimes: runc io.containerd.runc.v2 nvidia\n Default Runtime: runc\n Init Binary: docker-init\n containerd version: 193637f7ee8ae5f5aa5248f49e7baa3e6164966e\n runc version: v1.3.5-0-g488fc13e\n init version: de40ad0\n Security Options:\n  seccomp\n   Profile: builtin\n  cgroupns\n Kernel Version: 6.18.33.1-microsoft-standard-WSL2\n Operating System: Docker Desktop\n OSType: linux\n Architecture: x86_64\n CPUs: 16\n Total Memory: 31.3GiB\n Name: docker-desktop\n ID: 03bf4b76-e76c-4ff1-b56a-ae9c97bcc773\n Docker Root Dir: /var/lib/docker\n Debug Mode: false\n HTTP Proxy: http.docker.internal:3128\n HTTPS Proxy: http.docker.internal:3128\n No Proxy: hubproxy.docker.internal\n Labels:\n  com.docker.desktop.address=npipe://\\\\.\\pipe\\docker_cli\n Experimental: false\n Insecure Registries:\n  hubproxy.docker.internal:5555\n  ::1/128\n  127.0.0.0/8\n Live Restore Enabled: false\n Firewall Backend: iptables\n\n",
+                                       "err":  ""
+                                   },
+                   "docker_context_ls":  {
+                                             "ok":  false,
+                                             "timeout":  false,
+                                             "exit_code":  null,
+                                             "out":  "NAME              DESCRIPTION                               DOCKER ENDPOINT                             ERROR\ndefault           Current DOCKER_HOST based configuration   npipe:////./pipe/docker_engine              \ndesktop-linux *   Docker Desktop                            npipe:////./pipe/dockerDesktopLinuxEngine   \n",
+                                             "err":  ""
+                                         },
+                   "docker_context_show":  {
+                                               "ok":  false,
+                                               "timeout":  false,
+                                               "exit_code":  null,
+                                               "out":  "desktop-linux\n",
+                                               "err":  ""
+                                           },
+                   "wsl_status":  {
+                                      "ok":  false,
+                                      "timeout":  false,
+                                      "exit_code":  null,
+                                      "out":  "D\u0000i\u0000s\u0000t\u0000r\u0000i\u0000b\u0000u\u0000c\u0000i\u0000ó\u0000n\u0000 \u0000p\u0000r\u0000e\u0000d\u0000e\u0000t\u0000e\u0000r\u0000m\u0000i\u0000n\u0000a\u0000d\u0000a\u0000:\u0000 \u0000d\u0000o\u0000c\u0000k\u0000e\u0000r\u0000-\u0000d\u0000e\u0000s\u0000k\u0000t\u0000o\u0000p\u0000\r\u0000\n\u0000V\u0000e\u0000r\u0000s\u0000i\u0000ó\u0000n\u0000 \u0000p\u0000r\u0000e\u0000d\u0000e\u0000t\u0000e\u0000r\u0000m\u0000i\u0000n\u0000a\u0000d\u0000a\u0000:\u0000 \u00002\u0000\r\u0000\n\u0000",
+                                      "err":  ""
+                                  },
+                   "wsl_list":  {
+                                    "ok":  false,
+                                    "timeout":  false,
+                                    "exit_code":  null,
+                                    "out":  " \u0000 \u0000N\u0000A\u0000M\u0000E\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000S\u0000T\u0000A\u0000T\u0000E\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000V\u0000E\u0000R\u0000S\u0000I\u0000O\u0000N\u0000\r\u0000\n\u0000*\u0000 \u0000d\u0000o\u0000c\u0000k\u0000e\u0000r\u0000-\u0000d\u0000e\u0000s\u0000k\u0000t\u0000o\u0000p\u0000 \u0000 \u0000 \u0000 \u0000R\u0000u\u0000n\u0000n\u0000i\u0000n\u0000g\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u00002\u0000\r\u0000\n\u0000",
+                                    "err":  ""
+                                },
+                   "docker_desktop_proc":  {
+                                               "ok":  false,
+                                               "timeout":  false,
+                                               "exit_code":  null,
+                                               "out":  "\r\nNombre de imagen               PID Nombre de sesi¢n N£m. de ses Uso de memor\r\n========================= ======== ================ =========== ============\r\nDocker Desktop.exe           14676 Console                    1    12.828 KB\r\nDocker Desktop.exe           13240 Console                    1   141.612 KB\r\nDocker Desktop.exe           17020 Console                    1   114.776 KB\r\nDocker Desktop.exe           17072 Console                    1    52.380 KB\r\nDocker Desktop.exe           17972 Console                    1   152.152 KB\r\n",
+                                               "err":  ""
+                                           },
+                   "com_docker_service":  {
+                                              "ok":  false,
+                                              "timeout":  false,
+                                              "exit_code":  null,
+                                              "out":  "\r\nNOMBRE_DE_SERVICIO: com.docker.service \r\n        TIPO                         : 10  WIN32_OWN_PROCESS  \r\n        ESTADO                       : 1  STOPPED \r\n        CàDIGO_DE_SALIDA_DE_WIN32    : 1077  (0x435)\r\n        CàDIGO_DE_SALIDA_DEL_SERVICIO: 0  (0x0)\r\n        PUNTO_DE_CONTROL             : 0x0\r\n        ESPERA                       : 0x0\r\n",
+                                              "err":  ""
+                                          }
+               },
+    "decision":  "WARN_DOCKER_CONTEXT_OR_ENGINE_NOT_READY",
+    "next":  "SET_DOCKER_CONTEXT_DESKTOP_LINUX_AND_RERUN"
+}

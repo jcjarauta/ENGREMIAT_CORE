@@ -1,0 +1,15 @@
+﻿{
+    "schema":  "engremiat.task_rollback_pack.v1",
+    "objective":  "ENGREMIAT_REAL_VALUE_TASK_EXECUTION_LOOP_112_121",
+    "stage":  "E116",
+    "block":  "B116.1",
+    "step":  "P116.1.2",
+    "rollback_id":  "TASK-ROLLBACK-116-001",
+    "created_at":  "2026-06-17T14:13:43",
+    "reversible":  true,
+    "rollback_strategy":  "DELETE_LOCAL_APPLY_MARKER_AND_RESULT_ARTIFACTS_ONLY",
+    "rollback_targets":  [
+                             "data/task-controlled-apply-116/real-value-apply-marker.json"
+                         ],
+    "requires_external_action":  false
+}

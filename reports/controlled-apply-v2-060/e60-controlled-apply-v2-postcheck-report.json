@@ -1,0 +1,26 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_REAL_WORKER_DAILY_VALUE_LOOP_056_065",
+    "stage":  "E60",
+    "postcheck_id":  "E60_CONTROLLED_APPLY_V2_POSTCHECK",
+    "required_artifacts":  [
+                               "data\\controlled-apply-v2-060\\controlled-apply-v2-gate.json",
+                               "data\\controlled-apply-v2-060\\controlled-apply-v2-rollback-plan.json",
+                               "data\\controlled-apply-v2-060\\controlled-apply-v2-output.json",
+                               "data\\controlled-apply-v2-060\\controlled-apply-v2-output.rollback-before.json",
+                               "data\\controlled-apply-v2-060\\receipts\\controlled-apply-v2-receipt.json"
+                           ],
+    "missing":  [
+
+                ],
+    "json_ok":  true,
+    "policy_ok":  true,
+    "rollback_ready":  true,
+    "apply_executed":  true,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "decision":  "GO_E60_POSTCHECK_OK",
+    "created_at":  "2026-06-17T12:22:51"
+}

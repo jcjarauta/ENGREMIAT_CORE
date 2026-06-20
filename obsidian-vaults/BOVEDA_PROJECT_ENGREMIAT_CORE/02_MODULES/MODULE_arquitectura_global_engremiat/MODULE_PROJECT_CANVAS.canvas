@@ -1,0 +1,84 @@
+﻿{
+    "nodes":  [
+                  {
+                      "id":  "card",
+                      "type":  "file",
+                      "file":  "02_MODULES/MODULE_arquitectura_global_engremiat/MODULE_CARD.md",
+                      "x":  0,
+                      "y":  0,
+                      "width":  360,
+                      "height":  160,
+                      "color":  "2"
+                  },
+                  {
+                      "id":  "view",
+                      "type":  "file",
+                      "file":  "02_MODULES/MODULE_arquitectura_global_engremiat/MODULE_PROJECT_VIEW.md",
+                      "x":  -420,
+                      "y":  240,
+                      "width":  330,
+                      "height":  140,
+                      "color":  "3"
+                  },
+                  {
+                      "id":  "status",
+                      "type":  "file",
+                      "file":  "02_MODULES/MODULE_arquitectura_global_engremiat/MODULE_PROJECT_STATUS.md",
+                      "x":  0,
+                      "y":  260,
+                      "width":  330,
+                      "height":  140,
+                      "color":  "4"
+                  },
+                  {
+                      "id":  "evidence",
+                      "type":  "file",
+                      "file":  "02_MODULES/MODULE_arquitectura_global_engremiat/MODULE_PROJECT_EVIDENCE.md",
+                      "x":  420,
+                      "y":  240,
+                      "width":  330,
+                      "height":  140,
+                      "color":  "5"
+                  },
+                  {
+                      "id":  "modules_index",
+                      "type":  "file",
+                      "file":  "02_MODULES/PROJECT_MODULES_INDEX.md",
+                      "x":  0,
+                      "y":  -240,
+                      "width":  330,
+                      "height":  140,
+                      "color":  "1"
+                  }
+              ],
+    "edges":  [
+                  {
+                      "id":  "e1",
+                      "fromNode":  "modules_index",
+                      "fromSide":  "bottom",
+                      "toNode":  "card",
+                      "toSide":  "top"
+                  },
+                  {
+                      "id":  "e2",
+                      "fromNode":  "card",
+                      "fromSide":  "left",
+                      "toNode":  "view",
+                      "toSide":  "top"
+                  },
+                  {
+                      "id":  "e3",
+                      "fromNode":  "card",
+                      "fromSide":  "bottom",
+                      "toNode":  "status",
+                      "toSide":  "top"
+                  },
+                  {
+                      "id":  "e4",
+                      "fromNode":  "card",
+                      "fromSide":  "right",
+                      "toNode":  "evidence",
+                      "toSide":  "top"
+                  }
+              ]
+}

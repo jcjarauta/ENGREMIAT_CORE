@@ -1,0 +1,16 @@
+{
+    "package_id":  "ENGREMIAT_007E_PANEL_MAESTRO_OPERATIVO",
+    "status":  "PASS",
+    "stage":  "INIT_AND_E01",
+    "checks":  {
+                   "previous_panel_closed":  true,
+                   "contract_created":  true,
+                   "plan_created":  true,
+                   "snapshot_created":  true,
+                   "core_changes":  false,
+                   "external_network":  false,
+                   "git_write":  false,
+                   "real_integration":  false
+               },
+    "next":  "E02_TIMELINE_AND_HISTORY"
+}

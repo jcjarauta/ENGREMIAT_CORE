@@ -1,0 +1,110 @@
+﻿{
+    "objective":  "ENGREMIAT_MULTI_WORKER_ORCHESTRATION_AND_REAL_VALUE_PIPELINE_066_075",
+    "stage":  "E66",
+    "contract_id":  "E66_MULTI_WORKER_BOUNDARIES_CONTRACT",
+    "purpose":  "Evitar agentes libres definiendo limites por rol",
+    "global_rules":  [
+                         "Workers proponen, no ejecutan",
+                         "No auto_apply",
+                         "No remote_execution",
+                         "No git_write",
+                         "No external_network",
+                         "No Kanban real write",
+                         "No multi-agent autonomy",
+                         "Cada respuesta se importa y valida antes de decision humana"
+                     ],
+    "allowed_flow":  [
+                         "create_role_prompt",
+                         "manual_human_send_if_authorized",
+                         "capture_response",
+                         "quality_check",
+                         "human_arbitration",
+                         "controlled_apply_future_if_authorized"
+                     ],
+    "forbidden_flow":  [
+                           "worker_to_worker_autonomy",
+                           "automatic_prompt_chaining",
+                           "automatic_tool_execution",
+                           "batch_apply_without_gate",
+                           "real_kanban_write_without_gate"
+                       ],
+    "role_boundaries":  [
+                            {
+                                "role_id":  "PLANNER",
+                                "name":  "Plan worker",
+                                "purpose":  "Proponer plan pequeno y ordenado",
+                                "allowed_outputs":  [
+                                                        "plan",
+                                                        "risks",
+                                                        "dependencies"
+                                                    ],
+                                "forbidden":  [
+                                                  "execute",
+                                                  "apply",
+                                                  "git_write",
+                                                  "remote_execution"
+                                              ]
+                            },
+                            {
+                                "role_id":  "CRITIC",
+                                "name":  "Quality and risk worker",
+                                "purpose":  "Detectar riesgos, conflictos y NO_GO",
+                                "allowed_outputs":  [
+                                                        "risk_review",
+                                                        "quality_flags",
+                                                        "repair_suggestions"
+                                                    ],
+                                "forbidden":  [
+                                                  "execute",
+                                                  "apply",
+                                                  "approve",
+                                                  "git_write"
+                                              ]
+                            },
+                            {
+                                "role_id":  "BUILDER",
+                                "name":  "Implementation proposal worker",
+                                "purpose":  "Proponer cambio local reversible",
+                                "allowed_outputs":  [
+                                                        "suggested_change",
+                                                        "files",
+                                                        "rollback_notes"
+                                                    ],
+                                "forbidden":  [
+                                                  "execute",
+                                                  "modify_files",
+                                                  "auto_apply",
+                                                  "remote_execution"
+                                              ]
+                            },
+                            {
+                                "role_id":  "DOCS",
+                                "name":  "Documentation worker",
+                                "purpose":  "Proponer documentacion humana",
+                                "allowed_outputs":  [
+                                                        "manual_notes",
+                                                        "checklist",
+                                                        "summary"
+                                                    ],
+                                "forbidden":  [
+                                                  "execute",
+                                                  "apply",
+                                                  "git_write",
+                                                  "external_network"
+                                              ]
+                            }
+                        ],
+    "security":  {
+                     "apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "worker_executed":  false,
+                     "multi_agent_autonomy":  false,
+                     "orchestration_execution":  false,
+                     "human_decision_required":  true,
+                     "sensitive_actions_executed":  false
+                 },
+    "created_at":  "2026-06-17T12:35:14"
+}

@@ -1,0 +1,34 @@
+﻿{
+    "rules_id":  "output-transform-rules.v1",
+    "rules":  [
+                  {
+                      "from":  "PROPOSAL",
+                      "to":  "TASK_PLAN",
+                      "requires":  [
+                                       "APPROVE_OR_BACKLOG"
+                                   ]
+                  },
+                  {
+                      "from":  "RESOURCE_QUERY",
+                      "to":  "COMPOSITION_BLUEPRINT",
+                      "requires":  [
+                                       "resource_library_index"
+                                   ]
+                  },
+                  {
+                      "from":  "COMPOSITION_BLUEPRINT",
+                      "to":  "BUILD_PACKAGE",
+                      "requires":  [
+                                       "compatibility_check",
+                                       "human_gate"
+                                   ]
+                  },
+                  {
+                      "from":  "MODEL_RESPONSE_NORMALIZED",
+                      "to":  "PROPOSAL_OR_RESOURCE_QUERY",
+                      "requires":  [
+                                       "validation"
+                                   ]
+                  }
+              ]
+}

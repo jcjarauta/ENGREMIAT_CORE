@@ -1,0 +1,58 @@
+﻿{
+    "contract_id":  "ENGREMIAT_MODULE_OPERATIONAL_CONTRACT_V1",
+    "purpose":  "Crear modulos como unidades operativas, no como copia de plantilla maestra",
+    "module_root":  "MODULOS/MODULE_\u003cslug\u003e",
+    "required_files":  [
+                           "BOVEDA_MODULO/00_CONTROL/module.json",
+                           "BOVEDA_MODULO/00_CONTROL/module-cards.json",
+                           "BOVEDA_MODULO/00_CONTROL/module-relations.json",
+                           "BOVEDA_MODULO/01_HOME/MODULE_HOME.md",
+                           "BOVEDA_MODULO/02_TARJETAS/MODULE_CARDS.md",
+                           "BOVEDA_MODULO/02_TARJETAS/cards.tsv",
+                           "BOVEDA_MODULO/03_PROCESO/MODULE_PROCESS.md",
+                           "BOVEDA_MODULO/04_GATES/MODULE_GATES.md",
+                           "BOVEDA_MODULO/05_EVIDENCIAS/MODULE_EVIDENCE.md",
+                           "BOVEDA_MODULO/06_RESULTADOS/MODULE_RESULTS.md",
+                           "BOVEDA_MODULO/07_WORKERS/MODULE_WORKERS.md",
+                           "BOVEDA_MODULO/08_RELACIONES/MODULE_GRAPH.md"
+                       ],
+    "ids":  {
+                "project":  "PROJECT-\u003cslug\u003e-\u003ctimestamp\u003e",
+                "module":  "MODULE-\u003cslug\u003e-\u003ctimestamp\u003e",
+                "card":  "CARD-\u003cmodule\u003e-000",
+                "gate":  "GATE-\u003cmodule\u003e-000",
+                "evidence":  "EVID-\u003cmodule\u003e-000",
+                "relation":  "REL-\u003cfrom\u003e-\u003cto\u003e-000"
+            },
+    "card_types":  [
+                       "humana",
+                       "asistida",
+                       "automatizable",
+                       "gate",
+                       "evidencia",
+                       "decision",
+                       "worker"
+                   ],
+    "states":  [
+                   "pending",
+                   "active",
+                   "blocked",
+                   "done",
+                   "archived"
+               ],
+    "module_types":  [
+                         "humano",
+                         "tecnico",
+                         "worker",
+                         "documentacion",
+                         "integracion",
+                         "simulacion",
+                         "control"
+                     ],
+    "project_updates":  [
+                            "BOVEDA_PROYECTO/03_MODULOS/MODULES_INDEX.md",
+                            "BOVEDA_PROYECTO/04_TAREAS/TASKS_INDEX.md",
+                            "BOVEDA_PROYECTO/11_AGRUPACION_MANUAL/SYSTEM_GROUPING_MODEL.md"
+                        ],
+    "created_at":  "2026-06-20T02:08:35"
+}

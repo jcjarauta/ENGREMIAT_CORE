@@ -1,0 +1,36 @@
+﻿Resultado OpenWebUI:
+```json
+{
+  "name": "ENGREMIAT Estado Operativo Summary",
+  "description": "Summariza el estado actual, último bloque cerrado, siguiente paso y riesgos según reglas canónicas de ENGREMIAT, basado en la última captura de OpenWebUI [1].",
+  "inputs": {
+    "current_state": "PACKAGE_004_READY_FOR_IMPORT",
+    "last_closed_block": "B12",
+    "next_step": "B13_IMPORT_PACKAGE_004_AND_FINAL_MANUAL_VALIDATION",
+    "risks": "OpenWebUI no lee carpetas; usar Markdown único; evitar nuevas funcionalidades hasta cerrar B13"
+  },
+  "outputs": {
+    "estado_actual": "PACKAGE_004_READY_FOR_IMPORT",
+    "ultimo_bloque_cerrado": "B12",
+    "siguiente_paso": "B13_IMPORT_PACKAGE_004_AND_FINAL_MANUAL_VALIDATION",
+    "riesgos": "OpenWebUI no lee carpetas; usar Markdown único; evitar nuevas funcionalidades hasta cerrar B13",
+    "decision": "PASS"
+  },
+  "steps": [
+    "Buscar en Knowledge el bloque cerrado más reciente [1].",
+    "Verificar si se cumplen las reglas canónicas para B12/B13 [1].",
+    "Compilar riesgos activos basados en la captura de OpenWebUI [1].",
+    "Validar que no se propongan nuevas funcionalidades sin PASS manual [1]."
+  ],
+  "rules": {
+    "no_inventar_api": true,
+    "no_conectar_telegram": true,
+    "requiere_pass_manual": true
+  }
+}
+```
+
+Decision humana: WARN
+
+Notas:
+La respuesta es estructurada y útil, pero no cumple del todo el objetivo B03/B04: debía convertir una captura en candidata de skill usando el schema de Skill Factory Light. En cambio, devolvió una ficha/resumen de la skill anterior de estado. Se conserva como evidencia WARN y se recomienda reparar el prompt para forzar salida candidate_id/proposed_skill_id/test_status/decision/next.

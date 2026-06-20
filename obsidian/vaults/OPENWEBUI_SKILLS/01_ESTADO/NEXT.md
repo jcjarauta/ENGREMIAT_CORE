@@ -1,0 +1,3 @@
+﻿# NEXT · OPENWEBUI_SKILLS
+
+Siguiente paso recomendado: SKILL_REGISTRY_IMPORT_PACKS

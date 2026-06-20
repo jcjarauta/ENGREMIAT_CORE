@@ -1,0 +1,50 @@
+﻿{
+    "objective":  "ENGREMIAT_HUMAN_USABLE_DAILY_WORKBENCH_086_095",
+    "stage":  "E91",
+    "plan":  "FRICTION_REDUCTION_PLAN",
+    "created_utc":  "2026-06-17T11:13:52.7441577Z",
+    "safe_actions_only":  true,
+    "actions":  [
+                    {
+                        "id":  "FRA-091-001",
+                        "title":  "Crear indice unico de dashboards en E92",
+                        "risk":  "LOW",
+                        "safe":  true,
+                        "auto_apply_allowed":  false,
+                        "expected_result":  "Un punto visual de entrada"
+                    },
+                    {
+                        "id":  "FRA-091-002",
+                        "title":  "Mantener decision shortcuts como registro local only",
+                        "risk":  "MEDIUM",
+                        "safe":  true,
+                        "auto_apply_allowed":  false,
+                        "expected_result":  "Decisiones mas rapidas sin auto approve"
+                    },
+                    {
+                        "id":  "FRA-091-003",
+                        "title":  "Vincular evidencia principal desde dashboard index",
+                        "risk":  "LOW",
+                        "safe":  true,
+                        "auto_apply_allowed":  false,
+                        "expected_result":  "Menos busqueda manual"
+                    },
+                    {
+                        "id":  "FRA-091-004",
+                        "title":  "Mantener preview-to-apply bloqueado hasta gate humano explicito",
+                        "risk":  "HIGH",
+                        "safe":  true,
+                        "auto_apply_allowed":  false,
+                        "expected_result":  "Seguridad conservada"
+                    }
+                ],
+    "next_stage":  "E92_DASHBOARD_INDEX_V2",
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "kanban_real_write":  false,
+    "status":  "READY_FOR_SAFE_NAVIGATION_IMPROVEMENT"
+}

@@ -1,0 +1,23 @@
+{
+    "package_id":  "ENG-MOD-WRK-002",
+    "module_id":  "ENG-MOD-WRK-001",
+    "module_name":  "Package Manifest",
+    "stage":  "E04",
+    "block":  "B04.2",
+    "purpose":  "Definir qué recibió el worker y qué evidencias dejó",
+    "received":  [
+                     "worker-bridge-contract.json",
+                     "worker-context.json",
+                     "WORKER_PROMPT.md"
+                 ],
+    "evidence_expected":  [
+                              "worker-bridge-validation-report.json"
+                          ],
+    "traceability":  {
+                         "inputs_recorded":  true,
+                         "outputs_recorded":  true,
+                         "evidence_recorded":  true,
+                         "timestamp_recorded":  true
+                     },
+    "state":  "planned"
+}

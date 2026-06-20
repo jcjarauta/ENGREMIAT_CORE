@@ -1,0 +1,21 @@
+{
+    "package_id":  "ENGREMIAT_MODULAR_PLATFORM_001",
+    "stage":  "E03",
+    "block":  "B03.2",
+    "module_id":  "ENG-MOD-CTL-001",
+    "module_name":  "Operative Control Surface",
+    "purpose":  "Crear espacio de control para el humano",
+    "depends_on":  "ENG-MOD-QUE-001",
+    "state":  "planned",
+    "control":  {
+                    "human_gate_required":  true,
+                    "visible_queue":  true,
+                    "visible_blockers":  true,
+                    "visible_next_action":  true
+                },
+    "acceptance_criteria":  [
+                                "El humano ve cola y bloqueos",
+                                "El gate puede iniciar o pausar módulos",
+                                "La acción siguiente queda visible"
+                            ]
+}

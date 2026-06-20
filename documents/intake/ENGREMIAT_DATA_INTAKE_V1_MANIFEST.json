@@ -1,0 +1,61 @@
+﻿{
+    "package_id":  "ENGREMIAT_DATA_INTAKE_001",
+    "version":  "v1",
+    "closed_at":  "2026-06-20T09:36:06",
+    "status":  "CLOSED_PASS",
+    "principle":  "Data Intake produce fichas estructuradas; Centro Documental consume fichas; futuros centros consumiran perfiles normalizados",
+    "local_first":  true,
+    "network_used":  false,
+    "external_ai_used":  false,
+    "web_scraping_used":  false,
+    "commit_done":  false,
+    "capabilities":  [
+                         {
+                             "id":  "E10",
+                             "name":  "demo_profile_to_active_grant_profile",
+                             "status":  "PASS"
+                         },
+                         {
+                             "id":  "E11",
+                             "name":  "txt_md_source_registration",
+                             "status":  "PASS"
+                         },
+                         {
+                             "id":  "E12",
+                             "name":  "local_heuristic_extraction",
+                             "status":  "PASS",
+                             "confidence":  "medium"
+                         },
+                         {
+                             "id":  "E13",
+                             "name":  "folder_as_source",
+                             "status":  "PASS",
+                             "confidence":  "medium"
+                         },
+                         {
+                             "id":  "E14",
+                             "name":  "pdf_registered_only_no_ocr",
+                             "status":  "PASS"
+                         },
+                         {
+                             "id":  "E15",
+                             "name":  "connected_outputs_and_consumers",
+                             "status":  "PASS"
+                         }
+                     ],
+    "contracts":  [
+                      "documents\\intake\\contracts\\intake-source-contract.json",
+                      "documents\\intake\\contracts\\normalized-profile-contract.json",
+                      "documents\\intake\\contracts\\intake-output-consumer-map.json"
+                  ],
+    "sources_count":  3,
+    "profiles_count":  5,
+    "active_profile":  "documents/grants/grant-call-profile-latest.json",
+    "connections":  "documents/intake/connections/intake-latest-pointers.json",
+    "next_options":  [
+                         "Integrar opciones persistentes en ENGREMIAT-DATA-INTAKE-CENTER.ps1",
+                         "Conectar ficha activa a generador documental limpio",
+                         "Preparar Task/Module/Evidence consumers futuros",
+                         "Cerrar etapa sin commit y decidir siguiente objetivo"
+                     ]
+}

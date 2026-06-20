@@ -1,0 +1,27 @@
+﻿{
+    "objective":  "ENGREMIAT_NEXT_REAL_VALUE_OPERATIONALIZATION_076_085",
+    "stage":  "E77",
+    "name":  "Human Daily Console",
+    "version":  "0.77.0-local",
+    "purpose":  "Crear una consola diaria humana para revisar cola operativa, propuestas, decisiones, bloqueos y siguiente accion sin ejecutar tareas automaticamente.",
+    "reduces_friction":  true,
+    "human_governed":  true,
+    "default_decision":  "DEFER",
+    "console_executes":  false,
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "kanban_real_write":  false,
+    "sections":  [
+                     "daily_status",
+                     "operational_queue",
+                     "pending_decisions",
+                     "blocked_items",
+                     "evidence_links",
+                     "next_human_action"
+                 ],
+    "created_utc":  "2026-06-17T10:53:02.2092076Z"
+}

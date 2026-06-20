@@ -1,0 +1,193 @@
+﻿{
+    "objective":  "ENGREMIAT_HUMAN_USABLE_DAILY_WORKBENCH_086_095",
+    "stage":  "E94",
+    "audit":  "WORKBENCH_REGRESSION_AUDIT_E86_E93",
+    "created_utc":  "2026-06-17T11:16:34.6995490Z",
+    "critical_artifacts_total":  29,
+    "missing_artifacts_count":  0,
+    "invalid_json_count":  0,
+    "checks":  [
+                   {
+                       "path":  "reports\\daily-workbench-086\\e86-daily-workbench-readiness-report.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "reports\\unified-human-inbox-087\\e87-unified-human-inbox-readiness-report.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "reports\\decision-shortcuts-088\\e88-decision-shortcuts-readiness-report.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "reports\\evidence-browser-089\\e89-evidence-browser-readiness-report.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "reports\\preview-apply-gate-090\\e90-preview-to-apply-readiness-report.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "reports\\friction-reduction-091\\e91-friction-reduction-readiness-report.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "reports\\dashboard-index-092\\e92-dashboard-index-readiness-report.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "reports\\manual-093\\e93-manual-readiness-report.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "data\\daily-workbench-086\\daily-workbench-model.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "data\\daily-workbench-086\\daily-workbench-contract.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "data\\unified-human-inbox-087\\unified-human-inbox-model.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "data\\unified-human-inbox-087\\unified-human-inbox-items.jsonl",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "data\\decision-shortcuts-088\\decision-shortcuts-contract.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "tools\\eng-decision-shortcuts.ps1",
+                       "exists":  true,
+                       "json_valid":  null,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "data\\evidence-browser-089\\evidence-browser-index.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "data\\evidence-browser-089\\evidence-browser-items.jsonl",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "data\\preview-apply-gate-090\\preview-to-apply-gate-model.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "data\\preview-apply-gate-090\\preview-to-apply-authorization-gate.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "data\\friction-reduction-091\\friction-reduction-model.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "data\\friction-reduction-091\\friction-reduction-plan.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "data\\dashboard-index-092\\dashboard-index-v2-model.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "data\\dashboard-index-092\\dashboard-index-v2-map.json",
+                       "exists":  true,
+                       "json_valid":  true,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "docs\\DAILY_WORKBENCH_MANUAL.md",
+                       "exists":  true,
+                       "json_valid":  null,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "docs\\DAILY_WORKBENCH_QUICKSTART.md",
+                       "exists":  true,
+                       "json_valid":  null,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "dashboard\\index.html",
+                       "exists":  true,
+                       "json_valid":  null,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "dashboard\\daily-workbench\\index.html",
+                       "exists":  true,
+                       "json_valid":  null,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "dashboard\\unified-human-inbox\\index.html",
+                       "exists":  true,
+                       "json_valid":  null,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "dashboard\\evidence-browser\\index.html",
+                       "exists":  true,
+                       "json_valid":  null,
+                       "status":  "OK"
+                   },
+                   {
+                       "path":  "dashboard\\friction-reduction\\index.html",
+                       "exists":  true,
+                       "json_valid":  null,
+                       "status":  "OK"
+                   }
+               ],
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "kanban_real_write":  false,
+    "status":  "OK"
+}

@@ -1,0 +1,32 @@
+{
+    "package_id":  "ENGREMIAT_007E_PANEL_MAESTRO_OPERATIVO",
+    "module_id":  "ENG-OMP-007E",
+    "status":  "INITIATED",
+    "purpose":  "Evolucionar el panel maestro hacia una superficie operativa superior con snapshot visual, timeline, decision center, readiness por integracion y gates preparados",
+    "depends_on":  [
+                       "ENGREMIAT_OPERATIONAL_MASTER_PANEL_001"
+                   ],
+    "mode":  "LOCAL_READONLY_FIRST",
+    "blocked_actions":  [
+                            "core_changes",
+                            "external_network",
+                            "git_write",
+                            "real_integration",
+                            "kanban_real_write",
+                            "telegram_real_send",
+                            "ollama_real_inference"
+                        ],
+    "allowed_actions":  [
+                            "read_local_reports",
+                            "write_local_dashboard",
+                            "write_local_contracts",
+                            "write_local_decision_artifacts"
+                        ],
+    "stages":  [
+                   "E01_PANEL_SCOPE_AND_SNAPSHOT",
+                   "E02_TIMELINE_AND_HISTORY",
+                   "E03_DECISION_CENTER",
+                   "E04_INTEGRATION_READINESS",
+                   "E05_CLOSE_AND_NEXT"
+               ]
+}

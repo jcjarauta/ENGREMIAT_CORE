@@ -1,0 +1,12 @@
+{
+    "artifact":  "next-boundary-policy.json",
+    "rules":  [
+                  "do_not_touch_frozen_core",
+                  "local_files_only",
+                  "no_external_network",
+                  "no_git_write",
+                  "no_module_activation_without_new_explicit_gate",
+                  "validate_before_next_stage"
+              ],
+    "status":  "DEFINED"
+}

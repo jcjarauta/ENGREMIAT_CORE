@@ -1,0 +1,32 @@
+﻿{
+    "objective":  "ENGREMIAT_MAIN_PC_REAL_LINKING_010",
+    "stage":  "E03",
+    "repair":  "SOFT_VALIDATION",
+    "required_artifacts":  [
+                               "data/main-pc-linking/main-pc-handoff-schema.json",
+                               "data/main-pc-linking/main-pc-to-current-pc-handoff-template.json",
+                               "data/main-pc-linking/main-pc-state-snapshot.json",
+                               "docs/HANDOFF_MAIN_PC_TO_NEXT_PC.md"
+                           ],
+    "missing_artifacts":  [
+
+                          ],
+    "errors":  [
+
+               ],
+    "handoff_schema":  "data/main-pc-linking/main-pc-handoff-schema.json",
+    "handoff_template":  "data/main-pc-linking/main-pc-to-current-pc-handoff-template.json",
+    "snapshot":  "data/main-pc-linking/main-pc-state-snapshot.json",
+    "handoff_markdown":  "docs/HANDOFF_MAIN_PC_TO_NEXT_PC.md",
+    "git_detected":  true,
+    "main_pc_touched":  true,
+    "remote_execution":  false,
+    "git_write":  false,
+    "git_remote_auto":  false,
+    "secret_values_read":  false,
+    "handoff_ready":  true,
+    "validation_ok":  true,
+    "readiness":  100,
+    "decision":  "GO_E03_MAIN_PC_HANDOFF_READY",
+    "next":  "E04_SAFE_SYNC_GIT_AND_SHARED"
+}

@@ -1,0 +1,53 @@
+﻿{
+    "contract_id":  "resource-evidence-policy.v1",
+    "default_required":  [
+                             "manifest",
+                             "source_trace",
+                             "validation_report"
+                         ],
+    "by_resource_type":  [
+                             {
+                                 "type":  "RESOURCE_MODULE",
+                                 "required":  [
+                                                  "module.json",
+                                                  "contract",
+                                                  "schema",
+                                                  "validation_report",
+                                                  "close_report"
+                                              ]
+                             },
+                             {
+                                 "type":  "RESOURCE_DOCUMENT",
+                                 "required":  [
+                                                  "source",
+                                                  "document_path",
+                                                  "review_report"
+                                              ]
+                             },
+                             {
+                                 "type":  "RESOURCE_GRANT_APPLICATION",
+                                 "required":  [
+                                                  "bases_reference",
+                                                  "eligibility_check",
+                                                  "draft",
+                                                  "human_review"
+                                              ]
+                             },
+                             {
+                                 "type":  "RESOURCE_BUSINESS_PLAN",
+                                 "required":  [
+                                                  "market_notes",
+                                                  "financial_model_or_assumptions",
+                                                  "review_report"
+                                              ]
+                             },
+                             {
+                                 "type":  "RESOURCE_WORKFLOW",
+                                 "required":  [
+                                                  "steps",
+                                                  "inputs_outputs",
+                                                  "validation_report"
+                                              ]
+                             }
+                         ]
+}

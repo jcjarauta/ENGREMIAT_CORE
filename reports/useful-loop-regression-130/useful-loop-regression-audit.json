@@ -1,0 +1,102 @@
+﻿{
+    "schema":  "engremiat.useful_loop_regression_audit.v1",
+    "objective":  "ENGREMIAT_REAL_VALUE_TASK_EXECUTION_LOOP_122_131_REAL_USEFUL_OUTPUT",
+    "stage":  "E130",
+    "block":  "B130.1",
+    "step":  "P130.1.1",
+    "created_at":  "2026-06-17T14:35:01",
+    "required_count":  17,
+    "found_count":  17,
+    "missing_count":  0,
+    "items":  [
+                  {
+                      "path":  "data/useful-task-122/useful-task-intent.json",
+                      "exists":  true,
+                      "size_bytes":  904
+                  },
+                  {
+                      "path":  "reports/useful-task-122/e122-useful-task-readiness-report.json",
+                      "exists":  true,
+                      "size_bytes":  965
+                  },
+                  {
+                      "path":  "data/useful-input-123/useful-input-package.json",
+                      "exists":  true,
+                      "size_bytes":  1174
+                  },
+                  {
+                      "path":  "reports/useful-input-123/e123-useful-input-readiness-report.json",
+                      "exists":  true,
+                      "size_bytes":  922
+                  },
+                  {
+                      "path":  "data/useful-proposal-124/useful-output-proposal.json",
+                      "exists":  true,
+                      "size_bytes":  2348
+                  },
+                  {
+                      "path":  "reports/useful-proposal-124/e124-useful-proposal-readiness-report.json",
+                      "exists":  true,
+                      "size_bytes":  959
+                  },
+                  {
+                      "path":  "data/useful-authorization-125/useful-authorization-decision.json",
+                      "exists":  true,
+                      "size_bytes":  889
+                  },
+                  {
+                      "path":  "reports/useful-authorization-125/e125-useful-authorization-readiness-report.json",
+                      "exists":  true,
+                      "size_bytes":  1026
+                  },
+                  {
+                      "path":  "data/useful-apply-126/useful-apply-result.json",
+                      "exists":  true,
+                      "size_bytes":  705
+                  },
+                  {
+                      "path":  "data/useful-apply-126/useful-output.md",
+                      "exists":  true,
+                      "size_bytes":  1665
+                  },
+                  {
+                      "path":  "reports/useful-apply-126/e126-useful-apply-readiness-report.json",
+                      "exists":  true,
+                      "size_bytes":  1069
+                  },
+                  {
+                      "path":  "reports/useful-postcheck-127/e127-useful-postcheck-readiness-report.json",
+                      "exists":  true,
+                      "size_bytes":  976
+                  },
+                  {
+                      "path":  "data/useful-evidence-128/useful-evidence-ledger.jsonl",
+                      "exists":  true,
+                      "size_bytes":  584
+                  },
+                  {
+                      "path":  "reports/useful-evidence-128/e128-useful-evidence-readiness-report.json",
+                      "exists":  true,
+                      "size_bytes":  957
+                  },
+                  {
+                      "path":  "data/useful-dashboard-refresh-129/useful-dashboard-refresh-model.json",
+                      "exists":  true,
+                      "size_bytes":  678
+                  },
+                  {
+                      "path":  "dashboard/useful-value-loop/index.html",
+                      "exists":  true,
+                      "size_bytes":  2784
+                  },
+                  {
+                      "path":  "reports/useful-dashboard-refresh-129/e129-useful-dashboard-readiness-report.json",
+                      "exists":  true,
+                      "size_bytes":  973
+                  }
+              ],
+    "audit_passed":  true,
+    "network_used":  false,
+    "git_write":  false,
+    "destructive_actions":  false
+}

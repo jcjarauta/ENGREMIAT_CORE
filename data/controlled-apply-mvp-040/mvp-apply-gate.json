@@ -1,0 +1,18 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_HUMAN_USABLE_036_045",
+    "stage":  "E40",
+    "gate_id":  "E40_MVP_APPLY_GATE_001",
+    "authorization":  "APPROVE_EXPLICIT_BY_USER_REQUEST_FOR_E40_CONTROLLED_APPLY",
+    "scope":  "single_local_reversible_artifact_only",
+    "allowed_change":  "create_or_update data/controlled-apply-mvp-040/applied-change.json",
+    "forbidden":  [
+                      "git_write",
+                      "remote_execution",
+                      "auto_apply",
+                      "external_network",
+                      "free_apply",
+                      "source_code_mutation"
+                  ],
+    "status":  "APPROVED_FOR_ONE_LOCAL_REVERSIBLE_CHANGE",
+    "created_at":  "2026-06-17T11:43:52"
+}

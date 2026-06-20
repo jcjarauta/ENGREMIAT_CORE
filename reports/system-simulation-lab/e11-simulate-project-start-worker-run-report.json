@@ -1,0 +1,49 @@
+﻿{
+    "package_id":  "ENGREMIAT_SYSTEM_SIMULATION_LAB_001",
+    "stage":  "E11_SIMULATE_PROJECT_START_WORKER_RUN",
+    "status":  "PASS",
+    "readiness":  100,
+    "decision":  "GO_PROJECT_START_WORKER_SIMULATION_READY_FOR_HUMAN_VALIDATION",
+    "project_id":  "SIM_PROJECT_20260619-144124",
+    "worker_runs":  3,
+    "evidences_pass":  3,
+    "canvas_nodes":  8,
+    "canvas_edges":  7,
+    "checks":  [
+                   {
+                       "id":  "RESULT_PROJECT_START_SIMULATION.md_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_SIMULATION_LAB\\08_RESULTS\\SIM_PROJECT_20260619-144124\\RESULT_PROJECT_START_SIMULATION.md"
+                   },
+                   {
+                       "id":  "SIM_PROJECT_20260619-144124_GATE_VALIDATE_RESULT.md_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_SIMULATION_LAB\\05_HUMAN_GATES\\SIM_PROJECT_20260619-144124_GATE_VALIDATE_RESULT.md"
+                   },
+                   {
+                       "id":  "SIM_PROJECT_20260619-144124_WORKER_RESULT_CANVAS.canvas_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_SIMULATION_LAB\\10_CANVAS\\SIM_PROJECT_20260619-144124_WORKER_RESULT_CANVAS.canvas"
+                   },
+                   {
+                       "id":  "EV_SCOPE_pass",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_SIMULATION_LAB\\07_EVIDENCE\\SIM_PROJECT_20260619-144124\\EV_SCOPE.md"
+                   },
+                   {
+                       "id":  "EV_STRUCTURE_pass",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_SIMULATION_LAB\\07_EVIDENCE\\SIM_PROJECT_20260619-144124\\EV_STRUCTURE.md"
+                   },
+                   {
+                       "id":  "EV_VALIDATION_pass",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_SIMULATION_LAB\\07_EVIDENCE\\SIM_PROJECT_20260619-144124\\EV_VALIDATION.md"
+                   }
+               ],
+    "failed_checks":  [
+
+                      ],
+    "state":  "C:\\ENGREMIAT_CORE\\data\\system-simulation-lab\\project-start-worker-result-SIM_PROJECT_20260619-144124.json",
+    "next":  "HUMAN_VALIDATE_PROJECT_START_RESULT"
+}

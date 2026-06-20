@@ -1,0 +1,31 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_ACTION_TEMPLATE_017",
+    "stage":  "E03",
+    "purpose":  "Gate humano estandar para acciones controladas",
+    "default_gate":  "DEFER",
+    "approval_formula":  "decision=APPROVE AND human_confirmation=true AND execution_allowed=true",
+    "allowed_decisions":  [
+                              "DEFER",
+                              "APPROVE",
+                              "REJECT"
+                          ],
+    "required_fields":  [
+                            "decision",
+                            "human_confirmation",
+                            "execution_allowed",
+                            "operator_id",
+                            "reason",
+                            "timestamp"
+                        ],
+    "default_flags":  {
+                          "decision":  "DEFER",
+                          "human_confirmation":  false,
+                          "execution_allowed":  false,
+                          "apply_executed":  false,
+                          "auto_apply":  false,
+                          "remote_execution":  false,
+                          "git_write":  false
+                      },
+    "machine_rule":  "Never execute controlled action unless approval formula is true",
+    "human_rule":  "Kanban/Sheets/terminal decision is human control surface, not execution engine"
+}

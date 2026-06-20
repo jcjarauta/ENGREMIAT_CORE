@@ -1,0 +1,97 @@
+﻿{
+    "package_id":  "ENGREMIAT_NEW_VAULT_FROM_MASTER_TEMPLATE_001",
+    "stage":  "E05_VALIDATE_GRAPH_GROUPS_AND_VIEW_SELECTOR",
+    "status":  "PASS",
+    "vault_path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146",
+    "readiness":  90,
+    "decision":  "WARN_SELECTOR_USABLE_WITH_MINOR_REVIEW",
+    "groups":  9,
+    "views":  9,
+    "checks":  [
+                   {
+                       "id":  "vault_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146"
+                   },
+                   {
+                       "id":  "selector_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\00_CONTROL_OPERATIVO\\GRAPH_VIEW_SELECTOR.md"
+                   },
+                   {
+                       "id":  "graph_json_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\.obsidian\\graph.json"
+                   },
+                   {
+                       "id":  "localgraph_json_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\.obsidian\\localgraph.json"
+                   },
+                   {
+                       "id":  "home_exists",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\HOME.md"
+                   },
+                   {
+                       "id":  "groups_count_9",
+                       "ok":  true,
+                       "count":  9
+                   },
+                   {
+                       "id":  "views_count_9",
+                       "ok":  true,
+                       "count":  9
+                   },
+                   {
+                       "id":  "selector_mentions_all_views",
+                       "ok":  true,
+                       "count":  9
+                   },
+                   {
+                       "id":  "selector_mentions_all_groups",
+                       "ok":  true,
+                       "count":  9
+                   },
+                   {
+                       "id":  "home_links_selector",
+                       "ok":  true
+                   },
+                   {
+                       "id":  "graph_color_groups_9",
+                       "ok":  false,
+                       "count":  0
+                   },
+                   {
+                       "id":  "graph_default_filter_set",
+                       "ok":  false,
+                       "filter":  ""
+                   }
+               ],
+    "failed_checks":  [
+                          {
+                              "id":  "graph_color_groups_9",
+                              "ok":  false,
+                              "count":  0
+                          },
+                          {
+                              "id":  "graph_default_filter_set",
+                              "ok":  false,
+                              "filter":  ""
+                          }
+                      ],
+    "safety":  {
+                   "local_only":  true,
+                   "read_only_validation":  true,
+                   "new_vault_only":  true,
+                   "template_write":  false,
+                   "preview_only":  true,
+                   "obsidian_app_automation":  false,
+                   "worker_execution":  false,
+                   "kanban_write":  false,
+                   "clien_write":  false,
+                   "git_write":  false,
+                   "external_network":  false
+               },
+    "next":  "HUMAN_REVIEW_SELECTOR_WARNINGS_OR_START_FIRST_MODULE"
+}

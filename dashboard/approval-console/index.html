@@ -1,0 +1,22 @@
+﻿<!doctype html><html lang="es"><head><meta charset="utf-8"><title>ENGREMIAT E59 Approval Console</title><style>body{font-family:Segoe UI,Arial,sans-serif;background:#101014;color:#eee;margin:28px}.card{background:#1d1d24;border:1px solid #444;border-radius:12px;padding:16px;margin:12px 0}.ok{color:#7CFC98}.warn{color:#FFD45A}.bad{color:#FF7777}.btn{display:inline-block;border:1px solid #666;border-radius:8px;padding:10px;margin:5px;background:#282836}pre{white-space:pre-wrap;background:#0b0b0f;border:1px solid #333;padding:12px;border-radius:10px}</style></head><body><h1>ENGREMIAT E59 · Human Approval Console Upgrade</h1><div class="card"><b>Estado:</b> <span class="ok">READY</span><br><b>Default:</b> <span class="warn">DEFER_FOR_HUMAN_REVIEW</span><br><b>Approve aplica cambios:</b> false<br><b>Auto apply:</b> false · <b>Remote:</b> false · <b>Git write:</b> false</div><div class="card"><h2>Quality check</h2><p>Decision: <b>NOT_RUN</b> · Score: <b>N/A</b></p></div><div class="card"><h2>Decisiones disponibles</h2><span class="btn">APPROVE_FOR_CONTROLLED_APPLY_REVIEW</span><span class="btn">REPAIR_PROPOSAL</span><span class="btn">DEFER_FOR_HUMAN_REVIEW</span><span class="btn">REJECT_PROPOSAL</span><p>Regla: aprobar aqui solo permite preparar E60; no ejecuta apply.</p></div><div class="card"><h2>Propuesta worker / sample</h2><pre># WORKER_RESPONSE_SAMPLE
+
+proposal_id: WORKER-SAMPLE-E57-001
+summary: Propuesta segura para mejorar el loop diario mostrando en el dashboard operational una tarjeta de &quot;accion recomendada del dia&quot;.
+suggested_change: Crear una fuente local simple que lea production-output.json y muestre la recomendacion diaria en dashboard/daily-value en una etapa posterior.
+risk: MEDIUM
+required_files:
+- data/daily-production-052/production-output.json
+- dashboard/daily-value/index.html
+expected_value: El humano ve rapidamente la accion util recomendada sin buscar en JSON.
+safety_flags:
+- apply_executed=false
+- auto_apply=false
+- remote_execution=false
+- git_write=false
+- external_network=false
+rollback_needed: true
+postcheck_needed: true
+recommended_human_decision: REVIEW
+
+Notas: Esta respuesta es sample fallback seguro. No debe ejecutarse como cambio.
+</pre></div><p class="warn">Siguiente: E60_CONTROLLED_LOCAL_APPLY_V2</p></body></html>

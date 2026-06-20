@@ -1,0 +1,50 @@
+﻿{
+    "objective_id":  "DEFINE_REAL_CONTROLLED_FILE_TO_OLLAMA_EXECUTION_MVP_162_171",
+    "stage":  "E165",
+    "step":  "Prompt Build",
+    "purpose":  "Build final prompt for one READY task",
+    "local_only":  true,
+    "external_network":  false,
+    "human_authorization_required":  true,
+    "single_task_only":  true,
+    "selected_ready_task":  {
+                                "objective_id":  "DEFINE_REAL_CONTROLLED_FILE_TO_OLLAMA_EXECUTION_MVP_162_171",
+                                "stage":  "E162",
+                                "selection_source":  "queue_ready_line",
+                                "selection_status":  "SELECTED",
+                                "queue_path":  "C:\\ENGREMIAT_CORE\\data\\file-worker-queue-154\\worker-queue-items.jsonl",
+                                "selected_task":  {
+                                                      "task_id":  "TASK-154-001",
+                                                      "objective":  "ENGREMIAT_MIN_REAL_FILE_TO_WORKER_MVP_152_161",
+                                                      "stage":  "E154",
+                                                      "title":  "Revisar contenido.",
+                                                      "status":  "READY",
+                                                      "source":  "data/file-parser-153/imported-input.json",
+                                                      "risk":  "LOW",
+                                                      "readonly":  true,
+                                                      "worker_execution_allowed":  false,
+                                                      "kanban_real_write":  false,
+                                                      "created_at":  "2026-06-17T16:57:36"
+                                                  }
+                            },
+    "execution_gate":  {
+                           "objective_id":  "DEFINE_REAL_CONTROLLED_FILE_TO_OLLAMA_EXECUTION_MVP_162_171",
+                           "stage":  "E164",
+                           "decision":  "DEFER",
+                           "execution_allowed":  false,
+                           "reason":  "Blocked by default until explicit human authorization is provided for E166",
+                           "allowed_next_stage":  "E165 Ollama Prompt Build",
+                           "prohibited_actions":  [
+                                                      "ollama /api/generate",
+                                                      "git_write",
+                                                      "kanban_real_write",
+                                                      "cline_real_write",
+                                                      "external_network",
+                                                      "destructive_actions"
+                                                  ],
+                           "authorization_required":  "EXPLICIT_HUMAN_AUTHORIZATION",
+                           "created_at":  "2026-06-17T17:09:08.8884855+02:00"
+                       },
+    "prompt_path":  "C:\\ENGREMIAT_CORE\\data\\ollama-prompt-165\\ollama-final-prompt.md",
+    "created_at":  "2026-06-17T17:10:10.1685445+02:00"
+}

@@ -1,0 +1,31 @@
+﻿{
+    "schema_id":  "task.schema.v1",
+    "required":  [
+                     "task_id",
+                     "project_id",
+                     "task_type",
+                     "objective",
+                     "assigned_worker",
+                     "inputs",
+                     "expected_output",
+                     "status",
+                     "gate",
+                     "evidence"
+                 ],
+    "fields":  [
+                   "task_id",
+                   "project_id",
+                   "task_type",
+                   "objective",
+                   "assigned_worker",
+                   "inputs",
+                   "expected_output",
+                   "outputs",
+                   "status",
+                   "dependencies",
+                   "gate",
+                   "evidence",
+                   "created_at",
+                   "updated_at"
+               ]
+}

@@ -1,0 +1,16 @@
+{
+    "package_id":  "ENGREMIAT_OPERATIONAL_MASTER_PANEL_001",
+    "stage":  "E02_LOCAL_STATE_COLLECTOR",
+    "status":  "PASS",
+    "checks":  {
+                   "previous_e01_pass":  true,
+                   "sources_registered":  true,
+                   "all_required_sources_found":  true,
+                   "collector_package_created":  true,
+                   "core_changes":  false,
+                   "external_network":  false,
+                   "git_write":  false,
+                   "real_integration":  false
+               },
+    "next":  "E03_OPERATIONAL_STATE_MODEL"
+}

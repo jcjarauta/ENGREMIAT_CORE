@@ -1,0 +1,50 @@
+﻿{
+    "objective":  "ENGREMIAT_POST_MVP_OPERATIONAL_DAILY_LOOP_046_055",
+    "stage":  "E53",
+    "standard_id":  "E53_ROLLBACK_STANDARD_V1",
+    "purpose":  "Asegurar reversibilidad diaria",
+    "required_fields":  [
+                            "rollback_id",
+                            "target_path",
+                            "previous_state_exists",
+                            "rollback_reference",
+                            "rollback_instruction",
+                            "rollback_tested",
+                            "rollback_executed",
+                            "created_at"
+                        ],
+    "rollback_modes":  [
+                           "restore_previous_file",
+                           "delete_created_file",
+                           "restore_json_snapshot",
+                           "manual_human_review_required"
+                       ],
+    "rules":  [
+                  "Antes de modificar, guardar estado previo si existe",
+                  "Si el archivo no existia, rollback es borrar el archivo creado",
+                  "Nunca ejecutar rollback automaticamente sin decision humana salvo bloque de reparacion explicito",
+                  "Registrar rollback_reference en receipt y postcheck"
+              ],
+    "example":  {
+                    "rollback_id":  "ROLLBACK-YYYYMMDD-HHMMSS",
+                    "target_path":  "data/example/output.json",
+                    "previous_state_exists":  false,
+                    "rollback_reference":  "data/example/output.rollback-before.json",
+                    "rollback_instruction":  "delete target_path",
+                    "rollback_tested":  false,
+                    "rollback_executed":  false,
+                    "created_at":  "ISO8601"
+                },
+    "security":  {
+                     "apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "sensitive_actions_executed":  false,
+                     "standards_only":  true,
+                     "human_gate_required":  true,
+                     "local_only":  true
+                 },
+    "created_at":  "2026-06-17T12:03:50"
+}

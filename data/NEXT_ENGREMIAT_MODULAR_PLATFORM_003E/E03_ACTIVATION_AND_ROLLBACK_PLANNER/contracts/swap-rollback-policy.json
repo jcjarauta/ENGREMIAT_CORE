@@ -1,0 +1,29 @@
+{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_003E",
+    "stage":  "E03",
+    "block":  "B03.2",
+    "artifact":  "swap-rollback-policy.json",
+    "status":  "DEFINED",
+    "purpose":  "Definir sustitucion, retirada, rollback y recuperacion sin activar cambios reales",
+    "actions":  [
+                    "prepare_swap",
+                    "pause_old_module",
+                    "stage_new_module",
+                    "validate_new_module",
+                    "rollback_to_previous_snapshot",
+                    "detach_if_safe",
+                    "retire_if_confirmed"
+                ],
+    "requirements":  [
+                         "previous_snapshot",
+                         "compatibility_record",
+                         "human_gate",
+                         "validation_report",
+                         "rollback_path"
+                     ],
+    "control":  {
+                    "rollback_required":  true,
+                    "no_destructive_action":  true,
+                    "local_only":  true
+                }
+}

@@ -1,0 +1,67 @@
+﻿{
+    "nodes":  [
+                  {
+                      "id":  "module",
+                      "type":  "file",
+                      "file":  "03_MODULOS/MODULE_arquitectura_global_engremiat/MODULE_arquitectura_global_engremiat_INDEX.md",
+                      "x":  0,
+                      "y":  0,
+                      "width":  360,
+                      "height":  160,
+                      "color":  "2"
+                  },
+                  {
+                      "id":  "readme",
+                      "type":  "file",
+                      "file":  "03_MODULOS/MODULE_arquitectura_global_engremiat/README.md",
+                      "x":  420,
+                      "y":  0,
+                      "width":  320,
+                      "height":  140,
+                      "color":  "3"
+                  },
+                  {
+                      "id":  "evidence",
+                      "type":  "file",
+                      "file":  "03_MODULOS/MODULE_arquitectura_global_engremiat/EVIDENCE.md",
+                      "x":  420,
+                      "y":  220,
+                      "width":  320,
+                      "height":  140,
+                      "color":  "5"
+                  },
+                  {
+                      "id":  "home",
+                      "type":  "file",
+                      "file":  "HOME.md",
+                      "x":  -420,
+                      "y":  0,
+                      "width":  280,
+                      "height":  140,
+                      "color":  "1"
+                  }
+              ],
+    "edges":  [
+                  {
+                      "id":  "e1",
+                      "fromNode":  "home",
+                      "fromSide":  "right",
+                      "toNode":  "module",
+                      "toSide":  "left"
+                  },
+                  {
+                      "id":  "e2",
+                      "fromNode":  "module",
+                      "fromSide":  "right",
+                      "toNode":  "readme",
+                      "toSide":  "left"
+                  },
+                  {
+                      "id":  "e3",
+                      "fromNode":  "module",
+                      "fromSide":  "right",
+                      "toNode":  "evidence",
+                      "toSide":  "left"
+                  }
+              ]
+}

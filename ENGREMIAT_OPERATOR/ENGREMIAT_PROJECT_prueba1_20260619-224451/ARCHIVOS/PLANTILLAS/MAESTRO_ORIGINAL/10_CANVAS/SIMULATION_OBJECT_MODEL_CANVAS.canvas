@@ -1,0 +1,152 @@
+﻿{
+    "nodes":  [
+                  {
+                      "id":  "registry",
+                      "type":  "file",
+                      "file":  "00_LAB_CONTROL/OBJECT_MODEL_REGISTRY.md",
+                      "x":  0,
+                      "y":  0,
+                      "width":  360,
+                      "height":  150,
+                      "color":  "1"
+                  },
+                  {
+                      "id":  "m1",
+                      "type":  "file",
+                      "file":  "01_OBJECTIVES/OBJECTIVE_MODEL.md",
+                      "x":  -900,
+                      "y":  260,
+                      "width":  300,
+                      "height":  140,
+                      "color":  "3"
+                  },
+                  {
+                      "id":  "m2",
+                      "type":  "file",
+                      "file":  "02_ROADMAPS/ROADMAP_MODEL.md",
+                      "x":  -540,
+                      "y":  260,
+                      "width":  300,
+                      "height":  140,
+                      "color":  "3"
+                  },
+                  {
+                      "id":  "m3",
+                      "type":  "file",
+                      "file":  "03_SIMULATED_TASKS/TASK_MODEL.md",
+                      "x":  -180,
+                      "y":  260,
+                      "width":  300,
+                      "height":  140,
+                      "color":  "3"
+                  },
+                  {
+                      "id":  "m4",
+                      "type":  "file",
+                      "file":  "04_SIMULATED_WORKERS/SIM_WORKER_MODEL.md",
+                      "x":  180,
+                      "y":  260,
+                      "width":  300,
+                      "height":  140,
+                      "color":  "3"
+                  },
+                  {
+                      "id":  "m5",
+                      "type":  "file",
+                      "file":  "05_HUMAN_GATES/HUMAN_GATE_MODEL.md",
+                      "x":  540,
+                      "y":  260,
+                      "width":  300,
+                      "height":  140,
+                      "color":  "3"
+                  },
+                  {
+                      "id":  "m6",
+                      "type":  "file",
+                      "file":  "07_EVIDENCE/EVIDENCE_MODEL.md",
+                      "x":  900,
+                      "y":  260,
+                      "width":  300,
+                      "height":  140,
+                      "color":  "3"
+                  },
+                  {
+                      "id":  "m7",
+                      "type":  "file",
+                      "file":  "08_RESULTS/RESULT_MODEL.md",
+                      "x":  -900,
+                      "y":  480,
+                      "width":  300,
+                      "height":  140,
+                      "color":  "3"
+                  },
+                  {
+                      "id":  "m8",
+                      "type":  "file",
+                      "file":  "09_LEARNING/LEARNING_MODEL.md",
+                      "x":  -540,
+                      "y":  480,
+                      "width":  300,
+                      "height":  140,
+                      "color":  "3"
+                  }
+              ],
+    "edges":  [
+                  {
+                      "id":  "e1",
+                      "fromNode":  "registry",
+                      "fromSide":  "bottom",
+                      "toNode":  "m1",
+                      "toSide":  "top"
+                  },
+                  {
+                      "id":  "e2",
+                      "fromNode":  "registry",
+                      "fromSide":  "bottom",
+                      "toNode":  "m2",
+                      "toSide":  "top"
+                  },
+                  {
+                      "id":  "e3",
+                      "fromNode":  "registry",
+                      "fromSide":  "bottom",
+                      "toNode":  "m3",
+                      "toSide":  "top"
+                  },
+                  {
+                      "id":  "e4",
+                      "fromNode":  "registry",
+                      "fromSide":  "bottom",
+                      "toNode":  "m4",
+                      "toSide":  "top"
+                  },
+                  {
+                      "id":  "e5",
+                      "fromNode":  "registry",
+                      "fromSide":  "bottom",
+                      "toNode":  "m5",
+                      "toSide":  "top"
+                  },
+                  {
+                      "id":  "e6",
+                      "fromNode":  "registry",
+                      "fromSide":  "bottom",
+                      "toNode":  "m6",
+                      "toSide":  "top"
+                  },
+                  {
+                      "id":  "e7",
+                      "fromNode":  "registry",
+                      "fromSide":  "bottom",
+                      "toNode":  "m7",
+                      "toSide":  "top"
+                  },
+                  {
+                      "id":  "e8",
+                      "fromNode":  "registry",
+                      "fromSide":  "bottom",
+                      "toNode":  "m8",
+                      "toSide":  "top"
+                  }
+              ]
+}

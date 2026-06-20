@@ -1,0 +1,17 @@
+﻿{
+    "gate_id":  "GATE-ROADMAP-APPROVAL-001",
+    "package_id":  "ENGREMIAT_PROJECT_BUILDER_TO_WORKER_LOOP_001",
+    "status":  "PENDING_HUMAN_DECISION",
+    "decision":  "DEFER",
+    "human_confirmation":  false,
+    "materialize_cards_allowed":  false,
+    "required_phrase":  "AUTORIZO_MATERIALIZAR_ROADMAP_EN_CARDS_CON_BACKUP",
+    "default":  "BLOCKED",
+    "safety":  {
+                   "card_write":  false,
+                   "worker_real_execution":  false,
+                   "git":  false,
+                   "network_external":  false,
+                   "auto_apply":  false
+               }
+}

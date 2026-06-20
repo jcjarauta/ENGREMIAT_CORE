@@ -1,0 +1,27 @@
+﻿{
+    "package_id":  "ENGREMIAT_INTERNAL_WORKFLOW_STANDARD_001",
+    "stage":  "E07_MANUAL_CLOSE_AND_NEXT",
+    "status":  "PASS",
+    "readiness":  100,
+    "closed":  true,
+    "module_dir":  "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_INTERNAL_WORKFLOW_STANDARD_001",
+    "manual":  "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_INTERNAL_WORKFLOW_STANDARD_001\\HUMAN_MACHINE_MANUAL.md",
+    "next_objective":  "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_INTERNAL_WORKFLOW_STANDARD_001\\NEXT_OBJECTIVE.md",
+    "validation_report":  "C:\\ENGREMIAT_CORE\\reports\\internal-workflow-standard-001\\workflow-standard-validation-report.json",
+    "missing":  [
+
+                ],
+    "policy":  {
+                   "local_only":  true,
+                   "core_changes":  false,
+                   "real_tool_integration":  false,
+                   "git_write":  false,
+                   "network":  false,
+                   "ollama_inference":  false,
+                   "kanban_write":  false,
+                   "obsidian_write":  false,
+                   "sheets_write":  false
+               },
+    "result":  "Norma interna de trabajo cerrada para proyectos tareas workers recursos evidencias gates y adaptadores.",
+    "next":  "ENGREMIAT_TOOL_ADAPTER_GATE_001"
+}

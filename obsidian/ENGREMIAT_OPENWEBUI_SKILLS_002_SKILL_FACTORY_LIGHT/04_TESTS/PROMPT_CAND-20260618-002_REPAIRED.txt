@@ -1,0 +1,28 @@
+﻿TAREA: Convierte la captura siguiente en una CANDIDATA DE SKILL ENGREMIAT.
+
+IMPORTANTE: No resumas el estado del proyecto. No oficialices la skill. No devuelvas una skill final. Devuelve solo una ficha de candidata usando exactamente estos campos:
+
+candidate_id: CAND-20260618-002
+proposed_skill_id: SKILL_CAPTURE_TO_CANDIDATE
+name:
+source: openwebui_manual_test
+human_problem:
+trigger_phrase:
+expected_output:
+source_files:
+test_status: PENDING
+decision: CANDIDATE
+next:
+
+CRITERIOS:
+- test_status debe ser PENDING.
+- decision debe ser CANDIDATE o CAPTURE_ONLY.
+- next debe indicar test manual, no oficializacion.
+- No inventes API, Telegram ni automatizacion.
+- No uses decision PASS para la candidata; PASS solo se decidirá después del test humano.
+
+CAPTURA:
+La respuesta de OpenWebUI sobre el estado ENGREMIAT fue útil porque resumió estado actual, último bloque, siguiente paso y riesgos. Queremos convertir este patrón en una candidata reutilizable para próximas capturas.
+
+SALIDA ESPERADA:
+Devuelve una ficha en texto plano con los campos obligatorios y una breve explicación de por qué es candidata, no oficial.

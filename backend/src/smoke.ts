@@ -1,0 +1,3 @@
+﻿import 'reflect-metadata';
+import { DataSource } from 'typeorm';
+const ds=new DataSource({type:'postgres',host:process.env.DB_HOST || 'localhost',port:Number(process.env.DB_PORT || 5432),username:process.env.DB_USERNAME || 'postgres',password:process.env.DB_PASSWORD || 'engremiat',database:process.env.DB_DATABASE || 'engremiat'}); ds.initialize().then(async()=>{const r=await ds.query('SELECT current_database() as database'); console.log('OK backend_db_smoke=True database='+r[0].database); await ds.destroy();}).catch(e=>{console.error('ERR backend_db_smoke=False',e.message); process.exit(1);});

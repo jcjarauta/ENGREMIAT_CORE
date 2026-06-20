@@ -1,0 +1,21 @@
+﻿{
+    "objective":  "ENGREMIAT_KANBAN_REAL_SETUP_012_REPAIR_013",
+    "stage":  "E01",
+    "required_count":  10,
+    "present_count":  9,
+    "missing_artifacts":  [
+                              "reports/kanban-real-setup-012/e05-kanban-real-dashboard-validation-report.json"
+                          ],
+    "launcher_safe":  true,
+    "launcher_has_param":  false,
+    "browser_opened_expected_false":  true,
+    "git_write":  false,
+    "remote_execution":  false,
+    "auto_apply":  false,
+    "shared_repo_edit":  false,
+    "readiness":  70,
+    "decision":  "NO_GO_REPAIR_REQUIRED",
+    "next":  "REPAIR_MISSING_ARTIFACTS_OR_LAUNCHER",
+    "validation_ok":  false,
+    "timestamp_utc":  "2026-06-16T14:58:11.8891185Z"
+}

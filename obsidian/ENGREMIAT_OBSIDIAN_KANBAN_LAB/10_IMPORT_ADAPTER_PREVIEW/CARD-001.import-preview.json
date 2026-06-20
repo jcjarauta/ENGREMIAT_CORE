@@ -1,0 +1,20 @@
+﻿{
+    "dry_run":  true,
+    "write_to_cline":  false,
+    "target_candidate":  "C:\\Users\\pc\\.cline\\kanban\\workspaces\\engremiat-core\\board.json",
+    "target_score":  125,
+    "card":  {
+                 "id":  "CARD-001",
+                 "title":  "Crear backlog visible",
+                 "column":  "NEXT",
+                 "source_need":  "NEED-001",
+                 "status":  "approved_from_obsidian",
+                 "origin":  "obsidian_lab",
+                 "criteria":  [
+                                  "visible in Kanban",
+                                  "traceable to source need",
+                                  "no auto approve",
+                                  "no project modification"
+                              ]
+             }
+}

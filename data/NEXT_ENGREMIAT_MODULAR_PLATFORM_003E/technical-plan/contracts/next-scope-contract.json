@@ -1,0 +1,24 @@
+{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_003E",
+    "artifact":  "next-scope-contract.json",
+    "status":  "DEFINED",
+    "includes":  [
+                     "scope",
+                     "boundary",
+                     "module_graph_seed",
+                     "selector_rules",
+                     "dependency_rules",
+                     "activation_plans",
+                     "rollback_policy",
+                     "dashboard",
+                     "close_report"
+                 ],
+    "excludes":  [
+                     "core_changes",
+                     "external_network",
+                     "git_write",
+                     "real_module_activation",
+                     "remote_worker_execution"
+                 ],
+    "authorization":  "LOCAL_WRITE_GRANTED_BY_USER"
+}

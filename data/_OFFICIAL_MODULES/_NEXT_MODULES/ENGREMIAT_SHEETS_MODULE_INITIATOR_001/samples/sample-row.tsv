@@ -1,0 +1,29 @@
+﻿module_id	module_name	module_type	purpose	problem	expected_output	source_task_packet_id	priority	risk	dependencies	requires_core_change	requires_real_write	requires_external_api	human_gate	target_path	status	decision	notes	generated_json_log	validation_status	validation_errors	created_at	created_by
+ENGREMIAT_EXAMPLE_FROM_SHEETS_001	Example From Sheets	ACOPLABLE_DESACOPLABLE	Crear un modulo candidato desde una fila humana de Sheets.	Necesitamos iniciar modulos de forma sistematica sin escribir manualmente todos los JSON.	JSON canonico de inicio de modulo listo para repositorio.	TASK-PACKET-DEMO-001	MEDIUM	LOW	ENGREMIAT_MODULE_INTAKE_REGISTRY_001,ENGREMIAT_OFFICIAL_MODULES_NEXT_MODULES_DIR_001	FALSE	FALSE	FALSE	REQUIRED	data/_OFFICIAL_MODULES/_NEXT_MODULES/ENGREMIAT_EXAMPLE_FROM_SHEETS_001	READY_FOR_JSON	CREATE_CANDIDATE_JSON	Fila de ejemplo generada por ENGREMIAT_SHEETS_MODULE_INITIATOR_001	{
+    "module_id":  "ENGREMIAT_EXAMPLE_FROM_SHEETS_001",
+    "name":  "Example From Sheets",
+    "kind":  "ACOPLABLE_DESACOPLABLE",
+    "status":  "CANDIDATE",
+    "target_path":  "data/_OFFICIAL_MODULES/_NEXT_MODULES/ENGREMIAT_EXAMPLE_FROM_SHEETS_001",
+    "purpose":  "Crear un modulo candidato desde una fila humana de Sheets.",
+    "problem":  "Necesitamos iniciar modulos de forma sistematica sin escribir manualmente todos los JSON.",
+    "expected_output":  "JSON canonico de inicio de modulo listo para repositorio.",
+    "source_task_packet_id":  "TASK-PACKET-DEMO-001",
+    "priority":  "MEDIUM",
+    "risk":  "LOW",
+    "dependencies":  [
+                         "ENGREMIAT_MODULE_INTAKE_REGISTRY_001",
+                         "ENGREMIAT_OFFICIAL_MODULES_NEXT_MODULES_DIR_001"
+                     ],
+    "gates":  {
+                  "human_gate":  "REQUIRED",
+                  "requires_core_change":  false,
+                  "requires_real_write":  false,
+                  "requires_external_api":  false
+              },
+    "decision":  "CREATE_CANDIDATE_JSON",
+    "notes":  "Fila de ejemplo generada por ENGREMIAT_SHEETS_MODULE_INITIATOR_001",
+    "generated_by":  "ENGREMIAT_SHEETS_MODULE_INITIATOR_001",
+    "generated_at":  "2026-06-17T22:20:59",
+    "dry_run":  true
+}	PASS		2026-06-17T22:20:59	ENGREMIAT_SHEETS_MODULE_INITIATOR_001

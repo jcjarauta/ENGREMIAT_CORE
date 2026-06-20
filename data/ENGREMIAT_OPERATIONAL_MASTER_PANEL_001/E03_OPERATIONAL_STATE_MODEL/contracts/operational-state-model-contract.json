@@ -1,0 +1,22 @@
+{
+    "package_id":  "ENGREMIAT_OPERATIONAL_MASTER_PANEL_001",
+    "stage":  "E03_OPERATIONAL_STATE_MODEL",
+    "artifact":  "operational-state-model-contract.json",
+    "status":  "DEFINED",
+    "purpose":  "Normalizar estado global, readiness, gates, riesgos y siguiente accion para el panel maestro",
+    "input":  "local-state-collector-package.json",
+    "output":  "operational-state-summary.json",
+    "fields":  [
+                   "global_readiness",
+                   "modules",
+                   "pending_gates",
+                   "risks",
+                   "next_action"
+               ],
+    "blocked_actions":  [
+                            "core_changes",
+                            "external_network",
+                            "git_write",
+                            "real_integration"
+                        ]
+}

@@ -1,0 +1,72 @@
+﻿{
+    "package_id":  "ENGREMIAT_REAL_HUMAN_INTAKE_UI_001",
+    "stage":  "E02_GENERATE_ROADMAP_FROM_REAL_INTAKE_PREVIEW",
+    "roadmap_id":  "real-intake-roadmap-preview.v1",
+    "status":  "PREVIEW_ONLY",
+    "source_intake":  "real-human-intake.accepted.json",
+    "project_name":  "Primer intake real para construir roadmap automático en ENGREMIAT",
+    "priority":  "ALTA",
+    "authorization_level":  "PREVIEW_ONLY",
+    "summary":  "Convertir una idea humana en una estructura ordenada de desarrollo, exportable y revisable antes de worker.",
+    "proposed_stages":  [
+                            {
+                                "stage_id":  "E01",
+                                "name":  "Validar intake real",
+                                "goal":  "Confirmar que el intake contiene necesidad, resultado, restricciones, recursos y criterios de éxito.",
+                                "output":  "real-human-intake.accepted.json",
+                                "risk":  "LOW",
+                                "human_gate":  "PASS"
+                            },
+                            {
+                                "stage_id":  "E02",
+                                "name":  "Roadmap preview desde intake real",
+                                "goal":  "Transformar el intake en una propuesta de etapas revisable.",
+                                "output":  "real-intake-roadmap-preview.json",
+                                "risk":  "LOW",
+                                "human_gate":  "REVIEW"
+                            },
+                            {
+                                "stage_id":  "E03",
+                                "name":  "Gate humano del roadmap real",
+                                "goal":  "Permitir aprobar, editar, rechazar o aplazar el roadmap antes de worker.",
+                                "output":  "real-roadmap-approval-gate.json",
+                                "risk":  "LOW",
+                                "human_gate":  "REQUIRED"
+                            },
+                            {
+                                "stage_id":  "E04",
+                                "name":  "Worker packet preview",
+                                "goal":  "Preparar un paquete para worker sin ejecutarlo.",
+                                "output":  "real-worker-packet-preview.json",
+                                "risk":  "MEDIUM",
+                                "human_gate":  "REQUIRED"
+                            },
+                            {
+                                "stage_id":  "E05",
+                                "name":  "Dry-run controlado",
+                                "goal":  "Simular ejecución controlada y devolver NO_GO si no hay autorización explícita.",
+                                "output":  "real-controlled-dry-run-result.json",
+                                "risk":  "MEDIUM",
+                                "human_gate":  "REQUIRED"
+                            }
+                        ],
+    "success_mapping":  [
+                            "JSON valido",
+                            "safety.local_only=true",
+                            "worker_execution=false",
+                            "execute_now=false",
+                            "roadmap preview generado",
+                            "siguiente gate humano visible"
+                        ],
+    "safety":  {
+                   "local_only":  true,
+                   "preview_only":  true,
+                   "execute_now":  false,
+                   "worker_execution":  false,
+                   "network":  false,
+                   "git_write":  false,
+                   "manual_review_required":  true
+               },
+    "decision":  "GO_ROADMAP_PREVIEW_ONLY",
+    "next":  "E03_BUILD_REAL_ROADMAP_HUMAN_APPROVAL_GATE"
+}

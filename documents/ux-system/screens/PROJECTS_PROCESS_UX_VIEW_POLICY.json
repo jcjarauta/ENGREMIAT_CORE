@@ -1,0 +1,21 @@
+﻿{
+    "package_id":  "ENGREMIAT_UX_SYSTEM_001",
+    "stage":  "E61_APPLY_TABLE_PROCESS_UX_TO_PROJECTS_VIEW",
+    "created_at":  "2026-06-20T10:34:14",
+    "status":  "PASS",
+    "decision":  "Aplicar tabla canonica y proceso vivo a cartera de proyectos",
+    "columns":  [
+                    "N",
+                    "NOMBRE",
+                    "FASE",
+                    "PROGRESO",
+                    "WORKER",
+                    "BLOQ",
+                    "NEXT"
+                ],
+    "worker_now":  "heuristica local por locks, errores y actividad reciente",
+    "worker_future":  "heartbeat/eventos worker JSONL o DB local",
+    "launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1",
+    "backup":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\backup-projects-center-before-e61-20260620-103414.ps1",
+    "next":  "RUN_PROJECTS_PROCESS_UX_VIEW_TEST"
+}

@@ -1,0 +1,57 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_FINAL_026_035",
+    "stage":  "E30",
+    "created_at":  "2026-06-17T11:11:35.6186662+02:00",
+    "readiness":  100,
+    "decision":  "GO_E30_READINESS_CHECKER_READY",
+    "next":  "E31_ERROR_MEMORY_MVP",
+    "current_readiness":  {
+                              "objective":  "ENGREMIAT_MVP_FINAL_026_035",
+                              "stage":  "E30",
+                              "created_at":  "2026-06-17T11:11:35.6186662+02:00",
+                              "readiness":  90,
+                              "decision":  "NEEDS_REVIEW",
+                              "pending_gates":  1,
+                              "inputs":  {
+                                             "artifact_registry":  true,
+                                             "context_snapshot":  true,
+                                             "gate_center":  true,
+                                             "gate_index":  true,
+                                             "artifact_index":  true
+                                         },
+                              "blockers":  [
+
+                                           ],
+                              "next":  "REVIEW_GATES_OR_MISSING_ARTIFACTS",
+                              "apply_executed":  false,
+                              "auto_apply":  false,
+                              "remote_execution":  false,
+                              "git_write":  false
+                          },
+    "checks":  {
+                   "readiness_model_created":  true,
+                   "current_readiness_created":  true,
+                   "tool_created":  true,
+                   "readiness_doc_created":  true,
+                   "dashboard_created":  true,
+                   "score":  90,
+                   "decision":  "NEEDS_REVIEW",
+                   "pending_gates":  1,
+                   "apply_executed":  false,
+                   "auto_apply":  false,
+                   "remote_execution":  false,
+                   "git_write":  false
+               },
+    "artifacts":  [
+                      "data/dev/readiness-model.json",
+                      "reports/readiness/current-readiness.json",
+                      "tools/eng-readiness.ps1",
+                      "docs/READINESS.md",
+                      "reports/readiness/index.html",
+                      "reports/readiness/e30-readiness-checker-report.json"
+                  ],
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false
+}

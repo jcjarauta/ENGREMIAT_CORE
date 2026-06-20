@@ -1,0 +1,80 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_HUMAN_USABLE_036_045",
+    "stage":  "E45",
+    "manifest_id":  "E45_HUMAN_USABLE_MVP_MANIFEST",
+    "core_command":  "eng.ps1",
+    "daily_commands":  [
+                           "start",
+                           "status",
+                           "next",
+                           "readiness",
+                           "gates",
+                           "artifacts",
+                           "context",
+                           "errors",
+                           "docs",
+                           "dashboard",
+                           "mvp-open",
+                           "prompt",
+                           "inbox",
+                           "review",
+                           "approve"
+                       ],
+    "artifacts":  [
+                      {
+                          "path":  "eng.ps1",
+                          "exists":  true
+                      },
+                      {
+                          "path":  "docs/HUMAN_COMMANDS.md",
+                          "exists":  true
+                      },
+                      {
+                          "path":  "docs/MVP_DEMO_CHECKLIST.md",
+                          "exists":  true
+                      },
+                      {
+                          "path":  "docs/HUMAN_USABLE_MVP_MANUAL.md",
+                          "exists":  false
+                      },
+                      {
+                          "path":  "docs/HUMAN_USABLE_MVP_DEMO_SCRIPT.md",
+                          "exists":  false
+                      },
+                      {
+                          "path":  "docs/HUMAN_USABLE_MVP_CLOSE_REPORT.md",
+                          "exists":  false
+                      },
+                      {
+                          "path":  "docs/NEXT_OBJECTIVE_AFTER_HUMAN_USABLE_MVP.md",
+                          "exists":  false
+                      },
+                      {
+                          "path":  "dashboard/human-start/index.html",
+                          "exists":  true
+                      },
+                      {
+                          "path":  "dashboard/kanban-mvp/index.html",
+                          "exists":  true
+                      },
+                      {
+                          "path":  "dashboard/mvp-demo/index.html",
+                          "exists":  true
+                      },
+                      {
+                          "path":  "ENGREMIAT_MEMORY/dashboard/memory/index.html",
+                          "exists":  true
+                      }
+                  ],
+    "security":  {
+                     "apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "mvp_close_local_only":  true,
+                     "human_final_decision":  true
+                 },
+    "next":  "POST_MVP_OPERATIONALIZATION",
+    "created_at":  "2026-06-17T11:48:29"
+}

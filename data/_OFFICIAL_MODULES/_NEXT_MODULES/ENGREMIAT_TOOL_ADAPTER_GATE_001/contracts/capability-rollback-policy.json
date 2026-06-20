@@ -1,0 +1,16 @@
+﻿{
+    "policy_id":  "capability-rollback-policy.v1",
+    "rules":  [
+                  "WRITE requires before_state when possible",
+                  "EXECUTE requires rollback_plan or explicit no_rollback_possible reason",
+                  "OFFICIALIZE_RESOURCE requires reversible staging or archival record",
+                  "DESTRUCTIVE actions blocked unless explicit human authorization"
+              ],
+    "blocked_without_rollback":  [
+                                     "DELETE",
+                                     "OVERWRITE_OFFICIAL",
+                                     "REMOTE_PUSH",
+                                     "MODULE_ACTIVATION",
+                                     "RESOURCE_PUBLICATION"
+                                 ]
+}

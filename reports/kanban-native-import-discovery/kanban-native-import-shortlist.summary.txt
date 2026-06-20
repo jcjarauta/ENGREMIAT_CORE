@@ -1,0 +1,134 @@
+﻿KANBAN_NATIVE_IMPORT_REVIEW_SHORTLIST_001
+signals_total=120
+candidates_count=25
+report=C:\ENGREMIAT_CORE\reports\kanban-native-import-discovery\kanban-native-import-shortlist.report.json
+
+TOP_CANDIDATES
+
+[1] score=9 length=3202
+path=C:\Users\pc\AppData\Roaming\npm\node_modules\cline\node_modules\@modelcontextprotocol\sdk\dist\cjs\experimental\tasks\types.js
+signals=CreateTask
+snippet=TaskPayloadRequestSchema = exports.GetTaskResultSchema = exports.GetTaskRequestSchema = exports.TaskStatusNotificationSchema = exports.TaskStatusNotificationParamsSchema = exports.CreateTaskResultSchema = exports.TaskSchema = exports.RelatedTaskMetadataSchema = exports.TaskCreationParamsSchema = void 0; // Task schemas (Zod) var types_js_1 = require("../../types.js"); Object.defineProperty(exports, "TaskCreationParamsSchema", { enumerable: true, get: function () { return types_js_1.TaskCreationParamsSchema; } }); O
+
+[2] score=9 length=2973
+path=C:\Users\pc\AppData\Roaming\npm\node_modules\cline\node_modules\@modelcontextprotocol\sdk\dist\esm\experimental\tasks\mcp-server.d.ts
+signals=createTask
+snippet=tool with a config object and handler. * * Task-based tools support long-running operations that can be polled for status * and results. The handler must implement `createTask`, `getTask`, and `getTaskResult` * methods. * * @example * ```typescript * server.experimental.tasks.registerToolTask('long-computation', { * description: 'Performs a long computation', * inputSchema: { input: z.string() }, * execution: { taskSupport: 'required' } * }, { *
+
+[3] score=9 length=2973
+path=C:\Users\pc\AppData\Roaming\npm\node_modules\cline\node_modules\@modelcontextprotocol\sdk\dist\cjs\experimental\tasks\mcp-server.d.ts
+signals=createTask
+snippet=tool with a config object and handler. * * Task-based tools support long-running operations that can be polled for status * and results. The handler must implement `createTask`, `getTask`, and `getTaskResult` * methods. * * @example * ```typescript * server.experimental.tasks.registerToolTask('long-computation', { * description: 'Performs a long computation', * inputSchema: { input: z.string() }, * execution: { taskSupport: 'required' } * }, { *
+
+[4] score=9 length=1032
+path=C:\Users\pc\AppData\Roaming\npm\node_modules\cline\node_modules\@modelcontextprotocol\sdk\dist\cjs\experimental\tasks\types.d.ts
+signals=CreateTask
+snippet= protocol spec) and * re-exported here for convenience when working with experimental task features. */ export { TaskCreationParamsSchema, RelatedTaskMetadataSchema, TaskSchema, CreateTaskResultSchema, TaskStatusNotificationParamsSchema, TaskStatusNotificationSchema, GetTaskRequestSchema, GetTaskResultSchema, GetTaskPayloadRequestSchema, ListTasksRequestSchema, ListTasksResultSchema, CancelTaskRequestSchema, CancelTaskResultSchema, ClientTasksCapabilitySchema, ServerTasksCapabilitySchema } from '../../types.js'; 
+
+[5] score=9 length=1032
+path=C:\Users\pc\AppData\Roaming\npm\node_modules\cline\node_modules\@modelcontextprotocol\sdk\dist\esm\experimental\tasks\types.d.ts
+signals=CreateTask
+snippet= protocol spec) and * re-exported here for convenience when working with experimental task features. */ export { TaskCreationParamsSchema, RelatedTaskMetadataSchema, TaskSchema, CreateTaskResultSchema, TaskStatusNotificationParamsSchema, TaskStatusNotificationSchema, GetTaskRequestSchema, GetTaskResultSchema, GetTaskPayloadRequestSchema, ListTasksRequestSchema, ListTasksResultSchema, CancelTaskRequestSchema, CancelTaskResultSchema, ClientTasksCapabilitySchema, ServerTasksCapabilitySchema } from '../../types.js'; 
+
+[6] score=9 length=769
+path=C:\Users\pc\AppData\Roaming\npm\node_modules\cline\node_modules\@modelcontextprotocol\sdk\dist\esm\experimental\tasks\types.js
+signals=CreateTask
+snippet= re-exported here for convenience when working with experimental task features. */ // Task schemas (Zod) export { TaskCreationParamsSchema, RelatedTaskMetadataSchema, TaskSchema, CreateTaskResultSchema, TaskStatusNotificationParamsSchema, TaskStatusNotificationSchema, GetTaskRequestSchema, GetTaskResultSchema, GetTaskPayloadRequestSchema, ListTasksRequestSchema, ListTasksResultSchema, CancelTaskRequestSchema, CancelTaskResultSchema, ClientTasksCapabilitySchema, ServerTasksCapabilitySchema } from '../../types.js'; 
+
+[7] score=7 length=4104
+path=C:\Users\pc\AppData\Roaming\npm\node_modules\cline\node_modules\@modelcontextprotocol\sdk\dist\esm\experimental\tasks\stores\in-memory.d.ts
+signals=CreateTask,updateTask
+snippet=l and may change without notice. * * @experimental */ import { Task, RequestId, Result, Request } from '../../../types.js'; import { TaskStore, TaskMessageQueue, QueuedMessage, CreateTaskOptions } from '../interfaces.js'; /** * A simple in-memory implementation of TaskStore for demonstration purposes. * * This implementation stores all tasks in memory and provides automatic cleanup * based on the ttl duration specified in the task creation parameters. * * Note: This is not suitable for production use as al
+
+[8] score=7 length=4104
+path=C:\Users\pc\AppData\Roaming\npm\node_modules\cline\node_modules\@modelcontextprotocol\sdk\dist\cjs\experimental\tasks\stores\in-memory.d.ts
+signals=CreateTask,updateTask
+snippet=l and may change without notice. * * @experimental */ import { Task, RequestId, Result, Request } from '../../../types.js'; import { TaskStore, TaskMessageQueue, QueuedMessage, CreateTaskOptions } from '../interfaces.js'; /** * A simple in-memory implementation of TaskStore for demonstration purposes. * * This implementation stores all tasks in memory and provides automatic cleanup * based on the ttl duration specified in the task creation parameters. * * Note: This is not suitable for production use as al
+
+[9] score=7 length=1220
+path=C:\Users\pc\AppData\Roaming\npm\node_modules\cline\node_modules\@cline\core\dist\session\checkpoint-restore.d.ts
+signals=Checkpoint,Worktree
+snippet=import type * as LlmsProviders from "@cline/llms"; import type { CheckpointEntry, CheckpointMetadata } from "../hooks/checkpoint-hooks"; import type { SessionRecord } from "../types/sessions"; export interface CheckpointRestorePlan { checkpoint: CheckpointEntry; messages?: LlmsProviders.Message[]; cwd: string; } export declare function readSessionCheckpointHistory(session: Pick<SessionRecord, "metadata"> | undefined): CheckpointEntry[]; export declare function createRestoredCheckpointMetadata(session: P
+
+[10] score=6 length=6261
+path=C:\Users\pc\AppData\Roaming\npm\node_modules\cline\node_modules\@anthropic-ai\claude-agent-sdk\assistant.d.ts
+signals=Checkpoint
+snippet=ompt, Options, PermissionResult, SDKMessage, SDKUserMessage } from './agentSdkTypes.js'; export type { ConnectRemoteControlOptions, InboundPrompt }; /** * Worker-persisted state. Checkpointed on turn boundaries, bridge * reconnects, and teardown. * @alpha */ export type WorkerState = { claudeSessionId?: string; lastSSESequenceNum?: number; bridgeSessionId?: string; /** * Bridge-requested model override, replayed onto spawned queries. * `{ model: undefined }` â€” which a JSON round-trip
+
+[11] score=6 length=6214
+path=C:\Users\pc\AppData\Roaming\npm\node_modules\cline\node_modules\@cline\core\dist\types\config.d.ts
+signals=checkpoint
+snippet=rConfig; compact?: (context: CoreCompactionContext) => Promise<CoreCompactionResult | undefined> | CoreCompactionResult | undefined; } /** * Context passed to a custom `createCheckpoint` implementation. */ export interface CoreCheckpointContext { /** Absolute path to the working directory of the session. */ cwd: string; /** The session identifier. */ sessionId: string; /** Monotonically increasing run counter for this session (starts at 1). */ runCount: number; } /** * Configuration f
+
+[12] score=6 length=6114
+path=C:\Users\pc\AppData\Roaming\npm\node_modules\cline\node_modules\@opentelemetry\api\build\esm\metrics\Metric.d.ts
+signals=checkpoint
+snippet=unt the number of bytes received. </li> * <li> count the number of requests completed. </li> * <li> count the number of accounts created. </li> * <li> count the number of checkpoints run. </li> * <li> count the number of 5xx errors. </li> * <ol> * * @since 1.3.0 */ export interface Counter<AttributesTypes extends MetricAttributes = MetricAttributes> { /** * Increment value of counter by the input. Inputs must not be negative. */ add(value: number, attributes?: AttributesTypes, cont
+
+[13] score=6 length=6114
+path=C:\Users\pc\AppData\Roaming\npm\node_modules\cline\node_modules\@opentelemetry\api\build\esnext\metrics\Metric.d.ts
+signals=checkpoint
+snippet=unt the number of bytes received. </li> * <li> count the number of requests completed. </li> * <li> count the number of accounts created. </li> * <li> count the number of checkpoints run. </li> * <li> count the number of 5xx errors. </li> * <ol> * * @since 1.3.0 */ export interface Counter<AttributesTypes extends MetricAttributes = MetricAttributes> { /** * Increment value of counter by the input. Inputs must not be negative. */ add(value: number, attributes?: AttributesTypes, cont
+
+[14] score=6 length=6114
+path=C:\Users\pc\AppData\Roaming\npm\node_modules\cline\node_modules\@opentelemetry\api\build\src\metrics\Metric.d.ts
+signals=checkpoint
+snippet=unt the number of bytes received. </li> * <li> count the number of requests completed. </li> * <li> count the number of accounts created. </li> * <li> count the number of checkpoints run. </li> * <li> count the number of 5xx errors. </li> * <ol> * * @since 1.3.0 */ export interface Counter<AttributesTypes extends MetricAttributes = MetricAttributes> { /** * Increment value of counter by the input. Inputs must not be negative. */ add(value: number, attributes?: AttributesTypes, cont
+
+[15] score=6 length=5602
+path=C:\Users\pc\AppData\Roaming\npm\node_modules\cline\node_modules\@cline\core\dist\types\chat-schema.d.ts
+signals=checkpoint
+snippet=ptional<z.ZodString>; hookEventName: z.ZodOptional<z.ZodString>; inputTokens: z.ZodOptional<z.ZodNumber>; outputTokens: z.ZodOptional<z.ZodNumber>; checkpoint: z.ZodOptional<z.ZodObject<{ ref: z.ZodString; createdAt: z.ZodNumber; runCount: z.ZodNumber; kind: z.ZodOptional<z.ZodEnum<{ commit: "commit"; stash: "stash"; }>>; }, z.core.$strip>>; }, z.core.$strip>>; }, z.core.$strip>; e
+
+[16] score=6 length=5225
+path=C:\Users\pc\AppData\Roaming\npm\node_modules\cline\node_modules\@cline\core\dist\types.d.ts
+signals=Checkpoint
+snippet=from "./session/models/session-row"; export type { CreateRootSessionWithArtifactsInput, RootSessionArtifacts, } from "./session/services/session-service"; export type { CoreSessionCheckpointSnapshot, CoreSessionSnapshot, } from "./session/session-snapshot"; export type { SessionCheckpointRestoreContext, SessionCheckpointRestoreResult, SessionVersioningErrorCode, } from "./session/session-versioning-service"; export type { ChatMessage, ChatSessionConfig, ChatSessionStatus, ChatSummary, ChatViewState, } from "./types
+
+[17] score=6 length=4435
+path=C:\Users\pc\AppData\Roaming\npm\node_modules\cline\node_modules\@cline\core\dist\hub\client\session-client.d.ts
+signals=checkpoint
+snippet=cline/llms"; import type { ChatRunTurnRequest, ChatStartSessionRequest, ChatStartSessionResponse, ChatTurnResult, TeamProgressProjectionEvent } from "@cline/shared"; import type { CheckpointEntry } from "../../hooks/checkpoint-hooks"; type ScheduleClientRecord = Record<string, unknown> & { metadata?: Record<string, unknown>; }; export interface HubSessionClientOptions { address: string; authToken?: string; clientId?: string; clientType?: string; displayName?: string; workspaceRoot?: stri
+
+[18] score=6 length=2578
+path=C:\Users\pc\AppData\Roaming\npm\node_modules\cline\node_modules\@cline\core\dist\session\session-versioning-service.d.ts
+signals=Checkpoint
+snippet=import type * as LlmsProviders from "@cline/llms"; import type { CheckpointEntry, CheckpointMetadata } from "../hooks/checkpoint-hooks"; import type { RestoreSessionInput } from "../runtime/host/runtime-host"; import type { SessionRecord } from "../types/sessions"; import { type CheckpointRestorePlan } from "./checkpoint-restore"; import { type CoreSessionSnapshot } from "./session-snapshot"; export type SessionVersioningErrorCode = "invalid_restore" | "session_not_found" | "session_messages_not_found"; export decl
+
+[19] score=6 length=1768
+path=C:\Users\pc\AppData\Roaming\npm\node_modules\cline\node_modules\@cline\core\dist\session\session-snapshot.d.ts
+signals=Checkpoint
+snippet=import type * as LlmsProviders from "@cline/llms"; import type { CheckpointEntry } from "../hooks/checkpoint-hooks"; import type { SessionAccumulatedUsage } from "../runtime/host/runtime-host"; import type { SessionRecord } from "../types/sessions"; export interface CoreSessionCheckpointSnapshot { enabled?: boolean; latest?: CheckpointEntry; history: CheckpointEntry[]; } export interface CoreSessionSnapshot { version: 1; sessionId: string; source: SessionRecord["source"]; status: Session
+
+[20] score=6 length=1472
+path=C:\Users\pc\AppData\Roaming\npm\node_modules\cline\node_modules\@cline\core\dist\hub\server\hub-client-contributions.d.ts
+signals=CHECKPOINT
+snippet=import type { AgentHooks, HubClientContribution } from "@cline/shared"; export { HUB_CHECKPOINT_CAPABILITY, HUB_COMPACTION_CAPABILITY, HUB_CUSTOM_TOOL_CAPABILITY_PREFIX, HUB_HOOK_CAPABILITY_PREFIX, HUB_MISTAKE_LIMIT_CAPABILITY, HUB_TOOL_EXECUTOR_CAPABILITY_PREFIX, HUB_USER_INSTRUCTIONS_SNAPSHOT_CAPABILITY, } from "@cline/shared"; import type { ToolExecutors } from "../../extensions/tools"; import type { LocalRuntimeStartOptions, RuntimeSessionConfig } from "../../runtime/host/runtime-host"; type RequestCapability =
+
+[21] score=6 length=1442
+path=C:\Users\pc\AppData\Roaming\npm\node_modules\cline\node_modules\async\priorityQueue.js
+signals=createTask
+snippet=Start with a normal queue var q = (0, _queue2.default)(worker, concurrency); var { push, pushAsync } = q; q._tasks = new _Heap2.default(); q._createTaskItem = ({ data, priority }, callback) => { return { data, priority, callback }; }; function createDataItems(tasks, priority) { if (!Array.isArray(tasks)) { return { data: tasks, priority }; } return tasks.map(data => { re
+
+[22] score=6 length=1182
+path=C:\Users\pc\AppData\Roaming\npm\node_modules\cline\node_modules\@cline\core\dist\types\sessions.d.ts
+signals=checkpoint
+snippet=<string, unknown> { title?: string; totalCost?: number; aggregatedAgentsCost?: number; usage?: SessionUsageMetadata; aggregateUsage?: SessionUsageMetadata; checkpoint?: { latest?: { ref?: string; createdAt?: number; runCount?: number; }; history?: Array<{ ref?: string; createdAt?: number; runCount?: number; }>; }; } export interface SessionHistoryRecord extends Omit<SessionRecord, "met
+
+[23] score=4 length=6432
+path=C:\Users\pc\AppData\Roaming\npm\node_modules\cline\node_modules\@modelcontextprotocol\sdk\package.json
+signals=review
+snippet=
+
+[24] score=4 length=6250
+path=C:\Users\pc\AppData\Roaming\npm\node_modules\cline\node_modules\@types\node\wasi.d.ts
+signals=review
+snippet=
+
+[25] score=4 length=6062
+path=C:\Users\pc\AppData\Roaming\npm\node_modules\cline\node_modules\@anthropic-ai\sdk\resources\messages\messages.js
+signals=review
+snippet=llect helper info from tools and messages const helperHeader = (0, stainless_helper_header_1.stainlessHelperHeader)(body.tools, body.messages); return this._client.post('/v1/messages', { body, timeout: timeout ?? 600000, ...options, headers: (0, headers_1.buildHeaders)([helperHeader, options?.headers]), stream: body.stream ?? false, }); } /** * Send a structured list of input messages with text and/or image content, alo
+
+decision=REVIEW_SHORTLIST_ONLY_NO_WRITE
+next=PASTE_TOP_CANDIDATES_THEN_DECIDE_DRY_RUN_IMPORT_OR_LOCAL_BOARD

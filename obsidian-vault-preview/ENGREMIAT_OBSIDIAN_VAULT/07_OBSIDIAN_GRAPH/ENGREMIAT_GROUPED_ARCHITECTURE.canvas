@@ -1,0 +1,158 @@
+﻿{
+    "nodes":  [
+                  {
+                      "id":  "g-core",
+                      "x":  0,
+                      "y":  0,
+                      "width":  300,
+                      "height":  140,
+                      "type":  "text",
+                      "text":  "G01 · ENGREMIAT CORE\nFuente canonica: data/reports/exports/dashboard",
+                      "color":  "1"
+                  },
+                  {
+                      "id":  "g-human",
+                      "x":  420,
+                      "y":  "-180",
+                      "width":  300,
+                      "height":  140,
+                      "type":  "text",
+                      "text":  "G02 · CONTROL HUMANO\nGates, decisiones, autorizaciones",
+                      "color":  "2"
+                  },
+                  {
+                      "id":  "g-projects",
+                      "x":  420,
+                      "y":  0,
+                      "width":  300,
+                      "height":  140,
+                      "type":  "text",
+                      "text":  "G03 · PROYECTOS Y MODULOS\nProject spaces y modulos conectables",
+                      "color":  "3"
+                  },
+                  {
+                      "id":  "g-memory",
+                      "x":  420,
+                      "y":  180,
+                      "width":  300,
+                      "height":  140,
+                      "type":  "text",
+                      "text":  "G04 · MEMORIA VISUAL\nObsidian, canvas, grafo, indices",
+                      "color":  "4"
+                  },
+                  {
+                      "id":  "g-kanban",
+                      "x":  840,
+                      "y":  "-180",
+                      "width":  300,
+                      "height":  140,
+                      "type":  "text",
+                      "text":  "G05 · TAREAS / KANBAN PREVIEW\nBacklog, tarjetas, lanes",
+                      "color":  "5"
+                  },
+                  {
+                      "id":  "g-workers",
+                      "x":  840,
+                      "y":  0,
+                      "width":  300,
+                      "height":  140,
+                      "type":  "text",
+                      "text":  "G06 · WORKERS PREVIEW\nWorker packet, dry-run, NO_GO",
+                      "color":  "6"
+                  },
+                  {
+                      "id":  "g-evidence",
+                      "x":  840,
+                      "y":  180,
+                      "width":  300,
+                      "height":  140,
+                      "type":  "text",
+                      "text":  "G07 · EVIDENCIAS / RESULTADOS\nReceipts, readiness, cierre",
+                      "color":  "1"
+                  },
+                  {
+                      "id":  "g-evolution",
+                      "x":  1260,
+                      "y":  0,
+                      "width":  300,
+                      "height":  140,
+                      "type":  "text",
+                      "text":  "G08 · EVOLUCION\nBacklog arquitectura y siguientes objetivos",
+                      "color":  "2"
+                  }
+              ],
+    "edges":  [
+                  {
+                      "id":  "e1",
+                      "fromNode":  "g-core",
+                      "fromSide":  "right",
+                      "toNode":  "g-human",
+                      "toSide":  "left",
+                      "label":  "estado/gates"
+                  },
+                  {
+                      "id":  "e2",
+                      "fromNode":  "g-core",
+                      "fromSide":  "right",
+                      "toNode":  "g-projects",
+                      "toSide":  "left",
+                      "label":  "crea estructura"
+                  },
+                  {
+                      "id":  "e3",
+                      "fromNode":  "g-projects",
+                      "fromSide":  "right",
+                      "toNode":  "g-memory",
+                      "toSide":  "left",
+                      "label":  "se visualiza"
+                  },
+                  {
+                      "id":  "e4",
+                      "fromNode":  "g-projects",
+                      "fromSide":  "right",
+                      "toNode":  "g-kanban",
+                      "toSide":  "left",
+                      "label":  "genera tareas"
+                  },
+                  {
+                      "id":  "e5",
+                      "fromNode":  "g-kanban",
+                      "fromSide":  "right",
+                      "toNode":  "g-workers",
+                      "toSide":  "left",
+                      "label":  "prepara trabajo"
+                  },
+                  {
+                      "id":  "e6",
+                      "fromNode":  "g-workers",
+                      "fromSide":  "right",
+                      "toNode":  "g-evidence",
+                      "toSide":  "left",
+                      "label":  "produce evidencia"
+                  },
+                  {
+                      "id":  "e7",
+                      "fromNode":  "g-evidence",
+                      "fromSide":  "right",
+                      "toNode":  "g-human",
+                      "toSide":  "left",
+                      "label":  "humano decide"
+                  },
+                  {
+                      "id":  "e8",
+                      "fromNode":  "g-evidence",
+                      "fromSide":  "right",
+                      "toNode":  "g-evolution",
+                      "toSide":  "left",
+                      "label":  "aprendizaje"
+                  },
+                  {
+                      "id":  "e9",
+                      "fromNode":  "g-evolution",
+                      "fromSide":  "right",
+                      "toNode":  "g-core",
+                      "toSide":  "left",
+                      "label":  "actualiza arquitectura"
+                  }
+              ]
+}

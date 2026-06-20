@@ -1,0 +1,31 @@
+{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_002E",
+    "stage":  "E01",
+    "block":  "B01.1",
+    "module_id":  "ENG-MOD-REG-001",
+    "module_name":  "Module Catalog Expansion",
+    "purpose":  "Extender el registro maestro con catálogo de capas, familias y roles",
+    "model":  {
+                  "layer_catalog":  true,
+                  "family_catalog":  true,
+                  "role_catalog":  true,
+                  "relation_catalog":  true,
+                  "local_first":  true
+              },
+    "fields":  [
+                   "family_id",
+                   "family_name",
+                   "layer",
+                   "role",
+                   "description",
+                   "parent_family_id",
+                   "compatibility_tags",
+                   "state",
+                   "versioning_policy"
+               ],
+    "acceptance_criteria":  [
+                                "Clasifica módulos por familia",
+                                "Relaciona capas y roles",
+                                "Mantiene compatibilidad trazable"
+                            ]
+}

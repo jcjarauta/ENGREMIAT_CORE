@@ -1,0 +1,40 @@
+﻿{
+    "policy_id":  "adapter-safety-policy.v1",
+    "module_id":  "ENGREMIAT_INTERNAL_WORKFLOW_STANDARD_001",
+    "default_policy":  {
+                           "local_only":  true,
+                           "real_tool_integration":  false,
+                           "network":  false,
+                           "git_write":  false,
+                           "core_changes":  false,
+                           "real_write":  false
+                       },
+    "gate_required_for":  [
+                              "network",
+                              "git_write",
+                              "core_changes",
+                              "real_sheets_write",
+                              "obsidian_write",
+                              "kanban_write",
+                              "cline_execute",
+                              "openclaw_execute",
+                              "ollama_stateful_generation",
+                              "module_activation"
+                          ],
+    "evidence_required_for":  [
+                                  "audio_input",
+                                  "document_attachment",
+                                  "generated_document",
+                                  "module_candidate",
+                                  "project_decision",
+                                  "task_completion",
+                                  "resource_publication"
+                              ],
+    "blocked_without_gate":  [
+                                 "real_write",
+                                 "external_api",
+                                 "agent_execution",
+                                 "module_officialization",
+                                 "resource_publication"
+                             ]
+}

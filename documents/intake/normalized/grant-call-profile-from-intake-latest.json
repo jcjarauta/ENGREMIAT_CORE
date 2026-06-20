@@ -1,0 +1,80 @@
+﻿{
+    "profile_id":  "grant-call-profile-from-intake-latest",
+    "profile_type":  "grant_call",
+    "schema":  "ENGREMIAT_NORMALIZED_PROFILE_CONTRACT_V1",
+    "created_at":  "2026-06-20T09:28:21",
+    "status":  "ready",
+    "human_review_required":  false,
+    "confidence":  "high",
+    "source":  {
+                   "source_id":  "intake-demo-grant-call-001",
+                   "source_type":  "demo",
+                   "source_path":  "C:\\ENGREMIAT_CORE\\documents\\intake\\samples\\grant-call-demo-source.json",
+                   "created_at":  "2026-06-20T09:28:21",
+                   "status":  "normalized",
+                   "human_review_required":  false,
+                   "title":  "Convocatoria demo completa para validacion E10",
+                   "notes":  "Fuente demo local generada por Data Intake; sin red, sin IA externa, sin scraping."
+               },
+    "convocatoria_nombre":  "Convocatoria demo de innovacion social y economia circular",
+    "titulo":  "Convocatoria demo de innovacion social y economia circular",
+    "entidad_convocante":  "Entidad publica demo",
+    "entity":  "Entidad publica demo",
+    "territorio":  "Catalunya / España",
+    "territory":  "Catalunya / España",
+    "fecha_limite":  "2026-12-31",
+    "deadline":  "2026-12-31",
+    "importe_maximo":  "50000 EUR",
+    "amount":  "50000 EUR",
+    "modalidad":  "Subvencion competitiva",
+    "objetivo_convocatoria":  "Financiar proyectos piloto con impacto social, economia circular, digitalizacion local y participacion comunitaria.",
+    "encaje_engremiat":  "Engremiat encaja como infraestructura local-first para coordinar recursos, tareas, documentacion, evidencias y colaboracion humano-maquina.",
+    "beneficiarios":  "Comunidades locales, entidades sociales, pequenos productores, profesionales y administraciones colaboradoras.",
+    "criterios":  [
+                      "Innovacion social",
+                      "Impacto medible",
+                      "Viabilidad tecnica",
+                      "Sostenibilidad",
+                      "Escalabilidad",
+                      "Participacion comunitaria"
+                  ],
+    "criteria":  [
+                     "Innovacion social",
+                     "Impacto medible",
+                     "Viabilidad tecnica",
+                     "Sostenibilidad",
+                     "Escalabilidad",
+                     "Participacion comunitaria"
+                 ],
+    "documentacion_requerida":  [
+                                    "Memoria tecnica",
+                                    "Presupuesto",
+                                    "Cronograma",
+                                    "Indicadores",
+                                    "Declaracion responsable",
+                                    "Documentacion administrativa"
+                                ],
+    "required_documents":  [
+                               "Memoria tecnica",
+                               "Presupuesto",
+                               "Cronograma",
+                               "Indicadores",
+                               "Declaracion responsable",
+                               "Documentacion administrativa"
+                           ],
+    "resumen":  "Ficha demo completa generada desde Data Intake para validar que el Centro Documental consume perfiles normalizados sin campos pendientes.",
+    "summary":  "Ficha demo completa generada desde Data Intake para validar que el Centro Documental consume perfiles normalizados sin campos pendientes.",
+    "pending_fields":  [
+
+                       ],
+    "campos_pendientes":  [
+
+                          ],
+    "metadata":  {
+                     "producer":  "ENGREMIAT-DATA-INTAKE-CENTER",
+                     "consumer":  "ENGREMIAT-MEMORY-DOCUMENTATION-CENTER",
+                     "local_first":  true,
+                     "network_used":  false,
+                     "external_ai_used":  false
+                 }
+}

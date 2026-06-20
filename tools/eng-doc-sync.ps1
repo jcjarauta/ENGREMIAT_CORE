@@ -1,14 +1,13 @@
-﻿param([string]$Command="sync",[string]$Value="")
-$ErrorActionPreference="Stop"
-[Console]::OutputEncoding=[System.Text.Encoding]::UTF8
-function EnsureDir($p){ if(!(Test-Path -LiteralPath $p)){ New-Item -ItemType Directory -Path $p -Force | Out-Null } }
-function LoadJsonl($path){ $items=@(); if(Test-Path -LiteralPath $path){ foreach($line in Get-Content -LiteralPath $path -Encoding UTF8){ if([string]::IsNullOrWhiteSpace($line)){ continue }; try{ $items += ($line | ConvertFrom-Json) }catch{} } }; return @($items) }
-function WriteLines($p,[string[]]$lines){ EnsureDir (Split-Path -Parent $p); Set-Content -LiteralPath $p -Value $lines -Encoding UTF8 }
-function SyncDocs(){ $arts=LoadJsonl "data/registry/artifact-registry.jsonl"; $gates=LoadJsonl "data/gates/gate-registry.jsonl"; $errs=LoadJsonl "data/errors/error-memory.jsonl"; $ctx=$null; if(Test-Path -LiteralPath "data/dev/context-snapshot.json"){ $ctx=Get-Content -LiteralPath "data/dev/context-snapshot.json" -Raw -Encoding UTF8 | ConvertFrom-Json }; $ready=$null; if(Test-Path -LiteralPath "data/dev/readiness.json"){ $ready=Get-Content -LiteralPath "data/dev/readiness.json" -Raw -Encoding UTF8 | ConvertFrom-Json }; $current=@("# CURRENT_CONTEXT","","Generado por eng-doc-sync.",""); if($ctx){ $current += "objective="+$ctx.objective_id; $current += "active_stage="+$ctx.active_stage; $current += "active_block="+$ctx.active_block; $current += "active_step="+$ctx.active_step; $current += "last_validated="+$ctx.last_validated }; WriteLines "docs/CURRENT_CONTEXT.md" $current; $idx=@("# ARTIFACT_INDEX","","Generado desde data/registry/artifact-registry.jsonl.",""); foreach($grp in ($arts | Group-Object objective_id | Sort-Object Name)){ $idx += "## "+$grp.Name; $idx += ""; $idx += "| Paso | Artefacto | Ruta | Tipo | Estado |"; $idx += "|---|---|---|---|---|"; foreach($a in ($grp.Group | Sort-Object stage_id,block_id,step_id,name)){ $idx += "| "+$a.step_id+" | "+$a.name+" | "+$a.path+" | "+$a.artifact_type+" | "+$a.status+" |" }; $idx += "" }; WriteLines "docs/ARTIFACT_INDEX.md" $idx; $gidx=@("# GATE_INDEX","","Generado desde data/gates/gate-registry.jsonl.","","| Gate | Paso | Acción | Riesgo | Decisión | Estado | Alcance |","|---|---|---|---|---|---|---|"); if($gates.Count -eq 0){ $gidx += "| — | — | Sin gates registrados | — | — | — | — |" } else { foreach($g in ($gates | Sort-Object created_at,gate_id)){ $gidx += "| "+$g.gate_id+" | "+$g.step_id+" | "+$g.action+" | "+$g.risk+" | "+$g.decision+" | "+$g.status+" | "+$g.scope+" |" } }; WriteLines "docs/GATE_INDEX.md" $gidx; $rd=@("# READINESS","","Generado desde data/dev/readiness.json.",""); if($ready){ $rd += "objective="+$ready.objective_id; $rd += "readiness="+$ready.readiness; $rd += "decision="+$ready.decision } else { $rd += "decision=NO_GO" }; WriteLines "docs/READINESS.md" $rd; $ed=@("# ERROR_PLAYBOOK","","Generado desde data/errors/error-memory.jsonl.","","| Error | Firma | Prevención | Estado |","|---|---|---|---|"); foreach($e in ($errs | Sort-Object error_id)){ $ed += "| "+$e.error_id+" | "+$e.signature+" | "+$e.prevention_rule+" | "+$e.status+" |" }; WriteLines "docs/ERROR_PLAYBOOK.md" $ed; if(!(Test-Path -LiteralPath "docs/DEVELOPMENT_LOG.md")){ WriteLines "docs/DEVELOPMENT_LOG.md" @("# DEVELOPMENT_LOG") }; Write-Host "OK docs_synced=True targets=6" }
-switch($Command){
-  "sync" { SyncDocs; break }
-  "current" { if(Test-Path -LiteralPath "docs/CURRENT_CONTEXT.md"){ Get-Content -LiteralPath "docs/CURRENT_CONTEXT.md" -Encoding UTF8 } else { Write-Host "NO_CONTEXT" }; break }
-  "objective" { SyncDocs; Write-Host ("OK docs_objective="+$Value); break }
-  "status" { $targets=@("docs/CURRENT_CONTEXT.md","docs/ARTIFACT_INDEX.md","docs/GATE_INDEX.md","docs/READINESS.md","docs/ERROR_PLAYBOOK.md","docs/DEVELOPMENT_LOG.md"); $missing=@($targets | Where-Object { !(Test-Path -LiteralPath $_) }); Write-Host ("OK docs_targets="+($targets.Count)+" missing="+($missing.Count)); break }
-  default { Write-Host "Uso: .\tools\eng-doc-sync.ps1 sync|current|objective <ID>|status" }
+﻿$ErrorActionPreference='Stop'
+param([string]$Mode='sync')
+$ts=(Get-Date).ToString('o')
+New-Item -ItemType Directory -Force -Path 'docs'|Out-Null
+if($Mode -eq 'sync'){
+# minimal safe sync: refresh DEVELOPMENT_LOG from key reports
+  $lines=@('# DEVELOPMENT LOG','','Updated: '+$ts,'','## Key reports')
+  Get-ChildItem 'reports' -Recurse -File -ErrorAction SilentlyContinue|Sort-Object LastWriteTime -Descending|Select-Object -First 30|ForEach-Object{$lines += '- `'+$_.FullName.Replace((Get-Location).Path+'\','')+'`'}
+  $lines -join [Environment]::NewLine|Set-Content 'docs/DEVELOPMENT_LOG.md' -Encoding UTF8
+  Write-Host 'OK tool=eng-doc-sync mode=sync doc=docs/DEVELOPMENT_LOG.md'
+  return
 }
+Write-Host 'OK tool=eng-doc-sync modes=sync'

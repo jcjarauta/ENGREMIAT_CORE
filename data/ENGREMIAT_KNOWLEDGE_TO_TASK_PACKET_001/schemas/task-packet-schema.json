@@ -1,0 +1,86 @@
+{
+    "package_id":  "ENGREMIAT_KNOWLEDGE_TO_TASK_PACKET_001",
+    "artifact":  "task-packet-schema.json",
+    "type":  "object",
+    "required":  [
+                     "objective_id",
+                     "module_id",
+                     "task_id",
+                     "title",
+                     "context",
+                     "requirements",
+                     "constraints",
+                     "inputs",
+                     "outputs",
+                     "acceptance_criteria",
+                     "risk_level",
+                     "human_gate_required",
+                     "kanban_status",
+                     "clien_prompt",
+                     "evidence_expected",
+                     "next_action"
+                 ],
+    "properties":  {
+                       "objective_id":  {
+                                            "type":  "string"
+                                        },
+                       "module_id":  {
+                                         "type":  "string"
+                                     },
+                       "task_id":  {
+                                       "type":  "string"
+                                   },
+                       "title":  {
+                                     "type":  "string"
+                                 },
+                       "context":  {
+                                       "type":  "string"
+                                   },
+                       "requirements":  {
+                                            "type":  "array"
+                                        },
+                       "constraints":  {
+                                           "type":  "array"
+                                       },
+                       "inputs":  {
+                                      "type":  "array"
+                                  },
+                       "outputs":  {
+                                       "type":  "array"
+                                   },
+                       "acceptance_criteria":  {
+                                                   "type":  "array"
+                                               },
+                       "risk_level":  {
+                                          "type":  "string",
+                                          "enum":  [
+                                                       "LOW",
+                                                       "MEDIUM",
+                                                       "HIGH"
+                                                   ]
+                                      },
+                       "human_gate_required":  {
+                                                   "type":  "boolean"
+                                               },
+                       "kanban_status":  {
+                                             "type":  "string",
+                                             "enum":  [
+                                                          "BACKLOG",
+                                                          "READY",
+                                                          "BLOCKED",
+                                                          "IN_PROGRESS",
+                                                          "REVIEW",
+                                                          "DONE"
+                                                      ]
+                                         },
+                       "clien_prompt":  {
+                                            "type":  "string"
+                                        },
+                       "evidence_expected":  {
+                                                 "type":  "array"
+                                             },
+                       "next_action":  {
+                                           "type":  "string"
+                                       }
+                   }
+}

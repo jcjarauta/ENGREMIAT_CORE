@@ -1,0 +1,118 @@
+﻿{
+    "package_id":  "ENGREMIAT_OPERATOR_CONTEXT_AND_DECISION_TREE_001",
+    "stage":  "E03K_AUDIT_AND_BIND_PROJECT_COMMANDS",
+    "status":  "PASS",
+    "readiness":  80,
+    "decision":  "STOP_ALIAS_LOOP_FIND_REAL_ROUTER_BINDING",
+    "active_project":  "ENGREMIAT_PROJECT_NUEVO_PROYECTO_20260619_161706",
+    "historical_projects":  [
+                                "ENGREMIAT_PROJECT_NUEVO_PROYECTO_20260619_164503",
+                                "ENGREMIAT_PROJECT_NUEVO_PROYECTO_20260619_162809"
+                            ],
+    "map":  "C:\\ENGREMIAT_CORE\\data\\operator-state\\command-dispatch-map.json",
+    "commands":  [
+                     "C:\\ENGREMIAT_CORE\\tools\\operator-context\\proyectos.ps1",
+                     "C:\\ENGREMIAT_CORE\\tools\\operator-context\\abrir-proyecto.ps1"
+                 ],
+    "router_candidates":  [
+                              {
+                                  "file":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-router.ps1",
+                                  "has_help":  true,
+                                  "has_unknown":  true,
+                                  "mentions_abrir_proyecto":  true,
+                                  "mentions_abrir_proyectos":  true,
+                                  "likely_router":  true
+                              }
+                          ],
+    "audit":  [
+                  {
+                      "file":  "C:\\ENGREMIAT_CORE\\dashboard\\operator-context-decision-tree\\e02-create-active-context-state.html",
+                      "has_help":  false,
+                      "has_unknown":  false,
+                      "mentions_abrir_proyecto":  true,
+                      "mentions_abrir_proyectos":  false,
+                      "likely_router":  false
+                  },
+                  {
+                      "file":  "C:\\ENGREMIAT_CORE\\data\\operator-context-decision-tree\\operative-decision-tree.json",
+                      "has_help":  false,
+                      "has_unknown":  false,
+                      "mentions_abrir_proyecto":  true,
+                      "mentions_abrir_proyectos":  true,
+                      "likely_router":  false
+                  },
+                  {
+                      "file":  "C:\\ENGREMIAT_CORE\\docs\\operator-context-decision-tree\\COMMAND_CONTEXT_MAP.md",
+                      "has_help":  false,
+                      "has_unknown":  false,
+                      "mentions_abrir_proyecto":  true,
+                      "mentions_abrir_proyectos":  false,
+                      "likely_router":  false
+                  },
+                  {
+                      "file":  "C:\\ENGREMIAT_CORE\\docs\\operator-context-decision-tree\\OPERATIVE_DECISION_TREE.md",
+                      "has_help":  false,
+                      "has_unknown":  false,
+                      "mentions_abrir_proyecto":  true,
+                      "mentions_abrir_proyectos":  false,
+                      "likely_router":  false
+                  },
+                  {
+                      "file":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-context.ps1",
+                      "has_help":  false,
+                      "has_unknown":  false,
+                      "mentions_abrir_proyecto":  true,
+                      "mentions_abrir_proyectos":  true,
+                      "likely_router":  false
+                  },
+                  {
+                      "file":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-module-vault-builder.ps1",
+                      "has_help":  true,
+                      "has_unknown":  false,
+                      "mentions_abrir_proyecto":  false,
+                      "mentions_abrir_proyectos":  false,
+                      "likely_router":  false
+                  },
+                  {
+                      "file":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-router.ps1",
+                      "has_help":  true,
+                      "has_unknown":  true,
+                      "mentions_abrir_proyecto":  true,
+                      "mentions_abrir_proyectos":  true,
+                      "likely_router":  true
+                  },
+                  {
+                      "file":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\ENGREMIAT_OPERATOR_HELP.md",
+                      "has_help":  false,
+                      "has_unknown":  false,
+                      "mentions_abrir_proyecto":  true,
+                      "mentions_abrir_proyectos":  false,
+                      "likely_router":  false
+                  },
+                  {
+                      "file":  "C:\\ENGREMIAT_CORE\\tools\\operator-context\\abrir-proyecto.ps1",
+                      "has_help":  false,
+                      "has_unknown":  false,
+                      "mentions_abrir_proyecto":  true,
+                      "mentions_abrir_proyectos":  false,
+                      "likely_router":  false
+                  },
+                  {
+                      "file":  "C:\\ENGREMIAT_CORE\\tools\\operator-context\\abrir-proyectos.ps1",
+                      "has_help":  false,
+                      "has_unknown":  false,
+                      "mentions_abrir_proyecto":  true,
+                      "mentions_abrir_proyectos":  false,
+                      "likely_router":  false
+                  },
+                  {
+                      "file":  "C:\\ENGREMIAT_CORE\\tools\\operator-context\\proyectos.ps1",
+                      "has_help":  false,
+                      "has_unknown":  false,
+                      "mentions_abrir_proyecto":  true,
+                      "mentions_abrir_proyectos":  false,
+                      "likely_router":  false
+                  }
+              ],
+    "next":  "PATCH_ONLY_THE_REAL_ROUTER_CANDIDATE_NOT_HELP_MENU"
+}

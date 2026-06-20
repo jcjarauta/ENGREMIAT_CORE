@@ -1,0 +1,21 @@
+﻿{
+    "schema_id":  "system-health-dimensions.v1",
+    "dimensions":  [
+                       "modularity",
+                       "workflow_standard",
+                       "capability_gates",
+                       "resource_library",
+                       "composition",
+                       "documentation",
+                       "validation",
+                       "evidence",
+                       "client_assembly",
+                       "automation_readiness"
+                   ],
+    "score_range":  "0-100",
+    "decision_thresholds":  {
+                                "good":  80,
+                                "warn":  50,
+                                "bad":  0
+                            }
+}

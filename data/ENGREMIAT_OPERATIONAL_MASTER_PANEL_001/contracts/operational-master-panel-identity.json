@@ -1,0 +1,24 @@
+{
+    "package_id":  "ENGREMIAT_OPERATIONAL_MASTER_PANEL_001",
+    "module_id":  "ENG-OMP-001",
+    "module_name":  "Operational Master Panel",
+    "type":  "ACOPLABLE_MODULE",
+    "status":  "DEFINED",
+    "purpose":  "Crear el panel maestro operativo humano para visualizar estado, readiness, modulos cerrados, gates, riesgos y siguiente accion",
+    "depends_on":  [
+                       "ENGREMIAT_MODULAR_PLATFORM",
+                       "ENGREMIAT_MODULAR_PLATFORM_MANUALS"
+                   ],
+    "compatible_with":  [
+                            "ENGREMIAT_MODULAR_PLATFORM_001",
+                            "NEXT_ENGREMIAT_MODULAR_PLATFORM_004E",
+                            "NEXT_ENGREMIAT_MODULAR_PLATFORM_005E",
+                            "CIERRE_DOCUMENTAL_001",
+                            "006E_VALIDACION_OPERATIVA_VISUAL"
+                        ],
+    "mode":  "LOCAL_READONLY_FIRST",
+    "core_changes":  false,
+    "external_network":  false,
+    "git_write":  false,
+    "real_module_activation":  false
+}

@@ -1,0 +1,101 @@
+﻿$ErrorActionPreference="Stop"
+[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+$Core="C:\ENGREMIAT_CORE"
+$ToolDir=Join-Path $Core "tools\desktop-terminal-operator"
+$LauncherDir=Join-Path $Core "tools\launcher"
+$NavDir=Join-Path $Core "reports\navigation"
+New-Item -ItemType Directory -Force -Path $NavDir | Out-Null
+function W($m,$c="White"){ Write-Host $m -ForegroundColor $c }
+function ActiveProject(){
+  $j=Join-Path $Core "data\desktop-terminal-operator\active-project.json"
+  $t=Join-Path $Core "data\desktop-terminal-operator\active-project.txt"
+  if(Test-Path $j){ try{ $x=Get-Content $j -Raw | ConvertFrom-Json; if($x.active_project -and (Test-Path ([string]$x.active_project))){ return [string]$x.active_project } }catch{} }
+  if(Test-Path $t){ $y=(Get-Content $t -Raw).Trim(); if(Test-Path $y){ return $y } }
+  return ""
+}
+function CountDirs($p){ if(Test-Path $p){ return @(Get-ChildItem $p -Directory -ErrorAction SilentlyContinue).Count }; return 0 }
+function Screen($id,$label,$path,$role,$parent){ return [pscustomobject]@{ id=$id; label=$label; path=$path; exists=(Test-Path $path); role=$role; parent=$parent } }
+function Route($from,$command,$to,$purpose,$section){ return [pscustomobject]@{ from=$from; command=$command; to=$to; purpose=$purpose; section=$section } }
+$project=ActiveProject
+$projectName=if($project){ Split-Path $project -Leaf }else{ "" }
+$projectModules=0
+if($project){ $projectModules=CountDirs (Join-Path $project "MODULOS") }
+$libraryActive=CountDirs (Join-Path $Core "library\modules")
+$libraryHistoric=CountDirs (Join-Path $Core "library\modules_historico")
+$screens=@()
+$screens += Screen "inicio" "Inicio raíz" (Join-Path $LauncherDir "ENGREMIAT-INICIO.ps1") "launcher" "-"
+$screens += Screen "modules" "Módulos del proyecto" (Join-Path $ToolDir "eng-project-modules-screen.ps1") "project_modules" "inicio"
+$screens += Screen "library" "Biblioteca de módulos" (Join-Path $ToolDir "eng-module-library-screen.ps1") "module_library" "inicio"
+$screens += Screen "workspace" "Workspace de módulo" (Join-Path $ToolDir "eng-module-workspace-screen.ps1") "module_workspace" "inicio/modules/library"
+$screens += Screen "cards" "Tarjetas de módulo" (Join-Path $ToolDir "eng-module-cards-screen.ps1") "module_cards" "workspace"
+$screens += Screen "graph" "Grafo de módulos" (Join-Path $ToolDir "eng-refresh-project-module-graph.ps1") "graph_refresh" "inicio"
+$screens += Screen "navigation_tree" "Generador árbol navegación" (Join-Path $LauncherDir "ENGREMIAT-NAVIGATION-TREE.ps1") "navigation" "inicio"
+$screens += Screen "navigation_viewer" "Visor árbol navegación" (Join-Path $LauncherDir "ENGREMIAT-NAVIGATION-VIEWER.ps1") "navigation" "inicio"
+$screens += Screen "navigation_safe" "Árbol seguro" (Join-Path $LauncherDir "ENGREMIAT-NAVIGATION-SAFE.ps1") "navigation_safe" "inicio"
+$screens += Screen "memory_generate" "Generador memoria viva" (Join-Path $LauncherDir "ENGREMIAT-PROJECT-MEMORY-GENERATE.ps1") "memory" "inicio"
+$screens += Screen "diary_add" "Añadir entrada diario" (Join-Path $LauncherDir "ENGREMIAT-PROJECT-DIARY-ADD.ps1") "memory" "inicio"
+$screens += Screen "status" "Status externo inicio" (Join-Path $LauncherDir "ENGREMIAT-INICIO-STATUS.ps1") "diagnostic" "inicio"
+$routes=@()
+$routes += Route "inicio" "1" "smart_start" "acción recomendada contextual" "CONTINUAR"
+$routes += Route "inicio" "2" "modules" "módulos del proyecto activo" "TRABAJO"
+$routes += Route "inicio" "3" "library" "biblioteca de módulos" "TRABAJO"
+$routes += Route "inicio" "4" "workspace" "workspace de módulo" "TRABAJO"
+$routes += Route "inicio" "5" "cards" "tarjetas de módulo" "TRABAJO"
+$routes += Route "inicio" "6" "project_folder" "abrir carpeta del proyecto activo" "TRABAJO"
+$routes += Route "inicio" "7" "operator_selector" "operador principal / selector" "TRABAJO"
+$routes += Route "inicio" "8" "navigation_safe" "árbol de navegación seguro" "REVISAR"
+$routes += Route "inicio" "9" "routes_help" "rutas recomendadas" "REVISAR"
+$routes += Route "inicio" "10" "help" "ayuda" "REVISAR"
+$routes += Route "inicio" "11" "technical_status" "estado técnico" "DIAGNOSTICO"
+$routes += Route "inicio" "12" "copyable_status" "estado copiable" "DIAGNOSTICO"
+$routes += Route "inicio" "13" "external_status" "status externo" "DIAGNOSTICO"
+$routes += Route "inicio" "14" "last_log" "último log" "DIAGNOSTICO"
+$routes += Route "inicio" "15" "live_memory" "generar/abrir memoria viva" "MEMORIA"
+$routes += Route "inicio" "16" "chatgpt_prompt" "generar/abrir prompt continuidad ChatGPT" "MEMORIA"
+$routes += Route "inicio" "17" "worker_prompt" "generar/abrir prompt worker Ollama/Cline" "MEMORIA"
+$routes += Route "inicio" "18" "development_diary" "abrir diario de desarrollo" "MEMORIA"
+$routes += Route "inicio" "19" "add_diary_entry" "añadir entrada al diario" "MEMORIA"
+$routes += Route "inicio" "20" "graph_refresh" "refrescar grafo de módulos" "MANTENIMIENTO"
+$routes += Route "inicio" "21" "core_folder" "abrir C:\ENGREMIAT_CORE" "MANTENIMIENTO"
+$routes += Route "workspace" "2" "cards" "tarjetas avanzadas del módulo" "WORKSPACE"
+$routes += Route "library_item" "w" "workspace" "abrir workspace desde ficha de módulo" "BIBLIOTECA"
+$recommendations=@("Mantener inicio como raíz ligera con solo números.","Mantener acciones internas con letras solo dentro de pantallas profundas.","Crear pantalla avanzada de tareas equivalente a tarjetas.","Vincular tarjeta ↔ tarea ↔ tipo ↔ enlace.","Extender grafo para incluir memoria, diario, tarjetas y tareas.","Regenerar memoria viva tras cambios importantes.")
+$tree=[pscustomobject]@{ generated_at=(Get-Date).ToString("s"); core=$Core; active_project=$project; active_project_name=$projectName; counters=[pscustomobject]@{ project_modules=$projectModules; library_active=$libraryActive; library_historic=$libraryHistoric }; screens=$screens; navigation=$routes; recommendations=$recommendations; next="E24A_CREATE_MODULE_TASKS_MANAGEMENT_SCREEN" }
+$json=Join-Path $NavDir ("navigation-tree-"+(Get-Date -Format "yyyyMMdd-HHmmss")+".json")
+$md=Join-Path $NavDir ("navigation-tree-"+(Get-Date -Format "yyyyMMdd-HHmmss")+".md")
+$latestJson=Join-Path $NavDir "navigation-tree-latest.json"
+$latestMd=Join-Path $NavDir "navigation-tree-latest.md"
+$tree | ConvertTo-Json -Depth 80 | Set-Content $json -Encoding UTF8
+$tree | ConvertTo-Json -Depth 80 | Set-Content $latestJson -Encoding UTF8
+$out=@()
+$out += "# ENGREMIAT - Árbol de navegación"
+$out += ""
+$out += "- Generado: $($tree.generated_at)"
+$out += "- Proyecto activo: $projectName"
+$out += "- Módulos proyecto: $projectModules"
+$out += "- Biblioteca: $libraryActive activos / $libraryHistoric históricos"
+$out += ""
+$out += "## Pantallas"
+foreach($s in $screens){ $ok=if($s.exists){"OK"}else{"MISS"}; $out += "- [$ok] **$($s.label)** (`$($s.id)`) → $($s.path)" }
+$out += ""
+$out += "## Rutas por sección"
+foreach($section in ($routes.section | Select-Object -Unique)){
+  $out += ""
+  $out += "### $section"
+  foreach($r in ($routes | Where-Object { $_.section -eq $section })){ $out += "- `$($r.from)` -- `$($r.command)` --> `$($r.to)` · $($r.purpose)" }
+}
+$out += ""
+$out += "## Recomendaciones"
+foreach($r in $recommendations){ $out += "- $r" }
+$out += ""
+$out += "## Siguiente recomendado"
+$out += "- $($tree.next)"
+$out | Set-Content $md -Encoding UTF8
+$out | Set-Content $latestMd -Encoding UTF8
+W "==== ARBOL DE NAVEGACION ENGREMIAT ====" Cyan
+W "status=PASS" Green
+W ("screens={0}/{1}" -f @($screens | Where-Object {$_.exists}).Count,$screens.Count) Green
+W "json=$json" Green
+W "md=$md" Green
+W "latest_json=$latestJson" DarkCyan
+W "latest_md=$latestMd" DarkCyan

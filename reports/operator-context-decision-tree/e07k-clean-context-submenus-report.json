@@ -1,0 +1,16 @@
+﻿{
+    "package_id":  "ENGREMIAT_OPERATOR_CONTEXT_AND_DECISION_TREE_001",
+    "stage":  "E07K_CLEAN_CONTEXT_SUBMENUS",
+    "status":  "PASS",
+    "readiness":  100,
+    "context":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-context.ps1",
+    "backup":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-context.ps1.bak-e07k-20260619202304",
+    "changed":  [
+                    "open_project_clears_screen",
+                    "project_submenu_clears_screen",
+                    "module_selector_clears_screen",
+                    "create_module_clears_screen",
+                    "submenus_show_only_local_options"
+                ],
+    "next":  "test_global_1_then_project_1"
+}

@@ -1,0 +1,42 @@
+{
+    "package_id":  "ENGREMIAT_MODULE_INTAKE_REGISTRY_001",
+    "stage":  "E03_CANONICAL_SCAFFOLDER",
+    "artifact":  "canonical-scaffold-contract.json",
+    "status":  "DEFINED",
+    "purpose":  "Definir estructura canonica para crear carpetas de modulos nuevos bajo data/\u003cPACKAGE_ID\u003e",
+    "canonical_root":  "data/\u003cPACKAGE_ID\u003e",
+    "required_files":  [
+                           "module.json",
+                           "README.md"
+                       ],
+    "required_dirs":  [
+                          "contracts",
+                          "schemas",
+                          "packages",
+                          "reports",
+                          "dashboard",
+                          "docs",
+                          "stages"
+                      ],
+    "optional_dirs":  [
+                          "registry",
+                          "plan",
+                          "templates",
+                          "snapshots",
+                          "rollback"
+                      ],
+    "blocked_actions":  [
+                            "core_changes",
+                            "external_network",
+                            "git_write",
+                            "real_integration_without_gate"
+                        ],
+    "rules":  [
+                  "create_only_under_data_package_id",
+                  "do_not_overwrite_existing_module_without_gate",
+                  "write_module_json_first",
+                  "write_readme_second",
+                  "create_standard_dirs",
+                  "validate_paths_after_create"
+              ]
+}

@@ -1,0 +1,178 @@
+﻿{
+    "ux_id":  "ENGREMIAT_TERMINAL_UX_V1",
+    "principle":  "La terminal navega por niveles operativos: global, proyecto y modulo.",
+    "levels":  {
+                   "GLOBAL":  {
+                                  "prompt":  "ENGREMIAT:",
+                                  "purpose":  "Elegir o crear proyecto",
+                                  "primary_actions":  [
+                                                          "1 Abrir proyecto",
+                                                          "2 Nuevo proyecto",
+                                                          "3 Ver proyectos",
+                                                          "4 Estado",
+                                                          "0 Salir"
+                                                      ],
+                                  "commands":  [
+                                                   "abrir-proyecto",
+                                                   "nuevo-proyecto",
+                                                   "proyectos",
+                                                   "estado",
+                                                   "dashboard",
+                                                   "ultimo",
+                                                   "ayuda",
+                                                   "salir"
+                                               ],
+                                  "shortcuts":  [
+                                                    {
+                                                        "key":  "p",
+                                                        "command":  "abrir-proyecto"
+                                                    },
+                                                    {
+                                                        "key":  "n",
+                                                        "command":  "nuevo-proyecto"
+                                                    },
+                                                    {
+                                                        "key":  "e",
+                                                        "command":  "estado"
+                                                    },
+                                                    {
+                                                        "key":  "?",
+                                                        "command":  "ayuda"
+                                                    },
+                                                    {
+                                                        "key":  "q",
+                                                        "command":  "salir"
+                                                    },
+                                                    {
+                                                        "key":  "0",
+                                                        "command":  "salir"
+                                                    }
+                                                ]
+                              },
+                   "PROJECT":  {
+                                   "prompt":  "ENGREMIAT[PROYECTO]:",
+                                   "purpose":  "Entrar o crear modulo dentro del proyecto activo",
+                                   "primary_actions":  [
+                                                           "1 Entrar en modulo",
+                                                           "2 Crear modulo",
+                                                           "3 Revisar proyecto",
+                                                           "0 Atras"
+                                                       ],
+                                   "commands":  [
+                                                    "menu",
+                                                    "modulos",
+                                                    "abrir-modulo",
+                                                    "nuevo-modulo",
+                                                    "proyecto",
+                                                    "revisar-proyecto",
+                                                    "atras"
+                                                ],
+                                   "shortcuts":  [
+                                                     {
+                                                         "key":  "m",
+                                                         "command":  "menu"
+                                                     },
+                                                     {
+                                                         "key":  "n",
+                                                         "command":  "nuevo-modulo"
+                                                     },
+                                                     {
+                                                         "key":  "r",
+                                                         "command":  "revisar-proyecto"
+                                                     },
+                                                     {
+                                                         "key":  "a",
+                                                         "command":  "atras"
+                                                     },
+                                                     {
+                                                         "key":  "0",
+                                                         "command":  "atras"
+                                                     },
+                                                     {
+                                                         "key":  "?",
+                                                         "command":  "ayuda"
+                                                     }
+                                                 ]
+                               },
+                   "MODULE":  {
+                                  "prompt":  "ENGREMIAT[PROYECTO/MODULO]:",
+                                  "purpose":  "Trabajar el modulo activo hasta cumplir objetivo",
+                                  "primary_actions":  [
+                                                          "1 Contrato",
+                                                          "2 Tareas",
+                                                          "3 Evidencias",
+                                                          "4 Gates",
+                                                          "5 Smoke",
+                                                          "6 Cerrar modulo",
+                                                          "0 Atras"
+                                                      ],
+                                  "commands":  [
+                                                   "modulo",
+                                                   "contrato",
+                                                   "tareas",
+                                                   "evidencias",
+                                                   "gates",
+                                                   "preparar-smoke",
+                                                   "cerrar-modulo",
+                                                   "promover-modulo",
+                                                   "atras"
+                                               ],
+                                  "shortcuts":  [
+                                                    {
+                                                        "key":  "c",
+                                                        "command":  "contrato"
+                                                    },
+                                                    {
+                                                        "key":  "t",
+                                                        "command":  "tareas"
+                                                    },
+                                                    {
+                                                        "key":  "e",
+                                                        "command":  "evidencias"
+                                                    },
+                                                    {
+                                                        "key":  "g",
+                                                        "command":  "gates"
+                                                    },
+                                                    {
+                                                        "key":  "s",
+                                                        "command":  "preparar-smoke"
+                                                    },
+                                                    {
+                                                        "key":  "x",
+                                                        "command":  "cerrar-modulo"
+                                                    },
+                                                    {
+                                                        "key":  "a",
+                                                        "command":  "atras"
+                                                    },
+                                                    {
+                                                        "key":  "0",
+                                                        "command":  "atras"
+                                                    },
+                                                    {
+                                                        "key":  "?",
+                                                        "command":  "ayuda"
+                                                    }
+                                                ]
+                              }
+               },
+    "hidden_internal":  [
+                            "open-project",
+                            "open-module",
+                            "create-module",
+                            "module-view",
+                            "project-menu",
+                            "modules",
+                            "menu-proyecto"
+                        ],
+    "rewrite_rules":  [
+                          "comandos muestra solo el nivel actual y sus atajos",
+                          "menu abre acciones numericas del nivel actual",
+                          "atras abre menu del nivel anterior",
+                          "abrir-proyecto termina en menu de proyecto",
+                          "nuevo-modulo crea en proyecto activo",
+                          "modulo materializa y muestra artefactos"
+                      ],
+    "next_stage":  "E05_REWRITE_TERMINAL_UX_HIERARCHY_AND_SHORTCUTS"
+}

@@ -1,0 +1,138 @@
+﻿{
+    "schema_id":  "module-init-json-schema.v1",
+    "module_id":  "ENGREMIAT_JSON_MODULE_FACTORY_001",
+    "stage":  "E02_MODULE_INIT_JSON_SCHEMA",
+    "type":  "object",
+    "required":  [
+                     "module_id",
+                     "name",
+                     "kind",
+                     "status",
+                     "target_path",
+                     "purpose",
+                     "expected_output",
+                     "priority",
+                     "risk",
+                     "gates",
+                     "decision"
+                 ],
+    "properties":  {
+                       "module_id":  {
+                                         "type":  "string",
+                                         "pattern":  "^ENGREMIAT_[A-Z0-9_]+_[0-9]{3}$"
+                                     },
+                       "name":  {
+                                    "type":  "string"
+                                },
+                       "kind":  {
+                                    "type":  "string",
+                                    "enum":  [
+                                                 "ACOPLABLE_DESACOPLABLE",
+                                                 "ADAPTER",
+                                                 "WORKER",
+                                                 "INTERFACE",
+                                                 "VALIDATOR",
+                                                 "DASHBOARD",
+                                                 "REGISTRY"
+                                             ]
+                                },
+                       "status":  {
+                                      "type":  "string",
+                                      "enum":  [
+                                                   "CANDIDATE"
+                                               ]
+                                  },
+                       "target_path":  {
+                                           "type":  "string",
+                                           "prefix":  "data/_OFFICIAL_MODULES/_NEXT_MODULES/"
+                                       },
+                       "purpose":  {
+                                       "type":  "string"
+                                   },
+                       "problem":  {
+                                       "type":  "string"
+                                   },
+                       "expected_output":  {
+                                               "type":  "string"
+                                           },
+                       "source_task_packet_id":  {
+                                                     "type":  "string"
+                                                 },
+                       "priority":  {
+                                        "type":  "string",
+                                        "enum":  [
+                                                     "LOW",
+                                                     "MEDIUM",
+                                                     "HIGH"
+                                                 ]
+                                    },
+                       "risk":  {
+                                    "type":  "string",
+                                    "enum":  [
+                                                 "LOW",
+                                                 "MEDIUM",
+                                                 "HIGH"
+                                             ]
+                                },
+                       "dependencies":  {
+                                            "type":  "array",
+                                            "items":  "string"
+                                        },
+                       "gates":  {
+                                     "type":  "object",
+                                     "required":  [
+                                                      "human_gate",
+                                                      "requires_core_change",
+                                                      "requires_real_write",
+                                                      "requires_external_api"
+                                                  ],
+                                     "properties":  {
+                                                        "human_gate":  {
+                                                                           "type":  "string",
+                                                                           "enum":  [
+                                                                                        "REQUIRED",
+                                                                                        "NOT_REQUIRED"
+                                                                                    ]
+                                                                       },
+                                                        "requires_core_change":  {
+                                                                                     "type":  "boolean",
+                                                                                     "must_be":  false
+                                                                                 },
+                                                        "requires_real_write":  {
+                                                                                    "type":  "boolean",
+                                                                                    "must_be":  false
+                                                                                },
+                                                        "requires_external_api":  {
+                                                                                      "type":  "boolean",
+                                                                                      "must_be":  false
+                                                                                  }
+                                                    }
+                                 },
+                       "decision":  {
+                                        "type":  "string",
+                                        "enum":  [
+                                                     "CREATE_CANDIDATE_JSON"
+                                                 ]
+                                    },
+                       "notes":  {
+                                     "type":  "string"
+                                 },
+                       "generated_by":  {
+                                            "type":  "string"
+                                        },
+                       "generated_at":  {
+                                            "type":  "string"
+                                        },
+                       "dry_run":  {
+                                       "type":  "boolean",
+                                       "must_be":  true
+                                   }
+                   },
+    "blocking_rules":  [
+                           "BLOCK_IF_requires_core_change_TRUE",
+                           "BLOCK_IF_requires_real_write_TRUE",
+                           "BLOCK_IF_requires_external_api_TRUE",
+                           "BLOCK_IF_decision_NOT_CREATE_CANDIDATE_JSON",
+                           "BLOCK_IF_target_path_OUTSIDE_NEXT_MODULES"
+                       ]
+}

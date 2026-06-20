@@ -1,0 +1,42 @@
+﻿{
+    "objective":  "ENGREMIAT_NEXT_REAL_VALUE_OPERATIONALIZATION_076_085",
+    "stage":  "E82",
+    "dry_run":  "KANBAN_AUTHORIZED_BRIDGE_DRY_RUN",
+    "dry_run_only":  true,
+    "kanban_real_write":  false,
+    "real_write_executed":  false,
+    "execution_status":  "NOT_EXECUTED",
+    "simulated_source":  "data/worker-proposal-intake-078/worker-proposal-intake-v2-sample.json",
+    "simulated_card":  {
+                           "external_id":  "WPI78-SAMPLE-001",
+                           "title":  "Preparar propuesta operativa diaria",
+                           "description":  "Preview de tarjeta Kanban generada desde propuesta worker intake V2.",
+                           "labels":  [
+                                          "risk:MEDIUM",
+                                          "human_gate:true",
+                                          "preview_only:true"
+                                      ],
+                           "checklist":  [
+                                             "proposal_summary",
+                                             "target_artifacts",
+                                             "rollback_note",
+                                             "postcheck_note"
+                                         ]
+                       },
+    "authorization_status":  "PENDING_EXPLICIT_HUMAN_AUTHORIZATION",
+    "future_requirements":  [
+                                "UNLOCK_GATE",
+                                "EXPLICIT_HUMAN_APPROVAL",
+                                "ROLLBACK_PLAN",
+                                "POSTCHECK",
+                                "RECEIPT",
+                                "READINESS_REPORT"
+                            ],
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "created_utc":  "2026-06-17T10:58:44.3784493Z"
+}

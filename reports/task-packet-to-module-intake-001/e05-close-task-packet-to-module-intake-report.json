@@ -1,0 +1,41 @@
+﻿{
+    "package_id":  "ENGREMIAT_TASK_PACKET_TO_MODULE_INTAKE_001",
+    "stage":  "E05_CLOSE_AND_HUMAN_DECISION",
+    "status":  "PASS",
+    "readiness":  100,
+    "closed":  true,
+    "candidate":  "C:\\ENGREMIAT_CORE\\data\\task-packet-to-module-intake-001\\module-intake-candidate.demo.json",
+    "module_id_proposal":  "ENGREMIAT_TASK_PACKET_DEMO_001",
+    "candidate_name":  "Paquete demo de conocimiento a tarea",
+    "validation_status":  "PASS",
+    "duplicate_id":  false,
+    "duplicate_name":  false,
+    "human_decision_required":  true,
+    "human_decision_default":  "BACKLOG",
+    "allowed_decisions":  [
+                              "CREATE_MODULE_LATER",
+                              "BACKLOG",
+                              "REJECT"
+                          ],
+    "recommended_decision":  "BACKLOG",
+    "reason":  "Candidatura valida y no duplicada; queda en backlog hasta autorizacion humana para crear modulo real.",
+    "policy":  {
+                   "local_only":  true,
+                   "core_changes":  false,
+                   "real_module_creation":  false,
+                   "real_intake_write":  false,
+                   "git_write":  false,
+                   "network":  false,
+                   "ollama_inference":  false,
+                   "obsidian_write":  false,
+                   "kanban_write":  false,
+                   "cline_write":  false
+               },
+    "evidence":  [
+                     "C:\\ENGREMIAT_CORE\\reports\\task-packet-to-module-intake-001\\e01-contract-task-packet-to-module-intake-report.json",
+                     "C:\\ENGREMIAT_CORE\\reports\\task-packet-to-module-intake-001\\e02-candidate-intake-schema-report.json",
+                     "C:\\ENGREMIAT_CORE\\reports\\task-packet-to-module-intake-001\\e03-dry-run-candidate-generator-report.json",
+                     "C:\\ENGREMIAT_CORE\\reports\\task-packet-to-module-intake-001\\e04-validate-against-official-modules-report.json"
+                 ],
+    "next":  "PAUSE_AND_DECIDE_NEXT_MODULE_OR_CREATE_MODULE_LATER"
+}

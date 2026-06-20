@@ -1,0 +1,12 @@
+﻿{
+    "mapping_id":  "OLLAMA_REQUEST_MAPPING_V1",
+    "from":  "MODEL_REQUEST.prompt_envelope",
+    "to":  "OLLAMA_PAYLOAD",
+    "fields":  {
+                   "model":  "default_model_or_allowed_model",
+                   "prompt":  "system_role + user_goal + context_refs + constraints + output_contract",
+                   "stream":  "false",
+                   "options":  "safe_defaults"
+               },
+    "real_call":  false
+}

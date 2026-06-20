@@ -1,0 +1,29 @@
+﻿{
+    "schema":  "engremiat.useful_expected_evidence.v1",
+    "objective":  "ENGREMIAT_REAL_VALUE_TASK_EXECUTION_LOOP_122_131_REAL_USEFUL_OUTPUT",
+    "stage":  "E124",
+    "block":  "B124.1",
+    "step":  "P124.1.2",
+    "created_at":  "2026-06-17T14:25:43",
+    "evidence_id":  "USEFUL-EXPECTED-EVIDENCE-124-001",
+    "proposal_id":  "USEFUL-OUTPUT-PROPOSAL-124-001",
+    "mandatory_artifacts":  [
+                                "data/useful-proposal-124/useful-output-proposal.json",
+                                "data/useful-proposal-124/useful-expected-evidence.json",
+                                "data/useful-proposal-124/useful-output-preview.json",
+                                "reports/useful-proposal-124/e124-useful-proposal-readiness-report.json",
+                                "data/useful-apply-126/useful-output.md"
+                            ],
+    "validation_rules":  [
+                             "Proposal must stay execution_authorized=false",
+                             "Preview must declare no apply executed",
+                             "Output target must be Markdown",
+                             "E125 approval required before E126"
+                         ],
+    "completion_criteria":  [
+                                "proposal_valid=true",
+                                "evidence_valid=true",
+                                "preview_valid=true",
+                                "execution_allowed_now=false"
+                            ]
+}

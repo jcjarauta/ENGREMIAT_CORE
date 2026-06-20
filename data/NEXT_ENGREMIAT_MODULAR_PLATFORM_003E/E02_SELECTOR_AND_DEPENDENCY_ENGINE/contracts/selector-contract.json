@@ -1,0 +1,36 @@
+{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_003E",
+    "stage":  "E02",
+    "block":  "B02.1",
+    "artifact":  "selector-contract.json",
+    "status":  "DEFINED",
+    "purpose":  "Seleccionar modulos por objetivo, estado, familia, compatibilidad y frontera tecnica",
+    "inputs":  [
+                   "objective",
+                   "family",
+                   "state",
+                   "compatibility_tags",
+                   "dependency_requirements",
+                   "human_priority"
+               ],
+    "outputs":  [
+                    "selected_modules",
+                    "blocked_modules",
+                    "selection_reasons",
+                    "next_dependency_resolution"
+                ],
+    "selection_rules":  [
+                            "only_known_families",
+                            "planned_or_active_only",
+                            "compatibility_required",
+                            "blocked_if_boundary_violation",
+                            "explain_every_selection"
+                        ],
+    "control":  {
+                    "local_first":  true,
+                    "no_core_changes":  true,
+                    "no_external_network":  true,
+                    "no_git_write":  true,
+                    "no_activation":  true
+                }
+}

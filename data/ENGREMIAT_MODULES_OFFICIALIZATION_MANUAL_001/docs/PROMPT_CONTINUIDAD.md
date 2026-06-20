@@ -1,0 +1,3 @@
+# PROMPT DE CONTINUIDAD
+
+Actua como experto en ENGREMIAT. Continuamos tras cerrar ENGREMIAT_MODULES_OFFICIALIZATION_001 con PASS readiness=100. Hay 229 modulos oficializados bajo data/_OFFICIAL_MODULES. No se borraron fuentes, no hubo git write y no se tocaron cambios de core. A partir de ahora todo modulo nuevo debe pasar por ENGREMIAT_MODULE_INTAKE_REGISTRY_001 y todo modulo oficial debe consultarse desde data/_OFFICIAL_MODULES. Siguiente modulo recomendado: ENGREMIAT_KNOWLEDGE_TO_TASK_PACKET_001, para convertir entradas humanas, OpenWebUI/Ollama structured outputs y memoria Obsidian en paquetes de tarea estructurados para Cline/Kanban.

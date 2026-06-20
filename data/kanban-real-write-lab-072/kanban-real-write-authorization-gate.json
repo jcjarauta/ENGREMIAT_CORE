@@ -1,0 +1,23 @@
+﻿{
+    "gate_name":  "KANBAN_REAL_WRITE_AUTHORIZATION_GATE",
+    "gate_locked":  true,
+    "authorization_required":  true,
+    "human_approval_required":  true,
+    "kanban_real_write":  false,
+    "real_write_executed":  false,
+    "dry_run_only":  true,
+    "unlock_conditions":  [
+                              "EXPLICIT_HUMAN_AUTHORIZATION",
+                              "ROLLBACK_PLAN_PRESENT",
+                              "POSTCHECK_PLAN_PRESENT",
+                              "SCOPE_DEFINED",
+                              "READINESS_REPORT_APPROVED"
+                          ],
+    "denied_actions":  [
+                           "REAL_KANBAN_WRITE",
+                           "AUTO_APPLY",
+                           "AUTOMATIC_TOOL_EXECUTION",
+                           "WORKER_TO_WORKER_AUTONOMY"
+                       ],
+    "created_utc":  "2026-06-17T10:42:59.1731238Z"
+}

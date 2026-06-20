@@ -1,0 +1,81 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_NAVIGATION_MODEL_001",
+    "stage":  "E11A3_FREEZE_OPERATOR_BASELINE_NO_ALIAS_COLLISIONS",
+    "status":  "PASS",
+    "frozen_at":  "2026-06-19T22:58:26",
+    "root":  "C:\\ENGREMIAT_CORE",
+    "tools":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator",
+    "state":  "C:\\ENGREMIAT_CORE\\data\\desktop-terminal-operator\\operator-state.v1.json",
+    "active_project":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\\ENGREMIAT_PROJECT_p3_20260619-224903",
+    "active_project_exists":  true,
+    "official_template_source":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_SIMULATION_LAB",
+    "official_template_source_exists":  true,
+    "official_master_in_project":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\\ENGREMIAT_PROJECT_p3_20260619-224903\\BOVEDA_PROYECTO\\00_PLANTILLA_MAESTRA_OFICIAL",
+    "official_master_exists":  true,
+    "module_inicio":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\\ENGREMIAT_PROJECT_p3_20260619-224903\\MODULOS\\MODULE_inicio",
+    "module_inicio_exists":  true,
+    "operator_files":  [
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1",
+                               "sha256":  "fae6048d6d86246d1868eac9226ad53be12a3052fc23ae9417c7d8937d82a2a0"
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-router.ps1",
+                               "sha256":  "10c3c5545aaaa84b07dc3ca2bd6aa12d0b1cee674d07ec6caf49f04ec8e783ac"
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-context.ps1",
+                               "sha256":  "244ffa85c26905193c89b5e1cbe3adb04155ea0f25085aea8e2c3c81aba1cea6"
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-status.ps1",
+                               "sha256":  "efdcea3ab9a98474cecf15f99c32e63f2f212d6a8d04c5982a45b05eed49cc2d"
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-new-project-safe.ps1",
+                               "sha256":  "006dc0b290416fcf4ea516753c3d7bee53bbb21733ed4fe3aff0b50c51e92d4e"
+                           }
+                       ],
+    "ux_contract":  [
+                        "Enter vacio/refrescar/f5 = redibujar pantalla",
+                        "? = ayuda contextual",
+                        "comandos/menu = menu actual",
+                        "b/a/atras/volver/0 = volver cuando aplique",
+                        "barra UBICACION visible con Nivel, Proyecto, Modulo y Ruta",
+                        "GLOBAL, PROYECTO y MODULO son niveles separados",
+                        "GLOBAL conserva proyecto activo pero no entra automaticamente salvo seleccion",
+                        "PROYECTO muestra modulos y acciones del proyecto",
+                        "MODULO muestra contexto del modulo activo"
+                    ],
+    "navigation_contract":  [
+                                "GLOBAL -\u003e [1] Abrir proyecto",
+                                "GLOBAL -\u003e [2] Nuevo proyecto desde plantilla maestra oficial",
+                                "GLOBAL -\u003e [3] Ver proyectos con ACTIVO/HISTORICO",
+                                "GLOBAL -\u003e [4] Estado compacto",
+                                "PROYECTO -\u003e [1] Entrar en modulo",
+                                "PROYECTO -\u003e [2] Crear modulo",
+                                "PROYECTO -\u003e [3] Biblioteca modulos",
+                                "PROYECTO -\u003e [4] Revisar proyecto",
+                                "MODULO -\u003e acciones futuras sin romper retorno a PROYECTO"
+                            ],
+    "no_break_contract":  [
+                              "No sustituir Start-EngremiatDesktopOperator.ps1 entero sin freeze nuevo",
+                              "No parchear eng-context.ps1 con regex fragil si puede usarse script separado",
+                              "No cambiar comandos existentes sin compatibilidad hacia atras",
+                              "No borrar plantilla maestra oficial ni MODULE_inicio",
+                              "No mezclar creacion de proyecto con biblioteca/modulos avanzados",
+                              "No ampliar sin validador readonly previo",
+                              "No usar plantillas genericas inventadas como fuente oficial",
+                              "No hacer commit/push en esta microfase"
+                          ],
+    "safe_expansion_contract":  [
+                                    "Nuevas capacidades preferentemente como scripts separados en tools/desktop-terminal-operator",
+                                    "Router solo delega comandos nuevos; no debe absorber logica compleja",
+                                    "Cada ampliacion debe tener stage propio, backup si toca codigo y reporte JSON",
+                                    "Una frontera tecnica por bloque",
+                                    "Primero readonly/diagnostico, despues write controlado",
+                                    "Validar parse de scripts antes y despues",
+                                    "Mantener navegacion GLOBAL/PROYECTO/MODULO intacta",
+                                    "Cualquier cambio UX debe actualizar freeze o generar freeze successor"
+                                ]
+}

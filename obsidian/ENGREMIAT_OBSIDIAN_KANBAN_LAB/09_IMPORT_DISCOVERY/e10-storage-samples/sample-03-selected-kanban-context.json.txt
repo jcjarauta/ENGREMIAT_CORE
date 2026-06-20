@@ -1,0 +1,121 @@
+﻿PATH=C:\ENGREMIAT_CORE\data\cline-real-proposal-no-apply\selected-kanban-context.json SCORE=80 SIZE=8107 EXT=.json --- SAMPLE BEGIN ---
+{
+    "objective":  "ENGREMIAT_CLINE_REAL_PROPOSAL_NO_APPLY_008",
+    "stage":  "E02",
+    "source_objective":  "ENGREMIAT_KANBAN_HUMAN_CONTROL_SURFACE_007",
+    "source_board":  "data/kanban-human-control/kanban-board.json",
+    "source_preview":  "data/kanban-human-control/cline-kanban-export-preview.json",
+    "source_gate":  "data/kanban-human-control/kanban-write-gate.json",
+    "source_close_report":  "reports/kanban-human-control/e06-close-validation-report.json",
+    "selected_card_id":  "KANBAN-007-E06-CLOSE",
+    "selected_card":  {
+                          "card_id":  "KANBAN-007-E06-CLOSE",
+                          "objective":  "ENGREMIAT_KANBAN_HUMAN_CONTROL_SURFACE_007",
+                          "stage":  {
+                                        "id":  "E06",
+                                        "name":  "Cierre y siguiente objetivo"
+                                    },
+                          "block":  {
+                                        "id":  "B06.1-B06.3",
+                                        "name":  "Manifest cierre y continuidad"
+                                    },
+                          "step":  {
+                                       "id":  "P06.3.2",
+                                       "name":  "Registrar decision final"
+                                   },
+                          "title":  "Cerrar Kanban Human Control Surface 007",
+                          "description":  "Consolidar manifest, dashboard, close report y siguiente objetivo sin escritura Kanban real.",
+                          "status":  "DONE",
+                          "risk":  "LOW",
+                          "gate":  {
+                                       "authorization_required":  false,
+                                       "decision":  "NOT_REQUIRED_LOCAL_CLOSE_ONLY",
+                                       "reason":  "Cierre local sin acciones externas"
+                                   },
+                          "worker":  {
+                                         "assigned":  "NONE",
+                                         "worker_real_execution":  false
+                                     },
+                          "evidence":  [
+                                           "data/kanban-human-control/kanban-human-control-manifest.json",
+                                           "docs/KANBAN_HUMAN_CONTROL_CLOSE_REPORT.md",
+                                           "docs/NEXT_OBJECTIVE_CLINE_REAL_PROPOSAL_NO_APPLY.md",
+                                           "reports/kanban-human-control/e06-close-validation-report.json"
+                                       ],
+                          "next_action":  {
+                                              "recommended":  "ENGREMIAT_CLINE_REAL_PROPOSAL_NO_APPLY_008",
+                                              "requires_human_review":  true
+                                          },
+                          "safety":  {
+                                         "kanban_write":  false,
+                                         "cline_task_created":  false,
+                                         "worker_real_execution":  false,
+                                         "auto_apply":  false,
+                                         "git_write":  false,
+                                         "remote_inference":  false
+                                     }
+                      },
+    "selected_preview":  {
+                             "external_card_id":  "CLINE-KANBAN-PREVIEW-KANBAN-005-E06",
+                             "source_card_id":  "KANBAN-005-E06",
+                             "title":  "Controlled Worker Adapters",
+                             "lane":  "DONE",
+                             "body":  "Objective: ENGREMIAT_CONTROLLED_WORKER_ADAPTERS_005\nStage: E06 Controlled Worker Adapters\nBlock: CLOSE Evidence derived card\nStep: ADAPTERS_READY Controlled Worker Adapters\nDecision: NOT_REQUIRED_VIEW_ONLY\nNext: 006_GATED_WORKER_EXECUTION",
+                             "labels":  [
+                                            "ENGREMIAT",
+                                            "DONE",
+                                            "LOW",
+                                            "E06"
+                                        ],
+                             "evidence_links":  [
+                                                    "data/controlled-worker-adapters/controlled-worker-adapters-manifest.json",
+                                                    "data/controlled-worker-adapters/controlled-worker-policy.json",
+                                                    "data/controlled-worker-adapters/fake-worker-response.json",
+                                                    "data/controlled-worker-adapters/sample-human-gate-decision.json",
+                                                    "data/controlled-worker-adapters/worker-adapter-contract.json",
+                                                    "data/controlled-worker-adapters/worker-execution-gate-schema.json",
+                                                    "data/controlled-worker-adapters/cline/cline-adapter-contract.json",
+                                                    "data/controlled-worker-adapters/cline/sample-cline-request.json",
+                                                    "data/controlled-worker-adapters/ollama-remote/remote-ollama-probe-gate.json",
+                                                    "data/controlled-worker-adapters/ollama-remote/remote-ollama-safe-probe-plan.json",
+                                                    "data/controlled-worker-adapters/receipts/sample-worker-receipt.json",
+                                                    "reports/controlled-worker-adapters/e01-contract-smoke-report.json"
+                                                ],
+                             "gate_summary":  {
+                                                  "authorization_required":  false,
+                                                  "decision":  "NOT_REQUIRED_VIEW_ONLY",
+                                                  "reason":  "Generacion local de tarjeta desde evidencia"
+                                              },
+                             "safety_flags":  {
+                                                  "kanban_write":  false,
+                                                  "launch_cline_task":  false,
+                                                  "cline_task_created":  false,
+                                                  "worker_real_execution":  false,
+                                                  "auto_apply":  false,
+                                                  "git_write":  false,
+                                                  "remote_inference":  false
+                                              },
+                             "proposed_action":  "PREVIEW_ONLY_NO_WRITE"
+                         },
+    "source_safety":  {
+                          "source_kanban_write":  false,
+                          "source_launch_cline_task":  false,
+                          "source_cline_task_created":  false,
+                          "source_worker_real_execution":  false,
+                          "source_auto_apply":  false,
+                          "source_git_write":  false,
+                          "source_remote_inference":  false
+                      },
+    "current_safety":  {
+                           "cline_task_created":  false,
+                           "launch_cline_task":  false,
+                           "prompt_sent":  false,
+                           "worker_real_execution":  false,
+                           "auto_apply":  false,
+                           "apply_executed":  false,
+                           "git_write":  false,
+                           "remote_inference":  false,
+                           "ui_automation":  false
+                       }
+}
+--- SAMPLE END ---

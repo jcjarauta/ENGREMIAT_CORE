@@ -1,0 +1,15 @@
+﻿# README
+
+## Entrada
+Nodo puente del grafo ENGREMIAT.
+## Puente grafico
+- [[PROJECT_HOME]]
+- [[GRAPH_INDEX]]
+- [[SYSTEM_GROUPING_MODEL]]
+- [[MODULE_HOME]]
+- [[MODULE_GROUPING_MODEL]]
+- [[PROJECT_HOME]]
+- [[GRAPH_INDEX]]
+- [[SYSTEM_GROUPING_MODEL]]
+- [[MODULE_HOME]]
+- [[MODULE_GROUPING_MODEL]]

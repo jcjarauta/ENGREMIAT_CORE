@@ -1,0 +1,52 @@
+﻿{
+    "package_id":  "ENGREMIAT_REAL_INTAKE_IMPORTER_001",
+    "stage":  "E02_BUILD_REAL_ROADMAP_REVIEW_DASHBOARD",
+    "gate_id":  "real-roadmap-review-gate.v1",
+    "status":  "PENDING_HUMAN_REVIEW",
+    "source_intake":  "C:\\ENGREMIAT_CORE\\data\\real-intake-importer\\real-human-intake.accepted.latest.json",
+    "source_roadmap":  "C:\\ENGREMIAT_CORE\\data\\real-intake-importer\\real-intake-roadmap-preview.latest.json",
+    "project_name":  "Primer intake real para construir roadmap automático en ENGREMIAT",
+    "allowed_decisions":  [
+                              {
+                                  "decision":  "APPROVE_ROADMAP",
+                                  "meaning":  "Aceptar roadmap preview y preparar worker packet preview sin ejecucion real",
+                                  "next":  "E03_BUILD_REAL_WORKER_PACKET_PREVIEW"
+                              },
+                              {
+                                  "decision":  "EDIT_ROADMAP",
+                                  "meaning":  "Modificar intake o roadmap y regenerar preview",
+                                  "next":  "E02_REGENERATE_ROADMAP_PREVIEW"
+                              },
+                              {
+                                  "decision":  "REJECT_ROADMAP",
+                                  "meaning":  "Cerrar roadmap sin worker",
+                                  "next":  "CLOSE_REJECTED"
+                              },
+                              {
+                                  "decision":  "DEFER_ROADMAP",
+                                  "meaning":  "Aparcar roadmap para revision futura",
+                                  "next":  "CLOSE_DEFERRED"
+                              }
+                          ],
+    "review_checklist":  [
+                             "La necesidad humana esta clara",
+                             "El resultado deseado es verificable",
+                             "Las restricciones son suficientes",
+                             "Los recursos disponibles son utiles",
+                             "Los criterios de exito permiten validar avance",
+                             "Las etapas propuestas son comprensibles",
+                             "No hay ejecucion real",
+                             "El siguiente paso sigue siendo preview"
+                         ],
+    "safety":  {
+                   "local_only":  true,
+                   "review_only":  true,
+                   "execute_now":  false,
+                   "worker_execution":  false,
+                   "network":  false,
+                   "git_write":  false,
+                   "external_ai":  false,
+                   "authorization_status":  "NOT_GRANTED"
+               },
+    "next":  "E03_BUILD_REAL_WORKER_PACKET_PREVIEW_AFTER_HUMAN_REVIEW"
+}

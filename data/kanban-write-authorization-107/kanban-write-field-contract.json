@@ -1,0 +1,59 @@
+﻿{
+    "objective":  "ENGREMIAT_SAFE_LOCAL_APPLY_AND_KANBAN_AUTHORIZATION_102_111",
+    "stage":  "E107",
+    "contract":  "KANBAN_WRITE_FIELD_CONTRACT",
+    "version":  "1.07.0-local",
+    "preview_only":  true,
+    "kanban_real_write":  false,
+    "source_to_kanban_fields":  [
+                                    {
+                                        "source":  "objective",
+                                        "kanban_field":  "card.project",
+                                        "required":  true,
+                                        "example":  "ENGREMIAT_SAFE_LOCAL_APPLY_AND_KANBAN_AUTHORIZATION_102_111"
+                                    },
+                                    {
+                                        "source":  "stage",
+                                        "kanban_field":  "card.stage",
+                                        "required":  true,
+                                        "example":  "E107"
+                                    },
+                                    {
+                                        "source":  "title",
+                                        "kanban_field":  "card.title",
+                                        "required":  true,
+                                        "example":  "Safe local apply and Kanban authorization"
+                                    },
+                                    {
+                                        "source":  "status",
+                                        "kanban_field":  "card.status",
+                                        "required":  true,
+                                        "example":  "PENDING_AUTHORIZATION"
+                                    },
+                                    {
+                                        "source":  "risk",
+                                        "kanban_field":  "card.labels.risk",
+                                        "required":  true,
+                                        "example":  "HIGH"
+                                    },
+                                    {
+                                        "source":  "authorization_status",
+                                        "kanban_field":  "card.labels.authorization",
+                                        "required":  true,
+                                        "example":  "PENDING_EXPLICIT_HUMAN_AUTHORIZATION"
+                                    },
+                                    {
+                                        "source":  "evidence_refs",
+                                        "kanban_field":  "card.checklist.evidence",
+                                        "required":  true,
+                                        "example":  "readiness,receipt,rollback,postcheck"
+                                    }
+                                ],
+    "blocked_fields":  [
+                           "secrets",
+                           "tokens",
+                           "private_paths",
+                           "env_values"
+                       ],
+    "created_utc":  "2026-06-17T11:39:35.7120463Z"
+}

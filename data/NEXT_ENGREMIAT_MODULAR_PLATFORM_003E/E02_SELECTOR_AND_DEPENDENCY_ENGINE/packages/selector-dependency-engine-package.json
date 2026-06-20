@@ -1,0 +1,222 @@
+{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_003E",
+    "stage":  "E02",
+    "artifact":  "selector-dependency-engine-package.json",
+    "selector":  {
+                     "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_003E",
+                     "stage":  "E02",
+                     "block":  "B02.1",
+                     "artifact":  "selector-contract.json",
+                     "status":  "DEFINED",
+                     "purpose":  "Seleccionar modulos por objetivo, estado, familia, compatibilidad y frontera tecnica",
+                     "inputs":  [
+                                    "objective",
+                                    "family",
+                                    "state",
+                                    "compatibility_tags",
+                                    "dependency_requirements",
+                                    "human_priority"
+                                ],
+                     "outputs":  [
+                                     "selected_modules",
+                                     "blocked_modules",
+                                     "selection_reasons",
+                                     "next_dependency_resolution"
+                                 ],
+                     "selection_rules":  [
+                                             "only_known_families",
+                                             "planned_or_active_only",
+                                             "compatibility_required",
+                                             "blocked_if_boundary_violation",
+                                             "explain_every_selection"
+                                         ],
+                     "control":  {
+                                     "local_first":  true,
+                                     "no_core_changes":  true,
+                                     "no_external_network":  true,
+                                     "no_git_write":  true,
+                                     "no_activation":  true
+                                 }
+                 },
+    "resolver":  {
+                     "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_003E",
+                     "stage":  "E02",
+                     "block":  "B02.2",
+                     "artifact":  "dependency-resolver.json",
+                     "status":  "DEFINED",
+                     "purpose":  "Resolver dependencias, conflictos, bloqueos y orden estable antes de cualquier activacion futura",
+                     "dependency_rules":  [
+                                              "registry_before_catalog",
+                                              "catalog_before_selector",
+                                              "selector_before_orchestrator",
+                                              "orchestrator_before_observability",
+                                              "blocked_conflicts_stop_plan"
+                                          ],
+                     "priority_rules":  [
+                                            "Alta before Media",
+                                            "explicit_human_priority_over_default",
+                                            "dependency_order_over_priority"
+                                        ],
+                     "outputs":  [
+                                     "resolved_order",
+                                     "blocked_conflicts",
+                                     "missing_dependencies",
+                                     "activation_plan_seed"
+                                 ],
+                     "control":  {
+                                     "deterministic_order":  true,
+                                     "stop_on_conflict":  true,
+                                     "local_only":  true
+                                 }
+                 },
+    "catalog":  [
+                    {
+                        "module_id":  "ENG-MOD-REG-001",
+                        "family":  "REGISTRY",
+                        "state":  "active",
+                        "priority":  "Alta",
+                        "depends_on":  [
+
+                                       ],
+                        "compatibility":  [
+                                              "core_frozen",
+                                              "local_first"
+                                          ]
+                    },
+                    {
+                        "module_id":  "ENG-MOD-CAT-001",
+                        "family":  "CATALOG",
+                        "state":  "planned",
+                        "priority":  "Alta",
+                        "depends_on":  [
+                                           "ENG-MOD-REG-001"
+                                       ],
+                        "compatibility":  [
+                                              "registry",
+                                              "local_first"
+                                          ]
+                    },
+                    {
+                        "module_id":  "ENG-MOD-SEL-001",
+                        "family":  "SELECTOR",
+                        "state":  "planned",
+                        "priority":  "Alta",
+                        "depends_on":  [
+                                           "ENG-MOD-CAT-001"
+                                       ],
+                        "compatibility":  [
+                                              "catalog",
+                                              "local_first"
+                                          ]
+                    },
+                    {
+                        "module_id":  "ENG-MOD-DEP-001",
+                        "family":  "SELECTOR",
+                        "state":  "planned",
+                        "priority":  "Alta",
+                        "depends_on":  [
+                                           "ENG-MOD-SEL-001"
+                                       ],
+                        "compatibility":  [
+                                              "selector",
+                                              "local_first"
+                                          ]
+                    },
+                    {
+                        "module_id":  "ENG-MOD-ACT-001",
+                        "family":  "ORCHESTRATOR",
+                        "state":  "planned",
+                        "priority":  "Alta",
+                        "depends_on":  [
+                                           "ENG-MOD-DEP-001"
+                                       ],
+                        "compatibility":  [
+                                              "resolver",
+                                              "local_first"
+                                          ]
+                    },
+                    {
+                        "module_id":  "ENG-MOD-OBS-001",
+                        "family":  "OBSERVABILITY",
+                        "state":  "planned",
+                        "priority":  "Media",
+                        "depends_on":  [
+                                           "ENG-MOD-ACT-001"
+                                       ],
+                        "compatibility":  [
+                                              "orchestrator",
+                                              "local_first"
+                                          ]
+                    }
+                ],
+    "selected_modules":  [
+                             {
+                                 "module_id":  "ENG-MOD-REG-001",
+                                 "family":  "REGISTRY",
+                                 "state":  "active",
+                                 "selected":  true,
+                                 "reason":  "known_family_and_local_compatible"
+                             },
+                             {
+                                 "module_id":  "ENG-MOD-CAT-001",
+                                 "family":  "CATALOG",
+                                 "state":  "planned",
+                                 "selected":  true,
+                                 "reason":  "known_family_and_local_compatible"
+                             },
+                             {
+                                 "module_id":  "ENG-MOD-SEL-001",
+                                 "family":  "SELECTOR",
+                                 "state":  "planned",
+                                 "selected":  true,
+                                 "reason":  "known_family_and_local_compatible"
+                             },
+                             {
+                                 "module_id":  "ENG-MOD-DEP-001",
+                                 "family":  "SELECTOR",
+                                 "state":  "planned",
+                                 "selected":  true,
+                                 "reason":  "known_family_and_local_compatible"
+                             },
+                             {
+                                 "module_id":  "ENG-MOD-ACT-001",
+                                 "family":  "ORCHESTRATOR",
+                                 "state":  "planned",
+                                 "selected":  true,
+                                 "reason":  "known_family_and_local_compatible"
+                             },
+                             {
+                                 "module_id":  "ENG-MOD-OBS-001",
+                                 "family":  "OBSERVABILITY",
+                                 "state":  "planned",
+                                 "selected":  true,
+                                 "reason":  "known_family_and_local_compatible"
+                             }
+                         ],
+    "resolved_order":  [
+                           "ENG-MOD-REG-001",
+                           "ENG-MOD-CAT-001",
+                           "ENG-MOD-SEL-001",
+                           "ENG-MOD-DEP-001",
+                           "ENG-MOD-ACT-001",
+                           "ENG-MOD-OBS-001"
+                       ],
+    "blocked_conflicts":  [
+
+                          ],
+    "missing_dependencies":  [
+
+                             ],
+    "activation_plan_seed":  {
+                                 "status":  "READY_FOR_E03_PLANNING_ONLY",
+                                 "order":  [
+                                               "ENG-MOD-REG-001",
+                                               "ENG-MOD-CAT-001",
+                                               "ENG-MOD-SEL-001",
+                                               "ENG-MOD-DEP-001",
+                                               "ENG-MOD-ACT-001",
+                                               "ENG-MOD-OBS-001"
+                                           ],
+                                 "note":  "Seed only; no module activation executed"
+                             }
+}

@@ -1,0 +1,76 @@
+﻿{
+    "package_id":  "ENGREMIAT_PROJECT_BUILDER_TO_WORKER_LOOP_001",
+    "stage":  "E07_BUILD_CONTROLLED_EXECUTION_DRY_RUN_PLAN",
+    "plan_id":  "controlled-execution-dry-run-plan.v1",
+    "status":  "DRY_RUN_ONLY",
+    "purpose":  "Simular como se ejecutaria el worker despues de una aprobacion futura, sin ejecutar worker real ni escribir cambios",
+    "source_packet":  "worker-packet-preview.json",
+    "source_receipt":  "approved-execution-receipt.pending.json",
+    "mode":  {
+                 "dry_run":  true,
+                 "execute_now":  false,
+                 "worker_execution":  false,
+                 "authorization_status":  "NOT_GRANTED",
+                 "network":  false,
+                 "git_write":  false,
+                 "external_ai":  false,
+                 "local_only":  true
+             },
+    "dry_run_steps":  [
+                          {
+                              "step_id":  "DRY01",
+                              "operation":  "READ_LOCAL_CONTEXT",
+                              "risk":  "LOW",
+                              "execute":  false,
+                              "expected":  "context_loaded_preview_only"
+                          },
+                          {
+                              "step_id":  "DRY02",
+                              "operation":  "VALIDATE_HUMAN_RECEIPT",
+                              "risk":  "LOW",
+                              "execute":  false,
+                              "expected":  "receipt_pending_not_authorized"
+                          },
+                          {
+                              "step_id":  "DRY03",
+                              "operation":  "PLAN_WORKER_ACTIONS",
+                              "risk":  "LOW",
+                              "execute":  false,
+                              "expected":  "worker_actions_listed_only"
+                          },
+                          {
+                              "step_id":  "DRY04",
+                              "operation":  "CHECK_FORBIDDEN_OPERATIONS",
+                              "risk":  "MEDIUM",
+                              "execute":  false,
+                              "expected":  "network_git_external_ai_blocked"
+                          },
+                          {
+                              "step_id":  "DRY05",
+                              "operation":  "RETURN_EVIDENCE_PLAN",
+                              "risk":  "LOW",
+                              "execute":  false,
+                              "expected":  "evidence_plan_ready"
+                          }
+                      ],
+    "forbidden":  [
+                      "EXECUTE_WORKER",
+                      "WRITE_PROJECT_CODE",
+                      "CALL_NETWORK",
+                      "CALL_EXTERNAL_AI",
+                      "GIT_COMMIT",
+                      "GIT_PUSH",
+                      "MODIFY_SYSTEM",
+                      "RUN_COMMANDS"
+                  ],
+    "go_conditions":  [
+                          "human_receipt_status_APPROVED",
+                          "explicit_authorization_phrase_present",
+                          "scope_defined",
+                          "rollback_defined",
+                          "evidence_defined",
+                          "dry_run_passed"
+                      ],
+    "current_decision":  "NO_GO_EXECUTION_NOT_AUTHORIZED",
+    "next":  "E08_BUILD_DRY_RUN_VALIDATOR_AND_CLOSE"
+}

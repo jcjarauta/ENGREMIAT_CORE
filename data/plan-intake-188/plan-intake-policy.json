@@ -1,0 +1,23 @@
+﻿{
+    "objective_id":  "DEFINE_PLAN_INTAKE_STANDARD_MVP_188_191",
+    "stage":  "E188",
+    "block":  "B188.1",
+    "step":  "P188.1.2",
+    "name":  "plan-intake-policy",
+    "purpose":  "Define default blocks, limits and safety rules for plan intake",
+    "default_decision":  "DEFER",
+    "allowed":  [
+                    "local file reads",
+                    "local file writes",
+                    "preview generation",
+                    "validation reports"
+                ],
+    "blocked":  [
+                    "external network",
+                    "git writes",
+                    "real kanban writes",
+                    "real cline writes",
+                    "destructive actions"
+                ],
+    "created_at":  "2026-06-17T18:43:46.4886186+02:00"
+}

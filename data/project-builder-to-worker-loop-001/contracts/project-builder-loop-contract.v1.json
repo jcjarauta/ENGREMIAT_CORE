@@ -1,0 +1,45 @@
+﻿{
+    "contract_id":  "engremiat-project-builder-to-worker-loop-v1",
+    "package_id":  "ENGREMIAT_PROJECT_BUILDER_TO_WORKER_LOOP_001",
+    "stage":  "E01_PREPARE_READONLY_STRUCTURE",
+    "purpose":  "Convert human project intent into normalized Engremiat roadmap, cards preview and worker-ready tasks under human gates.",
+    "flow":  [
+                 "human_project_intake",
+                 "ollama_prompt_proposal_only",
+                 "ollama_or_mock_response",
+                 "engremiat_normalization",
+                 "human_roadmap_review",
+                 "cards_preview",
+                 "human_gate_before_materialization",
+                 "worker_task_after_card_approval",
+                 "worker_result_to_human_review"
+             ],
+    "canonical_objects":  [
+                              "project",
+                              "phase",
+                              "block",
+                              "task",
+                              "card_preview",
+                              "need",
+                              "capability_required",
+                              "worker_request",
+                              "evidence_expected",
+                              "gate",
+                              "decision",
+                              "transition"
+                          ],
+    "safety":  {
+                   "readonly_structure":  true,
+                   "proposal_only":  true,
+                   "ollama_real_execution":  false,
+                   "worker_real_execution":  false,
+                   "materialize_cards":  false,
+                   "card_write":  false,
+                   "write_to_cline":  false,
+                   "git":  false,
+                   "network_external":  false,
+                   "auto_apply":  false,
+                   "human_gate_required":  true
+               },
+    "next":  "E02_BUILD_HUMAN_PROJECT_INTAKE_DASHBOARD"
+}

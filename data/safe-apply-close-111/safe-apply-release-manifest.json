@@ -1,0 +1,85 @@
+﻿{
+    "objective":  "ENGREMIAT_SAFE_LOCAL_APPLY_AND_KANBAN_AUTHORIZATION_102_111",
+    "stage":  "E111",
+    "version":  "1.11.0-local",
+    "release":  "SAFE_LOCAL_APPLY_AND_KANBAN_AUTHORIZATION_102_111",
+    "created_utc":  "2026-06-17T11:43:16.2691163Z",
+    "stages":  [
+                   "E102 Apply Scope Contract",
+                   "E103 Rollback Pack Builder",
+                   "E104 Postcheck Runner",
+                   "E105 Human Authorization Screen",
+                   "E106 First Controlled Local Apply",
+                   "E107 Kanban Write Authorization Contract",
+                   "E108 Kanban Dry-run To Real Gate",
+                   "E109 Safety Manual",
+                   "E110 Regression",
+                   "E111 Close"
+               ],
+    "evidence_summary":  "reports\\safe-apply-close-111\\safe-apply-evidence-summary.json",
+    "artifacts":  [
+                      {
+                          "path":  "reports\\apply-scope-102\\e102-apply-scope-readiness-report.json",
+                          "exists":  true,
+                          "json_valid":  true,
+                          "status":  "OK"
+                      },
+                      {
+                          "path":  "reports\\rollback-pack-103\\e103-rollback-pack-readiness-report.json",
+                          "exists":  true,
+                          "json_valid":  true,
+                          "status":  "OK"
+                      },
+                      {
+                          "path":  "reports\\postcheck-runner-104\\e104-postcheck-runner-readiness-report.json",
+                          "exists":  true,
+                          "json_valid":  true,
+                          "status":  "OK"
+                      },
+                      {
+                          "path":  "reports\\human-authorization-105\\e105-human-authorization-readiness-report.json",
+                          "exists":  true,
+                          "json_valid":  true,
+                          "status":  "OK"
+                      },
+                      {
+                          "path":  "reports\\controlled-apply-106\\e106-controlled-apply-readiness-report.json",
+                          "exists":  true,
+                          "json_valid":  true,
+                          "status":  "OK"
+                      },
+                      {
+                          "path":  "reports\\kanban-write-authorization-107\\e107-kanban-write-authorization-readiness-report.json",
+                          "exists":  true,
+                          "json_valid":  true,
+                          "status":  "OK"
+                      },
+                      {
+                          "path":  "reports\\kanban-dryrun-gate-108\\e108-kanban-dryrun-gate-readiness-report.json",
+                          "exists":  true,
+                          "json_valid":  true,
+                          "status":  "OK"
+                      },
+                      {
+                          "path":  "reports\\safety-manual-109\\e109-safety-manual-readiness-report.json",
+                          "exists":  true,
+                          "json_valid":  true,
+                          "status":  "OK"
+                      },
+                      {
+                          "path":  "reports\\safe-apply-regression-110\\e110-safe-apply-regression-readiness-report.json",
+                          "exists":  true,
+                          "json_valid":  true,
+                          "status":  "OK"
+                      }
+                  ],
+    "safe_apply_ready":  true,
+    "real_execution_enabled":  false,
+    "controlled_apply_executed":  false,
+    "controlled_apply_safe_no_go":  true,
+    "kanban_real_write":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "auto_apply":  false
+}

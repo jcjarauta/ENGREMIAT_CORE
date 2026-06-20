@@ -1,0 +1,116 @@
+﻿{
+    "proposal_type":  "PROJECT_BUILDER_PROPOSAL",
+    "status":  "PROPOSAL_ONLY",
+    "project":  {
+                    "id":  "PROJECT-BUILDER-SAMPLE-001",
+                    "title":  "Crear módulo para convertir necesidades en tareas ejecutables por workers",
+                    "objective":  "Construir un ciclo proyecto -\u003e roadmap -\u003e aprobación humana -\u003e cards -\u003e worker -\u003e evidencia -\u003e revisión humana.",
+                    "success_criteria":  [
+                                             "roadmap normalizado disponible",
+                                             "cards preview generadas",
+                                             "gate humano preparado",
+                                             "worker request preview generado",
+                                             "dashboard de revisión disponible"
+                                         ]
+                },
+    "phases":  [
+                   {
+                       "id":  "PHASE-001",
+                       "title":  "Intake y normalización",
+                       "goal":  "Capturar intención humana y convertirla en estructura Engremiat."
+                   },
+                   {
+                       "id":  "PHASE-002",
+                       "title":  "Roadmap y revisión humana",
+                       "goal":  "Mostrar fases, tareas, riesgos y evidencias para aprobación."
+                   },
+                   {
+                       "id":  "PHASE-003",
+                       "title":  "Cards y worker loop",
+                       "goal":  "Materializar cards aprobadas y ejecutar tareas bajo gate."
+                   }
+               ],
+    "tasks":  [
+                  {
+                      "id":  "TASK-001",
+                      "phase":  "PHASE-001",
+                      "title":  "Crear contrato de intake",
+                      "risk":  "LOW",
+                      "evidence":  "contract json validado"
+                  },
+                  {
+                      "id":  "TASK-002",
+                      "phase":  "PHASE-002",
+                      "title":  "Mostrar roadmap en dashboard",
+                      "risk":  "MEDIUM",
+                      "evidence":  "dashboard html visible"
+                  },
+                  {
+                      "id":  "TASK-003",
+                      "phase":  "PHASE-003",
+                      "title":  "Preparar primera card preview",
+                      "risk":  "MEDIUM",
+                      "evidence":  "card preview sin escritura real"
+                  }
+              ],
+    "card_previews":  [
+                          {
+                              "id":  "CARD-PREVIEW-001",
+                              "from_task":  "TASK-001",
+                              "title":  "Definir intake normalizado",
+                              "status":  "PREVIEW",
+                              "recommended_column":  "NEXT",
+                              "requires_gate":  true
+                          },
+                          {
+                              "id":  "CARD-PREVIEW-002",
+                              "from_task":  "TASK-002",
+                              "title":  "Construir dashboard de roadmap",
+                              "status":  "PREVIEW",
+                              "recommended_column":  "NEXT",
+                              "requires_gate":  true
+                          },
+                          {
+                              "id":  "CARD-PREVIEW-003",
+                              "from_task":  "TASK-003",
+                              "title":  "Generar cards Obsidian desde roadmap aprobado",
+                              "status":  "PREVIEW",
+                              "recommended_column":  "NEXT",
+                              "requires_gate":  true
+                          }
+                      ],
+    "needs":  [
+                  "normalizador",
+                  "dashboard humano",
+                  "worker request controlado",
+                  "evidencia y gates"
+              ],
+    "capabilities_required":  [
+                                  "project_analysis",
+                                  "roadmap_generation",
+                                  "card_preview_generation",
+                                  "human_review",
+                                  "worker_request_building"
+                              ],
+    "risks":  [
+                  "roadmap demasiado grande",
+                  "respuesta Ollama no parseable",
+                  "crear cards sin aprobación",
+                  "mezclar proposal con ejecución"
+              ],
+    "evidence_expected":  [
+                              "normalized-project-roadmap.json",
+                              "roadmap-review-package.json",
+                              "cards-preview.json",
+                              "gate-roadmap-approval.json"
+                          ],
+    "human_questions":  [
+                            "¿El proyecto debe generar código real o documentación primero?",
+                            "¿Qué worker preferimos para la primera tarea: mock u Ollama?"
+                        ],
+    "gates_required":  [
+                           "APPROVE_ROADMAP_BEFORE_CARD_MATERIALIZATION",
+                           "APPROVE_WORKER_BEFORE_EXECUTION"
+                       ],
+    "next_recommendation":  "E02_BUILD_HUMAN_PROJECT_INTAKE_DASHBOARD"
+}

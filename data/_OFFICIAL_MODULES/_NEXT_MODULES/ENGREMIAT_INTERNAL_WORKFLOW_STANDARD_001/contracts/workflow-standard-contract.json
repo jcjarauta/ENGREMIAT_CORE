@@ -1,0 +1,26 @@
+﻿{
+    "contract_id":  "workflow-standard-contract.v1",
+    "module_id":  "ENGREMIAT_INTERNAL_WORKFLOW_STANDARD_001",
+    "principle":  "ENGREMIAT gobierna; las herramientas consumen y producen objetos normalizados.",
+    "canonical_flow":  [
+                           "IDEA",
+                           "PROJECT",
+                           "TASK",
+                           "WORKER",
+                           "INPUT",
+                           "PROCESS",
+                           "OUTPUT",
+                           "EVIDENCE",
+                           "RESOURCE",
+                           "LIBRARY_OR_ARCHIVE"
+                       ],
+    "rules":  [
+                  "Ninguna herramienta escribe libremente",
+                  "Todo output util debe poder convertirse en recurso reutilizable",
+                  "Todo trabajo debe tener tarea trazable",
+                  "Toda tarea debe declarar worker inputs outputs evidence gate y estado",
+                  "Las integraciones reales requieren gate humano explicito",
+                  "Los adjuntos se tratan como inputs o evidencias normalizadas"
+              ],
+    "tool_position":  "OpenWebUI Ollama OpenClaw Cline Kanban Obsidian Sheets son adaptadores no fuente de verdad."
+}

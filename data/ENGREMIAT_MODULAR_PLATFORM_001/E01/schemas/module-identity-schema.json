@@ -1,0 +1,134 @@
+{
+    "$schema":  "https://json-schema.org/draft/2020-12/schema",
+    "$id":  "module-identity-schema.json",
+    "title":  "ENGREMIAT Module Identity Schema",
+    "type":  "object",
+    "additionalProperties":  false,
+    "required":  [
+                     "module_id",
+                     "module_name",
+                     "version",
+                     "state",
+                     "owner",
+                     "compatibility"
+                 ],
+    "properties":  {
+                       "module_id":  {
+                                         "type":  "string",
+                                         "minLength":  1,
+                                         "pattern":  "^[A-Z0-9][A-Z0-9._-]*$",
+                                         "description":  "Stable canonical identifier for the module."
+                                     },
+                       "module_name":  {
+                                           "type":  "string",
+                                           "minLength":  1,
+                                           "description":  "Human-readable module name."
+                                       },
+                       "version":  {
+                                       "type":  "string",
+                                       "minLength":  1,
+                                       "pattern":  "^\\d+\\.\\d+\\.\\d+(?:[-+][A-Za-z0-9.-]+)?$",
+                                       "description":  "SemVer compatible version."
+                                   },
+                       "state":  {
+                                     "type":  "string",
+                                     "enum":  [
+                                                  "planned",
+                                                  "active",
+                                                  "paused",
+                                                  "deprecated",
+                                                  "retired"
+                                              ],
+                                     "description":  "Lifecycle state of the module."
+                                 },
+                       "owner":  {
+                                     "type":  "string",
+                                     "minLength":  1,
+                                     "description":  "Responsible owner or subsystem."
+                                 },
+                       "description":  {
+                                           "type":  "string",
+                                           "description":  "Short module description."
+                                       },
+                       "compatibility":  {
+                                             "type":  "object",
+                                             "additionalProperties":  false,
+                                             "required":  [
+                                                              "core",
+                                                              "api",
+                                                              "runtime"
+                                                          ],
+                                             "properties":  {
+                                                                "core":  {
+                                                                             "minLength":  1,
+                                                                             "type":  "string"
+                                                                         },
+                                                                "api":  {
+                                                                            "minLength":  1,
+                                                                            "type":  "string"
+                                                                        },
+                                                                "runtime":  {
+                                                                                "minLength":  1,
+                                                                                "type":  "string"
+                                                                            },
+                                                                "notes":  {
+                                                                              "items":  {
+                                                                                            "type":  "string"
+                                                                                        },
+                                                                              "type":  "array"
+                                                                          }
+                                                            }
+                                         },
+                       "dependencies":  {
+                                            "type":  "array",
+                                            "items":  {
+                                                          "type":  "object",
+                                                          "additionalProperties":  false,
+                                                          "required":  [
+                                                                           "module_id",
+                                                                           "version_range",
+                                                                           "relation"
+                                                                       ],
+                                                          "properties":  {
+                                                                             "module_id":  {
+                                                                                               "minLength":  1,
+                                                                                               "type":  "string"
+                                                                                           },
+                                                                             "version_range":  {
+                                                                                                   "minLength":  1,
+                                                                                                   "type":  "string"
+                                                                                               },
+                                                                             "relation":  {
+                                                                                              "type":  "string",
+                                                                                              "enum":  [
+                                                                                                           "required",
+                                                                                                           "optional",
+                                                                                                           "replaceable"
+                                                                                                       ]
+                                                                                          },
+                                                                             "notes":  {
+                                                                                           "type":  "string"
+                                                                                       }
+                                                                         }
+                                                      }
+                                        },
+                       "coupling":  {
+                                        "type":  "object",
+                                        "additionalProperties":  false,
+                                        "properties":  {
+                                                           "can_attach":  {
+                                                                              "type":  "boolean"
+                                                                          },
+                                                           "can_detach":  {
+                                                                              "type":  "boolean"
+                                                                          },
+                                                           "can_pause":  {
+                                                                             "type":  "boolean"
+                                                                         },
+                                                           "can_replace":  {
+                                                                               "type":  "boolean"
+                                                                           }
+                                                       }
+                                    }
+                   }
+}

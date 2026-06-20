@@ -1,0 +1,31 @@
+﻿{
+    "cycle_id":  "CYCLE-CARD-001-20260619-083550",
+    "package_id":  "ENGREMIAT_LOCAL_KANBAN_EXECUTION_CYCLE_001",
+    "stage":  "E03_PREPARE_CARD_EXECUTION_CYCLE_JOB_DRY_RUN",
+    "card":  {
+                 "id":  "CARD-001",
+                 "title":  "Crear backlog visible",
+                 "source_need":  "NEED-001",
+                 "status":  "DOING",
+                 "recommended_column":  "DOING",
+                 "priority":  "HIGH",
+                 "kanban_decision":  "GO",
+                 "human_reviewed":  "true",
+                 "last_transition_id":  "TRANSITION-CARD-001-20260619-083051",
+                 "path":  "C:\\ENGREMIAT_CORE\\obsidian\\ENGREMIAT_OBSIDIAN_KANBAN_LAB\\12_MARKDOWN_KANBAN_TEST\\cards\\CARD-001.md"
+             },
+    "transport":  {
+                      "default":  "mock",
+                      "real":  "ollama",
+                      "ollama_requires_authorization":  true,
+                      "ollama_authorization_phrase":  "AUTORIZO_OLLAMA_WORKER_TRANSPORT_REAL_CARD_001_PROPOSAL_ONLY"
+                  },
+    "dispatcher":  "C:\\ENGREMIAT_CORE\\tools\\local-kanban-worker-loop\\Invoke-LocalKanbanWorkerLoop.ps1",
+    "prompt":  "# DESTINO: WORKER ENGREMIAT\n\n## Card execution cycle job\n\n- cycle_id: \nCYCLE-CARD-001-20260619-083550\n- card_id: \nCARD-001\n- title: \nCrear backlog visible\n- source_need: \nNEED-001\n- status: \nDOING\n- column: \nDOING\n- priority: \nHIGH\n- decision: \nGO\n- human_reviewed: \ntrue\n- last_transition_id: \nTRANSITION-CARD-001-20260619-083051\n\n## Instrucciones\n\nResponde en español. No ejecutes comandos. No modifiques archivos. No uses git. No uses red. Devuelve solo propuesta y evidencia esperada para avanzar esta card.\n\n## Formato obligatorio\n\nWORKER_RESPONSE_BEGIN\ncard_id: \nCARD-001\nstatus: PROPOSAL_ONLY\nsummary:\nproposal_steps:\nexpected_files:\nexpected_evidence:\nrisks:\nhuman_validation_needed: true\nnext_recommended_action:\nWORKER_RESPONSE_END",
+    "will_execute_worker":  false,
+    "will_write_card":  false,
+    "will_git":  false,
+    "will_external_network":  false,
+    "created_at":  "2026-06-19T08:35:50",
+    "next":  "E04_RUN_CARD_EXECUTION_CYCLE_WORKER_MOCK"
+}

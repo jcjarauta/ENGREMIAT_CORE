@@ -1,0 +1,33 @@
+﻿{
+    "schema":  "engremiat.task_authorization_package.v1",
+    "objective":  "ENGREMIAT_REAL_VALUE_TASK_EXECUTION_LOOP_112_121",
+    "stage":  "E115",
+    "block":  "B115.1",
+    "step":  "P115.1.1",
+    "authorization_id":  "TASK-AUTHORIZATION-115-001",
+    "source_readiness":  "reports/real-task-proposal-114/e114-proposal-readiness-report.json",
+    "created_at":  "2026-06-17T14:10:46",
+    "proposal_ready":  true,
+    "authorization_status":  "PENDING_HUMAN_DECISION",
+    "default_decision":  "DEFER",
+    "allowed_decisions":  [
+                              "APPROVE",
+                              "REJECT",
+                              "DEFER"
+                          ],
+    "execution_allowed_now":  false,
+    "human_required":  true,
+    "risk_level":  "HIGH",
+    "scope":  {
+                  "may_create_local_artifacts":  true,
+                  "may_execute_task":  false,
+                  "may_run_external_commands":  false,
+                  "may_write_git":  false,
+                  "may_use_network":  false
+              },
+    "decision_contract":  {
+                              "decision_file":  "data/task-authorization-115/task-authorization-decision.json",
+                              "approval_requires":  "explicit human APPROVE in next stage or edited decision file",
+                              "defer_is_safe_default":  true
+                          }
+}

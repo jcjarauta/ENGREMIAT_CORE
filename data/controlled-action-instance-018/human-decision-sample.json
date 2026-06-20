@@ -1,0 +1,40 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_ACTION_INSTANCE_018",
+    "stage":  "E02",
+    "created_at":  "2026-06-17T09:59:45.7889948+02:00",
+    "samples":  [
+                    {
+                        "name":  "DEFAULT_DEFER",
+                        "decision":  "DEFER",
+                        "human_confirmation":  false,
+                        "execution_allowed":  false,
+                        "approved":  false,
+                        "expected":  "BLOCKED"
+                    },
+                    {
+                        "name":  "VALID_APPROVE",
+                        "decision":  "APPROVE",
+                        "human_confirmation":  true,
+                        "execution_allowed":  true,
+                        "approved":  true,
+                        "expected":  "GATE_APPROVED_NO_AUTO_APPLY"
+                    },
+                    {
+                        "name":  "INCOMPLETE_APPROVE",
+                        "decision":  "APPROVE",
+                        "human_confirmation":  true,
+                        "execution_allowed":  false,
+                        "approved":  false,
+                        "expected":  "BLOCKED_MISSING_EXECUTION_ALLOWED"
+                    },
+                    {
+                        "name":  "REJECT",
+                        "decision":  "REJECT",
+                        "human_confirmation":  true,
+                        "execution_allowed":  false,
+                        "approved":  false,
+                        "expected":  "BLOCKED_REJECTED"
+                    }
+                ],
+    "rule":  "APPROVE requiere triple condicion"
+}

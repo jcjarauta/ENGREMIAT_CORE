@@ -1,0 +1,116 @@
+﻿$ErrorActionPreference="Stop"
+[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+$Core="C:\ENGREMIAT_CORE"
+$NavDir=Join-Path $Core "reports\navigation"
+$LatestJson=Join-Path $NavDir "navigation-tree-latest.json"
+$LatestMd=Join-Path $NavDir "navigation-tree-latest.md"
+$TreePs1=Join-Path $Core "tools\launcher\ENGREMIAT-NAVIGATION-TREE.ps1"
+function W($m,$c="White"){ Write-Host $m -ForegroundColor $c }
+function P(){ [void](Read-Host "Enter") }
+function EnsureTree(){
+  if(-not(Test-Path $LatestJson)){
+    if(Test-Path $TreePs1){ & powershell -NoProfile -ExecutionPolicy Bypass -File $TreePs1 | Out-Null }
+  }
+  if(-not(Test-Path $LatestJson)){ throw "NO_GO navigation_tree_latest_missing=$LatestJson" }
+}
+function LoadTree(){ EnsureTree; return Get-Content $LatestJson -Raw | ConvertFrom-Json }
+function ShowSummary($tree){
+  Clear-Host
+  W "==== ARBOL DE NAVEGACION ====" Cyan
+  W ("Generado: {0}" -f $tree.generated_at) DarkGray
+  W ("Proyecto activo: {0}" -f $tree.active_project_name) Green
+  W ("Módulos proyecto: {0}" -f $tree.counters.project_modules) White
+  W ("Biblioteca: {0} activos / {1} históricos" -f $tree.counters.library_active,$tree.counters.library_historic) White
+  $ok=@($tree.screens | Where-Object { $_.exists }).Count
+  $total=@($tree.screens).Count
+  W ("Pantallas OK: {0}/{1}" -f $ok,$total) $(if($ok -eq $total){"Green"}else{"Yellow"})
+  W ("Rutas registradas: {0}" -f @($tree.navigation).Count) White
+  W ("Siguiente: {0}" -f $tree.next) Yellow
+  W ""
+  W "1 = ver pantallas" White
+  W "2 = ver rutas por seccion" White
+  W "3 = ver memoria/diario" White
+  W "4 = ver recomendaciones" White
+  W "5 = abrir markdown" White
+  W "6 = regenerar árbol" White
+  W "b = atras | Enter = refrescar" Cyan
+}
+function ShowScreens($tree){
+  Clear-Host
+  W "==== PANTALLAS ====" Cyan
+  foreach($s in $tree.screens){
+    $ok=if($s.exists){"OK"}else{"MISS"}
+    $color=if($s.exists){"Green"}else{"Yellow"}
+    W ("[{0}] {1} ({2})" -f $ok,$s.label,$s.id) $color
+    W ("     role={0} parent={1}" -f $s.role,$s.parent) DarkGray
+    W ("     {0}" -f $s.path) DarkGray
+  }
+  W ""
+  W "b = atras | o = abrir markdown" Cyan
+  $cmd=Read-Host "PANTALLAS"
+  if($cmd -eq "o" -and (Test-Path $LatestMd)){ Start-Process notepad.exe $LatestMd }
+}
+function ShowRoutes($tree){
+  Clear-Host
+  W "==== RUTAS POR SECCION ====" Cyan
+  $sections=@($tree.navigation | ForEach-Object { $_.section } | Select-Object -Unique)
+  foreach($section in $sections){
+    W ""
+    W $section Yellow
+    foreach($r in ($tree.navigation | Where-Object { $_.section -eq $section })){
+      W (" {0} -- {1} --> {2}" -f $r.from,$r.command,$r.to) Green
+      W ("    {0}" -f $r.purpose) DarkGray
+    }
+  }
+  W ""
+  W "b = atras | o = abrir markdown" Cyan
+  $cmd=Read-Host "RUTAS"
+  if($cmd -eq "o" -and (Test-Path $LatestMd)){ Start-Process notepad.exe $LatestMd }
+}
+function ShowMemoryRoutes($tree){
+  Clear-Host
+  W "==== MEMORIA Y DIARIO ====" Cyan
+  $memoryRoutes=@($tree.navigation | Where-Object { $_.section -eq "MEMORIA" })
+  if($memoryRoutes.Count -eq 0){ W "Sin rutas de memoria registradas." Yellow }
+  foreach($r in $memoryRoutes){
+    W (" {0} = {1}" -f $r.command,$r.purpose) Green
+    W ("    destino={0}" -f $r.to) DarkGray
+  }
+  W ""
+  W "Archivos esperados:" Yellow
+  W " - C:\ENGREMIAT_CORE\memory\project-memory\project-memory-latest.md" White
+  W " - C:\ENGREMIAT_CORE\memory\project-memory\development-diary-latest.md" White
+  W " - C:\ENGREMIAT_CORE\memory\project-memory\continuation-prompt-latest.md" White
+  W " - C:\ENGREMIAT_CORE\memory\project-memory\ollama-worker-prompt-latest.md" White
+  W ""
+  W "b = atras" Cyan
+  [void](Read-Host "MEMORIA_ARBOL")
+}
+function ShowRecommendations($tree){
+  Clear-Host
+  W "==== RECOMENDACIONES ====" Cyan
+  foreach($r in $tree.recommendations){ W (" - {0}" -f $r) Yellow }
+  W ""
+  W "Siguiente recomendado:" Green
+  W (" - {0}" -f $tree.next) White
+  W ""
+  W "b = atras" Cyan
+  [void](Read-Host "RECOMENDACIONES")
+}
+function Main(){
+  while($true){
+    $tree=LoadTree
+    ShowSummary $tree
+    $cmd=Read-Host "ARBOL"
+    if([string]::IsNullOrWhiteSpace($cmd)){ continue }
+    if($cmd -eq "b"){ return }
+    if($cmd -eq "1"){ ShowScreens $tree; continue }
+    if($cmd -eq "2"){ ShowRoutes $tree; continue }
+    if($cmd -eq "3"){ ShowMemoryRoutes $tree; continue }
+    if($cmd -eq "4"){ ShowRecommendations $tree; continue }
+    if($cmd -eq "5"){ if(Test-Path $LatestMd){ Start-Process notepad.exe $LatestMd } else { W "NO_GO markdown_no_existe" Yellow; P }; continue }
+    if($cmd -eq "6"){ if(Test-Path $TreePs1){ & powershell -NoProfile -ExecutionPolicy Bypass -File $TreePs1; P }; continue }
+    W "WARN comando_no_reconocido" Yellow; P
+  }
+}
+Main

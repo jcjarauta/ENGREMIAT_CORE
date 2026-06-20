@@ -1,0 +1,44 @@
+﻿{
+    "template_id":  "engremiat-master-vault-template.v1",
+    "package_id":  "ENGREMIAT_VAULT_MODULE_BUILDER_001",
+    "stage":  "E02_CREATE_MASTER_VAULT_TEMPLATE_PACKET",
+    "status":  "PASS",
+    "template_root":  "C:\\ENGREMIAT_CORE\\templates\\obsidian-master-vault-template\\ENGREMIAT_MASTER_VAULT_TEMPLATE",
+    "folders":  [
+                    "00_CONTROL_OPERATIVO",
+                    "01_SISTEMA_ENGREMIAT",
+                    "02_PROYECTOS",
+                    "03_MODULOS",
+                    "04_GATES_DECISIONES",
+                    "05_EVIDENCIAS",
+                    "06_WORKERS",
+                    "07_OBSIDIAN_GRAPH",
+                    "08_PLANTILLAS",
+                    "09_ARCHIVO",
+                    "10_SUPERFICIES_TRABAJO"
+                ],
+    "entrypoints":  [
+                        "C:\\ENGREMIAT_CORE\\templates\\obsidian-master-vault-template\\ENGREMIAT_MASTER_VAULT_TEMPLATE\\HOME.md",
+                        "C:\\ENGREMIAT_CORE\\templates\\obsidian-master-vault-template\\ENGREMIAT_MASTER_VAULT_TEMPLATE\\00_CONTROL_OPERATIVO\\CONTROL_HUB.md",
+                        "C:\\ENGREMIAT_CORE\\templates\\obsidian-master-vault-template\\ENGREMIAT_MASTER_VAULT_TEMPLATE\\01_SISTEMA_ENGREMIAT\\ARQUITECTURA_OFICIAL_AGRUPADA.md",
+                        "C:\\ENGREMIAT_CORE\\templates\\obsidian-master-vault-template\\ENGREMIAT_MASTER_VAULT_TEMPLATE\\02_PROYECTOS\\PROJECT_INDEX.md",
+                        "C:\\ENGREMIAT_CORE\\templates\\obsidian-master-vault-template\\ENGREMIAT_MASTER_VAULT_TEMPLATE\\03_MODULOS\\MODULE_INDEX.md",
+                        "C:\\ENGREMIAT_CORE\\templates\\obsidian-master-vault-template\\ENGREMIAT_MASTER_VAULT_TEMPLATE\\10_SUPERFICIES_TRABAJO\\WORK_SURFACE_INDEX.md",
+                        "C:\\ENGREMIAT_CORE\\templates\\obsidian-master-vault-template\\ENGREMIAT_MASTER_VAULT_TEMPLATE\\07_OBSIDIAN_GRAPH\\MASTER_GROUPED_CANVAS.canvas"
+                    ],
+    "space_type":  "MASTER_VAULT",
+    "default_group":  "G01_CORE",
+    "builder_contract":  "C:\\ENGREMIAT_CORE\\data\\vault-module-builder\\vault-module-builder-contract.v1.json",
+    "safety":  {
+                   "local_only":  true,
+                   "preview_only":  true,
+                   "execute_now":  false,
+                   "worker_execution":  false,
+                   "kanban_write":  false,
+                   "clien_write":  false,
+                   "obsidian_app_automation":  false,
+                   "git_write":  false,
+                   "external_network":  false
+               },
+    "next":  "E03_CREATE_PROJECT_MODULE_SPACE_GENERATOR_PREVIEW"
+}

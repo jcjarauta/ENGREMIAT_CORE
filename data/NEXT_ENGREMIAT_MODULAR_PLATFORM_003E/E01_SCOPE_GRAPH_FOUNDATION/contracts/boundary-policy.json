@@ -1,0 +1,20 @@
+{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_003E",
+    "stage":  "E01",
+    "block":  "B01.2",
+    "artifact":  "boundary-policy.json",
+    "status":  "DEFINED",
+    "rules":  [
+                  "do_not_touch_frozen_core",
+                  "write_only_under_data_NEXT_ENGREMIAT_MODULAR_PLATFORM_003E",
+                  "no_network",
+                  "no_git_write",
+                  "no_real_activation",
+                  "validate_artifacts_before_next_stage"
+              ],
+    "failure_policy":  "stop_on_first_error",
+    "control":  {
+                    "human_gate_required_for_execution":  true,
+                    "rollback_plan_required_for_future_activation":  true
+                }
+}

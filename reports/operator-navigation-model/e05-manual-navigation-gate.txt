@@ -1,0 +1,22 @@
+﻿ENGREMIAT_OPERATOR_NAVIGATION_MODEL_001 E05 MANUAL GATE
+
+Objetivo: validar navegacion humana tras helpers comunes.
+
+Prueba 1 - Proyectos
+1. Abre el operador.
+2. Pulsa 3.
+3. Debe aparecer PROYECTOS con lista, historico/activo, [b] Atras y ayuda de refresco.
+4. Pulsa Enter vacio.
+5. Debe redibujar PROYECTOS, no volver al menu.
+6. Pulsa b.
+7. Debe volver al menu GLOBAL completo.
+
+Prueba 2 - Estado
+1. Pulsa 4.
+2. Debe aparecer ENGREMIAT STATUS con [b] Atras y ayuda de refresco.
+3. Pulsa Enter vacio.
+4. Debe redibujar ENGREMIAT STATUS, no volver al menu.
+5. Pulsa b.
+6. Debe volver al menu GLOBAL completo.
+
+Resultado esperado: manual_gate=PASS si ambas pruebas cumplen.

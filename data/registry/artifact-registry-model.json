@@ -1,0 +1,25 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_FINAL_026_035",
+    "stage":  "E27",
+    "created_at":  "2026-06-17T11:08:26.5107410+02:00",
+    "registry":  "artifact-registry",
+    "purpose":  "Registrar artefactos E19-E26 para evitar perdida de rutas.",
+    "required_fields":  [
+                            "artifact_id",
+                            "objective",
+                            "stage",
+                            "step",
+                            "path",
+                            "type",
+                            "risk",
+                            "created_at",
+                            "exists",
+                            "status"
+                        ],
+    "formats":  [
+                    "jsonl",
+                    "latest_json",
+                    "markdown_index"
+                ],
+    "rule":  "Si un bloque crea artefactos y no los registra, no puede considerarse validado."
+}

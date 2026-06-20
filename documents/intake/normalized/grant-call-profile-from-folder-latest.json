@@ -1,0 +1,82 @@
+﻿{
+    "profile_id":  "grant-call-profile-from-folder-latest",
+    "profile_type":  "grant_call",
+    "schema":  "ENGREMIAT_NORMALIZED_PROFILE_CONTRACT_V1",
+    "created_at":  "2026-06-20T09:34:11",
+    "status":  "ready",
+    "human_review_required":  false,
+    "confidence":  "medium",
+    "source":  {
+                   "source_id":  "intake-folder-20260620-093411",
+                   "source_type":  "folder",
+                   "source_path":  "C:\\ENGREMIAT_CORE\\documents\\intake\\inbox\\convocatoria-demo-folder",
+                   "created_at":  "2026-06-20T09:34:11",
+                   "status":  "normalized",
+                   "human_review_required":  false,
+                   "title":  "convocatoria-demo-folder",
+                   "files":  [
+                                 "C:\\ENGREMIAT_CORE\\documents\\intake\\inbox\\convocatoria-demo-folder\\metadata.json",
+                                 "C:\\ENGREMIAT_CORE\\documents\\intake\\inbox\\convocatoria-demo-folder\\notas.txt",
+                                 "C:\\ENGREMIAT_CORE\\documents\\intake\\inbox\\convocatoria-demo-folder\\README.md"
+                             ],
+                   "file_count":  3,
+                   "combined_text_length":  1306,
+                   "notes":  "Carpeta local registrada como fuente compuesta en E13"
+               },
+    "titulo":  "convocatoria-demo-folder",
+    "convocatoria_nombre":  "convocatoria-demo-folder",
+    "entidad_convocante":  "Agencia Demo Folder de Innovacion Social.",
+    "entity":  "Agencia Demo Folder de Innovacion Social.",
+    "territorio":  "Catalunya y España.",
+    "territory":  "Catalunya y España.",
+    "fecha_limite":  "30/11/2026",
+    "deadline":  "30/11/2026",
+    "importe_maximo":  "75000 EUR.",
+    "amount":  "75000 EUR.",
+    "modalidad":  "subvencion competitiva para proyectos de entrada documental estructurada.",
+    "objetivo_convocatoria":  "financiar soluciones que conviertan documentos, carpetas y evidencias locales en fichas reutilizables para gestion de proyectos, modulos, tareas y dossiers.",
+    "beneficiarios":  "entidades sociales, cooperativas, administraciones colaboradoras y comunidades locales.",
+    "criterios":  [
+                      "impacto social",
+                      "reutilizacion de datos",
+                      "trazabilidad",
+                      "viabilidad tecnica",
+                      "sostenibilidad y escalabilidad"
+                  ],
+    "criteria":  [
+                     "impacto social",
+                     "reutilizacion de datos",
+                     "trazabilidad",
+                     "viabilidad tecnica",
+                     "sostenibilidad y escalabilidad"
+                 ],
+    "documentacion_requerida":  [
+                                    "memoria tecnica",
+                                    "presupuesto",
+                                    "cronograma",
+                                    "indicadores",
+                                    "declaracion responsable y anexos tecnicos"
+                                ],
+    "required_documents":  [
+                               "memoria tecnica",
+                               "presupuesto",
+                               "cronograma",
+                               "indicadores",
+                               "declaracion responsable y anexos tecnicos"
+                           ],
+    "resumen":  "carpeta demo para validar que Data Intake registra carpetas locales como fuente compuesta.",
+    "summary":  "carpeta demo para validar que Data Intake registra carpetas locales como fuente compuesta.",
+    "encaje_engremiat":  "Engremiat puede consumir esta carpeta como fuente compuesta para documentacion, tareas, modulos y evidencias.",
+    "pending_fields":  [
+
+                       ],
+    "metadata":  {
+                     "producer":  "ENGREMIAT-DATA-INTAKE-CENTER",
+                     "stage":  "E13_FOLDER_AS_SOURCE",
+                     "local_first":  true,
+                     "network_used":  false,
+                     "external_ai_used":  false,
+                     "heuristic_version":  "v0.1-folder",
+                     "raw_text_preview":  "===== FILE: metadata.json =====\r\n{\r\n    \"source_hint\":  \"folder_demo\",\r\n    \"created_at\":  \"2026-06-20T09:34:11\",\r\n    \"local_first\":  true\r\n}\r\n\r\n===== FILE: notas.txt =====\r\nNOTA INTERNA\r\n\r\nEsta carpeta representa una convocatoria compuesta por varios documentos locales.\r\nNo usa red, no usa IA externa, no usa scraping.\r\n\r\n===== FILE: README.md =====\r\n# Convocatoria Demo Folder\r\n\r\nEntidad convocante: Agencia Demo Folder de Innovacion Social.\r\nTerritorio: Catalunya y España.\r\nFecha limite de presentacion: 30/11/2026.\r\nImporte maximo por proyecto: 75000 EUR.\r\nModalidad: subvencion competitiva para proyectos de entrada documental estructurada.\r\n\r\nObjeto de la convocatoria: financiar soluciones que conviertan documentos, carpetas y evidencias locales en fichas reutilizables para gestion de proyectos, modulos, tareas y dossiers.\r\n\r\nBeneficiarios: entidades sociales, cooperativas, administraci"
+                 }
+}

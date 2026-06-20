@@ -1,0 +1,186 @@
+﻿{
+    "nodes":  [
+                  {
+                      "id":  "map",
+                      "type":  "file",
+                      "file":  "03_MODULOS/MODULE_arquitectura_global_engremiat/ARCHITECTURE_CONTENT_MAP.md",
+                      "x":  0,
+                      "y":  0,
+                      "width":  360,
+                      "height":  160,
+                      "color":  "2"
+                  },
+                  {
+                      "id":  "boundaries",
+                      "type":  "file",
+                      "file":  "03_MODULOS/MODULE_arquitectura_global_engremiat/01_ARQUITECTURA/ARCHITECTURE_BOUNDARIES.md",
+                      "x":  -520,
+                      "y":  -240,
+                      "width":  340,
+                      "height":  140,
+                      "color":  "4"
+                  },
+                  {
+                      "id":  "flows",
+                      "type":  "file",
+                      "file":  "03_MODULOS/MODULE_arquitectura_global_engremiat/01_ARQUITECTURA/ARCHITECTURE_FLOWS.md",
+                      "x":  0,
+                      "y":  -260,
+                      "width":  340,
+                      "height":  140,
+                      "color":  "5"
+                  },
+                  {
+                      "id":  "decisions",
+                      "type":  "file",
+                      "file":  "03_MODULOS/MODULE_arquitectura_global_engremiat/01_ARQUITECTURA/ARCHITECTURE_DECISIONS.md",
+                      "x":  520,
+                      "y":  -240,
+                      "width":  340,
+                      "height":  140,
+                      "color":  "6"
+                  },
+                  {
+                      "id":  "layer1",
+                      "type":  "file",
+                      "file":  "03_MODULOS/MODULE_arquitectura_global_engremiat/01_ARQUITECTURA/L01_CORE_Core_local.md",
+                      "x":  -950,
+                      "y":  260,
+                      "width":  320,
+                      "height":  140,
+                      "color":  "3"
+                  },
+                  {
+                      "id":  "layer2",
+                      "type":  "file",
+                      "file":  "03_MODULOS/MODULE_arquitectura_global_engremiat/01_ARQUITECTURA/L02_HUMAN_CONTROL_Control_humano.md",
+                      "x":  -570,
+                      "y":  260,
+                      "width":  320,
+                      "height":  140,
+                      "color":  "3"
+                  },
+                  {
+                      "id":  "layer3",
+                      "type":  "file",
+                      "file":  "03_MODULOS/MODULE_arquitectura_global_engremiat/01_ARQUITECTURA/L03_VISUAL_MEMORY_Memoria_visual_Obsidian.md",
+                      "x":  -190,
+                      "y":  260,
+                      "width":  320,
+                      "height":  140,
+                      "color":  "3"
+                  },
+                  {
+                      "id":  "layer4",
+                      "type":  "file",
+                      "file":  "03_MODULOS/MODULE_arquitectura_global_engremiat/01_ARQUITECTURA/L04_PROJECT_MODULE_BUILDER_Builder_de_proyectos_y_modulos.md",
+                      "x":  190,
+                      "y":  260,
+                      "width":  320,
+                      "height":  140,
+                      "color":  "3"
+                  },
+                  {
+                      "id":  "layer5",
+                      "type":  "file",
+                      "file":  "03_MODULOS/MODULE_arquitectura_global_engremiat/01_ARQUITECTURA/L05_WORKER_LOOP_Loop_de_workers.md",
+                      "x":  570,
+                      "y":  260,
+                      "width":  320,
+                      "height":  140,
+                      "color":  "3"
+                  },
+                  {
+                      "id":  "layer6",
+                      "type":  "file",
+                      "file":  "03_MODULOS/MODULE_arquitectura_global_engremiat/01_ARQUITECTURA/L06_EVIDENCE_REPORTING_Evidencia_y_reportes.md",
+                      "x":  950,
+                      "y":  260,
+                      "width":  320,
+                      "height":  140,
+                      "color":  "3"
+                  },
+                  {
+                      "id":  "contract",
+                      "type":  "file",
+                      "file":  "03_MODULOS/MODULE_arquitectura_global_engremiat/MODULE_CONTRACT.md",
+                      "x":  900,
+                      "y":  -20,
+                      "width":  340,
+                      "height":  140,
+                      "color":  "4"
+                  }
+              ],
+    "edges":  [
+                  {
+                      "id":  "e_boundaries",
+                      "fromNode":  "map",
+                      "fromSide":  "left",
+                      "toNode":  "boundaries",
+                      "toSide":  "right"
+                  },
+                  {
+                      "id":  "e_flows",
+                      "fromNode":  "map",
+                      "fromSide":  "top",
+                      "toNode":  "flows",
+                      "toSide":  "bottom"
+                  },
+                  {
+                      "id":  "e_decisions",
+                      "fromNode":  "map",
+                      "fromSide":  "right",
+                      "toNode":  "decisions",
+                      "toSide":  "left"
+                  },
+                  {
+                      "id":  "e_layer_1",
+                      "fromNode":  "map",
+                      "fromSide":  "bottom",
+                      "toNode":  "layer1",
+                      "toSide":  "top"
+                  },
+                  {
+                      "id":  "e_layer_2",
+                      "fromNode":  "map",
+                      "fromSide":  "bottom",
+                      "toNode":  "layer2",
+                      "toSide":  "top"
+                  },
+                  {
+                      "id":  "e_layer_3",
+                      "fromNode":  "map",
+                      "fromSide":  "bottom",
+                      "toNode":  "layer3",
+                      "toSide":  "top"
+                  },
+                  {
+                      "id":  "e_layer_4",
+                      "fromNode":  "map",
+                      "fromSide":  "bottom",
+                      "toNode":  "layer4",
+                      "toSide":  "top"
+                  },
+                  {
+                      "id":  "e_layer_5",
+                      "fromNode":  "map",
+                      "fromSide":  "bottom",
+                      "toNode":  "layer5",
+                      "toSide":  "top"
+                  },
+                  {
+                      "id":  "e_layer_6",
+                      "fromNode":  "map",
+                      "fromSide":  "bottom",
+                      "toNode":  "layer6",
+                      "toSide":  "top"
+                  },
+                  {
+                      "id":  "e_contract",
+                      "fromNode":  "map",
+                      "fromSide":  "right",
+                      "toNode":  "contract",
+                      "toSide":  "left"
+                  }
+              ]
+}

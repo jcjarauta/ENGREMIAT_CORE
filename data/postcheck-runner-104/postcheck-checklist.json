@@ -1,0 +1,52 @@
+﻿{
+    "objective":  "ENGREMIAT_SAFE_LOCAL_APPLY_AND_KANBAN_AUTHORIZATION_102_111",
+    "stage":  "E104",
+    "checklist":  "POSTCHECK_CHECKLIST",
+    "target_path":  "data/safe-apply-runtime-106/controlled-local-apply-target.json",
+    "checks":  [
+                   {
+                       "id":  "PC-001",
+                       "name":  "target_policy_known",
+                       "required":  true
+                   },
+                   {
+                       "id":  "PC-002",
+                       "name":  "rollback_pack_present",
+                       "required":  true
+                   },
+                   {
+                       "id":  "PC-003",
+                       "name":  "apply_result_present_after_E106",
+                       "required":  false
+                   },
+                   {
+                       "id":  "PC-004",
+                       "name":  "target_state_matches_expected_after_apply_or_no_go",
+                       "required":  false
+                   },
+                   {
+                       "id":  "PC-005",
+                       "name":  "no_external_network",
+                       "required":  true
+                   },
+                   {
+                       "id":  "PC-006",
+                       "name":  "no_git_write",
+                       "required":  true
+                   },
+                   {
+                       "id":  "PC-007",
+                       "name":  "no_kanban_real_write",
+                       "required":  true
+                   }
+               ],
+    "postcheck_executes_safe_readonly":  true,
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "kanban_real_write":  false,
+    "created_utc":  "2026-06-17T11:36:06.2979069Z"
+}

@@ -1,0 +1,35 @@
+﻿{
+    "package_id":  "ENGREMIAT_REAL_INTAKE_IMPORTER_001",
+    "stage":  "E03_BUILD_REAL_WORKER_PACKET_PREVIEW_AFTER_HUMAN_REVIEW",
+    "manifest_id":  "real-worker-packet-preview-manifest.v1",
+    "status":  "PREVIEW_ONLY",
+    "packet":  "C:\\ENGREMIAT_CORE\\data\\real-intake-importer\\real-worker-packet-preview.json",
+    "source_files":  [
+                         "C:\\ENGREMIAT_CORE\\data\\real-intake-importer\\real-human-intake.accepted.latest.json",
+                         "C:\\ENGREMIAT_CORE\\data\\real-intake-importer\\real-intake-roadmap-preview.latest.json",
+                         "C:\\ENGREMIAT_CORE\\data\\real-intake-importer\\real-roadmap-review-gate.json",
+                         "C:\\ENGREMIAT_CORE\\data\\real-intake-importer\\real-roadmap-review-receipt.pending.json"
+                     ],
+    "checks":  [
+                   {
+                       "check":  "execute_now_false",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "worker_execution_false",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "authorization_not_granted",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "network_false",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "git_write_false",
+                       "status":  "PASS"
+                   }
+               ]
+}

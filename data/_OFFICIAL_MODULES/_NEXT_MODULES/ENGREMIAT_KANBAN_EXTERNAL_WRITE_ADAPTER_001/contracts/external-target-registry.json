@@ -1,0 +1,19 @@
+﻿{
+    "targets":  [
+                    {
+                        "api_write":  false,
+                        "target":  "GOOGLE_SHEETS",
+                        "mode":  "MANUAL_TSV"
+                    },
+                    {
+                        "api_write":  false,
+                        "target":  "CLINE_KANBAN",
+                        "mode":  "MANUAL_PROMPT"
+                    },
+                    {
+                        "api_write":  false,
+                        "target":  "LOCAL_PREVIEW",
+                        "mode":  "JSON_TSV_MD"
+                    }
+                ]
+}

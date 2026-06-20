@@ -1,0 +1,65 @@
+﻿{
+    "package_id":  "ENGREMIAT_FIRST_OFFICIAL_MODULE_FROM_BUILDER_001",
+    "stage":  "E01_DEFINE_FIRST_OFFICIAL_MODULE_REQUEST",
+    "status":  "PASS",
+    "created_at":  "2026-06-19T13:26:31",
+    "objective":  "Crear el primer modulo oficial no-demo desde la BOVEDA_ENGREMIAT_MASTER validada.",
+    "vault":  {
+                  "name":  "BOVEDA_ENGREMIAT_MASTER",
+                  "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146",
+                  "source_decision":  "GO_BOVEDA_ENGREMIAT_MASTER_ADOPTED_AS_OPERATIVE_BASE",
+                  "source_readiness":  100
+              },
+    "module":  {
+                   "id":  "MODULE_arquitectura_global_engremiat",
+                   "slug":  "arquitectura-global-engremiat",
+                   "title":  "Arquitectura Global ENGREMIAT",
+                   "type":  "official_module",
+                   "status":  "requested",
+                   "primary_group":  "G01_CORE",
+                   "secondary_groups":  [
+                                            "G04_MODULES",
+                                            "G07_GRAPH_CANVAS",
+                                            "G08_SURFACES"
+                                        ],
+                   "graph_view":  "VIEW_SYSTEM",
+                   "folder":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\03_MODULOS\\MODULE_arquitectura_global_engremiat",
+                   "purpose":  "Definir y mantener la arquitectura global de ENGREMIAT como modulo oficial navegable, indexado y evidenciable.",
+                   "must_link_to":  [
+                                        "HOME",
+                                        "00_CONTROL_OPERATIVO/GRAPH_NAVIGATION_MAP",
+                                        "00_CONTROL_OPERATIVO/GRAPH_VIEW_SELECTOR",
+                                        "03_MODULOS/03_MODULOS_INDEX"
+                                    ]
+               },
+    "expected_outputs":  [
+                             "module_index",
+                             "module_readme",
+                             "module_contract",
+                             "module_canvas",
+                             "module_evidence_note",
+                             "dashboard",
+                             "report"
+                         ],
+    "acceptance_criteria":  [
+                                "module_folder_created",
+                                "module_index_linked_from_modules_index",
+                                "module_linked_from_HOME_or_graph_map",
+                                "module_tagged_for_group_visibility",
+                                "no_worker_execution",
+                                "no_external_links_file_uri"
+                            ],
+    "safety":  {
+                   "local_only":  true,
+                   "new_vault_only":  true,
+                   "template_write":  false,
+                   "preview_only":  true,
+                   "obsidian_app_automation":  false,
+                   "worker_execution":  false,
+                   "kanban_write":  false,
+                   "clien_write":  false,
+                   "git_write":  false,
+                   "external_network":  false
+               },
+    "next":  "E02_CREATE_FIRST_OFFICIAL_MODULE_SPACE_PREVIEW"
+}

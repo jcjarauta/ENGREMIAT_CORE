@@ -1,0 +1,58 @@
+﻿[
+    {
+        "route":  "MARKDOWN_KANBAN_EXTENSION",
+        "goal":  "Obsidian/Engremiat writes Markdown board visible in VS Code/Cursor",
+        "status":  "ACTIVE_TEST",
+        "manual_reduction":  "HIGH",
+        "risk":  "LOW",
+        "next":  "Validate jeddak.md-kanban visual result"
+    },
+    {
+        "route":  "CLINE_KANBAN_SIDEBAR_CHAT",
+        "goal":  "Engremiat generates one structured prompt for Kanban sidebar to create cards",
+        "status":  "PARTIAL_GO",
+        "manual_reduction":  "MEDIUM_HIGH",
+        "risk":  "MEDIUM",
+        "next":  "Build sidebar prompt pack"
+    },
+    {
+        "route":  "CLINE_CLI_HEADLESS",
+        "goal":  "Send selected Obsidian task to Cline CLI as controlled worker",
+        "status":  "STRATEGIC_GO_LATER",
+        "manual_reduction":  "HIGH",
+        "risk":  "MEDIUM_HIGH",
+        "next":  "Requires auth/config/safety gate"
+    },
+    {
+        "route":  "CLINE_MCP_SERVER",
+        "goal":  "Expose Obsidian/Engremiat objects as MCP tools/context for Cline",
+        "status":  "BEST_ARCHITECTURE_CANDIDATE",
+        "manual_reduction":  "HIGH",
+        "risk":  "MEDIUM",
+        "next":  "Design MCP read-only server contract"
+    },
+    {
+        "route":  "CLINE_PROJECT_PLUGINS_HOOKS",
+        "goal":  "Use .cline project plugins/hooks/rules/skills to bridge objects",
+        "status":  "RESEARCH_REQUIRED",
+        "manual_reduction":  "HIGH",
+        "risk":  "MEDIUM_HIGH",
+        "next":  "Inspect local .cline config safely"
+    },
+    {
+        "route":  "VSCODE_EXTENSION_SYNC_TO_KANBAN",
+        "goal":  "Direct sync between VS Code Cline extension and Kanban board",
+        "status":  "NOT_CONFIRMED",
+        "manual_reduction":  "HIGH_IF_EXISTS",
+        "risk":  "UNKNOWN",
+        "next":  "Do not assume; search/verify before using"
+    },
+    {
+        "route":  "GIT_ISSUES_OR_MD_TASKS_BRIDGE",
+        "goal":  "Bridge planning/execution through Markdown tasks or Git issues",
+        "status":  "STRONG_FALLBACK",
+        "manual_reduction":  "MEDIUM_HIGH",
+        "risk":  "LOW_MEDIUM",
+        "next":  "Keep as fallback if Kanban sync unavailable"
+    }
+]

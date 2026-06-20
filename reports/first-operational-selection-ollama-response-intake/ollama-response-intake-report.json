@@ -1,0 +1,24 @@
+﻿{
+    "package_id":  "ENGREMIAT_FIRST_OPERATIONAL_SELECTION_OLLAMA_RESPONSE_INTAKE_001",
+    "status":  "PASS",
+    "analysis_decision":  "GO_ANALYSIS_ONLY",
+    "recommended_first_card":  "SYSTEM_NEED_001",
+    "human_decision":  "DEFER",
+    "first_safe_action":  "READONLY_AUDIT_OBSIDIAN_HOME_ESTADO_MASTER_INDEX",
+    "next_after_first":  "SYSTEM_NEED_004",
+    "required_gate":  "HUMAN_VERIFY_ARCHITECTURE_BEFORE_MODIFICATION",
+    "do_not_do_yet":  [
+                          "apply_real",
+                          "git_write",
+                          "network",
+                          "worker_real_execution",
+                          "modify_vault_architecture_without_gate",
+                          "modify_bundles_or_registry_without_gate"
+                      ],
+    "git":  false,
+    "network":  false,
+    "external_execution":  false,
+    "worker_real_execution":  false,
+    "auto_apply":  false,
+    "created_at":  "2026-06-18T20:16:57"
+}

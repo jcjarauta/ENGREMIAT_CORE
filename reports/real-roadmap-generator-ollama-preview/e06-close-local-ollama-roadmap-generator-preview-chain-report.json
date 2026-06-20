@@ -1,0 +1,101 @@
+﻿{
+    "package_id":  "ENGREMIAT_REAL_ROADMAP_GENERATOR_WITH_LOCAL_OLLAMA_PREVIEW_001",
+    "stage":  "E06_CLOSE_LOCAL_OLLAMA_ROADMAP_GENERATOR_PREVIEW_CHAIN",
+    "status":  "PASS",
+    "closed":  true,
+    "readiness":  100,
+    "decision":  "NO_GO_EXECUTION_NOT_AUTHORIZED",
+    "scope":  "REAL_INTAKE_TO_LOCAL_OLLAMA_ROADMAP_PREVIEW_CHAIN",
+    "project_name":  "Primer intake real para construir roadmap automático en ENGREMIAT",
+    "model":  "qwen3:14b",
+    "summary":  "Cadena cerrada: intake real aceptado, generación de roadmap preview con Ollama local qwen3:14b, dashboard de revisión, gate humano, worker packet preview y dry-run seguro con NO_GO por falta de autorización explícita.",
+    "completed_chain":  [
+                            "accepted_real_intake",
+                            "local_ollama_prompt_contract",
+                            "local_ollama_roadmap_generation",
+                            "ollama_roadmap_review_gate",
+                            "ollama_roadmap_worker_packet_preview",
+                            "controlled_dry_run_no_go",
+                            "close_evidence"
+                        ],
+    "reports":  [
+                    {
+                        "file":  "e01-prepare-local-ollama-roadmap-generator-contract-report.json",
+                        "status":  "PASS"
+                    },
+                    {
+                        "file":  "e02-create-local-ollama-roadmap-generator-script-report.json",
+                        "status":  "PASS"
+                    },
+                    {
+                        "file":  "ollama-roadmap-preview-run.latest.json",
+                        "status":  "PASS"
+                    },
+                    {
+                        "file":  "e03-build-ollama-roadmap-review-dashboard-and-gate-report.json",
+                        "status":  "PASS"
+                    },
+                    {
+                        "file":  "e04-build-ollama-roadmap-worker-packet-preview-report.json",
+                        "status":  "PASS"
+                    },
+                    {
+                        "file":  "e05-build-ollama-roadmap-controlled-dry-run-report.json",
+                        "status":  "PASS"
+                    }
+                ],
+    "files":  [
+                  {
+                      "file":  "local-ollama-roadmap-generator-contract.json",
+                      "status":  "PRESENT"
+                  },
+                  {
+                      "file":  "local-ollama-roadmap-generator-script-contract.json",
+                      "status":  "PRESENT"
+                  },
+                  {
+                      "file":  "ollama-roadmap-preview.latest.json",
+                      "status":  "PRESENT"
+                  },
+                  {
+                      "file":  "ollama-roadmap-review-gate.json",
+                      "status":  "PRESENT"
+                  },
+                  {
+                      "file":  "ollama-roadmap-review-receipt.pending.json",
+                      "status":  "PRESENT"
+                  },
+                  {
+                      "file":  "ollama-roadmap-worker-packet-preview.json",
+                      "status":  "PRESENT"
+                  },
+                  {
+                      "file":  "ollama-roadmap-worker-packet-preview-manifest.json",
+                      "status":  "PRESENT"
+                  },
+                  {
+                      "file":  "ollama-roadmap-controlled-dry-run.json",
+                      "status":  "PRESENT"
+                  },
+                  {
+                      "file":  "ollama-roadmap-controlled-dry-run-result.latest.json",
+                      "status":  "PRESENT"
+                  }
+              ],
+    "safety":  {
+                   "local_only":  true,
+                   "ollama_local_only":  true,
+                   "external_ai":  false,
+                   "network_external":  false,
+                   "preview_only":  true,
+                   "execute_now":  false,
+                   "worker_execution":  false,
+                   "worker_authorization":  "NOT_GRANTED",
+                   "authorization_status":  "NOT_GRANTED",
+                   "git_write":  false,
+                   "auto_apply":  false
+               },
+    "strategic_value":  "ENGREMIAT ya puede transformar una intención humana real en una propuesta de roadmap generada localmente por IA, revisable y gobernada antes de cualquier ejecución.",
+    "current_limit":  "Todavía no se convierte el roadmap aprobado en tareas Kanban ni en ejecución controlada real; todo queda en preview seguro.",
+    "next_recommendation":  "PAUSE_AND_REVIEW_OR_START_KANBAN_ROADMAP_CARD_EXPORT_PREVIEW"
+}

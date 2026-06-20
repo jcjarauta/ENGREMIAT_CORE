@@ -1,0 +1,36 @@
+﻿{
+    "template_kind":  "PROJECT_MASTER_TEMPLATE_V2_DESIGNED",
+    "status":  "STAGING_NOT_APPLIED",
+    "version":  "v2-designed-draft",
+    "created_at":  "2026-06-19T23:30:27",
+    "project_name":  "{{PROJECT_NAME}}",
+    "project_slug":  "{{PROJECT_SLUG}}",
+    "contract_version":  "operator-project-v2",
+    "source_policy":  "designed_from_rich_sources_not_literal_copy",
+    "short_path_staging":  true,
+    "required_dirs":  [
+                          "00_HOME",
+                          "00_CONTROL",
+                          "01_OBJETIVO",
+                          "02_ROADMAP",
+                          "03_MODULOS",
+                          "03_MODULOS\\EJEMPLOS_MODULOS_REALES",
+                          "04_TAREAS",
+                          "05_GATES_HUMANOS",
+                          "06_EVIDENCIAS",
+                          "07_WORKERS",
+                          "08_RESULTADOS",
+                          "09_DECISIONES",
+                          "10_CANVAS",
+                          "90_EXPORTS",
+                          "99_ARCHIVO_ORIGEN",
+                          "99_EVIDENCE_BUILD"
+                      ],
+    "protected":  [
+                      "MODULE_inicio",
+                      "operator-state",
+                      "operator scripts",
+                      "MAESTRO_ORIGINAL"
+                  ],
+    "next_gate":  "E08G_REVIEW_STAGING_V2_DESIGNED_NO_APPLY"
+}

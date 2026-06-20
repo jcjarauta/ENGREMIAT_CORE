@@ -1,0 +1,31 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ENGREMIAT · Real Human Intake UI</title>
+<style>body{font-family:Segoe UI,Arial,sans-serif;margin:24px;background:#111827;color:#e5e7eb}h1{margin-bottom:6px}.muted{color:#9ca3af}.card{border:1px solid #374151;border-radius:14px;padding:16px;margin:12px 0;background:#1f2937}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}label{display:block;font-weight:700;margin-bottom:6px}input,textarea,select{width:100%;box-sizing:border-box;border-radius:10px;border:1px solid #4b5563;background:#0f172a;color:#e5e7eb;padding:10px;font-size:14px}textarea{min-height:92px}button{border:0;border-radius:10px;padding:11px 14px;margin:4px;background:#2563eb;color:white;font-weight:700;cursor:pointer}.secondary{background:#374151}.warn{background:#ca8a04}.ok{color:#22c55e}.bad{color:#fb7185}.warnText{color:#facc15}pre{white-space:pre-wrap;background:#020617;border:1px solid #334155;border-radius:12px;padding:14px;color:#dbeafe;min-height:160px}.pill{display:inline-block;border:1px solid #334155;border-radius:999px;padding:4px 10px;margin:3px;background:#0f172a}</style>
+</head>
+<body>
+<h1>ENGREMIAT · Real Human Intake UI</h1>
+<p class="muted">Interfaz local estática para introducir un proyecto real y exportar intake. Sin backend, sin red, sin worker, sin Git.</p>
+<div class="card"><b class="warnText">Estado:</b> LOCAL_STATIC_HTML · MANUAL_EXPORT_ONLY · WORKER_EXECUTION_FALSE</div>
+<div class="card">
+<h2>1 · Intake humano</h2>
+<div class="grid">
+<div><label>Nombre del proyecto</label><input id="project_name" placeholder="Ej. Automatizar backlog desde una idea humana"></div>
+<div><label>Prioridad</label><select id="priority"><option>ALTA</option><option selected>MEDIA</option><option>BAJA</option></select></div>
+<div><label>Nivel de autorización</label><select id="authorization_level"><option selected>PREVIEW_ONLY</option><option>ALLOW_DRY_RUN</option><option>REQUIRES_EXPLICIT_APPROVAL</option></select></div>
+</div>
+<label>Necesidad / problema</label><textarea id="human_need" placeholder="Describe qué necesitas resolver..."></textarea>
+<label>Resultado deseado</label><textarea id="desired_result" placeholder="Describe cómo sabremos que está conseguido..."></textarea>
+<label>Restricciones</label><textarea id="constraints" placeholder="Límites: sin red, sin git, solo local, tiempo, hardware, etc."></textarea>
+<label>Recursos disponibles</label><textarea id="available_resources" placeholder="Archivos, carpetas, modelos, herramientas, personas, nodos..."></textarea>
+<label>Criterios de éxito</label><textarea id="success_criteria" placeholder="Evidencias concretas que demostrarán que funciona..."></textarea>
+<label>Notas</label><textarea id="notes" placeholder="Contexto adicional..."></textarea>
+<button onclick="generate()">Generar intake</button><button class="secondary" onclick="saveLocal()">Guardar localStorage</button><button class="secondary" onclick="loadLocal()">Cargar localStorage</button><button class="warn" onclick="clearForm()">Limpiar</button>
+</div>
+<div class="card"><h2>2 · Resultado exportable</h2><p><span class="pill">JSON</span><span class="pill">Markdown</span><span class="pill">Manual copy</span><span class="pill">Download local</span></p><button onclick="copyJson()">Copiar JSON</button><button onclick="downloadJson()">Descargar JSON</button><button onclick="downloadMarkdown()">Descargar Markdown</button><pre id="output">{}</pre></div>
+<script>function v(id){return document.getElementById(id).value.trim()}function intake(){return {package_id:"ENGREMIAT_REAL_HUMAN_INTAKE_UI_001",schema:"real-human-intake.v1",created_at:new Date().toISOString(),project_name:v("project_name"),human_need:v("human_need"),desired_result:v("desired_result"),constraints:v("constraints"),available_resources:v("available_resources"),priority:v("priority"),success_criteria:v("success_criteria"),authorization_level:v("authorization_level"),notes:v("notes"),safety:{local_only:true,manual_export_only:true,backend:false,network:false,worker_execution:false,git_write:false,execute_now:false},next:"E02_GENERATE_ROADMAP_FROM_REAL_INTAKE_PREVIEW"}}function generate(){let x=intake();document.getElementById("output").textContent=JSON.stringify(x,null,2);return x}function saveLocal(){localStorage.setItem("engremiat_real_human_intake",JSON.stringify(intake()));generate()}function loadLocal(){let raw=localStorage.getItem("engremiat_real_human_intake");if(!raw){alert("No hay intake guardado");return}let x=JSON.parse(raw);["project_name","human_need","desired_result","constraints","available_resources","priority","success_criteria","authorization_level","notes"].forEach(k=>{if(document.getElementById(k)){document.getElementById(k).value=x[k]||""}});generate()}function clearForm(){["project_name","human_need","desired_result","constraints","available_resources","success_criteria","notes"].forEach(k=>document.getElementById(k).value="");document.getElementById("priority").value="MEDIA";document.getElementById("authorization_level").value="PREVIEW_ONLY";generate()}async function copyJson(){let txt=document.getElementById("output").textContent;if(!txt||txt==="{}"){generate();txt=document.getElementById("output").textContent}try{await navigator.clipboard.writeText(txt);alert("JSON copiado")}catch(e){alert("No se pudo copiar automaticamente. Copia manualmente desde el cuadro.")}}function dl(name,text,type){let a=document.createElement("a");a.href=URL.createObjectURL(new Blob([text],{type:type}));a.download=name;document.body.appendChild(a);a.click();a.remove()}function downloadJson(){let x=generate();dl("engremiat-real-human-intake.json",JSON.stringify(x,null,2),"application/json")}function downloadMarkdown(){let x=generate();let md="# ENGREMIAT REAL HUMAN INTAKE\n\n## Proyecto\n"+x.project_name+"\n\n## Necesidad\n"+x.human_need+"\n\n## Resultado deseado\n"+x.desired_result+"\n\n## Restricciones\n"+x.constraints+"\n\n## Recursos disponibles\n"+x.available_resources+"\n\n## Prioridad\n"+x.priority+"\n\n## Criterios de exito\n"+x.success_criteria+"\n\n## Autorizacion\n"+x.authorization_level+"\n\n## Notas\n"+x.notes+"\n";dl("engremiat-real-human-intake.md",md,"text/markdown")}generate()</script>
+</body>
+</html>

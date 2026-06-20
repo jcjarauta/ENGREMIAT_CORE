@@ -1,0 +1,83 @@
+{
+    "policy_id":  "module-lifecycle-policy.json",
+    "stage":  "E01",
+    "block":  "B01.2",
+    "objective":  "Module lifecycle policy",
+    "purpose":  "Define the lifecycle states and allowed transitions for modules in the registry.",
+    "states":  [
+                   "planned",
+                   "active",
+                   "paused",
+                   "deprecated",
+                   "retired"
+               ],
+    "transitions":  [
+                        {
+                            "from":  "planned",
+                            "to":  "active",
+                            "requires":  [
+                                             "identity_valid",
+                                             "package_valid",
+                                             "evidence_registered"
+                                         ]
+                        },
+                        {
+                            "from":  "active",
+                            "to":  "paused",
+                            "requires":  [
+                                             "human_or_policy_gate",
+                                             "state_snapshot"
+                                         ]
+                        },
+                        {
+                            "from":  "paused",
+                            "to":  "active",
+                            "requires":  [
+                                             "revalidation",
+                                             "compatibility_ok"
+                                         ]
+                        },
+                        {
+                            "from":  "active",
+                            "to":  "deprecated",
+                            "requires":  [
+                                             "replacement_defined",
+                                             "notice_registered"
+                                         ]
+                        },
+                        {
+                            "from":  "deprecated",
+                            "to":  "retired",
+                            "requires":  [
+                                             "replacement_or_removal_record"
+                                         ]
+                        },
+                        {
+                            "from":  "paused",
+                            "to":  "deprecated",
+                            "requires":  [
+                                             "replacement_defined"
+                                         ]
+                        }
+                    ],
+    "rules":  {
+                  "pause_rule":  "Pausing a module must keep its identity, version and evidence available.",
+                  "detach_rule":  "Detaching a module must not alter the frozen core.",
+                  "replace_rule":  "Replacement must reference the previous module and the compatibility window.",
+                  "retire_rule":  "Retired modules remain in registry memory for traceability.",
+                  "active_rule":  "Only active modules may be attached to operational flows.",
+                  "validation_rule":  "Every lifecycle change requires local validation before progression."
+              },
+    "lifecycle_memory":  {
+                             "keep_history":  true,
+                             "store_reasons":  true,
+                             "store_actor":  true,
+                             "store_timestamp":  true
+                         },
+    "control":  {
+                    "local_first":  true,
+                    "no_external_network":  true,
+                    "no_git_write":  true,
+                    "human_gate_for_sensitive_changes":  true
+                }
+}

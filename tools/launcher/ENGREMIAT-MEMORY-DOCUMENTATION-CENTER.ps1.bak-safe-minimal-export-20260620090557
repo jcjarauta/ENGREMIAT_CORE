@@ -1,0 +1,386 @@
+﻿param()
+
+$ErrorActionPreference="Stop"
+[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+
+$Core="C:\ENGREMIAT_CORE"
+$MemoryDir=Join-Path $Core "memory\project-memory"
+$DocDir=Join-Path $Core "documents"
+$OutReportDir=Join-Path $Core "reports\launcher"
+New-Item -ItemType Directory -Force -Path $MemoryDir,$DocDir,$OutReportDir | Out-Null
+foreach($d in @("technical","executive","development","grants","partners","clients","worker","exports")){
+  New-Item -ItemType Directory -Force -Path (Join-Path $DocDir $d) | Out-Null
+}
+
+function W($m,$c="White"){ Write-Host $m -ForegroundColor $c }
+function P(){ [void](Read-Host "Enter") }
+
+function ActiveProject(){
+  $j=Join-Path $Core "data\desktop-terminal-operator\active-project.json"
+  $t=Join-Path $Core "data\desktop-terminal-operator\active-project.txt"
+  if(Test-Path $j){ try{ $x=Get-Content $j -Raw | ConvertFrom-Json; if($x.active_project -and (Test-Path ([string]$x.active_project))){ return [string]$x.active_project } }catch{} }
+  if(Test-Path $t){ $y=(Get-Content $t -Raw).Trim(); if(Test-Path $y){ return $y } }
+  return ""
+}
+
+function NormalizeStatus($status){
+  $s=([string]$status).Trim().ToUpperInvariant()
+  if($s -eq "ACTIVE" -or $s -eq "ACTIVO"){ return "ACTIVO" }
+  if($s -eq "INACTIVE" -or $s -eq "INACTIVO" -or $s -eq "DISABLED" -or $s -eq "DESACTIVADO"){ return "INACTIVO" }
+  if($s -eq "HISTORIC" -or $s -eq "HISTORICAL" -or $s -eq "HISTORICO" -or $s -eq "HISTÓRICO"){ return "HISTORICO" }
+  if([string]::IsNullOrWhiteSpace($s)){ return "ACTIVO" }
+  return $s
+}
+
+function ModuleStatus($dir){
+  $mj=Join-Path $dir "module.json"
+  if(Test-Path $mj){ try{ $j=Get-Content $mj -Raw | ConvertFrom-Json; if($j.status){ return NormalizeStatus $j.status } }catch{} }
+  return "ACTIVO"
+}
+
+function CountDirs($path){ if(Test-Path $path){ return @((Get-ChildItem $path -Directory -ErrorAction SilentlyContinue)).Count }; return 0 }
+
+function CountLibrary(){
+  $lib=Join-Path $Core "library\modules"
+  $hist=Join-Path $Core "library\modules_historico"
+  $active=0; $inactive=0
+  if(Test-Path $lib){
+    foreach($d in (Get-ChildItem $lib -Directory -ErrorAction SilentlyContinue)){
+      if((ModuleStatus $d.FullName) -eq "INACTIVO"){ $inactive++ } else { $active++ }
+    }
+  }
+  return [pscustomobject]@{ active=$active; inactive=$inactive; historic=(CountDirs $hist) }
+}
+
+function LatestReports(){
+  $items=@()
+  foreach($root in @((Join-Path $Core "reports\launcher"),(Join-Path $Core "reports\navigation"))){
+    if(Test-Path $root){
+      foreach($f in (Get-ChildItem $root -Filter "*.json" -File -ErrorAction SilentlyContinue | Sort-Object LastWriteTime -Descending | Select-Object -First 15)){
+        try{
+          $j=Get-Content $f.FullName -Raw | ConvertFrom-Json
+          $items += [pscustomobject]@{ name=$f.Name; status=if($j.status){$j.status}else{"UNKNOWN"}; package=if($j.package){$j.package}else{""}; next=if($j.next){$j.next}else{""}; path=$f.FullName }
+        }catch{
+          $items += [pscustomobject]@{ name=$f.Name; status="UNREADABLE"; package=""; next=""; path=$f.FullName }
+        }
+      }
+    }
+  }
+  return @($items | Sort-Object name -Descending | Select-Object -First 15)
+}
+
+function BuildContext(){
+  $p=ActiveProject
+  $lib=CountLibrary
+  $modules=0
+  if($p){ $modules=CountDirs (Join-Path $p "MODULOS") }
+  return [pscustomobject]@{
+    generated=(Get-Date).ToString("s")
+    core=$Core
+    project_path=$p
+    project_name=if($p){ Split-Path $p -Leaf }else{"NO_DETECTADO"}
+    project_modules=$modules
+    library_active=$lib.active
+    library_inactive=$lib.inactive
+    library_historic=$lib.historic
+    reports=(LatestReports)
+    next="E24A_CREATE_MODULE_TASKS_MANAGEMENT_SCREEN"
+  }
+}
+
+function SaveContext($ctx){
+  $path=Join-Path $DocDir "document-context-latest.json"
+  $ctx | ConvertTo-Json -Depth 80 | Set-Content $path -Encoding UTF8
+  return $path
+}
+
+function BuildTechnical($ctx){
+  $lines=@("# ENGREMIAT - Memoria técnica","","## Estado base","Generado: $($ctx.generated)","Core: $($ctx.core)","Proyecto activo: $($ctx.project_name)","Ruta proyecto: $($ctx.project_path)","Módulos proyecto: $($ctx.project_modules)","Biblioteca: $($ctx.library_active) activos / $($ctx.library_inactive) inactivos / $($ctx.library_historic) históricos","","## Reports recientes")
+  foreach($r in $ctx.reports){ $lines += "- [$($r.status)] $($r.name) · package=$($r.package) · next=$($r.next)" }
+  $lines += ""; $lines += "## Siguiente técnico recomendado"; $lines += "- $($ctx.next)"
+  return $lines
+}
+
+function BuildHumanSummary($ctx){
+  return @(
+    "# ENGREMIAT - Resumen humano",
+    "",
+    "Engremiat dispone de una raíz de inicio estable para navegar por el sistema, revisar estado, abrir módulos, consultar memoria viva y generar documentación.",
+    "",
+    "## Estado actual",
+    "- Proyecto activo: $($ctx.project_name)",
+    "- Módulos del proyecto: $($ctx.project_modules)",
+    "- Biblioteca: $($ctx.library_active) activos / $($ctx.library_inactive) inactivos / $($ctx.library_historic) históricos",
+    "",
+    "## Qué aporta",
+    "- Reduce fricción humana.",
+    "- Ordena navegación, memoria y diagnóstico.",
+    "- Prepara documentación reutilizable para informes, subvenciones, partners, clientes y workers.",
+    "",
+    "## Siguiente paso",
+    "- Crear pantalla avanzada de tareas de módulo y conectar tarjetas con trabajo operativo."
+  )
+}
+
+function BuildDevelopmentReport($ctx){
+  $lines=@("# ENGREMIAT - Informe de desarrollo","","## Avance reciente")
+  foreach($r in $ctx.reports | Select-Object -First 10){ $lines += "- $($r.package): $($r.status)" }
+  $lines += ""; $lines += "## Validaciones actuales"; $lines += "- Inicio operativo."; $lines += "- Selectores workspace/tarjetas normalizados."; $lines += "- Árbol, rutas, ayuda, estado técnico, estado copiable, status externo y último log revisados."; $lines += "- Centro documental creado con exportación local-first preparada."
+  $lines += ""; $lines += "## Pendiente"; $lines += "- Crear pantalla avanzada de tareas."; $lines += "- Vincular worker local para redacción asistida."; $lines += "- Añadir exportación PDF cuando el pipeline DOCX/HTML esté validado."
+  return $lines
+}
+
+function BuildGrantDossier($ctx){
+  return @(
+    "# ENGREMIAT - Dossier base para subvenciones",
+    "",
+    "## 1. Resumen ejecutivo",
+    "Engremiat es una infraestructura local-first para organizar proyectos complejos mediante módulos, memoria viva, documentación automática, trazabilidad de decisiones y futura colaboración con workers locales. El objetivo es reducir la fricción humana en el desarrollo, coordinación y justificación de proyectos comunitarios, cooperativos, tecnológicos y de economía circular.",
+    "",
+    "## 2. Problema detectado",
+    "Muchos proyectos con vocación social, comunitaria o innovadora tienen dificultades para mantener continuidad operativa, documentar avances, justificar impacto, ordenar conocimiento disperso y convertir decisiones en tareas trazables. Esta pérdida de memoria y estructura reduce la capacidad de colaboración, dificulta la búsqueda de financiación y limita la escalabilidad.",
+    "",
+    "## 3. Solución propuesta",
+    "Engremiat propone un sistema modular de coordinación y documentación que permite registrar proyectos, módulos, estados, memoria viva, reports, diarios de desarrollo, rutas operativas y dossiers reutilizables. La solución se construye primero en entorno local para garantizar control, seguridad y autonomía, y prepara una evolución posterior hacia workers, automatización, exportación documental y colaboración distribuida.",
+    "",
+    "## 4. Innovación",
+    "- Memoria viva generada desde evidencias reales del sistema.",
+    "- Documentación automática a partir del estado operativo, reports y diario.",
+    "- Organización modular de proyectos y recursos reutilizables.",
+    "- Preparación para workers locales sin depender inicialmente de servicios externos.",
+    "- Trazabilidad entre decisiones, módulos, pantallas, tareas y documentos.",
+    "- Potencial de exportación futura a formatos DOCX, PDF, HTML y paquetes para convocatorias.",
+    "",
+    "## 5. Objetivos del proyecto",
+    "- Construir una base operativa estable para gestionar proyectos complejos.",
+    "- Reducir la carga humana repetitiva en documentación, seguimiento y continuidad.",
+    "- Facilitar que proyectos comunitarios o cooperativos puedan justificar mejor su avance e impacto.",
+    "- Preparar un sistema replicable para subvenciones, partners, clientes y equipos técnicos.",
+    "- Integrar progresivamente workers locales para apoyar redacción, análisis y ejecución asistida.",
+    "",
+    "## 6. Beneficiarios potenciales",
+    "- Proyectos de economía circular.",
+    "- Cooperativas, asociaciones y entidades comunitarias.",
+    "- Equipos pequeños con necesidad de ordenar trabajo y documentación.",
+    "- Iniciativas que necesiten justificar impacto ante financiadores.",
+    "- Personas o colectivos con baja capacidad administrativa pero alto potencial de acción local.",
+    "",
+    "## 7. Impacto esperado",
+    "- Mejor continuidad entre sesiones de trabajo.",
+    "- Mayor capacidad de documentar evidencias y decisiones.",
+    "- Reducción de tiempo dedicado a reconstruir contexto.",
+    "- Mejora de la preparación para convocatorias, colaboraciones y pilotos.",
+    "- Mayor trazabilidad del desarrollo y de las necesidades del proyecto.",
+    "",
+    "## 8. Estado actual de desarrollo",
+    "- Proyecto activo: $($ctx.project_name)",
+    "- Módulos actuales del proyecto: $($ctx.project_modules)",
+    "- Biblioteca de módulos: $($ctx.library_active) activos / $($ctx.library_inactive) inactivos / $($ctx.library_historic) históricos",
+    "- Inicio humano estable creado.",
+    "- Selectores de workspace y tarjetas normalizados.",
+    "- Árbol de navegación, rutas, ayuda, estado técnico, status externo y último log revisados.",
+    "- Centro de memoria y documentación local-first creado.",
+    "",
+    "## 9. Evidencias disponibles",
+    "- Reports locales generados automáticamente.",
+    "- Memoria viva del proyecto.",
+    "- Diario de desarrollo.",
+    "- Dossiers Markdown generados desde estado real.",
+    "- Contexto JSON para futuras integraciones con workers.",
+    "",
+    "## 10. Próximo hito técnico",
+    "Consolidar la pantalla avanzada de tareas por módulo para vincular módulos, tarjetas, tareas, tipos, enlaces, evidencias y decisiones.",
+    "",
+    "## 11. Necesidades futuras",
+    "- Motor de plantillas documentales más completo.",
+    "- Exportación DOCX/PDF/HTML.",
+    "- Integración controlada con worker local para redacción asistida.",
+    "- Panel humano para seleccionar tipo de documento, destinatario y tono.",
+    "- Plantillas específicas por convocatoria, partner o cliente.",
+    "",
+    "## 12. Escalabilidad y sostenibilidad",
+    "El enfoque modular permite reutilizar componentes, adaptar documentos a distintos públicos y mantener el sistema bajo control local. La evolución natural es conectar memoria, tareas, documentación y workers para reducir dependencia de trabajo manual repetitivo y facilitar la preparación de proyectos financiables.",
+    "",
+    "## 13. Encaje con subvenciones",
+    "Engremiat puede presentarse como herramienta de apoyo a la transformación digital, innovación social, economía circular, cooperación territorial, gestión del conocimiento, capacitación comunitaria y automatización responsable local-first.",
+    "",
+    "## 14. Frase de síntesis",
+    "Engremiat convierte el conocimiento disperso de un proyecto en memoria viva, documentación útil y trabajo trazable."
+  )
+}
+
+function BuildPartnerDossier($ctx){
+  return @("# ENGREMIAT - Dossier base para partners","","## Qué es","Engremiat es una plataforma de coordinación modular para proyectos con memoria viva, documentación y futura ejecución asistida por workers.","","## Qué puede aportar a un partner","- Orden del proyecto y de sus módulos.","- Documentación reutilizable.","- Trazabilidad de decisiones y avances.","- Preparación para pilotos colaborativos.","","## Qué se busca","- Partners técnicos.","- Entidades piloto.","- Espacios de validación real.","- Colaboradores para financiación, datos, comunidad u operación.","","## Estado actual","- Inicio humano estable.","- Módulos y biblioteca operativos.","- Centro documental en construcción.")
+}
+
+function BuildClientDossier($ctx){
+  return @("# ENGREMIAT - Dossier base para clientes / usuarios","","## Para qué sirve","Engremiat ayuda a ordenar un proyecto, convertir ideas en módulos, revisar el estado y mantener documentación viva sin perder el hilo.","","## Qué puedes hacer ahora","- Entrar desde un inicio estable.","- Ver módulos del proyecto.","- Consultar biblioteca de módulos.","- Abrir workspace y tarjetas.","- Generar memoria viva y documentación base.","","## Beneficio","- Menos dispersión.","- Más trazabilidad.","- Mejor continuidad entre sesiones.","- Preparación para automatización asistida.")
+}
+
+function BuildWorkerPrompt($ctx){
+  return @("# ENGREMIAT - Contexto para worker","","Objetivo: continuar desarrollo local-first sin acciones externas no autorizadas.","","Core: $($ctx.core)","Proyecto activo: $($ctx.project_name)","Ruta proyecto: $($ctx.project_path)","Módulos proyecto: $($ctx.project_modules)","Biblioteca: $($ctx.library_active) activos / $($ctx.library_inactive) inactivos / $($ctx.library_historic) históricos","","Siguiente recomendado: $($ctx.next)","","Normas:","- No usar red.","- No hacer commit/push salvo autorización explícita.","- Generar evidencias locales.","- Mantener PowerShell completo y validado.","- Una frontera técnica por paso.")
+}
+
+function GenerateDocs(){
+  $ctx=BuildContext
+  $contextPath=SaveContext $ctx
+  $stamp=Get-Date -Format "yyyyMMdd-HHmmss"
+  $outputs=@(
+    @{ name="memoria-tecnica"; dir="technical"; lines=(BuildTechnical $ctx) },
+    @{ name="resumen-humano"; dir="executive"; lines=(BuildHumanSummary $ctx) },
+    @{ name="informe-desarrollo"; dir="development"; lines=(BuildDevelopmentReport $ctx) },
+    @{ name="dossier-subvenciones-base"; dir="grants"; lines=(BuildGrantDossier $ctx) },
+    @{ name="dossier-partners-base"; dir="partners"; lines=(BuildPartnerDossier $ctx) },
+    @{ name="dossier-clientes-base"; dir="clients"; lines=(BuildClientDossier $ctx) },
+    @{ name="worker-context"; dir="worker"; lines=(BuildWorkerPrompt $ctx) }
+  )
+  $written=@()
+  foreach($o in $outputs){
+    $folder=Join-Path $DocDir $o.dir
+    $latest=Join-Path $folder ($o.name + "-latest.md")
+    $versioned=Join-Path $folder ($o.name + "-" + $stamp + ".md")
+    $o.lines | Set-Content $latest -Encoding UTF8
+    $o.lines | Set-Content $versioned -Encoding UTF8
+    $written += [pscustomobject]@{ name=$o.name; latest=$latest; versioned=$versioned }
+  }
+  $report=Join-Path $OutReportDir ("memory-documentation-center-"+$stamp+".json")
+  [pscustomobject]@{ package="ENGREMIAT_MEMORY_DOCUMENTATION_CENTER_001_E03_STABLE_EXPORT"; status="PASS"; generated=(Get-Date).ToString("s"); context=$contextPath; documents=$written; next="REVIEW_EXPORTS" } | ConvertTo-Json -Depth 60 | Set-Content $report -Encoding UTF8
+  return [pscustomobject]@{ context=$contextPath; report=$report; documents=$written }
+}
+
+function FindPandoc(){ $cmd=Get-Command pandoc -ErrorAction SilentlyContinue; if($cmd -and $cmd.Source){ return $cmd.Source }; return "" }
+
+function ExportDocuments(){
+  $pandoc=FindPandoc
+  $stamp=Get-Date -Format "yyyyMMdd-HHmmss"
+  $exportRoot=Join-Path $DocDir "exports"
+  New-Item -ItemType Directory -Force -Path $exportRoot | Out-Null
+  $sources=@(
+    @{ name="dossier-subvenciones-base"; path=(Join-Path $DocDir "grants\dossier-subvenciones-base-latest.md") },
+    @{ name="dossier-partners-base"; path=(Join-Path $DocDir "partners\dossier-partners-base-latest.md") },
+    @{ name="dossier-clientes-base"; path=(Join-Path $DocDir "clients\dossier-clientes-base-latest.md") },
+    @{ name="informe-desarrollo"; path=(Join-Path $DocDir "development\informe-desarrollo-latest.md") },
+    @{ name="resumen-humano"; path=(Join-Path $DocDir "executive\resumen-humano-latest.md") },
+    @{ name="memoria-tecnica"; path=(Join-Path $DocDir "technical\memoria-tecnica-latest.md") }
+  )
+  $results=@()
+  foreach($s in $sources){
+    if(-not(Test-Path $s.path)){ $results += [pscustomobject]@{ source=$s.path; status="MISS_SOURCE"; html=""; docx=""; message="Genera primero [1]." }; continue }
+    $html=Join-Path $exportRoot ($s.name + "-latest.html")
+    $docx=Join-Path $exportRoot ($s.name + "-latest.docx")
+    if($pandoc){
+      try{
+        & $pandoc $s.path -o $html --standalone
+        if($LASTEXITCODE -ne 0){ throw "pandoc_html_exit=$LASTEXITCODE" }
+        & $pandoc $s.path -o $docx
+        if($LASTEXITCODE -ne 0){ throw "pandoc_docx_exit=$LASTEXITCODE" }
+        Copy-Item $html (Join-Path $exportRoot ($s.name + "-" + $stamp + ".html")) -Force
+        Copy-Item $docx (Join-Path $exportRoot ($s.name + "-" + $stamp + ".docx")) -Force
+        $results += [pscustomobject]@{ source=$s.path; status="EXPORTED"; html=$html; docx=$docx; message="OK" }
+      }catch{
+        $results += [pscustomobject]@{ source=$s.path; status="EXPORT_ERROR"; html=$html; docx=$docx; message=$_.Exception.Message }
+      }
+    }else{
+      $fallback=Join-Path $exportRoot ($s.name + "-latest.md")
+      Copy-Item $s.path $fallback -Force
+      $results += [pscustomobject]@{ source=$s.path; status="PANDOC_NOT_FOUND_MD_COPIED"; html=""; docx=""; message="Pandoc no detectado. Copiado Markdown a exports." }
+    }
+  }
+  $installNote=Join-Path $exportRoot "README-pandoc-install.md"
+  @("# Exportación documental Engremiat","","Estado pandoc: " + $(if($pandoc){"DETECTADO: $pandoc"}else{"NO_DETECTADO"}),"","Comprobación:","```powershell","pandoc --version","```") | Set-Content $installNote -Encoding UTF8
+  $report=Join-Path $OutReportDir ("document-export-pandoc-"+$stamp+".json")
+  [pscustomobject]@{ package="ENGREMIAT_DOCUMENT_EXPORT_001_E01_PANDOC_EXPORT"; status="PASS"; generated=(Get-Date).ToString("s"); pandoc_detected=[bool]$pandoc; pandoc_path=$pandoc; exports_dir=$exportRoot; install_note=$installNote; results=$results; next="REVIEW_EXPORTS" } | ConvertTo-Json -Depth 80 | Set-Content $report -Encoding UTF8
+  return [pscustomobject]@{ pandoc=$pandoc; report=$report; exports=$exportRoot; install_note=$installNote; results=$results }
+}
+
+function ShowExportResult($r){
+  Clear-Host
+  W "==== EXPORTACIÓN DOCUMENTAL ====" Cyan
+  W ""
+  if($r.pandoc){ W ("[OK] pandoc: {0}" -f $r.pandoc) Green } else { W "[WARN] pandoc no detectado; se copiaron Markdown a exports." Yellow }
+  W ""
+  foreach($x in $r.results){
+    $color=if($x.status -eq "EXPORTED"){"Green"}elseif($x.status -like "PANDOC_NOT_FOUND*"){"Yellow"}else{"Red"}
+    W ("[{0}] {1}" -f $x.status,$x.source) $color
+    if($x.html){ W ("  HTML: {0}" -f $x.html) DarkCyan }
+    if($x.docx){ W ("  DOCX: {0}" -f $x.docx) DarkCyan }
+    if($x.message -and $x.message -ne "OK"){ W ("  nota: {0}" -f $x.message) Yellow }
+  }
+  W ""
+  W ("exports: {0}" -f $r.exports) Green
+  W ("report:  {0}" -f $r.report) Green
+  W ("nota:    {0}" -f $r.install_note) DarkCyan
+  W ""
+  W "[Enter] volver" Cyan
+  W ""
+  [void](Read-Host "EXPORTAR")
+}
+
+function ShowToolingStatus(){
+  Clear-Host
+  W "==== HERRAMIENTAS DOCUMENTALES ====" Cyan
+  W ""
+  $pandoc=FindPandoc
+  if($pandoc){
+    W "[OK] pandoc detectado" Green
+    W ("ruta: {0}" -f $pandoc) DarkCyan
+    try{ W ("version: {0}" -f (& $pandoc --version | Select-Object -First 1)) White }catch{}
+  }else{
+    W "[MISS] pandoc no detectado" Yellow
+    W "Exportación DOCX/HTML automática no disponible todavía." White
+  }
+  W ""
+  W ("Carpeta exports: {0}" -f (Join-Path $DocDir "exports")) Green
+  W ""
+  W "[Enter] volver" Cyan
+  W ""
+  [void](Read-Host "HERRAMIENTAS")
+}
+
+function OpenFolder($path){ if(Test-Path $path){ Start-Process explorer.exe $path } }
+function OpenLatest($rel){ $path=Join-Path $DocDir $rel; if(Test-Path $path){ Start-Process notepad.exe $path } else { W "NO_GO documento_no_existe. Genera primero [1]." Yellow; P } }
+
+function ShowMain(){
+  Clear-Host
+  W "==== MEMORIA Y DOCUMENTACIÓN ====" Cyan
+  W ""
+  W "Centro local-first para memoria viva, informes, dossiers, contexto worker y exportación documental." DarkCyan
+  W ""
+  W "[1] generar paquete documental completo" White
+  W "[2] abrir memoria técnica" White
+  W "[3] abrir resumen humano" White
+  W "[4] abrir informe de desarrollo" White
+  W "[5] abrir dossier subvenciones" White
+  W "[6] abrir dossier partners" White
+  W "[7] abrir dossier clientes" White
+  W "[8] abrir contexto worker" White
+  W "[9] abrir carpeta documents" White
+  W "[10] abrir contexto JSON" White
+  W "[11] exportar documentos DOCX/HTML con Pandoc" White
+  W "[12] abrir carpeta exports" White
+  W "[13] verificar herramientas documentales" White
+  W "[b] atrás | [Enter] refrescar" Cyan
+  W ""
+}
+
+while($true){
+  ShowMain
+  $cmd=Read-Host "DOCUMENTACION"
+  if([string]::IsNullOrWhiteSpace($cmd)){ continue }
+  if($cmd -eq "b"){ return }
+  if($cmd -eq "1"){ $r=GenerateDocs; Clear-Host; W "==== DOCUMENTOS GENERADOS ====" Cyan; W ""; foreach($d in $r.documents){ W ("[OK] {0}: {1}" -f $d.name,$d.latest) Green }; W ""; W ("contexto: {0}" -f $r.context) Green; W ("report:   {0}" -f $r.report) Green; W ""; W "[Enter] volver" Cyan; W ""; [void](Read-Host "DOCUMENTOS"); continue }
+  if($cmd -eq "2"){ OpenLatest "technical\memoria-tecnica-latest.md"; continue }
+  if($cmd -eq "3"){ OpenLatest "executive\resumen-humano-latest.md"; continue }
+  if($cmd -eq "4"){ OpenLatest "development\informe-desarrollo-latest.md"; continue }
+  if($cmd -eq "5"){ OpenLatest "grants\dossier-subvenciones-base-latest.md"; continue }
+  if($cmd -eq "6"){ OpenLatest "partners\dossier-partners-base-latest.md"; continue }
+  if($cmd -eq "7"){ OpenLatest "clients\dossier-clientes-base-latest.md"; continue }
+  if($cmd -eq "8"){ OpenLatest "worker\worker-context-latest.md"; continue }
+  if($cmd -eq "9"){ OpenFolder $DocDir; continue }
+  if($cmd -eq "10"){ OpenLatest "document-context-latest.json"; continue }
+  if($cmd -eq "11"){ $r=ExportDocuments; ShowExportResult $r; continue }
+  if($cmd -eq "12"){ OpenFolder (Join-Path $DocDir "exports"); continue }
+  if($cmd -eq "13"){ ShowToolingStatus; continue }
+  W "WARN comando_no_reconocido" Yellow
+  P
+}

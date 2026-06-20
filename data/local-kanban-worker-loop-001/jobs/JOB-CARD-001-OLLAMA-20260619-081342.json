@@ -1,0 +1,14 @@
+﻿{
+    "job_id":  "JOB-CARD-001-OLLAMA-20260619-081342",
+    "card_id":  "CARD-001",
+    "title":  "Crear backlog visible",
+    "source_need":  "NEED-001",
+    "column":  "NEXT",
+    "priority":  "HIGH",
+    "decision":  "GO",
+    "human_reviewed":  "true",
+    "transport":  "ollama",
+    "authorized_real_worker":  true,
+    "prompt":  "Eres un worker local de ENGREMIAT. Responde en español. No ejecutes comandos. No escribas archivos. No uses git. No uses red.\nDevuelve SOLO una propuesta de trabajo y evidencia esperada para la tarjeta indicada.\nRespeta exactamente los marcadores WORKER_RESPONSE_BEGIN y WORKER_RESPONSE_END.\ncard_id: CARD-001\ntitle: Crear backlog visible\nsource_need: NEED-001\ncolumn: NEXT\npriority: HIGH\ndecision: GO\nhuman_reviewed: true\nFORMATO OBLIGATORIO:\nWORKER_RESPONSE_BEGIN\ncard_id: CARD-001\nstatus: PROPOSAL_ONLY\nsummary:\nproposal_steps:\nexpected_files:\nexpected_evidence:\nrisks:\nhuman_validation_needed: true\nnext_recommended_action:\nWORKER_RESPONSE_END",
+    "created_at":  "2026-06-19T08:13:42"
+}

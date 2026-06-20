@@ -1,0 +1,47 @@
+﻿{
+    "package":  "DOCKER_ENGINE_FINAL_STATUS_AND_OPENWEBUI_001",
+    "created_at":  "2026-06-18T12:07:29",
+    "docker_context":  {
+                           "ok":  false,
+                           "timeout":  false,
+                           "exit_code":  null,
+                           "out":  "NAME              DESCRIPTION                               DOCKER ENDPOINT                             ERROR\ndefault           Current DOCKER_HOST based configuration   npipe:////./pipe/docker_engine              \ndesktop-linux *   Docker Desktop                            npipe:////./pipe/dockerDesktopLinuxEngine   \n",
+                           "err":  ""
+                       },
+    "wsl_list":  {
+                     "ok":  false,
+                     "timeout":  false,
+                     "exit_code":  null,
+                     "out":  " \u0000 \u0000N\u0000A\u0000M\u0000E\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000S\u0000T\u0000A\u0000T\u0000E\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000V\u0000E\u0000R\u0000S\u0000I\u0000O\u0000N\u0000\r\u0000\n\u0000*\u0000 \u0000d\u0000o\u0000c\u0000k\u0000e\u0000r\u0000-\u0000d\u0000e\u0000s\u0000k\u0000t\u0000o\u0000p\u0000 \u0000 \u0000 \u0000 \u0000R\u0000u\u0000n\u0000n\u0000i\u0000n\u0000g\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u00002\u0000\r\u0000\n\u0000",
+                     "err":  ""
+                 },
+    "service":  {
+                    "ok":  false,
+                    "timeout":  false,
+                    "exit_code":  null,
+                    "out":  "\r\nNOMBRE_DE_SERVICIO: com.docker.service \r\n        TIPO                         : 10  WIN32_OWN_PROCESS  \r\n        ESTADO                       : 1  STOPPED \r\n        CàDIGO_DE_SALIDA_DE_WIN32    : 0  (0x0)\r\n        CàDIGO_DE_SALIDA_DEL_SERVICIO: 0  (0x0)\r\n        PUNTO_DE_CONTROL             : 0x0\r\n        ESPERA                       : 0x0\r\n",
+                    "err":  ""
+                },
+    "docker_version":  {
+                           "ok":  false,
+                           "timeout":  true,
+                           "exit_code":  null,
+                           "out":  "",
+                           "err":  "TIMEOUT"
+                       },
+    "docker_info":  {
+                        "ok":  false,
+                        "timeout":  true,
+                        "exit_code":  null,
+                        "out":  "",
+                        "err":  "TIMEOUT"
+                    },
+    "docker_ready":  false,
+    "compose":  "C:\\ENGREMIAT_TOOLS\\openwebui\\docker-compose.yml",
+    "compose_up":  null,
+    "docker_ps":  null,
+    "container_started":  false,
+    "url":  "http://localhost:3000",
+    "decision":  "WARN_DOCKER_ENGINE_NOT_READY_BUT_PROCESSES_RUNNING",
+    "next":  "DOCKER_TROUBLESHOOT_RESTART_ENGINE"
+}

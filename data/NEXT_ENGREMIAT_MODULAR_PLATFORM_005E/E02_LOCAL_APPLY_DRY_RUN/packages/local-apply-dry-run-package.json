@@ -1,0 +1,87 @@
+{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_005E",
+    "stage":  "E02_LOCAL_APPLY_DRY_RUN",
+    "status":  "PASS",
+    "dry_run":  {
+                    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_005E",
+                    "stage":  "E02_LOCAL_APPLY_DRY_RUN",
+                    "status":  "DEFINED",
+                    "purpose":  "Simular apply local controlado sin activar modulos reales",
+                    "mode":  "DRY_RUN_ONLY",
+                    "allowed_now":  [
+                                        "read_previous_plan",
+                                        "write_dry_run_artifacts",
+                                        "validate_apply_steps",
+                                        "generate_dashboard"
+                                    ],
+                    "blocked_now":  [
+                                        "real_apply",
+                                        "core_changes",
+                                        "external_network",
+                                        "git_write",
+                                        "remote_worker_execution"
+                                    ],
+                    "human_gate_required_for_real_apply":  true
+                },
+    "steps":  [
+                  {
+                      "id":  "DRY01",
+                      "operation":  "CHECK_PREVIOUS_E01",
+                      "target":  "controlled-local-activation-design-report.json",
+                      "would_execute":  false,
+                      "status":  "PLANNED_OK"
+                  },
+                  {
+                      "id":  "DRY02",
+                      "operation":  "CREATE_SNAPSHOT_PLAN",
+                      "target":  "snapshot-plan.json",
+                      "would_execute":  false,
+                      "status":  "PLANNED_OK"
+                  },
+                  {
+                      "id":  "DRY03",
+                      "operation":  "VALIDATE_LOCAL_APPLY_PLAN",
+                      "target":  "local-apply-plan.json",
+                      "would_execute":  false,
+                      "status":  "PLANNED_OK"
+                  },
+                  {
+                      "id":  "DRY04",
+                      "operation":  "VALIDATE_ROLLBACK_PLAN",
+                      "target":  "rollback-plan.json",
+                      "would_execute":  false,
+                      "status":  "PLANNED_OK"
+                  },
+                  {
+                      "id":  "DRY05",
+                      "operation":  "CHECK_HUMAN_GATE",
+                      "target":  "human-gate-005e.json",
+                      "would_execute":  false,
+                      "status":  "PENDING_REAL_AUTHORIZATION"
+                  },
+                  {
+                      "id":  "DRY06",
+                      "operation":  "STOP_BEFORE_REAL_APPLY",
+                      "target":  "real_activation",
+                      "would_execute":  false,
+                      "status":  "STOPPED_BY_DESIGN"
+                  }
+              ],
+    "snapshot_plan":  {
+                          "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_005E",
+                          "artifact":  "snapshot-plan.json",
+                          "status":  "DEFINED",
+                          "purpose":  "Planificar snapshot previo a cualquier apply real futuro",
+                          "snapshot_targets":  [
+                                                   "state_registry",
+                                                   "module_registry",
+                                                   "dashboards",
+                                                   "manifests",
+                                                   "reports"
+                                               ],
+                          "executes_now":  false,
+                          "required_before_real_apply":  true
+                      },
+    "decision":  "NO_REAL_APPLY_EXECUTED",
+    "next":  "E03_CONTROLLED_APPLY_GATE"
+}

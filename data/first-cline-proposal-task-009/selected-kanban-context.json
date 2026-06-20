@@ -1,0 +1,33 @@
+﻿{
+    "objective":  "ENGREMIAT_FIRST_REAL_CLINE_PROPOSAL_TASK_009",
+    "stage":  "E02",
+    "selection_mode":  "kanban_candidate",
+    "source_dashboard":  "dashboard/kanban-human-control/index.html",
+    "source_report":  "reports/kanban-real-setup-012/e06-kanban-real-setup-final-report.json",
+    "source_board_closed":  true,
+    "source_board_readiness":  100,
+    "source_board_decision":  "GO_KANBAN_REAL_READY",
+    "selected_candidate":  {
+                               "candidate_id":  "CANDIDATE-009-001",
+                               "candidate_title":  "Preflight real de MAIN-PC",
+                               "target_objective":  "ENGREMIAT_REAL_CLINE_KANBAN_OLLAMA_TESTS_011",
+                               "target_stage":  "E01",
+                               "summary":  "Validar MAIN-PC, repo local, Kanban y Ollama antes de crear la primera prueba real de Cline.",
+                               "reason":  "Es la primera tarjeta util para activar el ciclo real de Cline + Kanban + Ollama sin apply."
+                           },
+    "contract_available":  {
+                               "scope":  true,
+                               "policy":  true,
+                               "output_contract":  true,
+                               "guide":  true,
+                               "e01_contract_report":  true
+                           },
+    "safety":  {
+                   "task_created":  false,
+                   "prompt_sent":  false,
+                   "auto_apply":  false,
+                   "git_write":  false,
+                   "remote_execution":  false
+               },
+    "timestamp_utc":  "2026-06-16T19:54:43.8003775Z"
+}

@@ -1,0 +1,21 @@
+{
+    "package_id":  "ENGREMIAT_MODULES_OFFICIALIZATION_001",
+    "stage":  "E06_VALIDATE_OFFICIAL_MODULES",
+    "artifact":  "official-modules-validation-contract.json",
+    "status":  "DEFINED",
+    "purpose":  "Validar modulos oficializados en data/_OFFICIAL_MODULES tras copia controlada",
+    "checks":  [
+                   "target_exists",
+                   "module_json_exists",
+                   "module_json_valid",
+                   "readme_exists",
+                   "canonical_dirs_visibility"
+               ],
+    "blocked_actions":  [
+                            "delete_sources",
+                            "move_sources",
+                            "git_write",
+                            "external_network",
+                            "core_changes"
+                        ]
+}

@@ -1,0 +1,15 @@
+﻿{
+    "package_id":  "ENGREMIAT_REAL_INTAKE_IMPORTER_001",
+    "stage":  "E01_CREATE_INTERACTIVE_INTAKE_IMPORTER",
+    "status":  "PASS",
+    "importer":  "C:\\ENGREMIAT_CORE\\tools\\real-intake-importer\\Invoke-RealHumanIntakeImport.ps1",
+    "contract":  "C:\\ENGREMIAT_CORE\\data\\real-intake-importer\\real-intake-importer-contract.json",
+    "parse":  "PASS",
+    "interactive":  true,
+    "local_only":  true,
+    "network":  false,
+    "worker_execution":  false,
+    "git_write":  false,
+    "execute_now":  false,
+    "next":  "RUN_IMPORTER_WITH_EXPORTED_JSON"
+}

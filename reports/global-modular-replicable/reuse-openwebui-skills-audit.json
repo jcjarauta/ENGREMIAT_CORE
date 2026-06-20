@@ -1,0 +1,29 @@
+﻿{
+    "package_id":  "ENGREMIAT_GLOBAL_MODULAR_REPLICABLE_001",
+    "stage":  "E01",
+    "block":  "B01.3",
+    "step":  "P01.3.1",
+    "objective":  "reuse-openwebui-skills-audit",
+    "status":  "PASS",
+    "detected":  {
+                     "skill_estado":  true,
+                     "openwebui_skills_002":  true,
+                     "skill_capture":  true,
+                     "openwebui_skills_001":  true
+                 },
+    "official_skills":  [
+                            "SKILL_ESTADO_ENGREMIAT",
+                            "SKILL_CAPTURE_TO_CANDIDATE"
+                        ],
+    "reusable_patterns":  [
+                              "capture_to_candidate",
+                              "strict_template",
+                              "openwebui_import_bundle",
+                              "manual_only_officialization",
+                              "pass_warn_fail_receipts"
+                          ],
+    "risk":  "LOW",
+    "git":  false,
+    "network":  false,
+    "created_at":  "2026-06-18T19:33:11"
+}

@@ -1,0 +1,57 @@
+﻿{
+    "objective_id":  "DEFINE_REAL_CONTROLLED_FILE_TO_OLLAMA_EXECUTION_MVP_162_171",
+    "stage":  "E171",
+    "status":  "CLOSED",
+    "readiness":  100,
+    "purpose":  "Consolidate evidence from E162-E170",
+    "critical_artifacts":  [
+                               {
+                                   "stage":  "E162",
+                                   "path":  "data/real-ollama-execution-162/real-ollama-execution-contract.json",
+                                   "exists":  true
+                               },
+                               {
+                                   "stage":  "E163",
+                                   "path":  "reports/ollama-preflight-163/ollama-preflight-validation-report.json",
+                                   "exists":  true
+                               },
+                               {
+                                   "stage":  "E164",
+                                   "path":  "reports/ollama-execution-gate-164/e164-ollama-execution-gate-readiness-report.json",
+                                   "exists":  true
+                               },
+                               {
+                                   "stage":  "E165",
+                                   "path":  "reports/ollama-prompt-165/e165-ollama-prompt-readiness-report.json",
+                                   "exists":  true
+                               },
+                               {
+                                   "stage":  "E166",
+                                   "path":  "reports/ollama-generate-166/e166-ollama-generate-readiness-report.json",
+                                   "exists":  true
+                               },
+                               {
+                                   "stage":  "E167",
+                                   "path":  "reports/ollama-result-167/e167-result-readiness-report.json",
+                                   "exists":  true
+                               },
+                               {
+                                   "stage":  "E168",
+                                   "path":  "reports/ollama-postcheck-168/e168-postcheck-readiness-report.json",
+                                   "exists":  true
+                               },
+                               {
+                                   "stage":  "E169",
+                                   "path":  "reports/real-result-review-169/e169-real-review-readiness-report.json",
+                                   "exists":  true
+                               },
+                               {
+                                   "stage":  "E170",
+                                   "path":  "reports/real-execution-regression-170/e170-real-execution-regression-readiness-report.json",
+                                   "exists":  true
+                               }
+                           ],
+    "decision":  "GO_NEXT_FUNCTION_RECOMMENDED",
+    "next":  "DEFINE_NEXT_REAL_FUNCTION_MVP_172_181",
+    "created_at":  "2026-06-17T17:54:12.2448128+02:00"
+}

@@ -1,0 +1,56 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_REAL_WORKER_DAILY_VALUE_LOOP_056_065",
+    "stage":  "E59",
+    "stage_name":  "Human Approval Console Upgrade",
+    "purpose":  "Mejorar consola humana para propuesta worker real",
+    "model_id":  "E59_APPROVAL_CONSOLE_UPGRADE_MODEL",
+    "proposal_sources":  [
+                             "data/worker-response-057/worker-response-sample.md",
+                             "reports/proposal-quality-058/proposal-quality-check-report.json"
+                         ],
+    "allowed_decisions":  [
+                              "APPROVE_FOR_CONTROLLED_APPLY_REVIEW",
+                              "REPAIR_PROPOSAL",
+                              "DEFER_FOR_HUMAN_REVIEW",
+                              "REJECT_PROPOSAL"
+                          ],
+    "default_decision":  "DEFER_FOR_HUMAN_REVIEW",
+    "decision_meanings":  {
+                              "APPROVE_FOR_CONTROLLED_APPLY_REVIEW":  "Autoriza preparar E60, pero no aplica cambios en E59",
+                              "REPAIR_PROPOSAL":  "Devuelve la propuesta a reparacion",
+                              "DEFER_FOR_HUMAN_REVIEW":  "Aplaza la decision",
+                              "REJECT_PROPOSAL":  "Rechaza la propuesta"
+                          },
+    "required_context":  [
+                             "proposal_summary",
+                             "quality_decision",
+                             "risk",
+                             "expected_value",
+                             "rollback_needed",
+                             "postcheck_needed",
+                             "human_reason"
+                         ],
+    "rules":  [
+                  "Approve no aplica",
+                  "Approve solo habilita revision de apply controlado futuro",
+                  "No auto_apply",
+                  "No remote_execution",
+                  "No git_write",
+                  "No ejecutar worker",
+                  "Registrar receipt de decision"
+              ],
+    "security":  {
+                     "apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "worker_executed":  false,
+                     "proposal_executed":  false,
+                     "approve_does_not_apply":  true,
+                     "human_decision_required":  true,
+                     "sensitive_actions_executed":  false
+                 },
+    "next":  "E60_CONTROLLED_LOCAL_APPLY_V2",
+    "created_at":  "2026-06-17T12:21:45"
+}

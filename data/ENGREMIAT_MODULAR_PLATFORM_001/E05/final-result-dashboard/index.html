@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang='es'>
+<head>
+<meta charset='utf-8'/>
+<meta name='viewport' content='width=device-width, initial-scale=1'/>
+<title>ENGREMIAT E05 Final Result Dashboard</title>
+<style>body{font-family:Segoe UI,Arial,sans-serif;background:#0f172a;color:#e2e8f0;margin:0;padding:24px}.card{max-width:1180px;margin:auto;background:#111827;border:1px solid #334155;border-radius:18px;padding:20px;box-shadow:0 12px 36px rgba(0,0,0,.25)}h1,h2{margin:0 0 8px}.muted{color:#94a3b8}pre{background:#020617;padding:14px;border-radius:12px;overflow:auto;white-space:pre-wrap}table{width:100%;border-collapse:collapse}th,td{border-bottom:1px solid #334155;padding:10px 8px;text-align:left}.ok{color:#4ade80}</style>
+</head>
+<body>
+<div class='card'>
+<h1>ENGREMIAT Modular Platform · E05</h1>
+<p class='muted'>Result normalizer and separable memory layer.</p>
+<h2>Result normalizer</h2>
+<pre>{
+    "package_id":  "ENGREMIAT_MODULAR_PLATFORM_001",
+    "stage":  "E05",
+    "block":  "B05.1",
+    "module_id":  "ENG-MOD-RES-001",
+    "module_name":  "Result Normalizer",
+    "purpose":  "Normalizar la salida y convertirla en memoria útil",
+    "depends_on":  "ENG-MOD-WRK-001",
+    "state":  "planned",
+    "output_model":  {
+                         "normalize_human":  true,
+                         "normalize_machine":  true,
+                         "traceability":  true,
+                         "memory_ready":  true
+                     },
+    "control":  {
+                    "local_first":  true,
+                    "no_external_network":  true,
+                    "no_git_write":  true,
+                    "human_validation_required":  true
+                },
+    "acceptance_criteria":  [
+                                "La salida queda estandarizada",
+                                "El resultado es trazable",
+                                "La memoria queda separada del core y no frágil"
+                            ]
+}</pre>
+<h2>Result package</h2>
+<pre>{
+    "package_id":  "ENG-MOD-RES-001",
+    "stage":  "E05",
+    "block":  "P05.1.1",
+    "name":  "Result package",
+    "purpose":  "Crear el paquete de resultado humano y máquina",
+    "artifacts":  [
+                      "contracts/result-normalizer-contract.json",
+                      "packages/result-package.json",
+                      "reports/memory-validation-report.json",
+                      "final-result-dashboard/index.html"
+                  ],
+    "state":  "planned",
+    "control":  {
+                    "local_first":  true,
+                    "no_external_network":  true,
+                    "no_git_write":  true
+                }
+}</pre>
+<h2>Memory layer</h2>
+<pre>{
+    "package_id":  "ENGREMIAT_MODULAR_PLATFORM_001",
+    "stage":  "E05",
+    "block":  "B05.2",
+    "module_id":  "ENG-MOD-MEM-001",
+    "module_name":  "State Memory Layer",
+    "purpose":  "Guardar estados, eventos, dependencias y cierres",
+    "depends_on":  "ENG-MOD-RES-001",
+    "state":  "planned",
+    "memory_model":  {
+                         "stores_states":  true,
+                         "stores_events":  true,
+                         "stores_dependencies":  true,
+                         "stores_closures":  true,
+                         "separable_from_core":  true
+                     },
+    "control":  {
+                    "local_first":  true,
+                    "no_external_network":  true,
+                    "no_git_write":  true,
+                    "human_validation_required":  true
+                },
+    "acceptance_criteria":  [
+                                "La memoria es estructurada",
+                                "No se acopla al core de forma frágil",
+                                "Es compatible y separable"
+                            ]
+}</pre>
+<h2>State registry</h2>
+<pre>{
+    "package_id":  "ENG-MOD-MEM-001",
+    "stage":  "E05",
+    "block":  "P05.2.1",
+    "name":  "State registry",
+    "purpose":  "Registrar estados, módulos activos, dependencias y cierres",
+    "fields":  [
+                   "module_id",
+                   "state",
+                   "version",
+                   "dependencies",
+                   "close_reason",
+                   "timestamp"
+               ],
+    "state":  "planned",
+    "control":  {
+                    "local_first":  true,
+                    "no_external_network":  true,
+                    "no_git_write":  true
+                }
+}</pre>
+<h2>Validation</h2>
+<pre>{
+    "package_id":  "ENG-MOD-MEM-001",
+    "stage":  "E05",
+    "block":  "P05.2.2",
+    "status":  "PASS",
+    "checks":  {
+                   "result_contract_ok":  true,
+                   "result_package_ok":  true,
+                   "dashboard_ok":  true,
+                   "memory_contract_ok":  true,
+                   "state_registry_ok":  true,
+                   "validation_ok":  true,
+                   "local_first":  true,
+                   "no_external_network":  true,
+                   "no_git_write":  true
+               },
+    "evidence":  [
+                     "result-normalizer-contract.json",
+                     "result-package.json",
+                     "state-memory-contract.json",
+                     "state-registry.json",
+                     "memory-validation-report.json"
+                 ],
+    "next":  "E06"
+}</pre>
+<h2>Artifacts</h2>
+<table><thead><tr><th>File</th><th>Status</th></tr></thead><tbody>
+<tr><td>result-normalizer-contract.json</td><td class='ok'>ok</td></tr>
+<tr><td>result-package.json</td><td class='ok'>ok</td></tr>
+<tr><td>final-result-dashboard/index.html</td><td class='ok'>ok</td></tr>
+<tr><td>state-memory-contract.json</td><td class='ok'>ok</td></tr>
+<tr><td>state-registry.json</td><td class='ok'>ok</td></tr>
+<tr><td>memory-validation-report.json</td><td class='ok'>ok</td></tr>
+</tbody></table>
+</div>
+</body>
+</html>

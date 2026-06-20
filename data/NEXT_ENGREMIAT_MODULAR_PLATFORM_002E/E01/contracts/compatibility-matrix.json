@@ -1,0 +1,29 @@
+{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_002E",
+    "stage":  "E01",
+    "block":  "B01.2",
+    "module_id":  "ENG-MOD-REG-001",
+    "module_name":  "Compatibility and Scope Matrix",
+    "purpose":  "Definir compatibilidad entre módulos, capas y objetivos de negocio",
+    "model":  {
+                  "module_compatibility":  true,
+                  "layer_compatibility":  true,
+                  "objective_scope":  true,
+                  "dependency_scope":  true,
+                  "swap_scope":  true
+              },
+    "dimensions":  [
+                       "module",
+                       "version",
+                       "layer",
+                       "objective",
+                       "state",
+                       "dependency",
+                       "risk"
+                   ],
+    "acceptance_criteria":  [
+                                "Evita acoples frágiles",
+                                "Permite filtrado por objetivo",
+                                "Protege el alcance operativo"
+                            ]
+}

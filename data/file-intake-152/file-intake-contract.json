@@ -1,0 +1,20 @@
+﻿{
+    "schema":  "engremiat.file_intake_contract.v1",
+    "objective":  "ENGREMIAT_MIN_REAL_FILE_TO_WORKER_MVP_152_161",
+    "stage":  "E152",
+    "readonly":  true,
+    "allowed_extensions":  [
+                               ".txt",
+                               ".md",
+                               ".csv",
+                               ".tsv",
+                               ".json"
+                           ],
+    "default_input":  "data/file-intake-152/sample-input.md",
+    "no_execution":  true,
+    "no_worker_call":  true,
+    "kanban_real_write":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "created_at":  "2026-06-17T16:57:36"
+}

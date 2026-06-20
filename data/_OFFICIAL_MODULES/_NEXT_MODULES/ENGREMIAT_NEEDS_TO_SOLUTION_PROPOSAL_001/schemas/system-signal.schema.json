@@ -1,0 +1,34 @@
+﻿{
+    "schema_id":  "system-signal.schema.v1",
+    "required":  [
+                     "signal_id",
+                     "signal_type",
+                     "source",
+                     "severity",
+                     "message"
+                 ],
+    "signal_types":  [
+                         "REPORT_PASS",
+                         "REPORT_WARN",
+                         "REPORT_ERR",
+                         "MISSING_FILE",
+                         "MISSING_MODULE",
+                         "MISSING_RESOURCE",
+                         "LOW_QUALITY",
+                         "NEXT_OBJECTIVE",
+                         "BACKLOG_ITEM",
+                         "VALIDATOR_ERROR",
+                         "CAPABILITY_MISSING",
+                         "RESOURCE_MISSING"
+                     ],
+    "fields":  [
+                   "signal_id",
+                   "signal_type",
+                   "source",
+                   "severity",
+                   "message",
+                   "related_module",
+                   "related_resource",
+                   "created_at"
+               ]
+}

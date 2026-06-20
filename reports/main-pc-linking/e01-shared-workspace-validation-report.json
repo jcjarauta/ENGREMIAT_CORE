@@ -1,0 +1,29 @@
+﻿{
+    "objective":  "ENGREMIAT_MAIN_PC_REAL_LINKING_010",
+    "stage":  "E01",
+    "share_root":  "C:\\ENGREMIAT_SHARED",
+    "control_root":  "C:\\ENGREMIAT_SHARED\\_CONTROL",
+    "created_folders":  [
+                            "C:\\ENGREMIAT_SHARED",
+                            "C:\\ENGREMIAT_SHARED\\_CONTROL",
+                            "C:\\ENGREMIAT_SHARED\\INBOX_FROM_OTHER_PC",
+                            "C:\\ENGREMIAT_SHARED\\OUTBOX_TO_OTHER_PC",
+                            "C:\\ENGREMIAT_SHARED\\PROMPTS",
+                            "C:\\ENGREMIAT_SHARED\\REPORTS",
+                            "C:\\ENGREMIAT_SHARED\\EVIDENCE",
+                            "C:\\ENGREMIAT_SHARED\\HANDOFF"
+                        ],
+    "policy_file":  "C:\\ENGREMIAT_SHARED\\_CONTROL\\shared-workspace-policy.json",
+    "manifest_file":  "C:\\ENGREMIAT_SHARED\\_CONTROL\\shared-workspace-manifest.json",
+    "readme_file":  "C:\\ENGREMIAT_SHARED\\README_ENGREMIAT_SHARED.md",
+    "smb_share_created":  false,
+    "shared_repo_edit":  false,
+    "secret_storage_allowed":  false,
+    "auto_execution_from_shared":  false,
+    "git_write_from_shared":  false,
+    "apply_from_shared":  false,
+    "remote_execution":  false,
+    "decision":  "GO_SHARED_READY",
+    "next":  "E02_MAIN_PC_REPO_READINESS",
+    "readiness":  100
+}

@@ -1,0 +1,30 @@
+﻿{
+    "schema":  "engremiat.operational_expected_evidence.v1",
+    "objective":  "ENGREMIAT_REAL_VALUE_TASK_EXECUTION_LOOP_132_141_OPERATIONAL_USEFUL_TASK",
+    "stage":  "E134",
+    "block":  "B134.1",
+    "step":  "P134.1.2",
+    "created_at":  "2026-06-17T14:44:39",
+    "evidence_id":  "OPERATIONAL-EXPECTED-EVIDENCE-134-001",
+    "proposal_id":  "OPERATIONAL-ARTIFACT-PROPOSAL-134-001",
+    "mandatory_artifacts":  [
+                                "data/operational-proposal-134/operational-artifact-proposal.json",
+                                "data/operational-proposal-134/operational-expected-evidence.json",
+                                "data/operational-proposal-134/operational-artifact-preview.json",
+                                "reports/operational-proposal-134/e134-operational-proposal-readiness-report.json",
+                                "data/operational-apply-136/OPERATIONAL_ARTIFACT.md"
+                            ],
+    "validation_rules":  [
+                             "Proposal must keep execution_authorized=false",
+                             "Preview must declare no apply executed",
+                             "Target artifact must be Markdown",
+                             "E135 approval required before E136",
+                             "No network, no git write, no external execution"
+                         ],
+    "completion_criteria":  [
+                                "proposal_valid=true",
+                                "evidence_valid=true",
+                                "preview_valid=true",
+                                "execution_allowed_now=false"
+                            ]
+}

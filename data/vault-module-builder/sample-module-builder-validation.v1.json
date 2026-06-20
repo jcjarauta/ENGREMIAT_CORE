@@ -1,0 +1,74 @@
+﻿{
+    "package_id":  "ENGREMIAT_VAULT_MODULE_BUILDER_001",
+    "stage":  "E06_VALIDATE_BUILDER_WITH_SAMPLE_MODULE",
+    "status":  "PASS",
+    "sample_name":  "Modulo Validacion Builder E06",
+    "sample_space_root":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\02_PROYECTOS\\PROJECT_demo-builder-project-space\\08_RELACIONES\\MODULE_modulo-validacion-builder-e06",
+    "router_report":  "C:\\ENGREMIAT_CORE\\reports\\vault-module-builder\\relation-router-preview-modulo-validacion-builder-e06.json",
+    "space_report":  "C:\\ENGREMIAT_CORE\\reports\\vault-module-builder\\space-generator-preview-modulo-validacion-builder-e06.json",
+    "checks":  [
+                   {
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\02_PROYECTOS\\PROJECT_demo-builder-project-space\\08_RELACIONES\\MODULE_modulo-validacion-builder-e06\\00_INDEX\\INDEX.md",
+                       "exists":  true,
+                       "frontmatter_ok":  true
+                   },
+                   {
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\02_PROYECTOS\\PROJECT_demo-builder-project-space\\08_RELACIONES\\MODULE_modulo-validacion-builder-e06\\01_CONTRATO\\INTAKE.md",
+                       "exists":  true,
+                       "frontmatter_ok":  true
+                   },
+                   {
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\02_PROYECTOS\\PROJECT_demo-builder-project-space\\08_RELACIONES\\MODULE_modulo-validacion-builder-e06\\02_ROADMAP\\ROADMAP.md",
+                       "exists":  true,
+                       "frontmatter_ok":  true
+                   },
+                   {
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\02_PROYECTOS\\PROJECT_demo-builder-project-space\\08_RELACIONES\\MODULE_modulo-validacion-builder-e06\\03_TAREAS\\TASKS.md",
+                       "exists":  true,
+                       "frontmatter_ok":  true
+                   },
+                   {
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\02_PROYECTOS\\PROJECT_demo-builder-project-space\\08_RELACIONES\\MODULE_modulo-validacion-builder-e06\\04_GATES\\GATES.md",
+                       "exists":  true,
+                       "frontmatter_ok":  true
+                   },
+                   {
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\02_PROYECTOS\\PROJECT_demo-builder-project-space\\08_RELACIONES\\MODULE_modulo-validacion-builder-e06\\05_EVIDENCIAS\\EVIDENCE.md",
+                       "exists":  true,
+                       "frontmatter_ok":  true
+                   },
+                   {
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\02_PROYECTOS\\PROJECT_demo-builder-project-space\\08_RELACIONES\\MODULE_modulo-validacion-builder-e06\\06_RELACIONES\\WORKERS.md",
+                       "exists":  true,
+                       "frontmatter_ok":  true
+                   },
+                   {
+                       "path":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\02_PROYECTOS\\PROJECT_demo-builder-project-space\\08_RELACIONES\\MODULE_modulo-validacion-builder-e06\\00_INDEX\\PROJECT_CANVAS.canvas",
+                       "exists":  true,
+                       "frontmatter_ok":  true
+                   }
+               ],
+    "missing":  [
+
+                ],
+    "frontmatter_bad":  [
+
+                        ],
+    "canvas_ok":  true,
+    "canvas_nodes":  6,
+    "canvas_edges":  5,
+    "readiness":  100,
+    "decision":  "GO_BUILDER_SAMPLE_MODULE_VALIDATED",
+    "safety":  {
+                   "local_only":  true,
+                   "preview_only":  true,
+                   "execute_now":  false,
+                   "worker_execution":  false,
+                   "kanban_write":  false,
+                   "clien_write":  false,
+                   "obsidian_app_automation":  false,
+                   "git_write":  false,
+                   "external_network":  false
+               },
+    "next":  "E07_CLOSE_AND_DECIDE_ADOPTION"
+}

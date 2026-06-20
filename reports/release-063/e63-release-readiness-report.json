@@ -1,0 +1,26 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_REAL_WORKER_DAILY_VALUE_LOOP_056_065",
+    "stage":  "E63",
+    "readiness":  100,
+    "decision":  "GO_E63_RELEASE_MANIFEST_AND_VERSIONING_READY",
+    "next":  "E64_OPERATOR_HARDENING",
+    "release_documented":  true,
+    "version":  "0.63.0-local",
+    "artifacts":  [
+                      "data\\release-063\\release-manifest.json",
+                      "VERSION.json",
+                      "docs\\CHANGELOG_RELEASE_056_065.md",
+                      "data\\release-063\\receipts\\release-063-receipt.json"
+                  ],
+    "security":  {
+                     "apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "worker_executed":  false,
+                     "release_docs_only":  true,
+                     "sensitive_actions_executed":  false
+                 },
+    "created_at":  "2026-06-17T12:26:00"
+}

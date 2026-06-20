@@ -1,0 +1,31 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_REAL_WORKER_DAILY_VALUE_LOOP_056_065",
+    "stage":  "E56",
+    "readiness":  100,
+    "decision":  "GO_E56_WORKER_REAL_INPUT_GATE_READY",
+    "next":  "E57_WORKER_RESPONSE_CAPTURE",
+    "worker_real_input_gate_ready":  true,
+    "worker_executed":  false,
+    "worker_real_execution_authorized":  false,
+    "default_decision":  "DEFER",
+    "prompt_packet":  "prompts\\outbox\\WORKER_REAL_PROMPT_PACKET.md",
+    "artifacts":  [
+                      "data\\worker-real-056\\worker-real-input-contract.json",
+                      "data\\worker-real-056\\worker-real-execution-gate.json",
+                      "prompts\\outbox\\WORKER_REAL_PROMPT_PACKET.md",
+                      "data\\worker-real-056\\receipts\\worker-real-input-gate-receipt.json"
+                  ],
+    "security":  {
+                     "apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "worker_executed":  false,
+                     "worker_real_execution_authorized":  false,
+                     "human_gate_required":  true,
+                     "default_decision":  "DEFER",
+                     "sensitive_actions_executed":  false
+                 },
+    "created_at":  "2026-06-17T12:11:55"
+}

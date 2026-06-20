@@ -1,0 +1,36 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_OPERATIVE_WORKER_FLOW_019_025",
+    "stage":  "E24",
+    "created_at":  "2026-06-17T10:52:25.7984894+02:00",
+    "dashboard":  "MVP_OPERATIVE_DASHBOARD",
+    "purpose":  "Unificar estado, paso actual, worker prompt, inbox, decision y evidencias.",
+    "sections":  [
+                     "status",
+                     "worker_prompt",
+                     "inbox",
+                     "human_decision",
+                     "apply_preview",
+                     "evidence",
+                     "next"
+                 ],
+    "state_fields":  [
+                         "objective",
+                         "stage",
+                         "readiness",
+                         "decision",
+                         "next",
+                         "human_decision",
+                         "worker_decision",
+                         "apply_executed",
+                         "auto_apply",
+                         "remote_execution",
+                         "git_write"
+                     ],
+    "safety_defaults":  {
+                            "apply_executed":  false,
+                            "auto_apply":  false,
+                            "remote_execution":  false,
+                            "git_write":  false,
+                            "human_decision":  "DEFER"
+                        }
+}

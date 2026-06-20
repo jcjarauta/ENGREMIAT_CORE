@@ -1,0 +1,24 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_ACTION_REPLICATION_016",
+    "stage":  "E05",
+    "created_at":  "2026-06-17T08:34:41.0168352+02:00",
+    "first_cycle_reference":  "ENGREMIAT_CONTROLLED_ACTION_FROM_PROPOSAL_015",
+    "replication_cycle":  "ENGREMIAT_CONTROLLED_ACTION_REPLICATION_016",
+    "gate":  "DEFER",
+    "apply_executed":  false,
+    "git_write":  false,
+    "remote_execution":  false,
+    "auto_apply":  false,
+    "pattern_repeated":  true,
+    "artifacts_checked":  [
+                              "e03-dry-run-report.json",
+                              "e04-controlled-postcheck-report.json",
+                              "controlled-action-replication-receipt.json"
+                          ],
+    "differences":  [
+                        "Replication cycle keeps gate deferred by default",
+                        "Receipt is created even when action is blocked",
+                        "No unauthorized apply, git write, remote execution or auto apply detected"
+                    ],
+    "technical_summary":  "Controlled action pattern replicated with dry-run, gated execution plan, receipt and postcheck."
+}

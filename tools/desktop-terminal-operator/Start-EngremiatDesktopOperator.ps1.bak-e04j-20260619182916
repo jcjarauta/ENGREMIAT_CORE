@@ -1,0 +1,69 @@
+﻿$ErrorActionPreference="Stop"
+[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+$ScriptDir=Split-Path -Parent $MyInvocation.MyCommand.Path
+$Root=(Resolve-Path (Join-Path $ScriptDir "..\..")).Path
+Set-Location -LiteralPath $Root
+$Router=Join-Path $Root "tools\desktop-terminal-operator\eng-router.ps1"
+$SessionInsideProject=$false
+$SessionInsideModule=$false
+
+function Get-EngremiatPrompt {
+  param([bool]$InsideProject,[bool]$InsideModule)
+  if(!$InsideProject){return "ENGREMIAT"}
+  try {
+    $state=Join-Path $Root "data\operator-state\active-context.json"
+    if(Test-Path -LiteralPath $state){
+      $s=Get-Content -LiteralPath $state -Raw -Encoding UTF8|ConvertFrom-Json
+      $projectName=""
+      $moduleName=""
+      if($s.active_project){$projectName=Split-Path ([string]$s.active_project) -Leaf}
+      if($InsideModule -and $s.active_module){$moduleName=[string]$s.active_module}
+      if($projectName -and $moduleName){return ("ENGREMIAT["+$projectName+"/"+$moduleName+"]")}
+      if($projectName){return ("ENGREMIAT["+$projectName+"]")}
+    }
+  } catch {}
+  return "ENGREMIAT"
+}
+
+Clear-Host
+Write-Host "ENGREMIAT TERMINAL OPERATOR" -ForegroundColor Cyan
+Write-Host ("Workspace: "+$Root) -ForegroundColor DarkCyan
+Write-Host ""
+& powershell -NoProfile -ExecutionPolicy Bypass -File $Router estado
+Write-Host ""
+
+while($true){
+  $prompt=Get-EngremiatPrompt -InsideProject:$SessionInsideProject -InsideModule:$SessionInsideModule
+  $cmd=(Read-Host $prompt).Trim()
+  if($cmd.ToLower() -in @("salir","exit","q")){break}
+  if([string]::IsNullOrWhiteSpace($cmd)){$cmd="estado"}
+
+  & powershell -NoProfile -ExecutionPolicy Bypass -File $Router $cmd
+
+  $lower=$cmd.ToLowerInvariant()
+  if($lower.StartsWith("abrir-proyecto")){
+    try {
+      $state=Join-Path $Root "data\operator-state\active-context.json"
+      if(Test-Path -LiteralPath $state){
+        $s=Get-Content -LiteralPath $state -Raw -Encoding UTF8|ConvertFrom-Json
+        if($s.active_project){
+          $SessionInsideProject=$true
+          $SessionInsideModule=$false
+        }
+      }
+    } catch {}
+  }
+
+  if($lower.StartsWith("abrir-modulo")){
+    try {
+      $state=Join-Path $Root "data\operator-state\active-context.json"
+      if(Test-Path -LiteralPath $state){
+        $s=Get-Content -LiteralPath $state -Raw -Encoding UTF8|ConvertFrom-Json
+        if($s.active_project){$SessionInsideProject=$true}
+        if($s.active_module){$SessionInsideModule=$true}
+      }
+    } catch {}
+  }
+
+  Write-Host ""
+}

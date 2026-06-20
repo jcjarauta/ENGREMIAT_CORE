@@ -1,0 +1,72 @@
+﻿{
+    "screen_id":  "DATA_INTAKE_NORMALIZED",
+    "created_at":  "2026-06-20T10:07:32",
+    "title":  "DATA INTAKE / ENTRADA DE DATOS Y FICHAS",
+    "route":  "INICIO \u003e Memoria y documentacion \u003e Data Intake",
+    "role":  "productor y normalizador local de fichas estructuradas",
+    "principle":  "Entrada de datos produce perfiles normalizados; Centro Documental consume fichas",
+    "prompt":  "DATA_INTAKE",
+    "numbering_policy":  "local_numbers_from_1",
+    "legacy_preserved":  true,
+    "source_launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-DATA-INTAKE-CENTER.ps1",
+    "normalized_launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-DATA-INTAKE-CENTER-NORMALIZED.ps1",
+    "actions":  [
+                    {
+                        "local":  1,
+                        "legacy":  1,
+                        "label":  "activar ficha demo completa",
+                        "type":  "producer",
+                        "risk":  "LOW"
+                    },
+                    {
+                        "local":  2,
+                        "legacy":  2,
+                        "label":  "crear/abrir ficha manual editable",
+                        "type":  "human_edit",
+                        "risk":  "LOW"
+                    },
+                    {
+                        "local":  3,
+                        "legacy":  3,
+                        "label":  "importar TXT/MD desde inbox y normalizar",
+                        "type":  "local_import",
+                        "risk":  "LOW"
+                    },
+                    {
+                        "local":  4,
+                        "legacy":  4,
+                        "label":  "importar JSON desde inbox como ficha activa",
+                        "type":  "local_import",
+                        "risk":  "LOW"
+                    },
+                    {
+                        "local":  5,
+                        "legacy":  5,
+                        "label":  "abrir carpeta inbox de entradas",
+                        "type":  "filesystem",
+                        "risk":  "LOW"
+                    },
+                    {
+                        "local":  6,
+                        "legacy":  6,
+                        "label":  "abrir carpeta normalized de fichas",
+                        "type":  "filesystem",
+                        "risk":  "LOW"
+                    },
+                    {
+                        "local":  7,
+                        "legacy":  7,
+                        "label":  "ver estado de Data Intake",
+                        "type":  "status",
+                        "risk":  "LOW"
+                    },
+                    {
+                        "local":  8,
+                        "legacy":  8,
+                        "label":  "abrir contratos Data Intake",
+                        "type":  "filesystem",
+                        "risk":  "LOW"
+                    }
+                ],
+    "next":  "E35_REWRITE_DATA_INTAKE_NORMALIZED_PARALLEL"
+}

@@ -1,0 +1,96 @@
+{
+    "package_id":  "ENGREMIAT_OPERATIONAL_MASTER_PANEL_001",
+    "stage":  "E03_OPERATIONAL_STATE_MODEL",
+    "artifact":  "operational-state-summary.json",
+    "status":  "PASS",
+    "global_readiness":  100,
+    "modules":  [
+                    {
+                        "id":  "MODULAR_001",
+                        "label":  "Base modular",
+                        "source":  "data\\ENGREMIAT_MODULAR_PLATFORM_001\\_001_POST_CLOSE_AUDIT\\reports\\post-close-audit-report.json",
+                        "status":  "READY",
+                        "readiness":  100,
+                        "risk":  "LOW"
+                    },
+                    {
+                        "id":  "SIM_004E",
+                        "label":  "Simulador modular",
+                        "source":  "data\\NEXT_ENGREMIAT_MODULAR_PLATFORM_004E\\E04_SIMULATION_CLOSE_AND_NEXT\\reports\\simulation-readiness-report.json",
+                        "status":  "READY",
+                        "readiness":  100,
+                        "risk":  "LOW"
+                    },
+                    {
+                        "id":  "APPLY_005E",
+                        "label":  "Apply local controlado",
+                        "source":  "data\\NEXT_ENGREMIAT_MODULAR_PLATFORM_005E\\E05_POST_APPLY_VALIDATION_AND_CLOSE\\reports\\post-apply-readiness-report.json",
+                        "status":  "READY",
+                        "readiness":  100,
+                        "risk":  "LOW"
+                    },
+                    {
+                        "id":  "MANUALS_001",
+                        "label":  "Manuales consolidados",
+                        "source":  "data\\ENGREMIAT_MODULAR_PLATFORM_MANUALS_001\\reports\\manuals-consolidation-report.json",
+                        "status":  "READY",
+                        "readiness":  100,
+                        "risk":  "LOW"
+                    },
+                    {
+                        "id":  "CIERRE_DOC_001",
+                        "label":  "Cierre documental",
+                        "source":  "data\\CIERRE_DOCUMENTAL_001\\reports\\cierre-documental-report.json",
+                        "status":  "READY",
+                        "readiness":  100,
+                        "risk":  "LOW"
+                    },
+                    {
+                        "id":  "VISUAL_006E",
+                        "label":  "Validacion visual",
+                        "source":  "data\\006E_VALIDACION_OPERATIVA_VISUAL\\reports\\visual-readiness-report.json",
+                        "status":  "READY",
+                        "readiness":  100,
+                        "risk":  "LOW"
+                    }
+                ],
+    "pending_gates":  [
+                          {
+                              "gate_id":  "KANBAN_REAL",
+                              "status":  "PENDING",
+                              "requires":  "explicit_human_authorization",
+                              "risk":  "MEDIUM"
+                          },
+                          {
+                              "gate_id":  "TELEGRAM_REAL",
+                              "status":  "PENDING",
+                              "requires":  "explicit_human_authorization",
+                              "risk":  "MEDIUM"
+                          },
+                          {
+                              "gate_id":  "OLLAMA_STRUCTURED_OUTPUTS_ADAPTER",
+                              "status":  "OPTIONAL_NEXT",
+                              "requires":  "local_schema_validation",
+                              "risk":  "LOW"
+                          },
+                          {
+                              "gate_id":  "WORKER_LOCAL",
+                              "status":  "PENDING",
+                              "requires":  "controlled_gate_and_rollback",
+                              "risk":  "MEDIUM"
+                          }
+                      ],
+    "risks":  [
+                  {
+                      "risk":  "external_tool_coupling_before_master_panel",
+                      "level":  "MEDIUM",
+                      "mitigation":  "finish dashboard before Kanban real"
+                  },
+                  {
+                      "risk":  "context_fragmentation",
+                      "level":  "LOW",
+                      "mitigation":  "manuals and documental close already created"
+                  }
+              ],
+    "next_action":  "E04_MASTER_DASHBOARD"
+}

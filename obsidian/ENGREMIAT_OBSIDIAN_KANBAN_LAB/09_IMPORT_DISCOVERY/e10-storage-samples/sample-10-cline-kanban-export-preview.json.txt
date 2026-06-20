@@ -1,0 +1,122 @@
+﻿PATH=C:\Users\pc\.cline\worktrees\07b15\ENGREMIAT_CORE\data\kanban-human-control\cline-kanban-export-preview.json SCORE=80 SIZE=9641 EXT=.json --- SAMPLE BEGIN ---
+{
+    "objective":  "ENGREMIAT_KANBAN_HUMAN_CONTROL_SURFACE_007",
+    "stage":  "E04",
+    "mode":  "PREVIEW_ONLY",
+    "contract":  "data/kanban-human-control/cline-kanban-adapter-contract.json",
+    "source_board":  "data/kanban-human-control/kanban-board.json",
+    "generated_at_utc":  "2026-06-16T12:11:39.6321848Z",
+    "items_count":  3,
+    "items":  [
+                  {
+                      "external_card_id":  "CLINE-KANBAN-PREVIEW-KANBAN-005-E06",
+                      "source_card_id":  "KANBAN-005-E06",
+                      "title":  "Controlled Worker Adapters",
+                      "lane":  "DONE",
+                      "body":  "Objective: ENGREMIAT_CONTROLLED_WORKER_ADAPTERS_005\nStage: E06 Controlled Worker Adapters\nBlock: CLOSE Evidence derived card\nStep: ADAPTERS_READY Controlled Worker Adapters\nDecision: NOT_REQUIRED_VIEW_ONLY\nNext: 006_GATED_WORKER_EXECUTION",
+                      "labels":  [
+                                     "ENGREMIAT",
+                                     "DONE",
+                                     "LOW",
+                                     "E06"
+                                 ],
+                      "evidence_links":  [
+                                             "data/controlled-worker-adapters/controlled-worker-adapters-manifest.json",
+                                             "data/controlled-worker-adapters/controlled-worker-policy.json",
+                                             "data/controlled-worker-adapters/fake-worker-response.json",
+                                             "data/controlled-worker-adapters/sample-human-gate-decision.json",
+                                             "data/controlled-worker-adapters/worker-adapter-contract.json",
+                                             "data/controlled-worker-adapters/worker-execution-gate-schema.json",
+                                             "data/controlled-worker-adapters/cline/cline-adapter-contract.json",
+                                             "data/controlled-worker-adapters/cline/sample-cline-request.json",
+                                             "data/controlled-worker-adapters/ollama-remote/remote-ollama-probe-gate.json",
+                                             "data/controlled-worker-adapters/ollama-remote/remote-ollama-safe-probe-plan.json",
+                                             "data/controlled-worker-adapters/receipts/sample-worker-receipt.json",
+                                             "reports/controlled-worker-adapters/e01-contract-smoke-report.json"
+                                         ],
+                      "gate_summary":  {
+                                           "authorization_required":  false,
+                                           "decision":  "NOT_REQUIRED_VIEW_ONLY",
+                                           "reason":  "Generacion local de tarjeta desde evidencia"
+                                       },
+                      "safety_flags":  {
+                                           "kanban_write":  false,
+                                           "launch_cline_task":  false,
+                                           "cline_task_created":  false,
+                                           "worker_real_execution":  false,
+                                           "auto_apply":  false,
+                                           "git_write":  false,
+                                           "remote_inference":  false
+                                       },
+                      "proposed_action":  "PREVIEW_ONLY_NO_WRITE"
+                  },
+                  {
+                      "external_card_id":  "CLINE-KANBAN-PREVIEW-KANBAN-006-E06",
+                      "source_card_id":  "KANBAN-006-E06",
+                      "title":  "Gated Worker Execution",
+                      "lane":  "DONE",
+                      "body":  "Objective: ENGREMIAT_GATED_WORKER_EXECUTION_006\nStage: E06 Gated Worker Execution\nBlock: CLOSE Evidence derived card\nStep: READONLY_EXECUTION_CLOSED Gated Worker Execution\nDecision: NOT_REQUIRED_VIEW_ONLY\nNext: 007_KANBAN_HUMAN_CONTROL_SURFACE",
+                      "labels":  [
+                                     "ENGREMIAT",
+                                     "DONE",
+                                     "LOW",
+                                     "E06"
+                                 ],
+                      "evidence_links":  [
+                                             "data/gated-worker-execution/cline-readonly-dispatch-contract.json",
+                                             "data/gated-worker-execution/cline-readonly-output.json",
+                                             "data/gated-worker-execution/first-cline-readonly-request.json",
+                                             "data/gated-worker-execution/first-gated-execution-scope.json",
+                                             "data/gated-worker-execution/first-human-approve-readonly.json",
+                                             "data/gated-worker-execution/gated-worker-execution-manifest.json",
+                                             "data/gated-worker-execution/sample-proposal-decision.json",
+                                             "data/gated-worker-execution/worker-proposal.json",
+                                             "data/gated-worker-execution/receipts/first-real-worker-receipt.json",
+                                             "reports/gated-worker-execution/cline-dispatch-preview.json",
+                                             "reports/gated-worker-execution/e01-preflight-smoke-report.json",
+                                             "reports/gated-worker-execution/e01-preflight-validation-report.json"
+                                         ],
+                      "gate_summary":  {
+                                           "authorization_required":  false,
+                                           "decision":  "NOT_REQUIRED_VIEW_ONLY",
+                                           "reason":  "Generacion local de tarjeta desde evidencia"
+                                       },
+                      "safety_flags":  {
+                                           "kanban_write":  false,
+                                           "launch_cline_task":  false,
+                                           "cline_task_created":  false,
+                                           "worker_real_execution":  false,
+                                           "auto_apply":  false,
+                                           "git_write":  false,
+                                           "remote_inference":  false
+                                       },
+                      "proposed_action":  "PREVIEW_ONLY_NO_WRITE"
+                  },
+                  {
+                      "external_card_id":  "CLINE-KANBAN-PREVIEW-KANBAN-007-E02",
+                      "source_card_id":  "KANBAN-007-E02",
+                      "title":  "Kanban Human Control Surface",
+                      "lane":  "READY",
+                      "body":  "Objective: ENGREMIAT_KANBAN_HUMAN_CONTROL_SURFACE_007\nStage: E02 Kanban Human Control Surface\nBlock: B02.1-B02.3 Evidence derived card\nStep: BOARD_FROM_EVIDENCE Kanban Human Control Surface\nDecision: NOT_REQUIRED_VIEW_ONLY\nNext: E03_BUILD_LOCAL_HTML_DASHBOARD",
+                      "labels":  [
+                                     "ENGREMIAT",
+                                     "READY",
+                                     "LOW",
+                                     "E02"
+                                 ],
+                      "evidence_links":  [
+                                             "data/kanban-human-control/evidence-sources.json",
+                                             "data/kanban-human-control/kanban-card-schema.json",
+                                             "data/kanban-human-control/sample-kanban-card.json",
+                                             "reports/kanban-human-control/e01-kanban-card-schema-validation-report.json"
+                                         ],
+                      "gate_summary":  {
+                                           "authorization_required":  false,
+                                           "decision":  "NOT_REQUIRED_VIEW_ONLY",
+                                           "reason":  "Generacion local de tarjeta desde evidencia"
+                                       },
+                      "safety_flags":  {
+                                           "kanban_write":  false,
+                                           "launch_cline_task":  false,
+                                           "cline_task_created":  false,
+--- SAMPLE END ---

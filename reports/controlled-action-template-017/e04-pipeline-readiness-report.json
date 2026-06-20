@@ -1,0 +1,37 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_ACTION_TEMPLATE_017",
+    "stage":  "E04",
+    "created_at":  "2026-06-17T08:54:01.8211881+02:00",
+    "readiness":  100,
+    "decision":  "GO_E04_PIPELINE_REUSABLE_READY",
+    "next":  "E05_CIERRE_MANUAL_Y_CONTINUIDAD",
+    "gate":  "DEFER",
+    "status":  "READY",
+    "checks":  {
+                   "dry_run_template_created":  true,
+                   "dispatcher_template_created":  true,
+                   "receipt_template_created":  true,
+                   "postcheck_template_created":  true,
+                   "dashboard_index_created":  true,
+                   "default_gate_defer":  true,
+                   "dry_run_no_apply":  true,
+                   "receipt_required":  true,
+                   "receipt_even_blocked":  true,
+                   "postcheck_required":  true,
+                   "auto_apply_false":  true,
+                   "remote_execution_false":  true,
+                   "git_write_false":  true
+               },
+    "git_write":  false,
+    "remote_execution":  false,
+    "auto_apply":  false,
+    "apply_executed":  false,
+    "artifacts":  [
+                      "data/controlled-action-template-017/controlled-action-dry-run-template.json",
+                      "tools/controlled-action-template-017/Invoke-ControlledActionTemplate.ps1",
+                      "data/controlled-action-template-017/controlled-action-receipt-template.json",
+                      "data/controlled-action-template-017/controlled-action-postcheck-template.json",
+                      "dashboard/controlled-actions-index.json",
+                      "reports/controlled-action-template-017/e04-pipeline-readiness-report.json"
+                  ]
+}

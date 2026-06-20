@@ -1,0 +1,53 @@
+﻿{
+    "objective":  "ENGREMIAT_HUMAN_USABLE_DAILY_WORKBENCH_086_095",
+    "stage":  "E87",
+    "name":  "Unified Human Inbox",
+    "version":  "0.87.0-local",
+    "purpose":  "Unificar bandejas humanas de cola, decisiones, evidencia y bloqueos para reducir dispersion.",
+    "inbox_executes":  false,
+    "human_governed":  true,
+    "default_decision":  "DEFER",
+    "sources":  [
+                    "operational_value_queue",
+                    "human_daily_console",
+                    "worker_proposal_intake",
+                    "evidence_decision_loop",
+                    "local_apply_lab",
+                    "value_metrics",
+                    "kanban_bridge_preview",
+                    "release_controls"
+                ],
+    "item_types":  [
+                       "VALUE_ITEM",
+                       "DECISION_PENDING",
+                       "EVIDENCE_REVIEW",
+                       "BLOCKED_ITEM",
+                       "PREVIEW_AVAILABLE",
+                       "REPAIR_REQUIRED"
+                   ],
+    "allowed_human_actions":  [
+                                  "REVIEW",
+                                  "DEFER",
+                                  "REQUEST_REPAIR",
+                                  "APPROVE_FOR_PREVIEW",
+                                  "MARK_BLOCKED",
+                                  "MARK_DONE_MANUAL"
+                              ],
+    "blocked_machine_actions":  [
+                                    "AUTO_APPROVE",
+                                    "AUTO_APPLY",
+                                    "REMOTE_EXECUTION",
+                                    "EXTERNAL_NETWORK",
+                                    "WORKER_EXECUTION",
+                                    "KANBAN_REAL_WRITE",
+                                    "GIT_WRITE"
+                                ],
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "kanban_real_write":  false,
+    "created_utc":  "2026-06-17T11:10:51.7835321Z"
+}

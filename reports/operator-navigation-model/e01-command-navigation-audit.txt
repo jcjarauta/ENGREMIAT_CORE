@@ -1,0 +1,117 @@
+﻿package=ENGREMIAT_OPERATOR_NAVIGATION_MODEL_001
+stage=E01_READONLY_COMMAND_NAVIGATION_AUDIT
+mode=READONLY
+files_scanned=19
+screen_count=3
+selector_count=2
+flow_count=12
+action_count=2
+risk_high=0
+risk_medium=4
+
+--- COMMAND NAVIGATION AUDIT ---
+LOW | ACTION | refresh=False | back=False | exit=False | tools\desktop-terminal-operator\eng-boot-status.ps1
+LOW | ACTION | refresh=False | back=False | exit=False | tools\desktop-terminal-operator\eng-operator-preview.ps1
+LOW | FLOW | refresh=True | back=False | exit=False | tools\desktop-terminal-operator\eng-module-artifact.ps1
+LOW | FLOW | refresh=True | back=False | exit=False | tools\desktop-terminal-operator\eng-module-close.ps1
+LOW | FLOW | refresh=True | back=False | exit=False | tools\desktop-terminal-operator\eng-module-edit.ps1
+LOW | FLOW | refresh=True | back=False | exit=False | tools\desktop-terminal-operator\eng-module-objective.ps1
+LOW | FLOW | refresh=True | back=False | exit=False | tools\desktop-terminal-operator\eng-module-promote.ps1
+LOW | FLOW | refresh=True | back=True | exit=False | tools\desktop-terminal-operator\eng-module-vault-builder.ps1
+LOW | FLOW | refresh=False | back=False | exit=False | tools\desktop-terminal-operator\eng-review-project.ps1
+LOW | FLOW | refresh=True | back=True | exit=False | tools\desktop-terminal-operator\eng-vault-master-link-normalizer.ps1
+LOW | SCREEN | refresh=True | back=True | exit=True | tools\desktop-terminal-operator\eng-context.ps1
+LOW | SCREEN | refresh=True | back=True | exit=True | tools\desktop-terminal-operator\eng-status.ps1
+LOW | SCREEN | refresh=True | back=True | exit=True | tools\desktop-terminal-operator\Start-EngremiatDesktopOperator.ps1
+LOW | SELECTOR | refresh=True | back=True | exit=False | tools\desktop-terminal-operator\eng-new-module.ps1
+LOW | SELECTOR | refresh=True | back=True | exit=False | tools\desktop-terminal-operator\eng-new-project.ps1
+MEDIUM | FLOW | refresh=True | back=False | exit=True | tools\desktop-terminal-operator\eng-library-import.ps1
+MEDIUM | FLOW | refresh=True | back=False | exit=True | tools\desktop-terminal-operator\eng-module-smoke.ps1
+MEDIUM | FLOW | refresh=True | back=False | exit=True | tools\desktop-terminal-operator\eng-project-modules.ps1
+MEDIUM | FLOW | refresh=True | back=True | exit=True | tools\desktop-terminal-operator\eng-router.ps1
+
+--- SUSPECT LINES ---
+tools\desktop-terminal-operator\eng-context.ps1:13: function Select-Project{Clear-Host;L "ABRIR PROYECTO" Cyan;L "Solo comandos de este paso: numero = entrar | n = nuevo proyecto | a = atras" DarkCyan;$projects=@(Get-Projects);$i=1;foreach($p in $projects){L (" ["+$i+"] Entrar: "+$p.Name+"  "+$p.LastWriteTime.ToString("yyyy-MM-dd HH:mm")) Green;$i++};L " [n] Nuevo proyecto" Green;L " [a] Atras" Yellow;$sel=(Read-Host "Elige accion").Trim().ToLowerInvariant();if($sel -in @("a","atras","atrás","volver","back","..","0")){$s=Get-State;$s.mode="global";$s.active_project="";$s.active_master_vault="";$s.active_module="";$s.active_module_vault="";$s.next="global";$s.last_command="abrir-proyecto-atras";Save-State $s;L "OK atras=global" Green;return};if($sel -eq "n"){$name=Read-Host "Nombre del proyecto";$project=New-Project $name}else{if(!($sel -match "^\d+$")){throw "seleccion_invalida=$sel"};$idx=[int]$sel-1;if($idx -lt 0 -or $idx -ge $projects.Count){throw "seleccion_fuera_de_rango=$sel"};$project=$projects[$idx].FullName};$s=Get-State;$s.mode="project";$s.active_project=$project;$s.active_master_vault=Join-Path $project "BOVEDA_PROYECTO";$s.active_module="";$s.active_module_vault="";$s.last_command="abrir-proyecto";$s.next="proyecto";Save-State $s;L ("OK active_project="+$project) Green}
+tools\desktop-terminal-operator\eng-context.ps1:14: function Select-Module{param([switch]$Create);$s=Get-State;$project=[string]$s.active_project;if([string]::IsNullOrWhiteSpace($project)){throw "no_active_project"};$modsDir=Join-Path $project "MODULOS";New-Item -ItemType Directory -Force -Path $modsDir|Out-Null;if($Create){$name=(Read-Host "Nombre del modulo").Trim();if([string]::IsNullOrWhiteSpace($name)){throw "module_name_empty"};$safe=($name -replace "[^a-zA-Z0-9_-]","_");if($safe -notlike "MODULE_*"){$safe="MODULE_"+$safe};$modulePath=Join-Path $modsDir $safe;New-Item -ItemType Directory -Force -Path (Join-Path $modulePath "BOVEDA_MODULO")|Out-Null;$mj=Join-Path $modulePath "BOVEDA_MODULO\module.json";if(!(Test-Path $mj)){[ordered]@{module=$safe;lifecycle="ACTIVE_IN_PROJECT";library_status="NOT_READY";objective="";created_at=(Get-Date).ToString("s")}|ConvertTo-Json -Depth 20|Set-Content -LiteralPath $mj -Encoding UTF8}}else{Clear-Host;L "ENTRAR EN MODULO" Cyan;$mods=@(Get-ChildItem -LiteralPath $modsDir -Directory -ErrorAction SilentlyContinue|Where-Object{$_.Name -ne ".obsidian"}|Sort-Object Name);if($mods.Count -eq 0){throw "no_modules"};$i=1;foreach($m in $mods){L (" ["+$i+"] "+$m.Name) Green;$i++};L " [a] Atras" Yellow;$sel=(Read-Host "Elige modulo").Trim().ToLowerInvariant();if($sel -in @("a","atras","atrás","volver","back","..","0")){L "OK atras=proyecto" Green;return};if(!($sel -match "^\d+$")){throw "seleccion_invalida=$sel"};$idx=[int]$sel-1;if($idx -lt 0 -or $idx -ge $mods.Count){throw "seleccion_fuera_de_rango=$sel"};$modulePath=$mods[$idx].FullName;$safe=$mods[$idx].Name};$s=Get-State;$s.mode="module";$s.active_project=$project;$s.active_module=$safe;$s.active_module_vault=Join-Path $modulePath "BOVEDA_MODULO";$s.last_command="abrir-modulo";$s.next="modulo";Save-State $s;L ("OK active_module="+$safe) Green}
+tools\desktop-terminal-operator\eng-context.ps1:16: if($cmd -eq "abrir-proyecto"){Select-Project;exit}
+tools\desktop-terminal-operator\eng-context.ps1:17: if($cmd -eq "nuevo-proyecto"){$name=Read-Host "Nombre del proyecto";$p=New-Project $name;$s=Get-State;$s.mode="project";$s.active_project=$p;$s.active_master_vault=Join-Path $p "BOVEDA_PROYECTO";$s.active_module="";$s.active_module_vault="";$s.last_command="nuevo-proyecto";$s.next="proyecto";Save-State $s;L ("OK active_project="+$p) Green;exit}
+tools\desktop-terminal-operator\eng-context.ps1:18: if($cmd -eq "abrir-modulo"){Select-Module;exit}
+tools\desktop-terminal-operator\eng-context.ps1:19: if($cmd -eq "nuevo-modulo"){Select-Module -Create;exit}
+tools\desktop-terminal-operator\eng-context.ps1:20: if($cmd -eq "biblioteca"){& powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot "eng-library-import.ps1");exit}
+tools\desktop-terminal-operator\eng-context.ps1:21: if($cmd -in @("projects","proyectos","ver-proyectos","list-projects","project-list")){
+tools\desktop-terminal-operator\eng-context.ps1:22: while($true){
+tools\desktop-terminal-operator\eng-context.ps1:24: L "PROYECTOS" Cyan
+tools\desktop-terminal-operator\eng-context.ps1:30: L "sin proyectos" Yellow
+tools\desktop-terminal-operator\eng-context.ps1:41: L " [b] Atras" Yellow
+tools\desktop-terminal-operator\eng-context.ps1:43: L "refrescar/f5/Enter = redibujar pantalla | b/atras = volver" DarkGray
+tools\desktop-terminal-operator\eng-context.ps1:45: $choice=(Read-Host "ENGREMIAT").Trim().ToLowerInvariant()
+tools\desktop-terminal-operator\eng-context.ps1:46: if([string]::IsNullOrWhiteSpace($choice) -or $choice -in @("refrescar","refresh","f5","menu","comandos")){continue}
+tools\desktop-terminal-operator\eng-context.ps1:47: if($choice -in @("b","a","atras","atrás","back","volver","0")){
+tools\desktop-terminal-operator\eng-context.ps1:48: $s.mode="global";$s.last_command="proyectos";$s.next="global";Save-State $s;exit
+tools\desktop-terminal-operator\eng-library-import.ps1:26: $choice=(Read-Host "Elige modulo(s): 1,3 o all").Trim().ToLowerInvariant()
+tools\desktop-terminal-operator\eng-library-import.ps1:27: if($choice -in @("0","q","cancelar")){L "CANCEL biblioteca_import=False" Yellow;exit}
+tools\desktop-terminal-operator\eng-module-edit.ps1:12: if([string]::IsNullOrWhiteSpace($kind)){L "EDITAR ARTEFACTO" Cyan;L " [1] Contrato" Green;L " [2] Tareas" Green;L " [3] Evidencias" Green;L " [4] Gates" Green;$kind=(Read-Host "Elige artefacto").Trim().ToLowerInvariant()}
+tools\desktop-terminal-operator\eng-module-objective.ps1:12: $objective=Read-Host "Objetivo del modulo"
+tools\desktop-terminal-operator\eng-module-smoke.ps1:31: if(!$ok){exit 1}
+tools\desktop-terminal-operator\eng-new-module.ps1:17: $sel=Read-Host "Numero de proyecto"
+tools\desktop-terminal-operator\eng-new-module.ps1:29: $name=Read-Host "Nombre del modulo"
+tools\desktop-terminal-operator\eng-new-module.ps1:30: $purpose=Read-Host "Proposito del modulo"
+tools\desktop-terminal-operator\eng-new-module.ps1:31: $acceptance=Read-Host "Criterio de aceptacion"
+tools\desktop-terminal-operator\eng-new-project.ps1:49: $title=Read-Host "Titulo del proyecto"
+tools\desktop-terminal-operator\eng-new-project.ps1:50: $objective=Read-Host "Objetivo principal"
+tools\desktop-terminal-operator\eng-new-project.ps1:51: $limits=Read-Host "Limites / restricciones"
+tools\desktop-terminal-operator\eng-new-project.ps1:52: $acceptance=Read-Host "Criterio de aceptacion"
+tools\desktop-terminal-operator\eng-project-modules.ps1:13: if(!(Test-Path -LiteralPath $modsDir)){L "WARN sin carpeta MODULOS" Yellow;exit}
+tools\desktop-terminal-operator\eng-project-modules.ps1:15: if(@($mods).Count -eq 0){L "WARN no hay modulos en este proyecto" Yellow;exit}
+tools\desktop-terminal-operator\eng-router.ps1:48: L " [3] Ver proyectos" Green
+tools\desktop-terminal-operator\eng-router.ps1:52: L "refrescar/f5/Enter = redibujar pantalla | ? = ayuda | comandos = menu actual" DarkGray
+tools\desktop-terminal-operator\eng-router.ps1:60: L " [0] Atras              a" Yellow
+tools\desktop-terminal-operator\eng-router.ps1:62: L "refrescar/f5/Enter = redibujar pantalla | ? = ayuda | comandos = menu actual" DarkGray
+tools\desktop-terminal-operator\eng-router.ps1:72: L " [0] Atras              a" Yellow
+tools\desktop-terminal-operator\eng-router.ps1:74: L "refrescar/f5/Enter = redibujar pantalla | ? = ayuda | comandos = menu actual" DarkGray
+tools\desktop-terminal-operator\eng-router.ps1:83: function RunModuleArtifact($kind){if(!(HasActiveModule)){L "WARN abre primero un modulo" Yellow;exit}; & powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot "eng-module-artifact.ps1") $kind;exit}
+tools\desktop-terminal-operator\eng-router.ps1:86: function RunModuleSmoke(){if(!(HasActiveModule)){L "WARN abre primero un modulo" Yellow;exit}; & powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot "eng-module-smoke.ps1");exit}
+tools\desktop-terminal-operator\eng-router.ps1:99: RunScript "eng-status.ps1";exit
+tools\desktop-terminal-operator\eng-router.ps1:102: ShowCommands;exit
+tools\desktop-terminal-operator\eng-router.ps1:105: ShowCommands;exit
+tools\desktop-terminal-operator\eng-router.ps1:107: elseif($cmd -eq "proyectos"){
+tools\desktop-terminal-operator\eng-router.ps1:108: Ctx "projects";exit
+tools\desktop-terminal-operator\eng-router.ps1:111: Ctx "open-project" $cmdArg;exit
+tools\desktop-terminal-operator\eng-router.ps1:114: RunScript "eng-new-project.ps1";exit
+tools\desktop-terminal-operator\eng-router.ps1:117: Ctx "show";exit
+tools\desktop-terminal-operator\eng-router.ps1:120: Ctx "project-menu";exit
+tools\desktop-terminal-operator\eng-router.ps1:122: elseif($cmd -eq "ver-modulos" -or $cmd -eq "listar-modulos" -or $cmd -eq "modulos-proyecto"){if(!(HasActiveProject)){L "WARN abre primero un proyecto" Yellow;exit}; & powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot "eng-project-modules.ps1");exit}
+tools\desktop-terminal-operator\eng-router.ps1:124: Ctx "modules";exit
+tools\desktop-terminal-operator\eng-router.ps1:127: Ctx "open-module" $cmdArg;exit
+tools\desktop-terminal-operator\eng-router.ps1:130: if(!(HasActiveProject)){L "WARN abre primero un proyecto con abrir-proyecto" Yellow;exit}
+tools\desktop-terminal-operator\eng-router.ps1:131: Ctx "create-module";exit
+tools\desktop-terminal-operator\eng-router.ps1:134: if(!(HasActiveModule)){L "WARN abre primero un modulo" Yellow;exit}
+tools\desktop-terminal-operator\eng-router.ps1:135: Ctx "module-view";L "" Gray;exit
+tools\desktop-terminal-operator\eng-router.ps1:152: elseif($cmd -eq "editar" -or $cmd -eq "ed"){if(!(HasActiveModule)){L "WARN abre primero un modulo" Yellow;exit}; & powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot "eng-module-edit.ps1");exit}
+tools\desktop-terminal-operator\eng-router.ps1:153: elseif($cmd -eq "objetivo"){if(!(HasActiveModule)){L "WARN abre primero un modulo" Yellow;exit}; & powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot "eng-module-objective.ps1");exit}
+tools\desktop-terminal-operator\eng-router.ps1:154: elseif($cmd -eq "cerrar-modulo" -or $cmd -eq "cerrar"){if(!(HasActiveModule)){L "WARN abre primero un modulo" Yellow;exit}; & powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot "eng-module-close.ps1");exit}
+tools\desktop-terminal-operator\eng-router.ps1:155: elseif($cmd -eq "promover" -or $cmd -eq "promover-biblioteca"){if(!(HasActiveModule)){L "WARN abre primero un modulo" Yellow;exit}; & powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot "eng-module-promote.ps1");exit}
+tools\desktop-terminal-operator\eng-router.ps1:156: elseif($cmd -eq "biblioteca" -or $cmd -eq "biblioteca-modulos" -or $cmd -eq "importar-modulo"){if(!(HasActiveProject)){L "WARN abre primero un proyecto" Yellow;exit}; & powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot "eng-library-import.ps1");exit}
+tools\desktop-terminal-operator\eng-router.ps1:158: if(!(HasActiveProject)){L "WARN abre primero un proyecto con abrir-proyecto" Yellow;exit}
+tools\desktop-terminal-operator\eng-router.ps1:159: RunScript "eng-review-project.ps1";exit
+tools\desktop-terminal-operator\eng-router.ps1:163: exit
+tools\desktop-terminal-operator\eng-router.ps1:168: exit
+tools\desktop-terminal-operator\eng-router.ps1:170: elseif($cmd -eq "atras" -or $cmd -eq "volver" -or $cmd -eq "back" -or $cmd -eq ".."){
+tools\desktop-terminal-operator\eng-router.ps1:171: L "INFO atras se gestiona en el operador interactivo" Cyan;exit
+tools\desktop-terminal-operator\eng-router.ps1:173: elseif($cmd -eq "salir" -or $cmd -eq "exit" -or $cmd -eq "q"){
+tools\desktop-terminal-operator\eng-router.ps1:174: L "Saliendo ENGREMIAT." Cyan;exit
+tools\desktop-terminal-operator\eng-router.ps1:179: exit 0
+tools\desktop-terminal-operator\eng-status.ps1:6: function ShowStatus([string]$Workspace){Clear-Host;$launcher=Join-Path $Workspace "tools\desktop-terminal-operator\Start-EngremiatDesktopOperator.ps1";$lab=Join-Path $Workspace "reports\system-simulation-lab";L "ENGREMIAT STATUS" Cyan;L ("workspace="+$Workspace) Gray;L ("desktop_launcher_exists="+[string](Test-Path -LiteralPath $launcher)) Green;L ("simulation_lab_exists="+[string](Test-Path -LiteralPath $lab)) Green;L ("last_operator_report="+(LastReport (Join-Path $Workspace "reports\desktop-terminal-operator"))) Gray;L ("last_simulation_lab_report="+(LastReport (Join-Path $Workspace "reports\system-simulation-lab"))) Gray;L "next=E04_COMMAND_ROUTER" Magenta;L "";L " [b] Atras" Yellow;L "";L "refrescar/f5/Enter = redibujar pantalla | b/atras = volver" DarkGray;L ""}
+tools\desktop-terminal-operator\eng-status.ps1:7: while($true){ShowStatus $Root;$choice=(Read-Host "ENGREMIAT").Trim().ToLowerInvariant();if([string]::IsNullOrWhiteSpace($choice) -or $choice -in @("refrescar","refresh","f5","menu","comandos")){continue};if($choice -in @("b","a","atras","atrás","back","volver","0")){exit}}
+tools\desktop-terminal-operator\Start-EngremiatDesktopOperator.ps1:17: function Show-Menu{$level=Get-Level;if($level -eq "GLOBAL"){Write-Host "GLOBAL" -ForegroundColor Cyan;Write-Host " [1] Abrir proyecto     p" -ForegroundColor Green;Write-Host " [2] Nuevo proyecto     n" -ForegroundColor Green;Write-Host " [3] Ver proyectos" -ForegroundColor Green;Write-Host " [4] Estado compacto    e" -ForegroundColor Green;Write-Host " [q] Salir" -ForegroundColor Yellow}elseif($level -eq "PROJECT"){Write-Host "PROYECTO" -ForegroundColor Cyan;Show-ProjectModulesInline;Write-Host "ACCIONES" -ForegroundColor Cyan;Write-Host " [1] Entrar en modulo   m" -ForegroundColor Green;Write-Host " [2] Crear modulo       n" -ForegroundColor Green;Write-Host " [3] Biblioteca modulos b" -ForegroundColor Green;Write-Host " [4] Revisar proyecto   r" -ForegroundColor Green;Write-Host " [a] Atras" -ForegroundColor Yellow}else{Write-Host "MODULO" -ForegroundColor Cyan;Write-Host " [1] Contrato           c" -ForegroundColor Green;Write-Host " [2] Tareas             t" -ForegroundColor Green;Write-Host " [3] Evidencias         ev" -ForegroundColor Green;Write-Host " [4] Gates              g" -ForegroundColor Green;Write-Host " [5] Smoke              s" -ForegroundColor Green;Write-Host " [6] Editar artefacto   ed" -ForegroundColor Green;Write-Host " [7] Definir objetivo   o" -ForegroundColor Green;Write-Host " [8] Cerrar modulo      cm" -ForegroundColor Green;Write-Host " [9] Promover biblioteca pb" -ForegroundColor Green;Write-Host " [a] Atras" -ForegroundColor Yellow};Write-Host "";Write-Host "refrescar/f5/Enter = redibujar pantalla | ? = ayuda | comandos = menu actual" -ForegroundColor DarkGray;Write-Host ""}
+tools\desktop-terminal-operator\Start-EngremiatDesktopOperator.ps1:18: function Refresh-Screen{Show-Health;Show-Menu}
+tools\desktop-terminal-operator\Start-EngremiatDesktopOperator.ps1:19: function Normalize-Command($raw){$x=([string]$raw).Trim().ToLowerInvariant();$level=Get-Level;if([string]::IsNullOrWhiteSpace($x)){return "__refresh__"};if($x -in @("refrescar","refresh","f5","menu","comandos")){return "__refresh__"};if($x -in @("?","ayuda")){return "ayuda"};if($x -in @("q","salir","exit")){return "salir"};if($x -in @("a","atras","atrás","volver","back","..","0")){return "atras"};if($level -eq "GLOBAL"){if($x -in @("1","p")){return "abrir-proyecto"};if($x -in @("2","n")){return "nuevo-proyecto"};if($x -eq "3"){return "proyectos"};if($x -in @("4","e")){return "estado"}}elseif($level -eq "PROJECT"){if($x -in @("1","m","entrar-modulo","abrir-modulo")){return "abrir-modulo"};if($x -in @("2","n","nuevo-modulo")){return "nuevo-modulo"};if($x -in @("3","b","biblioteca","biblioteca-modulos","importar-modulo")){return "biblioteca"};if($x -in @("4","r","revisar-proyecto")){return "revisar-proyecto"}}else{if($x -in @("1","c")){return "contrato"};if($x -in @("2","t")){return "tareas"};if($x -in @("3","ev","e")){return "evidencias"};if($x -in @("4","g")){return "gates"};if($x -in @("5","s")){return "preparar-smoke"};if($x -in @("6","ed","editar")){return "editar"};if($x -in @("7","o","objetivo")){return "objetivo"};if($x -in @("8","cm","cerrar","cerrar-modulo")){return "cerrar-modulo"};if($x -in @("9","pb","promover","promover-biblioteca")){return "promover"}};return $raw}
+tools\desktop-terminal-operator\Start-EngremiatDesktopOperator.ps1:21: function IsContextCommand($cmd){$x=([string]$cmd).Trim().ToLowerInvariant();return ($x -in @("abrir-proyecto","abrir-modulo","nuevo-modulo","biblioteca","nuevo-proyecto","projects","proyectos"))}
+tools\desktop-terminal-operator\Start-EngremiatDesktopOperator.ps1:23: function Pause-And-Refresh{Write-Host "";Write-Host "Pulsa Enter para volver al menu limpio..." -ForegroundColor DarkGray;[void](Read-Host);Refresh-Screen}
+tools\desktop-terminal-operator\Start-EngremiatDesktopOperator.ps1:27: while($true){
+tools\desktop-terminal-operator\Start-EngremiatDesktopOperator.ps1:33: Show-Menu
+tools\desktop-terminal-operator\Start-EngremiatDesktopOperator.ps1:34: $rawChoice = Read-Host "ENGREMIAT"
+tools\desktop-terminal-operator\Start-EngremiatDesktopOperator.ps1:35: $cmd = Normalize-Command $rawChoice
+tools\desktop-terminal-operator\Start-EngremiatDesktopOperator.ps1:38: if($cmd -eq "ayuda"){ Show-Help; Read-Host "Enter para volver" | Out-Null; continue }
+tools\desktop-terminal-operator\Start-EngremiatDesktopOperator.ps1:39: if($cmd -eq "atras"){ Go-Back; continue }
+tools\desktop-terminal-operator\Start-EngremiatDesktopOperator.ps1:40: if(IsContextCommand $cmd -or $cmd -in @("estado","status","compact-status","estado-compacto")){

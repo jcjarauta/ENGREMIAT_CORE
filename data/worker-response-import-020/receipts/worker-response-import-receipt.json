@@ -1,0 +1,15 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_OPERATIVE_WORKER_FLOW_019_025",
+    "stage":  "E20",
+    "created_at":  "2026-06-17T10:48:06.3424434+02:00",
+    "receipt_type":  "WORKER_RESPONSE_IMPORT_RECEIPT",
+    "source":  "prompts/inbox/worker-response-sample.json",
+    "imported_response":  "data/worker-response-import-020/imported-worker-response.json",
+    "validation_report":  "reports/worker-response-import-020/worker-response-validation-report.json",
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "decision":  "GO_E20_WORKER_RESPONSE_IMPORT_READY",
+    "next":  "E21_HUMAN_REVIEW_GATE"
+}

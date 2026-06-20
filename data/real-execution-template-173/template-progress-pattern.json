@@ -1,0 +1,20 @@
+﻿{
+    "objective_id":  "DEFINE_REAL_EXECUTION_TEMPLATE_STANDARD_MVP_172_175",
+    "stage":  "E173",
+    "block":  "B173.2",
+    "step":  "P173.2.1",
+    "name":  "template-progress-pattern",
+    "purpose":  "Normalize visible loading, spinner and timeout for terminal",
+    "ui":  [
+               "Write-Progress",
+               "Console spinner",
+               "elapsed seconds",
+               "timeout"
+           ],
+    "behavior":  [
+                     "visible while waiting",
+                     "clean completion",
+                     "no false freeze"
+                 ],
+    "created_at":  "2026-06-17T18:00:54.4181172+02:00"
+}

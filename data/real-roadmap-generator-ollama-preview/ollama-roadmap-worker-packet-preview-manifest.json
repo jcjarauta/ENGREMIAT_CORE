@@ -1,0 +1,38 @@
+﻿{
+    "package_id":  "ENGREMIAT_REAL_ROADMAP_GENERATOR_WITH_LOCAL_OLLAMA_PREVIEW_001",
+    "stage":  "E04_BUILD_OLLAMA_ROADMAP_WORKER_PACKET_PREVIEW",
+    "manifest_id":  "ollama-roadmap-worker-packet-preview-manifest.v1",
+    "status":  "PREVIEW_ONLY",
+    "packet":  "C:\\ENGREMIAT_CORE\\data\\real-roadmap-generator-ollama-preview\\ollama-roadmap-worker-packet-preview.json",
+    "source_files":  [
+                         "C:\\ENGREMIAT_CORE\\data\\real-roadmap-generator-ollama-preview\\ollama-roadmap-preview.latest.json",
+                         "C:\\ENGREMIAT_CORE\\data\\real-roadmap-generator-ollama-preview\\ollama-roadmap-review-gate.json",
+                         "C:\\ENGREMIAT_CORE\\data\\real-roadmap-generator-ollama-preview\\ollama-roadmap-review-receipt.pending.json"
+                     ],
+    "checks":  [
+                   {
+                       "check":  "execute_now_false",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "worker_execution_false",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "authorization_not_granted",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "git_write_false",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "auto_apply_false",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "external_ai_false",
+                       "status":  "PASS"
+                   }
+               ]
+}

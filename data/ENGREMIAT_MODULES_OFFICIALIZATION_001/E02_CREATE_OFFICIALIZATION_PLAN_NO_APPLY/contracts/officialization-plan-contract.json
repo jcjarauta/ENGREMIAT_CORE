@@ -1,0 +1,24 @@
+{
+    "package_id":  "ENGREMIAT_MODULES_OFFICIALIZATION_001",
+    "stage":  "E02_CREATE_OFFICIALIZATION_PLAN_NO_APPLY",
+    "artifact":  "officialization-plan-contract.json",
+    "status":  "DEFINED",
+    "purpose":  "Crear plan de oficializacion sin mover ni escribir modulos reales",
+    "mode":  "PLAN_ONLY_NO_APPLY",
+    "source_inventory":  "reports/readonly-inventory-report.json",
+    "target_root":  "data\\_OFFICIAL_MODULES",
+    "blocked_actions":  [
+                            "move_files",
+                            "copy_modules",
+                            "delete_sources",
+                            "git_write",
+                            "external_network",
+                            "core_changes"
+                        ],
+    "allowed_actions":  [
+                            "write_plan",
+                            "write_dashboard",
+                            "write_reports"
+                        ],
+    "next":  "E03_PREPARE_IDENTITY_PATCHES_NO_APPLY"
+}

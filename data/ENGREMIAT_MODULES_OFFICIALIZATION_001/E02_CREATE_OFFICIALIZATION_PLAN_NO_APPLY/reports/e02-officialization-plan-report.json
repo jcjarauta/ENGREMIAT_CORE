@@ -1,0 +1,16 @@
+{
+    "package_id":  "ENGREMIAT_MODULES_OFFICIALIZATION_001",
+    "stage":  "E02_CREATE_OFFICIALIZATION_PLAN_NO_APPLY",
+    "status":  "PASS",
+    "checks":  {
+                   "previous_inventory_exists":  true,
+                   "plan_created":  true,
+                   "no_apply":  true,
+                   "no_moves":  true,
+                   "no_deletes":  true,
+                   "git_write":  false,
+                   "external_network":  false,
+                   "core_changes":  false
+               },
+    "next":  "E03_PREPARE_IDENTITY_PATCHES_NO_APPLY"
+}

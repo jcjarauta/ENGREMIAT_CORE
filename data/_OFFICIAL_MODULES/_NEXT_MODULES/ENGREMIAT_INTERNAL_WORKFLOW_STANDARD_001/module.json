@@ -1,0 +1,37 @@
+﻿{
+    "module_id":  "ENGREMIAT_INTERNAL_WORKFLOW_STANDARD_001",
+    "name":  "Internal Workflow Standard",
+    "status":  "CANDIDATE",
+    "kind":  "STANDARD",
+    "location":  "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_INTERNAL_WORKFLOW_STANDARD_001",
+    "purpose":  "Definir la norma interna de trabajo para proyectos, tareas, workers, recursos, evidencias, gates y taxonomias antes de integrar OpenWebUI, Ollama, OpenClaw, Cline, Kanban, Obsidian o Sheets reales.",
+    "scope":  [
+                  "PROJECT",
+                  "TASK",
+                  "WORKER",
+                  "RESOURCE",
+                  "EVIDENCE",
+                  "GATE",
+                  "INPUT",
+                  "OUTPUT",
+                  "LIFECYCLE"
+              ],
+    "safety":  {
+                   "local_only":  true,
+                   "core_changes":  false,
+                   "real_tool_integration":  false,
+                   "git_write":  false,
+                   "network":  false,
+                   "ollama_inference":  false,
+                   "kanban_write":  false,
+                   "obsidian_write":  false,
+                   "sheets_write":  false
+               },
+    "stages_created":  [
+                           "E01_IDENTIDAD_Y_ALCANCE",
+                           "E02_CICLO_DE_VIDA_UNIFICADO",
+                           "E03_CONTRATOS_PRINCIPALES",
+                           "E04_TIPOS_DE_TRABAJO_Y_RECURSOS"
+                       ],
+    "next":  "E05_TOOL_ADAPTERS"
+}

@@ -1,0 +1,114 @@
+﻿$ErrorActionPreference="Stop"
+[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+
+$Core="C:\ENGREMIAT_CORE"
+$NavDir=Join-Path $Core "reports\navigation"
+$NavTree=Join-Path $NavDir "navigation-tree-latest.json"
+$NavMd=Join-Path $NavDir "navigation-tree-latest.md"
+$Generator=Join-Path $Core "tools\launcher\ENGREMIAT-NAVIGATION-TREE.ps1"
+
+function W($m,$c="White"){ Write-Host $m -ForegroundColor $c }
+function P(){ [void](Read-Host "Enter") }
+
+function EnsureTree(){
+  if(-not(Test-Path $NavTree)){
+    if(Test-Path $Generator){
+      & powershell -NoProfile -ExecutionPolicy Bypass -File $Generator | Out-Null
+    }
+  }
+  if(-not(Test-Path $NavTree)){ throw "navigation_tree_missing=$NavTree" }
+}
+
+function LoadTree(){
+  EnsureTree
+  return Get-Content $NavTree -Raw | ConvertFrom-Json
+}
+
+function ShowScreens($tree){
+  Clear-Host
+  W "==== PANTALLAS DEL SISTEMA ====" Cyan
+  W ("Proyecto activo: {0}" -f $tree.active_project_name) DarkCyan
+  W ""
+
+  foreach($s in $tree.screens){
+    $ok=if($s.exists){"OK"}else{"MISS"}
+    $color=if($s.exists){"Green"}else{"Yellow"}
+    W ("[{0}] {1}" -f $ok,$s.label) $color
+    W ("     id={0} role={1} parent={2}" -f $s.id,$s.role,$s.parent) DarkGray
+    W ("     {0}" -f $s.path) DarkGray
+  }
+
+  W ""
+  W "o = abrir informe markdown | r = regenerar | b = atras" Cyan
+  $cmd=Read-Host "PANTALLAS"
+  if($cmd -eq "o" -and (Test-Path $NavMd)){ Start-Process notepad.exe $NavMd }
+  if($cmd -eq "r" -and (Test-Path $Generator)){ & powershell -NoProfile -ExecutionPolicy Bypass -File $Generator; P }
+}
+
+function ShowRoutes($tree){
+  Clear-Host
+  W "==== RUTAS DE NAVEGACION ====" Cyan
+  W ""
+
+  foreach($n in $tree.navigation){
+    W ("{0} -- {1} --> {2}" -f $n.from,$n.command,$n.to) Green
+    W ("     {0}" -f $n.purpose) DarkGray
+  }
+
+  W ""
+  W "o = abrir informe markdown | r = regenerar | b = atras" Cyan
+  $cmd=Read-Host "RUTAS"
+  if($cmd -eq "o" -and (Test-Path $NavMd)){ Start-Process notepad.exe $NavMd }
+  if($cmd -eq "r" -and (Test-Path $Generator)){ & powershell -NoProfile -ExecutionPolicy Bypass -File $Generator; P }
+}
+
+function ShowRecommendations($tree){
+  Clear-Host
+  W "==== RECOMENDACIONES DE NAVEGACION ====" Cyan
+  W ""
+
+  foreach($r in $tree.recommendations){
+    W (" - {0}" -f $r) Yellow
+  }
+
+  W ""
+  W "b = atras | o = abrir markdown" Cyan
+  $cmd=Read-Host "RECOMENDACIONES"
+  if($cmd -eq "o" -and (Test-Path $NavMd)){ Start-Process notepad.exe $NavMd }
+}
+
+function ShowSummary($tree){
+  Clear-Host
+  W "==== RESUMEN ARBOL DE NAVEGACION ====" Cyan
+  W ("Generado: {0}" -f $tree.generated_at) DarkGray
+  W ("Proyecto activo: {0}" -f $tree.active_project_name) Green
+  W ("Modulos proyecto: {0}" -f $tree.counters.project_modules) White
+  W ("Biblioteca: {0} activos / {1} historicos" -f $tree.counters.library_active,$tree.counters.library_historic) White
+  W ""
+
+  $ok=@($tree.screens | Where-Object { $_.exists }).Count
+  $total=@($tree.screens).Count
+  W ("Pantallas OK: {0}/{1}" -f $ok,$total) $(if($ok -eq $total){"Green"}else{"Yellow"})
+  W ("Rutas registradas: {0}" -f @($tree.navigation).Count) White
+  W ("Recomendaciones: {0}" -f @($tree.recommendations).Count) White
+  W ""
+  W "1 = pantallas | 2 = rutas | 3 = recomendaciones | o = abrir markdown | r = regenerar | b = salir" Cyan
+}
+
+function Main(){
+  while($true){
+    $tree=LoadTree
+    ShowSummary $tree
+    $cmd=Read-Host "ARBOL"
+
+    if([string]::IsNullOrWhiteSpace($cmd)){ continue }
+    if($cmd -eq "b"){ return }
+    if($cmd -eq "1"){ ShowScreens $tree; continue }
+    if($cmd -eq "2"){ ShowRoutes $tree; continue }
+    if($cmd -eq "3"){ ShowRecommendations $tree; continue }
+    if($cmd -eq "o" -and (Test-Path $NavMd)){ Start-Process notepad.exe $NavMd; continue }
+    if($cmd -eq "r" -and (Test-Path $Generator)){ & powershell -NoProfile -ExecutionPolicy Bypass -File $Generator; continue }
+  }
+}
+
+Main

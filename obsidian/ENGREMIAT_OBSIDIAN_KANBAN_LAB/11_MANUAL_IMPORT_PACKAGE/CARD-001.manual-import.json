@@ -1,0 +1,17 @@
+﻿{
+    "id":  "CARD-001",
+    "title":  "Crear backlog visible",
+    "column":  "NEXT",
+    "source_need":  "NEED-001",
+    "description":  "Tarjeta aprobada por revisión humana en Obsidian. Debe ser visible, entendible y trazable a su necesidad origen.",
+    "done_criteria":  [
+                          "La tarjeta existe en Kanban",
+                          "Está en la columna NEXT",
+                          "El origen NEED-001 queda visible",
+                          "No se ejecutan comandos",
+                          "No se modifica el proyecto",
+                          "No se activa auto-approve"
+                      ],
+    "import_mode":  "manual_or_future_adapter",
+    "file_based_write_safe":  false
+}

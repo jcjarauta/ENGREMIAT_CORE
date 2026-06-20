@@ -1,0 +1,23 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_HUMAN_USABLE_036_045",
+    "stage":  "E40",
+    "postcheck_id":  "E40_CONTROLLED_APPLY_POSTCHECK",
+    "required_artifacts":  [
+                               "data\\controlled-apply-mvp-040\\mvp-apply-gate.json",
+                               "data\\controlled-apply-mvp-040\\receipts\\mvp-apply-authorization-receipt.json",
+                               "data\\controlled-apply-mvp-040\\applied-change.json",
+                               "data\\controlled-apply-mvp-040\\receipts\\mvp-controlled-apply-receipt.json",
+                               "data\\controlled-apply-mvp-040\\applied-change.rollback-before.json"
+                           ],
+    "missing_artifacts":  [
+
+                          ],
+    "json_parse_ok":  true,
+    "no_git_write":  true,
+    "no_remote_execution":  true,
+    "no_external_network":  true,
+    "no_auto_apply":  true,
+    "no_side_effects_detected":  true,
+    "decision":  "GO_E40_POSTCHECK_OK",
+    "created_at":  "2026-06-17T11:43:52"
+}

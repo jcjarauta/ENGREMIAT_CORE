@@ -1,0 +1,1855 @@
+{
+    "package_id":  "ENGREMIAT_MODULES_OFFICIALIZATION_001",
+    "stage":  "E01_READONLY_INVENTORY",
+    "status":  "PASS",
+    "mode":  "READONLY_NO_MOVES",
+    "purpose":  "Inventariar modulos en data y preparar oficializacion fuera del core",
+    "target_structure":  "data\\_OFFICIAL_MODULES",
+    "total":  230,
+    "core_excluded":  0,
+    "ready":  1,
+    "needs_identity":  229,
+    "items":  [
+                  {
+                      "package_id":  "006E_VALIDACION_OPERATIVA_VISUAL",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\006E_VALIDACION_OPERATIVA_VISUAL",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\006E_VALIDACION_OPERATIVA_VISUAL",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "apply-scope-102",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\apply-scope-102",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\apply-scope-102",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "approval-console-059",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\approval-console-059",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\approval-console-059",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "arbitration-069",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\arbitration-069",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\arbitration-069",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "batch-apply-preview-070",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\batch-apply-preview-070",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\batch-apply-preview-070",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "CIERRE_DOCUMENTAL_001",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\CIERRE_DOCUMENTAL_001",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\CIERRE_DOCUMENTAL_001",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "cline-real-proposal-no-apply",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\cline-real-proposal-no-apply",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\cline-real-proposal-no-apply",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "command-hub-037",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\command-hub-037",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\command-hub-037",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "controlled-action-from-proposal-015",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\controlled-action-from-proposal-015",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\controlled-action-from-proposal-015",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "controlled-action-instance-018",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\controlled-action-instance-018",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\controlled-action-instance-018",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "controlled-action-replication-016",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\controlled-action-replication-016",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\controlled-action-replication-016",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "controlled-action-template-017",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\controlled-action-template-017",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\controlled-action-template-017",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "controlled-apply-106",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\controlled-apply-106",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\controlled-apply-106",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "controlled-apply-mvp-040",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\controlled-apply-mvp-040",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\controlled-apply-mvp-040",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "controlled-apply-or-repair-014",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\controlled-apply-or-repair-014",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\controlled-apply-or-repair-014",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "controlled-apply-v2-060",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\controlled-apply-v2-060",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\controlled-apply-v2-060",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "controlled-local-apply-100",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\controlled-local-apply-100",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\controlled-local-apply-100",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "controlled-local-apply-preview-022",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\controlled-local-apply-preview-022",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\controlled-local-apply-preview-022",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "controlled-worker-adapters",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\controlled-worker-adapters",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\controlled-worker-adapters",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "controlled-worker-close-065",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\controlled-worker-close-065",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\controlled-worker-close-065",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "controlled-worker-task-019",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\controlled-worker-task-019",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\controlled-worker-task-019",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "core-consolidation-204",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\core-consolidation-204",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\core-consolidation-204",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "core-consolidation-205",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\core-consolidation-205",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\core-consolidation-205",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "core-consolidation-206",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\core-consolidation-206",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\core-consolidation-206",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "core-consolidation-207",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\core-consolidation-207",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\core-consolidation-207",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "daily-loop-046",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\daily-loop-046",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\daily-loop-046",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "daily-production-052",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\daily-production-052",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\daily-production-052",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "daily-value-dashboard-061",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\daily-value-dashboard-061",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\daily-value-dashboard-061",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "daily-workbench-086",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\daily-workbench-086",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\daily-workbench-086",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "dashboard-index-092",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\dashboard-index-092",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\dashboard-index-092",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "dashboard-refresh-119",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\dashboard-refresh-119",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\dashboard-refresh-119",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "decision-console-039",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\decision-console-039",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\decision-console-039",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "decision-history-048",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\decision-history-048",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\decision-history-048",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "decision-shortcuts-088",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\decision-shortcuts-088",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\decision-shortcuts-088",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "dev",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\dev",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\dev",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "dev-assisted-worker",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\dev-assisted-worker",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\dev-assisted-worker",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "dual-pc-development-workflow",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\dual-pc-development-workflow",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\dual-pc-development-workflow",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "ENGREMIAT_007E_PANEL_MAESTRO_OPERATIVO",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\ENGREMIAT_007E_PANEL_MAESTRO_OPERATIVO",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\ENGREMIAT_007E_PANEL_MAESTRO_OPERATIVO",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "ENGREMIAT_MODULAR_PLATFORM_001",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\ENGREMIAT_MODULAR_PLATFORM_001",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\ENGREMIAT_MODULAR_PLATFORM_001",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "ENGREMIAT_MODULAR_PLATFORM_MANUALS_001",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\ENGREMIAT_MODULAR_PLATFORM_MANUALS_001",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\ENGREMIAT_MODULAR_PLATFORM_MANUALS_001",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "ENGREMIAT_MODULES_OFFICIALIZATION_001",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\ENGREMIAT_MODULES_OFFICIALIZATION_001",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\ENGREMIAT_MODULES_OFFICIALIZATION_001",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "ENGREMIAT_MODULE_INTAKE_REGISTRY_001",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\ENGREMIAT_MODULE_INTAKE_REGISTRY_001",
+                      "classification":  "MODULE_WITH_IDENTITY",
+                      "has_module_json":  true,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\ENGREMIAT_MODULE_INTAKE_REGISTRY_001",
+                      "action":  "OFFICIALIZE_COPY_OR_MOVE_GATED"
+                  },
+                  {
+                      "package_id":  "ENGREMIAT_OPERATIONAL_MASTER_PANEL_001",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\ENGREMIAT_OPERATIONAL_MASTER_PANEL_001",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\ENGREMIAT_OPERATIONAL_MASTER_PANEL_001",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "errors",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\errors",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\errors",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "events",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\events",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\events",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "evidence",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\evidence",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\evidence",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "evidence-browser-089",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\evidence-browser-089",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\evidence-browser-089",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "evidence-decision-loop-079",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\evidence-decision-loop-079",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\evidence-decision-loop-079",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "executions",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\executions",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\executions",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "file-intake-152",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\file-intake-152",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\file-intake-152",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "file-kanban-preview-155",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\file-kanban-preview-155",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\file-kanban-preview-155",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "file-parser-153",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\file-parser-153",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\file-parser-153",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "file-worker-queue-154",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\file-worker-queue-154",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\file-worker-queue-154",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "file-worker-request-156",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\file-worker-request-156",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\file-worker-request-156",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "final-hardening-044",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\final-hardening-044",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\final-hardening-044",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "final-mvp-035",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\final-mvp-035",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\final-mvp-035",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "first-cline-proposal-task-009",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\first-cline-proposal-task-009",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\first-cline-proposal-task-009",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "first-real-authorization-099",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\first-real-authorization-099",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\first-real-authorization-099",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "first-real-flow-096",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\first-real-flow-096",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\first-real-flow-096",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "first-real-flow-close-101",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\first-real-flow-close-101",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\first-real-flow-close-101",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "first-real-proposal-098",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\first-real-proposal-098",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\first-real-proposal-098",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "first-useful-local-change-023",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\first-useful-local-change-023",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\first-useful-local-change-023",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "fixtures",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\fixtures",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\fixtures",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "friction-reduction-091",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\friction-reduction-091",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\friction-reduction-091",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "gated-worker-execution",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\gated-worker-execution",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\gated-worker-execution",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "gates",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\gates",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\gates",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "human-authorization-105",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\human-authorization-105",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\human-authorization-105",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "human-daily-console-077",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\human-daily-console-077",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\human-daily-console-077",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "human-mvp-close-045",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\human-mvp-close-045",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\human-mvp-close-045",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "human-need-intake-097",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\human-need-intake-097",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\human-need-intake-097",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "human-review-gate-021",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\human-review-gate-021",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\human-review-gate-021",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "human-start-036",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\human-start-036",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\human-start-036",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "integration-close-151",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\integration-close-151",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\integration-close-151",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "integration-regression-150",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\integration-regression-150",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\integration-regression-150",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "integration-smoke-148",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\integration-smoke-148",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\integration-smoke-148",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "kanban-bridge-051",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\kanban-bridge-051",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\kanban-bridge-051",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "kanban-bridge-preview-082",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\kanban-bridge-preview-082",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\kanban-bridge-preview-082",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "kanban-dryrun-gate-108",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\kanban-dryrun-gate-108",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\kanban-dryrun-gate-108",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "kanban-human-control",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\kanban-human-control",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\kanban-human-control",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "kanban-real-setup-012",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\kanban-real-setup-012",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\kanban-real-setup-012",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "kanban-real-write-lab-072",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\kanban-real-write-lab-072",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\kanban-real-write-lab-072",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "kanban-sync-042",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\kanban-sync-042",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\kanban-sync-042",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "kanban-visible-ollama-ready-013",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\kanban-visible-ollama-ready-013",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\kanban-visible-ollama-ready-013",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "kanban-write-authorization-107",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\kanban-write-authorization-107",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\kanban-write-authorization-107",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "kanban-write-sim-062",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\kanban-write-sim-062",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\kanban-write-sim-062",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "leases",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\leases",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\leases",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "local-apply-lab-080",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\local-apply-lab-080",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\local-apply-lab-080",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "local-multiworker-launch-and-link-n1",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\local-multiworker-launch-and-link-n1",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\local-multiworker-launch-and-link-n1",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "local-multiworker-launch-and-link-n2",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\local-multiworker-launch-and-link-n2",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\local-multiworker-launch-and-link-n2",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "local-runtime-fix",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\local-runtime-fix",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\local-runtime-fix",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "main-pc-linking",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\main-pc-linking",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\main-pc-linking",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "manual-093",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\manual-093",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\manual-093",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "matching",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\matching",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\matching",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "memory-sync-041",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\memory-sync-041",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\memory-sync-041",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "multi-worker-066",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\multi-worker-066",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\multi-worker-066",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "multi-worker-close-075",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\multi-worker-close-075",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\multi-worker-close-075",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "mvp-authorized-apply-026",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\mvp-authorized-apply-026",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\mvp-authorized-apply-026",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "mvp-close-025",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\mvp-close-025",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\mvp-close-025",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "mvp-dashboard-024",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\mvp-dashboard-024",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\mvp-dashboard-024",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "mvp-demo-043",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\mvp-demo-043",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\mvp-demo-043",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_002E",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\NEXT_ENGREMIAT_MODULAR_PLATFORM_002E",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\NEXT_ENGREMIAT_MODULAR_PLATFORM_002E",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_003E",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\NEXT_ENGREMIAT_MODULAR_PLATFORM_003E",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\NEXT_ENGREMIAT_MODULAR_PLATFORM_003E",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_004E",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\NEXT_ENGREMIAT_MODULAR_PLATFORM_004E",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\NEXT_ENGREMIAT_MODULAR_PLATFORM_004E",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_005E",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\NEXT_ENGREMIAT_MODULAR_PLATFORM_005E",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\NEXT_ENGREMIAT_MODULAR_PLATFORM_005E",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "node-link",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\node-link",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\node-link",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "offers",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\offers",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\offers",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "official-entrypoint-196",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\official-entrypoint-196",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\official-entrypoint-196",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "official-entrypoint-197",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\official-entrypoint-197",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\official-entrypoint-197",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "official-entrypoint-198",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\official-entrypoint-198",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\official-entrypoint-198",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "official-entrypoint-199",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\official-entrypoint-199",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\official-entrypoint-199",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "ollama-execution-gate-164",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\ollama-execution-gate-164",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\ollama-execution-gate-164",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "ollama-generate-166",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\ollama-generate-166",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\ollama-generate-166",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "ollama-postcheck-168",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\ollama-postcheck-168",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\ollama-postcheck-168",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "ollama-preflight-163",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\ollama-preflight-163",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\ollama-preflight-163",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "ollama-prompt-165",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\ollama-prompt-165",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\ollama-prompt-165",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "ollama-result-167",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\ollama-result-167",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\ollama-result-167",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "open-source-toolchain-bootstrap",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\open-source-toolchain-bootstrap",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\open-source-toolchain-bootstrap",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "operational-apply-136",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\operational-apply-136",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\operational-apply-136",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "operational-authorization-135",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\operational-authorization-135",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\operational-authorization-135",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "operational-close-085",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\operational-close-085",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\operational-close-085",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "operational-command-144",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\operational-command-144",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\operational-command-144",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "operational-control-147",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\operational-control-147",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\operational-control-147",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "operational-dashboard-050",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\operational-dashboard-050",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\operational-dashboard-050",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "operational-dashboard-refresh-139",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\operational-dashboard-refresh-139",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\operational-dashboard-refresh-139",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "operational-demo-054",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\operational-demo-054",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\operational-demo-054",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "operational-evidence-138",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\operational-evidence-138",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\operational-evidence-138",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "operational-inbox-047",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\operational-inbox-047",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\operational-inbox-047",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "operational-index-149",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\operational-index-149",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\operational-index-149",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "operational-input-133",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\operational-input-133",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\operational-input-133",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "operational-integration-142",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\operational-integration-142",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\operational-integration-142",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "operational-launch-146",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\operational-launch-146",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\operational-launch-146",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "operational-loop-close-141",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\operational-loop-close-141",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\operational-loop-close-141",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "operational-loop-regression-140",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\operational-loop-regression-140",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\operational-loop-regression-140",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "operational-proposal-134",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\operational-proposal-134",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\operational-proposal-134",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "operational-registry-143",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\operational-registry-143",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\operational-registry-143",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "operational-regression-084",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\operational-regression-084",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\operational-regression-084",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "operational-task-132",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\operational-task-132",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\operational-task-132",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "operational-template-145",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\operational-template-145",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\operational-template-145",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "operational-value-076",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\operational-value-076",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\operational-value-076",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "operator-hardening-064",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\operator-hardening-064",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\operator-hardening-064",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "pipeline-hardening-074",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\pipeline-hardening-074",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\pipeline-hardening-074",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "plan-intake-188",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\plan-intake-188",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\plan-intake-188",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "plan-intake-189",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\plan-intake-189",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\plan-intake-189",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "plan-intake-190",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\plan-intake-190",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\plan-intake-190",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "plan-intake-191",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\plan-intake-191",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\plan-intake-191",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "plan-to-worker",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\plan-to-worker",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\plan-to-worker",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "policies",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\policies",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\policies",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "post-mvp-close-055",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\post-mvp-close-055",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\post-mvp-close-055",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "postcheck-runner-104",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\postcheck-runner-104",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\postcheck-runner-104",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "preview-apply-gate-090",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\preview-apply-gate-090",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\preview-apply-gate-090",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "prompt-factory",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\prompt-factory",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\prompt-factory",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "proposal-merge-068",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\proposal-merge-068",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\proposal-merge-068",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "proposal-quality-058",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\proposal-quality-058",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\proposal-quality-058",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "readonly-human-review-159",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\readonly-human-review-159",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\readonly-human-review-159",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "readonly-mvp-close-161",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\readonly-mvp-close-161",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\readonly-mvp-close-161",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "readonly-mvp-regression-160",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\readonly-mvp-regression-160",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\readonly-mvp-regression-160",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "readonly-result-sim-158",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\readonly-result-sim-158",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\readonly-result-sim-158",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "readonly-worker-gate-157",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\readonly-worker-gate-157",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\readonly-worker-gate-157",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "real-cline-kanban-ollama-tests",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\real-cline-kanban-ollama-tests",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\real-cline-kanban-ollama-tests",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "real-execution-close-171",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\real-execution-close-171",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\real-execution-close-171",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "real-execution-launcher-184",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\real-execution-launcher-184",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\real-execution-launcher-184",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "real-execution-launcher-185",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\real-execution-launcher-185",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\real-execution-launcher-185",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "real-execution-launcher-186",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\real-execution-launcher-186",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\real-execution-launcher-186",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "real-execution-launcher-187",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\real-execution-launcher-187",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\real-execution-launcher-187",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "real-execution-regression-170",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\real-execution-regression-170",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\real-execution-regression-170",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "real-execution-template-172",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\real-execution-template-172",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\real-execution-template-172",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "real-execution-template-173",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\real-execution-template-173",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\real-execution-template-173",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "real-execution-template-174",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\real-execution-template-174",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\real-execution-template-174",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "real-execution-template-175",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\real-execution-template-175",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\real-execution-template-175",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "real-ollama-execution-162",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\real-ollama-execution-162",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\real-ollama-execution-162",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "real-result-review-169",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\real-result-review-169",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\real-result-review-169",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "real-task-proposal-114",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\real-task-proposal-114",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\real-task-proposal-114",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "real-value-task-112",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\real-value-task-112",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\real-value-task-112",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "receipts-rollback-053",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\receipts-rollback-053",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\receipts-rollback-053",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "registry",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\registry",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\registry",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "release-063",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\release-063",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\release-063",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "release-controls-083",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\release-controls-083",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\release-controls-083",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "release-governance-073",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\release-governance-073",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\release-governance-073",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "rollback-pack-103",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\rollback-pack-103",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\rollback-pack-103",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "roundtrip-038",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\roundtrip-038",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\roundtrip-038",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "safe-apply-close-111",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\safe-apply-close-111",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\safe-apply-close-111",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "safe-apply-regression-110",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\safe-apply-regression-110",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\safe-apply-regression-110",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "safe-apply-runtime-106",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\safe-apply-runtime-106",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\safe-apply-runtime-106",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "safety-manual-109",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\safety-manual-109",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\safety-manual-109",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "schemas",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\schemas",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\schemas",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "second-real-function-176",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\second-real-function-176",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\second-real-function-176",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "second-real-function-177",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\second-real-function-177",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\second-real-function-177",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "second-real-function-178",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\second-real-function-178",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\second-real-function-178",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "second-real-function-179",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\second-real-function-179",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\second-real-function-179",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "state",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\state",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\state",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "stress-test-200",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\stress-test-200",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\stress-test-200",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "stress-test-201",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\stress-test-201",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\stress-test-201",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "stress-test-202",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\stress-test-202",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\stress-test-202",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "stress-test-203",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\stress-test-203",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\stress-test-203",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "task-authorization-115",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\task-authorization-115",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\task-authorization-115",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "task-controlled-apply-116",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\task-controlled-apply-116",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\task-controlled-apply-116",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "task-evidence-118",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\task-evidence-118",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\task-evidence-118",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "task-intake-113",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\task-intake-113",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\task-intake-113",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "task-loop-close-121",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\task-loop-close-121",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\task-loop-close-121",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "task-loop-regression-120",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\task-loop-regression-120",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\task-loop-regression-120",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "third-real-function-180",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\third-real-function-180",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\third-real-function-180",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "third-real-function-181",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\third-real-function-181",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\third-real-function-181",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "third-real-function-182",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\third-real-function-182",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\third-real-function-182",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "third-real-function-183",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\third-real-function-183",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\third-real-function-183",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "unified-entrypoint-192",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\unified-entrypoint-192",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\unified-entrypoint-192",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "unified-entrypoint-193",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\unified-entrypoint-193",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\unified-entrypoint-193",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "unified-entrypoint-194",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\unified-entrypoint-194",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\unified-entrypoint-194",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "unified-entrypoint-195",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\unified-entrypoint-195",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\unified-entrypoint-195",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "unified-entrypoint-196",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\unified-entrypoint-196",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\unified-entrypoint-196",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "unified-entrypoint-197",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\unified-entrypoint-197",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\unified-entrypoint-197",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "unified-human-inbox-087",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\unified-human-inbox-087",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\unified-human-inbox-087",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "useful-apply-126",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\useful-apply-126",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\useful-apply-126",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "useful-authorization-125",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\useful-authorization-125",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\useful-authorization-125",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "useful-dashboard-refresh-129",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\useful-dashboard-refresh-129",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\useful-dashboard-refresh-129",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "useful-evidence-128",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\useful-evidence-128",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\useful-evidence-128",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "useful-input-123",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\useful-input-123",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\useful-input-123",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "useful-loop-close-131",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\useful-loop-close-131",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\useful-loop-close-131",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "useful-loop-regression-130",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\useful-loop-regression-130",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\useful-loop-regression-130",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "useful-proposal-124",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\useful-proposal-124",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\useful-proposal-124",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "useful-task-122",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\useful-task-122",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\useful-task-122",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "value-metrics-081",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\value-metrics-081",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\value-metrics-081",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "value-pipeline-071",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\value-pipeline-071",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\value-pipeline-071",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "workbench-close-095",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\workbench-close-095",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\workbench-close-095",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "workbench-regression-094",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\workbench-regression-094",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\workbench-regression-094",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "worker-import-049",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\worker-import-049",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\worker-import-049",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "worker-proposal-intake-078",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\worker-proposal-intake-078",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\worker-proposal-intake-078",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "worker-queue-067",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\worker-queue-067",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\worker-queue-067",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "worker-real-056",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\worker-real-056",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\worker-real-056",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "worker-response-057",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\worker-response-057",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\worker-response-057",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  },
+                  {
+                      "package_id":  "worker-response-import-020",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\worker-response-import-020",
+                      "classification":  "MODULE_CANDIDATE_NEEDS_IDENTITY",
+                      "has_module_json":  false,
+                      "official_target":  "data\\_OFFICIAL_MODULES\\worker-response-import-020",
+                      "action":  "CREATE_MODULE_JSON_THEN_OFFICIALIZE_GATED"
+                  }
+              ],
+    "next":  "E02_CREATE_OFFICIALIZATION_PLAN_NO_APPLY"
+}

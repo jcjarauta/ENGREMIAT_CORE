@@ -1,0 +1,102 @@
+﻿{
+    "schema":  "engremiat.operational_loop_regression_audit.v1",
+    "objective":  "ENGREMIAT_REAL_VALUE_TASK_EXECUTION_LOOP_132_141_OPERATIONAL_USEFUL_TASK",
+    "stage":  "E140",
+    "block":  "B140.1",
+    "step":  "P140.1.1",
+    "created_at":  "2026-06-17T14:52:57",
+    "required_count":  17,
+    "found_count":  17,
+    "missing_count":  0,
+    "items":  [
+                  {
+                      "path":  "data/operational-task-132/operational-task-intent.json",
+                      "exists":  true,
+                      "size_bytes":  1010
+                  },
+                  {
+                      "path":  "reports/operational-task-132/e132-operational-task-readiness-report.json",
+                      "exists":  true,
+                      "size_bytes":  1031
+                  },
+                  {
+                      "path":  "data/operational-input-133/operational-input-package.json",
+                      "exists":  true,
+                      "size_bytes":  1296
+                  },
+                  {
+                      "path":  "reports/operational-input-133/e133-operational-input-readiness-report.json",
+                      "exists":  true,
+                      "size_bytes":  986
+                  },
+                  {
+                      "path":  "data/operational-proposal-134/operational-artifact-proposal.json",
+                      "exists":  true,
+                      "size_bytes":  2619
+                  },
+                  {
+                      "path":  "reports/operational-proposal-134/e134-operational-proposal-readiness-report.json",
+                      "exists":  true,
+                      "size_bytes":  1003
+                  },
+                  {
+                      "path":  "data/operational-authorization-135/operational-authorization-decision.json",
+                      "exists":  true,
+                      "size_bytes":  925
+                  },
+                  {
+                      "path":  "reports/operational-authorization-135/e135-operational-authorization-readiness-report.json",
+                      "exists":  true,
+                      "size_bytes":  1061
+                  },
+                  {
+                      "path":  "data/operational-apply-136/operational-apply-result.json",
+                      "exists":  true,
+                      "size_bytes":  743
+                  },
+                  {
+                      "path":  "data/operational-apply-136/OPERATIONAL_ARTIFACT.md",
+                      "exists":  true,
+                      "size_bytes":  2589
+                  },
+                  {
+                      "path":  "reports/operational-apply-136/e136-operational-apply-readiness-report.json",
+                      "exists":  true,
+                      "size_bytes":  1128
+                  },
+                  {
+                      "path":  "reports/operational-postcheck-137/e137-operational-postcheck-readiness-report.json",
+                      "exists":  true,
+                      "size_bytes":  1024
+                  },
+                  {
+                      "path":  "data/operational-evidence-138/operational-evidence-ledger.jsonl",
+                      "exists":  true,
+                      "size_bytes":  653
+                  },
+                  {
+                      "path":  "reports/operational-evidence-138/e138-operational-evidence-readiness-report.json",
+                      "exists":  true,
+                      "size_bytes":  994
+                  },
+                  {
+                      "path":  "data/operational-dashboard-refresh-139/operational-dashboard-refresh-model.json",
+                      "exists":  true,
+                      "size_bytes":  697
+                  },
+                  {
+                      "path":  "dashboard/operational-value-loop/index.html",
+                      "exists":  true,
+                      "size_bytes":  3238
+                  },
+                  {
+                      "path":  "reports/operational-dashboard-refresh-139/e139-operational-dashboard-readiness-report.json",
+                      "exists":  true,
+                      "size_bytes":  1020
+                  }
+              ],
+    "audit_passed":  true,
+    "network_used":  false,
+    "git_write":  false,
+    "destructive_actions":  false
+}

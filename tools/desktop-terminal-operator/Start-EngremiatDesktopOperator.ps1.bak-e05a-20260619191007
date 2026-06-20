@@ -1,0 +1,59 @@
+﻿$ErrorActionPreference="Stop"
+[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+$ScriptDir=Split-Path -Parent $MyInvocation.MyCommand.Path
+$Root=(Resolve-Path (Join-Path $ScriptDir "..\..")).Path
+Set-Location -LiteralPath $Root
+$Router=Join-Path $Root "tools\desktop-terminal-operator\eng-router.ps1"
+$StatePath=Join-Path $Root "data\operator-state\active-context.json"
+$SessionInsideProject=$false
+$SessionInsideModule=$false
+
+function Get-State{try{if(Test-Path -LiteralPath $StatePath){return (Get-Content -LiteralPath $StatePath -Raw -Encoding UTF8|ConvertFrom-Json)}}catch{};return $null}
+function Save-State($s){try{$s|Add-Member -Force -NotePropertyName updated_at -NotePropertyValue (Get-Date).ToString("s");$s|ConvertTo-Json -Depth 100|Set-Content -LiteralPath $StatePath -Encoding UTF8}catch{}}
+function Enter-From-State{$s=Get-State;if($s -and $s.active_project){$script:SessionInsideProject=$true}else{$script:SessionInsideProject=$false};if($s -and $s.active_module){$script:SessionInsideModule=$true}else{$script:SessionInsideModule=$false}}
+function Get-EngremiatPrompt{param([bool]$InsideProject,[bool]$InsideModule);if(!$InsideProject){return "ENGREMIAT"};$s=Get-State;if($s){$p="";$m="";if($s.active_project){$p=Split-Path ([string]$s.active_project) -Leaf};if($InsideModule -and $s.active_module){$m=[string]$s.active_module};if($p -and $m){return ("ENGREMIAT["+$p+"/"+$m+"]")};if($p){return ("ENGREMIAT["+$p+"]")}};return "ENGREMIAT"}
+function Open-ProjectMenu{& powershell -NoProfile -ExecutionPolicy Bypass -File $Router "menu-proyecto";Enter-From-State}
+function Open-GlobalMenu{& powershell -NoProfile -ExecutionPolicy Bypass -File $Router "abrir-proyecto";Enter-From-State}
+
+function Go-Back{
+  if($script:SessionInsideModule){
+    $s=Get-State
+    if($s){$s.mode="project";$s.active_module="";$s.active_module_vault="";$s.next="entrar_modulo_o_crear_modulo_en_proyecto_activo";Save-State $s}
+    $script:SessionInsideModule=$false
+    Write-Host "OK atras=modulo_a_proyecto" -ForegroundColor Green
+    Write-Host ""
+    Open-ProjectMenu
+    return
+  }
+  if($script:SessionInsideProject){
+    $s=Get-State
+    if($s){$s.mode="global";$s.active_project="";$s.active_master_vault="";$s.active_module="";$s.active_module_vault="";$s.next="abrir-proyecto_or_nuevo-proyecto";Save-State $s}
+    $script:SessionInsideProject=$false;$script:SessionInsideModule=$false
+    Write-Host "OK atras=proyecto_a_global" -ForegroundColor Green
+    Write-Host ""
+    Open-GlobalMenu
+    return
+  }
+  Write-Host "WARN ya_estas_en_global" -ForegroundColor Yellow
+  Write-Host ""
+  Open-GlobalMenu
+}
+
+Clear-Host
+Write-Host "ENGREMIAT TERMINAL OPERATOR" -ForegroundColor Cyan
+Write-Host ("Workspace: "+$Root) -ForegroundColor DarkCyan
+Write-Host ""
+& powershell -NoProfile -ExecutionPolicy Bypass -File $Router estado
+Write-Host ""
+
+while($true){
+  $prompt=Get-EngremiatPrompt -InsideProject:$SessionInsideProject -InsideModule:$SessionInsideModule
+  $cmd=(Read-Host $prompt).Trim()
+  $lower=$cmd.ToLowerInvariant()
+  if($lower -in @("salir","exit","q")){break}
+  if($lower -in @("atras","atrás","volver","back","..")){Go-Back;Write-Host "";continue}
+  if([string]::IsNullOrWhiteSpace($cmd)){$cmd="estado";$lower="estado"}
+  & powershell -NoProfile -ExecutionPolicy Bypass -File $Router $cmd
+  if($lower.StartsWith("abrir-proyecto") -or $lower -eq "abrir proyecto" -or $lower.StartsWith("abrir-modulo") -or $lower -eq "abrir modulo" -or $lower.StartsWith("nuevo-modulo") -or $lower -eq "menu-proyecto"){Enter-From-State}
+  Write-Host ""
+}

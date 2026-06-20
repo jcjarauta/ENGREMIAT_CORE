@@ -1,0 +1,27 @@
+﻿{
+    "package_id":  "ENGREMIAT_UX_SYSTEM_001",
+    "stage":  "E59_CALIBRATE_PROJECTS_BLOCKERS_VIEW",
+    "created_at":  "2026-06-20T10:31:14",
+    "status":  "PASS",
+    "decision":  "Separar bloqueo critico de advertencia",
+    "critical_blockers":  [
+                              "sin_modulos_dir",
+                              "sin_modulos"
+                          ],
+    "warning_signals":  [
+                            "sin_project_json",
+                            "sin_reports",
+                            "sin_actividad_7d"
+                        ],
+    "view_columns":  [
+                         "nombre",
+                         "madurez",
+                         "bloq",
+                         "mod",
+                         "rep",
+                         "causa"
+                     ],
+    "launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1",
+    "backup":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\backup-projects-center-before-e59-20260620-103114.ps1",
+    "next":  "RUN_PROJECTS_BLOCKERS_CALIBRATED_TEST"
+}

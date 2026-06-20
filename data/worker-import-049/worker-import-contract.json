@@ -1,0 +1,46 @@
+﻿{
+    "objective":  "ENGREMIAT_POST_MVP_OPERATIONAL_DAILY_LOOP_046_055",
+    "stage":  "E49",
+    "stage_name":  "Worker Import Real Preview",
+    "purpose":  "Importar propuesta worker real o simulada sin ejecución",
+    "contract_id":  "E49_WORKER_IMPORT_CONTRACT",
+    "accepted_input":  [
+                           "JSON local proposal",
+                           "Markdown local proposal",
+                           "safe sample proposal"
+                       ],
+    "required_fields":  [
+                            "proposal_id",
+                            "source_worker",
+                            "title",
+                            "summary",
+                            "risk",
+                            "recommended_decision",
+                            "requires_human_gate",
+                            "apply_executed",
+                            "auto_apply",
+                            "remote_execution",
+                            "git_write"
+                        ],
+    "rules":  [
+                  "No ejecutar worker",
+                  "No aplicar propuesta",
+                  "No modificar codigo fuente",
+                  "No red externa",
+                  "No git write",
+                  "Importar como evidencia revisable",
+                  "Decision humana posterior"
+              ],
+    "security":  {
+                     "apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "worker_executed":  false,
+                     "import_only":  true,
+                     "human_decision_required":  true
+                 },
+    "next":  "E50_OPERATIONAL_DASHBOARD",
+    "created_at":  "2026-06-17T11:59:30"
+}

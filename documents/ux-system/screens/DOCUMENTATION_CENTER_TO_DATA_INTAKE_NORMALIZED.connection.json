@@ -1,0 +1,15 @@
+﻿{
+    "connection_id":  "DOCUMENTATION_CENTER_TO_DATA_INTAKE_NORMALIZED",
+    "created_at":  "2026-06-20T10:16:11",
+    "status":  "ACTIVE",
+    "from_launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-MEMORY-DOCUMENTATION-CENTER-NORMALIZED.ps1",
+    "to_launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-DATA-INTAKE-CENTER-NORMALIZED.ps1",
+    "legacy_preserved":  true,
+    "legacy_not_used_by_normalized_doc_center":  true,
+    "validated":  [
+                      "both launchers parse",
+                      "doc center now points to normalized Data Intake",
+                      "legacy launcher preserved"
+                  ],
+    "next":  "RUN_DOC_CENTER_TO_DATA_INTAKE_NORMALIZED_TEST"
+}

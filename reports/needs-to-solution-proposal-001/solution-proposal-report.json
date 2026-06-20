@@ -1,0 +1,84 @@
+﻿{
+    "package_id":  "ENGREMIAT_NEEDS_TO_SOLUTION_PROPOSAL_001",
+    "status":  "PASS",
+    "readiness":  100,
+    "needs_report":  "C:\\ENGREMIAT_CORE\\reports\\needs-to-solution-proposal-001\\needs-detection-report.json",
+    "proposals_count":  2,
+    "proposals":  [
+                      {
+                          "proposal_id":  "PROPOSAL-NEED-COMPOSITION-001",
+                          "need_id":  "NEED-COMPOSITION-001",
+                          "need_type":  "COMPOSITION_GAP",
+                          "recommended_solution":  "ENGREMIAT_RESOURCE_COMPOSER_OLLAMA_READY_001",
+                          "proposal_type":  "CREATE_NEXT_MODULE",
+                          "required_capabilities":  [
+                                                        "RESOURCE_COMPOSITION",
+                                                        "BLUEPRINT_GENERATION"
+                                                    ],
+                          "required_resources":  [
+                                                     "ENGREMIAT_RESOURCE_LIBRARY_STANDARD_001",
+                                                     "ENGREMIAT_TOOL_ADAPTER_GATE_001"
+                                                 ],
+                          "missing_resources":  [
+                                                    "RESOURCE_COMPOSER"
+                                                ],
+                          "expected_outputs":  [
+                                                   "contract",
+                                                   "schema",
+                                                   "dry_run",
+                                                   "validation_report",
+                                                   "manual"
+                                               ],
+                          "priority":  "HIGH",
+                          "risk":  "MEDIUM",
+                          "gates":  [
+                                        "HUMAN_REVIEW_REQUIRED"
+                                    ],
+                          "evidence":  [
+                                           "needs-detection-report.json"
+                                       ],
+                          "next_action":  "ENGREMIAT_RESOURCE_COMPOSER_OLLAMA_READY_001",
+                          "status":  "PROPOSED"
+                      },
+                      {
+                          "proposal_id":  "PROPOSAL-NEED-COMPOSITION-HEALTH-001",
+                          "need_id":  "NEED-COMPOSITION-HEALTH-001",
+                          "need_type":  "SYSTEM_REPRODUCTION_GAP",
+                          "recommended_solution":  "ENGREMIAT_RESOURCE_COMPOSER_OLLAMA_READY_001",
+                          "proposal_type":  "CREATE_NEXT_MODULE",
+                          "required_capabilities":  [
+                                                        "RESOURCE_COMPOSITION"
+                                                    ],
+                          "required_resources":  [
+
+                                                 ],
+                          "missing_resources":  [
+                                                    "COMPOSER",
+                                                    "COMPOSITION_VALIDATOR"
+                                                ],
+                          "expected_outputs":  [
+                                                   "contract",
+                                                   "schema",
+                                                   "dry_run",
+                                                   "validation_report",
+                                                   "manual"
+                                               ],
+                          "priority":  "HIGH",
+                          "risk":  "MEDIUM",
+                          "gates":  [
+                                        "HUMAN_REVIEW_REQUIRED"
+                                    ],
+                          "evidence":  [
+                                           "needs-detection-report.json"
+                                       ],
+                          "next_action":  "ENGREMIAT_RESOURCE_COMPOSER_OLLAMA_READY_001",
+                          "status":  "PROPOSED"
+                      }
+                  ],
+    "local_only":  true,
+    "proposal_execution":  false,
+    "ollama_inference":  false,
+    "git_write":  false,
+    "network":  false,
+    "next":  "E06_VALIDATION"
+}

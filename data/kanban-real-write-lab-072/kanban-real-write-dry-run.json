@@ -1,0 +1,23 @@
+﻿{
+    "simulation":  "KANBAN_REAL_WRITE_DRY_RUN",
+    "dry_run_only":  true,
+    "kanban_real_write":  false,
+    "real_write_executed":  false,
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "simulated_action":  "CREATE_OR_UPDATE_KANBAN_CARD",
+    "execution_status":  "NOT_EXECUTED",
+    "authorization_status":  "PENDING_EXPLICIT_HUMAN_AUTHORIZATION",
+    "future_requirements":  [
+                                "UNLOCK_GATE",
+                                "HUMAN_APPROVAL",
+                                "ROLLBACK",
+                                "POSTCHECK",
+                                "RECEIPT"
+                            ],
+    "created_utc":  "2026-06-17T10:42:59.1731238Z"
+}

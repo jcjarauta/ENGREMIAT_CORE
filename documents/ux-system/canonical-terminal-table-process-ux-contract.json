@@ -1,0 +1,93 @@
+﻿{
+    "package_id":  "ENGREMIAT_UX_SYSTEM_001",
+    "stage":  "E60_TERMINAL_TABLE_AND_PROCESS_UX_MODEL",
+    "created_at":  "2026-06-20T10:33:21",
+    "status":  "PASS",
+    "purpose":  "Modelo canonico para representar tablas y procesos vivos en terminal",
+    "principles":  [
+                       "La terminal debe dar vision operativa, no solo listar carpetas",
+                       "Los porcentajes se acompañan de barra visual y estado semantico",
+                       "Cada fila debe indicar trabajo, bloqueo y siguiente accion",
+                       "Una vista debe poder refrescarse con Enter sin perder contexto",
+                       "Los workers se representan como señales: IDLE, RUNNING, WAITING, BLOCKED, DONE, ERROR"
+                   ],
+    "table_model":  {
+                        "required_columns":  [
+                                                 "N",
+                                                 "NOMBRE",
+                                                 "FASE",
+                                                 "PROGRESO",
+                                                 "WORKER",
+                                                 "BLOQ",
+                                                 "NEXT"
+                                             ],
+                        "optional_columns":  [
+                                                 "MOD",
+                                                 "REP",
+                                                 "AGE",
+                                                 "OWNER",
+                                                 "RISK"
+                                             ],
+                        "max_visible_rows":  20,
+                        "overflow_rule":  "si hay mas filas, mostrar total y permitir filtros en fase posterior",
+                        "row_status":  [
+                                           "OK",
+                                           "WARN",
+                                           "BLOCK",
+                                           "RUN",
+                                           "DONE",
+                                           "ERR",
+                                           "IDLE"
+                                       ]
+                    },
+    "progress_model":  {
+                           "bar_width":  10,
+                           "symbols":  {
+                                           "filled":  "#",
+                                           "empty":  "-",
+                                           "running":  "\u003e",
+                                           "blocked":  "!",
+                                           "done":  "✓"
+                                       },
+                           "examples":  [
+                                            "[####------] 40%",
+                                            "[####\u003e-----] RUN",
+                                            "[!!!!------] BLOCK",
+                                            "[##########] DONE"
+                                        ]
+                       },
+    "process_model":  {
+                          "states":  [
+                                         "IDLE",
+                                         "QUEUED",
+                                         "RUNNING",
+                                         "WAITING_HUMAN",
+                                         "BLOCKED",
+                                         "DONE",
+                                         "ERROR"
+                                     ],
+                          "screen_pattern":  [
+                                                 "header canonico",
+                                                 "resumen agregado",
+                                                 "tabla cartera",
+                                                 "detalle seleccionado",
+                                                 "acciones locales",
+                                                 "refresco Enter"
+                                             ]
+                      },
+    "worker_realtime_model":  {
+                                  "source_now":  "heuristica local desde reports, locks, lastwrite y carpetas",
+                                  "source_future":  "eventos worker en JSONL o DB local",
+                                  "refresh":  "Enter manual ahora; watcher/auto-refresh en fase posterior",
+                                  "fields":  [
+                                                 "worker_id",
+                                                 "task_id",
+                                                 "state",
+                                                 "heartbeat_at",
+                                                 "current_step",
+                                                 "blocked_reason",
+                                                 "next_action"
+                                             ]
+                              },
+    "next":  "E61_APPLY_TABLE_PROCESS_UX_TO_PROJECTS_VIEW"
+}

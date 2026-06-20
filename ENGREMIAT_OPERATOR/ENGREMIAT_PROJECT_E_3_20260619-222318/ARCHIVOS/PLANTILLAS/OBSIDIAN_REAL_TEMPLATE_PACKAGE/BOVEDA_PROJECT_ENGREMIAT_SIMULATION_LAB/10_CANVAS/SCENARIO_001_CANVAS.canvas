@@ -1,0 +1,152 @@
+﻿{
+    "nodes":  [
+                  {
+                      "id":  "objective",
+                      "type":  "file",
+                      "file":  "01_OBJECTIVES/OBJ_001_VISUAL_TASK_MANAGEMENT_MODULE.md",
+                      "x":  -760,
+                      "y":  0,
+                      "width":  330,
+                      "height":  150,
+                      "color":  "2"
+                  },
+                  {
+                      "id":  "roadmap",
+                      "type":  "file",
+                      "file":  "02_ROADMAPS/ROADMAP_001_VISUAL_TASK_MANAGEMENT_MODULE.md",
+                      "x":  -380,
+                      "y":  0,
+                      "width":  330,
+                      "height":  150,
+                      "color":  "2"
+                  },
+                  {
+                      "id":  "task1",
+                      "type":  "file",
+                      "file":  "03_SIMULATED_TASKS/TASK_001_DEFINE_MODULE_SCOPE.md",
+                      "x":  0,
+                      "y":  -180,
+                      "width":  320,
+                      "height":  140,
+                      "color":  "3"
+                  },
+                  {
+                      "id":  "task2",
+                      "type":  "file",
+                      "file":  "03_SIMULATED_TASKS/TASK_002_CREATE_VISUAL_STRUCTURE.md",
+                      "x":  0,
+                      "y":  0,
+                      "width":  320,
+                      "height":  140,
+                      "color":  "3"
+                  },
+                  {
+                      "id":  "task3",
+                      "type":  "file",
+                      "file":  "03_SIMULATED_TASKS/TASK_003_VALIDATE_EVIDENCE.md",
+                      "x":  0,
+                      "y":  180,
+                      "width":  320,
+                      "height":  140,
+                      "color":  "3"
+                  },
+                  {
+                      "id":  "workers",
+                      "type":  "file",
+                      "file":  "04_SIMULATED_WORKERS/SIM_WORKER_PLANNER.md",
+                      "x":  420,
+                      "y":  -180,
+                      "width":  320,
+                      "height":  140,
+                      "color":  "4"
+                  },
+                  {
+                      "id":  "gate",
+                      "type":  "file",
+                      "file":  "05_HUMAN_GATES/GATE_001_APPROVE_ROADMAP.md",
+                      "x":  420,
+                      "y":  0,
+                      "width":  320,
+                      "height":  140,
+                      "color":  "5"
+                  },
+                  {
+                      "id":  "result",
+                      "type":  "file",
+                      "file":  "08_RESULTS/SCENARIO_001_visual_task_management_module/RESULT_001_SCENARIO_STATUS.md",
+                      "x":  800,
+                      "y":  0,
+                      "width":  340,
+                      "height":  150,
+                      "color":  "6"
+                  },
+                  {
+                      "id":  "learning",
+                      "type":  "file",
+                      "file":  "09_LEARNING/LEARNING_001_SCENARIO_SETUP.md",
+                      "x":  1180,
+                      "y":  0,
+                      "width":  340,
+                      "height":  150,
+                      "color":  "6"
+                  }
+              ],
+    "edges":  [
+                  {
+                      "id":  "e1",
+                      "fromNode":  "objective",
+                      "fromSide":  "right",
+                      "toNode":  "roadmap",
+                      "toSide":  "left"
+                  },
+                  {
+                      "id":  "e2",
+                      "fromNode":  "roadmap",
+                      "fromSide":  "right",
+                      "toNode":  "task1",
+                      "toSide":  "left"
+                  },
+                  {
+                      "id":  "e3",
+                      "fromNode":  "roadmap",
+                      "fromSide":  "right",
+                      "toNode":  "task2",
+                      "toSide":  "left"
+                  },
+                  {
+                      "id":  "e4",
+                      "fromNode":  "roadmap",
+                      "fromSide":  "right",
+                      "toNode":  "task3",
+                      "toSide":  "left"
+                  },
+                  {
+                      "id":  "e5",
+                      "fromNode":  "task1",
+                      "fromSide":  "right",
+                      "toNode":  "workers",
+                      "toSide":  "left"
+                  },
+                  {
+                      "id":  "e6",
+                      "fromNode":  "task2",
+                      "fromSide":  "right",
+                      "toNode":  "gate",
+                      "toSide":  "left"
+                  },
+                  {
+                      "id":  "e7",
+                      "fromNode":  "gate",
+                      "fromSide":  "right",
+                      "toNode":  "result",
+                      "toSide":  "left"
+                  },
+                  {
+                      "id":  "e8",
+                      "fromNode":  "result",
+                      "fromSide":  "right",
+                      "toNode":  "learning",
+                      "toSide":  "left"
+                  }
+              ]
+}

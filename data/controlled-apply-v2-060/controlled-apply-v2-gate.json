@@ -1,0 +1,27 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_REAL_WORKER_DAILY_VALUE_LOOP_056_065",
+    "stage":  "E60",
+    "gate_id":  "E60_CONTROLLED_APPLY_V2_GATE_001",
+    "status":  "APPROVED_FOR_ONE_LOCAL_REVERSIBLE_CHANGE",
+    "authorization":  "USER_REQUESTED_E60_CONTROLLED_LOCAL_APPLY_V2_IN_CURRENT_STEP",
+    "approved_scope":  "create_or_update data/controlled-apply-v2-060/controlled-apply-v2-output.json only",
+    "source_proposal":  "data/worker-response-057/worker-response-sample.md",
+    "quality_reference":  "reports/proposal-quality-058/proposal-quality-check-report.json",
+    "approval_reference":  "data/approval-console-059/proposal-approval-gate.json",
+    "forbidden":  [
+                      "remote_execution",
+                      "external_network",
+                      "git_write",
+                      "auto_apply",
+                      "free_apply",
+                      "kanban_real_write",
+                      "source_code_mutation"
+                  ],
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "created_at":  "2026-06-17T12:22:51"
+}

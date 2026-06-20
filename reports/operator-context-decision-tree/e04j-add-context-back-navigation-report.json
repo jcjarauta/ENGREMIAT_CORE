@@ -1,0 +1,22 @@
+﻿{
+    "package_id":  "ENGREMIAT_OPERATOR_CONTEXT_AND_DECISION_TREE_001",
+    "stage":  "E04J_ADD_CONTEXT_BACK_NAVIGATION",
+    "status":  "PASS",
+    "readiness":  100,
+    "launcher":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1",
+    "router":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-router.ps1",
+    "backup_launcher":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1.bak-e04j-20260619182916",
+    "backup_router":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-router.ps1.bak-e04j-20260619182916",
+    "commands":  [
+                     "atras",
+                     "volver",
+                     "back",
+                     ".."
+                 ],
+    "behavior":  [
+                     "module_to_project",
+                     "project_to_global",
+                     "global_warn"
+                 ],
+    "next":  "relaunch_and_test_atras"
+}

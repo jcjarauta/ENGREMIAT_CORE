@@ -1,0 +1,17 @@
+﻿{
+    "package_id":  "ENGREMIAT_TASK_PACKET_TO_MODULE_INTAKE_001",
+    "stage":  "E01_CONTRACT_TASK_PACKET_TO_MODULE_INTAKE",
+    "status":  "PASS",
+    "readiness":  100,
+    "checks":  {
+                   "previous_task_packet_exists":  true,
+                   "previous_close_report_exists":  true,
+                   "official_modules_dir_exists":  true
+               },
+    "contract":  "C:\\ENGREMIAT_CORE\\data\\task-packet-to-module-intake-001\\task-packet-to-module-intake-contract.json",
+    "local_only":  true,
+    "core_changes":  false,
+    "git_write":  false,
+    "real_intake_write":  false,
+    "next":  "E02_CANDIDATE_INTAKE_SCHEMA"
+}

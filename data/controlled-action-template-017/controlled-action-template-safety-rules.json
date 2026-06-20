@@ -1,0 +1,45 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_ACTION_TEMPLATE_017",
+    "stage":  "E01",
+    "rules":  [
+                  {
+                      "id":  "SAFETY-001",
+                      "rule":  "Gate por defecto DEFER",
+                      "required":  true
+                  },
+                  {
+                      "id":  "SAFETY-002",
+                      "rule":  "No apply libre",
+                      "required":  true
+                  },
+                  {
+                      "id":  "SAFETY-003",
+                      "rule":  "No remote execution",
+                      "required":  true
+                  },
+                  {
+                      "id":  "SAFETY-004",
+                      "rule":  "No git write sin autorizacion explicita",
+                      "required":  true
+                  },
+                  {
+                      "id":  "SAFETY-005",
+                      "rule":  "Receipt obligatorio incluso si se bloquea",
+                      "required":  true
+                  },
+                  {
+                      "id":  "SAFETY-006",
+                      "rule":  "Postcheck obligatorio tras plan o bloqueo",
+                      "required":  true
+                  }
+              ],
+    "default_flags":  {
+                          "gate":  "DEFER",
+                          "apply_executed":  false,
+                          "auto_apply":  false,
+                          "remote_execution":  false,
+                          "git_write":  false,
+                          "human_confirmation":  false,
+                          "execution_allowed":  false
+                      }
+}

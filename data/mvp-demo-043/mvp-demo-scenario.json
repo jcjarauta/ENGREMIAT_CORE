@@ -1,0 +1,56 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_HUMAN_USABLE_036_045",
+    "stage":  "E43",
+    "scenario_id":  "E43_MVP_DEMO_10_MIN",
+    "title":  "Demo reproducible de 10 minutos del ciclo humano-maquina",
+    "duration_minutes":  10,
+    "flow":  [
+                 {
+                     "expected":  "dashboard human-start visible",
+                     "step":  "Abrir pantalla inicial",
+                     "command":  ".\\eng.ps1 start",
+                     "minute":  "0-1"
+                 },
+                 {
+                     "expected":  "estado local y E43/E44",
+                     "step":  "Mostrar estado y siguiente paso",
+                     "command":  ".\\eng.ps1 status; .\\eng.ps1 next",
+                     "minute":  "1-2"
+                 },
+                 {
+                     "expected":  "prompt preparado sin enviar",
+                     "step":  "Mostrar prompt roundtrip",
+                     "command":  ".\\eng.ps1 prompt",
+                     "minute":  "2-4"
+                 },
+                 {
+                     "expected":  "receipt de decision",
+                     "step":  "Mostrar consola decision",
+                     "command":  ".\\tools\\eng-decision.ps1 -Decision DEFER -Reason demo_safe_defer",
+                     "minute":  "4-6"
+                 },
+                 {
+                     "expected":  "kanban view_only",
+                     "step":  "Mostrar kanban preview",
+                     "command":  "abrir dashboard/kanban-mvp/index.html",
+                     "minute":  "6-8"
+                 },
+                 {
+                     "expected":  "evidencia navegable",
+                     "step":  "Mostrar memoria y demo dashboard",
+                     "command":  "abrir ENGREMIAT_MEMORY/dashboard/memory/index.html y dashboard/mvp-demo/index.html",
+                     "minute":  "8-10"
+                 }
+             ],
+    "security":  {
+                     "apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "demo_local_only":  true,
+                     "human_decision_final":  true
+                 },
+    "next":  "E44_FINAL_HARDENING",
+    "created_at":  "2026-06-17T11:46:21"
+}

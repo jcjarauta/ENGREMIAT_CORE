@@ -1,0 +1,73 @@
+﻿{
+    "package_id":  "ENGREMIAT_NEXT_MODULES_GLOBAL_VALIDATOR_001",
+    "status":  "PASS",
+    "readiness":  100,
+    "next_modules_root":  "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES",
+    "modules_scanned":  4,
+    "errors":  0,
+    "warnings":  3,
+    "items":  [
+                  {
+                      "folder":  "ENGREMIAT_EXAMPLE_FROM_SHEETS_001",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_EXAMPLE_FROM_SHEETS_001",
+                      "module_id":  "ENGREMIAT_EXAMPLE_FROM_SHEETS_001",
+                      "active":  false,
+                      "errors":  [
+
+                                 ],
+                      "warnings":  [
+
+                                   ],
+                      "status":  "PASS"
+                  },
+                  {
+                      "folder":  "ENGREMIAT_JSON_MODULE_FACTORY_001",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_JSON_MODULE_FACTORY_001",
+                      "module_id":  "ENGREMIAT_JSON_MODULE_FACTORY_001",
+                      "active":  null,
+                      "errors":  [
+
+                                 ],
+                      "warnings":  [
+                                       "missing_gates_dir"
+                                   ],
+                      "status":  "PASS"
+                  },
+                  {
+                      "folder":  "ENGREMIAT_NEXT_MODULES_GLOBAL_VALIDATOR_001",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_NEXT_MODULES_GLOBAL_VALIDATOR_001",
+                      "module_id":  "ENGREMIAT_NEXT_MODULES_GLOBAL_VALIDATOR_001",
+                      "active":  null,
+                      "errors":  [
+
+                                 ],
+                      "warnings":  [
+                                       "missing_schemas_dir",
+                                       "missing_gates_dir"
+                                   ],
+                      "status":  "PASS"
+                  },
+                  {
+                      "folder":  "ENGREMIAT_SHEETS_MODULE_INITIATOR_001",
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_SHEETS_MODULE_INITIATOR_001",
+                      "module_id":  "ENGREMIAT_SHEETS_MODULE_INITIATOR_001",
+                      "active":  null,
+                      "errors":  [
+
+                                 ],
+                      "warnings":  [
+                                       "missing_gates_dir"
+                                   ],
+                      "status":  "PASS"
+                  }
+              ],
+    "policy":  {
+                   "local_only":  true,
+                   "core_changes":  false,
+                   "real_module_activation":  false,
+                   "git_write":  false,
+                   "network":  false,
+                   "real_sheets_write":  false
+               },
+    "next":  "ENGREMIAT_SHEETS_REAL_GATE_INTEGRATION_001"
+}

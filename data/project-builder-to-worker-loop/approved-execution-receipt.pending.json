@@ -1,0 +1,27 @@
+﻿{
+    "package_id":  "ENGREMIAT_PROJECT_BUILDER_TO_WORKER_LOOP_001",
+    "stage":  "E06_BUILD_APPROVED_EXECUTION_RECEIPT_MODEL",
+    "receipt_id":  "approved-execution-receipt.pending.v1",
+    "status":  "PENDING",
+    "human_decision":  "PENDING",
+    "approved_scope":  "NONE",
+    "approved_operations":  [
+
+                            ],
+    "explicit_authorization_phrase":  "PENDING",
+    "risk_acknowledgement":  "PENDING",
+    "rollback_expectation":  "PENDING",
+    "evidence_required":  [
+                              "execution_plan",
+                              "dry_run_report",
+                              "human_review_receipt"
+                          ],
+    "execute_now":  false,
+    "worker_execution":  false,
+    "network":  false,
+    "git_write":  false,
+    "external_ai":  false,
+    "authorization_status":  "NOT_GRANTED",
+    "created_at":  "2026-06-19T09:44:38",
+    "next":  "WAIT_HUMAN_APPROVAL_OR_E07_DRY_RUN_PLAN_ONLY"
+}

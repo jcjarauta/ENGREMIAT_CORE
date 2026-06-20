@@ -1,0 +1,22 @@
+﻿{
+    "contract_id":  "needs-to-solution-contract.v1",
+    "module_id":  "ENGREMIAT_NEEDS_TO_SOLUTION_PROPOSAL_001",
+    "principle":  "ENGREMIAT puede detectar necesidades y proponer soluciones, pero no ejecutarlas sin gate humano.",
+    "flow":  [
+                 "OBSERVE_LOCAL_STATE",
+                 "DETECT_SIGNALS",
+                 "CALCULATE_GAPS",
+                 "CREATE_NEEDS",
+                 "PRIORITIZE_NEEDS",
+                 "PROPOSE_SOLUTIONS",
+                 "HUMAN_REVIEW"
+             ],
+    "rules":  [
+                  "Solo lectura local",
+                  "No IA real en este MVP",
+                  "No compositor real",
+                  "No escritura fuera del modulo y reports",
+                  "Toda propuesta debe incluir evidencia y gate",
+                  "Toda solucion recomendada debe enlazar capacidades, recursos o modulos faltantes"
+              ]
+}

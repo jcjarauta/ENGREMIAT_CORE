@@ -1,0 +1,25 @@
+{
+    "package_id":  "ENGREMIAT_KNOWLEDGE_TO_TASK_PACKET_001",
+    "stage":  "E02_TASK_PACKET_SCHEMA_AND_VALIDATOR",
+    "artifact":  "task-packet-validator-contract.json",
+    "status":  "DEFINED",
+    "purpose":  "Validar task packets antes de proyectarlos a Obsidian, Cline o Kanban",
+    "input":  "task-packet-schema.json + task-packet-dry-run.json",
+    "output":  "task-packet-validation-report.json",
+    "rules":  [
+                  "required_fields_present",
+                  "risk_level_enum",
+                  "kanban_status_enum",
+                  "list_fields_are_arrays",
+                  "no_real_integration"
+              ],
+    "blocked_actions":  [
+                            "external_network",
+                            "git_write",
+                            "core_changes",
+                            "real_ollama_inference",
+                            "real_obsidian_write",
+                            "real_kanban_write",
+                            "real_cline_send"
+                        ]
+}

@@ -1,0 +1,17 @@
+﻿{
+    "package_id":  "ENGREMIAT_OPERATOR_CONTEXT_AND_DECISION_TREE_001",
+    "stage":  "E04L_PROMPT_NO_PRESELECTED_PROJECT_ON_START",
+    "status":  "PASS",
+    "readiness":  100,
+    "launcher":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1",
+    "backup":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1.bak-e04l-20260619183245",
+    "fixed":  "prompt_starts_global_even_if_state_has_active_project",
+    "behavior":  [
+                     "inicio ENGREMIAT",
+                     "comandos no cambia prompt",
+                     "proyectos no cambia prompt",
+                     "abrir-proyecto entra a proyecto/modulo",
+                     "atras sale de modulo/proyecto"
+                 ],
+    "next":  "relaunch_test"
+}

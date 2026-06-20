@@ -1,0 +1,16 @@
+﻿{
+    "module_id":  "ENGREMIAT_MODEL_ADAPTER_STANDARD_001",
+    "version":  "0.1.0",
+    "status":  "CANDIDATE",
+    "purpose":  "Standard común para adaptadores de modelo",
+    "scope":  "MODEL_ADAPTER_STANDARD_LOCAL_FIRST",
+    "depends_on_ollama":  false,
+    "model_specific":  false,
+    "network_required":  false,
+    "real_inference_default":  false,
+    "gates_required":  [
+                           "INFER",
+                           "MODEL_CALL",
+                           "EXTERNAL_CONTEXT_READ"
+                       ]
+}

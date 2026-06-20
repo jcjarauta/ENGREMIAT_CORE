@@ -1,0 +1,30 @@
+﻿{
+    "rules_id":  "solution-proposal-rules.v1",
+    "rules":  [
+                  {
+                      "need_type":  "COMPOSITION_GAP",
+                      "solution":  "ENGREMIAT_RESOURCE_COMPOSER_OLLAMA_READY_001",
+                      "proposal_type":  "CREATE_NEXT_MODULE"
+                  },
+                  {
+                      "need_type":  "MISSING_RESOURCE",
+                      "solution":  "CREATE_RESOURCE_CANDIDATE",
+                      "proposal_type":  "CREATE_RESOURCE"
+                  },
+                  {
+                      "need_type":  "MISSING_VALIDATOR",
+                      "solution":  "CREATE_VALIDATOR",
+                      "proposal_type":  "CREATE_TOOLING"
+                  },
+                  {
+                      "need_type":  "DOCUMENTATION_GAP",
+                      "solution":  "CREATE_MANUAL",
+                      "proposal_type":  "CREATE_DOCUMENTATION"
+                  },
+                  {
+                      "need_type":  "SYSTEM_REPRODUCTION_GAP",
+                      "solution":  "ENGREMIAT_RESOURCE_COMPOSER_OLLAMA_READY_001",
+                      "proposal_type":  "CREATE_NEXT_MODULE"
+                  }
+              ]
+}

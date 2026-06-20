@@ -1,0 +1,143 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_NAVIGATION_MODEL_001",
+    "stage":  "E11B_DEFINE_PROTECTED_EXTENSION_MAP",
+    "status":  "PASS",
+    "created_at":  "2026-06-19T22:59:08",
+    "baseline":  "C:\\ENGREMIAT_CORE\\data\\operator-navigation-freeze\\operator-baseline-freeze.v1.json",
+    "validator":  "C:\\ENGREMIAT_CORE\\data\\operator-navigation-freeze\\Validate-OperatorFreeze.ps1",
+    "active_project":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\\ENGREMIAT_PROJECT_p3_20260619-224903",
+    "principles":  [
+                       "baseline_v1_is_protected",
+                       "new_features_as_separate_scripts",
+                       "router_only_delegates",
+                       "one_technical_boundary_per_block",
+                       "readonly_before_write",
+                       "errors_visible_and_reported",
+                       "no_generic_templates_as_official",
+                       "freeze_validator_before_and_after"
+                   ],
+    "extension_order":  [
+                            "EXT04_PROJECT_REVIEW_SAFE",
+                            "EXT01_CREATE_MODULE_SAFE",
+                            "EXT02_MODULE_SELECTOR_SAFE",
+                            "EXT03_MODULE_LIBRARY_SAFE",
+                            "EXT05_OBSIDIAN_SYNC_PREVIEW",
+                            "EXT06_WORKER_GATE_FUTURE"
+                        ],
+    "extensions":  [
+                       {
+                           "id":  "EXT01_CREATE_MODULE_SAFE",
+                           "level":  "PROYECTO",
+                           "menu_entry":  "[2] Crear modulo",
+                           "script":  "eng-create-module-safe.ps1",
+                           "risk":  "LOW",
+                           "touch_core":  "NO",
+                           "depends_on":  [
+                                              "baseline_v1",
+                                              "active_project",
+                                              "official_master_template"
+                                          ],
+                           "goal":  "Crear un modulo nuevo copiando estructura minima y referencia a plantilla oficial",
+                           "validation":  [
+                                              "parse",
+                                              "module_folder_exists",
+                                              "module_json_exists",
+                                              "operator_freeze_pass"
+                                          ]
+                       },
+                       {
+                           "id":  "EXT02_MODULE_SELECTOR_SAFE",
+                           "level":  "PROYECTO",
+                           "menu_entry":  "[1] Entrar en modulo",
+                           "script":  "eng-select-module-safe.ps1",
+                           "risk":  "LOW",
+                           "touch_core":  "ROUTER_DELEGATION_ONLY_IF_NEEDED",
+                           "depends_on":  [
+                                              "baseline_v1",
+                                              "MODULOS"
+                                          ],
+                           "goal":  "Selector robusto de modulos con ACTIVO/HISTORICO y atras",
+                           "validation":  [
+                                              "module_list_visible",
+                                              "enter_module_sets_state",
+                                              "back_returns_project",
+                                              "operator_freeze_pass_or_successor"
+                                          ]
+                       },
+                       {
+                           "id":  "EXT03_MODULE_LIBRARY_SAFE",
+                           "level":  "PROYECTO",
+                           "menu_entry":  "[3] Biblioteca modulos",
+                           "script":  "eng-module-library-safe.ps1",
+                           "risk":  "MEDIUM",
+                           "touch_core":  "NO",
+                           "depends_on":  [
+                                              "baseline_v1",
+                                              "official_master_template"
+                                          ],
+                           "goal":  "Biblioteca local de modulos reutilizables sin contaminar proyecto activo",
+                           "validation":  [
+                                              "library_index_exists",
+                                              "no_write_without_gate",
+                                              "operator_freeze_pass"
+                                          ]
+                       },
+                       {
+                           "id":  "EXT04_PROJECT_REVIEW_SAFE",
+                           "level":  "PROYECTO",
+                           "menu_entry":  "[4] Revisar proyecto",
+                           "script":  "eng-review-project-safe.ps1",
+                           "risk":  "LOW",
+                           "touch_core":  "NO",
+                           "depends_on":  [
+                                              "baseline_v1",
+                                              "active_project"
+                                          ],
+                           "goal":  "Revision readonly de proyecto, plantilla, modulos y navegabilidad",
+                           "validation":  [
+                                              "readonly_report",
+                                              "no_changes",
+                                              "operator_freeze_pass"
+                                          ]
+                       },
+                       {
+                           "id":  "EXT05_OBSIDIAN_SYNC_PREVIEW",
+                           "level":  "PROYECTO",
+                           "menu_entry":  "futuro: obsidian",
+                           "script":  "eng-obsidian-sync-preview.ps1",
+                           "risk":  "MEDIUM",
+                           "touch_core":  "NO",
+                           "depends_on":  [
+                                              "baseline_v1",
+                                              "BOVEDA_PROYECTO"
+                                          ],
+                           "goal":  "Preparar vista/preview de sincronizacion Obsidian sin escritura peligrosa",
+                           "validation":  [
+                                              "preview_only",
+                                              "diff_report",
+                                              "manual_gate_required"
+                                          ]
+                       },
+                       {
+                           "id":  "EXT06_WORKER_GATE_FUTURE",
+                           "level":  "MODULO",
+                           "menu_entry":  "futuro: worker",
+                           "script":  "eng-worker-gate-safe.ps1",
+                           "risk":  "HIGH",
+                           "touch_core":  "NO",
+                           "depends_on":  [
+                                              "baseline_v1",
+                                              "module_active",
+                                              "human_gate"
+                                          ],
+                           "goal":  "Preparar worker futuro siempre con gate humano y evidencia",
+                           "validation":  [
+                                              "no_auto_execute",
+                                              "gate_required",
+                                              "evidence_report",
+                                              "operator_freeze_pass"
+                                          ]
+                       }
+                   ],
+    "next_recommended":  "EXT04_PROJECT_REVIEW_SAFE"
+}

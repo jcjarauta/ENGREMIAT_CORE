@@ -1,0 +1,109 @@
+﻿{
+    "contract_id":  "engremiat-card-state-transition-contract-v1",
+    "package_id":  "ENGREMIAT_LOCAL_KANBAN_STATE_UPDATE_001",
+    "purpose":  "Convert worker response/evidence into controlled Kanban card state transition proposal",
+    "source_inputs":  [
+                          "Obsidian card Markdown/YAML",
+                          "worker response",
+                          "worker evidence",
+                          "human gate"
+                      ],
+    "target_outputs":  [
+                           "transition proposal",
+                           "backup plan",
+                           "optional card YAML update after gate",
+                           "dashboard refresh"
+                       ],
+    "allowed_columns":  [
+                            "BACKLOG",
+                            "NEXT",
+                            "DOING",
+                            "REVIEW",
+                            "DONE",
+                            "BLOCKED"
+                        ],
+    "current_columns_supported":  [
+                                      "BACKLOG",
+                                      "NEXT",
+                                      "DOING",
+                                      "DONE"
+                                  ],
+    "new_columns_to_introduce":  [
+                                     "REVIEW",
+                                     "BLOCKED"
+                                 ],
+    "allowed_transitions":  [
+                                {
+                                    "from":  "BACKLOG",
+                                    "to":  "NEXT",
+                                    "requires":  "human_prioritization"
+                                },
+                                {
+                                    "from":  "NEXT",
+                                    "to":  "DOING",
+                                    "requires":  "worker_dispatch_started"
+                                },
+                                {
+                                    "from":  "DOING",
+                                    "to":  "REVIEW",
+                                    "requires":  "worker_response_captured"
+                                },
+                                {
+                                    "from":  "REVIEW",
+                                    "to":  "DONE",
+                                    "requires":  "human_validation"
+                                },
+                                {
+                                    "from":  "NEXT",
+                                    "to":  "BLOCKED",
+                                    "requires":  "blocking_risk_detected"
+                                },
+                                {
+                                    "from":  "DOING",
+                                    "to":  "BLOCKED",
+                                    "requires":  "worker_or_human_blocker"
+                                },
+                                {
+                                    "from":  "BLOCKED",
+                                    "to":  "NEXT",
+                                    "requires":  "blocker_resolved"
+                                }
+                            ],
+    "required_card_fields":  [
+                                 "object_type",
+                                 "id",
+                                 "title",
+                                 "status",
+                                 "recommended_column",
+                                 "kanban_decision",
+                                 "human_reviewed",
+                                 "source_need"
+                             ],
+    "transition_proposal_fields":  [
+                                       "proposal_id",
+                                       "card_id",
+                                       "from_column",
+                                       "to_column",
+                                       "reason",
+                                       "evidence_path",
+                                       "response_path",
+                                       "risk_level",
+                                       "requires_human_gate",
+                                       "backup_required",
+                                       "created_at"
+                                   ],
+    "gate_policy":  {
+                        "apply_without_human_authorization":  false,
+                        "backup_before_write":  true,
+                        "write_to_cline_kanban":  false,
+                        "git_write":  false,
+                        "external_network":  false,
+                        "worker_real_execution":  false
+                    },
+    "success_criteria":  [
+                             "transition proposal generated",
+                             "no card modified in E01",
+                             "contract JSON valid",
+                             "human-next-action updated"
+                         ]
+}

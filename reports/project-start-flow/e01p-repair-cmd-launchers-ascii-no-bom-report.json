@@ -1,0 +1,58 @@
+﻿{
+    "package_id":  "ENGREMIAT_PROJECT_START_FLOW_001",
+    "stage":  "E01P_REPAIR_CMD_LAUNCHERS_ASCII_NO_BOM",
+    "status":  "PASS",
+    "readiness":  100,
+    "decision":  "GO_CMD_LAUNCHERS_ASCII_NO_BOM_REPAIRED",
+    "project_home":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto-nuevo-proyecto_20260619-160241",
+    "master_vault":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto-nuevo-proyecto_20260619-160241\\BOVEDA_MAESTRA",
+    "master_open":  {
+                        "ps1":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto-nuevo-proyecto_20260619-160241\\ABRIR_BOVEDA_MAESTRA.ps1",
+                        "cmd":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto-nuevo-proyecto_20260619-160241\\ABRIR_BOVEDA_MAESTRA.cmd",
+                        "vault":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto-nuevo-proyecto_20260619-160241\\BOVEDA_MAESTRA"
+                    },
+    "module_open":  {
+                        "ps1":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto-nuevo-proyecto_20260619-160241\\MODULOS\\MODULE_inicio\\ABRIR_BOVEDA_MODULO.ps1",
+                        "cmd":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto-nuevo-proyecto_20260619-160241\\MODULOS\\MODULE_inicio\\ABRIR_BOVEDA_MODULO.cmd",
+                        "vault":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto-nuevo-proyecto_20260619-160241\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO"
+                    },
+    "patched_new_project":  false,
+    "checks":  [
+                   {
+                       "id":  "latest_project_found",
+                       "ok":  true,
+                       "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto-nuevo-proyecto_20260619-160241"
+                   },
+                   {
+                       "id":  "master_cmd_exists",
+                       "ok":  true,
+                       "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto-nuevo-proyecto_20260619-160241\\ABRIR_BOVEDA_MAESTRA.cmd"
+                   },
+                   {
+                       "id":  "master_cmd_ascii_no_bom",
+                       "ok":  true,
+                       "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto-nuevo-proyecto_20260619-160241\\ABRIR_BOVEDA_MAESTRA.cmd"
+                   },
+                   {
+                       "id":  "master_ps1_exists",
+                       "ok":  true,
+                       "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto-nuevo-proyecto_20260619-160241\\ABRIR_BOVEDA_MAESTRA.ps1"
+                   },
+                   {
+                       "id":  "module_cmd_exists",
+                       "ok":  true,
+                       "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto-nuevo-proyecto_20260619-160241\\MODULOS\\MODULE_inicio\\ABRIR_BOVEDA_MODULO.cmd"
+                   }
+               ],
+    "failed_checks":  [
+
+                      ],
+    "safety":  {
+                   "local_only":  true,
+                   "cmd_ascii_no_bom":  true,
+                   "no_worker_real":  true,
+                   "no_git":  true,
+                   "no_network":  true
+               },
+    "next":  "RUN_ABRIR_BOVEDA_MAESTRA_CMD_AGAIN"
+}

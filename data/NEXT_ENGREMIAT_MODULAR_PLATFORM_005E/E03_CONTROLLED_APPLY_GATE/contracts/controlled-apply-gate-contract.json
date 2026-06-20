@@ -1,0 +1,26 @@
+{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_005E",
+    "stage":  "E03_CONTROLLED_APPLY_GATE",
+    "status":  "PENDING_HUMAN_AUTHORIZATION",
+    "purpose":  "Preparar gate para apply local controlado sin ejecutarlo todavia",
+    "allowed_decisions":  [
+                              "APPROVE_LOCAL_APPLY",
+                              "HOLD",
+                              "REJECT"
+                          ],
+    "default_decision":  "HOLD",
+    "requires":  [
+                     "snapshot_plan",
+                     "rollback_plan",
+                     "dry_run_pass",
+                     "explicit_human_authorization"
+                 ],
+    "blocked_now":  [
+                        "real_apply",
+                        "core_changes",
+                        "external_network",
+                        "git_write",
+                        "remote_worker_execution"
+                    ],
+    "real_apply_executed":  false
+}

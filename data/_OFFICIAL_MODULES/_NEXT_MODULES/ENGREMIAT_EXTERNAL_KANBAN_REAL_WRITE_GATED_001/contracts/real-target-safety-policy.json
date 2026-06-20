@@ -1,0 +1,10 @@
+﻿{
+    "policy_id":  "EXTERNAL_REAL_WRITE_SAFETY_V1",
+    "max_cards":  5,
+    "requires_human_review":  true,
+    "requires_literal_authorization":  "AUTORIZO_EXTERNAL_KANBAN_REAL_WRITE_GATED",
+    "api_write_blocked_in_e01_e05":  true,
+    "rollback_required_for_real_api":  true,
+    "git":  false,
+    "network_api_calls":  false
+}

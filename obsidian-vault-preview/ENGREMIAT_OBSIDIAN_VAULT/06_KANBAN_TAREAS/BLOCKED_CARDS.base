@@ -1,0 +1,15 @@
+﻿ENGREMIAT_BASE_PREVIEW
+view_id: BLOCKED_CARDS
+title: Tarjetas bloqueadas
+object_type: task_card
+filter: status = blocked OR gate = REVIEW_REQUIRED
+group_by: gate
+sort: risk desc
+columns:
+- card_id
+- project_id
+- status
+- risk
+- gate
+- next_action
+note: Preview de especificacion para Obsidian Bases. No ejecuta nada.

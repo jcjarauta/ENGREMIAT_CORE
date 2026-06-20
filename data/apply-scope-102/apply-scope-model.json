@@ -1,0 +1,36 @@
+﻿{
+    "objective":  "ENGREMIAT_SAFE_LOCAL_APPLY_AND_KANBAN_AUTHORIZATION_102_111",
+    "stage":  "E102",
+    "name":  "Apply Scope Contract",
+    "version":  "1.02.0-local",
+    "purpose":  "Definir alcance seguro para el primer apply local real reversible.",
+    "scope_id":  "APP-SCOPE-102-001",
+    "scope_type":  "MINIMAL_REVERSIBLE_LOCAL_APPLY",
+    "target_policy":  "SAFE_TEST_ARTIFACT_ONLY",
+    "allowed_targets":  [
+                            "data/safe-apply-runtime-106/controlled-local-apply-target.json"
+                        ],
+    "forbidden_targets":  [
+                              "source_code_without_explicit_scope",
+                              "git_metadata",
+                              ".env",
+                              "secrets",
+                              "node_modules",
+                              "dist",
+                              "external_services",
+                              "kanban_real"
+                          ],
+    "requires_human_authorization":  true,
+    "requires_rollback":  true,
+    "requires_postcheck":  true,
+    "requires_receipt":  true,
+    "real_apply_allowed":  false,
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "kanban_real_write":  false,
+    "created_utc":  "2026-06-17T11:33:50.7626210Z"
+}

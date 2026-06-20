@@ -1,0 +1,230 @@
+﻿{
+    "package_id":  "ENGREMIAT_VAULT_MODULE_BUILDER_001",
+    "stage":  "E01_DEFINE_BUILDER_CONTRACT",
+    "status":  "PASS",
+    "contract_id":  "vault-module-builder-contract.v1",
+    "objective":  "Construir espacios de trabajo ENGREMIAT agrupados desde decisiones humanas: boveda maestra, project space, module space, relation space o work surface.",
+    "depends_on":  "engremiat-official-grouped-architecture.v1",
+    "official_groups":  [
+                            {
+                                "id":  "G01_CORE",
+                                "name":  "ENGREMIAT CORE",
+                                "purpose":  "Fuente canonica, contratos, reports, manifests, dashboards y estado reconstruible",
+                                "contains":  [
+                                                 "data",
+                                                 "reports",
+                                                 "exports",
+                                                 "dashboard",
+                                                 "contracts"
+                                             ]
+                            },
+                            {
+                                "id":  "G02_HUMAN_CONTROL",
+                                "name":  "CONTROL HUMANO",
+                                "purpose":  "Panel humano, decisiones, gates, revisiones y autorizaciones",
+                                "contains":  [
+                                                 "00_CONTROL_OPERATIVO",
+                                                 "04_GATES_DECISIONES"
+                                             ]
+                            },
+                            {
+                                "id":  "G03_PROJECTS_MODULES",
+                                "name":  "PROYECTOS Y MODULOS",
+                                "purpose":  "Project spaces, module spaces y lineas de trabajo agrupables",
+                                "contains":  [
+                                                 "02_PROYECTOS",
+                                                 "modules",
+                                                 "PROJECT_*"
+                                             ]
+                            },
+                            {
+                                "id":  "G04_MEMORY_VISUAL",
+                                "name":  "MEMORIA VISUAL",
+                                "purpose":  "Obsidian, Canvas, grafo, enlaces, indices y vistas",
+                                "contains":  [
+                                                 "07_OBSIDIAN_GRAPH",
+                                                 "08_RELACIONES",
+                                                 "bases",
+                                                 "canvas"
+                                             ]
+                            },
+                            {
+                                "id":  "G05_TASKS_KANBAN",
+                                "name":  "TAREAS Y KANBAN PREVIEW",
+                                "purpose":  "Tarjetas, backlog, lanes, prioridades y trabajo humano visible",
+                                "contains":  [
+                                                 "03_TAREAS",
+                                                 "06_KANBAN_TAREAS"
+                                             ]
+                            },
+                            {
+                                "id":  "G06_WORKERS_EXECUTION_PREVIEW",
+                                "name":  "WORKERS Y EJECUCION PREVIEW",
+                                "purpose":  "Worker packets, dry-runs, propuestas y ejecucion bloqueada por gate",
+                                "contains":  [
+                                                 "06_WORKERS",
+                                                 "dry_run",
+                                                 "worker_packet"
+                                             ]
+                            },
+                            {
+                                "id":  "G07_EVIDENCE_RESULTS",
+                                "name":  "EVIDENCIAS Y RESULTADOS",
+                                "purpose":  "Pruebas, receipts, reports de cierre, readiness y resultados",
+                                "contains":  [
+                                                 "05_EVIDENCIAS",
+                                                 "07_RESULTADOS"
+                                             ]
+                            },
+                            {
+                                "id":  "G08_SYSTEM_EVOLUTION",
+                                "name":  "EVOLUCION DEL SISTEMA",
+                                "purpose":  "Backlog de arquitectura, decisiones estrategicas, modulos futuros y aprendizaje",
+                                "contains":  [
+                                                 "01_SISTEMA_ENGREMIAT",
+                                                 "09_ARCHIVO",
+                                                 "NEXT_OBJECTIVE"
+                                             ]
+                            }
+                        ],
+    "space_types":  [
+                        {
+                            "id":  "MASTER_VAULT",
+                            "label":  "Boveda maestra ENGREMIAT",
+                            "default_group":  "G01_CORE",
+                            "root_pattern":  "obsidian-vault-preview/ENGREMIAT_OBSIDIAN_VAULT",
+                            "creates":  [
+                                            "00_CONTROL_OPERATIVO",
+                                            "01_SISTEMA_ENGREMIAT",
+                                            "02_PROYECTOS",
+                                            "07_OBSIDIAN_GRAPH",
+                                            "08_PLANTILLAS",
+                                            "09_ARCHIVO"
+                                        ]
+                        },
+                        {
+                            "id":  "PROJECT_SPACE",
+                            "label":  "Project space",
+                            "default_group":  "G03_PROJECTS_MODULES",
+                            "root_pattern":  "02_PROYECTOS/PROJECT_\u003cslug\u003e",
+                            "creates":  [
+                                            "00_INDEX",
+                                            "01_INTAKE",
+                                            "02_ROADMAP",
+                                            "03_TAREAS",
+                                            "04_GATES_DECISIONES",
+                                            "05_EVIDENCIAS",
+                                            "06_WORKERS",
+                                            "07_RESULTADOS",
+                                            "08_RELACIONES"
+                                        ]
+                        },
+                        {
+                            "id":  "MODULE_SPACE",
+                            "label":  "Modulo ENGREMIAT relacionado",
+                            "default_group":  "G03_PROJECTS_MODULES",
+                            "root_pattern":  "02_PROYECTOS/\u003cparent\u003e/08_RELACIONES/MODULE_\u003cslug\u003e",
+                            "creates":  [
+                                            "00_INDEX",
+                                            "01_CONTRATO",
+                                            "02_ROADMAP",
+                                            "03_TAREAS",
+                                            "04_GATES",
+                                            "05_EVIDENCIAS",
+                                            "06_RELACIONES",
+                                            "MODULE_CANVAS"
+                                        ]
+                        },
+                        {
+                            "id":  "RELATION_SPACE",
+                            "label":  "Relacion entre boveda/proyecto/modulo",
+                            "default_group":  "G04_MEMORY_VISUAL",
+                            "root_pattern":  "\u003ctarget\u003e/08_RELACIONES/REL_\u003cslug\u003e",
+                            "creates":  [
+                                            "relation_note",
+                                            "relation_canvas_edge",
+                                            "index_update"
+                                        ]
+                        },
+                        {
+                            "id":  "WORK_SURFACE",
+                            "label":  "Superficie humana de trabajo",
+                            "default_group":  "G02_HUMAN_CONTROL",
+                            "root_pattern":  "00_CONTROL_OPERATIVO/SURFACE_\u003cslug\u003e",
+                            "creates":  [
+                                            "surface_pointer",
+                                            "dashboard_preview",
+                                            "next_action_note"
+                                        ]
+                        }
+                    ],
+    "human_inputs":  [
+                         {
+                             "id":  "name",
+                             "required":  true,
+                             "description":  "Nombre humano del espacio o modulo"
+                         },
+                         {
+                             "id":  "intent",
+                             "required":  true,
+                             "description":  "Que quiere conseguir el humano"
+                         },
+                         {
+                             "id":  "space_type",
+                             "required":  true,
+                             "allowed":  [
+                                             "MASTER_VAULT",
+                                             "PROJECT_SPACE",
+                                             "MODULE_SPACE",
+                                             "RELATION_SPACE",
+                                             "WORK_SURFACE"
+                                         ]
+                         },
+                         {
+                             "id":  "parent_vault_or_project",
+                             "required":  false,
+                             "description":  "Boveda/proyecto padre si aplica"
+                         },
+                         {
+                             "id":  "related_to",
+                             "required":  false,
+                             "description":  "Modulo, proyecto o grupo relacionado"
+                         },
+                         {
+                             "id":  "preferred_surface",
+                             "required":  false,
+                             "description":  "CONTROL_HUB, GROUPED_CANVAS, PROJECT_CANVAS, PENDING_GATES, ACTIVE_CARDS, RECENT_EVIDENCE, WORKER_PROPOSALS"
+                         }
+                     ],
+    "outputs":  [
+                    "builder_request.json",
+                    "builder_plan.preview.json",
+                    "filesystem_preview.json",
+                    "obsidian_notes_preview",
+                    "canvas_preview",
+                    "dashboard_preview",
+                    "validation_report.json",
+                    "next_action.md"
+                ],
+    "builder_rules":  [
+                          "Todo espacio debe declarar grupo oficial",
+                          "Todo project/module space debe tener index, intake/contexto, roadmap, tareas, gates, evidencias, workers/resultados y relaciones",
+                          "Todo builder empieza en preview_only=true",
+                          "Toda ejecucion real queda bloqueada por gate explicito",
+                          "Obsidian visualiza y relaciona; no ejecuta",
+                          "data/reports/dashboard siguen siendo fuente canonica",
+                          "Cada salida debe incluir decision, readiness, safety y next"
+                      ],
+    "safety":  {
+                   "local_only":  true,
+                   "preview_only":  true,
+                   "execute_now":  false,
+                   "worker_execution":  false,
+                   "kanban_write":  false,
+                   "clien_write":  false,
+                   "obsidian_app_automation":  false,
+                   "git_write":  false,
+                   "external_network":  false
+               },
+    "next":  "E02_CREATE_MASTER_VAULT_TEMPLATE_PACKET"
+}

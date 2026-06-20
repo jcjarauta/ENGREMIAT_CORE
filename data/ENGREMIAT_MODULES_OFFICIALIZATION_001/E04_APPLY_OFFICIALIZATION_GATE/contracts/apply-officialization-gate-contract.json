@@ -1,0 +1,30 @@
+{
+    "package_id":  "ENGREMIAT_MODULES_OFFICIALIZATION_001",
+    "stage":  "E04_APPLY_OFFICIALIZATION_GATE",
+    "artifact":  "apply-officialization-gate-contract.json",
+    "status":  "PENDING_EXPLICIT_HUMAN_AUTHORIZATION",
+    "purpose":  "Preparar gate para oficializar modulos en data/_OFFICIAL_MODULES sin aplicar todavia",
+    "required_phrase":  "AUTORIZO_OFFICIALIZE_MODULES_COPY_ONLY_NO_DELETE_NO_GIT_NO_CORE",
+    "allowed_if_authorized":  [
+                                  "create_data_OFFICIAL_MODULES",
+                                  "copy_module_folders",
+                                  "write_module_json_from_patches",
+                                  "write_rollback_manifest",
+                                  "write_apply_report"
+                              ],
+    "blocked_now":  [
+                        "copy_modules",
+                        "move_modules",
+                        "delete_sources",
+                        "git_write",
+                        "external_network",
+                        "core_changes"
+                    ],
+    "blocked_even_if_authorized":  [
+                                       "delete_sources",
+                                       "git_write",
+                                       "external_network",
+                                       "core_changes"
+                                   ],
+    "mode":  "GATE_ONLY_NO_APPLY"
+}

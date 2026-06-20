@@ -1,0 +1,53 @@
+﻿{
+    "package_id":  "ENGREMIAT_EXTERNAL_KANBAN_REAL_WRITE_GATED_001",
+    "tool":  "Invoke-ExternalRealWriteDryRun",
+    "status":  "PASS",
+    "operations_simulated":  5,
+    "external_write_executed":  false,
+    "sheets_write":  false,
+    "cline_write":  false,
+    "api_called":  false,
+    "ready_for_go_no_go":  true,
+    "simulated_operations":  [
+                                 {
+                                     "operation_id":  "REAL-WRITE-PLAN-0001",
+                                     "target":  "MANUAL_TSV_REVIEW",
+                                     "card_id":  "KANBAN-SEED-0017",
+                                     "would_execute":  true,
+                                     "executed":  false,
+                                     "reason":  "DRY_RUN_ONLY_NO_TARGET_CALL"
+                                 },
+                                 {
+                                     "operation_id":  "REAL-WRITE-PLAN-0002",
+                                     "target":  "MANUAL_TSV_REVIEW",
+                                     "card_id":  "KANBAN-SEED-0018",
+                                     "would_execute":  true,
+                                     "executed":  false,
+                                     "reason":  "DRY_RUN_ONLY_NO_TARGET_CALL"
+                                 },
+                                 {
+                                     "operation_id":  "REAL-WRITE-PLAN-0003",
+                                     "target":  "MANUAL_TSV_REVIEW",
+                                     "card_id":  "KANBAN-SEED-0019",
+                                     "would_execute":  true,
+                                     "executed":  false,
+                                     "reason":  "DRY_RUN_ONLY_NO_TARGET_CALL"
+                                 },
+                                 {
+                                     "operation_id":  "REAL-WRITE-PLAN-0004",
+                                     "target":  "MANUAL_TSV_REVIEW",
+                                     "card_id":  "KANBAN-SEED-0014",
+                                     "would_execute":  true,
+                                     "executed":  false,
+                                     "reason":  "DRY_RUN_ONLY_NO_TARGET_CALL"
+                                 },
+                                 {
+                                     "operation_id":  "REAL-WRITE-PLAN-0005",
+                                     "target":  "MANUAL_TSV_REVIEW",
+                                     "card_id":  "KANBAN-SEED-0015",
+                                     "would_execute":  true,
+                                     "executed":  false,
+                                     "reason":  "DRY_RUN_ONLY_NO_TARGET_CALL"
+                                 }
+                             ]
+}

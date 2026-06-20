@@ -1,0 +1,50 @@
+﻿{
+    "lifecycle_id":  "engremiat-internal-workflow-lifecycle.v1",
+    "flow":  [
+                 "IDEA",
+                 "PROJECT",
+                 "TASKS",
+                 "OUTPUTS",
+                 "EVIDENCE",
+                 "RESOURCE",
+                 "LIBRARY",
+                 "ARCHIVE"
+             ],
+    "transitions":  [
+                        {
+                            "from":  "IDEA",
+                            "to":  "PROJECT",
+                            "gate":  "HUMAN_ACCEPTS_PROJECT"
+                        },
+                        {
+                            "from":  "PROJECT",
+                            "to":  "TASKS",
+                            "gate":  "PLAN_READY"
+                        },
+                        {
+                            "from":  "TASKS",
+                            "to":  "OUTPUTS",
+                            "gate":  "TASK_EXECUTION"
+                        },
+                        {
+                            "from":  "OUTPUTS",
+                            "to":  "EVIDENCE",
+                            "gate":  "VALIDATION"
+                        },
+                        {
+                            "from":  "EVIDENCE",
+                            "to":  "RESOURCE",
+                            "gate":  "HUMAN_REVIEW"
+                        },
+                        {
+                            "from":  "RESOURCE",
+                            "to":  "LIBRARY",
+                            "gate":  "OFFICIALIZATION"
+                        },
+                        {
+                            "from":  "ANY",
+                            "to":  "ARCHIVE",
+                            "gate":  "REJECT_OR_SUPERSEDE"
+                        }
+                    ]
+}

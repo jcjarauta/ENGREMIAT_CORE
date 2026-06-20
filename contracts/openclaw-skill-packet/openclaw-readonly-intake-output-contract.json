@@ -1,0 +1,107 @@
+﻿{
+    "$schema":  "https://json-schema.org/draft/2020-12/schema",
+    "title":  "OpenClaw ENGREMIAT Readonly Intake Output",
+    "type":  "object",
+    "required":  [
+                     "thread_id",
+                     "source",
+                     "via",
+                     "title",
+                     "user_intent",
+                     "assistant_summary",
+                     "proposed_kind",
+                     "priority",
+                     "risk",
+                     "target_consumers"
+                 ],
+    "properties":  {
+                       "thread_id":  {
+                                         "type":  "string",
+                                         "minLength":  3
+                                     },
+                       "source":  {
+                                      "type":  "string",
+                                      "enum":  [
+                                                   "openwebui",
+                                                   "openclaw",
+                                                   "manual"
+                                               ]
+                                  },
+                       "via":  {
+                                   "type":  "string",
+                                   "enum":  [
+                                                "openclaw",
+                                                "manual",
+                                                "file_drop"
+                                            ]
+                               },
+                       "title":  {
+                                     "type":  "string",
+                                     "minLength":  3
+                                 },
+                       "user_intent":  {
+                                           "type":  "string",
+                                           "minLength":  3
+                                       },
+                       "assistant_summary":  {
+                                                 "type":  "string",
+                                                 "minLength":  3
+                                             },
+                       "proposed_kind":  {
+                                             "type":  "string",
+                                             "enum":  [
+                                                          "need",
+                                                          "capability",
+                                                          "project",
+                                                          "evidence",
+                                                          "blocker",
+                                                          "decision",
+                                                          "memory"
+                                                      ]
+                                         },
+                       "priority":  {
+                                        "type":  "integer",
+                                        "minimum":  0,
+                                        "maximum":  100
+                                    },
+                       "risk":  {
+                                    "type":  "string",
+                                    "enum":  [
+                                                 "LOW",
+                                                 "MEDIUM",
+                                                 "HIGH"
+                                             ]
+                                },
+                       "target_consumers":  {
+                                                "type":  "array",
+                                                "minItems":  1,
+                                                "items":  {
+                                                              "type":  "string",
+                                                              "enum":  [
+                                                                           "HUMAN",
+                                                                           "CLINE_KANBAN",
+                                                                           "OBSIDIAN",
+                                                                           "OPENWEBUI",
+                                                                           "OPENCLAW",
+                                                                           "OLLAMA",
+                                                                           "SYSTEM"
+                                                                       ]
+                                                          }
+                                            },
+                       "execution_allowed":  {
+                                                 "type":  "boolean"
+                                             },
+                       "native_kanban_write":  {
+                                                   "type":  "string",
+                                                   "enum":  [
+                                                                "disabled"
+                                                            ]
+                                               },
+                       "obsidian_real_write":  {
+                                                   "type":  "string",
+                                                   "enum":  [
+                                                                "disabled"
+                                                            ]
+                                               }
+                   }
+}

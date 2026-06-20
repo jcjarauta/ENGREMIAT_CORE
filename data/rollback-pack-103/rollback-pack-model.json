@@ -1,0 +1,20 @@
+﻿{
+    "objective":  "ENGREMIAT_SAFE_LOCAL_APPLY_AND_KANBAN_AUTHORIZATION_102_111",
+    "stage":  "E103",
+    "name":  "Rollback Pack Builder",
+    "version":  "1.03.0-local",
+    "purpose":  "Construir rollback pack verificable antes de cualquier apply local real reversible.",
+    "rollback_required_before_apply":  true,
+    "target_path":  "data/safe-apply-runtime-106/controlled-local-apply-target.json",
+    "rollback_strategy":  "RESTORE_PRE_APPLY_STATE_OR_DELETE_CREATED_TEST_ARTIFACT",
+    "rollback_executes":  false,
+    "rollback_available":  true,
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "kanban_real_write":  false,
+    "created_utc":  "2026-06-17T11:34:51.0564261Z"
+}

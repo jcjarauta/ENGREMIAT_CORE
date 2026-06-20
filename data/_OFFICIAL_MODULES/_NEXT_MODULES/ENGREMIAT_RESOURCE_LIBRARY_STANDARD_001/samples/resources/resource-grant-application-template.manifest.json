@@ -1,0 +1,32 @@
+﻿{
+    "resource_id":  "RESOURCE-GRANT-APPLICATION-TEMPLATE-001",
+    "resource_type":  "RESOURCE_GRANT_APPLICATION",
+    "status":  "DRAFT",
+    "title":  "Grant Application Base Template",
+    "description":  "Recurso ejemplo para memoria de subvencion con tareas, evidencias y revisión humana.",
+    "domain":  "grants",
+    "version":  "0.1.0",
+    "capabilities":  [
+                         "GRANT_DOCUMENT_WORKFLOW",
+                         "DOCUMENT_WORKFLOW",
+                         "HUMAN_GATE_REVIEW"
+                     ],
+    "dependencies":  [
+
+                     ],
+    "location":  "samples/resources/grant-application-template",
+    "evidence":  [
+                     "sample-only"
+                 ],
+    "quality":  {
+                    "readiness_score":  60,
+                    "reuse_score":  80,
+                    "evidence_score":  40,
+                    "overall_score":  60
+                },
+    "reuse_policy":  "ADAPT",
+    "gate":  {
+                 "required":  true,
+                 "decision":  "HUMAN_REVIEW_REQUIRED"
+             }
+}

@@ -1,0 +1,33 @@
+{
+    "package_id":  "ENG-MOD-WRK-001",
+    "stage":  "E04",
+    "block":  "P04.1.1",
+    "name":  "Worker context package",
+    "purpose":  "Preparar contexto auditado para Cline/Ollama o worker asistido",
+    "inputs":  [
+                   "task",
+                   "plan_block",
+                   "registry_state",
+                   "queue_state"
+               ],
+    "outputs":  [
+                    "worker_context_json"
+                ],
+    "fields":  [
+                   "objective",
+                   "stage",
+                   "block",
+                   "module_id",
+                   "dependencies",
+                   "constraints",
+                   "evidence",
+                   "next_action"
+               ],
+    "security":  {
+                     "remove_noise":  true,
+                     "keep_traceability":  true,
+                     "exclude_sensitive_runtime_data":  true,
+                     "no_external_network":  true,
+                     "no_git_write":  true
+                 }
+}

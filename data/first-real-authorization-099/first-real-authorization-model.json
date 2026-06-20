@@ -1,0 +1,32 @@
+﻿{
+    "objective":  "ENGREMIAT_FIRST_REAL_CONTROLLED_VALUE_FLOW",
+    "stage":  "E99",
+    "name":  "Human Authorization Gate",
+    "version":  "0.99.0-local",
+    "purpose":  "Crear autorizacion humana explicita para avanzar del preview al apply local controlado.",
+    "case_id":  "FRF-096-001",
+    "proposal_id":  "FRP-098-001",
+    "preview_id":  "FRV-098-001",
+    "human_decision_required":  true,
+    "default_decision":  "DEFER",
+    "allowed_decisions":  [
+                              "APPROVE_CONTROLLED_LOCAL_APPLY",
+                              "DEFER",
+                              "REJECT",
+                              "REQUEST_REPAIR"
+                          ],
+    "requires_reason":  true,
+    "requires_rollback":  true,
+    "requires_postcheck":  true,
+    "requires_receipt":  true,
+    "gate_locked_by_default":  true,
+    "real_apply_allowed":  false,
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "kanban_real_write":  false,
+    "created_utc":  "2026-06-17T11:26:18.9800618Z"
+}

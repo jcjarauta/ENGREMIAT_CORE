@@ -1,0 +1,64 @@
+﻿{
+    "matrix_id":  "capability-evidence-matrix.v1",
+    "required":  [
+                     {
+                         "capability":  "READ",
+                         "evidence":  [
+                                          "access_log_optional"
+                                      ]
+                     },
+                     {
+                         "capability":  "WRITE",
+                         "evidence":  [
+                                          "before_state",
+                                          "after_state",
+                                          "write_report"
+                                      ]
+                     },
+                     {
+                         "capability":  "EXECUTE",
+                         "evidence":  [
+                                          "command",
+                                          "stdout",
+                                          "stderr",
+                                          "exit_code",
+                                          "rollback_plan"
+                                      ]
+                     },
+                     {
+                         "capability":  "INFER",
+                         "evidence":  [
+                                          "prompt_hash",
+                                          "model_id",
+                                          "output_log",
+                                          "human_review_if_stateful"
+                                      ]
+                     },
+                     {
+                         "capability":  "CREATE_RESOURCE",
+                         "evidence":  [
+                                          "source_project",
+                                          "source_task",
+                                          "resource_manifest",
+                                          "validation_report"
+                                      ]
+                     },
+                     {
+                         "capability":  "OFFICIALIZE_RESOURCE",
+                         "evidence":  [
+                                          "candidate_report",
+                                          "validator_pass",
+                                          "human_approval"
+                                      ]
+                     },
+                     {
+                         "capability":  "AGENT_EXECUTE",
+                         "evidence":  [
+                                          "agent_scope",
+                                          "authorization",
+                                          "execution_log",
+                                          "result_report"
+                                      ]
+                     }
+                 ]
+}

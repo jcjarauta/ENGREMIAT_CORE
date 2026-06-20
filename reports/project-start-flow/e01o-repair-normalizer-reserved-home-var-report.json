@@ -1,0 +1,46 @@
+﻿{
+    "package_id":  "ENGREMIAT_PROJECT_START_FLOW_001",
+    "stage":  "E01O_REPAIR_NORMALIZER_RESERVED_HOME_VAR",
+    "status":  "PASS",
+    "readiness":  100,
+    "decision":  "GO_NORMALIZER_HOME_VAR_REPAIRED_AND_APPLIED",
+    "normalizer":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-vault-master-link-normalizer.ps1",
+    "latest_project":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto-nuevo-proyecto_20260619-160241",
+    "master_vault":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto-nuevo-proyecto_20260619-160241\\BOVEDA_MAESTRA",
+    "module_vault":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto-nuevo-proyecto_20260619-160241\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO",
+    "normalizer_output":  "OK master_vault_links_normalized=True hub=C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto-nuevo-proyecto_20260619-160241\\BOVEDA_MAESTRA\\00_HOME\\MASTER_HUB.md module_vault=C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto-nuevo-proyecto_20260619-160241\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO\r\n",
+    "checks":  [
+                   {
+                       "id":  "normalizer_parse_ok",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-vault-master-link-normalizer.ps1"
+                   },
+                   {
+                       "id":  "hub_created",
+                       "ok":  true,
+                       "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto-nuevo-proyecto_20260619-160241\\BOVEDA_MAESTRA\\00_HOME\\MASTER_HUB.md"
+                   },
+                   {
+                       "id":  "index_created",
+                       "ok":  true,
+                       "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto-nuevo-proyecto_20260619-160241\\BOVEDA_MAESTRA\\09_INDICE\\INDICE_MAESTRO.md"
+                   },
+                   {
+                       "id":  "modules_index_created",
+                       "ok":  true,
+                       "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto-nuevo-proyecto_20260619-160241\\BOVEDA_MAESTRA\\03_MODULOS\\MODULES_INDEX.md"
+                   }
+               ],
+    "failed_checks":  [
+
+                      ],
+    "safety":  {
+                   "local_only":  true,
+                   "patch_reserved_home_var":  true,
+                   "links_only":  true,
+                   "no_worker_real":  true,
+                   "no_git":  true,
+                   "no_network":  true
+               },
+    "next":  "REOPEN_MASTER_VAULT_GRAPH_AND_VERIFY_ORPHANS_REDUCED"
+}

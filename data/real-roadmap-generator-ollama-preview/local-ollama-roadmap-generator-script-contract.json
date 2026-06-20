@@ -1,0 +1,22 @@
+﻿{
+    "package_id":  "ENGREMIAT_REAL_ROADMAP_GENERATOR_WITH_LOCAL_OLLAMA_PREVIEW_001",
+    "stage":  "E02_CREATE_LOCAL_OLLAMA_ROADMAP_GENERATOR_SCRIPT",
+    "script":  "C:\\ENGREMIAT_CORE\\tools\\real-roadmap-generator-ollama-preview\\Invoke-LocalOllamaRoadmapPreview.ps1",
+    "purpose":  "Llamar a Ollama local para generar roadmap preview desde intake aceptado",
+    "input":  "data\\real-intake-importer\\real-human-intake.accepted.latest.json",
+    "outputs":  [
+                    "ollama-roadmap-preview.latest.json",
+                    "ollama-roadmap-preview.latest.html",
+                    "ollama-roadmap-preview-run.latest.json"
+                ],
+    "safety":  {
+                   "local_only":  true,
+                   "ollama_local_only":  true,
+                   "external_ai":  false,
+                   "execute_now":  false,
+                   "worker_execution":  false,
+                   "git_write":  false,
+                   "auto_apply":  false
+               },
+    "run_command":  "powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\ENGREMIAT_CORE\\tools\\real-roadmap-generator-ollama-preview\\Invoke-LocalOllamaRoadmapPreview.ps1\""
+}

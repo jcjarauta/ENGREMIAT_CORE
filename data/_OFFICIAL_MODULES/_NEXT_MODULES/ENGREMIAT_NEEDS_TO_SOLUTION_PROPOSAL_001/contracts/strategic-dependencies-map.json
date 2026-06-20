@@ -1,0 +1,19 @@
+﻿{
+    "contract_id":  "strategic-dependencies-map.v1",
+    "module_id":  "ENGREMIAT_NEEDS_TO_SOLUTION_PROPOSAL_001",
+    "dependencies":  [
+                         {
+                             "module":  "ENGREMIAT_INTERNAL_WORKFLOW_STANDARD_001",
+                             "use":  "PROJECT TASK WORKER RESOURCE EVIDENCE GATE"
+                         },
+                         {
+                             "module":  "ENGREMIAT_TOOL_ADAPTER_GATE_001",
+                             "use":  "capabilities permissions gates evidence"
+                         },
+                         {
+                             "module":  "ENGREMIAT_RESOURCE_LIBRARY_STANDARD_001",
+                             "use":  "resources capabilities index composition blueprints"
+                         }
+                     ],
+    "next_dependency":  "ENGREMIAT_RESOURCE_COMPOSER_OLLAMA_READY_001"
+}

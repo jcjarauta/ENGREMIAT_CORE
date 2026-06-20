@@ -1,0 +1,29 @@
+﻿{
+    "schema_id":  "worker.schema.v1",
+    "required":  [
+                     "worker_id",
+                     "worker_type",
+                     "capabilities",
+                     "availability",
+                     "authorization_scope"
+                 ],
+    "worker_types":  [
+                         "HUMAN_WORKER",
+                         "AI_ASSISTANT",
+                         "LOCAL_AGENT",
+                         "SOFTWARE_AGENT",
+                         "REVIEWER",
+                         "VALIDATOR",
+                         "COORDINATOR"
+                     ],
+    "fields":  [
+                   "worker_id",
+                   "worker_type",
+                   "name",
+                   "capabilities",
+                   "limitations",
+                   "availability",
+                   "authorization_scope",
+                   "tools_allowed"
+               ]
+}

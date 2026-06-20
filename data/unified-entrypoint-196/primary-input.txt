@@ -1,0 +1,27 @@
+﻿REAL MINIMAL PLAN
+
+Objective:
+- Validate the unified entry point with one minimal real plan.
+
+Goal:
+- Prove the full flow remains stable with a small, local case.
+
+Inputs:
+- primary: one compact real plan file
+- support: one short support note
+
+Expected output:
+- launcher summary
+- launcher receipt
+- launcher postcheck
+
+Restrictions:
+- local only
+- no external network
+- no Git writes
+- no real Kanban writes
+- no real Cline writes
+- no destructive actions
+
+Close criteria:
+- Plan -> Run -> artifacts exist -> output is readable

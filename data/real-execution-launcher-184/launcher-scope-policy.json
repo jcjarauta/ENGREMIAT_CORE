@@ -1,0 +1,22 @@
+﻿{
+    "objective_id":  "DEFINE_REAL_EXECUTION_LAUNCHER_REUSABLE_MVP_184_187",
+    "stage":  "E184",
+    "block":  "B184.1",
+    "step":  "P184.1.2",
+    "name":  "launcher-scope-policy",
+    "default_decision":  "DEFER",
+    "allowed":  [
+                    "local file I/O",
+                    "visible loading",
+                    "process monitoring",
+                    "evidence generation"
+                ],
+    "blocked":  [
+                    "external network",
+                    "git writes",
+                    "real kanban writes",
+                    "real cline writes",
+                    "destructive actions"
+                ],
+    "created_at":  "2026-06-17T18:26:32.8918159+02:00"
+}

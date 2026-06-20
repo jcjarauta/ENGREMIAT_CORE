@@ -1,0 +1,26 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_OPERATIVE_WORKER_FLOW_019_025",
+    "stage":  "E24",
+    "created_at":  "2026-06-17T10:52:25.7984894+02:00",
+    "readiness":  100,
+    "decision":  "GO_E24_MVP_DASHBOARD_READY",
+    "next":  "E25_MVP_CLOSE_AND_DEMO",
+    "checks":  {
+                   "dashboard_model_created":  true,
+                   "dashboard_data_index_created":  true,
+                   "html_dashboard_created":  true,
+                   "eng_ps1_exists":  true,
+                   "mvp_open_command_present":  true,
+                   "sources_count":  7,
+                   "prompt_exists":  true,
+                   "apply_false":  true,
+                   "auto_apply_false":  true,
+                   "remote_execution_false":  true,
+                   "git_write_false":  true
+               },
+    "dashboard":  "dashboard\\mvp-operative\\index.html",
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false
+}

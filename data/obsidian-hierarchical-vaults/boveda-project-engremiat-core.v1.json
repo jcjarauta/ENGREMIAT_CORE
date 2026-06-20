@@ -1,0 +1,42 @@
+﻿{
+    "package_id":  "ENGREMIAT_OBSIDIAN_HIERARCHICAL_VAULTS_001",
+    "stage":  "E03_CREATE_BOVEDA_PROJECT_ENGREMIAT_CORE_FROM_TEMPLATE_REPAIR_HOME_VAR",
+    "status":  "PASS",
+    "project_id":  "PROJECT_engremiat_core",
+    "project_name":  "ENGREMIAT_CORE",
+    "project_slug":  "engremiat-core",
+    "project_vault":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_CORE",
+    "template_source":  "C:\\ENGREMIAT_CORE\\templates\\obsidian-project-vault-template\\ENGREMIAT_PROJECT_VAULT_TEMPLATE",
+    "created_at":  "2026-06-19T14:17:39",
+    "role":  "project_vault",
+    "contains":  [
+                     "PROJECT_HOME",
+                     "PROJECT_STATUS",
+                     "ROADMAP_INDEX",
+                     "PROJECT_MODULES_INDEX",
+                     "PROJECT_DECISIONS_INDEX",
+                     "PROJECT_EVIDENCE_INDEX",
+                     "PROJECT_CANVAS",
+                     "PROJECT_REPORTS_INDEX"
+                 ],
+    "limits":  [
+                   "does_not_move_master_content",
+                   "does_not_move_existing_module",
+                   "does_not_execute_workers",
+                   "does_not_write_git",
+                   "does_not_use_external_network"
+               ],
+    "safety":  {
+                   "local_only":  true,
+                   "project_vault_created":  true,
+                   "master_write":  false,
+                   "module_move":  false,
+                   "obsidian_app_automation":  false,
+                   "worker_execution":  false,
+                   "kanban_write":  false,
+                   "clien_write":  false,
+                   "git_write":  false,
+                   "external_network":  false
+               },
+    "next":  "E04_CREATE_MASTER_PROJECT_LINK_REGISTRY"
+}

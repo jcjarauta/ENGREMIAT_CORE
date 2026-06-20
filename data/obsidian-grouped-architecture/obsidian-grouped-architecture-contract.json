@@ -1,0 +1,113 @@
+﻿{
+    "package_id":  "ENGREMIAT_OBSIDIAN_GROUPED_ARCHITECTURE_001",
+    "stage":  "E01_DEFINE_OBSIDIAN_GROUPS_FOR_OFFICIAL_ARCHITECTURE",
+    "status":  "DRAFT_READY",
+    "objective":  "Usar grupos Obsidian/Canvas para consolidar la arquitectura oficial global de ENGREMIAT",
+    "principle":  "Cada modulo o proyecto debe nacer ubicable, agrupable, relacionable, visible y gobernado",
+    "groups":  [
+                   {
+                       "id":  "G01_CORE",
+                       "name":  "ENGREMIAT CORE",
+                       "purpose":  "Fuente canonica, contratos, reports, manifests, dashboards y estado reconstruible",
+                       "contains":  [
+                                        "data",
+                                        "reports",
+                                        "exports",
+                                        "dashboard",
+                                        "contracts"
+                                    ]
+                   },
+                   {
+                       "id":  "G02_HUMAN_CONTROL",
+                       "name":  "CONTROL HUMANO",
+                       "purpose":  "Panel humano, decisiones, gates, revisiones y autorizaciones",
+                       "contains":  [
+                                        "00_CONTROL_OPERATIVO",
+                                        "04_GATES_DECISIONES"
+                                    ]
+                   },
+                   {
+                       "id":  "G03_PROJECTS_MODULES",
+                       "name":  "PROYECTOS Y MODULOS",
+                       "purpose":  "Project spaces, module spaces y lineas de trabajo agrupables",
+                       "contains":  [
+                                        "02_PROYECTOS",
+                                        "modules",
+                                        "PROJECT_*"
+                                    ]
+                   },
+                   {
+                       "id":  "G04_MEMORY_VISUAL",
+                       "name":  "MEMORIA VISUAL",
+                       "purpose":  "Obsidian, Canvas, grafo, enlaces, indices y vistas",
+                       "contains":  [
+                                        "07_OBSIDIAN_GRAPH",
+                                        "08_RELACIONES",
+                                        "bases",
+                                        "canvas"
+                                    ]
+                   },
+                   {
+                       "id":  "G05_TASKS_KANBAN",
+                       "name":  "TAREAS Y KANBAN PREVIEW",
+                       "purpose":  "Tarjetas, backlog, lanes, prioridades y trabajo humano visible",
+                       "contains":  [
+                                        "03_TAREAS",
+                                        "06_KANBAN_TAREAS"
+                                    ]
+                   },
+                   {
+                       "id":  "G06_WORKERS_EXECUTION_PREVIEW",
+                       "name":  "WORKERS Y EJECUCION PREVIEW",
+                       "purpose":  "Worker packets, dry-runs, propuestas y ejecucion bloqueada por gate",
+                       "contains":  [
+                                        "06_WORKERS",
+                                        "dry_run",
+                                        "worker_packet"
+                                    ]
+                   },
+                   {
+                       "id":  "G07_EVIDENCE_RESULTS",
+                       "name":  "EVIDENCIAS Y RESULTADOS",
+                       "purpose":  "Pruebas, receipts, reports de cierre, readiness y resultados",
+                       "contains":  [
+                                        "05_EVIDENCIAS",
+                                        "07_RESULTADOS"
+                                    ]
+                   },
+                   {
+                       "id":  "G08_SYSTEM_EVOLUTION",
+                       "name":  "EVOLUCION DEL SISTEMA",
+                       "purpose":  "Backlog de arquitectura, decisiones estrategicas, modulos futuros y aprendizaje",
+                       "contains":  [
+                                        "01_SISTEMA_ENGREMIAT",
+                                        "09_ARCHIVO",
+                                        "NEXT_OBJECTIVE"
+                                    ]
+                   }
+               ],
+    "human_choices":  [
+                          "crear_boveda_maestra",
+                          "crear_modulo_en_boveda_existente",
+                          "crear_modulo_relacionado",
+                          "crear_project_space",
+                          "ver_gates",
+                          "ver_tareas",
+                          "ver_evidencias",
+                          "ver_workers_preview",
+                          "ver_canvas_global",
+                          "trabajar_en_modulo"
+                      ],
+    "safety":  {
+                   "local_only":  true,
+                   "preview_only":  true,
+                   "execute_now":  false,
+                   "worker_execution":  false,
+                   "kanban_write":  false,
+                   "clien_write":  false,
+                   "obsidian_app_automation":  false,
+                   "git_write":  false,
+                   "external_network":  false
+               },
+    "next":  "E02_CREATE_GROUPED_SYSTEM_CANVAS_PREVIEW"
+}

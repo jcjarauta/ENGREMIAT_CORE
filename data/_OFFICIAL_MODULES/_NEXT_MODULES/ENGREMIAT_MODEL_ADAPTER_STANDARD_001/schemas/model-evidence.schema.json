@@ -1,0 +1,16 @@
+﻿{
+    "schema":  "model-evidence",
+    "required":  [
+                     "evidence_id",
+                     "request_id",
+                     "mode",
+                     "timestamp_utc",
+                     "real_inference_executed",
+                     "model_name",
+                     "input_refs",
+                     "output_refs",
+                     "safety"
+                 ],
+    "real_inference_executed":  false,
+    "traceability_required":  true
+}

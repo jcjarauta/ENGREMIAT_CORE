@@ -1,0 +1,35 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_ACTION_INSTANCE_018",
+    "stage":  "E05",
+    "created_at":  "2026-06-17T10:06:27.7785714+02:00",
+    "readiness":  100,
+    "decision":  "GO_E05_CLOSED_CONTROLLED_ACTION_INSTANCE_READY",
+    "next":  "NEXT_OBJECTIVE_CONTROLLED_WORKER_TASK_019",
+    "gate":  "DEFER",
+    "status":  "CLOSED",
+    "checks":  {
+                   "comparison_created":  true,
+                   "evidence_summary_created":  true,
+                   "close_report_created":  true,
+                   "manual_created":  true,
+                   "next_objective_created":  true,
+                   "gate_defer":  true,
+                   "template_reusability_validated":  true,
+                   "apply_false":  true,
+                   "auto_apply_false":  true,
+                   "remote_execution_false":  true,
+                   "git_write_false":  true
+               },
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "artifacts":  [
+                      "data/controlled-action-instance-018/controlled-action-instance-comparison.json",
+                      "reports/controlled-action-instance-018/instance-018-evidence-summary.json",
+                      "docs/CONTROLLED_ACTION_INSTANCE_018_CLOSE_REPORT.md",
+                      "docs/CONTROLLED_ACTION_INSTANCE_018_MANUAL.md",
+                      "docs/NEXT_OBJECTIVE_AFTER_CONTROLLED_ACTION_INSTANCE_018.md",
+                      "reports/controlled-action-instance-018/e05-close-readiness-report.json"
+                  ]
+}

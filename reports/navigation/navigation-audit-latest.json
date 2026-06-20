@@ -1,0 +1,61 @@
+﻿{
+    "generated_at":  "2026-06-20T08:18:32",
+    "package":  "ENGREMIAT_NAVIGATION_AUDIT",
+    "status":  "PASS",
+    "active_project":  "ENGREMIAT_PROJECT_prueba14_20260620-022106",
+    "current_routes":  23,
+    "current_screens":  12,
+    "ok":  3,
+    "pending":  5,
+    "expected":  [
+                     {
+                         "area":  "WORKSPACE",
+                         "expected":  "workspace -- 2 --\u003e cards",
+                         "status":  "OK",
+                         "reason":  "pantalla avanzada de tarjetas existe"
+                     },
+                     {
+                         "area":  "WORKSPACE",
+                         "expected":  "workspace -- 3 --\u003e tasks",
+                         "status":  "PENDING",
+                         "reason":  "falta pantalla avanzada de tareas equivalente a tarjetas"
+                     },
+                     {
+                         "area":  "WORKSPACE",
+                         "expected":  "workspace -- 4 --\u003e types",
+                         "status":  "PENDING",
+                         "reason":  "tipos existen como datos, falta decidir si pantalla propia o subpantalla"
+                     },
+                     {
+                         "area":  "WORKSPACE",
+                         "expected":  "workspace -- 5 --\u003e links",
+                         "status":  "PENDING",
+                         "reason":  "enlaces existen como datos, falta pantalla/vista de gestión"
+                     },
+                     {
+                         "area":  "CARDS",
+                         "expected":  "card -- vt --\u003e task",
+                         "status":  "PENDING",
+                         "reason":  "falta vínculo tarjeta-tarea bidireccional"
+                     },
+                     {
+                         "area":  "GRAPH",
+                         "expected":  "graph includes cards/tasks/memory",
+                         "status":  "PENDING",
+                         "reason":  "grafo actual se centra en módulos; falta extensión operativa"
+                     },
+                     {
+                         "area":  "MEMORY",
+                         "expected":  "memory + diary + prompts",
+                         "status":  "OK",
+                         "reason":  "memoria viva, diario y prompts ya vinculados al inicio"
+                     },
+                     {
+                         "area":  "INICIO",
+                         "expected":  "numeric-only navigation",
+                         "status":  "OK",
+                         "reason":  "inicio normalizado con números únicos"
+                     }
+                 ],
+    "recommended_next":  "E24A_CREATE_MODULE_TASKS_MANAGEMENT_SCREEN"
+}

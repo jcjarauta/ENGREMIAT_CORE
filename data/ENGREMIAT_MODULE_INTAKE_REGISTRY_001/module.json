@@ -1,0 +1,18 @@
+{
+    "package_id":  "ENGREMIAT_MODULE_INTAKE_REGISTRY_001",
+    "module_id":  "ENG-MOD-INTAKE-001",
+    "module_name":  "Module Intake Registry",
+    "module_type":  "REGISTRY",
+    "version":  "1.0.0",
+    "status":  "INITIATED",
+    "purpose":  "Normalizar y ordenar la entrada de modulos nuevos al sistema antes de desarrollarlos, conectarlos o archivarlos",
+    "depends_on":  [
+                       "ENGREMIAT_MODULAR_PLATFORM",
+                       "ENGREMIAT_OPERATIONAL_MASTER_PANEL_001"
+                   ],
+    "mode":  "LOCAL_FIRST",
+    "core_changes":  false,
+    "external_network":  false,
+    "git_write":  false,
+    "real_integration":  false
+}

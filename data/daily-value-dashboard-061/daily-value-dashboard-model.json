@@ -1,0 +1,38 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_REAL_WORKER_DAILY_VALUE_LOOP_056_065",
+    "stage":  "E61",
+    "stage_name":  "Daily Value Dashboard V2",
+    "purpose":  "Mostrar valor diario real, propuesta worker, decision y apply local",
+    "dashboard_role":  "daily_value_visual_evidence_surface",
+    "dashboard_path":  "dashboard/daily-value/index.html",
+    "sections":  [
+                     "worker_gate",
+                     "worker_response",
+                     "quality_check",
+                     "human_approval",
+                     "controlled_apply_v2",
+                     "postcheck",
+                     "next_step"
+                 ],
+    "rules":  [
+                  "Vista humana de valor",
+                  "No ejecuta acciones",
+                  "No aplica cambios",
+                  "No escribe Git",
+                  "No red externa",
+                  "No convierte worker en ejecutor libre"
+              ],
+    "security":  {
+                     "apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "worker_executed":  false,
+                     "dashboard_view_only":  true,
+                     "sensitive_actions_executed":  false,
+                     "human_decision_final":  true
+                 },
+    "next":  "E62_KANBAN_WRITE_SIMULATION_WITH_ROLLBACK",
+    "created_at":  "2026-06-17T12:24:14"
+}

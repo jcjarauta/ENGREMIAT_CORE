@@ -1,0 +1,65 @@
+﻿{
+    "package_id":  "ENGREMIAT_KANBAN_ROADMAP_CARD_EXPORT_PREVIEW_001",
+    "stage":  "E01_PREPARE_KANBAN_CARD_EXPORT_CONTRACT",
+    "contract_id":  "kanban-roadmap-card-export-preview.v1",
+    "purpose":  "Convertir el roadmap generado por Ollama local en tarjetas Kanban exportables, sin escribir en Kanban real ni Cline",
+    "source_preview":  "C:\\ENGREMIAT_CORE\\data\\real-roadmap-generator-ollama-preview\\ollama-roadmap-preview.latest.json",
+    "project_name":  "Primer intake real para construir roadmap automático en ENGREMIAT",
+    "model":  "qwen3:14b",
+    "output_formats":  [
+                           "JSON",
+                           "TSV",
+                           "Markdown",
+                           "HTML preview"
+                       ],
+    "card_schema":  {
+                        "columns":  [
+                                        "card_id",
+                                        "lane",
+                                        "title",
+                                        "description",
+                                        "source",
+                                        "priority",
+                                        "risk",
+                                        "human_gate",
+                                        "status",
+                                        "evidence",
+                                        "next_action"
+                                    ],
+                        "lanes":  [
+                                      "BACKLOG",
+                                      "READY_FOR_REVIEW",
+                                      "GATED_PREVIEW",
+                                      "BLOCKED",
+                                      "DONE_PREVIEW"
+                                  ]
+                    },
+    "safety":  {
+                   "preview_only":  true,
+                   "local_only":  true,
+                   "write_kanban":  false,
+                   "clien_write":  false,
+                   "browser_automation":  false,
+                   "worker_execution":  false,
+                   "execute_now":  false,
+                   "git_write":  false,
+                   "auto_apply":  false,
+                   "external_ai":  false
+               },
+    "allowed_operations":  [
+                               "READ_LOCAL_OLLAMA_ROADMAP_PREVIEW",
+                               "PARSE_TO_CARDS_PREVIEW",
+                               "SAVE_JSON_TSV_MD_HTML",
+                               "OPEN_LOCAL_DASHBOARD"
+                           ],
+    "forbidden_operations":  [
+                                 "WRITE_KANBAN_REAL",
+                                 "CLINE_SEND",
+                                 "BROWSER_AUTOMATION",
+                                 "EXECUTE_WORKER",
+                                 "GIT_COMMIT",
+                                 "GIT_PUSH",
+                                 "AUTO_APPLY"
+                             ],
+    "next":  "E02_BUILD_KANBAN_CARD_EXPORTER_PREVIEW"
+}

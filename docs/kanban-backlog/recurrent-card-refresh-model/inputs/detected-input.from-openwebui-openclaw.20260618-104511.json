@@ -1,0 +1,22 @@
+﻿{
+    "id":  "INPUT-OPENWEBUI-OPENCLAW-20260618-104511",
+    "source":  "openclaw",
+    "upstream_source":  "openwebui",
+    "upstream_thread_id":  "OPENWEBUI-THREAD-LOCAL-SAMPLE-001",
+    "kind":  "project",
+    "title":  "Evolucionar ENGREMIAT con OpenClaw como punto medio entre OpenWebUI y Obsidian",
+    "summary":  "Convertir conversaciones y propuestas de OpenWebUI en entradas detectadas para ENGREMIAT, manteniendo OpenClaw como gateway y Obsidian como memoria candidata. Se propone que OpenClaw normalice intenciones, enrute sesiones y aplique una skill ENGREMIAT para producir paquetes revisables. OpenWebUI aporta conversación, análisis y modelos. OpenClaw aporta gateway, routing y skills. ENGREMIAT aporta tarjetas consumibles, gates y tablero. Obsidian aporta memoria persistente candidata.",
+    "priority":  82,
+    "risk":  "MEDIUM",
+    "target_consumers":  [
+                             "HUMAN",
+                             "CLINE_KANBAN",
+                             "OBSIDIAN",
+                             "OPENWEBUI"
+                         ],
+    "mode":  "DRY_RUN",
+    "human_review_required":  true,
+    "execution_allowed":  false,
+    "native_kanban_write":  "disabled",
+    "obsidian_real_write":  "disabled"
+}

@@ -1,0 +1,19 @@
+﻿{
+    "response_id":  "OLLAMA-NORMALIZED-SAMPLE-001",
+    "request_id":  "OLLAMA-REQ-SAMPLE-001",
+    "mode":  "MOCK",
+    "status":  "MOCK_PASS",
+    "normalized_output":  {
+                              "output_type":  "MODEL_RESPONSE_NORMALIZED",
+                              "content":  "Sample normalized Ollama response without real inference"
+                          },
+    "evidence":  {
+                     "real_inference_executed":  false,
+                     "model_name":  "qwen3:14b",
+                     "adapter":  "OLLAMA"
+                 },
+    "adapter_metadata":  {
+                             "ollama_dependency":  true,
+                             "endpoint_called":  false
+                         }
+}

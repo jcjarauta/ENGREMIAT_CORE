@@ -1,0 +1,14 @@
+﻿{
+    "package_id":  "ENGREMIAT_OPERATOR_CONTEXT_AND_DECISION_TREE_001",
+    "stage":  "E07Y_CONTEXT_COMMAND_ALIASES_OPEN_PROJECT",
+    "status":  "PASS",
+    "readiness":  100,
+    "fixed":  [
+                  "open-project_alias",
+                  "new-project_alias",
+                  "open-module_alias",
+                  "new-module_alias",
+                  "library_alias"
+              ],
+    "next":  "retest_global_1_open_project"
+}

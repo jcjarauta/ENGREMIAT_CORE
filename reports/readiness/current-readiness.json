@@ -1,75 +1,23 @@
 ﻿{
-    "objective_id":  "ENGREMIAT_DEV_SYSTEM_001",
-    "scope":  "current",
-    "stage_id":  "E05",
-    "block_id":  "B05.1",
-    "step_id":  "P05.1.2",
-    "totals":  {
-                   "validation_reports_expected":  5,
-                   "validation_reports_validated":  5,
-                   "artifacts_expected":  19,
-                   "artifacts_found":  19,
-                   "artifacts_registered":  24
+    "objective":  "ENGREMIAT_MVP_FINAL_026_035",
+    "stage":  "E30",
+    "created_at":  "2026-06-17T11:11:35.6186662+02:00",
+    "readiness":  90,
+    "decision":  "NEEDS_REVIEW",
+    "pending_gates":  1,
+    "inputs":  {
+                   "artifact_registry":  true,
+                   "context_snapshot":  true,
+                   "gate_center":  true,
+                   "gate_index":  true,
+                   "artifact_index":  true
                },
-    "validated_steps":  [
-                            "reports/dev-system/e00-contract/dev-system-contract-validation-report.json",
-                            "reports/dev-system/e01-artifact-registry/artifact-registry-validation-report.json",
-                            "reports/dev-system/e02-context-snapshot/context-snapshot-validation-report.json",
-                            "reports/dev-system/e03-dev-runner/dev-runner-validation-report.json",
-                            "reports/dev-system/e04-gate-center/gate-center-validation-report.json"
-                        ],
-    "artifacts_expected":  [
-                               "data/dev/dev-system-contract.json",
-                               "docs/DEV_SYSTEM_GUIDE.md",
-                               "data/dev/dev-system-policy.json",
-                               "data/registry/artifact-record.schema.json",
-                               "data/registry/artifact-registry.jsonl",
-                               "docs/ARTIFACT_INDEX.md",
-                               "data/dev/context-snapshot.schema.json",
-                               "data/dev/context-snapshot.json",
-                               "tools/eng-context.ps1",
-                               "docs/CURRENT_CONTEXT.md",
-                               "data/dev/active-row.schema.json",
-                               "data/dev/active-row.json",
-                               "data/dev/next-package.json",
-                               "tools/eng-dev-runner.ps1",
-                               "data/gates/gate-record.schema.json",
-                               "data/gates/gate-registry.jsonl",
-                               "tools/eng-gates.ps1",
-                               "docs/GATE_INDEX.md",
-                               "data/dev/readiness-report.schema.json"
-                           ],
-    "artifacts_found":  [
-                            "data/dev/dev-system-contract.json",
-                            "docs/DEV_SYSTEM_GUIDE.md",
-                            "data/dev/dev-system-policy.json",
-                            "data/registry/artifact-record.schema.json",
-                            "data/registry/artifact-registry.jsonl",
-                            "docs/ARTIFACT_INDEX.md",
-                            "data/dev/context-snapshot.schema.json",
-                            "data/dev/context-snapshot.json",
-                            "tools/eng-context.ps1",
-                            "docs/CURRENT_CONTEXT.md",
-                            "data/dev/active-row.schema.json",
-                            "data/dev/active-row.json",
-                            "data/dev/next-package.json",
-                            "tools/eng-dev-runner.ps1",
-                            "data/gates/gate-record.schema.json",
-                            "data/gates/gate-registry.jsonl",
-                            "tools/eng-gates.ps1",
-                            "docs/GATE_INDEX.md",
-                            "data/dev/readiness-report.schema.json"
-                        ],
-    "artifacts_missing":  [
-
-                          ],
-    "gates_pending":  0,
-    "errors_open":  0,
     "blockers":  [
 
                  ],
-    "readiness":  100,
-    "decision":  "GO",
-    "created_at":  "2026-06-16T09:17:47",
-    "next":  "P05.2.1 Crear eng-readiness"
+    "next":  "REVIEW_GATES_OR_MISSING_ARTIFACTS",
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false
 }

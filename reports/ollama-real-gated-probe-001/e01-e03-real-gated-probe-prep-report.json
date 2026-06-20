@@ -1,0 +1,25 @@
+﻿{
+    "package_id":  "ENGREMIAT_OLLAMA_REAL_GATED_PROBE_001",
+    "stages":  [
+                   "E01",
+                   "E02",
+                   "E03"
+               ],
+    "status":  "PASS",
+    "missing":  [
+
+                ],
+    "parse_errors":  [
+
+                     ],
+    "authorization_recorded":  true,
+    "authorization":  "AUTORIZO_OLLAMA_REAL_INFERENCE_GATED",
+    "preflight_readonly":  true,
+    "payload_prepared":  true,
+    "real_inference_executed":  false,
+    "endpoint_generate_called":  false,
+    "network_scope":  "LOCALHOST_ONLY",
+    "git":  false,
+    "readiness":  43,
+    "next":  "E04_RUN_REAL_GATED_PROBE"
+}

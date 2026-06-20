@@ -1,0 +1,58 @@
+﻿[
+    {
+        "option":  "MARKDOWN_KANBAN_VSCODE_CURSOR",
+        "status":  "PENDING_VISUAL_VALIDATION",
+        "manual_step_avoidance":  "HIGH_IF_BOARD_VISIBLE",
+        "risk":  "LOW",
+        "decision":  "TEST_NOW",
+        "next":  "Validate jeddak.md-kanban board rendering"
+    },
+    {
+        "option":  "OBSIDIAN_AS_PRIMARY_KANBAN",
+        "status":  "VIABLE",
+        "manual_step_avoidance":  "HIGH",
+        "risk":  "LOW_MEDIUM",
+        "decision":  "STRONG_OPTION",
+        "next":  "Create Obsidian board/index using folders/tags/properties"
+    },
+    {
+        "option":  "ENGREMIAT_LOCAL_KANBAN_DASHBOARD",
+        "status":  "VIABLE_AND_CONTROLLED",
+        "manual_step_avoidance":  "HIGH",
+        "risk":  "LOW",
+        "decision":  "BEST_FALLBACK",
+        "next":  "Generate local HTML Kanban from Obsidian objects"
+    },
+    {
+        "option":  "CLINE_CLI_AS_WORKER_NOT_BOARD",
+        "status":  "VIABLE_LATER",
+        "manual_step_avoidance":  "MEDIUM_HIGH",
+        "risk":  "MEDIUM_HIGH",
+        "decision":  "DEFER_WITH_GATE",
+        "next":  "Design selected-task-to-Cline-worker flow"
+    },
+    {
+        "option":  "MCP_OBSIDIAN_ENGREMIAT_TO_CLINE",
+        "status":  "BEST_FUTURE_ARCHITECTURE",
+        "manual_step_avoidance":  "HIGH",
+        "risk":  "MEDIUM",
+        "decision":  "DESIGN_LATER",
+        "next":  "Create read-only MCP contract"
+    },
+    {
+        "option":  "GITHUB_ISSUES_OR_MARKDOWN_TASKS",
+        "status":  "ROBUST_FALLBACK",
+        "manual_step_avoidance":  "MEDIUM_HIGH",
+        "risk":  "LOW_MEDIUM",
+        "decision":  "KEEP_AVAILABLE",
+        "next":  "Use only if local Kanban insufficient"
+    },
+    {
+        "option":  "UI_AUTOMATION",
+        "status":  "LAST_RESORT",
+        "manual_step_avoidance":  "HIGH_BUT_FRAGILE",
+        "risk":  "HIGH",
+        "decision":  "DEFER",
+        "next":  "Only with explicit authorization and tiny scope"
+    }
+]

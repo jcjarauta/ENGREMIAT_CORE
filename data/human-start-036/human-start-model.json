@@ -1,0 +1,42 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_HUMAN_USABLE_036_045",
+    "stage":  "E36",
+    "created_at":  "2026-06-17T11:35:06.8176771+02:00",
+    "screen":  "HUMAN_START_SCREEN",
+    "purpose":  "Crear una pantalla unica para operar ENGREMIAT sin recordar rutas.",
+    "sections":  [
+                     "NOW",
+                     "NEXT",
+                     "READINESS",
+                     "GATES",
+                     "PROMPT",
+                     "INBOX",
+                     "ARTIFACTS",
+                     "CONTEXT",
+                     "ERRORS",
+                     "DASHBOARDS",
+                     "MANUALS"
+                 ],
+    "commands":  [
+                     ".\\eng.ps1 start",
+                     ".\\eng.ps1 status",
+                     ".\\eng.ps1 next",
+                     ".\\eng.ps1 readiness",
+                     ".\\eng.ps1 gates",
+                     ".\\eng.ps1 artifacts",
+                     ".\\eng.ps1 context",
+                     ".\\eng.ps1 errors",
+                     ".\\eng.ps1 docs",
+                     ".\\eng.ps1 dashboard",
+                     ".\\eng.ps1 mvp-open"
+                 ],
+    "safety":  {
+                   "local_first":  true,
+                   "auto_apply":  false,
+                   "remote_execution":  false,
+                   "git_write":  false,
+                   "external_network":  false,
+                   "read_secrets":  false,
+                   "fail_closed":  true
+               }
+}

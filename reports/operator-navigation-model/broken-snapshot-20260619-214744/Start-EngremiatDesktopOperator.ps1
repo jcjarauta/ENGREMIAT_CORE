@@ -1,0 +1,105 @@
+﻿$ErrorActionPreference="Stop"
+[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+$ScriptDir=Split-Path -Parent $MyInvocation.MyCommand.Path
+$Root=(Resolve-Path (Join-Path $ScriptDir "..\..")).Path
+Set-Location -LiteralPath $Root
+$Router=Join-Path $Root "tools\desktop-terminal-operator\eng-router.ps1"
+$StatePath=Join-Path $Root "data\operator-state\active-context.json"
+$SessionInsideProject=$false
+$SessionInsideModule=$false
+function Get-State{try{if(Test-Path -LiteralPath $StatePath){return (Get-Content -LiteralPath $StatePath -Raw -Encoding UTF8|ConvertFrom-Json)}}catch{};return $null}
+function Save-State($s){try{$s|Add-Member -Force -NotePropertyName updated_at -NotePropertyValue (Get-Date).ToString("s");$s|ConvertTo-Json -Depth 100|Set-Content -LiteralPath $StatePath -Encoding UTF8}catch{}}
+function Enter-From-State{$s=Get-State;if($s -and ![string]::IsNullOrWhiteSpace([string]$s.active_project)){$script:SessionInsideProject=$true}else{$script:SessionInsideProject=$false};if($s -and ![string]::IsNullOrWhiteSpace([string]$s.active_module)){$script:SessionInsideModule=$true}else{$script:SessionInsideModule=$false}}
+function Get-Level{if($script:SessionInsideModule){return "MODULE"}elseif($script:SessionInsideProject){return "PROJECT"}else{return "GLOBAL"}}
+function Get-EngremiatPrompt{if(!$script:SessionInsideProject){return "ENGREMIAT"};$s=Get-State;if($s){$p="";$m="";if($s.active_project){$p=Split-Path ([string]$s.active_project) -Leaf};if($script:SessionInsideModule -and $s.active_module){$m=[string]$s.active_module};if($p -and $m){return ("ENGREMIAT["+$p+"/"+$m+"]")};if($p){return ("ENGREMIAT["+$p+"]")}};return "ENGREMIAT"}
+function Show-ProjectModulesInline{$s=Get-State;if(!$s -or [string]::IsNullOrWhiteSpace([string]$s.active_project)){return};$modsDir=Join-Path ([string]$s.active_project) "MODULOS";Write-Host "MODULOS" -ForegroundColor Cyan;if(!(Test-Path -LiteralPath $modsDir)){Write-Host " sin carpeta MODULOS" -ForegroundColor Yellow;return};$mods=Get-ChildItem -LiteralPath $modsDir -Directory -ErrorAction SilentlyContinue|Where-Object{$_.Name -ne ".obsidian"}|Sort-Object Name;if(@($mods).Count -eq 0){Write-Host " sin modulos" -ForegroundColor Yellow;return};$i=1;foreach($m in $mods){$mjPath=Join-Path $m.FullName "BOVEDA_MODULO\module.json";$status="NO_JSON";$lib="";if(Test-Path -LiteralPath $mjPath){try{$mj=Get-Content -LiteralPath $mjPath -Raw -Encoding UTF8|ConvertFrom-Json;$status=[string]$mj.lifecycle;$lib=[string]$mj.library_status}catch{$status="INVALID_JSON"}};Write-Host (" ["+$i+"] "+$m.Name+"  "+$status+"  "+$lib) -ForegroundColor Green;$i++};Write-Host ""}
+function Show-Health{Clear-Host;Write-Host "ENGREMIAT TERMINAL OPERATOR" -ForegroundColor Cyan;Write-Host ("Workspace: "+$Root) -ForegroundColor DarkCyan;$ok=(Test-Path $Router) -and (Test-Path $StatePath);$status=if($ok){"HEALTHY"}else{"WARN"};$color=if($ok){"Green"}else{"Yellow"};Write-Host ("Sistema: "+$status) -ForegroundColor $color;Write-Host ""}
+function Show-Menu{$level=Get-Level;if($level -eq "GLOBAL"){Write-Host "GLOBAL" -ForegroundColor Cyan;Write-Host " [1] Abrir proyecto     p" -ForegroundColor Green;Write-Host " [2] Nuevo proyecto     n" -ForegroundColor Green;Write-Host " [3] Ver proyectos" -ForegroundColor Green;Write-Host " [4] Estado compacto    e" -ForegroundColor Green;Write-Host " [q] Salir" -ForegroundColor Yellow}elseif($level -eq "PROJECT"){Write-Host "PROYECTO" -ForegroundColor Cyan;Show-ProjectModulesInline;Write-Host "ACCIONES" -ForegroundColor Cyan;Write-Host " [1] Entrar en modulo   m" -ForegroundColor Green;Write-Host " [2] Crear modulo       n" -ForegroundColor Green;Write-Host " [3] Biblioteca modulos b" -ForegroundColor Green;Write-Host " [4] Revisar proyecto   r" -ForegroundColor Green;Write-Host " [a] Atras" -ForegroundColor Yellow}else{Write-Host "MODULO" -ForegroundColor Cyan;Write-Host " [1] Contrato           c" -ForegroundColor Green;Write-Host " [2] Tareas             t" -ForegroundColor Green;Write-Host " [3] Evidencias         ev" -ForegroundColor Green;Write-Host " [4] Gates              g" -ForegroundColor Green;Write-Host " [5] Smoke              s" -ForegroundColor Green;Write-Host " [6] Editar artefacto   ed" -ForegroundColor Green;Write-Host " [7] Definir objetivo   o" -ForegroundColor Green;Write-Host " [8] Cerrar modulo      cm" -ForegroundColor Green;Write-Host " [9] Promover biblioteca pb" -ForegroundColor Green;Write-Host " [a] Atras" -ForegroundColor Yellow};Write-Host "";Write-Host "refrescar/f5/Enter = redibujar pantalla | ? = ayuda | comandos = menu actual" -ForegroundColor DarkGray;Write-Host ""}
+function Refresh-Screen{Show-Health;Show-Menu}
+function Normalize-Command($raw){$x=([string]$raw).Trim().ToLowerInvariant();$level=Get-Level;if([string]::IsNullOrWhiteSpace($x)){return "__refresh__"};if($x -in @("refrescar","refresh","f5","menu","comandos")){return "__refresh__"};if($x -in @("?","ayuda")){return "ayuda"};if($x -in @("q","salir","exit")){return "salir"};if($x -in @("a","atras","atrás","volver","back","..","0")){return "atras"};if($level -eq "GLOBAL"){if($x -in @("1","p")){return "abrir-proyecto"};if($x -in @("2","n")){return "nuevo-proyecto"};if($x -eq "3"){return "proyectos"};if($x -in @("4","e")){return "estado"}}elseif($level -eq "PROJECT"){if($x -in @("1","m","entrar-modulo","abrir-modulo")){return "abrir-modulo"};if($x -in @("2","n","nuevo-modulo")){return "nuevo-modulo"};if($x -in @("3","b","biblioteca","biblioteca-modulos","importar-modulo")){return "biblioteca"};if($x -in @("4","r","revisar-proyecto")){return "revisar-proyecto"}}else{if($x -in @("1","c")){return "contrato"};if($x -in @("2","t")){return "tareas"};if($x -in @("3","ev","e")){return "evidencias"};if($x -in @("4","g")){return "gates"};if($x -in @("5","s")){return "preparar-smoke"};if($x -in @("6","ed","editar")){return "editar"};if($x -in @("7","o","objetivo")){return "objetivo"};if($x -in @("8","cm","cerrar","cerrar-modulo")){return "cerrar-modulo"};if($x -in @("9","pb","promover","promover-biblioteca")){return "promover"}};return $raw}
+function Go-Back{
+  if($script:SessionInsideModule){
+    $s=Get-State
+    if($s){
+      $s.mode="project"
+      $s.active_module=""
+      $s.active_module_vault=""
+      $s.next="proyecto"
+      Save-State $s
+    }
+    $script:SessionInsideProject=$true
+    $script:SessionInsideModule=$false
+    Refresh-Screen
+    return
+  }
+  if($script:SessionInsideProject){
+    $s=Get-State
+    if($s){
+      $s.mode="global"
+      $s.active_project=""
+      $s.active_master_vault=""
+      $s.active_module=""
+      $s.active_module_vault=""
+      $s.next="global"
+      Save-State $s
+    }
+    $script:SessionInsideProject=$false
+    $script:SessionInsideModule=$false
+    Refresh-Screen
+    return
+  }
+  Refresh-Screen
+}
+function IsModuleAction($cmd){$x=([string]$cmd).Trim().ToLowerInvariant();return ($x -in @("contrato","tareas","evidencias","gates","preparar-smoke","modulo","editar","objetivo","cerrar-modulo","cerrar","promover"))}
+function Pause-And-Refresh{Write-Host "";Write-Host "Pulsa Enter para volver al menu limpio..." -ForegroundColor DarkGray;[void](Read-Host);Refresh-Screen}
+Refresh-Screen
+function IsContextCommand($cmd){
+  $x=([string]$cmd).Trim().ToLowerInvariant()
+  return ($x -in @("abrir-proyecto","abrir-modulo","nuevo-modulo","biblioteca","nuevo-proyecto","projects","proyectos"))
+}
+
+# E05K_DIRECT_CONTEXT_ROUTING_BEGIN
+function Invoke-EngContextDirect {
+  param([string]$Cmd)
+  $x=([string]$Cmd).Trim().ToLowerInvariant()
+  if($x -eq "proyectos"){$x="projects"}
+  if($x -in @("abrir-proyecto","nuevo-proyecto","abrir-modulo","nuevo-modulo","projects")){
+    & powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot "eng-context.ps1") $x
+    Enter-From-State
+    return $true
+  }
+  return $false
+}
+# E05K_DIRECT_CONTEXT_ROUTING_END
+
+# E08Q_PARENT_REDRAW_OVERRIDE_BEGIN
+function Invoke-EngremiatDesktopOperatorRedrawLoop {
+  while($true){
+    Clear-Host
+    Write-Host "ENGREMIAT TERMINAL OPERATOR" -ForegroundColor Cyan
+    Write-Host ("Workspace: " + $Root) -ForegroundColor Cyan
+    Write-Host "Sistema: HEALTHY" -ForegroundColor Green
+    Write-Host ""
+    Show-Menu
+    $rawChoice = Read-Host "ENGREMIAT"
+    $cmd = Normalize-Command $rawChoice
+    if($cmd -eq "__refresh__"){ continue }
+    if($cmd -eq "salir"){ break }
+    if($cmd -eq "ayuda"){ Show-Help; Read-Host "Enter para volver" | Out-Null; continue }
+    if($cmd -eq "atras"){ Go-Back; continue }
+    if(IsContextCommand $cmd){
+      if(Invoke-EngContextDirect $cmd){ continue }
+    }
+    if($cmd -in @("estado","status","compact-status","estado-compacto")){
+      & (Join-Path $PSScriptRoot "eng-router.ps1") $cmd
+      Enter-From-State
+      continue
+    }
+    & (Join-Path $PSScriptRoot "eng-router.ps1") $cmd
+    Enter-From-State
+  }
+}
+Invoke-EngremiatDesktopOperatorRedrawLoop
+# E08Q_PARENT_REDRAW_OVERRIDE_END
+
+

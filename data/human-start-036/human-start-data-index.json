@@ -1,0 +1,61 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_HUMAN_USABLE_036_045",
+    "stage":  "E36",
+    "created_at":  "2026-06-17T11:35:06.8176771+02:00",
+    "sources":  [
+                    {
+                        "id":  "final_mvp",
+                        "label":  "Final MVP readiness",
+                        "path":  "reports/final-mvp-035/e35-final-readiness-report.json",
+                        "exists":  true
+                    },
+                    {
+                        "id":  "current_context",
+                        "label":  "Current context",
+                        "path":  "docs/CURRENT_CONTEXT.md",
+                        "exists":  true
+                    },
+                    {
+                        "id":  "readiness",
+                        "label":  "Readiness",
+                        "path":  "reports/readiness/current-readiness.json",
+                        "exists":  true
+                    },
+                    {
+                        "id":  "gates",
+                        "label":  "Pending gates",
+                        "path":  "data/gates/pending-gates.json",
+                        "exists":  true
+                    },
+                    {
+                        "id":  "artifacts",
+                        "label":  "Artifact registry",
+                        "path":  "data/registry/artifact-registry-latest.json",
+                        "exists":  true
+                    },
+                    {
+                        "id":  "errors",
+                        "label":  "Error memory",
+                        "path":  "data/errors/error-memory.jsonl",
+                        "exists":  true
+                    },
+                    {
+                        "id":  "mvp_dashboard",
+                        "label":  "MVP dashboard",
+                        "path":  "dashboard/mvp-operative/index.html",
+                        "exists":  true
+                    },
+                    {
+                        "id":  "readiness_dashboard",
+                        "label":  "Readiness dashboard",
+                        "path":  "reports/readiness/index.html",
+                        "exists":  true
+                    },
+                    {
+                        "id":  "manual",
+                        "label":  "Final MVP manual",
+                        "path":  "docs/FINAL_MVP_MANUAL.md",
+                        "exists":  true
+                    }
+                ]
+}

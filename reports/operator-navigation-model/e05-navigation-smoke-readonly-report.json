@@ -1,0 +1,37 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_NAVIGATION_MODEL_001",
+    "stage":  "E05_NAVIGATION_SMOKE_READONLY_AND_MANUAL_GATE",
+    "status":  "PASS",
+    "readonly":  true,
+    "checks":  [
+                   {
+                       "check":  "helper_has_refresh_alias",
+                       "ok":  true
+                   },
+                   {
+                       "check":  "helper_has_back_alias",
+                       "ok":  true
+                   },
+                   {
+                       "check":  "helper_loop_exists",
+                       "ok":  true
+                   },
+                   {
+                       "check":  "status_uses_helper",
+                       "ok":  true
+                   },
+                   {
+                       "check":  "projects_uses_helper",
+                       "ok":  true
+                   },
+                   {
+                       "check":  "parent_redraw_loop_exists",
+                       "ok":  true
+                   }
+               ],
+    "failed":  [
+
+               ],
+    "manual_gate":  "C:\\ENGREMIAT_CORE\\reports\\operator-navigation-model\\e05-manual-navigation-gate.txt",
+    "next":  "MANUAL_TEST_3_AND_4_THEN_E06_CLOSE_OR_FIX"
+}

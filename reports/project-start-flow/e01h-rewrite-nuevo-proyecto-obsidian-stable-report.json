@@ -1,0 +1,32 @@
+﻿{
+    "package_id":  "ENGREMIAT_PROJECT_START_FLOW_001",
+    "stage":  "E01H_REWRITE_NUEVO_PROYECTO_OBSIDIAN_STABLE",
+    "status":  "PASS",
+    "readiness":  100,
+    "decision":  "GO_NUEVO_PROYECTO_OBSIDIAN_STABLE_REWRITTEN",
+    "script":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-new-project.ps1",
+    "latest_vault":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_prueba2_20260619-153101\\BOVEDA_MAESTRA",
+    "latest_open_cmd":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_prueba2_20260619-153101\\ABRIR_BOVEDA_OBSIDIAN.cmd",
+    "checks":  [
+                   {
+                       "id":  "new_project_script_parse_ok",
+                       "ok":  true,
+                       "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-new-project.ps1"
+                   },
+                   {
+                       "id":  "latest_open_cmd_repaired_if_present",
+                       "ok":  true,
+                       "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_prueba2_20260619-153101\\ABRIR_BOVEDA_OBSIDIAN.cmd"
+                   }
+               ],
+    "safety":  {
+                   "local_only":  true,
+                   "full_rewrite":  true,
+                   "creates_real_obsidian_vault":  true,
+                   "registry_update":  true,
+                   "no_worker_real":  true,
+                   "no_git":  true,
+                   "no_network":  true
+               },
+    "next":  "RUN_NUEVO_PROYECTO_OR_DOUBLE_CLICK_LAST_ABRIR_BOVEDA_OBSIDIAN_CMD"
+}

@@ -1,0 +1,15 @@
+{
+    "package_id":  "ENGREMIAT_OPERATIONAL_MASTER_PANEL_001",
+    "stage":  "E04_MASTER_DASHBOARD",
+    "artifact":  "master-dashboard-contract.json",
+    "status":  "DEFINED",
+    "purpose":  "Crear dashboard maestro humano con readiness, modulos, gates, riesgos y siguiente accion",
+    "input":  "operational-state-summary.json",
+    "output":  "dashboard/index.html",
+    "blocked_actions":  [
+                            "core_changes",
+                            "external_network",
+                            "git_write",
+                            "real_integration"
+                        ]
+}

@@ -1,0 +1,52 @@
+﻿{
+    "package_id":  "ENGREMIAT_TASK_PACKET_TO_MODULE_INTAKE_001",
+    "stage":  "E01_CONTRACT_TASK_PACKET_TO_MODULE_INTAKE",
+    "purpose":  "Convertir un task_packet validado en una candidatura formal para ENGREMIAT_MODULE_INTAKE_REGISTRY_001 sin crear modulo real.",
+    "input":  {
+                  "task_packet":  "data/knowledge-to-task-packet-001/task-packet-demo-source.json",
+                  "previous_close_report":  "reports/knowledge-to-task-packet-001/e05-close-knowledge-to-task-packet-report.json",
+                  "official_modules_registry":  "data/_OFFICIAL_MODULES/"
+              },
+    "output":  {
+                   "candidate_intake":  "data/task-packet-to-module-intake-001/module-intake-candidate.demo.json",
+                   "validation_report":  "reports/task-packet-to-module-intake-001/e04-validate-against-official-modules-report.json",
+                   "close_report":  "reports/task-packet-to-module-intake-001/e05-close-task-packet-to-module-intake-report.json"
+               },
+    "mapping":  {
+                    "task_packet_id":  "source.task_packet_id -\u003e candidate.source.task_packet_id",
+                    "title":  "source.title -\u003e candidate.module_candidate.name",
+                    "summary":  "source.summary -\u003e candidate.module_candidate.description",
+                    "tags":  "source.tags -\u003e candidate.classification.tags",
+                    "links":  "source.links -\u003e candidate.traceability.links",
+                    "status":  "DRAFT -\u003e CANDIDATE_PENDING_HUMAN_DECISION"
+                },
+    "safety_policy":  {
+                          "local_only":  true,
+                          "core_changes":  false,
+                          "real_module_creation":  false,
+                          "real_intake_write":  false,
+                          "git_write":  false,
+                          "network":  false,
+                          "ollama_inference":  false,
+                          "obsidian_write":  false,
+                          "kanban_write":  false,
+                          "cline_write":  false
+                      },
+    "stages":  [
+                   "E01_CONTRACT_TASK_PACKET_TO_MODULE_INTAKE",
+                   "E02_CANDIDATE_INTAKE_SCHEMA",
+                   "E03_DRY_RUN_CANDIDATE_GENERATOR",
+                   "E04_VALIDATE_AGAINST_OFFICIAL_MODULES",
+                   "E05_CLOSE_AND_HUMAN_DECISION"
+               ],
+    "human_decisions":  [
+                            "CREATE_MODULE_LATER",
+                            "REJECT",
+                            "BACKLOG"
+                        ],
+    "compatibility":  {
+                          "consumes":  "ENGREMIAT_KNOWLEDGE_TO_TASK_PACKET_001",
+                          "prepares_for":  "ENGREMIAT_MODULE_INTAKE_REGISTRY_001",
+                          "official_modules_source":  "data/_OFFICIAL_MODULES/"
+                      }
+}

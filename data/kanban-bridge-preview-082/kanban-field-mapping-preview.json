@@ -1,0 +1,46 @@
+﻿{
+    "objective":  "ENGREMIAT_NEXT_REAL_VALUE_OPERATIONALIZATION_076_085",
+    "stage":  "E82",
+    "mapping":  "KANBAN_FIELD_MAPPING_PREVIEW",
+    "preview_only":  true,
+    "kanban_real_write":  false,
+    "source_to_kanban_fields":  [
+                                    {
+                                        "source":  "proposal_id",
+                                        "kanban_field":  "card.external_id",
+                                        "required":  true,
+                                        "example":  "WPI78-SAMPLE-001"
+                                    },
+                                    {
+                                        "source":  "title",
+                                        "kanban_field":  "card.title",
+                                        "required":  true,
+                                        "example":  "Preparar propuesta operativa diaria"
+                                    },
+                                    {
+                                        "source":  "summary",
+                                        "kanban_field":  "card.description",
+                                        "required":  true,
+                                        "example":  "Propuesta controlada sin ejecucion automatica"
+                                    },
+                                    {
+                                        "source":  "risk",
+                                        "kanban_field":  "card.labels.risk",
+                                        "required":  true,
+                                        "example":  "MEDIUM"
+                                    },
+                                    {
+                                        "source":  "expected_evidence",
+                                        "kanban_field":  "card.checklist.evidence",
+                                        "required":  true,
+                                        "example":  "proposal_summary,target_artifacts,rollback_note,postcheck_note"
+                                    },
+                                    {
+                                        "source":  "requires_human_decision",
+                                        "kanban_field":  "card.labels.human_gate",
+                                        "required":  true,
+                                        "example":  "true"
+                                    }
+                                ],
+    "created_utc":  "2026-06-17T10:58:44.3784493Z"
+}

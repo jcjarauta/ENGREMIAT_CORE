@@ -1,0 +1,20 @@
+﻿{
+    "package_id":  "ENGREMIAT_LOCAL_KANBAN_WORKER_LOOP_001",
+    "stage":  "E01_CREATE_WORKER_TRANSPORT_LAYER_MOCK",
+    "status":  "PASS",
+    "dispatcher":  "C:\\ENGREMIAT_CORE\\tools\\local-kanban-worker-loop\\Invoke-LocalKanbanWorkerLoop.ps1",
+    "transport_mock_test":  "PASS",
+    "test_output":  "En C:\\ENGREMIAT_CORE\\tools\\local-kanban-worker-loop\\Invoke-LocalKanbanWorkerL\noop.ps1: 3 Carácter: 23\n+ param([string]$CardId=\"CARD-003\",[ValidateSet(\"mock\",\"ollama\",\"cline- ...\n+                       ~~~~~~~~~~\nLa expresión de asignación no es válida. La entrada de un operador de \nasignación debe ser un objeto que pueda aceptar asignaciones, como una \nvariable o una propiedad.\n    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecord \n   Exception\n    + FullyQualifiedErrorId : InvalidLeftHandSide\n ",
+    "real_worker_transports":  [
+                                   "ollama",
+                                   "cline-cli"
+                               ],
+    "real_worker_requires_authorization":  true,
+    "write_to_cline":  false,
+    "browser":  false,
+    "api_called":  false,
+    "git":  false,
+    "network":  false,
+    "worker_real_execution":  false,
+    "next":  "E02_ADD_DASHBOARD_SEND_TO_WORKER_BUTTON_MOCK"
+}

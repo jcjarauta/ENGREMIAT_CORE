@@ -1,0 +1,98 @@
+﻿{
+    "package_id":  "ENGREMIAT_REAL_ROADMAP_GENERATOR_WITH_LOCAL_OLLAMA_PREVIEW_001",
+    "stage":  "E05_BUILD_OLLAMA_ROADMAP_CONTROLLED_DRY_RUN",
+    "dry_run_id":  "ollama-roadmap-controlled-dry-run.v1",
+    "status":  "PASS_PREVIEW_ONLY",
+    "decision":  "NO_GO_EXECUTION_NOT_AUTHORIZED",
+    "purpose":  "Simular la ejecucion controlada derivada del worker packet preview generado desde roadmap Ollama, sin ejecutar worker ni aplicar cambios",
+    "source_packet":  "C:\\ENGREMIAT_CORE\\data\\real-roadmap-generator-ollama-preview\\ollama-roadmap-worker-packet-preview.json",
+    "source_preview":  "C:\\ENGREMIAT_CORE\\data\\real-roadmap-generator-ollama-preview\\ollama-roadmap-preview.latest.json",
+    "source_gate":  "C:\\ENGREMIAT_CORE\\data\\real-roadmap-generator-ollama-preview\\ollama-roadmap-review-gate.json",
+    "source_receipt":  "C:\\ENGREMIAT_CORE\\data\\real-roadmap-generator-ollama-preview\\ollama-roadmap-review-receipt.pending.json",
+    "project_name":  "Primer intake real para construir roadmap automático en ENGREMIAT",
+    "model":  "qwen3:14b",
+    "mode":  {
+                 "dry_run":  true,
+                 "preview_only":  true,
+                 "local_only":  true,
+                 "ollama_local_only":  true,
+                 "external_ai":  false,
+                 "network_external":  false,
+                 "execute_now":  false,
+                 "worker_execution":  false,
+                 "worker_authorization":  "NOT_GRANTED",
+                 "authorization_status":  "NOT_GRANTED",
+                 "git_write":  false,
+                 "auto_apply":  false
+             },
+    "simulated_steps":  [
+                            {
+                                "step_id":  "DRY01",
+                                "operation":  "READ_OLLAMA_ROADMAP_PREVIEW",
+                                "risk":  "LOW",
+                                "would_execute":  false,
+                                "result":  "PASS_PREVIEW_AVAILABLE"
+                            },
+                            {
+                                "step_id":  "DRY02",
+                                "operation":  "READ_WORKER_PACKET_PREVIEW",
+                                "risk":  "LOW",
+                                "would_execute":  false,
+                                "result":  "PASS_PACKET_AVAILABLE"
+                            },
+                            {
+                                "step_id":  "DRY03",
+                                "operation":  "VALIDATE_HUMAN_GATE",
+                                "risk":  "LOW",
+                                "would_execute":  false,
+                                "result":  "PASS_GATE_PENDING_HUMAN_REVIEW"
+                            },
+                            {
+                                "step_id":  "DRY04",
+                                "operation":  "VALIDATE_EXECUTION_AUTHORIZATION",
+                                "risk":  "HIGH",
+                                "would_execute":  false,
+                                "result":  "NO_GO_AUTHORIZATION_NOT_GRANTED"
+                            },
+                            {
+                                "step_id":  "DRY05",
+                                "operation":  "CHECK_FORBIDDEN_OPERATIONS",
+                                "risk":  "MEDIUM",
+                                "would_execute":  false,
+                                "result":  "PASS_FORBIDDEN_OPERATIONS_BLOCKED"
+                            },
+                            {
+                                "step_id":  "DRY06",
+                                "operation":  "RETURN_EVIDENCE_AND_NEXT_GATE",
+                                "risk":  "LOW",
+                                "would_execute":  false,
+                                "result":  "PASS_EVIDENCE_READY"
+                            }
+                        ],
+    "forbidden_operations":  [
+                                 "EXECUTE_WORKER",
+                                 "WRITE_PROJECT_CODE",
+                                 "RUN_COMMANDS",
+                                 "CALL_EXTERNAL_AI",
+                                 "CALL_PUBLIC_NETWORK",
+                                 "GIT_COMMIT",
+                                 "GIT_PUSH",
+                                 "AUTO_APPLY",
+                                 "MODIFY_SYSTEM"
+                             ],
+    "go_conditions_missing":  [
+                                  "APPROVE_OLLAMA_ROADMAP_WORKER_PACKET",
+                                  "explicit_human_authorization_phrase",
+                                  "approved_scope",
+                                  "approved_operations",
+                                  "rollback_plan",
+                                  "execution_receipt"
+                              ],
+    "evidence_plan":  [
+                          "ollama-roadmap-controlled-dry-run.json",
+                          "ollama-roadmap-controlled-dry-run-result.latest.json",
+                          "ollama-roadmap-controlled-dry-run-dashboard.html",
+                          "e05-build-ollama-roadmap-controlled-dry-run-report.json"
+                      ],
+    "next":  "E06_CLOSE_LOCAL_OLLAMA_ROADMAP_GENERATOR_PREVIEW_CHAIN"
+}

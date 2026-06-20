@@ -1,0 +1,26 @@
+﻿{
+    "package_id":  "ENGREMIAT_UX_SYSTEM_001",
+    "stage":  "E42_CLOSE_DATA_INTAKE_REAL_HANDLERS_TEST",
+    "closed_at":  "2026-06-20T10:15:43",
+    "status":  "PASS",
+    "readiness":  100,
+    "human_validation":  "TXT/MD importado y normalizado correctamente desde Data Intake normalizado",
+    "launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-DATA-INTAKE-CENTER-NORMALIZED.ps1",
+    "active_profile":  "C:\\ENGREMIAT_CORE\\documents\\grants\\grant-call-profile-latest.json",
+    "normalized_txt_md_latest":  "C:\\ENGREMIAT_CORE\\documents\\intake\\normalized\\grant-call-profile-from-txt-md-latest.json",
+    "latest_import_report":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\data-intake-normalized-import-txt-md-20260620-101510.json",
+    "validated":  [
+                      "pantalla normalizada abre",
+                      "estado Data Intake OK",
+                      "handler [3] TXT/MD importa",
+                      "ficha activa actualizada",
+                      "perfil normalized generado",
+                      "report generado"
+                  ],
+    "pending":  [
+                    "probar handler [4] JSON si hace falta",
+                    "conectar Centro Documental normalizado al Data Intake normalizado",
+                    "decidir sustitucion del launcher legacy"
+                ],
+    "next":  "E43_CONNECT_DOCUMENTATION_CENTER_TO_DATA_INTAKE_NORMALIZED"
+}

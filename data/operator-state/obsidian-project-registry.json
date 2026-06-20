@@ -1,0 +1,914 @@
+﻿{
+    "package_id":  "ENGREMIAT_OPERATOR_CONTEXT_AND_DECISION_TREE_001",
+    "stage":  "E03C_FILTER_OBSIDIAN_PROJECTS_ONLY",
+    "created_at":  "2026-06-19T17:44:00",
+    "mode":  "OBSIDIAN_PROJECTS_ONLY",
+    "workspace":  "C:\\ENGREMIAT_CORE",
+    "scan_roots":  [
+                       "C:\\ENGREMIAT_CORE",
+                       "C:\\ENGREMIAT_REPO_CLEAN",
+                       "C:\\ENGREMIAT",
+                       "C:\\Users\\pc\\Desktop"
+                   ],
+    "project_count":  80,
+    "projects":  [
+                     {
+                         "id":  "ENGREMIAT_OBJECT_GRAPH",
+                         "name":  "ENGREMIAT_OBJECT_GRAPH",
+                         "path":  "C:\\ENGREMIAT_CORE\\obsidian\\ENGREMIAT_OBJECT_GRAPH",
+                         "score":  18,
+                         "signals":  [
+                                         ".obsidian",
+                                         "md_files=3",
+                                         "01_ESTADO",
+                                         "06_DECISIONES",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "ENGREMIAT_OBSIDIAN_VAULT",
+                         "name":  "ENGREMIAT_OBSIDIAN_VAULT",
+                         "path":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT",
+                         "score":  16,
+                         "signals":  [
+                                         ".obsidian",
+                                         "md_files=1",
+                                         "05_EVIDENCIAS",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "ENGREMIAT_MASTER_VAULT_20260619_123146",
+                         "name":  "ENGREMIAT_MASTER_VAULT_20260619-123146",
+                         "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146",
+                         "score":  16,
+                         "signals":  [
+                                         ".obsidian",
+                                         "md_files=3",
+                                         "05_EVIDENCIAS",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "BOVEDA_MAESTRA",
+                         "name":  "BOVEDA_MAESTRA",
+                         "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-162809\\BOVEDA_MAESTRA",
+                         "score":  15,
+                         "signals":  [
+                                         ".obsidian",
+                                         "md_files=3",
+                                         "05_EVIDENCIAS"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "BOVEDA_MAESTRA",
+                         "name":  "BOVEDA_MAESTRA",
+                         "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706\\BOVEDA_MAESTRA",
+                         "score":  15,
+                         "signals":  [
+                                         ".obsidian",
+                                         "md_files=3",
+                                         "05_EVIDENCIAS"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "BOVEDA_MAESTRA",
+                         "name":  "BOVEDA_MAESTRA",
+                         "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-164503\\BOVEDA_MAESTRA",
+                         "score":  15,
+                         "signals":  [
+                                         ".obsidian",
+                                         "md_files=3",
+                                         "05_EVIDENCIAS"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "ENGREMIAT_PROJECT_VAULT_TEMPLATE",
+                         "name":  "ENGREMIAT_PROJECT_VAULT_TEMPLATE",
+                         "path":  "C:\\ENGREMIAT_CORE\\templates\\obsidian-project-vault-template\\ENGREMIAT_PROJECT_VAULT_TEMPLATE",
+                         "score":  14,
+                         "signals":  [
+                                         ".obsidian",
+                                         "md_files=1",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "ENGREMIAT_PROJECT_NUEVO_PROYECTO_20260619_164503",
+                         "name":  "ENGREMIAT_PROJECT_nuevo-proyecto_20260619-164503",
+                         "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-164503",
+                         "score":  14,
+                         "signals":  [
+                                         ".obsidian",
+                                         "md_files=1",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "BOVEDA_PROJECT_ENGREMIAT_SIMULATION_LAB",
+                         "name":  "BOVEDA_PROJECT_ENGREMIAT_SIMULATION_LAB",
+                         "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_SIMULATION_LAB",
+                         "score":  14,
+                         "signals":  [
+                                         ".obsidian",
+                                         "md_files=1",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "BOVEDA_PROJECT_ENGREMIAT_CORE_BACKUP_20260619_141739",
+                         "name":  "BOVEDA_PROJECT_ENGREMIAT_CORE_BACKUP_20260619-141739",
+                         "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_CORE_BACKUP_20260619-141739",
+                         "score":  14,
+                         "signals":  [
+                                         ".obsidian",
+                                         "md_files=1",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "BOVEDA_PROJECT_ENGREMIAT_CORE",
+                         "name":  "BOVEDA_PROJECT_ENGREMIAT_CORE",
+                         "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_CORE",
+                         "score":  14,
+                         "signals":  [
+                                         ".obsidian",
+                                         "md_files=1",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "ENGREMIAT",
+                         "name":  "ENGREMIAT",
+                         "path":  "C:\\ENGREMIAT_CORE\\obsidian-vault\\ENGREMIAT",
+                         "score":  13,
+                         "signals":  [
+                                         ".obsidian",
+                                         "md_files=5"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "BOVEDA_MODULO",
+                         "name":  "BOVEDA_MODULO",
+                         "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-162809\\MODULOS\\MODULE_modulo1\\BOVEDA_MODULO",
+                         "score":  13,
+                         "signals":  [
+                                         ".obsidian",
+                                         "md_files=1"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "BOVEDA_MODULO",
+                         "name":  "BOVEDA_MODULO",
+                         "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-162809\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO",
+                         "score":  13,
+                         "signals":  [
+                                         ".obsidian",
+                                         "md_files=3"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "BOVEDA_MODULO",
+                         "name":  "BOVEDA_MODULO",
+                         "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO",
+                         "score":  13,
+                         "signals":  [
+                                         ".obsidian",
+                                         "md_files=3"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "BOVEDA_MODULO",
+                         "name":  "BOVEDA_MODULO",
+                         "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-164503\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO",
+                         "score":  13,
+                         "signals":  [
+                                         ".obsidian",
+                                         "md_files=3"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "ENGREMIAT_OBSIDIAN_KANBAN_LAB",
+                         "name":  "ENGREMIAT_OBSIDIAN_KANBAN_LAB",
+                         "path":  "C:\\ENGREMIAT_CORE\\obsidian\\ENGREMIAT_OBSIDIAN_KANBAN_LAB",
+                         "score":  11,
+                         "signals":  [
+                                         ".obsidian",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "MODULOS",
+                         "name":  "MODULOS",
+                         "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-164503\\MODULOS",
+                         "score":  10,
+                         "signals":  [
+                                         ".obsidian"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "MODULOS",
+                         "name":  "MODULOS",
+                         "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706\\MODULOS",
+                         "score":  10,
+                         "signals":  [
+                                         ".obsidian"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "ENGREMIAT_OBSIDIAN_OPENWEBUI_SKILLS_001",
+                         "name":  "ENGREMIAT_OBSIDIAN_OPENWEBUI_SKILLS_001",
+                         "path":  "C:\\ENGREMIAT_CORE\\openwebui-factory\\ENGREMIAT_OPENWEBUI_SKILLS_001\\obsidian_vault\\ENGREMIAT_OBSIDIAN_OPENWEBUI_SKILLS_001",
+                         "score":  10,
+                         "signals":  [
+                                         "md_files=1",
+                                         "01_ESTADO",
+                                         "05_EVIDENCIAS",
+                                         "06_DECISIONES",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "OPENWEBUI_SKILLS",
+                         "name":  "OPENWEBUI_SKILLS",
+                         "path":  "C:\\ENGREMIAT_CORE\\obsidian\\vaults\\OPENWEBUI_SKILLS",
+                         "score":  6,
+                         "signals":  [
+                                         "01_ESTADO",
+                                         "05_EVIDENCIAS",
+                                         "06_DECISIONES"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "KANBAN_BACKLOG",
+                         "name":  "KANBAN_BACKLOG",
+                         "path":  "C:\\ENGREMIAT_CORE\\obsidian\\vaults\\KANBAN_BACKLOG",
+                         "score":  6,
+                         "signals":  [
+                                         "01_ESTADO",
+                                         "05_EVIDENCIAS",
+                                         "06_DECISIONES"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "ENGREMIAT_MASTER_VAULT_TEMPLATE",
+                         "name":  "ENGREMIAT_MASTER_VAULT_TEMPLATE",
+                         "path":  "C:\\ENGREMIAT_CORE\\templates\\obsidian-master-vault-template\\ENGREMIAT_MASTER_VAULT_TEMPLATE",
+                         "score":  6,
+                         "signals":  [
+                                         "md_files=1",
+                                         "05_EVIDENCIAS",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "VISUAL_MEMORY",
+                         "name":  "VISUAL_MEMORY",
+                         "path":  "C:\\ENGREMIAT_CORE\\obsidian\\vaults\\VISUAL_MEMORY",
+                         "score":  5,
+                         "signals":  [
+                                         "01_ESTADO",
+                                         "05_EVIDENCIAS",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "VAULT_TEMPLATE",
+                         "name":  "VAULT_TEMPLATE",
+                         "path":  "C:\\ENGREMIAT_CORE\\obsidian\\VAULT_TEMPLATE",
+                         "score":  5,
+                         "signals":  [
+                                         "01_ESTADO",
+                                         "06_DECISIONES",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "PROJECT_TEMPLATE_SPACE",
+                         "name":  "PROJECT_TEMPLATE_SPACE",
+                         "path":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\02_PROYECTOS\\PROJECT_TEMPLATE_SPACE",
+                         "score":  5,
+                         "signals":  [
+                                         "00_INDEX",
+                                         "05_EVIDENCIAS",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "PROJECT_PRIMER_INTAKE_REAL_PARA_CONSTRUIR_ROADMAP_AUTOM_TICO_EN_ENGREMIA",
+                         "name":  "PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia",
+                         "path":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\02_PROYECTOS\\PROJECT_primer-intake-real-para-construir-roadmap-autom-tico-en-engremia",
+                         "score":  5,
+                         "signals":  [
+                                         "00_INDEX",
+                                         "05_EVIDENCIAS",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "PROJECT_DEMO_BUILDER_PROJECT_SPACE",
+                         "name":  "PROJECT_demo-builder-project-space",
+                         "path":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\02_PROYECTOS\\PROJECT_demo-builder-project-space",
+                         "score":  5,
+                         "signals":  [
+                                         "00_INDEX",
+                                         "05_EVIDENCIAS",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "WORKERS_AND_ADAPTERS",
+                         "name":  "WORKERS_AND_ADAPTERS",
+                         "path":  "C:\\ENGREMIAT_CORE\\obsidian\\vaults\\WORKERS_AND_ADAPTERS",
+                         "score":  4,
+                         "signals":  [
+                                         "01_ESTADO",
+                                         "05_EVIDENCIAS"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "VAULT_WRITE_GATE",
+                         "name":  "vault-write-gate",
+                         "path":  "C:\\ENGREMIAT_CORE\\docs\\obsidian-export-candidates\\vault-write-gate",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=3",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "VAULT_MODULE_BUILDER",
+                         "name":  "vault-module-builder",
+                         "path":  "C:\\ENGREMIAT_CORE\\docs\\vault-module-builder",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=5",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "SIM_PROJECT_20260619_152304_PRUEBA1",
+                         "name":  "SIM_PROJECT_20260619-152304_prueba1",
+                         "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_SIMULATION_LAB\\03_SIMULATED_TASKS\\SIM_PROJECT_20260619-152304_prueba1",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=3",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "SIM_PROJECT_20260619_144124",
+                         "name":  "SIM_PROJECT_20260619-144124",
+                         "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_SIMULATION_LAB\\07_EVIDENCE\\SIM_PROJECT_20260619-144124",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=3",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "SIM_PROJECT_20260619_144124",
+                         "name":  "SIM_PROJECT_20260619-144124",
+                         "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_SIMULATION_LAB\\08_RESULTS\\SIM_PROJECT_20260619-144124",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=1",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "RESOURCE_LIBRARY",
+                         "name":  "RESOURCE_LIBRARY",
+                         "path":  "C:\\ENGREMIAT_CORE\\obsidian\\vaults\\RESOURCE_LIBRARY",
+                         "score":  4,
+                         "signals":  [
+                                         "01_ESTADO",
+                                         "05_EVIDENCIAS"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "OBSIDIAN_VAULT_STABILIZATION",
+                         "name":  "obsidian-vault-stabilization",
+                         "path":  "C:\\ENGREMIAT_CORE\\docs\\obsidian-vault-stabilization",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=1",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "OBSIDIAN_VAULT_HUMAN_REVIEW",
+                         "name":  "obsidian-vault-human-review",
+                         "path":  "C:\\ENGREMIAT_CORE\\docs\\obsidian-vault-human-review",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=2",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "OBSIDIAN_SYSTEM_BRIDGE_001",
+                         "name":  "obsidian-system-bridge-001",
+                         "path":  "C:\\ENGREMIAT_CORE\\data\\obsidian-system-bridge-001",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=1",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "OBSIDIAN_ORDER",
+                         "name":  "obsidian-order",
+                         "path":  "C:\\ENGREMIAT_CORE\\openwebui-factory\\ENGREMIAT_OPENWEBUI_SKILLS_001\\obsidian-order",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=1",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "OBSIDIAN_OPERATIVE_MEMORY_ARCHITECTURE",
+                         "name":  "obsidian-operative-memory-architecture",
+                         "path":  "C:\\ENGREMIAT_CORE\\docs\\obsidian-operative-memory-architecture",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=5",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "OBSIDIAN_HIERARCHICAL_VAULTS",
+                         "name":  "obsidian-hierarchical-vaults",
+                         "path":  "C:\\ENGREMIAT_CORE\\docs\\obsidian-hierarchical-vaults",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=5",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "OBSIDIAN_GROUPED_ARCHITECTURE",
+                         "name":  "obsidian-grouped-architecture",
+                         "path":  "C:\\ENGREMIAT_CORE\\docs\\obsidian-grouped-architecture",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=5",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "OBSIDIAN_EXPORT_DRY_RUN",
+                         "name":  "obsidian-export-dry-run",
+                         "path":  "C:\\ENGREMIAT_CORE\\data\\knowledge-to-task-packet-001\\obsidian-export-dry-run",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=1",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "OBSIDIAN_EXPORT_CANDIDATES",
+                         "name":  "obsidian-export-candidates",
+                         "path":  "C:\\ENGREMIAT_CORE\\docs\\obsidian-export-candidates",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=2",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "OBSIDIAN_CANDIDATES",
+                         "name":  "obsidian-candidates",
+                         "path":  "C:\\ENGREMIAT_CORE\\docs\\kanban-backlog\\recurrent-card-refresh-model\\obsidian-candidates",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=5",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "NEW_VAULT_FROM_MASTER_TEMPLATE",
+                         "name":  "new-vault-from-master-template",
+                         "path":  "C:\\ENGREMIAT_CORE\\docs\\new-vault-from-master-template",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=5",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "MODULE_REGISTRY",
+                         "name":  "MODULE_REGISTRY",
+                         "path":  "C:\\ENGREMIAT_CORE\\obsidian\\vaults\\MODULE_REGISTRY",
+                         "score":  4,
+                         "signals":  [
+                                         "01_ESTADO",
+                                         "05_EVIDENCIAS"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "MEMORY_SYNC_041",
+                         "name":  "memory-sync-041",
+                         "path":  "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\memory-sync-041",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=1",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "MASTER_VAULT_TEMPLATE_AUDIT",
+                         "name":  "master-vault-template-audit",
+                         "path":  "C:\\ENGREMIAT_CORE\\docs\\master-vault-template-audit",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=5",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "KNOWLEDGE_FULL",
+                         "name":  "knowledge-full",
+                         "path":  "C:\\ENGREMIAT_CORE\\openwebui-factory\\ENGREMIAT_OPENWEBUI_SKILLS_001\\exports\\knowledge-full",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=2",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "KNOWLEDGE_FAST",
+                         "name":  "knowledge-fast",
+                         "path":  "C:\\ENGREMIAT_CORE\\openwebui-factory\\ENGREMIAT_OPENWEBUI_SKILLS_001\\exports\\knowledge-fast",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=5",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "GRAPH_GROUPS",
+                         "name":  "graph-groups",
+                         "path":  "C:\\ENGREMIAT_CORE\\openwebui-factory\\ENGREMIAT_OPENWEBUI_SKILLS_001\\obsidian-order\\graph-groups",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=1",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "GRAPH_GROUPS",
+                         "name":  "graph-groups",
+                         "path":  "C:\\ENGREMIAT_CORE\\obsidian-vault\\ENGREMIAT\\_system\\graph-groups",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=1",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "GRANT_PROJECT",
+                         "name":  "grant-project",
+                         "path":  "C:\\ENGREMIAT\\tools\\engremiat-constructor\\templates\\grant-project",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=2",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "ENGREMIAT_PROJECT_NUEVO_PROYECTO_20260619_162809",
+                         "name":  "ENGREMIAT_PROJECT_nuevo-proyecto_20260619-162809",
+                         "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-162809",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=1",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "ENGREMIAT_PROJECT_NUEVO_PROYECTO_20260619_161706",
+                         "name":  "ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706",
+                         "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=1",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "ENGREMIAT_OPENWEBUI_SKILLS_001",
+                         "name":  "ENGREMIAT_OPENWEBUI_SKILLS_001",
+                         "path":  "C:\\ENGREMIAT_CORE\\obsidian\\ENGREMIAT_OPENWEBUI_SKILLS_001",
+                         "score":  4,
+                         "signals":  [
+                                         "01_ESTADO",
+                                         "06_DECISIONES"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "ENGREMIAT_MEMORY",
+                         "name":  "ENGREMIAT_MEMORY",
+                         "path":  "C:\\ENGREMIAT_CORE\\ENGREMIAT_MEMORY",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=5",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "ENGREMIAT_KNOWLEDGE_TO_TASK_PACKET_001",
+                         "name":  "ENGREMIAT_KNOWLEDGE_TO_TASK_PACKET_001",
+                         "path":  "C:\\ENGREMIAT_CORE\\data\\ENGREMIAT_KNOWLEDGE_TO_TASK_PACKET_001",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=1",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "DEV_SYSTEM",
+                         "name":  "DEV_SYSTEM",
+                         "path":  "C:\\ENGREMIAT_CORE\\obsidian\\vaults\\DEV_SYSTEM",
+                         "score":  4,
+                         "signals":  [
+                                         "01_ESTADO",
+                                         "05_EVIDENCIAS"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "07_OBSIDIAN_GRAPH",
+                         "name":  "07_OBSIDIAN_GRAPH",
+                         "path":  "C:\\ENGREMIAT_CORE\\templates\\obsidian-master-vault-template\\ENGREMIAT_MASTER_VAULT_TEMPLATE\\07_OBSIDIAN_GRAPH",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=1",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "07_OBSIDIAN_GRAPH",
+                         "name":  "07_OBSIDIAN_GRAPH",
+                         "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-164503\\BOVEDA_MAESTRA\\07_OBSIDIAN_GRAPH",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=1",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "07_OBSIDIAN_GRAPH",
+                         "name":  "07_OBSIDIAN_GRAPH",
+                         "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706\\BOVEDA_MAESTRA\\07_OBSIDIAN_GRAPH",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=1",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "07_OBSIDIAN_GRAPH",
+                         "name":  "07_OBSIDIAN_GRAPH",
+                         "path":  "C:\\ENGREMIAT_CORE\\obsidian-vault-preview\\ENGREMIAT_OBSIDIAN_VAULT\\07_OBSIDIAN_GRAPH",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=1",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "07_OBSIDIAN_GRAPH",
+                         "name":  "07_OBSIDIAN_GRAPH",
+                         "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\ENGREMIAT_MASTER_VAULT_20260619-123146\\07_OBSIDIAN_GRAPH",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=1",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "07_OBSIDIAN_GRAPH",
+                         "name":  "07_OBSIDIAN_GRAPH",
+                         "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-162809\\BOVEDA_MAESTRA\\07_OBSIDIAN_GRAPH",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=1",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "02_PROJECT",
+                         "name":  "02_PROJECT",
+                         "path":  "C:\\ENGREMIAT_CORE\\obsidian\\vaults\\OPENWEBUI_SKILLS\\02_PROJECT",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=1",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "02_PROJECT",
+                         "name":  "02_PROJECT",
+                         "path":  "C:\\ENGREMIAT_CORE\\obsidian\\VAULT_TEMPLATE\\02_PROJECT",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=1",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "02_PROJECT",
+                         "name":  "02_PROJECT",
+                         "path":  "C:\\ENGREMIAT_CORE\\obsidian\\vaults\\KANBAN_BACKLOG\\02_PROJECT",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=1",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "01_OBJECTIVES",
+                         "name":  "01_OBJECTIVES",
+                         "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_SIMULATION_LAB\\01_OBJECTIVES",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=5",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "00_PROJECT_CONTROL",
+                         "name":  "00_PROJECT_CONTROL",
+                         "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_SIMULATION_LAB\\00_PROJECT_CONTROL",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=2",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "00_PROJECT_CONTROL",
+                         "name":  "00_PROJECT_CONTROL",
+                         "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_CORE_BACKUP_20260619-141739\\00_PROJECT_CONTROL",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=2",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "00_PROJECT_CONTROL",
+                         "name":  "00_PROJECT_CONTROL",
+                         "path":  "C:\\ENGREMIAT_CORE\\obsidian-vaults\\BOVEDA_PROJECT_ENGREMIAT_CORE\\00_PROJECT_CONTROL",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=4",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "00_PROJECT_CONTROL",
+                         "name":  "00_PROJECT_CONTROL",
+                         "path":  "C:\\ENGREMIAT_CORE\\templates\\obsidian-project-vault-template\\ENGREMIAT_PROJECT_VAULT_TEMPLATE\\00_PROJECT_CONTROL",
+                         "score":  4,
+                         "signals":  [
+                                         "md_files=2",
+                                         "name_signal"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "WORKER_RESPONSE_IMPORT_020",
+                         "name":  "worker-response-import-020",
+                         "path":  "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\worker-response-import-020",
+                         "score":  3,
+                         "signals":  [
+                                         "md_files=1"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "WORKER_RESPONSE_057",
+                         "name":  "worker-response-057",
+                         "path":  "C:\\ENGREMIAT_CORE\\data\\worker-response-057",
+                         "score":  3,
+                         "signals":  [
+                                         "md_files=1"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "WORKER_RESPONSE_057",
+                         "name":  "worker-response-057",
+                         "path":  "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\worker-response-057",
+                         "score":  3,
+                         "signals":  [
+                                         "md_files=1"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "WORKER_REAL_056",
+                         "name":  "worker-real-056",
+                         "path":  "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\worker-real-056",
+                         "score":  3,
+                         "signals":  [
+                                         "md_files=1"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "WORKER_QUEUE_067",
+                         "name":  "worker-queue-067",
+                         "path":  "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\worker-queue-067",
+                         "score":  3,
+                         "signals":  [
+                                         "md_files=1"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     },
+                     {
+                         "id":  "WORKER_PROPOSAL_INTAKE_078",
+                         "name":  "worker-proposal-intake-078",
+                         "path":  "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\worker-proposal-intake-078",
+                         "score":  3,
+                         "signals":  [
+                                         "md_files=1"
+                                     ],
+                         "status":  "OBSIDIAN_CANDIDATE"
+                     }
+                 ]
+}

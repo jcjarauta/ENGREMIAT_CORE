@@ -1,0 +1,17 @@
+{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_005E",
+    "artifact":  "rollback-plan.json",
+    "status":  "DEFINED",
+    "policy":  "Every future local apply must have snapshot, restore path and human decision record before execution",
+    "restore_strategy":  [
+                             "restore_previous_state_registry",
+                             "restore_previous_dashboard",
+                             "restore_previous_manifest",
+                             "mark_apply_as_reverted"
+                         ],
+    "blocked_without":  [
+                            "snapshot",
+                            "human_gate",
+                            "validation_report"
+                        ]
+}

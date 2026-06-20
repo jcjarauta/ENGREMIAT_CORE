@@ -1,0 +1,20 @@
+﻿==== NAVIGATION ERROR 2026-06-20T08:14:30 ====
+ERROR: navigation_tree parse_failed see=C:\ENGREMIAT_CORE\reports\launcher\last-navigation-error.txt
+
+TREE: C:\ENGREMIAT_CORE\tools\launcher\ENGREMIAT-NAVIGATION-TREE.ps1
+VIEWER: C:\ENGREMIAT_CORE\tools\launcher\ENGREMIAT-NAVIGATION-VIEWER.ps1
+
+POSITION:
+En C:\ENGREMIAT_CORE\tools\launcher\ENGREMIAT-NAVIGATION-SAFE.ps1: 24 Carácter: 5
++     throw "$label parse_failed see=$ErrLog"
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+STACK:
+en TestScriptParse, C:\ENGREMIAT_CORE\tools\launcher\ENGREMIAT-NAVIGATION-SAFE.ps1: línea 24
+en <ScriptBlock>, C:\ENGREMIAT_CORE\tools\launcher\ENGREMIAT-NAVIGATION-SAFE.ps1: línea 33
+
+RUN_LOG:
+==== NAVIGATION SAFE RUN 2026-06-20T08:14:30 ====
+tree=C:\ENGREMIAT_CORE\tools\launcher\ENGREMIAT-NAVIGATION-TREE.ps1
+viewer=C:\ENGREMIAT_CORE\tools\launcher\ENGREMIAT-NAVIGATION-VIEWER.ps1
+

@@ -1,0 +1,30 @@
+﻿{
+    "objective":  "ENGREMIAT_KANBAN_REAL_SETUP_012_REPAIR_013",
+    "stage":  "E03",
+    "status":  "CLOSED",
+    "decision":  "NO_GO_REPAIR",
+    "readiness":  70,
+    "rules":  "data/kanban-real-setup-012/kanban-real-readiness-rules.json",
+    "artifacts":  [
+                      "reports/kanban-real-setup-012/e01-kanban-real-preflight-report.json",
+                      "reports/kanban-real-setup-012/e02-kanban-model-validation-report.json",
+                      "reports/kanban-real-setup-012/e03-kanban-board-generation-report.json",
+                      "reports/kanban-real-setup-012/e04-kanban-dashboard-validation-report.json",
+                      "reports/kanban-real-setup-012/e05-kanban-real-dashboard-validation-report.json",
+                      "reports/kanban-real-setup-012/e02-launcher-repair-validation-report.json",
+                      "dashboard/kanban-real-setup-012/index.html",
+                      "tools/kanban-real-setup-012/Open-KanbanRealDashboard.ps1",
+                      "docs/KANBAN_REAL_SETUP_GUIDE.md",
+                      "docs/KANBAN_STARTUP_CHECKLIST.md",
+                      "data/kanban-real-setup-012/kanban-board.json"
+                  ],
+    "safety":  {
+                   "browser_opened":  false,
+                   "remote_execution":  false,
+                   "git_write":  false,
+                   "auto_apply":  false,
+                   "shared_repo_edit":  false,
+                   "secret_values_read":  false
+               },
+    "timestamp_utc":  "2026-06-16T15:02:23.8956216Z"
+}

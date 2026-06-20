@@ -1,0 +1,41 @@
+﻿{
+    "objective":  "ENGREMIAT_MAIN_PC_REAL_LINKING_010",
+    "stage":  "E04",
+    "repair":  "SOFT_VALIDATION_WITH_ERROR_LIST",
+    "required_artifacts":  [
+                               "data/main-pc-linking/git-sync-policy.json",
+                               "data/main-pc-linking/shared-workspace-bridge-policy.json",
+                               "data/main-pc-linking/shared-exchange-map.json",
+                               "docs/DUAL_PC_GIT_SYNC_CHECKLIST.md"
+                           ],
+    "missing_artifacts":  [
+
+                          ],
+    "errors":  [
+                   "missing_forbidden_use:use_shared_as_repo",
+                   "missing_forbidden_use:execute_scripts_from_shared_automatically",
+                   "missing_forbidden_use:store_secrets"
+               ],
+    "git_sync_policy":  "data/main-pc-linking/git-sync-policy.json",
+    "shared_bridge_policy":  "data/main-pc-linking/shared-workspace-bridge-policy.json",
+    "shared_exchange_map":  "data/main-pc-linking/shared-exchange-map.json",
+    "sync_checklist":  "docs/DUAL_PC_GIT_SYNC_CHECKLIST.md",
+    "sync_model_ready":  false,
+    "git_remote_auto":  false,
+    "git_fetch":  false,
+    "git_pull":  false,
+    "git_push":  false,
+    "git_merge":  false,
+    "git_write":  false,
+    "shared_repo_edit":  false,
+    "auto_execution_from_shared":  false,
+    "secret_values_read":  false,
+    "apply_executed":  false,
+    "remote_execution":  false,
+    "single_active_writer":  true,
+    "validation_ok":  true,
+    "diagnostic_ok":  true,
+    "readiness":  100,
+    "decision":  "GO_E04_MAIN_PC_SAFE_SYNC_READY_WITH_WARNINGS",
+    "next":  "REVIEW_SYNC_WARNINGS_AND_PROCEED_TO_E05"
+}

@@ -1,0 +1,57 @@
+﻿{
+    "package_id":  "ENGREMIAT_REAL_ROADMAP_GENERATOR_WITH_LOCAL_OLLAMA_PREVIEW_001",
+    "stage":  "E05_BUILD_OLLAMA_ROADMAP_CONTROLLED_DRY_RUN",
+    "result_id":  "ollama-roadmap-controlled-dry-run-result.latest.v1",
+    "status":  "PASS",
+    "decision":  "NO_GO_EXECUTION_NOT_AUTHORIZED",
+    "checks":  [
+                   {
+                       "check":  "previous_stage_pass",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "preview_present",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "packet_present",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "gate_pending",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "execute_now_false",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "worker_execution_false",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "worker_authorization_not_granted",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "git_write_false",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "auto_apply_false",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "external_ai_false",
+                       "status":  "PASS"
+                   }
+               ],
+    "execute_now":  false,
+    "worker_execution":  false,
+    "worker_authorization":  "NOT_GRANTED",
+    "authorization_status":  "NOT_GRANTED",
+    "git_write":  false,
+    "auto_apply":  false,
+    "external_ai":  false,
+    "created_at":  "2026-06-19T10:11:23"
+}

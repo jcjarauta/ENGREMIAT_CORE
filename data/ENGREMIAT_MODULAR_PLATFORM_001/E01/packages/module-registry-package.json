@@ -1,0 +1,40 @@
+{
+    "package_id":  "ENGREMIAT_MODULAR_PLATFORM_001",
+    "package_name":  "Module Registry Package",
+    "stage":  "E01",
+    "block":  "B01.1",
+    "version":  "1.0.0",
+    "status":  "draft",
+    "mode":  "local-first",
+    "core_policy":  "frozen",
+    "dependencies":  [
+
+                     ],
+    "artifacts":  [
+                      "contracts/module-registry-contract.json",
+                      "schemas/module-identity-schema.json",
+                      "packages/module-registry-package.json",
+                      "policies/module-lifecycle-policy.json",
+                      "reports/module-lifecycle-report.json",
+                      "module-registry-dashboard/index.html"
+                  ],
+    "registry_defaults":  {
+                              "state":  "planned",
+                              "versioning":  "semver",
+                              "compatibility_policy":  "explicit",
+                              "dependency_policy":  "versioned_and_traceable",
+                              "attach_policy":  "allowed_only_with_valid_identity_and_compatibility",
+                              "detach_policy":  "allowed_only_with_lifecycle_record",
+                              "pause_policy":  "allowed_without_breaking_registry",
+                              "replace_policy":  "allowed_only_with_compatibility_and_evidence"
+                          },
+    "control":  {
+                    "human_validation_required":  true,
+                    "evidence_required":  true,
+                    "external_network":  false,
+                    "git_write":  false,
+                    "push":  false,
+                    "fetch":  false,
+                    "merge":  false
+                }
+}

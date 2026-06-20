@@ -1,0 +1,20 @@
+﻿{
+    "package_id":  "ENGREMIAT_TOOL_ADAPTER_GATE_001",
+    "status":  "PASS",
+    "readiness":  100,
+    "request":  "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_TOOL_ADAPTER_GATE_001\\samples\\sample-capability-gate-request.json",
+    "decision":  "C:\\ENGREMIAT_CORE\\data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_TOOL_ADAPTER_GATE_001\\samples\\sample-human-decision.json",
+    "tool":  "Ollama",
+    "capability":  "INFER",
+    "requires_gate":  false,
+    "decision_value":  "APPROVE",
+    "errors":  [
+
+               ],
+    "warnings":  [
+
+                 ],
+    "local_only":  true,
+    "real_tool_integration":  false,
+    "next":  "E06_GLOBAL_VALIDATION"
+}

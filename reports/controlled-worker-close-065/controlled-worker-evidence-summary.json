@@ -1,0 +1,72 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_REAL_WORKER_DAILY_VALUE_LOOP_056_065",
+    "stage":  "E65",
+    "summary_id":  "E65_CONTROLLED_WORKER_EVIDENCE_SUMMARY",
+    "closed_stages":  [
+                          "E56",
+                          "E57",
+                          "E58",
+                          "E59",
+                          "E60",
+                          "E61",
+                          "E62",
+                          "E63",
+                          "E64",
+                          "E65"
+                      ],
+    "evidence":  [
+                     {
+                         "path":  "reports/worker-real-056/e56-worker-real-input-readiness-report.json",
+                         "exists":  true
+                     },
+                     {
+                         "path":  "reports/worker-response-057/e57-worker-response-readiness-report.json",
+                         "exists":  true
+                     },
+                     {
+                         "path":  "reports/proposal-quality-058/e58-proposal-quality-readiness-report.json",
+                         "exists":  true
+                     },
+                     {
+                         "path":  "reports/approval-console-059/e59-approval-console-readiness-report.json",
+                         "exists":  true
+                     },
+                     {
+                         "path":  "reports/controlled-apply-v2-060/e60-controlled-apply-v2-readiness-report.json",
+                         "exists":  true
+                     },
+                     {
+                         "path":  "reports/daily-value-dashboard-061/e61-daily-value-dashboard-readiness-report.json",
+                         "exists":  true
+                     },
+                     {
+                         "path":  "reports/kanban-write-sim-062/e62-kanban-write-sim-readiness-report.json",
+                         "exists":  true
+                     },
+                     {
+                         "path":  "reports/release-063/e63-release-readiness-report.json",
+                         "exists":  true
+                     },
+                     {
+                         "path":  "reports/operator-hardening-064/e64-operator-hardening-readiness-report.json",
+                         "exists":  true
+                     }
+                 ],
+    "missing_evidence":  [
+
+                         ],
+    "worker_loop_value":  "ENGREMIAT ya dispone de gate para worker real, captura/import de respuesta sin ejecucion, checker de calidad, consola humana contextual, apply local reversible v2, dashboard de valor diario, simulacion Kanban con rollback, versionado y hardening.",
+    "security":  {
+                     "apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "worker_executed":  false,
+                     "kanban_real_write":  false,
+                     "sensitive_actions_executed":  false,
+                     "close_local_only":  true,
+                     "human_decision_final":  true
+                 },
+    "created_at":  "2026-06-17T12:28:04"
+}

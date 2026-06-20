@@ -1,0 +1,21 @@
+﻿{
+    "module_id":  "ENGREMIAT_MODEL_ADAPTER_STANDARD_001",
+    "contract_version":  "0.1.0",
+    "adapter_role":  "Normalize model requests and responses",
+    "not_responsible_for":  [
+                                "resource_composition",
+                                "build_package_execution",
+                                "tool_write",
+                                "git_write"
+                            ],
+    "accepted_modes":  [
+                           "DRY_RUN",
+                           "MOCK",
+                           "REAL_GATED"
+                       ],
+    "default_mode":  "MOCK",
+    "input":  "MODEL_REQUEST",
+    "output":  "MODEL_RESPONSE_NORMALIZED",
+    "requires_gate_for_real_inference":  true,
+    "ollama_dependency":  false
+}

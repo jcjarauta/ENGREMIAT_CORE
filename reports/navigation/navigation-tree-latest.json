@@ -1,0 +1,238 @@
+﻿{
+    "generated":  "2026-06-20T08:44:19",
+    "project_active":  "ENGREMIAT_PROJECT_prueba14_20260620-022106",
+    "project_path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\\ENGREMIAT_PROJECT_prueba14_20260620-022106",
+    "project_modules":  10,
+    "library_active":  2,
+    "library_inactive":  8,
+    "library_historic":  2,
+    "screens":  [
+                    {
+                        "label":  "Inicio",
+                        "status":  "OK",
+                        "id":  "inicio"
+                    },
+                    {
+                        "label":  "Módulos del proyecto",
+                        "status":  "OK",
+                        "id":  "modules"
+                    },
+                    {
+                        "label":  "Biblioteca de módulos",
+                        "status":  "OK",
+                        "id":  "library"
+                    },
+                    {
+                        "label":  "Workspace de módulo",
+                        "status":  "OK",
+                        "id":  "workspace"
+                    },
+                    {
+                        "label":  "Tarjetas de módulo",
+                        "status":  "OK",
+                        "id":  "cards"
+                    },
+                    {
+                        "label":  "Árbol de navegación",
+                        "status":  "OK",
+                        "id":  "navigation"
+                    },
+                    {
+                        "label":  "Rutas recomendadas",
+                        "status":  "OK",
+                        "id":  "routes"
+                    },
+                    {
+                        "label":  "Ayuda",
+                        "status":  "OK",
+                        "id":  "help"
+                    },
+                    {
+                        "label":  "Estado técnico",
+                        "status":  "OK",
+                        "id":  "technical_status"
+                    },
+                    {
+                        "label":  "Estado copiable",
+                        "status":  "OK",
+                        "id":  "copyable_status"
+                    },
+                    {
+                        "label":  "Memoria viva",
+                        "status":  "OK",
+                        "id":  "memory"
+                    },
+                    {
+                        "label":  "Diario de desarrollo",
+                        "status":  "OK",
+                        "id":  "diary"
+                    }
+                ],
+    "routes":  [
+                   {
+                       "from":  "inicio",
+                       "section":  "CONTINUAR",
+                       "key":  "1",
+                       "to":  "smart_start",
+                       "description":  "acción recomendada contextual"
+                   },
+                   {
+                       "from":  "inicio",
+                       "section":  "TRABAJO",
+                       "key":  "2",
+                       "to":  "modules",
+                       "description":  "módulos del proyecto activo"
+                   },
+                   {
+                       "from":  "inicio",
+                       "section":  "TRABAJO",
+                       "key":  "3",
+                       "to":  "library",
+                       "description":  "biblioteca de módulos"
+                   },
+                   {
+                       "from":  "inicio",
+                       "section":  "TRABAJO",
+                       "key":  "4",
+                       "to":  "workspace",
+                       "description":  "workspace de módulo"
+                   },
+                   {
+                       "from":  "inicio",
+                       "section":  "TRABAJO",
+                       "key":  "5",
+                       "to":  "cards",
+                       "description":  "tarjetas de módulo"
+                   },
+                   {
+                       "from":  "inicio",
+                       "section":  "TRABAJO",
+                       "key":  "6",
+                       "to":  "project_folder",
+                       "description":  "abrir carpeta del proyecto activo"
+                   },
+                   {
+                       "from":  "inicio",
+                       "section":  "TRABAJO",
+                       "key":  "7",
+                       "to":  "human_start_dashboard",
+                       "description":  "dashboard humano / operador visual"
+                   },
+                   {
+                       "from":  "inicio",
+                       "section":  "REVISAR",
+                       "key":  "8",
+                       "to":  "navigation_safe",
+                       "description":  "árbol de navegación seguro"
+                   },
+                   {
+                       "from":  "inicio",
+                       "section":  "REVISAR",
+                       "key":  "9",
+                       "to":  "routes_help",
+                       "description":  "rutas recomendadas"
+                   },
+                   {
+                       "from":  "inicio",
+                       "section":  "REVISAR",
+                       "key":  "10",
+                       "to":  "help",
+                       "description":  "ayuda"
+                   },
+                   {
+                       "from":  "inicio",
+                       "section":  "DIAGNOSTICO",
+                       "key":  "11",
+                       "to":  "technical_status",
+                       "description":  "estado técnico"
+                   },
+                   {
+                       "from":  "inicio",
+                       "section":  "DIAGNOSTICO",
+                       "key":  "12",
+                       "to":  "copyable_status",
+                       "description":  "estado copiable"
+                   },
+                   {
+                       "from":  "inicio",
+                       "section":  "DIAGNOSTICO",
+                       "key":  "13",
+                       "to":  "external_status",
+                       "description":  "status externo"
+                   },
+                   {
+                       "from":  "inicio",
+                       "section":  "DIAGNOSTICO",
+                       "key":  "14",
+                       "to":  "last_log",
+                       "description":  "último log"
+                   },
+                   {
+                       "from":  "inicio",
+                       "section":  "MEMORIA",
+                       "key":  "15",
+                       "to":  "live_memory",
+                       "description":  "generar/abrir memoria viva"
+                   },
+                   {
+                       "from":  "inicio",
+                       "section":  "MEMORIA",
+                       "key":  "16",
+                       "to":  "chatgpt_prompt",
+                       "description":  "generar/abrir prompt continuidad ChatGPT"
+                   },
+                   {
+                       "from":  "inicio",
+                       "section":  "MEMORIA",
+                       "key":  "17",
+                       "to":  "worker_prompt",
+                       "description":  "generar/abrir prompt worker Ollama/Cline"
+                   },
+                   {
+                       "from":  "inicio",
+                       "section":  "MEMORIA",
+                       "key":  "18",
+                       "to":  "development_diary",
+                       "description":  "abrir diario de desarrollo"
+                   },
+                   {
+                       "from":  "inicio",
+                       "section":  "MEMORIA",
+                       "key":  "19",
+                       "to":  "add_diary_entry",
+                       "description":  "añadir entrada al diario"
+                   },
+                   {
+                       "from":  "inicio",
+                       "section":  "MANTENIMIENTO",
+                       "key":  "20",
+                       "to":  "graph_refresh",
+                       "description":  "refrescar grafo de módulos"
+                   },
+                   {
+                       "from":  "inicio",
+                       "section":  "MANTENIMIENTO",
+                       "key":  "21",
+                       "to":  "core_folder",
+                       "description":  "abrir C:\\ENGREMIAT_CORE"
+                   },
+                   {
+                       "from":  "workspace",
+                       "section":  "WORKSPACE",
+                       "key":  "2",
+                       "to":  "cards",
+                       "description":  "tarjetas avanzadas del módulo"
+                   },
+                   {
+                       "from":  "library_item",
+                       "section":  "BIBLIOTECA",
+                       "key":  "w",
+                       "to":  "workspace",
+                       "description":  "abrir workspace desde ficha de módulo"
+                   }
+               ],
+    "screens_ok":  12,
+    "screens_total":  12,
+    "routes_total":  23,
+    "next":  "E24A_CREATE_MODULE_TASKS_MANAGEMENT_SCREEN"
+}

@@ -1,0 +1,17 @@
+﻿<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>ENGREMIAT · Dashboard Decision Surface</title><style>body{font-family:Segoe UI,Arial;margin:24px;background:#111827;color:#e5e7eb}.card,.action{border:1px solid #374151;border-radius:14px;padding:16px;margin:12px 0;background:#1f2937}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}.ok{color:#22c55e}.warn{color:#facc15}code{color:#93c5fd}li{margin:6px 0}</style></head><body>
+<h1>ENGREMIAT · Superficie de decisión preview</h1>
+<div class="card"><b class="ok">E04 PASS · dashboard operativo preview definido</b><p>Acciones humanas: <code>
+5
+</code> · superficies: <code>
+10
+</code></p></div>
+<div class="card"><h2>Acciones disponibles</h2><div class="grid">
+<div class='action'><h3>Construir boveda maestra</h3><p><code>CREATE_MASTER_VAULT</code></p><p>Scope: <code>global</code> · Grupo: <code>G01_CORE</code></p><p class='warn'>preview_only=true · write_real=false</p></div><div class='action'><h3>Construir project space</h3><p><code>CREATE_PROJECT_SPACE</code></p><p>Scope: <code>project</code> · Grupo: <code>G03_PROJECTS_MODULES</code></p><p class='warn'>preview_only=true · write_real=false</p></div><div class='action'><h3>Construir modulo relacionado</h3><p><code>CREATE_MODULE_SPACE</code></p><p>Scope: <code>module</code> · Grupo: <code>G03_PROJECTS_MODULES</code></p><p class='warn'>preview_only=true · write_real=false</p></div><div class='action'><h3>Relacionar modulo con boveda concreta</h3><p><code>RELATE_MODULE_TO_VAULT</code></p><p>Scope: <code>relation</code> · Grupo: <code>G04_MEMORY_VISUAL</code></p><p class='warn'>preview_only=true · write_real=false</p></div><div class='action'><h3>Elegir donde trabajar</h3><p><code>OPEN_WORK_SURFACE</code></p><p>Scope: <code>view</code> · Grupo: <code>G02_HUMAN_CONTROL</code></p><p class='warn'>preview_only=true · write_real=false</p></div>
+</div></div>
+<div class="card"><h2>Superficies de trabajo</h2><ul>
+<li><code>CONTROL_HUB</code></li><li><code>GROUPED_CANVAS</code></li><li><code>PROJECT_CANVAS</code></li><li><code>ACTIVE_PROJECTS</code></li><li><code>PENDING_GATES</code></li><li><code>ACTIVE_CARDS</code></li><li><code>RECENT_EVIDENCE</code></li><li><code>WORKER_PROPOSALS</code></li><li><code>MODULE_INDEX</code></li><li><code>PROJECT_INDEX</code></li>
+</ul></div>
+<div class="card"><h2>Seguridad</h2><p class="warn">Sin ejecución real: worker_execution=false · kanban_write=false · clien_write=false · git_write=false</p></div>
+<div class="card"><h2>Siguiente</h2><p><code>E05_CREATE_GROUPED_ARCHITECTURE_OFFICIALIZATION_PLAN</code></p></div>
+</body></html>

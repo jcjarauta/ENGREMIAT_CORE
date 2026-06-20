@@ -1,0 +1,30 @@
+{
+    "package_id":  "ENG-MOD-QUE-001",
+    "stage":  "E03",
+    "block":  "P03.1.1",
+    "name":  "Queue engine package",
+    "purpose":  "Crear motor de cola con estados, prioridades y bloqueos",
+    "artifacts":  [
+                      "contracts/queue-manager-contract.json",
+                      "packages/queue-engine-package.json",
+                      "reports/queue-validation-report.json"
+                  ],
+    "states":  [
+                   "pending",
+                   "ready",
+                   "blocked",
+                   "running",
+                   "done",
+                   "paused"
+               ],
+    "priority_order":  [
+                           "high",
+                           "medium",
+                           "low"
+                       ],
+    "control":  {
+                    "local_first":  true,
+                    "no_external_network":  true,
+                    "no_git_write":  true
+                }
+}

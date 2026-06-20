@@ -1,0 +1,23 @@
+﻿{
+    "schema_id":  "task-plan-output.schema.v1",
+    "required":  [
+                     "task_plan_id",
+                     "project_id",
+                     "tasks",
+                     "gate"
+                 ],
+    "fields":  [
+                   "task_plan_id",
+                   "project_id",
+                   "source_proposal_id",
+                   "objective",
+                   "tasks",
+                   "dependencies",
+                   "workers",
+                   "inputs",
+                   "expected_outputs",
+                   "evidence_plan",
+                   "gate",
+                   "status"
+               ]
+}

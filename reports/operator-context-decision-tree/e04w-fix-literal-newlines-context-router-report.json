@@ -1,0 +1,21 @@
+﻿{
+    "package_id":  "ENGREMIAT_OPERATOR_CONTEXT_AND_DECISION_TREE_001",
+    "stage":  "E04W_FIX_LITERAL_NEWLINES_IN_CONTEXT_AND_ROUTER",
+    "status":  "PASS",
+    "readiness":  100,
+    "fixed":  [
+                  {
+                      "file":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-context.ps1",
+                      "backup":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-context.ps1.bak-e04w-20260619190301",
+                      "backticks_before":  20,
+                      "backticks_after":  0
+                  },
+                  {
+                      "file":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-router.ps1",
+                      "backup":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-router.ps1.bak-e04w-20260619190301",
+                      "backticks_before":  0,
+                      "backticks_after":  0
+                  }
+              ],
+    "next":  "test_modulo"
+}

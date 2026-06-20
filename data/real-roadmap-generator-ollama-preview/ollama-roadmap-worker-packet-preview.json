@@ -1,0 +1,64 @@
+﻿{
+    "package_id":  "ENGREMIAT_REAL_ROADMAP_GENERATOR_WITH_LOCAL_OLLAMA_PREVIEW_001",
+    "stage":  "E04_BUILD_OLLAMA_ROADMAP_WORKER_PACKET_PREVIEW",
+    "packet_id":  "ollama-roadmap-worker-packet-preview.v1",
+    "status":  "PREVIEW_ONLY",
+    "source_ollama_preview":  "C:\\ENGREMIAT_CORE\\data\\real-roadmap-generator-ollama-preview\\ollama-roadmap-preview.latest.json",
+    "source_gate":  "C:\\ENGREMIAT_CORE\\data\\real-roadmap-generator-ollama-preview\\ollama-roadmap-review-gate.json",
+    "source_receipt":  "C:\\ENGREMIAT_CORE\\data\\real-roadmap-generator-ollama-preview\\ollama-roadmap-review-receipt.pending.json",
+    "project_name":  "Primer intake real para construir roadmap automático en ENGREMIAT",
+    "model":  "qwen3:14b",
+    "purpose":  "Preparar un worker packet preview a partir del roadmap generado por Ollama local, sin ejecutar worker ni aplicar cambios",
+    "worker_task":  {
+                        "task_type":  "OLLAMA_ROADMAP_TO_CONTROLLED_DEVELOPMENT_PACKET",
+                        "objective":  "Convertir el roadmap preview en un paquete de desarrollo revisable por humano antes de cualquier ejecución",
+                        "roadmap_text":  "**RESUMEN**  \nCrear un roadmap preview basado en un intake humano estructurado, validado localmente sin dependencias externas. El resultado debe ser exportable en JSON/Markdown, con banderas de seguridad explícitas y preparado para pasar a etapa E02.  \n\n---\n\n**ETAPAS**  \n1. **Diseño del formulario de intake**  \n   - Campos obligatorios: `project_name`, `human_need`, `desired_result`, `constraints`, `success_criteria`, `safety`.  \n   - Validación local: Verificar que `safety.local_only=true`, `worker_execution=false`, `execute_now=false`.  \n   - Exportar a JSON con estructura `real-human-intake.v1`.  \n\n2. **Generación de preview Markdown**  \n   - Resumir `human_need` y `desired_result` en formato legible.  \n   - Incluir banderas de seguridad y restricciones en un apartado \"Notas de seguridad\".  \n   - Exportar manualmente como `.md` con nombre derivado de `package_id`.  \n\n3. **Validación humana**  \n   - Revisar que JSON y Markdown reflejen los datos originales.  \n   - Confirmar ausencia de referencias a backend, red, Git o ejecución automática.  \n\n---\n\n**RIESGOS**  \n- **Falta de claridad en campos**: Si `human_need` o `desired_result` son ambiguos, el roadmap preview podría ser inútil.  \n- **Errores en exportación**: Si el JSON no incluye `safety.local_only=true`, se viola el constraint.  \n- **Dependencia no declarada**: Incluir accidentalmente referencias a Ollama o PowerShell en el preview.  \n\n---\n\n**EVIDENCIAS**  \n- Archivo JSON válido con:  \n  ```json  \n  {\"safety\": {\"local_only\": true, \"worker_execution\": false, \"execute_now\": false}}  \n  ```  \n- Archivo Markdown con:  \n  ```markdown  \n  ## Notas de seguridad  \n  - Solo operación local.  \n  - No se permite ejecución automática.  \n  ```  \n- Confirmación manual de que no hay menciones a backend, red o Git.  \n\n---\n\n**GATE_HUMANO**  \n- ✅ Revisar que el JSON y Markdown cumplan con `success_criteria`.  \n- ✅ Verificar que no haya referencias a ejecución, red o Git.  \n- ✅ Aprobar paso a **E02_GENERATE_ROADMAP_FROM_REAL_INTAKE_PREVIEW**.  \n\n---\n\n**SIGUIENTE_PASO**  \n- Usar el JSON exportado como entrada para **E02_GENERATE_ROADMAP_FROM_REAL_INTAKE_PREVIEW**, asegurando que el roadmap preview respete las banderas de seguridad y no incluya etapas inválidas (ej: \"worker real\", \"Git\", \"backend\").",
+                        "expected_result":  "Paquete ordenado con pasos, ficheros propuestos, validaciones, riesgos y evidencias, pendiente de aprobación humana"
+                    },
+    "allowed_operations":  [
+                               "READ_OLLAMA_ROADMAP_PREVIEW",
+                               "READ_HUMAN_REVIEW_GATE",
+                               "PROPOSE_DEVELOPMENT_STEPS",
+                               "PROPOSE_FILE_PLAN",
+                               "PROPOSE_VALIDATION_PLAN",
+                               "PROPOSE_EVIDENCE_PLAN",
+                               "RETURN_HUMAN_REVIEW_SUMMARY"
+                           ],
+    "forbidden_operations":  [
+                                 "EXECUTE_WORKER",
+                                 "WRITE_PROJECT_CODE",
+                                 "RUN_COMMANDS",
+                                 "CALL_EXTERNAL_AI",
+                                 "CALL_PUBLIC_NETWORK",
+                                 "GIT_COMMIT",
+                                 "GIT_PUSH",
+                                 "AUTO_APPLY",
+                                 "MODIFY_SYSTEM"
+                             ],
+    "execution":  {
+                      "preview_only":  true,
+                      "execute_now":  false,
+                      "worker_execution":  false,
+                      "authorization_required":  true,
+                      "authorization_status":  "NOT_GRANTED",
+                      "worker_authorization":  "NOT_GRANTED",
+                      "local_only":  true,
+                      "ollama_local_only":  true,
+                      "external_ai":  false,
+                      "network_external":  false,
+                      "git_write":  false,
+                      "auto_apply":  false
+                  },
+    "human_gate":  {
+                       "required_before_execution":  true,
+                       "current_status":  "PENDING_HUMAN_REVIEW",
+                       "required_decision":  "APPROVE_OLLAMA_ROADMAP_WORKER_PACKET",
+                       "receipt_required":  true
+                   },
+    "evidence_plan":  [
+                          "ollama-roadmap-worker-packet-preview.json",
+                          "ollama-roadmap-worker-packet-preview-dashboard.html",
+                          "e04-build-ollama-roadmap-worker-packet-preview-report.json"
+                      ],
+    "next":  "E05_BUILD_OLLAMA_ROADMAP_CONTROLLED_DRY_RUN"
+}

@@ -1,0 +1,45 @@
+﻿{
+    "package_id":  "ENGREMIAT_PROJECT_BUILDER_TO_WORKER_LOOP_001",
+    "stage":  "E07_BUILD_CONTROLLED_EXECUTION_DRY_RUN_PLAN",
+    "dry_run_result_id":  "controlled-execution-dry-run-result.preview.v1",
+    "status":  "PASS_PREVIEW_ONLY",
+    "decision":  "NO_GO_EXECUTION_NOT_AUTHORIZED",
+    "checks":  [
+                   {
+                       "check":  "previous_stage_pass",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "receipt_pending",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "authorization_not_granted",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "execute_now_false",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "worker_execution_false",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "network_false",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "git_write_false",
+                       "status":  "PASS"
+                   },
+                   {
+                       "check":  "external_ai_false",
+                       "status":  "PASS"
+                   }
+               ],
+    "execute_now":  false,
+    "worker_execution":  false,
+    "authorization_status":  "NOT_GRANTED",
+    "created_at":  "2026-06-19T09:45:13"
+}

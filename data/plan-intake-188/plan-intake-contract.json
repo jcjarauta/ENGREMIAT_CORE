@@ -1,0 +1,34 @@
+﻿{
+    "objective_id":  "DEFINE_PLAN_INTAKE_STANDARD_MVP_188_191",
+    "stage":  "E188",
+    "block":  "B188.1",
+    "step":  "P188.1.1",
+    "name":  "plan-intake-contract",
+    "purpose":  "Normalize what a plan of entry is and its minimum required fields",
+    "fields":  [
+                   "objective_id",
+                   "context",
+                   "goal",
+                   "inputs",
+                   "outputs",
+                   "restrictions",
+                   "risk_level",
+                   "authorization_required",
+                   "close_criteria",
+                   "next_step"
+               ],
+    "required":  [
+                     true,
+                     true,
+                     true,
+                     true,
+                     true,
+                     true,
+                     true,
+                     true,
+                     true,
+                     true
+                 ],
+    "template_reference":  "DEFINE_REAL_EXECUTION_LAUNCHER_REUSABLE_MVP_184_187",
+    "created_at":  "2026-06-17T18:43:46.4886186+02:00"
+}

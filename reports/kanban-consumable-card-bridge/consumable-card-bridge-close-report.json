@@ -1,0 +1,18 @@
+﻿{
+    "package":  "CONSUMABLE_CARD_BRIDGE_CLOSE_001",
+    "created_at":  "2026-06-18T10:31:58",
+    "cards_count":  25,
+    "inline_batches_count":  1,
+    "manual":  "C:\\ENGREMIAT_CORE\\docs\\kanban-backlog\\CONSUMABLE_CARD_BRIDGE_MANUAL.md",
+    "schema":  "C:\\ENGREMIAT_CORE\\contracts\\kanban-local\\consumable-card.schema.json",
+    "adapter_plan":  "C:\\ENGREMIAT_CORE\\docs\\kanban-backlog\\NEXT_CARD_REFRESH_MODEL.md",
+    "refresh_tool":  "C:\\ENGREMIAT_CORE\\tools\\kanban-local\\Refresh-KanbanLocalBacklog.ps1",
+    "inline_batch_tool":  "C:\\ENGREMIAT_CORE\\tools\\kanban-local\\New-ClineInlineBatchPrompt.ps1",
+    "board":  "C:\\ENGREMIAT_CORE\\docs\\kanban-backlog\\seed-25\\ORCHESTRATION_BOARD.html",
+    "manifest":  "C:\\ENGREMIAT_CORE\\docs\\kanban-backlog\\seed-25\\seed-25-manifest.json",
+    "decision":  "GO_CONSUMABLE_CARD_BRIDGE_READY",
+    "bridge_role":  "future_connector_for_openwebui_ollama_obsidian_cline_kanban",
+    "native_kanban_write":  "disabled",
+    "automation":  "human_review_first",
+    "next":  "BUILD_RECURRENT_CARD_REFRESH_MODEL"
+}

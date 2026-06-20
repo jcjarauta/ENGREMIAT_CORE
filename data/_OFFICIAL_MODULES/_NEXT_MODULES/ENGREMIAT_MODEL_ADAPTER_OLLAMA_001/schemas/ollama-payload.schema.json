@@ -1,0 +1,16 @@
+﻿{
+    "schema":  "ollama-payload",
+    "required":  [
+                     "model",
+                     "prompt",
+                     "stream",
+                     "options"
+                 ],
+    "properties":  {
+                       "model":  "string_allowlisted",
+                       "prompt":  "string_from_prompt_envelope",
+                       "stream":  "boolean_false_by_default",
+                       "options":  "object_safe_defaults"
+                   },
+    "send_allowed_without_gate":  false
+}

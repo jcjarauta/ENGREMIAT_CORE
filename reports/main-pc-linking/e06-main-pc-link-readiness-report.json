@@ -1,0 +1,43 @@
+﻿{
+    "objective":  "ENGREMIAT_MAIN_PC_REAL_LINKING_010",
+    "stage":  "E06",
+    "report_id":  "E06-MAIN-PC-LINK-READINESS-010",
+    "created_at_utc":  "2026-06-16T14:16:35.1520656Z",
+    "current_pc":  {
+                       "computer_name":  "DESKTOP-PVRVE56",
+                       "user_name":  "pc",
+                       "cwd":  "C:\\ENGREMIAT_CORE",
+                       "git_detected":  false,
+                       "git_root":  null,
+                       "branch":  null,
+                       "head":  null,
+                       "dirty_status":  "GIT_STATUS_UNAVAILABLE",
+                       "dirty_count":  0,
+                       "origin":  null
+                   },
+    "readiness":  {
+                      "current_pc_ready":  true,
+                      "main_pc_required_later":  true,
+                      "workflow_ready":  false
+                  },
+    "writer_lock":  {
+                        "single_active_writer":  true,
+                        "writer_conflict":  false,
+                        "active_writer":  "MAIN_PC_PREPARATION_AND_LINKING"
+                    },
+    "missing_artifacts":  [
+
+                          ],
+    "repo_read_only":  true,
+    "git_write":  false,
+    "git_fetch":  false,
+    "git_pull":  false,
+    "git_push":  false,
+    "git_merge":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "shared_repo_edit":  false,
+    "secret_values_read":  false,
+    "decision":  "NEED_LINKING",
+    "next":  "CONFIRM_LINKING_CONTINUITY_OR_REVIEW_MAIN_PC_READYNESS"
+}

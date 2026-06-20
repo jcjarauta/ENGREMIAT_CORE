@@ -1,0 +1,67 @@
+﻿{
+    "package":  "DOCKER_WINDOWS_REQUIREMENTS_DIAG_REPAIR_001",
+    "created_at":  "2026-06-18T11:25:31",
+    "os":  {
+               "caption":  "Microsoft Windows 11 Pro",
+               "version":  "10.0.26200",
+               "build":  "26200"
+           },
+    "computer":  {
+                     "manufacturer":  "Gigabyte Technology Co., Ltd.",
+                     "model":  "B550M AORUS ELITE",
+                     "ram_gb":  63.92
+                 },
+    "cpu":  {
+                "name":  "AMD Ryzen 7 5700X 8-Core Processor             ",
+                "virtualization_firmware_enabled":  false
+            },
+    "windows_features":  [
+                             {
+                                 "feature":  "Microsoft-Windows-Subsystem-Linux",
+                                 "state":  "Enabled",
+                                 "ok":  true
+                             },
+                             {
+                                 "feature":  "VirtualMachinePlatform",
+                                 "state":  "Enabled",
+                                 "ok":  true
+                             },
+                             {
+                                 "feature":  "HypervisorPlatform",
+                                 "state":  "Disabled",
+                                 "ok":  false
+                             },
+                             {
+                                 "feature":  "Microsoft-Hyper-V-All",
+                                 "state":  "Enabled",
+                                 "ok":  true
+                             }
+                         ],
+    "wsl_status":  {
+                       "ok":  false,
+                       "timeout":  false,
+                       "exit_code":  null,
+                       "out":  "",
+                       "err":  "E\u0000l\u0000 \u0000S\u0000u\u0000b\u0000s\u0000i\u0000s\u0000t\u0000e\u0000m\u0000a\u0000 \u0000d\u0000e\u0000 \u0000W\u0000i\u0000n\u0000d\u0000o\u0000w\u0000s\u0000 \u0000p\u0000a\u0000r\u0000a\u0000 \u0000L\u0000i\u0000n\u0000u\u0000x\u0000 \u0000n\u0000o\u0000 \u0000e\u0000s\u0000t\u0000á\u0000 \u0000i\u0000n\u0000s\u0000t\u0000a\u0000l\u0000a\u0000d\u0000o\u0000.\u0000 \u0000P\u0000a\u0000r\u0000a\u0000 \u0000i\u0000n\u0000s\u0000t\u0000a\u0000l\u0000a\u0000r\u0000,\u0000 \u0000e\u0000j\u0000e\u0000c\u0000u\u0000t\u0000e\u0000 \u0000\"\u0000w\u0000s\u0000l\u0000.\u0000e\u0000x\u0000e\u0000 \u0000-\u0000-\u0000i\u0000n\u0000s\u0000t\u0000a\u0000l\u0000l\u0000\"\u0000.\u0000\r\u0000\r\u0000\n\u0000P\u0000a\u0000r\u0000a\u0000 \u0000o\u0000b\u0000t\u0000e\u0000n\u0000e\u0000r\u0000 \u0000m\u0000á\u0000s\u0000 \u0000i\u0000n\u0000f\u0000o\u0000r\u0000m\u0000a\u0000c\u0000i\u0000ó\u0000n\u0000,\u0000 \u0000v\u0000i\u0000s\u0000i\u0000t\u0000e\u0000 \u0000h\u0000t\u0000t\u0000p\u0000s\u0000:\u0000/\u0000/\u0000a\u0000k\u0000a\u0000.\u0000m\u0000s\u0000/\u0000w\u0000s\u0000l\u0000i\u0000n\u0000s\u0000t\u0000a\u0000l\u0000l\u0000\r\u0000\r\u0000\n\u0000"
+                   },
+    "wsl_list":  {
+                     "ok":  false,
+                     "timeout":  true,
+                     "exit_code":  null,
+                     "out":  "",
+                     "err":  "TIMEOUT"
+                 },
+    "docker_desktop_exists":  true,
+    "docker_info":  {
+                        "ok":  false,
+                        "timeout":  true,
+                        "exit_code":  null,
+                        "out":  "",
+                        "err":  "TIMEOUT"
+                    },
+    "missing_required_features":  [
+
+                                  ],
+    "decision":  "WARN_DOCKER_ENGINE_NOT_READY",
+    "next":  "OPEN_DOCKER_DESKTOP_ACCEPT_SETUP_AND_RERUN"
+}

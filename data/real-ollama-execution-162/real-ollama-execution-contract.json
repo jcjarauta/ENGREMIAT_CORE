@@ -1,0 +1,33 @@
+﻿{
+    "objective_id":  "DEFINE_REAL_CONTROLLED_FILE_TO_OLLAMA_EXECUTION_MVP_162_171",
+    "stage":  "E162",
+    "step":  "Real Execution Scope",
+    "scope":  "Minimal controlled real Ollama execution preparation",
+    "execution_mode":  "scope_only",
+    "local_only":  true,
+    "external_network":  false,
+    "human_authorization_required":  true,
+    "single_task":  true,
+    "single_prompt":  true,
+    "single_real_ollama_call":  false,
+    "allowed":  [
+                    "read local queue",
+                    "select one READY task",
+                    "create local scope artifacts"
+                ],
+    "prohibited":  [
+                       "ollama /api/generate",
+                       "git_write",
+                       "kanban_real_write",
+                       "cline_real_write",
+                       "external_network",
+                       "destructive_actions"
+                   ],
+    "required_outputs":  [
+                             "real-ollama-execution-contract.json",
+                             "real-execution-safety-policy.json",
+                             "selected-ready-task.json",
+                             "e162-real-execution-scope-readiness-report.json"
+                         ],
+    "next_stage":  "E163 Ollama Preflight"
+}

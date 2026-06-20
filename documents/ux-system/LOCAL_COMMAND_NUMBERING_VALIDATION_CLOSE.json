@@ -1,0 +1,30 @@
+﻿{
+    "package_id":  "ENGREMIAT_UX_SYSTEM_001",
+    "stage":  "E31_CLOSE_LOCAL_NUMBERING_VALIDATION",
+    "closed_at":  "2026-06-20T10:05:43",
+    "status":  "PASS",
+    "readiness":  100,
+    "human_validation":  "todo funcionando",
+    "launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-MEMORY-DOCUMENTATION-CENTER-NORMALIZED.ps1",
+    "policy":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\canonical-local-command-numbering-policy.json",
+    "local_map":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\DOCUMENTATION_CENTER.local-command-map.json",
+    "validated":  [
+                      "pantalla raiz con numeros locales",
+                      "subpantalla Convocatorias y fichas con [1]-[4]",
+                      "Data Intake sigue abriendo desde opcion local [4]",
+                      "legacy numbers hidden from normalized screen"
+                  ],
+    "rules_now_active":  [
+                             "cada pantalla empieza en [1]",
+                             "numeros visibles consecutivos",
+                             "legacy oculto como metadata",
+                             "b vuelve",
+                             "Enter refresca",
+                             "? ayuda",
+                             "si hay mas de 7 opciones crear subpantalla"
+                         ],
+    "next":  "E32_SYSTEM_SCREEN_INVENTORY_AND_NORMALIZATION_ROADMAP",
+    "network_used":  false,
+    "external_ai_used":  false,
+    "commit_done":  false
+}

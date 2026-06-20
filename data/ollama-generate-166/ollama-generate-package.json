@@ -1,0 +1,39 @@
+﻿{
+    "objective_id":  "DEFINE_REAL_CONTROLLED_FILE_TO_OLLAMA_EXECUTION_MVP_162_171",
+    "stage":  "E166",
+    "step":  "Generate package",
+    "purpose":  "One controlled local Ollama generation",
+    "authorization":  "AUTORIZO_E166_GENERATE_LOCAL_UNICO_SIN_RED_SIN_GIT_SIN_CLINE_SIN_KANBAN",
+    "local_only":  true,
+    "external_network":  false,
+    "git_write":  false,
+    "kanban_real_write":  false,
+    "cline_real_write":  false,
+    "auto_apply":  false,
+    "destructive_actions":  false,
+    "single_task_only":  true,
+    "selected_ready_task":  {
+                                "objective_id":  "DEFINE_REAL_CONTROLLED_FILE_TO_OLLAMA_EXECUTION_MVP_162_171",
+                                "stage":  "E162",
+                                "selection_source":  "queue_ready_line",
+                                "selection_status":  "SELECTED",
+                                "queue_path":  "C:\\ENGREMIAT_CORE\\data\\file-worker-queue-154\\worker-queue-items.jsonl",
+                                "selected_task":  {
+                                                      "task_id":  "TASK-154-001",
+                                                      "objective":  "ENGREMIAT_MIN_REAL_FILE_TO_WORKER_MVP_152_161",
+                                                      "stage":  "E154",
+                                                      "title":  "Revisar contenido.",
+                                                      "status":  "READY",
+                                                      "source":  "data/file-parser-153/imported-input.json",
+                                                      "risk":  "LOW",
+                                                      "readonly":  true,
+                                                      "worker_execution_allowed":  false,
+                                                      "kanban_real_write":  false,
+                                                      "created_at":  "2026-06-17T16:57:36"
+                                                  }
+                            },
+    "model":  "qwen3:14b",
+    "request_path":  "C:\\ENGREMIAT_CORE\\data\\ollama-generate-166\\ollama-generate-request.json",
+    "result_path":  "C:\\ENGREMIAT_CORE\\data\\ollama-generate-166\\ollama-generate-result.json",
+    "created_at":  "2026-06-17T17:24:12.5521044+02:00"
+}

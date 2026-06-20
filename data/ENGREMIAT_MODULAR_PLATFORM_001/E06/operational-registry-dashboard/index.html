@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang='es'><head><meta charset='utf-8'/><meta name='viewport' content='width=device-width, initial-scale=1'/><title>ENGREMIAT E06 Operational Registry</title><style>body{font-family:Segoe UI,Arial,sans-serif;background:#0f172a;color:#e2e8f0;margin:0;padding:24px}.card{max-width:1120px;margin:auto;background:#111827;border:1px solid #334155;border-radius:18px;padding:20px;box-shadow:0 12px 36px rgba(0,0,0,.25)}h1,h2{margin:0 0 8px}.muted{color:#94a3b8}pre{background:#020617;padding:14px;border-radius:12px;overflow:auto;white-space:pre-wrap}</style></head><body><div class='card'><h1>ENGREMIAT Operational Module Registry</h1><p class='muted'>Active, paused and detached modules with dependencies and version control.</p><h2>Operational Registry</h2><pre>{
+    "package_id":  "ENG-MOD-OPS-001",
+    "stage":  "E06",
+    "block":  "B06.2",
+    "module_id":  "ENG-MOD-OPS-001",
+    "module_name":  "Operational Module Registry",
+    "purpose":  "Registrar qué módulos están activos, pausados o desacoplados",
+    "depends_on":  "ENG-MOD-REG-001",
+    "state":  "planned",
+    "registry_model":  {
+                           "tracks_active":  true,
+                           "tracks_paused":  true,
+                           "tracks_detached":  true,
+                           "tracks_versions":  true,
+                           "tracks_dependencies":  true
+                       },
+    "control":  {
+                    "local_first":  true,
+                    "no_external_network":  true,
+                    "no_git_write":  true,
+                    "human_validation_required":  true
+                },
+    "acceptance_criteria":  [
+                                "Se ven módulos y versiones",
+                                "Se ven dependencias",
+                                "Se ve el estado operacional"
+                            ]
+}</pre><h2>Swap Report</h2><pre>{
+    "package_id":  "ENG-MOD-OPS-001",
+    "stage":  "E06",
+    "block":  "P06.2.2",
+    "name":  "Module swap report",
+    "purpose":  "Registrar sustitución, actualización o retirada de un módulo",
+    "fields":  [
+                   "old_module_id",
+                   "new_module_id",
+                   "action",
+                   "reason",
+                   "compatibility",
+                   "actor",
+                   "timestamp"
+               ],
+    "state":  "planned",
+    "control":  {
+                    "local_first":  true,
+                    "no_external_network":  true,
+                    "no_git_write":  true
+                }
+}</pre><h2>Validation</h2><pre>{
+    "package_id":  "ENGREMIAT_MODULAR_PLATFORM_001",
+    "stage":  "E06",
+    "status":  "PASS",
+    "validation":  {
+                       "kanban_contract_ok":  true,
+                       "kanban_package_ok":  true,
+                       "kanban_dashboard_ok":  true,
+                       "operational_registry_ok":  true,
+                       "operational_dashboard_ok":  true,
+                       "swap_report_ok":  true,
+                       "local_first":  true,
+                       "no_external_network":  true,
+                       "no_git_write":  true
+                   },
+    "artifacts":  [
+                      "contracts/kanban-adapter-contract.json",
+                      "packages/kanban-sync-package.json",
+                      "kanban-adapter-dashboard/index.html",
+                      "contracts/operational-module-registry.json",
+                      "operational-registry-dashboard/index.html",
+                      "reports/module-swap-report.json"
+                  ],
+    "next":  "E07"
+}</pre></div></body></html>

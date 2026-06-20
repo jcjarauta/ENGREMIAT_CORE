@@ -1,0 +1,21 @@
+﻿{
+    "policy_id":  "output-gate-policy.v1",
+    "gate_required_for":  [
+                              "DECISION",
+                              "TASK_PLAN",
+                              "COMPOSITION_BLUEPRINT",
+                              "BUILD_PACKAGE",
+                              "GATE_REQUEST",
+                              "CLIENT_ASSEMBLY_PLAN"
+                          ],
+    "critical_outputs":  [
+                             "BUILD_PACKAGE",
+                             "CLIENT_ASSEMBLY_PLAN"
+                         ],
+    "rules":  [
+                  "Blueprints require human review before build package",
+                  "Build packages cannot execute directly",
+                  "Model outputs require validation before becoming system outputs",
+                  "Decision outputs must reference target_output_id"
+              ]
+}

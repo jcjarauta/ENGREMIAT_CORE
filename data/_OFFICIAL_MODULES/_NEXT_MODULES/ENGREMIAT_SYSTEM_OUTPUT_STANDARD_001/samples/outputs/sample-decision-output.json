@@ -1,0 +1,20 @@
+﻿{
+    "output_id":  "OUT-DECISION-001",
+    "output_type":  "DECISION",
+    "source":  "HUMAN_OPERATOR",
+    "status":  "APPROVED",
+    "payload":  {
+                    "decision_id":  "DEC-001",
+                    "target_output_id":  "OUT-PROPOSAL-001",
+                    "decision":  "APPROVE",
+                    "reason":  "Composer core debe ser independiente de Ollama."
+                },
+    "evidence":  [
+                     "human_review"
+                 ],
+    "gate":  {
+                 "required":  false,
+                 "decision":  "APPROVE"
+             },
+    "created_at":  "2026-06-18T07:07:02"
+}

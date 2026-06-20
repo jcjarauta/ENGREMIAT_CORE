@@ -1,0 +1,22 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_ACTION_INSTANCE_018",
+    "stage":  "E01",
+    "template_objective":  "ENGREMIAT_CONTROLLED_ACTION_TEMPLATE_017",
+    "template_status":  "CLOSED_READY",
+    "template_expected_artifacts":  [
+                                        "controlled-action-template-scope.json",
+                                        "controlled-action-gate-contract.json",
+                                        "controlled-action-dry-run-template.json",
+                                        "controlled-action-receipt-template.json",
+                                        "controlled-action-postcheck-template.json"
+                                    ],
+    "inheritance":  [
+                        "gate_default_defer",
+                        "preview_first",
+                        "receipt_required",
+                        "postcheck_required",
+                        "no_auto_apply",
+                        "no_remote_execution",
+                        "no_git_write_without_authorization"
+                    ]
+}

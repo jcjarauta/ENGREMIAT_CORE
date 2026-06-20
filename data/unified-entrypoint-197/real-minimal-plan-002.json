@@ -1,0 +1,26 @@
+﻿{
+    "objective_id":  "UNIFIED_ENTRY_REAL_MINIMAL_PLAN_002",
+    "title":  "Validate unified entry with a second minimal real plan",
+    "context":  "Second distinct minimal plan to confirm the unified entry point stays stable.",
+    "goal":  "Recheck the full flow with a different small local case.",
+    "primary_input_path":  "C:\\ENGREMIAT_CORE\\data\\unified-entrypoint-197\\primary-input.txt",
+    "secondary_support_input_path":  "C:\\ENGREMIAT_CORE\\data\\unified-entrypoint-197\\secondary-support-input.txt",
+    "outputs":  [
+                    "launcher-summary.json",
+                    "launcher-receipt.json",
+                    "launcher-postcheck.json"
+                ],
+    "restrictions":  [
+                         "local_only",
+                         "external_network=false",
+                         "git_write=false",
+                         "kanban_real_write=false",
+                         "cline_real_write=false",
+                         "auto_apply=false",
+                         "destructive_actions=false"
+                     ],
+    "authorization_required":  true,
+    "close_criteria":  "Plan -\u003e Run -\u003e artifacts exist -\u003e readable output",
+    "next_step":  "If stable, promote the unified entry point as the official ingress",
+    "created_at":  "2026-06-17T19:13:05.5544793+02:00"
+}

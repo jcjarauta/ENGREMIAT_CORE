@@ -1,0 +1,13 @@
+﻿{
+    "capabilities":  [
+                         "CREATE_PROJECT",
+                         "CREATE_TASK",
+                         "CLOSE_TASK",
+                         "CLOSE_PROJECT"
+                     ],
+    "risk":  "MEDIUM",
+    "gate_required":  "DEPENDS_ON_REAL_WRITE",
+    "evidence_required":  true,
+    "allowed":  "Gestion interna de proyectos y tareas.",
+    "blocked":  "Cerrar sin evidencia."
+}

@@ -1,0 +1,25 @@
+﻿{
+    "objective_id":  "DEFINE_REAL_CONTROLLED_FILE_TO_OLLAMA_EXECUTION_MVP_162_171",
+    "stage":  "E162",
+    "policy_name":  "real-execution-safety-policy",
+    "local_only":  true,
+    "external_network":  false,
+    "git_write":  false,
+    "kanban_real_write":  false,
+    "cline_real_write":  false,
+    "auto_apply":  false,
+    "destructive_actions":  false,
+    "real_generate_allowed":  false,
+    "real_generate_gate":  "E166 only after explicit authorization",
+    "blocked_surfaces":  [
+                             "Cline real",
+                             "Git",
+                             "Kanban real",
+                             "network external",
+                             "destructive actions"
+                         ],
+    "evidence_policy":  "create receipts only after real execution",
+    "rollback_policy":  "logical rollback only",
+    "human_gated":  true,
+    "decision":  "DEFER"
+}

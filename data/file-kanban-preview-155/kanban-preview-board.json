@@ -1,0 +1,57 @@
+﻿{
+    "schema":  "engremiat.kanban_preview_board.v1",
+    "objective":  "ENGREMIAT_MIN_REAL_FILE_TO_WORKER_MVP_152_161",
+    "stage":  "E155",
+    "cards":  [
+                  {
+                      "card_id":  "TASK-154-001",
+                      "title":  "Revisar contenido.",
+                      "status":  "READY",
+                      "risk":  "LOW",
+                      "gate":  "READONLY_NO_EXECUTION",
+                      "worker":  "OLLAMA_PREVIEW_ONLY",
+                      "evidence":  [
+                                       "data/file-worker-queue-154/worker-queue-items.jsonl"
+                                   ],
+                      "next_action":  "Review only"
+                  },
+                  {
+                      "card_id":  "TASK-154-002",
+                      "title":  "Extraer tareas simples.",
+                      "status":  "PENDING",
+                      "risk":  "LOW",
+                      "gate":  "READONLY_NO_EXECUTION",
+                      "worker":  "OLLAMA_PREVIEW_ONLY",
+                      "evidence":  [
+                                       "data/file-worker-queue-154/worker-queue-items.jsonl"
+                                   ],
+                      "next_action":  "Review only"
+                  },
+                  {
+                      "card_id":  "TASK-154-003",
+                      "title":  "Preparar preview Kanban.",
+                      "status":  "PENDING",
+                      "risk":  "LOW",
+                      "gate":  "READONLY_NO_EXECUTION",
+                      "worker":  "OLLAMA_PREVIEW_ONLY",
+                      "evidence":  [
+                                       "data/file-worker-queue-154/worker-queue-items.jsonl"
+                                   ],
+                      "next_action":  "Review only"
+                  },
+                  {
+                      "card_id":  "TASK-154-004",
+                      "title":  "Preparar request worker sin ejecutar.",
+                      "status":  "PENDING",
+                      "risk":  "LOW",
+                      "gate":  "READONLY_NO_EXECUTION",
+                      "worker":  "OLLAMA_PREVIEW_ONLY",
+                      "evidence":  [
+                                       "data/file-worker-queue-154/worker-queue-items.jsonl"
+                                   ],
+                      "next_action":  "Review only"
+                  }
+              ],
+    "kanban_real_write":  false,
+    "created_at":  "2026-06-17T16:57:36"
+}

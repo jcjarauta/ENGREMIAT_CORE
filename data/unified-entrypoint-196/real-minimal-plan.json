@@ -1,0 +1,26 @@
+﻿{
+    "objective_id":  "UNIFIED_ENTRY_REAL_MINIMAL_PLAN_001",
+    "title":  "Validate unified entry with one minimal real plan",
+    "context":  "Use the unified entry point to hand a minimal plan to the reusable launcher.",
+    "goal":  "Check that the full flow remains stable with one small local case.",
+    "primary_input_path":  "C:\\ENGREMIAT_CORE\\data\\unified-entrypoint-196\\primary-input.txt",
+    "secondary_support_input_path":  "C:\\ENGREMIAT_CORE\\data\\unified-entrypoint-196\\secondary-support-input.txt",
+    "outputs":  [
+                    "launcher-summary.json",
+                    "launcher-receipt.json",
+                    "launcher-postcheck.json"
+                ],
+    "restrictions":  [
+                         "local_only",
+                         "external_network=false",
+                         "git_write=false",
+                         "kanban_real_write=false",
+                         "cline_real_write=false",
+                         "auto_apply=false",
+                         "destructive_actions=false"
+                     ],
+    "authorization_required":  true,
+    "close_criteria":  "Plan -\u003e Run -\u003e artifacts exist -\u003e readable output",
+    "next_step":  "If stable, promote the unified entry point as the official ingress",
+    "created_at":  "2026-06-17T19:10:17.8640236+02:00"
+}

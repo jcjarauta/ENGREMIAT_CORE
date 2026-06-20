@@ -1,0 +1,48 @@
+﻿{
+    "objective":  "ENGREMIAT_FIRST_REAL_CONTROLLED_VALUE_FLOW",
+    "stage":  "E98",
+    "evidence_id":  "FRE-098-001",
+    "case_id":  "FRF-096-001",
+    "proposal_id":  "FRP-098-001",
+    "expected_evidence":  [
+                              {
+                                  "id":  "EV-001",
+                                  "name":  "Need registered",
+                                  "path":  "data\\human-need-intake-097\\human-need-intake-record.json",
+                                  "required":  true
+                              },
+                              {
+                                  "id":  "EV-002",
+                                  "name":  "Proposal created",
+                                  "path":  "data\\first-real-proposal-098\\first-real-flow-proposal.json",
+                                  "required":  true
+                              },
+                              {
+                                  "id":  "EV-003",
+                                  "name":  "Preview created",
+                                  "path":  "data\\first-real-proposal-098\\first-real-flow-preview.json",
+                                  "required":  true
+                              },
+                              {
+                                  "id":  "EV-004",
+                                  "name":  "Human authorization gate pending",
+                                  "path":  "data/first-real-authorization-099/first-real-authorization-gate.json",
+                                  "required":  false
+                              },
+                              {
+                                  "id":  "EV-005",
+                                  "name":  "Controlled apply or safe NO_GO recorded",
+                                  "path":  "data/controlled-local-apply-100/controlled-local-apply-result.json",
+                                  "required":  false
+                              }
+                          ],
+    "defines_success":  true,
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "kanban_real_write":  false,
+    "created_utc":  "2026-06-17T11:25:28.8849074Z"
+}

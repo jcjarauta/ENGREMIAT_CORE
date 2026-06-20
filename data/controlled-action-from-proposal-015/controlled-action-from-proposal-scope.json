@@ -1,0 +1,19 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_ACTION_FROM_PROPOSAL_015",
+    "stage":  "E01",
+    "block":  "B01.1",
+    "step":  "P01.1.1",
+    "selected_case":  "single_candidate_only",
+    "purpose":  "Definir una sola propuesta candidata sobre la que operar, con alcance minimo y frontera clara.",
+    "limits":  {
+                   "no_apply":  true,
+                   "git_write":  false,
+                   "remote_execution":  false,
+                   "auto_apply":  false,
+                   "single_card":  true
+               },
+    "expected_result":  "Ruta de trabajo decidida y acotada.",
+    "artifact":  "data/controlled-action-from-proposal-015/controlled-action-from-proposal-scope.json",
+    "safety_note":  "Una sola frontera.",
+    "timestamp_utc":  "2026-06-17T06:08:41.4129513Z"
+}

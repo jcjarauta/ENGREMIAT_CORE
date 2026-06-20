@@ -1,0 +1,31 @@
+﻿{
+    "schema_version":  "1.0",
+    "required":  [
+                     "schema_version",
+                     "signal_id",
+                     "project_id",
+                     "worker_id",
+                     "state",
+                     "progress_pct",
+                     "heartbeat_at"
+                 ],
+    "properties":  {
+                       "schema_version":  "string",
+                       "signal_id":  "string",
+                       "project_id":  "string",
+                       "project_path":  "string",
+                       "worker_id":  "string",
+                       "task_id":  "string",
+                       "state":  "IDLE|QUEUED|RUNNING|WAITING_HUMAN|BLOCKED|DONE|ERROR",
+                       "phase":  "string",
+                       "current_step":  "string",
+                       "progress_pct":  "0..100",
+                       "blocked_reason":  "string|null",
+                       "next_action":  "string",
+                       "evidence_path":  "string|null",
+                       "heartbeat_at":  "ISO8601",
+                       "expires_at":  "ISO8601",
+                       "source":  "string",
+                       "readonly":  "boolean"
+                   }
+}

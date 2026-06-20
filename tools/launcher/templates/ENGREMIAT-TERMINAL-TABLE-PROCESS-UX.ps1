@@ -1,0 +1,3 @@
+﻿function Bar([int]$pct,[string]$state=""){if($pct -lt 0){$pct=0};if($pct -gt 100){$pct=100};$w=10;$f=[math]::Floor($pct/10);$e=$w-$f;$fill="#"*$f;$empty="-"*$e;$bar="["+$fill+$empty+"]";if($state -eq "RUNNING" -and $f -lt 10){$bar="["+(("#"* $f))+">"+("-"*([math]::Max(0,$w-$f-1)))+"]"};if($state -eq "BLOCKED"){$bar="[!!!!------]"};if($state -eq "DONE"){$bar="[##########]"};return $bar}
+function Short([string]$s,[int]$n){if($null -eq $s){return ""};if($s.Length -le $n){return $s};return $s.Substring(0,$n-3)+"..."}
+function Row($n,$name,$phase,$pct,$worker,$block,$next){$b=Bar $pct $worker;$line=("{0,2} {1,-36} {2,-9} {3} {4,-7} {5,-5} {6}" -f $n,(Short $name 36),(Short $phase 9),$b,(Short $worker 7),(Short $block 5),(Short $next 28));return $line}

@@ -1,0 +1,14 @@
+﻿{
+    "package_id":  "ENGREMIAT_OPERATOR_CONTEXT_AND_DECISION_TREE_001",
+    "stage":  "E07F_LAUNCHER_ALWAYS_STARTS_HOME",
+    "status":  "PASS",
+    "readiness":  100,
+    "launcher":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1",
+    "backup":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1.bak-e07f-20260619195412",
+    "changed":  [
+                    "startup_does_not_enter_saved_project_or_module",
+                    "refresh_keeps_current_screen_level",
+                    "context_changes_still_sync_after_user_action"
+                ],
+    "next":  "run_engremiat_operator_cmd_should_start_global"
+}

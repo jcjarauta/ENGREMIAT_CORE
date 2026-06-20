@@ -1,0 +1,35 @@
+﻿{
+    "objective":  "ENGREMIAT_FIRST_REAL_CONTROLLED_VALUE_FLOW",
+    "stage":  "E97",
+    "name":  "Human Need Intake",
+    "version":  "0.97.0-local",
+    "purpose":  "Registrar una necesidad humana real como entrada del primer flujo controlado sin ejecutar acciones.",
+    "need_executes":  false,
+    "human_input_required":  true,
+    "required_fields":  [
+                            "need_id",
+                            "title",
+                            "description",
+                            "expected_value",
+                            "constraints",
+                            "success_criteria",
+                            "risk",
+                            "human_owner"
+                        ],
+    "allowed_status":  [
+                           "DRAFT",
+                           "PENDING_REVIEW",
+                           "READY_FOR_PROPOSAL",
+                           "DEFERRED",
+                           "BLOCKED"
+                       ],
+    "default_status":  "PENDING_REVIEW",
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "kanban_real_write":  false,
+    "created_utc":  "2026-06-17T11:24:39.3997536Z"
+}

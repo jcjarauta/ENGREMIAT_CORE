@@ -1,0 +1,189 @@
+﻿{
+    "package_id":  "ENGREMIAT_SYSTEM_SIMULATION_LAB_001",
+    "stage":  "E01_DEFINE_SIMULATION_LAB_CONTRACT",
+    "status":  "PASS",
+    "created_at":  "2026-06-19T14:30:29",
+    "objective":  "Construir el primer espacio de pruebas y consolidacion de ENGREMIAT para simular objetivos, tareas, workers, gates humanos, evidencias, resultados y aprendizaje sin ejecucion real.",
+    "lab":  {
+                "id":  "PROJECT_engremiat_system_simulation_lab",
+                "name":  "ENGREMIAT System Simulation Lab",
+                "vault_name":  "BOVEDA_PROJECT_ENGREMIAT_SIMULATION_LAB",
+                "role":  "simulation_and_consolidation_workspace",
+                "parent_strategy":  "ENGREMIAT_OBSIDIAN_HIERARCHICAL_VAULTS_001"
+            },
+    "actors":  [
+                   {
+                       "id":  "HUMAN",
+                       "name":  "Humano",
+                       "role":  "Define objetivo, aprueba roadmap, resuelve gates, acepta o rechaza resultados."
+                   },
+                   {
+                       "id":  "SYSTEM",
+                       "name":  "Sistema ENGREMIAT",
+                       "role":  "Propone roadmap, divide tareas, asigna workers simulados, valida evidencias y aprende."
+                   },
+                   {
+                       "id":  "SIM_WORKER",
+                       "name":  "Worker simulado",
+                       "role":  "Ejecuta tareas ficticias/controladas y devuelve resultado simulado."
+                   },
+                   {
+                       "id":  "GATE",
+                       "name":  "Gate humano",
+                       "role":  "Punto de decision antes de aceptar cambios, avanzar o desbloquear."
+                   }
+               ],
+    "objects":  [
+                    {
+                        "id":  "OBJECTIVE",
+                        "name":  "Objetivo",
+                        "required_fields":  [
+                                                "id",
+                                                "title",
+                                                "intent",
+                                                "status",
+                                                "human_decision",
+                                                "next"
+                                            ]
+                    },
+                    {
+                        "id":  "ROADMAP",
+                        "name":  "Roadmap",
+                        "required_fields":  [
+                                                "id",
+                                                "objective_id",
+                                                "steps",
+                                                "status",
+                                                "approval_gate"
+                                            ]
+                    },
+                    {
+                        "id":  "TASK",
+                        "name":  "Tarea simulada",
+                        "required_fields":  [
+                                                "id",
+                                                "roadmap_id",
+                                                "title",
+                                                "status",
+                                                "assigned_worker",
+                                                "expected_evidence"
+                                            ]
+                    },
+                    {
+                        "id":  "WORKER_RUN",
+                        "name":  "Ejecucion simulada worker",
+                        "required_fields":  [
+                                                "id",
+                                                "task_id",
+                                                "worker_id",
+                                                "input",
+                                                "simulated_output",
+                                                "status"
+                                            ]
+                    },
+                    {
+                        "id":  "HUMAN_GATE",
+                        "name":  "Gate humano",
+                        "required_fields":  [
+                                                "id",
+                                                "target_id",
+                                                "question",
+                                                "options",
+                                                "decision",
+                                                "status"
+                                            ]
+                    },
+                    {
+                        "id":  "EVIDENCE",
+                        "name":  "Evidencia",
+                        "required_fields":  [
+                                                "id",
+                                                "source",
+                                                "summary",
+                                                "path",
+                                                "validation_status"
+                                            ]
+                    },
+                    {
+                        "id":  "LEARNING",
+                        "name":  "Aprendizaje",
+                        "required_fields":  [
+                                                "id",
+                                                "source_cycle",
+                                                "lesson",
+                                                "impact",
+                                                "next_adjustment"
+                                            ]
+                    }
+                ],
+    "cycle":  [
+                  {
+                      "step":  1,
+                      "name":  "human_defines_objective",
+                      "description":  "El humano formula un objetivo inicial."
+                  },
+                  {
+                      "step":  2,
+                      "name":  "system_proposes_roadmap",
+                      "description":  "El sistema propone etapas, bloques y criterios."
+                  },
+                  {
+                      "step":  3,
+                      "name":  "human_approves_or_adjusts",
+                      "description":  "El humano aprueba, bloquea o afina."
+                  },
+                  {
+                      "step":  4,
+                      "name":  "system_splits_tasks",
+                      "description":  "El sistema genera tareas simuladas."
+                  },
+                  {
+                      "step":  5,
+                      "name":  "sim_worker_runs_task",
+                      "description":  "Un worker simulado produce salida ficticia/verificable."
+                  },
+                  {
+                      "step":  6,
+                      "name":  "system_validates_evidence",
+                      "description":  "El sistema valida evidencia y detecta bloqueos."
+                  },
+                  {
+                      "step":  7,
+                      "name":  "human_accepts_or_rejects",
+                      "description":  "El humano acepta, rechaza o pide correccion."
+                  },
+                  {
+                      "step":  8,
+                      "name":  "system_records_learning",
+                      "description":  "El laboratorio registra aprendizaje y ajusta siguiente objetivo."
+                  }
+              ],
+    "first_scenario":  {
+                           "id":  "SCENARIO_001_visual_task_management_module",
+                           "title":  "Construir modulo simulado de gestion visual de tareas",
+                           "purpose":  "Probar ciclo humano-roadmap-tareas-worker-gate-evidencia-aprendizaje sin ejecucion real.",
+                           "expected_result":  "Un ciclo simulado completo navegable en Obsidian con evidencia y decision final."
+                       },
+    "acceptance_criteria":  [
+                                "contract_created",
+                                "no_real_worker_execution",
+                                "no_git_write",
+                                "no_external_network",
+                                "ready_to_create_lab_vault",
+                                "objects_defined",
+                                "cycle_defined",
+                                "first_scenario_defined"
+                            ],
+    "safety":  {
+                   "local_only":  true,
+                   "contract_only":  true,
+                   "no_lab_vault_creation_yet":  true,
+                   "no_real_worker_execution":  true,
+                   "no_kanban_write":  true,
+                   "no_clien_write":  true,
+                   "no_git_write":  true,
+                   "no_external_network":  true,
+                   "obsidian_app_automation":  false
+               },
+    "next":  "E02_CREATE_BOVEDA_PROJECT_ENGREMIAT_SIMULATION_LAB"
+}

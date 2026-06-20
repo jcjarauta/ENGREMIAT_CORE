@@ -1,0 +1,34 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_FINAL_026_035",
+    "stage":  "E34",
+    "created_at":  "2026-06-17T11:16:16.8227965+02:00",
+    "readiness":  100,
+    "decision":  "GO_E34_ASSISTED_WORKER_ADAPTER_READY",
+    "next":  "E35_MVP_FINAL_CLOSE",
+    "checks":  {
+                   "contract_created":  true,
+                   "policy_created":  true,
+                   "builder_created":  true,
+                   "prompt_template_created":  true,
+                   "handoff_tool_created":  true,
+                   "intake_tool_created":  true,
+                   "default_mode_manual":  true,
+                   "auto_apply_false":  true,
+                   "remote_execution_false":  true,
+                   "git_write_false":  true,
+                   "read_secrets_false":  true
+               },
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "artifacts":  [
+                      "data/dev-assisted-worker/assisted-worker-adapter-contract.json",
+                      "data/dev-assisted-worker/assisted-worker-policy.json",
+                      "tools/eng-assisted-task-builder.ps1",
+                      "data/dev-assisted-worker/assisted-worker-prompt-template.md",
+                      "tools/eng-assisted-handoff.ps1",
+                      "tools/eng-assisted-intake.ps1",
+                      "reports/assisted-worker/assisted-worker-adapter-readiness-report.json"
+                  ]
+}

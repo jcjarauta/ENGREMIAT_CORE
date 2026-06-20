@@ -1,0 +1,17 @@
+﻿{
+    "max_cards":  50,
+    "deduplicate_by":  [
+                           "card_id",
+                           "title"
+                       ],
+    "lanes":  [
+                  "READY",
+                  "GATED",
+                  "VALIDATION",
+                  "BLOCKED",
+                  "BACKLOG",
+                  "DONE"
+              ],
+    "default_lane":  "BACKLOG",
+    "manual_export_only":  true
+}

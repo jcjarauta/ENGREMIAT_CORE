@@ -1,0 +1,112 @@
+﻿{
+    "screen_id":  "INICIO_NORMALIZED_ROOT_HUB",
+    "created_at":  "2026-06-20T10:21:52",
+    "title":  "ENGREMIAT / INICIO",
+    "route":  "INICIO",
+    "role":  "hub raiz del sistema",
+    "principle":  "Entrar por bloques funcionales, no por listado largo",
+    "source_launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO.ps1",
+    "normalized_launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO-NORMALIZED.ps1",
+    "legacy_options_count":  54,
+    "groups":  [
+                   {
+                       "local":  1,
+                       "title":  "Proyectos",
+                       "role":  "crear, abrir y gestionar proyectos",
+                       "legacy_options":  [
+                                              "[2] módulos del proyecto activo: revisar/abrir módulos del proyecto.\" White",
+                                              "[3] biblioteca de módulos: reutilizables, activos, inactivos e históricos.\" White",
+                                              "[4] workspace de módulo: seleccionar módulo y abrir su espacio operativo.\" White",
+                                              "[5] tarjetas de módulo: seleccionar módulo y gestionar tarjetas.\" White",
+                                              "[6] abrir carpeta proyecto activo: acceso directo al explorador.\" White",
+                                              "[20] refrescar grafo de módulos.\" White",
+                                              "[2] módulos del proyecto -\u003e número de módulo -\u003e workspace/ficha del módulo\" White",
+                                              "[4] workspace de módulo -\u003e seleccionar módulo -\u003e tarjetas/tareas/tipos/enlaces\" White",
+                                              "[3] biblioteca de módulos -\u003e [d] desactivados / [h] históricos / [e] gestionar biblioteca\" White",
+                                              "[20] refrescar grafo de módulos -\u003e [11] estado técnico\" White",
+                                              "[2]  módulos del proyecto activo\" White",
+                                              "[3]  biblioteca de módulos\" White",
+                                              "[4]  workspace de módulo\" White",
+                                              "[5]  tarjetas de módulo\" White",
+                                              "[6]  abrir carpeta proyecto activo\" White",
+                                              "[20] refrescar grafo de módulos\" White"
+                                          ]
+                   },
+                   {
+                       "local":  2,
+                       "title":  "Memoria y documentacion",
+                       "role":  "documentos, fichas, dossiers y Data Intake",
+                       "legacy_options":  [
+                                              "[15] generar/abrir memoria viva.\" White",
+                                              "[15] memoria y documentación\" White"
+                                          ]
+                   },
+                   {
+                       "local":  3,
+                       "title":  "Operador y workers",
+                       "role":  "colas, workers, tareas y ejecucion asistida",
+                       "legacy_options":  [
+                                              "[7] dashboard humano / operador visual: abre el HTML de inicio humano.\" White",
+                                              "[17] generar/abrir prompt worker Ollama/Cline.\" White",
+                                              "[7]  dashboard humano / operador visual\" White",
+                                              "[17] generar/abrir prompt worker Ollama/Cline\" White"
+                                          ]
+                   },
+                   {
+                       "local":  4,
+                       "title":  "Control y estado",
+                       "role":  "salud, reports, dashboards y diagnostico",
+                       "legacy_options":  [
+                                              "[11] estado técnico: diagnóstico interno del inicio.\" White",
+                                              "[12] estado copiable: resumen para devolver a ChatGPT.\" White",
+                                              "[13] status externo: status ejecutable independiente.\" White",
+                                              "[11] estado técnico\" White",
+                                              "[12] estado copiable\" White",
+                                              "[13] status externo\" White"
+                                          ]
+                   },
+                   {
+                       "local":  5,
+                       "title":  "Herramientas y configuracion",
+                       "role":  "utilidades, rutas, contratos y configuracion",
+                       "legacy_options":  [
+
+                                          ]
+                   },
+                   {
+                       "local":  6,
+                       "title":  "Sistema legacy",
+                       "role":  "acceso temporal a opciones no clasificadas",
+                       "legacy_options":  [
+                                              "[1] continuar último foco: vuelve a donde estabas trabajando.\" White",
+                                              "[8] árbol de navegación seguro: mapa de pantallas y rutas.\" White",
+                                              "[9] rutas recomendadas: caminos prácticos de trabajo.\" White",
+                                              "[10] ayuda: esta pantalla.\" White",
+                                              "[14] ver último log: última salida registrada.\" White",
+                                              "[16] generar/abrir prompt continuidad ChatGPT.\" White",
+                                              "[18] abrir diario de desarrollo.\" White",
+                                              "[19] añadir entrada al diario.\" White",
+                                              "[21] abrir C:\\ENGREMIAT_CORE.\" White",
+                                              "[2]\" White",
+                                              "[3]\" White",
+                                              "[4]\" White",
+                                              "[5]\" White",
+                                              "[8]\" White",
+                                              "[20] y luego [11]\" White",
+                                              "[1] continuar último foco\" White",
+                                              "[4] selector workspace normalizado / [5] selector tarjetas normalizado\" DarkGray",
+                                              "[1]  {0}\" -f $rec.label) White",
+                                              "[8]  árbol de navegación seguro\" White",
+                                              "[9]  rutas recomendadas\" White",
+                                              "[10] ayuda\" White",
+                                              "[14] ver último log\" White",
+                                              "[16] generar/abrir prompt continuidad ChatGPT\" White",
+                                              "[18] abrir diario de desarrollo\" White",
+                                              "[19] añadir entrada al diario\" White",
+                                              "[21] abrir C:\\ENGREMIAT_CORE\" White"
+                                          ]
+                   }
+               ],
+    "decision":  "No renderizar 54 opciones en raiz; crear subpantallas por dominio",
+    "next":  "E50_WIRE_INICIO_ROOT_HUB_FIRST_LEVEL"
+}

@@ -1,0 +1,18 @@
+﻿{
+    "schema":  "prompt-envelope",
+    "purpose":  "Evitar prompts sueltos y asegurar trazabilidad",
+    "required":  [
+                     "envelope_id",
+                     "system_role",
+                     "user_goal",
+                     "context_refs",
+                     "constraints",
+                     "output_contract"
+                 ],
+    "forbidden":  [
+                      "raw_unbounded_prompt",
+                      "hidden_tool_instruction",
+                      "ungated_real_inference"
+                  ],
+    "output_contract":  "MODEL_RESPONSE_NORMALIZED"
+}

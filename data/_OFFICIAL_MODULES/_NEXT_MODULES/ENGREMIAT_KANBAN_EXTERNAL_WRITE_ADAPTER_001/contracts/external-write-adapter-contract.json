@@ -1,0 +1,9 @@
+﻿{
+    "package_id":  "ENGREMIAT_KANBAN_EXTERNAL_WRITE_ADAPTER_001",
+    "contract":  "EXTERNAL_KANBAN_WRITE_ADAPTER_PREP_V1",
+    "mode":  "MANUAL_EXPORT_ONLY",
+    "reads":  "priority-ranking-output.json",
+    "writes_local_reports":  true,
+    "external_api_write":  false,
+    "requires_gate_for_real_external_write":  "AUTORIZO_KANBAN_EXTERNAL_REAL_WRITE_GATED"
+}

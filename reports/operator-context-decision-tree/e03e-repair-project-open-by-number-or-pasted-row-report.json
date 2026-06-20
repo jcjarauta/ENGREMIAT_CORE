@@ -1,0 +1,15 @@
+﻿{
+    "package_id":  "ENGREMIAT_OPERATOR_CONTEXT_AND_DECISION_TREE_001",
+    "stage":  "E03E_REPAIR_PROJECT_OPEN_BY_NUMBER_OR_PASTED_ROW",
+    "status":  "PASS",
+    "readiness":  100,
+    "fixed":  "open_by_number_id_or_pasted_row",
+    "template_excluded":  true,
+    "projects":  3,
+    "registry":  "C:\\ENGREMIAT_CORE\\data\\operator-state\\project-registry.json",
+    "commands":  [
+                     "C:\\ENGREMIAT_CORE\\tools\\operator-context\\proyectos.ps1",
+                     "C:\\ENGREMIAT_CORE\\tools\\operator-context\\abrir-proyecto.ps1"
+                 ],
+    "next":  "E04_PROJECT_MODULE_TARGET_DECISION"
+}

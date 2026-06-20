@@ -1,0 +1,67 @@
+﻿{
+    "nodes":  [
+                  {
+                      "id":  "gate",
+                      "type":  "file",
+                      "file":  "05_HUMAN_GATES/GATE_002_ACCEPT_SIMULATED_RESULT.md",
+                      "x":  -420,
+                      "y":  0,
+                      "width":  340,
+                      "height":  150,
+                      "color":  "5"
+                  },
+                  {
+                      "id":  "result",
+                      "type":  "file",
+                      "file":  "08_RESULTS/SCENARIO_001_visual_task_management_module/RESULT_002_WORKER_SIMULATION_OUTPUT.md",
+                      "x":  0,
+                      "y":  0,
+                      "width":  360,
+                      "height":  160,
+                      "color":  "2"
+                  },
+                  {
+                      "id":  "learning",
+                      "type":  "file",
+                      "file":  "09_LEARNING/LEARNING_002_SIMULATION_CYCLE_ACCEPTED.md",
+                      "x":  420,
+                      "y":  0,
+                      "width":  360,
+                      "height":  160,
+                      "color":  "6"
+                  },
+                  {
+                      "id":  "final",
+                      "type":  "file",
+                      "file":  "00_LAB_CONTROL/CYCLE_RUN_001_FINAL_STATUS.md",
+                      "x":  840,
+                      "y":  0,
+                      "width":  360,
+                      "height":  160,
+                      "color":  "1"
+                  }
+              ],
+    "edges":  [
+                  {
+                      "id":  "e1",
+                      "fromNode":  "gate",
+                      "fromSide":  "right",
+                      "toNode":  "result",
+                      "toSide":  "left"
+                  },
+                  {
+                      "id":  "e2",
+                      "fromNode":  "result",
+                      "fromSide":  "right",
+                      "toNode":  "learning",
+                      "toSide":  "left"
+                  },
+                  {
+                      "id":  "e3",
+                      "fromNode":  "learning",
+                      "fromSide":  "right",
+                      "toNode":  "final",
+                      "toSide":  "left"
+                  }
+              ]
+}

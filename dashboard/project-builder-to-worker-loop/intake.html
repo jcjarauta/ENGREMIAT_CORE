@@ -1,0 +1,132 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ENGREMIAT · Project Intake Dashboard</title>
+<style>
+body{font-family:Segoe UI,Arial;margin:24px;background:#111;color:#eee}
+h1{color:#8bd3ff}
+.box{border:1px solid #444;border-radius:12px;padding:14px;margin:14px 0;background:#1b1b1b}
+label{display:block;margin-top:10px;font-weight:bold}
+input,textarea,select{width:100%;box-sizing:border-box;background:#181818;color:#eee;border:1px solid #555;border-radius:8px;padding:8px;margin-top:4px}
+textarea{min-height:90px}
+button{padding:9px 14px;margin:8px 4px 8px 0;border-radius:8px;border:1px solid #555;background:#222;color:#eee;cursor:pointer}
+button:hover{background:#333}
+pre{background:#222;padding:12px;border-radius:8px;white-space:pre-wrap;max-height:420px;overflow:auto}
+.ok{color:#6ee789}.warn{color:#ffd966}.err{color:#ff7b7b}.muted{color:#aaa}
+code{background:#222;padding:2px 5px;border-radius:5px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<h1>ENGREMIAT · Project Builder Intake · E02 readonly</h1>
+
+<div class="box">
+  <h2>Propósito</h2>
+  <p>Escribe una idea humana de proyecto. El panel genera una previsualización JSON local para revisión. En E02 no se guarda nada automáticamente, no llama a Ollama y no crea cards.</p>
+  <p><b class="warn">Siguiente escritura real:</b> guardar intake draft en E03 solo con gate humano.</p>
+</div>
+
+<div class="grid">
+  <div class="box">
+    <h2>Entrada humana</h2>
+    <label>Nombre del proyecto</label>
+    <input id="project_title" value="Crear módulo para convertir necesidades en tareas ejecutables por workers">
+
+    <label>Descripción libre</label>
+    <textarea id="human_description">El humano quiere hacer un proyecto, el sistema recoge la idea, propone un roadmap, el humano aprueba, el worker desarrolla con normas del sistema y devuelve resultado/evidencia al dashboard.</textarea>
+
+    <label>Objetivo</label>
+    <textarea id="objective">Construir un ciclo proyecto → roadmap → aprobación humana → cards/tareas → worker → evidencia → revisión humana.</textarea>
+
+    <label>Resultado esperado</label>
+    <textarea id="expected_result">Dashboard operativo amigable para construir proyectos segmentados en tareas ejecutables por workers, con normalización Engremiat y gates humanos.</textarea>
+
+    <label>Restricciones, una por línea</label>
+    <textarea id="constraints">usar normalización consolidada
+proposal-only por defecto
+no crear cards sin gate
+no ejecutar worker sin gate
+devolver evidencia verificable
+dashboard como superficie humana</textarea>
+
+    <label>Prioridad</label>
+    <select id="priority">
+      <option>HIGH</option>
+      <option>MEDIUM</option>
+      <option>LOW</option>
+      <option>CRITICAL</option>
+    </select>
+
+    <label>Nivel de detalle</label>
+    <select id="detail_level">
+      <option>MVP_READABLE</option>
+      <option>LIGHT</option>
+      <option>DETAILED</option>
+      <option>TECHNICAL</option>
+    </select>
+
+    <button onclick="buildPreview()">Generar preview JSON</button>
+    <button onclick="copyPreview()">Copiar preview</button>
+  </div>
+
+  <div class="box">
+    <h2>Preview normalizado</h2>
+    <p class="muted">Copia este JSON al chat o úsalo en E03 cuando autoricemos guardar intake draft.</p>
+    <pre id="preview">Pulsa “Generar preview JSON”.</pre>
+  </div>
+</div>
+
+<div class="box">
+  <h2>Estados de seguridad E02</h2>
+  <p><code>save_intake_allowed=false</code></p>
+  <p><code>ollama_real_execution=false</code></p>
+  <p><code>worker_real_execution=false</code></p>
+  <p><code>materialize_cards=false</code></p>
+  <p><code>card_write=false</code></p>
+</div>
+
+<script>
+function val(id){return document.getElementById(id).value;}
+function buildPreview(){
+  const constraints=val("constraints").split(/\r?\n/).map(x=>x.trim()).filter(Boolean);
+  const now=new Date();
+  const stamp=now.toISOString().replace(/[-:T.Z]/g,"").slice(0,14);
+  const obj={
+    intake_id:"PROJECT-INTAKE-DRAFT-"+stamp,
+    status:"DRAFT_PREVIEW_ONLY",
+    project_title:val("project_title").trim(),
+    human_description:val("human_description").trim(),
+    objective:val("objective").trim(),
+    expected_result:val("expected_result").trim(),
+    constraints:constraints,
+    priority:val("priority"),
+    detail_level:val("detail_level"),
+    created_by:"human_dashboard",
+    safety:{
+      save_intake_allowed:false,
+      ollama_real_execution:false,
+      worker_real_execution:false,
+      materialize_cards:false,
+      card_write:false,
+      git:false,
+      network_external:false
+    },
+    next:"E03_SAVE_HUMAN_PROJECT_INTAKE_WITH_GATE"
+  };
+  document.getElementById("preview").textContent=JSON.stringify(obj,null,2);
+}
+async function copyPreview(){
+  const txt=document.getElementById("preview").textContent;
+  try{
+    await navigator.clipboard.writeText(txt);
+    alert("Preview copiado al portapapeles.");
+  }catch(e){
+    alert("No se pudo copiar automáticamente. Selecciona el texto manualmente.");
+  }
+}
+buildPreview();
+</script>
+</body>
+</html>

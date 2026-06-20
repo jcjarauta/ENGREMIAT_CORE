@@ -1,0 +1,32 @@
+﻿{
+    "resource_id":  "RESOURCE-BUSINESS-PLAN-TEMPLATE-001",
+    "resource_type":  "RESOURCE_BUSINESS_PLAN",
+    "status":  "DRAFT",
+    "title":  "Business Plan Base Template",
+    "description":  "Recurso ejemplo para construir business plans reutilizables.",
+    "domain":  "business",
+    "version":  "0.1.0",
+    "capabilities":  [
+                         "BUSINESS_PLAN_WORKFLOW",
+                         "DOCUMENT_WORKFLOW",
+                         "RESOURCE_LIBRARY"
+                     ],
+    "dependencies":  [
+
+                     ],
+    "location":  "samples/resources/business-plan-template",
+    "evidence":  [
+                     "sample-only"
+                 ],
+    "quality":  {
+                    "readiness_score":  60,
+                    "reuse_score":  80,
+                    "evidence_score":  40,
+                    "overall_score":  60
+                },
+    "reuse_policy":  "ADAPT",
+    "gate":  {
+                 "required":  true,
+                 "decision":  "HUMAN_REVIEW_REQUIRED"
+             }
+}

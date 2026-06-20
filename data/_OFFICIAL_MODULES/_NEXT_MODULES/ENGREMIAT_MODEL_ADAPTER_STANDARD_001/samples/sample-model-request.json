@@ -1,0 +1,28 @@
+﻿{
+    "request_id":  "MODEL-REQ-MOCK-001",
+    "mode":  "MOCK",
+    "task":  {
+                 "task_id":  "TASK-MODEL-STANDARD-001",
+                 "goal":  "Normalize a model response without calling a real model"
+             },
+    "prompt_envelope":  {
+                            "envelope_id":  "PROMPT-ENV-001",
+                            "system_role":  "assistant_adapter",
+                            "user_goal":  "Return normalized mock output",
+                            "context_refs":  [
+                                                 "COMPOSITION_BLUEPRINT_SAMPLE"
+                                             ],
+                            "constraints":  [
+                                                "local_only",
+                                                "no_real_inference"
+                                            ],
+                            "output_contract":  "MODEL_RESPONSE_NORMALIZED"
+                        },
+    "constraints":  {
+                        "local_only":  true,
+                        "network":  false,
+                        "ollama":  false,
+                        "real_inference":  false
+                    },
+    "expected_output_type":  "MODEL_RESPONSE_NORMALIZED"
+}

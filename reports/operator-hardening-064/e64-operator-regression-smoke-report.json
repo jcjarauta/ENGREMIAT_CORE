@@ -1,0 +1,28 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_REAL_WORKER_DAILY_VALUE_LOOP_056_065",
+    "stage":  "E64",
+    "smoke_id":  "E64_OPERATOR_REGRESSION_SMOKE",
+    "required_items":  [
+                           "eng.ps1",
+                           "VERSION.json",
+                           "dashboard/daily-value/index.html",
+                           "dashboard/approval-console/index.html",
+                           "tools/eng-worker-response-import.ps1",
+                           "tools/eng-proposal-check.ps1",
+                           "data/controlled-apply-v2-060/controlled-apply-v2-output.json",
+                           "data/kanban-write-sim-062/kanban-write-sim-result.json"
+                       ],
+    "missing":  [
+
+                ],
+    "eng_daily_ok":  true,
+    "gates_locked_ok":  true,
+    "tools_policy_ok":  true,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "decision":  "GO_E64_OPERATOR_REGRESSION_OK",
+    "created_at":  "2026-06-17T12:26:56"
+}

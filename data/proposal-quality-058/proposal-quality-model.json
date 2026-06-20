@@ -1,0 +1,75 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_REAL_WORKER_DAILY_VALUE_LOOP_056_065",
+    "stage":  "E58",
+    "stage_name":  "Proposal Quality Checker",
+    "purpose":  "Validar calidad, seguridad y utilidad de la propuesta worker",
+    "model_id":  "E58_PROPOSAL_QUALITY_MODEL",
+    "required_fields":  [
+                            "proposal_id",
+                            "summary",
+                            "suggested_change",
+                            "risk",
+                            "required_files",
+                            "expected_value",
+                            "safety_flags",
+                            "rollback_needed",
+                            "postcheck_needed",
+                            "recommended_human_decision"
+                        ],
+    "quality_criteria":  [
+                             {
+                                 "weight":  20,
+                                 "name":  "Completa campos requeridos",
+                                 "id":  "QC01"
+                             },
+                             {
+                                 "weight":  20,
+                                 "name":  "Cambio pequeño y acotado",
+                                 "id":  "QC02"
+                             },
+                             {
+                                 "weight":  20,
+                                 "name":  "Valor humano diario claro",
+                                 "id":  "QC03"
+                             },
+                             {
+                                 "weight":  20,
+                                 "name":  "Flags de seguridad explícitos",
+                                 "id":  "QC04"
+                             },
+                             {
+                                 "weight":  20,
+                                 "name":  "Rollback y postcheck contemplados",
+                                 "id":  "QC05"
+                             }
+                         ],
+    "decisions":  [
+                      "GO_REVIEW",
+                      "REPAIR_REQUIRED",
+                      "DEFER_FOR_HUMAN_REVIEW",
+                      "REJECT_UNSAFE"
+                  ],
+    "no_go_triggers":  [
+                           "auto_apply=true",
+                           "remote_execution=true",
+                           "git_write=true",
+                           "external_network=true",
+                           "missing_required_fields",
+                           "no_rollback_for_apply",
+                           "unclear_value"
+                       ],
+    "security":  {
+                     "apply_executed":  false,
+                     "auto_apply":  false,
+                     "remote_execution":  false,
+                     "git_write":  false,
+                     "external_network":  false,
+                     "worker_executed":  false,
+                     "proposal_executed":  false,
+                     "check_only":  true,
+                     "human_decision_required":  true,
+                     "sensitive_actions_executed":  false
+                 },
+    "next":  "E59_HUMAN_APPROVAL_CONSOLE_UPGRADE",
+    "created_at":  "2026-06-17T12:21:00"
+}

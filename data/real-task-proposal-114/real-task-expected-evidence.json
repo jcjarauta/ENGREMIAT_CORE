@@ -1,0 +1,44 @@
+﻿{
+    "schema":  "engremiat.real_task_expected_evidence.v1",
+    "objective":  "ENGREMIAT_REAL_VALUE_TASK_EXECUTION_LOOP_112_121",
+    "stage":  "E114",
+    "block":  "B114.1",
+    "step":  "P114.1.2",
+    "evidence_id":  "REAL-TASK-EVIDENCE-114-001",
+    "proposal_id":  "REAL-TASK-PROPOSAL-114-001",
+    "created_at":  "2026-06-17T14:10:02",
+    "human_review_required":  true,
+    "mandatory_artifacts":  [
+                                "data/real-task-proposal-114/real-task-proposal.json",
+                                "data/real-task-proposal-114/real-task-expected-evidence.json",
+                                "data/real-task-proposal-114/real-task-preview.json",
+                                "reports/real-task-proposal-114/e114-proposal-readiness-report.json"
+                            ],
+    "evidence_items":  [
+                           {
+                               "id":  "proposal_exists",
+                               "description":  "Proposal JSON exists and declares execution_authorized=false"
+                           },
+                           {
+                               "id":  "preview_exists",
+                               "description":  "Preview JSON exists and declares no execution"
+                           },
+                           {
+                               "id":  "readiness_exists",
+                               "description":  "Readiness report exists and blocks execution until E115"
+                           }
+                       ],
+    "validation_rules":  [
+                             "All mandatory artifacts must exist",
+                             "proposal_status must be PROPOSED",
+                             "execution_authorized must be false",
+                             "execution_allowed_now must be false"
+                         ],
+    "completion_criteria":  [
+                                "proposal_valid=true",
+                                "evidence_valid=true",
+                                "preview_valid=true",
+                                "authorization_gate_ready=true",
+                                "execution_allowed_now=false"
+                            ]
+}

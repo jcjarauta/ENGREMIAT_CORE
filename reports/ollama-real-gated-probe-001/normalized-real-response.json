@@ -1,0 +1,25 @@
+﻿{
+    "output_type":  "MODEL_RESPONSE_NORMALIZED",
+    "package_id":  "ENGREMIAT_OLLAMA_REAL_GATED_PROBE_001",
+    "request_id":  "OLLAMA-REAL-GATED-PROBE-001",
+    "status":  "PASS",
+    "mode":  "REAL_GATED",
+    "normalized_output":  {
+                              "content":  "",
+                              "expected_contains":  "ENGREMIAT_OLLAMA_REAL_PROBE_OK",
+                              "contains_expected":  false
+                          },
+    "evidence":  {
+                     "real_inference_executed":  true,
+                     "endpoint_generate_called":  true,
+                     "calls_attempted":  1,
+                     "duration_ms":  7689,
+                     "model":  "qwen3:14b",
+                     "authorization":  "AUTORIZO_OLLAMA_REAL_INFERENCE_GATED"
+                 },
+    "adapter_metadata":  {
+                             "adapter":  "ENGREMIAT_MODEL_ADAPTER_OLLAMA_001",
+                             "base_url":  "http://127.0.0.1:11434",
+                             "status_code":  200
+                         }
+}

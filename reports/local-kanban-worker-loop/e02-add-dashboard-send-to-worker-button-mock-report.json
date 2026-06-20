@@ -1,0 +1,17 @@
+﻿{
+    "package_id":  "ENGREMIAT_LOCAL_KANBAN_WORKER_LOOP_001",
+    "stage":  "E02_ADD_DASHBOARD_SEND_TO_WORKER_BUTTON_MOCK",
+    "status":  "PASS",
+    "bridge":  "C:\\ENGREMIAT_CORE\\tools\\local-kanban-worker-loop\\Start-LocalKanbanWorkerBridge.ps1",
+    "dashboard":  "C:\\ENGREMIAT_CORE\\dashboard\\obsidian-local-kanban\\index.html",
+    "starter":  "C:\\ENGREMIAT_CORE\\tools\\local-kanban-worker-loop\\OPEN_DASHBOARD_WITH_WORKER_BRIDGE.ps1",
+    "localhost":  "http://127.0.0.1:8765",
+    "transport":  "mock",
+    "real_worker_execution":  false,
+    "write_to_cline":  false,
+    "browser":  true,
+    "api_called":  "localhost_only",
+    "git":  false,
+    "network_external":  false,
+    "next":  "HUMAN_CLICK_SEND_TO_WORKER_MOCK_AND_REPORT_RESULT"
+}

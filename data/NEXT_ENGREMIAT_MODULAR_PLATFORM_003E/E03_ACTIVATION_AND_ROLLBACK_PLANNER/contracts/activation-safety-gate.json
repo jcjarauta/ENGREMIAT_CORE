@@ -1,0 +1,23 @@
+{
+    "package_id":  "NEXT_ENGREMIAT_MODULAR_PLATFORM_003E",
+    "stage":  "E03",
+    "block":  "B03.3",
+    "artifact":  "activation-safety-gate.json",
+    "status":  "DEFINED",
+    "gate":  "PENDING_HUMAN_AUTHORIZATION_FOR_REAL_ACTIVATION",
+    "allowed_now":  [
+                        "write_local_plan",
+                        "write_local_policy",
+                        "write_local_dashboard",
+                        "validate_artifacts"
+                    ],
+    "blocked_now":  [
+                        "activate_module",
+                        "pause_real_module",
+                        "detach_real_module",
+                        "write_git",
+                        "external_network",
+                        "modify_core"
+                    ],
+    "decision":  "PLAN_ONLY_PASS"
+}

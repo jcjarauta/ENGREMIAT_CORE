@@ -1,0 +1,39 @@
+﻿{
+    "objective_id":  "ENGREMIAT_CORE_CONSOLIDATION_AND_MODULAR_BASELINE",
+    "stage":  "E206",
+    "block":  "B206.1",
+    "step":  "P206.1.1",
+    "name":  "state-memory-contract",
+    "purpose":  "Define the first upper layer over the frozen core for state, memory, dependencies and close tracking",
+    "references":  [
+                       "core-freeze-contract.json",
+                       "core-freeze-policy.json",
+                       "core-baseline-candidate.json",
+                       "modular-contract-schema.json",
+                       "module-registry-design.json"
+                   ],
+    "required_fields":  [
+                            "state_id",
+                            "current_state",
+                            "memory_entries",
+                            "dependencies",
+                            "module_links",
+                            "last_event",
+                            "close_status",
+                            "next_action"
+                        ],
+    "states":  [
+                   "empty",
+                   "tracking",
+                   "active",
+                   "waiting",
+                   "closed"
+               ],
+    "rules":  [
+                  "memory layer must not modify the frozen core",
+                  "state must be readable without reinterpreting the core",
+                  "dependencies must be explicit and traceable",
+                  "close state must be reproducible"
+              ],
+    "created_at":  "2026-06-17T19:55:50.5708468+02:00"
+}

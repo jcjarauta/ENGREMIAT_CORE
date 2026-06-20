@@ -1,0 +1,31 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_ACTION_TEMPLATE_017",
+    "stage":  "E01",
+    "purpose":  "Definir plantilla base reusable para acciones controladas ENGREMIAT",
+    "mode":  "LOCAL_FIRST_HUMAN_GATED",
+    "default_gate":  "DEFER",
+    "allowed_outputs":  [
+                            "scope",
+                            "safety_rules",
+                            "schema",
+                            "sample",
+                            "reports",
+                            "readiness"
+                        ],
+    "blocked_by_default":  [
+                               "auto_apply",
+                               "remote_execution",
+                               "git_write",
+                               "free_apply",
+                               "ungated_execution"
+                           ],
+    "evidence_paths":  [
+                           "data/",
+                           "reports/",
+                           "docs/",
+                           "dashboard/",
+                           "receipts/"
+                       ],
+    "human_role":  "DECIDES",
+    "machine_role":  "PREPARES_VALIDATES_RECORDS_PROPOSES"
+}

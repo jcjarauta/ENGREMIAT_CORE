@@ -1,0 +1,64 @@
+﻿{
+    "contract_id":  "ENGREMIAT_CANONICAL_SCREEN_AND_WORKFLOW_V1",
+    "created_at":  "2026-06-20T09:56:25",
+    "purpose":  "Definir plantilla visual, dinamica de trabajo y criterios para escalar de listados largos a pantallas propias",
+    "principles":  [
+                       "Cada pantalla tiene identidad, ruta, rol y principio operativo",
+                       "Cada pantalla separa acciones por bloques funcionales, no por acumulacion historica",
+                       "Enter vacio refresca/redibuja",
+                       "b vuelve siempre al nivel anterior",
+                       "? muestra ayuda contextual",
+                       "Las opciones peligrosas o externas declaran gate",
+                       "Los listados largos se convierten en submenus cuando superan 7 acciones o mezclan mas de 3 tipos de trabajo",
+                       "Los handlers reales se cablean submenu por submenu, nunca todo a la vez",
+                       "Legacy funcional se preserva hasta validar la pantalla normalizada",
+                       "No usar here-strings fragiles en scripts de normalizacion; preferir arrays y Set-Content"
+                   ],
+    "screen_sections":  [
+                            "HEADER",
+                            "CONTEXT",
+                            "STATUS",
+                            "ACTIONS_GROUPED",
+                            "NAVIGATION",
+                            "PROMPT",
+                            "FEEDBACK"
+                        ],
+    "header_fields":  [
+                          "titulo_canonico",
+                          "ruta",
+                          "rol",
+                          "principio",
+                          "estado_opcional"
+                      ],
+    "navigation_rules":  {
+                             "enter":  "refrescar/redibujar",
+                             "b":  "volver",
+                             "q":  "salir solo en raiz",
+                             "help":  "? ayuda contextual",
+                             "unknown":  "mensaje corto y no rompe flujo"
+                         },
+    "promotion_rules":  [
+                            "Si un listado tiene mas de 7 acciones, crear submenus",
+                            "Si una opcion abre otro dominio conceptual, crear pantalla propia",
+                            "Si un flujo tiene estado propio, crear pantalla propia",
+                            "Si una pantalla mezcla productores y consumidores, separarlos",
+                            "Si una pantalla requiere validaciones recurrentes, crear estado/checklist propio"
+                        ],
+    "workflow_rules":  [
+                           "Primero contrato/blueprint",
+                           "Luego launcher paralelo seguro",
+                           "Luego cablear un submenu prioritario",
+                           "Luego smoke no interactivo",
+                           "Luego prueba humana",
+                           "Luego reemplazo opcional del acceso principal"
+                       ],
+    "risk_rules":  [
+                       "LOCAL_ONLY por defecto",
+                       "Sin red, IA externa, scraping, commit o push salvo autorizacion",
+                       "Parse PSParser obligatorio",
+                       "Backups antes de reescribir launcher",
+                       "Report JSON obligatorio",
+                       "Una frontera tecnica por bloque"
+                   ],
+    "version":  "1.0.0"
+}

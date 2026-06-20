@@ -1,0 +1,38 @@
+﻿{
+    "objective":  "ENGREMIAT_NEXT_REAL_VALUE_OPERATIONALIZATION_076_085",
+    "stage":  "E83",
+    "name":  "Operational Release Controls",
+    "version":  "0.83.0-local",
+    "purpose":  "Definir controles de release operacional para cerrar el ciclo 076-085 sin perder gobernanza humana.",
+    "release_control_executes":  false,
+    "human_release_review_required":  true,
+    "required_controls":  [
+                              "E76_OPERATIONAL_VALUE_QUEUE_READY",
+                              "E77_HUMAN_DAILY_CONSOLE_READY",
+                              "E78_WORKER_PROPOSAL_INTAKE_V2_READY",
+                              "E79_EVIDENCE_DECISION_LOOP_READY",
+                              "E80_LOCAL_APPLY_LAB_V3_READY",
+                              "E81_VALUE_METRICS_READY",
+                              "E82_KANBAN_BRIDGE_PREVIEW_READY",
+                              "NO_PENDING_ERR",
+                              "NO_PENDING_NO_GO",
+                              "RECEIPTS_PRESENT",
+                              "READINESS_PRESENT"
+                          ],
+    "denied_release_conditions":  [
+                                      "auto_apply_true",
+                                      "remote_execution_true",
+                                      "external_network_true",
+                                      "worker_executed_true",
+                                      "kanban_real_write_true",
+                                      "git_write_true_without_authorization"
+                                  ],
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "worker_executed":  false,
+    "kanban_real_write":  false,
+    "created_utc":  "2026-06-17T10:59:27.7328500Z"
+}

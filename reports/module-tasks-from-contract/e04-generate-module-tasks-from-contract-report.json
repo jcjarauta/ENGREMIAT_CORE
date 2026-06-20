@@ -1,0 +1,83 @@
+﻿{
+    "package_id":  "ENGREMIAT_MODULE_TASKS_FROM_CONTRACT_001",
+    "stage":  "E04_GENERATE_MODULE_TASKS_FROM_CONTRACT",
+    "status":  "PASS",
+    "readiness":  100,
+    "decision":  "GO_MODULE_TASKS_GENERATED_FROM_CONTRACT",
+    "project_home":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-162809",
+    "module_vault":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-162809\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO",
+    "tasks":  [
+                  {
+                      "id":  "T01_CONTRACT_APPROVAL",
+                      "title":  "Aprobar contrato operativo",
+                      "status":  "pending_human_review",
+                      "risk":  "LOW",
+                      "worker_real":  false,
+                      "evidence":  "GATE_CONTRACT_APPROVAL.md"
+                  },
+                  {
+                      "id":  "T02_TASKS_FROM_CONTRACT",
+                      "title":  "Consolidar tareas desde contrato",
+                      "status":  "ready",
+                      "risk":  "LOW",
+                      "worker_real":  false,
+                      "evidence":  "TASK_PACKET.json"
+                  },
+                  {
+                      "id":  "T03_EXPECTED_EVIDENCE",
+                      "title":  "Definir evidencias esperadas",
+                      "status":  "ready",
+                      "risk":  "LOW",
+                      "worker_real":  false,
+                      "evidence":  "EXPECTED_EVIDENCE.md"
+                  },
+                  {
+                      "id":  "T04_SMOKE_WORKER_PREP",
+                      "title":  "Preparar smoke worker simulado",
+                      "status":  "blocked_until_gate",
+                      "risk":  "MEDIUM",
+                      "worker_real":  false,
+                      "evidence":  "SMOKE_WORKER_PLAN.md"
+                  },
+                  {
+                      "id":  "T05_HUMAN_VALIDATION",
+                      "title":  "Validar resultado humano",
+                      "status":  "blocked_until_result",
+                      "risk":  "LOW",
+                      "worker_real":  false,
+                      "evidence":  "HUMAN_VALIDATION.md"
+                  }
+              ],
+    "checks":  [
+                   {
+                       "id":  "task_index",
+                       "ok":  true,
+                       "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-162809\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO\\03_TAREAS\\TASK_INDEX.md"
+                   },
+                   {
+                       "id":  "task_packet",
+                       "ok":  true,
+                       "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-162809\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO\\03_TAREAS\\task-packet.json"
+                   },
+                   {
+                       "id":  "expected_evidence",
+                       "ok":  true,
+                       "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-162809\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO\\04_EVIDENCIAS\\EXPECTED_EVIDENCE.md"
+                   },
+                   {
+                       "id":  "gate_tasks",
+                       "ok":  true,
+                       "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-162809\\MODULOS\\MODULE_inicio\\BOVEDA_MODULO\\00_CONTROL\\GATES\\GATE_TASKS_APPROVAL.md"
+                   }
+               ],
+    "failed_checks":  [
+
+                      ],
+    "safety":  {
+                   "local_only":  true,
+                   "worker_real":  false,
+                   "git":  false,
+                   "network":  false
+               },
+    "next":  "E05_PREPARE_SMOKE_WORKER_SIMULATION"
+}

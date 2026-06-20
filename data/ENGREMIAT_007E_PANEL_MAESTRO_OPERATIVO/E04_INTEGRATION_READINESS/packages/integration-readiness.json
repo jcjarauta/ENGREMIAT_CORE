@@ -1,0 +1,43 @@
+{
+    "package_id":  "ENGREMIAT_007E_PANEL_MAESTRO_OPERATIVO",
+    "stage":  "E04_INTEGRATION_READINESS",
+    "artifact":  "integration-readiness.json",
+    "status":  "PASS",
+    "recommended_next":  "OLLAMA_STRUCTURED_OUTPUTS_ADAPTER",
+    "integrations":  [
+                         {
+                             "integration":  "OLLAMA_STRUCTURED_OUTPUTS_ADAPTER",
+                             "readiness":  90,
+                             "risk":  "LOW",
+                             "decision":  "PREPARE_NEXT",
+                             "reason":  "JSON estricto local validable para alimentar paneles y gates",
+                             "requires":  "schema_validation"
+                         },
+                         {
+                             "integration":  "KANBAN_REAL_GATED",
+                             "readiness":  72,
+                             "risk":  "MEDIUM",
+                             "decision":  "HOLD_GATE",
+                             "reason":  "Conviene panel maestro y contrato antes de escritura real",
+                             "requires":  "explicit_human_authorization"
+                         },
+                         {
+                             "integration":  "TELEGRAM_GATED",
+                             "readiness":  68,
+                             "risk":  "MEDIUM",
+                             "decision":  "HOLD_GATE",
+                             "reason":  "Interfaz movil util pero requiere contrato y limites",
+                             "requires":  "explicit_human_authorization"
+                         },
+                         {
+                             "integration":  "WORKER_LOCAL_GATED",
+                             "readiness":  70,
+                             "risk":  "MEDIUM",
+                             "decision":  "HOLD_GATE",
+                             "reason":  "Necesita snapshot, rollback y sandbox de ejecucion",
+                             "requires":  "controlled_gate_and_rollback"
+                         }
+                     ],
+    "real_integration_executed":  false,
+    "next":  "E05_CLOSE_AND_NEXT"
+}

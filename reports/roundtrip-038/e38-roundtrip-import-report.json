@@ -1,0 +1,49 @@
+﻿{
+    "objective":  "ENGREMIAT_MVP_HUMAN_USABLE_036_045",
+    "stage":  "E38",
+    "import_mode":  "sample_safe_import",
+    "import_created":  true,
+    "worker_response_received":  false,
+    "sample_used":  true,
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "external_network":  false,
+    "imported_proposal":  {
+                              "source":  "safe_local_sample_no_worker_execution",
+                              "worker_response_received":  false,
+                              "proposal":  {
+                                               "title":  "E39 Human Decision Console proposal",
+                                               "minimum_views":  [
+                                                                     "Decision inbox",
+                                                                     "Proposal detail",
+                                                                     "Risk and gates",
+                                                                     "Approve reject defer receipt"
+                                                                 ],
+                                               "decision_fields":  [
+                                                                       "proposal_id",
+                                                                       "source_stage",
+                                                                       "risk",
+                                                                       "human_decision",
+                                                                       "reason",
+                                                                       "approved_scope",
+                                                                       "timestamp"
+                                                                   ],
+                                               "go_criteria":  [
+                                                                   "proposal readable",
+                                                                   "risks visible",
+                                                                   "approve does not apply",
+                                                                   "receipt generated"
+                                                               ],
+                                               "no_go_criteria":  [
+                                                                      "missing proposal id",
+                                                                      "unclear risk",
+                                                                      "attempted auto apply",
+                                                                      "remote execution requested"
+                                                                  ]
+                                           }
+                          },
+    "decision":  "GO_SAFE_SAMPLE_IMPORTED",
+    "created_at":  "2026-06-17T11:42:00"
+}

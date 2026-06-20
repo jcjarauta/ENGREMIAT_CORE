@@ -1,0 +1,42 @@
+﻿[
+    {
+        "route":  "A_FILE_BASED_CLINE_KANBAN_STORAGE",
+        "goal":  "Obsidian/Engremiat writes card files directly into Cline/Kanban storage",
+        "current_evidence":  "NO_GO: .cline/kanban empty; best candidate not JSON safe; E14 FORMAT_NOT_SAFE_FOR_WRITE_YET",
+        "manual_step_avoided":  "Potentially yes",
+        "risk":  "HIGH until format confirmed",
+        "decision":  "NO_GO_NOW"
+    },
+    {
+        "route":  "B_CLINE_KANBAN_API_OR_IMPORT",
+        "goal":  "Use official import/API/command to create cards",
+        "current_evidence":  "Not found yet",
+        "manual_step_avoided":  "Yes if supported",
+        "risk":  "MEDIUM",
+        "decision":  "SEARCH_REQUIRED"
+    },
+    {
+        "route":  "C_OBSIDIAN_KANBAN_AS_BOARD",
+        "goal":  "Use Obsidian itself as Kanban board; Cline receives only selected task context",
+        "current_evidence":  "Promising: Obsidian saves Markdown/YAML and Engremiat reads decisions",
+        "manual_step_avoided":  "Yes for board creation inside Obsidian",
+        "risk":  "LOW_MEDIUM",
+        "decision":  "BEST_NEXT_TEST"
+    },
+    {
+        "route":  "D_ENGREMIAT_LOCAL_KANBAN_DASHBOARD",
+        "goal":  "Generate our own local HTML/Markdown Kanban from Obsidian objects",
+        "current_evidence":  "Highly controllable; compatible with local-first",
+        "manual_step_avoided":  "Yes inside Engremiat surface",
+        "risk":  "LOW",
+        "decision":  "STRONG_FALLBACK"
+    },
+    {
+        "route":  "E_UI_AUTOMATION",
+        "goal":  "Use AutoHotkey/browser automation to create cards in UI",
+        "current_evidence":  "Possible but fragile and requires explicit authorization",
+        "manual_step_avoided":  "Yes but unsafe/fragile",
+        "risk":  "HIGH",
+        "decision":  "DEFER"
+    }
+]

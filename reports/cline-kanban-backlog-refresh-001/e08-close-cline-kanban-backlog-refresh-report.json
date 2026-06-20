@@ -1,0 +1,19 @@
+﻿{
+    "package_id":  "ENGREMIAT_CLINE_KANBAN_BACKLOG_REFRESH_001",
+    "stage":  "CLOSE",
+    "status":  "PASS",
+    "closed":  true,
+    "readiness":  100,
+    "cards":  25,
+    "exports":  [
+                    "cline-kanban-import.tsv",
+                    "cline-kanban-prompt.md",
+                    "dashboard/index.html"
+                ],
+    "manual_export_only":  true,
+    "clien_write":  false,
+    "browser":  false,
+    "api_called":  false,
+    "git":  false,
+    "next":  "MANUAL_OPEN_CLINE_KANBAN_AND_IMPORT"
+}

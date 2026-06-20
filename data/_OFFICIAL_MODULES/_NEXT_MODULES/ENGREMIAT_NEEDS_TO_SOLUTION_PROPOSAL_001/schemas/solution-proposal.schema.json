@@ -1,0 +1,30 @@
+﻿{
+    "schema_id":  "solution-proposal.schema.v1",
+    "required":  [
+                     "proposal_id",
+                     "need_id",
+                     "recommended_solution",
+                     "proposal_type",
+                     "priority",
+                     "gates",
+                     "evidence",
+                     "next_action"
+                 ],
+    "fields":  [
+                   "proposal_id",
+                   "need_id",
+                   "need_type",
+                   "recommended_solution",
+                   "proposal_type",
+                   "required_capabilities",
+                   "required_resources",
+                   "missing_resources",
+                   "expected_outputs",
+                   "priority",
+                   "risk",
+                   "gates",
+                   "evidence",
+                   "next_action",
+                   "status"
+               ]
+}

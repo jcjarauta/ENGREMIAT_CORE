@@ -1,0 +1,83 @@
+﻿{
+    "package_id":  "ENGREMIAT_OPERATOR_CONTEXT_AND_DECISION_TREE_001",
+    "stage":  "E01_DEFINE_OPERATIVE_DECISION_TREE",
+    "goal":  "Definir el arbol operativo conceptual de ENGREMIAT antes de ampliar comandos",
+    "contexts":  [
+                     {
+                         "id":  "global",
+                         "visible_commands":  [
+                                                  "estado",
+                                                  "ayuda",
+                                                  "comandos",
+                                                  "proyectos",
+                                                  "abrir-proyecto",
+                                                  "nuevo-proyecto",
+                                                  "ultimo",
+                                                  "dashboard",
+                                                  "salir"
+                                              ],
+                         "hidden_commands":  [
+                                                 "abrir-lab",
+                                                 "nuevo-proyecto-preview"
+                                             ],
+                         "purpose":  "Operar sin proyecto activo"
+                     },
+                     {
+                         "id":  "project",
+                         "visible_commands":  [
+                                                  "proyecto",
+                                                  "abrir-master",
+                                                  "revisar-proyecto",
+                                                  "modulos",
+                                                  "abrir-modulo",
+                                                  "nuevo-modulo",
+                                                  "dashboard",
+                                                  "volver-global"
+                                              ],
+                         "purpose":  "Operar dentro de proyecto activo"
+                     },
+                     {
+                         "id":  "module",
+                         "visible_commands":  [
+                                                  "modulo",
+                                                  "abrir-modulo",
+                                                  "revisar-modulo",
+                                                  "contrato",
+                                                  "tareas",
+                                                  "evidencias",
+                                                  "gates",
+                                                  "preparar-smoke",
+                                                  "volver-proyecto"
+                                              ],
+                         "purpose":  "Operar dentro de modulo activo"
+                     },
+                     {
+                         "id":  "smoke",
+                         "visible_commands":  [
+                                                  "revisar-smoke",
+                                                  "simular-worker",
+                                                  "validar-resultado",
+                                                  "bloquear-worker"
+                                              ],
+                         "purpose":  "Preparar/simular antes de ejecucion real"
+                     }
+                 ],
+    "decisions":  [
+                      "APPROVE",
+                      "ADJUST",
+                      "BLOCK",
+                      "PREPARE",
+                      "SIMULATE",
+                      "EXECUTE_FUTURE_STRONG_GATE"
+                  ],
+    "views":  [
+                  "terminal_operator",
+                  "dashboard_context",
+                  "obsidian_master_vault",
+                  "obsidian_module_vault",
+                  "json_reports",
+                  "markdown_gates"
+              ],
+    "persistent_state":  "data/operator-state/active-context.json",
+    "next":  "E02_CREATE_ACTIVE_CONTEXT_STATE"
+}

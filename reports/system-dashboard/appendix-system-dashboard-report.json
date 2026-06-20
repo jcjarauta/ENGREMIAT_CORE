@@ -1,0 +1,66 @@
+﻿{
+    "package":  "ENGREMIAT_APPENDIX_SYSTEM_DASHBOARD_001_REPAIR",
+    "created_at":  "2026-06-18T10:50:58",
+    "status":  [
+                   {
+                       "key":  "consumable_close",
+                       "exists":  true,
+                       "decision":  "GO_CONSUMABLE_CARD_BRIDGE_READY",
+                       "next":  "BUILD_RECURRENT_CARD_REFRESH_MODEL",
+                       "path":  "C:\\ENGREMIAT_CORE\\reports\\kanban-consumable-card-bridge\\consumable-card-bridge-close-report.json"
+                   },
+                   {
+                       "key":  "recurrent_manifest",
+                       "exists":  true,
+                       "decision":  "GO_RECURRENT_CARD_REFRESH_DRY_RUN_READY",
+                       "next":  "PASTE_INLINE_BATCH_TO_CLINE_OR_BUILD_OPENCLAW_INPUT_ADAPTER",
+                       "path":  "C:\\ENGREMIAT_CORE\\docs\\kanban-backlog\\recurrent-card-refresh-model\\recurrent-card-refresh-manifest.json"
+                   },
+                   {
+                       "key":  "openwebui_adapter_close",
+                       "exists":  true,
+                       "decision":  "GO_OPENWEBUI_OPENCLAW_ADAPTER_REPAIRED_AND_FULL_CYCLE_READY",
+                       "next":  "CLINE_REVIEW_GENERATED_INLINE_BATCH_OR_BUILD_OBSIDIAN_EXPORT_ADAPTER",
+                       "path":  "C:\\ENGREMIAT_CORE\\reports\\openwebui-openclaw-adapter\\OPENWEBUI_OPENCLAW_ADAPTER_REPAIR_001.close-report.json"
+                   },
+                   {
+                       "key":  "obsidian_export_manifest",
+                       "exists":  true,
+                       "decision":  "GO_OBSIDIAN_EXPORT_CANDIDATES_READY",
+                       "next":  "HUMAN_REVIEW_OBSIDIAN_CANDIDATES_OR_BUILD_VAULT_GATE",
+                       "path":  "C:\\ENGREMIAT_CORE\\docs\\obsidian-export-candidates\\obsidian-export-manifest.json"
+                   },
+                   {
+                       "key":  "obsidian_gate_close",
+                       "exists":  true,
+                       "decision":  "GO_OBSIDIAN_VAULT_WRITE_GATE_READY",
+                       "next":  "WAIT_FOR_HUMAN_VAULT_PATH_AND_AUTHORIZATION_OR_CONTINUE_TO_SYSTEM_DASHBOARD",
+                       "path":  "C:\\ENGREMIAT_CORE\\reports\\obsidian-vault-write-gate\\OBSIDIAN_VAULT_WRITE_GATE_001.close-report.json"
+                   },
+                   {
+                       "key":  "system_kanban",
+                       "exists":  true,
+                       "decision":  "",
+                       "next":  "",
+                       "path":  "C:\\ENGREMIAT_CORE\\docs\\kanban-backlog\\system-view\\ENGREMIAT_SYSTEM_KANBAN.html"
+                   },
+                   {
+                       "key":  "orchestration_board",
+                       "exists":  true,
+                       "decision":  "",
+                       "next":  "",
+                       "path":  "C:\\ENGREMIAT_CORE\\docs\\kanban-backlog\\seed-25\\ORCHESTRATION_BOARD.html"
+                   }
+               ],
+    "counts":  {
+                   "seed_cards":  25,
+                   "recurrent_cards":  4,
+                   "obsidian_candidates":  4,
+                   "obsidian_export_notes":  4
+               },
+    "html":  "C:\\ENGREMIAT_CORE\\docs\\system-dashboard\\ENGREMIAT_APPENDIX_SYSTEM_DASHBOARD.html",
+    "model":  "C:\\ENGREMIAT_CORE\\docs\\system-dashboard\\APPENDIX_SYSTEM_MODEL.md",
+    "manual":  "C:\\ENGREMIAT_CORE\\docs\\system-dashboard\\APPENDIX_SYSTEM_DASHBOARD_USE.md",
+    "decision":  "GO_APPENDIX_SYSTEM_DASHBOARD_READY",
+    "next":  "CLOSE_APPENDIX_CORE_COUPLING_OBJECTIVE"
+}

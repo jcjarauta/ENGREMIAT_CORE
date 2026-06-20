@@ -1,0 +1,28 @@
+﻿{
+    "review_id":  "ROADMAP-REVIEW-001",
+    "status":  "READY_FOR_HUMAN_REVIEW",
+    "decision":  "DEFER",
+    "project_title":  "Crear módulo para convertir necesidades en tareas ejecutables por workers",
+    "phases_count":  3,
+    "tasks_count":  3,
+    "cards_preview_count":  3,
+    "risks":  [
+                  "roadmap demasiado grande",
+                  "respuesta Ollama no parseable",
+                  "crear cards sin aprobación",
+                  "mezclar proposal con ejecución"
+              ],
+    "human_questions":  [
+                            "¿El proyecto debe generar código real o documentación primero?",
+                            "¿Qué worker preferimos para la primera tarea: mock u Ollama?"
+                        ],
+    "allowed_human_decisions":  [
+                                    "APPROVE_ROADMAP",
+                                    "REQUEST_CHANGES",
+                                    "REJECT",
+                                    "REGENERATE",
+                                    "SPLIT_SMALLER",
+                                    "DEFER"
+                                ],
+    "next":  "HUMAN_REVIEW_ROADMAP_BEFORE_E02"
+}

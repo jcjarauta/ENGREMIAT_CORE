@@ -1,0 +1,85 @@
+﻿{
+    "$schema":  "https://json-schema.org/draft/2020-12/schema",
+    "title":  "ENGREMIAT Consumable Card",
+    "type":  "object",
+    "required":  [
+                     "id",
+                     "title",
+                     "state",
+                     "lane",
+                     "type",
+                     "priority",
+                     "status",
+                     "risk",
+                     "source",
+                     "rules",
+                     "success_criteria"
+                 ],
+    "properties":  {
+                       "id":  {
+                                  "type":  "string",
+                                  "pattern":  "^(KANBAN-SEED|ENG-CARD)-[0-9A-Z-]+$"
+                              },
+                       "title":  {
+                                     "type":  "string"
+                                 },
+                       "state":  {
+                                     "type":  "string",
+                                     "enum":  [
+                                                  "BACKLOG",
+                                                  "READY",
+                                                  "IN_REVIEW",
+                                                  "APPROVED_FOR_EXECUTION",
+                                                  "DONE",
+                                                  "NO_GO"
+                                              ]
+                                 },
+                       "lane":  {
+                                    "type":  "string"
+                                },
+                       "type":  {
+                                    "type":  "string"
+                                },
+                       "priority":  {
+                                        "type":  "integer",
+                                        "minimum":  0,
+                                        "maximum":  100
+                                    },
+                       "status":  {
+                                      "type":  "string"
+                                  },
+                       "risk":  {
+                                    "type":  "string",
+                                    "enum":  [
+                                                 "LOW",
+                                                 "MEDIUM",
+                                                 "HIGH"
+                                             ]
+                                },
+                       "source":  {
+                                      "type":  "string"
+                                  },
+                       "rules":  {
+                                     "type":  "array",
+                                     "items":  {
+                                                   "type":  "string"
+                                               }
+                                 },
+                       "success_criteria":  {
+                                                "type":  "string"
+                                            },
+                       "consumers":  {
+                                         "type":  "array",
+                                         "items":  {
+                                                       "type":  "string",
+                                                       "enum":  [
+                                                                    "CLINE_KANBAN",
+                                                                    "OPENWEBUI",
+                                                                    "OLLAMA",
+                                                                    "OBSIDIAN",
+                                                                    "HUMAN"
+                                                                ]
+                                                   }
+                                     }
+                   }
+}

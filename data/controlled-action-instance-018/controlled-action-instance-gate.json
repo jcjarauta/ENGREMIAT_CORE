@@ -1,0 +1,17 @@
+﻿{
+    "objective":  "ENGREMIAT_CONTROLLED_ACTION_INSTANCE_018",
+    "stage":  "E02",
+    "source_template":  "ENGREMIAT_CONTROLLED_ACTION_TEMPLATE_017",
+    "gate_type":  "INSTANCE_HUMAN_GATE",
+    "default_decision":  "DEFER",
+    "current_decision":  "DEFER",
+    "approval_formula":  "decision=APPROVE AND human_confirmation=true AND execution_allowed=true",
+    "human_confirmation":  false,
+    "execution_allowed":  false,
+    "approved":  false,
+    "apply_executed":  false,
+    "auto_apply":  false,
+    "remote_execution":  false,
+    "git_write":  false,
+    "status":  "BLOCKED_BY_DEFAULT"
+}

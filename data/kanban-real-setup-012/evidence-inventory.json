@@ -1,0 +1,556 @@
+﻿{
+    "objective":  "ENGREMIAT_KANBAN_REAL_SETUP_012",
+    "stage":  "E03",
+    "generated_at_utc":  "2026-06-16T14:47:55.4108507Z",
+    "source_roots":  [
+                         {
+                             "path":  "data",
+                             "purpose":  "setup data and generated artifacts",
+                             "kind":  "canonical"
+                         },
+                         {
+                             "path":  "reports",
+                             "purpose":  "validation reports",
+                             "kind":  "evidence"
+                         },
+                         {
+                             "path":  "docs",
+                             "purpose":  "guides and manuals",
+                             "kind":  "documentation"
+                         },
+                         {
+                             "path":  "data/kanban-real-setup-012",
+                             "purpose":  "kanban setup artifacts",
+                             "kind":  "objective_scope"
+                         },
+                         {
+                             "path":  "reports/kanban-real-setup-012",
+                             "purpose":  "kanban setup reports",
+                             "kind":  "objective_scope"
+                         },
+                         {
+                             "path":  "dashboard",
+                             "purpose":  "human surfaces",
+                             "kind":  "dashboard"
+                         },
+                         {
+                             "path":  "receipts",
+                             "purpose":  "receipts if present",
+                             "kind":  "receipt"
+                         }
+                     ],
+    "files":  [
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\kanban-real-setup-012\\evidence-sources.json",
+                      "size":  897,
+                      "last_write_utc":  "2026-06-16T14:47:55.3927700Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\kanban-real-setup-012\\kanban-card-schema.json",
+                      "size":  1205,
+                      "last_write_utc":  "2026-06-16T14:46:35.5027756Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\kanban-real-setup-012\\kanban-real-preflight-schema.json",
+                      "size":  1151,
+                      "last_write_utc":  "2026-06-16T14:46:01.7801399Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\kanban-real-setup-012\\kanban-surface-inventory-request.json",
+                      "size":  962,
+                      "last_write_utc":  "2026-06-16T14:46:01.7811602Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\data\\kanban-real-setup-012\\sample-kanban-card.json",
+                      "size":  473,
+                      "last_write_utc":  "2026-06-16T14:46:35.5027756Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\reports\\kanban-real-setup-012\\e01-kanban-real-preflight-report.json",
+                      "size":  1149,
+                      "last_write_utc":  "2026-06-16T14:46:03.0985193Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\reports\\kanban-real-setup-012\\e02-kanban-model-validation-report.json",
+                      "size":  454,
+                      "last_write_utc":  "2026-06-16T14:46:36.4181241Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\ARCHITECTURE.md",
+                      "size":  341,
+                      "last_write_utc":  "2026-06-16T13:32:45.6363957Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\ARTIFACT_INDEX.md",
+                      "size":  8324,
+                      "last_write_utc":  "2026-06-16T13:32:45.6363957Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\assisted-worker-prompt-template.md",
+                      "size":  828,
+                      "last_write_utc":  "2026-06-16T13:32:45.6753406Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\assisted-worker-prompt.sample.md",
+                      "size":  2779,
+                      "last_write_utc":  "2026-06-16T13:32:45.6753406Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\ASSISTED_WORKER_ADAPTER_GUIDE.md",
+                      "size":  1112,
+                      "last_write_utc":  "2026-06-16T13:32:45.6363957Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\CLINE_ADAPTER_GUIDE.md",
+                      "size":  599,
+                      "last_write_utc":  "2026-06-16T13:32:45.6363957Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\CLINE_CLI_MANUAL_GATE.md",
+                      "size":  602,
+                      "last_write_utc":  "2026-06-16T13:32:45.6363957Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\CLINE_INSTALL_GUIDE.md",
+                      "size":  765,
+                      "last_write_utc":  "2026-06-16T13:32:45.6363957Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\CLINE_KANBAN_ADAPTER_GUIDE.md",
+                      "size":  1178,
+                      "last_write_utc":  "2026-06-16T13:32:45.6363957Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\CLINE_PROPOSAL_NO_APPLY_CONTRACT_GUIDE.md",
+                      "size":  1250,
+                      "last_write_utc":  "2026-06-16T13:32:45.6363957Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\CLINE_READONLY_DISPATCH_GUIDE.md",
+                      "size":  866,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\CLINE_REAL_PROPOSAL_NO_APPLY_CLOSE_REPORT.md",
+                      "size":  1044,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\CLINE_TASK_CREATION_GATE_GUIDE.md",
+                      "size":  1314,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\CLOSE.md",
+                      "size":  558,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\CONTROLLED_WORKER_ADAPTERS_CLOSE_REPORT.md",
+                      "size":  870,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\CORE_TOOLCHAIN_MANUAL_INSTALL.md",
+                      "size":  520,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\CURRENT_CONTEXT.md",
+                      "size":  1453,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\CURRENT_STATE.md",
+                      "size":  763,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\DECISIONS.md",
+                      "size":  585,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\DEMO_SCRIPT.md",
+                      "size":  817,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\DEVELOPMENT_LOG.md",
+                      "size":  1374,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\DEV_SYSTEM_GUIDE.md",
+                      "size":  1362,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\DUAL_PC_DEVELOPMENT_WORKFLOW_CLOSE_REPORT.md",
+                      "size":  930,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\DUAL_PC_DEVELOPMENT_WORKFLOW_GUIDE.md",
+                      "size":  1057,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\DUAL_PC_GIT_SYNC_CHECKLIST.md",
+                      "size":  734,
+                      "last_write_utc":  "2026-06-16T14:14:40.8241416Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\ENG_COMMANDS.md",
+                      "size":  1623,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\ERROR_PLAYBOOK.md",
+                      "size":  1301,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\EXECUTIVE_SUMMARY.md",
+                      "size":  789,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\FIRST_GATED_EXECUTION_GUIDE.md",
+                      "size":  661,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\GATED_WORKER_EXECUTION_CLOSE_REPORT.md",
+                      "size":  879,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\GATE_INDEX.md",
+                      "size":  232,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\HANDOFF_CURRENT_PC_TO_MAIN_PC.md",
+                      "size":  1256,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\HANDOFF_MAIN_PC_TO_NEXT_PC.md",
+                      "size":  668,
+                      "last_write_utc":  "2026-06-16T14:11:49.4412263Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\HUMAN_APPROVAL_READONLY_GUIDE.md",
+                      "size":  619,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\KANBAN_CARD_MODEL_GUIDE.md",
+                      "size":  1093,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\KANBAN_HUMAN_CONTROL_CLOSE_REPORT.md",
+                      "size":  1027,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\KANBAN_HUMAN_DASHBOARD_GUIDE.md",
+                      "size":  893,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\KANBAN_MODEL_GUIDE.md",
+                      "size":  721,
+                      "last_write_utc":  "2026-06-16T14:46:35.5050756Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\KANBAN_WRITE_GATE_GUIDE.md",
+                      "size":  1144,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\LESSONS.md",
+                      "size":  690,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\LOCAL_MULTIWORKER_LAUNCH_AND_LINK_N1_CLOSE_REPORT.md",
+                      "size":  1289,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\LOCAL_RUNTIME_FIX_CLOSE_REPORT.md",
+                      "size":  786,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\MAIN_PC_IDENTITY_GUIDE.md",
+                      "size":  550,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\MAIN_PC_LINKING_CLOSE_REPORT.md",
+                      "size":  651,
+                      "last_write_utc":  "2026-06-16T14:16:35.1520656Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\MAIN_PC_LINKING_GUIDE.md",
+                      "size":  555,
+                      "last_write_utc":  "2026-06-16T14:15:31.7463280Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\MAIN_PC_PING_WARNING_GUIDE.md",
+                      "size":  554,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\MAIN_PC_SERVICES_GUIDE.md",
+                      "size":  829,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\MVP_GUIDE.md",
+                      "size":  315,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\MVP_REPORT.md",
+                      "size":  511,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\NEXT_OBJECTIVE.md",
+                      "size":  585,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\NEXT_OBJECTIVE_AFTER_LOCAL_MULTIWORKER_N1.md",
+                      "size":  833,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\NEXT_OBJECTIVE_CLINE_REAL_PROPOSAL_NO_APPLY.md",
+                      "size":  861,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\NEXT_OBJECTIVE_CONNECT_CONTROLLED_WORKERS.md",
+                      "size":  657,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\NEXT_OBJECTIVE_CONNECT_WORKER_ADAPTERS.md",
+                      "size":  927,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\NEXT_OBJECTIVE_CONTROLLED_APPLY_OR_OLLAMA_PROBE.md",
+                      "size":  641,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\NEXT_OBJECTIVE_CONTROLLED_APPLY_OR_REPAIR.md",
+                      "size":  904,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\NEXT_OBJECTIVE_CONTROLLED_WORKERS.md",
+                      "size":  935,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\NEXT_OBJECTIVE_CORE_MVP_WITH_APP.md",
+                      "size":  681,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\NEXT_OBJECTIVE_GATED_WORKER_EXECUTION.md",
+                      "size":  783,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\NEXT_OBJECTIVE_MAIN_PC_LINKING_OR_CONTINUE_PREP.md",
+                      "size":  593,
+                      "last_write_utc":  "2026-06-16T14:16:35.1520656Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\NEXT_OBJECTIVE_MAIN_PC_LINKING_OR_CURRENT_PC_PREP.md",
+                      "size":  741,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\NEXT_OBJECTIVE_REAL_TESTS_CONTINUE_OR_REPAIR.md",
+                      "size":  321,
+                      "last_write_utc":  "2026-06-16T14:38:41.7306959Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\NEXT_OBJECTIVE_REMOTE_OLLAMA_RUNTIME.md",
+                      "size":  570,
+                      "last_write_utc":  "2026-06-16T13:32:45.6520823Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\NODE_EXCHANGE_GUIDE.md",
+                      "size":  844,
+                      "last_write_utc":  "2026-06-16T13:32:45.6678849Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\NODE_INSTALL_GUIDE.md",
+                      "size":  560,
+                      "last_write_utc":  "2026-06-16T13:32:45.6678849Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\NODE_LINK_CLOSE_REPORT.md",
+                      "size":  667,
+                      "last_write_utc":  "2026-06-16T13:32:45.6678849Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\NODE_NAME_OR_STATIC_IP_GUIDE.md",
+                      "size":  655,
+                      "last_write_utc":  "2026-06-16T13:32:45.6678849Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\OLLAMA_MANUAL_GATE.md",
+                      "size":  433,
+                      "last_write_utc":  "2026-06-16T13:32:45.6691638Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\OPENCLAW_ADAPTER_CONTRACT.md",
+                      "size":  1066,
+                      "last_write_utc":  "2026-06-16T13:32:45.6695636Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\PLAN_IMPORT_REVIEW.md",
+                      "size":  307,
+                      "last_write_utc":  "2026-06-16T13:32:45.6702036Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\PLAN_TO_WORKER_APP_CONTRACT.md",
+                      "size":  855,
+                      "last_write_utc":  "2026-06-16T13:32:45.6702036Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\PLAN_TO_WORKER_CLOSE_REPORT.md",
+                      "size":  962,
+                      "last_write_utc":  "2026-06-16T13:32:45.6702036Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\PLAN_TO_WORKER_CONSOLIDATION_CLOSE_REPORT.md",
+                      "size":  1436,
+                      "last_write_utc":  "2026-06-16T13:32:45.6702036Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\PLAN_TO_WORKER_CONSOLIDATION_CONTRACT.md",
+                      "size":  1167,
+                      "last_write_utc":  "2026-06-16T13:32:45.6715403Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\PLAN_TO_WORKER_DEMO.md",
+                      "size":  824,
+                      "last_write_utc":  "2026-06-16T13:32:45.6715403Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\READINESS.md",
+                      "size":  182,
+                      "last_write_utc":  "2026-06-16T13:32:45.6715403Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\REAL_CLINE_KANBAN_OLLAMA_TESTS_CLOSE_REPORT.md",
+                      "size":  387,
+                      "last_write_utc":  "2026-06-16T14:38:41.7306959Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\REAL_WORKER_RECEIPT_GUIDE.md",
+                      "size":  351,
+                      "last_write_utc":  "2026-06-16T13:32:45.6715403Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\REMOTE_OLLAMA_MAIN_PC_GUIDE.md",
+                      "size":  690,
+                      "last_write_utc":  "2026-06-16T13:32:45.6728495Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\REMOTE_OLLAMA_MAIN_PC_RUNTIME.md",
+                      "size":  516,
+                      "last_write_utc":  "2026-06-16T13:32:45.6728495Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\REMOTE_OLLAMA_SAFE_PROBE_GUIDE.md",
+                      "size":  721,
+                      "last_write_utc":  "2026-06-16T13:32:45.6728495Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\ROADMAP.md",
+                      "size":  345,
+                      "last_write_utc":  "2026-06-16T13:32:45.6728495Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\SECURITY_GATES_GUIDE.md",
+                      "size":  469,
+                      "last_write_utc":  "2026-06-16T13:32:45.6740769Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\SET_MAIN_PC_IP_FOR_REMOTE_OLLAMA.md",
+                      "size":  425,
+                      "last_write_utc":  "2026-06-16T13:32:45.6740769Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\TASK_CANDIDATE_HUMAN_REVIEW.md",
+                      "size":  790,
+                      "last_write_utc":  "2026-06-16T13:32:45.6740769Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\TECHNICAL_SUMMARY.md",
+                      "size":  609,
+                      "last_write_utc":  "2026-06-16T13:32:45.6740769Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\TIMELINE.md",
+                      "size":  4453,
+                      "last_write_utc":  "2026-06-16T13:32:45.6753406Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\TOOLCHAIN_BOOTSTRAP_CLOSE_REPORT.md",
+                      "size":  1219,
+                      "last_write_utc":  "2026-06-16T13:32:45.6753406Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\TOOLCHAIN_BOOTSTRAP_PLAN.md",
+                      "size":  635,
+                      "last_write_utc":  "2026-06-16T13:32:45.6753406Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\VISUAL_PERSISTENCE_OPTIONAL_TOOLS.md",
+                      "size":  476,
+                      "last_write_utc":  "2026-06-16T13:32:45.6753406Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\WORKER_ADAPTER_CONTRACT_GUIDE.md",
+                      "size":  767,
+                      "last_write_utc":  "2026-06-16T13:32:45.6753406Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\WORKER_RECEIPT_GUIDE.md",
+                      "size":  746,
+                      "last_write_utc":  "2026-06-16T13:32:45.6753406Z"
+                  },
+                  {
+                      "path":  "C:\\ENGREMIAT_CORE\\docs\\prompt-factory\\PROMPT_FACTORY_CONTRACT.md",
+                      "size":  994,
+                      "last_write_utc":  "2026-06-16T13:32:45.6753406Z"
+                  }
+              ],
+    "counts":  {
+                   "source_roots":  7,
+                   "files":  100
+               },
+    "safety":  {
+                   "kanban_is_view":  true,
+                   "execution_engine":  false,
+                   "git_write":  false,
+                   "remote_execution":  false,
+                   "auto_apply":  false,
+                   "shared_repo_edit":  false
+               }
+}

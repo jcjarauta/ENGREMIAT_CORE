@@ -1,0 +1,51 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ENGREMIAT Obsidian → Worker Exercise</title>
+<style>
+body{font-family:Segoe UI,Arial;margin:22px;background:#111;color:#eee}
+button{padding:8px 12px;margin:4px;border-radius:8px;border:1px solid #555;background:#222;color:#eee;cursor:pointer}
+.card{border:1px solid #444;border-radius:12px;padding:12px;margin:10px 0;background:#1b1b1b}
+.ok{color:#6ee789}.warn{color:#ffd966}.err{color:#ff7b7b}
+code,pre{background:#222;padding:4px;border-radius:5px}
+pre{white-space:pre-wrap}
+</style>
+</head>
+<body>
+<h1>ENGREMIAT · Ejercicio real Obsidian → Kanban local → Worker</h1>
+<p>1) Crea o duplica una card en Obsidian desde <code>_TEMPLATE_NUEVA_CARD_OBSIDIAN_REAL.md</code>. 2) Pulsa refrescar. 3) Lanza worker mock desde la card. 4) Revisa response/evidence/propuesta.</p>
+<button onclick="refreshCards()">Refrescar cards desde Obsidian</button>
+<span id="health"></span>
+<div id="cards"></div>
+<h2>Ciclo worker</h2>
+<pre id="log">Esperando acción humana...</pre>
+<script>
+const API="http://127.0.0.1:8771";
+function esc(v){return String(v ?? "").replace(/[&<>"']/g,function(ch){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[ch];});}
+async function refreshCards(){
+  let r=await fetch(API+"/cards");
+  let j=await r.json();
+  document.getElementById("health").innerHTML=" <span class=\"ok\">cards="+esc(j.count)+"</span>";
+  let html="";
+  for(const c of j.cards){
+    html += "<div class=\"card\">";
+    html += "<h3>"+esc(c.id)+" · "+esc(c.title)+"</h3>";
+    html += "<p>columna=<b>"+esc(c.recommended_column)+"</b> · status="+esc(c.status)+" · decision="+esc(c.kanban_decision)+" · reviewed="+esc(c.human_reviewed)+"</p>";
+    html += "<p><code>"+esc(c.path)+"</code></p>";
+    html += "<button onclick=\"runMock('"+esc(c.id)+"')\">Iniciar worker mock</button>";
+    html += "</div>";
+  }
+  document.getElementById("cards").innerHTML=html;
+}
+async function runMock(id){
+  document.getElementById("log").textContent="Ejecutando worker mock para "+id+"...";
+  let r=await fetch(API+"/run-mock?cardId="+encodeURIComponent(id),{method:"POST"});
+  let j=await r.json();
+  document.getElementById("log").textContent=JSON.stringify(j,null,2);
+  await refreshCards();
+}
+refreshCards().catch(e=>document.getElementById("log").textContent=e);
+</script>
+</body>
+</html>
