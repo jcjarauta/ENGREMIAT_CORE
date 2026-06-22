@@ -1,27 +1,27 @@
 ﻿{
     "schema":  "ENGREMIAT_OPERATOR_V2_STATE_LATEST_V1",
-    "updated_at":  "2026-06-22T10:11:09",
+    "updated_at":  "2026-06-22T10:15:36",
     "active_objective":  {
                              "id":  "ENGREMIAT_OPERATOR_V1_SAFE_BUILD_001",
                              "title":  "Operador V2 self-state sync",
                              "status":  "ACTIVE",
                              "purpose":  "Mantener V2 actualizado desde cada bloque cerrado.",
-                             "active_stage":  "E06_VALIDATE_LAUNCHER_OPTION_1_AND_COMMIT_SCOPED",
-                             "readiness":  85,
-                             "next_action":  "PROBAR_DESDE_LAUNCHER_OPCION_1"
+                             "active_stage":  "E07R_REPAIR_HOME_RESERVED_VAR_AND_CLOSE_OBJECTIVE_NO_PUSH",
+                             "readiness":  100,
+                             "next_action":  "VALORAR_SIGUIENTE_MEJORA_V1_PROJECTS_SCREEN"
                          },
-    "last_stage":  "E06_VALIDATE_LAUNCHER_OPTION_1_AND_COMMIT_SCOPED",
-    "last_step":  "E06",
+    "last_stage":  "E07R_REPAIR_HOME_RESERVED_VAR_AND_CLOSE_OBJECTIVE_NO_PUSH",
+    "last_step":  "E07R",
     "last_status":  "PASS",
-    "last_report":  "reports\\operator-v1-safe-build\\e06-validate-launcher-option-1-and-commit-scoped-20260622-101102.json",
-    "readiness":  85,
+    "last_report":  "reports\\operator-v1-safe-build\\e07r-repair-home-reserved-var-and-close-objective-no-push-20260622-101535.json",
+    "readiness":  100,
     "git_state":  {
-                      "head":  "8902743f",
-                      "rev_sync":  "0\t1",
+                      "head":  "489d8439",
+                      "rev_sync":  "0\t2",
                       "tree_clean":  false,
-                      "status_short":  "M ENGREMIAT.ps1\n M data/operator-v2-self-state-sync/v2-state.events.jsonl\n M data/operator-v2-self-state-sync/v2-state.latest.json\n M data/operator-v2-self-state-sync/v2-state.registry.json\n M documents/operator-v2-self-state-sync/V2_STATE_INDEX.md\n?? data/operator-v1-safe-build/\n?? documents/operator-v1-safe-build/E04_GATE_LAUNCHER_INTEGRATION_V1_HOME_20260622-100750.md\n?? documents/operator-v1-safe-build/V1_HOME_INDEX.md\n?? documents/operator-v1-safe-build/V1_SAFE_BUILD_CONTRACT.v1.json\n?? documents/operator-v1-safe-build/V1_SAFE_BUILD_CONTRACT.v1.md\n?? reports/operator-v1-safe-build/e02-define-v1-safe-build-contract-20260622-100621.json\n?? reports/operator-v1-safe-build/e03-create-v1-home-screen-readonly-20260622-100706.json\n?? reports/operator-v1-safe-build/e04-gate-launcher-integration-v1-home-20260622-100750.json\n?? reports/operator-v1-safe-build/e05r-apply-v1-home-launcher-integration-by-case-boundary-20260622-101002.json\n?? tools/operator-v1/",
+                      "status_short":  "M data/operator-v2-self-state-sync/v2-state.events.jsonl\n M data/operator-v2-self-state-sync/v2-state.latest.json\n M data/operator-v2-self-state-sync/v2-state.registry.json\n M documents/operator-v2-self-state-sync/V2_STATE_INDEX.md",
                       "push_executed":  false
                   },
-    "next_action":  "PROBAR_DESDE_LAUNCHER_OPCION_1",
-    "human_summary":  "Opcion 1 Inicio operador validada apuntando a pantalla V1; V2 permanece como gobierno 6/7/8/9; cierre scoped sin push."
+    "next_action":  "VALORAR_SIGUIENTE_MEJORA_V1_PROJECTS_SCREEN",
+    "human_summary":  "Reparado cierre V1_SAFE_BUILD_001: evitada variable reservada HOME; Inicio operador V1 funciona desde opcion 1 y V2 queda como gobierno 6/7/8/9. No se ejecuto push."
 }
