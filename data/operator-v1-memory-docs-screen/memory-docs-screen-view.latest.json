@@ -1,0 +1,3398 @@
+﻿{
+    "screen":  "OPERATOR_V1_MEMORY_DOCS",
+    "updated_at":  "2026-06-22T10:27:58",
+    "purpose":  "Pantalla V1 para operar memoria y documentacion bajo gobierno V2.",
+    "git":  {
+                "branch":  "main",
+                "head":  "fd6e11f4",
+                "rev_sync":  "0\t6",
+                "tree_clean":  false,
+                "status_short":  "M data/operator-v2-self-state-sync/v2-state.events.jsonl\n M data/operator-v2-self-state-sync/v2-state.latest.json\n M data/operator-v2-self-state-sync/v2-state.registry.json\n M documents/operator-v2-self-state-sync/V2_STATE_INDEX.md\n?? data/operator-v1-memory-docs-screen/\n?? documents/operator-v1-memory-docs-screen/\n?? reports/operator-v1-memory-docs-screen/\n?? tools/operator-v1/operator-v1-memory-docs-screen.ps1"
+            },
+    "summary":  {
+                    "doc_dirs_count":  130,
+                    "doc_files_count":  360,
+                    "index_count":  12,
+                    "contract_count":  57,
+                    "evidence_count":  96,
+                    "state_count":  62,
+                    "manual_count":  102,
+                    "reports_recent_count":  10,
+                    "next_human_action":  "VALIDAR_PANTALLA_MEMORIA_DOCUMENTACION_V1_Y_PREPARAR_GATE_LAUNCHER"
+                },
+    "doc_dirs":  [
+                     {
+                         "name":  "operator-v1-memory-docs-screen",
+                         "path":  "documents\\operator-v1-memory-docs-screen",
+                         "modified":  "2026-06-22T10:26:51",
+                         "kind":  "MANUAL_HINT"
+                     },
+                     {
+                         "name":  "operator-v1-projects-screen",
+                         "path":  "documents\\operator-v1-projects-screen",
+                         "modified":  "2026-06-22T10:25:01",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v1-safe-build",
+                         "path":  "documents\\operator-v1-safe-build",
+                         "modified":  "2026-06-22T10:07:59",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-push-gate",
+                         "path":  "documents\\operator-v2-push-gate",
+                         "modified":  "2026-06-22T10:03:41",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-close-and-sync",
+                         "path":  "documents\\operator-v2-close-and-sync",
+                         "modified":  "2026-06-22T09:57:59",
+                         "kind":  "EVIDENCE_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-control-panel",
+                         "path":  "documents\\operator-v2-control-panel",
+                         "modified":  "2026-06-22T09:49:30",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-next-action-engine",
+                         "path":  "documents\\operator-v2-next-action-engine",
+                         "modified":  "2026-06-22T09:42:05",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-self-state-sync",
+                         "path":  "documents\\operator-v2-self-state-sync",
+                         "modified":  "2026-06-22T09:25:57",
+                         "kind":  "STATE_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-global-scope-cleanup",
+                         "path":  "documents\\operator-v2-global-scope-cleanup",
+                         "modified":  "2026-06-22T08:07:52",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-compare-cmd-launcher",
+                         "path":  "documents\\operator-v2-compare-cmd-launcher",
+                         "modified":  "2026-06-22T07:38:55",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-review-next-scope-group",
+                         "path":  "documents\\operator-v2-review-next-scope-group",
+                         "modified":  "2026-06-22T07:36:24",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-screen-normalizer-evidence-commit",
+                         "path":  "documents\\operator-v2-screen-normalizer-evidence-commit",
+                         "modified":  "2026-06-22T07:30:11",
+                         "kind":  "EVIDENCE_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-review-untracked-directory-contents",
+                         "path":  "documents\\operator-v2-review-untracked-directory-contents",
+                         "modified":  "2026-06-22T07:27:42",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-review-first-scope-group",
+                         "path":  "documents\\operator-v2-review-first-scope-group",
+                         "modified":  "2026-06-22T07:24:00",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-scope-code-untracked-review",
+                         "path":  "documents\\operator-v2-scope-code-untracked-review",
+                         "modified":  "2026-06-22T07:20:45",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-scope-hygiene",
+                         "path":  "documents\\operator-v2-scope-hygiene",
+                         "modified":  "2026-06-22T07:16:29",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-next-direction-review",
+                         "path":  "documents\\operator-v2-next-direction-review",
+                         "modified":  "2026-06-22T07:12:31",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-stage-close-git",
+                         "path":  "documents\\operator-v2-stage-close-git",
+                         "modified":  "2026-06-22T07:07:48",
+                         "kind":  "EVIDENCE_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-maintenance-actions-lab",
+                         "path":  "documents\\operator-v2-maintenance-actions-lab",
+                         "modified":  "2026-06-22T07:01:21",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-actions-lab-status",
+                         "path":  "documents\\operator-v2-actions-lab-status",
+                         "modified":  "2026-06-22T06:55:43",
+                         "kind":  "STATE_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-plan-sync",
+                         "path":  "documents\\operator-v2-plan-sync",
+                         "modified":  "2026-06-22T06:50:09",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-home-render-binding",
+                         "path":  "documents\\operator-v2-home-render-binding",
+                         "modified":  "2026-06-22T06:42:09",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-live-context",
+                         "path":  "documents\\operator-v2-live-context",
+                         "modified":  "2026-06-22T06:33:22",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-command-feedback-inside-wrapper",
+                         "path":  "documents\\operator-v2-command-feedback-inside-wrapper",
+                         "modified":  "2026-06-22T06:06:11",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-root-wrapper",
+                         "path":  "documents\\operator-v2-root-wrapper",
+                         "modified":  "2026-06-22T06:02:29",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-root-loop-router",
+                         "path":  "documents\\operator-v2-root-loop-router",
+                         "modified":  "2026-06-22T05:56:26",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-command-feedback",
+                         "path":  "documents\\operator-v2-command-feedback",
+                         "modified":  "2026-06-21T22:04:59",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-screen-ux",
+                         "path":  "documents\\operator-v2-screen-ux",
+                         "modified":  "2026-06-21T21:53:02",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-navigation",
+                         "path":  "documents\\operator-v2-navigation",
+                         "modified":  "2026-06-21T21:47:21",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-actions",
+                         "path":  "documents\\operator-v2-actions",
+                         "modified":  "2026-06-21T21:35:12",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-healthcheck",
+                         "path":  "documents\\operator-v2-healthcheck",
+                         "modified":  "2026-06-21T21:22:05",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "launcher-contracts",
+                         "path":  "documents\\launcher-contracts",
+                         "modified":  "2026-06-21T12:19:16",
+                         "kind":  "CONTRACT_HINT"
+                     },
+                     {
+                         "name":  "manual-screen-maintenance-cards",
+                         "path":  "documents\\manual-screen-maintenance-cards",
+                         "modified":  "2026-06-20T19:38:32",
+                         "kind":  "MANUAL_HINT"
+                     },
+                     {
+                         "name":  "launcher-actual-impact-audit",
+                         "path":  "documents\\launcher-actual-impact-audit",
+                         "modified":  "2026-06-20T17:26:50",
+                         "kind":  "EVIDENCE_HINT"
+                     },
+                     {
+                         "name":  "screen-normalizer-inicio-parity-audit",
+                         "path":  "documents\\screen-normalizer-inicio-parity-audit",
+                         "modified":  "2026-06-20T16:52:25",
+                         "kind":  "EVIDENCE_HINT"
+                     },
+                     {
+                         "name":  "operator-internal-screens-and-m-card-visual-sweep",
+                         "path":  "documents\\operator-internal-screens-and-m-card-visual-sweep",
+                         "modified":  "2026-06-20T16:24:15",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-real-screen-context-visual-smoke",
+                         "path":  "documents\\operator-real-screen-context-visual-smoke",
+                         "modified":  "2026-06-20T16:19:28",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-screen-context-normalization",
+                         "path":  "documents\\operator-screen-context-normalization",
+                         "modified":  "2026-06-20T16:13:51",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-real-maintenance-manual-smoke",
+                         "path":  "documents\\operator-real-maintenance-manual-smoke",
+                         "modified":  "2026-06-20T16:06:32",
+                         "kind":  "MANUAL_HINT"
+                     },
+                     {
+                         "name":  "operator-navigation",
+                         "path":  "documents\\operator-navigation",
+                         "modified":  "2026-06-20T13:19:27",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "documentation-center",
+                         "path":  "documents\\documentation-center",
+                         "modified":  "2026-06-20T09:49:20",
+                         "kind":  "MANUAL_HINT"
+                     },
+                     {
+                         "name":  "operator-v1-memory-docs-screen",
+                         "path":  "data\\operator-v1-memory-docs-screen",
+                         "modified":  "2026-06-22T10:26:51",
+                         "kind":  "MANUAL_HINT"
+                     },
+                     {
+                         "name":  "operator-v1-projects-screen",
+                         "path":  "data\\operator-v1-projects-screen",
+                         "modified":  "2026-06-22T10:19:13",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v1-safe-build",
+                         "path":  "data\\operator-v1-safe-build",
+                         "modified":  "2026-06-22T10:07:15",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-close-and-sync",
+                         "path":  "data\\operator-v2-close-and-sync",
+                         "modified":  "2026-06-22T09:57:15",
+                         "kind":  "EVIDENCE_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-control-panel",
+                         "path":  "data\\operator-v2-control-panel",
+                         "modified":  "2026-06-22T09:48:47",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-next-action-engine",
+                         "path":  "data\\operator-v2-next-action-engine",
+                         "modified":  "2026-06-22T09:41:20",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-self-state-sync",
+                         "path":  "data\\operator-v2-self-state-sync",
+                         "modified":  "2026-06-22T09:23:43",
+                         "kind":  "STATE_HINT"
+                     },
+                     {
+                         "name":  "desktop-terminal-operator",
+                         "path":  "data\\desktop-terminal-operator",
+                         "modified":  "2026-06-20T08:20:28",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-module-blueprint",
+                         "path":  "data\\operator-module-blueprint",
+                         "modified":  "2026-06-20T02:08:35",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-extension-plan",
+                         "path":  "data\\operator-extension-plan",
+                         "modified":  "2026-06-19T23:08:03",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-navigation-freeze",
+                         "path":  "data\\operator-navigation-freeze",
+                         "modified":  "2026-06-19T22:58:26",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-navigation-model",
+                         "path":  "data\\operator-navigation-model",
+                         "modified":  "2026-06-19T21:27:47",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-state",
+                         "path":  "data\\operator-state",
+                         "modified":  "2026-06-19T19:08:11",
+                         "kind":  "STATE_HINT"
+                     },
+                     {
+                         "name":  "operator-context-decision-tree",
+                         "path":  "data\\operator-context-decision-tree",
+                         "modified":  "2026-06-19T17:58:40",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "master-vault-template-audit",
+                         "path":  "data\\master-vault-template-audit",
+                         "modified":  "2026-06-19T12:29:14",
+                         "kind":  "EVIDENCE_HINT"
+                     },
+                     {
+                         "name":  "obsidian-operative-memory-architecture",
+                         "path":  "data\\obsidian-operative-memory-architecture",
+                         "modified":  "2026-06-19T11:25:04",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "local-kanban-state-update-001",
+                         "path":  "data\\local-kanban-state-update-001",
+                         "modified":  "2026-06-19T08:29:13",
+                         "kind":  "STATE_HINT"
+                     },
+                     {
+                         "name":  "knowledge-to-task-packet-001",
+                         "path":  "data\\knowledge-to-task-packet-001",
+                         "modified":  "2026-06-17T22:00:26",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "ENGREMIAT_KNOWLEDGE_TO_TASK_PACKET_001",
+                         "path":  "data\\ENGREMIAT_KNOWLEDGE_TO_TASK_PACKET_001",
+                         "modified":  "2026-06-17T21:58:01",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "ENGREMIAT_MODULES_OFFICIALIZATION_MANUAL_001",
+                         "path":  "data\\ENGREMIAT_MODULES_OFFICIALIZATION_MANUAL_001",
+                         "modified":  "2026-06-17T21:53:54",
+                         "kind":  "MANUAL_HINT"
+                     },
+                     {
+                         "name":  "CIERRE_DOCUMENTAL_001",
+                         "path":  "data\\CIERRE_DOCUMENTAL_001",
+                         "modified":  "2026-06-17T20:47:38",
+                         "kind":  "MANUAL_HINT"
+                     },
+                     {
+                         "name":  "ENGREMIAT_MODULAR_PLATFORM_MANUALS_001",
+                         "path":  "data\\ENGREMIAT_MODULAR_PLATFORM_MANUALS_001",
+                         "modified":  "2026-06-17T20:46:05",
+                         "kind":  "MANUAL_HINT"
+                     },
+                     {
+                         "name":  "operator-v1-memory-docs-screen",
+                         "path":  "reports\\operator-v1-memory-docs-screen",
+                         "modified":  "2026-06-22T10:26:51",
+                         "kind":  "MANUAL_HINT"
+                     },
+                     {
+                         "name":  "operator-v1-projects-screen",
+                         "path":  "reports\\operator-v1-projects-screen",
+                         "modified":  "2026-06-22T10:25:01",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v1-safe-build",
+                         "path":  "reports\\operator-v1-safe-build",
+                         "modified":  "2026-06-22T10:16:29",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-push-gate",
+                         "path":  "reports\\operator-v2-push-gate",
+                         "modified":  "2026-06-22T10:03:41",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-close-and-sync",
+                         "path":  "reports\\operator-v2-close-and-sync",
+                         "modified":  "2026-06-22T10:01:23",
+                         "kind":  "EVIDENCE_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-control-panel",
+                         "path":  "reports\\operator-v2-control-panel",
+                         "modified":  "2026-06-22T09:54:03",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-next-action-engine",
+                         "path":  "reports\\operator-v2-next-action-engine",
+                         "modified":  "2026-06-22T09:45:54",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-self-state-sync",
+                         "path":  "reports\\operator-v2-self-state-sync",
+                         "modified":  "2026-06-22T09:37:56",
+                         "kind":  "STATE_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-global-scope-cleanup",
+                         "path":  "reports\\operator-v2-global-scope-cleanup",
+                         "modified":  "2026-06-22T08:13:24",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-live-context",
+                         "path":  "reports\\operator-v2-live-context",
+                         "modified":  "2026-06-22T07:40:29",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-compare-cmd-launcher",
+                         "path":  "reports\\operator-v2-compare-cmd-launcher",
+                         "modified":  "2026-06-22T07:38:55",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-review-next-scope-group",
+                         "path":  "reports\\operator-v2-review-next-scope-group",
+                         "modified":  "2026-06-22T07:36:24",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-screen-normalizer-evidence-commit",
+                         "path":  "reports\\operator-v2-screen-normalizer-evidence-commit",
+                         "modified":  "2026-06-22T07:30:11",
+                         "kind":  "EVIDENCE_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-review-untracked-directory-contents",
+                         "path":  "reports\\operator-v2-review-untracked-directory-contents",
+                         "modified":  "2026-06-22T07:27:42",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-review-first-scope-group",
+                         "path":  "reports\\operator-v2-review-first-scope-group",
+                         "modified":  "2026-06-22T07:24:00",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-scope-code-untracked-review",
+                         "path":  "reports\\operator-v2-scope-code-untracked-review",
+                         "modified":  "2026-06-22T07:20:45",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-scope-hygiene",
+                         "path":  "reports\\operator-v2-scope-hygiene",
+                         "modified":  "2026-06-22T07:16:29",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-next-direction-review",
+                         "path":  "reports\\operator-v2-next-direction-review",
+                         "modified":  "2026-06-22T07:12:31",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-stage-close-git",
+                         "path":  "reports\\operator-v2-stage-close-git",
+                         "modified":  "2026-06-22T07:07:48",
+                         "kind":  "EVIDENCE_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-maintenance-actions-lab",
+                         "path":  "reports\\operator-v2-maintenance-actions-lab",
+                         "modified":  "2026-06-22T07:01:21",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-actions-lab-status",
+                         "path":  "reports\\operator-v2-actions-lab-status",
+                         "modified":  "2026-06-22T06:55:43",
+                         "kind":  "STATE_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-plan-sync",
+                         "path":  "reports\\operator-v2-plan-sync",
+                         "modified":  "2026-06-22T06:51:17",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-home-render-binding",
+                         "path":  "reports\\operator-v2-home-render-binding",
+                         "modified":  "2026-06-22T06:42:09",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-command-feedback-inside-wrapper",
+                         "path":  "reports\\operator-v2-command-feedback-inside-wrapper",
+                         "modified":  "2026-06-22T06:06:11",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-root-wrapper",
+                         "path":  "reports\\operator-v2-root-wrapper",
+                         "modified":  "2026-06-22T06:02:29",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-root-loop-router",
+                         "path":  "reports\\operator-v2-root-loop-router",
+                         "modified":  "2026-06-22T05:56:26",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-command-feedback",
+                         "path":  "reports\\operator-v2-command-feedback",
+                         "modified":  "2026-06-21T22:04:59",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-screen-ux",
+                         "path":  "reports\\operator-v2-screen-ux",
+                         "modified":  "2026-06-21T21:53:02",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-navigation",
+                         "path":  "reports\\operator-v2-navigation",
+                         "modified":  "2026-06-21T21:47:21",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-actions",
+                         "path":  "reports\\operator-v2-actions",
+                         "modified":  "2026-06-21T21:35:12",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-healthcheck",
+                         "path":  "reports\\operator-v2-healthcheck",
+                         "modified":  "2026-06-21T21:22:45",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-screen-architecture",
+                         "path":  "reports\\operator-v2-screen-architecture",
+                         "modified":  "2026-06-21T18:13:01",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-module-blueprint",
+                         "path":  "reports\\operator-module-blueprint",
+                         "modified":  "2026-06-21T12:25:23",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-navigation-model",
+                         "path":  "reports\\operator-navigation-model",
+                         "modified":  "2026-06-21T12:22:27",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "manual-screen-maintenance-cards",
+                         "path":  "reports\\manual-screen-maintenance-cards",
+                         "modified":  "2026-06-20T20:02:44",
+                         "kind":  "MANUAL_HINT"
+                     },
+                     {
+                         "name":  "launcher-actual-impact-audit",
+                         "path":  "reports\\launcher-actual-impact-audit",
+                         "modified":  "2026-06-20T17:26:50",
+                         "kind":  "EVIDENCE_HINT"
+                     },
+                     {
+                         "name":  "screen-normalizer-inicio-parity-audit",
+                         "path":  "reports\\screen-normalizer-inicio-parity-audit",
+                         "modified":  "2026-06-20T16:52:25",
+                         "kind":  "EVIDENCE_HINT"
+                     },
+                     {
+                         "name":  "operator-internal-screens-and-m-card-visual-sweep",
+                         "path":  "reports\\operator-internal-screens-and-m-card-visual-sweep",
+                         "modified":  "2026-06-20T16:21:05",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-real-screen-context-visual-smoke",
+                         "path":  "reports\\operator-real-screen-context-visual-smoke",
+                         "modified":  "2026-06-20T16:19:28",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-screen-context-normalization",
+                         "path":  "reports\\operator-screen-context-normalization",
+                         "modified":  "2026-06-20T16:13:51",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-real-maintenance-manual-smoke",
+                         "path":  "reports\\operator-real-maintenance-manual-smoke",
+                         "modified":  "2026-06-20T16:07:45",
+                         "kind":  "MANUAL_HINT"
+                     },
+                     {
+                         "name":  "operator-project-lifecycle",
+                         "path":  "reports\\operator-project-lifecycle",
+                         "modified":  "2026-06-20T02:01:49",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-template-canonicalization",
+                         "path":  "reports\\operator-template-canonicalization",
+                         "modified":  "2026-06-20T01:46:44",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-main-menu",
+                         "path":  "reports\\operator-main-menu",
+                         "modified":  "2026-06-20T00:43:46",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-context-decision-tree",
+                         "path":  "reports\\operator-context-decision-tree",
+                         "modified":  "2026-06-19T21:56:17",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-context-decision-tree",
+                         "path":  "docs\\operator-context-decision-tree",
+                         "modified":  "2026-06-19T17:39:19",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "desktop-terminal-operator",
+                         "path":  "docs\\desktop-terminal-operator",
+                         "modified":  "2026-06-19T15:13:40",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "master-vault-template-audit",
+                         "path":  "docs\\master-vault-template-audit",
+                         "modified":  "2026-06-19T12:29:14",
+                         "kind":  "EVIDENCE_HINT"
+                     },
+                     {
+                         "name":  "obsidian-operative-memory-architecture",
+                         "path":  "docs\\obsidian-operative-memory-architecture",
+                         "modified":  "2026-06-19T11:25:04",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "project-memory",
+                         "path":  "memory\\project-memory",
+                         "modified":  "2026-06-20T08:18:32",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v1-projects-screen",
+                         "path":  "backups\\operator-v1-projects-screen",
+                         "modified":  "2026-06-22T10:21:04",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v1-safe-build",
+                         "path":  "backups\\operator-v1-safe-build",
+                         "modified":  "2026-06-22T10:09:15",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-close-and-sync",
+                         "path":  "backups\\operator-v2-close-and-sync",
+                         "modified":  "2026-06-22T09:58:42",
+                         "kind":  "EVIDENCE_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-control-panel",
+                         "path":  "backups\\operator-v2-control-panel",
+                         "modified":  "2026-06-22T09:50:18",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-next-action-engine",
+                         "path":  "backups\\operator-v2-next-action-engine",
+                         "modified":  "2026-06-22T09:43:46",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-self-state-sync",
+                         "path":  "backups\\operator-v2-self-state-sync",
+                         "modified":  "2026-06-22T09:31:17",
+                         "kind":  "STATE_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-command-feedback",
+                         "path":  "backups\\operator-v2-command-feedback",
+                         "modified":  "2026-06-21T22:04:20",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-navigation",
+                         "path":  "backups\\operator-v2-navigation",
+                         "modified":  "2026-06-21T21:40:24",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-actions",
+                         "path":  "backups\\operator-v2-actions",
+                         "modified":  "2026-06-21T21:31:13",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-v2-screen-architecture",
+                         "path":  "backups\\operator-v2-screen-architecture",
+                         "modified":  "2026-06-21T18:08:18",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "manual-screen-maintenance-cards",
+                         "path":  "backups\\manual-screen-maintenance-cards",
+                         "modified":  "2026-06-20T20:02:44",
+                         "kind":  "MANUAL_HINT"
+                     },
+                     {
+                         "name":  "operator-module-blueprint",
+                         "path":  "backups\\operator-module-blueprint",
+                         "modified":  "2026-06-20T02:09:54",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-project-lifecycle",
+                         "path":  "backups\\operator-project-lifecycle",
+                         "modified":  "2026-06-20T02:01:49",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-state",
+                         "path":  "backups\\operator-state",
+                         "modified":  "2026-06-20T01:40:40",
+                         "kind":  "STATE_HINT"
+                     },
+                     {
+                         "name":  "operator-template-canonicalization",
+                         "path":  "backups\\operator-template-canonicalization",
+                         "modified":  "2026-06-20T01:39:06",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-new-project-safe",
+                         "path":  "backups\\operator-new-project-safe",
+                         "modified":  "2026-06-20T01:01:08",
+                         "kind":  "DOC_HINT"
+                     },
+                     {
+                         "name":  "operator-main-menu",
+                         "path":  "backups\\operator-main-menu",
+                         "modified":  "2026-06-20T00:43:46",
+                         "kind":  "DOC_HINT"
+                     }
+                 ],
+    "doc_files":  [
+                      {
+                          "name":  "V2_STATE_INDEX.md",
+                          "path":  "documents\\operator-v2-self-state-sync\\V2_STATE_INDEX.md",
+                          "modified":  "2026-06-22T10:26:52",
+                          "bytes":  651,
+                          "kind":  "INDEX"
+                      },
+                      {
+                          "name":  "MEMORY_DOCS_SCREEN_CONTRACT.v1.md",
+                          "path":  "documents\\operator-v1-memory-docs-screen\\MEMORY_DOCS_SCREEN_CONTRACT.v1.md",
+                          "modified":  "2026-06-22T10:26:51",
+                          "bytes":  1433,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "MEMORY_DOCS_SCREEN_CONTRACT.v1.json",
+                          "path":  "documents\\operator-v1-memory-docs-screen\\MEMORY_DOCS_SCREEN_CONTRACT.v1.json",
+                          "modified":  "2026-06-22T10:26:51",
+                          "bytes":  5163,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "E01_AUDIT_MEMORY_DOCS_SCREEN_STATE_READONLY_20260622-102600.md",
+                          "path":  "documents\\operator-v1-memory-docs-screen\\E01_AUDIT_MEMORY_DOCS_SCREEN_STATE_READONLY_20260622-102600.md",
+                          "modified":  "2026-06-22T10:26:05",
+                          "bytes":  697,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "E07_HUMAN_RETEST_AND_CLOSE_OBJECTIVE_NO_PUSH_20260622-102447.md",
+                          "path":  "documents\\operator-v1-projects-screen\\E07_HUMAN_RETEST_AND_CLOSE_OBJECTIVE_NO_PUSH_20260622-102447.md",
+                          "modified":  "2026-06-22T10:25:01",
+                          "bytes":  795,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "PROJECTS_SCREEN_INDEX.md",
+                          "path":  "documents\\operator-v1-projects-screen\\PROJECTS_SCREEN_INDEX.md",
+                          "modified":  "2026-06-22T10:19:13",
+                          "bytes":  612,
+                          "kind":  "INDEX"
+                      },
+                      {
+                          "name":  "PROJECTS_SCREEN_CONTRACT.v1.md",
+                          "path":  "documents\\operator-v1-projects-screen\\PROJECTS_SCREEN_CONTRACT.v1.md",
+                          "modified":  "2026-06-22T10:18:11",
+                          "bytes":  1226,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "PROJECTS_SCREEN_CONTRACT.v1.json",
+                          "path":  "documents\\operator-v1-projects-screen\\PROJECTS_SCREEN_CONTRACT.v1.json",
+                          "modified":  "2026-06-22T10:18:11",
+                          "bytes":  4805,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "E01_AUDIT_PROJECTS_SCREEN_STATE_READONLY_20260622-101718.md",
+                          "path":  "documents\\operator-v1-projects-screen\\E01_AUDIT_PROJECTS_SCREEN_STATE_READONLY_20260622-101718.md",
+                          "modified":  "2026-06-22T10:17:23",
+                          "bytes":  602,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "V1_HOME_INDEX.md",
+                          "path":  "documents\\operator-v1-safe-build\\V1_HOME_INDEX.md",
+                          "modified":  "2026-06-22T10:07:15",
+                          "bytes":  517,
+                          "kind":  "INDEX"
+                      },
+                      {
+                          "name":  "V1_SAFE_BUILD_CONTRACT.v1.md",
+                          "path":  "documents\\operator-v1-safe-build\\V1_SAFE_BUILD_CONTRACT.v1.md",
+                          "modified":  "2026-06-22T10:06:25",
+                          "bytes":  1094,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "V1_SAFE_BUILD_CONTRACT.v1.json",
+                          "path":  "documents\\operator-v1-safe-build\\V1_SAFE_BUILD_CONTRACT.v1.json",
+                          "modified":  "2026-06-22T10:06:25",
+                          "bytes":  4623,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "E01_AUDIT_V1_CURRENT_STATE_READONLY_20260622-100419.md",
+                          "path":  "documents\\operator-v1-safe-build\\E01_AUDIT_V1_CURRENT_STATE_READONLY_20260622-100419.md",
+                          "modified":  "2026-06-22T10:04:24",
+                          "bytes":  703,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "E02R_COMMIT_PUSH_GATE_EVIDENCE_AND_EXECUTE_AUTHORIZED_PUSH_20260622-100325.md",
+                          "path":  "documents\\operator-v2-push-gate\\E02R_COMMIT_PUSH_GATE_EVIDENCE_AND_EXECUTE_AUTHORIZED_PUSH_20260622-100325.md",
+                          "modified":  "2026-06-22T10:03:41",
+                          "bytes":  561,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "E04_GATE_LAUNCHER_INTEGRATION_CLOSE_SYNC_SCREEN_20260622-095750.md",
+                          "path":  "documents\\operator-v2-close-and-sync\\E04_GATE_LAUNCHER_INTEGRATION_CLOSE_SYNC_SCREEN_20260622-095750.md",
+                          "modified":  "2026-06-22T09:57:59",
+                          "bytes":  784,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "CLOSE_SYNC_INDEX.md",
+                          "path":  "documents\\operator-v2-close-and-sync\\CLOSE_SYNC_INDEX.md",
+                          "modified":  "2026-06-22T09:57:15",
+                          "bytes":  445,
+                          "kind":  "INDEX"
+                      },
+                      {
+                          "name":  "CLOSE_AND_SYNC_CONTRACT.v1.md",
+                          "path":  "documents\\operator-v2-close-and-sync\\CLOSE_AND_SYNC_CONTRACT.v1.md",
+                          "modified":  "2026-06-22T09:56:23",
+                          "bytes":  852,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "CLOSE_AND_SYNC_CONTRACT.v1.json",
+                          "path":  "documents\\operator-v2-close-and-sync\\CLOSE_AND_SYNC_CONTRACT.v1.json",
+                          "modified":  "2026-06-22T09:56:23",
+                          "bytes":  4140,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "E01_AUDIT_CLOSE_AND_SYNC_STATE_READONLY_20260622-095529.md",
+                          "path":  "documents\\operator-v2-close-and-sync\\E01_AUDIT_CLOSE_AND_SYNC_STATE_READONLY_20260622-095529.md",
+                          "modified":  "2026-06-22T09:55:39",
+                          "bytes":  577,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "CONTROL_PANEL_INDEX.md",
+                          "path":  "documents\\operator-v2-control-panel\\CONTROL_PANEL_INDEX.md",
+                          "modified":  "2026-06-22T09:48:47",
+                          "bytes":  422,
+                          "kind":  "INDEX"
+                      },
+                      {
+                          "name":  "CONTROL_PANEL_CONTRACT.v1.json",
+                          "path":  "documents\\operator-v2-control-panel\\CONTROL_PANEL_CONTRACT.v1.json",
+                          "modified":  "2026-06-22T09:47:59",
+                          "bytes":  3651,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "CONTROL_PANEL_CONTRACT.v1.md",
+                          "path":  "documents\\operator-v2-control-panel\\CONTROL_PANEL_CONTRACT.v1.md",
+                          "modified":  "2026-06-22T09:47:59",
+                          "bytes":  594,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "E01_AUDIT_CONTROL_PANEL_INPUTS_READONLY_20260622-094717.md",
+                          "path":  "documents\\operator-v2-control-panel\\E01_AUDIT_CONTROL_PANEL_INPUTS_READONLY_20260622-094717.md",
+                          "modified":  "2026-06-22T09:47:20",
+                          "bytes":  660,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "E04_GATE_LAUNCHER_INTEGRATION_NEXT_ACTION_SCREEN_20260622-094201.md",
+                          "path":  "documents\\operator-v2-next-action-engine\\E04_GATE_LAUNCHER_INTEGRATION_NEXT_ACTION_SCREEN_20260622-094201.md",
+                          "modified":  "2026-06-22T09:42:05",
+                          "bytes":  735,
+                          "kind":  "DOC_FILE"
+                      },
+                      {
+                          "name":  "NEXT_ACTION_INDEX.md",
+                          "path":  "documents\\operator-v2-next-action-engine\\NEXT_ACTION_INDEX.md",
+                          "modified":  "2026-06-22T09:41:20",
+                          "bytes":  493,
+                          "kind":  "INDEX"
+                      },
+                      {
+                          "name":  "NEXT_ACTION_ENGINE_CONTRACT.v1.md",
+                          "path":  "documents\\operator-v2-next-action-engine\\NEXT_ACTION_ENGINE_CONTRACT.v1.md",
+                          "modified":  "2026-06-22T09:40:19",
+                          "bytes":  685,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "NEXT_ACTION_ENGINE_CONTRACT.v1.json",
+                          "path":  "documents\\operator-v2-next-action-engine\\NEXT_ACTION_ENGINE_CONTRACT.v1.json",
+                          "modified":  "2026-06-22T09:40:19",
+                          "bytes":  4315,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "E01_AUDIT_NEXT_ACTION_STATE_READONLY_20260622-093935.md",
+                          "path":  "documents\\operator-v2-next-action-engine\\E01_AUDIT_NEXT_ACTION_STATE_READONLY_20260622-093935.md",
+                          "modified":  "2026-06-22T09:39:38",
+                          "bytes":  579,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "E06_PREPARE_V2_STATE_SCREEN_LAUNCHER_INTEGRATION_GATE_20260622-092551.md",
+                          "path":  "documents\\operator-v2-self-state-sync\\E06_PREPARE_V2_STATE_SCREEN_LAUNCHER_INTEGRATION_GATE_20260622-092551.md",
+                          "modified":  "2026-06-22T09:25:57",
+                          "bytes":  481,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "V2_STATE_REGISTRY_CONTRACT.v1.json",
+                          "path":  "documents\\operator-v2-self-state-sync\\V2_STATE_REGISTRY_CONTRACT.v1.json",
+                          "modified":  "2026-06-22T09:23:01",
+                          "bytes":  5777,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "V2_STATE_REGISTRY_CONTRACT.v1.md",
+                          "path":  "documents\\operator-v2-self-state-sync\\V2_STATE_REGISTRY_CONTRACT.v1.md",
+                          "modified":  "2026-06-22T09:23:01",
+                          "bytes":  873,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "NEXT_OBJECTIVE.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\NEXT_OBJECTIVE.md",
+                          "modified":  "2026-06-22T08:07:52",
+                          "bytes":  369,
+                          "kind":  "DOC_FILE"
+                      },
+                      {
+                          "name":  "E28_OPERATOR_V2_GLOBAL_CLEANUP_LATE_DOCS_COMMIT_CLOSE.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\E28_OPERATOR_V2_GLOBAL_CLEANUP_LATE_DOCS_COMMIT_CLOSE.md",
+                          "modified":  "2026-06-22T08:07:52",
+                          "bytes":  2243,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "E27_OPERATOR_V2_GLOBAL_CLEANUP_LATE_DOCS_COMMIT_PACKET.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\E27_OPERATOR_V2_GLOBAL_CLEANUP_LATE_DOCS_COMMIT_PACKET.md",
+                          "modified":  "2026-06-22T08:06:52",
+                          "bytes":  1598,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "E25_OPERATOR_V2_GLOBAL_CLEANUP_UNTRACKED_DOCS_COMMIT_CLOSE.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\E25_OPERATOR_V2_GLOBAL_CLEANUP_UNTRACKED_DOCS_COMMIT_CLOSE.md",
+                          "modified":  "2026-06-22T08:05:31",
+                          "bytes":  2228,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "E24_OPERATOR_V2_GLOBAL_CLEANUP_UNTRACKED_DOCS_AND_AUX_SPLIT.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\E24_OPERATOR_V2_GLOBAL_CLEANUP_UNTRACKED_DOCS_AND_AUX_SPLIT.md",
+                          "modified":  "2026-06-22T08:04:19",
+                          "bytes":  6105,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "E22_OPERATOR_V2_GLOBAL_CLEANUP_REMAINING_DOCS_COMMIT_CLOSE.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\E22_OPERATOR_V2_GLOBAL_CLEANUP_REMAINING_DOCS_COMMIT_CLOSE.md",
+                          "modified":  "2026-06-22T08:02:51",
+                          "bytes":  2223,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "E21_OPERATOR_V2_GLOBAL_CLEANUP_REMAINING_DOCS_COMMIT_PACKET.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\E21_OPERATOR_V2_GLOBAL_CLEANUP_REMAINING_DOCS_COMMIT_PACKET.md",
+                          "modified":  "2026-06-22T08:01:39",
+                          "bytes":  1584,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "E19_OPERATOR_V2_GLOBAL_CLEANUP_SAFE_DOCS_COMMIT_CLOSE.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\E19_OPERATOR_V2_GLOBAL_CLEANUP_SAFE_DOCS_COMMIT_CLOSE.md",
+                          "modified":  "2026-06-22T08:00:33",
+                          "bytes":  4517,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "E18_R1_OPERATOR_V2_GLOBAL_CLEANUP_DOCS_SPLIT_NO_APPLY.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\E18_R1_OPERATOR_V2_GLOBAL_CLEANUP_DOCS_SPLIT_NO_APPLY.md",
+                          "modified":  "2026-06-22T07:59:24",
+                          "bytes":  3317,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "E18_OPERATOR_V2_GLOBAL_CLEANUP_DOCS_COMMIT_PACKET.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\E18_OPERATOR_V2_GLOBAL_CLEANUP_DOCS_COMMIT_PACKET.md",
+                          "modified":  "2026-06-22T07:58:44",
+                          "bytes":  2652,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "E17_GLOBAL_SCOPE_AFTER_REPORTS_LAUNCHER_CLOSED_NO_APPLY.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\E17_GLOBAL_SCOPE_AFTER_REPORTS_LAUNCHER_CLOSED_NO_APPLY.md",
+                          "modified":  "2026-06-22T07:58:11",
+                          "bytes":  6877,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "documents_system-observer.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_system-observer.md",
+                          "modified":  "2026-06-22T07:58:11",
+                          "bytes":  268,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_system-autodiagnosis.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_system-autodiagnosis.md",
+                          "modified":  "2026-06-22T07:58:11",
+                          "bytes":  278,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_human-maintenance-cards.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_human-maintenance-cards.md",
+                          "modified":  "2026-06-22T07:58:11",
+                          "bytes":  284,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_launcher-actual-impact-audit.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_launcher-actual-impact-audit.md",
+                          "modified":  "2026-06-22T07:58:11",
+                          "bytes":  294,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_human-maintenance-interactive-form.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_human-maintenance-interactive-form.md",
+                          "modified":  "2026-06-22T07:58:11",
+                          "bytes":  306,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_screen-normalizer-standardization.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_screen-normalizer-standardization.md",
+                          "modified":  "2026-06-22T07:58:11",
+                          "bytes":  304,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_screen-maintenance-route-binding.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_screen-maintenance-route-binding.md",
+                          "modified":  "2026-06-22T07:58:11",
+                          "bytes":  302,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_screen-normalizer-target-launcher-disambiguation.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_screen-normalizer-target-launcher-disambiguation.md",
+                          "modified":  "2026-06-22T07:58:11",
+                          "bytes":  334,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_screen-normalizer-subscreen-routing-adapter.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_screen-normalizer-subscreen-routing-adapter.md",
+                          "modified":  "2026-06-22T07:58:11",
+                          "bytes":  324,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_launcher-contracts.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_launcher-contracts.md",
+                          "modified":  "2026-06-22T07:58:11",
+                          "bytes":  274,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "documents_launcher-canonical-action-runtime.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_launcher-canonical-action-runtime.md",
+                          "modified":  "2026-06-22T07:58:11",
+                          "bytes":  304,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_human-cards.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_human-cards.md",
+                          "modified":  "2026-06-22T07:58:11",
+                          "bytes":  260,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_context-guardian-enforcement.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_context-guardian-enforcement.md",
+                          "modified":  "2026-06-22T07:58:11",
+                          "bytes":  294,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_diagnostics.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_diagnostics.md",
+                          "modified":  "2026-06-22T07:58:11",
+                          "bytes":  260,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_context-guardian.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_context-guardian.md",
+                          "modified":  "2026-06-22T07:58:11",
+                          "bytes":  270,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_operator-real-screen-context-visual-smoke.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_operator-real-screen-context-visual-smoke.md",
+                          "modified":  "2026-06-22T07:58:11",
+                          "bytes":  320,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_operator-real-maintenance-manual-smoke.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_operator-real-maintenance-manual-smoke.md",
+                          "modified":  "2026-06-22T07:58:11",
+                          "bytes":  314,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_operator-screen-context-normalization.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_operator-screen-context-normalization.md",
+                          "modified":  "2026-06-22T07:58:11",
+                          "bytes":  312,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_screen-maintenance-real-integration.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_screen-maintenance-real-integration.md",
+                          "modified":  "2026-06-22T07:58:11",
+                          "bytes":  308,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_real-project-walkthrough.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_real-project-walkthrough.md",
+                          "modified":  "2026-06-22T07:58:11",
+                          "bytes":  286,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_operator-navigation.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_operator-navigation.md",
+                          "modified":  "2026-06-22T07:58:11",
+                          "bytes":  276,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "reports_screen-normalizer-internal-registry-sweep.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\reports_screen-normalizer-internal-registry-sweep.md",
+                          "modified":  "2026-06-22T07:58:11",
+                          "bytes":  316,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "documents_operator-internal-screens-and-m-card-visual-sweep.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_operator-internal-screens-and-m-card-visual-sweep.md",
+                          "modified":  "2026-06-22T07:58:11",
+                          "bytes":  336,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_launcher-runtime-ui-integration.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_launcher-runtime-ui-integration.md",
+                          "modified":  "2026-06-22T07:58:11",
+                          "bytes":  300,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_manual-screen-maintenance-cards.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_manual-screen-maintenance-cards.md",
+                          "modified":  "2026-06-22T07:58:11",
+                          "bytes":  300,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_launcher-management.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_launcher-management.md",
+                          "modified":  "2026-06-22T07:58:11",
+                          "bytes":  276,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_module-cards.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_module-cards.md",
+                          "modified":  "2026-06-22T07:58:11",
+                          "bytes":  262,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "reports_screen-normalizer-inicio-parity-audit.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\reports_screen-normalizer-inicio-parity-audit.md",
+                          "modified":  "2026-06-22T07:58:11",
+                          "bytes":  308,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "reports_manual-screen-maintenance-cards.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\reports_manual-screen-maintenance-cards.md",
+                          "modified":  "2026-06-22T07:58:11",
+                          "bytes":  296,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "reports_launcher-actual-impact-audit.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\reports_launcher-actual-impact-audit.md",
+                          "modified":  "2026-06-22T07:58:11",
+                          "bytes":  290,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "documents_operator-v2-global-scope-cleanup.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_operator-v2-global-scope-cleanup.md",
+                          "modified":  "2026-06-22T07:58:11",
+                          "bytes":  1940,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "reports_operator-real-maintenance-manual-smoke.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\reports_operator-real-maintenance-manual-smoke.md",
+                          "modified":  "2026-06-22T07:58:11",
+                          "bytes":  310,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_worker-sync.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_worker-sync.md",
+                          "modified":  "2026-06-22T07:58:11",
+                          "bytes":  810,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_ux-system.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_ux-system.md",
+                          "modified":  "2026-06-22T07:58:11",
+                          "bytes":  2824,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "E16_REPORTS_LAUNCHER_LOCAL_SCRIPTS_COMMIT_CLOSE.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\E16_REPORTS_LAUNCHER_LOCAL_SCRIPTS_COMMIT_CLOSE.md",
+                          "modified":  "2026-06-22T07:57:26",
+                          "bytes":  1766,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "E13_REPORTS_LAUNCHER_REMAINING_DOCS_COMMIT_PACKET.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\E13_REPORTS_LAUNCHER_REMAINING_DOCS_COMMIT_PACKET.md",
+                          "modified":  "2026-06-22T07:54:42",
+                          "bytes":  1150,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "E12_REPORTS_LAUNCHER_NOISE_DELETE_CLOSE.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\E12_REPORTS_LAUNCHER_NOISE_DELETE_CLOSE.md",
+                          "modified":  "2026-06-22T07:54:10",
+                          "bytes":  2917,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "E09_REPORTS_LAUNCHER_REPORT_ARTIFACTS_COMMIT_CLOSE.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\E09_REPORTS_LAUNCHER_REPORT_ARTIFACTS_COMMIT_CLOSE.md",
+                          "modified":  "2026-06-22T07:49:53",
+                          "bytes":  34385,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "documents_real-project-walkthrough.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-e04\\documents_real-project-walkthrough.md",
+                          "modified":  "2026-06-22T07:44:10",
+                          "bytes":  277,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_screen-maintenance-route-binding.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-e04\\documents_screen-maintenance-route-binding.md",
+                          "modified":  "2026-06-22T07:44:10",
+                          "bytes":  293,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_screen-maintenance-real-integration.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-e04\\documents_screen-maintenance-real-integration.md",
+                          "modified":  "2026-06-22T07:44:10",
+                          "bytes":  299,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_launcher-runtime-ui-integration.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-e04\\documents_launcher-runtime-ui-integration.md",
+                          "modified":  "2026-06-22T07:44:10",
+                          "bytes":  291,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_manual-screen-maintenance-cards.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-e04\\documents_manual-screen-maintenance-cards.md",
+                          "modified":  "2026-06-22T07:44:10",
+                          "bytes":  291,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_operator-real-maintenance-manual-smoke.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-e04\\documents_operator-real-maintenance-manual-smoke.md",
+                          "modified":  "2026-06-22T07:44:10",
+                          "bytes":  305,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_module-cards.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-e04\\documents_module-cards.md",
+                          "modified":  "2026-06-22T07:44:10",
+                          "bytes":  253,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_operator-navigation.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-e04\\documents_operator-navigation.md",
+                          "modified":  "2026-06-22T07:44:10",
+                          "bytes":  267,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_operator-internal-screens-and-m-card-visual-sweep.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-e04\\documents_operator-internal-screens-and-m-card-visual-sweep.md",
+                          "modified":  "2026-06-22T07:44:10",
+                          "bytes":  327,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "reports_screen-normalizer-internal-registry-sweep.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-e04\\reports_screen-normalizer-internal-registry-sweep.md",
+                          "modified":  "2026-06-22T07:44:10",
+                          "bytes":  307,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "reports_screen-normalizer-inicio-parity-audit.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-e04\\reports_screen-normalizer-inicio-parity-audit.md",
+                          "modified":  "2026-06-22T07:44:10",
+                          "bytes":  299,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "reports_manual-screen-maintenance-cards.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-e04\\reports_manual-screen-maintenance-cards.md",
+                          "modified":  "2026-06-22T07:44:10",
+                          "bytes":  287,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "reports_launcher-actual-impact-audit.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-e04\\reports_launcher-actual-impact-audit.md",
+                          "modified":  "2026-06-22T07:44:10",
+                          "bytes":  281,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "reports_operator-real-maintenance-manual-smoke.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-e04\\reports_operator-real-maintenance-manual-smoke.md",
+                          "modified":  "2026-06-22T07:44:10",
+                          "bytes":  301,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_worker-sync.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-e04\\documents_worker-sync.md",
+                          "modified":  "2026-06-22T07:44:10",
+                          "bytes":  801,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_operator-v2-global-scope-cleanup.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-e04\\documents_operator-v2-global-scope-cleanup.md",
+                          "modified":  "2026-06-22T07:44:10",
+                          "bytes":  393,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_ux-system.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-e04\\documents_ux-system.md",
+                          "modified":  "2026-06-22T07:44:10",
+                          "bytes":  2815,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "E04_OPERATOR_V2_SCOPED_CLEANUP_COMMIT_CLOSE.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\E04_OPERATOR_V2_SCOPED_CLEANUP_COMMIT_CLOSE.md",
+                          "modified":  "2026-06-22T07:43:14",
+                          "bytes":  63247,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "documents_screen-normalizer-inicio-parity-audit.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups\\documents_screen-normalizer-inicio-parity-audit.md",
+                          "modified":  "2026-06-22T07:41:00",
+                          "bytes":  293,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_screen-normalizer-inicio-migration-gate.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups\\documents_screen-normalizer-inicio-migration-gate.md",
+                          "modified":  "2026-06-22T07:41:00",
+                          "bytes":  297,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_screen-normalizer-general-launcher-route-gate.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups\\documents_screen-normalizer-general-launcher-route-gate.md",
+                          "modified":  "2026-06-22T07:41:00",
+                          "bytes":  309,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_screen-normalizer-internal-visual-smoke-results.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups\\documents_screen-normalizer-internal-visual-smoke-results.md",
+                          "modified":  "2026-06-22T07:41:00",
+                          "bytes":  313,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_screen-normalizer-internal-registry-sweep.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups\\documents_screen-normalizer-internal-registry-sweep.md",
+                          "modified":  "2026-06-22T07:41:00",
+                          "bytes":  301,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "documents_screen-normalizer-internal-candidates-generation.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups\\documents_screen-normalizer-internal-candidates-generation.md",
+                          "modified":  "2026-06-22T07:41:00",
+                          "bytes":  315,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_screen-normalizer-general-launcher-menu-router-integration-gate.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups\\documents_screen-normalizer-general-launcher-menu-router-integration-gate.md",
+                          "modified":  "2026-06-22T07:41:00",
+                          "bytes":  345,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_screen-maintenance-real-integration.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups\\documents_screen-maintenance-real-integration.md",
+                          "modified":  "2026-06-22T07:41:00",
+                          "bytes":  289,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_real-project-walkthrough.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups\\documents_real-project-walkthrough.md",
+                          "modified":  "2026-06-22T07:41:00",
+                          "bytes":  267,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_operator-v2-screen-normalizer-evidence-commit.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups\\documents_operator-v2-screen-normalizer-evidence-commit.md",
+                          "modified":  "2026-06-22T07:41:00",
+                          "bytes":  311,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_screen-normalizer-real-screen-generation.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups\\documents_screen-normalizer-real-screen-generation.md",
+                          "modified":  "2026-06-22T07:41:00",
+                          "bytes":  299,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_screen-maintenance-route-binding.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups\\documents_screen-maintenance-route-binding.md",
+                          "modified":  "2026-06-22T07:41:00",
+                          "bytes":  283,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_screen-master-template.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups\\documents_screen-master-template.md",
+                          "modified":  "2026-06-22T07:41:00",
+                          "bytes":  263,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_screen-normalizer-apply-controlled.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups\\documents_screen-normalizer-apply-controlled.md",
+                          "modified":  "2026-06-22T07:41:00",
+                          "bytes":  287,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "memory_development.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups\\memory_development.md",
+                          "modified":  "2026-06-22T07:41:00",
+                          "bytes":  222,
+                          "kind":  "DOC_FILE"
+                      },
+                      {
+                          "name":  "documents_screen-normalizer-small-batch-migration-gate.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups\\documents_screen-normalizer-small-batch-migration-gate.md",
+                          "modified":  "2026-06-22T07:41:00",
+                          "bytes":  307,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_screen-normalizer-standardization.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups\\documents_screen-normalizer-standardization.md",
+                          "modified":  "2026-06-22T07:41:00",
+                          "bytes":  285,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_screen-normalizer-subscreen-routing-adapter.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups\\documents_screen-normalizer-subscreen-routing-adapter.md",
+                          "modified":  "2026-06-22T07:41:00",
+                          "bytes":  305,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_screen-normalizer-target-launcher-disambiguation.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups\\documents_screen-normalizer-target-launcher-disambiguation.md",
+                          "modified":  "2026-06-22T07:41:00",
+                          "bytes":  315,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_system-autodiagnosis.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups\\documents_system-autodiagnosis.md",
+                          "modified":  "2026-06-22T07:41:00",
+                          "bytes":  259,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_system-observer.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups\\documents_system-observer.md",
+                          "modified":  "2026-06-22T07:41:00",
+                          "bytes":  249,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "documents_human-maintenance-cards.md",
+                          "path":  "documents\\operator-v2-global-scope-cleanup\\groups\\documents_human-maintenance-cards.md",
+                          "modified":  "2026-06-22T07:41:00",
+                          "bytes":  265,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "v2-state.latest.json",
+                          "path":  "data\\operator-v2-self-state-sync\\v2-state.latest.json",
+                          "modified":  "2026-06-22T10:26:52",
+                          "bytes":  1839,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "v2-state.registry.json",
+                          "path":  "data\\operator-v2-self-state-sync\\v2-state.registry.json",
+                          "modified":  "2026-06-22T10:26:52",
+                          "bytes":  4942,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "memory-docs-screen.latest.json",
+                          "path":  "data\\operator-v1-memory-docs-screen\\memory-docs-screen.latest.json",
+                          "modified":  "2026-06-22T10:26:51",
+                          "bytes":  5163,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "projects-screen-view.latest.json",
+                          "path":  "data\\operator-v1-projects-screen\\projects-screen-view.latest.json",
+                          "modified":  "2026-06-22T10:19:13",
+                          "bytes":  55468,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "projects-screen.latest.json",
+                          "path":  "data\\operator-v1-projects-screen\\projects-screen.latest.json",
+                          "modified":  "2026-06-22T10:18:11",
+                          "bytes":  4805,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "v1-home.latest.json",
+                          "path":  "data\\operator-v1-safe-build\\v1-home.latest.json",
+                          "modified":  "2026-06-22T10:07:15",
+                          "bytes":  6617,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "v1-safe-build.latest.json",
+                          "path":  "data\\operator-v1-safe-build\\v1-safe-build.latest.json",
+                          "modified":  "2026-06-22T10:06:25",
+                          "bytes":  4623,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "close-sync.latest.json",
+                          "path":  "data\\operator-v2-close-and-sync\\close-sync.latest.json",
+                          "modified":  "2026-06-22T09:57:15",
+                          "bytes":  5578,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "control-panel.latest.json",
+                          "path":  "data\\operator-v2-control-panel\\control-panel.latest.json",
+                          "modified":  "2026-06-22T09:48:47",
+                          "bytes":  6639,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "next-action.latest.json",
+                          "path":  "data\\operator-v2-next-action-engine\\next-action.latest.json",
+                          "modified":  "2026-06-22T09:41:20",
+                          "bytes":  2175,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "screen-registry.v1.json",
+                          "path":  "data\\screen-normalizer\\screen-registry.v1.json",
+                          "modified":  "2026-06-21T18:08:18",
+                          "bytes":  19737,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "operator-state.v1.json",
+                          "path":  "data\\desktop-terminal-operator\\operator-state.v1.json",
+                          "modified":  "2026-06-21T12:24:15",
+                          "bytes":  2504,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "INDEX.md",
+                          "path":  "data\\operator-module-blueprint\\INDEX.md",
+                          "modified":  "2026-06-20T02:08:35",
+                          "bytes":  219,
+                          "kind":  "INDEX"
+                      },
+                      {
+                          "name":  "module-operational-contract.v1.json",
+                          "path":  "data\\operator-module-blueprint\\module-operational-contract.v1.json",
+                          "modified":  "2026-06-20T02:08:35",
+                          "bytes":  2726,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "03_NEXT_BLOCK_EXT04_PROJECT_REVIEW_SAFE.md",
+                          "path":  "data\\operator-extension-plan\\03_NEXT_BLOCK_EXT04_PROJECT_REVIEW_SAFE.md",
+                          "modified":  "2026-06-19T22:59:08",
+                          "bytes":  566,
+                          "kind":  "DOC_FILE"
+                      },
+                      {
+                          "name":  "00_EXTENSION_PLAN_INDEX.md",
+                          "path":  "data\\operator-extension-plan\\00_EXTENSION_PLAN_INDEX.md",
+                          "modified":  "2026-06-19T22:59:08",
+                          "bytes":  917,
+                          "kind":  "INDEX"
+                      },
+                      {
+                          "name":  "00_FREEZE_INDEX.md",
+                          "path":  "data\\operator-navigation-freeze\\00_FREEZE_INDEX.md",
+                          "modified":  "2026-06-19T22:58:26",
+                          "bytes":  1063,
+                          "kind":  "INDEX"
+                      },
+                      {
+                          "name":  "operator-navigation-contract.v1.json",
+                          "path":  "data\\operator-navigation-model\\operator-navigation-contract.v1.json",
+                          "modified":  "2026-06-19T21:27:47",
+                          "bytes":  6403,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "project-registry.json",
+                          "path":  "data\\operator-state\\project-registry.json",
+                          "modified":  "2026-06-19T17:57:08",
+                          "bytes":  2666,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "engremiat-project-registry.json",
+                          "path":  "data\\operator-state\\engremiat-project-registry.json",
+                          "modified":  "2026-06-19T17:46:03",
+                          "bytes":  3292,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "obsidian-project-registry.json",
+                          "path":  "data\\operator-state\\obsidian-project-registry.json",
+                          "modified":  "2026-06-19T17:44:00",
+                          "bytes":  47757,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "desktop-terminal-operator-v1-close.json",
+                          "path":  "data\\desktop-terminal-operator\\desktop-terminal-operator-v1-close.json",
+                          "modified":  "2026-06-19T15:13:40",
+                          "bytes":  4159,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "simulation-lab-v1-close.v1.json",
+                          "path":  "data\\system-simulation-lab\\simulation-lab-v1-close.v1.json",
+                          "modified":  "2026-06-19T14:37:52",
+                          "bytes":  11542,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e07-validated-evidence-and-learning.v1.json",
+                          "path":  "data\\system-simulation-lab\\e07-validated-evidence-and-learning.v1.json",
+                          "modified":  "2026-06-19T14:36:54",
+                          "bytes":  1397,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "simulation-lab-contract.v1.json",
+                          "path":  "data\\system-simulation-lab\\simulation-lab-contract.v1.json",
+                          "modified":  "2026-06-19T14:30:29",
+                          "bytes":  9193,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "hierarchical-vaults-close.v1.json",
+                          "path":  "data\\obsidian-hierarchical-vaults\\hierarchical-vaults-close.v1.json",
+                          "modified":  "2026-06-19T14:20:36",
+                          "bytes":  8336,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "master-project-link-registry.v1.json",
+                          "path":  "data\\obsidian-hierarchical-vaults\\master-project-link-registry.v1.json",
+                          "modified":  "2026-06-19T14:18:30",
+                          "bytes":  1565,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "hierarchical-vaults-contract.v1.json",
+                          "path":  "data\\obsidian-hierarchical-vaults\\hierarchical-vaults-contract.v1.json",
+                          "modified":  "2026-06-19T14:13:11",
+                          "bytes":  9529,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "first-official-module-close.v1.json",
+                          "path":  "data\\first-official-module-from-builder\\first-official-module-close.v1.json",
+                          "modified":  "2026-06-19T13:31:24",
+                          "bytes":  2236,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "new-vault-graph-groups-selector-close.v1.json",
+                          "path":  "data\\new-vault-from-master-template\\new-vault-graph-groups-selector-close.v1.json",
+                          "modified":  "2026-06-19T12:45:00",
+                          "bytes":  4052,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "new-vault-graph-index-normalization.v1.json",
+                          "path":  "data\\new-vault-from-master-template\\new-vault-graph-index-normalization.v1.json",
+                          "modified":  "2026-06-19T12:36:05",
+                          "bytes":  1563,
+                          "kind":  "INDEX"
+                      },
+                      {
+                          "name":  "master-vault-template-audit.after-targeted-repair.v1.json",
+                          "path":  "data\\master-vault-template-audit\\master-vault-template-audit.after-targeted-repair.v1.json",
+                          "modified":  "2026-06-19T12:28:28",
+                          "bytes":  24530,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "master-vault-template-audit.after-repair.v1.json",
+                          "path":  "data\\master-vault-template-audit\\master-vault-template-audit.after-repair.v1.json",
+                          "modified":  "2026-06-19T12:26:41",
+                          "bytes":  31833,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "master-vault-template-audit.v1.json",
+                          "path":  "data\\master-vault-template-audit\\master-vault-template-audit.v1.json",
+                          "modified":  "2026-06-19T12:23:57",
+                          "bytes":  37131,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "vault-module-builder-close.v1.json",
+                          "path":  "data\\vault-module-builder\\vault-module-builder-close.v1.json",
+                          "modified":  "2026-06-19T12:18:01",
+                          "bytes":  3376,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "NEXT_OBJECTIVE_FIRST_OFFICIAL_MODULE_FROM_BUILDER_001.json",
+                          "path":  "data\\vault-module-builder\\NEXT_OBJECTIVE_FIRST_OFFICIAL_MODULE_FROM_BUILDER_001.json",
+                          "modified":  "2026-06-19T12:18:01",
+                          "bytes":  1555,
+                          "kind":  "DOC_FILE"
+                      },
+                      {
+                          "name":  "vault-module-builder-contract.v1.json",
+                          "path":  "data\\vault-module-builder\\vault-module-builder-contract.v1.json",
+                          "modified":  "2026-06-19T12:13:23",
+                          "bytes":  12699,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "NEXT_OBJECTIVE_VAULT_MODULE_BUILDER_001.json",
+                          "path":  "data\\obsidian-grouped-architecture\\NEXT_OBJECTIVE_VAULT_MODULE_BUILDER_001.json",
+                          "modified":  "2026-06-19T12:09:58",
+                          "bytes":  1148,
+                          "kind":  "DOC_FILE"
+                      },
+                      {
+                          "name":  "grouped-architecture-close.v1.json",
+                          "path":  "data\\obsidian-grouped-architecture\\grouped-architecture-close.v1.json",
+                          "modified":  "2026-06-19T12:09:58",
+                          "bytes":  2588,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "obsidian-grouped-architecture-contract.json",
+                          "path":  "data\\obsidian-grouped-architecture\\obsidian-grouped-architecture-contract.json",
+                          "modified":  "2026-06-19T12:04:19",
+                          "bytes":  5518,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "manual-obsidian-review-result.json",
+                          "path":  "data\\obsidian-vault-human-review\\manual-obsidian-review-result.json",
+                          "modified":  "2026-06-19T11:34:42",
+                          "bytes":  1499,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "manual-obsidian-open-instructions.json",
+                          "path":  "data\\obsidian-vault-human-review\\manual-obsidian-open-instructions.json",
+                          "modified":  "2026-06-19T11:25:55",
+                          "bytes":  1457,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "obsidian-operative-memory-final-manifest.json",
+                          "path":  "data\\obsidian-operative-memory-architecture\\obsidian-operative-memory-final-manifest.json",
+                          "modified":  "2026-06-19T11:25:04",
+                          "bytes":  4008,
+                          "kind":  "DOC_FILE"
+                      },
+                      {
+                          "name":  "obsidian-operative-memory-contract.json",
+                          "path":  "data\\obsidian-operative-memory-architecture\\obsidian-operative-memory-contract.json",
+                          "modified":  "2026-06-19T10:36:12",
+                          "bytes":  5376,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "kanban-import-gate.closed-preview.json",
+                          "path":  "data\\kanban-roadmap-card-export-preview\\kanban-import-gate.closed-preview.json",
+                          "modified":  "2026-06-19T10:14:41",
+                          "bytes":  2803,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "kanban-roadmap-card-export-close-manifest.json",
+                          "path":  "data\\kanban-roadmap-card-export-preview\\kanban-roadmap-card-export-close-manifest.json",
+                          "modified":  "2026-06-19T10:14:41",
+                          "bytes":  1272,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "kanban-roadmap-card-export-contract.json",
+                          "path":  "data\\kanban-roadmap-card-export-preview\\kanban-roadmap-card-export-contract.json",
+                          "modified":  "2026-06-19T10:12:37",
+                          "bytes":  3080,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "local-ollama-roadmap-generator-close-manifest.json",
+                          "path":  "data\\real-roadmap-generator-ollama-preview\\local-ollama-roadmap-generator-close-manifest.json",
+                          "modified":  "2026-06-19T10:12:04",
+                          "bytes":  912,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "ollama-roadmap-controlled-dry-run-result.latest.json",
+                          "path":  "data\\real-roadmap-generator-ollama-preview\\ollama-roadmap-controlled-dry-run-result.latest.json",
+                          "modified":  "2026-06-19T10:11:23",
+                          "bytes":  2045,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "ollama-roadmap-preview.latest.json",
+                          "path":  "data\\real-roadmap-generator-ollama-preview\\ollama-roadmap-preview.latest.json",
+                          "modified":  "2026-06-19T10:09:10",
+                          "bytes":  3415,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "local-ollama-roadmap-generator-script-contract.json",
+                          "path":  "data\\real-roadmap-generator-ollama-preview\\local-ollama-roadmap-generator-script-contract.json",
+                          "modified":  "2026-06-19T10:08:25",
+                          "bytes":  1205,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "local-ollama-roadmap-generator-contract.json",
+                          "path":  "data\\real-roadmap-generator-ollama-preview\\local-ollama-roadmap-generator-contract.json",
+                          "modified":  "2026-06-19T10:07:25",
+                          "bytes":  1961,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "real-intake-importer-close-manifest.json",
+                          "path":  "data\\real-intake-importer\\real-intake-importer-close-manifest.json",
+                          "modified":  "2026-06-19T10:06:47",
+                          "bytes":  772,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "real-controlled-dry-run-result.latest.json",
+                          "path":  "data\\real-intake-importer\\real-controlled-dry-run-result.latest.json",
+                          "modified":  "2026-06-19T10:06:03",
+                          "bytes":  1705,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "real-intake-roadmap-preview.latest.json",
+                          "path":  "data\\real-intake-importer\\real-intake-roadmap-preview.latest.json",
+                          "modified":  "2026-06-19T10:03:19",
+                          "bytes":  4696,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "real-human-intake.accepted.latest.json",
+                          "path":  "data\\real-intake-importer\\real-human-intake.accepted.latest.json",
+                          "modified":  "2026-06-19T10:03:19",
+                          "bytes":  2010,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "real-intake-importer-contract.json",
+                          "path":  "data\\real-intake-importer\\real-intake-importer-contract.json",
+                          "modified":  "2026-06-19T10:02:57",
+                          "bytes":  1167,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "real-human-intake-ui-contract.json",
+                          "path":  "data\\real-human-intake-ui\\real-human-intake-ui-contract.json",
+                          "modified":  "2026-06-19T09:47:46",
+                          "bytes":  1169,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "project-builder-to-worker-loop-close-manifest.json",
+                          "path":  "data\\project-builder-to-worker-loop\\project-builder-to-worker-loop-close-manifest.json",
+                          "modified":  "2026-06-19T09:45:59",
+                          "bytes":  790,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "human-project-intake-contract.json",
+                          "path":  "data\\project-builder-to-worker-loop\\human-project-intake-contract.json",
+                          "modified":  "2026-06-19T09:42:23",
+                          "bytes":  1190,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "project-builder-loop-contract.v1.json",
+                          "path":  "data\\project-builder-to-worker-loop-001\\contracts\\project-builder-loop-contract.v1.json",
+                          "modified":  "2026-06-19T09:39:46",
+                          "bytes":  1974,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "E06_FINAL_CLOSE_REAL_CARD_LIFECYCLE_PANEL_001.md",
+                          "path":  "data\\real-card-lifecycle-panel-001\\close\\E06_FINAL_CLOSE_REAL_CARD_LIFECYCLE_PANEL_001.md",
+                          "modified":  "2026-06-19T09:23:23",
+                          "bytes":  1908,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "NEXT_OBJECTIVE_ENGREMIAT_REAL_CARD_LIFECYCLE_PANEL_UX_001.md",
+                          "path":  "data\\real-card-lifecycle-panel-001\\close\\NEXT_OBJECTIVE_ENGREMIAT_REAL_CARD_LIFECYCLE_PANEL_UX_001.md",
+                          "modified":  "2026-06-19T09:23:23",
+                          "bytes":  686,
+                          "kind":  "DOC_FILE"
+                      },
+                      {
+                          "name":  "JOB-CARD-004-MOCK-20260619-091515.evidence.md",
+                          "path":  "data\\local-kanban-worker-loop-001\\evidence\\JOB-CARD-004-MOCK-20260619-091515.evidence.md",
+                          "modified":  "2026-06-19T09:15:16",
+                          "bytes":  1184,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "real-card-lifecycle-panel-contract.v1.json",
+                          "path":  "data\\real-card-lifecycle-panel-001\\contracts\\real-card-lifecycle-panel-contract.v1.json",
+                          "modified":  "2026-06-19T09:13:33",
+                          "bytes":  983,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "NEXT_OBJECTIVE_ENGREMIAT_REAL_CARD_LIFECYCLE_PANEL_001.md",
+                          "path":  "data\\obsidian-to-worker-real-exercise-001\\close\\NEXT_OBJECTIVE_ENGREMIAT_REAL_CARD_LIFECYCLE_PANEL_001.md",
+                          "modified":  "2026-06-19T09:12:26",
+                          "bytes":  553,
+                          "kind":  "DOC_FILE"
+                      },
+                      {
+                          "name":  "E06_FINAL_CLOSE_OBSIDIAN_TO_WORKER_REAL_EXERCISE_001.md",
+                          "path":  "data\\obsidian-to-worker-real-exercise-001\\close\\E06_FINAL_CLOSE_OBSIDIAN_TO_WORKER_REAL_EXERCISE_001.md",
+                          "modified":  "2026-06-19T09:12:26",
+                          "bytes":  1858,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "E05_CARD_004_NEXT_TO_DOING_APPLIED.md",
+                          "path":  "data\\obsidian-to-worker-real-exercise-001\\close\\E05_CARD_004_NEXT_TO_DOING_APPLIED.md",
+                          "modified":  "2026-06-19T09:11:16",
+                          "bytes":  995,
+                          "kind":  "DOC_FILE"
+                      },
+                      {
+                          "name":  "CARD-004-applied-next-to-doing-20260619-091116.json",
+                          "path":  "data\\obsidian-to-worker-real-exercise-001\\applied\\CARD-004-applied-next-to-doing-20260619-091116.json",
+                          "modified":  "2026-06-19T09:11:16",
+                          "bytes":  869,
+                          "kind":  "DOC_FILE"
+                      },
+                      {
+                          "name":  "CARD-004_APPLY_NEXT_TO_DOING_GATE.md",
+                          "path":  "data\\obsidian-to-worker-real-exercise-001\\gates\\CARD-004_APPLY_NEXT_TO_DOING_GATE.md",
+                          "modified":  "2026-06-19T09:09:40",
+                          "bytes":  1080,
+                          "kind":  "DOC_FILE"
+                      },
+                      {
+                          "name":  "JOB-CARD-004-MOCK-20260619-090807.evidence.md",
+                          "path":  "data\\local-kanban-worker-loop-001\\evidence\\JOB-CARD-004-MOCK-20260619-090807.evidence.md",
+                          "modified":  "2026-06-19T09:08:07",
+                          "bytes":  1184,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "CYCLE-CARD-001-20260619-083550.closed.json",
+                          "path":  "data\\local-kanban-execution-cycle-001\\cycles\\CYCLE-CARD-001-20260619-083550.closed.json",
+                          "modified":  "2026-06-19T08:54:24",
+                          "bytes":  776,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "E09R_FINAL_CLOSE_LOCAL_KANBAN_EXECUTION_CYCLE_001.md",
+                          "path":  "data\\local-kanban-execution-cycle-001\\close\\E09R_FINAL_CLOSE_LOCAL_KANBAN_EXECUTION_CYCLE_001.md",
+                          "modified":  "2026-06-19T08:54:24",
+                          "bytes":  2423,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "NEXT_OBJECTIVE_ENGREMIAT_LOCAL_KANBAN_CYCLE_QUEUE_001.md",
+                          "path":  "data\\local-kanban-execution-cycle-001\\close\\NEXT_OBJECTIVE_ENGREMIAT_LOCAL_KANBAN_CYCLE_QUEUE_001.md",
+                          "modified":  "2026-06-19T08:54:24",
+                          "bytes":  513,
+                          "kind":  "DOC_FILE"
+                      },
+                      {
+                          "name":  "E05_CYCLE_EVIDENCE_TRANSITION_ANALYSIS_DRY_RUN.md",
+                          "path":  "data\\local-kanban-execution-cycle-001\\analysis\\E05_CYCLE_EVIDENCE_TRANSITION_ANALYSIS_DRY_RUN.md",
+                          "modified":  "2026-06-19T08:41:56",
+                          "bytes":  1376,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "JOB-CARD-001-MOCK-20260619-084057.evidence.md",
+                          "path":  "data\\local-kanban-worker-loop-001\\evidence\\JOB-CARD-001-MOCK-20260619-084057.evidence.md",
+                          "modified":  "2026-06-19T08:40:57",
+                          "bytes":  1184,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "E02_NEXT_OPERABLE_CARD_DRY_RUN.md",
+                          "path":  "data\\local-kanban-execution-cycle-001\\selection\\E02_NEXT_OPERABLE_CARD_DRY_RUN.md",
+                          "modified":  "2026-06-19T08:35:07",
+                          "bytes":  1311,
+                          "kind":  "DOC_FILE"
+                      },
+                      {
+                          "name":  "next-operable-card.dry-run.json",
+                          "path":  "data\\local-kanban-execution-cycle-001\\selection\\next-operable-card.dry-run.json",
+                          "modified":  "2026-06-19T08:35:07",
+                          "bytes":  3567,
+                          "kind":  "DOC_FILE"
+                      },
+                      {
+                          "name":  "E01_CARD_EXECUTION_CYCLE_CONTRACT.md",
+                          "path":  "data\\local-kanban-execution-cycle-001\\contracts\\E01_CARD_EXECUTION_CYCLE_CONTRACT.md",
+                          "modified":  "2026-06-19T08:34:21",
+                          "bytes":  913,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "card-execution-cycle-contract.v1.json",
+                          "path":  "data\\local-kanban-execution-cycle-001\\contracts\\card-execution-cycle-contract.v1.json",
+                          "modified":  "2026-06-19T08:34:21",
+                          "bytes":  3220,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "NEXT_OBJECTIVE_ENGREMIAT_LOCAL_KANBAN_EXECUTION_CYCLE_001.md",
+                          "path":  "data\\local-kanban-state-update-001\\close\\NEXT_OBJECTIVE_ENGREMIAT_LOCAL_KANBAN_EXECUTION_CYCLE_001.md",
+                          "modified":  "2026-06-19T08:33:42",
+                          "bytes":  741,
+                          "kind":  "DOC_FILE"
+                      },
+                      {
+                          "name":  "E06_FINAL_CLOSE_LOCAL_KANBAN_STATE_UPDATE_001.md",
+                          "path":  "data\\local-kanban-state-update-001\\close\\E06_FINAL_CLOSE_LOCAL_KANBAN_STATE_UPDATE_001.md",
+                          "modified":  "2026-06-19T08:33:42",
+                          "bytes":  2598,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "E05R_VALIDATE_CARD_STATE_UPDATE_REBUILD_DASHBOARD_JSON.md",
+                          "path":  "data\\local-kanban-state-update-001\\close\\E05R_VALIDATE_CARD_STATE_UPDATE_REBUILD_DASHBOARD_JSON.md",
+                          "modified":  "2026-06-19T08:32:57",
+                          "bytes":  1003,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "E03_HUMAN_GATE_CARD_STATE_TRANSITIONS.md",
+                          "path":  "data\\local-kanban-state-update-001\\gates\\E03_HUMAN_GATE_CARD_STATE_TRANSITIONS.md",
+                          "modified":  "2026-06-19T08:27:50",
+                          "bytes":  1945,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "card-state-transition-contract.v1.json",
+                          "path":  "data\\local-kanban-state-update-001\\contracts\\card-state-transition-contract.v1.json",
+                          "modified":  "2026-06-19T08:25:48",
+                          "bytes":  5113,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "E01_CARD_STATE_TRANSITION_CONTRACT.md",
+                          "path":  "data\\local-kanban-state-update-001\\contracts\\E01_CARD_STATE_TRANSITION_CONTRACT.md",
+                          "modified":  "2026-06-19T08:25:48",
+                          "bytes":  861,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "NEXT_OBJECTIVE_ENGREMIAT_LOCAL_KANBAN_STATE_UPDATE_001.md",
+                          "path":  "data\\local-kanban-worker-loop-001\\close\\NEXT_OBJECTIVE_ENGREMIAT_LOCAL_KANBAN_STATE_UPDATE_001.md",
+                          "modified":  "2026-06-19T08:25:12",
+                          "bytes":  567,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "E08_FINAL_CLOSE_LOCAL_KANBAN_WORKER_LOOP_001.md",
+                          "path":  "data\\local-kanban-worker-loop-001\\close\\E08_FINAL_CLOSE_LOCAL_KANBAN_WORKER_LOOP_001.md",
+                          "modified":  "2026-06-19T08:25:12",
+                          "bytes":  2420,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "E07B_DASHBOARD_WORKER_EVIDENCE_VISUAL_GO.md",
+                          "path":  "data\\local-kanban-worker-loop-001\\close\\E07B_DASHBOARD_WORKER_EVIDENCE_VISUAL_GO.md",
+                          "modified":  "2026-06-19T08:24:31",
+                          "bytes":  1196,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "dashboard-worker-evidence.json",
+                          "path":  "data\\local-kanban-worker-loop-001\\dashboard-worker-evidence.json",
+                          "modified":  "2026-06-19T08:23:02",
+                          "bytes":  8875,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "E07_RESPONSE_PREVIEW_AND_EVIDENCE_LINKS_READY.md",
+                          "path":  "data\\local-kanban-worker-loop-001\\close\\E07_RESPONSE_PREVIEW_AND_EVIDENCE_LINKS_READY.md",
+                          "modified":  "2026-06-19T08:23:02",
+                          "bytes":  720,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "JOB-CARD-001-OLLAMA-20260619-082149.evidence.md",
+                          "path":  "data\\local-kanban-worker-loop-001\\evidence\\JOB-CARD-001-OLLAMA-20260619-082149.evidence.md",
+                          "modified":  "2026-06-19T08:22:08",
+                          "bytes":  3206,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "JOB-CARD-001-OLLAMA-20260619-081912.evidence.md",
+                          "path":  "data\\local-kanban-worker-loop-001\\evidence\\JOB-CARD-001-OLLAMA-20260619-081912.evidence.md",
+                          "modified":  "2026-06-19T08:19:28",
+                          "bytes":  2614,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "JOB-CARD-001-MOCK-20260619-081745.evidence.md",
+                          "path":  "data\\local-kanban-worker-loop-001\\evidence\\JOB-CARD-001-MOCK-20260619-081745.evidence.md",
+                          "modified":  "2026-06-19T08:17:45",
+                          "bytes":  1184,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "JOB-CARD-001-OLLAMA-20260619-081501.evidence.md",
+                          "path":  "data\\local-kanban-worker-loop-001\\evidence\\JOB-CARD-001-OLLAMA-20260619-081501.evidence.md",
+                          "modified":  "2026-06-19T08:15:20",
+                          "bytes":  3410,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "JOB-CARD-001-20260619-081103.evidence.md",
+                          "path":  "data\\local-kanban-worker-loop-001\\evidence\\JOB-CARD-001-20260619-081103.evidence.md",
+                          "modified":  "2026-06-19T08:11:03",
+                          "bytes":  1202,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "JOB-CARD-003-20260619-080934.evidence.md",
+                          "path":  "data\\local-kanban-worker-loop-001\\evidence\\JOB-CARD-003-20260619-080934.evidence.md",
+                          "modified":  "2026-06-19T08:09:34",
+                          "bytes":  1202,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "E19_CLOSE_SUMMARY.md",
+                          "path":  "data\\obsidian-system-bridge-001\\evaluation\\E19_CLOSE_SUMMARY.md",
+                          "modified":  "2026-06-19T08:03:49",
+                          "bytes":  242,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "NEXT_OBJECTIVE_ENGREMIAT_LOCAL_KANBAN_WORKER_LOOP_001.md",
+                          "path":  "data\\obsidian-system-bridge-001\\close\\NEXT_OBJECTIVE_ENGREMIAT_LOCAL_KANBAN_WORKER_LOOP_001.md",
+                          "modified":  "2026-06-19T08:03:49",
+                          "bytes":  1093,
+                          "kind":  "DOC_FILE"
+                      },
+                      {
+                          "name":  "CARD-003.worker-evidence.md",
+                          "path":  "data\\obsidian-system-bridge-001\\worker-evidence\\CARD-003.worker-evidence.md",
+                          "modified":  "2026-06-19T08:02:26",
+                          "bytes":  2542,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "obsidian-avoid-manual-kanban-matrix.json",
+                          "path":  "data\\obsidian-system-bridge-001\\evaluation\\obsidian-avoid-manual-kanban-matrix.json",
+                          "modified":  "2026-06-19T07:27:58",
+                          "bytes":  1854,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "E02_OBSIDIAN_CAN_AVOID_MANUAL_CLINE_KANBAN.md",
+                          "path":  "data\\obsidian-system-bridge-001\\evaluation\\E02_OBSIDIAN_CAN_AVOID_MANUAL_CLINE_KANBAN.md",
+                          "modified":  "2026-06-19T07:27:58",
+                          "bytes":  1994,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "obsidian-object-contract.v1.json",
+                          "path":  "data\\obsidian-system-bridge-001\\contracts\\obsidian-object-contract.v1.json",
+                          "modified":  "2026-06-19T07:26:37",
+                          "bytes":  2935,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "manual-response.md",
+                          "path":  "data\\tool-calibration-controller\\inbox\\manual-response.md",
+                          "modified":  "2026-06-18T20:50:16",
+                          "bytes":  429,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "tool-calibration-controller-contract.json",
+                          "path":  "data\\tool-calibration-controller\\tool-calibration-controller-contract.json",
+                          "modified":  "2026-06-18T20:39:30",
+                          "bytes":  1902,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "NEXT_OBJECTIVE.md",
+                          "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_CLINE_KANBAN_BACKLOG_REFRESH_001\\NEXT_OBJECTIVE.md",
+                          "modified":  "2026-06-18T09:12:10",
+                          "bytes":  143,
+                          "kind":  "DOC_FILE"
+                      },
+                      {
+                          "name":  "HUMAN_MACHINE_MANUAL.md",
+                          "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_CLINE_KANBAN_BACKLOG_REFRESH_001\\HUMAN_MACHINE_MANUAL.md",
+                          "modified":  "2026-06-18T09:12:10",
+                          "bytes":  227,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "cline-kanban-backlog-refresh-contract.json",
+                          "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_CLINE_KANBAN_BACKLOG_REFRESH_001\\contracts\\cline-kanban-backlog-refresh-contract.json",
+                          "modified":  "2026-06-18T09:12:08",
+                          "bytes":  617,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "NEXT_OBJECTIVE.md",
+                          "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_IMPROVEMENT_TO_EXECUTION_PIPELINE_001\\NEXT_OBJECTIVE.md",
+                          "modified":  "2026-06-18T08:58:51",
+                          "bytes":  177,
+                          "kind":  "DOC_FILE"
+                      },
+                      {
+                          "name":  "HUMAN_MACHINE_MANUAL.md",
+                          "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_IMPROVEMENT_TO_EXECUTION_PIPELINE_001\\HUMAN_MACHINE_MANUAL.md",
+                          "modified":  "2026-06-18T08:58:51",
+                          "bytes":  249,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "improvement-to-execution-contract.json",
+                          "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_IMPROVEMENT_TO_EXECUTION_PIPELINE_001\\contracts\\improvement-to-execution-contract.json",
+                          "modified":  "2026-06-18T08:58:46",
+                          "bytes":  513,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "HUMAN_MACHINE_MANUAL.md",
+                          "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_KANBAN_RECURRENT_OPERATION_001\\HUMAN_MACHINE_MANUAL.md",
+                          "modified":  "2026-06-18T08:50:16",
+                          "bytes":  259,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "NEXT_OBJECTIVE.md",
+                          "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_KANBAN_RECURRENT_OPERATION_001\\NEXT_OBJECTIVE.md",
+                          "modified":  "2026-06-18T08:50:16",
+                          "bytes":  165,
+                          "kind":  "DOC_FILE"
+                      },
+                      {
+                          "name":  "recurrent-operation-contract.json",
+                          "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_KANBAN_RECURRENT_OPERATION_001\\contracts\\recurrent-operation-contract.json",
+                          "modified":  "2026-06-18T08:50:12",
+                          "bytes":  857,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "recurrent-operation-state.schema.json",
+                          "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_KANBAN_RECURRENT_OPERATION_001\\schemas\\recurrent-operation-state.schema.json",
+                          "modified":  "2026-06-18T08:50:12",
+                          "bytes":  302,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "NEXT_OBJECTIVE.md",
+                          "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_KANBAN_OPERATION_LOOP_001\\NEXT_OBJECTIVE.md",
+                          "modified":  "2026-06-18T08:44:14",
+                          "bytes":  130,
+                          "kind":  "DOC_FILE"
+                      },
+                      {
+                          "name":  "HUMAN_MACHINE_MANUAL.md",
+                          "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_KANBAN_OPERATION_LOOP_001\\HUMAN_MACHINE_MANUAL.md",
+                          "modified":  "2026-06-18T08:44:14",
+                          "bytes":  226,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "kanban-operation-loop-contract.json",
+                          "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_KANBAN_OPERATION_LOOP_001\\contracts\\kanban-operation-loop-contract.json",
+                          "modified":  "2026-06-18T08:44:11",
+                          "bytes":  441,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "operation-loop-states.json",
+                          "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_KANBAN_OPERATION_LOOP_001\\schemas\\operation-loop-states.json",
+                          "modified":  "2026-06-18T08:44:11",
+                          "bytes":  411,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "NEXT_OBJECTIVE.md",
+                          "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_EXTERNAL_KANBAN_REAL_WRITE_GATED_001\\NEXT_OBJECTIVE.md",
+                          "modified":  "2026-06-18T08:37:57",
+                          "bytes":  119,
+                          "kind":  "DOC_FILE"
+                      },
+                      {
+                          "name":  "e02-define-memory-docs-screen-contract-20260622-102647.json",
+                          "path":  "reports\\operator-v1-memory-docs-screen\\e02-define-memory-docs-screen-contract-20260622-102647.json",
+                          "modified":  "2026-06-22T10:26:51",
+                          "bytes":  831,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "e01-audit-memory-docs-screen-state-readonly-20260622-102600.json",
+                          "path":  "reports\\operator-v1-memory-docs-screen\\e01-audit-memory-docs-screen-state-readonly-20260622-102600.json",
+                          "modified":  "2026-06-22T10:26:05",
+                          "bytes":  239612,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "e07-human-retest-and-close-objective-no-push-20260622-102447.json",
+                          "path":  "reports\\operator-v1-projects-screen\\e07-human-retest-and-close-objective-no-push-20260622-102447.json",
+                          "modified":  "2026-06-22T10:25:01",
+                          "bytes":  1176,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e02-define-projects-screen-contract-20260622-101806.json",
+                          "path":  "reports\\operator-v1-projects-screen\\e02-define-projects-screen-contract-20260622-101806.json",
+                          "modified":  "2026-06-22T10:18:11",
+                          "bytes":  804,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "e01-audit-projects-screen-state-readonly-20260622-101718.json",
+                          "path":  "reports\\operator-v1-projects-screen\\e01-audit-projects-screen-state-readonly-20260622-101718.json",
+                          "modified":  "2026-06-22T10:17:23",
+                          "bytes":  52076,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "e07r-repair-home-reserved-var-and-close-objective-no-push-20260622-101616.json",
+                          "path":  "reports\\operator-v1-safe-build\\e07r-repair-home-reserved-var-and-close-objective-no-push-20260622-101616.json",
+                          "modified":  "2026-06-22T10:16:29",
+                          "bytes":  1075,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e07r-repair-home-reserved-var-and-close-objective-no-push-20260622-101535.json",
+                          "path":  "reports\\operator-v1-safe-build\\e07r-repair-home-reserved-var-and-close-objective-no-push-20260622-101535.json",
+                          "modified":  "2026-06-22T10:15:48",
+                          "bytes":  1075,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e02-define-v1-safe-build-contract-20260622-100621.json",
+                          "path":  "reports\\operator-v1-safe-build\\e02-define-v1-safe-build-contract-20260622-100621.json",
+                          "modified":  "2026-06-22T10:06:25",
+                          "bytes":  774,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "e01s-commit-push-gate-and-v1-audit-evidence-clean-tree-20260622-100532.json",
+                          "path":  "reports\\operator-v1-safe-build\\e01s-commit-push-gate-and-v1-audit-evidence-clean-tree-20260622-100532.json",
+                          "modified":  "2026-06-22T10:05:35",
+                          "bytes":  1132,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e01-audit-v1-current-state-readonly-20260622-100419.json",
+                          "path":  "reports\\operator-v1-safe-build\\e01-audit-v1-current-state-readonly-20260622-100419.json",
+                          "modified":  "2026-06-22T10:04:24",
+                          "bytes":  11365,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "e02r-commit-push-gate-evidence-and-execute-authorized-push-20260622-100325.json",
+                          "path":  "reports\\operator-v2-push-gate\\e02r-commit-push-gate-evidence-and-execute-authorized-push-20260622-100325.json",
+                          "modified":  "2026-06-22T10:03:41",
+                          "bytes":  1061,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e07-refresh-final-state-and-close-objective-no-push-20260622-100107.json",
+                          "path":  "reports\\operator-v2-close-and-sync\\e07-refresh-final-state-and-close-objective-no-push-20260622-100107.json",
+                          "modified":  "2026-06-22T10:01:23",
+                          "bytes":  1194,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "e05-apply-close-sync-launcher-integration-with-backup-and-smoke-20260622-095842.json",
+                          "path":  "reports\\operator-v2-close-and-sync\\e05-apply-close-sync-launcher-integration-with-backup-and-smoke-20260622-095842.json",
+                          "modified":  "2026-06-22T09:58:59",
+                          "bytes":  1205,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e04-gate-launcher-integration-close-sync-screen-20260622-095750.json",
+                          "path":  "reports\\operator-v2-close-and-sync\\e04-gate-launcher-integration-close-sync-screen-20260622-095750.json",
+                          "modified":  "2026-06-22T09:57:59",
+                          "bytes":  1791,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e03-create-close-and-sync-screen-readonly-20260622-095704.json",
+                          "path":  "reports\\operator-v2-close-and-sync\\e03-create-close-and-sync-screen-readonly-20260622-095704.json",
+                          "modified":  "2026-06-22T09:57:15",
+                          "bytes":  7567,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e02-create-close-and-sync-contract-20260622-095619.json",
+                          "path":  "reports\\operator-v2-close-and-sync\\e02-create-close-and-sync-contract-20260622-095619.json",
+                          "modified":  "2026-06-22T09:56:23",
+                          "bytes":  741,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "e01-audit-close-and-sync-state-readonly-20260622-095529.json",
+                          "path":  "reports\\operator-v2-close-and-sync\\e01-audit-close-and-sync-state-readonly-20260622-095529.json",
+                          "modified":  "2026-06-22T09:55:39",
+                          "bytes":  8823,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "e07-refresh-final-state-and-close-objective-20260622-095355.json",
+                          "path":  "reports\\operator-v2-control-panel\\e07-refresh-final-state-and-close-objective-20260622-095355.json",
+                          "modified":  "2026-06-22T09:54:03",
+                          "bytes":  903,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "e02-create-control-panel-contract-20260622-094756.json",
+                          "path":  "reports\\operator-v2-control-panel\\e02-create-control-panel-contract-20260622-094756.json",
+                          "modified":  "2026-06-22T09:47:59",
+                          "bytes":  610,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "e01-audit-control-panel-inputs-readonly-20260622-094717.json",
+                          "path":  "reports\\operator-v2-control-panel\\e01-audit-control-panel-inputs-readonly-20260622-094717.json",
+                          "modified":  "2026-06-22T09:47:20",
+                          "bytes":  18995,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e07-refresh-final-state-and-close-objective-20260622-094550.json",
+                          "path":  "reports\\operator-v2-next-action-engine\\e07-refresh-final-state-and-close-objective-20260622-094550.json",
+                          "modified":  "2026-06-22T09:45:54",
+                          "bytes":  897,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "e05-apply-next-action-screen-launcher-integration-with-backup-and-smoke-20260622-094346.json",
+                          "path":  "reports\\operator-v2-next-action-engine\\e05-apply-next-action-screen-launcher-integration-with-backup-and-smoke-20260622-094346.json",
+                          "modified":  "2026-06-22T09:43:52",
+                          "bytes":  1014,
+                          "kind":  "DOC_FILE"
+                      },
+                      {
+                          "name":  "e04-gate-launcher-integration-next-action-screen-20260622-094201.json",
+                          "path":  "reports\\operator-v2-next-action-engine\\e04-gate-launcher-integration-next-action-screen-20260622-094201.json",
+                          "modified":  "2026-06-22T09:42:05",
+                          "bytes":  1650,
+                          "kind":  "DOC_FILE"
+                      },
+                      {
+                          "name":  "e03-create-next-action-screen-readonly-20260622-094116.json",
+                          "path":  "reports\\operator-v2-next-action-engine\\e03-create-next-action-screen-readonly-20260622-094116.json",
+                          "modified":  "2026-06-22T09:41:20",
+                          "bytes":  3439,
+                          "kind":  "DOC_FILE"
+                      },
+                      {
+                          "name":  "e02-create-next-action-contract-20260622-094016.json",
+                          "path":  "reports\\operator-v2-next-action-engine\\e02-create-next-action-contract-20260622-094016.json",
+                          "modified":  "2026-06-22T09:40:19",
+                          "bytes":  631,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "e01-audit-next-action-state-readonly-20260622-093935.json",
+                          "path":  "reports\\operator-v2-next-action-engine\\e01-audit-next-action-state-readonly-20260622-093935.json",
+                          "modified":  "2026-06-22T09:39:38",
+                          "bytes":  2832,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "e10-refresh-final-state-and-close-objective-20260622-093752.json",
+                          "path":  "reports\\operator-v2-self-state-sync\\e10-refresh-final-state-and-close-objective-20260622-093752.json",
+                          "modified":  "2026-06-22T09:37:56",
+                          "bytes":  851,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "e09-fix-v2-state-screen-human-pause-and-commit-20260622-093632.json",
+                          "path":  "reports\\operator-v2-self-state-sync\\e09-fix-v2-state-screen-human-pause-and-commit-20260622-093632.json",
+                          "modified":  "2026-06-22T09:36:35",
+                          "bytes":  1065,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "e08s-commit-self-state-sync-evidence-no-push-20260622-093406.json",
+                          "path":  "reports\\operator-v2-self-state-sync\\e08s-commit-self-state-sync-evidence-no-push-20260622-093406.json",
+                          "modified":  "2026-06-22T09:34:07",
+                          "bytes":  1911,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "e08r-validate-launcher-option-6-v-and-close-scoped-fixed-20260622-093258.json",
+                          "path":  "reports\\operator-v2-self-state-sync\\e08r-validate-launcher-option-6-v-and-close-scoped-fixed-20260622-093258.json",
+                          "modified":  "2026-06-22T09:33:01",
+                          "bytes":  1726,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e07u-apply-exact-substring-launcher-v2-state-patch-20260622-093114.json",
+                          "path":  "reports\\operator-v2-self-state-sync\\e07u-apply-exact-substring-launcher-v2-state-patch-20260622-093114.json",
+                          "modified":  "2026-06-22T09:31:20",
+                          "bytes":  695,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "e06-prepare-v2-state-screen-launcher-integration-gate-20260622-092551.json",
+                          "path":  "reports\\operator-v2-self-state-sync\\e06-prepare-v2-state-screen-launcher-integration-gate-20260622-092551.json",
+                          "modified":  "2026-06-22T09:25:57",
+                          "bytes":  12139,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "e05-create-v2-state-status-screen-readonly-20260622-092505.json",
+                          "path":  "reports\\operator-v2-self-state-sync\\e05-create-v2-state-status-screen-readonly-20260622-092505.json",
+                          "modified":  "2026-06-22T09:25:08",
+                          "bytes":  2219,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "e04-create-v2-state-update-helper-20260622-092426.json",
+                          "path":  "reports\\operator-v2-self-state-sync\\e04-create-v2-state-update-helper-20260622-092426.json",
+                          "modified":  "2026-06-22T09:24:28",
+                          "bytes":  806,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "e03-create-v2-state-registry-files-safe-init-20260622-092342.json",
+                          "path":  "reports\\operator-v2-self-state-sync\\e03-create-v2-state-registry-files-safe-init-20260622-092342.json",
+                          "modified":  "2026-06-22T09:23:43",
+                          "bytes":  765,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "e02-create-v2-state-registry-contract-20260622-092300.json",
+                          "path":  "reports\\operator-v2-self-state-sync\\e02-create-v2-state-registry-contract-20260622-092300.json",
+                          "modified":  "2026-06-22T09:23:01",
+                          "bytes":  584,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "E01R_REPAIR_GIT_AUDIT_HELPER_READONLY_20260622-092222.md",
+                          "path":  "reports\\operator-v2-self-state-sync\\E01R_REPAIR_GIT_AUDIT_HELPER_READONLY_20260622-092222.md",
+                          "modified":  "2026-06-22T09:22:23",
+                          "bytes":  365,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e01r-repair-git-audit-helper-readonly-20260622-092222.json",
+                          "path":  "reports\\operator-v2-self-state-sync\\e01r-repair-git-audit-helper-readonly-20260622-092222.json",
+                          "modified":  "2026-06-22T09:22:23",
+                          "bytes":  28275,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "E01_AUDIT_V2_SELF_STATE_CURRENT_STATE_READONLY_20260622-092139.md",
+                          "path":  "reports\\operator-v2-self-state-sync\\E01_AUDIT_V2_SELF_STATE_CURRENT_STATE_READONLY_20260622-092139.md",
+                          "modified":  "2026-06-22T09:21:44",
+                          "bytes":  5342,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "e01-audit-v2-self-state-current-state-readonly-20260622-092139.json",
+                          "path":  "reports\\operator-v2-self-state-sync\\e01-audit-v2-self-state-current-state-readonly-20260622-092139.json",
+                          "modified":  "2026-06-22T09:21:44",
+                          "bytes":  105141,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "e33-rebuild-global-scope-after-operator-v2-global-cleanup-group-closed-no-apply-20260622-081143.json",
+                          "path":  "reports\\operator-v2-global-scope-cleanup\\e33-rebuild-global-scope-after-operator-v2-global-cleanup-group-closed-no-apply-20260622-081143.json",
+                          "modified":  "2026-06-22T08:11:43",
+                          "bytes":  16638,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e30-execute-authorized-operator-v2-global-cleanup-final-docs-commit-no-push-20260622-080935.json",
+                          "path":  "reports\\operator-v2-global-scope-cleanup\\e30-execute-authorized-operator-v2-global-cleanup-final-docs-commit-no-push-20260622-080935.json",
+                          "modified":  "2026-06-22T08:09:35",
+                          "bytes":  2570,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "e28-execute-authorized-operator-v2-global-cleanup-late-docs-commit-no-push-20260622-080752.json",
+                          "path":  "reports\\operator-v2-global-scope-cleanup\\e28-execute-authorized-operator-v2-global-cleanup-late-docs-commit-no-push-20260622-080752.json",
+                          "modified":  "2026-06-22T08:07:52",
+                          "bytes":  2214,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "e27-prepare-remaining-docs-in-global-cleanup-group-no-execute-20260622-080652.json",
+                          "path":  "reports\\operator-v2-global-scope-cleanup\\e27-prepare-remaining-docs-in-global-cleanup-group-no-execute-20260622-080652.json",
+                          "modified":  "2026-06-22T08:06:52",
+                          "bytes":  1923,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "e25-execute-authorized-operator-v2-global-cleanup-untracked-docs-commit-no-push-20260622-080531.json",
+                          "path":  "reports\\operator-v2-global-scope-cleanup\\e25-execute-authorized-operator-v2-global-cleanup-untracked-docs-commit-no-push-20260622-080531.json",
+                          "modified":  "2026-06-22T08:05:31",
+                          "bytes":  2236,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "e22-execute-authorized-operator-v2-global-cleanup-remaining-docs-commit-no-push-20260622-080251.json",
+                          "path":  "reports\\operator-v2-global-scope-cleanup\\e22-execute-authorized-operator-v2-global-cleanup-remaining-docs-commit-no-push-20260622-080251.json",
+                          "modified":  "2026-06-22T08:02:51",
+                          "bytes":  2236,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "e21-prepare-operator-v2-global-cleanup-remaining-docs-commit-packet-no-execute-20260622-080139.json",
+                          "path":  "reports\\operator-v2-global-scope-cleanup\\e21-prepare-operator-v2-global-cleanup-remaining-docs-commit-packet-no-execute-20260622-080139.json",
+                          "modified":  "2026-06-22T08:01:39",
+                          "bytes":  1977,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "e19-execute-authorized-operator-v2-global-cleanup-safe-docs-commit-no-push-20260622-080033.json",
+                          "path":  "reports\\operator-v2-global-scope-cleanup\\e19-execute-authorized-operator-v2-global-cleanup-safe-docs-commit-no-push-20260622-080033.json",
+                          "modified":  "2026-06-22T08:00:33",
+                          "bytes":  4577,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "e18-r1-split-operator-v2-global-cleanup-docs-blocked-no-apply-20260622-075924.json",
+                          "path":  "reports\\operator-v2-global-scope-cleanup\\e18-r1-split-operator-v2-global-cleanup-docs-blocked-no-apply-20260622-075924.json",
+                          "modified":  "2026-06-22T07:59:24",
+                          "bytes":  5270,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "e18-prepare-operator-v2-global-cleanup-docs-commit-packet-no-execute-20260622-075844.json",
+                          "path":  "reports\\operator-v2-global-scope-cleanup\\e18-prepare-operator-v2-global-cleanup-docs-commit-packet-no-execute-20260622-075844.json",
+                          "modified":  "2026-06-22T07:58:44",
+                          "bytes":  3346,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "e17-global-scope-after-reports-launcher-closed-no-apply-20260622-075811.json",
+                          "path":  "reports\\operator-v2-global-scope-cleanup\\e17-global-scope-after-reports-launcher-closed-no-apply-20260622-075811.json",
+                          "modified":  "2026-06-22T07:58:11",
+                          "bytes":  33343,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e13-prepare-reports-launcher-remaining-docs-commit-packet-no-execute-20260622-075442.json",
+                          "path":  "reports\\operator-v2-global-scope-cleanup\\e13-prepare-reports-launcher-remaining-docs-commit-packet-no-execute-20260622-075442.json",
+                          "modified":  "2026-06-22T07:54:42",
+                          "bytes":  1438,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "e04-close-next-scope-group-review-and-pause-20260622-073624.json",
+                          "path":  "reports\\operator-v2-review-next-scope-group\\e04-close-next-scope-group-review-and-pause-20260622-073624.json",
+                          "modified":  "2026-06-22T07:36:24",
+                          "bytes":  840,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e03-decide-next-group-action-no-apply-20260622-073552.json",
+                          "path":  "reports\\operator-v2-review-next-scope-group\\e03-decide-next-group-action-no-apply-20260622-073552.json",
+                          "modified":  "2026-06-22T07:35:52",
+                          "bytes":  830,
+                          "kind":  "DOC_FILE"
+                      },
+                      {
+                          "name":  "e02-r1-fast-next-group-detail-no-content-read-20260622-073244.json",
+                          "path":  "reports\\operator-v2-review-next-scope-group\\e02-r1-fast-next-group-detail-no-content-read-20260622-073244.json",
+                          "modified":  "2026-06-22T07:32:44",
+                          "bytes":  1238,
+                          "kind":  "DOC_FILE"
+                      },
+                      {
+                          "name":  "e01-select-inspect-next-scope-group-no-apply-20260622-073122.json",
+                          "path":  "reports\\operator-v2-review-next-scope-group\\e01-select-inspect-next-scope-group-no-apply-20260622-073122.json",
+                          "modified":  "2026-06-22T07:31:22",
+                          "bytes":  1520,
+                          "kind":  "DOC_FILE"
+                      },
+                      {
+                          "name":  "e03-close-untracked-directory-contents-review-and-pause-20260622-072742.json",
+                          "path":  "reports\\operator-v2-review-untracked-directory-contents\\e03-close-untracked-directory-contents-review-and-pause-20260622-072742.json",
+                          "modified":  "2026-06-22T07:27:42",
+                          "bytes":  938,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e03-close-first-group-review-and-pause-20260622-072400.json",
+                          "path":  "reports\\operator-v2-review-first-scope-group\\e03-close-first-group-review-and-pause-20260622-072400.json",
+                          "modified":  "2026-06-22T07:24:00",
+                          "bytes":  1009,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e04-close-code-untracked-review-no-apply-20260622-072045.json",
+                          "path":  "reports\\operator-v2-scope-code-untracked-review\\e04-close-code-untracked-review-no-apply-20260622-072045.json",
+                          "modified":  "2026-06-22T07:20:45",
+                          "bytes":  971,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e05-close-scope-hygiene-review-no-delete-20260622-071629.json",
+                          "path":  "reports\\operator-v2-scope-hygiene\\e05-close-scope-hygiene-review-no-delete-20260622-071629.json",
+                          "modified":  "2026-06-22T07:16:29",
+                          "bytes":  868,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e03-close-next-direction-review-and-pause-20260622-071231.json",
+                          "path":  "reports\\operator-v2-next-direction-review\\e03-close-next-direction-review-and-pause-20260622-071231.json",
+                          "modified":  "2026-06-22T07:12:31",
+                          "bytes":  823,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e02-select-next-direction-safe-objective-20260622-071133.json",
+                          "path":  "reports\\operator-v2-next-direction-review\\e02-select-next-direction-safe-objective-20260622-071133.json",
+                          "modified":  "2026-06-22T07:11:33",
+                          "bytes":  1419,
+                          "kind":  "DOC_FILE"
+                      },
+                      {
+                          "name":  "e01-r1-next-direction-review-no-apply-20260622-071056.json",
+                          "path":  "reports\\operator-v2-next-direction-review\\e01-r1-next-direction-review-no-apply-20260622-071056.json",
+                          "modified":  "2026-06-22T07:10:56",
+                          "bytes":  2779,
+                          "kind":  "DOC_FILE"
+                      },
+                      {
+                          "name":  "e03-close-git-paused-outside-scope-20260622-070506.json",
+                          "path":  "reports\\operator-v2-stage-close-git\\e03-close-git-paused-outside-scope-20260622-070506.json",
+                          "modified":  "2026-06-22T07:05:06",
+                          "bytes":  1128,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e02-prepare-scoped-git-close-dry-run-20260622-070410.json",
+                          "path":  "reports\\operator-v2-stage-close-git\\e02-prepare-scoped-git-close-dry-run-20260622-070410.json",
+                          "modified":  "2026-06-22T07:04:10",
+                          "bytes":  6026,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e01-audit-stage-close-git-scope-no-commit-20260622-070331.json",
+                          "path":  "reports\\operator-v2-stage-close-git\\e01-audit-stage-close-git-scope-no-commit-20260622-070331.json",
+                          "modified":  "2026-06-22T07:03:31",
+                          "bytes":  43794,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e03-close-maintenance-actions-lab-014-20260622-070121.json",
+                          "path":  "reports\\operator-v2-maintenance-actions-lab\\e03-close-maintenance-actions-lab-014-20260622-070121.json",
+                          "modified":  "2026-06-22T07:01:21",
+                          "bytes":  2391,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e04-close-actions-lab-status-013-20260622-065543.json",
+                          "path":  "reports\\operator-v2-actions-lab-status\\e04-close-actions-lab-status-013-20260622-065543.json",
+                          "modified":  "2026-06-22T06:55:43",
+                          "bytes":  2022,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "e01-create-actions-lab-status-contract-router-20260622-065220.json",
+                          "path":  "reports\\operator-v2-actions-lab-status\\e01-create-actions-lab-status-contract-router-20260622-065220.json",
+                          "modified":  "2026-06-22T06:52:20",
+                          "bytes":  3287,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "e03-close-plan-sync-012-synced-20260622-065117.json",
+                          "path":  "reports\\operator-v2-plan-sync\\e03-close-plan-sync-012-synced-20260622-065117.json",
+                          "modified":  "2026-06-22T06:51:17",
+                          "bytes":  1489,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e03-close-plan-sync-012-synced-20260622-065009.json",
+                          "path":  "reports\\operator-v2-plan-sync\\e03-close-plan-sync-012-synced-20260622-065009.json",
+                          "modified":  "2026-06-22T06:50:09",
+                          "bytes":  1489,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e01-audit-plan-sync-sources-no-apply-20260622-064707.json",
+                          "path":  "reports\\operator-v2-plan-sync\\e01-audit-plan-sync-sources-no-apply-20260622-064707.json",
+                          "modified":  "2026-06-22T06:47:07",
+                          "bytes":  1058,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e08-close-home-render-binding-011-preview-ready-20260622-064209.json",
+                          "path":  "reports\\operator-v2-home-render-binding\\e08-close-home-render-binding-011-preview-ready-20260622-064209.json",
+                          "modified":  "2026-06-22T06:42:09",
+                          "bytes":  1683,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e10-close-live-context-screen-010-lab-ready-20260622-063322.json",
+                          "path":  "reports\\operator-v2-live-context\\e10-close-live-context-screen-010-lab-ready-20260622-063322.json",
+                          "modified":  "2026-06-22T06:33:22",
+                          "bytes":  2723,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e04-close-command-feedback-inside-wrapper-009-lab-ready-20260622-060611.json",
+                          "path":  "reports\\operator-v2-command-feedback-inside-wrapper\\e04-close-command-feedback-inside-wrapper-009-lab-ready-20260622-060611.json",
+                          "modified":  "2026-06-22T06:06:11",
+                          "bytes":  2029,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e05-close-root-wrapper-008-lab-ready-not-primary-20260622-060229.json",
+                          "path":  "reports\\operator-v2-root-wrapper\\e05-close-root-wrapper-008-lab-ready-not-primary-20260622-060229.json",
+                          "modified":  "2026-06-22T06:02:29",
+                          "bytes":  1576,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e08-close-root-loop-router-007-prepared-not-applied-20260622-055626.json",
+                          "path":  "reports\\operator-v2-root-loop-router\\e08-close-root-loop-router-007-prepared-not-applied-20260622-055626.json",
+                          "modified":  "2026-06-22T05:56:26",
+                          "bytes":  1396,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e02-root-loop-router-contract-20260621-220601.json",
+                          "path":  "reports\\operator-v2-root-loop-router\\e02-root-loop-router-contract-20260621-220601.json",
+                          "modified":  "2026-06-21T22:06:01",
+                          "bytes":  1086,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "e13-close-command-feedback-006-prepared-not-bound-20260621-220459.json",
+                          "path":  "reports\\operator-v2-command-feedback\\e13-close-command-feedback-006-prepared-not-bound-20260621-220459.json",
+                          "modified":  "2026-06-21T22:04:59",
+                          "bytes":  1400,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e11-manual-retest-command-feedback-after-repair-20260621-220301.json",
+                          "path":  "reports\\operator-v2-command-feedback\\e11-manual-retest-command-feedback-after-repair-20260621-220301.json",
+                          "modified":  "2026-06-21T22:03:01",
+                          "bytes":  953,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "e08-manual-command-feedback-test-20260621-220029.json",
+                          "path":  "reports\\operator-v2-command-feedback\\e08-manual-command-feedback-test-20260621-220029.json",
+                          "modified":  "2026-06-21T22:00:29",
+                          "bytes":  673,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "e08-manual-command-feedback-test-20260621-215713.json",
+                          "path":  "reports\\operator-v2-command-feedback\\e08-manual-command-feedback-test-20260621-215713.json",
+                          "modified":  "2026-06-21T21:57:13",
+                          "bytes":  673,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "e02-command-feedback-contract-20260621-215357.json",
+                          "path":  "reports\\operator-v2-command-feedback\\e02-command-feedback-contract-20260621-215357.json",
+                          "modified":  "2026-06-21T21:53:57",
+                          "bytes":  919,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "e07-close-screen-ux-005-20260621-215302.json",
+                          "path":  "reports\\operator-v2-screen-ux\\e07-close-screen-ux-005-20260621-215302.json",
+                          "modified":  "2026-06-21T21:53:02",
+                          "bytes":  1339,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e05-r3-active-screen-ux-audit-decision-20260621-215148.json",
+                          "path":  "reports\\operator-v2-screen-ux\\e05-r3-active-screen-ux-audit-decision-20260621-215148.json",
+                          "modified":  "2026-06-21T21:51:48",
+                          "bytes":  1119,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e05-r3-active-screen-ux-audit-data-20260621-215147.json",
+                          "path":  "reports\\operator-v2-screen-ux\\e05-r3-active-screen-ux-audit-data-20260621-215147.json",
+                          "modified":  "2026-06-21T21:51:48",
+                          "bytes":  1122,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e04-screen-ux-active-screen-auditor-20260621-214933.json",
+                          "path":  "reports\\operator-v2-screen-ux\\e04-screen-ux-active-screen-auditor-20260621-214933.json",
+                          "modified":  "2026-06-21T21:49:33",
+                          "bytes":  1027,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e02-screen-ux-style-contract-20260621-214817.json",
+                          "path":  "reports\\operator-v2-screen-ux\\e02-screen-ux-style-contract-20260621-214817.json",
+                          "modified":  "2026-06-21T21:48:17",
+                          "bytes":  693,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "e01-screen-ux-surface-audit-20260621-214748.json",
+                          "path":  "reports\\operator-v2-screen-ux\\e01-screen-ux-surface-audit-20260621-214748.json",
+                          "modified":  "2026-06-21T21:47:48",
+                          "bytes":  4145,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e13-close-navigation-004-20260621-214721.json",
+                          "path":  "reports\\operator-v2-navigation\\e13-close-navigation-004-20260621-214721.json",
+                          "modified":  "2026-06-21T21:47:21",
+                          "bytes":  1289,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e12-manual-operator-v2-legend-check-20260621-214616.json",
+                          "path":  "reports\\operator-v2-navigation\\e12-manual-operator-v2-legend-check-20260621-214616.json",
+                          "modified":  "2026-06-21T21:46:16",
+                          "bytes":  734,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "e09-manual-ux-evidence-v2-discovery-20260621-214326.json",
+                          "path":  "reports\\operator-v2-navigation\\e09-manual-ux-evidence-v2-discovery-20260621-214326.json",
+                          "modified":  "2026-06-21T21:43:26",
+                          "bytes":  5315,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "e08-manual-launcher-ux-check-20260621-214144.json",
+                          "path":  "reports\\operator-v2-navigation\\e08-manual-launcher-ux-check-20260621-214144.json",
+                          "modified":  "2026-06-21T21:41:44",
+                          "bytes":  793,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "e08-manual-launcher-ux-check-20260621-214119.json",
+                          "path":  "reports\\operator-v2-navigation\\e08-manual-launcher-ux-check-20260621-214119.json",
+                          "modified":  "2026-06-21T21:41:19",
+                          "bytes":  793,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "e02-navigation-commands-contract-20260621-213725.json",
+                          "path":  "reports\\operator-v2-navigation\\e02-navigation-commands-contract-20260621-213725.json",
+                          "modified":  "2026-06-21T21:37:25",
+                          "bytes":  1027,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "e13-close-actions-003-20260621-213512.json",
+                          "path":  "reports\\operator-v2-actions\\e13-close-actions-003-20260621-213512.json",
+                          "modified":  "2026-06-21T21:35:12",
+                          "bytes":  1044,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e12-manual-launcher-ux-check-20260621-213406.json",
+                          "path":  "reports\\operator-v2-actions\\e12-manual-launcher-ux-check-20260621-213406.json",
+                          "modified":  "2026-06-21T21:34:06",
+                          "bytes":  765,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "e12-manual-launcher-ux-check-20260621-213209.json",
+                          "path":  "reports\\operator-v2-actions\\e12-manual-launcher-ux-check-20260621-213209.json",
+                          "modified":  "2026-06-21T21:32:09",
+                          "bytes":  765,
+                          "kind":  "MANUAL"
+                      },
+                      {
+                          "name":  "e03-validate-screen-actions-contract-r1-20260621-212349.json",
+                          "path":  "reports\\operator-v2-actions\\e03-validate-screen-actions-contract-r1-20260621-212349.json",
+                          "modified":  "2026-06-21T21:23:49",
+                          "bytes":  818,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "e02-apply-screen-actions-contract-20260621-212250.json",
+                          "path":  "reports\\operator-v2-actions\\e02-apply-screen-actions-contract-20260621-212250.json",
+                          "modified":  "2026-06-21T21:22:50",
+                          "bytes":  869,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "guarded-target.latest.json",
+                          "path":  "reports\\context-guardian-enforcement\\guarded-target.latest.json",
+                          "modified":  "2026-06-21T21:22:49",
+                          "bytes":  977,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "active-context.latest.json",
+                          "path":  "reports\\context-guardian\\active-context.latest.json",
+                          "modified":  "2026-06-21T21:22:49",
+                          "bytes":  3290,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "operator-v2-healthcheck.latest.json",
+                          "path":  "reports\\operator-v2-healthcheck\\operator-v2-healthcheck.latest.json",
+                          "modified":  "2026-06-21T21:22:45",
+                          "bytes":  3137,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "e02-close-healthcheck-20260621-212205.json",
+                          "path":  "reports\\operator-v2-healthcheck\\e02-close-healthcheck-20260621-212205.json",
+                          "modified":  "2026-06-21T21:22:05",
+                          "bytes":  691,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e01b-action-contract-readonly-bool-fix-20260621-211723.json",
+                          "path":  "reports\\operator-v2-actions\\e01b-action-contract-readonly-bool-fix-20260621-211723.json",
+                          "modified":  "2026-06-21T21:17:23",
+                          "bytes":  5265,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "e05-close-enforcement-20260621-211547.json",
+                          "path":  "reports\\context-guardian-enforcement\\e05-close-enforcement-20260621-211547.json",
+                          "modified":  "2026-06-21T21:15:47",
+                          "bytes":  1342,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e09-close-stage-20260621-211145.json",
+                          "path":  "reports\\context-guardian\\e09-close-stage-20260621-211145.json",
+                          "modified":  "2026-06-21T21:11:45",
+                          "bytes":  740,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e08-close-ux-registry-simplification-20260621-211114.json",
+                          "path":  "reports\\context-guardian\\e08-close-ux-registry-simplification-20260621-211114.json",
+                          "modified":  "2026-06-21T21:11:14",
+                          "bytes":  660,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "e05k-real-renderer-and-registry-readonly-20260621-180646.txt",
+                          "path":  "reports\\operator-v2-screen-architecture\\e05k-real-renderer-and-registry-readonly-20260621-180646.txt",
+                          "modified":  "2026-06-21T18:07:13",
+                          "bytes":  44849,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "latest-observer.json",
+                          "path":  "reports\\observer\\latest-observer.json",
+                          "modified":  "2026-06-21T16:42:04",
+                          "bytes":  13211,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "latest-observer.md",
+                          "path":  "reports\\observer\\latest-observer.md",
+                          "modified":  "2026-06-21T16:42:04",
+                          "bytes":  2300,
+                          "kind":  "STATE"
+                      },
+                      {
+                          "name":  "e03-normalize-memoria-20260621-164049.json",
+                          "path":  "reports\\child-screen-normalization\\e03-normalize-memoria-20260621-164049.json",
+                          "modified":  "2026-06-21T16:40:52",
+                          "bytes":  709,
+                          "kind":  "DOC_FILE"
+                      },
+                      {
+                          "name":  "e04-close-diagnostic-recovery-20260621-163554.json",
+                          "path":  "reports\\observer\\e04-close-diagnostic-recovery-20260621-163554.json",
+                          "modified":  "2026-06-21T16:35:54",
+                          "bytes":  1027,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e01a-directory-index-20260621-150632.md",
+                          "path":  "reports\\diagnostics\\e01a-directory-index-20260621-150632.md",
+                          "modified":  "2026-06-21T15:06:39",
+                          "bytes":  13307,
+                          "kind":  "INDEX"
+                      },
+                      {
+                          "name":  "e01a-directory-index-20260621-150632.json",
+                          "path":  "reports\\diagnostics\\e01a-directory-index-20260621-150632.json",
+                          "modified":  "2026-06-21T15:06:38",
+                          "bytes":  243898,
+                          "kind":  "INDEX"
+                      },
+                      {
+                          "name":  "e37-navigation-contract-test-matrix-20260621-121916.md",
+                          "path":  "reports\\observer\\e37-navigation-contract-test-matrix-20260621-121916.md",
+                          "modified":  "2026-06-21T12:19:16",
+                          "bytes":  2374,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "e37-navigation-contract-test-matrix-20260621-121916.json",
+                          "path":  "reports\\observer\\e37-navigation-contract-test-matrix-20260621-121916.json",
+                          "modified":  "2026-06-21T12:19:16",
+                          "bytes":  9173,
+                          "kind":  "CONTRACT"
+                      },
+                      {
+                          "name":  "e30-master-entry-deep-route-audit-20260621-120957.md",
+                          "path":  "reports\\screen-normalization\\e30-master-entry-deep-route-audit-20260621-120957.md",
+                          "modified":  "2026-06-21T12:09:57",
+                          "bytes":  4624,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e30-master-entry-deep-route-audit-20260621-120957.json",
+                          "path":  "reports\\screen-normalization\\e30-master-entry-deep-route-audit-20260621-120957.json",
+                          "modified":  "2026-06-21T12:09:57",
+                          "bytes":  55465,
+                          "kind":  "EVIDENCE"
+                      },
+                      {
+                          "name":  "e29-deepest-internal-navigation-audit-20260621-120801.md",
+                          "path":  "reports\\screen-normalization\\e29-deepest-internal-navigation-audit-20260621-120801.md",
+                          "modified":  "2026-06-21T12:08:01",
+                          "bytes":  16734,
+                          "kind":  "EVIDENCE"
+                      }
+                  ],
+    "reports_recent":  [
+                           {
+                               "path":  "reports\\operator-v1-memory-docs-screen\\e02-define-memory-docs-screen-contract-20260622-102647.json",
+                               "modified":  "2026-06-22T10:26:51",
+                               "bytes":  831
+                           },
+                           {
+                               "path":  "reports\\operator-v1-memory-docs-screen\\e01-audit-memory-docs-screen-state-readonly-20260622-102600.json",
+                               "modified":  "2026-06-22T10:26:05",
+                               "bytes":  239612
+                           },
+                           {
+                               "path":  "reports\\operator-v1-projects-screen\\e07-human-retest-and-close-objective-no-push-20260622-102447.json",
+                               "modified":  "2026-06-22T10:25:01",
+                               "bytes":  1176
+                           },
+                           {
+                               "path":  "reports\\operator-v1-projects-screen\\e06-validate-launcher-option-2-and-commit-scoped-20260622-102231.json",
+                               "modified":  "2026-06-22T10:22:40",
+                               "bytes":  1923
+                           },
+                           {
+                               "path":  "reports\\operator-v1-projects-screen\\e05-apply-projects-launcher-integration-with-backup-and-smoke-20260622-102124.json",
+                               "modified":  "2026-06-22T10:21:40",
+                               "bytes":  1257
+                           },
+                           {
+                               "path":  "reports\\operator-v1-projects-screen\\e05-apply-projects-launcher-integration-with-backup-and-smoke-20260622-102055.json",
+                               "modified":  "2026-06-22T10:21:11",
+                               "bytes":  1374
+                           },
+                           {
+                               "path":  "reports\\operator-v1-projects-screen\\e04-gate-launcher-integration-projects-20260622-101957.json",
+                               "modified":  "2026-06-22T10:20:06",
+                               "bytes":  1786
+                           },
+                           {
+                               "path":  "reports\\operator-v1-projects-screen\\e03-create-projects-screen-readonly-20260622-101903.json",
+                               "modified":  "2026-06-22T10:19:13",
+                               "bytes":  955
+                           },
+                           {
+                               "path":  "reports\\operator-v1-projects-screen\\e02-define-projects-screen-contract-20260622-101806.json",
+                               "modified":  "2026-06-22T10:18:11",
+                               "bytes":  804
+                           },
+                           {
+                               "path":  "reports\\operator-v1-projects-screen\\e01-audit-projects-screen-state-readonly-20260622-101718.json",
+                               "modified":  "2026-06-22T10:17:23",
+                               "bytes":  52076
+                           }
+                       ],
+    "v2_governance":  [
+                          "6 Estado vivo V2",
+                          "7 Siguiente accion V2",
+                          "8 Panel control V2",
+                          "9 Close \u0026 Sync V2"
+                      ],
+    "blocked_actions":  [
+                            "worker_real",
+                            "api_externa",
+                            "navegador",
+                            "clipboard",
+                            "delete_files",
+                            "push_auto",
+                            "fetch_auto",
+                            "merge_auto",
+                            "editar_memoria_sin_gate",
+                            "reestructurar_documentos_sin_gate"
+                        ],
+    "next":  "E04_GATE_LAUNCHER_INTEGRATION_MEMORY_DOCS"
+}

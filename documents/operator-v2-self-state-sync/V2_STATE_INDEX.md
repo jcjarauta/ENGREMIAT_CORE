@@ -4,27 +4,27 @@ Estado vivo del Operador V2.
 
 ## Ultima actualizacion
 - Package: 
-ENGREMIAT_OPERATOR_V1_PROJECTS_SCREEN_001
+ENGREMIAT_OPERATOR_V1_MEMORY_DOCS_SCREEN_001
 - Stage: 
-E07_HUMAN_RETEST_AND_CLOSE_OBJECTIVE_NO_PUSH
+E06_VALIDATE_LAUNCHER_OPTION_3_AND_COMMIT_SCOPED
 - Step: 
-E07
+E06
 - Status: 
 PASS
 - Readiness: 
-100
+85
 - Head: 
-4ae94cc1
+fd6e11f4
 - Rev sync: 
-0	5
+0	6
 - Tree clean: 
-True
+False
 
 ## Resumen humano
-Objetivo Projects Screen V1 cerrado: opcion 2 abre pantalla Proyectos V1 con proyectos detectados, archivos relacionados, Git, reports, gobierno V2 y acciones bloqueadas. No se ejecuto push.
+Opcion 3 Memoria y documentacion validada apuntando a pantalla V1; V1 Home, V1 Projects y V2 gobierno conservados; commit scoped sin push.
 
 ## Report
-reports\operator-v1-projects-screen\e07-human-retest-and-close-objective-no-push-20260622-102447.json
+reports\operator-v1-memory-docs-screen\e06-validate-launcher-option-3-and-commit-scoped-20260622-103106.json
 
 ## NEXT
-VALORAR_SIGUIENTE_MEJORA_V1_MEMORIA_DOCUMENTACION_O_PROJECTS_DETAIL
+PROBAR_DESDE_LAUNCHER_OPCION_3

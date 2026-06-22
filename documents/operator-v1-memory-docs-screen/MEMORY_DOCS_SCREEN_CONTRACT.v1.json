@@ -1,0 +1,87 @@
+﻿{
+    "contract_id":  "ENGREMIAT_OPERATOR_V1_MEMORY_DOCS_SCREEN_CONTRACT_V1",
+    "package":  "ENGREMIAT_OPERATOR_V1_MEMORY_DOCS_SCREEN_001",
+    "stage":  "E02_DEFINE_MEMORY_DOCS_SCREEN_CONTRACT",
+    "created_at":  "2026-06-22T10:26:51",
+    "purpose":  "Crear pantalla V1 Memoria y documentacion para operar indices, contratos, evidencias, reports recientes y siguientes acciones humanas bajo gobierno V2.",
+    "strategy":  "Primero pantalla read-only versionada; despues gate de integracion de opcion 3; no modificar memoria ni documentacion sin gates posteriores.",
+    "scope_first_iteration":  {
+                                  "name":  "MEMORY_DOCS_SCREEN_READONLY_V1",
+                                  "description":  "Mostrar inventario operativo de memoria/documentacion: indices, contratos, evidencias, reports, estado Git, acciones bloqueadas y siguiente paso.",
+                                  "risk":  "LOW",
+                                  "reason":  "La opcion 3 existe y debe pasar de placeholder/ruta basica a pantalla operativa real."
+                              },
+    "sections":  [
+                     "Resumen documental",
+                     "Directorios documentales",
+                     "Archivos clave",
+                     "Reports recientes",
+                     "Estado Git",
+                     "Siguiente accion humana",
+                     "Acciones bloqueadas",
+                     "Gobierno V2 disponible"
+                 ],
+    "classification_rules":  {
+                                 "index_hint":  "Archivos o carpetas con INDEX, index, indice.",
+                                 "contract_hint":  "Archivos o carpetas con CONTRACT, contract, contrato.",
+                                 "evidence_hint":  "Archivos o carpetas con evidence, evidencia, report, close, audit.",
+                                 "state_hint":  "Archivos o carpetas con state, registry, latest, status.",
+                                 "manual_hint":  "Archivos o carpetas con manual, docs, documentacion, guide."
+                             },
+    "allowed_actions":  [
+                            "readonly_audit",
+                            "create_contract",
+                            "create_screen_readonly",
+                            "prepare_launcher_gate",
+                            "apply_launcher_gate_with_auth",
+                            "validate_and_commit_scoped",
+                            "human_retest"
+                        ],
+    "blocked_actions":  [
+                            "push_auto",
+                            "fetch_auto",
+                            "merge_auto",
+                            "delete_files",
+                            "worker_real",
+                            "api_externa",
+                            "navegador",
+                            "clipboard",
+                            "editar_memoria_sin_gate",
+                            "reestructurar_documentos_sin_gate"
+                        ],
+    "planned_stages":  [
+                           {
+                               "id":  "E03",
+                               "name":  "CREATE_MEMORY_DOCS_SCREEN_READONLY",
+                               "description":  "Crear pantalla V1 Memoria y documentacion read-only y testeable."
+                           },
+                           {
+                               "id":  "E04",
+                               "name":  "GATE_LAUNCHER_INTEGRATION_MEMORY_DOCS",
+                               "description":  "Preparar integracion gated de opcion 3."
+                           },
+                           {
+                               "id":  "E05",
+                               "name":  "APPLY_MEMORY_DOCS_INTEGRATION_WITH_AUTH",
+                               "description":  "Aplicar solo con autorizacion humana."
+                           },
+                           {
+                               "id":  "E06",
+                               "name":  "VALIDATE_AND_COMMIT_SCOPED",
+                               "description":  "Validar launcher/pantalla y commit scoped."
+                           },
+                           {
+                               "id":  "E07",
+                               "name":  "HUMAN_RETEST_AND_CLOSE",
+                               "description":  "Prueba humana y cierre sin push."
+                           }
+                       ],
+    "current_git":  {
+                        "branch":  "main",
+                        "head":  "fd6e11f4",
+                        "rev_sync":  "0\t6",
+                        "tree_clean":  false,
+                        "status_short":  "M data/operator-v2-self-state-sync/v2-state.events.jsonl\n M data/operator-v2-self-state-sync/v2-state.latest.json\n M data/operator-v2-self-state-sync/v2-state.registry.json\n M documents/operator-v2-self-state-sync/V2_STATE_INDEX.md\n?? documents/operator-v1-memory-docs-screen/\n?? reports/operator-v1-memory-docs-screen/"
+                    },
+    "next":  "E03_CREATE_MEMORY_DOCS_SCREEN_READONLY"
+}
