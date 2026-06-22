@@ -1,0 +1,20 @@
+﻿{
+    "package_id":  "ENGREMIAT_MANUAL_SCREEN_MAINTENANCE_CARDS_001",
+    "stage":  "E05F_ROLLBACK_BROKEN_INICIO_COMMANDS_AFTER_M_GUARD",
+    "status":  "PASS",
+    "decision":  "GO_ROLLBACK_E05D_DONE_INICIO_PARSE_OK",
+    "inicio_write":  true,
+    "git_write":  false,
+    "inicio":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO-NORMALIZED.ps1",
+    "restored_from_backup":  "C:\\ENGREMIAT_CORE\\backups\\manual-screen-maintenance-cards\\ENGREMIAT-INICIO-NORMALIZED.before-e05d-m-guard-after-readhost-20260620-194145.ps1",
+    "backup_parse":  true,
+    "inicio_parse_after":  true,
+    "guard_removed":  true,
+    "hint_still_present":  true,
+    "before_rollback_sha256":  "959D65427E0913291BC842184DBE00DBF18142A5874954281C611F2DC3C45EE8",
+    "backup_sha256":  "7DD2DF350B29E5353F4F4C620C24B21A41F3E1EB6804134A03A0133E3524BED6",
+    "after_rollback_sha256":  "7DD2DF350B29E5353F4F4C620C24B21A41F3E1EB6804134A03A0133E3524BED6",
+    "summary":  "C:\\ENGREMIAT_CORE\\documents\\manual-screen-maintenance-cards\\close\\E05F_ROLLBACK_BROKEN_INICIO_COMMANDS_AFTER_M_GUARD.md",
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\manual-screen-maintenance-cards\\e05f-rollback-broken-inicio-commands-after-m-guard-20260620-194319.json",
+    "next":  "E05G_DEEP_AUDIT_INICIO_MAIN_ROUTER_READHOST_NO_APPLY"
+}

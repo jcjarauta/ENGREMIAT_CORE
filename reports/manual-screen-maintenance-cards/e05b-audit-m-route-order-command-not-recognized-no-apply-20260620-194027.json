@@ -1,0 +1,42 @@
+﻿{
+    "package_id":  "ENGREMIAT_MANUAL_SCREEN_MAINTENANCE_CARDS_001",
+    "stage":  "E05B_AUDIT_M_ROUTE_ORDER_COMMAND_NOT_RECOGNIZED_NO_APPLY",
+    "status":  "PASS",
+    "decision":  "WARN_M_ROUTE_PRESENT_ORDER_NEEDS_MANUAL_CONTEXT_REPAIR",
+    "apply_now":  false,
+    "git_write":  false,
+    "inicio_write":  false,
+    "inicio":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO-NORMALIZED.ps1",
+    "inicio_parse":  true,
+    "function_present":  true,
+    "hint_present":  true,
+    "route_present":  true,
+    "read_hosts":  [
+                       29,
+                       31,
+                       32,
+                       33,
+                       34,
+                       35,
+                       38,
+                       39,
+                       40,
+                       41,
+                       43
+                   ],
+    "m_routes":  [
+                     1,
+                     30,
+                     36,
+                     37,
+                     42
+                 ],
+    "unknown_handlers":  [
+                             32,
+                             35
+                         ],
+    "route_after_unknown":  false,
+    "audit":  "C:\\ENGREMIAT_CORE\\documents\\manual-screen-maintenance-cards\\planned\\m-route-order-command-not-recognized-audit.latest.md",
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\manual-screen-maintenance-cards\\e05b-audit-m-route-order-command-not-recognized-no-apply-20260620-194027.json",
+    "next":  "E05C_PREPARE_M_ROUTE_BEFORE_UNKNOWN_HANDLER_NO_APPLY"
+}

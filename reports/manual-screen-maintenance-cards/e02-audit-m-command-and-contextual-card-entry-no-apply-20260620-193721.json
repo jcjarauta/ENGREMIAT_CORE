@@ -1,0 +1,127 @@
+﻿{
+    "package_id":  "ENGREMIAT_MANUAL_SCREEN_MAINTENANCE_CARDS_001",
+    "stage":  "E02_AUDIT_M_COMMAND_AND_CONTEXTUAL_CARD_ENTRY_NO_APPLY",
+    "status":  "PASS",
+    "decision":  "NO_GO_M_COMMAND_ROUTE_NOT_CONFIRMED",
+    "apply_now":  false,
+    "git_write":  false,
+    "m_works":  false,
+    "contextual_cards":  false,
+    "candidate_host":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO-NORMALIZED.ps1",
+    "rows":  [
+                 {
+                     "key":  "master",
+                     "path":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+                     "exists":  true,
+                     "parse_ok":  true,
+                     "has_m_hint":  false,
+                     "has_m_route":  false,
+                     "has_cards":  false,
+                     "has_maintenance":  false,
+                     "readhost_lines":  [
+                                            9
+                                        ],
+                     "m_lines":  [
+
+                                 ],
+                     "card_lines":  [
+
+                                    ],
+                     "maintenance_lines":  [
+
+                                           ],
+                     "sha256":  "20F64CA6E9986C2655C077D4E4AE4F1D110CAD2307ABE31E6099693B56FB3714"
+                 },
+                 {
+                     "key":  "inicio",
+                     "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO-NORMALIZED.ps1",
+                     "exists":  true,
+                     "parse_ok":  true,
+                     "has_m_hint":  true,
+                     "has_m_route":  false,
+                     "has_cards":  true,
+                     "has_maintenance":  true,
+                     "readhost_lines":  [
+                                            7,
+                                            9,
+                                            10,
+                                            11,
+                                            12,
+                                            13
+                                        ],
+                     "m_lines":  [
+                                     8
+                                 ],
+                     "card_lines":  [
+                                        8,
+                                        9,
+                                        12
+                                    ],
+                     "maintenance_lines":  [
+                                               8
+                                           ],
+                     "sha256":  "F1F6EDD55AC784CAC5227919A54EDC143F84419FC274CF12179FB34C54953A99"
+                 },
+                 {
+                     "key":  "operator",
+                     "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1",
+                     "exists":  true,
+                     "parse_ok":  true,
+                     "has_m_hint":  true,
+                     "has_m_route":  false,
+                     "has_cards":  true,
+                     "has_maintenance":  true,
+                     "readhost_lines":  [
+                                            175,
+                                            184,
+                                            218,
+                                            220,
+                                            224,
+                                            228,
+                                            230
+                                        ],
+                     "m_lines":  [
+                                     178,
+                                     201,
+                                     204,
+                                     212,
+                                     215,
+                                     219
+                                 ],
+                     "card_lines":  [
+                                        197,
+                                        199,
+                                        201,
+                                        204,
+                                        245
+                                    ],
+                     "maintenance_lines":  [
+                                               176,
+                                               178,
+                                               179,
+                                               182,
+                                               196,
+                                               197,
+                                               199,
+                                               200,
+                                               201,
+                                               203,
+                                               204,
+                                               205,
+                                               206,
+                                               208,
+                                               209,
+                                               212,
+                                               215,
+                                               219,
+                                               245,
+                                               246,
+                                               249
+                                           ],
+                     "sha256":  "7C09A41A74F467FC4AD4392F5ED858FDA377D43CE07905891ADB9104F6772B9F"
+                 }
+             ],
+    "audit":  "C:\\ENGREMIAT_CORE\\documents\\manual-screen-maintenance-cards\\planned\\m-command-contextual-card-entry-audit.latest.md",
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\manual-screen-maintenance-cards\\e02-audit-m-command-and-contextual-card-entry-no-apply-20260620-193721.json",
+    "next":  "E03_PREPARE_CONTEXTUAL_MAINTENANCE_CARD_COMMAND_NO_APPLY"
+}
