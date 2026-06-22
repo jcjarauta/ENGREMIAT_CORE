@@ -1,0 +1,66 @@
+﻿{
+    "schema_version":  "1.0",
+    "package_id":  "ENGREMIAT_WORKER_SYNC_001",
+    "stage":  "E80_DEFINE_REAL_WORKER_BRIDGE_MINIMAL_CONTRACT",
+    "status":  "PASS",
+    "created_at":  "2026-06-20T12:40:14",
+    "purpose":  "Definir contrato minimo para conectar un worker real al sistema de señales locales ya validado",
+    "previous_stage":  "E79B_REPAIR_MISSING_EVENT_SEQUENCE_CLOSE_AND_CLOSE_STAGE",
+    "runtime_policy":  "LOCAL_FIRST_CONTROLLED_BRIDGE",
+    "external_execution_policy":  "NO_REAL_WORKER_EXECUTION_IN_THIS_STAGE",
+    "allowed_worker_types":  [
+                                 "local_script_worker",
+                                 "ollama_worker_future",
+                                 "cline_worker_future",
+                                 "manual_worker_future"
+                             ],
+    "forbidden_in_this_stage":  [
+                                    "no browser automation",
+                                    "no Cline execution",
+                                    "no Ollama prompt execution",
+                                    "no network",
+                                    "no git",
+                                    "no remote worker",
+                                    "no credentials",
+                                    "no file deletion outside worker-sync reports"
+                                ],
+    "bridge_inputs":  [
+                          "worker_id",
+                          "project_id",
+                          "task_id",
+                          "project_path",
+                          "task_payload_path",
+                          "allowed_state_transition",
+                          "human_authorization_status"
+                      ],
+    "bridge_outputs":  [
+                           "worker-heartbeat-latest.json",
+                           "worker-events.jsonl",
+                           "project-signal-latest.json",
+                           "worker-run-report.json"
+                       ],
+    "allowed_states":  [
+                           "QUEUED",
+                           "RUNNING",
+                           "WAITING_HUMAN",
+                           "BLOCKED",
+                           "DONE",
+                           "ERROR"
+                       ],
+    "state_transition_rules":  [
+                                   "QUEUED can move to RUNNING",
+                                   "RUNNING can move to WAITING_HUMAN BLOCKED DONE ERROR",
+                                   "WAITING_HUMAN can move to RUNNING DONE BLOCKED ERROR",
+                                   "BLOCKED can move to RUNNING ERROR",
+                                   "DONE is terminal for that run",
+                                   "ERROR is terminal until human repair"
+                               ],
+    "resource_saving":  [
+                            "worker-signals-config.json controls whether Projects Center consumes worker signals",
+                            "toggle OFF does not delete events",
+                            "toggle OFF avoids live signal interpretation in views",
+                            "toggle ON restores worker signal interpretation"
+                        ],
+    "minimal_next_step":  "E81_CREATE_REAL_WORKER_BRIDGE_DRY_RUN_SCAFFOLD",
+    "next_step_scope":  "Create bridge scaffold only; no real worker execution"
+}
