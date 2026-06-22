@@ -6,25 +6,25 @@ Estado vivo del Operador V2.
 - Package: 
 ENGREMIAT_OPERATOR_V1_ACTIONABLE_NAVIGATION_001
 - Stage: 
-E11_HUMAN_RETEST_CLOSE_MEMORY_DOCS_ACTIONABLE_READONLY_NO_PUSH
+E14_VALIDATE_ACTIONABLE_DATA_INTAKE_AND_COMMIT_SCOPED
 - Step: 
-E11
+E14
 - Status: 
 PASS
 - Readiness: 
-100
+90
 - Head: 
-e66ac984
+3aaa024a
 - Rev sync: 
-0	4
+0	5
 - Tree clean: 
-True
+False
 
 ## Resumen humano
-Memory Docs V1 accionable read-only probado por humano: numero abre Detail Viewer readonly, Enter vuelve, acciones externas bloqueadas. Sin push.
+Data Intake V1 accionable read-only validado: numero abre detalle seguro, Enter refresca, b/q vuelve, imports/staging/Sheets/API bloqueados por gate; commit scoped sin push.
 
 ## Report
-reports\operator-v1-actionable-navigation\e11-human-retest-close-memory-docs-actionable-readonly-no-push-20260622-111924.json
+reports\operator-v1-actionable-navigation\e14-validate-actionable-data-intake-and-commit-scoped-20260622-112321.json
 
 ## NEXT
-VALORAR_EXTENDER_ACTIONABLE_NAVIGATION_A_DATA_INTAKE_O_PUSH
+PROBAR_DATA_INTAKE_ACTIONABLE_READONLY_DESDE_LAUNCHER

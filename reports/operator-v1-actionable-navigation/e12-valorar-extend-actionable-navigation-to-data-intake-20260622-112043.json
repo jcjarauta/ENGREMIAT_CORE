@@ -1,0 +1,50 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V1_ACTIONABLE_NAVIGATION_001",
+    "stage":  "E12_VALORAR_EXTEND_ACTIONABLE_NAVIGATION_TO_DATA_INTAKE",
+    "status":  "PASS",
+    "created_at":  "2026-06-22T11:21:03",
+    "launcher_parse":  true,
+    "projects_actionable":  true,
+    "memory_docs_actionable":  true,
+    "data_intake_screen_available":  true,
+    "data_intake_current_screen":  "OPERATOR_V1_DATA_INTAKE",
+    "head":  "3aaa024a",
+    "rev_sync":  "0\t5",
+    "rev_sync_left":  0,
+    "rev_sync_right":  5,
+    "remote_synced":  false,
+    "tree_clean":  true,
+    "recommended_next_step":  "E13_INTEGRATE_DATA_INTAKE_ACTIONS_READONLY",
+    "reason":  "Data Intake es el siguiente bloque natural: lista recursos reales de entrada, staging e imports, pero puede mantenerse 100% readonly con numero para detalle y gates visibles para cualquier importacion, transformacion o Sheets.",
+    "alternatives":  [
+                         {
+                             "id":  "A",
+                             "objective":  "E13_INTEGRATE_DATA_INTAKE_ACTIONS_READONLY",
+                             "score":  94,
+                             "reason":  "Completa tercera pantalla V1; permite inspeccionar fuentes/staging/imports con detalle readonly y gates visibles para imports/Sheets."
+                         },
+                         {
+                             "id":  "B",
+                             "objective":  "PUSH_CURRENT_PROJECTS_MEMORY_ONLY",
+                             "score":  78,
+                             "reason":  "Sincroniza lo ya probado, pero deja incompleto el patron accionable V1 antes de Data Intake."
+                         },
+                         {
+                             "id":  "C",
+                             "objective":  "EXTEND_TO_HEALTH_LAUNCHERS_READONLY",
+                             "score":  72,
+                             "reason":  "Util, pero conviene hacerlo despues de Data Intake porque Health contiene smokes/repairs y requiere bloqueos mas delicados."
+                         },
+                         {
+                             "id":  "D",
+                             "objective":  "PAUSE_AND_REVIEW_UX",
+                             "score":  65,
+                             "reason":  "Puede mejorar UX, pero todavia falta probar el patron en mas pantallas."
+                         }
+                     ],
+    "push_executed":  false,
+    "fetch_executed":  false,
+    "merge_executed":  false,
+    "delete_files":  false,
+    "next":  "E13_INTEGRATE_DATA_INTAKE_ACTIONS_READONLY"
+}

@@ -1,7 +1,7 @@
 ﻿{
     "schema":  "ENGREMIAT_OPERATOR_V2_STATE_REGISTRY_V1",
     "created_at":  "2026-06-22T09:23:43",
-    "updated_at":  "2026-06-22T11:19:38",
+    "updated_at":  "2026-06-22T11:23:29",
     "source_contract":  "documents/operator-v2-self-state-sync/V2_STATE_REGISTRY_CONTRACT.v1.json",
     "objectives":  [
                        {
@@ -69,27 +69,27 @@
                   }
               ],
     "git_state":  {
-                      "head":  "e66ac984",
-                      "rev_sync":  "0\t4",
-                      "tree_clean":  true,
-                      "status_short":  "",
+                      "head":  "3aaa024a",
+                      "rev_sync":  "0\t5",
+                      "tree_clean":  false,
+                      "status_short":  "M data/operator-v2-self-state-sync/v2-state.events.jsonl\n M data/operator-v2-self-state-sync/v2-state.latest.json\n M data/operator-v2-self-state-sync/v2-state.registry.json\n M documents/operator-v2-self-state-sync/V2_STATE_INDEX.md\n M tools/operator-v1/operator-v1-data-intake-screen.ps1\n?? data/operator-v1-actionable-navigation/data-intake-actionable-readonly.latest.json\n?? documents/operator-v1-actionable-navigation/DATA_INTAKE_ACTIONABLE_READONLY.v1.md\n?? documents/operator-v1-actionable-navigation/E12_VALORAR_EXTEND_ACTIONABLE_NAVIGATION_TO_DATA_INTAKE_20260622-112043.md\n?? reports/operator-v1-actionable-navigation/e12-valorar-extend-actionable-navigation-to-data-intake-20260622-112043.json\n?? reports/operator-v1-actionable-navigation/e13-integrate-data-intake-actions-readonly-20260622-112217.json",
                       "push_executed":  false
                   },
-    "next_action":  "VALORAR_EXTENDER_ACTIONABLE_NAVIGATION_A_DATA_INTAKE_O_PUSH",
-    "events_count":  80,
+    "next_action":  "PROBAR_DATA_INTAKE_ACTIONABLE_READONLY_DESDE_LAUNCHER",
+    "events_count":  83,
     "last_event":  {
-                       "ts":  "2026-06-22T11:19:38",
+                       "ts":  "2026-06-22T11:23:29",
                        "event":  "V2_STATE_UPDATE",
                        "package":  "ENGREMIAT_OPERATOR_V1_ACTIONABLE_NAVIGATION_001",
-                       "stage":  "E11_HUMAN_RETEST_CLOSE_MEMORY_DOCS_ACTIONABLE_READONLY_NO_PUSH",
-                       "step":  "E11",
+                       "stage":  "E14_VALIDATE_ACTIONABLE_DATA_INTAKE_AND_COMMIT_SCOPED",
+                       "step":  "E14",
                        "status":  "PASS",
-                       "report":  "reports\\operator-v1-actionable-navigation\\e11-human-retest-close-memory-docs-actionable-readonly-no-push-20260622-111924.json",
-                       "next":  "VALORAR_EXTENDER_ACTIONABLE_NAVIGATION_A_DATA_INTAKE_O_PUSH",
-                       "readiness":  100,
-                       "summary":  "Memory Docs V1 accionable read-only probado por humano: numero abre Detail Viewer readonly, Enter vuelve, acciones externas bloqueadas. Sin push.",
-                       "head":  "e66ac984",
-                       "rev_sync":  "0\t4",
-                       "tree_clean":  true
+                       "report":  "reports\\operator-v1-actionable-navigation\\e14-validate-actionable-data-intake-and-commit-scoped-20260622-112321.json",
+                       "next":  "PROBAR_DATA_INTAKE_ACTIONABLE_READONLY_DESDE_LAUNCHER",
+                       "readiness":  90,
+                       "summary":  "Data Intake V1 accionable read-only validado: numero abre detalle seguro, Enter refresca, b/q vuelve, imports/staging/Sheets/API bloqueados por gate; commit scoped sin push.",
+                       "head":  "3aaa024a",
+                       "rev_sync":  "0\t5",
+                       "tree_clean":  false
                    }
 }
