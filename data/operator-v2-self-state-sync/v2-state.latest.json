@@ -1,27 +1,27 @@
 ﻿{
     "schema":  "ENGREMIAT_OPERATOR_V2_STATE_LATEST_V1",
-    "updated_at":  "2026-06-22T09:51:43",
+    "updated_at":  "2026-06-22T09:53:56",
     "active_objective":  {
                              "id":  "ENGREMIAT_OPERATOR_V2_CONTROL_PANEL_001",
                              "title":  "Operador V2 self-state sync",
                              "status":  "ACTIVE",
                              "purpose":  "Mantener V2 actualizado desde cada bloque cerrado.",
-                             "active_stage":  "E06_VALIDATE_LAUNCHER_OPTION_8_P_AND_COMMIT_SCOPED",
-                             "readiness":  85,
-                             "next_action":  "PROBAR_DESDE_LAUNCHER_OPCION_8_O_P"
+                             "active_stage":  "E07_REFRESH_FINAL_STATE_AND_CLOSE_OBJECTIVE",
+                             "readiness":  100,
+                             "next_action":  "VALORAR_SIGUIENTE_OBJETIVO_OPERADOR_V2"
                          },
-    "last_stage":  "E06_VALIDATE_LAUNCHER_OPTION_8_P_AND_COMMIT_SCOPED",
-    "last_step":  "E06",
+    "last_stage":  "E07_REFRESH_FINAL_STATE_AND_CLOSE_OBJECTIVE",
+    "last_step":  "E07",
     "last_status":  "PASS",
-    "last_report":  "reports\\operator-v2-control-panel\\e06-validate-launcher-option-8-p-and-commit-scoped-20260622-095137.json",
-    "readiness":  85,
+    "last_report":  "reports\\operator-v2-control-panel\\e07-refresh-final-state-and-close-objective-20260622-095355.json",
+    "readiness":  100,
     "git_state":  {
-                      "head":  "ab396764",
-                      "rev_sync":  "0\t39",
-                      "tree_clean":  false,
-                      "status_short":  "M ENGREMIAT.ps1\n M data/operator-v2-self-state-sync/v2-state.events.jsonl\n M data/operator-v2-self-state-sync/v2-state.latest.json\n M data/operator-v2-self-state-sync/v2-state.registry.json\n M documents/operator-v2-self-state-sync/V2_STATE_INDEX.md\n?? data/operator-v2-control-panel/\n?? documents/operator-v2-control-panel/\n?? reports/operator-v2-control-panel/\n?? tools/operator-v2/operator-v2-control-panel.ps1",
+                      "head":  "f197d26c",
+                      "rev_sync":  "0\t40",
+                      "tree_clean":  true,
+                      "status_short":  "",
                       "push_executed":  false
                   },
-    "next_action":  "PROBAR_DESDE_LAUNCHER_OPCION_8_O_P",
-    "human_summary":  "Opcion 8/p Panel control V2 validada en launcher maestro; cierre scoped sin push."
+    "next_action":  "VALORAR_SIGUIENTE_OBJETIVO_OPERADOR_V2",
+    "human_summary":  "Objetivo CONTROL_PANEL_001 cerrado: Operador V2 ya tiene panel central con estado vivo, siguiente accion, Git, reports recientes, eventos, riesgo e integracion en launcher validada por humano."
 }
