@@ -1,0 +1,143 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_CLOSE_AND_SYNC_001",
+    "stage":  "E01_AUDIT_CLOSE_AND_SYNC_STATE_READONLY",
+    "status":  "PASS",
+    "created_at":  "2026-06-22T09:55:39",
+    "git":  {
+                "branch":  "main",
+                "head":  "edf62a14",
+                "rev_sync":  "0\t41",
+                "behind":  0,
+                "ahead":  41,
+                "tree_clean":  true,
+                "status_short":  "",
+                "last_commits":  "edf62a14 close operator v2 control panel objective\nf197d26c integrate operator v2 control panel\nab396764 close operator v2 next action engine objective\n21af9a62 integrate operator v2 next action screen\nb1a1425b close operator v2 self state sync objective\n97887d8f fix operator v2 state screen pause\n3a9c16db close operator v2 self state sync evidence\n34c4484d integrate operator v2 live state screen\n5542a460 close functional validation reports scoped\n4eabed02 fix projects manager active/historic screen stable\n96f941d2 final manual groups safe parts scoped\na461c479 final verified code batch scoped"
+            },
+    "panel":  {
+                  "screen":  "OPERATOR_V2_CONTROL_PANEL",
+                  "state_objective":  "ENGREMIAT_OPERATOR_V2_CONTROL_PANEL_001",
+                  "state_stage":  "E07_REFRESH_FINAL_STATE_AND_CLOSE_OBJECTIVE",
+                  "readiness":  100,
+                  "reports_recent_count":  12,
+                  "events_count":  22,
+                  "panel_risk":  "MEDIUM"
+              },
+    "reports_recent":  [
+                           {
+                               "path":  "reports\\operator-v2-control-panel\\e07-refresh-final-state-and-close-objective-20260622-095355.json",
+                               "modified":  "2026-06-22T09:54:03",
+                               "bytes":  903
+                           },
+                           {
+                               "path":  "reports\\operator-v2-control-panel\\e06-validate-launcher-option-8-p-and-commit-scoped-20260622-095137.json",
+                               "modified":  "2026-06-22T09:51:44",
+                               "bytes":  1718
+                           },
+                           {
+                               "path":  "reports\\operator-v2-control-panel\\e05-apply-control-panel-launcher-integration-with-backup-and-smoke-20260622-095018.json",
+                               "modified":  "2026-06-22T09:50:31",
+                               "bytes":  996
+                           },
+                           {
+                               "path":  "reports\\operator-v2-control-panel\\e04-gate-launcher-integration-control-panel-20260622-094923.json",
+                               "modified":  "2026-06-22T09:49:30",
+                               "bytes":  1626
+                           },
+                           {
+                               "path":  "reports\\operator-v2-control-panel\\e03-create-control-panel-screen-readonly-20260622-094840.json",
+                               "modified":  "2026-06-22T09:48:47",
+                               "bytes":  8754
+                           },
+                           {
+                               "path":  "reports\\operator-v2-control-panel\\e02-create-control-panel-contract-20260622-094756.json",
+                               "modified":  "2026-06-22T09:47:59",
+                               "bytes":  610
+                           },
+                           {
+                               "path":  "reports\\operator-v2-control-panel\\e01-audit-control-panel-inputs-readonly-20260622-094717.json",
+                               "modified":  "2026-06-22T09:47:20",
+                               "bytes":  18995
+                           },
+                           {
+                               "path":  "reports\\operator-v2-next-action-engine\\e07-refresh-final-state-and-close-objective-20260622-094550.json",
+                               "modified":  "2026-06-22T09:45:54",
+                               "bytes":  897
+                           },
+                           {
+                               "path":  "reports\\operator-v2-next-action-engine\\e06-validate-launcher-option-7-s-and-commit-scoped-20260622-094429.json",
+                               "modified":  "2026-06-22T09:44:32",
+                               "bytes":  1827
+                           },
+                           {
+                               "path":  "reports\\operator-v2-next-action-engine\\e05-apply-next-action-screen-launcher-integration-with-backup-and-smoke-20260622-094346.json",
+                               "modified":  "2026-06-22T09:43:52",
+                               "bytes":  1014
+                           },
+                           {
+                               "path":  "reports\\operator-v2-next-action-engine\\e04-gate-launcher-integration-next-action-screen-20260622-094201.json",
+                               "modified":  "2026-06-22T09:42:05",
+                               "bytes":  1650
+                           },
+                           {
+                               "path":  "reports\\operator-v2-next-action-engine\\e03-create-next-action-screen-readonly-20260622-094116.json",
+                               "modified":  "2026-06-22T09:41:20",
+                               "bytes":  3439
+                           },
+                           {
+                               "path":  "reports\\operator-v2-next-action-engine\\e02-create-next-action-contract-20260622-094016.json",
+                               "modified":  "2026-06-22T09:40:19",
+                               "bytes":  631
+                           },
+                           {
+                               "path":  "reports\\operator-v2-next-action-engine\\e01-audit-next-action-state-readonly-20260622-093935.json",
+                               "modified":  "2026-06-22T09:39:38",
+                               "bytes":  2832
+                           },
+                           {
+                               "path":  "reports\\operator-v2-self-state-sync\\e10-refresh-final-state-and-close-objective-20260622-093752.json",
+                               "modified":  "2026-06-22T09:37:56",
+                               "bytes":  851
+                           },
+                           {
+                               "path":  "reports\\operator-v2-self-state-sync\\e09-fix-v2-state-screen-human-pause-and-commit-20260622-093632.json",
+                               "modified":  "2026-06-22T09:36:35",
+                               "bytes":  1065
+                           },
+                           {
+                               "path":  "reports\\operator-v2-self-state-sync\\e08s-commit-self-state-sync-evidence-no-push-20260622-093406.json",
+                               "modified":  "2026-06-22T09:34:07",
+                               "bytes":  1911
+                           },
+                           {
+                               "path":  "reports\\operator-v2-self-state-sync\\e08r-validate-launcher-option-6-v-and-close-scoped-fixed-20260622-093258.json",
+                               "modified":  "2026-06-22T09:33:01",
+                               "bytes":  1726
+                           },
+                           {
+                               "path":  "reports\\operator-v2-self-state-sync\\e07u-apply-exact-substring-launcher-v2-state-patch-20260622-093114.json",
+                               "modified":  "2026-06-22T09:31:20",
+                               "bytes":  695
+                           },
+                           {
+                               "path":  "reports\\operator-v2-self-state-sync\\e06-prepare-v2-state-screen-launcher-integration-gate-20260622-092551.json",
+                               "modified":  "2026-06-22T09:25:57",
+                               "bytes":  12139
+                           }
+                       ],
+    "reports_recent_count":  20,
+    "decision":  "READY_FOR_PUSH_GATE_IF_HUMAN_APPROVES",
+    "allowed_options":  [
+                            "pausar_sin_push",
+                            "preparar_gate_push",
+                            "validar_arbol_limpio",
+                            "ver_ultimos_commits"
+                        ],
+    "blocked_options":  [
+                            "push_sin_gate",
+                            "fetch_merge_automatico",
+                            "borrado_archivos",
+                            "worker_real",
+                            "api_externa"
+                        ],
+    "next":  "E02_CREATE_CLOSE_AND_SYNC_CONTRACT"
+}

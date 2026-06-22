@@ -1,0 +1,92 @@
+﻿{
+    "screen":  "OPERATOR_V2_CLOSE_AND_SYNC",
+    "updated_at":  "2026-06-22T09:57:14",
+    "git":  {
+                "branch":  "main",
+                "head":  "edf62a14",
+                "rev_sync":  "0\t41",
+                "behind":  0,
+                "ahead":  41,
+                "tree_clean":  false,
+                "status_short":  "M data/operator-v2-self-state-sync/v2-state.events.jsonl\n M data/operator-v2-self-state-sync/v2-state.latest.json\n M data/operator-v2-self-state-sync/v2-state.registry.json\n M documents/operator-v2-self-state-sync/V2_STATE_INDEX.md\n?? documents/operator-v2-close-and-sync/\n?? reports/operator-v2-close-and-sync/\n?? tools/operator-v2/operator-v2-close-sync-screen.ps1",
+                "last_commits":  "edf62a14 close operator v2 control panel objective\nf197d26c integrate operator v2 control panel\nab396764 close operator v2 next action engine objective\n21af9a62 integrate operator v2 next action screen\nb1a1425b close operator v2 self state sync objective\n97887d8f fix operator v2 state screen pause\n3a9c16db close operator v2 self state sync evidence\n34c4484d integrate operator v2 live state screen"
+            },
+    "decision":  "CLEAN_TREE_BEFORE_PUSH_GATE",
+    "risk":  "MEDIUM",
+    "reports_recent":  [
+                           {
+                               "path":  "reports\\operator-v2-close-and-sync\\e02-create-close-and-sync-contract-20260622-095619.json",
+                               "modified":  "2026-06-22T09:56:23",
+                               "bytes":  741
+                           },
+                           {
+                               "path":  "reports\\operator-v2-close-and-sync\\e01-audit-close-and-sync-state-readonly-20260622-095529.json",
+                               "modified":  "2026-06-22T09:55:39",
+                               "bytes":  8823
+                           },
+                           {
+                               "path":  "reports\\operator-v2-control-panel\\e07-refresh-final-state-and-close-objective-20260622-095355.json",
+                               "modified":  "2026-06-22T09:54:03",
+                               "bytes":  903
+                           },
+                           {
+                               "path":  "reports\\operator-v2-control-panel\\e06-validate-launcher-option-8-p-and-commit-scoped-20260622-095137.json",
+                               "modified":  "2026-06-22T09:51:44",
+                               "bytes":  1718
+                           },
+                           {
+                               "path":  "reports\\operator-v2-control-panel\\e05-apply-control-panel-launcher-integration-with-backup-and-smoke-20260622-095018.json",
+                               "modified":  "2026-06-22T09:50:31",
+                               "bytes":  996
+                           },
+                           {
+                               "path":  "reports\\operator-v2-control-panel\\e04-gate-launcher-integration-control-panel-20260622-094923.json",
+                               "modified":  "2026-06-22T09:49:30",
+                               "bytes":  1626
+                           },
+                           {
+                               "path":  "reports\\operator-v2-control-panel\\e03-create-control-panel-screen-readonly-20260622-094840.json",
+                               "modified":  "2026-06-22T09:48:47",
+                               "bytes":  8754
+                           },
+                           {
+                               "path":  "reports\\operator-v2-control-panel\\e02-create-control-panel-contract-20260622-094756.json",
+                               "modified":  "2026-06-22T09:47:59",
+                               "bytes":  610
+                           },
+                           {
+                               "path":  "reports\\operator-v2-control-panel\\e01-audit-control-panel-inputs-readonly-20260622-094717.json",
+                               "modified":  "2026-06-22T09:47:20",
+                               "bytes":  18995
+                           },
+                           {
+                               "path":  "reports\\operator-v2-next-action-engine\\e07-refresh-final-state-and-close-objective-20260622-094550.json",
+                               "modified":  "2026-06-22T09:45:54",
+                               "bytes":  897
+                           }
+                       ],
+    "reports_recent_count":  10,
+    "allowed_options":  [
+                            "pausar_sin_push",
+                            "preparar_gate_push",
+                            "validar_arbol_limpio",
+                            "ver_ultimos_commits"
+                        ],
+    "blocked_options":  [
+                            "push_sin_gate",
+                            "fetch_automatico",
+                            "merge_automatico",
+                            "pull_automatico",
+                            "delete_files",
+                            "worker_real",
+                            "api_externa",
+                            "navegador",
+                            "clipboard"
+                        ],
+    "push_authorization_phrase":  "AUTORIZO_PUSH_FINAL_OPERADOR_V2_CLOSE_AND_SYNC_MAIN_A_ORIGIN_MAIN",
+    "push_executed":  false,
+    "fetch_executed":  false,
+    "merge_executed":  false,
+    "delete_files":  false,
+    "next":  "E04_GATE_LAUNCHER_INTEGRATION_CLOSE_SYNC_SCREEN"
+}

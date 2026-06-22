@@ -4,27 +4,27 @@ Estado vivo del Operador V2.
 
 ## Ultima actualizacion
 - Package: 
-ENGREMIAT_OPERATOR_V2_CONTROL_PANEL_001
+ENGREMIAT_OPERATOR_V2_CLOSE_AND_SYNC_001
 - Stage: 
-E07_REFRESH_FINAL_STATE_AND_CLOSE_OBJECTIVE
+E06_VALIDATE_LAUNCHER_OPTION_9_C_AND_COMMIT_SCOPED
 - Step: 
-E07
+E06
 - Status: 
 PASS
 - Readiness: 
-100
+85
 - Head: 
-f197d26c
+edf62a14
 - Rev sync: 
-0	40
+0	41
 - Tree clean: 
-True
+False
 
 ## Resumen humano
-Objetivo CONTROL_PANEL_001 cerrado: Operador V2 ya tiene panel central con estado vivo, siguiente accion, Git, reports recientes, eventos, riesgo e integracion en launcher validada por humano.
+Opcion 9/c Close and Sync V2 validada en launcher maestro; cierre scoped sin push/fetch/merge.
 
 ## Report
-reports\operator-v2-control-panel\e07-refresh-final-state-and-close-objective-20260622-095355.json
+reports\operator-v2-close-and-sync\e06-validate-launcher-option-9-c-and-commit-scoped-20260622-095932.json
 
 ## NEXT
-VALORAR_SIGUIENTE_OBJETIVO_OPERADOR_V2
+PROBAR_DESDE_LAUNCHER_OPCION_9_O_C

@@ -1,0 +1,71 @@
+﻿{
+    "contract_id":  "ENGREMIAT_OPERATOR_V2_CLOSE_AND_SYNC_CONTRACT_V1",
+    "package":  "ENGREMIAT_OPERATOR_V2_CLOSE_AND_SYNC_001",
+    "stage":  "E02_CREATE_CLOSE_AND_SYNC_CONTRACT",
+    "created_at":  "2026-06-22T09:56:23",
+    "purpose":  "Crear un cierre gobernado para Operador V2: pausar sin push, preparar gate de push o ejecutar push solo con autorizacion explicita.",
+    "principles":  [
+                       "No ejecutar push sin gate humano explicito.",
+                       "No ejecutar fetch/merge automatico desde este objetivo.",
+                       "No borrar archivos como parte del cierre.",
+                       "Distinguir pausa local limpia de sincronizacion remota.",
+                       "Mostrar ahead/behind, branch, head, tree_clean, reports y ultimo objetivo antes de cualquier decision."
+                   ],
+    "inputs":  [
+                   "git status --short",
+                   "git rev-parse --short HEAD",
+                   "git branch --show-current",
+                   "git rev-list --left-right --count origin/main...HEAD",
+                   "reports recientes",
+                   "panel control V2",
+                   "estado vivo V2"
+               ],
+    "outputs":  [
+                    "tools/operator-v2/operator-v2-close-sync-screen.ps1",
+                    "data/operator-v2-close-and-sync/close-sync.latest.json",
+                    "documents/operator-v2-close-and-sync/CLOSE_SYNC_INDEX.md"
+                ],
+    "modes":  {
+                  "pause_no_push":  {
+                                        "risk":  "LOW",
+                                        "description":  "Dejar arbol limpio y documentar pausa sin tocar remoto.",
+                                        "allowed":  true
+                                    },
+                  "prepare_push_gate":  {
+                                            "risk":  "MEDIUM",
+                                            "description":  "Mostrar resumen y frase de autorizacion para push controlado.",
+                                            "allowed":  true
+                                        },
+                  "execute_push":  {
+                                       "risk":  "HIGH",
+                                       "description":  "Ejecutar git push solo si existe autorizacion humana exacta.",
+                                       "allowed":  "AUTH_REQUIRED"
+                                   },
+                  "review_remote_divergence":  {
+                                                   "risk":  "MEDIUM",
+                                                   "description":  "Si behind \u003e 0, no hacer push y revisar divergencia.",
+                                                   "allowed":  true
+                                               }
+              },
+    "blocked_actions":  [
+                            "fetch_automatico",
+                            "merge_automatico",
+                            "pull_automatico",
+                            "delete_files",
+                            "worker_real",
+                            "api_externa",
+                            "navegador",
+                            "clipboard"
+                        ],
+    "push_authorization_phrase":  "AUTORIZO_PUSH_FINAL_OPERADOR_V2_CLOSE_AND_SYNC_MAIN_A_ORIGIN_MAIN",
+    "current_git":  {
+                        "branch":  "main",
+                        "head":  "edf62a14",
+                        "rev_sync":  "0\t41",
+                        "behind":  0,
+                        "ahead":  41,
+                        "tree_clean":  false,
+                        "status_short":  "M data/operator-v2-self-state-sync/v2-state.events.jsonl\n M data/operator-v2-self-state-sync/v2-state.latest.json\n M data/operator-v2-self-state-sync/v2-state.registry.json\n M documents/operator-v2-self-state-sync/V2_STATE_INDEX.md\n?? documents/operator-v2-close-and-sync/\n?? reports/operator-v2-close-and-sync/"
+                    },
+    "next":  "E03_CREATE_CLOSE_AND_SYNC_SCREEN_READONLY"
+}
