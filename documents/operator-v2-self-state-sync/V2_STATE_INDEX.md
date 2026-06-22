@@ -4,27 +4,27 @@ Estado vivo del Operador V2.
 
 ## Ultima actualizacion
 - Package: 
-ENGREMIAT_OPERATOR_V1_BATCH_PUSH_FINAL_001
+ENGREMIAT_OPERATOR_V1_ACTIONABLE_NAVIGATION_001
 - Stage: 
-E01S_NORMALIZE_SYNC_VERIFY_RECORD_AND_PUSH_FINAL_EVIDENCE
+E06_VALIDATE_ACTIONABLE_PROJECTS_AND_COMMIT_SCOPED
 - Step: 
-E01S
+E06
 - Status: 
 PASS
 - Readiness: 
-100
+80
 - Head: 
-e4092a14
+7b5f91aa
 - Rev sync: 
 0	0
 - Tree clean: 
-True
+False
 
 ## Resumen humano
-Verificacion final V1 batch con rev_sync normalizado: launcher V1 1-5 y V2 6-9 conservados; evidencia final registrada; push final autorizado.
+Projects V1 accionable read-only validado: numero abre detalle seguro, Enter refresca, b/q vuelve, acciones reales bloqueadas por gate; commit scoped sin push.
 
 ## Report
-reports\operator-v1-batch-push-final\e01s-normalize-sync-verify-record-and-push-final-evidence-20260622-105901.json
+reports\operator-v1-actionable-navigation\e06-validate-actionable-projects-and-commit-scoped-20260622-110742.json
 
 ## NEXT
-VALORAR_SIGUIENTE_OBJETIVO_TRAS_V1_BATCH_SYNCED
+PROBAR_PROJECTS_ACTIONABLE_READONLY_DESDE_LAUNCHER

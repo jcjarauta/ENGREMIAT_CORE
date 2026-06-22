@@ -1,0 +1,135 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V1_ACTIONABLE_NAVIGATION_001",
+    "stage":  "E01_AUDIT_ACTIONABLE_NAVIGATION_READONLY",
+    "status":  "PASS",
+    "created_at":  "2026-06-22T11:01:56",
+    "launcher_parse":  true,
+    "launcher_contract":  {
+                              "has_1_home":  true,
+                              "has_2_projects":  true,
+                              "has_3_memory":  true,
+                              "has_4_data":  true,
+                              "has_5_health":  true,
+                              "has_6_v2_state":  true,
+                              "has_7_v2_next":  true,
+                              "has_8_v2_panel":  true,
+                              "has_9_v2_close":  true
+                          },
+    "screens":  [
+                    {
+                        "path":  "tools/operator-v1/operator-v1-home-screen.ps1",
+                        "screen":  "OPERATOR_V1_HOME",
+                        "parse":  true,
+                        "json_smoke":  true,
+                        "has_refresh_or_pause":  true,
+                        "has_command_surface":  true,
+                        "has_blocked_actions":  true,
+                        "has_json_mode":  true,
+                        "candidate_actions":  [
+                                                  "abrir_estado",
+                                                  "abrir_proyectos",
+                                                  "abrir_memoria",
+                                                  "abrir_data_intake",
+                                                  "abrir_health",
+                                                  "ir_v2_next"
+                                              ],
+                        "candidate_actions_count":  6
+                    },
+                    {
+                        "path":  "tools/operator-v1/operator-v1-projects-screen.ps1",
+                        "screen":  "OPERATOR_V1_PROJECTS",
+                        "parse":  true,
+                        "json_smoke":  true,
+                        "has_refresh_or_pause":  true,
+                        "has_command_surface":  true,
+                        "has_blocked_actions":  true,
+                        "has_json_mode":  true,
+                        "candidate_actions":  [
+                                                  "abrir_proyecto",
+                                                  "ver_detalle_proyecto",
+                                                  "volver",
+                                                  "refrescar",
+                                                  "preparar_gate_crear_proyecto"
+                                              ],
+                        "candidate_actions_count":  5
+                    },
+                    {
+                        "path":  "tools/operator-v1/operator-v1-memory-docs-screen.ps1",
+                        "screen":  "OPERATOR_V1_MEMORY_DOCS",
+                        "parse":  true,
+                        "json_smoke":  true,
+                        "has_refresh_or_pause":  true,
+                        "has_command_surface":  true,
+                        "has_blocked_actions":  true,
+                        "has_json_mode":  true,
+                        "candidate_actions":  [
+                                                  "abrir_documento",
+                                                  "ver_indice",
+                                                  "filtrar_contrato",
+                                                  "filtrar_evidencia",
+                                                  "volver",
+                                                  "refrescar"
+                                              ],
+                        "candidate_actions_count":  6
+                    },
+                    {
+                        "path":  "tools/operator-v1/operator-v1-data-intake-screen.ps1",
+                        "screen":  "OPERATOR_V1_DATA_INTAKE",
+                        "parse":  true,
+                        "json_smoke":  true,
+                        "has_refresh_or_pause":  true,
+                        "has_command_surface":  true,
+                        "has_blocked_actions":  true,
+                        "has_json_mode":  true,
+                        "candidate_actions":  [
+                                                  "ver_fuente",
+                                                  "ver_staging",
+                                                  "ver_import",
+                                                  "preparar_gate_import",
+                                                  "volver",
+                                                  "refrescar"
+                                              ],
+                        "candidate_actions_count":  6
+                    },
+                    {
+                        "path":  "tools/operator-v1/operator-v1-health-launchers-screen.ps1",
+                        "screen":  "OPERATOR_V1_HEALTH_LAUNCHERS",
+                        "parse":  true,
+                        "json_smoke":  true,
+                        "has_refresh_or_pause":  true,
+                        "has_command_surface":  true,
+                        "has_blocked_actions":  true,
+                        "has_json_mode":  true,
+                        "candidate_actions":  [
+                                                  "ver_launcher",
+                                                  "ver_smoke",
+                                                  "ver_healthcheck",
+                                                  "preparar_gate_smoke",
+                                                  "volver",
+                                                  "refrescar"
+                                              ],
+                        "candidate_actions_count":  6
+                    }
+                ],
+    "v1_screens_count":  5,
+    "candidate_actions_count":  29,
+    "head":  "7b5f91aa",
+    "rev_sync_raw":  "0\t0",
+    "rev_sync_left":  0,
+    "rev_sync_right":  0,
+    "remote_synced":  true,
+    "tree_clean":  false,
+    "risk_notes":  [
+                       "No ejecutar acciones reales en E01-E03",
+                       "No abrir navegador/clipboard/API/workers",
+                       "Separar navegacion read-only de gates de escritura",
+                       "Mantener Enter/refrescar/volver en cada pantalla",
+                       "No mezclar repairs/smokes sensibles con navegacion"
+                   ],
+    "decision":  "GO_E02_DEFINE_ACTIONABLE_NAVIGATION_CONTRACT",
+    "push_executed":  false,
+    "fetch_executed":  false,
+    "merge_executed":  false,
+    "delete_files":  false,
+    "next":  "E02_DEFINE_ACTIONABLE_NAVIGATION_CONTRACT"
+}

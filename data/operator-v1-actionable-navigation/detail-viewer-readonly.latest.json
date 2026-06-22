@@ -1,0 +1,42 @@
+﻿{
+    "screen":  "OPERATOR_V1_DETAIL_VIEWER_READONLY",
+    "updated_at":  "2026-06-22T11:05:26",
+    "title":  "Smoke detail viewer",
+    "kind":  "SMOKE",
+    "path":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+    "path_exists":  true,
+    "path_inside_root":  true,
+    "metadata":  {
+                     "name":  "ENGREMIAT.ps1",
+                     "full_name":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+                     "relative_path":  "ENGREMIAT.ps1",
+                     "exists":  true,
+                     "is_container":  false,
+                     "length":  7848,
+                     "last_write_time":  "2026-06-22T10:50:39",
+                     "extension":  ".ps1"
+                 },
+    "json_preview_available":  false,
+    "json_preview":  null,
+    "policy":  {
+                   "mode":  "READONLY",
+                   "open_external":  false,
+                   "execute":  false,
+                   "modify":  false,
+                   "delete":  false,
+                   "clipboard":  false,
+                   "network":  false,
+                   "requires_gate_for_external_open":  true
+               },
+    "blocked_actions":  [
+                            "abrir_archivo_externo_sin_gate",
+                            "ejecutar_script",
+                            "modificar_archivo",
+                            "delete_files",
+                            "clipboard",
+                            "navegador",
+                            "worker_real",
+                            "api_externa"
+                        ],
+    "next":  "RETURN_TO_CALLER"
+}

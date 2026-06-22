@@ -1,0 +1,38 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V1_ACTIONABLE_NAVIGATION_001",
+    "stage":  "E05_INTEGRATE_PROJECTS_ACTIONS_READONLY",
+    "status":  "PASS",
+    "created_at":  "2026-06-22T11:06:53",
+    "backup":  "C:\\ENGREMIAT_CORE\\backups\\operator-v1-actionable-navigation\\operator-v1-projects-screen.before-e05-actionable-20260622-110643.ps1",
+    "projects_screen":  "C:\\ENGREMIAT_CORE\\tools\\operator-v1\\operator-v1-projects-screen.ps1",
+    "detail_viewer":  "C:\\ENGREMIAT_CORE\\tools\\operator-v1\\operator-v1-detail-viewer-readonly.ps1",
+    "viewer_parse":  true,
+    "screen_parse":  true,
+    "json_smoke":  true,
+    "detail_viewer_smoke":  true,
+    "project_candidates_count":  10,
+    "safe_actions":  [
+                         "numero_ver_detalle_readonly",
+                         "Enter_refrescar",
+                         "b_q_volver",
+                         "ayuda"
+                     ],
+    "gated_actions":  [
+                          "abrir_carpeta_proyecto",
+                          "crear_proyecto",
+                          "activar_proyecto",
+                          "archivar_proyecto"
+                      ],
+    "latest":  "C:\\ENGREMIAT_CORE\\data\\operator-v1-actionable-navigation\\projects-actionable-readonly.latest.json",
+    "index":  "C:\\ENGREMIAT_CORE\\documents\\operator-v1-actionable-navigation\\PROJECTS_ACTIONABLE_READONLY.v1.md",
+    "branch":  "main",
+    "head":  "7b5f91aa",
+    "rev_sync":  "0\t0",
+    "remote_synced":  true,
+    "tree_clean":  false,
+    "push_executed":  false,
+    "fetch_executed":  false,
+    "merge_executed":  false,
+    "delete_files":  false,
+    "next":  "E06_VALIDATE_ACTIONABLE_PROJECTS_AND_COMMIT_SCOPED"
+}

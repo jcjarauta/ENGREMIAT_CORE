@@ -1,0 +1,71 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V1_ACTIONABLE_NAVIGATION_001",
+    "stage":  "E03_CREATE_NAVIGATION_MODEL_READONLY",
+    "status":  "PASS",
+    "created_at":  "2026-06-22T11:04:28",
+    "launcher_parse":  true,
+    "model_json":  "C:\\ENGREMIAT_CORE\\data\\operator-v1-actionable-navigation\\actionable-navigation-model.v1.json",
+    "latest":  "C:\\ENGREMIAT_CORE\\data\\operator-v1-actionable-navigation\\actionable-navigation-model.latest.json",
+    "model_md":  "C:\\ENGREMIAT_CORE\\documents\\operator-v1-actionable-navigation\\ACTIONABLE_NAVIGATION_MODEL.v1.md",
+    "v1_screens_count":  5,
+    "screen_checks":  [
+                          {
+                              "id":  "home",
+                              "screen":  "OPERATOR_V1_HOME",
+                              "path":  "tools/operator-v1/operator-v1-home-screen.ps1",
+                              "parse":  true,
+                              "json_smoke":  true,
+                              "safe_actions_count":  6,
+                              "gate_actions_count":  0
+                          },
+                          {
+                              "id":  "projects",
+                              "screen":  "OPERATOR_V1_PROJECTS",
+                              "path":  "tools/operator-v1/operator-v1-projects-screen.ps1",
+                              "parse":  true,
+                              "json_smoke":  true,
+                              "safe_actions_count":  5,
+                              "gate_actions_count":  4
+                          },
+                          {
+                              "id":  "memory_docs",
+                              "screen":  "OPERATOR_V1_MEMORY_DOCS",
+                              "path":  "tools/operator-v1/operator-v1-memory-docs-screen.ps1",
+                              "parse":  true,
+                              "json_smoke":  true,
+                              "safe_actions_count":  7,
+                              "gate_actions_count":  3
+                          },
+                          {
+                              "id":  "data_intake",
+                              "screen":  "OPERATOR_V1_DATA_INTAKE",
+                              "path":  "tools/operator-v1/operator-v1-data-intake-screen.ps1",
+                              "parse":  true,
+                              "json_smoke":  true,
+                              "safe_actions_count":  7,
+                              "gate_actions_count":  4
+                          },
+                          {
+                              "id":  "health_launchers",
+                              "screen":  "OPERATOR_V1_HEALTH_LAUNCHERS",
+                              "path":  "tools/operator-v1/operator-v1-health-launchers-screen.ps1",
+                              "parse":  true,
+                              "json_smoke":  true,
+                              "safe_actions_count":  7,
+                              "gate_actions_count":  4
+                          }
+                      ],
+    "safe_actions_count":  32,
+    "gate_actions_count":  15,
+    "recommended_screen":  "OPERATOR_V1_PROJECTS",
+    "branch":  "main",
+    "head":  "7b5f91aa",
+    "rev_sync":  "0\t0",
+    "remote_synced":  true,
+    "tree_clean":  false,
+    "push_executed":  false,
+    "fetch_executed":  false,
+    "merge_executed":  false,
+    "delete_files":  false,
+    "next":  "E04_CREATE_DETAIL_VIEWER_READONLY"
+}

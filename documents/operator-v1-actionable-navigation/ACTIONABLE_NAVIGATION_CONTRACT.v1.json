@@ -1,0 +1,138 @@
+﻿{
+    "contract_id":  "ENGREMIAT_OPERATOR_V1_ACTIONABLE_NAVIGATION_CONTRACT_V1",
+    "package":  "ENGREMIAT_OPERATOR_V1_ACTIONABLE_NAVIGATION_001",
+    "stage":  "E02_DEFINE_ACTIONABLE_NAVIGATION_CONTRACT",
+    "created_at":  "2026-06-22T11:02:53",
+    "purpose":  "Convertir pantallas V1 read-only en navegacion accionable segura: seleccionar elementos, ver detalle, refrescar, volver y preparar gates sin ejecutar acciones sensibles.",
+    "principles":  [
+                       "navegacion_antes_que_ejecucion",
+                       "una_frontera_tecnica_por_paso",
+                       "read_only_por_defecto",
+                       "acciones_reales_solo_con_gate",
+                       "mantener_enter_refrescar_volver",
+                       "sin_push_fetch_merge_delete_en_desarrollo_local"
+                   ],
+    "screen_scope":  [
+                         {
+                             "screen":  "OPERATOR_V1_HOME",
+                             "actions":  [
+                                             "abrir_estado",
+                                             "abrir_proyectos",
+                                             "abrir_memoria",
+                                             "abrir_data_intake",
+                                             "abrir_health",
+                                             "ir_v2_next"
+                                         ]
+                         },
+                         {
+                             "screen":  "OPERATOR_V1_PROJECTS",
+                             "actions":  [
+                                             "listar",
+                                             "seleccionar_proyecto",
+                                             "ver_detalle",
+                                             "abrir_carpeta_con_gate",
+                                             "preparar_gate_crear_proyecto",
+                                             "volver",
+                                             "refrescar"
+                                         ]
+                         },
+                         {
+                             "screen":  "OPERATOR_V1_MEMORY_DOCS",
+                             "actions":  [
+                                             "listar",
+                                             "filtrar_indices",
+                                             "filtrar_contratos",
+                                             "filtrar_evidencias",
+                                             "ver_detalle_documento",
+                                             "preparar_gate_abrir_documento",
+                                             "volver",
+                                             "refrescar"
+                                         ]
+                         },
+                         {
+                             "screen":  "OPERATOR_V1_DATA_INTAKE",
+                             "actions":  [
+                                             "listar_fuentes",
+                                             "listar_staging",
+                                             "listar_imports",
+                                             "ver_detalle_fuente",
+                                             "preparar_gate_import",
+                                             "volver",
+                                             "refrescar"
+                                         ]
+                         },
+                         {
+                             "screen":  "OPERATOR_V1_HEALTH_LAUNCHERS",
+                             "actions":  [
+                                             "listar_launchers",
+                                             "listar_smokes",
+                                             "listar_healthchecks",
+                                             "ver_detalle_launcher",
+                                             "preparar_gate_smoke",
+                                             "volver",
+                                             "refrescar"
+                                         ]
+                         }
+                     ],
+    "allowed_actions":  [
+                            "create_contract",
+                            "create_navigation_model_readonly",
+                            "create_detail_view_readonly",
+                            "prepare_gate_text",
+                            "validate_parse_json",
+                            "commit_scoped"
+                        ],
+    "blocked_actions":  [
+                            "push_auto",
+                            "fetch_auto",
+                            "merge_auto",
+                            "delete_files",
+                            "worker_real",
+                            "api_externa",
+                            "navegador",
+                            "clipboard",
+                            "abrir_archivos_sin_gate",
+                            "ejecutar_smokes_sin_gate",
+                            "ejecutar_reparaciones_sin_gate",
+                            "modificar_datos_sin_gate",
+                            "modificar_launchers_sin_gate"
+                        ],
+    "planned_stages":  [
+                           {
+                               "id":  "E03",
+                               "name":  "CREATE_NAVIGATION_MODEL_READONLY",
+                               "description":  "Crear modelo de navegacion accionable read-only para pantallas V1."
+                           },
+                           {
+                               "id":  "E04",
+                               "name":  "CREATE_DETAIL_VIEWER_READONLY",
+                               "description":  "Crear visor comun de detalle seguro para elementos seleccionados."
+                           },
+                           {
+                               "id":  "E05",
+                               "name":  "INTEGRATE_FIRST_SCREEN_ACTIONS_LOW_RISK",
+                               "description":  "Integrar acciones read-only en una pantalla V1 inicial, preferiblemente Projects o Memory."
+                           },
+                           {
+                               "id":  "E06",
+                               "name":  "VALIDATE_AND_COMMIT_SCOPED",
+                               "description":  "Validar parse/json/contrato y commit scoped."
+                           },
+                           {
+                               "id":  "E07",
+                               "name":  "HUMAN_RETEST_AND_CLOSE_OR_NEXT_SCREEN",
+                               "description":  "Prueba humana y decidir extender a mas pantallas."
+                           }
+                       ],
+    "current_git":  {
+                        "branch":  "main",
+                        "head":  "7b5f91aa",
+                        "rev_sync":  "0\t0",
+                        "rev_sync_left":  0,
+                        "rev_sync_right":  0,
+                        "remote_synced":  true,
+                        "tree_clean":  false,
+                        "status_short":  "M data/operator-v2-self-state-sync/v2-state.events.jsonl\n M data/operator-v2-self-state-sync/v2-state.latest.json\n M data/operator-v2-self-state-sync/v2-state.registry.json\n M documents/operator-v2-self-state-sync/V2_STATE_INDEX.md\n?? documents/next-objective-after-v1-batch-sync/\n?? documents/operator-v1-actionable-navigation/\n?? reports/next-objective-after-v1-batch-sync/\n?? reports/operator-v1-actionable-navigation/"
+                    },
+    "next":  "E03_CREATE_NAVIGATION_MODEL_READONLY"
+}
