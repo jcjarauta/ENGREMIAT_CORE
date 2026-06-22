@@ -1,0 +1,426 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_SELF_STATE_SYNC_001",
+    "stage":  "E01R_REPAIR_GIT_AUDIT_HELPER_READONLY",
+    "created_at":  "2026-06-22T09:22:23",
+    "root":  "C:\\ENGREMIAT_CORE",
+    "git":  {
+                "status_short":  "?? reports/functional-validation/e09-r1-commit-final-validation-reports-no-push-20260622-091608.json\n?? reports/operator-v2-self-state-sync/",
+                "tree_clean":  false,
+                "head":  "5542a460",
+                "rev_sync":  "0\t33",
+                "status_exit":  0,
+                "head_exit":  0,
+                "sync_exit":  0
+            },
+    "diagnosis":  {
+                      "previous_e01_conceptual_result":  "PASS",
+                      "previous_e01_git_helper":  "FAIL_param_args_collision",
+                      "repair":  "RunGit parameter renamed to gitArgs",
+                      "self_state_live_sync":  false,
+                      "decision":  "GO_E02_CREATE_V2_STATE_REGISTRY_CONTRACT"
+                  },
+    "recent_reports_count":  80,
+    "recent_reports":  [
+                           {
+                               "path":  "reports\\operator-v2-self-state-sync\\E01_AUDIT_V2_SELF_STATE_CURRENT_STATE_READONLY_20260622-092139.md",
+                               "modified":  "2026-06-22T09:21:44",
+                               "bytes":  5342
+                           },
+                           {
+                               "path":  "reports\\operator-v2-self-state-sync\\e01-audit-v2-self-state-current-state-readonly-20260622-092139.json",
+                               "modified":  "2026-06-22T09:21:44",
+                               "bytes":  105141
+                           },
+                           {
+                               "path":  "reports\\functional-validation\\e09-r1-commit-final-validation-reports-no-push-20260622-091608.json",
+                               "modified":  "2026-06-22T09:16:08",
+                               "bytes":  705
+                           },
+                           {
+                               "path":  "reports\\functional-validation\\e09-final-validate-after-projects-manager-patch-and-pause-20260622-091540.json",
+                               "modified":  "2026-06-22T09:15:40",
+                               "bytes":  628
+                           },
+                           {
+                               "path":  "reports\\functional-validation\\e08-evaluate-smoke-and-commit-projects-manager-patch-no-push-20260622-091509.json",
+                               "modified":  "2026-06-22T09:15:09",
+                               "bytes":  1225
+                           },
+                           {
+                               "path":  "reports\\functional-validation\\e06-r1-rewrite-projects-manager-stable-error-capture-no-commit-no-push-20260622-091154.json",
+                               "modified":  "2026-06-22T09:11:54",
+                               "bytes":  714
+                           },
+                           {
+                               "path":  "reports\\functional-validation\\e05-diagnose-projects-manager-active-projects-no-apply-20260622-090909.json",
+                               "modified":  "2026-06-22T09:09:09",
+                               "bytes":  489395
+                           },
+                           {
+                               "path":  "reports\\functional-validation\\e04-diagnose-child-operator-active-projects-screen-no-apply-20260622-090832.json",
+                               "modified":  "2026-06-22T09:08:32",
+                               "bytes":  35833
+                           },
+                           {
+                               "path":  "reports\\functional-validation\\e03-diagnose-active-projects-screen-static-no-apply-20260622-090754.json",
+                               "modified":  "2026-06-22T09:07:54",
+                               "bytes":  150456
+                           },
+                           {
+                               "path":  "reports\\operator-v2-global-scope-cleanup\\e35-execute-authorized-cleanup-self-reports-commit-no-push-20260622-081324.json",
+                               "modified":  "2026-06-22T08:13:24",
+                               "bytes":  8559
+                           },
+                           {
+                               "path":  "reports\\operator-v2-global-scope-cleanup\\e33-rebuild-global-scope-after-operator-v2-global-cleanup-group-closed-no-apply-20260622-081143.json",
+                               "modified":  "2026-06-22T08:11:43",
+                               "bytes":  16638
+                           },
+                           {
+                               "path":  "reports\\operator-v2-global-scope-cleanup\\e32-execute-authorized-operator-v2-global-cleanup-aux-dirs-commit-no-push-20260622-081112.json",
+                               "modified":  "2026-06-22T08:11:12",
+                               "bytes":  28647
+                           },
+                           {
+                               "path":  "reports\\operator-v2-global-scope-cleanup\\e31-decide-operator-v2-global-cleanup-aux-directories-commit-or-delete-no-apply-20260622-081011.json",
+                               "modified":  "2026-06-22T08:10:11",
+                               "bytes":  11999
+                           },
+                           {
+                               "path":  "reports\\operator-v2-global-scope-cleanup\\e30-execute-authorized-operator-v2-global-cleanup-final-docs-commit-no-push-20260622-080935.json",
+                               "modified":  "2026-06-22T08:09:35",
+                               "bytes":  2570
+                           },
+                           {
+                               "path":  "reports\\operator-v2-global-scope-cleanup\\e29-handle-operator-v2-global-cleanup-aux-directories-decision-no-apply-20260622-080842.json",
+                               "modified":  "2026-06-22T08:08:42",
+                               "bytes":  10571
+                           },
+                           {
+                               "path":  "reports\\operator-v2-global-scope-cleanup\\e28-execute-authorized-operator-v2-global-cleanup-late-docs-commit-no-push-20260622-080752.json",
+                               "modified":  "2026-06-22T08:07:52",
+                               "bytes":  2214
+                           },
+                           {
+                               "path":  "reports\\operator-v2-global-scope-cleanup\\e27-prepare-remaining-docs-in-global-cleanup-group-no-execute-20260622-080652.json",
+                               "modified":  "2026-06-22T08:06:52",
+                               "bytes":  1923
+                           },
+                           {
+                               "path":  "reports\\operator-v2-global-scope-cleanup\\e26-handle-operator-v2-global-cleanup-aux-directories-no-apply-20260622-080612.json",
+                               "modified":  "2026-06-22T08:06:12",
+                               "bytes":  12681
+                           },
+                           {
+                               "path":  "reports\\operator-v2-global-scope-cleanup\\e25-execute-authorized-operator-v2-global-cleanup-untracked-docs-commit-no-push-20260622-080531.json",
+                               "modified":  "2026-06-22T08:05:31",
+                               "bytes":  2236
+                           },
+                           {
+                               "path":  "reports\\operator-v2-global-scope-cleanup\\e24-handle-operator-v2-global-cleanup-untracked-other-by-kind-no-apply-20260622-080419.json",
+                               "modified":  "2026-06-22T08:04:19",
+                               "bytes":  7432
+                           },
+                           {
+                               "path":  "reports\\operator-v2-global-scope-cleanup\\e23-inspect-operator-v2-global-cleanup-untracked-other-no-apply-20260622-080327.json",
+                               "modified":  "2026-06-22T08:03:27",
+                               "bytes":  11871
+                           },
+                           {
+                               "path":  "reports\\operator-v2-global-scope-cleanup\\e22-execute-authorized-operator-v2-global-cleanup-remaining-docs-commit-no-push-20260622-080251.json",
+                               "modified":  "2026-06-22T08:02:51",
+                               "bytes":  2236
+                           },
+                           {
+                               "path":  "reports\\operator-v2-global-scope-cleanup\\e21-prepare-operator-v2-global-cleanup-remaining-docs-commit-packet-no-execute-20260622-080139.json",
+                               "modified":  "2026-06-22T08:01:39",
+                               "bytes":  1977
+                           },
+                           {
+                               "path":  "reports\\operator-v2-global-scope-cleanup\\e20-inspect-operator-v2-global-cleanup-blocked-leftovers-no-apply-20260622-080108.json",
+                               "modified":  "2026-06-22T08:01:08",
+                               "bytes":  7038
+                           },
+                           {
+                               "path":  "reports\\operator-v2-global-scope-cleanup\\e19-execute-authorized-operator-v2-global-cleanup-safe-docs-commit-no-push-20260622-080033.json",
+                               "modified":  "2026-06-22T08:00:33",
+                               "bytes":  4577
+                           },
+                           {
+                               "path":  "reports\\operator-v2-global-scope-cleanup\\e18-r1-split-operator-v2-global-cleanup-docs-blocked-no-apply-20260622-075924.json",
+                               "modified":  "2026-06-22T07:59:24",
+                               "bytes":  5270
+                           },
+                           {
+                               "path":  "reports\\operator-v2-global-scope-cleanup\\e18-prepare-operator-v2-global-cleanup-docs-commit-packet-no-execute-20260622-075844.json",
+                               "modified":  "2026-06-22T07:58:44",
+                               "bytes":  3346
+                           },
+                           {
+                               "path":  "reports\\operator-v2-global-scope-cleanup\\e17-global-scope-after-reports-launcher-closed-no-apply-20260622-075811.json",
+                               "modified":  "2026-06-22T07:58:11",
+                               "bytes":  33343
+                           },
+                           {
+                               "path":  "reports\\operator-v2-global-scope-cleanup\\e16-execute-authorized-reports-launcher-local-scripts-commit-no-push-20260622-075726.json",
+                               "modified":  "2026-06-22T07:57:26",
+                               "bytes":  2281
+                           },
+                           {
+                               "path":  "reports\\operator-v2-global-scope-cleanup\\e15-prepare-reports-launcher-local-scripts-commit-packet-no-execute-20260622-075625.json",
+                               "modified":  "2026-06-22T07:56:25",
+                               "bytes":  1503
+                           },
+                           {
+                               "path":  "reports\\operator-v2-global-scope-cleanup\\e14-inspect-reports-launcher-code-or-script-no-apply-20260622-075555.json",
+                               "modified":  "2026-06-22T07:55:55",
+                               "bytes":  11135
+                           },
+                           {
+                               "path":  "reports\\operator-v2-global-scope-cleanup\\e13-r1-inspect-reports-launcher-remainder-no-apply-20260622-075520.json",
+                               "modified":  "2026-06-22T07:55:20",
+                               "bytes":  3383
+                           },
+                           {
+                               "path":  "reports\\operator-v2-global-scope-cleanup\\e13-prepare-reports-launcher-remaining-docs-commit-packet-no-execute-20260622-075442.json",
+                               "modified":  "2026-06-22T07:54:42",
+                               "bytes":  1438
+                           },
+                           {
+                               "path":  "reports\\operator-v2-global-scope-cleanup\\e12-delete-authorized-reports-launcher-noise-generated-no-commit-no-push-20260622-075410.json",
+                               "modified":  "2026-06-22T07:54:10",
+                               "bytes":  4482
+                           },
+                           {
+                               "path":  "reports\\operator-v2-global-scope-cleanup\\e11-prepare-reports-launcher-noise-review-no-delete-20260622-075305.json",
+                               "modified":  "2026-06-22T07:53:05",
+                               "bytes":  4171
+                           },
+                           {
+                               "path":  "reports\\operator-v2-global-scope-cleanup\\e10-global-scope-after-reports-launcher-reconcile-no-apply-20260622-075233.json",
+                               "modified":  "2026-06-22T07:52:33",
+                               "bytes":  2119
+                           },
+                           {
+                               "path":  "reports\\operator-v2-global-scope-cleanup\\e09-r1-reconcile-reports-launcher-artifacts-already-clean-no-apply-20260622-075148.json",
+                               "modified":  "2026-06-22T07:51:48",
+                               "bytes":  1021
+                           },
+                           {
+                               "path":  "reports\\operator-v2-global-scope-cleanup\\e09-execute-authorized-reports-launcher-report-artifacts-commit-no-push-20260622-074953.json",
+                               "modified":  "2026-06-22T07:49:53",
+                               "bytes":  21338
+                           },
+                           {
+                               "path":  "reports\\operator-v2-global-scope-cleanup\\e08-reports-launcher-report-artifacts-commit-packet-no-execute-20260622-074835.json",
+                               "modified":  "2026-06-22T07:48:35",
+                               "bytes":  14882
+                           },
+                           {
+                               "path":  "reports\\operator-v2-global-scope-cleanup\\e07-split-reports-launcher-mixed-group-no-apply-20260622-074743.json",
+                               "modified":  "2026-06-22T07:47:43",
+                               "bytes":  14273
+                           },
+                           {
+                               "path":  "reports\\operator-v2-global-scope-cleanup\\e06-prepare-reports-launcher-group-no-apply-20260622-074620.json",
+                               "modified":  "2026-06-22T07:46:20",
+                               "bytes":  16069
+                           },
+                           {
+                               "path":  "reports\\operator-v2-global-scope-cleanup\\e05-global-scope-after-operator-v2-commit-no-apply-20260622-074410.json",
+                               "modified":  "2026-06-22T07:44:10",
+                               "bytes":  34031
+                           },
+                           {
+                               "path":  "reports\\operator-v2-global-scope-cleanup\\e04-execute-authorized-operator-v2-scoped-cleanup-commit-no-push-20260622-074314.json",
+                               "modified":  "2026-06-22T07:43:14",
+                               "bytes":  41714
+                           },
+                           {
+                               "path":  "reports\\operator-v2-global-scope-cleanup\\e03-operator-v2-scoped-cleanup-commit-packet-no-execute-20260622-074208.json",
+                               "modified":  "2026-06-22T07:42:08",
+                               "bytes":  7316
+                           },
+                           {
+                               "path":  "reports\\operator-v2-global-scope-cleanup\\e02-select-first-global-cleanup-group-no-apply-20260622-074134.json",
+                               "modified":  "2026-06-22T07:41:34",
+                               "bytes":  20925
+                           },
+                           {
+                               "path":  "reports\\operator-v2-global-scope-cleanup\\e01-global-scope-cleanup-map-no-apply-20260622-074100.json",
+                               "modified":  "2026-06-22T07:41:00",
+                               "bytes":  40629
+                           },
+                           {
+                               "path":  "reports\\operator-v2-live-context\\operator-v2-development-plan-report-20260622-074029.json",
+                               "modified":  "2026-06-22T07:40:29",
+                               "bytes":  8938
+                           },
+                           {
+                               "path":  "reports\\operator-v2-compare-cmd-launcher\\e03-execute-authorized-engremiat-cmd-scoped-commit-no-push-20260622-073855.json",
+                               "modified":  "2026-06-22T07:38:55",
+                               "bytes":  26086
+                           },
+                           {
+                               "path":  "reports\\operator-v2-compare-cmd-launcher\\e02-cmd-launcher-decision-no-apply-20260622-073819.json",
+                               "modified":  "2026-06-22T07:38:19",
+                               "bytes":  965
+                           },
+                           {
+                               "path":  "reports\\operator-v2-compare-cmd-launcher\\e01-compare-engremiat-cmd-with-canonical-launcher-no-apply-20260622-073751.json",
+                               "modified":  "2026-06-22T07:37:51",
+                               "bytes":  1176
+                           },
+                           {
+                               "path":  "reports\\operator-v2-review-next-scope-group\\e04-close-next-scope-group-review-and-pause-20260622-073624.json",
+                               "modified":  "2026-06-22T07:36:24",
+                               "bytes":  840
+                           },
+                           {
+                               "path":  "reports\\operator-v2-review-next-scope-group\\e03-decide-next-group-action-no-apply-20260622-073552.json",
+                               "modified":  "2026-06-22T07:35:52",
+                               "bytes":  830
+                           },
+                           {
+                               "path":  "reports\\operator-v2-review-next-scope-group\\e02-r1-fast-next-group-detail-no-content-read-20260622-073244.json",
+                               "modified":  "2026-06-22T07:32:44",
+                               "bytes":  1238
+                           },
+                           {
+                               "path":  "reports\\operator-v2-review-next-scope-group\\e01-select-inspect-next-scope-group-no-apply-20260622-073122.json",
+                               "modified":  "2026-06-22T07:31:22",
+                               "bytes":  1520
+                           },
+                           {
+                               "path":  "reports\\operator-v2-screen-normalizer-evidence-commit\\e02-execute-authorized-data-screen-normalizer-scoped-commit-no-push-20260622-073011.json",
+                               "modified":  "2026-06-22T07:30:11",
+                               "bytes":  26133
+                           },
+                           {
+                               "path":  "reports\\operator-v2-screen-normalizer-evidence-commit\\e01-prepare-data-screen-normalizer-scoped-commit-no-execute-20260622-072918.json",
+                               "modified":  "2026-06-22T07:29:18",
+                               "bytes":  1291
+                           },
+                           {
+                               "path":  "reports\\operator-v2-review-untracked-directory-contents\\e03-close-untracked-directory-contents-review-and-pause-20260622-072742.json",
+                               "modified":  "2026-06-22T07:27:42",
+                               "bytes":  938
+                           },
+                           {
+                               "path":  "reports\\operator-v2-review-untracked-directory-contents\\e02-directory-classification-decision-no-apply-20260622-072713.json",
+                               "modified":  "2026-06-22T07:27:13",
+                               "bytes":  1026
+                           },
+                           {
+                               "path":  "reports\\operator-v2-review-untracked-directory-contents\\e01-r1-fast-inspect-data-screen-normalizer-no-apply-20260622-072643.json",
+                               "modified":  "2026-06-22T07:26:44",
+                               "bytes":  1451
+                           },
+                           {
+                               "path":  "reports\\operator-v2-review-first-scope-group\\e03-close-first-group-review-and-pause-20260622-072400.json",
+                               "modified":  "2026-06-22T07:24:00",
+                               "bytes":  1009
+                           },
+                           {
+                               "path":  "reports\\operator-v2-review-first-scope-group\\e02-first-group-diff-summary-no-apply-20260622-072330.json",
+                               "modified":  "2026-06-22T07:23:30",
+                               "bytes":  1448
+                           },
+                           {
+                               "path":  "reports\\operator-v2-review-first-scope-group\\e01-r1-review-first-available-scope-group-no-apply-20260622-072259.json",
+                               "modified":  "2026-06-22T07:22:59",
+                               "bytes":  1645
+                           },
+                           {
+                               "path":  "reports\\operator-v2-review-first-scope-group\\e01-review-data-screen-normalizer-no-apply-20260622-072218.json",
+                               "modified":  "2026-06-22T07:22:18",
+                               "bytes":  724
+                           },
+                           {
+                               "path":  "reports\\operator-v2-scope-code-untracked-review\\e04-close-code-untracked-review-no-apply-20260622-072045.json",
+                               "modified":  "2026-06-22T07:20:45",
+                               "bytes":  971
+                           },
+                           {
+                               "path":  "reports\\operator-v2-scope-code-untracked-review\\e03-select-safe-review-order-no-apply-20260622-072011.json",
+                               "modified":  "2026-06-22T07:20:11",
+                               "bytes":  10136
+                           },
+                           {
+                               "path":  "reports\\operator-v2-scope-code-untracked-review\\e02-module-grouping-no-apply-20260622-071940.json",
+                               "modified":  "2026-06-22T07:19:40",
+                               "bytes":  6182
+                           },
+                           {
+                               "path":  "reports\\operator-v2-scope-code-untracked-review\\e01-r1-classify-code-untracked-from-git-status-no-apply-20260622-071902.json",
+                               "modified":  "2026-06-22T07:19:02",
+                               "bytes":  2508
+                           },
+                           {
+                               "path":  "reports\\operator-v2-scope-code-untracked-review\\e01-classify-code-and-untracked-no-apply-20260622-071824.json",
+                               "modified":  "2026-06-22T07:18:24",
+                               "bytes":  931
+                           },
+                           {
+                               "path":  "reports\\operator-v2-live-context\\operator-v2-development-plan-report-20260622-071802.json",
+                               "modified":  "2026-06-22T07:18:02",
+                               "bytes":  8938
+                           },
+                           {
+                               "path":  "reports\\operator-v2-scope-hygiene\\e05-close-scope-hygiene-review-no-delete-20260622-071629.json",
+                               "modified":  "2026-06-22T07:16:29",
+                               "bytes":  868
+                           },
+                           {
+                               "path":  "reports\\operator-v2-scope-hygiene\\e04-review-hygiene-lists-select-action-no-delete-20260622-071557.json",
+                               "modified":  "2026-06-22T07:15:57",
+                               "bytes":  2109
+                           },
+                           {
+                               "path":  "reports\\operator-v2-scope-hygiene\\e03-generate-scope-hygiene-review-lists-no-delete-20260622-071513.json",
+                               "modified":  "2026-06-22T07:15:13",
+                               "bytes":  3394
+                           },
+                           {
+                               "path":  "reports\\operator-v2-scope-hygiene\\e02-prepare-scope-hygiene-plan-no-delete-20260622-071434.json",
+                               "modified":  "2026-06-22T07:14:34",
+                               "bytes":  1524
+                           },
+                           {
+                               "path":  "reports\\operator-v2-scope-hygiene\\e01-classify-outside-scope-hygiene-no-apply-20260622-071405.json",
+                               "modified":  "2026-06-22T07:14:05",
+                               "bytes":  3386
+                           },
+                           {
+                               "path":  "reports\\operator-v2-next-direction-review\\e03-close-next-direction-review-and-pause-20260622-071231.json",
+                               "modified":  "2026-06-22T07:12:31",
+                               "bytes":  823
+                           },
+                           {
+                               "path":  "reports\\operator-v2-next-direction-review\\e02-select-next-direction-safe-objective-20260622-071133.json",
+                               "modified":  "2026-06-22T07:11:33",
+                               "bytes":  1419
+                           },
+                           {
+                               "path":  "reports\\operator-v2-next-direction-review\\e01-r1-next-direction-review-no-apply-20260622-071056.json",
+                               "modified":  "2026-06-22T07:10:56",
+                               "bytes":  2779
+                           },
+                           {
+                               "path":  "reports\\operator-v2-live-context\\operator-v2-development-plan-report-20260622-071055.json",
+                               "modified":  "2026-06-22T07:10:55",
+                               "bytes":  8938
+                           },
+                           {
+                               "path":  "reports\\operator-v2-live-context\\operator-v2-development-plan-report-20260622-071050.json",
+                               "modified":  "2026-06-22T07:10:50",
+                               "bytes":  8938
+                           },
+                           {
+                               "path":  "reports\\operator-v2-live-context\\operator-v2-development-plan-report-20260622-071047.json",
+                               "modified":  "2026-06-22T07:10:47",
+                               "bytes":  8938
+                           }
+                       ],
+    "next":  "E02_CREATE_V2_STATE_REGISTRY_CONTRACT"
+}

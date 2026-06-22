@@ -1,0 +1,219 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_SELF_STATE_SYNC_001",
+    "stage":  "E06_PREPARE_V2_STATE_SCREEN_LAUNCHER_INTEGRATION_GATE",
+    "status":  "PASS",
+    "created_at":  "2026-06-22T09:25:57",
+    "screen":  "C:\\ENGREMIAT_CORE\\tools\\operator-v2\\operator-v2-state-screen.ps1",
+    "screen_smoke":  {
+                         "active_stage":  "E05_CREATE_V2_STATE_STATUS_SCREEN_READONLY",
+                         "last_step":  "E05",
+                         "last_status":  "PASS",
+                         "readiness":  50,
+                         "next_action":  "E06_INTEGRATE_V2_STATE_SCREEN_IN_LAUNCHER_GATED"
+                     },
+    "recommended_target":  {
+                               "path":  "ENGREMIAT.ps1",
+                               "name":  "ENGREMIAT.ps1",
+                               "score":  190,
+                               "bytes":  6871,
+                               "has_v2_text":  true,
+                               "has_menu":  true,
+                               "already_integrated":  false
+                           },
+    "candidates":  [
+                       {
+                           "path":  "ENGREMIAT.ps1",
+                           "name":  "ENGREMIAT.ps1",
+                           "score":  190,
+                           "bytes":  6871,
+                           "has_v2_text":  true,
+                           "has_menu":  true,
+                           "already_integrated":  false
+                       },
+                       {
+                           "path":  "documents\\screen-master-template\\planned\\ENGREMIAT-LAUNCHER-ACTUAL.screen-master-candidate.latest.ps1",
+                           "name":  "ENGREMIAT-LAUNCHER-ACTUAL.screen-master-candidate.latest.ps1",
+                           "score":  140,
+                           "bytes":  6187,
+                           "has_v2_text":  false,
+                           "has_menu":  true,
+                           "already_integrated":  false
+                       },
+                       {
+                           "path":  "documents\\screen-normalizer-general-launcher-route-gate\\diff\\ENGREMIAT-LAUNCHER-ACTUAL.route-adapter-planned-stable-20260620-184831.ps1",
+                           "name":  "ENGREMIAT-LAUNCHER-ACTUAL.route-adapter-planned-stable-20260620-184831.ps1",
+                           "score":  140,
+                           "bytes":  5657,
+                           "has_v2_text":  false,
+                           "has_menu":  true,
+                           "already_integrated":  false
+                       },
+                       {
+                           "path":  "documents\\screen-normalizer-general-launcher-route-gate\\diff\\ENGREMIAT-LAUNCHER-ACTUAL.route-adapter-planned.latest.ps1",
+                           "name":  "ENGREMIAT-LAUNCHER-ACTUAL.route-adapter-planned.latest.ps1",
+                           "score":  140,
+                           "bytes":  5657,
+                           "has_v2_text":  false,
+                           "has_menu":  true,
+                           "already_integrated":  false
+                       },
+                       {
+                           "path":  "tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1",
+                           "name":  "ENGREMIAT-LAUNCHER-ACTUAL.ps1",
+                           "score":  140,
+                           "bytes":  7498,
+                           "has_v2_text":  false,
+                           "has_menu":  true,
+                           "already_integrated":  false
+                       },
+                       {
+                           "path":  ".tmp-e06-v2-state-screen-launcher-gate.ps1",
+                           "name":  ".tmp-e06-v2-state-screen-launcher-gate.ps1",
+                           "score":  140,
+                           "bytes":  6697,
+                           "has_v2_text":  true,
+                           "has_menu":  true,
+                           "already_integrated":  true
+                       },
+                       {
+                           "path":  "tools\\launcher\\ENGREMIAT-LAUNCHER-HEALTH.ps1",
+                           "name":  "ENGREMIAT-LAUNCHER-HEALTH.ps1",
+                           "score":  120,
+                           "bytes":  1293,
+                           "has_v2_text":  false,
+                           "has_menu":  false,
+                           "already_integrated":  false
+                       },
+                       {
+                           "path":  "tools\\launcher\\ENGREMIAT-LAUNCHER-UPDATE-HELPER.ps1",
+                           "name":  "ENGREMIAT-LAUNCHER-UPDATE-HELPER.ps1",
+                           "score":  120,
+                           "bytes":  2221,
+                           "has_v2_text":  false,
+                           "has_menu":  false,
+                           "already_integrated":  false
+                       },
+                       {
+                           "path":  ".tmp-e05-v2-state-status-screen-readonly.ps1",
+                           "name":  ".tmp-e05-v2-state-status-screen-readonly.ps1",
+                           "score":  100,
+                           "bytes":  6054,
+                           "has_v2_text":  true,
+                           "has_menu":  true,
+                           "already_integrated":  true
+                       },
+                       {
+                           "path":  "tools\\operator-v2-healthcheck\\Test-EngremiatOperatorV2Health.before-e01b-20260621-212054.ps1",
+                           "name":  "Test-EngremiatOperatorV2Health.before-e01b-20260621-212054.ps1",
+                           "score":  90,
+                           "bytes":  5360,
+                           "has_v2_text":  true,
+                           "has_menu":  true,
+                           "already_integrated":  false
+                       },
+                       {
+                           "path":  "tools\\context-guardian\\Invoke-EngremiatContextGuardedPatch.ps1",
+                           "name":  "Invoke-EngremiatContextGuardedPatch.ps1",
+                           "score":  90,
+                           "bytes":  3248,
+                           "has_v2_text":  true,
+                           "has_menu":  true,
+                           "already_integrated":  false
+                       },
+                       {
+                           "path":  "tools\\operator-v2-healthcheck\\Test-EngremiatOperatorV2Health.before-e01c-20260621-212135.ps1",
+                           "name":  "Test-EngremiatOperatorV2Health.before-e01c-20260621-212135.ps1",
+                           "score":  90,
+                           "bytes":  5932,
+                           "has_v2_text":  true,
+                           "has_menu":  true,
+                           "already_integrated":  false
+                       },
+                       {
+                           "path":  "tools\\operator-v2-healthcheck\\Test-EngremiatOperatorV2Health.ps1",
+                           "name":  "Test-EngremiatOperatorV2Health.ps1",
+                           "score":  90,
+                           "bytes":  6030,
+                           "has_v2_text":  true,
+                           "has_menu":  true,
+                           "already_integrated":  false
+                       },
+                       {
+                           "path":  "tools\\operator-v2\\operator-v2-state-screen.ps1",
+                           "name":  "operator-v2-state-screen.ps1",
+                           "score":  90,
+                           "bytes":  2076,
+                           "has_v2_text":  true,
+                           "has_menu":  true,
+                           "already_integrated":  false
+                       },
+                       {
+                           "path":  "tools\\context-guardian\\Start-EngremiatGuardedWrite.ps1",
+                           "name":  "Start-EngremiatGuardedWrite.ps1",
+                           "score":  70,
+                           "bytes":  2978,
+                           "has_v2_text":  true,
+                           "has_menu":  false,
+                           "already_integrated":  false
+                       },
+                       {
+                           "path":  "tools\\context-guardian\\Start-EngremiatGuardedWrite.before-e02b-20260621-211352.ps1",
+                           "name":  "Start-EngremiatGuardedWrite.before-e02b-20260621-211352.ps1",
+                           "score":  70,
+                           "bytes":  2653,
+                           "has_v2_text":  true,
+                           "has_menu":  false,
+                           "already_integrated":  false
+                       },
+                       {
+                           "path":  "tools\\context-guardian\\New-EngremiatGuardedPatchTemplate.ps1",
+                           "name":  "New-EngremiatGuardedPatchTemplate.ps1",
+                           "score":  70,
+                           "bytes":  2994,
+                           "has_v2_text":  true,
+                           "has_menu":  false,
+                           "already_integrated":  false
+                       },
+                       {
+                           "path":  "tools\\operator-v2\\operator-v2-state-update.ps1",
+                           "name":  "operator-v2-state-update.ps1",
+                           "score":  70,
+                           "bytes":  4598,
+                           "has_v2_text":  true,
+                           "has_menu":  false,
+                           "already_integrated":  false
+                       },
+                       {
+                           "path":  "documents\\screen-normalizer-subscreen-routing-adapter\\candidate-repair\\backup-20260620-183930\\LAUNCHERS_CONFIGURACION.candidate.isolated.ps1",
+                           "name":  "LAUNCHERS_CONFIGURACION.candidate.isolated.ps1",
+                           "score":  60,
+                           "bytes":  2214,
+                           "has_v2_text":  false,
+                           "has_menu":  true,
+                           "already_integrated":  false
+                       },
+                       {
+                           "path":  "freezers\\ENGREMIAT_STABLE_FREEZER_BEFORE_CHILD_NORMALIZATION_20260621-123351\\snapshots\\data__ENGREMIAT-DATA-INTAKE-CENTER-NORMALIZED.ps1",
+                           "name":  "data__ENGREMIAT-DATA-INTAKE-CENTER-NORMALIZED.ps1",
+                           "score":  60,
+                           "bytes":  8442,
+                           "has_v2_text":  false,
+                           "has_menu":  true,
+                           "already_integrated":  false
+                       }
+                   ],
+    "integration_proposal":  {
+                                 "mode":  "GATED_NO_APPLY",
+                                 "menu_label":  "[v] Estado vivo V2",
+                                 "action":  "powershell -NoProfile -ExecutionPolicy Bypass -File tools/operator-v2/operator-v2-state-screen.ps1",
+                                 "safe_rule":  "No parchear launcher hasta validar target exacto y backup",
+                                 "authorization_phrase":  "AUTORIZO_E07_INTEGRAR_PANTALLA_ESTADO_V2_EN_LAUNCHER_CON_BACKUP_Y_SMOKE"
+                             },
+    "git":  {
+                "head":  "5542a460",
+                "rev_sync":  "0\t33",
+                "tree_clean":  false,
+                "status_short":  "?? data/operator-v2-self-state-sync/\n?? documents/operator-v2-self-state-sync/\n?? reports/functional-validation/e09-r1-commit-final-validation-reports-no-push-20260622-091608.json\n?? reports/operator-v2-self-state-sync/\n?? tools/operator-v2/"
+            },
+    "next":  "E07_APPLY_V2_STATE_SCREEN_LAUNCHER_INTEGRATION_WITH_BACKUP_OR_REVIEW"
+}
