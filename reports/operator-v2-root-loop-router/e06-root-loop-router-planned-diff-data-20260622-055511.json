@@ -1,0 +1,89 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_ROOT_LOOP_ROUTER_007",
+    "stage":  "E06_GENERATE_ROOT_LOOP_ROUTER_PLANNED_DIFF_NO_APPLY",
+    "launcher":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+    "patched":  false,
+    "primary_readhost":  {
+                             "line":  11,
+                             "text":  "function Wait-Back(){ W \"\"; $x = Read-Host \"Enter = volver/refrescar | b/q = salir\"; $x = ($x + \"\").Trim().ToLowerInvariant(); if($x -eq \"b\" -or $x -eq \"q\"){ return \"quit\" }; return \"back\" }"
+                         },
+    "primary_switch":  {
+                           "line":  13,
+                           "text":  "# mode=DRY_RUN_ONLY observer; legacy switch/router preserved"
+                       },
+    "readhost_hits":  [
+                          {
+                              "line":  11,
+                              "text":  "function Wait-Back(){ W \"\"; $x = Read-Host \"Enter = volver/refrescar | b/q = salir\"; $x = ($x + \"\").Trim().ToLowerInvariant(); if($x -eq \"b\" -or $x -eq \"q\"){ return \"quit\" }; return \"back\" }"
+                          },
+                          {
+                              "line":  41,
+                              "text":  "function Show-Maintenance(){ Clear-Host; W \"==== ENGREMIAT / MANTENIMIENTO ====\" Cyan; W \"\"; W (\"Ruta: \" + $PSCommandPath) DarkGray; W \"Principio: mantenimiento del launcher maestro estable\" DarkGray; W \"\"; W \"[1] Abrir asistente de tarjetas humanas\" White; W \"[2] Mostrar comando maestro\" White; W \"\"; W $CommonCommandLegend DarkGray; W \"\"; $cmd=Read-Host \"MANTENIMIENTO\"; $cmd=($cmd+\"\").Trim().ToLowerInvariant(); if($cmd -eq \"1\"){ Run-Screen \"Asistente tarjetas humanas\" \"C:\\ENGREMIAT_CORE\\tools\\human-card-assistant.ps1\"; return }; if($cmd -eq \"2\"){ W \"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -NoProfile -ExecutionPolicy Bypass -File `\"C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1`\"\" Green; Wait-Back | Out-Null; return }; return }"
+                          },
+                          {
+                              "line":  44,
+                              "text":  "while($true){ try{ Show-Menu; $cmd = Read-Host \"ENGREMIAT\"; $cmd = ($cmd + \"\").Trim().ToLowerInvariant(); switch($cmd){ \"\" { continue } \"1\" { Run-Screen \"Inicio operador\" \"C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatOperatorMenu.ps1\" } \"2\" { Run-Screen \"Proyectos\" \"C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-projects-manager.ps1\" } \"3\" { Run-Screen \"Memoria y documentacion\" \"C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-MEMORY-DOCUMENTATION-CENTER-NORMALIZED.ps1\" } \"4\" { Run-Screen \"Data Intake\" \"C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-DATA-INTAKE-CENTER-NORMALIZED.ps1\" } \"5\" { Run-Screen \"Health launchers\" \"C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-HEALTH.ps1\" } \"m\" { Show-Maintenance } \"?\" { Show-Help } \"h\" { Show-Help } \"help\" { Show-Help } \"b\" { return } \"q\" { return } default { W (\"Comando no reconocido: \" + $cmd) Yellow; $r=Wait-Back; if($r -eq \"quit\"){ return } } } } catch { if($_.Exception.Message -eq \"__ENGREMIAT_QUIT__\"){ return } else { throw } } }"
+                          }
+                      ],
+    "switch_hits":  [
+                        {
+                            "line":  13,
+                            "text":  "# mode=DRY_RUN_ONLY observer; legacy switch/router preserved"
+                        },
+                        {
+                            "line":  25,
+                            "text":  "# mode=DRY_RUN_ONLY navigation observer; legacy switch/router preserved"
+                        },
+                        {
+                            "line":  44,
+                            "text":  "while($true){ try{ Show-Menu; $cmd = Read-Host \"ENGREMIAT\"; $cmd = ($cmd + \"\").Trim().ToLowerInvariant(); switch($cmd){ \"\" { continue } \"1\" { Run-Screen \"Inicio operador\" \"C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatOperatorMenu.ps1\" } \"2\" { Run-Screen \"Proyectos\" \"C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-projects-manager.ps1\" } \"3\" { Run-Screen \"Memoria y documentacion\" \"C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-MEMORY-DOCUMENTATION-CENTER-NORMALIZED.ps1\" } \"4\" { Run-Screen \"Data Intake\" \"C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-DATA-INTAKE-CENTER-NORMALIZED.ps1\" } \"5\" { Run-Screen \"Health launchers\" \"C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-HEALTH.ps1\" } \"m\" { Show-Maintenance } \"?\" { Show-Help } \"h\" { Show-Help } \"help\" { Show-Help } \"b\" { return } \"q\" { return } default { W (\"Comando no reconocido: \" + $cmd) Yellow; $r=Wait-Back; if($r -eq \"quit\"){ return } } } } catch { if($_.Exception.Message -eq \"__ENGREMIAT_QUIT__\"){ return } else { throw } } }"
+                        }
+                    ],
+    "unknown_hits":  [
+                         {
+                             "line":  44,
+                             "text":  "while($true){ try{ Show-Menu; $cmd = Read-Host \"ENGREMIAT\"; $cmd = ($cmd + \"\").Trim().ToLowerInvariant(); switch($cmd){ \"\" { continue } \"1\" { Run-Screen \"Inicio operador\" \"C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatOperatorMenu.ps1\" } \"2\" { Run-Screen \"Proyectos\" \"C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-projects-manager.ps1\" } \"3\" { Run-Screen \"Memoria y documentacion\" \"C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-MEMORY-DOCUMENTATION-CENTER-NORMALIZED.ps1\" } \"4\" { Run-Screen \"Data Intake\" \"C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-DATA-INTAKE-CENTER-NORMALIZED.ps1\" } \"5\" { Run-Screen \"Health launchers\" \"C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-HEALTH.ps1\" } \"m\" { Show-Maintenance } \"?\" { Show-Help } \"h\" { Show-Help } \"help\" { Show-Help } \"b\" { return } \"q\" { return } default { W (\"Comando no reconocido: \" + $cmd) Yellow; $r=Wait-Back; if($r -eq \"quit\"){ return } } } } catch { if($_.Exception.Message -eq \"__ENGREMIAT_QUIT__\"){ return } else { throw } } }"
+                         }
+                     ],
+    "help_hits":  [
+                      {
+                          "line":  9,
+                          "text":  "$CommonCommandLegend = \"[b/q] salir/volver | m = mantenimiento | ? = ayuda | Enter = refrescar\""
+                      },
+                      {
+                          "line":  42,
+                          "text":  "function Show-Help(){ Clear-Host; W \"==== ENGREMIAT / AYUDA ====\" Cyan; W \"\"; W \"1 = Inicio operador / menu operador.\" White; W \"2 = Proyectos / gestor de proyectos.\" White; W \"3 = Memoria y documentacion.\" White; W \"4 = Data Intake.\" White; W \"5 = Health launchers.\" White; W \"m = mantenimiento.\" White; W \"? = ayuda.\" White; W \"Enter vacio = refrescar.\" White; W \"b/q = salir.\" White; $r=Wait-Back; if($r -eq \"quit\"){ throw \"__ENGREMIAT_QUIT__\" } }"
+                      }
+                  ],
+    "planned_patch":  [
+                          "# ROOT_LOOP_ROUTER_007 planned integration - NO_APPLY",
+                          "# Punto previsto: dentro del switch principal posterior al Read-Host, no como observer externo.",
+                          "# Cargar router antes del bucle o al inicio controlado:",
+                          "$engRootRouterAdapter = \"C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\engine\\root-loop-router-dry-run-adapter.ps1\"",
+                          "if (Test-Path $engRootRouterAdapter) {",
+                          "  # En apply real, evitar dot-source bloqueado por ExecutionPolicy: usar scriptblock controlado.",
+                          "  $engRootRouterCode = Get-Content $engRootRouterAdapter -Raw -Encoding UTF8",
+                          "  . ([scriptblock]::Create($engRootRouterCode))",
+                          "}",
+                          "",
+                          "# Dentro del switch principal:",
+                          "$route = Invoke-EngRootLoopRouterDryRun -InputText $input -ScreenId \"root_launcher\"",
+                          "switch ($route.route_id) {",
+                          "  \"root.refresh\" { continue }",
+                          "  \"root.help\" { \u003cmantener ayuda legacy actual\u003e; continue }",
+                          "  \"root.maintenance\" { Write-Host $route.feedback -ForegroundColor Yellow; continue }",
+                          "  \"root.status\" { Write-Host $route.feedback -ForegroundColor Yellow; continue }",
+                          "  \"root.unknown\" { Write-Host $route.feedback -ForegroundColor Yellow; continue }",
+                          "  default { \u003cdejar rutas legacy 1..5 b/q en switch actual\u003e }",
+                          "}"
+                      ],
+    "risks":  [
+                  "NO aplicar automaticamente aun: hay rutas legacy 1..5 y b/q que no deben reescribirse a ciegas.",
+                  "La integracion debe entrar dentro del switch principal, no despues de Read-Host.",
+                  "Debe evitar dot-source directo por ExecutionPolicy; usar scriptblock controlado si se carga adapter.",
+                  "Debe preservar ayuda legacy actual porque ya funciona.",
+                  "Debe tratar e/m/desconocido como feedback, no como observer externo."
+              ],
+    "decision":  "GO_NO_APPLY_PLAN_READY_RECOMMEND_MANUAL_REVIEW_BEFORE_PATCH",
+    "next":  "E07_REVIEW_PLANNED_DIFF_AND_DECIDE_APPLY_OR_CLOSE_PREPARED"
+}

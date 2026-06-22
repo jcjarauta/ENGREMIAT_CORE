@@ -1,0 +1,35 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_ROOT_LOOP_ROUTER_007",
+    "stage":  "E05_COMPARE_DRY_RUN_ROUTER_WITH_CURRENT_LAUNCHER_BEHAVIOR",
+    "status":  "PASS",
+    "launcher":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+    "adapter":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\engine\\root-loop-router-dry-run-adapter.ps1",
+    "patched":  false,
+    "has_actions_observer":  true,
+    "has_navigation_observer":  true,
+    "has_command_feedback_observer":  false,
+    "matrix":  [
+                   {
+                       "input":  " enter ? m e 1 2 3 4 5 b q xyz",
+                       "expected_route":  "",
+                       "actual_route":  "root.refresh root.refresh root.help root.maintenance root.status root.option.1 root.option.2 root.option.3 root.option.4 root.option.5 root.quit root.quit root.unknown",
+                       "ok":  false,
+                       "intent":  "REFRESH_ROOT_SCREEN REFRESH_ROOT_SCREEN SHOW_ROOT_HELP OPEN_MAINTENANCE SHOW_COMPACT_STATUS OPEN_OPERATOR_V2 OPEN_PROJECTS OPEN_MEMORY_DOCS OPEN_DATA_INTAKE OPEN_HEALTH_LAUNCHERS QUIT_OR_BACK QUIT_OR_BACK UNKNOWN_COMMAND",
+                       "action":  "REFRESH REFRESH HELP MAINTENANCE_OR_PENDING STATUS_OR_PENDING LEGACY_ROUTE LEGACY_ROUTE LEGACY_ROUTE LEGACY_ROUTE LEGACY_ROUTE LEGACY_QUIT LEGACY_QUIT FEEDBACK_ONLY",
+                       "feedback":  "Pantalla refrescada. Pantalla refrescada. Ayuda: 1 operador, 2 proyectos, 3 memoria, 4 data intake, 5 health, m mantenimiento, b/q salir. Mantenimiento pendiente de conectar en el router root. Estado compacto pendiente de conectar en el router root. Abriendo operador. Abriendo proyectos. Abriendo memoria y documentacion. Abriendo Data Intake. Abriendo Health launchers. Saliendo o volviendo segun flujo legacy. Saliendo o volviendo segun flujo legacy. Comando no reconocido. Usa ? para ayuda.",
+                       "integration_risk":  "LOW"
+                   }
+               ],
+    "mismatches":  [
+                       {
+                           "input":  " enter ? m e 1 2 3 4 5 b q xyz",
+                           "expected":  "",
+                           "actual":  "root.refresh root.refresh root.help root.maintenance root.status root.option.1 root.option.2 root.option.3 root.option.4 root.option.5 root.quit root.quit root.unknown"
+                       }
+                   ],
+    "mismatches_count":  1,
+    "json_data":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-root-loop-router\\e05-root-loop-router-compare-data-20260622-055250.json",
+    "decision":  "NO_GO_ROUTER_DRY_RUN_MISMATCH_REPAIR_CONTRACT_FIRST",
+    "next":  "E06_REPAIR_ROOT_LOOP_ROUTER_CONTRACT_OR_READER",
+    "doc":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-root-loop-router\\E05_ROOT_LOOP_ROUTER_COMPARE.md"
+}

@@ -1,0 +1,52 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_MAINTENANCE_ACTIONS_LAB_014",
+    "stage":  "E02_R1_REWRITE_ACTIONS_LAB_ROUTER_WITH_MAINTENANCE_BIND_STABLE",
+    "status":  "PASS",
+    "repair":  "REWRITE_ACTIONS_ROUTER_STABLE",
+    "root_patched":  false,
+    "screen_engine_patched":  false,
+    "router":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\engine\\actions-lab-status-router.ps1",
+    "maintenance_router":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\engine\\maintenance-actions-lab-router.ps1",
+    "backup":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\backups\\guarded-write\\actions-lab-status-router.before-E02_R1_REWRITE_ACTIONS_LAB_ROUTER_WITH_MAINTENANCE_BIND_STABLE-20260622-070003.ps1.bak",
+    "tests":  [
+                  {
+                      "input":  "plan",
+                      "ok":  null,
+                      "mode":  null,
+                      "action_id":  null
+                  },
+                  {
+                      "input":  "estado",
+                      "ok":  null,
+                      "mode":  null,
+                      "action_id":  null
+                  },
+                  {
+                      "input":  "home",
+                      "ok":  null,
+                      "mode":  null,
+                      "action_id":  null
+                  },
+                  {
+                      "input":  "mantenimiento",
+                      "ok":  null,
+                      "mode":  null,
+                      "action_id":  null
+                  },
+                  {
+                      "input":  "m",
+                      "ok":  null,
+                      "mode":  null,
+                      "action_id":  null
+                  },
+                  {
+                      "input":  "zzz",
+                      "ok":  null,
+                      "mode":  null,
+                      "action_id":  null
+                  }
+              ],
+    "maintenance_menu_count":  6,
+    "doc":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-maintenance-actions-lab\\E02_R1_REWRITE_ACTIONS_LAB_ROUTER_WITH_MAINTENANCE_BIND.md",
+    "next":  "E03_VALIDATE_MAINTENANCE_ACTIONS_AND_CLOSE"
+}

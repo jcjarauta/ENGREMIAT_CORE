@@ -1,0 +1,164 @@
+﻿{
+    "home":  "==== ENGREMIAT / ROOT WRAPPER V2 PREVIEW ====\r\n\r\nModo: wrapper no invasivo / dry-run\r\nLauncher raiz: C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1\r\nEstado: LAB | Progreso: 40%\r\nProposito: probar feedback y routing root sin tocar la puerta estable\r\n\r\nSUBMENU\r\n [1] Inicio operador  [LEGACY · dry-run]\r\n [2] Proyectos  [LEGACY · dry-run]\r\n [3] Memoria y documentacion  [LEGACY · dry-run]\r\n [4] Data Intake  [LEGACY · dry-run]\r\n [5] Health launchers  [LEGACY · dry-run]\r\n\r\n[b/q] volver | m = mantenimiento | e = estado | ? = ayuda | Enter = refrescar\r\nROOT_WRAPPER:",
+    "matrix":  [
+                   {
+                       "input":  "",
+                       "expected_route":  "root.refresh",
+                       "actual_route":  "root.refresh",
+                       "ok":  true,
+                       "intent":  "REFRESH_ROOT_SCREEN",
+                       "feedback":  "Pantalla refrescada.",
+                       "risk":  "LOW",
+                       "executed":  false,
+                       "real_execution":  false,
+                       "launcher_modified":  false
+                   },
+                   {
+                       "input":  "enter",
+                       "expected_route":  "root.refresh",
+                       "actual_route":  "root.refresh",
+                       "ok":  true,
+                       "intent":  "REFRESH_ROOT_SCREEN",
+                       "feedback":  "Pantalla refrescada.",
+                       "risk":  "LOW",
+                       "executed":  false,
+                       "real_execution":  false,
+                       "launcher_modified":  false
+                   },
+                   {
+                       "input":  "?",
+                       "expected_route":  "root.help",
+                       "actual_route":  "root.help",
+                       "ok":  true,
+                       "intent":  "SHOW_ROOT_HELP",
+                       "feedback":  "Ayuda: 1 operador, 2 proyectos, 3 memoria, 4 data intake, 5 health, m mantenimiento, b/q salir.",
+                       "risk":  "LOW",
+                       "executed":  false,
+                       "real_execution":  false,
+                       "launcher_modified":  false
+                   },
+                   {
+                       "input":  "m",
+                       "expected_route":  "root.maintenance",
+                       "actual_route":  "root.maintenance",
+                       "ok":  true,
+                       "intent":  "OPEN_MAINTENANCE",
+                       "feedback":  "Mantenimiento pendiente de conectar en el router root.",
+                       "risk":  "PENDING_FEEDBACK_SAFE",
+                       "executed":  false,
+                       "real_execution":  false,
+                       "launcher_modified":  false
+                   },
+                   {
+                       "input":  "e",
+                       "expected_route":  "root.status",
+                       "actual_route":  "root.status",
+                       "ok":  true,
+                       "intent":  "SHOW_COMPACT_STATUS",
+                       "feedback":  "Estado compacto pendiente de conectar en el router root.",
+                       "risk":  "PENDING_FEEDBACK_SAFE",
+                       "executed":  false,
+                       "real_execution":  false,
+                       "launcher_modified":  false
+                   },
+                   {
+                       "input":  "1",
+                       "expected_route":  "root.option.1",
+                       "actual_route":  "root.option.1",
+                       "ok":  true,
+                       "intent":  "OPEN_OPERATOR_V2",
+                       "feedback":  "Abriendo operador.",
+                       "risk":  "LEGACY_DRY_RUN_ONLY",
+                       "executed":  false,
+                       "real_execution":  false,
+                       "launcher_modified":  false
+                   },
+                   {
+                       "input":  "2",
+                       "expected_route":  "root.option.2",
+                       "actual_route":  "root.option.2",
+                       "ok":  true,
+                       "intent":  "OPEN_PROJECTS",
+                       "feedback":  "Abriendo proyectos.",
+                       "risk":  "LEGACY_DRY_RUN_ONLY",
+                       "executed":  false,
+                       "real_execution":  false,
+                       "launcher_modified":  false
+                   },
+                   {
+                       "input":  "3",
+                       "expected_route":  "root.option.3",
+                       "actual_route":  "root.option.3",
+                       "ok":  true,
+                       "intent":  "OPEN_MEMORY_DOCS",
+                       "feedback":  "Abriendo memoria y documentacion.",
+                       "risk":  "LEGACY_DRY_RUN_ONLY",
+                       "executed":  false,
+                       "real_execution":  false,
+                       "launcher_modified":  false
+                   },
+                   {
+                       "input":  "4",
+                       "expected_route":  "root.option.4",
+                       "actual_route":  "root.option.4",
+                       "ok":  true,
+                       "intent":  "OPEN_DATA_INTAKE",
+                       "feedback":  "Abriendo Data Intake.",
+                       "risk":  "LEGACY_DRY_RUN_ONLY",
+                       "executed":  false,
+                       "real_execution":  false,
+                       "launcher_modified":  false
+                   },
+                   {
+                       "input":  "5",
+                       "expected_route":  "root.option.5",
+                       "actual_route":  "root.option.5",
+                       "ok":  true,
+                       "intent":  "OPEN_HEALTH_LAUNCHERS",
+                       "feedback":  "Abriendo Health launchers.",
+                       "risk":  "LEGACY_DRY_RUN_ONLY",
+                       "executed":  false,
+                       "real_execution":  false,
+                       "launcher_modified":  false
+                   },
+                   {
+                       "input":  "b",
+                       "expected_route":  "root.quit",
+                       "actual_route":  "root.quit",
+                       "ok":  true,
+                       "intent":  "QUIT_OR_BACK",
+                       "feedback":  "Saliendo o volviendo segun flujo legacy.",
+                       "risk":  "LEGACY_DRY_RUN_ONLY",
+                       "executed":  false,
+                       "real_execution":  false,
+                       "launcher_modified":  false
+                   },
+                   {
+                       "input":  "q",
+                       "expected_route":  "root.quit",
+                       "actual_route":  "root.quit",
+                       "ok":  true,
+                       "intent":  "QUIT_OR_BACK",
+                       "feedback":  "Saliendo o volviendo segun flujo legacy.",
+                       "risk":  "LEGACY_DRY_RUN_ONLY",
+                       "executed":  false,
+                       "real_execution":  false,
+                       "launcher_modified":  false
+                   },
+                   {
+                       "input":  "xyz",
+                       "expected_route":  "root.unknown",
+                       "actual_route":  "root.unknown",
+                       "ok":  true,
+                       "intent":  "UNKNOWN_COMMAND",
+                       "feedback":  "Comando no reconocido. Usa ? para ayuda.",
+                       "risk":  "UNKNOWN_FEEDBACK_SAFE",
+                       "executed":  false,
+                       "real_execution":  false,
+                       "launcher_modified":  false
+                   }
+               ],
+    "mismatches":  [
+
+                   ]
+}

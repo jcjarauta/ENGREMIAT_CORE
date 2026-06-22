@@ -1,0 +1,23 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_ROOT_LOOP_ROUTER_007",
+    "stage":  "E08_CLOSE_ROOT_LOOP_ROUTER_007_PREPARED_NOT_APPLIED",
+    "status":  "PASS",
+    "close_status":  "CLOSED_PREPARED_NOT_APPLIED",
+    "readiness":  90,
+    "launcher":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+    "contract":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\contracts\\ROOT_LOOP_ROUTER.json",
+    "reader":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\engine\\root-loop-router-reader.ps1",
+    "adapter":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\engine\\root-loop-router-dry-run-adapter.ps1",
+    "has_actions_observer":  true,
+    "has_navigation_observer":  true,
+    "has_command_feedback_observer":  false,
+    "launcher_parse_ok":  true,
+    "router_prepared":  true,
+    "applied_to_launcher":  false,
+    "smoke_ok":  true,
+    "smoke_output":  "SMOKE_OK root_loop_router_prepared_not_applied=True routes=11 tests=13 unknown=Comando no reconocido. Usa ? para ayuda. option1=OPEN_OPERATOR_V2",
+    "close_doc":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-root-loop-router\\ROOT_LOOP_ROUTER_007_CLOSE.md",
+    "next_objective":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-root-loop-router\\NEXT_OBJECTIVE.md",
+    "decision":  "GO_ROOT_LOOP_ROUTER_007_CLOSED_PREPARED_NOT_APPLIED_NEXT_ROOT_WRAPPER_008",
+    "next":  "ENGREMIAT_OPERATOR_V2_ROOT_WRAPPER_008"
+}

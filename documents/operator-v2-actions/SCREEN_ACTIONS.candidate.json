@@ -1,0 +1,113 @@
+﻿{
+    "package_id":  "ENGREMIAT_OPERATOR_V2_ACTIONS_003",
+    "stage":  "E01B_CREATE_OPERATOR_V2_ACTION_CONTRACT_READONLY_BOOL_FIX",
+    "status":  "CANDIDATE_READY",
+    "created_at":  "2026-06-21T21:17:23",
+    "active_root":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2",
+    "registry":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\contracts\\SCREEN_REGISTRY.json",
+    "write_to_operator_v2":  false,
+    "actions":  [
+                    {
+                        "action_id":  "ux_registry.e",
+                        "key":  "e",
+                        "label":  "Estados",
+                        "screen_id":  "ux_registry",
+                        "target":  "screen_states",
+                        "mode":  "navigate_internal",
+                        "risk":  "LOW",
+                        "write":  false,
+                        "status":  "READY",
+                        "purpose":  "Abrir resumen de estados desde UX Registry"
+                    },
+                    {
+                        "action_id":  "ux_registry.r",
+                        "key":  "r",
+                        "label":  "Reparaciones",
+                        "screen_id":  "ux_registry",
+                        "target":  "pending_ux_repairs",
+                        "mode":  "navigate_internal",
+                        "risk":  "LOW",
+                        "write":  false,
+                        "status":  "READY",
+                        "purpose":  "Abrir reparaciones UX desde UX Registry"
+                    },
+                    {
+                        "action_id":  "ux_registry.v",
+                        "key":  "v",
+                        "label":  "Reglas visuales",
+                        "screen_id":  "ux_registry",
+                        "target":  "layout_rules",
+                        "mode":  "navigate_internal",
+                        "risk":  "LOW",
+                        "write":  false,
+                        "status":  "READY",
+                        "purpose":  "Abrir reglas visuales desde UX Registry"
+                    },
+                    {
+                        "action_id":  "progress.e",
+                        "key":  "e",
+                        "label":  "Estados",
+                        "screen_id":  "progreso_pendientes",
+                        "target":  "screen_states",
+                        "mode":  "navigate_internal",
+                        "risk":  "LOW",
+                        "write":  false,
+                        "status":  "READY",
+                        "purpose":  "Abrir estados desde Progreso y pendientes"
+                    },
+                    {
+                        "action_id":  "progress.r",
+                        "key":  "r",
+                        "label":  "Reparaciones UX",
+                        "screen_id":  "progreso_pendientes",
+                        "target":  "pending_ux_repairs",
+                        "mode":  "navigate_internal",
+                        "risk":  "LOW",
+                        "write":  false,
+                        "status":  "READY",
+                        "purpose":  "Abrir reparaciones desde Progreso y pendientes"
+                    },
+                    {
+                        "action_id":  "progress.x",
+                        "key":  "x",
+                        "label":  "Registry",
+                        "screen_id":  "progreso_pendientes",
+                        "target":  "ux_registry",
+                        "mode":  "navigate_internal",
+                        "risk":  "LOW",
+                        "write":  false,
+                        "status":  "READY",
+                        "purpose":  "Abrir registry desde Progreso y pendientes"
+                    },
+                    {
+                        "action_id":  "layout_rules.validate",
+                        "key":  "c",
+                        "label":  "Comprobar reglas",
+                        "screen_id":  "layout_rules",
+                        "target":  "future_validator",
+                        "mode":  "planned_validator",
+                        "risk":  "LOW",
+                        "write":  false,
+                        "status":  "PLANNED",
+                        "purpose":  "Validar menus cortos y estructura UX en fase posterior"
+                    }
+                ],
+    "validation":  {
+                       "required_screens":  [
+                                                "ux_registry",
+                                                "screen_states",
+                                                "layout_rules",
+                                                "pending_ux_repairs",
+                                                "progreso_pendientes"
+                                            ],
+                       "missing":  [
+
+                                   ],
+                       "invalid_actions":  [
+
+                                           ],
+                       "ready_actions":  6,
+                       "planned_actions":  1
+                   },
+    "next":  "E02_PREPARE_ACTION_CONTRACT_APPLY_WITH_GUARDED_WRITE"
+}

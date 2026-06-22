@@ -1,0 +1,312 @@
+﻿REPORT=C:\ENGREMIAT_CORE\reports\operator-v2-screen-architecture\e05k-real-renderer-and-registry-readonly-20260621-180646.txt
+ROOT=C:\ENGREMIAT_CORE
+MODE=READONLY_NO_PATCH_NO_RECURSION
+
+HITS_TOTAL=10231
+
+HITS_RELEVANTES_120:
+HIT pattern=Proposito: file=C:\ENGREMIAT_CORE\.tmp-e70b-define-worker-heartbeat-writer-minimal-stable.ps1:8 text=$mdLines=@("# Worker Heartbeat Writer Minimal Contract","","Proposito: definir el emisor minimo de heartbeat local para publicar estado vivo sin depender de Obsidian, red, APIs externas ni ejecucion remota.","","Salidas locales:","documents/worker-sync/worker-heartbeat-latest.json","documents/worker-sync/worker-events.jsonl","documents/worker-sync/project-signal-latest.json","","Estados admitidos: IDLE, QUEUED, RUNNING, WAITING_HUMAN, BLOCKED, DONE, ERROR","","Reglas:","RUNNING sin blocked_reason se muestra como OK en Proyectos.","blocked_reason no vacio fuerza BLOCK.","project-signal-latest.json es la vista resumida para terminal.","Obsidian solo visualiza Markdown/YAML; no es dependencia runtime.","El writer no ejecuta tareas: solo publica señal.","","Siguiente paso: E71_CREATE_WORKER_HEARTBEAT_WRITER_MINIMAL_DRY_RUN");$mdLines|Set-Content $contractMd -Encoding UTF8
+HIT pattern=Estado: file=C:\ENGREMIAT_CORE\.tmp-e74-define-next-worker-event-writer.ps1:9 text=$md=@("# E74 Worker Event Writer Next Decision","","Estado: PASS","","Decision recomendada: GO_E75_CREATE_LOCAL_WORKER_EVENT_SEQUENCE_DRY_RUN","","Cadena validada:","writer minimo publica heartbeat local","writer minimo publica project signal","Projects Center lee la senal","vista humana muestra RUNNING OK con fase completa","","Siguiente paso propuesto: crear un event writer local que simule una secuencia de estados: QUEUED, RUNNING, WAITING_HUMAN, DONE.","","Limites: local only, sin worker real, sin red, sin git, sin Obsidian runtime, sin IA externa.","","Next: E75_CREATE_LOCAL_WORKER_EVENT_SEQUENCE_DRY_RUN");$md|Set-Content $decisionMd -Encoding UTF8
+HIT pattern=Estado: file=C:\ENGREMIAT_CORE\.tmp-e79b-repair-missing-event-sequence-close-and-close-stage.ps1:14 text=$md=@("# Worker Sync Local Stage Close","","Estado: PASS","","Cadena validada:","1. Projects Center lee heartbeat y project-signal local.","2. Obsidian queda desacoplado como Markdown/YAML, no dependencia runtime.","3. Writer mínimo publica worker-heartbeat-latest.json, worker-events.jsonl y project-signal-latest.json.","4. Secuencia local simula QUEUED, RUNNING, WAITING_HUMAN y DONE.","5. Projects Center representa EVENT_SEQUENCE DONE OK con progreso completo.","6. Palanca worker-signals-config.json permite ON/OFF para ahorrar recursos.","","Estado final:","worker_signals: ON","phase: EVENT_SEQUENCE","state: DONE","progress: 100","block: OK","","Siguiente recomendado: E80_DEFINE_REAL_WORKER_BRIDGE_MINIMAL_CONTRACT") -join "`r`n";Set-Content $summaryMd $md -Encoding UTF8
+HIT pattern=Estado: file=C:\ENGREMIAT_CORE\.tmp-e79-close-worker-sync-stage.ps1:13 text=$md=@("# Worker Sync Local Stage Close","","Estado: PASS","","Cadena validada:","1. Projects Center lee heartbeat y project-signal local.","2. Obsidian queda desacoplado como Markdown/YAML, no dependencia runtime.","3. Writer mínimo publica worker-heartbeat-latest.json, worker-events.jsonl y project-signal-latest.json.","4. Secuencia local simula QUEUED, RUNNING, WAITING_HUMAN y DONE.","5. Projects Center representa EVENT_SEQUENCE DONE OK con progreso completo.","6. Palanca worker-signals-config.json permite ON/OFF para ahorrar recursos.","","Estado final:","worker_signals: ON","phase: EVENT_SEQUENCE","state: DONE","progress: 100","block: OK","","Siguiente recomendado: E80_DEFINE_REAL_WORKER_BRIDGE_MINIMAL_CONTRACT") -join "`r`n";Set-Content $summaryMd $md -Encoding UTF8
+HIT pattern=Estado: file=C:\ENGREMIAT_CORE\.tmp-e80-define-real-worker-bridge-minimal-contract.ps1:12 text=$md=@("# Real Worker Bridge Minimal Contract","","Estado: PASS","","Proposito: preparar el puente minimo para que un worker real publique señales locales sin ejecutar todavia ningun worker real.","","Base validada: Worker Sync local cerrado en E79B.","","Politica de esta etapa:","LOCAL_FIRST_CONTROLLED_BRIDGE","NO_REAL_WORKER_EXECUTION_IN_THIS_STAGE","","Permitido en el siguiente paso:","crear scaffold local","crear contrato de entrada de tarea","crear contrato de salida de worker","crear reporte dry-run","validar que no ejecuta worker real","","Prohibido en el siguiente paso:","navegador","Cline real","Ollama real","red","git","credenciales","acciones remotas","","Estados permitidos: QUEUED, RUNNING, WAITING_HUMAN, BLOCKED, DONE, ERROR","","Ahorro de recursos: worker-signals-config.json permite ON/OFF sin borrar evidencias.","","Next: E81_CREATE_REAL_WORKER_BRIDGE_DRY_RUN_SCAFFOLD") -join "`r`n";Set-Content $contractMd $md -Encoding UTF8
+HIT pattern=Proposito: file=C:\ENGREMIAT_CORE\.tmp-e80-define-real-worker-bridge-minimal-contract.ps1:12 text=$md=@("# Real Worker Bridge Minimal Contract","","Estado: PASS","","Proposito: preparar el puente minimo para que un worker real publique señales locales sin ejecutar todavia ningun worker real.","","Base validada: Worker Sync local cerrado en E79B.","","Politica de esta etapa:","LOCAL_FIRST_CONTROLLED_BRIDGE","NO_REAL_WORKER_EXECUTION_IN_THIS_STAGE","","Permitido en el siguiente paso:","crear scaffold local","crear contrato de entrada de tarea","crear contrato de salida de worker","crear reporte dry-run","validar que no ejecuta worker real","","Prohibido en el siguiente paso:","navegador","Cline real","Ollama real","red","git","credenciales","acciones remotas","","Estados permitidos: QUEUED, RUNNING, WAITING_HUMAN, BLOCKED, DONE, ERROR","","Ahorro de recursos: worker-signals-config.json permite ON/OFF sin borrar evidencias.","","Next: E81_CREATE_REAL_WORKER_BRIDGE_DRY_RUN_SCAFFOLD") -join "`r`n";Set-Content $contractMd $md -Encoding UTF8
+HIT pattern=Estado: file=C:\ENGREMIAT_CORE\.tmp-e84-define-operator-navigation-model.ps1:126 text="Estado: PASS",
+HIT pattern=Estado: file=C:\ENGREMIAT_CORE\.tmp-e84-define-operator-navigation-model.ps1:144 text="- [4] Control y estado: readiness, reportes, bloqueos y salud del sistema.",
+HIT pattern=Ruta: file=C:\ENGREMIAT_CORE\.tmp-e85-apply-operator-navigation-model-to-projects.ps1:34 text='    UX ("Ruta: "+$project.FullName) "info"',
+HIT pattern=route file=C:\ENGREMIAT_CORE\backend\package-lock.json:2453 text="router": "^2.2.0",
+HIT pattern=route file=C:\ENGREMIAT_CORE\backend\package-lock.json:4090 text="node_modules/router": {
+HIT pattern=route file=C:\ENGREMIAT_CORE\backend\package-lock.json:4092 text="resolved": "https://registry.npmjs.org/router/-/router-2.2.0.tgz",
+HIT pattern=route file=C:\ENGREMIAT_CORE\contracts\tool-linking\tool-linking-permissions-contract.json:26 text="role":  "middle_layer_gateway_skill_router",
+HIT pattern=Estado: file=C:\ENGREMIAT_CORE\data\_OFFICIAL_MODULES\_NEXT_MODULES\ENGREMIAT_CLINE_KANBAN_BACKLOG_REFRESH_001\README.md:2 text=Estado: readiness 100. Backlog listo para import manual en Cline/Kanban.
+HIT pattern=Estado: file=C:\ENGREMIAT_CORE\data\_OFFICIAL_MODULES\_NEXT_MODULES\ENGREMIAT_EXTERNAL_KANBAN_REAL_WRITE_GATED_001\README.md:2 text=Estado: PASS_BLOCKED_SAFE
+HIT pattern=Estado: file=C:\ENGREMIAT_CORE\data\_OFFICIAL_MODULES\_NEXT_MODULES\ENGREMIAT_IMPROVEMENT_TO_EXECUTION_PIPELINE_001\README.md:2 text=Estado: readiness 100. Mejora convertida en paquete dry-run.
+HIT pattern=Estado: file=C:\ENGREMIAT_CORE\data\_OFFICIAL_MODULES\_NEXT_MODULES\ENGREMIAT_INTERNAL_IMPROVEMENT_KANBAN_SEED_001\README.md:5 text=Estado: readiness 100 tras cierre.
+HIT pattern=Estado: file=C:\ENGREMIAT_CORE\data\_OFFICIAL_MODULES\_NEXT_MODULES\ENGREMIAT_INTERNAL_PRIORITY_ENGINE_001\README.md:3 text=Priority engine read-only sobre tarjetas Kanban reales. Estado: cerrado readiness 100.
+HIT pattern=Estado: file=C:\ENGREMIAT_CORE\data\_OFFICIAL_MODULES\_NEXT_MODULES\ENGREMIAT_KANBAN_EXTERNAL_WRITE_ADAPTER_001\README.md:3 text=External write adapter en modo manual/read-only. Estado: readiness 100.
+HIT pattern=Estado: file=C:\ENGREMIAT_CORE\data\_OFFICIAL_MODULES\_NEXT_MODULES\ENGREMIAT_KANBAN_OPERATION_LOOP_001\README.md:2 text=Estado: readiness 100. Loop supervisado cerrado en SAFE_BLOCKED.
+HIT pattern=Estado: file=C:\ENGREMIAT_CORE\data\_OFFICIAL_MODULES\_NEXT_MODULES\ENGREMIAT_KANBAN_RECURRENT_OPERATION_001\README.md:2 text=Estado: readiness 100. Recurrent operation simulada cerrada en SAFE_BLOCKED.
+HIT pattern=Estado: file=C:\ENGREMIAT_CORE\data\_OFFICIAL_MODULES\_NEXT_MODULES\ENGREMIAT_KANBAN_WRITE_GATED_001\README.md:5 text=Estado: readiness 100.
+HIT pattern=Estado: file=C:\ENGREMIAT_CORE\data\_OFFICIAL_MODULES\_NEXT_MODULES\ENGREMIAT_MODEL_ADAPTER_OLLAMA_001\README.md:5 text=Estado: cerrado readiness 100.
+HIT pattern=Estado: file=C:\ENGREMIAT_CORE\data\_OFFICIAL_MODULES\_NEXT_MODULES\ENGREMIAT_OLLAMA_REAL_GATED_PROBE_001\README.md:5 text=Estado: cerrado readiness 100.
+HIT pattern=Estado: file=C:\ENGREMIAT_CORE\data\_OFFICIAL_MODULES\_NEXT_MODULES\ENGREMIAT_RESOURCE_COMPOSER_CORE_001\README.md:3 text=Composer core desacoplado de modelos. Entradas: need, proposal, RESOURCE_QUERY. Salidas: RESOURCE_SELECTION, COMPOSITION_BLUEPRINT, BUILD_PACKAGE. Estado: cerrado readiness 100.
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\_OFFICIAL_MODULES\_NEXT_MODULES\ENGREMIAT_SYSTEM_OUTPUT_STANDARD_001\HUMAN_MACHINE_MANUAL.md:11 text=Archivos clave: contracts/system-output-contract.json, contracts/output-dependencies-map.json, contracts/output-evidence-policy.json, contracts/output-gate-policy.json, contracts/model-output-adapter-contract.json, schemas/output-envelope.schema.json, schemas/proposal-output.schema.json, schemas/decision-output.schema.json, schemas/task-plan-output.schema.json, schemas/resource-query-output.schema.json, schemas/composition-blueprint-output.schema.json, schemas/build-package-output.schema.json, rules/output-validation-rules.json, rules/output-transform-rules.json, tools/Invoke-SystemOutputRouterDryRun.ps1, tools/Invoke-SystemOutputValidator.ps1.
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\_OFFICIAL_MODULES\_NEXT_MODULES\ENGREMIAT_SYSTEM_OUTPUT_STANDARD_001\HUMAN_MACHINE_MANUAL.md:13 text=Uso humano: revisar output, validar envelope, comprobar evidence y gate, enrutar con router dry-run y aprobar solo mediante gate humano cuando el output sea accionable.
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\_OFFICIAL_MODULES\_NEXT_MODULES\ENGREMIAT_SYSTEM_OUTPUT_STANDARD_001\tools\Invoke-SystemOutputRouterDryRun.ps1:12 text=$report=[ordered]@{package_id=$pkg;status='PASS';readiness=100;input=$OutputPath;output_type=$o.output_type;route=$dest;execution=$false;local_only=$true;next='E06_VALIDATION'}
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\_OFFICIAL_MODULES\_NEXT_MODULES\ENGREMIAT_SYSTEM_OUTPUT_STANDARD_001\tools\Invoke-SystemOutputRouterDryRun.ps1:13 text=$reportPath=Join-Path $reportDir 'output-router-report.json'
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\_OFFICIAL_MODULES\_NEXT_MODULES\ENGREMIAT_SYSTEM_OUTPUT_STANDARD_001\tools\Invoke-SystemOutputRouterDryRun.ps1:15 text=Write-Host ("OK output_router status=PASS output_type="+$o.output_type+" route="+$dest+" report="+$reportPath)
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\_OFFICIAL_MODULES\_NEXT_MODULES\ENGREMIAT_SYSTEM_OUTPUT_STANDARD_001\tools\Invoke-SystemOutputValidator.ps1:9 text=$required=@('module.json','contracts\system-output-contract.json','schemas\output-type-catalog.json','schemas\output-envelope.schema.json','contracts\output-evidence-policy.json','contracts\output-gate-policy.json','schemas\output-audit-event.schema.json','contracts\model-output-adapter-contract.json','rules\output-transform-rules.json','contracts\output-compatibility-map.json','tools\Invoke-SystemOutputRouterDryRun.ps1','samples\sample-model-output.json')
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\_OFFICIAL_MODULES\_NEXT_MODULES\ENGREMIAT_SYSTEM_OUTPUT_STANDARD_001\tools\Invoke-SystemOutputValidator.ps1:15 text=$routerReport=Join-Path $reportDir 'output-router-report.json'
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\_OFFICIAL_MODULES\_NEXT_MODULES\ENGREMIAT_SYSTEM_OUTPUT_STANDARD_001\tools\Invoke-SystemOutputValidator.ps1:16 text=$pass=($missing.Count -eq 0 -and $jsonErrors.Count -eq 0 -and $outputErrors.Count -eq 0 -and (Test-Path $routerReport))
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\_OFFICIAL_MODULES\_NEXT_MODULES\ENGREMIAT_SYSTEM_OUTPUT_STANDARD_001\tools\Invoke-SystemOutputValidator.ps1:17 text=$report=[ordered]@{package_id=$pkg;status=$(if($pass){'PASS'}else{'ERR'});readiness=$(if($pass){100}else{0});required_checked=$required.Count;sample_outputs=$outputFiles.Count;missing=$missing;json_errors=$jsonErrors;output_errors=$outputErrors;router_report_exists=(Test-Path $routerReport);local_only=$true;ollama_inference=$false;model_dependency=$false;git_write=$false;network=$false;next=$(if($pass){'E07_MANUAL_CLOSE_AND_NEXT'}else{'REPAIR_E06_SYSTEM_OUTPUT_VALIDATION'})}
+HIT pattern=Estado: file=C:\ENGREMIAT_CORE\data\cline-real-proposal-no-apply\cline-proposal-prompt-preview.md:15 text=Estado:
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\controlled-action-from-proposal-015\initial-route-decision.json:6 text="route":  "unknown",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\controlled-action-replication-016\initial-route-decision.json:6 text="route":  "unknown",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\controlled-apply-or-repair-014\initial-route-decision.json:6 text="route":  "unknown",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\desktop-terminal-operator\command-map.json:85 text="implementation_stage":  "E04_COMMAND_ROUTER"
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\desktop-terminal-operator\command-map.json:95 text="implementation_stage":  "E04_COMMAND_ROUTER"
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\desktop-terminal-operator\command-map.json:126 text="implementation_stage":  "E04_COMMAND_ROUTER"
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\desktop-terminal-operator\command-router.v1.json:3 text="stage":  "E04_COMMAND_ROUTER",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\desktop-terminal-operator\command-router.v1.json:5 text="router":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-router.ps1",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\desktop-terminal-operator\command-router.v1.json:18 text="router_minimal":  true,
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\desktop-terminal-operator\desktop-terminal-operator-v1-close.json:9 text="router":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-router.ps1",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\desktop-terminal-operator\desktop-terminal-operator-v1-close.json:32 text="id":  "eng-router.ps1_exists",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\desktop-terminal-operator\desktop-terminal-operator-v1-close.json:34 text="path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-router.ps1"
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\desktop-terminal-operator\desktop-terminal-operator-v1-close.json:47 text="id":  "router_parse_ok",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\desktop-terminal-operator\desktop-terminal-operator-v1-close.json:49 text="path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-router.ps1"
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\desktop-terminal-operator\help-and-logs.v1.json:5 text="router":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-router.ps1",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\desktop-terminal-operator\operator-boot-status.v1.json:20 text="next":  "E04_COMMAND_ROUTER"
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\desktop-terminal-operator\operator-scope.json:21 text="command_router",
+HIT pattern=Ruta: file=C:\ENGREMIAT_CORE\data\dual-pc-development-workflow\dual-pc-development-workflow-manifest.json:6 text="purpose":  "Consolidar el workflow dual-PC y dejar clara la ruta: continuar en el PC actual o volver a MAIN-PC cuando se indique.",
+HIT pattern=Estado: file=C:\ENGREMIAT_CORE\data\ENGREMIAT_MODULES_OFFICIALIZATION_001\E04_APPLY_OFFICIALIZATION_GATE\docs\APPLY_GATE.md:3 text=Estado: PENDING_EXPLICIT_HUMAN_AUTHORIZATION.
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\local-kanban-worker-loop-001\close\E06B_LOCAL_KANBAN_TO_OLLAMA_BRIDGE_ROUTE_VALIDATED.md:1 text=# E06B · Local Kanban to Ollama bridge route validated
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\local-kanban-worker-loop-001\close\E06B_LOCAL_KANBAN_TO_OLLAMA_BRIDGE_ROUTE_VALIDATED.md:6 text=LOCAL_KANBAN_TO_OLLAMA_BRIDGE_ROUTE_GO
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\master-vault-template-audit\master-vault-template-audit.after-repair.v1.json:240 text="title":  "Route preview · \r",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\master-vault-template-audit\master-vault-template-audit.after-repair.v1.json:242 text="07_OBSIDIAN_GRAPH\\RELATION_ROUTER_PREVIEW\\ROUTE_demo-relation-router.md",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\master-vault-template-audit\master-vault-template-audit.after-repair.v1.json:243 text="07_OBSIDIAN_GRAPH\\RELATION_ROUTER_PREVIEW\\ROUTE_modulo-validacion-builder-e06.md"
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\master-vault-template-audit\master-vault-template-audit.after-repair.v1.json:264 text="theme":  "route preview",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\master-vault-template-audit\master-vault-template-audit.after-repair.v1.json:266 text="07_OBSIDIAN_GRAPH\\RELATION_ROUTER_PREVIEW\\ROUTE_demo-relation-router.md",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\master-vault-template-audit\master-vault-template-audit.after-repair.v1.json:267 text="07_OBSIDIAN_GRAPH\\RELATION_ROUTER_PREVIEW\\ROUTE_modulo-validacion-builder-e06.md"
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\master-vault-template-audit\master-vault-template-audit.after-targeted-repair.v1.json:173 text="theme":  "route preview",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\master-vault-template-audit\master-vault-template-audit.after-targeted-repair.v1.json:175 text="07_OBSIDIAN_GRAPH\\RELATION_ROUTER_PREVIEW\\ROUTE_demo-relation-router.md",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\master-vault-template-audit\master-vault-template-audit.after-targeted-repair.v1.json:176 text="07_OBSIDIAN_GRAPH\\RELATION_ROUTER_PREVIEW\\ROUTE_modulo-validacion-builder-e06.md"
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\master-vault-template-audit\master-vault-template-audit.v1.json:255 text="title":  "Route preview · \r",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\master-vault-template-audit\master-vault-template-audit.v1.json:257 text="07_OBSIDIAN_GRAPH\\RELATION_ROUTER_PREVIEW\\ROUTE_demo-relation-router.md",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\master-vault-template-audit\master-vault-template-audit.v1.json:258 text="07_OBSIDIAN_GRAPH\\RELATION_ROUTER_PREVIEW\\ROUTE_modulo-validacion-builder-e06.md"
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\master-vault-template-audit\master-vault-template-audit.v1.json:354 text="theme":  "route preview",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\master-vault-template-audit\master-vault-template-audit.v1.json:356 text="07_OBSIDIAN_GRAPH\\RELATION_ROUTER_PREVIEW\\ROUTE_demo-relation-router.md",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\master-vault-template-audit\master-vault-template-audit.v1.json:357 text="07_OBSIDIAN_GRAPH\\RELATION_ROUTER_PREVIEW\\ROUTE_modulo-validacion-builder-e06.md"
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\master-vault-template-audit\master-vault-template-audit.v1.json:414 text="07_OBSIDIAN_GRAPH\\RELATION_ROUTER_PREVIEW\\ROUTE_demo-relation-router.md",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\master-vault-template-audit\master-vault-template-audit.v1.json:415 text="07_OBSIDIAN_GRAPH\\RELATION_ROUTER_PREVIEW\\ROUTE_modulo-validacion-builder-e06.md"
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\master-vault-template-audit\minor-warnings-classification-and-gate.v1.json:131 text="theme":  "route preview",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\master-vault-template-audit\minor-warnings-classification-and-gate.v1.json:133 text="07_OBSIDIAN_GRAPH\\RELATION_ROUTER_PREVIEW\\ROUTE_demo-relation-router.md",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\master-vault-template-audit\minor-warnings-classification-and-gate.v1.json:134 text="07_OBSIDIAN_GRAPH\\RELATION_ROUTER_PREVIEW\\ROUTE_modulo-validacion-builder-e06.md"
+HIT pattern=Estado: file=C:\ENGREMIAT_CORE\data\NEXT_ENGREMIAT_MODULAR_PLATFORM_003E\reports\needs-capabilities-summary.md:3 text=Estado: readonly design.
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\obsidian-grouped-architecture\dashboard-decision-surface-preview.json:74 text="route_to":  "VAULT_TEMPLATE_BUILDER_PREVIEW",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\obsidian-grouped-architecture\dashboard-decision-surface-preview.json:79 text="route_to":  "PROJECT_SPACE_BUILDER_PREVIEW",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\obsidian-grouped-architecture\dashboard-decision-surface-preview.json:84 text="route_to":  "MODULE_SPACE_BUILDER_PREVIEW",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\obsidian-grouped-architecture\dashboard-decision-surface-preview.json:89 text="route_to":  "RELATION_BUILDER_PREVIEW",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\obsidian-grouped-architecture\dashboard-decision-surface-preview.json:94 text="route_to":  "HUMAN_WORK_SURFACE_ROUTER",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\obsidian-grouped-architecture\NEXT_OBJECTIVE_VAULT_MODULE_BUILDER_001.json:9 text="E04_CREATE_RELATION_AND_GROUP_ROUTER_PREVIEW",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\obsidian-system-bridge-001\evaluation\cline-integration-routes.v1.json:3 text="route":  "MARKDOWN_KANBAN_EXTENSION",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\obsidian-system-bridge-001\evaluation\cline-integration-routes.v1.json:11 text="route":  "CLINE_KANBAN_SIDEBAR_CHAT",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\obsidian-system-bridge-001\evaluation\cline-integration-routes.v1.json:19 text="route":  "CLINE_CLI_HEADLESS",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\obsidian-system-bridge-001\evaluation\cline-integration-routes.v1.json:27 text="route":  "CLINE_MCP_SERVER",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\obsidian-system-bridge-001\evaluation\cline-integration-routes.v1.json:35 text="route":  "CLINE_PROJECT_PLUGINS_HOOKS",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\obsidian-system-bridge-001\evaluation\cline-integration-routes.v1.json:43 text="route":  "VSCODE_EXTENSION_SYNC_TO_KANBAN",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\obsidian-system-bridge-001\evaluation\cline-integration-routes.v1.json:51 text="route":  "GIT_ISSUES_OR_MD_TASKS_BRIDGE",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\obsidian-system-bridge-001\evaluation\E09_CLINE_INTEGRATION_ROUTES.md:1 text=# E09 · Cline integration routes for avoiding manual Kanban handoff
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\obsidian-system-bridge-001\evaluation\obsidian-avoid-manual-kanban-matrix.json:3 text="route":  "A_FILE_BASED_CLINE_KANBAN_STORAGE",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\obsidian-system-bridge-001\evaluation\obsidian-avoid-manual-kanban-matrix.json:11 text="route":  "B_CLINE_KANBAN_API_OR_IMPORT",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\obsidian-system-bridge-001\evaluation\obsidian-avoid-manual-kanban-matrix.json:19 text="route":  "C_OBSIDIAN_KANBAN_AS_BOARD",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\obsidian-system-bridge-001\evaluation\obsidian-avoid-manual-kanban-matrix.json:27 text="route":  "D_ENGREMIAT_LOCAL_KANBAN_DASHBOARD",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\obsidian-system-bridge-001\evaluation\obsidian-avoid-manual-kanban-matrix.json:35 text="route":  "E_UI_AUTOMATION",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\official-entrypoint-197\official-entry-preview.md:37 text=- Keep the route from plan to launcher obvious.
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\official-entrypoint-199\OFFICIAL_ENTRYPOINT_CLOSE_REPORT.md:10 text=- The dashboard and manual make the route visible and repeatable.
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\official-entrypoint-199\OFFICIAL_ENTRYPOINT_CLOSE_REPORT.md:15 text=- Reuse the launcher instead of redefining the route each time.
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\official-entrypoint-199\OFFICIAL_ENTRYPOINT_MANUAL.md:5 text=- Connects the readonly preview, human approval, and launcher handoff into one official route.
+HIT pattern=Estado: file=C:\ENGREMIAT_CORE\data\operator-extension-plan\00_EXTENSION_PLAN_INDEX.md:3 text=Estado: PLAN DEFINIDO
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\operator-extension-plan\02_EXTENSION_GUARDS.md:12 text=- No meter logica compleja en router.
+HIT pattern=Estado: file=C:\ENGREMIAT_CORE\data\operator-extension-plan\04_CIERRE_BASELINE_OPERADOR_AMPLIABLE.md:3 text=Estado: WARN
+HIT pattern=Estado: file=C:\ENGREMIAT_CORE\data\operator-extension-plan\05_CIERRE_LIMPIO_BASELINE_OPERADOR_AMPLIABLE.md:3 text=Estado: PASS
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\operator-extension-plan\operator-protected-extension-map.v1.json:12 text="router_only_delegates",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\operator-extension-plan\operator-protected-extension-map.v1.json:54 text="touch_core":  "ROUTER_DELEGATION_ONLY_IF_NEEDED",
+HIT pattern=Estado: file=C:\ENGREMIAT_CORE\data\operator-navigation-freeze\00_FREEZE_INDEX.md:3 text=Estado: CONGELADO
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\operator-navigation-freeze\03_CONTRATOS_NO_ROMPER.md:15 text=- eng-router.ps1
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\operator-navigation-freeze\04_AMPLIACION_SEGURA.md:5 text=- El router solo debe delegar; la logica vive fuera.
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\operator-navigation-freeze\operator-baseline-freeze.v1.json:23 text="path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-router.ps1",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\operator-navigation-freeze\operator-baseline-freeze.v1.json:73 text="Router solo delega comandos nuevos; no debe absorber logica compleja",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\operator-state\ux\terminal-ux-v1.md:31 text=E05 reescribir router y launcher para menus por nivel y atajos.
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\plan-intake-191\next-plan-intake-objective.md:3 text=Recommended next step: apply the Plan Intake Standard to a real minimal plan and route it through the launcher.
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\registry\artifact-record.schema.json:38 text="route_standard":  [
+HIT pattern=screen_id file=C:\ENGREMIAT_CORE\data\screen-normalizer\screen-registry.v1.json:12 text="screen_id":  "INICIO",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\screen-normalizer\screen-registry.v1.json:15 text="route":  "INICIO",
+HIT pattern=screen_id file=C:\ENGREMIAT_CORE\data\screen-normalizer\screen-registry.v1.json:82 text="screen_id":  "PROYECTOS",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\screen-normalizer\screen-registry.v1.json:85 text="route":  "INICIO \u003e Proyectos",
+HIT pattern=screen_id file=C:\ENGREMIAT_CORE\data\screen-normalizer\screen-registry.v1.json:105 text="screen_id":  "MEMORIA_DOCUMENTACION",
+HIT pattern=route file=C:\ENGREMIAT_CORE\data\screen-normalizer\screen-registry.v1.json:108 text="route":  "INICIO \u003e Memoria y documentacion",
+
+CANDIDATOS_RENDERER:
+CANDIDATE count=3473 file=C:\ENGREMIAT_CORE\reports\screen-normalizer-inicio-migration-gate\e02-inicio-candidate-stdout-20260620-164724.txt
+CANDIDATE count=71 file=C:\ENGREMIAT_CORE\documents\screen-master-template\planned\projects-screen-mismatch-renderer-search.latest.md
+CANDIDATE count=60 file=C:\ENGREMIAT_CORE\documents\manual-screen-maintenance-cards\planned\inicio-main-router-readhost-deep-audit.latest.md
+CANDIDATE count=54 file=C:\ENGREMIAT_CORE\documents\manual-screen-maintenance-cards\planned\inicio-nonempty-command-router-audit.latest.md
+CANDIDATE count=54 file=C:\ENGREMIAT_CORE\reports\manual-screen-maintenance-cards\e05l-audit-inicio-nonempty-command-router-no-apply-20260620-195255.txt
+CANDIDATE count=49 file=C:\ENGREMIAT_CORE\documents\manual-screen-maintenance-cards\planned\m-route-order-command-not-recognized-audit.latest.md
+CANDIDATE count=40 file=C:\ENGREMIAT_CORE\documents\screen-normalizer-general-launcher-menu-router-integration-gate\planned\real-inicio-chain-audit.latest.md
+CANDIDATE count=36 file=C:\ENGREMIAT_CORE\documents\manual-screen-maintenance-cards\planned\m-command-contextual-card-entry-audit.latest.md
+CANDIDATE count=31 file=C:\ENGREMIAT_CORE\reports\manual-screen-maintenance-cards\e05h-router-map-inicio-readhost-context-no-apply-20260620-194826.txt
+CANDIDATE count=31 file=C:\ENGREMIAT_CORE\documents\manual-screen-maintenance-cards\planned\inicio-router-readhost-context-map.latest.md
+CANDIDATE count=27 file=C:\ENGREMIAT_CORE\documents\manual-screen-maintenance-cards\planned\m-guard-after-readhost-patch.latest.md
+CANDIDATE count=22 file=C:\ENGREMIAT_CORE\documents\screen-normalizer-general-launcher-menu-router-integration-gate\planned\human-entrypoints-audit.latest.md
+CANDIDATE count=20 file=C:\ENGREMIAT_CORE\obsidian\ENGREMIAT_GLOBAL_VAULT\07_BUNDLES\ENGREMIAT_MEMORY_MANUALS_AND_RULES_BUNDLE.md
+CANDIDATE count=16 file=C:\ENGREMIAT_CORE\documents\screen-master-template\planned\projects-center-boundary-expanded-for-rewrite.latest.md
+CANDIDATE count=15 file=C:\ENGREMIAT_CORE\reports\launcher\backup-projects-center-before-e66e-20260620-104029.ps1
+CANDIDATE count=15 file=C:\ENGREMIAT_CORE\reports\launcher\backup-projects-center-before-e68d-20260620-104430.ps1
+CANDIDATE count=15 file=C:\ENGREMIAT_CORE\reports\launcher\backup-projects-center-before-e66d-20260620-104001.ps1
+CANDIDATE count=15 file=C:\ENGREMIAT_CORE\reports\launcher\backup-projects-center-before-e67b-20260620-104231.ps1
+CANDIDATE count=15 file=C:\ENGREMIAT_CORE\documents\screen-master-template\planned\projects-center-router-after-manual-fail.latest.md
+CANDIDATE count=15 file=C:\ENGREMIAT_CORE\reports\launcher\e66c-probe-projects-functions-20260620-103924.ps1
+
+CANDIDATOS_REGISTRY:
+CANDIDATE count=18 file=C:\ENGREMIAT_CORE\documents\manual-screen-maintenance-cards\planned\inicio-nonempty-command-router-audit.latest.md
+CANDIDATE count=18 file=C:\ENGREMIAT_CORE\reports\manual-screen-maintenance-cards\e05l-audit-inicio-nonempty-command-router-no-apply-20260620-195255.txt
+CANDIDATE count=12 file=C:\ENGREMIAT_CORE\documents\manual-screen-maintenance-cards\planned\m-route-order-command-not-recognized-audit.latest.md
+CANDIDATE count=12 file=C:\ENGREMIAT_CORE\reports\screen-normalizer-internal-candidates-generation\e02-static-smoke-internal-candidates-no-execute-20260620-165631.json
+CANDIDATE count=12 file=C:\ENGREMIAT_CORE\documents\screen-normalizer-internal-candidates-generation\smoke\internal-candidates-static-smoke-20260620-165631.json
+CANDIDATE count=12 file=C:\ENGREMIAT_CORE\documents\screen-normalizer-internal-candidates-generation\smoke\internal-candidates-static-smoke.latest.json
+CANDIDATE count=9 file=C:\ENGREMIAT_CORE\data\screen-normalizer\screen-registry.v1.json
+CANDIDATE count=9 file=C:\ENGREMIAT_CORE\documents\screen-normalizer-apply-controlled\apply\screen-registry.candidate-20260620-164130.json
+CANDIDATE count=8 file=C:\ENGREMIAT_CORE\documents\screen-normalizer-internal-registry-sweep\audit\internal-registry-sweep-audit.latest.json
+CANDIDATE count=8 file=C:\ENGREMIAT_CORE\documents\screen-normalizer-internal-registry-sweep\audit\internal-registry-sweep-audit-20260620-165335.json
+CANDIDATE count=8 file=C:\ENGREMIAT_CORE\reports\screen-normalizer-internal-registry-sweep\e01-audit-internal-registry-and-launchers-readonly-20260620-165335.json
+CANDIDATE count=7 file=C:\ENGREMIAT_CORE\documents\screen-normalizer-standardization\registry\operator-screen-registry.real.latest.json
+CANDIDATE count=7 file=C:\ENGREMIAT_CORE\reports\screen-normalizer-internal-candidates-generation\e03-prepare-internal-candidates-visual-smoke-guide-20260620-165703.json
+CANDIDATE count=7 file=C:\ENGREMIAT_CORE\reports\screen-normalizer-standardization\e05-create-screen-registry-real-initial-20260620-163702.json
+CANDIDATE count=7 file=C:\ENGREMIAT_CORE\documents\screen-normalizer-internal-candidates-generation\visual-smoke-guide\internal-candidates-visual-smoke-guide.latest.json
+CANDIDATE count=7 file=C:\ENGREMIAT_CORE\documents\screen-normalizer-internal-candidates-generation\visual-smoke-guide\internal-candidates-visual-smoke-guide-20260620-165703.json
+CANDIDATE count=6 file=C:\ENGREMIAT_CORE\documents\screen-normalizer-subscreen-routing-adapter\adapter\subscreen-routing-adapter-manifest.latest.json
+CANDIDATE count=6 file=C:\ENGREMIAT_CORE\documents\screen-normalizer-subscreen-routing-adapter\guided-navigation-classification\guided-navigation-warn-classification.latest.json
+CANDIDATE count=6 file=C:\ENGREMIAT_CORE\documents\screen-normalizer-subscreen-routing-adapter\guided-navigation-classification\guided-navigation-warn-classification-20260620-183758.json
+CANDIDATE count=6 file=C:\ENGREMIAT_CORE\vaults\template-v2-operational-graph\TEMPLATE_V2_OPERATIONAL_GRAPH\.obsidian\workspace.json
+CANDIDATE count=6 file=C:\ENGREMIAT_CORE\documents\screen-normalizer-subscreen-routing-adapter\candidate-repair-smoke\all-repaired-candidates-static-smoke-retry.latest.json
+CANDIDATE count=6 file=C:\ENGREMIAT_CORE\documents\screen-normalizer-subscreen-routing-adapter\candidate-repair-smoke\all-repaired-candidates-static-smoke-retry-20260620-184107.json
+CANDIDATE count=6 file=C:\ENGREMIAT_CORE\tmp\template-v2-project-test\PROJECT_TEST_V2_20260619-233428\.obsidian\workspace.json
+CANDIDATE count=6 file=C:\ENGREMIAT_CORE\documents\screen-normalizer-internal-visual-smoke-results\runner\run-internal-visual-smoke.ps1
+CANDIDATE count=6 file=C:\ENGREMIAT_CORE\documents\screen-normalizer-internal-visual-smoke-results\template\internal-visual-smoke-results-template-20260620-165836.json
+CANDIDATE count=6 file=C:\ENGREMIAT_CORE\tmp\template-v2-project-test\PROJECT_TEST_V2_20260619-233428\BOVEDA_PROYECTO\.obsidian\workspace.json
+CANDIDATE count=6 file=C:\ENGREMIAT_CORE\documents\screen-normalizer-internal-visual-smoke-results\runner\internal-visual-smoke-results.manual.latest.json
+CANDIDATE count=6 file=C:\ENGREMIAT_CORE\documents\screen-normalizer-standardization\registry\operator-screen-registry.v1.json
+CANDIDATE count=6 file=C:\ENGREMIAT_CORE\documents\screen-normalizer-subscreen-routing-adapter\adapter\subscreen-routing-adapter-manifest-20260620-172815.json
+CANDIDATE count=6 file=C:\ENGREMIAT_CORE\documents\screen-normalizer-internal-visual-smoke-results\template\internal-visual-smoke-results-template.latest.json
+
+SNIPPETS_TOP_RENDERER:
+--- FILE=C:\ENGREMIAT_CORE\reports\screen-normalizer-inicio-migration-gate\e02-inicio-candidate-stdout-20260620-164724.txt lines=1..24 ---
+1: ==== ENGREMIAT / INICIO ====
+2: Ruta: INICIO
+3: Rol: hub humano principal del operador
+4: Estado: READY
+5: Principio: local-first | workers OFF | worker real pausado
+6: 
+7: Entrada principal para navegar por proyectos, memoria, control, launchers, workers y tarjetas.
+8: 
+9: 
+10: b/q = salir | m = mantenimiento | ? = ayuda | Enter = refrescar
+11: 
+12: DRY-RUN: INICIO generado desde registry + helper. No sustituye launcher real.
+13: ´╗┐q
+14: DRY-RUN: accion no conectada todavia. La migracion real vendra con gate humano.
+15: ==== ENGREMIAT / INICIO ====
+16: Ruta: INICIO
+17: Rol: hub humano principal del operador
+18: Estado: READY
+19: Principio: local-first | workers OFF | worker real pausado
+20: 
+21: Entrada principal para navegar por proyectos, memoria, control, launchers, workers y tarjetas.
+22: 
+23: 
+24: b/q = salir | m = mantenimiento | ? = ayuda | Enter = refrescar
+--- FILE=C:\ENGREMIAT_CORE\documents\screen-master-template\planned\projects-screen-mismatch-renderer-search.latest.md lines=4..34 ---
+4: GO_PROJECTS_SCREEN_RENDERER_FOUND_NO_APPLY
+5: 
+6: ## Manual finding
+7: La pantalla visible es PROYECTOS / INICIO > Proyectos, no PROYECTOS ACTIVOS. Falta m, ?, q.
+8: 
+9: ## Best candidate
+10: - path: C:\ENGREMIAT_CORE\tools\launcher\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1
+11: - score: 5
+12: - matched: ==== PROYECTOS ==== | Ruta: INICIO > Proyectos | Rol: cartera de proyectos | Principio: PROYECTO > MODULO > TARJETA | numero = abrir proyecto | b = volver | Enter = refrescar
+13: 
+14: ## Hits
+15: | score | readhosts | m | ? | q | parse | path | matched |
+16: |---:|---:|---|---|---|---|---|---|
+17: | 5 | 7 | False | False | False | True | C:\ENGREMIAT_CORE\tools\launcher\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1 | ==== PROYECTOS ==== | Ruta: INICIO > Proyectos | Rol: cartera de proyectos | Principio: PROYECTO > MODULO > TARJETA | numero = abrir proyecto | b = volver | Enter = refrescar |
+18: | 2 | 2 | True | True | True | True | C:\ENGREMIAT_CORE\documents\screen-normalizer-internal-candidates-generation\generated\PROYECTOS.candidate.isolated.ps1 | ==== PROYECTOS ==== | Ruta: INICIO > Proyectos |
+19: | 2 | 4 | False | False | True | True | C:\ENGREMIAT_CORE\tools\launcher\ENGREMIAT-CARDS-VIEW-NORMALIZED.ps1 | Ruta: INICIO > Proyectos | Principio: PROYECTO > MODULO > TARJETA |
+20: | 1 | 40 | True | True | True |  | C:\ENGREMIAT_CORE\documents\manual-screen-maintenance-cards\planned\contextual-m-card-command-patch.latest.md | PROYECTOS: |
+21: | 1 | 13 | True | True | True | True | C:\ENGREMIAT_CORE\documents\manual-screen-maintenance-cards\planned\ENGREMIAT-INICIO-NORMALIZED.contextual-m-card-selected.latest.ps1 | PROYECTOS: |
+22: | 1 | 13 | True | True | True | True | C:\ENGREMIAT_CORE\documents\manual-screen-maintenance-cards\planned\ENGREMIAT-INICIO-NORMALIZED.fix-bq-return.latest.ps1 | PROYECTOS: |
+23: | 1 | 13 | True | True | True | True | C:\ENGREMIAT_CORE\documents\manual-screen-maintenance-cards\planned\ENGREMIAT-INICIO-NORMALIZED.maintenance-card-cancel.latest.ps1 | PROYECTOS: |
+24: | 1 | 18 | True | True | True | True | C:\ENGREMIAT_CORE\documents\manual-screen-maintenance-cards\planned\ENGREMIAT-INICIO-NORMALIZED.m-guard-after-readhost-selected.latest.ps1 | PROYECTOS: |
+25: | 1 | 13 | True | True | True | True | C:\ENGREMIAT_CORE\documents\manual-screen-maintenance-cards\planned\ENGREMIAT-INICIO-NORMALIZED.multiline-stable-router-with-m.bis.latest.ps1 | PROYECTOS: |
+26: | 1 | 13 | True | True | True | False | C:\ENGREMIAT_CORE\documents\manual-screen-maintenance-cards\planned\ENGREMIAT-INICIO-NORMALIZED.multiline-stable-router-with-m.latest.ps1 | PROYECTOS: |
+27: | 1 | 18 | True | True | True | True | C:\ENGREMIAT_CORE\documents\manual-screen-maintenance-cards\planned\ENGREMIAT-INICIO-NORMALIZED.real-inicio-m-route-selected.latest.ps1 | PROYECTOS: |
+28: | 1 | 198 | True | True | True |  | C:\ENGREMIAT_CORE\documents\manual-screen-maintenance-cards\planned\inicio-main-router-readhost-deep-audit.latest.md | PROYECTOS: |
+29: | 1 | 242 | True | True | True |  | C:\ENGREMIAT_CORE\documents\manual-screen-maintenance-cards\planned\inicio-nonempty-command-router-audit.latest.md | PROYECTOS: |
+30: | 1 | 18 | True | True | True |  | C:\ENGREMIAT_CORE\documents\manual-screen-maintenance-cards\planned\inicio-router-direct-lines-25-130.latest.md | PROYECTOS: |
+31: | 1 | 117 | True | True | True |  | C:\ENGREMIAT_CORE\documents\manual-screen-maintenance-cards\planned\inicio-router-readhost-context-map.latest.md | PROYECTOS: |
+32: | 1 | 25 | True | True | True |  | C:\ENGREMIAT_CORE\documents\manual-screen-maintenance-cards\planned\inicio-router-ultra-stable-audit.latest.md | PROYECTOS: |
+33: | 1 | 73 | True | True | True |  | C:\ENGREMIAT_CORE\documents\manual-screen-maintenance-cards\planned\m-command-contextual-card-entry-audit.latest.md | PROYECTOS: |
+34: | 1 | 124 | True | True | True |  | C:\ENGREMIAT_CORE\documents\manual-screen-maintenance-cards\planned\m-guard-after-readhost-patch.latest.md | PROYECTOS: |
+--- FILE=C:\ENGREMIAT_CORE\documents\manual-screen-maintenance-cards\planned\inicio-main-router-readhost-deep-audit.latest.md lines=1..23 ---
+1: # E05G deep audit INICIO main router ReadHost no apply
+2: 
+3: ## Decision
+4: NO_GO_MAIN_ROUTER_NOT_CLEAR
+5: 
+6: ## Diagnosis
+7: MULTIPLE_READHOSTS_FIRST_ONE_NOT_MAIN_PROMPT
+8: 
+9: ## Critical finding
+10: - first_readhost_var: 
+11: NONE
+12: - candidate_main_readhost_line: 
+13: 43
+14: - candidate_main_readhost_var: 
+15: NONE
+16: - main_prompt_line: 
+17: -1
+18: 
+19: ## Checks
+20: - parse_ok: 
+21: True
+22: - has_function_New_EngremiatMaintenanceCard: 
+23: True
+--- FILE=C:\ENGREMIAT_CORE\documents\manual-screen-maintenance-cards\planned\inicio-nonempty-command-router-audit.latest.md lines=1..23 ---
+1: # E05L audit INICIO nonempty command router no apply
+2: 
+3: Decision: AUDIT_READY_NO_APPLY
+4: Human result: Enter refresca; b/q y m no funcionan.
+5: 
+6: ## Lectura esperada
+7: Buscar si el router compara otra variable distinta a `$c`, si normaliza después del guard, o si el guard está dentro de un bloque que no se ejecuta para comandos no vacíos.
+8: 
+9: ## Contextos
+10: ### HIT line 5
+11:      1: function New-EngremiatMaintenanceCard {
+12:      2:   param([string]$ScreenId,[string]$Route,[string]$Expected,[string]$Observed,[string]$ActionDone,[string]$Severity)
+13:      3:   $RootPath = "C:\ENGREMIAT_CORE"
+14:      4:   $Base = Join-Path $RootPath "documents\manual-screen-maintenance-cards"
+15: >    5:   $Cards = Join-Path $Base "cards"
+16:      6:   $Queue = Join-Path $Base "MAINTENANCE_QUEUE.json"
+17:      7:   $Index = Join-Path $Base "MAINTENANCE_CARDS_INDEX.md"
+18:      8:   foreach($p in @($Base,$Cards)){ if(!(Test-Path $p)){ New-Item -ItemType Directory -Force -Path $p | Out-Null } }
+19:      9:   $Id = "MCARD-" + (Get-Date -Format "yyyyMMdd-HHmmss")
+20:     10:   if([string]::IsNullOrWhiteSpace($Severity)){ $Severity = "MEDIUM" }
+21:     11:   $CardPath = Join-Path $Cards ($Id + ".md")
+22:     12:   @("# " + $Id,"","## Identidad","- card_id: " + $Id,"- screen_id: " + $ScreenId,"- route: " + $Route,"- severity: " + $Severity,"- status: OPEN","","## Evidencia humana","- expected: " + $Expected,"- observed: " + $Observed,"- action_done: " + $ActionDone,"","## Diagnostico inicial","- suspected_file: PENDING","- suspected_function: PENDING","- risk: " + $Severity,"","## Reparacion propuesta","- minimal_frontier: PENDING","- no_apply_first: yes","- rollback_needed: PENDING") | Set-Content -Encoding UTF8 $CardPath
+23:     13:   if(!(Test-Path $Index)){ @("# Indice tarjetas mantenimiento","","## Tarjetas") | Set-Content -Encoding UTF8 $Index }
+--- FILE=C:\ENGREMIAT_CORE\reports\manual-screen-maintenance-cards\e05l-audit-inicio-nonempty-command-router-no-apply-20260620-195255.txt lines=1..23 ---
+1: # E05L audit INICIO nonempty command router no apply
+2: 
+3: Decision: AUDIT_READY_NO_APPLY
+4: Human result: Enter refresca; b/q y m no funcionan.
+5: 
+6: ## Lectura esperada
+7: Buscar si el router compara otra variable distinta a `$c`, si normaliza después del guard, o si el guard está dentro de un bloque que no se ejecuta para comandos no vacíos.
+8: 
+9: ## Contextos
+10: ### HIT line 5
+11:      1: function New-EngremiatMaintenanceCard {
+12:      2:   param([string]$ScreenId,[string]$Route,[string]$Expected,[string]$Observed,[string]$ActionDone,[string]$Severity)
+13:      3:   $RootPath = "C:\ENGREMIAT_CORE"
+14:      4:   $Base = Join-Path $RootPath "documents\manual-screen-maintenance-cards"
+15: >    5:   $Cards = Join-Path $Base "cards"
+16:      6:   $Queue = Join-Path $Base "MAINTENANCE_QUEUE.json"
+17:      7:   $Index = Join-Path $Base "MAINTENANCE_CARDS_INDEX.md"
+18:      8:   foreach($p in @($Base,$Cards)){ if(!(Test-Path $p)){ New-Item -ItemType Directory -Force -Path $p | Out-Null } }
+19:      9:   $Id = "MCARD-" + (Get-Date -Format "yyyyMMdd-HHmmss")
+20:     10:   if([string]::IsNullOrWhiteSpace($Severity)){ $Severity = "MEDIUM" }
+21:     11:   $CardPath = Join-Path $Cards ($Id + ".md")
+22:     12:   @("# " + $Id,"","## Identidad","- card_id: " + $Id,"- screen_id: " + $ScreenId,"- route: " + $Route,"- severity: " + $Severity,"- status: OPEN","","## Evidencia humana","- expected: " + $Expected,"- observed: " + $Observed,"- action_done: " + $ActionDone,"","## Diagnostico inicial","- suspected_file: PENDING","- suspected_function: PENDING","- risk: " + $Severity,"","## Reparacion propuesta","- minimal_frontier: PENDING","- no_apply_first: yes","- rollback_needed: PENDING") | Set-Content -Encoding UTF8 $CardPath
+23:     13:   if(!(Test-Path $Index)){ @("# Indice tarjetas mantenimiento","","## Tarjetas") | Set-Content -Encoding UTF8 $Index }

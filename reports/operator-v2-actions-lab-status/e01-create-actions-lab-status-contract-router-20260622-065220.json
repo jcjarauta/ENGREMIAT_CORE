@@ -1,0 +1,82 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_ACTIONS_LAB_STATUS_013",
+    "stage":  "E01_CREATE_ACTIONS_LAB_STATUS_CONTRACT_AND_ROUTER_NO_ROOT_PATCH",
+    "status":  "PASS",
+    "root_patched":  false,
+    "screen_engine_patched":  false,
+    "contract":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\contracts\\ACTIONS_LAB_STATUS.json",
+    "router":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\engine\\actions-lab-status-router.ps1",
+    "backup_contract":  null,
+    "backup_router":  null,
+    "actions_count":  4,
+    "tests":  [
+                  {
+                      "input":  "13",
+                      "ok":  true,
+                      "mode":  "MATCH",
+                      "action_id":  "plan",
+                      "execute":  false
+                  },
+                  {
+                      "input":  "plan",
+                      "ok":  true,
+                      "mode":  "MATCH",
+                      "action_id":  "plan",
+                      "execute":  false
+                  },
+                  {
+                      "input":  "estado-plan",
+                      "ok":  true,
+                      "mode":  "MATCH",
+                      "action_id":  "plan",
+                      "execute":  false
+                  },
+                  {
+                      "input":  "e",
+                      "ok":  true,
+                      "mode":  "MATCH",
+                      "action_id":  "estado",
+                      "execute":  false
+                  },
+                  {
+                      "input":  "estado",
+                      "ok":  true,
+                      "mode":  "MATCH",
+                      "action_id":  "estado",
+                      "execute":  false
+                  },
+                  {
+                      "input":  "home",
+                      "ok":  true,
+                      "mode":  "MATCH",
+                      "action_id":  "home",
+                      "execute":  false
+                  },
+                  {
+                      "input":  "vision",
+                      "ok":  true,
+                      "mode":  "MATCH",
+                      "action_id":  "home",
+                      "execute":  false
+                  },
+                  {
+                      "input":  "m",
+                      "ok":  true,
+                      "mode":  "PLACEHOLDER",
+                      "action_id":  "mantenimiento",
+                      "execute":  false
+                  },
+                  {
+                      "input":  "zzz",
+                      "ok":  false,
+                      "mode":  "UNKNOWN",
+                      "action_id":  null,
+                      "execute":  false
+                  }
+              ],
+    "execute_plan_topics":  11,
+    "run_router":  "powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\engine\\actions-lab-status-router.ps1\"",
+    "doc":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-actions-lab-status\\E01_CREATE_ACTIONS_LAB_STATUS_CONTRACT_AND_ROUTER.md",
+    "decision":  "GO_ACTIONS_LAB_ROUTER_CREATED_VALIDATE_NEXT",
+    "next":  "E02_VALIDATE_ACTIONS_LAB_ROUTER_AND_OPTIONAL_WRAPPER_HINT"
+}

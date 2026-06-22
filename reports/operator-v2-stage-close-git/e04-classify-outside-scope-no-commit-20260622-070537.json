@@ -1,0 +1,91 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_STAGE_CLOSE_GIT_015",
+    "stage":  "E04_CLASSIFY_OUTSIDE_SCOPE_CHANGES_NO_COMMIT",
+    "status":  "PASS",
+    "commit_executed":  false,
+    "push_executed":  false,
+    "scoped_count":  30,
+    "outside_scope_count":  339,
+    "by_top":  [
+                   {
+                       "group":  "reports",
+                       "count":  189
+                   },
+                   {
+                       "group":  "documents",
+                       "count":  80
+                   },
+                   {
+                       "group":  "tools",
+                       "count":  62
+                   },
+                   {
+                       "group":  "projects",
+                       "count":  2
+                   },
+                   {
+                       "group":  "data",
+                       "count":  2
+                   },
+                   {
+                       "group":  "ENGREMIAT.cmd",
+                       "count":  1
+                   },
+                   {
+                       "group":  "ENGREMIAT.ps1",
+                       "count":  1
+                   },
+                   {
+                       "group":  "freezers",
+                       "count":  1
+                   },
+                   {
+                       "group":  "memory",
+                       "count":  1
+                   }
+               ],
+    "by_ext":  [
+                   {
+                       "ext":  ".json",
+                       "count":  145
+                   },
+                   {
+                       "ext":  "_no_ext",
+                       "count":  91
+                   },
+                   {
+                       "ext":  ".ps1",
+                       "count":  81
+                   },
+                   {
+                       "ext":  ".txt",
+                       "count":  17
+                   },
+                   {
+                       "ext":  ".md",
+                       "count":  3
+                   },
+                   {
+                       "ext":  ".cmd",
+                       "count":  1
+                   },
+                   {
+                       "ext":  ".jsonl",
+                       "count":  1
+                   }
+               ],
+    "by_code":  [
+                    {
+                        "code":  "??",
+                        "count":  296
+                    },
+                    {
+                        "code":  "M",
+                        "count":  43
+                    }
+                ],
+    "risk":  "OUTSIDE_SCOPE_PRESENT_DO_NOT_ADD_DOT",
+    "decision":  "KEEP_GIT_CLOSE_PAUSED_OR_AUTHORIZE_SCOPED_ONLY",
+    "doc":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-stage-close-git\\E04_CLASSIFY_OUTSIDE_SCOPE_CHANGES_NO_COMMIT.md",
+    "next":  "AUTHORIZE_SCOPED_COMMIT_OR_REVIEW_OUTSIDE_GROUPS"
+}

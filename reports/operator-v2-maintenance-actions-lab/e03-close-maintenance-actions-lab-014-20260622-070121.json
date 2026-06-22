@@ -1,0 +1,68 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_MAINTENANCE_ACTIONS_LAB_014",
+    "stage":  "E03_VALIDATE_MAINTENANCE_ACTIONS_AND_CLOSE",
+    "status":  "PASS",
+    "close_status":  "CLOSED_LAB_READY",
+    "readiness":  90,
+    "root_patched":  false,
+    "screen_engine_patched":  false,
+    "plan_updated":  true,
+    "maintenance_status":  "CLOSED_LAB_READY",
+    "tests":  [
+                  {
+                      "input":  "mantenimiento",
+                      "ok":  true,
+                      "id":  "menu",
+                      "count":  6
+                  },
+                  {
+                      "input":  "m",
+                      "ok":  true,
+                      "id":  "menu",
+                      "count":  6
+                  },
+                  {
+                      "input":  "salud",
+                      "ok":  true,
+                      "id":  "salud",
+                      "count":  7
+                  },
+                  {
+                      "input":  "validar",
+                      "ok":  true,
+                      "id":  "validar",
+                      "count":  3
+                  },
+                  {
+                      "input":  "reports",
+                      "ok":  true,
+                      "id":  "reports",
+                      "count":  20
+                  },
+                  {
+                      "input":  "backups",
+                      "ok":  true,
+                      "id":  "backups",
+                      "count":  20
+                  },
+                  {
+                      "input":  "rutas",
+                      "ok":  true,
+                      "id":  "rutas",
+                      "count":  7
+                  },
+                  {
+                      "input":  "git-dry",
+                      "ok":  true,
+                      "id":  "git-dry",
+                      "count":  1
+                  }
+              ],
+    "plan_topics":  11,
+    "overview_topics":  11,
+    "composer_topics":  11,
+    "root_unchanged":  true,
+    "close_doc":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-maintenance-actions-lab\\MAINTENANCE_ACTIONS_LAB_014_CLOSE.md",
+    "next_doc":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-maintenance-actions-lab\\NEXT_OBJECTIVE.md",
+    "next":  "ENGREMIAT_OPERATOR_V2_STAGE_CLOSE_GIT_015"
+}

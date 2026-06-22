@@ -1,0 +1,15 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_COMMAND_FEEDBACK_006",
+    "stage":  "E12_ROLLBACK_COMMAND_FEEDBACK_OBSERVER_FROM_ROOT_LAUNCHER",
+    "status":  "PASS",
+    "launcher":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+    "pre_rollback_backup":  "C:\\ENGREMIAT_CORE\\backups\\operator-v2-command-feedback\\ENGREMIAT.ps1.before-E12_ROLLBACK_COMMAND_FEEDBACK_OBSERVER_FROM_ROOT_LAUNCHER-20260621-220420.bak",
+    "restored_from":  "C:\\ENGREMIAT_CORE\\backups\\operator-v2-command-feedback\\ENGREMIAT.ps1.before-E06_BIND_COMMAND_FEEDBACK_OBSERVER_AFTER_NAVIGATION_OBSERVER_GUARDED_WRITE-20260621-215617.bak",
+    "has_command_feedback_observer":  false,
+    "has_navigation_observer":  true,
+    "has_actions_observer":  true,
+    "parse_ok":  true,
+    "decision":  "GO_COMMAND_FEEDBACK_ROLLED_BACK_FROM_ROOT_LAUNCHER",
+    "next":  "E13_HEALTHCHECK_RESTORED_LAUNCHER_AND_CLOSE_PREPARED_NOT_BOUND",
+    "doc":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-command-feedback\\E12_ROLLBACK_COMMAND_FEEDBACK_OBSERVER_FROM_ROOT_LAUNCHER.md"
+}

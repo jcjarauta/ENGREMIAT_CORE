@@ -1,0 +1,22 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_COMMAND_FEEDBACK_INSIDE_WRAPPER_009",
+    "stage":  "E01_CREATE_WRAPPER_COMMAND_FEEDBACK_ADAPTER_NO_ROOT_PATCH",
+    "status":  "PASS",
+    "patched_launcher":  false,
+    "launcher":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+    "wrapper_preview":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\engine\\root-wrapper-preview.ps1",
+    "root_wrapper":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\engine\\root-wrapper.ps1",
+    "root_wrapper_contract":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\contracts\\ROOT_WRAPPER.json",
+    "root_router_contract":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\contracts\\ROOT_LOOP_ROUTER.json",
+    "feedback_contract":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\contracts\\COMMAND_FEEDBACK.json",
+    "adapter":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\engine\\wrapper-command-feedback-adapter.ps1",
+    "backup_adapter":  null,
+    "has_actions_observer":  true,
+    "has_navigation_observer":  true,
+    "has_command_feedback_observer":  false,
+    "smoke_ok":  true,
+    "smoke_output":  "SMOKE_OK command_feedback_inside_wrapper=True tests=13 help=Ayuda: 1 operador, 2 proyectos, 3 memoria, 4 data intake, 5 health, m mantenimiento, b/q salir. maintenance=Mantenimiento pendiente de conectar en el router root. unknown=Comando no reconocido. Usa ? para ayuda. launcher_modified=False executed=False real_execution=False",
+    "doc":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-command-feedback-inside-wrapper\\E01_WRAPPER_COMMAND_FEEDBACK_ADAPTER.md",
+    "decision":  "GO_COMMAND_FEEDBACK_INSIDE_WRAPPER_009_E01_ADAPTER_CREATED",
+    "next":  "E02_INTEGRATE_FEEDBACK_ADAPTER_IN_WRAPPER_PREVIEW_NO_ROOT_PATCH"
+}

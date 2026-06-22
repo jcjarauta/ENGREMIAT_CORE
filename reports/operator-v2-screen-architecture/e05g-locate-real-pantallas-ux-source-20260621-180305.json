@@ -1,0 +1,476 @@
+﻿[
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\screen-master-template\\planned\\legend-candidates\\tools__launcher__ENGREMIAT-MEMORY-DOCUMENTATION-CENTER-NORMALIZED.ps1.candidate.ps1",
+        "line":  27,
+        "text":  "function PlaceholderSub([string]$title,[string[]]$items){while($true){Header $title;foreach($i in $items){UX $i};Write-Host \"\";UX \"[b] volver | [Enter] refrescar | ? = ayuda\" \"muted\";Write-Host \"\";$op=Read-Host \"DOCUMENTACION_SUBMENU\";switch($op){\"b\"{return};\"\"{continue};\"?\"{Header (\"AYUDA \"+$title);UX \"Pantalla propia creada. Handlers reales pendientes de cablear en fase posterior.\";P};default{UXWarn \"Handler pendiente de cablear en siguiente fase\";Start-Sleep -Milliseconds 700}}}}"
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\screen-master-template\\planned\\legend-candidates\\tools__launcher__ENGREMIAT-MEMORY-DOCUMENTATION-CENTER-NORMALIZED.ps1.candidate.ps1",
+        "line":  29,
+        "text":  "function Menu(){while($true){Header;UX \"[1] Memoria viva\";UX \"[2] Dossiers\";UX \"[3] Convocatorias y fichas\";UX \"[4] Contexto worker / continuidad\";UX \"[5] Exportaciones y herramientas\";UX \"[6] Carpetas y archivos\";UX \"[7] Estado y ayuda\";Write-Host \"\";UX \"[b] volver | [Enter] refrescar | ? = ayuda\" \"muted\";Write-Host \"\";$op=Read-Host \"DOCUMENTACION\";switch($op){\"1\"{PlaceholderSub \"MEMORIA VIVA\" @(\"[1] abrir memoria tecnica\",\"[2] abrir resumen humano\",\"[3] abrir informe de desarrollo\")};\"2\"{SubDossiers};\"3\"{SubConvocatorias};\"4\"{PlaceholderSub \"CONTEXTO WORKER / CONTINUIDAD\" @(\"[1] abrir contexto worker\",\"[2] abrir contexto JSON\")};\"5\"{PlaceholderSub \"EXPORTACIONES Y HERRAMIENTAS\" @(\"[1] exportar documentos DOCX/HTML con Pandoc\",\"[2] abrir carpeta exports\",\"[3] verificar herramientas documentales\")};\"6\"{PlaceholderSub \"CARPETAS Y ARCHIVOS\" @(\"[1] abrir carpeta documents\")};\"7\"{StatusHelp};\"b\"{return};\"\"{continue};\"?\"{Header \"AYUDA\";UX \"Pantalla canonica. Numeros locales por pantalla. Enter refresca, b vuelve, ? ayuda.\";P};default{UXWarn \"Opcion no reconocida\";Start-Sleep -Milliseconds 700}}}}"
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\freezers\\ENGREMIAT_STABLE_FREEZER_BEFORE_CHILD_NORMALIZATION_20260621-123351\\snapshots\\memoria__ENGREMIAT-MEMORY-DOCUMENTATION-CENTER-NORMALIZED.ps1",
+        "line":  27,
+        "text":  "function PlaceholderSub([string]$title,[string[]]$items){while($true){Header $title;foreach($i in $items){UX $i};Write-Host \"\";UX \"[b] volver | [Enter] refrescar | ? = ayuda\" \"muted\";Write-Host \"\";$op=Read-Host \"DOCUMENTACION_SUBMENU\";switch($op){\"b\"{return};\"\"{continue};\"?\"{Header (\"AYUDA \"+$title);UX \"Pantalla propia creada. Handlers reales pendientes de cablear en fase posterior.\";P};default{UXWarn \"Handler pendiente de cablear en siguiente fase\";Start-Sleep -Milliseconds 700}}}}"
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\freezers\\ENGREMIAT_STABLE_FREEZER_BEFORE_CHILD_NORMALIZATION_20260621-123351\\snapshots\\memoria__ENGREMIAT-MEMORY-DOCUMENTATION-CENTER-NORMALIZED.ps1",
+        "line":  29,
+        "text":  "function Menu(){while($true){Header;UX \"[1] Memoria viva\";UX \"[2] Dossiers\";UX \"[3] Convocatorias y fichas\";UX \"[4] Contexto worker / continuidad\";UX \"[5] Exportaciones y herramientas\";UX \"[6] Carpetas y archivos\";UX \"[7] Estado y ayuda\";Write-Host \"\";UX \"[b] volver | [Enter] refrescar | ? = ayuda\" \"muted\";Write-Host \"\";$op=Read-Host \"DOCUMENTACION\";switch($op){\"1\"{PlaceholderSub \"MEMORIA VIVA\" @(\"[1] abrir memoria tecnica\",\"[2] abrir resumen humano\",\"[3] abrir informe de desarrollo\")};\"2\"{SubDossiers};\"3\"{SubConvocatorias};\"4\"{PlaceholderSub \"CONTEXTO WORKER / CONTINUIDAD\" @(\"[1] abrir contexto worker\",\"[2] abrir contexto JSON\")};\"5\"{PlaceholderSub \"EXPORTACIONES Y HERRAMIENTAS\" @(\"[1] exportar documentos DOCX/HTML con Pandoc\",\"[2] abrir carpeta exports\",\"[3] verificar herramientas documentales\")};\"6\"{PlaceholderSub \"CARPETAS Y ARCHIVOS\" @(\"[1] abrir carpeta documents\")};\"7\"{StatusHelp};\"b\"{return};\"\"{continue};\"?\"{Header \"AYUDA\";UX \"Pantalla canonica. Numeros locales por pantalla. Enter refresca, b vuelve, ? ayuda.\";P};default{UXWarn \"Opcion no reconocida\";Start-Sleep -Milliseconds 700}}}}"
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\freezers\\ENGREMIAT_STABLE_FREEZER_BEFORE_CHILD_NORMALIZATION_20260621-123459\\snapshots\\memoria__ENGREMIAT-MEMORY-DOCUMENTATION-CENTER-NORMALIZED.ps1",
+        "line":  27,
+        "text":  "function PlaceholderSub([string]$title,[string[]]$items){while($true){Header $title;foreach($i in $items){UX $i};Write-Host \"\";UX \"[b] volver | [Enter] refrescar | ? = ayuda\" \"muted\";Write-Host \"\";$op=Read-Host \"DOCUMENTACION_SUBMENU\";switch($op){\"b\"{return};\"\"{continue};\"?\"{Header (\"AYUDA \"+$title);UX \"Pantalla propia creada. Handlers reales pendientes de cablear en fase posterior.\";P};default{UXWarn \"Handler pendiente de cablear en siguiente fase\";Start-Sleep -Milliseconds 700}}}}"
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\freezers\\ENGREMIAT_STABLE_FREEZER_BEFORE_CHILD_NORMALIZATION_20260621-123459\\snapshots\\memoria__ENGREMIAT-MEMORY-DOCUMENTATION-CENTER-NORMALIZED.ps1",
+        "line":  29,
+        "text":  "function Menu(){while($true){Header;UX \"[1] Memoria viva\";UX \"[2] Dossiers\";UX \"[3] Convocatorias y fichas\";UX \"[4] Contexto worker / continuidad\";UX \"[5] Exportaciones y herramientas\";UX \"[6] Carpetas y archivos\";UX \"[7] Estado y ayuda\";Write-Host \"\";UX \"[b] volver | [Enter] refrescar | ? = ayuda\" \"muted\";Write-Host \"\";$op=Read-Host \"DOCUMENTACION\";switch($op){\"1\"{PlaceholderSub \"MEMORIA VIVA\" @(\"[1] abrir memoria tecnica\",\"[2] abrir resumen humano\",\"[3] abrir informe de desarrollo\")};\"2\"{SubDossiers};\"3\"{SubConvocatorias};\"4\"{PlaceholderSub \"CONTEXTO WORKER / CONTINUIDAD\" @(\"[1] abrir contexto worker\",\"[2] abrir contexto JSON\")};\"5\"{PlaceholderSub \"EXPORTACIONES Y HERRAMIENTAS\" @(\"[1] exportar documentos DOCX/HTML con Pandoc\",\"[2] abrir carpeta exports\",\"[3] verificar herramientas documentales\")};\"6\"{PlaceholderSub \"CARPETAS Y ARCHIVOS\" @(\"[1] abrir carpeta documents\")};\"7\"{StatusHelp};\"b\"{return};\"\"{continue};\"?\"{Header \"AYUDA\";UX \"Pantalla canonica. Numeros locales por pantalla. Enter refresca, b vuelve, ? ayuda.\";P};default{UXWarn \"Opcion no reconocida\";Start-Sleep -Milliseconds 700}}}}"
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-MEMORY-DOCUMENTATION-CENTER-NORMALIZED.ps1",
+        "line":  31,
+        "text":  "function PlaceholderSub([string]$title,[string[]]$items){while($true){Header $title;foreach($i in $items){UX $i};Write-Host \"\";UX \"[b] volver | [Enter] refrescar | ? = ayuda\" \"muted\";Write-Host \"\";$op=Read-Host \"DOCUMENTACION_SUBMENU\";switch($op){\"b\"{return};\"\"{continue};\"?\"{Header (\"AYUDA \"+$title);UX \"Pantalla propia creada. Handlers reales pendientes de cablear en fase posterior.\";P};default{UXWarn \"Handler pendiente de cablear en siguiente fase\";Start-Sleep -Milliseconds 700}}}}"
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-MEMORY-DOCUMENTATION-CENTER-NORMALIZED.ps1",
+        "line":  33,
+        "text":  "function Menu(){while($true){Header;UX \"[1] Memoria viva\";UX \"[2] Dossiers\";UX \"[3] Convocatorias y fichas\";UX \"[4] Contexto worker / continuidad\";UX \"[5] Exportaciones y herramientas\";UX \"[6] Carpetas y archivos\";UX \"[7] Estado y ayuda\";Write-Host \"\";UX \"[b] volver | [Enter] refrescar | ? = ayuda\" \"muted\";Write-Host \"\";$op=Read-Host \"DOCUMENTACION\";switch($op){\"1\"{PlaceholderSub \"MEMORIA VIVA\" @(\"[1] abrir memoria tecnica\",\"[2] abrir resumen humano\",\"[3] abrir informe de desarrollo\")};\"2\"{SubDossiers};\"3\"{SubConvocatorias};\"4\"{PlaceholderSub \"CONTEXTO WORKER / CONTINUIDAD\" @(\"[1] abrir contexto worker\",\"[2] abrir contexto JSON\")};\"5\"{PlaceholderSub \"EXPORTACIONES Y HERRAMIENTAS\" @(\"[1] exportar documentos DOCX/HTML con Pandoc\",\"[2] abrir carpeta exports\",\"[3] verificar herramientas documentales\")};\"6\"{PlaceholderSub \"CARPETAS Y ARCHIVOS\" @(\"[1] abrir carpeta documents\")};\"7\"{StatusHelp};\"b\"{return};\"\"{continue};\"?\"{Header \"AYUDA\";UX \"Pantalla canonica. Numeros locales por pantalla. Enter refresca, b vuelve, ? ayuda.\";P};default{UXWarn \"Opcion no reconocida\";Start-Sleep -Milliseconds 700}}}}"
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\tools\\plan-to-worker\\Normalize-DevelopmentPlan.ps1",
+        "line":  3,
+        "text":  "Write-Host \u0027OK Normalize-DevelopmentPlan placeholder=True use=main_E03_block\u0027"
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\tools\\plan-to-worker\\Test-PlanToWorkerConsolidationContract.ps1",
+        "line":  3,
+        "text":  "Write-Host \"OK Test-PlanToWorkerConsolidationContract placeholder=True validation=main_block\""
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\tools\\plan-to-worker\\Validate-DevelopmentPlan.ps1",
+        "line":  3,
+        "text":  "Write-Host \u0027OK Validate-DevelopmentPlan placeholder=True use=main_E03_block\u0027"
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\tools\\runtime\\Test-RemoteOllamaSafeProbe.ps1",
+        "line":  7,
+        "text":  "if($cfg.base_url -match \"REPLACE_WITH_MAIN_PC_IP\"){Write-Host \"NO_GO remote_ip_placeholder=True\";exit 2}"
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\data\\cline-real-proposal-no-apply\\cline-proposal-raw-output.json",
+        "line":  9,
+        "text":  "\"raw_text\":  \"PENDING_OUTPUT: no real Cline task was created or no manual Cline output has been provided yet. This placeholder preserves the no-apply review flow.\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\data\\controlled-action-instance-018\\controlled-action-instance-execution-plan.json",
+        "line":  13,
+        "text":  "\"minimal_action\":  \"NOOP_INSTANCE_018_CONTROLLED_ACTION_PLACEHOLDER\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\data\\operator-hardening-064\\operator-hardening-fix-plan.json",
+        "line":  8,
+        "text":  "\"policy\":  \"Only low-risk docs/dashboard placeholders may be created; no source mutation, no git write, no worker execution\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\operator-navigation\\operator-navigation-tree-layer-plan.json",
+        "line":  93,
+        "text":  "\"Some root areas are placeholders or partial\""
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  17,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  24,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  31,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  38,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  45,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  52,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  59,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  66,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  73,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  80,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  87,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  94,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  101,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  108,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  115,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  122,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  129,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  136,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  143,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  150,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  157,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  164,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  171,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  178,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  185,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  192,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  199,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  206,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  213,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  220,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  227,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  234,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  241,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  248,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  255,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  262,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  269,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  276,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  283,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  290,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  297,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  304,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  311,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  318,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  325,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  332,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  339,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  346,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  353,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  360,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  367,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  374,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  381,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\ENGREMIAT_INICIO.screen.json",
+        "line":  388,
+        "text":  "\"status\":  \"placeholder\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\OPERATOR_NAVIGATION_TREE_LAYER_PLAN_READY.json",
+        "line":  93,
+        "text":  "\"Some root areas are placeholders or partial\""
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\freezers\\ENGREMIAT_STABLE_FREEZER_BEFORE_CHILD_NORMALIZATION_20260621-123459\\FREEZER.json",
+        "line":  151,
+        "text":  "\"PlaceholderSub\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\memory\\development\\latest-state.json",
+        "line":  166,
+        "text":  "\"PlaceholderSub\","
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\docs\\master-vault-template-audit\\MASTER_VAULT_TEMPLATE_REPAIR_E02.md",
+        "line":  15,
+        "text":  "- Canvas vacío/inválido con placeholder."
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-general-launcher-menu-router-integration-gate\\planned\\human-entrypoints-audit.latest.md",
+        "line":  59,
+        "text":  "content: $ErrorActionPreference=\"Stop\"  [Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()  $Core=\"C:\\ENGREMIAT_CORE\"  function UX([string]$m,[string]$role=\"info\"){$c=switch($role){\"title\"{\"Cyan\"}\"route\"{\"DarkGray\"}\"role\"{\"Gray\"}\"principle\"{\"DarkGray\"}\"section\"{\"Yellow\"}\"ok\"{\"Green\"}\"warn\"{\"Yellow\"}\"err\"{\"Red\"}\"next\"{\"Cyan\"}\"muted\"{\"DarkGray\"}default{\"Gray\"}};try{Write-Host $m -ForegroundColor $c}catch{Write-Host $m}}  function UXOk([string]$m){UX (\"[OK] \"+$m) \"ok\"}  function UXWarn([string]$m){UX (\"[WARN] \"+$m) \"warn\"}  function P(){Write-Host \"\";Read-Host \"[Enter] volver / refrescar\"|Out-Null}  function Header([string]$section=\"\"){Clear-Host;UX \"==== ENGREMIAT / INICIO ====\" \"title\";UX \"Ruta: INICIO \u003e pantalla normalizada pendiente de ubicar\" \"route\";UX \"Rol: pantalla normalizada generada desde inventario\" \"role\";UX \"Principio: reducir listado legacy a pantalla propia con numeros locales\" \"principle\";if($section){UX $section \"section\"};Write-Host \"\"}  function ShowHelp(){Header \"AYUDA\";UX \"Pantalla paralela normalizada. Legacy preservado.\" \"info\";UX \"b vuelve, Enter refresca, ? ayuda.\" \"muted\";P}  function PlaceholderAction([string]$label,[string]$legacy){Header $label;UXWarn \"Handler real pendiente de cablear en fase posterior.\";UX (\"Legacy option: \"+$legacy) \"muted\";P}  function Menu(){while($true){Header  UX \"[1] continuar último foco: vuelve a donde estabas trabajando. White\" \"info\"  UX \"[2] módulos del proyecto activo: revisar/abrir módulos del proyecto. White\" \"info\"  UX \"[3] biblioteca de módulos: reutilizables, activos, inactivos e históricos. White\" \"info\"  UX \"[4] workspace de módulo: seleccionar módulo y abrir su espacio operativo. White\" \"info\"  UX \"[5] tarjetas de módulo: seleccionar módulo y gestionar tarjetas. White\" \"info\"  UX \"[6] abrir carpeta proyecto activo: acceso directo al explorador. White\" \"info\"  UX \"[7] dashboard humano / operador visual: abre el HTML de inicio humano. White\" \"info\"  UX \"[8] árbol de navegación seguro: mapa de pantallas y rutas. White\" \"info\"  UX \"[9] rutas recomendadas: caminos prácticos de trabajo. White\" \"info\"  UX \"[10] ayuda: esta pantalla. White\" \"info\"  UX \"[11] estado técnico: diagnóstico interno del inicio. White\" \"info\"  UX \"[12] estado copiable: resumen para devolver a ChatGPT. White\" \"info\"  UX \"[13] status externo: status ejecutable independiente. White\" \"info\"  UX \"[14] ver último log: última salida registrada. White\" \"info\"  UX \"[15] generar/abrir memoria viva. White\" \"info\"  UX \"[16] generar/abrir prompt continuidad ChatGPT. White\" \"info\"  UX \"[17] generar/abrir prompt worker Ollama/Cline. White\" \"info\"  UX \"[18] abrir diario de desarrollo. White\" \"info\"  UX \"[19] añadir entrada al diario. White\" \"info\"  UX \"[20] refrescar grafo de módulos. White\" \"info\"  UX \"[21] abrir C:\\ENGREMIAT_CORE. White\" \"info\"  UX \"[22]  White\" \"info\"  UX \"[23]  White\" \"info\"  UX \"[24]  White\" \"info\"  UX \"[25]  White\" \"info\"  UX \"[26]  White\" \"info\"  UX \"[27] y luego [11] White\" \"info\"  UX \"[28] módulos del proyecto -\u003e número de módulo -\u003e workspace/ficha del módulo White\" \"info\"  UX \"[29] workspace de módulo -\u003e seleccionar módulo -\u003e tarjetas/tareas/tipos/enlaces White\" \"info\"  UX \"[30] biblioteca de módulos -\u003e [d] desactivados / [h] históricos / [e] gestionar biblioteca White\" \"info\"  UX \"[31] refrescar grafo de módulos -\u003e [11] estado técnico White\" \"info\"  UX \"[32] continuar último foco White\" \"info\"  UX \"[33] selector workspace normalizado / [5] selector tarjetas normalizado DarkGray\" \"info\"  UX \"[34] {0} -f $rec.label) White\" \"info\"  UX \"[35] módulos del proyecto activo White\" \"info\"  UX \"[36] biblioteca de módulos White\" \"info\"  UX \"[37] workspace de módulo White\" \"info\"  UX \"[38] tarjetas de módulo White\" \"info\"  UX \"[39] abrir carpeta proyecto activo White\" \"info\"  UX \"[40] dashboard humano / operador visual White\" \"info\"  UX \"[41] árbol de navegación seguro White\" \"info\"  UX \"[42] rutas recomendadas White\" \"info\"  UX \"[43] ayuda White\" \"info\"  UX \"[44] estado técnico White\" \"info\"  UX \"[45] estado copiable White\" \"info\"  UX \"[46] status externo White\" \"info\"  UX \"[47] ver último log White\" \"info\"  UX \"[48] memoria y documentación White\" \"info\"  UX \"[49] generar/abrir prompt continuidad ChatGPT White\" \"info\"  UX \"[50] generar/abrir prompt worker Ollama/Cline White\" \"info\"  UX \"[51] abrir diario de desarrollo White\" \"info\"  UX \"[52] añadir entrada al diario White\" \"info\"  UX \"[53] refrescar grafo de módulos White\" \"info\"  UX \"[54] abrir C:\\ENGREMIAT_CORE White\" \"info\"  Write-Host \"\";UX \"[b] volver | [Enter] refrescar | ? = ayuda\" \"muted\";Write-Host \"\"; $op=Read-Host \"ENGREMIAT_INICIO\";switch($op){  \"1\"{PlaceholderAction \"continuar último foco: vuelve a donde estabas trabajando. White\" \"1\"}  \"2\"{PlaceholderAction \"módulos del proyecto activo: revisar/abrir módulos del proyecto. White\" \"2\"}  \"3\"{PlaceholderAction \"biblioteca de módulos: reutilizables, activos, inactivos e históricos. White\" \"3\"}  \"4\"{PlaceholderAction \"workspace de módulo: seleccionar módulo y abrir su espacio operativo. White\" \"4\"}  \"5\"{PlaceholderAction \"tarjetas de módulo: seleccionar módulo y gestionar tarjetas. White\" \"5\"}  \"6\"{PlaceholderAction \"abrir carpeta proyecto activo: acceso directo al explorador. White\" \"6\"}  \"7\"{PlaceholderAction \"dashboard humano / operador visual: abre el HTML de inicio humano. White\" \"7\"}  \"8\"{PlaceholderAction \"árbol de navegación seguro: mapa de pantallas y rutas. White\" \"8\"}  \"9\"{PlaceholderAction \"rutas recomendadas: caminos prácticos de trabajo. White\" \"9\"}  \"10\"{PlaceholderAction \"ayuda: esta pantalla. White\" \"10\"}  \"11\"{PlaceholderAction \"estado técnico: diagnóstico interno del inicio. White\" \"11\"}  \"12\"{PlaceholderAction \"estado copiable: resumen para devolver a ChatGPT. White\" \"12\"}  \"13\"{PlaceholderAction \"status externo: status ejecutable independiente. White\" \"13\"}  \"14\"{PlaceholderAction \"ver último log: última salida registrada. White\" \"14\"}  \"15\"{PlaceholderAction \"generar/abrir memoria viva. White\" \"15\"}  \"16\"{PlaceholderAction \"generar/abrir prompt continuidad ChatGPT. White\" \"16\"}  \"17\"{PlaceholderAction \"generar/abrir prompt worker Ollama/Cline. White\" \"17\"}  \"18\"{PlaceholderAction \"abrir diario de desarrollo. White\" \"18\"}  \"19\"{PlaceholderAction \"añadir entrada al diario. White\" \"19\"}  \"20\"{PlaceholderAction \"refrescar grafo de módulos. White\" \"20\"}  \"21\"{PlaceholderAction \"abrir C:\\ENGREMIAT_CORE. White\" \"21\"}  \"22\"{PlaceholderAction \" White\" \"2\"}  \"23\"{PlaceholderAction \" White\" \"3\"}  \"24\"{PlaceholderAction \" White\" \"4\"}  \"25\"{PlaceholderAction \" White\" \"5\"}  \"26\"{PlaceholderAction \" White\" \"8\"}  \"27\"{PlaceholderAction \"y luego [11] White\" \"20\"}  \"28\"{PlaceholderAction \"módulos del proyecto -\u003e número de módulo -\u003e workspace/ficha del módulo White\" \"2\"}  \"29\"{PlaceholderAction \"workspace de módulo -\u003e seleccionar módulo -\u003e tarjetas/tareas/tipos/enlaces White\" \"4\"}  \"30\"{PlaceholderAction \"biblioteca de módulos -\u003e [d] desactivados / [h] históricos / [e] gestionar biblioteca White\" \"3\"}  \"31\"{PlaceholderAction \"refrescar grafo de módulos -\u003e [11] estado técnico White\" \"20\"}  \"32\"{PlaceholderAction \"continuar último foco White\" \"1\"}  \"33\"{PlaceholderAction \"selector workspace normalizado / [5] selector tarjetas normalizado DarkGray\" \"4\"}  \"34\"{PlaceholderAction \"{0} -f $rec.label) White\" \"1\"}  \"35\"{PlaceholderAction \"módulos del proyecto activo White\" \"2\"}  \"36\"{PlaceholderAction \"biblioteca de módulos White\" \"3\"}  \"37\"{PlaceholderAction \"workspace de módulo White\" \"4\"}  \"38\"{PlaceholderAction \"tarjetas de módulo White\" \"5\"}  \"39\"{PlaceholderAction \"abrir carpeta proyecto activo White\" \"6\"}  \"40\"{PlaceholderAction \"dashboard humano / operador visual White\" \"7\"}  \"41\"{PlaceholderAction \"árbol de navegación seguro White\" \"8\"}  \"42\"{PlaceholderAction \"rutas recomendadas White\" \"9\"}  \"43\"{PlaceholderAction \"ayuda White\" \"10\"}  \"44\"{PlaceholderAction \"estado técnico White\" \"11\"}  \"45\"{PlaceholderAction \"estado copiable White\" \"12\"}  \"46\"{PlaceholderAction \"status externo White\" \"13\"}  \"47\"{PlaceholderAction \"ver último log White\" \"14\"}  \"48\"{PlaceholderAction \"memoria y documentación White\" \"15\"}  \"49\"{PlaceholderAction \"generar/abrir prompt continuidad ChatGPT White\" \"16\"}  \"50\"{PlaceholderAction \"generar/abrir prompt worker Ollama/Cline White\" \"17\"}  \"51\"{PlaceholderAction \"abrir diario de desarrollo White\" \"18\"}  \"52\"{PlaceholderAction \"añadir entrada al diario White\" \"19\"}  \"53\"{PlaceholderAction \"refrescar grafo de módulos White\" \"20\"}  \"54\"{PlaceholderAction \"abrir C:\\ENGREMIAT_CORE White\" \"21\"}  \"b\"{return};\"\"{continue};\"?\"{ShowHelp};default{UXWarn \"Opcion no reconocida\";Start-Sleep -Milliseconds 700}}}}  Menu"
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\freezers\\ENGREMIAT_STABLE_FREEZER_BEFORE_CHILD_NORMALIZATION_20260621-123459\\FREEZER.md",
+        "line":  33,
+        "text":  "funciones: ActiveProfilePath, Arr, AssistGrantProfile, DossierClientes, DossierPartners, DossierSubvenciones, EditGrantProfile, EnsureDir, EnsureDoc, EnsureProfile, GenerateAdaptedDossier, Header, Menu, OpenDataIntake, OpenMd, P, PlaceholderSub, StatusHelp, SubConvocatorias, UX"
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\obsidian\\ENGREMIAT_GLOBAL_VAULT\\07_BUNDLES\\ENGREMIAT_MEMORY_MANUALS_AND_RULES_BUNDLE.md",
+        "line":  20748,
+        "text":  "\"cleaned_placeholder\":  true,"
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\obsidian\\ENGREMIAT_GLOBAL_VAULT\\07_BUNDLES\\ENGREMIAT_MEMORY_MANUALS_AND_RULES_BUNDLE.md",
+        "line":  33995,
+        "text":  "Write-Host \u0027OK Normalize-DevelopmentPlan placeholder=True use=main_E03_block\u0027"
+    },
+    {
+        "pattern":  "PLACEHOLDER",
+        "path":  "C:\\ENGREMIAT_CORE\\obsidian\\ENGREMIAT_GLOBAL_VAULT\\07_BUNDLES\\ENGREMIAT_MEMORY_MANUALS_AND_RULES_BUNDLE.md",
+        "line":  34724,
+        "text":  "Write-Host \"OK Test-PlanToWorkerConsolidationContract placeholder=True validation=main_block\""
+    }
+]

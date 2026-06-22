@@ -1,0 +1,21 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_COMMAND_FEEDBACK_006",
+    "stage":  "E02_CREATE_COMMAND_FEEDBACK_CONTRACT_GUARDED_WRITE",
+    "status":  "PASS",
+    "target":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\contracts\\COMMAND_FEEDBACK.json",
+    "backup":  null,
+    "schema":  "ENGREMIAT_COMMAND_FEEDBACK_V1",
+    "command_count":  6,
+    "command_ids":  [
+                        "refresh.empty_enter",
+                        "help.context",
+                        "maintenance.menu",
+                        "status.compact",
+                        "back.quit",
+                        "unknown.fallback"
+                    ],
+    "patched":  true,
+    "doc":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-command-feedback\\E02_COMMAND_FEEDBACK_CONTRACT.md",
+    "decision":  "GO_COMMAND_FEEDBACK_CONTRACT_CREATED",
+    "next":  "E03_CREATE_COMMAND_FEEDBACK_READER_AND_SMOKE"
+}

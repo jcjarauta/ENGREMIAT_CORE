@@ -1,0 +1,23 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_COMMAND_FEEDBACK_006",
+    "stage":  "E13_HEALTHCHECK_RESTORED_LAUNCHER_AND_CLOSE_PREPARED_NOT_BOUND",
+    "status":  "PASS",
+    "close_status":  "CLOSED_PREPARED_NOT_BOUND",
+    "readiness":  85,
+    "launcher":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+    "contract":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\contracts\\COMMAND_FEEDBACK.json",
+    "reader":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\engine\\command-feedback-reader.ps1",
+    "adapter":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\engine\\command-feedback-dry-run-adapter.ps1",
+    "has_command_feedback_observer":  false,
+    "has_navigation_observer":  true,
+    "has_actions_observer":  true,
+    "launcher_parse_ok":  true,
+    "module_parse_ok":  true,
+    "contract_ok":  true,
+    "smoke_ok":  true,
+    "smoke_output":  "SMOKE_OK command_feedback_prepared_not_bound=True tests=6 unknown=Comando no reconocido. Usa ? para ayuda. executed=False real_execution=False",
+    "close_doc":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-command-feedback\\COMMAND_FEEDBACK_006_CLOSE.md",
+    "next_objective":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-command-feedback\\NEXT_OBJECTIVE.md",
+    "decision":  "GO_COMMAND_FEEDBACK_006_CLOSED_PREPARED_NOT_BOUND_NEXT_ROOT_LOOP_ROUTER_007",
+    "next":  "ENGREMIAT_OPERATOR_V2_ROOT_LOOP_ROUTER_007"
+}

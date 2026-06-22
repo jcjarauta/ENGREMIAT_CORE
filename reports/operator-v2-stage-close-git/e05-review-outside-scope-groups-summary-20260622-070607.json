@@ -1,0 +1,92 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_STAGE_CLOSE_GIT_015",
+    "stage":  "E05_REVIEW_OUTSIDE_SCOPE_GROUPS_SUMMARY_NO_COMMIT",
+    "status":  "PASS",
+    "commit_executed":  false,
+    "push_executed":  false,
+    "source_report":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-stage-close-git\\e04-classify-outside-scope-no-commit-20260622-070537.json",
+    "scoped_count":  30,
+    "outside_scope_count":  339,
+    "by_top":  [
+                   {
+                       "group":  "reports",
+                       "count":  189
+                   },
+                   {
+                       "group":  "documents",
+                       "count":  80
+                   },
+                   {
+                       "group":  "tools",
+                       "count":  62
+                   },
+                   {
+                       "group":  "projects",
+                       "count":  2
+                   },
+                   {
+                       "group":  "data",
+                       "count":  2
+                   },
+                   {
+                       "group":  "ENGREMIAT.cmd",
+                       "count":  1
+                   },
+                   {
+                       "group":  "ENGREMIAT.ps1",
+                       "count":  1
+                   },
+                   {
+                       "group":  "freezers",
+                       "count":  1
+                   },
+                   {
+                       "group":  "memory",
+                       "count":  1
+                   }
+               ],
+    "by_ext":  [
+                   {
+                       "ext":  ".json",
+                       "count":  145
+                   },
+                   {
+                       "ext":  "_no_ext",
+                       "count":  91
+                   },
+                   {
+                       "ext":  ".ps1",
+                       "count":  81
+                   },
+                   {
+                       "ext":  ".txt",
+                       "count":  17
+                   },
+                   {
+                       "ext":  ".md",
+                       "count":  3
+                   },
+                   {
+                       "ext":  ".cmd",
+                       "count":  1
+                   },
+                   {
+                       "ext":  ".jsonl",
+                       "count":  1
+                   }
+               ],
+    "by_code":  [
+                    {
+                        "code":  "??",
+                        "count":  296
+                    },
+                    {
+                        "code":  "M",
+                        "count":  43
+                    }
+                ],
+    "decision":  "REVIEW_GROUPS_BEFORE_SCOPED_COMMIT",
+    "recommendation":  "Puedes autorizar commit scoped SOLO de Operator V2, pero no usar git add .",
+    "doc":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-stage-close-git\\E05_REVIEW_OUTSIDE_SCOPE_GROUPS_SUMMARY_NO_COMMIT.md",
+    "next":  "AUTHORIZE_SCOPED_COMMIT_OPERATOR_V2_OR_REVIEW_OUTSIDE_SCOPE"
+}

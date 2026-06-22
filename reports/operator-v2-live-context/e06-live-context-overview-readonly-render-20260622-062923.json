@@ -1,0 +1,19 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_LIVE_CONTEXT_SCREEN_010",
+    "stage":  "E06_SHOW_LIVE_CONTEXT_IN_OPERATOR_V2_OVERVIEW_READONLY_RENDER",
+    "status":  "PASS",
+    "root_patched":  false,
+    "screen_engine_patched":  false,
+    "render":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\engine\\operator-v2-live-context-overview.ps1",
+    "backup_render":  null,
+    "binding_ready":  true,
+    "topics_total":  9,
+    "closed_count":  5,
+    "active_count":  5,
+    "pending_count":  2,
+    "functions_count":  6,
+    "run_command":  "powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\engine\\operator-v2-live-context-overview.ps1\"",
+    "doc":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-live-context\\E06_LIVE_CONTEXT_OVERVIEW_READONLY_RENDER.md",
+    "decision":  "GO_LIVE_CONTEXT_OVERVIEW_RENDER_READY",
+    "next":  "E07_DECIDE_BIND_OVERVIEW_TO_OPERATOR_V2_OR_KEEP_AUX_COMMAND"
+}

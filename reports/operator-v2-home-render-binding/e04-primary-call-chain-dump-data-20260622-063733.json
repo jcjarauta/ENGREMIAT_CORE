@@ -1,0 +1,211 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_HOME_RENDER_BINDING_011",
+    "stage":  "E04_DUMP_PRIMARY_AND_CALL_CHAIN_FOR_MANUAL_MAPPING_NO_APPLY",
+    "patched":  false,
+    "screen":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\operator\\lib\\OperatorV2.ScreenEngine.ps1",
+    "root_function":  {
+                          "name":  "Show-EngRootMenu",
+                          "start":  23,
+                          "end":  25,
+                          "length":  3,
+                          "body":  "function Show-EngRootMenu{while($true){$roots=@(Get-EngScreens|Where-Object{[string]$_.level -notmatch \"\\.\"}|Sort-Object {Get-EngLevelSortKey $_});$map=@{};Clear-Host;Write-Host \"==== ENGREMIAT / OPERADOR V2 ====\" -ForegroundColor Cyan;Write-Host \"\";Write-Host (\"Root: \"+$script:EngV2Root);Write-Host \"\";Write-Host \"MENU\";$i=1;foreach($s in $roots){Write-Host (\" [\"+$i+\"] \"+$s.title+\"  [\"+$s.status+\" · \"+$s.progress+\"%]\");$map[[string]$i]=$s.id;$i++};Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){\"refresh\"{continue}\"b\"{break}\"q\"{break}\"m\"{Show-EngMaintenance;continue}\"?\"{Write-Host \"Selecciona una pantalla principal. Enter refresca.\";Start-Sleep -Seconds 1;continue}default{if($map.ContainsKey($cmd)){Show-EngScreen $map[$cmd];continue};Write-Host \"Opcion no reconocida\" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700}}}}\n\n# LIVE_CONTEXT_SCREEN_010_RENDERER_BEGIN"
+                      },
+    "call_names":  [
+                       "Get-EngScreens",
+                       "Get-EngLevelSortKey",
+                       "Show-EngFooter",
+                       "Read-EngCmd",
+                       "Show-EngMaintenance",
+                       "Show-EngScreen"
+                   ],
+    "called_bodies":  [
+                          {
+                              "name":  "Show-EngScreen",
+                              "start":  22,
+                              "end":  22,
+                              "length":  1,
+                              "score":  55,
+                              "why":  "output,template"
+                          },
+                          {
+                              "name":  "Show-EngMaintenance",
+                              "start":  14,
+                              "end":  15,
+                              "length":  2,
+                              "score":  30,
+                              "why":  "output"
+                          },
+                          {
+                              "name":  "Show-EngFooter",
+                              "start":  11,
+                              "end":  11,
+                              "length":  1,
+                              "score":  30,
+                              "why":  "output"
+                          },
+                          {
+                              "name":  "Get-EngScreens",
+                              "start":  7,
+                              "end":  7,
+                              "length":  1,
+                              "score":  25,
+                              "why":  "template"
+                          },
+                          {
+                              "name":  "Read-EngCmd",
+                              "start":  12,
+                              "end":  12,
+                              "length":  1,
+                              "score":  0,
+                              "why":  ""
+                          },
+                          {
+                              "name":  "Get-EngLevelSortKey",
+                              "start":  9,
+                              "end":  9,
+                              "length":  1,
+                              "score":  0,
+                              "why":  ""
+                          }
+                      ],
+    "global_candidates":  [
+                              {
+                                  "name":  "Show-EngUxRegistryScreen",
+                                  "start":  17,
+                                  "end":  17,
+                                  "length":  1,
+                                  "score":  140,
+                                  "why":  "menu,output,template,name"
+                              },
+                              {
+                                  "name":  "Show-EngLayoutRulesScreen",
+                                  "start":  19,
+                                  "end":  19,
+                                  "length":  1,
+                                  "score":  140,
+                                  "why":  "menu,output,template,name"
+                              },
+                              {
+                                  "name":  "Show-EngScreenStatesScreen",
+                                  "start":  18,
+                                  "end":  18,
+                                  "length":  1,
+                                  "score":  140,
+                                  "why":  "menu,output,template,name"
+                              },
+                              {
+                                  "name":  "Show-EngBody",
+                                  "start":  16,
+                                  "end":  16,
+                                  "length":  1,
+                                  "score":  140,
+                                  "why":  "menu,output,template,name"
+                              },
+                              {
+                                  "name":  "Show-EngPendingUxRepairsScreen",
+                                  "start":  20,
+                                  "end":  20,
+                                  "length":  1,
+                                  "score":  80,
+                                  "why":  "output,template,name"
+                              },
+                              {
+                                  "name":  "Show-EngProgressPendingScreen",
+                                  "start":  21,
+                                  "end":  21,
+                                  "length":  1,
+                                  "score":  80,
+                                  "why":  "output,template,name"
+                              },
+                              {
+                                  "name":  "Show-EngScreen",
+                                  "start":  22,
+                                  "end":  22,
+                                  "length":  1,
+                                  "score":  80,
+                                  "why":  "output,template,name"
+                              },
+                              {
+                                  "name":  "Show-EngOperatorV2LiveContextOverviewPanel",
+                                  "start":  48,
+                                  "end":  72,
+                                  "length":  25,
+                                  "score":  80,
+                                  "why":  "output,template,name"
+                              },
+                              {
+                                  "name":  "Show-EngFooter",
+                                  "start":  11,
+                                  "end":  11,
+                                  "length":  1,
+                                  "score":  55,
+                                  "why":  "output,name"
+                              },
+                              {
+                                  "name":  "Show-EngHeader",
+                                  "start":  13,
+                                  "end":  13,
+                                  "length":  1,
+                                  "score":  55,
+                                  "why":  "output,name"
+                              },
+                              {
+                                  "name":  "Show-EngMaintenance",
+                                  "start":  14,
+                                  "end":  15,
+                                  "length":  2,
+                                  "score":  55,
+                                  "why":  "output,name"
+                              },
+                              {
+                                  "name":  "Get-EngScreen",
+                                  "start":  8,
+                                  "end":  8,
+                                  "length":  1,
+                                  "score":  50,
+                                  "why":  "template,name"
+                              },
+                              {
+                                  "name":  "Get-EngScreens",
+                                  "start":  7,
+                                  "end":  7,
+                                  "length":  1,
+                                  "score":  50,
+                                  "why":  "template,name"
+                              },
+                              {
+                                  "name":  "Get-EngRegistry",
+                                  "start":  6,
+                                  "end":  6,
+                                  "length":  1,
+                                  "score":  25,
+                                  "why":  "template"
+                              },
+                              {
+                                  "name":  "Get-EngOperatorV2LiveContextOverviewTemplateItem",
+                                  "start":  26,
+                                  "end":  37,
+                                  "length":  12,
+                                  "score":  25,
+                                  "why":  "template"
+                              },
+                              {
+                                  "name":  "Get-EngChildren",
+                                  "start":  10,
+                                  "end":  10,
+                                  "length":  1,
+                                  "score":  25,
+                                  "why":  "template"
+                              }
+                          ],
+    "best_candidate":  {
+                           "name":  "Show-EngScreen",
+                           "start":  22,
+                           "end":  22,
+                           "length":  1
+                       },
+    "overview_binding_ready":  true,
+    "topics_total":  9,
+    "decision":  "GO_MANUAL_REVIEW_DUMP_READY",
+    "next":  "E05_PREPARE_BIND_ON_CONFIRMED_RENDER_BODY_NO_APPLY"
+}

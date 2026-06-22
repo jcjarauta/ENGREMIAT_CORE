@@ -1,0 +1,37 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_ROOT_WRAPPER_008",
+    "stage":  "E04_DECIDE_IF_WRAPPER_BECOMES_SAFE_ENTRY_OR_STAYS_LAB",
+    "status":  "PASS",
+    "patched_launcher":  false,
+    "decision":  "KEEP_AS_LAB_NOT_PRIMARY_ENTRY_YET",
+    "readiness":  80,
+    "launcher":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+    "preview":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\engine\\root-wrapper-preview.ps1",
+    "wrapper":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\engine\\root-wrapper.ps1",
+    "wrapper_contract":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\contracts\\ROOT_WRAPPER.json",
+    "router_contract":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\contracts\\ROOT_LOOP_ROUTER.json",
+    "latest_compare":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-root-wrapper\\e03-wrapper-compare-expected-root-behavior-20260622-060122.json",
+    "has_actions_observer":  true,
+    "has_navigation_observer":  true,
+    "has_command_feedback_observer":  false,
+    "reasons":  [
+                    "wrapper_preview_matches_expected_root_behavior",
+                    "launcher_root_is_stable_entrypoint",
+                    "wrapper_still_dry_run_only",
+                    "legacy_routes_1_5_bq_not_real_executed_inside_wrapper",
+                    "no_human_manual_preview_confirmed_yet",
+                    "no_launcher_patch_allowed_in_this_objective"
+                ],
+    "promotion_criteria":  [
+                               "manual_preview_visible_ok",
+                               "enter_refresh_feels_correct",
+                               "unknown_feedback_visible_ok",
+                               "m_and_e_feedback_useful",
+                               "legacy_routes_remain_safe",
+                               "operator_v1_root_still_stable_after_separate_preview"
+                           ],
+    "run_command":  "powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\engine\\root-wrapper-preview.ps1\"",
+    "doc":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-root-wrapper\\E04_ROOT_WRAPPER_DECISION.md",
+    "next_doc":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-root-wrapper\\NEXT_AFTER_WRAPPER_DECISION.md",
+    "next":  "E05_CLOSE_ROOT_WRAPPER_008_LAB_READY_NOT_PRIMARY"
+}

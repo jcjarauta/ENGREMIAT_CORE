@@ -1,0 +1,16 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_COMMAND_FEEDBACK_006",
+    "stage":  "E04_CREATE_COMMAND_FEEDBACK_DRY_RUN_ADAPTER",
+    "status":  "PASS",
+    "contract":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\contracts\\COMMAND_FEEDBACK.json",
+    "reader":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\engine\\command-feedback-reader.ps1",
+    "adapter":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\engine\\command-feedback-dry-run-adapter.ps1",
+    "backup":  null,
+    "parse_ok":  true,
+    "smoke_ok":  true,
+    "smoke_output":  "SMOKE_OK command_feedback_adapter=True tests=8 real_execution=False unknown=Comando no reconocido. Usa ? para ayuda. pending=3",
+    "patched":  true,
+    "doc":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-command-feedback\\E04_COMMAND_FEEDBACK_DRY_RUN_ADAPTER.md",
+    "decision":  "GO_COMMAND_FEEDBACK_DRY_RUN_ADAPTER_CREATED",
+    "next":  "E05_DISCOVER_SAFE_INTEGRATION_POINT_FOR_COMMAND_FEEDBACK"
+}

@@ -1,0 +1,18 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_COMMAND_FEEDBACK_006",
+    "stage":  "E07_HEALTHCHECK_COMMAND_FEEDBACK_OBSERVER_BIND",
+    "status":  "PASS",
+    "launcher":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+    "adapter":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\engine\\command-feedback-dry-run-adapter.ps1",
+    "has_actions_observer":  true,
+    "has_navigation_observer":  true,
+    "has_command_feedback_observer":  true,
+    "observer_order_ok":  true,
+    "parse_ok":  true,
+    "smoke_ok":  true,
+    "smoke_output":  "SMOKE_OK command_feedback_healthcheck=True tests=8 executed=False real_execution=False unknown=Comando no reconocido. Usa ? para ayuda.",
+    "patched":  false,
+    "doc":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-command-feedback\\E07_COMMAND_FEEDBACK_OBSERVER_HEALTHCHECK.md",
+    "decision":  "GO_COMMAND_FEEDBACK_OBSERVER_HEALTHY_READY_FOR_MANUAL_TEST",
+    "next":  "E08_MANUAL_COMMAND_FEEDBACK_TEST"
+}

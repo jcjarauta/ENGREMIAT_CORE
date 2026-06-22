@@ -1,0 +1,57 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_MAINTENANCE_ACTIONS_LAB_014",
+    "stage":  "E01_R2_REPAIR_TESTPATH_AND_OPERATOR_IN_MAINTENANCE_ROUTER",
+    "status":  "PASS",
+    "repair":  "WRAPPED_TESTPATH_AND_OPERATOR",
+    "root_patched":  false,
+    "screen_engine_patched":  false,
+    "router":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\engine\\maintenance-actions-lab-router.ps1",
+    "backup":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\backups\\guarded-write\\maintenance-actions-lab-router.before-E01_R2_REPAIR_TESTPATH_AND_OPERATOR_IN_MAINTENANCE_ROUTER-20260622-065810.ps1.bak",
+    "menu_count":  6,
+    "tests":  [
+                  {
+                      "input":  "salud",
+                      "ok":  true,
+                      "id":  "salud",
+                      "count":  7
+                  },
+                  {
+                      "input":  "validar",
+                      "ok":  true,
+                      "id":  "validar",
+                      "count":  3
+                  },
+                  {
+                      "input":  "reports",
+                      "ok":  true,
+                      "id":  "reports",
+                      "count":  20
+                  },
+                  {
+                      "input":  "backups",
+                      "ok":  true,
+                      "id":  "backups",
+                      "count":  20
+                  },
+                  {
+                      "input":  "rutas",
+                      "ok":  true,
+                      "id":  "rutas",
+                      "count":  7
+                  },
+                  {
+                      "input":  "git-dry",
+                      "ok":  true,
+                      "id":  "git-dry",
+                      "count":  1
+                  },
+                  {
+                      "input":  "zzz",
+                      "ok":  false,
+                      "id":  "unknown",
+                      "count":  0
+                  }
+              ],
+    "doc":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-maintenance-actions-lab\\E01_R2_REPAIR_TESTPATH_AND_OPERATOR.md",
+    "next":  "E02_BIND_MAINTENANCE_ROUTER_TO_ACTIONS_LAB_ROUTER_PLACEHOLDER"
+}

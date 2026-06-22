@@ -1,0 +1,25 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_STAGE_CLOSE_GIT_015",
+    "stage":  "E03_DECIDE_COMMIT_SCOPED_OR_PAUSE_OUTSIDE_SCOPE",
+    "status":  "PASS",
+    "close_status":  "PAUSED_SAFE_NO_COMMIT",
+    "commit_executed":  false,
+    "push_executed":  false,
+    "scoped_count":  30,
+    "outside_scope_count":  339,
+    "outside_groups":  {
+                           "data":  2,
+                           "documents":  80,
+                           "tools":  62,
+                           "ENGREMIAT.cmd":  1,
+                           "ENGREMIAT.ps1":  1,
+                           "freezers":  1,
+                           "memory":  1,
+                           "projects":  2,
+                           "reports":  189
+                       },
+    "decision":  "PAUSE_COMMIT_OUTSIDE_SCOPE_REVIEW_REQUIRED",
+    "close_doc":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-stage-close-git\\STAGE_CLOSE_GIT_015_CLOSE_PAUSED.md",
+    "next_doc":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-stage-close-git\\NEXT_OBJECTIVE.md",
+    "next":  "REVIEW_OUTSIDE_SCOPE_OR_AUTHORIZE_SCOPED_COMMIT"
+}

@@ -1,0 +1,407 @@
+﻿REPORT=C:\ENGREMIAT_CORE\reports\operator-v2-screen-architecture\e05q-real-operator-v2-source-20260621-181300.txt
+REAL_OPERATOR_V2_ROOT=C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2
+FILES_SCANNED=36
+HITS=153
+
+CANDIDATOS_REALES_V2:
+CANDIDATE count=16 file=C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2\operator\lib\OperatorV2.ScreenEngine.before-e04b-20260621-175346.ps1
+CANDIDATE count=15 file=C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2\operator\lib\OperatorV2.ScreenEngine.before-e04c-20260621-175502.ps1
+CANDIDATE count=15 file=C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2\operator\lib\OperatorV2.ScreenEngine.before-e05b-20260621-175913.ps1
+CANDIDATE count=15 file=C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2\operator\lib\OperatorV2.ScreenEngine.ps1
+CANDIDATE count=14 file=C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2\operator\lib\OperatorV2.ScreenEngine.before-e03-20260621-175039.ps1
+CANDIDATE count=11 file=C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2\operator\lib\OperatorV2.UI.before-e04-20260621-171140.ps1
+CANDIDATE count=11 file=C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2\operator\lib\OperatorV2.UI.ps1
+CANDIDATE count=9 file=C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2\operator\lib\OperatorV2.UI.before-state-20260621-170823.ps1
+CANDIDATE count=8 file=C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2\operator\lib\OperatorV2.UI.before-e03b-20260621-170435.ps1
+CANDIDATE count=7 file=C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2\operator\lib\OperatorV2.UI.before-e03-20260621-170239.ps1
+CANDIDATE count=4 file=C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2\contracts\SCREEN_REGISTRY.before-e03-20260621-175039.json
+CANDIDATE count=4 file=C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2\contracts\SCREEN_REGISTRY.before-e04b-20260621-175346.json
+CANDIDATE count=4 file=C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2\contracts\SCREEN_REGISTRY.json
+CANDIDATE count=4 file=C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2\contracts\SCREEN_REGISTRY.before-e05b-20260621-175913.json
+CANDIDATE count=3 file=C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2\operator\ENGREMIAT_OPERADOR_V2.before-e02-20260621-170200.ps1
+CANDIDATE count=2 file=C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2\operator\ENGREMIAT_OPERADOR_V2.before-e03-20260621-170239.ps1
+CANDIDATE count=2 file=C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2\operator\ENGREMIAT_OPERADOR_V2.before-e03b-20260621-170435.ps1
+CANDIDATE count=2 file=C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2\operator\ENGREMIAT_OPERADOR_V2.before-e04-20260621-171140.ps1
+CANDIDATE count=2 file=C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2\operator\ENGREMIAT_OPERADOR_V2.before-state-20260621-170823.ps1
+CANDIDATE count=2 file=C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2\operator\ENGREMIAT_OPERADOR_V2.before-e01b-20260621-170949.ps1
+CANDIDATE count=2 file=C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2\operator\ENGREMIAT_OPERADOR_V2.before-e02-engine-20260621-174611.ps1
+CANDIDATE count=1 file=C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2\contracts\OPERATOR_V2_UI_CONTRACT.json
+
+SNIPPETS_TOP:
+--- FILE=C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2\operator\lib\OperatorV2.ScreenEngine.before-e04b-20260621-175346.ps1 lines=1..75 ---
+1: param([string]$Root="C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2")
+2: $script:EngV2Root=$Root
+3: $script:EngCoreRoot="C:\ENGREMIAT_CORE"
+4: $script:EngFooter="[b/q] salir/volver | m = mantenimiento | ? = ayuda | Enter = refrescar"
+5: $script:EngPrompt="ENGREMIAT_V2"
+6: function Read-EngJson([string]$Path){try{if(Test-Path -LiteralPath $Path){return Get-Content -LiteralPath $Path -Raw|ConvertFrom-Json}}catch{};return $null}
+7: function Get-EngScreenRegistry{Read-EngJson (Join-Path $script:EngV2Root "contracts\SCREEN_REGISTRY.json")}
+8: function Get-EngScreen([string]$Id){$r=Get-EngScreenRegistry;if(!$r){return $null};return @($r.screens|Where-Object{$_.id -eq $Id}|Select-Object -First 1)}
+9: function Show-EngTemplateHeader($s){Clear-Host;Write-Host ("==== ENGREMIAT / "+$s.title+" ====") -ForegroundColor Cyan;Write-Host "";Write-Host "Modo: operador V2 / arquitectura por plantillas";Write-Host ("Ruta: "+$s.level+" · "+$s.id);Write-Host ("Estado: "+$s.status+" | Progreso: "+$s.progress+"%");Write-Host ("Proposito: "+$s.purpose);Write-Host ""}
+10: function Show-EngTemplateBody($s){Write-Host "SUBPANTALLAS / HIJOS:";if(@($s.children).Count -eq 0){Write-Host " - sin hijos definidos"}else{foreach($c in @($s.children)){Write-Host (" - "+$c)}};Write-Host "";Write-Host "PENDIENTES:";if(@($s.pending).Count -eq 0){Write-Host " - sin pendientes"}else{foreach($p in @($s.pending)){Write-Host (" - "+$p)}};Write-Host "";Write-Host "DEPENDENCIAS FUTURAS:";if(@($s.future_dependencies).Count -eq 0){Write-Host " - ninguna"}else{foreach($d in @($s.future_dependencies)){Write-Host (" - "+$d)}}}
+11: function Show-EngTemplateFooter{Write-Host "";Write-Host $script:EngFooter -ForegroundColor Gray;Write-Host ""}
+12: function Read-EngTemplateCommand{ $x=Read-Host $script:EngPrompt; if([string]::IsNullOrWhiteSpace($x)){return "refresh"}; return $x.ToLowerInvariant() }
+13: function Show-EngGenericMaintenance{Clear-Host;Write-Host "==== ENGREMIAT / MANTENIMIENTO V2 ====" -ForegroundColor Cyan;Write-Host "";Write-Host "Pendiente: mantenimiento se consolidara en fase de tarjetas.";Write-Host "";Show-EngTemplateFooter;Read-Host "Enter para volver"|Out-Null}
+14: function Show-EngGenericHelp($s){Clear-Host;Write-Host ("==== ENGREMIAT / AYUDA · "+$s.title+" ====") -ForegroundColor Cyan;Write-Host "";Write-Host "Enter: refrescar";Write-Host "b/q: volver";Write-Host "m: mantenimiento";Write-Host "?: ayuda";Write-Host "";Write-Host "Esta pantalla se genera desde SCREEN_REGISTRY.json.";Show-EngTemplateFooter;Read-Host "Enter para volver"|Out-Null}
+15: function Show-EngScreen([string]$Id){$s=Get-EngScreen $Id;if(!$s){Clear-Host;Write-Host ("Pantalla no encontrada: "+$Id) -ForegroundColor Yellow;Read-Host "Enter para volver"|Out-Null;return};while($true){Show-EngTemplateHeader $s;Show-EngTemplateBody $s;Show-EngTemplateFooter;$cmd=Read-EngTemplateCommand;switch($cmd){"refresh"{continue}"b"{return}"q"{return}"m"{Show-EngGenericMaintenance;continue}"?"{Show-EngGenericHelp $s;continue}default{Write-Host "Opcion no reconocida" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700;continue}}}}
+16: function Show-EngRootMenu{while($true){$r=Get-EngScreenRegistry;Clear-Host;Write-Host "==== ENGREMIAT / OPERADOR V2 ====" -ForegroundColor Cyan;Write-Host "";Write-Host "Modo: arquitectura por plantillas";Write-Host ("Root: "+$script:EngV2Root);Write-Host "";Write-Host "MENU";$map=@{};$i=1;foreach($s in @($r.screens|Where-Object{$_.level -notmatch "\."}|Sort-Object {[int]($_.level -replace "[^0-9]","")})){Write-Host (" ["+$i+"] "+$s.title+"  ["+$s.status+" · "+$s.progress+"%]");$map[[string]$i]=$s.id;$i++};Show-EngTemplateFooter;$x=Read-EngTemplateCommand;if($x -eq "refresh"){continue};if($x -eq "b" -or $x -eq "q"){break};if($x -eq "?"){Write-Host "Selecciona un numero para abrir pantalla. Enter refresca.";Start-Sleep -Seconds 1;continue};if($x -eq "m"){Show-EngGenericMaintenance;continue};if($map.ContainsKey($x)){Show-EngScreen $map[$x];continue};Write-Host "Opcion no reconocida" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700}}
+17: 
+18: function Show-EngProgressPendingScreen {
+19:   while($true){
+20:     $r=Get-EngScreenRegistry
+21:     $screens=@($r.screens)
+22:     $total=$screens.Count
+23:     $active=@($screens|Where-Object{$_.status -eq "ACTIVE"}).Count
+24:     $partial=@($screens|Where-Object{$_.status -eq "PARTIAL"}).Count
+25:     $placeholder=@($screens|Where-Object{$_.status -eq "PLACEHOLDER"}).Count
+26:     $planned=@($screens|Where-Object{$_.status -eq "PLANNED"}).Count
+27:     $deferred=@($screens|Where-Object{$_.status -eq "DEFERRED_PLANNED"}).Count
+28:     $repair=@($screens|Where-Object{$_.status -eq "NEEDS_REPAIR"}).Count
+29:     $avg=0
+30:     if($total -gt 0){$avg=[math]::Round((($screens|ForEach-Object{[int]$_.progress}|Measure-Object -Average).Average),2)}
+31:     Clear-Host
+32:     Write-Host "==== ENGREMIAT / PROGRESO Y PENDIENTES ====" -ForegroundColor Cyan
+33:     Write-Host ""
+34:     Write-Host "Modo: operador V2 / arquitectura por plantillas"
+35:     Write-Host "Ruta: 1.3 · progreso_pendientes"
+36:     Write-Host ("Estado: ACTIVE | Progreso medio: "+$avg+"%")
+37:     Write-Host "Proposito: ver que existe, que esta en uso y que queda pendiente"
+38:     Write-Host ""
+39:     Write-Host "RESUMEN:"
+40:     Write-Host (" - Total pantallas: "+$total)
+41:     Write-Host (" - ACTIVE: "+$active)
+42:     Write-Host (" - PARTIAL: "+$partial)
+43:     Write-Host (" - PLACEHOLDER: "+$placeholder)
+44:     Write-Host (" - PLANNED: "+$planned)
+45:     Write-Host (" - DEFERRED_PLANNED: "+$deferred)
+46:     Write-Host (" - NEEDS_REPAIR: "+$repair)
+47:     Write-Host ""
+48:     Write-Host "PANTALLAS:"
+49:     foreach($s in ($screens|Sort-Object level)){
+50:       Write-Host (" - "+$s.level+" "+$s.title+" ["+$s.status+" · "+$s.progress+"%]")
+51:       $pend=@($s.pending)
+52:       if($pend.Count -gt 0){
+53:         foreach($p in $pend){Write-Host ("     pendiente: "+$p)}
+54:       }
+55:       $deps=@($s.future_dependencies)
+56:       if($deps.Count -gt 0){
+57:         foreach($d in $deps){Write-Host ("     futuro: "+$d)}
+58:       }
+59:     }
+60:     Write-Host ""
+61:     Write-Host "SIGUIENTE ITERACION:"
+62:     if($repair -gt 0){Write-Host " - reparar pantallas NEEDS_REPAIR"}
+63:     elseif($placeholder -gt 0){Write-Host " - profundizar primera pantalla PLACEHOLDER prioritaria"}
+64:     elseif($planned -gt 0){Write-Host " - crear siguiente pantalla PLANNED"}
+65:     else{Write-Host " - avanzar funciones reales por pantalla"}
+66:     Show-EngTemplateFooter
+67:     $cmd=Read-EngTemplateCommand
+68:     switch($cmd){
+69:       "refresh"{continue}
+70:       "b"{return}
+71:       "q"{return}
+72:       "m"{Show-EngGenericMaintenance;continue}
+73:       "?"{Clear-Host;Write-Host "==== AYUDA / PROGRESO Y PENDIENTES ====" -ForegroundColor Cyan;Write-Host "";Write-Host "Esta pantalla lee SCREEN_REGISTRY.json y muestra progreso, estados y pendientes.";Write-Host "";Show-EngTemplateFooter;Read-Host "Enter para volver"|Out-Null;continue}
+74:       default{Write-Host "Opcion no reconocida" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700;continue}
+75:     }
+--- FILE=C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2\operator\lib\OperatorV2.ScreenEngine.before-e04c-20260621-175502.ps1 lines=1..74 ---
+1: $script:EngV2Root="C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2"
+2: $script:EngCoreRoot="C:\ENGREMIAT_CORE"
+3: $script:EngFooter="[b/q] salir/volver | m = mantenimiento | ? = ayuda | Enter = refrescar"
+4: $script:EngPrompt="ENGREMIAT_V2"
+5: function Read-EngJson([string]$Path){try{if(Test-Path -LiteralPath $Path){return Get-Content -LiteralPath $Path -Raw|ConvertFrom-Json}}catch{};return $null}
+6: function Get-EngRegistry{Read-EngJson (Join-Path $script:EngV2Root "contracts\SCREEN_REGISTRY.json")}
+7: function Get-EngScreens{$r=Get-EngRegistry;if($r){return @($r.screens)}else{return @()}}
+8: function Get-EngScreen([string]$Id){return @(Get-EngScreens|Where-Object{$_.id -eq $Id}|Select-Object -First 1)}
+9: function Get-EngChildren($Screen){$all=Get-EngScreens;$out=@();foreach($cid in @($Screen.children)){$c=@($all|Where-Object{$_.id -eq $cid}|Select-Object -First 1);if($c){$out+=$c}};return @($out)}
+10: function Show-EngFooter{Write-Host "";Write-Host $script:EngFooter -ForegroundColor Gray;Write-Host ""}
+11: function Read-EngCmd{$x=Read-Host $script:EngPrompt;if([string]::IsNullOrWhiteSpace($x)){return "refresh"};return $x.ToLowerInvariant()}
+12: function Show-EngMaintenance{Clear-Host;Write-Host "==== ENGREMIAT / MANTENIMIENTO V2 ====" -ForegroundColor Cyan;Write-Host "";Write-Host "Pendiente: mantenimiento real se resolvera en fase de tarjetas.";Show-EngFooter;Read-Host "Enter para volver"|Out-Null}
+13: function Show-EngHelp($s){Clear-Host;Write-Host ("==== ENGREMIAT / AYUDA · "+$s.title+" ====") -ForegroundColor Cyan;Write-Host "";Write-Host "Enter = refrescar";Write-Host "b/q = volver";Write-Host "m = mantenimiento";Write-Host "? = ayuda";Write-Host "";Write-Host "Esta pantalla se genera desde SCREEN_REGISTRY.json.";Show-EngFooter;Read-Host "Enter para volver"|Out-Null}
+14: function Show-EngHeader($s){Clear-Host;Write-Host ("==== ENGREMIAT / "+$s.title+" ====") -ForegroundColor Cyan;Write-Host "";Write-Host "Modo: operador V2 / arquitectura por plantillas";Write-Host ("Ruta: "+$s.level+" · "+$s.id);Write-Host ("Estado: "+$s.status+" | Progreso: "+$s.progress+"%");Write-Host ("Proposito: "+$s.purpose);Write-Host ""}
+15: function Show-EngBody($s){$children=Get-EngChildren $s;$map=@{};if($children.Count -gt 0){Write-Host "SUBMENU";$i=1;foreach($c in $children){Write-Host (" ["+$i+"] "+$c.level+" "+$c.title+"  ["+$c.status+" · "+$c.progress+"%]");$map[[string]$i]=$c.id;$i++};Write-Host ""}else{Write-Host "SUBPANTALLAS / HIJOS:";Write-Host " - sin hijos definidos";Write-Host ""};Write-Host "PENDIENTES:";$p=@($s.pending);if($p.Count -eq 0){Write-Host " - sin pendientes"}else{foreach($x in $p){Write-Host (" - "+$x)}};Write-Host "";Write-Host "DEPENDENCIAS FUTURAS:";$d=@($s.future_dependencies);if($d.Count -eq 0){Write-Host " - ninguna"}else{foreach($x in $d){Write-Host (" - "+$x)}};return $map}
+16: function Show-EngProgressPendingScreen{while($true){$screens=Get-EngScreens;$total=$screens.Count;$avg=0;if($total -gt 0){$avg=[math]::Round((($screens|ForEach-Object{[int]$_.progress}|Measure-Object -Average).Average),2)};Clear-Host;Write-Host "==== ENGREMIAT / PROGRESO Y PENDIENTES ====" -ForegroundColor Cyan;Write-Host "";Write-Host ("Pantallas: "+$total+" | Progreso medio: "+$avg+"%");Write-Host "";foreach($s in ($screens|Sort-Object level)){Write-Host (" - "+$s.level+" "+$s.title+" ["+$s.status+" · "+$s.progress+"%]");foreach($p in @($s.pending)){Write-Host ("     pendiente: "+$p)}};Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){"refresh"{continue}"b"{return}"q"{return}"m"{Show-EngMaintenance;continue}"?"{Write-Host "Muestra progreso y pendientes desde SCREEN_REGISTRY.json";Start-Sleep -Seconds 1;continue}default{Write-Host "Opcion no reconocida";Start-Sleep -Milliseconds 700}}}}
+17: function Show-EngScreen([string]$Id){if($Id -eq "progreso_pendientes"){Show-EngProgressPendingScreen;return};$s=Get-EngScreen $Id;if(!$s){Clear-Host;Write-Host ("Pantalla no encontrada: "+$Id) -ForegroundColor Yellow;Read-Host "Enter para volver"|Out-Null;return};while($true){Show-EngHeader $s;$map=Show-EngBody $s;Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){"refresh"{continue}"b"{return}"q"{return}"m"{Show-EngMaintenance;continue}"?"{Show-EngHelp $s;continue}default{if($map.ContainsKey($cmd)){Show-EngScreen $map[$cmd];continue};Write-Host "Opcion no reconocida" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700;continue}}}}
+18: function Show-EngRootMenu{while($true){$roots=@(Get-EngScreens|Where-Object{$_.level -notmatch "\."}|Sort-Object {[int]($_.level -replace "[^0-9]","")});$map=@{};Clear-Host;Write-Host "==== ENGREMIAT / OPERADOR V2 ====" -ForegroundColor Cyan;Write-Host "";Write-Host "Modo: arquitectura por plantillas";Write-Host ("Root: "+$script:EngV2Root);Write-Host "";Write-Host "MENU";$i=1;foreach($s in $roots){Write-Host (" ["+$i+"] "+$s.title+"  ["+$s.status+" · "+$s.progress+"%]");$map[[string]$i]=$s.id;$i++};Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){"refresh"{continue}"b"{break}"q"{break}"m"{Show-EngMaintenance;continue}"?"{Write-Host "Selecciona una pantalla principal. Enter refresca.";Start-Sleep -Seconds 1;continue}default{if($map.ContainsKey($cmd)){Show-EngScreen $map[$cmd];continue};Write-Host "Opcion no reconocida" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700;continue}}}}
+--- FILE=C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2\operator\lib\OperatorV2.ScreenEngine.before-e05b-20260621-175913.ps1 lines=1..74 ---
+1: $script:EngV2Root="C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2"
+2: $script:EngCoreRoot="C:\ENGREMIAT_CORE"
+3: $script:EngFooter="[b/q] salir/volver | m = mantenimiento | ? = ayuda | Enter = refrescar"
+4: $script:EngPrompt="ENGREMIAT_V2"
+5: function Read-EngJson([string]$Path){try{if(Test-Path -LiteralPath $Path){return Get-Content -LiteralPath $Path -Raw|ConvertFrom-Json}}catch{};return $null}
+6: function Get-EngRegistry{Read-EngJson (Join-Path $script:EngV2Root "contracts\SCREEN_REGISTRY.json")}
+7: function Get-EngScreens{$r=Get-EngRegistry;if($r){return @($r.screens)}else{return @()}}
+8: function Get-EngScreen([string]$Id){return @(Get-EngScreens|Where-Object{$_.id -eq $Id}|Select-Object -First 1)}
+9: function Get-EngChildren($Screen){$all=Get-EngScreens;$out=@();foreach($cid in @($Screen.children)){$c=@($all|Where-Object{$_.id -eq $cid}|Select-Object -First 1);if($c){$out+=$c}};return @($out)}
+10: function Show-EngFooter{Write-Host "";Write-Host $script:EngFooter -ForegroundColor Gray;Write-Host ""}
+11: function Read-EngCmd{$x=Read-Host $script:EngPrompt;if([string]::IsNullOrWhiteSpace($x)){return "refresh"};return $x.ToLowerInvariant()}
+12: function Show-EngMaintenance{Clear-Host;Write-Host "==== ENGREMIAT / MANTENIMIENTO V2 ====" -ForegroundColor Cyan;Write-Host "";Write-Host "Pendiente: mantenimiento real se resolvera en fase de tarjetas.";Show-EngFooter;Read-Host "Enter para volver"|Out-Null}
+13: function Show-EngHelp($s){Clear-Host;Write-Host ("==== ENGREMIAT / AYUDA · "+$s.title+" ====") -ForegroundColor Cyan;Write-Host "";Write-Host "Enter = refrescar";Write-Host "b/q = volver";Write-Host "m = mantenimiento";Write-Host "? = ayuda";Write-Host "";Write-Host "Esta pantalla se genera desde SCREEN_REGISTRY.json.";Show-EngFooter;Read-Host "Enter para volver"|Out-Null}
+14: function Show-EngHeader($s){Clear-Host;Write-Host ("==== ENGREMIAT / "+$s.title+" ====") -ForegroundColor Cyan;Write-Host "";Write-Host "Modo: operador V2 / arquitectura por plantillas";Write-Host ("Ruta: "+$s.level+" · "+$s.id);Write-Host ("Estado: "+$s.status+" | Progreso: "+$s.progress+"%");Write-Host ("Proposito: "+$s.purpose);Write-Host ""}
+15: function Show-EngBody($s){$children=Get-EngChildren $s;$map=@{};if($children.Count -gt 0){Write-Host "SUBMENU";$i=1;foreach($c in $children){Write-Host (" ["+$i+"] "+$c.title+"  ["+$c.status+" · "+$c.progress+"%]");$map[[string]$i]=$c.id;$i++};Write-Host ""}else{Write-Host "SUBPANTALLAS / HIJOS:";Write-Host " - sin hijos definidos";Write-Host ""};Write-Host "PENDIENTES:";$p=@($s.pending);if($p.Count -eq 0){Write-Host " - sin pendientes"}else{foreach($x in $p){Write-Host (" - "+$x)}};Write-Host "";Write-Host "DEPENDENCIAS FUTURAS:";$d=@($s.future_dependencies);if($d.Count -eq 0){Write-Host " - ninguna"}else{foreach($x in $d){Write-Host (" - "+$x)}};return $map}
+16: function Show-EngProgressPendingScreen{while($true){$screens=Get-EngScreens;$total=$screens.Count;$avg=0;if($total -gt 0){$avg=[math]::Round((($screens|ForEach-Object{[int]$_.progress}|Measure-Object -Average).Average),2)};Clear-Host;Write-Host "==== ENGREMIAT / PROGRESO Y PENDIENTES ====" -ForegroundColor Cyan;Write-Host "";Write-Host ("Pantallas: "+$total+" | Progreso medio: "+$avg+"%");Write-Host "";foreach($s in ($screens|Sort-Object level)){Write-Host (" - "+$s.level+" "+$s.title+" ["+$s.status+" · "+$s.progress+"%]");foreach($p in @($s.pending)){Write-Host ("     pendiente: "+$p)}};Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){"refresh"{continue}"b"{return}"q"{return}"m"{Show-EngMaintenance;continue}"?"{Write-Host "Muestra progreso y pendientes desde SCREEN_REGISTRY.json";Start-Sleep -Seconds 1;continue}default{Write-Host "Opcion no reconocida";Start-Sleep -Milliseconds 700}}}}
+17: function Show-EngScreen([string]$Id){if($Id -eq "progreso_pendientes"){Show-EngProgressPendingScreen;return};$s=Get-EngScreen $Id;if(!$s){Clear-Host;Write-Host ("Pantalla no encontrada: "+$Id) -ForegroundColor Yellow;Read-Host "Enter para volver"|Out-Null;return};while($true){Show-EngHeader $s;$map=Show-EngBody $s;Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){"refresh"{continue}"b"{return}"q"{return}"m"{Show-EngMaintenance;continue}"?"{Show-EngHelp $s;continue}default{if($map.ContainsKey($cmd)){Show-EngScreen $map[$cmd];continue};Write-Host "Opcion no reconocida" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700;continue}}}}
+18: function Show-EngRootMenu{while($true){$roots=@(Get-EngScreens|Where-Object{$_.level -notmatch "\."}|Sort-Object {[int]($_.level -replace "[^0-9]","")});$map=@{};Clear-Host;Write-Host "==== ENGREMIAT / OPERADOR V2 ====" -ForegroundColor Cyan;Write-Host "";Write-Host "Modo: arquitectura por plantillas";Write-Host ("Root: "+$script:EngV2Root);Write-Host "";Write-Host "MENU";$i=1;foreach($s in $roots){Write-Host (" ["+$i+"] "+$s.title+"  ["+$s.status+" · "+$s.progress+"%]");$map[[string]$i]=$s.id;$i++};Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){"refresh"{continue}"b"{break}"q"{break}"m"{Show-EngMaintenance;continue}"?"{Write-Host "Selecciona una pantalla principal. Enter refresca.";Start-Sleep -Seconds 1;continue}default{if($map.ContainsKey($cmd)){Show-EngScreen $map[$cmd];continue};Write-Host "Opcion no reconocida" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700;continue}}}}
+19: 
+--- FILE=C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2\operator\lib\OperatorV2.ScreenEngine.ps1 lines=1..74 ---
+1: $script:EngV2Root="C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2"
+2: $script:EngCoreRoot="C:\ENGREMIAT_CORE"
+3: $script:EngFooter="[b/q] salir/volver | m = mantenimiento | ? = ayuda | Enter = refrescar"
+4: $script:EngPrompt="ENGREMIAT_V2"
+5: function Read-EngJson([string]$Path){try{if(Test-Path -LiteralPath $Path){return Get-Content -LiteralPath $Path -Raw|ConvertFrom-Json}}catch{};return $null}
+6: function Get-EngRegistry{Read-EngJson (Join-Path $script:EngV2Root "contracts\SCREEN_REGISTRY.json")}
+7: function Get-EngScreens{$r=Get-EngRegistry;if($r){return @($r.screens)}else{return @()}}
+8: function Get-EngScreen([string]$Id){return @(Get-EngScreens|Where-Object{$_.id -eq $Id}|Select-Object -First 1)}
+9: function Get-EngChildren($Screen){$all=Get-EngScreens;$out=@();foreach($cid in @($Screen.children)){$c=@($all|Where-Object{$_.id -eq $cid}|Select-Object -First 1);if($c){$out+=$c}};return @($out)}
+10: function Show-EngFooter{Write-Host "";Write-Host $script:EngFooter -ForegroundColor Gray;Write-Host ""}
+11: function Read-EngCmd{$x=Read-Host $script:EngPrompt;if([string]::IsNullOrWhiteSpace($x)){return "refresh"};return $x.ToLowerInvariant()}
+12: function Show-EngMaintenance{Clear-Host;Write-Host "==== ENGREMIAT / MANTENIMIENTO V2 ====" -ForegroundColor Cyan;Write-Host "";Write-Host "Pendiente: mantenimiento real se resolvera en fase de tarjetas.";Show-EngFooter;Read-Host "Enter para volver"|Out-Null}
+13: function Show-EngHelp($s){Clear-Host;Write-Host ("==== ENGREMIAT / AYUDA · "+$s.title+" ====") -ForegroundColor Cyan;Write-Host "";Write-Host "Enter = refrescar";Write-Host "b/q = volver";Write-Host "m = mantenimiento";Write-Host "? = ayuda";Write-Host "";Write-Host "Esta pantalla se genera desde SCREEN_REGISTRY.json.";Show-EngFooter;Read-Host "Enter para volver"|Out-Null}
+14: function Show-EngHeader($s){Clear-Host;Write-Host ("==== ENGREMIAT / "+$s.title+" ====") -ForegroundColor Cyan;Write-Host "";Write-Host "Modo: operador V2 / arquitectura por plantillas";Write-Host ("Ruta: "+$s.level+" · "+$s.id);Write-Host ("Estado: "+$s.status+" | Progreso: "+$s.progress+"%");Write-Host ("Proposito: "+$s.purpose);Write-Host ""}
+15: function Show-EngBody($s){$children=Get-EngChildren $s;$map=@{};if($children.Count -gt 0){Write-Host "SUBMENU";$i=1;foreach($c in $children){Write-Host (" ["+$i+"] "+$c.title+"  ["+$c.status+" · "+$c.progress+"%]");$map[[string]$i]=$c.id;$i++};Write-Host ""}else{Write-Host "SUBPANTALLAS / HIJOS:";Write-Host " - sin hijos definidos";Write-Host ""};Write-Host "PENDIENTES:";$p=@($s.pending);if($p.Count -eq 0){Write-Host " - sin pendientes"}else{foreach($x in $p){Write-Host (" - "+$x)}};Write-Host "";Write-Host "DEPENDENCIAS FUTURAS:";$d=@($s.future_dependencies);if($d.Count -eq 0){Write-Host " - ninguna"}else{foreach($x in $d){Write-Host (" - "+$x)}};return $map}
+16: function Show-EngProgressPendingScreen{while($true){$screens=Get-EngScreens;$total=$screens.Count;$avg=0;if($total -gt 0){$avg=[math]::Round((($screens|ForEach-Object{[int]$_.progress}|Measure-Object -Average).Average),2)};Clear-Host;Write-Host "==== ENGREMIAT / PROGRESO Y PENDIENTES ====" -ForegroundColor Cyan;Write-Host "";Write-Host ("Pantallas: "+$total+" | Progreso medio: "+$avg+"%");Write-Host "";foreach($s in ($screens|Sort-Object level)){Write-Host (" - "+$s.level+" "+$s.title+" ["+$s.status+" · "+$s.progress+"%]");foreach($p in @($s.pending)){Write-Host ("     pendiente: "+$p)}};Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){"refresh"{continue}"b"{return}"q"{return}"m"{Show-EngMaintenance;continue}"?"{Write-Host "Muestra progreso y pendientes desde SCREEN_REGISTRY.json";Start-Sleep -Seconds 1;continue}default{Write-Host "Opcion no reconocida";Start-Sleep -Milliseconds 700}}}}
+17: function Show-EngScreen([string]$Id){if($Id -eq "progreso_pendientes"){Show-EngProgressPendingScreen;return};$s=Get-EngScreen $Id;if(!$s){Clear-Host;Write-Host ("Pantalla no encontrada: "+$Id) -ForegroundColor Yellow;Read-Host "Enter para volver"|Out-Null;return};while($true){Show-EngHeader $s;$map=Show-EngBody $s;Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){"refresh"{continue}"b"{return}"q"{return}"m"{Show-EngMaintenance;continue}"?"{Show-EngHelp $s;continue}default{if($map.ContainsKey($cmd)){Show-EngScreen $map[$cmd];continue};Write-Host "Opcion no reconocida" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700;continue}}}}
+18: function Show-EngRootMenu{while($true){$roots=@(Get-EngScreens|Where-Object{$_.level -notmatch "\."}|Sort-Object {[int]($_.level -replace "[^0-9]","")});$map=@{};Clear-Host;Write-Host "==== ENGREMIAT / OPERADOR V2 ====" -ForegroundColor Cyan;Write-Host "";Write-Host "Modo: arquitectura por plantillas";Write-Host ("Root: "+$script:EngV2Root);Write-Host "";Write-Host "MENU";$i=1;foreach($s in $roots){Write-Host (" ["+$i+"] "+$s.title+"  ["+$s.status+" · "+$s.progress+"%]");$map[[string]$i]=$s.id;$i++};Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){"refresh"{continue}"b"{break}"q"{break}"m"{Show-EngMaintenance;continue}"?"{Write-Host "Selecciona una pantalla principal. Enter refresca.";Start-Sleep -Seconds 1;continue}default{if($map.ContainsKey($cmd)){Show-EngScreen $map[$cmd];continue};Write-Host "Opcion no reconocida" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700;continue}}}}
+19: 
+--- FILE=C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2\operator\lib\OperatorV2.ScreenEngine.before-e03-20260621-175039.ps1 lines=1..75 ---
+1: param([string]$Root="C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2")
+2: $script:EngV2Root=$Root
+3: $script:EngCoreRoot="C:\ENGREMIAT_CORE"
+4: $script:EngFooter="[b/q] salir/volver | m = mantenimiento | ? = ayuda | Enter = refrescar"
+5: $script:EngPrompt="ENGREMIAT_V2"
+6: function Read-EngJson([string]$Path){try{if(Test-Path -LiteralPath $Path){return Get-Content -LiteralPath $Path -Raw|ConvertFrom-Json}}catch{};return $null}
+7: function Get-EngScreenRegistry{Read-EngJson (Join-Path $script:EngV2Root "contracts\SCREEN_REGISTRY.json")}
+8: function Get-EngScreen([string]$Id){$r=Get-EngScreenRegistry;if(!$r){return $null};return @($r.screens|Where-Object{$_.id -eq $Id}|Select-Object -First 1)}
+9: function Show-EngTemplateHeader($s){Clear-Host;Write-Host ("==== ENGREMIAT / "+$s.title+" ====") -ForegroundColor Cyan;Write-Host "";Write-Host "Modo: operador V2 / arquitectura por plantillas";Write-Host ("Ruta: "+$s.level+" · "+$s.id);Write-Host ("Estado: "+$s.status+" | Progreso: "+$s.progress+"%");Write-Host ("Proposito: "+$s.purpose);Write-Host ""}
+10: function Show-EngTemplateBody($s){Write-Host "SUBPANTALLAS / HIJOS:";if(@($s.children).Count -eq 0){Write-Host " - sin hijos definidos"}else{foreach($c in @($s.children)){Write-Host (" - "+$c)}};Write-Host "";Write-Host "PENDIENTES:";if(@($s.pending).Count -eq 0){Write-Host " - sin pendientes"}else{foreach($p in @($s.pending)){Write-Host (" - "+$p)}};Write-Host "";Write-Host "DEPENDENCIAS FUTURAS:";if(@($s.future_dependencies).Count -eq 0){Write-Host " - ninguna"}else{foreach($d in @($s.future_dependencies)){Write-Host (" - "+$d)}}}
+11: function Show-EngTemplateFooter{Write-Host "";Write-Host $script:EngFooter -ForegroundColor Gray;Write-Host ""}
+12: function Read-EngTemplateCommand{ $x=Read-Host $script:EngPrompt; if([string]::IsNullOrWhiteSpace($x)){return "refresh"}; return $x.ToLowerInvariant() }
+13: function Show-EngGenericMaintenance{Clear-Host;Write-Host "==== ENGREMIAT / MANTENIMIENTO V2 ====" -ForegroundColor Cyan;Write-Host "";Write-Host "Pendiente: mantenimiento se consolidara en fase de tarjetas.";Write-Host "";Show-EngTemplateFooter;Read-Host "Enter para volver"|Out-Null}
+14: function Show-EngGenericHelp($s){Clear-Host;Write-Host ("==== ENGREMIAT / AYUDA · "+$s.title+" ====") -ForegroundColor Cyan;Write-Host "";Write-Host "Enter: refrescar";Write-Host "b/q: volver";Write-Host "m: mantenimiento";Write-Host "?: ayuda";Write-Host "";Write-Host "Esta pantalla se genera desde SCREEN_REGISTRY.json.";Show-EngTemplateFooter;Read-Host "Enter para volver"|Out-Null}
+15: function Show-EngScreen([string]$Id){$s=Get-EngScreen $Id;if(!$s){Clear-Host;Write-Host ("Pantalla no encontrada: "+$Id) -ForegroundColor Yellow;Read-Host "Enter para volver"|Out-Null;return};while($true){Show-EngTemplateHeader $s;Show-EngTemplateBody $s;Show-EngTemplateFooter;$cmd=Read-EngTemplateCommand;switch($cmd){"refresh"{continue}"b"{return}"q"{return}"m"{Show-EngGenericMaintenance;continue}"?"{Show-EngGenericHelp $s;continue}default{Write-Host "Opcion no reconocida" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700;continue}}}}
+16: function Show-EngRootMenu{while($true){$r=Get-EngScreenRegistry;Clear-Host;Write-Host "==== ENGREMIAT / OPERADOR V2 ====" -ForegroundColor Cyan;Write-Host "";Write-Host "Modo: arquitectura por plantillas";Write-Host ("Root: "+$script:EngV2Root);Write-Host "";Write-Host "MENU";$map=@{};$i=1;foreach($s in @($r.screens|Where-Object{$_.level -notmatch "\."}|Sort-Object {[int]($_.level -replace "[^0-9]","")})){Write-Host (" ["+$i+"] "+$s.title+"  ["+$s.status+" · "+$s.progress+"%]");$map[[string]$i]=$s.id;$i++};Show-EngTemplateFooter;$x=Read-EngTemplateCommand;if($x -eq "refresh"){continue};if($x -eq "b" -or $x -eq "q"){break};if($x -eq "?"){Write-Host "Selecciona un numero para abrir pantalla. Enter refresca.";Start-Sleep -Seconds 1;continue};if($x -eq "m"){Show-EngGenericMaintenance;continue};if($map.ContainsKey($x)){Show-EngScreen $map[$x];continue};Write-Host "Opcion no reconocida" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700}}
+--- FILE=C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2\operator\lib\OperatorV2.UI.before-e04-20260621-171140.ps1 lines=1..74 ---
+1: $script:EngV2Root = "C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2"
+2: $script:EngCoreRoot = "C:\ENGREMIAT_CORE"
+3: $script:EngFooter = "[b/q] salir/volver | m = mantenimiento | ? = ayuda | Enter = refrescar"
+4: $script:EngPrompt = "ENGREMIAT_V2"
+5: function Read-EngJson { param([string]$Path) try { if(Test-Path -LiteralPath $Path){ return Get-Content -LiteralPath $Path -Raw | ConvertFrom-Json } } catch {} return $null }
+6: function Get-EngState { $obs=Read-EngJson (Join-Path $script:EngCoreRoot "reports\observer\latest-observer.json"); $watch=Read-EngJson (Join-Path $script:EngCoreRoot "memory\development\watch-state.json"); return [ordered]@{ observer_status = if($obs){[string]$obs.status}else{"NO_LATEST"}; observer_needs = if($obs){@($obs.needs).Count}else{-1}; watch_status = if($watch){[string]$watch.status}else{"NO_STATE"}; watch_changes = if($watch){[int]$watch.changes_count}else{-1}; watch_tracked = if($watch){[int]$watch.tracked_files}else{-1}; core_root = $script:EngCoreRoot; v2_root = $script:EngV2Root } }
+7: function Show-EngHeader { param([string]$Title,[string]$Route,[string]$Purpose) Clear-Host; Write-Host ("==== ENGREMIAT / " + $Title + " ====") -ForegroundColor Cyan; Write-Host ""; Write-Host "Modo: paralelo / no rompe operador actual"; Write-Host ("Core: " + $script:EngCoreRoot); if($Route){ Write-Host ("Ruta: " + $Route) }; if($Purpose){ Write-Host ("Proposito: " + $Purpose) }; $s=Get-EngState; Write-Host ""; Write-Host ("Observer: " + $s.observer_status + " | needs=" + $s.observer_needs); Write-Host ("Watch: " + $s.watch_status + " | changes=" + $s.watch_changes + " | tracked=" + $s.watch_tracked); Write-Host "" }
+8: function Show-EngFooter { Write-Host ""; Write-Host $script:EngFooter -ForegroundColor Gray; Write-Host "" }
+9: function Show-EngMenu { param([array]$Items) Write-Host "MENU"; foreach($it in $Items){ Write-Host (" [" + $it.key + "] " + $it.label) }; Show-EngFooter }
+10: function Read-EngCommand { return (Read-Host $script:EngPrompt) }
+11: function Pause-Eng { param([string]$Message="Enter para volver") Write-Host ""; Read-Host $Message | Out-Null }
+12: function Open-EngPath { param([string]$Path) if(Test-Path -LiteralPath $Path){ Invoke-Item $Path } else { Write-Host ("NO existe: " + $Path) -ForegroundColor Yellow; Pause-Eng } }
+13: function Show-EngHelp { Show-EngHeader "AYUDA OPERADOR V2" "help" "Comandos base y estilo comun"; Write-Host "Enter vacio: refresca la pantalla actual"; Write-Host "b/q: volver o salir segun contexto"; Write-Host "m: mantenimiento contextual"; Write-Host "?: ayuda contextual"; Write-Host ""; Write-Host "Regla V2: cada pantalla debe tener header, contexto, menu, footer y prompt comun."; Show-EngFooter; Pause-Eng }
+14: function Build-EngOperatorState {
+15:   $obsPath = Join-Path $script:EngCoreRoot "reports\observer\latest-observer.json"
+16:   $watchPath = Join-Path $script:EngCoreRoot "memory\development\watch-state.json"
+17:   $timelinePath = Join-Path $script:EngCoreRoot "memory\development\timeline.md"
+18:   $closePath = Join-Path $script:EngCoreRoot "documents\diagnostics\DIAGNOSTIC_RECOVERY_CLOSE.md"
+19:   $obs = Read-EngJson $obsPath
+20:   $watch = Read-EngJson $watchPath
+21:   $needs = @()
+22:   if($obs -and $obs.needs){ $needs = @($obs.needs) }
+23:   $blocking = @($needs | Where-Object { $_ -notlike "INFO:*" })
+24:   $info = @($needs | Where-Object { $_ -like "INFO:*" })
+25:   $decision = "GO"
+26:   if($blocking.Count -gt 0){ $decision = "REVIEW_BLOCKING_NEEDS" }
+27:   $timelineTail = @()
+28:   if(Test-Path -LiteralPath $timelinePath){ $timelineTail = @(Get-Content -LiteralPath $timelinePath -Tail 8) }
+29:   return [ordered]@{
+30:     created_at = Get-Date -Format s
+31:     operator = "ENGREMIAT_OPERADOR_V2"
+32:     core_root = $script:EngCoreRoot
+33:     v2_root = $script:EngV2Root
+34:     observer_status = if($obs){[string]$obs.status}else{"NO_LATEST"}
+35:     observer_needs_count = $needs.Count
+36:     blocking_needs_count = $blocking.Count
+37:     info_needs_count = $info.Count
+38:     watch_status = if($watch){[string]$watch.status}else{"NO_STATE"}
+39:     watch_changes = if($watch){[int]$watch.changes_count}else{-1}
+40:     watch_tracked = if($watch){[int]$watch.tracked_files}else{-1}
+41:     decision = $decision
+42:     latest_observer = $obsPath
+43:     watch_state = $watchPath
+44:     timeline = $timelinePath
+45:     diagnostic_close = $closePath
+46:     blocking_needs = $blocking
+47:     info_needs = $info
+48:     timeline_tail = $timelineTail
+49:     next = if($blocking.Count -gt 0){"REVIEW_NEEDS"}else{"CONTINUE_OPERATOR_V2_SCREEN_BY_SCREEN"}
+50:   }
+51: }
+52: 
+53: function Save-EngOperatorState {
+54:   $out = Join-Path $script:EngV2Root "memory\OPERATOR_STATE.json"
+55:   New-Item -ItemType Directory -Force -Path (Split-Path $out -Parent) | Out-Null
+56:   $state = Build-EngOperatorState
+57:   $state | ConvertTo-Json -Depth 14 | Set-Content -LiteralPath $out -Encoding UTF8
+58:   return $state
+59: }
+60: 
+61: function Show-EngStateScreen {
+62:   $state = Save-EngOperatorState
+63:   Show-EngHeader "ESTADO DEL SISTEMA" "state" "Lectura consolidada de observer, watcher, needs y timeline"
+64:   Write-Host ("Decision: " + $state.decision)
+65:   Write-Host ("Observer: " + $state.observer_status + " | needs=" + $state.observer_needs_count + " | blocking=" + $state.blocking_needs_count + " | info=" + $state.info_needs_count)
+66:   Write-Host ("Watch: " + $state.watch_status + " | changes=" + $state.watch_changes + " | tracked=" + $state.watch_tracked)
+67:   Write-Host ""
+68:   Write-Host "Rutas:"
+69:   Write-Host (" - OPERATOR_STATE: " + (Join-Path $script:EngV2Root "memory\OPERATOR_STATE.json"))
+70:   Write-Host (" - latest observer: " + $state.latest_observer)
+71:   Write-Host (" - watch state: " + $state.watch_state)
+72:   Write-Host (" - timeline: " + $state.timeline)
+73:   Write-Host ""
+74:   if($state.blocking_needs_count -gt 0){
+--- FILE=C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2\operator\lib\OperatorV2.UI.ps1 lines=1..74 ---
+1: $script:EngV2Root = "C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2"
+2: $script:EngCoreRoot = "C:\ENGREMIAT_CORE"
+3: $script:EngFooter = "[b/q] salir/volver | m = mantenimiento | ? = ayuda | Enter = refrescar"
+4: $script:EngPrompt = "ENGREMIAT_V2"
+5: function Read-EngJson { param([string]$Path) try { if(Test-Path -LiteralPath $Path){ return Get-Content -LiteralPath $Path -Raw | ConvertFrom-Json } } catch {} return $null }
+6: function Get-EngState { $obs=Read-EngJson (Join-Path $script:EngCoreRoot "reports\observer\latest-observer.json"); $watch=Read-EngJson (Join-Path $script:EngCoreRoot "memory\development\watch-state.json"); return [ordered]@{ observer_status = if($obs){[string]$obs.status}else{"NO_LATEST"}; observer_needs = if($obs){@($obs.needs).Count}else{-1}; watch_status = if($watch){[string]$watch.status}else{"NO_STATE"}; watch_changes = if($watch){[int]$watch.changes_count}else{-1}; watch_tracked = if($watch){[int]$watch.tracked_files}else{-1}; core_root = $script:EngCoreRoot; v2_root = $script:EngV2Root } }
+7: function Show-EngHeader { param([string]$Title,[string]$Route,[string]$Purpose) Clear-Host; Write-Host ("==== ENGREMIAT / " + $Title + " ====") -ForegroundColor Cyan; Write-Host ""; Write-Host "Modo: paralelo / no rompe operador actual"; Write-Host ("Core: " + $script:EngCoreRoot); if($Route){ Write-Host ("Ruta: " + $Route) }; if($Purpose){ Write-Host ("Proposito: " + $Purpose) }; $s=Get-EngState; Write-Host ""; Write-Host ("Observer: " + $s.observer_status + " | needs=" + $s.observer_needs); Write-Host ("Watch: " + $s.watch_status + " | changes=" + $s.watch_changes + " | tracked=" + $s.watch_tracked); Write-Host "" }
+8: function Show-EngFooter { Write-Host ""; Write-Host $script:EngFooter -ForegroundColor Gray; Write-Host "" }
+9: function Show-EngMenu { param([array]$Items) Write-Host "MENU"; foreach($it in $Items){ Write-Host (" [" + $it.key + "] " + $it.label) }; Show-EngFooter }
+10: function Read-EngCommand { return (Read-Host $script:EngPrompt) }
+11: function Pause-Eng { param([string]$Message="Enter para volver") Write-Host ""; Read-Host $Message | Out-Null }
+12: 
+13: function Save-EngOperatorState {
+14:   $out = Join-Path $script:EngV2Root "memory\OPERATOR_STATE.json"
+15:   New-Item -ItemType Directory -Force -Path (Split-Path $out -Parent) | Out-Null
+16:   $state = Build-EngOperatorState
+17:   $state | ConvertTo-Json -Depth 14 | Set-Content -LiteralPath $out -Encoding UTF8
+18:   return $state
+19: }
+20: 
+21: function Show-EngStateScreen {
+22:   $state = Save-EngOperatorState
+23:   Show-EngHeader "ESTADO DEL SISTEMA" "state" "Lectura consolidada de observer, watcher, needs y timeline"
+24:   Write-Host ("Decision: " + $state.decision)
+25:   Write-Host ("Observer: " + $state.observer_status + " | needs=" + $state.observer_needs_count + " | blocking=" + $state.blocking_needs_count + " | info=" + $state.info_needs_count)
+26:   Write-Host ("Watch: " + $state.watch_status + " | changes=" + $state.watch_changes + " | tracked=" + $state.watch_tracked)
+27:   Write-Host ""
+28:   Write-Host "Rutas:"
+29:   Write-Host (" - OPERATOR_STATE: " + (Join-Path $script:EngV2Root "memory\OPERATOR_STATE.json"))
+30:   Write-Host (" - latest observer: " + $state.latest_observer)
+31:   Write-Host (" - watch state: " + $state.watch_state)
+32:   Write-Host (" - timeline: " + $state.timeline)
+33:   Write-Host ""
+34:   if($state.blocking_needs_count -gt 0){
+35:     Write-Host "Needs bloqueantes:" -ForegroundColor Yellow
+36:     foreach($n in $state.blocking_needs){ Write-Host (" - " + $n) }
+37:   } else {
+38:     Write-Host "Needs bloqueantes: 0" -ForegroundColor Green
+39:   }
+40:   Write-Host ""
+41:   Write-Host "Ultimos eventos timeline:"
+42:   foreach($l in @($state.timeline_tail)){ Write-Host (" - " + $l) }
+43:   Show-EngFooter
+44:   Pause-Eng
+45: }
+46: 
+47: function Show-EngMaintenanceV2 {
+48:   Show-EngHeader "MANTENIMIENTO V2" "maintenance" "Herramientas locales del operador paralelo"
+49:   Write-Host "Comandos disponibles:"
+50:   Write-Host " - status: pantalla principal del operador"
+51:   Write-Host " - observer: usar obs.ps1 desde CORE si hace falta"
+52:   Write-Host " - timeline: abrir memoria de desarrollo"
+53:   Write-Host ""
+54:   Write-Host "Rutas V2:"
+55:   Write-Host (" - Root: " + $script:EngV2Root)
+56:   Write-Host (" - UI lib: " + (Join-Path $script:EngV2Root "operator\lib\OperatorV2.UI.ps1"))
+57:   Write-Host (" - Contratos: " + (Join-Path $script:EngV2Root "contracts"))
+58:   Write-Host (" - Reports: " + (Join-Path $script:EngV2Root "reports"))
+59:   Show-EngFooter
+60:   Pause-Eng
+61: }
+62: 
+63: 
+64: function Build-EngOperatorStateFast {
+65:   $obsPath = Join-Path $script:EngCoreRoot "reports\observer\latest-observer.json"
+66:   $watchPath = Join-Path $script:EngCoreRoot "memory\development\watch-state.json"
+67:   $timelinePath = Join-Path $script:EngCoreRoot "memory\development\timeline.md"
+68:   $obs = Read-EngJson $obsPath
+69:   $watch = Read-EngJson $watchPath
+70:   $needs = @()
+71:   if($obs -and $obs.needs){ $needs = @($obs.needs) }
+72:   $blocking = @($needs | Where-Object { $_ -notlike "INFO:*" })
+73:   $info = @($needs | Where-Object { $_ -like "INFO:*" })
+74:   $tail = @()
+--- FILE=C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2\operator\lib\OperatorV2.UI.before-state-20260621-170823.ps1 lines=1..74 ---
+1: $script:EngV2Root = "C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2"
+2: $script:EngCoreRoot = "C:\ENGREMIAT_CORE"
+3: $script:EngFooter = "[b/q] salir/volver | m = mantenimiento | ? = ayuda | Enter = refrescar"
+4: $script:EngPrompt = "ENGREMIAT_V2"
+5: function Read-EngJson { param([string]$Path) try { if(Test-Path -LiteralPath $Path){ return Get-Content -LiteralPath $Path -Raw | ConvertFrom-Json } } catch {} return $null }
+6: function Get-EngState { $obs=Read-EngJson (Join-Path $script:EngCoreRoot "reports\observer\latest-observer.json"); $watch=Read-EngJson (Join-Path $script:EngCoreRoot "memory\development\watch-state.json"); return [ordered]@{ observer_status = if($obs){[string]$obs.status}else{"NO_LATEST"}; observer_needs = if($obs){@($obs.needs).Count}else{-1}; watch_status = if($watch){[string]$watch.status}else{"NO_STATE"}; watch_changes = if($watch){[int]$watch.changes_count}else{-1}; watch_tracked = if($watch){[int]$watch.tracked_files}else{-1}; core_root = $script:EngCoreRoot; v2_root = $script:EngV2Root } }
+7: function Show-EngHeader { param([string]$Title,[string]$Route,[string]$Purpose) Clear-Host; Write-Host ("==== ENGREMIAT / " + $Title + " ====") -ForegroundColor Cyan; Write-Host ""; Write-Host "Modo: paralelo / no rompe operador actual"; Write-Host ("Core: " + $script:EngCoreRoot); if($Route){ Write-Host ("Ruta: " + $Route) }; if($Purpose){ Write-Host ("Proposito: " + $Purpose) }; $s=Get-EngState; Write-Host ""; Write-Host ("Observer: " + $s.observer_status + " | needs=" + $s.observer_needs); Write-Host ("Watch: " + $s.watch_status + " | changes=" + $s.watch_changes + " | tracked=" + $s.watch_tracked); Write-Host "" }
+8: function Show-EngFooter { Write-Host ""; Write-Host $script:EngFooter -ForegroundColor Gray; Write-Host "" }
+9: function Show-EngMenu { param([array]$Items) Write-Host "MENU"; foreach($it in $Items){ Write-Host (" [" + $it.key + "] " + $it.label) }; Show-EngFooter }
+10: function Read-EngCommand { return (Read-Host $script:EngPrompt) }
+11: function Pause-Eng { param([string]$Message="Enter para volver") Write-Host ""; Read-Host $Message | Out-Null }
+12: function Open-EngPath { param([string]$Path) if(Test-Path -LiteralPath $Path){ Invoke-Item $Path } else { Write-Host ("NO existe: " + $Path) -ForegroundColor Yellow; Pause-Eng } }
+13: function Show-EngHelp { Show-EngHeader "AYUDA OPERADOR V2" "help" "Comandos base y estilo comun"; Write-Host "Enter vacio: refresca la pantalla actual"; Write-Host "b/q: volver o salir segun contexto"; Write-Host "m: mantenimiento contextual"; Write-Host "?: ayuda contextual"; Write-Host ""; Write-Host "Regla V2: cada pantalla debe tener header, contexto, menu, footer y prompt comun."; Show-EngFooter; Pause-Eng }
+14: function Build-EngOperatorState {
+15:   $obsPath = Join-Path $script:EngCoreRoot "reports\observer\latest-observer.json"
+16:   $watchPath = Join-Path $script:EngCoreRoot "memory\development\watch-state.json"
+17:   $timelinePath = Join-Path $script:EngCoreRoot "memory\development\timeline.md"
+18:   $closePath = Join-Path $script:EngCoreRoot "documents\diagnostics\DIAGNOSTIC_RECOVERY_CLOSE.md"
+19:   $obs = Read-EngJson $obsPath
+20:   $watch = Read-EngJson $watchPath
+21:   $needs = @()
+22:   if($obs -and $obs.needs){ $needs = @($obs.needs) }
+23:   $blocking = @($needs | Where-Object { $_ -notlike "INFO:*" })
+24:   $info = @($needs | Where-Object { $_ -like "INFO:*" })
+25:   $decision = "GO"
+26:   if($blocking.Count -gt 0){ $decision = "REVIEW_BLOCKING_NEEDS" }
+27:   $timelineTail = @()
+28:   if(Test-Path -LiteralPath $timelinePath){ $timelineTail = @(Get-Content -LiteralPath $timelinePath -Tail 8) }
+29:   return [ordered]@{
+30:     created_at = Get-Date -Format s
+31:     operator = "ENGREMIAT_OPERADOR_V2"
+32:     core_root = $script:EngCoreRoot
+33:     v2_root = $script:EngV2Root
+34:     observer_status = if($obs){[string]$obs.status}else{"NO_LATEST"}
+35:     observer_needs_count = $needs.Count
+36:     blocking_needs_count = $blocking.Count
+37:     info_needs_count = $info.Count
+38:     watch_status = if($watch){[string]$watch.status}else{"NO_STATE"}
+39:     watch_changes = if($watch){[int]$watch.changes_count}else{-1}
+40:     watch_tracked = if($watch){[int]$watch.tracked_files}else{-1}
+41:     decision = $decision
+42:     latest_observer = $obsPath
+43:     watch_state = $watchPath
+44:     timeline = $timelinePath
+45:     diagnostic_close = $closePath
+46:     blocking_needs = $blocking
+47:     info_needs = $info
+48:     timeline_tail = $timelineTail
+49:     next = if($blocking.Count -gt 0){"REVIEW_NEEDS"}else{"CONTINUE_OPERATOR_V2_SCREEN_BY_SCREEN"}
+50:   }
+51: }
+52: 
+53: function Save-EngOperatorState {
+54:   $out = Join-Path $script:EngV2Root "memory\OPERATOR_STATE.json"
+55:   New-Item -ItemType Directory -Force -Path (Split-Path $out -Parent) | Out-Null
+56:   $state = Build-EngOperatorState
+57:   $state | ConvertTo-Json -Depth 14 | Set-Content -LiteralPath $out -Encoding UTF8
+58:   return $state
+59: }
+60: 
+61: function Show-EngStateScreen {
+62:   $state = Save-EngOperatorState
+63:   Show-EngHeader "ESTADO DEL SISTEMA" "state" "Lectura consolidada de observer, watcher, needs y timeline"
+64:   Write-Host ("Decision: " + $state.decision)
+65:   Write-Host ("Observer: " + $state.observer_status + " | needs=" + $state.observer_needs_count + " | blocking=" + $state.blocking_needs_count + " | info=" + $state.info_needs_count)
+66:   Write-Host ("Watch: " + $state.watch_status + " | changes=" + $state.watch_changes + " | tracked=" + $state.watch_tracked)
+67:   Write-Host ""
+68:   Write-Host "Rutas:"
+69:   Write-Host (" - OPERATOR_STATE: " + (Join-Path $script:EngV2Root "memory\OPERATOR_STATE.json"))
+70:   Write-Host (" - latest observer: " + $state.latest_observer)
+71:   Write-Host (" - watch state: " + $state.watch_state)
+72:   Write-Host (" - timeline: " + $state.timeline)
+73:   Write-Host ""
+74:   if($state.blocking_needs_count -gt 0){

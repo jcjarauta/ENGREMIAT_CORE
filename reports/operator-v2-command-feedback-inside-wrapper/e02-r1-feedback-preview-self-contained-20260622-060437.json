@@ -1,0 +1,21 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_COMMAND_FEEDBACK_INSIDE_WRAPPER_009",
+    "stage":  "E02_R1_REPAIR_FEEDBACK_PREVIEW_SELF_CONTAINED_NO_ROOT_PATCH",
+    "status":  "PASS",
+    "repaired":  true,
+    "repair":  "SELF_CONTAINED_FEEDBACK_PREVIEW_SCOPE_SAFE",
+    "patched_launcher":  false,
+    "launcher":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+    "preview":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\engine\\root-wrapper-preview.ps1",
+    "adapter_reference":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\engine\\wrapper-command-feedback-adapter.ps1",
+    "backup_preview":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\backups\\guarded-write\\root-wrapper-preview.ps1.before-E02_R1_REPAIR_FEEDBACK_PREVIEW_SELF_CONTAINED_NO_ROOT_PATCH-20260622-060436.bak",
+    "has_actions_observer":  true,
+    "has_navigation_observer":  true,
+    "has_command_feedback_observer":  false,
+    "smoke_ok":  true,
+    "smoke_output":  "SMOKE_OK feedback_preview_self_contained=True tests=13 help=Ayuda: 1 operador, 2 proyectos, 3 memoria, 4 data intake, 5 health, m mantenimiento, b/q salir. maintenance=Mantenimiento pendiente de conectar en el router root. status=Estado compacto pendiente de conectar en el router root. unknown=Comando no reconocido. Usa ? para ayuda. option1=OPEN_OPERATOR_V2 launcher_modified=False executed=False real_execution=False",
+    "run_command":  "powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\engine\\root-wrapper-preview.ps1\"",
+    "doc":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-command-feedback-inside-wrapper\\E02_R1_FEEDBACK_PREVIEW_SELF_CONTAINED.md",
+    "decision":  "GO_COMMAND_FEEDBACK_INSIDE_WRAPPER_009_E02_R1_SELF_CONTAINED_PREVIEW",
+    "next":  "E03_COMPARE_INTEGRATED_FEEDBACK_MATRIX_AND_DECIDE_CLOSE"
+}

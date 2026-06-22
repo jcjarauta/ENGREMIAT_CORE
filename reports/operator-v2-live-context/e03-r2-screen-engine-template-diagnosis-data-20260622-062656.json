@@ -1,0 +1,373 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_LIVE_CONTEXT_SCREEN_010",
+    "stage":  "E03_R2_DIAGNOSE_SCREEN_ENGINE_TEMPLATE_SOURCE_NO_APPLY",
+    "screen":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\operator\\lib\\OperatorV2.ScreenEngine.ps1",
+    "alias":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\engine\\plan-v2.ps1",
+    "functions":  [
+                      {
+                          "line":  5,
+                          "name":  "Read-EngJson",
+                          "text":  "function Read-EngJson([string]$Path){try{if(Test-Path -LiteralPath $Path){return Get-Content -LiteralPath $Path -Raw -Encoding UTF8|ConvertFrom-Json}}catch{};return $null}"
+                      },
+                      {
+                          "line":  6,
+                          "name":  "Get-EngRegistry",
+                          "text":  "function Get-EngRegistry{Read-EngJson (Join-Path $script:EngV2Root \"contracts\\SCREEN_REGISTRY.json\")}"
+                      },
+                      {
+                          "line":  7,
+                          "name":  "Get-EngScreens",
+                          "text":  "function Get-EngScreens{$r=Get-EngRegistry;if($r -and $r.screens){return @($r.screens)};return @()}"
+                      },
+                      {
+                          "line":  8,
+                          "name":  "Get-EngScreen",
+                          "text":  "function Get-EngScreen([string]$Id){return @(Get-EngScreens|Where-Object{[string]$_.id -eq $Id}|Select-Object -First 1)}"
+                      },
+                      {
+                          "line":  9,
+                          "name":  "Get-EngLevelSortKey",
+                          "text":  "function Get-EngLevelSortKey($s){$parts=(([string]$s.level).Split(\".\"));$nums=@();foreach($p in $parts){$n=0;[void][int]::TryParse(($p -replace \"[^0-9]\",\"\"),[ref]$n);$nums+=(\"{0:D4}\" -f $n)};return ($nums -join \".\")}"
+                      },
+                      {
+                          "line":  10,
+                          "name":  "Get-EngChildren",
+                          "text":  "function Get-EngChildren($Screen){$all=Get-EngScreens;$out=@();foreach($cid in @($Screen.children)){$c=@($all|Where-Object{[string]$_.id -eq [string]$cid}|Select-Object -First 1);if($c){$out+=$c}};return @($out)}"
+                      },
+                      {
+                          "line":  11,
+                          "name":  "Show-EngFooter",
+                          "text":  "function Show-EngFooter{Write-Host \"\";Write-Host $script:EngFooter -ForegroundColor Gray;Write-Host \"\"}"
+                      },
+                      {
+                          "line":  12,
+                          "name":  "Read-EngCmd",
+                          "text":  "function Read-EngCmd{$x=Read-Host $script:EngPrompt;if([string]::IsNullOrWhiteSpace($x)){return \"refresh\"};return $x.Trim().ToLowerInvariant()}"
+                      },
+                      {
+                          "line":  13,
+                          "name":  "Show-EngHeader",
+                          "text":  "function Show-EngHeader([string]$Title,[string]$Route,[string]$Status,[int]$Progress,[string]$Purpose){Clear-Host;Write-Host (\"==== ENGREMIAT / \"+$Title+\" ====\") -ForegroundColor Cyan;Write-Host \"\";if($Route){Write-Host (\"Ruta: \"+$Route) -ForegroundColor DarkCyan};if($Status){Write-Host (\"Estado: \"+$Status+\" · \"+$Progress+\"%\") -ForegroundColor DarkCyan};if($Purpose){Write-Host (\"Objetivo: \"+$Purpose)};Write-Host \"\"}"
+                      },
+                      {
+                          "line":  14,
+                          "name":  "Show-EngMaintenance",
+                          "text":  "function Show-EngMaintenance{Show-EngHeader \"MANTENIMIENTO V2\" \"mantenimiento\" \"PLANNED\" 0 \"Mantenimiento contextual pendiente\";Write-Host \"Pendiente: conectar tarjetas de mantenimiento.\";Show-EngFooter;Read-Host \"Enter para volver\"|Out-Null}"
+                      },
+                      {
+                          "line":  16,
+                          "name":  "Show-EngBody",
+                          "text":  "function Show-EngBody($s){$children=Get-EngChildren $s;$map=@{};if($children.Count -gt 0){Write-Host \"MENU\";$i=1;foreach($c in ($children|Sort-Object {Get-EngLevelSortKey $_})){Write-Host (\" [\"+$i+\"] \"+$c.title+\"  [\"+$c.status+\" · \"+$c.progress+\"%]\");$map[[string]$i]=$c.id;$i++};Write-Host \"\"};$p=@($s.pending);if($p.Count -gt 0){Write-Host \"PENDIENTE PRINCIPAL:\";Write-Host (\" - \"+$p[0]);if($p.Count -gt 1){Write-Host (\" - +\"+($p.Count-1)+\" pendientes mas en Reparaciones UX\")};Write-Host \"\"};return $map}"
+                      },
+                      {
+                          "line":  17,
+                          "name":  "Show-EngUxRegistryScreen",
+                          "text":  "function Show-EngUxRegistryScreen{while($true){$screens=Get-EngScreens;$groups=$screens|Group-Object status|Sort-Object Name;$roots=@($screens|Where-Object{[string]$_.level -notmatch \"\\.\"}|Sort-Object {Get-EngLevelSortKey $_});$active=@($screens|Where-Object{[string]$_.status -eq \"ACTIVE\"}).Count;$open=@($screens|Where-Object{[string]$_.status -in @(\"PLACEHOLDER\",\"PLANNED\",\"PARTIAL\")}).Count;Show-EngHeader \"UX REGISTRY\" \"1.2.1 · ux_registry\" \"ACTIVE\" 35 \"Panel resumido del registro activo\";Write-Host (\"Registry: \"+(Join-Path $script:EngV2Root \"contracts\\SCREEN_REGISTRY.json\"));Write-Host (\"Pantallas: \"+$screens.Count+\" | ACTIVE: \"+$active+\" | por trabajar: \"+$open);Write-Host \"\";Write-Host \"ESTADOS:\";foreach($g in $groups){Write-Host (\" - \"+$g.Name+\": \"+$g.Count)};Write-Host \"\";Write-Host \"AREAS:\";$shown=@($roots|Select-Object -First 8);foreach($s in $shown){Write-Host (\" - \"+$s.level+\" · \"+$s.title+\"  [\"+$s.status+\" · \"+$s.progress+\"%]\")};if($roots.Count -gt 8){Write-Host (\" - +\"+($roots.Count-8)+\" areas mas\")};Write-Host \"\";Write-Host \"ACCIONES:\";Write-Host \" [e] Estados\";Write-Host \" [r] Reparaciones\";Write-Host \" [v] Reglas visuales\";Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){\"refresh\"{continue}\"b\"{return}\"q\"{return}\"e\"{Show-EngScreenStatesScreen;continue}\"r\"{Show-EngPendingUxRepairsScreen;continue}\"v\"{Show-EngLayoutRulesScreen;continue}\"m\"{Show-EngMaintenance;continue}\"?\"{Write-Host \"Panel resumido. Las areas se abren desde el menu raiz.\";Start-Sleep -Seconds 1;continue}default{Write-Host \"Opcion no reconocida\" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700}}}}"
+                      },
+                      {
+                          "line":  18,
+                          "name":  "Show-EngScreenStatesScreen",
+                          "text":  "function Show-EngScreenStatesScreen{while($true){$screens=Get-EngScreens;$groups=$screens|Group-Object status|Sort-Object Name;Show-EngHeader \"ESTADOS DE PANTALLA\" \"1.2.2 · screen_states\" \"ACTIVE\" 35 \"Resumen por estado\";foreach($g in $groups){Write-Host (\" \"+$g.Name+\" (\"+$g.Count+\")\") -ForegroundColor Cyan;$sample=@($g.Group|Sort-Object {Get-EngLevelSortKey $_}|Select-Object -First 5);foreach($s in $sample){Write-Host (\"   - \"+$s.level+\" \"+$s.title+\" [\"+$s.progress+\"%]\")};if($g.Count -gt 5){Write-Host (\"   - +\"+($g.Count-5)+\" mas\")};Write-Host \"\"};Write-Host \"SIGUIENTE:\";Write-Host \" - Priorizar PLACEHOLDER y PLANNED antes de ampliar menus.\";Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){\"refresh\"{continue}\"b\"{return}\"q\"{return}\"m\"{Show-EngMaintenance;continue}\"?\"{Write-Host \"Agrupa pantallas por estado.\";Start-Sleep -Seconds 1;continue}default{Write-Host \"Opcion no reconocida\" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700}}}}"
+                      },
+                      {
+                          "line":  19,
+                          "name":  "Show-EngLayoutRulesScreen",
+                          "text":  "function Show-EngLayoutRulesScreen{while($true){Show-EngHeader \"REGLAS VISUALES\" \"1.2.3 · layout_rules\" \"PLANNED\" 20 \"Reglas simples de lectura\";Write-Host \"REGLAS:\";Write-Host \" - Una pantalla = una decision clara.\";Write-Host \" - Menu corto: maximo 5 opciones visibles.\";Write-Host \" - Listas largas solo como resumen + accion.\";Write-Host \" - Footer corto y comun.\";Write-Host \" - Context Guardian obligatorio antes de parchear.\";Write-Host \"\";Write-Host \"SIGUIENTE:\";Write-Host \" - Convertir reglas en validador automatico.\";Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){\"refresh\"{continue}\"b\"{return}\"q\"{return}\"m\"{Show-EngMaintenance;continue}\"?\"{Write-Host \"Reglas UX actuales del operador.\";Start-Sleep -Seconds 1;continue}default{Write-Host \"Opcion no reconocida\" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700}}}}"
+                      },
+                      {
+                          "line":  20,
+                          "name":  "Show-EngPendingUxRepairsScreen",
+                          "text":  "function Show-EngPendingUxRepairsScreen{while($true){$screens=Get-EngScreens;$items=@();foreach($s in ($screens|Sort-Object {Get-EngLevelSortKey $_})){foreach($p in @($s.pending)){$items+=[pscustomobject]@{level=$s.level;title=$s.title;pending=$p;status=$s.status}}};Show-EngHeader \"REPARACIONES UX\" \"1.2.4 · pending_ux_repairs\" \"ACTIVE\" 35 \"Pendientes priorizados\";Write-Host (\"Pendientes totales: \"+$items.Count);Write-Host \"\";Write-Host \"TOP 8:\";foreach($x in ($items|Select-Object -First 8)){Write-Host (\" - \"+$x.level+\" \"+$x.title+\": \"+$x.pending)};if($items.Count -gt 8){Write-Host (\" - +\"+($items.Count-8)+\" pendientes mas\")};Write-Host \"\";Write-Host \"GUARDIAN:\";Write-Host \" - active_root debe coincidir antes de parchear.\";Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){\"refresh\"{continue}\"b\"{return}\"q\"{return}\"m\"{Show-EngMaintenance;continue}\"?\"{Write-Host \"Lista corta de reparaciones UX.\";Start-Sleep -Seconds 1;continue}default{Write-Host \"Opcion no reconocida\" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700}}}}"
+                      },
+                      {
+                          "line":  21,
+                          "name":  "Show-EngProgressPendingScreen",
+                          "text":  "function Show-EngProgressPendingScreen{while($true){$screens=Get-EngScreens;$total=$screens.Count;$avg=0;if($total -gt 0){$avg=[math]::Round((($screens|ForEach-Object{[int]$_.progress}|Measure-Object -Average).Average),2)};$pendingCount=0;foreach($s in $screens){$pendingCount+=@($s.pending).Count};Show-EngHeader \"PROGRESO Y PENDIENTES\" \"1.3 · progreso_pendientes\" \"ACTIVE\" 25 \"Resumen operativo\";Write-Host (\"Pantallas: \"+$total);Write-Host (\"Progreso medio: \"+$avg+\"%\");Write-Host (\"Pendientes: \"+$pendingCount);Write-Host \"\";Write-Host \"ACCIONES:\";Write-Host \" [e] Estados\";Write-Host \" [r] Reparaciones UX\";Write-Host \" [x] Registry\";Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){\"refresh\"{continue}\"b\"{return}\"q\"{return}\"e\"{Show-EngScreenStatesScreen;continue}\"r\"{Show-EngPendingUxRepairsScreen;continue}\"x\"{Show-EngUxRegistryScreen;continue}\"m\"{Show-EngMaintenance;continue}\"?\"{Write-Host \"Resumen global de progreso.\";Start-Sleep -Seconds 1;continue}default{Write-Host \"Opcion no reconocida\" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700}}}}"
+                      },
+                      {
+                          "line":  22,
+                          "name":  "Show-EngScreen",
+                          "text":  "function Show-EngScreen([string]$Id){if($Id -eq \"progreso_pendientes\"){Show-EngProgressPendingScreen;return};if($Id -eq \"ux_registry\"){Show-EngUxRegistryScreen;return};if($Id -eq \"screen_states\"){Show-EngScreenStatesScreen;return};if($Id -eq \"layout_rules\"){Show-EngLayoutRulesScreen;return};if($Id -eq \"pending_ux_repairs\"){Show-EngPendingUxRepairsScreen;return};$s=Get-EngScreen $Id;if(!$s){Clear-Host;Write-Host (\"Pantalla no encontrada: \"+$Id) -ForegroundColor Yellow;Read-Host \"Enter para volver\"|Out-Null;return};while($true){Show-EngHeader $s.title ($s.level+\" · \"+$s.id) $s.status ([int]$s.progress) $s.purpose;$map=Show-EngBody $s;Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){\"refresh\"{continue}\"b\"{return}\"q\"{return}\"m\"{Show-EngMaintenance;continue}\"?\"{Show-EngHelp $s;continue}default{if($map.ContainsKey($cmd)){Show-EngScreen $map[$cmd];continue};Write-Host \"Opcion no reconocida\" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700}}}}"
+                      },
+                      {
+                          "line":  23,
+                          "name":  "Show-EngRootMenu",
+                          "text":  "function Show-EngRootMenu{while($true){$roots=@(Get-EngScreens|Where-Object{[string]$_.level -notmatch \"\\.\"}|Sort-Object {Get-EngLevelSortKey $_});$map=@{};Clear-Host;Write-Host \"==== ENGREMIAT / OPERADOR V2 ====\" -ForegroundColor Cyan;Write-Host \"\";Write-Host (\"Root: \"+$script:EngV2Root);Write-Host \"\";Write-Host \"MENU\";$i=1;foreach($s in $roots){Write-Host (\" [\"+$i+\"] \"+$s.title+\"  [\"+$s.status+\" · \"+$s.progress+\"%]\");$map[[string]$i]=$s.id;$i++};Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){\"refresh\"{continue}\"b\"{break}\"q\"{break}\"m\"{Show-EngMaintenance;continue}\"?\"{Write-Host \"Selecciona una pantalla principal. Enter refresca.\";Start-Sleep -Seconds 1;continue}default{if($map.ContainsKey($cmd)){Show-EngScreen $map[$cmd];continue};Write-Host \"Opcion no reconocida\" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700}}}}"
+                      }
+                  ],
+    "hits":  [
+                 {
+                     "pattern":  "ENGREMIAT / OPERADOR V2",
+                     "line":  23,
+                     "text":  "function Show-EngRootMenu{while($true){$roots=@(Get-EngScreens|Where-Object{[string]$_.level -notmatch \"\\.\"}|Sort-Object {Get-EngLevelSortKey $_});$map=@{};Clear-Host;Write-Host \"==== ENGREMIAT / OPERADOR V2 ====\" -ForegroundColor Cyan;Write-Host \"\";Write-Host (\"Root: \"+$script:EngV2Root);Write-Host \"\";Write-Host \"MENU\";$i=1;foreach($s in $roots){Write-Host (\" [\"+$i+\"] \"+$s.title+\"  [\"+$s.status+\" · \"+$s.progress+\"%]\");$map[[string]$i]=$s.id;$i++};Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){\"refresh\"{continue}\"b\"{break}\"q\"{break}\"m\"{Show-EngMaintenance;continue}\"?\"{Write-Host \"Selecciona una pantalla principal. Enter refresca.\";Start-Sleep -Seconds 1;continue}default{if($map.ContainsKey($cmd)){Show-EngScreen $map[$cmd];continue};Write-Host \"Opcion no reconocida\" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700}}}}"
+                 },
+                 {
+                     "pattern":  "ENGREMIAT_V2",
+                     "line":  4,
+                     "text":  "$script:EngPrompt=\"ENGREMIAT_V2\""
+                 },
+                 {
+                     "pattern":  "MENU",
+                     "line":  16,
+                     "text":  "function Show-EngBody($s){$children=Get-EngChildren $s;$map=@{};if($children.Count -gt 0){Write-Host \"MENU\";$i=1;foreach($c in ($children|Sort-Object {Get-EngLevelSortKey $_})){Write-Host (\" [\"+$i+\"] \"+$c.title+\"  [\"+$c.status+\" · \"+$c.progress+\"%]\");$map[[string]$i]=$c.id;$i++};Write-Host \"\"};$p=@($s.pending);if($p.Count -gt 0){Write-Host \"PENDIENTE PRINCIPAL:\";Write-Host (\" - \"+$p[0]);if($p.Count -gt 1){Write-Host (\" - +\"+($p.Count-1)+\" pendientes mas en Reparaciones UX\")};Write-Host \"\"};return $map}"
+                 },
+                 {
+                     "pattern":  "MENU",
+                     "line":  17,
+                     "text":  "function Show-EngUxRegistryScreen{while($true){$screens=Get-EngScreens;$groups=$screens|Group-Object status|Sort-Object Name;$roots=@($screens|Where-Object{[string]$_.level -notmatch \"\\.\"}|Sort-Object {Get-EngLevelSortKey $_});$active=@($screens|Where-Object{[string]$_.status -eq \"ACTIVE\"}).Count;$open=@($screens|Where-Object{[string]$_.status -in @(\"PLACEHOLDER\",\"PLANNED\",\"PARTIAL\")}).Count;Show-EngHeader \"UX REGISTRY\" \"1.2.1 · ux_registry\" \"ACTIVE\" 35 \"Panel resumido del registro activo\";Write-Host (\"Registry: \"+(Join-Path $script:EngV2Root \"contracts\\SCREEN_REGISTRY.json\"));Write-Host (\"Pantallas: \"+$screens.Count+\" | ACTIVE: \"+$active+\" | por trabajar: \"+$open);Write-Host \"\";Write-Host \"ESTADOS:\";foreach($g in $groups){Write-Host (\" - \"+$g.Name+\": \"+$g.Count)};Write-Host \"\";Write-Host \"AREAS:\";$shown=@($roots|Select-Object -First 8);foreach($s in $shown){Write-Host (\" - \"+$s.level+\" · \"+$s.title+\"  [\"+$s.status+\" · \"+$s.progress+\"%]\")};if($roots.Count -gt 8){Write-Host (\" - +\"+($roots.Count-8)+\" areas mas\")};Write-Host \"\";Write-Host \"ACCIONES:\";Write-Host \" [e] Estados\";Write-Host \" [r] Reparaciones\";Write-Host \" [v] Reglas visuales\";Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){\"refresh\"{continue}\"b\"{return}\"q\"{return}\"e\"{Show-EngScreenStatesScreen;continue}\"r\"{Show-EngPendingUxRepairsScreen;continue}\"v\"{Show-EngLayoutRulesScreen;continue}\"m\"{Show-EngMaintenance;continue}\"?\"{Write-Host \"Panel resumido. Las areas se abren desde el menu raiz.\";Start-Sleep -Seconds 1;continue}default{Write-Host \"Opcion no reconocida\" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700}}}}"
+                 },
+                 {
+                     "pattern":  "MENU",
+                     "line":  18,
+                     "text":  "function Show-EngScreenStatesScreen{while($true){$screens=Get-EngScreens;$groups=$screens|Group-Object status|Sort-Object Name;Show-EngHeader \"ESTADOS DE PANTALLA\" \"1.2.2 · screen_states\" \"ACTIVE\" 35 \"Resumen por estado\";foreach($g in $groups){Write-Host (\" \"+$g.Name+\" (\"+$g.Count+\")\") -ForegroundColor Cyan;$sample=@($g.Group|Sort-Object {Get-EngLevelSortKey $_}|Select-Object -First 5);foreach($s in $sample){Write-Host (\"   - \"+$s.level+\" \"+$s.title+\" [\"+$s.progress+\"%]\")};if($g.Count -gt 5){Write-Host (\"   - +\"+($g.Count-5)+\" mas\")};Write-Host \"\"};Write-Host \"SIGUIENTE:\";Write-Host \" - Priorizar PLACEHOLDER y PLANNED antes de ampliar menus.\";Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){\"refresh\"{continue}\"b\"{return}\"q\"{return}\"m\"{Show-EngMaintenance;continue}\"?\"{Write-Host \"Agrupa pantallas por estado.\";Start-Sleep -Seconds 1;continue}default{Write-Host \"Opcion no reconocida\" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700}}}}"
+                 },
+                 {
+                     "pattern":  "MENU",
+                     "line":  19,
+                     "text":  "function Show-EngLayoutRulesScreen{while($true){Show-EngHeader \"REGLAS VISUALES\" \"1.2.3 · layout_rules\" \"PLANNED\" 20 \"Reglas simples de lectura\";Write-Host \"REGLAS:\";Write-Host \" - Una pantalla = una decision clara.\";Write-Host \" - Menu corto: maximo 5 opciones visibles.\";Write-Host \" - Listas largas solo como resumen + accion.\";Write-Host \" - Footer corto y comun.\";Write-Host \" - Context Guardian obligatorio antes de parchear.\";Write-Host \"\";Write-Host \"SIGUIENTE:\";Write-Host \" - Convertir reglas en validador automatico.\";Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){\"refresh\"{continue}\"b\"{return}\"q\"{return}\"m\"{Show-EngMaintenance;continue}\"?\"{Write-Host \"Reglas UX actuales del operador.\";Start-Sleep -Seconds 1;continue}default{Write-Host \"Opcion no reconocida\" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700}}}}"
+                 },
+                 {
+                     "pattern":  "MENU",
+                     "line":  23,
+                     "text":  "function Show-EngRootMenu{while($true){$roots=@(Get-EngScreens|Where-Object{[string]$_.level -notmatch \"\\.\"}|Sort-Object {Get-EngLevelSortKey $_});$map=@{};Clear-Host;Write-Host \"==== ENGREMIAT / OPERADOR V2 ====\" -ForegroundColor Cyan;Write-Host \"\";Write-Host (\"Root: \"+$script:EngV2Root);Write-Host \"\";Write-Host \"MENU\";$i=1;foreach($s in $roots){Write-Host (\" [\"+$i+\"] \"+$s.title+\"  [\"+$s.status+\" · \"+$s.progress+\"%]\");$map[[string]$i]=$s.id;$i++};Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){\"refresh\"{continue}\"b\"{break}\"q\"{break}\"m\"{Show-EngMaintenance;continue}\"?\"{Write-Host \"Selecciona una pantalla principal. Enter refresca.\";Start-Sleep -Seconds 1;continue}default{if($map.ContainsKey($cmd)){Show-EngScreen $map[$cmd];continue};Write-Host \"Opcion no reconocida\" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700}}}}"
+                 },
+                 {
+                     "pattern":  "screens",
+                     "line":  7,
+                     "text":  "function Get-EngScreens{$r=Get-EngRegistry;if($r -and $r.screens){return @($r.screens)};return @()}"
+                 },
+                 {
+                     "pattern":  "screens",
+                     "line":  8,
+                     "text":  "function Get-EngScreen([string]$Id){return @(Get-EngScreens|Where-Object{[string]$_.id -eq $Id}|Select-Object -First 1)}"
+                 },
+                 {
+                     "pattern":  "screens",
+                     "line":  10,
+                     "text":  "function Get-EngChildren($Screen){$all=Get-EngScreens;$out=@();foreach($cid in @($Screen.children)){$c=@($all|Where-Object{[string]$_.id -eq [string]$cid}|Select-Object -First 1);if($c){$out+=$c}};return @($out)}"
+                 },
+                 {
+                     "pattern":  "screens",
+                     "line":  17,
+                     "text":  "function Show-EngUxRegistryScreen{while($true){$screens=Get-EngScreens;$groups=$screens|Group-Object status|Sort-Object Name;$roots=@($screens|Where-Object{[string]$_.level -notmatch \"\\.\"}|Sort-Object {Get-EngLevelSortKey $_});$active=@($screens|Where-Object{[string]$_.status -eq \"ACTIVE\"}).Count;$open=@($screens|Where-Object{[string]$_.status -in @(\"PLACEHOLDER\",\"PLANNED\",\"PARTIAL\")}).Count;Show-EngHeader \"UX REGISTRY\" \"1.2.1 · ux_registry\" \"ACTIVE\" 35 \"Panel resumido del registro activo\";Write-Host (\"Registry: \"+(Join-Path $script:EngV2Root \"contracts\\SCREEN_REGISTRY.json\"));Write-Host (\"Pantallas: \"+$screens.Count+\" | ACTIVE: \"+$active+\" | por trabajar: \"+$open);Write-Host \"\";Write-Host \"ESTADOS:\";foreach($g in $groups){Write-Host (\" - \"+$g.Name+\": \"+$g.Count)};Write-Host \"\";Write-Host \"AREAS:\";$shown=@($roots|Select-Object -First 8);foreach($s in $shown){Write-Host (\" - \"+$s.level+\" · \"+$s.title+\"  [\"+$s.status+\" · \"+$s.progress+\"%]\")};if($roots.Count -gt 8){Write-Host (\" - +\"+($roots.Count-8)+\" areas mas\")};Write-Host \"\";Write-Host \"ACCIONES:\";Write-Host \" [e] Estados\";Write-Host \" [r] Reparaciones\";Write-Host \" [v] Reglas visuales\";Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){\"refresh\"{continue}\"b\"{return}\"q\"{return}\"e\"{Show-EngScreenStatesScreen;continue}\"r\"{Show-EngPendingUxRepairsScreen;continue}\"v\"{Show-EngLayoutRulesScreen;continue}\"m\"{Show-EngMaintenance;continue}\"?\"{Write-Host \"Panel resumido. Las areas se abren desde el menu raiz.\";Start-Sleep -Seconds 1;continue}default{Write-Host \"Opcion no reconocida\" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700}}}}"
+                 },
+                 {
+                     "pattern":  "screens",
+                     "line":  18,
+                     "text":  "function Show-EngScreenStatesScreen{while($true){$screens=Get-EngScreens;$groups=$screens|Group-Object status|Sort-Object Name;Show-EngHeader \"ESTADOS DE PANTALLA\" \"1.2.2 · screen_states\" \"ACTIVE\" 35 \"Resumen por estado\";foreach($g in $groups){Write-Host (\" \"+$g.Name+\" (\"+$g.Count+\")\") -ForegroundColor Cyan;$sample=@($g.Group|Sort-Object {Get-EngLevelSortKey $_}|Select-Object -First 5);foreach($s in $sample){Write-Host (\"   - \"+$s.level+\" \"+$s.title+\" [\"+$s.progress+\"%]\")};if($g.Count -gt 5){Write-Host (\"   - +\"+($g.Count-5)+\" mas\")};Write-Host \"\"};Write-Host \"SIGUIENTE:\";Write-Host \" - Priorizar PLACEHOLDER y PLANNED antes de ampliar menus.\";Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){\"refresh\"{continue}\"b\"{return}\"q\"{return}\"m\"{Show-EngMaintenance;continue}\"?\"{Write-Host \"Agrupa pantallas por estado.\";Start-Sleep -Seconds 1;continue}default{Write-Host \"Opcion no reconocida\" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700}}}}"
+                 },
+                 {
+                     "pattern":  "screens",
+                     "line":  20,
+                     "text":  "function Show-EngPendingUxRepairsScreen{while($true){$screens=Get-EngScreens;$items=@();foreach($s in ($screens|Sort-Object {Get-EngLevelSortKey $_})){foreach($p in @($s.pending)){$items+=[pscustomobject]@{level=$s.level;title=$s.title;pending=$p;status=$s.status}}};Show-EngHeader \"REPARACIONES UX\" \"1.2.4 · pending_ux_repairs\" \"ACTIVE\" 35 \"Pendientes priorizados\";Write-Host (\"Pendientes totales: \"+$items.Count);Write-Host \"\";Write-Host \"TOP 8:\";foreach($x in ($items|Select-Object -First 8)){Write-Host (\" - \"+$x.level+\" \"+$x.title+\": \"+$x.pending)};if($items.Count -gt 8){Write-Host (\" - +\"+($items.Count-8)+\" pendientes mas\")};Write-Host \"\";Write-Host \"GUARDIAN:\";Write-Host \" - active_root debe coincidir antes de parchear.\";Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){\"refresh\"{continue}\"b\"{return}\"q\"{return}\"m\"{Show-EngMaintenance;continue}\"?\"{Write-Host \"Lista corta de reparaciones UX.\";Start-Sleep -Seconds 1;continue}default{Write-Host \"Opcion no reconocida\" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700}}}}"
+                 },
+                 {
+                     "pattern":  "screens",
+                     "line":  21,
+                     "text":  "function Show-EngProgressPendingScreen{while($true){$screens=Get-EngScreens;$total=$screens.Count;$avg=0;if($total -gt 0){$avg=[math]::Round((($screens|ForEach-Object{[int]$_.progress}|Measure-Object -Average).Average),2)};$pendingCount=0;foreach($s in $screens){$pendingCount+=@($s.pending).Count};Show-EngHeader \"PROGRESO Y PENDIENTES\" \"1.3 · progreso_pendientes\" \"ACTIVE\" 25 \"Resumen operativo\";Write-Host (\"Pantallas: \"+$total);Write-Host (\"Progreso medio: \"+$avg+\"%\");Write-Host (\"Pendientes: \"+$pendingCount);Write-Host \"\";Write-Host \"ACCIONES:\";Write-Host \" [e] Estados\";Write-Host \" [r] Reparaciones UX\";Write-Host \" [x] Registry\";Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){\"refresh\"{continue}\"b\"{return}\"q\"{return}\"e\"{Show-EngScreenStatesScreen;continue}\"r\"{Show-EngPendingUxRepairsScreen;continue}\"x\"{Show-EngUxRegistryScreen;continue}\"m\"{Show-EngMaintenance;continue}\"?\"{Write-Host \"Resumen global de progreso.\";Start-Sleep -Seconds 1;continue}default{Write-Host \"Opcion no reconocida\" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700}}}}"
+                 },
+                 {
+                     "pattern":  "screens",
+                     "line":  22,
+                     "text":  "function Show-EngScreen([string]$Id){if($Id -eq \"progreso_pendientes\"){Show-EngProgressPendingScreen;return};if($Id -eq \"ux_registry\"){Show-EngUxRegistryScreen;return};if($Id -eq \"screen_states\"){Show-EngScreenStatesScreen;return};if($Id -eq \"layout_rules\"){Show-EngLayoutRulesScreen;return};if($Id -eq \"pending_ux_repairs\"){Show-EngPendingUxRepairsScreen;return};$s=Get-EngScreen $Id;if(!$s){Clear-Host;Write-Host (\"Pantalla no encontrada: \"+$Id) -ForegroundColor Yellow;Read-Host \"Enter para volver\"|Out-Null;return};while($true){Show-EngHeader $s.title ($s.level+\" · \"+$s.id) $s.status ([int]$s.progress) $s.purpose;$map=Show-EngBody $s;Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){\"refresh\"{continue}\"b\"{return}\"q\"{return}\"m\"{Show-EngMaintenance;continue}\"?\"{Show-EngHelp $s;continue}default{if($map.ContainsKey($cmd)){Show-EngScreen $map[$cmd];continue};Write-Host \"Opcion no reconocida\" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700}}}}"
+                 },
+                 {
+                     "pattern":  "screens",
+                     "line":  23,
+                     "text":  "function Show-EngRootMenu{while($true){$roots=@(Get-EngScreens|Where-Object{[string]$_.level -notmatch \"\\.\"}|Sort-Object {Get-EngLevelSortKey $_});$map=@{};Clear-Host;Write-Host \"==== ENGREMIAT / OPERADOR V2 ====\" -ForegroundColor Cyan;Write-Host \"\";Write-Host (\"Root: \"+$script:EngV2Root);Write-Host \"\";Write-Host \"MENU\";$i=1;foreach($s in $roots){Write-Host (\" [\"+$i+\"] \"+$s.title+\"  [\"+$s.status+\" · \"+$s.progress+\"%]\");$map[[string]$i]=$s.id;$i++};Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){\"refresh\"{continue}\"b\"{break}\"q\"{break}\"m\"{Show-EngMaintenance;continue}\"?\"{Write-Host \"Selecciona una pantalla principal. Enter refresca.\";Start-Sleep -Seconds 1;continue}default{if($map.ContainsKey($cmd)){Show-EngScreen $map[$cmd];continue};Write-Host \"Opcion no reconocida\" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700}}}}"
+                 },
+                 {
+                     "pattern":  "items",
+                     "line":  20,
+                     "text":  "function Show-EngPendingUxRepairsScreen{while($true){$screens=Get-EngScreens;$items=@();foreach($s in ($screens|Sort-Object {Get-EngLevelSortKey $_})){foreach($p in @($s.pending)){$items+=[pscustomobject]@{level=$s.level;title=$s.title;pending=$p;status=$s.status}}};Show-EngHeader \"REPARACIONES UX\" \"1.2.4 · pending_ux_repairs\" \"ACTIVE\" 35 \"Pendientes priorizados\";Write-Host (\"Pendientes totales: \"+$items.Count);Write-Host \"\";Write-Host \"TOP 8:\";foreach($x in ($items|Select-Object -First 8)){Write-Host (\" - \"+$x.level+\" \"+$x.title+\": \"+$x.pending)};if($items.Count -gt 8){Write-Host (\" - +\"+($items.Count-8)+\" pendientes mas\")};Write-Host \"\";Write-Host \"GUARDIAN:\";Write-Host \" - active_root debe coincidir antes de parchear.\";Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){\"refresh\"{continue}\"b\"{return}\"q\"{return}\"m\"{Show-EngMaintenance;continue}\"?\"{Write-Host \"Lista corta de reparaciones UX.\";Start-Sleep -Seconds 1;continue}default{Write-Host \"Opcion no reconocida\" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700}}}}"
+                 },
+                 {
+                     "pattern":  "children",
+                     "line":  10,
+                     "text":  "function Get-EngChildren($Screen){$all=Get-EngScreens;$out=@();foreach($cid in @($Screen.children)){$c=@($all|Where-Object{[string]$_.id -eq [string]$cid}|Select-Object -First 1);if($c){$out+=$c}};return @($out)}"
+                 },
+                 {
+                     "pattern":  "children",
+                     "line":  16,
+                     "text":  "function Show-EngBody($s){$children=Get-EngChildren $s;$map=@{};if($children.Count -gt 0){Write-Host \"MENU\";$i=1;foreach($c in ($children|Sort-Object {Get-EngLevelSortKey $_})){Write-Host (\" [\"+$i+\"] \"+$c.title+\"  [\"+$c.status+\" · \"+$c.progress+\"%]\");$map[[string]$i]=$c.id;$i++};Write-Host \"\"};$p=@($s.pending);if($p.Count -gt 0){Write-Host \"PENDIENTE PRINCIPAL:\";Write-Host (\" - \"+$p[0]);if($p.Count -gt 1){Write-Host (\" - +\"+($p.Count-1)+\" pendientes mas en Reparaciones UX\")};Write-Host \"\"};return $map}"
+                 },
+                 {
+                     "pattern":  "route",
+                     "line":  13,
+                     "text":  "function Show-EngHeader([string]$Title,[string]$Route,[string]$Status,[int]$Progress,[string]$Purpose){Clear-Host;Write-Host (\"==== ENGREMIAT / \"+$Title+\" ====\") -ForegroundColor Cyan;Write-Host \"\";if($Route){Write-Host (\"Ruta: \"+$Route) -ForegroundColor DarkCyan};if($Status){Write-Host (\"Estado: \"+$Status+\" · \"+$Progress+\"%\") -ForegroundColor DarkCyan};if($Purpose){Write-Host (\"Objetivo: \"+$Purpose)};Write-Host \"\"}"
+                 },
+                 {
+                     "pattern":  "Read-Host",
+                     "line":  12,
+                     "text":  "function Read-EngCmd{$x=Read-Host $script:EngPrompt;if([string]::IsNullOrWhiteSpace($x)){return \"refresh\"};return $x.Trim().ToLowerInvariant()}"
+                 },
+                 {
+                     "pattern":  "Read-Host",
+                     "line":  14,
+                     "text":  "function Show-EngMaintenance{Show-EngHeader \"MANTENIMIENTO V2\" \"mantenimiento\" \"PLANNED\" 0 \"Mantenimiento contextual pendiente\";Write-Host \"Pendiente: conectar tarjetas de mantenimiento.\";Show-EngFooter;Read-Host \"Enter para volver\"|Out-Null}"
+                 },
+                 {
+                     "pattern":  "Read-Host",
+                     "line":  22,
+                     "text":  "function Show-EngScreen([string]$Id){if($Id -eq \"progreso_pendientes\"){Show-EngProgressPendingScreen;return};if($Id -eq \"ux_registry\"){Show-EngUxRegistryScreen;return};if($Id -eq \"screen_states\"){Show-EngScreenStatesScreen;return};if($Id -eq \"layout_rules\"){Show-EngLayoutRulesScreen;return};if($Id -eq \"pending_ux_repairs\"){Show-EngPendingUxRepairsScreen;return};$s=Get-EngScreen $Id;if(!$s){Clear-Host;Write-Host (\"Pantalla no encontrada: \"+$Id) -ForegroundColor Yellow;Read-Host \"Enter para volver\"|Out-Null;return};while($true){Show-EngHeader $s.title ($s.level+\" · \"+$s.id) $s.status ([int]$s.progress) $s.purpose;$map=Show-EngBody $s;Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){\"refresh\"{continue}\"b\"{return}\"q\"{return}\"m\"{Show-EngMaintenance;continue}\"?\"{Show-EngHelp $s;continue}default{if($map.ContainsKey($cmd)){Show-EngScreen $map[$cmd];continue};Write-Host \"Opcion no reconocida\" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700}}}}"
+                 },
+                 {
+                     "pattern":  "switch",
+                     "line":  17,
+                     "text":  "function Show-EngUxRegistryScreen{while($true){$screens=Get-EngScreens;$groups=$screens|Group-Object status|Sort-Object Name;$roots=@($screens|Where-Object{[string]$_.level -notmatch \"\\.\"}|Sort-Object {Get-EngLevelSortKey $_});$active=@($screens|Where-Object{[string]$_.status -eq \"ACTIVE\"}).Count;$open=@($screens|Where-Object{[string]$_.status -in @(\"PLACEHOLDER\",\"PLANNED\",\"PARTIAL\")}).Count;Show-EngHeader \"UX REGISTRY\" \"1.2.1 · ux_registry\" \"ACTIVE\" 35 \"Panel resumido del registro activo\";Write-Host (\"Registry: \"+(Join-Path $script:EngV2Root \"contracts\\SCREEN_REGISTRY.json\"));Write-Host (\"Pantallas: \"+$screens.Count+\" | ACTIVE: \"+$active+\" | por trabajar: \"+$open);Write-Host \"\";Write-Host \"ESTADOS:\";foreach($g in $groups){Write-Host (\" - \"+$g.Name+\": \"+$g.Count)};Write-Host \"\";Write-Host \"AREAS:\";$shown=@($roots|Select-Object -First 8);foreach($s in $shown){Write-Host (\" - \"+$s.level+\" · \"+$s.title+\"  [\"+$s.status+\" · \"+$s.progress+\"%]\")};if($roots.Count -gt 8){Write-Host (\" - +\"+($roots.Count-8)+\" areas mas\")};Write-Host \"\";Write-Host \"ACCIONES:\";Write-Host \" [e] Estados\";Write-Host \" [r] Reparaciones\";Write-Host \" [v] Reglas visuales\";Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){\"refresh\"{continue}\"b\"{return}\"q\"{return}\"e\"{Show-EngScreenStatesScreen;continue}\"r\"{Show-EngPendingUxRepairsScreen;continue}\"v\"{Show-EngLayoutRulesScreen;continue}\"m\"{Show-EngMaintenance;continue}\"?\"{Write-Host \"Panel resumido. Las areas se abren desde el menu raiz.\";Start-Sleep -Seconds 1;continue}default{Write-Host \"Opcion no reconocida\" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700}}}}"
+                 },
+                 {
+                     "pattern":  "switch",
+                     "line":  18,
+                     "text":  "function Show-EngScreenStatesScreen{while($true){$screens=Get-EngScreens;$groups=$screens|Group-Object status|Sort-Object Name;Show-EngHeader \"ESTADOS DE PANTALLA\" \"1.2.2 · screen_states\" \"ACTIVE\" 35 \"Resumen por estado\";foreach($g in $groups){Write-Host (\" \"+$g.Name+\" (\"+$g.Count+\")\") -ForegroundColor Cyan;$sample=@($g.Group|Sort-Object {Get-EngLevelSortKey $_}|Select-Object -First 5);foreach($s in $sample){Write-Host (\"   - \"+$s.level+\" \"+$s.title+\" [\"+$s.progress+\"%]\")};if($g.Count -gt 5){Write-Host (\"   - +\"+($g.Count-5)+\" mas\")};Write-Host \"\"};Write-Host \"SIGUIENTE:\";Write-Host \" - Priorizar PLACEHOLDER y PLANNED antes de ampliar menus.\";Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){\"refresh\"{continue}\"b\"{return}\"q\"{return}\"m\"{Show-EngMaintenance;continue}\"?\"{Write-Host \"Agrupa pantallas por estado.\";Start-Sleep -Seconds 1;continue}default{Write-Host \"Opcion no reconocida\" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700}}}}"
+                 },
+                 {
+                     "pattern":  "switch",
+                     "line":  19,
+                     "text":  "function Show-EngLayoutRulesScreen{while($true){Show-EngHeader \"REGLAS VISUALES\" \"1.2.3 · layout_rules\" \"PLANNED\" 20 \"Reglas simples de lectura\";Write-Host \"REGLAS:\";Write-Host \" - Una pantalla = una decision clara.\";Write-Host \" - Menu corto: maximo 5 opciones visibles.\";Write-Host \" - Listas largas solo como resumen + accion.\";Write-Host \" - Footer corto y comun.\";Write-Host \" - Context Guardian obligatorio antes de parchear.\";Write-Host \"\";Write-Host \"SIGUIENTE:\";Write-Host \" - Convertir reglas en validador automatico.\";Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){\"refresh\"{continue}\"b\"{return}\"q\"{return}\"m\"{Show-EngMaintenance;continue}\"?\"{Write-Host \"Reglas UX actuales del operador.\";Start-Sleep -Seconds 1;continue}default{Write-Host \"Opcion no reconocida\" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700}}}}"
+                 },
+                 {
+                     "pattern":  "switch",
+                     "line":  20,
+                     "text":  "function Show-EngPendingUxRepairsScreen{while($true){$screens=Get-EngScreens;$items=@();foreach($s in ($screens|Sort-Object {Get-EngLevelSortKey $_})){foreach($p in @($s.pending)){$items+=[pscustomobject]@{level=$s.level;title=$s.title;pending=$p;status=$s.status}}};Show-EngHeader \"REPARACIONES UX\" \"1.2.4 · pending_ux_repairs\" \"ACTIVE\" 35 \"Pendientes priorizados\";Write-Host (\"Pendientes totales: \"+$items.Count);Write-Host \"\";Write-Host \"TOP 8:\";foreach($x in ($items|Select-Object -First 8)){Write-Host (\" - \"+$x.level+\" \"+$x.title+\": \"+$x.pending)};if($items.Count -gt 8){Write-Host (\" - +\"+($items.Count-8)+\" pendientes mas\")};Write-Host \"\";Write-Host \"GUARDIAN:\";Write-Host \" - active_root debe coincidir antes de parchear.\";Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){\"refresh\"{continue}\"b\"{return}\"q\"{return}\"m\"{Show-EngMaintenance;continue}\"?\"{Write-Host \"Lista corta de reparaciones UX.\";Start-Sleep -Seconds 1;continue}default{Write-Host \"Opcion no reconocida\" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700}}}}"
+                 },
+                 {
+                     "pattern":  "switch",
+                     "line":  21,
+                     "text":  "function Show-EngProgressPendingScreen{while($true){$screens=Get-EngScreens;$total=$screens.Count;$avg=0;if($total -gt 0){$avg=[math]::Round((($screens|ForEach-Object{[int]$_.progress}|Measure-Object -Average).Average),2)};$pendingCount=0;foreach($s in $screens){$pendingCount+=@($s.pending).Count};Show-EngHeader \"PROGRESO Y PENDIENTES\" \"1.3 · progreso_pendientes\" \"ACTIVE\" 25 \"Resumen operativo\";Write-Host (\"Pantallas: \"+$total);Write-Host (\"Progreso medio: \"+$avg+\"%\");Write-Host (\"Pendientes: \"+$pendingCount);Write-Host \"\";Write-Host \"ACCIONES:\";Write-Host \" [e] Estados\";Write-Host \" [r] Reparaciones UX\";Write-Host \" [x] Registry\";Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){\"refresh\"{continue}\"b\"{return}\"q\"{return}\"e\"{Show-EngScreenStatesScreen;continue}\"r\"{Show-EngPendingUxRepairsScreen;continue}\"x\"{Show-EngUxRegistryScreen;continue}\"m\"{Show-EngMaintenance;continue}\"?\"{Write-Host \"Resumen global de progreso.\";Start-Sleep -Seconds 1;continue}default{Write-Host \"Opcion no reconocida\" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700}}}}"
+                 },
+                 {
+                     "pattern":  "switch",
+                     "line":  22,
+                     "text":  "function Show-EngScreen([string]$Id){if($Id -eq \"progreso_pendientes\"){Show-EngProgressPendingScreen;return};if($Id -eq \"ux_registry\"){Show-EngUxRegistryScreen;return};if($Id -eq \"screen_states\"){Show-EngScreenStatesScreen;return};if($Id -eq \"layout_rules\"){Show-EngLayoutRulesScreen;return};if($Id -eq \"pending_ux_repairs\"){Show-EngPendingUxRepairsScreen;return};$s=Get-EngScreen $Id;if(!$s){Clear-Host;Write-Host (\"Pantalla no encontrada: \"+$Id) -ForegroundColor Yellow;Read-Host \"Enter para volver\"|Out-Null;return};while($true){Show-EngHeader $s.title ($s.level+\" · \"+$s.id) $s.status ([int]$s.progress) $s.purpose;$map=Show-EngBody $s;Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){\"refresh\"{continue}\"b\"{return}\"q\"{return}\"m\"{Show-EngMaintenance;continue}\"?\"{Show-EngHelp $s;continue}default{if($map.ContainsKey($cmd)){Show-EngScreen $map[$cmd];continue};Write-Host \"Opcion no reconocida\" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700}}}}"
+                 },
+                 {
+                     "pattern":  "switch",
+                     "line":  23,
+                     "text":  "function Show-EngRootMenu{while($true){$roots=@(Get-EngScreens|Where-Object{[string]$_.level -notmatch \"\\.\"}|Sort-Object {Get-EngLevelSortKey $_});$map=@{};Clear-Host;Write-Host \"==== ENGREMIAT / OPERADOR V2 ====\" -ForegroundColor Cyan;Write-Host \"\";Write-Host (\"Root: \"+$script:EngV2Root);Write-Host \"\";Write-Host \"MENU\";$i=1;foreach($s in $roots){Write-Host (\" [\"+$i+\"] \"+$s.title+\"  [\"+$s.status+\" · \"+$s.progress+\"%]\");$map[[string]$i]=$s.id;$i++};Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){\"refresh\"{continue}\"b\"{break}\"q\"{break}\"m\"{Show-EngMaintenance;continue}\"?\"{Write-Host \"Selecciona una pantalla principal. Enter refresca.\";Start-Sleep -Seconds 1;continue}default{if($map.ContainsKey($cmd)){Show-EngScreen $map[$cmd];continue};Write-Host \"Opcion no reconocida\" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700}}}}"
+                 },
+                 {
+                     "pattern":  "Write-Host",
+                     "line":  11,
+                     "text":  "function Show-EngFooter{Write-Host \"\";Write-Host $script:EngFooter -ForegroundColor Gray;Write-Host \"\"}"
+                 },
+                 {
+                     "pattern":  "Write-Host",
+                     "line":  13,
+                     "text":  "function Show-EngHeader([string]$Title,[string]$Route,[string]$Status,[int]$Progress,[string]$Purpose){Clear-Host;Write-Host (\"==== ENGREMIAT / \"+$Title+\" ====\") -ForegroundColor Cyan;Write-Host \"\";if($Route){Write-Host (\"Ruta: \"+$Route) -ForegroundColor DarkCyan};if($Status){Write-Host (\"Estado: \"+$Status+\" · \"+$Progress+\"%\") -ForegroundColor DarkCyan};if($Purpose){Write-Host (\"Objetivo: \"+$Purpose)};Write-Host \"\"}"
+                 },
+                 {
+                     "pattern":  "Write-Host",
+                     "line":  14,
+                     "text":  "function Show-EngMaintenance{Show-EngHeader \"MANTENIMIENTO V2\" \"mantenimiento\" \"PLANNED\" 0 \"Mantenimiento contextual pendiente\";Write-Host \"Pendiente: conectar tarjetas de mantenimiento.\";Show-EngFooter;Read-Host \"Enter para volver\"|Out-Null}"
+                 },
+                 {
+                     "pattern":  "Write-Host",
+                     "line":  15,
+                     "text":  "Write-Host \"[b/q] volver | m = mantenimiento | ? = ayuda | Enter = refrescar\" -ForegroundColor DarkGray"
+                 },
+                 {
+                     "pattern":  "Write-Host",
+                     "line":  16,
+                     "text":  "function Show-EngBody($s){$children=Get-EngChildren $s;$map=@{};if($children.Count -gt 0){Write-Host \"MENU\";$i=1;foreach($c in ($children|Sort-Object {Get-EngLevelSortKey $_})){Write-Host (\" [\"+$i+\"] \"+$c.title+\"  [\"+$c.status+\" · \"+$c.progress+\"%]\");$map[[string]$i]=$c.id;$i++};Write-Host \"\"};$p=@($s.pending);if($p.Count -gt 0){Write-Host \"PENDIENTE PRINCIPAL:\";Write-Host (\" - \"+$p[0]);if($p.Count -gt 1){Write-Host (\" - +\"+($p.Count-1)+\" pendientes mas en Reparaciones UX\")};Write-Host \"\"};return $map}"
+                 },
+                 {
+                     "pattern":  "Write-Host",
+                     "line":  17,
+                     "text":  "function Show-EngUxRegistryScreen{while($true){$screens=Get-EngScreens;$groups=$screens|Group-Object status|Sort-Object Name;$roots=@($screens|Where-Object{[string]$_.level -notmatch \"\\.\"}|Sort-Object {Get-EngLevelSortKey $_});$active=@($screens|Where-Object{[string]$_.status -eq \"ACTIVE\"}).Count;$open=@($screens|Where-Object{[string]$_.status -in @(\"PLACEHOLDER\",\"PLANNED\",\"PARTIAL\")}).Count;Show-EngHeader \"UX REGISTRY\" \"1.2.1 · ux_registry\" \"ACTIVE\" 35 \"Panel resumido del registro activo\";Write-Host (\"Registry: \"+(Join-Path $script:EngV2Root \"contracts\\SCREEN_REGISTRY.json\"));Write-Host (\"Pantallas: \"+$screens.Count+\" | ACTIVE: \"+$active+\" | por trabajar: \"+$open);Write-Host \"\";Write-Host \"ESTADOS:\";foreach($g in $groups){Write-Host (\" - \"+$g.Name+\": \"+$g.Count)};Write-Host \"\";Write-Host \"AREAS:\";$shown=@($roots|Select-Object -First 8);foreach($s in $shown){Write-Host (\" - \"+$s.level+\" · \"+$s.title+\"  [\"+$s.status+\" · \"+$s.progress+\"%]\")};if($roots.Count -gt 8){Write-Host (\" - +\"+($roots.Count-8)+\" areas mas\")};Write-Host \"\";Write-Host \"ACCIONES:\";Write-Host \" [e] Estados\";Write-Host \" [r] Reparaciones\";Write-Host \" [v] Reglas visuales\";Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){\"refresh\"{continue}\"b\"{return}\"q\"{return}\"e\"{Show-EngScreenStatesScreen;continue}\"r\"{Show-EngPendingUxRepairsScreen;continue}\"v\"{Show-EngLayoutRulesScreen;continue}\"m\"{Show-EngMaintenance;continue}\"?\"{Write-Host \"Panel resumido. Las areas se abren desde el menu raiz.\";Start-Sleep -Seconds 1;continue}default{Write-Host \"Opcion no reconocida\" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700}}}}"
+                 },
+                 {
+                     "pattern":  "Write-Host",
+                     "line":  18,
+                     "text":  "function Show-EngScreenStatesScreen{while($true){$screens=Get-EngScreens;$groups=$screens|Group-Object status|Sort-Object Name;Show-EngHeader \"ESTADOS DE PANTALLA\" \"1.2.2 · screen_states\" \"ACTIVE\" 35 \"Resumen por estado\";foreach($g in $groups){Write-Host (\" \"+$g.Name+\" (\"+$g.Count+\")\") -ForegroundColor Cyan;$sample=@($g.Group|Sort-Object {Get-EngLevelSortKey $_}|Select-Object -First 5);foreach($s in $sample){Write-Host (\"   - \"+$s.level+\" \"+$s.title+\" [\"+$s.progress+\"%]\")};if($g.Count -gt 5){Write-Host (\"   - +\"+($g.Count-5)+\" mas\")};Write-Host \"\"};Write-Host \"SIGUIENTE:\";Write-Host \" - Priorizar PLACEHOLDER y PLANNED antes de ampliar menus.\";Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){\"refresh\"{continue}\"b\"{return}\"q\"{return}\"m\"{Show-EngMaintenance;continue}\"?\"{Write-Host \"Agrupa pantallas por estado.\";Start-Sleep -Seconds 1;continue}default{Write-Host \"Opcion no reconocida\" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700}}}}"
+                 },
+                 {
+                     "pattern":  "Write-Host",
+                     "line":  19,
+                     "text":  "function Show-EngLayoutRulesScreen{while($true){Show-EngHeader \"REGLAS VISUALES\" \"1.2.3 · layout_rules\" \"PLANNED\" 20 \"Reglas simples de lectura\";Write-Host \"REGLAS:\";Write-Host \" - Una pantalla = una decision clara.\";Write-Host \" - Menu corto: maximo 5 opciones visibles.\";Write-Host \" - Listas largas solo como resumen + accion.\";Write-Host \" - Footer corto y comun.\";Write-Host \" - Context Guardian obligatorio antes de parchear.\";Write-Host \"\";Write-Host \"SIGUIENTE:\";Write-Host \" - Convertir reglas en validador automatico.\";Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){\"refresh\"{continue}\"b\"{return}\"q\"{return}\"m\"{Show-EngMaintenance;continue}\"?\"{Write-Host \"Reglas UX actuales del operador.\";Start-Sleep -Seconds 1;continue}default{Write-Host \"Opcion no reconocida\" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700}}}}"
+                 },
+                 {
+                     "pattern":  "Write-Host",
+                     "line":  20,
+                     "text":  "function Show-EngPendingUxRepairsScreen{while($true){$screens=Get-EngScreens;$items=@();foreach($s in ($screens|Sort-Object {Get-EngLevelSortKey $_})){foreach($p in @($s.pending)){$items+=[pscustomobject]@{level=$s.level;title=$s.title;pending=$p;status=$s.status}}};Show-EngHeader \"REPARACIONES UX\" \"1.2.4 · pending_ux_repairs\" \"ACTIVE\" 35 \"Pendientes priorizados\";Write-Host (\"Pendientes totales: \"+$items.Count);Write-Host \"\";Write-Host \"TOP 8:\";foreach($x in ($items|Select-Object -First 8)){Write-Host (\" - \"+$x.level+\" \"+$x.title+\": \"+$x.pending)};if($items.Count -gt 8){Write-Host (\" - +\"+($items.Count-8)+\" pendientes mas\")};Write-Host \"\";Write-Host \"GUARDIAN:\";Write-Host \" - active_root debe coincidir antes de parchear.\";Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){\"refresh\"{continue}\"b\"{return}\"q\"{return}\"m\"{Show-EngMaintenance;continue}\"?\"{Write-Host \"Lista corta de reparaciones UX.\";Start-Sleep -Seconds 1;continue}default{Write-Host \"Opcion no reconocida\" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700}}}}"
+                 },
+                 {
+                     "pattern":  "Write-Host",
+                     "line":  21,
+                     "text":  "function Show-EngProgressPendingScreen{while($true){$screens=Get-EngScreens;$total=$screens.Count;$avg=0;if($total -gt 0){$avg=[math]::Round((($screens|ForEach-Object{[int]$_.progress}|Measure-Object -Average).Average),2)};$pendingCount=0;foreach($s in $screens){$pendingCount+=@($s.pending).Count};Show-EngHeader \"PROGRESO Y PENDIENTES\" \"1.3 · progreso_pendientes\" \"ACTIVE\" 25 \"Resumen operativo\";Write-Host (\"Pantallas: \"+$total);Write-Host (\"Progreso medio: \"+$avg+\"%\");Write-Host (\"Pendientes: \"+$pendingCount);Write-Host \"\";Write-Host \"ACCIONES:\";Write-Host \" [e] Estados\";Write-Host \" [r] Reparaciones UX\";Write-Host \" [x] Registry\";Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){\"refresh\"{continue}\"b\"{return}\"q\"{return}\"e\"{Show-EngScreenStatesScreen;continue}\"r\"{Show-EngPendingUxRepairsScreen;continue}\"x\"{Show-EngUxRegistryScreen;continue}\"m\"{Show-EngMaintenance;continue}\"?\"{Write-Host \"Resumen global de progreso.\";Start-Sleep -Seconds 1;continue}default{Write-Host \"Opcion no reconocida\" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700}}}}"
+                 },
+                 {
+                     "pattern":  "Write-Host",
+                     "line":  22,
+                     "text":  "function Show-EngScreen([string]$Id){if($Id -eq \"progreso_pendientes\"){Show-EngProgressPendingScreen;return};if($Id -eq \"ux_registry\"){Show-EngUxRegistryScreen;return};if($Id -eq \"screen_states\"){Show-EngScreenStatesScreen;return};if($Id -eq \"layout_rules\"){Show-EngLayoutRulesScreen;return};if($Id -eq \"pending_ux_repairs\"){Show-EngPendingUxRepairsScreen;return};$s=Get-EngScreen $Id;if(!$s){Clear-Host;Write-Host (\"Pantalla no encontrada: \"+$Id) -ForegroundColor Yellow;Read-Host \"Enter para volver\"|Out-Null;return};while($true){Show-EngHeader $s.title ($s.level+\" · \"+$s.id) $s.status ([int]$s.progress) $s.purpose;$map=Show-EngBody $s;Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){\"refresh\"{continue}\"b\"{return}\"q\"{return}\"m\"{Show-EngMaintenance;continue}\"?\"{Show-EngHelp $s;continue}default{if($map.ContainsKey($cmd)){Show-EngScreen $map[$cmd];continue};Write-Host \"Opcion no reconocida\" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700}}}}"
+                 },
+                 {
+                     "pattern":  "Write-Host",
+                     "line":  23,
+                     "text":  "function Show-EngRootMenu{while($true){$roots=@(Get-EngScreens|Where-Object{[string]$_.level -notmatch \"\\.\"}|Sort-Object {Get-EngLevelSortKey $_});$map=@{};Clear-Host;Write-Host \"==== ENGREMIAT / OPERADOR V2 ====\" -ForegroundColor Cyan;Write-Host \"\";Write-Host (\"Root: \"+$script:EngV2Root);Write-Host \"\";Write-Host \"MENU\";$i=1;foreach($s in $roots){Write-Host (\" [\"+$i+\"] \"+$s.title+\"  [\"+$s.status+\" · \"+$s.progress+\"%]\");$map[[string]$i]=$s.id;$i++};Show-EngFooter;$cmd=Read-EngCmd;switch($cmd){\"refresh\"{continue}\"b\"{break}\"q\"{break}\"m\"{Show-EngMaintenance;continue}\"?\"{Write-Host \"Selecciona una pantalla principal. Enter refresca.\";Start-Sleep -Seconds 1;continue}default{if($map.ContainsKey($cmd)){Show-EngScreen $map[$cmd];continue};Write-Host \"Opcion no reconocida\" -ForegroundColor Yellow;Start-Sleep -Milliseconds 700}}}}"
+                 }
+             ],
+    "json_refs":  [
+                      "contracts\\SCREEN_REGISTRY.json"
+                  ],
+    "candidate_contracts":  [
+                                {
+                                    "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\contracts\\SCREEN_UX_STYLE.json",
+                                    "score":  155,
+                                    "why":  "title,menu-structure,prompt"
+                                },
+                                {
+                                    "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\contracts\\SCREEN_REGISTRY.before-e05b-20260621-175913.json",
+                                    "score":  125,
+                                    "why":  "dev-system,reports,menu-structure"
+                                },
+                                {
+                                    "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\contracts\\SCREEN_REGISTRY.before-e04b-20260621-175346.json",
+                                    "score":  125,
+                                    "why":  "dev-system,reports,menu-structure"
+                                },
+                                {
+                                    "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\contracts\\SCREEN_REGISTRY.before-e03-20260621-175039.json",
+                                    "score":  125,
+                                    "why":  "dev-system,reports,menu-structure"
+                                },
+                                {
+                                    "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\contracts\\SCREEN_REGISTRY.json",
+                                    "score":  125,
+                                    "why":  "dev-system,reports,menu-structure"
+                                },
+                                {
+                                    "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\contracts\\OPERATOR_V2_UI_CONTRACT.json",
+                                    "score":  75,
+                                    "why":  "menu-structure,prompt"
+                                },
+                                {
+                                    "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\contracts\\COMMAND_FEEDBACK.json",
+                                    "score":  25,
+                                    "why":  "menu-structure"
+                                },
+                                {
+                                    "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\contracts\\ROOT_LOOP_ROUTER.json",
+                                    "score":  25,
+                                    "why":  "menu-structure"
+                                },
+                                {
+                                    "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\contracts\\NAVIGATION_COMMANDS.json",
+                                    "score":  25,
+                                    "why":  "menu-structure"
+                                },
+                                {
+                                    "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\contracts\\SCREEN_ARCHITECTURE_CONTRACT.json",
+                                    "score":  25,
+                                    "why":  "menu-structure"
+                                },
+                                {
+                                    "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\contracts\\ROOT_WRAPPER.json",
+                                    "score":  25,
+                                    "why":  "menu-structure"
+                                }
+                            ],
+    "smoke_output":  "==== ENGREMIAT / OPERADOR V2 / INFORME PLAN ==== | Readiness global estimada: 64 | Root estable: True | Wrapper LAB: True | Feedback wrapper: True |  | PLAN POR TEMAS |  [CLOSED] NAVIGATION_004 Â· 100% Â· falta: Integracion visual final por plantillas |  [CLOSED] SCREEN_UX_005 Â· 100% Â· falta: Pulido final de plantillas |  [PREPARED_NOT_BOUND] COMMAND_FEEDBACK_006 Â· 85% Â· falta: No integrar en root como observer |  [CLOSED_PREPARED_NOT_APPLIED] ROOT_LOOP_ROUTER_007 Â· 90% Â· falta: No aplicar a ENGREMIAT.ps1 hasta wrapper estable |  [CLOSED_LAB_READY_NOT_PRIMARY] ROOT_WRAPPER_008 Â· 85% Â· falta: No es entrada principal; faltan acciones LAB |  [CLOSED_LAB_READY] COMMAND_FEEDBACK_INSIDE_WRAPPER_009 Â· 90% Â· falta: Falta conectar estado/mantenimiento LAB |  [ACTIVE] LIVE_CONTEXT_SCREEN_010 Â· 25% Â· falta: Integrar informe en pantalla Operador V2 |  [PENDING] STATUS_ACTIONS_LAB_011 Â· 0% Â· falta: Crear accion LAB sin tocar root |  [PENDING] MAINTENANCE_ACTIONS_LAB_012 Â· 0% Â· falta: Crear menu/acciones LAB |  | FUNCIONES Y RUTAS |  - Launcher raiz estable -\u003e C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1 |  - Wrapper LAB preview -\u003e C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\engine\\root-wrapper-preview.ps1 |  - Informe plan desarrollo V2 -\u003e C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\engine\\operator-v2-development-report.ps1 |  - Contrato router root -\u003e C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\contracts\\ROOT_LOOP_ROUTER.json |  - Contrato wrapper -\u003e C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\contracts\\ROOT_WRAPPER.json |  - Contrato feedback -\u003e C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\contracts\\COMMAND_FEEDBACK.json |  | NEXT Integrar informe vivo en pantalla Operador V2 antes de conectar nuevas acciones. | OK markdown=C:\\ENGREMIAT_CORE\\documents\\operator-v2-live-context\\OPERATOR_V2_DEVELOPMENT_PLAN_REPORT.md | OK json=C:\\ENGREMIAT_CORE\\reports\\operator-v2-live-context\\operator-v2-development-plan-report-20260622-062656.json",
+    "decision":  "GO_PATCH_TEMPLATE_OR_CONTRACT_NEXT_NOT_SCREEN_TEXT",
+    "next":  "E04_PATCH_REAL_MENU_SOURCE_WITH_PLAN_REPORT_ENTRY_GUARDED_WRITE"
+}

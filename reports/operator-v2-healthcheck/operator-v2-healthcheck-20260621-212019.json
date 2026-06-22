@@ -1,0 +1,33 @@
+﻿{
+    "created_at":  "2026-06-21T21:20:19",
+    "package_id":  "ENGREMIAT_OPERATOR_V2_HEALTHCHECK_004",
+    "stage":  "E01_CREATE_OPERATOR_V2_HEALTHCHECK_READONLY",
+    "decision":  "NO_GO_OPERATOR_V2_HEALTHCHECK_FAILED",
+    "readiness":  40,
+    "active_root":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2",
+    "registry":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\contracts\\SCREEN_REGISTRY.json",
+    "engine":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\operator\\lib\\OperatorV2.ScreenEngine.ps1",
+    "screens":  21,
+    "actions_ready":  6,
+    "actions_planned":  1,
+    "errors":  [
+                   "bad_children:estado_sistema-\u003eobserver,estado_sistema-\u003eobserver_watch,estado_sistema-\u003eneeds,estado_sistema-\u003ediagnostico_global,proyectos-\u003eindice_proyectos,proyectos-\u003eproyecto_activo,proyectos-\u003egrafo_proyecto,proyectos-\u003ebacklog_proyecto,modulos-\u003emodulos_activos,modulos-\u003emodulos_planificados,modulos-\u003edependencias_modulos,memoria-\u003etimeline,memoria-\u003eevents,memoria-\u003elatest_state,memoria-\u003econtexto_recuperable,necesidades-\u003enecesidades_actuales,necesidades-\u003enecesidades_futuras,necesidades-\u003enecesidades_diferidas,necesidades-\u003ematriz_dependencias,workers-\u003eestado_workers,workers-\u003etask_packets,workers-\u003epropuestas_workers,workers-\u003evalidacion_propuestas,data_scraping-\u003edata_intake_local,data_scraping-\u003escraping_web,data_scraping-\u003efuentes_externas,data_scraping-\u003ecalidad_datos,gates-\u003ebandeja_decisiones,gates-\u003egates_riesgo,gates-\u003ereceipts,roadmaps-\u003eroadmap_global,roadmaps-\u003eroadmap_proyecto,roadmaps-\u003eroadmap_modulo,roadmaps-\u003eroadmap_vivo,evidencias-\u003eultimos_reports,evidencias-\u003efreezers,evidencias-\u003ebackups,evidencias-\u003ecierres,configuracion-\u003erutas,configuracion-\u003econtratos,configuracion-\u003epreferencias_ux,configuracion-\u003emantenimiento_memoria,dev_operator-\u003ecrear_pantalla,dev_operator-\u003evalidar_pantalla,dev_operator-\u003eintegrar_pantalla,dev_operator-\u003emostrar_pendientes,dev_operator-\u003eprogreso_operador,progreso_pendientes-\u003eresumen_estados,progreso_pendientes-\u003ependientes_por_pantalla,progreso_pendientes-\u003esiguiente_iteracion"
+               ],
+    "warnings":  [
+
+                 ],
+    "ok":  [
+               "context_resolved",
+               "active_root_ok",
+               "registry_exists",
+               "engine_exists",
+               "engine_parse_ok",
+               "screens_count=21",
+               "no_duplicate_ids",
+               "required_fields_ok",
+               "actions_contract_ok",
+               "guarded_write_exists",
+               "menus_short_ok"
+           ],
+    "next":  "REPAIR_HEALTHCHECK_ERRORS_FIRST"
+}

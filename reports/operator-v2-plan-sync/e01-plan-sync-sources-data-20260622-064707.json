@@ -1,0 +1,598 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_PLAN_SYNC_012",
+    "stage":  "E01_AUDIT_PLAN_SYNC_SOURCES_NO_APPLY",
+    "patched":  false,
+    "plan":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\engine\\plan-v2.ps1",
+    "dev_report":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\engine\\operator-v2-development-report.ps1",
+    "composer":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\engine\\operator-v2-home-preview-composer.ps1",
+    "hardcoded_topics":  [
+                             {
+                                 "area":  "NAVIGATION_004",
+                                 "status":  "CLOSED",
+                                 "readiness":  100
+                             },
+                             {
+                                 "area":  "SCREEN_UX_005",
+                                 "status":  "CLOSED",
+                                 "readiness":  100
+                             },
+                             {
+                                 "area":  "COMMAND_FEEDBACK_006",
+                                 "status":  "PREPARED_NOT_BOUND",
+                                 "readiness":  85
+                             },
+                             {
+                                 "area":  "ROOT_LOOP_ROUTER_007",
+                                 "status":  "CLOSED_PREPARED_NOT_APPLIED",
+                                 "readiness":  90
+                             },
+                             {
+                                 "area":  "ROOT_WRAPPER_008",
+                                 "status":  "CLOSED_LAB_READY_NOT_PRIMARY",
+                                 "readiness":  85
+                             },
+                             {
+                                 "area":  "COMMAND_FEEDBACK_INSIDE_WRAPPER_009",
+                                 "status":  "CLOSED_LAB_READY",
+                                 "readiness":  90
+                             },
+                             {
+                                 "area":  "LIVE_CONTEXT_SCREEN_010",
+                                 "status":  "ACTIVE",
+                                 "readiness":  25
+                             },
+                             {
+                                 "area":  "STATUS_ACTIONS_LAB_011",
+                                 "status":  "PENDING",
+                                 "readiness":  0
+                             },
+                             {
+                                 "area":  "MAINTENANCE_ACTIONS_LAB_012",
+                                 "status":  "PENDING",
+                                 "readiness":  0
+                             }
+                         ],
+    "close_summaries":  [
+                            {
+                                "path":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-home-render-binding\\HOME_RENDER_BINDING_011_CLOSE.md",
+                                "name":  "HOME_RENDER_BINDING_011_CLOSE.md",
+                                "last_write":  "2026-06-22T06:42:09",
+                                "status":  "CLOSED_PREVIEW_READY",
+                                "readiness":  "85"
+                            },
+                            {
+                                "path":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-live-context\\LIVE_CONTEXT_SCREEN_010_CLOSE.md",
+                                "name":  "LIVE_CONTEXT_SCREEN_010_CLOSE.md",
+                                "last_write":  "2026-06-22T06:33:22",
+                                "status":  "CLOSED_LAB_READY",
+                                "readiness":  "90"
+                            },
+                            {
+                                "path":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-command-feedback-inside-wrapper\\COMMAND_FEEDBACK_INSIDE_WRAPPER_009_CLOSE.md",
+                                "name":  "COMMAND_FEEDBACK_INSIDE_WRAPPER_009_CLOSE.md",
+                                "last_write":  "2026-06-22T06:06:11",
+                                "status":  "CLOSED_LAB_READY",
+                                "readiness":  "90"
+                            },
+                            {
+                                "path":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-root-wrapper\\ROOT_WRAPPER_008_CLOSE.md",
+                                "name":  "ROOT_WRAPPER_008_CLOSE.md",
+                                "last_write":  "2026-06-22T06:02:29",
+                                "status":  "CLOSED_LAB_READY_NOT_PRIMARY",
+                                "readiness":  "85"
+                            },
+                            {
+                                "path":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-root-loop-router\\ROOT_LOOP_ROUTER_007_CLOSE.md",
+                                "name":  "ROOT_LOOP_ROUTER_007_CLOSE.md",
+                                "last_write":  "2026-06-22T05:56:26",
+                                "status":  "CLOSED_PREPARED_NOT_APPLIED",
+                                "readiness":  "90"
+                            },
+                            {
+                                "path":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-command-feedback\\COMMAND_FEEDBACK_006_CLOSE.md",
+                                "name":  "COMMAND_FEEDBACK_006_CLOSE.md",
+                                "last_write":  "2026-06-21T22:04:59",
+                                "status":  "CLOSED_PREPARED_NOT_BOUND",
+                                "readiness":  "85"
+                            },
+                            {
+                                "path":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-screen-ux\\SCREEN_UX_005_CLOSE.md",
+                                "name":  "SCREEN_UX_005_CLOSE.md",
+                                "last_write":  "2026-06-21T21:53:02",
+                                "status":  "CLOSED_WITH_TECHNICAL_EVIDENCE",
+                                "readiness":  "100"
+                            },
+                            {
+                                "path":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-navigation\\NAVIGATION_004_CLOSE.md",
+                                "name":  "NAVIGATION_004_CLOSE.md",
+                                "last_write":  "2026-06-21T21:47:21",
+                                "status":  "CLOSED_WITH_MANUAL_UX_PASS",
+                                "readiness":  "100"
+                            },
+                            {
+                                "path":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-actions\\ACTIONS_003_CLOSE.md",
+                                "name":  "ACTIONS_003_CLOSE.md",
+                                "last_write":  "2026-06-21T21:35:12",
+                                "status":  "CLOSED_WITH_TECHNICAL_EVIDENCE",
+                                "readiness":  "90"
+                            },
+                            {
+                                "path":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-healthcheck\\ENGREMIAT_OPERATOR_V2_HEALTHCHECK_004_CLOSE.md",
+                                "name":  "ENGREMIAT_OPERATOR_V2_HEALTHCHECK_004_CLOSE.md",
+                                "last_write":  "2026-06-21T21:22:05",
+                                "status":  "",
+                                "readiness":  "85"
+                            },
+                            {
+                                "path":  "C:\\ENGREMIAT_CORE\\documents\\context-guardian-enforcement\\ENGREMIAT_OPERATOR_V2_CONTEXT_GUARDIAN_ENFORCEMENT_002_CLOSE.md",
+                                "name":  "ENGREMIAT_OPERATOR_V2_CONTEXT_GUARDIAN_ENFORCEMENT_002_CLOSE.md",
+                                "last_write":  "2026-06-21T21:15:47",
+                                "status":  "",
+                                "readiness":  ""
+                            }
+                        ],
+    "next_summaries":  [
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-home-render-binding\\NEXT_OBJECTIVE.md",
+                               "last_write":  "2026-06-22T06:42:09",
+                               "preview":  "# NEXT OBJECTIVE | Recomendado: ENGREMIAT_OPERATOR_V2_ACTIONS_LAB_STATUS_012 | Objetivo: conectar acciones LAB no invasivas sobre la base ya creada: 13/informe/plan/estado-plan, e/estado y m/mantenimiento, usando comandos auxiliares existentes y sin tocar ENGREMIAT.ps1. | Motivo: antes de forzar auto-bind visual, ya tenemos hoja de tareas viva por comando. Ahora conviene que el wrapper/operador LAB pueda invocar esos comandos como acciones controladas. | Reglas:"
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-live-context\\NEXT_OBJECTIVE.md",
+                               "last_write":  "2026-06-22T06:33:22",
+                               "preview":  "# NEXT OBJECTIVE | Recomendado: ENGREMIAT_OPERATOR_V2_HOME_RENDER_BINDING_011 | Objetivo: localizar el punto exacto de render de la home de Operador V2 y enlazar Show-EngOperatorV2LiveContextOverviewPanel como bloque superior de pantalla, usando guarded write y sin tocar ENGREMIAT.ps1. | Reglas: | - no parchear por regex de texto visible del menu;"
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-command-feedback-inside-wrapper\\NEXT_OBJECTIVE.md",
+                               "last_write":  "2026-06-22T06:06:11",
+                               "preview":  "# NEXT OBJECTIVE | ID:  | ENGREMIAT_OPERATOR_V2_WRAPPER_MANUAL_PREVIEW_OR_STATUS_ACTIONS_010 | Objetivo: avanzar desde feedback textual seguro hacia una prueba humana visual o acciones LAB reales de estado/mantenimiento dentro del wrapper. | Opciones recomendadas:"
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-root-wrapper\\NEXT_OBJECTIVE.md",
+                               "last_write":  "2026-06-22T06:02:29",
+                               "preview":  "# NEXT OBJECTIVE | ID:  | ENGREMIAT_OPERATOR_V2_COMMAND_FEEDBACK_INSIDE_WRAPPER_009 | Objetivo: integrar feedback de comandos dentro del wrapper LAB para probar mensajes de ayuda, estado, mantenimiento y comandos desconocidos sin tocar ENGREMIAT.ps1. | Motivo: COMMAND_FEEDBACK_006 ya preparo contrato y adapter, pero no era seguro integrarlo como observer en el launcher raiz. ROOT_WRAPPER_008 crea ahora una frontera segura para probarlo."
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-root-loop-router\\NEXT_OBJECTIVE.md",
+                               "last_write":  "2026-06-22T05:56:26",
+                               "preview":  "# NEXT OBJECTIVE | ID: ENGREMIAT_OPERATOR_V2_ROOT_WRAPPER_008 | Objetivo: crear una capa wrapper/router controlada para el root launcher antes de aplicar cambios directos en ENGREMIAT.ps1. | Motivo: ROOT_LOOP_ROUTER_007 deja el router preparado, pero no conviene integrarlo aun en la puerta estable del sistema. | Prioridades:"
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-command-feedback\\NEXT_OBJECTIVE.md",
+                               "last_write":  "2026-06-21T22:04:59",
+                               "preview":  "# NEXT OBJECTIVE | ID: ENGREMIAT_OPERATOR_V2_ROOT_LOOP_ROUTER_007 | Objetivo: aislar y normalizar el bucle interactivo del launcher/root antes de integrar feedback real de comandos. | Motivo: COMMAND_FEEDBACK_006 demostro que un observer posterior a Read-Host puede romper el flujo interactivo si imprime o evalua input fuera del router principal. | Prioridades:"
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-screen-ux\\NEXT_OBJECTIVE.md",
+                               "last_write":  "2026-06-21T21:53:02",
+                               "preview":  "# NEXT OBJECTIVE | ID: ENGREMIAT_OPERATOR_V2_COMMAND_FEEDBACK_006 | Objetivo: mejorar feedback real de comandos del Operador V2 sin romper el flujo legacy. | Prioridades: | 1. Enter vacio = refrescar/redibujar pantalla."
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-navigation\\NEXT_OBJECTIVE.md",
+                               "last_write":  "2026-06-21T21:47:21",
+                               "preview":  "# NEXT OBJECTIVE | ID: ENGREMIAT_OPERATOR_V2_SCREEN_UX_005 | Objetivo: mejorar consistencia visual y usabilidad de pantallas del Operador V2. | Prioridades: | 1. Normalizar espaciado entre titulo, menu, leyenda y prompt."
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-actions\\NEXT_OBJECTIVE.md",
+                               "last_write":  "2026-06-21T21:35:12",
+                               "preview":  "# NEXT OBJECTIVE | ID: ENGREMIAT_OPERATOR_V2_NAVIGATION_004 | Objetivo: normalizar navegación real del operador V2 manteniendo el launcher estable. | Prioridad: | 1. Validar UX manual real de Enter/e/m/?/b/q."
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-healthcheck\\NEXT_OBJECTIVE.md",
+                               "last_write":  "2026-06-21T21:22:05",
+                               "preview":  "# NEXT_OBJECTIVE · ENGREMIAT_OPERATOR_V2_ACTIONS_003_E02 | ## Objetivo | Aplicar el contrato de acciones candidato al active_root del operador V2 usando Guarded Write. | ## Condiciones previas | - Context Guardian: GO_ACTIVE_CONTEXT_RESOLVED."
+                           }
+                       ],
+    "json_reports":  [
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-live-context\\operator-v2-development-plan-report-20260622-064443.json",
+                             "last_write":  "2026-06-22T06:44:43",
+                             "package":  "ENGREMIAT_OPERATOR_V2_LIVE_CONTEXT_SCREEN_010",
+                             "stage":  null,
+                             "status":  "REPORT_READY",
+                             "close_status":  null,
+                             "readiness":  null,
+                             "next":  null
+                         },
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-live-context\\operator-v2-development-plan-report-20260622-064414.json",
+                             "last_write":  "2026-06-22T06:44:14",
+                             "package":  "ENGREMIAT_OPERATOR_V2_LIVE_CONTEXT_SCREEN_010",
+                             "stage":  null,
+                             "status":  "REPORT_READY",
+                             "close_status":  null,
+                             "readiness":  null,
+                             "next":  null
+                         },
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-home-render-binding\\e08-close-home-render-binding-011-preview-ready-20260622-064209.json",
+                             "last_write":  "2026-06-22T06:42:09",
+                             "package":  "ENGREMIAT_OPERATOR_V2_HOME_RENDER_BINDING_011",
+                             "stage":  "E08_CLOSE_HOME_RENDER_BINDING_011_PREVIEW_READY",
+                             "status":  "PASS",
+                             "close_status":  "CLOSED_PREVIEW_READY",
+                             "readiness":  85,
+                             "next":  "ENGREMIAT_OPERATOR_V2_ACTIONS_LAB_STATUS_012"
+                         },
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-live-context\\operator-v2-development-plan-report-20260622-064208.json",
+                             "last_write":  "2026-06-22T06:42:08",
+                             "package":  "ENGREMIAT_OPERATOR_V2_LIVE_CONTEXT_SCREEN_010",
+                             "stage":  null,
+                             "status":  "REPORT_READY",
+                             "close_status":  null,
+                             "readiness":  null,
+                             "next":  null
+                         },
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-live-context\\operator-v2-development-plan-report-20260622-064205.json",
+                             "last_write":  "2026-06-22T06:42:05",
+                             "package":  "ENGREMIAT_OPERATOR_V2_LIVE_CONTEXT_SCREEN_010",
+                             "stage":  null,
+                             "status":  "REPORT_READY",
+                             "close_status":  null,
+                             "readiness":  null,
+                             "next":  null
+                         },
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-live-context\\operator-v2-development-plan-report-20260622-064201.json",
+                             "last_write":  "2026-06-22T06:42:01",
+                             "package":  "ENGREMIAT_OPERATOR_V2_LIVE_CONTEXT_SCREEN_010",
+                             "stage":  null,
+                             "status":  "REPORT_READY",
+                             "close_status":  null,
+                             "readiness":  null,
+                             "next":  null
+                         },
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-home-render-binding\\e07-review-home-preview-decision-20260622-064124.json",
+                             "last_write":  "2026-06-22T06:41:24",
+                             "package":  "ENGREMIAT_OPERATOR_V2_HOME_RENDER_BINDING_011",
+                             "stage":  "E07_REVIEW_HOME_PREVIEW_AND_DECIDE_BIND_OR_KEEP_PREVIEW",
+                             "status":  "PASS",
+                             "close_status":  null,
+                             "readiness":  64,
+                             "next":  "E08_CLOSE_HOME_RENDER_BINDING_011_PREVIEW_READY"
+                         },
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-live-context\\operator-v2-development-plan-report-20260622-064123.json",
+                             "last_write":  "2026-06-22T06:41:23",
+                             "package":  "ENGREMIAT_OPERATOR_V2_LIVE_CONTEXT_SCREEN_010",
+                             "stage":  null,
+                             "status":  "REPORT_READY",
+                             "close_status":  null,
+                             "readiness":  null,
+                             "next":  null
+                         },
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-live-context\\operator-v2-development-plan-report-20260622-064118.json",
+                             "last_write":  "2026-06-22T06:41:18",
+                             "package":  "ENGREMIAT_OPERATOR_V2_LIVE_CONTEXT_SCREEN_010",
+                             "stage":  null,
+                             "status":  "REPORT_READY",
+                             "close_status":  null,
+                             "readiness":  null,
+                             "next":  null
+                         },
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-home-render-binding\\e06-safe-home-preview-composer-20260622-064038.json",
+                             "last_write":  "2026-06-22T06:40:38",
+                             "package":  "ENGREMIAT_OPERATOR_V2_HOME_RENDER_BINDING_011",
+                             "stage":  "E06_CREATE_SAFE_HOME_PREVIEW_COMPOSER_USING_TEMPLATE_ITEM_NO_SCREEN_PATCH",
+                             "status":  "PASS",
+                             "close_status":  null,
+                             "readiness":  null,
+                             "next":  "E07_REVIEW_HOME_PREVIEW_AND_DECIDE_BIND_OR_KEEP_PREVIEW"
+                         },
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-live-context\\operator-v2-development-plan-report-20260622-064037.json",
+                             "last_write":  "2026-06-22T06:40:37",
+                             "package":  "ENGREMIAT_OPERATOR_V2_LIVE_CONTEXT_SCREEN_010",
+                             "stage":  null,
+                             "status":  "REPORT_READY",
+                             "close_status":  null,
+                             "readiness":  null,
+                             "next":  null
+                         },
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-live-context\\operator-v2-development-plan-report-20260622-064032.json",
+                             "last_write":  "2026-06-22T06:40:32",
+                             "package":  "ENGREMIAT_OPERATOR_V2_LIVE_CONTEXT_SCREEN_010",
+                             "stage":  null,
+                             "status":  "REPORT_READY",
+                             "close_status":  null,
+                             "readiness":  null,
+                             "next":  null
+                         },
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-live-context\\operator-v2-development-plan-report-20260622-064027.json",
+                             "last_write":  "2026-06-22T06:40:27",
+                             "package":  "ENGREMIAT_OPERATOR_V2_LIVE_CONTEXT_SCREEN_010",
+                             "stage":  null,
+                             "status":  "REPORT_READY",
+                             "close_status":  null,
+                             "readiness":  null,
+                             "next":  null
+                         },
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-home-render-binding\\e05-prepare-bind-on-confirmed-render-body-no-apply-20260622-063824.json",
+                             "last_write":  "2026-06-22T06:38:24",
+                             "package":  "ENGREMIAT_OPERATOR_V2_HOME_RENDER_BINDING_011",
+                             "stage":  "E05_PREPARE_BIND_ON_CONFIRMED_RENDER_BODY_NO_APPLY",
+                             "status":  "PASS",
+                             "close_status":  null,
+                             "readiness":  null,
+                             "next":  "E06_CREATE_SAFE_HOME_PREVIEW_COMPOSER_USING_TEMPLATE_ITEM_NO_SCREEN_PATCH"
+                         },
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-home-render-binding\\e05-confirmed-render-body-bind-plan-data-20260622-063824.json",
+                             "last_write":  "2026-06-22T06:38:24",
+                             "package":  "ENGREMIAT_OPERATOR_V2_HOME_RENDER_BINDING_011",
+                             "stage":  "E05_PREPARE_BIND_ON_CONFIRMED_RENDER_BODY_NO_APPLY",
+                             "status":  null,
+                             "close_status":  null,
+                             "readiness":  null,
+                             "next":  "E06_CREATE_SAFE_HOME_PREVIEW_COMPOSER_USING_TEMPLATE_ITEM_NO_SCREEN_PATCH"
+                         },
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-live-context\\operator-v2-development-plan-report-20260622-063823.json",
+                             "last_write":  "2026-06-22T06:38:23",
+                             "package":  "ENGREMIAT_OPERATOR_V2_LIVE_CONTEXT_SCREEN_010",
+                             "stage":  null,
+                             "status":  "REPORT_READY",
+                             "close_status":  null,
+                             "readiness":  null,
+                             "next":  null
+                         },
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-home-render-binding\\e04-primary-and-call-chain-dump-20260622-063733.json",
+                             "last_write":  "2026-06-22T06:37:33",
+                             "package":  "ENGREMIAT_OPERATOR_V2_HOME_RENDER_BINDING_011",
+                             "stage":  "E04_DUMP_PRIMARY_AND_CALL_CHAIN_FOR_MANUAL_MAPPING_NO_APPLY",
+                             "status":  "PASS",
+                             "close_status":  null,
+                             "readiness":  null,
+                             "next":  "E05_PREPARE_BIND_ON_CONFIRMED_RENDER_BODY_NO_APPLY"
+                         },
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-home-render-binding\\e04-primary-call-chain-dump-data-20260622-063733.json",
+                             "last_write":  "2026-06-22T06:37:33",
+                             "package":  "ENGREMIAT_OPERATOR_V2_HOME_RENDER_BINDING_011",
+                             "stage":  "E04_DUMP_PRIMARY_AND_CALL_CHAIN_FOR_MANUAL_MAPPING_NO_APPLY",
+                             "status":  null,
+                             "close_status":  null,
+                             "readiness":  null,
+                             "next":  "E05_PREPARE_BIND_ON_CONFIRMED_RENDER_BODY_NO_APPLY"
+                         },
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-live-context\\operator-v2-development-plan-report-20260622-063731.json",
+                             "last_write":  "2026-06-22T06:37:31",
+                             "package":  "ENGREMIAT_OPERATOR_V2_LIVE_CONTEXT_SCREEN_010",
+                             "stage":  null,
+                             "status":  "REPORT_READY",
+                             "close_status":  null,
+                             "readiness":  null,
+                             "next":  null
+                         },
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-home-render-binding\\e03-review-home-render-binding-plan-and-trace-call-chain-20260622-063644.json",
+                             "last_write":  "2026-06-22T06:36:44",
+                             "package":  "ENGREMIAT_OPERATOR_V2_HOME_RENDER_BINDING_011",
+                             "stage":  "E03_REVIEW_HOME_RENDER_BINDING_PLAN_AND_TRACE_CALL_CHAIN_NO_APPLY",
+                             "status":  "PASS",
+                             "close_status":  null,
+                             "readiness":  null,
+                             "next":  "E04_DUMP_PRIMARY_AND_CALL_CHAIN_FOR_MANUAL_MAPPING"
+                         },
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-home-render-binding\\e03-trace-home-render-call-chain-data-20260622-063644.json",
+                             "last_write":  "2026-06-22T06:36:44",
+                             "package":  "ENGREMIAT_OPERATOR_V2_HOME_RENDER_BINDING_011",
+                             "stage":  "E03_REVIEW_HOME_RENDER_BINDING_PLAN_AND_TRACE_CALL_CHAIN_NO_APPLY",
+                             "status":  null,
+                             "close_status":  null,
+                             "readiness":  null,
+                             "next":  "E04_DUMP_PRIMARY_AND_CALL_CHAIN_FOR_MANUAL_MAPPING"
+                         },
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-live-context\\operator-v2-development-plan-report-20260622-063643.json",
+                             "last_write":  "2026-06-22T06:36:43",
+                             "package":  "ENGREMIAT_OPERATOR_V2_LIVE_CONTEXT_SCREEN_010",
+                             "stage":  null,
+                             "status":  "REPORT_READY",
+                             "close_status":  null,
+                             "readiness":  null,
+                             "next":  null
+                         },
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-home-render-binding\\e02-prepare-home-render-binding-plan-no-apply-20260622-063541.json",
+                             "last_write":  "2026-06-22T06:35:41",
+                             "package":  "ENGREMIAT_OPERATOR_V2_HOME_RENDER_BINDING_011",
+                             "stage":  "E02_PREPARE_HOME_RENDER_BINDING_PLAN_NO_APPLY",
+                             "status":  "PASS",
+                             "close_status":  null,
+                             "readiness":  null,
+                             "next":  "E03_MANUAL_REVIEW_HOME_RENDER_BINDING_PLAN"
+                         },
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-home-render-binding\\e02-home-render-binding-plan-data-20260622-063541.json",
+                             "last_write":  "2026-06-22T06:35:41",
+                             "package":  "ENGREMIAT_OPERATOR_V2_HOME_RENDER_BINDING_011",
+                             "stage":  "E02_PREPARE_HOME_RENDER_BINDING_PLAN_NO_APPLY",
+                             "status":  null,
+                             "close_status":  null,
+                             "readiness":  null,
+                             "next":  "E03_MANUAL_REVIEW_HOME_RENDER_BINDING_PLAN"
+                         },
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-live-context\\operator-v2-development-plan-report-20260622-063539.json",
+                             "last_write":  "2026-06-22T06:35:39",
+                             "package":  "ENGREMIAT_OPERATOR_V2_LIVE_CONTEXT_SCREEN_010",
+                             "stage":  null,
+                             "status":  "REPORT_READY",
+                             "close_status":  null,
+                             "readiness":  null,
+                             "next":  null
+                         },
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-home-render-binding\\e01-discover-home-render-binding-point-20260622-063500.json",
+                             "last_write":  "2026-06-22T06:35:00",
+                             "package":  "ENGREMIAT_OPERATOR_V2_HOME_RENDER_BINDING_011",
+                             "stage":  "E01_DISCOVER_HOME_RENDER_BINDING_POINT_NO_APPLY",
+                             "status":  "PASS",
+                             "close_status":  null,
+                             "readiness":  null,
+                             "next":  "E02_PREPARE_HOME_RENDER_BINDING_PLAN_NO_APPLY"
+                         },
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-home-render-binding\\e01-home-render-binding-discovery-data-20260622-063500.json",
+                             "last_write":  "2026-06-22T06:35:00",
+                             "package":  "ENGREMIAT_OPERATOR_V2_HOME_RENDER_BINDING_011",
+                             "stage":  "E01_DISCOVER_HOME_RENDER_BINDING_POINT_NO_APPLY",
+                             "status":  null,
+                             "close_status":  null,
+                             "readiness":  null,
+                             "next":  "E02_PREPARE_HOME_RENDER_BINDING_PLAN_NO_APPLY"
+                         },
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-live-context\\operator-v2-development-plan-report-20260622-063458.json",
+                             "last_write":  "2026-06-22T06:34:58",
+                             "package":  "ENGREMIAT_OPERATOR_V2_LIVE_CONTEXT_SCREEN_010",
+                             "stage":  null,
+                             "status":  "REPORT_READY",
+                             "close_status":  null,
+                             "readiness":  null,
+                             "next":  null
+                         },
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-live-context\\e10-close-live-context-screen-010-lab-ready-20260622-063322.json",
+                             "last_write":  "2026-06-22T06:33:22",
+                             "package":  "ENGREMIAT_OPERATOR_V2_LIVE_CONTEXT_SCREEN_010",
+                             "stage":  "E10_VALIDATE_RENDERER_AND_CLOSE_LIVE_CONTEXT_LAB_READY",
+                             "status":  "PASS",
+                             "close_status":  "CLOSED_LAB_READY",
+                             "readiness":  90,
+                             "next":  "ENGREMIAT_OPERATOR_V2_HOME_RENDER_BINDING_011"
+                         },
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-live-context\\operator-v2-development-plan-report-20260622-063321.json",
+                             "last_write":  "2026-06-22T06:33:21",
+                             "package":  "ENGREMIAT_OPERATOR_V2_LIVE_CONTEXT_SCREEN_010",
+                             "stage":  null,
+                             "status":  "REPORT_READY",
+                             "close_status":  null,
+                             "readiness":  null,
+                             "next":  null
+                         },
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-live-context\\operator-v2-development-plan-report-20260622-063317.json",
+                             "last_write":  "2026-06-22T06:33:17",
+                             "package":  "ENGREMIAT_OPERATOR_V2_LIVE_CONTEXT_SCREEN_010",
+                             "stage":  null,
+                             "status":  "REPORT_READY",
+                             "close_status":  null,
+                             "readiness":  null,
+                             "next":  null
+                         },
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-live-context\\operator-v2-development-plan-report-20260622-063314.json",
+                             "last_write":  "2026-06-22T06:33:14",
+                             "package":  "ENGREMIAT_OPERATOR_V2_LIVE_CONTEXT_SCREEN_010",
+                             "stage":  null,
+                             "status":  "REPORT_READY",
+                             "close_status":  null,
+                             "readiness":  null,
+                             "next":  null
+                         },
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-live-context\\e09-render-template-item-in-screen-engine-20260622-063224.json",
+                             "last_write":  "2026-06-22T06:32:24",
+                             "package":  "ENGREMIAT_OPERATOR_V2_LIVE_CONTEXT_SCREEN_010",
+                             "stage":  "E09_RENDER_TEMPLATE_ITEM_IN_OPERATOR_V2_SCREEN_ENGINE_GUARDED_WRITE",
+                             "status":  "PASS",
+                             "close_status":  null,
+                             "readiness":  null,
+                             "next":  "E10_BIND_RENDERER_TO_OPERATOR_V2_HOME_VIEW_GUARDED_WRITE_OR_CLOSE_LAB_READY"
+                         },
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-live-context\\operator-v2-development-plan-report-20260622-063223.json",
+                             "last_write":  "2026-06-22T06:32:23",
+                             "package":  "ENGREMIAT_OPERATOR_V2_LIVE_CONTEXT_SCREEN_010",
+                             "stage":  null,
+                             "status":  "REPORT_READY",
+                             "close_status":  null,
+                             "readiness":  null,
+                             "next":  null
+                         },
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-live-context\\operator-v2-development-plan-report-20260622-063219.json",
+                             "last_write":  "2026-06-22T06:32:19",
+                             "package":  "ENGREMIAT_OPERATOR_V2_LIVE_CONTEXT_SCREEN_010",
+                             "stage":  null,
+                             "status":  "REPORT_READY",
+                             "close_status":  null,
+                             "readiness":  null,
+                             "next":  null
+                         },
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-live-context\\e08-r1-bind-overview-as-template-item-policy-repair-20260622-063132.json",
+                             "last_write":  "2026-06-22T06:31:32",
+                             "package":  "ENGREMIAT_OPERATOR_V2_LIVE_CONTEXT_SCREEN_010",
+                             "stage":  "E08_R1_BIND_OVERVIEW_AS_TEMPLATE_ITEM_POLICY_REPAIR",
+                             "status":  "PASS",
+                             "close_status":  null,
+                             "readiness":  null,
+                             "next":  "E09_RENDER_TEMPLATE_ITEM_IN_OPERATOR_V2_SCREEN_ENGINE_GUARDED_WRITE"
+                         },
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-live-context\\operator-v2-development-plan-report-20260622-063130.json",
+                             "last_write":  "2026-06-22T06:31:30",
+                             "package":  "ENGREMIAT_OPERATOR_V2_LIVE_CONTEXT_SCREEN_010",
+                             "stage":  null,
+                             "status":  "REPORT_READY",
+                             "close_status":  null,
+                             "readiness":  null,
+                             "next":  null
+                         },
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-live-context\\operator-v2-development-plan-report-20260622-063051.json",
+                             "last_write":  "2026-06-22T06:30:51",
+                             "package":  "ENGREMIAT_OPERATOR_V2_LIVE_CONTEXT_SCREEN_010",
+                             "stage":  null,
+                             "status":  "REPORT_READY",
+                             "close_status":  null,
+                             "readiness":  null,
+                             "next":  null
+                         },
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-live-context\\e07-live-context-bind-decision-20260622-063011.json",
+                             "last_write":  "2026-06-22T06:30:11",
+                             "package":  "ENGREMIAT_OPERATOR_V2_LIVE_CONTEXT_SCREEN_010",
+                             "stage":  "E07_DECIDE_BIND_OVERVIEW_TO_OPERATOR_V2_OR_KEEP_AUX_COMMAND",
+                             "status":  "PASS",
+                             "close_status":  null,
+                             "readiness":  null,
+                             "next":  "E08_BIND_OVERVIEW_AS_OPERATOR_V2_TEMPLATE_ITEM_GUARDED_WRITE"
+                         },
+                         {
+                             "path":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-live-context\\operator-v2-development-plan-report-20260622-063011.json",
+                             "last_write":  "2026-06-22T06:30:11",
+                             "package":  "ENGREMIAT_OPERATOR_V2_LIVE_CONTEXT_SCREEN_010",
+                             "stage":  null,
+                             "status":  "REPORT_READY",
+                             "close_status":  null,
+                             "readiness":  null,
+                             "next":  null
+                         }
+                     ],
+    "stale_signals":  [
+                          "HOME_RENDER_BINDING_011_MISSING_IN_PLAN",
+                          "NEXT_RECOMMENDATION_STALE",
+                          "UNICODE_SEPARATOR_RISK_DOT_CHAR"
+                      ],
+    "current_next":  "Integrar informe vivo en pantalla Operador V2 antes de conectar nuevas acciones.",
+    "composer_menu_count":  13,
+    "composer_topics_total":  9,
+    "decision":  "GO_PREPARE_PLAN_SYNC_PATCH",
+    "next":  "E02_PATCH_PLAN_V2_STATIC_BASE_WITH_LATEST_CLOSURES_AND_ASCII_SEPARATOR"
+}

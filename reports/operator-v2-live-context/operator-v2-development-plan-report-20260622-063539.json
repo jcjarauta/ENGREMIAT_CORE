@@ -1,0 +1,125 @@
+﻿{
+    "generated_at":  "2026-06-22T06:35:39",
+    "package":  "ENGREMIAT_OPERATOR_V2_LIVE_CONTEXT_SCREEN_010",
+    "status":  "REPORT_READY",
+    "global_readiness":  64,
+    "state":  {
+                  "root_stable":  true,
+                  "actions_observer":  true,
+                  "navigation_observer":  true,
+                  "command_feedback_observer":  false,
+                  "wrapper_lab":  true,
+                  "feedback_inside_wrapper":  true,
+                  "launcher_modified_by_wrapper":  false
+              },
+    "topics":  [
+                   {
+                       "area":  "NAVIGATION_004",
+                       "status":  "CLOSED",
+                       "readiness":  100,
+                       "point":  "Navegacion observada y contratos creados",
+                       "missing":  "Integracion visual final por plantillas"
+                   },
+                   {
+                       "area":  "SCREEN_UX_005",
+                       "status":  "CLOSED",
+                       "readiness":  100,
+                       "point":  "UX base y leyenda normalizada",
+                       "missing":  "Pulido final de plantillas"
+                   },
+                   {
+                       "area":  "COMMAND_FEEDBACK_006",
+                       "status":  "PREPARED_NOT_BOUND",
+                       "readiness":  85,
+                       "point":  "Contrato y adapter preparados",
+                       "missing":  "No integrar en root como observer"
+                   },
+                   {
+                       "area":  "ROOT_LOOP_ROUTER_007",
+                       "status":  "CLOSED_PREPARED_NOT_APPLIED",
+                       "readiness":  90,
+                       "point":  "Router root dry-run validado 13 inputs",
+                       "missing":  "No aplicar a ENGREMIAT.ps1 hasta wrapper estable"
+                   },
+                   {
+                       "area":  "ROOT_WRAPPER_008",
+                       "status":  "CLOSED_LAB_READY_NOT_PRIMARY",
+                       "readiness":  85,
+                       "point":  "Wrapper LAB no invasivo operativo",
+                       "missing":  "No es entrada principal; faltan acciones LAB"
+                   },
+                   {
+                       "area":  "COMMAND_FEEDBACK_INSIDE_WRAPPER_009",
+                       "status":  "CLOSED_LAB_READY",
+                       "readiness":  90,
+                       "point":  "Feedback autocontenido validado en wrapper",
+                       "missing":  "Falta conectar estado/mantenimiento LAB"
+                   },
+                   {
+                       "area":  "LIVE_CONTEXT_SCREEN_010",
+                       "status":  "ACTIVE",
+                       "readiness":  25,
+                       "point":  "Crear informe vivo del plan de desarrollo",
+                       "missing":  "Integrar informe en pantalla Operador V2"
+                   },
+                   {
+                       "area":  "STATUS_ACTIONS_LAB_011",
+                       "status":  "PENDING",
+                       "readiness":  0,
+                       "point":  "e debera mostrar estado compacto real",
+                       "missing":  "Crear accion LAB sin tocar root"
+                   },
+                   {
+                       "area":  "MAINTENANCE_ACTIONS_LAB_012",
+                       "status":  "PENDING",
+                       "readiness":  0,
+                       "point":  "m debera mostrar mantenimiento LAB",
+                       "missing":  "Crear menu/acciones LAB"
+                   }
+               ],
+    "functions":  [
+                      {
+                          "name":  "Launcher raiz estable",
+                          "command":  "powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1\"",
+                          "path":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+                          "role":  "Entrada principal estable, no sustituida"
+                      },
+                      {
+                          "name":  "Wrapper LAB preview",
+                          "command":  "powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\engine\\root-wrapper-preview.ps1\"",
+                          "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\engine\\root-wrapper-preview.ps1",
+                          "role":  "Probar routing y feedback sin tocar root"
+                      },
+                      {
+                          "name":  "Informe plan desarrollo V2",
+                          "command":  "powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\engine\\operator-v2-development-report.ps1\"",
+                          "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\engine\\operator-v2-development-report.ps1",
+                          "role":  "Extraer estado humano-maquina del desarrollo"
+                      },
+                      {
+                          "name":  "Contrato router root",
+                          "command":  "abrir/leer JSON",
+                          "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\contracts\\ROOT_LOOP_ROUTER.json",
+                          "role":  "Mapa de inputs root a intenciones"
+                      },
+                      {
+                          "name":  "Contrato wrapper",
+                          "command":  "abrir/leer JSON",
+                          "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\contracts\\ROOT_WRAPPER.json",
+                          "role":  "Politica LAB no invasiva"
+                      },
+                      {
+                          "name":  "Contrato feedback",
+                          "command":  "abrir/leer JSON",
+                          "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\contracts\\COMMAND_FEEDBACK.json",
+                          "role":  "Mensajes de ayuda/estado/mantenimiento/unknown"
+                      }
+                  ],
+    "latest":  {
+                   "root_router_close":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-root-loop-router\\ROOT_LOOP_ROUTER_007_CLOSE.md",
+                   "root_wrapper_close":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-root-wrapper\\ROOT_WRAPPER_008_CLOSE.md",
+                   "feedback_wrapper_close":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-command-feedback-inside-wrapper\\COMMAND_FEEDBACK_INSIDE_WRAPPER_009_CLOSE.md",
+                   "next_feedback":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-command-feedback-inside-wrapper\\NEXT_OBJECTIVE.md"
+               },
+    "next_recommended":  "Integrar informe vivo en pantalla Operador V2 antes de conectar nuevas acciones."
+}

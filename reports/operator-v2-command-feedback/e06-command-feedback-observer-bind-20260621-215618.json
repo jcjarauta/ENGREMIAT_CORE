@@ -1,0 +1,18 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_COMMAND_FEEDBACK_006",
+    "stage":  "E06_BIND_COMMAND_FEEDBACK_OBSERVER_AFTER_NAVIGATION_OBSERVER_GUARDED_WRITE",
+    "status":  "PASS",
+    "launcher":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+    "adapter":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\engine\\command-feedback-dry-run-adapter.ps1",
+    "backup":  "C:\\ENGREMIAT_CORE\\backups\\operator-v2-command-feedback\\ENGREMIAT.ps1.before-E06_BIND_COMMAND_FEEDBACK_OBSERVER_AFTER_NAVIGATION_OBSERVER_GUARDED_WRITE-20260621-215617.bak",
+    "changed":  true,
+    "has_command_feedback_observer":  true,
+    "has_navigation_observer":  true,
+    "parse_after_ok":  true,
+    "smoke_ok":  true,
+    "smoke_output":  "SMOKE_OK command_feedback_bind=True observer=True unknown=Comando no reconocido. Usa ? para ayuda. executed=False real_execution=False",
+    "patched":  true,
+    "doc":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-command-feedback\\E06_COMMAND_FEEDBACK_OBSERVER_BIND.md",
+    "decision":  "GO_COMMAND_FEEDBACK_OBSERVER_BOUND_DRY_RUN_ONLY",
+    "next":  "E07_HEALTHCHECK_COMMAND_FEEDBACK_OBSERVER_BIND"
+}

@@ -1,0 +1,1078 @@
+﻿REPORT=C:\ENGREMIAT_CORE\reports\operator-v2-screen-architecture\e05p-trace-operator-menu-entrypoint-20260621-181143.txt
+ENTRY=C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\Start-EngremiatOperatorMenu.ps1
+ROUTER=C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-router.ps1
+FILES_SCANNED=14
+
+==== FILE: C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\Start-EngremiatOperatorMenu.ps1 ====
+MARKER Pantallas y UX = no
+MARKER pantallas_ux = no
+MARKER ENGREMIAT_V2 = no
+MARKER ENGREMIAT / Pantallas y UX = no
+MARKER Estado: PLACEHOLDER = no
+MARKER Progreso: 10 = no
+MARKER crear pantalla real desde registry = no
+MARKER sin hijos definidos = no
+MARKER SUBPANTALLAS / HIJOS = no
+MARKER function Show = no
+MARKER Read-Host = YES
+--- HITS ---
+L27: $a=Read-Host "ENGREMIAT"
+L32: if(Test-Path -LiteralPath $manager){& powershell -NoProfile -ExecutionPolicy Bypass -File $manager}else{B "NO_GO" @("No encuentro gestor: $manager") "Yellow";Read-Host "Enter"}
+L36: if(Test-Path -LiteralPath $creator){& powershell -NoProfile -ExecutionPolicy Bypass -File $creator}else{B "NO_GO" @("No encuentro creador: $creator") "Yellow";Read-Host "Enter"}
+L45: Read-Host "Enter para volver"
+--- FIRST 120 LINES ---
+1: $ErrorActionPreference="Stop"
+2: [Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+3: function W([string]$m,[string]$c="Gray"){Write-Host $m -ForegroundColor $c}
+4: function B([string]$t,[object[]]$l,[string]$c="Cyan"){Write-Host "";Write-Host "==== $t ====" -ForegroundColor $c;foreach($x in $l){Write-Host ([string]$x) -ForegroundColor $c}}
+5: $root="C:\ENGREMIAT_CORE"
+6: $tools=Join-Path $root "tools\desktop-terminal-operator"
+7: $manager=Join-Path $tools "eng-projects-manager.ps1"
+8: $creator=Join-Path $tools "eng-new-project-safe.ps1"
+9: Set-Location $root
+10: while($true){
+11:   Clear-Host
+12:   B "ENGREMIAT TERMINAL OPERATOR" @("Workspace: C:\ENGREMIAT_CORE","Sistema: MENU_V2_ESTABLE") "Cyan"
+13:   Write-Host ""
+14:   Write-Host "GLOBAL" -ForegroundColor Cyan
+15:   Write-Host " [1] Abrir / gestionar proyectos     p" -ForegroundColor Green
+16:   Write-Host " [2] Nuevo proyecto                  n" -ForegroundColor Green
+17:   Write-Host " [3] Ver proyectos activos/historico" -ForegroundColor Green
+18:   Write-Host " [4] Estado compacto                 e" -ForegroundColor Yellow
+19:   Write-Host " [q] Salir" -ForegroundColor Yellow
+20:   Write-Host ""
+21: Write-Host "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" -ForegroundColor DarkGray
+22:   Write-Host ""
+23: 
+24: Write-Host ""
+25: Write-Host "[b/q] salir/volver | m = mantenimiento | ? = ayuda | Enter = refrescar" -ForegroundColor DarkGray
+26: Write-Host ""
+27:   $a=Read-Host "ENGREMIAT"
+28:   if([string]::IsNullOrWhiteSpace($a)){continue}
+29:   $a=$a.Trim().ToLowerInvariant()
+30:   if($a -eq "q"){break}
+31:   if($a -eq "1" -or $a -eq "3" -or $a -eq "p" -or $a -eq "proyectos"){
+32:     if(Test-Path -LiteralPath $manager){& powershell -NoProfile -ExecutionPolicy Bypass -File $manager}else{B "NO_GO" @("No encuentro gestor: $manager") "Yellow";Read-Host "Enter"}
+33:     continue
+34:   }
+35:   if($a -eq "2" -or $a -eq "n" -or $a -eq "nuevo"){
+36:     if(Test-Path -LiteralPath $creator){& powershell -NoProfile -ExecutionPolicy Bypass -File $creator}else{B "NO_GO" @("No encuentro creador: $creator") "Yellow";Read-Host "Enter"}
+37:     if(Test-Path -LiteralPath $manager){& powershell -NoProfile -ExecutionPolicy Bypass -File $manager}
+38:     continue
+39:   }
+40:   if($a -eq "4" -or $a -eq "e" -or $a -eq "estado"){
+41:     $base="C:\Users\pc\Desktop\ENGREMIAT_OPERATOR"
+42:     $projects=@()
+43:     if(Test-Path -LiteralPath $base){$projects=@(Get-ChildItem -LiteralPath $base -Directory -Filter "ENGREMIAT_PROJECT_*" -ErrorAction SilentlyContinue)}
+44:     B "ESTADO COMPACTO" @("projects=$($projects.Count)","manager=$manager","creator=$creator","root=$root") "Cyan"
+45:     Read-Host "Enter para volver"
+46:     continue
+47:   }
+48: }
+49: 
+
+==== FILE: C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-router.ps1 ====
+MARKER Pantallas y UX = no
+MARKER pantallas_ux = no
+MARKER ENGREMIAT_V2 = no
+MARKER ENGREMIAT / Pantallas y UX = no
+MARKER Estado: PLACEHOLDER = no
+MARKER Progreso: 10 = no
+MARKER crear pantalla real desde registry = no
+MARKER sin hijos definidos = no
+MARKER SUBPANTALLAS / HIJOS = no
+MARKER function Show = YES
+MARKER Read-Host = YES
+--- HITS ---
+L40: Read-Host "Enter para volver"
+L42: function Show-EngremiatProjects { Invoke-EngremiatProjectsManager }
+L43: function Show-Projects { Invoke-EngremiatProjectsManager }
+--- FIRST 120 LINES ---
+1: param([string]$Command="",[string]$Arg="",[string]$Root="C:\ENGREMIAT_CORE")
+2: $ErrorActionPreference="Stop"
+3: [Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+4: $StateFile=Join-Path $Root "data\desktop-terminal-operator\operator-state.v1.json"
+5: function L([string]$m,[string]$c="Gray"){Write-Host $m -ForegroundColor $c}
+6: function Get-State{if(!(Test-Path -LiteralPath $StateFile)){return $null};return (Get-Content -LiteralPath $StateFile -Raw -Encoding UTF8|ConvertFrom-Json)}
+7: function HasActiveProject{$s=Get-State;return ($s -and ![string]::IsNullOrWhiteSpace([string]$s.active_project))}
+8: function HasActiveModule{$s=Get-State;return ($s -and ![string]::IsNullOrWhiteSpace([string]$s.active_module))}
+9: $cmd=([string]$Command).Trim().ToLowerInvariant()
+10: # E10O_NEW_PROJECT_SAFE_ROUTE_BEGIN
+11: if($cmd -eq "nuevo-proyecto"){
+12:   & powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot "eng-new-project-safe.ps1")
+13:   exit
+14: }
+15: # E10O_NEW_PROJECT_SAFE_ROUTE_END
+16: $cmdArg=([string]$Arg).Trim()
+17: if($cmd -eq "abrir" -and $cmdArg -eq "proyecto"){$cmd="abrir-proyecto"}
+18: if($cmd -eq "abrir" -and $cmdArg -eq "modulo"){$cmd="abrir-modulo"}
+19: if($cmd -in @("abrir-proyecto","nuevo-proyecto","projects","proyectos","abrir-modulo","nuevo-modulo")){if($cmd -in @("abrir-modulo","nuevo-modulo") -and !(HasActiveProject)){L "WARN abre primero un proyecto" Yellow;exit};if($cmd -eq "proyectos"){$cmd="projects"};& powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot "eng-context.ps1") $cmd;exit}
+20: if($cmd -in @("estado","status","compact-status","estado-compacto")){& powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot "eng-status.ps1");exit}
+21: if($cmd -in @("biblioteca","biblioteca-modulos","importar-modulo")){if(!(HasActiveProject)){L "WARN abre primero un proyecto" Yellow;exit};& powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot "eng-library-import.ps1");exit}
+22: if($cmd -in @("revisar-proyecto")){if(!(HasActiveProject)){L "WARN abre primero un proyecto" Yellow;exit};& powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot "eng-review-project.ps1");exit}
+23: if($cmd -in @("preparar-smoke")){if(!(HasActiveModule)){L "WARN entra primero en un modulo" Yellow;exit};& powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot "eng-module-smoke.ps1");exit}
+24: if($cmd -in @("contrato","tareas","evidencias","gates")){if(!(HasActiveModule)){L "WARN entra primero en un modulo" Yellow;exit};& powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot "eng-module-artifact.ps1") $cmd;exit}
+25: if($cmd -in @("objetivo")){if(!(HasActiveModule)){L "WARN entra primero en un modulo" Yellow;exit};& powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot "eng-module-objective.ps1");exit}
+26: if($cmd -in @("editar")){if(!(HasActiveModule)){L "WARN entra primero en un modulo" Yellow;exit};& powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot "eng-module-edit.ps1");exit}
+27: if($cmd -in @("cerrar-modulo")){if(!(HasActiveModule)){L "WARN entra primero en un modulo" Yellow;exit};& powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot "eng-module-close.ps1");exit}
+28: if($cmd -in @("promover")){if(!(HasActiveModule)){L "WARN entra primero en un modulo" Yellow;exit};& powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot "eng-module-promote.ps1");exit}
+29: L ("WARN comando_no_soportado="+$cmd) Yellow;exit
+30: 
+31: # ENGREMIAT_E02E_PROJECTS_MANAGER_ROUTE
+32: function Invoke-EngremiatProjectsManager {
+33:   $manager = "C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-projects-manager.ps1"
+34:   if(Test-Path -LiteralPath $manager){
+35:     & powershell -NoProfile -ExecutionPolicy Bypass -File $manager
+36:     return
+37:   }
+38:   Write-Host "NO_GO manager missing: $manager" -ForegroundColor Yellow
+39: Write-Host "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" -ForegroundColor DarkGray
+40:   Read-Host "Enter para volver"
+41: }
+42: function Show-EngremiatProjects { Invoke-EngremiatProjectsManager }
+43: function Show-Projects { Invoke-EngremiatProjectsManager }
+44: function Invoke-ProjectsView { Invoke-EngremiatProjectsManager }
+45: 
+
+==== FILE: C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-projects-manager.ps1 ====
+MARKER Pantallas y UX = no
+MARKER pantallas_ux = no
+MARKER ENGREMIAT_V2 = no
+MARKER ENGREMIAT / Pantallas y UX = no
+MARKER Estado: PLACEHOLDER = no
+MARKER Progreso: 10 = no
+MARKER crear pantalla real desde registry = no
+MARKER sin hijos definidos = no
+MARKER SUBPANTALLAS / HIJOS = no
+MARKER function Show = YES
+MARKER Read-Host = YES
+--- HITS ---
+L14: $sev = Read-Host "Severidad LOW/MEDIUM/HIGH/BLOCKER"
+L16: $exp = Read-Host "Esperado"
+L18: $obs = Read-Host "Observado / que falla"
+L20: $act = Read-Host "Accion realizada antes del fallo"
+L45: Read-Host "Enter para volver a PROYECTOS ACTIVOS" | Out-Null
+L48: function Show-EngProjectsManagerHelp {
+L62: Read-Host "Enter para volver" | Out-Null
+L78: function ShowWorkspace($project){while($true){Clear-Host;B "ESPACIO DE TRABAJO" @($project.Name,$project.Path,("Estado: "+$project.Status)) "Cyan";Write-Host " [1] Carpeta del proyecto" -ForegroundColor Green;Write-Host " [2] Módulos del proyecto" -ForegroundColor Green;Write-Host " [3] Espacio módulo inicio" -ForegroundColor Green;Write-Host " [4] Control del proyecto" -ForegroundColor Yellow;Write-Host " [b] Atrás" -ForegroundColor Yellow;Write-Host "";Write-Host "Enter = refrescar | b = volver | 1 carpeta | 2 modulos | 3 modulo inicio | 4 control" -ForegroundColor DarkGray;$a=Read-Host "PROYECTO";if([string]::IsNullOrWhiteSpace($a)){continue};$a=$a.Trim().ToLowerInvariant();if($a -eq "b"){break};if($a -eq "1"){Start-Process explorer.exe $project.Path;continue};if($a -eq "2"){& powershell -NoProfile -ExecutionPolicy Bypass -File "C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-project-modules-screen.ps1" -ProjectPath $project.Path;continue};if($a -eq "3"){$p=Join-Path $project.Path "MODULOS\MODULE_inicio\BOVEDA_MODULO";if(Test-Path -LiteralPath $p){Start-Process explorer.exe $p}else{B "NO_GO" @("No existe: $p") "Yellow";Read-Host "Enter"};continue};if($a -eq "4"){$p=Join-Path $project.Path "BOVEDA_PROYECTO\00_CONTROL";if(Test-Path -LiteralPath $p){Start-Process explorer.exe $p}else{B "NO_GO" @("No existe: $p") "Yellow";Read-Host "Enter"};continue}}}
+L91: $a=Read-Host "ENGREMIAT"
+L99: if($a -eq "n"){$creator=Join-Path $root "tools\desktop-terminal-operator\eng-new-project-safe.ps1";if(Test-Path -LiteralPath $creator){& powershell -NoProfile -ExecutionPolicy Bypass -File $creator}else{B "NO_GO" @("No encuentro creador: $creator") "Yellow";Read-Host "Enter"};$latest=@(Get-ChildItem -LiteralPath $base -Directory -Filter "ENGREMIAT_PROJECT_*" -ErrorAction SilentlyContinue|Sort-Object LastWriteTime -Descending|Select-Object -First 1);if($latest.Count -gt 0){SaveActive $latest[0].FullName};continue}
+L100: if($a -eq "v"){while($true){Clear-Host;$projects=GetProjects $base;$hist=@($projects|Where-Object{$_.Status -ne "ACTIVO"}|Sort-Object LastWriteTime -Descending);B "HISTORICO" @("numero = activar | oN = abrir carpeta | b = atras") "Yellow";if($hist.Count -eq 0){W " Historico vacio." "Yellow"}else{for($i=0;$i -lt $hist.Count;$i++){W (" ["+($i+1)+"] "+$hist[$i].Name+"  "+$hist[$i].LastWriteTime.ToString("yyyy-MM-dd HH:mm")+"  HISTORICO") "Gray"}};W "";$h=Read-Host "HISTORICO";if([string]::IsNullOrWhiteSpace($h)){continue};$h=$h.Trim().ToLowerInvariant();if($h -eq "b"){break};if($h -match "^o(\d+)$"){$idx=[int]$Matches[1]-1;if($idx -ge 0 -and $idx -lt $hist.Count){Start-Process explorer.exe $hist[$idx].Path};continue};$hn=0;if([int]::TryParse($h,[ref]$hn) -and $hn -ge 1 -and $hn -le $hist.Count){SaveActive $hist[($hn-1)].Path;break}};continue}
+L105: }catch{B "ERR" @("status=FAIL",$_.Exception.Message) "Red";Read-Host "Enter para salir";exit 1}
+--- FIRST 120 LINES ---
+1: # ENG_PROJECTS_MANAGER_SCREEN_MASTER_E17B_BEGIN
+2: function New-EngProjectsManagerMaintenanceCard {
+3:   Clear-Host
+4: Write-Host "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" -ForegroundColor DarkGray
+5:   Write-Host "Ruta: PROYECTOS ACTIVOS" -ForegroundColor DarkCyan
+6:   Write-Host "Cancelar: b / q / c / cancelar" -ForegroundColor DarkGray
+7:   Write-Host ""
+8: 
+9:   $cancelTokens = @("b","q","c","cancelar","cancel","salir")
+10: 
+11: Write-Host ""
+12: Write-Host "[b/q] salir/volver | m = mantenimiento | ? = ayuda | Enter = refrescar" -ForegroundColor DarkGray
+13: Write-Host ""
+14:   $sev = Read-Host "Severidad LOW/MEDIUM/HIGH/BLOCKER"
+15:   if($cancelTokens -contains $sev.Trim().ToLowerInvariant()){ Write-Host "CANCELADO tarjeta_mantenimiento" -ForegroundColor Yellow; Start-Sleep -Milliseconds 500; return }
+16:   $exp = Read-Host "Esperado"
+17:   if($cancelTokens -contains $exp.Trim().ToLowerInvariant()){ Write-Host "CANCELADO tarjeta_mantenimiento" -ForegroundColor Yellow; Start-Sleep -Milliseconds 500; return }
+18:   $obs = Read-Host "Observado / que falla"
+19:   if($cancelTokens -contains $obs.Trim().ToLowerInvariant()){ Write-Host "CANCELADO tarjeta_mantenimiento" -ForegroundColor Yellow; Start-Sleep -Milliseconds 500; return }
+20:   $act = Read-Host "Accion realizada antes del fallo"
+21:   if($cancelTokens -contains $act.Trim().ToLowerInvariant()){ Write-Host "CANCELADO tarjeta_mantenimiento" -ForegroundColor Yellow; Start-Sleep -Milliseconds 500; return }
+22: 
+23:   if([string]::IsNullOrWhiteSpace($sev)){ $sev = "MEDIUM" }
+24:   if([string]::IsNullOrWhiteSpace($exp)){ $exp = "PENDING" }
+25:   if([string]::IsNullOrWhiteSpace($obs)){ $obs = "PENDING" }
+26:   if([string]::IsNullOrWhiteSpace($act)){ $act = "PENDING" }
+27: 
+28:   $cardsDir = "C:\ENGREMIAT_CORE\documents\manual-screen-maintenance-cards\cards"
+29:   if(!(Test-Path $cardsDir)){ New-Item -ItemType Directory -Force -Path $cardsDir | Out-Null }
+30:   $id = "MCARD-" + (Get-Date -Format "yyyyMMdd-HHmmss") + "-projects-active"
+31:   $card = Join-Path $cardsDir ($id + ".md")
+32:   @(
+33:     "# " + $id,
+34:     "",
+35:     "- screen_id: PROJECTS_ACTIVE",
+36:     "- route: PROYECTOS ACTIVOS",
+37:     "- severity: " + $sev,
+38:     "- expected: " + $exp,
+39:     "- observed: " + $obs,
+40:     "- action_done: " + $act,
+41:     "- status: OPEN",
+42:     "- created_at: " + (Get-Date).ToString("s")
+43:   ) | Set-Content -Encoding UTF8 $card
+44:   Write-Host ("OK tarjeta_mantenimiento_creada=" + $card) -ForegroundColor Green
+45:   Read-Host "Enter para volver a PROYECTOS ACTIVOS" | Out-Null
+46: }
+47: 
+48: function Show-EngProjectsManagerHelp {
+49:   Clear-Host
+50:   Write-Host "==== AYUDA - PROYECTOS ACTIVOS ====" -ForegroundColor Cyan
+51:   Write-Host "Ruta: PROYECTOS ACTIVOS" -ForegroundColor DarkCyan
+52:   Write-Host ""
+53:   Write-Host "Enter = refrescar pantalla" -ForegroundColor Gray
+54:   Write-Host "numero = abrir espacio de trabajo" -ForegroundColor Gray
+55:   Write-Host "oN = abrir carpeta del proyecto N" -ForegroundColor Gray
+56:   Write-Host "hN = historico del proyecto N" -ForegroundColor Gray
+57:   Write-Host "v = historico" -ForegroundColor Gray
+58:   Write-Host "n = nuevo proyecto" -ForegroundColor Gray
+59:   Write-Host "m = crear tarjeta de mantenimiento contextual" -ForegroundColor Gray
+60:   Write-Host "q = salir" -ForegroundColor Gray
+61:   Write-Host ""
+62:   Read-Host "Enter para volver" | Out-Null
+63: }
+64: # ENG_PROJECTS_MANAGER_SCREEN_MASTER_E17B_END
+65: param([string]$Mode="menu")
+66: $ErrorActionPreference="Stop"
+67: [Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+68: function W([string]$m,[string]$c="Gray"){Write-Host $m -ForegroundColor $c}
+69: function B([string]$t,[object[]]$l,[string]$c="Cyan"){Write-Host "";Write-Host "==== $t ====" -ForegroundColor $c;foreach($x in $l){Write-Host ([string]$x) -ForegroundColor $c}}
+70: function D([string]$p){[System.IO.Directory]::CreateDirectory($p)|Out-Null}
+71: function SetProp([object]$o,[string]$n,[object]$v){if($o.PSObject.Properties.Name -contains $n){$o.$n=$v}else{$o|Add-Member -NotePropertyName $n -NotePropertyValue $v -Force}}
+72: function LoadJsonOrNew([string]$p){if(Test-Path -LiteralPath $p){try{return (Get-Content -LiteralPath $p -Raw -Encoding UTF8|ConvertFrom-Json)}catch{}};return [pscustomobject]@{}}
+73: function GetActivePath{ $p="C:\ENGREMIAT_CORE\data\desktop-terminal-operator\operator-state.v1.json"; if(!(Test-Path -LiteralPath $p)){return ""}; try{$s=Get-Content -LiteralPath $p -Raw -Encoding UTF8|ConvertFrom-Json; foreach($k in @("active_project_path","current_project_path","active_project","current_project")){if($s.PSObject.Properties.Name -contains $k){$v=[string]$s.$k;if($v -and (Test-Path -LiteralPath $v)){return (Resolve-Path -LiteralPath $v).Path}}}}catch{}; return "" }
+74: function EnsureProjectJson([string]$projectPath,[string]$status){$control=Join-Path $projectPath "BOVEDA_PROYECTO\00_CONTROL";D $control;$pjp=Join-Path $control "project.json";$pj=LoadJsonOrNew $pjp;SetProp $pj "project_id" (Split-Path -Leaf $projectPath);SetProp $pj "name" (Split-Path -Leaf $projectPath);SetProp $pj "path" $projectPath;SetProp $pj "status" $status;SetProp $pj "operator_status" $status;SetProp $pj "updated_at" ((Get-Date).ToString("s"));$pj|ConvertTo-Json -Depth 80|Set-Content -LiteralPath $pjp -Encoding UTF8}
+75: function GetProjects([string]$base){if(!(Test-Path -LiteralPath $base)){return @()};$activePath=GetActivePath;$items=@();$dirs=@(Get-ChildItem -LiteralPath $base -Directory -Filter "ENGREMIAT_PROJECT_*" -ErrorAction SilentlyContinue|Sort-Object LastWriteTime -Descending);foreach($d in $dirs){$resolved=(Resolve-Path -LiteralPath $d.FullName).Path;$status="HISTORICO";if($activePath -ne "" -and $resolved -eq $activePath){$status="ACTIVO"};$items+=[pscustomobject]@{Name=$d.Name;Path=$resolved;Status=$status;LastWriteTime=$d.LastWriteTime}};return @($items)}
+76: function SaveActive([string]$projectPath){$root="C:\ENGREMIAT_CORE";$base="C:\Users\pc\Desktop\ENGREMIAT_OPERATOR";$statePath=Join-Path $root "data\desktop-terminal-operator\operator-state.v1.json";D (Split-Path -Parent $statePath);$resolved=(Resolve-Path -LiteralPath $projectPath).Path;$state=LoadJsonOrNew $statePath;$name=Split-Path -Leaf $resolved;SetProp $state "active_project" $resolved;SetProp $state "active_project_path" $resolved;SetProp $state "active_project_name" $name;SetProp $state "current_project" $resolved;SetProp $state "current_project_path" $resolved;SetProp $state "updated_at" ((Get-Date).ToString("s"));SetProp $state "last_project_lifecycle_action" ([ordered]@{action="activate";project=$resolved;created_at=(Get-Date).ToString("s")});$state|ConvertTo-Json -Depth 100|Set-Content -LiteralPath $statePath -Encoding UTF8;foreach($d in @(Get-ChildItem -LiteralPath $base -Directory -Filter "ENGREMIAT_PROJECT_*" -ErrorAction SilentlyContinue)){if((Resolve-Path -LiteralPath $d.FullName).Path -eq $resolved){EnsureProjectJson $d.FullName "ACTIVO"}else{EnsureProjectJson $d.FullName "HISTORICO"}}}
+77: function SendHistoric([string]$projectPath){$resolved=(Resolve-Path -LiteralPath $projectPath).Path;EnsureProjectJson $resolved "HISTORICO";$active=GetActivePath;if($active -eq $resolved){$statePath="C:\ENGREMIAT_CORE\data\desktop-terminal-operator\operator-state.v1.json";$state=LoadJsonOrNew $statePath;foreach($k in @("active_project","active_project_path","active_project_name","current_project","current_project_path")){SetProp $state $k ""};SetProp $state "updated_at" ((Get-Date).ToString("s"));SetProp $state "last_project_lifecycle_action" ([ordered]@{action="historify_active";project=$resolved;created_at=(Get-Date).ToString("s")});$state|ConvertTo-Json -Depth 100|Set-Content -LiteralPath $statePath -Encoding UTF8}}
+78: function ShowWorkspace($project){while($true){Clear-Host;B "ESPACIO DE TRABAJO" @($project.Name,$project.Path,("Estado: "+$project.Status)) "Cyan";Write-Host " [1] Carpeta del proyecto" -ForegroundColor Green;Write-Host " [2] Módulos del proyecto" -ForegroundColor Green;Write-Host " [3] Espacio módulo inicio" -ForegroundColor Green;Write-Host " [4] Control del proyecto" -ForegroundColor Yellow;Write-Host " [b] Atrás" -ForegroundColor Yellow;Write-Host "";Write-Host "Enter = refrescar | b = volver | 1 carpeta | 2 modulos | 3 modulo inicio | 4 control" -ForegroundColor DarkGray;$a=Read-Host "PROYECTO";if([string]::IsNullOrWhiteSpace($a)){continue};$a=$a.Trim().ToLowerInvariant();if($a -eq "b"){break};if($a -eq "1"){Start-Process explorer.exe $project.Path;continue};if($a -eq "2"){& powershell -NoProfile -ExecutionPolicy Bypass -File "C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-project-modules-screen.ps1" -ProjectPath $project.Path;continue};if($a -eq "3"){$p=Join-Path $project.Path "MODULOS\MODULE_inicio\BOVEDA_MODULO";if(Test-Path -LiteralPath $p){Start-Process explorer.exe $p}else{B "NO_GO" @("No existe: $p") "Yellow";Read-Host "Enter"};continue};if($a -eq "4"){$p=Join-Path $project.Path "BOVEDA_PROYECTO\00_CONTROL";if(Test-Path -LiteralPath $p){Start-Process explorer.exe $p}else{B "NO_GO" @("No existe: $p") "Yellow";Read-Host "Enter"};continue}}}
+79: try{
+80:   $root="C:\ENGREMIAT_CORE";$base="C:\Users\pc\Desktop\ENGREMIAT_OPERATOR"
+81:   while($true){
+82:     Clear-Host
+83:     $projects=GetProjects $base
+84:     $active=@($projects|Where-Object{$_.Status -eq "ACTIVO"}|Sort-Object LastWriteTime -Descending)
+85:     $hist=@($projects|Where-Object{$_.Status -ne "ACTIVO"}|Sort-Object LastWriteTime -Descending)
+86: Write-Host "Ruta: PROYECTOS ACTIVOS" -ForegroundColor DarkCyan
+87: Write-Host "[?] Ayuda  [m] Mantenimiento  [Enter] Refrescar" -ForegroundColor DarkGray
+88:     B "PROYECTOS ACTIVOS" @("numero = espacio de trabajo | oN = abrir carpeta | hN = historico | v = historico | n = nuevo | q = salir") "Cyan"
+89:     if($active.Count -eq 0){W " No hay proyectos activos." "Yellow"}else{for($i=0;$i -lt $active.Count;$i++){W (" ["+($i+1)+"] "+$active[$i].Name+"  "+$active[$i].LastWriteTime.ToString("yyyy-MM-dd HH:mm")+"  ACTIVO") "Green"}}
+90:     W "";W "[v] Historico  [n] Nuevo  [q] Salir" "Yellow";W ""
+91:     $a=Read-Host "ENGREMIAT"
+92: # ENG_PROJECTS_MANAGER_ROUTER_E17B_BEGIN
+93: $__eng_projects_cmd = if($null -eq $a) { "" } else { [string]$a }
+94: $__eng_projects_cmd = $__eng_projects_cmd.Trim().ToLowerInvariant()
+95: if($__eng_projects_cmd -eq "m"){ New-EngProjectsManagerMaintenanceCard; continue }
+96: if($__eng_projects_cmd -eq "?"){ Show-EngProjectsManagerHelp; continue }
+97: # ENG_PROJECTS_MANAGER_ROUTER_E17B_END
+98:     if([string]::IsNullOrWhiteSpace($a)){continue};$a=$a.Trim().ToLowerInvariant();if($a -eq "q"){break}
+99:     if($a -eq "n"){$creator=Join-Path $root "tools\desktop-terminal-operator\eng-new-project-safe.ps1";if(Test-Path -LiteralPath $creator){& powershell -NoProfile -ExecutionPolicy Bypass -File $creator}else{B "NO_GO" @("No encuentro creador: $creator") "Yellow";Read-Host "Enter"};$latest=@(Get-ChildItem -LiteralPath $base -Directory -Filter "ENGREMIAT_PROJECT_*" -ErrorAction SilentlyContinue|Sort-Object LastWriteTime -Descending|Select-Object -First 1);if($latest.Count -gt 0){SaveActive $latest[0].FullName};continue}
+100:     if($a -eq "v"){while($true){Clear-Host;$projects=GetProjects $base;$hist=@($projects|Where-Object{$_.Status -ne "ACTIVO"}|Sort-Object LastWriteTime -Descending);B "HISTORICO" @("numero = activar | oN = abrir carpeta | b = atras") "Yellow";if($hist.Count -eq 0){W " Historico vacio." "Yellow"}else{for($i=0;$i -lt $hist.Count;$i++){W (" ["+($i+1)+"] "+$hist[$i].Name+"  "+$hist[$i].LastWriteTime.ToString("yyyy-MM-dd HH:mm")+"  HISTORICO") "Gray"}};W "";$h=Read-Host "HISTORICO";if([string]::IsNullOrWhiteSpace($h)){continue};$h=$h.Trim().ToLowerInvariant();if($h -eq "b"){break};if($h -match "^o(\d+)$"){$idx=[int]$Matches[1]-1;if($idx -ge 0 -and $idx -lt $hist.Count){Start-Process explorer.exe $hist[$idx].Path};continue};$hn=0;if([int]::TryParse($h,[ref]$hn) -and $hn -ge 1 -and $hn -le $hist.Count){SaveActive $hist[($hn-1)].Path;break}};continue}
+101:     if($a -match "^o(\d+)$"){$idx=[int]$Matches[1]-1;if($idx -ge 0 -and $idx -lt $active.Count){Start-Process explorer.exe $active[$idx].Path};continue}
+102:     if($a -match "^h(\d+)$"){$idx=[int]$Matches[1]-1;if($idx -ge 0 -and $idx -lt $active.Count){SendHistoric $active[$idx].Path};continue}
+103:     $n=0;if([int]::TryParse($a,[ref]$n) -and $n -ge 1 -and $n -le $active.Count){ShowWorkspace $active[($n-1)];continue}
+104:   }
+105: }catch{B "ERR" @("status=FAIL",$_.Exception.Message) "Red";Read-Host "Enter para salir";exit 1}
+106: 
+107: 
+108: 
+109: 
+
+==== FILE: C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-new-project-safe.ps1 ====
+MARKER Pantallas y UX = no
+MARKER pantallas_ux = no
+MARKER ENGREMIAT_V2 = no
+MARKER ENGREMIAT / Pantallas y UX = no
+MARKER Estado: PLACEHOLDER = no
+MARKER Progreso: 10 = no
+MARKER crear pantalla real desde registry = no
+MARKER sin hijos definidos = no
+MARKER SUBPANTALLAS / HIJOS = no
+MARKER function Show = no
+MARKER Read-Host = YES
+--- HITS ---
+L21: if([string]::IsNullOrWhiteSpace($ProjectName)){$ProjectName=Read-Host "Nombre corto del proyecto"}
+L45: if(-not $NoPause){Read-Host "Enter para volver"}
+L50: if(-not $NoPause){Read-Host "Enter para volver"}
+--- FIRST 120 LINES ---
+1: param([string]$ProjectName="",[string]$BaseDir="C:\Users\pc\Desktop\ENGREMIAT_OPERATOR",[switch]$NoPause)
+2: $ErrorActionPreference="Stop"
+3: [Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+4: function W([string]$m,[string]$c="Gray"){Write-Host $m -ForegroundColor $c}
+5: function B([string]$t,[object[]]$l,[string]$c="Cyan"){W "";W "==== $t ====" $c;foreach($x in $l){W ([string]$x) $c}}
+6: function D([string]$p){[System.IO.Directory]::CreateDirectory($p)|Out-Null}
+7: function CF([string]$p){if(!(Test-Path -LiteralPath $p)){return 0};return @(Get-ChildItem -LiteralPath $p -Recurse -File -ErrorAction SilentlyContinue).Count}
+8: function Mirror([string]$src,[string]$dst,[string]$tag,[string]$logDir){if(!(Test-Path -LiteralPath $src)){throw "source_missing tag=$tag path=$src"};D $dst;D $logDir;$log=Join-Path $logDir ("robocopy-"+$tag+"-"+(Get-Date -Format "yyyyMMdd-HHmmss")+".log");& robocopy $src $dst /MIR /R:2 /W:1 /NFL /NDL /NP /LOG:$log|Out-Null;if($LASTEXITCODE -gt 7){throw "robocopy_failed tag=$tag code=$LASTEXITCODE log=$log"};return $log}
+9: try{
+10:   $root="C:\ENGREMIAT_CORE"
+11:   $stage="eng-new-project-safe-v2-canonical-core-templates"
+12:   $reports=Join-Path $root "reports\operator-navigation-model"
+13:   $registry=Join-Path $root "templates\ENGREMIAT_TEMPLATE_REGISTRY_V2.json"
+14:   $masterTemplate=Join-Path $root "templates\MASTER_PROJECT_TEMPLATE_V2"
+15:   $moduleTemplate=Join-Path $root "templates\MODULE_INICIO_TEMPLATE_V2"
+16:   D $reports
+17:   B "CREAR PROYECTO V2" @("Paso=$stage","BaseDir=$BaseDir","MasterTemplate=$masterTemplate","ModuleTemplate=$moduleTemplate") "Cyan"
+18:   if(!(Test-Path -LiteralPath $registry)){throw "template_registry_missing=$registry"}
+19:   foreach($r in @("00_HOME\PROJECT_HOME.md","00_CONTROL\project.template.json","11_AGRUPACION_MANUAL\SYSTEM_GROUPING_MODEL.md")){if(!(Test-Path -LiteralPath (Join-Path $masterTemplate $r))){throw "master_template_required_missing=$r"}}
+20:   foreach($r in @("00_HOME\MODULE_HOME.md","06_RELACIONES\MODULE_GROUPING_MODEL.md")){if(!(Test-Path -LiteralPath (Join-Path $moduleTemplate $r))){throw "module_template_required_missing=$r"}}
+21:   if([string]::IsNullOrWhiteSpace($ProjectName)){$ProjectName=Read-Host "Nombre corto del proyecto"}
+22:   if([string]::IsNullOrWhiteSpace($ProjectName)){$ProjectName="nuevo-proyecto"}
+23:   $safe=($ProjectName -replace "[^a-zA-Z0-9_-]","-").Trim("-")
+24:   if([string]::IsNullOrWhiteSpace($safe)){$safe="nuevo-proyecto"}
+25:   D $BaseDir
+26:   $stamp=Get-Date -Format "yyyyMMdd-HHmmss"
+27:   $project=Join-Path $BaseDir ("ENGREMIAT_PROJECT_"+$safe+"_"+$stamp)
+28:   $masterDst=Join-Path $project "BOVEDA_PROYECTO\00_PLANTILLA_MAESTRA_OFICIAL"
+29:   $moduleRefDst=Join-Path $project "MODULOS\MODULE_inicio\BOVEDA_MODULO\00_PLANTILLA_MAESTRA_REFERENCIA"
+30:   $projectControl=Join-Path $project "BOVEDA_PROYECTO\00_CONTROL"
+31:   $moduleControl=Join-Path $project "MODULOS\MODULE_inicio\BOVEDA_MODULO\00_CONTROL"
+32:   D $project;D $projectControl;D $moduleControl
+33:   $logMaster=Mirror $masterTemplate $masterDst "copy-canonical-master-v2" $reports
+34:   $logModule=Mirror $moduleTemplate $moduleRefDst "copy-canonical-module-v2" $reports
+35:   [ordered]@{project_id=("PROJECT_"+$safe+"_"+$stamp);name=$safe;created_at=(Get-Date).ToString("s");creator=$stage;template_registry=$registry;master_template=$masterTemplate;module_template=$moduleTemplate;master=$masterDst;module_inicio=$moduleRefDst;status="ACTIVO";operator_status="ACTIVO"}|ConvertTo-Json -Depth 40|Set-Content -LiteralPath (Join-Path $projectControl "project.json") -Encoding UTF8
+36:   [ordered]@{module_id="MODULE_inicio";name="inicio";created_at=(Get-Date).ToString("s");creator=$stage;template_reference=$moduleRefDst;source_template=$moduleTemplate;status="ACTIVO"}|ConvertTo-Json -Depth 40|Set-Content -LiteralPath (Join-Path $moduleControl "module.json") -Encoding UTF8
+37:   Set-Content -LiteralPath (Join-Path $project "00_INICIO_GRAFO_OPERATIVO.md") -Encoding UTF8 -Value @("# 00_INICIO_GRAFO_OPERATIVO","","Proyecto creado desde plantillas canonicas CORE.","","MasterTemplate: $masterTemplate","ModuleTemplate: $moduleTemplate","RuntimeDependsOnSourceProject: false")
+38:   $missing=@()
+39:   foreach($r in @("BOVEDA_PROYECTO\00_PLANTILLA_MAESTRA_OFICIAL\00_HOME\PROJECT_HOME.md","BOVEDA_PROYECTO\00_PLANTILLA_MAESTRA_OFICIAL\00_CONTROL\project.template.json","BOVEDA_PROYECTO\00_PLANTILLA_MAESTRA_OFICIAL\11_AGRUPACION_MANUAL\SYSTEM_GROUPING_MODEL.md","MODULOS\MODULE_inicio\BOVEDA_MODULO\00_PLANTILLA_MAESTRA_REFERENCIA\00_HOME\MODULE_HOME.md","MODULOS\MODULE_inicio\BOVEDA_MODULO\00_PLANTILLA_MAESTRA_REFERENCIA\06_RELACIONES\MODULE_GROUPING_MODEL.md","BOVEDA_PROYECTO\00_CONTROL\project.json","MODULOS\MODULE_inicio\BOVEDA_MODULO\00_CONTROL\module.json","00_INICIO_GRAFO_OPERATIVO.md")){if(!(Test-Path -LiteralPath (Join-Path $project $r))){$missing+=$r}}
+40:   if($missing.Count -gt 0){throw "missing_after_create="+($missing -join ",")}
+41:   $report=Join-Path $reports ("new-project-safe-v2-canonical-"+$stamp+".json")
+42:   [ordered]@{status="PASS";stage=$stage;project=$project;base_dir=$BaseDir;template_registry=$registry;master_template=$masterTemplate;module_template=$moduleTemplate;runtime_depends_on_source_project=$false;master_files=CF $masterDst;module_ref_files=CF $moduleRefDst;log_master=$logMaster;log_module=$logModule;missing=$missing;next="manager_should_activate_latest"}|ConvertTo-Json -Depth 50|Set-Content -LiteralPath $report -Encoding UTF8
+43:   B "OK CREAR PROYECTO" @("status=PASS","project=$project","master_files=$(CF $masterDst)","module_ref_files=$(CF $moduleRefDst)","runtime_depends_on_source_project=false","report=$report") "Green"
+44:   Start-Process explorer.exe $project
+45:   if(-not $NoPause){Read-Host "Enter para volver"}
+46: }catch{
+47:   $errReport=Join-Path "C:\ENGREMIAT_CORE\reports\operator-navigation-model" ("new-project-error-"+(Get-Date -Format "yyyyMMdd-HHmmss")+".json")
+48:   [ordered]@{status="FAIL";step="eng-new-project-safe-v2-canonical-core-templates";message=$_.Exception.Message;base_dir=$BaseDir;runtime_depends_on_source_project=$false;created_at=(Get-Date).ToString("s")}|ConvertTo-Json -Depth 30|Set-Content -LiteralPath $errReport -Encoding UTF8
+49:   B "ERR CREAR PROYECTO" @("Paso=eng-new-project-safe-v2-canonical-core-templates","Mensaje=$($_.Exception.Message)","Reporte=$errReport") "Red"
+50:   if(-not $NoPause){Read-Host "Enter para volver"}
+51:   exit 1
+52: }
+
+==== FILE: C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-context.ps1 ====
+MARKER Pantallas y UX = no
+MARKER pantallas_ux = no
+MARKER ENGREMIAT_V2 = no
+MARKER ENGREMIAT / Pantallas y UX = no
+MARKER Estado: PLACEHOLDER = no
+MARKER Progreso: 10 = no
+MARKER crear pantalla real desde registry = no
+MARKER sin hijos definidos = no
+MARKER SUBPANTALLAS / HIJOS = no
+MARKER function Show = YES
+MARKER Read-Host = YES
+--- HITS ---
+L72: $parentRaw=(Read-Host "Carpeta base").Trim()
+L86: $ok=(Read-Host "Crear aqui usando plantilla maestra original? Enter/s = si | n = cambiar ruta").Trim().ToLowerInvariant()
+L151: Read-Host "Enter para volver"
+L153: function Show-Projects{
+L172: $sel=(Read-Host "ENGREMIAT").Trim().ToLowerInvariant()
+L198: $name=(Read-Host "Nombre del modulo").Trim()
+L222: $sel=(Read-Host "Elige modulo").Trim().ToLowerInvariant()
+L235: if($cmd -eq "nuevo-proyecto"){$name=Read-Host "Nombre del proyecto";$p=New-Project $name;Set-Project-State $p;exit}
+L251: Read-Host "Enter para volver"
+L253: function Show-EngremiatProjects { Invoke-EngremiatProjectsManager }
+L254: function Show-Projects { Invoke-EngremiatProjectsManager }
+--- FIRST 120 LINES ---
+1: param([string]$Command="abrir-proyecto",[string]$Root="C:\ENGREMIAT_CORE")
+2: $ErrorActionPreference="Stop"
+3: [Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+4: $StateFile=Join-Path $Root "data\desktop-terminal-operator\operator-state.v1.json"
+5: function L([string]$m,[string]$c="Gray"){Write-Host $m -ForegroundColor $c}
+6: function Desktop-Path{return [Environment]::GetFolderPath("Desktop")}
+7: function Ensure-State{
+8:   if(!(Test-Path -LiteralPath $StateFile)){
+9:     New-Item -ItemType Directory -Force -Path (Split-Path $StateFile -Parent)|Out-Null
+10:     $desktop=Desktop-Path
+11:     [ordered]@{mode="global";active_project="";active_master_vault="";active_module="";active_module_vault="";historical_projects=@();last_project_parent=$desktop;project_roots=@($desktop);last_command="init";next="global";updated_at=(Get-Date).ToString("s");safety=[ordered]@{local_only=$true;worker_real=$false;git=$false;network=$false}}|ConvertTo-Json -Depth 100|Set-Content -LiteralPath $StateFile -Encoding UTF8
+12:   }
+13: }
+14: function Get-State{Ensure-State;$s=Get-Content -LiteralPath $StateFile -Raw -Encoding UTF8|ConvertFrom-Json;if(!($s.PSObject.Properties.Name -contains "last_project_parent")){$s|Add-Member -Force -NotePropertyName last_project_parent -NotePropertyValue (Desktop-Path)};if(!($s.PSObject.Properties.Name -contains "project_roots")){$s|Add-Member -Force -NotePropertyName project_roots -NotePropertyValue @($s.last_project_parent)};return $s}
+15: function Save-State($s){$s|Add-Member -Force -NotePropertyName updated_at -NotePropertyValue (Get-Date).ToString("s");$s|ConvertTo-Json -Depth 100|Set-Content -LiteralPath $StateFile -Encoding UTF8}
+16: function Resolve-ParentPath([string]$InputPath,[string]$DefaultParent){
+17:   $p=$InputPath.Trim()
+18:   if([string]::IsNullOrWhiteSpace($p)){$p=$DefaultParent}
+19:   $p=[Environment]::ExpandEnvironmentVariables($p)
+20:   try{return (Resolve-Path -LiteralPath $p -ErrorAction Stop).Path}catch{New-Item -ItemType Directory -Force -Path $p|Out-Null;return (Resolve-Path -LiteralPath $p).Path}
+21: }
+22: function Get-ProjectRoots{
+23:   $s=Get-State
+24:   $roots=@()
+25:   $desktop=Desktop-Path
+26:   if($desktop){$roots+=$desktop}
+27:   if($s.last_project_parent){$roots+=[string]$s.last_project_parent}
+28:   if($s.active_project -and (Test-Path -LiteralPath ([string]$s.active_project))){$roots+=(Split-Path ([string]$s.active_project) -Parent)}
+29:   if($s.PSObject.Properties.Name -contains "project_roots" -and $s.project_roots){foreach($r in @($s.project_roots)){if([string]$r){$roots+=[string]$r}}}
+30:   return @($roots|Where-Object{$_}|Sort-Object -Unique)
+31: }
+32: function Get-Projects{
+33:   $items=@()
+34:   foreach($r in Get-ProjectRoots){
+35:     if(Test-Path -LiteralPath $r){$items+=@(Get-ChildItem -LiteralPath $r -Directory -ErrorAction SilentlyContinue|Where-Object{$_.Name -like "ENGREMIAT_PROJECT_*"})}
+36:   }
+37:   $s=Get-State
+38:   if($s.active_project -and (Test-Path -LiteralPath ([string]$s.active_project))){$items+=@(Get-Item -LiteralPath ([string]$s.active_project))}
+39:   return @($items|Sort-Object FullName -Unique|Sort-Object LastWriteTime -Descending)
+40: }
+41: function Set-Project-ParentMemory([string]$Parent){
+42:   $s=Get-State
+43:   $roots=@()
+44:   if($s.PSObject.Properties.Name -contains "project_roots" -and $s.project_roots){$roots+=@($s.project_roots)}
+45:   $roots+=$Parent
+46:   $s|Add-Member -Force -NotePropertyName last_project_parent -NotePropertyValue $Parent
+47:   $s|Add-Member -Force -NotePropertyName project_roots -NotePropertyValue @($roots|Where-Object{$_}|Sort-Object -Unique)
+48:   Save-State $s
+49: }
+50: function New-Project{
+51:   param([string]$Name)
+52:   $s=Get-State
+53:   if([string]::IsNullOrWhiteSpace($Name)){$Name="nuevo-proyecto"}
+54:   $safe=($Name -replace "[^a-zA-Z0-9_-]","-").Trim("-")
+55:   if([string]::IsNullOrWhiteSpace($safe)){$safe="nuevo-proyecto"}
+56:   $desktop=Desktop-Path
+57:   $remembered=$desktop
+58:   if($s.last_project_parent -and (Test-Path -LiteralPath ([string]$s.last_project_parent))){$remembered=[string]$s.last_project_parent}
+59:   $templateSource=""
+60:   if($s.PSObject.Properties.Name -contains "current_template_source" -and [string]$s.current_template_source -and (Test-Path -LiteralPath ([string]$s.current_template_source))){$templateSource=[string]$s.current_template_source}
+61:   while($true){
+62:     Clear-Host
+63:     L "CREAR PROYECTO DESDE PLANTILLA MAESTRA ORIGINAL" Cyan
+64:     L ("Nombre:           "+$safe) Gray
+65:     L ("Ruta recordada:   "+$remembered) Green
+66:     L ("Plantilla origen: "+$(if($templateSource){$templateSource}else{"NO_CONFIGURADA"})) Yellow
+67:     L ""
+68:     if([string]::IsNullOrWhiteSpace($templateSource)){throw "current_template_source_not_configured"}
+69:     L "Indica carpeta BASE donde se creara la carpeta ENGREMIAT_PROJECT_*." DarkCyan
+70:     L "Enter = usar ruta recordada | . = workspace actual | escritorio = Escritorio | ruta absoluta = usar esa ruta" DarkGray
+71:     L ""
+72:     $parentRaw=(Read-Host "Carpeta base").Trim()
+73:     if([string]::IsNullOrWhiteSpace($parentRaw)){$parentRaw=$remembered}
+74:     if($parentRaw -eq "."){$parentRaw=$Root}
+75:     if($parentRaw.ToLowerInvariant() -eq "escritorio"){$parentRaw=$desktop}
+76:     $parentRaw=[Environment]::ExpandEnvironmentVariables($parentRaw)
+77:     if(![System.IO.Path]::IsPathRooted($parentRaw)){$parentRaw=Join-Path $Root $parentRaw}
+78:     if(!(Test-Path -LiteralPath $parentRaw)){L ("WARN ruta no existe, se creara: "+$parentRaw) Yellow;New-Item -ItemType Directory -Force -Path $parentRaw|Out-Null}
+79:     $parent=(Resolve-Path -LiteralPath $parentRaw).Path
+80:     $projectName="ENGREMIAT_PROJECT_"+$safe+"_"+(Get-Date -Format "yyyyMMdd-HHmmss")
+81:     $p=Join-Path $parent $projectName
+82:     L ""
+83:     L "DESTINO FINAL DEL PROYECTO" Cyan
+84:     L $p Green
+85:     L ""
+86:     $ok=(Read-Host "Crear aqui usando plantilla maestra original? Enter/s = si | n = cambiar ruta").Trim().ToLowerInvariant()
+87:     if($ok -in @("n","no","cambiar","c")){continue}
+88:     $vault=Join-Path $p "BOVEDA_PROYECTO"
+89:     $mods=Join-Path $p "MODULOS"
+90:     $archivos=Join-Path $p "ARCHIVOS"
+91:     $plantillas=Join-Path $archivos "PLANTILLAS"
+92:     $dest=Join-Path $plantillas "OBSIDIAN_REAL_TEMPLATE_PACKAGE"
+93:     $sourceName=Split-Path $templateSource -Leaf
+94:     $destVault=Join-Path $dest $sourceName
+95:     New-Item -ItemType Directory -Force -Path $p,$vault,$mods,$archivos,$plantillas,$dest|Out-Null
+96:     Copy-Item -LiteralPath $templateSource -Destination $dest -Recurse -Force
+97:     $copiedFiles=@(Get-ChildItem -LiteralPath $destVault -Recurse -File -ErrorAction SilentlyContinue)
+98:     if($copiedFiles.Count -lt 10){throw "template_copy_incomplete files="+$copiedFiles.Count+" dest="+$destVault}
+99:     $startModule=Join-Path $mods "MODULE_inicio"
+100:     $startVault=Join-Path $startModule "BOVEDA_MODULO"
+101:     New-Item -ItemType Directory -Force -Path $startVault,(Join-Path $startVault "00_CONTROL")|Out-Null
+102:     $moduleJson=Join-Path $startVault "00_CONTROL\module.json"
+103:     if(!(Test-Path -LiteralPath $moduleJson)){[ordered]@{module="MODULE_inicio";title="Inicio";lifecycle="ACTIVE_IN_PROJECT";library_status="FROM_ORIGINAL_MASTER_TEMPLATE";objective="Arranque desde plantilla maestra original";project_path=$p;template_source=$templateSource;created_at=(Get-Date).ToString("s")}|ConvertTo-Json -Depth 20|Set-Content -LiteralPath $moduleJson -Encoding UTF8}
+104:     $manifest=Join-Path $plantillas "CURRENT_TEMPLATE_SOURCE.json"
+105:     [ordered]@{template_source_kind="OBSIDIAN_REAL_TEMPLATE_PACKAGE";template_source=$templateSource;project=$p;project_name=$projectName;destination=$destVault;copied_files=$copiedFiles.Count;selected_reason="official_original_master_template";created_at=(Get-Date).ToString("s")}|ConvertTo-Json -Depth 20|Set-Content -LiteralPath $manifest -Encoding UTF8
+106:     New-Item -ItemType Directory -Force -Path (Join-Path $vault "00_CONTROL")|Out-Null
+107:     Copy-Item -LiteralPath $manifest -Destination (Join-Path $vault "00_CONTROL\template-source.json") -Force
+108:     [ordered]@{project=$projectName;root=$p;vault=$vault;modules_dir=$mods;template_source=$templateSource;visible_templates=$plantillas;status="ACTIVE_PROJECT";created_at=(Get-Date).ToString("s")}|ConvertTo-Json -Depth 20|Set-Content -LiteralPath (Join-Path $vault "00_CONTROL\project.json") -Encoding UTF8
+109:     $required=@($destVault,$manifest,(Join-Path $vault "00_CONTROL\template-source.json"),(Join-Path $vault "00_CONTROL\project.json"),$moduleJson)
+110:     $missing=@($required|Where-Object{!(Test-Path -LiteralPath $_)})
+111:     if($missing.Count -gt 0){throw "new_project_from_original_template_missing="+($missing -join ";")}
+112:     $s=Get-State
+113:     $roots=@()
+114:     if($s.PSObject.Properties.Name -contains "project_roots" -and $s.project_roots){$roots+=@($s.project_roots)}
+115:     $roots+=$parent
+116:     $s|Add-Member -Force -NotePropertyName last_project_parent -NotePropertyValue $parent
+117:     $s|Add-Member -Force -NotePropertyName project_roots -NotePropertyValue @($roots|Where-Object{$_}|Sort-Object -Unique)
+118:     $s|Add-Member -Force -NotePropertyName current_template_source -NotePropertyValue $templateSource
+119:     Save-State $s
+120:     L ""
+
+==== FILE: C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-status.ps1 ====
+MARKER Pantallas y UX = no
+MARKER pantallas_ux = no
+MARKER ENGREMIAT_V2 = no
+MARKER ENGREMIAT / Pantallas y UX = no
+MARKER Estado: PLACEHOLDER = no
+MARKER Progreso: 10 = no
+MARKER crear pantalla real desde registry = no
+MARKER sin hijos definidos = no
+MARKER SUBPANTALLAS / HIJOS = no
+MARKER function Show = no
+MARKER Read-Host = no
+--- HITS ---
+--- FIRST 120 LINES ---
+1: param([string]$Root="C:\ENGREMIAT_CORE")
+2: $ErrorActionPreference="Stop"
+3: [Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+4: function L([string]$m,[string]$c="Gray"){Write-Host $m -ForegroundColor $c}
+5: function LastReport([string]$Dir){if(!(Test-Path $Dir)){return ""};$f=@(Get-ChildItem $Dir -File -ErrorAction SilentlyContinue|Sort-Object LastWriteTime -Descending|Select-Object -First 1);if($f.Count -gt 0){return $f[0].FullName};return ""}
+6: Write-Host "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" -ForegroundColor DarkGray
+7: 
+
+==== FILE: C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-library-import.ps1 ====
+MARKER Pantallas y UX = no
+MARKER pantallas_ux = no
+MARKER ENGREMIAT_V2 = no
+MARKER ENGREMIAT / Pantallas y UX = no
+MARKER Estado: PLACEHOLDER = no
+MARKER Progreso: 10 = no
+MARKER crear pantalla real desde registry = no
+MARKER sin hijos definidos = no
+MARKER SUBPANTALLAS / HIJOS = no
+MARKER function Show = no
+MARKER Read-Host = YES
+--- HITS ---
+L96: $choice=(Read-Host "Elige modulo(s): 1,3 o all").Trim().ToLowerInvariant()
+--- FIRST 120 LINES ---
+1: param([string]$Root="C:\ENGREMIAT_CORE")
+2: $ErrorActionPreference="Stop"
+3: [Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+4: $StateFile=Join-Path $Root "data\desktop-terminal-operator\operator-state.v1.json"
+5: function L([string]$m,[string]$c="Gray"){Write-Host $m -ForegroundColor $c}
+6: function Get-State{if(!(Test-Path -LiteralPath $StateFile)){throw "missing_state=$StateFile"};return (Get-Content -LiteralPath $StateFile -Raw -Encoding UTF8|ConvertFrom-Json)}
+7: function Save-State($s){$s|Add-Member -Force -NotePropertyName updated_at -NotePropertyValue (Get-Date).ToString("s");$s|ConvertTo-Json -Depth 100|Set-Content -LiteralPath $StateFile -Encoding UTF8}
+8: function Read-ModuleMeta([string]$ModulePath){
+9:   $candidates=@((Join-Path $ModulePath "BOVEDA_MODULO\module.json"),(Join-Path $ModulePath "00_CONTROL\module.json"),(Join-Path $ModulePath "module.json"))
+10:   foreach($p in $candidates){
+11:     if(Test-Path -LiteralPath $p){
+12:       try{return (Get-Content -LiteralPath $p -Raw -Encoding UTF8|ConvertFrom-Json)}catch{}
+13:     }
+14:   }
+15:   return $null
+16: }
+17: function Get-LibraryCandidates([string]$RootPath,[string]$ActiveProject){
+18:   $exclude=@("\\.git\\","\\node_modules\\","\\reports\\","\\data\\desktop-terminal-operator\\operator-state")
+19:   $dirs=@(Get-ChildItem -LiteralPath $RootPath -Recurse -Directory -Filter "MODULE_*" -ErrorAction SilentlyContinue)
+20:   $out=@()
+21:   foreach($d in $dirs){
+22:     $path=[string]$d.FullName
+23:     if($ActiveProject -and $path.StartsWith($ActiveProject,[System.StringComparison]::OrdinalIgnoreCase)){continue}
+24:     $skip=$false
+25:     foreach($x in $exclude){if($path -match $x){$skip=$true}}
+26:     if($skip){continue}
+27:     $meta=Read-ModuleMeta $path
+28:     $title=$d.Name
+29:     $desc=""
+30:     if($meta){
+31:       foreach($k in @("title","name","module_name","purpose","objective")){if($meta.PSObject.Properties.Name -contains $k -and [string]$meta.$k){$title=[string]$meta.$k;break}}
+32:       foreach($k in @("description","summary","objective","purpose")){if($meta.PSObject.Properties.Name -contains $k -and [string]$meta.$k){$desc=[string]$meta.$k;break}}
+33:     }
+34:     $out += [pscustomobject]@{id=$d.Name;title=$title;description=$desc;path=$path;vault=$(if(Test-Path (Join-Path $path "BOVEDA_MODULO")){Join-Path $path "BOVEDA_MODULO"}else{$path})}
+35:   }
+36:   return @($out|Sort-Object id -Unique)
+37: }
+38: function Copy-ModuleToProject($Candidate,[string]$Project){
+39:   $modsDir=Join-Path $Project "MODULOS"
+40:   New-Item -ItemType Directory -Force -Path $modsDir|Out-Null
+41:   $dest=Join-Path $modsDir $Candidate.id
+42:   if(!(Test-Path -LiteralPath $dest)){
+43:     Copy-Item -LiteralPath $Candidate.path -Destination $dest -Recurse -Force
+44:   }
+45:   $vault=Join-Path $dest "BOVEDA_MODULO"
+46:   if(!(Test-Path -LiteralPath $vault)){New-Item -ItemType Directory -Force -Path $vault|Out-Null}
+47:   $mj=Join-Path $vault "module.json"
+48:   if(Test-Path -LiteralPath $mj){
+49:     try{$meta=Get-Content -LiteralPath $mj -Raw -Encoding UTF8|ConvertFrom-Json}catch{$meta=$null}
+50:     if($meta){
+51:       $meta|Add-Member -Force -NotePropertyName lifecycle -NotePropertyValue "ACTIVE_IN_PROJECT"
+52:       $meta|Add-Member -Force -NotePropertyName library_status -NotePropertyValue "REUSED_IN_PROJECT"
+53:       $meta|Add-Member -Force -NotePropertyName project_path -NotePropertyValue $Project
+54:       $meta|ConvertTo-Json -Depth 50|Set-Content -LiteralPath $mj -Encoding UTF8
+55:     }
+56:   } else {
+57:     [ordered]@{module=$Candidate.id;lifecycle="ACTIVE_IN_PROJECT";library_status="REUSED_IN_PROJECT";project_path=$Project;source_path=$Candidate.path;created_at=(Get-Date).ToString("s")}|ConvertTo-Json -Depth 20|Set-Content -LiteralPath $mj -Encoding UTF8
+58:   }
+59:   return [pscustomobject]@{id=$Candidate.id;dest=$dest;vault=$vault}
+60: }
+61: function Parse-Selection([string]$Choice,[int]$Count){
+62:   $x=$Choice.Trim().ToLowerInvariant()
+63:   if($x -eq "all"){return @(0..($Count-1))}
+64:   $parts=@($x -split ","|ForEach-Object{$_.Trim()}|Where-Object{$_})
+65:   $idxs=@()
+66:   foreach($p in $parts){
+67:     if(!($p -match "^\d+$")){return @()}
+68:     $n=[int]$p
+69:     if($n -lt 1 -or $n -gt $Count){return @()}
+70:     $idxs+=($n-1)
+71:   }
+72:   return @($idxs|Sort-Object -Unique)
+73: }
+74: $s=Get-State
+75: $project=[string]$s.active_project
+76: if([string]::IsNullOrWhiteSpace($project) -or !(Test-Path -LiteralPath $project)){throw "no_active_project"}
+77: while($true){
+78:   Clear-Host
+79:   L "BIBLIOTECA MODULOS REUTILIZABLES" Cyan
+80:   $candidates=@(Get-LibraryCandidates -RootPath $Root -ActiveProject $project)
+81:   if($candidates.Count -eq 0){
+82:     L "WARN no hay modulos reutilizables detectados fuera del proyecto activo" Yellow
+83:   } else {
+84:     $i=1
+85:     foreach($c in $candidates){
+86:       L (" ["+$i+"] "+$c.id+" :: "+$c.title) Green
+87:       if($c.description){L ("     "+$c.description) Gray}
+88:       $i++
+89:     }
+90:   }
+91:   L " [all] importar todos" Green
+92:   L " [0] cancelar" Yellow
+93:   L ""
+94:   L "refrescar/f5/Enter = redibujar pantalla | 0/b = cancelar | ejemplo: 1,3 o all" DarkGray
+95:   L ""
+96:   $choice=(Read-Host "Elige modulo(s): 1,3 o all").Trim().ToLowerInvariant()
+97: Write-Host "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" -ForegroundColor DarkGray
+98:   if($choice -in @("0","b","a","atras","atrás","back","volver")){exit}
+99:   if($candidates.Count -eq 0){continue}
+100:   $idxs=@(Parse-Selection -Choice $choice -Count $candidates.Count)
+101:   if($idxs.Count -eq 0){
+102:     L "Seleccion no valida. Usa 1, 1,3, all o 0." Yellow
+103:     Start-Sleep -Milliseconds 900
+104:     continue
+105:   }
+106:   $imported=@()
+107:   foreach($idx in $idxs){
+108:     $imported += Copy-ModuleToProject -Candidate $candidates[$idx] -Project $project
+109:   }
+110:   $s=Get-State
+111:   if($imported.Count -eq 1){
+112:     $one=$imported[0]
+113:     $s.mode="module"
+114:     $s.active_module=[string]$one.id
+115:     $s.active_module_vault=[string]$one.vault
+116:     $s.last_command="biblioteca-import-one"
+117:     $s.next="modulo"
+118:   } else {
+119:     $s.mode="project"
+120:     $s.active_module=""
+
+==== FILE: C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-review-project.ps1 ====
+MARKER Pantallas y UX = no
+MARKER pantallas_ux = no
+MARKER ENGREMIAT_V2 = no
+MARKER ENGREMIAT / Pantallas y UX = no
+MARKER Estado: PLACEHOLDER = no
+MARKER Progreso: 10 = no
+MARKER crear pantalla real desde registry = no
+MARKER sin hijos definidos = no
+MARKER SUBPANTALLAS / HIJOS = no
+MARKER function Show = no
+MARKER Read-Host = no
+--- HITS ---
+--- FIRST 120 LINES ---
+1: Write-Host "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" -ForegroundColor DarkGray
+2: $ErrorActionPreference="Stop"
+3: [Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+4: $ScriptDir=Split-Path -Parent $MyInvocation.MyCommand.Path
+5: $Root=(Resolve-Path (Join-Path $ScriptDir "..\..")).Path
+6: Set-Location -LiteralPath $Root
+7: function L($m,$c="Gray"){Write-Host $m -ForegroundColor $c}
+8: function D($p){if(!(Test-Path -LiteralPath $p)){New-Item -ItemType Directory -Force -Path $p|Out-Null}}
+9: function W($p,[string[]]$a,$enc="UTF8"){$d=Split-Path $p -Parent;D $d;$a|Set-Content -LiteralPath $p -Encoding $enc}
+10: function J($p,$o){$d=Split-Path $p -Parent;D $d;$o|ConvertTo-Json -Depth 100|Set-Content -LiteralPath $p -Encoding UTF8}
+11: $desktop=[Environment]::GetFolderPath("Desktop")
+12: $project=Get-ChildItem -LiteralPath $desktop -Directory -Filter "ENGREMIAT_PROJECT_*" -ErrorAction SilentlyContinue|Sort-Object LastWriteTime -Descending|Select-Object -First 1
+13: if(!$project){throw "no_engremiat_project_found_on_desktop"}
+14: $projectHome=$project.FullName
+15: $projectId=Split-Path $projectHome -Leaf
+16: $masterVault=Join-Path $projectHome "BOVEDA_MAESTRA"
+17: $moduleVault=Join-Path $projectHome "MODULOS\MODULE_inicio\BOVEDA_MODULO"
+18: $systemDir=Join-Path $projectHome "_system"
+19: $reviewDir=Join-Path $systemDir "review"
+20: $globalReports=Join-Path $Root "reports\project-review-flow"
+21: $globalDash=Join-Path $Root "dashboard\project-review-flow"
+22: foreach($p in @($reviewDir,$globalReports,$globalDash)){D $p}
+23: $checks=@(
+24:   [ordered]@{id="project_home_exists";ok=(Test-Path -LiteralPath $projectHome);path=$projectHome},
+25:   [ordered]@{id="master_vault_exists";ok=(Test-Path -LiteralPath $masterVault);path=$masterVault},
+26:   [ordered]@{id="module_vault_exists";ok=(Test-Path -LiteralPath $moduleVault);path=$moduleVault},
+27:   [ordered]@{id="master_home";ok=(Test-Path -LiteralPath (Join-Path $masterVault "HOME.md"));path=(Join-Path $masterVault "HOME.md")},
+28:   [ordered]@{id="master_hub";ok=(Test-Path -LiteralPath (Join-Path $masterVault "00_HOME\MASTER_HUB.md"));path=(Join-Path $masterVault "00_HOME\MASTER_HUB.md")},
+29:   [ordered]@{id="master_modules_index";ok=(Test-Path -LiteralPath (Join-Path $masterVault "03_MODULOS\MODULES_INDEX.md"));path=(Join-Path $masterVault "03_MODULOS\MODULES_INDEX.md")},
+30:   [ordered]@{id="module_home";ok=(Test-Path -LiteralPath (Join-Path $moduleVault "HOME.md"));path=(Join-Path $moduleVault "HOME.md")},
+31:   [ordered]@{id="module_control_operativo";ok=(Test-Path -LiteralPath (Join-Path $moduleVault "00_CONTROL\OPERATIVE_CONTROL\CONTROL_OPERATIVO.md"));path=(Join-Path $moduleVault "00_CONTROL\OPERATIVE_CONTROL\CONTROL_OPERATIVO.md")},
+32:   [ordered]@{id="module_gates";ok=(Test-Path -LiteralPath (Join-Path $moduleVault "00_CONTROL\GATES\GATE_INDEX.md"));path=(Join-Path $moduleVault "00_CONTROL\GATES\GATE_INDEX.md")},
+33:   [ordered]@{id="module_work_surface";ok=(Test-Path -LiteralPath (Join-Path $moduleVault "11_SUPERFICIES_TRABAJO\WORK_SURFACE_INDEX.md"));path=(Join-Path $moduleVault "11_SUPERFICIES_TRABAJO\WORK_SURFACE_INDEX.md")}
+34: )
+35: $failed=@($checks|Where-Object{!$_.ok})
+36: $readiness=if(@($failed).Count -eq 0){100}else{[math]::Max(0,100-(@($failed).Count*10))}
+37: $recommendation=if($readiness -eq 100){"APPROVE"}elseif($readiness -ge 70){"ADJUST"}else{"BLOCK"}
+38: $gatePath=Join-Path $masterVault "04_GATES\GATE_REVIEW_PROJECT_START.md"
+39: W $gatePath @(
+40:   "# Gate humano - revisar proyecto",
+41:   "",
+42:   "## Proyecto",
+43:   $projectId,
+44:   "",
+45:   "## Estado tecnico",
+46:   "- Readiness: $readiness",
+47:   "- Recomendacion: $recommendation",
+48:   "",
+49:   "## Comprobaciones",
+50:   ($checks|ForEach-Object{"- "+$_.id+": "+$(if($_.ok){"OK"}else{"FAIL"})+" -> "+$_.path}),
+51:   "",
+52:   "## Decision humana pendiente",
+53:   "Opciones:",
+54:   "- APPROVE: aceptar estructura y pasar a definir contrato operativo del modulo.",
+55:   "- ADJUST: ajustar vision, enlaces o modulo antes de avanzar.",
+56:   "- BLOCK: detener porque la estructura base no sirve.",
+57:   "",
+58:   "## Seguridad",
+59:   "- worker_real=False",
+60:   "- git=False",
+61:   "- network=False"
+62: )
+63: $reviewMd=Join-Path $reviewDir "PROJECT_REVIEW.md"
+64: W $reviewMd @(
+65:   "# Revision de proyecto ENGREMIAT",
+66:   "",
+67:   "## Proyecto",
+68:   $projectHome,
+69:   "",
+70:   "## Boveda maestra",
+71:   $masterVault,
+72:   "",
+73:   "## Boveda modulo inicio",
+74:   $moduleVault,
+75:   "",
+76:   "## Readiness",
+77:   "$readiness",
+78:   "",
+79:   "## Recomendacion",
+80:   "$recommendation",
+81:   "",
+82:   "## Siguiente paso",
+83:   $(if($recommendation -eq "APPROVE"){"E03_DEFINE_MODULE_OPERATIVE_CONTRACT"}elseif($recommendation -eq "ADJUST"){"E02B_ADJUST_PROJECT_STRUCTURE"}else{"E02C_BLOCK_AND_REPORT"})
+84: )
+85: $report=[ordered]@{
+86:   package_id="ENGREMIAT_PROJECT_REVIEW_FLOW_001"
+87:   stage="E02_COMMAND_REVISAR_PROYECTO_RUNTIME"
+88:   status="PASS"
+89:   readiness=$readiness
+90:   recommendation=$recommendation
+91:   project_home=$projectHome
+92:   master_vault=$masterVault
+93:   module_vault=$moduleVault
+94:   gate=$gatePath
+95:   review=$reviewMd
+96:   checks=$checks
+97:   failed_checks=$failed
+98:   safety=[ordered]@{local_only=$true;read_review_only=$true;writes_gate_and_report=$true;worker_real=$false;git=$false;network=$false}
+99:   next=if($recommendation -eq "APPROVE"){"E03_DEFINE_MODULE_OPERATIVE_CONTRACT"}elseif($recommendation -eq "ADJUST"){"E02B_ADJUST_PROJECT_STRUCTURE"}else{"E02C_BLOCK_AND_REPORT"}
+100: }
+101: $reportPath=Join-Path $globalReports ("e02-project-review-"+$projectId+".json")
+102: J $reportPath $report
+103: J (Join-Path $reviewDir "project-review-report.json") $report
+104: $html=Join-Path $globalDash ("e02-project-review-"+$projectId+".html")
+105: W $html @(
+106:   "<!doctype html><html lang='es'><head><meta charset='utf-8'><title>ENGREMIAT Review</title></head><body>",
+107:   "<h1>Revision de proyecto</h1>",
+108:   "<p>Proyecto: $projectHome</p>",
+109:   "<p>Readiness: $readiness</p>",
+110:   "<p>Recomendacion: $recommendation</p>",
+111:   "<p>Gate: $gatePath</p>",
+112:   "<p>Next: $($report.next)</p>",
+113:   "</body></html>"
+114: )
+115: Start-Process $html
+116: L "OK project_review=True readiness=$readiness recommendation=$recommendation project=$projectHome gate=$gatePath report=$reportPath next=$($report.next)" Green
+117: 
+
+==== FILE: C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-module-smoke.ps1 ====
+MARKER Pantallas y UX = no
+MARKER pantallas_ux = no
+MARKER ENGREMIAT_V2 = no
+MARKER ENGREMIAT / Pantallas y UX = no
+MARKER Estado: PLACEHOLDER = no
+MARKER Progreso: 10 = no
+MARKER crear pantalla real desde registry = no
+MARKER sin hijos definidos = no
+MARKER SUBPANTALLAS / HIJOS = no
+MARKER function Show = no
+MARKER Read-Host = no
+--- HITS ---
+--- FIRST 120 LINES ---
+1: $ErrorActionPreference="Stop"
+2: [Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+3: $Root=(Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
+4: $StatePath=Join-Path $Root "data\operator-state\active-context.json"
+5: function L($m,$c="Gray"){Write-Host $m -ForegroundColor $c}
+6: if(!(Test-Path -LiteralPath $StatePath)){throw "no_active_context"}
+7: $s=Get-Content -LiteralPath $StatePath -Raw -Encoding UTF8|ConvertFrom-Json
+8: if([string]::IsNullOrWhiteSpace([string]$s.active_project)){throw "no_active_project"}
+9: if([string]::IsNullOrWhiteSpace([string]$s.active_module)){throw "no_active_module"}
+10: $vault=[string]$s.active_module_vault
+11: $modulePath=Split-Path $vault -Parent
+12: $checks=@()
+13: function Check($name,$ok,$detail){$script:checks+=[pscustomobject]@{check=$name;ok=[bool]$ok;detail=$detail}}
+14: Check "project_exists" (Test-Path -LiteralPath $s.active_project) $s.active_project
+15: Check "module_path_exists" (Test-Path -LiteralPath $modulePath) $modulePath
+16: Check "vault_exists" (Test-Path -LiteralPath $vault) $vault
+17: foreach($f in @("module.json","CONTRATO.md","TAREAS.md","EVIDENCIAS.md","GATES.md")){Check ("artifact_"+$f) (Test-Path -LiteralPath (Join-Path $vault $f)) (Join-Path $vault $f)}
+18: $moduleJson=Join-Path $vault "module.json"
+19: if(Test-Path -LiteralPath $moduleJson){try{$mj=Get-Content -LiteralPath $moduleJson -Raw -Encoding UTF8|ConvertFrom-Json;Check "module_json_project_binding" ([string]$mj.project_path -eq [string]$s.active_project) ([string]$mj.project_path);Check "module_json_lifecycle" ([string]$mj.lifecycle -eq "ACTIVE_IN_PROJECT") ([string]$mj.lifecycle)}catch{Check "module_json_parse" $false $_.Exception.Message}}else{Check "module_json_parse" $false "missing"}
+20: $ok=@($checks|Where-Object{!$_.ok}).Count -eq 0
+21: $smokeDir=Join-Path $Root "reports\module-smoke"
+22: New-Item -ItemType Directory -Force -Path $smokeDir|Out-Null
+23: $report=Join-Path $smokeDir ("module-smoke-"+$s.active_module+"-"+(Get-Date -Format yyyyMMddHHmmss)+".json")
+24: [pscustomobject]@{status=if($ok){"PASS"}else{"FAIL"};project=$s.active_project;module=$s.active_module;module_path=$modulePath;vault=$vault;checks=$checks;created_at=(Get-Date).ToString("s")}|ConvertTo-Json -Depth 10|Set-Content -LiteralPath $report -Encoding UTF8
+25: $ev=Join-Path $vault "EVIDENCIAS.md"
+26: Add-Content -LiteralPath $ev -Encoding UTF8 -Value ("`r`n## Smoke "+(Get-Date).ToString("s")+"`r`n- status: "+$(if($ok){"PASS"}else{"FAIL"})+"`r`n- report: "+$report+"`r`n")
+27: L "SMOKE MODULO" Cyan
+28: L ("status="+$(if($ok){"PASS"}else{"FAIL"})) $(if($ok){"Green"}else{"Red"})
+29: $checks|ForEach-Object{L (($(if($_.ok){"OK "}else{"ERR "}))+$_.check+" -> "+$_.detail) $(if($_.ok){"Green"}else{"Red"})}
+30: L ("report="+$report) Cyan
+31: if(!$ok){exit 1}
+
+==== FILE: C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-module-artifact.ps1 ====
+MARKER Pantallas y UX = no
+MARKER pantallas_ux = no
+MARKER ENGREMIAT_V2 = no
+MARKER ENGREMIAT / Pantallas y UX = no
+MARKER Estado: PLACEHOLDER = no
+MARKER Progreso: 10 = no
+MARKER crear pantalla real desde registry = no
+MARKER sin hijos definidos = no
+MARKER SUBPANTALLAS / HIJOS = no
+MARKER function Show = no
+MARKER Read-Host = no
+--- HITS ---
+--- FIRST 120 LINES ---
+1: Write-Host "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" -ForegroundColor DarkGray
+2: $ErrorActionPreference="Stop"
+3: [Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+4: $Root=(Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
+5: $StatePath=Join-Path $Root "data\operator-state\active-context.json"
+6: function L($m,$c="Gray"){Write-Host $m -ForegroundColor $c}
+7: function D($p){if(!(Test-Path -LiteralPath $p)){New-Item -ItemType Directory -Force -Path $p|Out-Null}}
+8: if(!(Test-Path -LiteralPath $StatePath)){throw "no_active_context"}
+9: $s=Get-Content -LiteralPath $StatePath -Raw -Encoding UTF8|ConvertFrom-Json
+10: if([string]::IsNullOrWhiteSpace([string]$s.active_module_vault)){throw "no_active_module_vault"}
+11: $kind=if($args.Count -gt 0){([string]$args[0]).Trim().ToLowerInvariant()}else{"contrato"}
+12: $map=@{contrato="CONTRATO.md";tareas="TAREAS.md";evidencias="EVIDENCIAS.md";gates="GATES.md"}
+13: if(!$map.ContainsKey($kind)){throw "unknown_artifact=$kind"}
+14: $vault=[string]$s.active_module_vault
+15: D $vault
+16: $file=Join-Path $vault $map[$kind]
+17: if(!(Test-Path -LiteralPath $file)){
+18:   $title=$kind.ToUpperInvariant()
+19:   Set-Content -LiteralPath $file -Encoding UTF8 -Value "# $title $($s.active_module)`r`n`r`nProyecto: $($s.active_project)`r`nModulo: $($s.active_module)`r`nEstado: ACTIVE_IN_PROJECT`r`n`r`nPendiente de completar.`r`n"
+20:   L ("OK created="+$file) Green
+21: }
+22: L ("ARTEFACTO "+$kind.ToUpperInvariant()) Cyan
+23: L ("file="+$file) DarkCyan
+24: L "----------------------------------------" DarkGray
+25: Get-Content -LiteralPath $file -Encoding UTF8 | Select-Object -First 80 | ForEach-Object{Write-Host $_}
+26: L "----------------------------------------" DarkGray
+27: L ("NEXT editar archivo o continuar: modulo | tareas | evidencias | gates | preparar-smoke") Magenta
+28: 
+
+==== FILE: C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-module-objective.ps1 ====
+MARKER Pantallas y UX = no
+MARKER pantallas_ux = no
+MARKER ENGREMIAT_V2 = no
+MARKER ENGREMIAT / Pantallas y UX = no
+MARKER Estado: PLACEHOLDER = no
+MARKER Progreso: 10 = no
+MARKER crear pantalla real desde registry = no
+MARKER sin hijos definidos = no
+MARKER SUBPANTALLAS / HIJOS = no
+MARKER function Show = no
+MARKER Read-Host = YES
+--- HITS ---
+L13: $objective=Read-Host "Objetivo del modulo"
+--- FIRST 120 LINES ---
+1: Write-Host "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" -ForegroundColor DarkGray
+2: $ErrorActionPreference="Stop"
+3: [Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+4: $Root=(Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
+5: $StatePath=Join-Path $Root "data\operator-state\active-context.json"
+6: function L($m,$c="Gray"){Write-Host $m -ForegroundColor $c}
+7: function D($p){if(!(Test-Path -LiteralPath $p)){New-Item -ItemType Directory -Force -Path $p|Out-Null}}
+8: if(!(Test-Path -LiteralPath $StatePath)){throw "no_active_context"}
+9: $s=Get-Content -LiteralPath $StatePath -Raw -Encoding UTF8|ConvertFrom-Json
+10: if([string]::IsNullOrWhiteSpace([string]$s.active_module_vault)){throw "no_active_module_vault"}
+11: $vault=[string]$s.active_module_vault
+12: $module=[string]$s.active_module
+13: $objective=Read-Host "Objetivo del modulo"
+14: if([string]::IsNullOrWhiteSpace($objective)){throw "objective_empty"}
+15: $contract=Join-Path $vault "CONTRATO.md"
+16: $tasks=Join-Path $vault "TAREAS.md"
+17: $json=Join-Path $vault "module.json"
+18: D $vault
+19: $contractLines=@("# CONTRATO $module","","Proyecto vinculado: $($s.active_project)","Modulo: $((Split-Path $vault -Parent))","Estado: ACTIVE_IN_PROJECT","","## Objetivo",$objective,"","## Criterio de cierre","El modulo podra cerrarse cuando el objetivo este implementado, validado con smoke y registrado en evidencias.","")
+20: Set-Content -LiteralPath $contract -Encoding UTF8 -Value $contractLines
+21: if(!(Test-Path -LiteralPath $tasks)){Set-Content -LiteralPath $tasks -Encoding UTF8 -Value @("# TAREAS $module","")}
+22: Add-Content -LiteralPath $tasks -Encoding UTF8 -Value @("","## Objetivo definido $(Get-Date -Format s)","- [ ] $objective","- [ ] Validar smoke del modulo.","- [ ] Registrar evidencia de cierre.")
+23: if(Test-Path -LiteralPath $json){try{$mj=Get-Content -LiteralPath $json -Raw -Encoding UTF8|ConvertFrom-Json}catch{$mj=[pscustomobject]@{}}}else{$mj=[pscustomobject]@{}}
+24: $mj|Add-Member -Force -NotePropertyName objective -NotePropertyValue $objective
+25: $mj|Add-Member -Force -NotePropertyName objective_status -NotePropertyValue "DEFINED"
+26: $mj|Add-Member -Force -NotePropertyName updated_at -NotePropertyValue (Get-Date).ToString("s")
+27: $mj|ConvertTo-Json -Depth 20|Set-Content -LiteralPath $json -Encoding UTF8
+28: if($s.PSObject.Properties.Name -contains "active_module_context" -and $s.active_module_context){$s.active_module_context|Add-Member -Force -NotePropertyName objective -NotePropertyValue $objective;$s.active_module_context|Add-Member -Force -NotePropertyName objective_status -NotePropertyValue "DEFINED"}
+29: $s|ConvertTo-Json -Depth 100|Set-Content -LiteralPath $StatePath -Encoding UTF8
+30: L "OK objetivo_definido=True" Green
+31: L ("module="+$module) Cyan
+32: L ("objective="+$objective) Cyan
+33: L ("contract="+$contract) Cyan
+34: L ("tasks="+$tasks) Cyan
+35: L ("module_json="+$json) Cyan
+36: L "NEXT ejecuta 1 para ver contrato o 5 para smoke" Magenta
+37: 
+
+==== FILE: C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-module-edit.ps1 ====
+MARKER Pantallas y UX = no
+MARKER pantallas_ux = no
+MARKER ENGREMIAT_V2 = no
+MARKER ENGREMIAT / Pantallas y UX = no
+MARKER Estado: PLACEHOLDER = no
+MARKER Progreso: 10 = no
+MARKER crear pantalla real desde registry = no
+MARKER sin hijos definidos = no
+MARKER SUBPANTALLAS / HIJOS = no
+MARKER function Show = no
+MARKER Read-Host = YES
+--- HITS ---
+L13: if([string]::IsNullOrWhiteSpace($kind)){L "EDITAR ARTEFACTO" Cyan;L " [1] Contrato" Green;L " [2] Tareas" Green;L " [3] Evidencias" Green;L " [4] Gates" Green;$kind=(Read-Host "Elige artefacto").Trim().ToLowerInvariant()}
+--- FIRST 120 LINES ---
+1: Write-Host "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" -ForegroundColor DarkGray
+2: $ErrorActionPreference="Stop"
+3: [Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+4: $Root=(Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
+5: $StatePath=Join-Path $Root "data\operator-state\active-context.json"
+6: function L($m,$c="Gray"){Write-Host $m -ForegroundColor $c}
+7: if(!(Test-Path -LiteralPath $StatePath)){throw "no_active_context"}
+8: $s=Get-Content -LiteralPath $StatePath -Raw -Encoding UTF8|ConvertFrom-Json
+9: if([string]::IsNullOrWhiteSpace([string]$s.active_module_vault)){throw "no_active_module_vault"}
+10: $vault=[string]$s.active_module_vault
+11: $map=@{ "1"="CONTRATO.md"; "contrato"="CONTRATO.md"; "c"="CONTRATO.md"; "2"="TAREAS.md"; "tareas"="TAREAS.md"; "t"="TAREAS.md"; "3"="EVIDENCIAS.md"; "evidencias"="EVIDENCIAS.md"; "ev"="EVIDENCIAS.md"; "4"="GATES.md"; "gates"="GATES.md"; "g"="GATES.md" }
+12: $kind=if($args.Count -gt 0){([string]$args[0]).Trim().ToLowerInvariant()}else{""}
+13: if([string]::IsNullOrWhiteSpace($kind)){L "EDITAR ARTEFACTO" Cyan;L " [1] Contrato" Green;L " [2] Tareas" Green;L " [3] Evidencias" Green;L " [4] Gates" Green;$kind=(Read-Host "Elige artefacto").Trim().ToLowerInvariant()}
+14: if(!$map.ContainsKey($kind)){throw "unknown_artifact=$kind"}
+15: $file=Join-Path $vault $map[$kind]
+16: if(!(Test-Path -LiteralPath $file)){& powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot "eng-module-artifact.ps1") ($map[$kind].Replace(".md","").ToLowerInvariant()) | Out-Null}
+17: L ("OPEN editor="+$file) Cyan
+18: Start-Process notepad.exe -ArgumentList @($file)
+19: L "OK editor_abierto=True" Green
+20: L "NEXT guarda el archivo en Notepad y vuelve al launcher; Enter refresca pantalla limpia" Magenta
+21: 
+
+==== FILE: C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-module-close.ps1 ====
+MARKER Pantallas y UX = no
+MARKER pantallas_ux = no
+MARKER ENGREMIAT_V2 = no
+MARKER ENGREMIAT / Pantallas y UX = no
+MARKER Estado: PLACEHOLDER = no
+MARKER Progreso: 10 = no
+MARKER crear pantalla real desde registry = no
+MARKER sin hijos definidos = no
+MARKER SUBPANTALLAS / HIJOS = no
+MARKER function Show = no
+MARKER Read-Host = no
+--- HITS ---
+--- FIRST 120 LINES ---
+1: $ErrorActionPreference="Stop"
+2: [Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+3: $Root=(Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
+4: $StatePath=Join-Path $Root "data\operator-state\active-context.json"
+5: function L($m,$c="Gray"){Write-Host $m -ForegroundColor $c}
+6: if(!(Test-Path -LiteralPath $StatePath)){throw "no_active_context"}
+7: $s=Get-Content -LiteralPath $StatePath -Raw -Encoding UTF8|ConvertFrom-Json
+8: if([string]::IsNullOrWhiteSpace([string]$s.active_module_vault)){throw "no_active_module_vault"}
+9: $vault=[string]$s.active_module_vault
+10: $module=[string]$s.active_module
+11: $moduleJson=Join-Path $vault "module.json"
+12: $evidence=Join-Path $vault "EVIDENCIAS.md"
+13: $gates=Join-Path $vault "GATES.md"
+14: if(!(Test-Path -LiteralPath $moduleJson)){throw "missing_module_json"}
+15: $mj=Get-Content -LiteralPath $moduleJson -Raw -Encoding UTF8|ConvertFrom-Json
+16: $objective=if($mj.PSObject.Properties.Name -contains "objective"){[string]$mj.objective}else{""}
+17: if([string]::IsNullOrWhiteSpace($objective)){throw "objective_not_defined"}
+18: $smokeDir=Join-Path $Root "reports\module-smoke"
+19: $lastSmoke=Get-ChildItem -LiteralPath $smokeDir -Filter ("module-smoke-"+$module+"-*.json") -File -ErrorAction SilentlyContinue|Sort-Object LastWriteTime -Descending|Select-Object -First 1
+20: if(!$lastSmoke){throw "no_smoke_report_found"}
+21: $sr=Get-Content -LiteralPath $lastSmoke.FullName -Raw -Encoding UTF8|ConvertFrom-Json
+22: if([string]$sr.status -ne "PASS"){throw "last_smoke_not_pass report=$($lastSmoke.FullName)"}
+23: $now=Get-Date -Format s
+24: $mj|Add-Member -Force -NotePropertyName lifecycle -NotePropertyValue "OBJECTIVE_COMPLETED"
+25: $mj|Add-Member -Force -NotePropertyName objective_status -NotePropertyValue "COMPLETED"
+26: $mj|Add-Member -Force -NotePropertyName reusable -NotePropertyValue $false
+27: $mj|Add-Member -Force -NotePropertyName library_status -NotePropertyValue "CANDIDATE_NOT_PROMOTED"
+28: $mj|Add-Member -Force -NotePropertyName completed_at -NotePropertyValue $now
+29: $mj|Add-Member -Force -NotePropertyName last_smoke_report -NotePropertyValue $lastSmoke.FullName
+30: $mj|ConvertTo-Json -Depth 30|Set-Content -LiteralPath $moduleJson -Encoding UTF8
+31: Add-Content -LiteralPath $evidence -Encoding UTF8 -Value @("","## Cierre objetivo $now","- status: OBJECTIVE_COMPLETED","- objective: $objective","- smoke: $($lastSmoke.FullName)","- library_status: CANDIDATE_NOT_PROMOTED")
+32: Add-Content -LiteralPath $gates -Encoding UTF8 -Value @("","## Gate cierre $now","- [x] Objetivo definido: $objective","- [x] Smoke PASS: $($lastSmoke.FullName)","- [x] Modulo cerrado como OBJECTIVE_COMPLETED","- [ ] Promocion a biblioteca reutilizable pendiente")
+33: if($s.PSObject.Properties.Name -contains "active_module_context" -and $s.active_module_context){$s.active_module_context|Add-Member -Force -NotePropertyName lifecycle -NotePropertyValue "OBJECTIVE_COMPLETED";$s.active_module_context|Add-Member -Force -NotePropertyName objective_status -NotePropertyValue "COMPLETED";$s.active_module_context|Add-Member -Force -NotePropertyName library_status -NotePropertyValue "CANDIDATE_NOT_PROMOTED";$s.active_module_context|Add-Member -Force -NotePropertyName completed_at -NotePropertyValue $now}
+34: $s|ConvertTo-Json -Depth 100|Set-Content -LiteralPath $StatePath -Encoding UTF8
+35: $closeDir=Join-Path $Root "reports\operator-context-decision-tree"
+36: New-Item -ItemType Directory -Force -Path $closeDir|Out-Null
+37: $closeReport=Join-Path $closeDir ("e06c-module-close-"+$module+"-"+(Get-Date -Format yyyyMMddHHmmss)+".json")
+38: [pscustomobject]@{package_id="ENGREMIAT_OPERATOR_CONTEXT_AND_DECISION_TREE_001";stage="E06C_CLOSE_MODULE_OBJECTIVE";status="PASS";module=$module;objective=$objective;lifecycle="OBJECTIVE_COMPLETED";objective_status="COMPLETED";last_smoke_report=$lastSmoke.FullName;library_status="CANDIDATE_NOT_PROMOTED";closed_at=$now}|ConvertTo-Json -Depth 10|Set-Content -LiteralPath $closeReport -Encoding UTF8
+39: L "OK modulo_cerrado=True" Green
+40: L ("module="+$module) Cyan
+41: L ("objective="+$objective) Cyan
+42: L ("lifecycle=OBJECTIVE_COMPLETED") Green
+43: L ("smoke="+$lastSmoke.FullName) Cyan
+44: L ("report="+$closeReport) Cyan
+45: L "NEXT 3 evidencias | 4 gates | siguiente: promover a biblioteca reutilizable si procede" Magenta
+
+==== FILE: C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-module-promote.ps1 ====
+MARKER Pantallas y UX = no
+MARKER pantallas_ux = no
+MARKER ENGREMIAT_V2 = no
+MARKER ENGREMIAT / Pantallas y UX = no
+MARKER Estado: PLACEHOLDER = no
+MARKER Progreso: 10 = no
+MARKER crear pantalla real desde registry = no
+MARKER sin hijos definidos = no
+MARKER SUBPANTALLAS / HIJOS = no
+MARKER function Show = no
+MARKER Read-Host = no
+--- HITS ---
+--- FIRST 120 LINES ---
+1: Write-Host "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" -ForegroundColor DarkGray
+2: $ErrorActionPreference="Stop"
+3: [Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
+4: $Root=(Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
+5: $StatePath=Join-Path $Root "data\operator-state\active-context.json"
+6: $LibRoot=Join-Path $Root "library\reusable-modules"
+7: function L($m,$c="Gray"){Write-Host $m -ForegroundColor $c}
+8: function CopyDir($src,$dst){if(Test-Path -LiteralPath $dst){Remove-Item -LiteralPath $dst -Recurse -Force};New-Item -ItemType Directory -Force -Path $dst|Out-Null;Copy-Item -LiteralPath (Join-Path $src "*") -Destination $dst -Recurse -Force}
+9: if(!(Test-Path -LiteralPath $StatePath)){throw "no_active_context"}
+10: $s=Get-Content -LiteralPath $StatePath -Raw -Encoding UTF8|ConvertFrom-Json
+11: if([string]::IsNullOrWhiteSpace([string]$s.active_module_vault)){throw "no_active_module_vault"}
+12: $vault=[string]$s.active_module_vault
+13: $module=[string]$s.active_module
+14: $modulePath=Split-Path $vault -Parent
+15: $moduleJson=Join-Path $vault "module.json"
+16: $evidence=Join-Path $vault "EVIDENCIAS.md"
+17: $gates=Join-Path $vault "GATES.md"
+18: if(!(Test-Path -LiteralPath $moduleJson)){throw "missing_module_json"}
+19: $mj=Get-Content -LiteralPath $moduleJson -Raw -Encoding UTF8|ConvertFrom-Json
+20: if([string]$mj.lifecycle -ne "OBJECTIVE_COMPLETED"){throw "module_not_completed lifecycle=$($mj.lifecycle)"}
+21: $objective=if($mj.PSObject.Properties.Name -contains "objective"){[string]$mj.objective}else{""}
+22: if([string]::IsNullOrWhiteSpace($objective)){throw "objective_not_defined"}
+23: $safeName=($module -replace "[^A-Za-z0-9_\-]","_")
+24: $dest=Join-Path $LibRoot ($safeName+"_"+(Get-Date -Format yyyyMMddHHmmss))
+25: CopyDir $modulePath $dest
+26: $now=Get-Date -Format s
+27: $mj|Add-Member -Force -NotePropertyName reusable -NotePropertyValue $true
+28: $mj|Add-Member -Force -NotePropertyName library_status -NotePropertyValue "PROMOTED_TO_LIBRARY_CANDIDATE"
+29: $mj|Add-Member -Force -NotePropertyName promoted_at -NotePropertyValue $now
+30: $mj|Add-Member -Force -NotePropertyName library_snapshot_path -NotePropertyValue $dest
+31: $mj|ConvertTo-Json -Depth 30|Set-Content -LiteralPath $moduleJson -Encoding UTF8
+32: Add-Content -LiteralPath $evidence -Encoding UTF8 -Value @("","## Promocion biblioteca $now","- status: PROMOTED_TO_LIBRARY_CANDIDATE","- objective: $objective","- snapshot: $dest")
+33: Add-Content -LiteralPath $gates -Encoding UTF8 -Value @("","## Gate biblioteca $now","- [x] Modulo cerrado como OBJECTIVE_COMPLETED","- [x] Snapshot copiado a biblioteca reutilizable","- [x] Estado: PROMOTED_TO_LIBRARY_CANDIDATE")
+34: if($s.PSObject.Properties.Name -contains "active_module_context" -and $s.active_module_context){$s.active_module_context|Add-Member -Force -NotePropertyName reusable -NotePropertyValue $true;$s.active_module_context|Add-Member -Force -NotePropertyName library_status -NotePropertyValue "PROMOTED_TO_LIBRARY_CANDIDATE";$s.active_module_context|Add-Member -Force -NotePropertyName library_snapshot_path -NotePropertyValue $dest;$s.active_module_context|Add-Member -Force -NotePropertyName promoted_at -NotePropertyValue $now}
+35: $s|ConvertTo-Json -Depth 100|Set-Content -LiteralPath $StatePath -Encoding UTF8
+36: $reportDir=Join-Path $Root "reports\operator-context-decision-tree"
+37: New-Item -ItemType Directory -Force -Path $reportDir|Out-Null
+38: $report=Join-Path $reportDir ("e06d-module-promote-"+$module+"-"+(Get-Date -Format yyyyMMddHHmmss)+".json")
+39: [pscustomobject]@{package_id="ENGREMIAT_OPERATOR_CONTEXT_AND_DECISION_TREE_001";stage="E06D_PROMOTE_MODULE_TO_LIBRARY_CANDIDATE";status="PASS";module=$module;objective=$objective;library_status="PROMOTED_TO_LIBRARY_CANDIDATE";snapshot=$dest;promoted_at=$now}|ConvertTo-Json -Depth 10|Set-Content -LiteralPath $report -Encoding UTF8
+40: L "OK modulo_promovido=True" Green
+41: L ("module="+$module) Cyan
+42: L ("library_status=PROMOTED_TO_LIBRARY_CANDIDATE") Green
+43: L ("snapshot="+$dest) Cyan
+44: L ("report="+$report) Cyan
+45: L "NEXT 3 evidencias | 4 gates | cierre E06" Magenta
+46: 
+

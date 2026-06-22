@@ -1,0 +1,353 @@
+﻿REPORT=C:\ENGREMIAT_CORE\reports\operator-v2-screen-architecture\e05m-active-renderer-only-readonly-20260621-180854.txt
+ACTIVE_FILES=348
+HITS=311
+
+CANDIDATOS_ACTIVOS:
+CANDIDATE count=21 file=C:\ENGREMIAT_CORE\tools\launcher\ENGREMIAT-MEMORY-DOCUMENTATION-CENTER.ps1
+CANDIDATE count=18 file=C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-module-workspace-screen.ps1
+CANDIDATE count=16 file=C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-project-modules-screen.ps1
+CANDIDATE count=15 file=C:\ENGREMIAT_CORE\tools\launcher\ENGREMIAT-INICIO-NORMALIZED.ps1
+CANDIDATE count=15 file=C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-module-cards-screen.ps1
+CANDIDATE count=14 file=C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-module-library-screen.ps1
+CANDIDATE count=14 file=C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-projects-manager.ps1
+CANDIDATE count=14 file=C:\ENGREMIAT_CORE\tools\launcher\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1
+CANDIDATE count=12 file=C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-context.ps1
+CANDIDATE count=11 file=C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\Start-EngremiatDesktopOperator.ps1
+CANDIDATE count=11 file=C:\ENGREMIAT_CORE\tools\launcher\ENGREMIAT-INICIO.ps1
+CANDIDATE count=9 file=C:\ENGREMIAT_CORE\tools\launcher\ENGREMIAT-CARD-DETAIL-VIEW-NORMALIZED.ps1
+CANDIDATE count=9 file=C:\ENGREMIAT_CORE\tools\screen-normalizer\screen-normalizer.ps1
+CANDIDATE count=8 file=C:\ENGREMIAT_CORE\tools\launcher\ENGREMIAT-LAUNCHER-ACTUAL.ps1
+CANDIDATE count=7 file=C:\ENGREMIAT_CORE\tools\launcher\ENGREMIAT-NAVIGATION-VIEWER.ps1
+CANDIDATE count=7 file=C:\ENGREMIAT_CORE\tools\human-card-assistant.ps1
+CANDIDATE count=6 file=C:\ENGREMIAT_CORE\ENGREMIAT.ps1
+CANDIDATE count=6 file=C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-new-module.ps1
+CANDIDATE count=5 file=C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-new-project.ps1
+CANDIDATE count=5 file=C:\ENGREMIAT_CORE\tools\data-intake.ps1
+
+SNIPPETS_ACTIVOS:
+--- FILE=C:\ENGREMIAT_CORE\tools\launcher\ENGREMIAT-MEMORY-DOCUMENTATION-CENTER.ps1 lines=5..60 ---
+5: 
+6: $Core = "C:\ENGREMIAT_CORE"
+7: $DocDir = Join-Path $Core "documents"
+8: $ReportDir = Join-Path $Core "reports\launcher"
+9: New-Item -ItemType Directory -Force -Path $DocDir,$ReportDir | Out-Null
+10: foreach($d in @("technical","executive","development","grants","partners","clients","worker","exports")){
+11:   New-Item -ItemType Directory -Force -Path (Join-Path $DocDir $d) | Out-Null
+12: }
+13: 
+14: function W($m,$c="White"){ Write-Host $m -ForegroundColor $c }
+15: function Pause-Eng(){ [void](Read-Host "Enter") }
+16: 
+17: function Get-ActiveProject {
+18:   $j = Join-Path $Core "data\desktop-terminal-operator\active-project.json"
+19:   $t = Join-Path $Core "data\desktop-terminal-operator\active-project.txt"
+20:   if(Test-Path $j){
+21:     try{
+22:       $x = Get-Content $j -Raw | ConvertFrom-Json
+23:       if($x.active_project -and (Test-Path ([string]$x.active_project))){ return [string]$x.active_project }
+24:     } catch {}
+25:   }
+26:   if(Test-Path $t){
+27:     $v = (Get-Content $t -Raw).Trim()
+28:     if(Test-Path $v){ return $v }
+29:   }
+30:   return ""
+31: }
+32: 
+33: function Normalize-Status($s){
+34:   $v = ([string]$s).Trim().ToUpperInvariant()
+35:   if($v -eq "ACTIVE" -or $v -eq "ACTIVO"){ return "ACTIVO" }
+36:   if($v -eq "INACTIVE" -or $v -eq "INACTIVO" -or $v -eq "DISABLED" -or $v -eq "DESACTIVADO"){ return "INACTIVO" }
+37:   if($v -eq "HISTORIC" -or $v -eq "HISTORICAL" -or $v -eq "HISTORICO" -or $v -eq "HISTÓRICO"){ return "HISTORICO" }
+38:   if([string]::IsNullOrWhiteSpace($v)){ return "ACTIVO" }
+39:   return $v
+40: }
+41: 
+42: function Get-ModuleStatus($dir){
+43:   $mj = Join-Path $dir "module.json"
+44:   if(Test-Path $mj){
+45:     try{
+46:       $x = Get-Content $mj -Raw | ConvertFrom-Json
+47:       if($x.status){ return Normalize-Status $x.status }
+48:     } catch {}
+49:   }
+50:   return "ACTIVO"
+51: }
+52: 
+53: function Count-Dirs($path){
+54:   if(Test-Path $path){ return @((Get-ChildItem $path -Directory -ErrorAction SilentlyContinue)).Count }
+55:   return 0
+56: }
+57: 
+58: function Get-LibraryCounts {
+59:   $lib = Join-Path $Core "library\modules"
+60:   $hist = Join-Path $Core "library\modules_historico"
+--- FILE=C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-module-workspace-screen.ps1 lines=1..54 ---
+1: param(
+2:   [string]$ProjectPath="",
+3:   [string]$ModulePath=""
+4: )
+5: 
+6: $ErrorActionPreference="Stop"
+7: 
+8: function W($m,$c="White"){ Write-Host $m -ForegroundColor $c }
+9: function P(){ [void](Read-Host "Enter") }
+10: function Now(){ return (Get-Date).ToString("s") }
+11: function SafeName($s){ return (($s.Trim()) -replace "[^\w\.-]","_") }
+12: 
+13: function ActiveProject([string]$p){
+14:   if($p -and (Test-Path $p)){ return $p }
+15:   $j="C:\ENGREMIAT_CORE\data\desktop-terminal-operator\active-project.json"
+16:   $t="C:\ENGREMIAT_CORE\data\desktop-terminal-operator\active-project.txt"
+17:   if(Test-Path $j){
+18:     $x=Get-Content $j -Raw | ConvertFrom-Json
+19:     if($x.active_project -and (Test-Path ([string]$x.active_project))){ return [string]$x.active_project }
+20:   }
+21:   if(Test-Path $t){
+22:     $y=(Get-Content $t -Raw).Trim()
+23:     if(Test-Path $y){ return $y }
+24:   }
+25:   throw "active_project_missing"
+26: }
+27: 
+28: function ReadJsonOrDefault($path,$default){
+29:   if(Test-Path $path){
+30:     try { return Get-Content $path -Raw | ConvertFrom-Json }
+31:     catch { return $default }
+32:   }
+33:   return $default
+34: }
+35: 
+36: function SaveJson($path,$obj){
+37:   $dir=Split-Path $path
+38:   New-Item -ItemType Directory -Force -Path $dir | Out-Null
+39:   $obj | ConvertTo-Json -Depth 40 | Set-Content $path -Encoding UTF8
+40: }
+41: 
+42: function ReadMod($dir){
+43:   $mj=Join-Path $dir "module.json"
+44:   if(Test-Path $mj){
+45:     try { return Get-Content $mj -Raw | ConvertFrom-Json }
+46:     catch { return [pscustomobject]@{ id=(Split-Path $dir -Leaf); name=(Split-Path $dir -Leaf); status="INVALID_JSON"; type="module" } }
+47:   }
+48:   return [pscustomobject]@{ id=(Split-Path $dir -Leaf); name=(Split-Path $dir -Leaf); status="ACTIVO"; type="module" }
+49: }
+50: 
+51: function SaveMod($dir,$j){
+52:   if(-not $j.id){ $j | Add-Member -NotePropertyName id -NotePropertyValue (Split-Path $dir -Leaf) -Force }
+53:   if(-not $j.name){ $j | Add-Member -NotePropertyName name -NotePropertyValue (Split-Path $dir -Leaf) -Force }
+54:   $j | Add-Member -NotePropertyName updated_at -NotePropertyValue (Now) -Force
+--- FILE=C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-project-modules-screen.ps1 lines=1..50 ---
+1: param([string]$ProjectPath="")
+2: $ErrorActionPreference="Stop"
+3: 
+4: function W($m,$c="White"){ Write-Host $m -ForegroundColor $c }
+5: function P(){ [void](Read-Host "Enter") }
+6: function SafeName($s){ return (($s.Trim()) -replace "[^\w\.-]","_") }
+7: 
+8: function ActiveProject([string]$p){
+9:   if($p -and (Test-Path $p)){ return $p }
+10:   $j="C:\ENGREMIAT_CORE\data\desktop-terminal-operator\active-project.json"
+11:   $t="C:\ENGREMIAT_CORE\data\desktop-terminal-operator\active-project.txt"
+12:   if(Test-Path $j){
+13:     $x=Get-Content $j -Raw | ConvertFrom-Json
+14:     if($x.active_project -and (Test-Path ([string]$x.active_project))){ return [string]$x.active_project }
+15:   }
+16:   if(Test-Path $t){
+17:     $y=(Get-Content $t -Raw).Trim()
+18:     if(Test-Path $y){ return $y }
+19:   }
+20:   throw "active_project_missing"
+21: }
+22: 
+23: function ReadMod($dir){
+24:   $mj=Join-Path $dir "module.json"
+25:   if(Test-Path $mj){
+26:     try { return Get-Content $mj -Raw | ConvertFrom-Json }
+27:     catch { return [pscustomobject]@{ id=(Split-Path $dir -Leaf); name=(Split-Path $dir -Leaf); status="INVALID_JSON"; type="operational_module"; relations=@() } }
+28:   }
+29:   return [pscustomobject]@{ id=(Split-Path $dir -Leaf); name=(Split-Path $dir -Leaf); status="ACTIVO"; type="operational_module"; relations=@() }
+30: }
+31: 
+32: function SaveMod($dir,$j){
+33:   $mj=Join-Path $dir "module.json"
+34:   if(-not $j.id){ $j | Add-Member -NotePropertyName id -NotePropertyValue (Split-Path $dir -Leaf) -Force }
+35:   if(-not $j.name){ $j | Add-Member -NotePropertyName name -NotePropertyValue (Split-Path $dir -Leaf) -Force }
+36:   $j | Add-Member -NotePropertyName updated_at -NotePropertyValue (Get-Date).ToString("s") -Force
+37:   $j | ConvertTo-Json -Depth 40 | Set-Content $mj -Encoding UTF8
+38: }
+39: 
+40: function ModStatus($dir){
+41:   $j=ReadMod $dir
+42:   if($j.status){ return ([string]$j.status).ToUpper() }
+43:   return "ACTIVO"
+44: }
+45: 
+46: function RefreshGraph($p){
+47:   $r=Join-Path $PSScriptRoot "eng-refresh-project-module-graph.ps1"
+48:   if(Test-Path $r){ & powershell -NoProfile -ExecutionPolicy Bypass -File $r -ProjectPath $p | Out-Null }
+49: }
+50: 
+--- FILE=C:\ENGREMIAT_CORE\tools\launcher\ENGREMIAT-INICIO-NORMALIZED.ps1 lines=89..144 ---
+89: $LauncherDir = Join-Path $Core "tools\launcher"
+90: $CardBase = Join-Path $Core "documents\module-cards"
+91: 
+92: function W($m,$c="Gray"){
+93:   try { Write-Host $m -ForegroundColor $c } catch { Write-Host $m }
+94: }
+95: 
+96: function RunPs1($p){
+97:   if(!(Test-Path $p)){
+98:     W "NO_GO falta launcher: $p" Red
+99:     Read-Host "Enter" | Out-Null
+100:     return
+101:   }
+102:   & powershell -NoProfile -ExecutionPolicy Bypass -File $p
+103: }
+104: 
+105: function Header(){
+106:   Clear-Host
+107:   W "==== ENGREMIAT / INICIO ====" Cyan
+108:   W "Ruta: INICIO" DarkCyan
+109:   W "Rol: hub humano principal del operador" DarkCyan
+110:   W "Principio: local-first | workers OFF | worker real" DarkCyan
+111:   W ""
+112:   W "[1] Proyectos" White
+113:   W "[2] Memoria y documentacion" White
+114:   W "[3] Control y estado" White
+115:   W "[4] Launchers y configuracion" White
+116:   W "[5] Operador y workers" Yellow
+117:   W "[6] Tarjetas" White
+118:   W "[?] Ayuda" White
+119:   W "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" DarkGray
+120: }
+121: 
+122: function StatusPanel(){
+123:   Clear-Host
+124:   W "==== CONTROL Y ESTADO ====" Cyan
+125:   W "Estado compacto del operador local." DarkCyan
+126:   W ""
+127:   $schema = Join-Path $CardBase "module-linked-card.schema.json"
+128:   $index = Join-Path $CardBase "module-linked-card.index.json"
+129:   $flow = Join-Path $CardBase "card-to-module-flow.json"
+130:   $checker = Join-Path $Core "tools\module-cards\check-card-to-module-flow.ps1"
+131:   $view = Join-Path $LauncherDir "ENGREMIAT-CARDS-VIEW-NORMALIZED.ps1"
+132:   W "OK entrada humana: .\ENGREMIAT.cmd" Green
+133:   W "OK launchers: usar [4] para health" Green
+134:   W "PAUSADO worker real: no ejecutar hasta cerrar operador" Yellow
+135:   if((Test-Path $schema) -and (Test-Path $index) -and (Test-Path $flow) -and (Test-Path $checker)){
+136:     W "OK canon tarjetas-modulos: schema + index + flow + checker" Green
+137:     W "REGLA tarjetas: PROPOSED no ejecuta | human_gate=SI" Magenta
+138:   } else {
+139:     W "WARN canon tarjetas-modulos incompleto" Yellow
+140:   }
+141:   if(Test-Path $view){ W "OK vista tarjetas: [6] Tarjetas" Green } else { W "WARN vista tarjetas no enlazada" Yellow }
+142:   W "FUTURO sistema vivo: autodiagnostico genera tarjetas PROPOSED, no acciones directas" Magenta
+143:   W ""
+144:   W "Siguiente recomendado: revisar Tarjetas o Launchers/configuracion." Cyan
+--- FILE=C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-module-cards-screen.ps1 lines=1..54 ---
+1: param(
+2:   [string]$ProjectPath="",
+3:   [string]$ModulePath=""
+4: )
+5: 
+6: $ErrorActionPreference="Stop"
+7: 
+8: function W($m,$c="White"){ Write-Host $m -ForegroundColor $c }
+9: function P(){ [void](Read-Host "Enter") }
+10: function Now(){ return (Get-Date).ToString("s") }
+11: function SafeName($s){ return (($s.Trim()) -replace "[^\w\.-]","_") }
+12: 
+13: function ActiveProject([string]$p){
+14:   if($p -and (Test-Path $p)){ return $p }
+15:   $j="C:\ENGREMIAT_CORE\data\desktop-terminal-operator\active-project.json"
+16:   $t="C:\ENGREMIAT_CORE\data\desktop-terminal-operator\active-project.txt"
+17:   if(Test-Path $j){
+18:     $x=Get-Content $j -Raw | ConvertFrom-Json
+19:     if($x.active_project -and (Test-Path ([string]$x.active_project))){ return [string]$x.active_project }
+20:   }
+21:   if(Test-Path $t){
+22:     $y=(Get-Content $t -Raw).Trim()
+23:     if(Test-Path $y){ return $y }
+24:   }
+25:   throw "active_project_missing"
+26: }
+27: 
+28: function SelectModulePath($project){
+29:   $candidates=@()
+30:   $projectMods=Join-Path $project "MODULOS"
+31:   if(Test-Path $projectMods){
+32:     foreach($m in (Get-ChildItem $projectMods -Directory -ErrorAction SilentlyContinue | Sort-Object Name)){
+33:       $candidates += [pscustomobject]@{ source="PROYECTO"; dir=$m }
+34:     }
+35:   }
+36:   $lib="C:\ENGREMIAT_CORE\library\modules"
+37:   if(Test-Path $lib){
+38:     foreach($m in (Get-ChildItem $lib -Directory -ErrorAction SilentlyContinue | Sort-Object Name)){
+39:       $candidates += [pscustomobject]@{ source="BIBLIOTECA"; dir=$m }
+40:     }
+41:   }
+42: 
+43:   while($true){
+44:     Clear-Host
+45:     W "==== SELECCIONAR MODULO PARA TARJETAS ====" Cyan
+46:     W ("Proyecto activo: {0}" -f (Split-Path $project -Leaf)) White
+47: Write-Host "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" -ForegroundColor DarkGray
+48:     W ""
+49:     if(-not $candidates){ W "No hay modulos disponibles." Yellow; P; return "" }
+50: 
+51:     W ("{0,-4} {1,-12} {2}" -f "N","ORIGEN","MODULO") DarkGray
+52:     W ("{0,-4} {1,-12} {2}" -f "--","------","------") DarkGray
+53:     for($i=0;$i -lt $candidates.Count;$i++){
+54:       $color=if($candidates[$i].source -eq "PROYECTO"){"Green"}else{"Cyan"}
+--- FILE=C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-module-library-screen.ps1 lines=1..50 ---
+1: param([string]$ProjectPath="")
+2: $ErrorActionPreference="Stop"
+3: 
+4: function W($m,$c="White"){ Write-Host $m -ForegroundColor $c }
+5: function P(){ [void](Read-Host "Enter") }
+6: function SafeName($s){ return (($s.Trim()) -replace "[^\w\.-]","_") }
+7: 
+8: function ActiveProject([string]$p){
+9:   if($p -and (Test-Path $p)){ return $p }
+10:   $j="C:\ENGREMIAT_CORE\data\desktop-terminal-operator\active-project.json"
+11:   $t="C:\ENGREMIAT_CORE\data\desktop-terminal-operator\active-project.txt"
+12:   if(Test-Path $j){
+13:     $x=Get-Content $j -Raw | ConvertFrom-Json
+14:     if($x.active_project -and (Test-Path ([string]$x.active_project))){ return [string]$x.active_project }
+15:   }
+16:   if(Test-Path $t){
+17:     $y=(Get-Content $t -Raw).Trim()
+18:     if(Test-Path $y){ return $y }
+19:   }
+20:   throw "active_project_missing"
+21: }
+22: 
+23: function ReadMod($dir){
+24:   $mj=Join-Path $dir "module.json"
+25:   if(Test-Path $mj){
+26:     try { return Get-Content $mj -Raw | ConvertFrom-Json }
+27:     catch { return [pscustomobject]@{ id=(Split-Path $dir -Leaf); name=(Split-Path $dir -Leaf); status="INVALID_JSON"; type="module"; relations=@() } }
+28:   }
+29:   return [pscustomobject]@{ id=(Split-Path $dir -Leaf); name=(Split-Path $dir -Leaf); status="ACTIVO"; type="module"; relations=@() }
+30: }
+31: 
+32: function SaveMod($dir,$j){
+33:   if(-not(Test-Path $dir)){ New-Item -ItemType Directory -Force -Path $dir | Out-Null }
+34:   if(-not $j.id){ $j | Add-Member -NotePropertyName id -NotePropertyValue (Split-Path $dir -Leaf) -Force }
+35:   if(-not $j.name){ $j | Add-Member -NotePropertyName name -NotePropertyValue (Split-Path $dir -Leaf) -Force }
+36:   $j | Add-Member -NotePropertyName updated_at -NotePropertyValue (Get-Date).ToString("s") -Force
+37:   $j | ConvertTo-Json -Depth 40 | Set-Content (Join-Path $dir "module.json") -Encoding UTF8
+38: }
+39: 
+40: function ModStatus($dir){
+41:   $j=ReadMod $dir
+42:   if($j.status){ return ([string]$j.status).ToUpper() }
+43:   return "ACTIVO"
+44: }
+45: 
+46: function RefreshGraph($p){
+47:   $r=Join-Path $PSScriptRoot "eng-refresh-project-module-graph.ps1"
+48:   if(Test-Path $r){ & powershell -NoProfile -ExecutionPolicy Bypass -File $r -ProjectPath $p | Out-Null }
+49: }
+50: 

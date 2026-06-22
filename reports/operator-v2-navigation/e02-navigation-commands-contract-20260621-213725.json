@@ -1,0 +1,27 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_NAVIGATION_004",
+    "stage":  "E02_CREATE_NAVIGATION_COMMANDS_CONTRACT_GUARDED_WRITE",
+    "status":  "PASS",
+    "target":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\contracts\\NAVIGATION_COMMANDS.json",
+    "backup":  null,
+    "schema":  "ENGREMIAT_NAVIGATION_COMMANDS_V1",
+    "commands":  8,
+    "ids":  [
+                "nav.refresh.enter",
+                "nav.help",
+                "nav.back",
+                "nav.quit",
+                "nav.maintenance",
+                "nav.status",
+                "nav.numeric.option",
+                "nav.unknown.fallback"
+            ],
+    "has_enter_refresh":  true,
+    "has_help":  true,
+    "has_back":  true,
+    "has_quit":  true,
+    "parse_json_ok":  true,
+    "doc":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-navigation\\E02_NAVIGATION_COMMANDS_CONTRACT.md",
+    "decision":  "GO_NAVIGATION_COMMANDS_CONTRACT_CREATED",
+    "next":  "E03_CREATE_NAVIGATION_COMMANDS_READER_AND_SMOKE"
+}

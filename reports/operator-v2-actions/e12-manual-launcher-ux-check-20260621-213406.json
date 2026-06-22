@@ -1,0 +1,19 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_ACTIONS_003",
+    "stage":  "E12_MANUAL_LAUNCHER_UX_CHECK_ACTIONS_OBSERVER",
+    "status":  "READY_FOR_HUMAN_TEST",
+    "launcher":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+    "parse_ok":  true,
+    "has_minimal_bind":  true,
+    "has_observer_bind":  true,
+    "manual_tests":  [
+                         "Enter/refrescar",
+                         "e",
+                         "m",
+                         "?",
+                         "b/q"
+                     ],
+    "doc":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-actions\\E12_MANUAL_LAUNCHER_UX_CHECK.md",
+    "decision":  "READY_OPEN_LAUNCHER_FOR_MANUAL_UX_CHECK",
+    "next":  "E13_CLOSE_ACTIONS_003_IF_MANUAL_UX_PASS_OR_REPAIR_IF_FAIL"
+}

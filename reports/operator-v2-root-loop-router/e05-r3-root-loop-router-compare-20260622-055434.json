@@ -1,0 +1,154 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_ROOT_LOOP_ROUTER_007",
+    "stage":  "E05_COMPARE_DRY_RUN_ROUTER_WITH_CURRENT_LAUNCHER_BEHAVIOR_R3_READER_ONLY_SCRIPTBLOCK",
+    "status":  "PASS",
+    "method":  "READER_ONLY_SCRIPTBLOCK_BYPASS_EXECUTION_POLICY",
+    "launcher":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+    "contract":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\contracts\\ROOT_LOOP_ROUTER.json",
+    "reader":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\engine\\root-loop-router-reader.ps1",
+    "patched":  false,
+    "results_count":  13,
+    "has_actions_observer":  true,
+    "has_navigation_observer":  true,
+    "has_command_feedback_observer":  false,
+    "matrix":  [
+                   {
+                       "input":  "",
+                       "expected_route":  "root.refresh",
+                       "actual_route":  "root.refresh",
+                       "ok":  true,
+                       "intent":  "REFRESH_ROOT_SCREEN",
+                       "action":  "REFRESH",
+                       "feedback":  "Pantalla refrescada.",
+                       "integration_risk":  "LOW"
+                   },
+                   {
+                       "input":  "enter",
+                       "expected_route":  "root.refresh",
+                       "actual_route":  "root.refresh",
+                       "ok":  true,
+                       "intent":  "REFRESH_ROOT_SCREEN",
+                       "action":  "REFRESH",
+                       "feedback":  "Pantalla refrescada.",
+                       "integration_risk":  "LOW"
+                   },
+                   {
+                       "input":  "?",
+                       "expected_route":  "root.help",
+                       "actual_route":  "root.help",
+                       "ok":  true,
+                       "intent":  "SHOW_ROOT_HELP",
+                       "action":  "HELP",
+                       "feedback":  "Ayuda: 1 operador, 2 proyectos, 3 memoria, 4 data intake, 5 health, m mantenimiento, b/q salir.",
+                       "integration_risk":  "LOW"
+                   },
+                   {
+                       "input":  "m",
+                       "expected_route":  "root.maintenance",
+                       "actual_route":  "root.maintenance",
+                       "ok":  true,
+                       "intent":  "OPEN_MAINTENANCE",
+                       "action":  "MAINTENANCE_OR_PENDING",
+                       "feedback":  "Mantenimiento pendiente de conectar en el router root.",
+                       "integration_risk":  "MEDIUM_PENDING"
+                   },
+                   {
+                       "input":  "e",
+                       "expected_route":  "root.status",
+                       "actual_route":  "root.status",
+                       "ok":  true,
+                       "intent":  "SHOW_COMPACT_STATUS",
+                       "action":  "STATUS_OR_PENDING",
+                       "feedback":  "Estado compacto pendiente de conectar en el router root.",
+                       "integration_risk":  "MEDIUM_PENDING"
+                   },
+                   {
+                       "input":  "1",
+                       "expected_route":  "root.option.1",
+                       "actual_route":  "root.option.1",
+                       "ok":  true,
+                       "intent":  "OPEN_OPERATOR_V2",
+                       "action":  "LEGACY_ROUTE",
+                       "feedback":  "Abriendo operador.",
+                       "integration_risk":  "HIGH_LEGACY_ROUTE_DO_NOT_REWRITE_BLINDLY"
+                   },
+                   {
+                       "input":  "2",
+                       "expected_route":  "root.option.2",
+                       "actual_route":  "root.option.2",
+                       "ok":  true,
+                       "intent":  "OPEN_PROJECTS",
+                       "action":  "LEGACY_ROUTE",
+                       "feedback":  "Abriendo proyectos.",
+                       "integration_risk":  "HIGH_LEGACY_ROUTE_DO_NOT_REWRITE_BLINDLY"
+                   },
+                   {
+                       "input":  "3",
+                       "expected_route":  "root.option.3",
+                       "actual_route":  "root.option.3",
+                       "ok":  true,
+                       "intent":  "OPEN_MEMORY_DOCS",
+                       "action":  "LEGACY_ROUTE",
+                       "feedback":  "Abriendo memoria y documentacion.",
+                       "integration_risk":  "HIGH_LEGACY_ROUTE_DO_NOT_REWRITE_BLINDLY"
+                   },
+                   {
+                       "input":  "4",
+                       "expected_route":  "root.option.4",
+                       "actual_route":  "root.option.4",
+                       "ok":  true,
+                       "intent":  "OPEN_DATA_INTAKE",
+                       "action":  "LEGACY_ROUTE",
+                       "feedback":  "Abriendo Data Intake.",
+                       "integration_risk":  "HIGH_LEGACY_ROUTE_DO_NOT_REWRITE_BLINDLY"
+                   },
+                   {
+                       "input":  "5",
+                       "expected_route":  "root.option.5",
+                       "actual_route":  "root.option.5",
+                       "ok":  true,
+                       "intent":  "OPEN_HEALTH_LAUNCHERS",
+                       "action":  "LEGACY_ROUTE",
+                       "feedback":  "Abriendo Health launchers.",
+                       "integration_risk":  "HIGH_LEGACY_ROUTE_DO_NOT_REWRITE_BLINDLY"
+                   },
+                   {
+                       "input":  "b",
+                       "expected_route":  "root.quit",
+                       "actual_route":  "root.quit",
+                       "ok":  true,
+                       "intent":  "QUIT_OR_BACK",
+                       "action":  "LEGACY_QUIT",
+                       "feedback":  "Saliendo o volviendo segun flujo legacy.",
+                       "integration_risk":  "HIGH_LEGACY_ROUTE_DO_NOT_REWRITE_BLINDLY"
+                   },
+                   {
+                       "input":  "q",
+                       "expected_route":  "root.quit",
+                       "actual_route":  "root.quit",
+                       "ok":  true,
+                       "intent":  "QUIT_OR_BACK",
+                       "action":  "LEGACY_QUIT",
+                       "feedback":  "Saliendo o volviendo segun flujo legacy.",
+                       "integration_risk":  "HIGH_LEGACY_ROUTE_DO_NOT_REWRITE_BLINDLY"
+                   },
+                   {
+                       "input":  "xyz",
+                       "expected_route":  "root.unknown",
+                       "actual_route":  "root.unknown",
+                       "ok":  true,
+                       "intent":  "UNKNOWN_COMMAND",
+                       "action":  "FEEDBACK_ONLY",
+                       "feedback":  "Comando no reconocido. Usa ? para ayuda.",
+                       "integration_risk":  "LOW_FEEDBACK_ONLY"
+                   }
+               ],
+    "mismatches":  [
+
+                   ],
+    "mismatches_count":  0,
+    "json_data":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-root-loop-router\\e05-r3-root-loop-router-compare-data-20260622-055434.json",
+    "decision":  "GO_PLANNED_DIFF_CAN_BE_GENERATED_WITH_CAUTION",
+    "next":  "E06_GENERATE_ROOT_LOOP_ROUTER_PLANNED_DIFF_NO_APPLY",
+    "doc":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-root-loop-router\\E05_R3_ROOT_LOOP_ROUTER_COMPARE.md"
+}

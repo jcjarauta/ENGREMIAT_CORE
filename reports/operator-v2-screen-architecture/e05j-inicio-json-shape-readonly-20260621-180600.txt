@@ -1,0 +1,149 @@
+﻿JSON=C:\ENGREMIAT_CORE\documents\ux-system\screens\ENGREMIAT_INICIO.screen.json
+ROOT_TYPE=System.Management.Automation.PSCustomObject
+
+ROOT_PROPERTIES:
+ - screen_id: System.String
+ - created_at: System.String
+ - title: System.String
+ - route: System.String
+ - role: System.String
+ - principle: System.String
+ - prompt: System.String
+ - source_launcher: System.String
+ - normalized_launcher: System.String
+ - legacy_preserved: System.Boolean
+ - actions: System.Object[] count=54
+ - next: System.String
+
+TOP_ARRAYS_AND_ITEMS:
+ARRAY root.actions count=54
+  ITEM[0] type=System.Management.Automation.PSCustomObject
+    local = 1
+    legacy = 1
+    label = continuar último foco: vuelve a donde estabas trabajando." White
+    status = placeholder
+    risk = LOW
+  ITEM[1] type=System.Management.Automation.PSCustomObject
+    local = 2
+    legacy = 2
+    label = módulos del proyecto activo: revisar/abrir módulos del proyecto." White
+    status = placeholder
+    risk = LOW
+  ITEM[2] type=System.Management.Automation.PSCustomObject
+    local = 3
+    legacy = 3
+    label = biblioteca de módulos: reutilizables, activos, inactivos e históricos." White
+    status = placeholder
+    risk = LOW
+  ITEM[3] type=System.Management.Automation.PSCustomObject
+    local = 4
+    legacy = 4
+    label = workspace de módulo: seleccionar módulo y abrir su espacio operativo." White
+    status = placeholder
+    risk = LOW
+  ITEM[4] type=System.Management.Automation.PSCustomObject
+    local = 5
+    legacy = 5
+    label = tarjetas de módulo: seleccionar módulo y gestionar tarjetas." White
+    status = placeholder
+    risk = LOW
+  ITEM[5] type=System.Management.Automation.PSCustomObject
+    local = 6
+    legacy = 6
+    label = abrir carpeta proyecto activo: acceso directo al explorador." White
+    status = placeholder
+    risk = LOW
+  ITEM[6] type=System.Management.Automation.PSCustomObject
+    local = 7
+    legacy = 7
+    label = dashboard humano / operador visual: abre el HTML de inicio humano." White
+    status = placeholder
+    risk = LOW
+  ITEM[7] type=System.Management.Automation.PSCustomObject
+    local = 8
+    legacy = 8
+    label = árbol de navegación seguro: mapa de pantallas y rutas." White
+    status = placeholder
+    risk = LOW
+
+FIRST_80_PLACEHOLDER_CONTEXTS:
+L4: "title":  "ENGREMIAT / INICIO",
+L5: "route":  "INICIO \u003e pantalla normalizada pendiente de ubicar",
+L16: "label":  "continuar último foco: vuelve a donde estabas trabajando.\" White",
+L17: "status":  "placeholder",
+L23: "label":  "módulos del proyecto activo: revisar/abrir módulos del proyecto.\" White",
+L24: "status":  "placeholder",
+L30: "label":  "biblioteca de módulos: reutilizables, activos, inactivos e históricos.\" White",
+L31: "status":  "placeholder",
+L37: "label":  "workspace de módulo: seleccionar módulo y abrir su espacio operativo.\" White",
+L38: "status":  "placeholder",
+L44: "label":  "tarjetas de módulo: seleccionar módulo y gestionar tarjetas.\" White",
+L45: "status":  "placeholder",
+L51: "label":  "abrir carpeta proyecto activo: acceso directo al explorador.\" White",
+L52: "status":  "placeholder",
+L58: "label":  "dashboard humano / operador visual: abre el HTML de inicio humano.\" White",
+L59: "status":  "placeholder",
+L65: "label":  "árbol de navegación seguro: mapa de pantallas y rutas.\" White",
+L66: "status":  "placeholder",
+L72: "label":  "rutas recomendadas: caminos prácticos de trabajo.\" White",
+L73: "status":  "placeholder",
+L79: "label":  "ayuda: esta pantalla.\" White",
+L80: "status":  "placeholder",
+L86: "label":  "estado técnico: diagnóstico interno del inicio.\" White",
+L87: "status":  "placeholder",
+L93: "label":  "estado copiable: resumen para devolver a ChatGPT.\" White",
+L94: "status":  "placeholder",
+L100: "label":  "status externo: status ejecutable independiente.\" White",
+L101: "status":  "placeholder",
+L107: "label":  "ver último log: última salida registrada.\" White",
+L108: "status":  "placeholder",
+L114: "label":  "generar/abrir memoria viva.\" White",
+L115: "status":  "placeholder",
+L121: "label":  "generar/abrir prompt continuidad ChatGPT.\" White",
+L122: "status":  "placeholder",
+L128: "label":  "generar/abrir prompt worker Ollama/Cline.\" White",
+L129: "status":  "placeholder",
+L135: "label":  "abrir diario de desarrollo.\" White",
+L136: "status":  "placeholder",
+L142: "label":  "añadir entrada al diario.\" White",
+L143: "status":  "placeholder",
+L149: "label":  "refrescar grafo de módulos.\" White",
+L150: "status":  "placeholder",
+L156: "label":  "abrir C:\\ENGREMIAT_CORE.\" White",
+L157: "status":  "placeholder",
+L163: "label":  "\" White",
+L164: "status":  "placeholder",
+L170: "label":  "\" White",
+L171: "status":  "placeholder",
+L177: "label":  "\" White",
+L178: "status":  "placeholder",
+L184: "label":  "\" White",
+L185: "status":  "placeholder",
+L191: "label":  "\" White",
+L192: "status":  "placeholder",
+L198: "label":  "y luego [11]\" White",
+L199: "status":  "placeholder",
+L205: "label":  "módulos del proyecto -\u003e número de módulo -\u003e workspace/ficha del módulo\" White",
+L206: "status":  "placeholder",
+L212: "label":  "workspace de módulo -\u003e seleccionar módulo -\u003e tarjetas/tareas/tipos/enlaces\" White",
+L213: "status":  "placeholder",
+L219: "label":  "biblioteca de módulos -\u003e [d] desactivados / [h] históricos / [e] gestionar biblioteca\" White",
+L220: "status":  "placeholder",
+L226: "label":  "refrescar grafo de módulos -\u003e [11] estado técnico\" White",
+L227: "status":  "placeholder",
+L233: "label":  "continuar último foco\" White",
+L234: "status":  "placeholder",
+L240: "label":  "selector workspace normalizado / [5] selector tarjetas normalizado\" DarkGray",
+L241: "status":  "placeholder",
+L247: "label":  "{0}\" -f $rec.label) White",
+L248: "status":  "placeholder",
+L254: "label":  "módulos del proyecto activo\" White",
+L255: "status":  "placeholder",
+L261: "label":  "biblioteca de módulos\" White",
+L262: "status":  "placeholder",
+L268: "label":  "workspace de módulo\" White",
+L269: "status":  "placeholder",
+L275: "label":  "tarjetas de módulo\" White",
+L276: "status":  "placeholder",
+L282: "label":  "abrir carpeta proyecto activo\" White",
+L283: "status":  "placeholder",

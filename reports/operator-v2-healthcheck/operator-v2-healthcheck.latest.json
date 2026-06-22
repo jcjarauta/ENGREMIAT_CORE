@@ -1,0 +1,57 @@
+﻿{
+    "created_at":  "2026-06-21T21:22:45",
+    "package_id":  "ENGREMIAT_OPERATOR_V2_HEALTHCHECK_004",
+    "stage":  "E01C_REPAIR_CUSTOM_SCREEN_CHILDREN_AS_WARN",
+    "decision":  "GO_OPERATOR_V2_HEALTHY_WITH_WARNINGS",
+    "readiness":  85,
+    "active_root":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2",
+    "registry":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\contracts\\SCREEN_REGISTRY.json",
+    "engine":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\operator\\lib\\OperatorV2.ScreenEngine.ps1",
+    "screens":  21,
+    "actions_ready":  6,
+    "actions_planned":  1,
+    "planned_or_custom_child_stubs_count":  50,
+    "planned_or_custom_child_stubs_sample":  [
+                                                 "estado_sistema-\u003eobserver",
+                                                 "estado_sistema-\u003eobserver_watch",
+                                                 "estado_sistema-\u003eneeds",
+                                                 "estado_sistema-\u003ediagnostico_global",
+                                                 "proyectos-\u003eindice_proyectos",
+                                                 "proyectos-\u003eproyecto_activo",
+                                                 "proyectos-\u003egrafo_proyecto",
+                                                 "proyectos-\u003ebacklog_proyecto",
+                                                 "modulos-\u003emodulos_activos",
+                                                 "modulos-\u003emodulos_planificados",
+                                                 "modulos-\u003edependencias_modulos",
+                                                 "memoria-\u003etimeline",
+                                                 "memoria-\u003eevents",
+                                                 "memoria-\u003elatest_state",
+                                                 "memoria-\u003econtexto_recuperable",
+                                                 "necesidades-\u003enecesidades_actuales",
+                                                 "necesidades-\u003enecesidades_futuras",
+                                                 "necesidades-\u003enecesidades_diferidas",
+                                                 "necesidades-\u003ematriz_dependencias",
+                                                 "workers-\u003eestado_workers"
+                                             ],
+    "errors":  [
+
+               ],
+    "warnings":  [
+                     "planned_or_custom_child_stubs=50"
+                 ],
+    "ok":  [
+               "context_resolved",
+               "active_root_ok",
+               "registry_exists",
+               "engine_exists",
+               "engine_parse_ok",
+               "screens_count=21",
+               "no_duplicate_ids",
+               "required_fields_ok",
+               "rendered_children_links_ok",
+               "actions_contract_ok",
+               "guarded_write_exists",
+               "menus_short_ok"
+           ],
+    "next":  "E02_CLOSE_HEALTHCHECK_AND_RETURN_TO_ACTIONS_003"
+}
