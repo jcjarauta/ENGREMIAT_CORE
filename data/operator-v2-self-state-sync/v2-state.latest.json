@@ -1,27 +1,27 @@
 ﻿{
     "schema":  "ENGREMIAT_OPERATOR_V2_STATE_LATEST_V1",
-    "updated_at":  "2026-06-22T10:57:51",
+    "updated_at":  "2026-06-22T10:59:05",
     "active_objective":  {
                              "id":  "ENGREMIAT_OPERATOR_V1_BATCH_PUSH_FINAL_001",
                              "title":  "Operador V2 self-state sync",
                              "status":  "ACTIVE",
                              "purpose":  "Mantener V2 actualizado desde cada bloque cerrado.",
-                             "active_stage":  "E01R_REPAIR_CLOSE_SYNC_SMOKE_VALIDATE_COMMIT_EVIDENCE_AND_PUSH_FINAL",
+                             "active_stage":  "E01S_NORMALIZE_SYNC_VERIFY_RECORD_AND_PUSH_FINAL_EVIDENCE",
                              "readiness":  100,
                              "next_action":  "VALORAR_SIGUIENTE_OBJETIVO_TRAS_V1_BATCH_SYNCED"
                          },
-    "last_stage":  "E01R_REPAIR_CLOSE_SYNC_SMOKE_VALIDATE_COMMIT_EVIDENCE_AND_PUSH_FINAL",
-    "last_step":  "E01R",
+    "last_stage":  "E01S_NORMALIZE_SYNC_VERIFY_RECORD_AND_PUSH_FINAL_EVIDENCE",
+    "last_step":  "E01S",
     "last_status":  "PASS",
-    "last_report":  "reports\\operator-v1-batch-push-final\\e01r-repair-close-sync-smoke-validate-commit-evidence-and-push-final-20260622-105704.json",
+    "last_report":  "reports\\operator-v1-batch-push-final\\e01s-normalize-sync-verify-record-and-push-final-evidence-20260622-105901.json",
     "readiness":  100,
     "git_state":  {
-                      "head":  "bc81c20c",
-                      "rev_sync":  "0\t12",
+                      "head":  "e4092a14",
+                      "rev_sync":  "0\t0",
                       "tree_clean":  true,
                       "status_short":  "",
                       "push_executed":  false
                   },
     "next_action":  "VALORAR_SIGUIENTE_OBJETIVO_TRAS_V1_BATCH_SYNCED",
-    "human_summary":  "Push final V1 batch reparado: smoke Close Sync acepta identificador real compatible, V1 1-5 y V2 6-9 validados, evidencia preparada y push autorizado a origin/main."
+    "human_summary":  "Verificacion final V1 batch con rev_sync normalizado: launcher V1 1-5 y V2 6-9 conservados; evidencia final registrada; push final autorizado."
 }
