@@ -1,0 +1,48 @@
+{
+    "package_id":  "ENGREMIAT_MODULE_CARD_ACTION_FLOW_001",
+    "stage":  "E102C_CLOSE_HUMAN_GATE_VIEW_FROM_UI",
+    "status":  "PASS",
+    "human_validation":  "CONFIRMED_BY_USER_SCREEN_TEXT",
+    "validated_route":  "TARJETA / DETALLE \u003e GATE HUMANO",
+    "validated_screen":  "TARJETA / GATE HUMANO",
+    "validated_gate":  {
+                           "card_id":  "CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001",
+                           "blueprint_id":  "CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830",
+                           "gate_id":  "HUMAN-GATE-CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830",
+                           "human_gate":  "SI",
+                           "decision":  "PENDING_HUMAN_DECISION",
+                           "status":  "PENDING",
+                           "proposal_id":  "CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830"
+                       },
+    "validated_allowed_decisions":  [
+                                        "APPROVE_BLUEPRINT",
+                                        "BLOCK_BLUEPRINT",
+                                        "REQUEST_CHANGES"
+                                    ],
+    "validated_guards":  [
+                             "execute_worker",
+                             "modify_code_directly",
+                             "git_commit",
+                             "git_push",
+                             "network_call",
+                             "browser_action",
+                             "autohotkey_action",
+                             "delete_files"
+                         ],
+    "validated_rules":  [
+                            "GATE_READONLY",
+                            "PENDING_HUMAN_DECISION",
+                            "HUMAN_GATE_SI",
+                            "NO_WORKER",
+                            "NO_CODE_MODIFICATION",
+                            "NO_GIT",
+                            "NO_NETWORK",
+                            "NO_BROWSER_OR_AUTOHOTKEY"
+                        ],
+    "artifacts":  {
+                      "detail_view":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-CARD-DETAIL-VIEW-NORMALIZED.ps1",
+                      "gate":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\gates\\HUMAN-GATE-CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830.json"
+                  },
+    "recommended_next":  "E103_CREATE_HUMAN_GATE_DECISION_DRY_RUN_OR_CLOSE_APPROVAL_GATE_STAGE",
+    "closed_at":  "2026-06-20T14:41:44"
+}

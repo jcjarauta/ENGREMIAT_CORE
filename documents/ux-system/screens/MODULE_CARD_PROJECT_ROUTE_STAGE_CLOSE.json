@@ -1,0 +1,41 @@
+{
+    "package_id":  "ENGREMIAT_MODULE_CARD_CANON_001",
+    "stage":  "E96_CLOSE_MODULE_CARD_PROJECT_ROUTE_STAGE",
+    "status":  "PASS",
+    "closed_scope":  "Integracion navegable Proyecto \u003e Modulo \u003e Tarjeta",
+    "validated_routes":  [
+                             {
+                                 "project_id":  "ENGREMIAT_PROJECT_projects",
+                                 "module_id":  "MODULE_inicio",
+                                 "cards":  1
+                             },
+                             {
+                                 "project_id":  "ENGREMIAT_PROJECT_heartbeat_demo",
+                                 "module_id":  "MODULE_inicio",
+                                 "cards":  1
+                             }
+                         ],
+    "rules":  [
+                  "PROJECT_HAS_MODULE_inicio",
+                  "CARD_BELONGS_TO_MODULE",
+                  "MODULE_BELONGS_TO_PROJECT",
+                  "PROPOSED_DOES_NOT_EXECUTE",
+                  "HUMAN_GATE_SI",
+                  "GENERIC_PROJECT_ID_NORMALIZED"
+              ],
+    "artifacts":  {
+                      "flow":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\card-to-module-flow.json",
+                      "route_close":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\PROJECT_MODULE_CARD_ROUTE_WITH_START_CARD_CLOSE.json",
+                      "bridge":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECT-MODULE-CARDS-BRIDGE.ps1",
+                      "projects_launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1",
+                      "table":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\project-module-card-table.normalized.json",
+                      "cards_view":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-CARDS-VIEW-NORMALIZED.ps1",
+                      "index":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\module-linked-card.index.json",
+                      "rule":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\project-start-module-rule.json",
+                      "schema":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\module-linked-card.schema.json",
+                      "normalized_close":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\NORMALIZED_PROJECT_ID_ROUTE_VALIDATION_CLOSE.json"
+                  },
+    "summary":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\MODULE_CARD_PROJECT_ROUTE_STAGE_CLOSE.md",
+    "recommended_next":  "E97_CREATE_CARD_DETAIL_VIEW",
+    "closed_at":  "2026-06-20T13:58:05"
+}

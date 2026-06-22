@@ -1,0 +1,20 @@
+{
+    "package_id":  "ENGREMIAT_MODULE_CARD_CANON_001",
+    "stage":  "E94B2_CLOSE_FILTERABLE_CARD_VIEW_HUMAN_VALIDATION",
+    "status":  "PASS",
+    "human_validation":  "CONFIRMED_BY_USER_SCREEN_TEXT",
+    "validated_screen":  "TARJETAS filtered",
+    "validated_route":  "INICIO \u003e Proyectos \u003e Proyecto \u003e Modulos \u003e Tarjetas",
+    "validated_filter":  {
+                             "module_id":  "MODULE_OPERATOR_NAVIGATION",
+                             "project_id":  "ENGREMIAT_CORE"
+                         },
+    "validated_card":  "CARD-ENG-ROOT-UX-001",
+    "rows":  1,
+    "cards_view":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-CARDS-VIEW-NORMALIZED.ps1",
+    "table":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\project-module-card-table.normalized.json",
+    "checker":  "C:\\ENGREMIAT_CORE\\tools\\module-cards\\check-card-to-module-flow.ps1",
+    "decision":  "La vista de tarjetas ya acepta filtros project_id y module_id para integrarse debajo de Proyectos \u003e Proyecto \u003e Modulos",
+    "next":  "E94C_LINK_FILTERED_CARDS_FROM_PROJECT_MODULE_SCREEN",
+    "closed_at":  "2026-06-20T13:40:52"
+}

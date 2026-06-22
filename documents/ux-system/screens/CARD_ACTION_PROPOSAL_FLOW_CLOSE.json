@@ -1,0 +1,38 @@
+{
+    "package_id":  "ENGREMIAT_MODULE_CARD_ACTION_FLOW_001",
+    "stage":  "E99F_CLOSE_CARD_ACTION_PROPOSAL_FLOW",
+    "status":  "PASS",
+    "closed_scope":  "Tarjeta \u003e Propuesta \u003e Blueprint dry-run",
+    "mode":  "LOCAL_ONLY_NO_EXECUTION",
+    "validated":  {
+                      "blueprint_decision":  "READY_FOR_HUMAN_REVIEW_NOT_EXECUTION",
+                      "validator":  "C:\\ENGREMIAT_CORE\\tools\\module-cards\\validate-card-action-proposal.ps1",
+                      "blueprint_execution_status":  "NOT_EXECUTED",
+                      "blueprint":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\blueprints\\CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830.json",
+                      "proposal":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\proposals\\CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830.json",
+                      "proposal_human_gate":  "SI",
+                      "proposal_status":  "PROPOSED"
+                  },
+    "guards":  [
+                   "execute_worker",
+                   "modify_code_directly",
+                   "git_commit",
+                   "git_push",
+                   "network_call",
+                   "browser_action",
+                   "autohotkey_action",
+                   "delete_files"
+               ],
+    "artifacts":  {
+                      "flow":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\card-action-proposal-flow.json",
+                      "schema":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\card-action-proposal.schema.json",
+                      "example":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\card-action-proposal.example.json",
+                      "validator":  "C:\\ENGREMIAT_CORE\\tools\\module-cards\\validate-card-action-proposal.ps1",
+                      "card":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001.json",
+                      "proposal_dir":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\proposals",
+                      "blueprint_dir":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\blueprints"
+                  },
+    "summary":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\CARD_ACTION_PROPOSAL_FLOW_CLOSE.md",
+    "recommended_next":  "E100_INTEGRATE_CARD_ACTION_VIEW_IN_DETAIL_MENU",
+    "closed_at":  "2026-06-20T14:09:46"
+}

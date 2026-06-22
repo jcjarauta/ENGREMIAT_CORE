@@ -1,0 +1,29 @@
+{
+    "package_id":  "ENGREMIAT_MODULE_CARD_CANON_001",
+    "stage":  "E93D_CLOSE_CARD_VIEW_FROM_ROOT_MENU_VALIDATION",
+    "status":  "PASS",
+    "human_validation":  "CONFIRMED_BY_USER_SCREEN_TEXT",
+    "validated_screen":  "TARJETAS",
+    "validated_route":  "INICIO \u003e Tarjetas",
+    "validated_hierarchy":  "PROYECTO \u003e MODULO \u003e TARJETA",
+    "validated_lines":  [
+                            "vista readonly de tarjetas vinculadas a proyecto y modulo",
+                            "PROPOSED no ejecuta",
+                            "human_gate=SI",
+                            "numero = abrir tarjeta",
+                            "v = validar ejemplo",
+                            "b = volver",
+                            "Enter = refrescar"
+                        ],
+    "rows":  1,
+    "cards_view":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-CARDS-VIEW-NORMALIZED.ps1",
+    "root":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO-NORMALIZED.ps1",
+    "table":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\project-module-card-table.normalized.json",
+    "schema":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\module-linked-card.schema.json",
+    "index":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\module-linked-card.index.json",
+    "flow":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\card-to-module-flow.json",
+    "checker":  "C:\\ENGREMIAT_CORE\\tools\\module-cards\\check-card-to-module-flow.ps1",
+    "decision":  "Vista global de tarjetas validada; todas las tarjetas normalizadas deben tener project_id, module_id y card_id",
+    "recommended_next":  "E94_DECIDE_CARD_VIEW_INTEGRATION_WITH_PROJECT_MODULE_SCREEN",
+    "closed_at":  "2026-06-20T13:39:01"
+}

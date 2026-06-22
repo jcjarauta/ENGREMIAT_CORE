@@ -1,0 +1,38 @@
+{
+    "package_id":  "ENGREMIAT_MODULE_CARD_CANON_001",
+    "stage":  "E98_CLOSE_MODULE_CARD_CANON",
+    "status":  "PASS",
+    "closed_scope":  "Canon navegable Proyecto \u003e Modulo \u003e Tarjeta",
+    "validated_by":  "STATIC_VALIDATION_AND_HUMAN_UI_VALIDATION",
+    "canonical_hierarchy":  "PROYECTO \u003e MODULO \u003e TARJETA",
+    "validated_cards":  [
+                            "CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001",
+                            "CARD-ENGREMIAT_PROJECT_heartbeat_demo-MODULE_inicio-START-001"
+                        ],
+    "rows_total":  3,
+    "start_module_rows":  2,
+    "rules":  [
+                  "PROJECT_HAS_MODULE_inicio",
+                  "MODULE_BELONGS_TO_PROJECT",
+                  "CARD_BELONGS_TO_MODULE",
+                  "PROPOSED_DOES_NOT_EXECUTE",
+                  "HUMAN_GATE_SI",
+                  "READONLY_CARD_LIST",
+                  "READONLY_CARD_DETAIL"
+              ],
+    "artifacts":  {
+                      "projects_launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1",
+                      "cards_view":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-CARDS-VIEW-NORMALIZED.ps1",
+                      "card_detail_view":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-CARD-DETAIL-VIEW-NORMALIZED.ps1",
+                      "module_card_schema":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\module-linked-card.schema.json",
+                      "module_card_index":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\module-linked-card.index.json",
+                      "project_module_card_table":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\project-module-card-table.normalized.json",
+                      "card_to_module_flow":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\card-to-module-flow.json",
+                      "project_start_module_rule":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\project-start-module-rule.json",
+                      "card_detail_close":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\CARD_DETAIL_VIEW_FROM_UI_CLOSE.json",
+                      "route_stage_close":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\MODULE_CARD_PROJECT_ROUTE_STAGE_CLOSE.json"
+                  },
+    "summary":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\MODULE_CARD_CANON_FINAL_CLOSE.md",
+    "recommended_next":  "E99_CREATE_CARD_ACTION_PROPOSAL_FLOW",
+    "closed_at":  "2026-06-20T14:05:59"
+}

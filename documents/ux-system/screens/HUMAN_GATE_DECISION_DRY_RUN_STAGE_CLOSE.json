@@ -1,0 +1,40 @@
+{
+    "package_id":  "ENGREMIAT_MODULE_CARD_ACTION_FLOW_001",
+    "stage":  "E105_CLOSE_HUMAN_GATE_DECISION_DRY_RUN_STAGE",
+    "status":  "PASS",
+    "closed_scope":  "Decision humana dry-run sobre gate de blueprint",
+    "validated_by":  "STATIC_VALIDATION_AND_HUMAN_UI_VALIDATION",
+    "card_id":  "CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001",
+    "decision":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\gate-decisions\\HGD-HUMAN-GATE-CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830-20260620-144247.json",
+    "gate":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\gates\\HUMAN-GATE-CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830.json",
+    "blueprint":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\blueprints\\CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830.json",
+    "decision_value":  "APPROVE_BLUEPRINT",
+    "decision_mode":  "DRY_RUN_NO_GATE_MUTATION",
+    "effects_applied":  [
+
+                        ],
+    "gate_decision":  "PENDING_HUMAN_DECISION",
+    "gate_status":  "PENDING",
+    "blueprint_execution_status":  "NOT_EXECUTED",
+    "rules":  [
+                  "DRY_RUN_ONLY",
+                  "NO_GATE_MUTATION",
+                  "ZERO_EFFECTS_APPLIED",
+                  "GATE_REMAINS_PENDING",
+                  "BLUEPRINT_NOT_EXECUTED",
+                  "NO_WORKER",
+                  "NO_CODE_MODIFICATION",
+                  "NO_GIT",
+                  "NO_NETWORK"
+              ],
+    "artifacts":  {
+                      "detail_view":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-CARD-DETAIL-VIEW-NORMALIZED.ps1",
+                      "decision_validator":  "C:\\ENGREMIAT_CORE\\tools\\module-cards\\validate-human-gate-decision.ps1",
+                      "gate_view_close":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\HUMAN_GATE_VIEW_FROM_UI_CLOSE.json",
+                      "decision_view_close":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\GATE_DECISION_DRY_RUN_VIEW_FROM_UI_CLOSE.json",
+                      "readonly_stage_close":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\HUMAN_GATE_READONLY_STAGE_CLOSE.json"
+                  },
+    "summary":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\HUMAN_GATE_DECISION_DRY_RUN_STAGE_CLOSE.md",
+    "recommended_next":  "E106_CREATE_REAL_GATE_APPROVAL_CONTRACT_NO_EXECUTION",
+    "closed_at":  "2026-06-20T14:47:00"
+}

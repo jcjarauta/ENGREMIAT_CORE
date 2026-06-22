@@ -1,0 +1,40 @@
+{
+    "package_id":  "ENGREMIAT_MODULE_CARD_CANON_001",
+    "stage":  "E95C_VALIDATE_NORMALIZED_PROJECT_ROUTE",
+    "status":  "PASS",
+    "mode":  "STATIC_VALIDATION_LOCAL_ONLY",
+    "old_project_id":  "projects",
+    "new_project_id":  "ENGREMIAT_PROJECT_projects",
+    "validated":  {
+                      "card":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001.json",
+                      "project_json":  "C:\\ENGREMIAT_CORE\\projects\\projects\\project.json",
+                      "table":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\project-module-card-table.normalized.json",
+                      "projects_launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1",
+                      "index":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\module-linked-card.index.json",
+                      "cards_view":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-CARDS-VIEW-NORMALIZED.ps1",
+                      "module_json":  "C:\\ENGREMIAT_CORE\\projects\\projects\\MODULOS\\MODULE_inicio\\module.json"
+                  },
+    "checks":  [
+                   "project.json identity normalized",
+                   "MODULE_inicio project_id normalized",
+                   "start card project_id normalized",
+                   "normalized table old generic row removed",
+                   "module card index old generic row removed",
+                   "launchers parse OK"
+               ],
+    "manual_next":  [
+                        ".\\ENGREMIAT.cmd",
+                        "[1] Inicio operador",
+                        "[1] Proyectos",
+                        "abrir proyecto carpeta projects",
+                        "[3] modulos",
+                        "[1] MODULE_inicio",
+                        "[3] tarjetas del modulo"
+                    ],
+    "expected_filter":  {
+                            "module_id":  "MODULE_inicio",
+                            "project_id":  "ENGREMIAT_PROJECT_projects"
+                        },
+    "recommended_next":  "E96_CLOSE_MODULE_CARD_PROJECT_ROUTE_STAGE_OR_CREATE_CARD_DETAIL_VIEW",
+    "closed_at":  "2026-06-20T13:57:28"
+}

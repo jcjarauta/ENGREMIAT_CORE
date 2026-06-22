@@ -1,0 +1,36 @@
+{
+    "package_id":  "ENGREMIAT_MODULE_CARD_ACTION_FLOW_001",
+    "stage":  "E101_CLOSE_CARD_ACTION_VIEW_STAGE",
+    "status":  "PASS",
+    "closed_scope":  "Vista de accion sobre tarjeta: propuesta y blueprint readonly",
+    "validated_by":  "STATIC_VALIDATION_AND_HUMAN_UI_VALIDATION",
+    "validated_card":  "CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001",
+    "validated_proposal":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\proposals\\CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830.json",
+    "validated_blueprint":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\blueprints\\CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830.json",
+    "proposal_status":  "PROPOSED",
+    "proposal_human_gate":  "SI",
+    "blueprint_execution_status":  "NOT_EXECUTED",
+    "blueprint_decision":  "READY_FOR_HUMAN_REVIEW_NOT_EXECUTION",
+    "rules":  [
+                  "PROPOSAL_READONLY",
+                  "BLUEPRINT_READONLY",
+                  "PROPOSED_DOES_NOT_EXECUTE",
+                  "HUMAN_GATE_SI",
+                  "NOT_EXECUTED",
+                  "NO_WORKER",
+                  "NO_GIT",
+                  "NO_NETWORK"
+              ],
+    "artifacts":  {
+                      "detail_view":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-CARD-DETAIL-VIEW-NORMALIZED.ps1",
+                      "cards_view":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-CARDS-VIEW-NORMALIZED.ps1",
+                      "proposal_flow":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\card-action-proposal-flow.json",
+                      "proposal_schema":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\card-action-proposal.schema.json",
+                      "proposal_validator":  "C:\\ENGREMIAT_CORE\\tools\\module-cards\\validate-card-action-proposal.ps1",
+                      "action_flow_close":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\CARD_ACTION_PROPOSAL_FLOW_CLOSE.json",
+                      "action_view_close":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\CARD_ACTION_VIEW_FROM_UI_CLOSE.json"
+                  },
+    "summary":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\CARD_ACTION_VIEW_STAGE_CLOSE.md",
+    "recommended_next":  "E102_CREATE_HUMAN_APPROVAL_GATE_FOR_CARD_BLUEPRINT",
+    "closed_at":  "2026-06-20T14:37:43"
+}

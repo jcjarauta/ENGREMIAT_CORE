@@ -1,0 +1,42 @@
+{
+    "package_id":  "ENGREMIAT_MODULE_CARD_ACTION_FLOW_001",
+    "stage":  "E104D2_CLOSE_GATE_DECISION_VIEW_FROM_UI_JSON_VALIDATION",
+    "status":  "PASS",
+    "human_validation":  "CONFIRMED_BY_USER_SCREEN_TEXT",
+    "validated_route":  "TARJETA / DETALLE \u003e DECISION DRY-RUN",
+    "validated_screen":  "TARJETA / DECISION DRY-RUN",
+    "validated_decision":  {
+                               "effects_applied":  [
+
+                                                   ],
+                               "mode":  "DRY_RUN_NO_GATE_MUTATION",
+                               "human_gate":  "SI",
+                               "decision":  "APPROVE_BLUEPRINT",
+                               "decision_id":  "HGD-HUMAN-GATE-CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830-20260620-144247",
+                               "status":  "DRY_RUN_DECISION_CREATED"
+                           },
+    "gate_after_validation":  {
+                                  "gate_id":  "HUMAN-GATE-CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830",
+                                  "status":  "PENDING",
+                                  "human_gate":  "SI",
+                                  "decision":  "PENDING_HUMAN_DECISION"
+                              },
+    "validated_rules":  [
+                            "DECISION_DRY_RUN_READONLY",
+                            "NO_GATE_MUTATION",
+                            "ZERO_EFFECTS_APPLIED",
+                            "GATE_REMAINS_PENDING",
+                            "NO_WORKER",
+                            "NO_CODE_MODIFICATION",
+                            "NO_GIT",
+                            "NO_NETWORK"
+                        ],
+    "artifacts":  {
+                      "gate":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\gates\\HUMAN-GATE-CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830.json",
+                      "detail_view":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-CARD-DETAIL-VIEW-NORMALIZED.ps1",
+                      "validator":  "C:\\ENGREMIAT_CORE\\tools\\module-cards\\validate-human-gate-decision.ps1",
+                      "decision":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\gate-decisions\\HGD-HUMAN-GATE-CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830-20260620-144247.json"
+                  },
+    "recommended_next":  "E105_CLOSE_HUMAN_GATE_DECISION_DRY_RUN_STAGE_OR_CREATE_REAL_APPROVAL_MUTATION_GATE",
+    "closed_at":  "2026-06-20T14:46:22"
+}

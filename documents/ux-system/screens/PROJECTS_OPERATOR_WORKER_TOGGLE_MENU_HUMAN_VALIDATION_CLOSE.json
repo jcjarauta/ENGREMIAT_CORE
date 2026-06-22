@@ -1,0 +1,20 @@
+﻿{
+    "package_id":  "ENGREMIAT_OPERATOR_UX_001",
+    "stage":  "E81B_CLOSE_PROJECTS_OPERATOR_WORKER_TOGGLE_MENU_HUMAN_VALIDATION",
+    "status":  "PASS",
+    "human_validation":  "CONFIRMED_BY_USER_SCREEN_TEXT",
+    "validated_screens":  [
+                              "PROYECTOS / CENTRO DE PROYECTOS shows [5] Workers ON/OFF actual=OFF",
+                              "PROYECTOS / WORKERS ON-OFF shows Estado actual OFF",
+                              "PROYECTOS / WORKERS ON-OFF shows [1] activar workers ON",
+                              "PROYECTOS / WORKERS ON-OFF shows [2] desactivar workers OFF",
+                              "PROYECTOS / WORKERS ON-OFF shows [b] volver"
+                          ],
+    "current_worker_signals_mode":  "OFF",
+    "launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1",
+    "toggle_script":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-WORKER-SIGNALS-TOGGLE.ps1",
+    "config":  "C:\\ENGREMIAT_CORE\\documents\\worker-sync\\worker-signals-config.json",
+    "architecture_decision":  "Centro de Proyectos incorpora control humano visible para activar/desactivar lectura de workers y ahorrar recursos cuando no hay workers trabajando",
+    "created_at":  "2026-06-20T12:44:19",
+    "next":  "E82_AFFINE_OPERATOR_PROJECTS_NAVIGATION_AND_STATUS"
+}

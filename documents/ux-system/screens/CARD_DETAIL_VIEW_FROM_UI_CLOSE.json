@@ -1,0 +1,35 @@
+{
+    "package_id":  "ENGREMIAT_MODULE_CARD_CANON_001",
+    "stage":  "E97C_CLOSE_CARD_DETAIL_VIEW_FROM_UI",
+    "status":  "PASS",
+    "human_validation":  "CONFIRMED_BY_USER_SCREEN_TEXT",
+    "validated_route":  "INICIO \u003e Proyectos \u003e Proyecto \u003e Modulos \u003e Tarjetas \u003e Detalle",
+    "validated_screen":  "TARJETA / DETALLE",
+    "validated_card":  {
+                           "title":  "Tarjeta base de inicio del proyecto",
+                           "type":  "CONTROL",
+                           "card_id":  "CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001",
+                           "module_id":  "MODULE_inicio",
+                           "human_gate":  "SI",
+                           "project_id":  "ENGREMIAT_PROJECT_projects",
+                           "status":  "PROPOSED",
+                           "priority":  "MEDIUM",
+                           "risk":  "LOW"
+                       },
+    "validated_rules":  [
+                            "PROJECT_MODULE_CARD_DETAIL_ROUTE_OK",
+                            "CARD_BELONGS_TO_MODULE",
+                            "MODULE_BELONGS_TO_PROJECT",
+                            "PROPOSED_DOES_NOT_EXECUTE",
+                            "HUMAN_GATE_SI",
+                            "DETAIL_VIEW_READONLY"
+                        ],
+    "artifacts":  {
+                      "card_json":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001.json",
+                      "detail_view":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-CARD-DETAIL-VIEW-NORMALIZED.ps1",
+                      "cards_view":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-CARDS-VIEW-NORMALIZED.ps1",
+                      "table":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\project-module-card-table.normalized.json"
+                  },
+    "recommended_next":  "E98_CREATE_CARD_ACTION_PROPOSAL_FLOW_OR_CLOSE_MODULE_CARD_CANON",
+    "closed_at":  "2026-06-20T14:05:25"
+}

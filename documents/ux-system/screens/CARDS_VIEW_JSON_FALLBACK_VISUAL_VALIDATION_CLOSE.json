@@ -1,0 +1,39 @@
+{
+    "package_id":  "ENGREMIAT_MODULE_CARD_CANON_001",
+    "stage":  "E97B4_CLOSE_CARDS_VIEW_JSON_FALLBACK_AFTER_VISUAL_VALIDATION",
+    "status":  "PASS",
+    "human_validation":  "CONFIRMED_BY_USER_SCREEN_TEXT",
+    "note":  "Previous smoke failed because rendered table truncates card_id visually; row was visible in UI",
+    "validated_screen":  "TARJETAS",
+    "validated_filter":  {
+                             "module_id":  "MODULE_inicio",
+                             "project_id":  "ENGREMIAT_PROJECT_projects"
+                         },
+    "validated_card":  {
+                           "status":  "PROPOSED",
+                           "card_id":  "CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001",
+                           "module_id":  "MODULE_inicio",
+                           "human_gate":  "SI",
+                           "project_id":  "ENGREMIAT_PROJECT_projects"
+                       },
+    "checks":  [
+                   "cards view parse OK",
+                   "detail view parse OK",
+                   "table row exists",
+                   "card JSON exists",
+                   "JSON fallback present",
+                   "UI row visible"
+               ],
+    "recommended_next":  "E97C_VALIDATE_CARD_DETAIL_VIEW_FROM_UI",
+    "manual_next":  [
+                        ".\\ENGREMIAT.cmd",
+                        "[1] Inicio operador",
+                        "[1] Proyectos",
+                        "abrir proyecto",
+                        "[3] modulos",
+                        "[1] MODULE_inicio",
+                        "[3] tarjetas del modulo",
+                        "[1] abrir tarjeta"
+                    ],
+    "closed_at":  "2026-06-20T14:04:01"
+}

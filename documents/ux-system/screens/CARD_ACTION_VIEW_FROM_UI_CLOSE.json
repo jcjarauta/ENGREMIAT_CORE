@@ -1,0 +1,39 @@
+{
+    "package_id":  "ENGREMIAT_MODULE_CARD_ACTION_FLOW_001",
+    "stage":  "E100B_CLOSE_CARD_ACTION_VIEW_FROM_UI",
+    "status":  "PASS",
+    "human_validation":  "CONFIRMED_BY_USER_SCREEN_TEXT",
+    "validated_route":  "TARJETA / DETALLE \u003e PROPUESTA \u003e BLUEPRINT",
+    "validated_card":  "CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001",
+    "validated_proposal":  {
+                               "mode":  "readonly_no_execution",
+                               "proposal_id":  "CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830",
+                               "human_gate":  "SI",
+                               "status":  "PROPOSED",
+                               "action":  "convert_to_task_blueprint"
+                           },
+    "validated_blueprint":  {
+                                "blueprint_id":  "CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830",
+                                "blueprint_type":  "TASK_BLUEPRINT",
+                                "decision":  "READY_FOR_HUMAN_REVIEW_NOT_EXECUTION",
+                                "status":  "BLUEPRINT_CREATED",
+                                "execution_status":  "NOT_EXECUTED"
+                            },
+    "validated_rules":  [
+                            "DETAIL_MENU_SHOWS_PROPOSAL_AND_BLUEPRINT",
+                            "PROPOSAL_READONLY",
+                            "BLUEPRINT_READONLY",
+                            "PROPOSED_DOES_NOT_EXECUTE",
+                            "NOT_EXECUTED",
+                            "READY_FOR_HUMAN_REVIEW_NOT_EXECUTION",
+                            "HUMAN_GATE_SI"
+                        ],
+    "artifacts":  {
+                      "proposal":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\proposals\\CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830.json",
+                      "detail_view":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-CARD-DETAIL-VIEW-NORMALIZED.ps1",
+                      "blueprint":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\blueprints\\CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830.json",
+                      "validator":  "C:\\ENGREMIAT_CORE\\tools\\module-cards\\validate-card-action-proposal.ps1"
+                  },
+    "recommended_next":  "E101_CLOSE_CARD_ACTION_VIEW_STAGE_OR_CREATE_HUMAN_APPROVAL_GATE",
+    "closed_at":  "2026-06-20T14:37:01"
+}

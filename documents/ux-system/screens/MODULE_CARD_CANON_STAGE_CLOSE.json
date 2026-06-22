@@ -1,0 +1,37 @@
+{
+    "package_id":  "ENGREMIAT_MODULE_CARD_CANON_001",
+    "stage":  "E91E_CLOSE_MODULE_CARD_CANON_STAGE",
+    "status":  "PASS",
+    "closed_at":  "2026-06-20T13:31:33",
+    "canon_artifacts":  [
+                            "C:\\ENGREMIAT_CORE\\documents\\module-cards\\module-linked-card.schema.json",
+                            "C:\\ENGREMIAT_CORE\\documents\\module-cards\\module-linked-card.template.md",
+                            "C:\\ENGREMIAT_CORE\\documents\\module-cards\\module-linked-card.example.json",
+                            "C:\\ENGREMIAT_CORE\\documents\\module-cards\\module-linked-card.index.json",
+                            "C:\\ENGREMIAT_CORE\\documents\\module-cards\\card-to-module-flow.json",
+                            "C:\\ENGREMIAT_CORE\\documents\\module-cards\\card-to-module-flow.md",
+                            "C:\\ENGREMIAT_CORE\\documents\\module-cards\\card-to-module-decision-matrix.json",
+                            "C:\\ENGREMIAT_CORE\\tools\\module-cards\\validate-module-card.ps1",
+                            "C:\\ENGREMIAT_CORE\\tools\\module-cards\\check-card-to-module-flow.ps1"
+                        ],
+    "validated_chain":  [
+                            "schema exists",
+                            "example exists",
+                            "index exists",
+                            "validator parses",
+                            "checker parses",
+                            "example passes validator",
+                            "example passes card-to-module flow checker"
+                        ],
+    "core_decisions":  [
+                           "La tarjeta es la unidad minima de propuesta/tarea/mejora/bug",
+                           "El modulo es capacidad estable",
+                           "Una tarjeta puede proponer crear, mejorar, reparar o documentar un modulo",
+                           "Toda tarjeta del sistema queda PROPOSED hasta gate humano",
+                           "PROPOSED no ejecuta",
+                           "WORKER no ejecuta worker real",
+                           "MODULO crea blueprint antes de tocar archivos reales",
+                           "human_gate=SI por defecto"
+                       ],
+    "next":  "E92_RETURN_TO_CONTROL_STATUS_WITH_CARD_CANON"
+}

@@ -1,0 +1,32 @@
+﻿{
+    "package_id":  "ENGREMIAT_WORKER_SYNC_001",
+    "stage":  "E77F_RECONSTRUCTED_EVENT_SEQUENCE_HUMAN_VALIDATION",
+    "status":  "PASS",
+    "human_validation":  "RECONSTRUCTED_FROM_CONFIRMED_USER_SCREEN_TEXT_AND_CURRENT_VALIDATED_STATE",
+    "validated_view":  "PROYECTOS / CARTERA DE PROYECTOS / PROCESO VIVO",
+    "validated_expected":  {
+                               "total":  1,
+                               "progress":  "[##########]",
+                               "block_status":  "OK",
+                               "wait":  0,
+                               "project":  "ENGREMIAT_PROJECT_heartbeat_demo",
+                               "run":  0,
+                               "phase":  "EVENT_SEQUENCE",
+                               "block":  0,
+                               "ok":  1,
+                               "worker":  "DONE",
+                               "warn":  0,
+                               "next_action":  "secuencia local completada"
+                           },
+    "validated_sequence":  [
+                               "QUEUED",
+                               "RUNNING",
+                               "WAITING_HUMAN",
+                               "DONE"
+                           ],
+    "heartbeat":  "C:\\ENGREMIAT_CORE\\documents\\worker-sync\\worker-heartbeat-latest.json",
+    "project_signal":  "C:\\ENGREMIAT_CORE\\documents\\worker-sync\\project-signal-latest.json",
+    "events":  "C:\\ENGREMIAT_CORE\\documents\\worker-sync\\worker-events.jsonl",
+    "created_at":  "2026-06-20T12:39:40",
+    "note":  "Creado para reparar cierre faltante; no repite pruebas ni cambia logica"
+}

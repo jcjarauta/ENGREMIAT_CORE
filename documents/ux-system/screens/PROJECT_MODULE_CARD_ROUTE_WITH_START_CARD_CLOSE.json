@@ -1,0 +1,42 @@
+{
+    "package_id":  "ENGREMIAT_MODULE_CARD_CANON_001",
+    "stage":  "E94D4_CLOSE_PROJECT_MODULE_CARD_ROUTE_WITH_START_CARD",
+    "status":  "PASS",
+    "human_validation":  "CONFIRMED_BY_USER_SCREEN_TEXT",
+    "validated_route":  "INICIO \u003e Proyectos \u003e Proyecto \u003e Modulos \u003e MODULE_inicio \u003e Tarjetas",
+    "validated_screen":  "TARJETAS",
+    "validated_filter":  {
+                             "module_id":  "MODULE_inicio",
+                             "project_id":  "projects"
+                         },
+    "validated_card":  {
+                           "title":  "Tarjeta base de inicio del proyecto",
+                           "type":  "CONTROL",
+                           "card_id":  "CARD-projects-MODULE_inicio-START-001",
+                           "module_id":  "MODULE_inicio",
+                           "human_gate":  "SI",
+                           "project_id":  "projects",
+                           "status":  "PROPOSED",
+                           "priority":  "MEDIUM",
+                           "risk":  "LOW"
+                       },
+    "structural_rules_confirmed":  [
+                                       "Todo proyecto debe tener MODULE_inicio",
+                                       "Toda tarjeta pertenece a un modulo",
+                                       "Todo modulo pertenece a un proyecto",
+                                       "Vista filtrada por project_id/module_id funciona",
+                                       "PROPOSED no ejecuta",
+                                       "human_gate=SI"
+                                   ],
+    "artifacts":  {
+                      "projects_launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1",
+                      "table":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\project-module-card-table.normalized.json",
+                      "checker":  "C:\\ENGREMIAT_CORE\\tools\\module-cards\\check-card-to-module-flow.ps1",
+                      "start_module_rule":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\project-start-module-rule.json",
+                      "cards_view":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-CARDS-VIEW-NORMALIZED.ps1",
+                      "index":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\module-linked-card.index.json"
+                  },
+    "open_issue":  "project_id=projects parece generico; revisar normalizacion de identidad del proyecto despues de cerrar ruta funcional",
+    "recommended_next":  "E95_REVIEW_PROJECT_ID_NORMALIZATION_OR_CLOSE_CARD_MODULE_INTEGRATION_STAGE",
+    "closed_at":  "2026-06-20T13:54:33"
+}
