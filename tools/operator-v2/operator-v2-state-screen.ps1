@@ -33,3 +33,7 @@ W 'NEXT' Magenta
 W ($View.next_action) Magenta
 W '' Gray
 W ('Events:      '+$View.events_count) Gray
+
+W '' Gray
+W 'Enter = volver al launcher' DarkGray
+Read-Host 'Enter' | Out-Null
