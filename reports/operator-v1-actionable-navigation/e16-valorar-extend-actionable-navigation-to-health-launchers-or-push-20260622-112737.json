@@ -1,0 +1,51 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V1_ACTIONABLE_NAVIGATION_001",
+    "stage":  "E16_VALORAR_EXTEND_ACTIONABLE_NAVIGATION_TO_HEALTH_LAUNCHERS_OR_PUSH",
+    "status":  "PASS",
+    "created_at":  "2026-06-22T11:28:04",
+    "launcher_parse":  true,
+    "projects_actionable":  true,
+    "memory_docs_actionable":  true,
+    "data_intake_actionable":  true,
+    "health_launchers_screen_available":  true,
+    "health_launchers_current_screen":  "OPERATOR_V1_HEALTH_LAUNCHERS",
+    "head":  "57ab9908",
+    "rev_sync":  "0\t7",
+    "rev_sync_left":  0,
+    "rev_sync_right":  7,
+    "remote_synced":  false,
+    "tree_clean":  true,
+    "recommended_next_step":  "E17_INTEGRATE_HEALTH_LAUNCHERS_ACTIONS_READONLY",
+    "reason":  "Health Launchers es la ultima pantalla V1 operativa pendiente. Puede integrarse de forma segura si la accion numerica solo abre detalle readonly y todos los smokes, repairs, ejecuciones, launchers externos y cambios quedan bloqueados por gate.",
+    "alternatives":  [
+                         {
+                             "id":  "A",
+                             "objective":  "E17_INTEGRATE_HEALTH_LAUNCHERS_ACTIONS_READONLY",
+                             "score":  91,
+                             "reason":  "Completa las 4 pantallas V1 operativas con detalle readonly; smokes y repairs quedan bloqueados por gate."
+                         },
+                         {
+                             "id":  "B",
+                             "objective":  "PUSH_CURRENT_PROJECTS_MEMORY_DATA_ONLY",
+                             "score":  84,
+                             "reason":  "Sincroniza ya 3 pantallas accionables probadas, pero deja Health fuera del patron comun."
+                         },
+                         {
+                             "id":  "C",
+                             "objective":  "CLOSE_ACTIONABLE_NAVIGATION_OBJECTIVE_NO_HEALTH",
+                             "score":  74,
+                             "reason":  "Cierra objetivo parcial estable, aunque incompleto respecto al menu V1."
+                         },
+                         {
+                             "id":  "D",
+                             "objective":  "PAUSE_AND_REVIEW_UX",
+                             "score":  68,
+                             "reason":  "Puede mejorar UX, pero antes conviene cubrir Health con el mismo contrato readonly."
+                         }
+                     ],
+    "push_executed":  false,
+    "fetch_executed":  false,
+    "merge_executed":  false,
+    "delete_files":  false,
+    "next":  "E17_INTEGRATE_HEALTH_LAUNCHERS_ACTIONS_READONLY"
+}
