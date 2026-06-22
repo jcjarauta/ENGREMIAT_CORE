@@ -167,7 +167,7 @@ function Show-Projects{
     }
     L " [b] Atras" Yellow
     L ""
-    L "refrescar/f5/Enter = redibujar pantalla | numero = entrar | b/atras = volver" DarkGray
+Write-Host "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" -ForegroundColor DarkGray
     L ""
     $sel=(Read-Host "ENGREMIAT").Trim().ToLowerInvariant()
     if([string]::IsNullOrWhiteSpace($sel) -or $sel -in @("refrescar","refresh","f5","menu","comandos")){continue}
@@ -253,3 +253,4 @@ function Invoke-EngremiatProjectsManager {
 function Show-EngremiatProjects { Invoke-EngremiatProjectsManager }
 function Show-Projects { Invoke-EngremiatProjectsManager }
 function Invoke-ProjectsView { Invoke-EngremiatProjectsManager }
+

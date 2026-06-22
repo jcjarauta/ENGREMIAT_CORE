@@ -1,4 +1,5 @@
-﻿$ErrorActionPreference="Stop"
+﻿Write-Host "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" -ForegroundColor DarkGray
+$ErrorActionPreference="Stop"
 [Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
 $Root=(Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
 $StatePath=Join-Path $Root "data\operator-state\active-context.json"
@@ -17,3 +18,4 @@ L ("OPEN editor="+$file) Cyan
 Start-Process notepad.exe -ArgumentList @($file)
 L "OK editor_abierto=True" Green
 L "NEXT guarda el archivo en Notepad y vuelve al launcher; Enter refresca pantalla limpia" Magenta
+

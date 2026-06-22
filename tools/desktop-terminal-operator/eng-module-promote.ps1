@@ -1,4 +1,5 @@
-﻿$ErrorActionPreference="Stop"
+﻿Write-Host "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" -ForegroundColor DarkGray
+$ErrorActionPreference="Stop"
 [Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
 $Root=(Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
 $StatePath=Join-Path $Root "data\operator-state\active-context.json"
@@ -42,3 +43,4 @@ L ("library_status=PROMOTED_TO_LIBRARY_CANDIDATE") Green
 L ("snapshot="+$dest) Cyan
 L ("report="+$report) Cyan
 L "NEXT 3 evidencias | 4 gates | cierre E06" Magenta
+

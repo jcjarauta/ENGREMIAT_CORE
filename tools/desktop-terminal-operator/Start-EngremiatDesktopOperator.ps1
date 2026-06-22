@@ -75,6 +75,7 @@ function Show-Menu{
     L " [2] Nuevo proyecto     n" Green
     L " [3] Ver proyectos" Green
     L " [4] Estado compacto    e" Green
+    W " [10] Screen normalizer adapter" Cyan
     L " [q] Salir" Yellow
   } elseif($level -eq "PROJECT"){
     L "PROYECTO" Cyan
@@ -99,7 +100,7 @@ function Show-Menu{
     L " [a] Atras" Yellow
   }
   L ""
-  L "refrescar/f5/Enter = redibujar pantalla | ? = ayuda | comandos = menu actual" DarkGray
+Write-Host "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" -ForegroundColor DarkGray
   L ""
 }
 function Refresh-Screen{
@@ -172,9 +173,80 @@ Set-BootGlobalKeepContext
 while($true){
   Refresh-Screen
   $cmd=Normalize-Command (Read-Host "ENGREMIAT")
+  # ENGREMIAT_ROUTE_BINDING_M_MAINTENANCE_BEGIN
+  
+if($cmd -in @("m","mant","mantenimiento")){
+    Invoke-EngremiatHumanMaintenanceInteractiveForm -SourceScreen "desktop-terminal-operator" -SourceContext "operator-readhost-route"
+    continue
+  }
+  # ENGREMIAT_ROUTE_BINDING_M_MAINTENANCE_END
   if($cmd -eq "__refresh__"){continue}
   if($cmd -eq "ayuda"){Show-Help;Read-Host "Enter para volver"|Out-Null;continue}
   if($cmd -eq "salir"){if((Get-Level) -eq "GLOBAL"){break}else{Go-Back;continue}}
   if($cmd -eq "atras"){Go-Back;continue}
   & powershell -NoProfile -ExecutionPolicy Bypass -File $Router $cmd
 }
+
+# ENGREMIAT_RUNTIME_UI_INTEGRATION_BEGIN
+# Runtime UI adapter hook prepared by ENGREMIAT_LAUNCHER_RUNTIME_UI_INTEGRATION_001
+# Visible command proposal: runtime / acciones -> tools\launcher\runtime-ui-adapter\launcher-runtime-ui-adapter.readonly.ps1 -Command estado
+# Safety: approve/execute remain NO_GO in readonly adapter until explicit bridge is authorized.
+# ENGREMIAT_RUNTIME_UI_INTEGRATION_END
+
+# ENGREMIAT_HUMAN_MAINTENANCE_COMMAND_BEGIN
+function Invoke-EngremiatHumanMaintenanceCard {
+  param([string]$SourceScreen="desktop-terminal-operator",[string]$SourceContext="operator-screen")
+  $scriptPath = Join-Path (Get-Location).Path "tools\human-maintenance-cards\new-human-maintenance-card.ps1"
+  if(-not (Test-Path -LiteralPath $scriptPath)){ Write-Host "NO_GO maintenance_capture_script_not_found" -ForegroundColor Red; return }
+  & powershell -NoProfile -ExecutionPolicy Bypass -File $scriptPath -SourceScreen $SourceScreen -SourceContext $SourceContext -Dimension "ux" -Severity "INFO" -Title "Mantenimiento humano desde pantalla" -Description "Tarjeta creada desde comando m = mantenimiento." -Observation "Observacion humana pendiente de ampliar/evaluar por Observer." -SuggestedAction "Evaluar esta senal humana y convertirla en mejora/tarea si procede." | Enter = refrescar
+}
+# ENGREMIAT_MAINTENANCE_ROUTE_NOTE_BEGIN
+# Route requirement: m, mant and mantenimiento should call Invoke-EngremiatHumanMaintenanceCard and return to same screen.
+# ENGREMIAT_MAINTENANCE_ROUTE_NOTE_END
+# ENGREMIAT_HUMAN_MAINTENANCE_COMMAND_END
+
+# ENGREMIAT_HUMAN_MAINTENANCE_INTERACTIVE_FORM_BEGIN
+function Invoke-EngremiatHumanMaintenanceInteractiveForm {
+  param([string]$SourceScreen="desktop-terminal-operator",[string]$SourceContext="operator-interactive-form")
+  Write-Host ""
+  Write-Host "==== MANTENIMIENTO HUMANO ====" -ForegroundColor Cyan
+Ruta: INICIO > Pantalla actual
+Rol: operacion guiada del sistema
+Principio: contexto visible | acciones claras | mantenimiento humano disponible
+  Write-Host "Deja un campo vacio para usar valor por defecto." -ForegroundColor DarkGray
+  Write-Host " [10] Screen normalizer adapter" -ForegroundColor Cyan
+  $title=Read-Host "Titulo breve"
+  if([string]::IsNullOrWhiteSpace($title)){$title="Mantenimiento humano desde operator"}
+  $dimension=Read-Host "Dimension [ux/software/architecture/documentation/security/hardware/humans/financing/growth/governance/operations/workers/other]"
+  if([string]::IsNullOrWhiteSpace($dimension)){$dimension="ux"}
+  $allowedDimensions=@("ux","software","architecture","documentation","security","hardware","humans","financing","growth","governance","operations","workers","other")
+  if($dimension -notin $allowedDimensions){$dimension="other"}
+  $severity=Read-Host "Severidad [LOW/MEDIUM/HIGH/CRITICAL]"
+  if([string]::IsNullOrWhiteSpace($severity)){$severity="MEDIUM"}
+  $severity=$severity.ToUpperInvariant()
+  if($severity -notin @("LOW","MEDIUM","HIGH","CRITICAL")){$severity="MEDIUM"}
+  $observation=Read-Host "Observacion"
+  if([string]::IsNullOrWhiteSpace($observation)){$observation="Observacion humana pendiente de detalle"}
+  $suggested=Read-Host "Accion sugerida"
+  if ($suggested -eq '10') {
+    $adapter = Join-Path $PSScriptRoot "screen-normalizer-general-launcher-adapter.ps1"
+    if (Test-Path $adapter) {
+      & powershell -NoProfile -ExecutionPolicy Bypass -File $adapter
+    } else {
+      Write-Host "Screen normalizer adapter pendiente de conectar." -ForegroundColor Yellow
+      Write-Host "Ruta esperada: $adapter" -ForegroundColor DarkGray
+    }
+    return
+  }
+  if([string]::IsNullOrWhiteSpace($suggested)){$suggested="Revisar y convertir en mejora/tarea si procede"}
+  if($title.Length -gt 120){$title=$title.Substring(0,120)}
+  if($observation.Length -gt 1200){$observation=$observation.Substring(0,1200)}
+  if($suggested.Length -gt 800){$suggested=$suggested.Substring(0,800)}
+  $scriptPath=Join-Path (Get-Location).Path "tools\human-maintenance-cards\new-human-maintenance-card.ps1"
+  if(-not(Test-Path -LiteralPath $scriptPath)){throw "HUMAN_MAINTENANCE_CAPTURE_SCRIPT_NOT_FOUND path=$scriptPath"}
+  & powershell -NoProfile -ExecutionPolicy Bypass -File $scriptPath -SourceScreen $SourceScreen -SourceContext $SourceContext -Title $title -Dimension $dimension -Severity $severity -Observation $observation -SuggestedAction $suggested
+}
+# ENGREMIAT_HUMAN_MAINTENANCE_INTERACTIVE_FORM_END
+
+
+

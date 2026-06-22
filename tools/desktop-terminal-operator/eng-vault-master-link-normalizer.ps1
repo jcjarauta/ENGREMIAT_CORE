@@ -1,4 +1,5 @@
-﻿$ErrorActionPreference="Stop"
+﻿Write-Host "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" -ForegroundColor DarkGray
+$ErrorActionPreference="Stop"
 [Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
 $MasterVault=if($args.Count -gt 0){[string]$args[0]}else{""}
 $ProjectHome=if($args.Count -gt 1){[string]$args[1]}else{""}
@@ -37,4 +38,5 @@ $homeFile=Join-Path $MasterVault "HOME.md";if(Test-Path -LiteralPath $homeFile){
 $canvas=@{nodes=@(@{id="home";type="file";file="HOME.md";x=0;y=0;width=360;height=220},@{id="hub";type="file";file="00_HOME/MASTER_HUB.md";x=420;y=0;width=360;height=220},@{id="vision";type="file";file="00_VISION_GLOBAL/VISION_GLOBAL.md";x=840;y=-160;width=360;height=220},@{id="index";type="file";file="09_INDICE/INDICE_MAESTRO.md";x=840;y=160;width=360;height=220},@{id="modules";type="file";file="03_MODULOS/MODULES_INDEX.md";x=1260;y=0;width=360;height=220},@{id="module_card";type="file";file="03_MODULOS/MODULE_inicio_CARD.md";x=1680;y=0;width=360;height=220});edges=@(@{id="e1";fromNode="home";fromSide="right";toNode="hub";toSide="left"},@{id="e2";fromNode="hub";fromSide="right";toNode="vision";toSide="left"},@{id="e3";fromNode="hub";fromSide="right";toNode="index";toSide="left"},@{id="e4";fromNode="hub";fromSide="right";toNode="modules";toSide="left"},@{id="e5";fromNode="modules";fromSide="right";toNode="module_card";toSide="left"})}
 J (Join-Path $MasterVault "08_CANVAS\PROJECT_MASTER.canvas") $canvas
 L "OK master_vault_links_normalized=True hub=$hub module_vault=$ModuleVault" Green
+
 

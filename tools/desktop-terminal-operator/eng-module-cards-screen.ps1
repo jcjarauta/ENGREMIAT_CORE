@@ -44,7 +44,7 @@ function SelectModulePath($project){
     Clear-Host
     W "==== SELECCIONAR MODULO PARA TARJETAS ====" Cyan
     W ("Proyecto activo: {0}" -f (Split-Path $project -Leaf)) White
-    W "numero = abrir tarjetas del modulo | b = atras | Enter = refrescar" Cyan
+Write-Host "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" -ForegroundColor DarkGray
     W ""
     if(-not $candidates){ W "No hay modulos disponibles." Yellow; P; return "" }
 
@@ -470,3 +470,4 @@ function Main($project,$module){
 $ProjectPath=ActiveProject $ProjectPath
 if([string]::IsNullOrWhiteSpace($ModulePath)){ $ModulePath=SelectModulePath $ProjectPath; if([string]::IsNullOrWhiteSpace($ModulePath)){ return } }
 Main $ProjectPath $ModulePath
+

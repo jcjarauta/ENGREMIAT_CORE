@@ -1,4 +1,5 @@
-﻿$ErrorActionPreference="Stop"
+﻿Write-Host "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" -ForegroundColor DarkGray
+$ErrorActionPreference="Stop"
 [Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
 $Root=(Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
 $StatePath=Join-Path $Root "data\operator-state\active-context.json"
@@ -15,3 +16,4 @@ $mods=Get-ChildItem -LiteralPath $modsDir -Directory -ErrorAction SilentlyContin
 if(@($mods).Count -eq 0){L "WARN no hay modulos en este proyecto" Yellow;exit}
 $i=1;foreach($m in $mods){$vault=Join-Path $m.FullName "BOVEDA_MODULO";$mjPath=Join-Path $vault "module.json";$status="UNKNOWN";$objective="";$source="";if(Test-Path -LiteralPath $mjPath){try{$mj=Get-Content -LiteralPath $mjPath -Raw -Encoding UTF8|ConvertFrom-Json;$status=[string]$mj.lifecycle;$objective=[string]$mj.objective;$source=[string]$mj.library_status}catch{}};L (" ["+$i+"] "+$m.Name+"  status="+$status+"  library="+$source) Green;if(![string]::IsNullOrWhiteSpace($objective)){L ("     objetivo="+$objective) DarkGray};L ("     path="+$m.FullName) DarkGray;$i++}
 L "NEXT para entrar en uno: usa entrar-modulo / menu proyecto opcion 1" Magenta
+

@@ -1,4 +1,5 @@
-﻿$ErrorActionPreference="Stop"
+﻿Write-Host "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" -ForegroundColor DarkGray
+$ErrorActionPreference="Stop"
 [Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
 $Root=(Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
 $StatePath=Join-Path $Root "data\operator-state\active-context.json"
@@ -24,3 +25,4 @@ L "----------------------------------------" DarkGray
 Get-Content -LiteralPath $file -Encoding UTF8 | Select-Object -First 80 | ForEach-Object{Write-Host $_}
 L "----------------------------------------" DarkGray
 L ("NEXT editar archivo o continuar: modulo | tareas | evidencias | gates | preparar-smoke") Magenta
+

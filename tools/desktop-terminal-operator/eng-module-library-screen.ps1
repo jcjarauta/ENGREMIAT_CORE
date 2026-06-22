@@ -257,7 +257,7 @@ function CopyProjectModulesToLibrary($p){
   if(-not $mods){ W "sin_modulos_en_proyecto" Yellow; P; return }
   for($i=0;$i -lt $mods.Count;$i++){ W (" [{0}] {1}  {2}" -f ($i+1),$mods[$i].dir.Name,$mods[$i].status) Yellow }
   W ""
-  W "numero = copiar uno | t = copiar todos | b = atras" Cyan
+Write-Host "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" -ForegroundColor DarkGray
   $cmd=Read-Host "COPIAR"
   if($cmd -eq "b"){ return }
 
@@ -696,6 +696,7 @@ function LibraryScreen($p){
 
 $ProjectPath=ActiveProject $ProjectPath
 LibraryScreen $ProjectPath
+
 
 
 

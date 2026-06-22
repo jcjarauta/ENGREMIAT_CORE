@@ -4,7 +4,7 @@ $ErrorActionPreference="Stop"
 
 function Eng-L { param([string]$Text="",[string]$Color="Gray") Write-Host $Text -ForegroundColor $Color }
 
-function Eng-IsRefreshCommand { param([string]$Value) $x=([string]$Value).Trim().ToLowerInvariant(); return ([string]::IsNullOrWhiteSpace($x) -or $x -in @("refrescar","refresh","f5","menu","comandos")) }
+Write-Host "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" -ForegroundColor DarkGray
 
 function Eng-IsBackCommand { param([string]$Value) $x=([string]$Value).Trim().ToLowerInvariant(); return ($x -in @("b","a","atras","atrás","back","volver","0")) }
 
@@ -21,3 +21,4 @@ function Eng-ShowScreenHelp { param([string]$Title="AYUDA") Eng-L ""; Eng-L $Tit
 function Eng-InvokeScreenLoop { param([Parameter(Mandatory=$true)][scriptblock]$Draw,[scriptblock]$HandleCommand,[string]$Prompt="ENGREMIAT",[switch]$AllowExit) while($true){Clear-Host;& $Draw;Eng-WriteNavigationHint -AllowExit:$AllowExit;$cmd=Eng-ReadNavigationCommand -Prompt $Prompt;if(Eng-IsRefreshCommand $cmd){continue};if(Eng-IsHelpCommand $cmd){Eng-ShowScreenHelp;Read-Host "Enter para volver"|Out-Null;continue};if(Eng-IsBackCommand $cmd){return "BACK"};if($AllowExit -and (Eng-IsExitCommand $cmd)){return "EXIT"};if($HandleCommand){$r=& $HandleCommand $cmd;if($r -in @("BACK","EXIT","DONE")){return $r}}} }
 
 function Eng-TestNavigationHelpers { $checks=@(); $checks += [pscustomobject]@{name="refresh_empty";ok=(Eng-IsRefreshCommand "")}; $checks += [pscustomobject]@{name="refresh_f5";ok=(Eng-IsRefreshCommand "f5")}; $checks += [pscustomobject]@{name="back_b";ok=(Eng-IsBackCommand "b")}; $checks += [pscustomobject]@{name="help_question";ok=(Eng-IsHelpCommand "?")}; $checks += [pscustomobject]@{name="exit_q";ok=(Eng-IsExitCommand "q")}; return @($checks) }
+

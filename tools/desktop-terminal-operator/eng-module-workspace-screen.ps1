@@ -223,7 +223,7 @@ function CollectionScreen($project,$module,$ws,$name,$kind,$relPath){
     W "==== $($name.ToUpper()) DEL MODULO ====" Cyan
     W ("Modulo: {0}" -f (Split-Path $module -Leaf)) White
     W ("VISTA: {0} | BUSQUEDA: {1}" -f $view,$(if($query){$query}else{"-"})) Magenta
-    W "numero = abrir | n = nuevo | a = activos | h = historicos | t = todos | q = buscar | limpiar | o = abrir carpeta | b = atras | Enter = refrescar" Cyan
+Write-Host "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" -ForegroundColor DarkGray
     W ""
 
     if(-not $items){ W "No hay elementos en esta vista." DarkYellow }
@@ -604,6 +604,7 @@ function Main($project,$module){
 $ProjectPath=ActiveProject $ProjectPath
 if([string]::IsNullOrWhiteSpace($ModulePath)){ $ModulePath=SelectModulePathForWorkspace $ProjectPath; if([string]::IsNullOrWhiteSpace($ModulePath)){ return } }
 Main $ProjectPath $ModulePath
+
 
 
 

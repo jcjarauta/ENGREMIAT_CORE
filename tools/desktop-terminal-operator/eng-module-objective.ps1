@@ -1,4 +1,5 @@
-﻿$ErrorActionPreference="Stop"
+﻿Write-Host "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" -ForegroundColor DarkGray
+$ErrorActionPreference="Stop"
 [Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
 $Root=(Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
 $StatePath=Join-Path $Root "data\operator-state\active-context.json"
@@ -33,3 +34,4 @@ L ("contract="+$contract) Cyan
 L ("tasks="+$tasks) Cyan
 L ("module_json="+$json) Cyan
 L "NEXT ejecuta 1 para ver contrato o 5 para smoke" Magenta
+

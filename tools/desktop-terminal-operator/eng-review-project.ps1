@@ -1,4 +1,5 @@
-﻿$ErrorActionPreference="Stop"
+﻿Write-Host "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" -ForegroundColor DarkGray
+$ErrorActionPreference="Stop"
 [Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
 $ScriptDir=Split-Path -Parent $MyInvocation.MyCommand.Path
 $Root=(Resolve-Path (Join-Path $ScriptDir "..\..")).Path
@@ -113,3 +114,4 @@ W $html @(
 )
 Start-Process $html
 L "OK project_review=True readiness=$readiness recommendation=$recommendation project=$projectHome gate=$gatePath report=$reportPath next=$($report.next)" Green
+

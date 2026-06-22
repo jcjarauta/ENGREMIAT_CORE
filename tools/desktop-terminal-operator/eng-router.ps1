@@ -36,8 +36,10 @@ function Invoke-EngremiatProjectsManager {
     return
   }
   Write-Host "NO_GO manager missing: $manager" -ForegroundColor Yellow
+Write-Host "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" -ForegroundColor DarkGray
   Read-Host "Enter para volver"
 }
 function Show-EngremiatProjects { Invoke-EngremiatProjectsManager }
 function Show-Projects { Invoke-EngremiatProjectsManager }
 function Invoke-ProjectsView { Invoke-EngremiatProjectsManager }
+

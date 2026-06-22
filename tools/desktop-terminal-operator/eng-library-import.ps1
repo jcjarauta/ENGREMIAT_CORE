@@ -94,7 +94,7 @@ while($true){
   L "refrescar/f5/Enter = redibujar pantalla | 0/b = cancelar | ejemplo: 1,3 o all" DarkGray
   L ""
   $choice=(Read-Host "Elige modulo(s): 1,3 o all").Trim().ToLowerInvariant()
-  if([string]::IsNullOrWhiteSpace($choice) -or $choice -in @("refrescar","refresh","f5","menu","comandos")){continue}
+Write-Host "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" -ForegroundColor DarkGray
   if($choice -in @("0","b","a","atras","atrás","back","volver")){exit}
   if($candidates.Count -eq 0){continue}
   $idxs=@(Parse-Selection -Choice $choice -Count $candidates.Count)
@@ -131,3 +131,4 @@ while($true){
   Start-Sleep -Milliseconds 900
   exit
 }
+

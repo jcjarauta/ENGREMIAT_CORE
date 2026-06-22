@@ -18,8 +18,12 @@ while($true){
   Write-Host " [4] Estado compacto                 e" -ForegroundColor Yellow
   Write-Host " [q] Salir" -ForegroundColor Yellow
   Write-Host ""
-  Write-Host "Enter = refrescar | p/1/3 = proyectos | n/2 = nuevo proyecto | q = salir" -ForegroundColor DarkGray
+Write-Host "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" -ForegroundColor DarkGray
   Write-Host ""
+
+Write-Host ""
+Write-Host "[b/q] salir/volver | m = mantenimiento | ? = ayuda | Enter = refrescar" -ForegroundColor DarkGray
+Write-Host ""
   $a=Read-Host "ENGREMIAT"
   if([string]::IsNullOrWhiteSpace($a)){continue}
   $a=$a.Trim().ToLowerInvariant()
@@ -42,3 +46,4 @@ while($true){
     continue
   }
 }
+
