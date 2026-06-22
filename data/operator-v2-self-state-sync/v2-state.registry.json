@@ -1,7 +1,7 @@
 ﻿{
     "schema":  "ENGREMIAT_OPERATOR_V2_STATE_REGISTRY_V1",
     "created_at":  "2026-06-22T09:23:43",
-    "updated_at":  "2026-06-22T09:37:53",
+    "updated_at":  "2026-06-22T09:44:31",
     "source_contract":  "documents/operator-v2-self-state-sync/V2_STATE_REGISTRY_CONTRACT.v1.json",
     "objectives":  [
                        {
@@ -69,27 +69,27 @@
                   }
               ],
     "git_state":  {
-                      "head":  "97887d8f",
-                      "rev_sync":  "0\t36",
-                      "tree_clean":  true,
-                      "status_short":  "",
+                      "head":  "b1a1425b",
+                      "rev_sync":  "0\t37",
+                      "tree_clean":  false,
+                      "status_short":  "M ENGREMIAT.ps1\n M data/operator-v2-self-state-sync/v2-state.events.jsonl\n M data/operator-v2-self-state-sync/v2-state.latest.json\n M data/operator-v2-self-state-sync/v2-state.registry.json\n M documents/operator-v2-self-state-sync/V2_STATE_INDEX.md\n?? data/operator-v2-next-action-engine/\n?? documents/operator-v2-next-action-engine/\n?? reports/operator-v2-next-action-engine/\n?? tools/operator-v2/operator-v2-next-action-screen.ps1",
                       "push_executed":  false
                   },
-    "next_action":  "VALORAR_SIGUIENTE_OBJETIVO_OPERADOR_V2",
-    "events_count":  7,
+    "next_action":  "PROBAR_DESDE_LAUNCHER_OPCION_7_O_S",
+    "events_count":  13,
     "last_event":  {
-                       "ts":  "2026-06-22T09:37:53",
+                       "ts":  "2026-06-22T09:44:31",
                        "event":  "V2_STATE_UPDATE",
-                       "package":  "ENGREMIAT_OPERATOR_V2_SELF_STATE_SYNC_001",
-                       "stage":  "E10_REFRESH_FINAL_STATE_AND_CLOSE_OBJECTIVE",
-                       "step":  "E10",
+                       "package":  "ENGREMIAT_OPERATOR_V2_NEXT_ACTION_ENGINE_001",
+                       "stage":  "E06_VALIDATE_LAUNCHER_OPTION_7_S_AND_COMMIT_SCOPED",
+                       "step":  "E06",
                        "status":  "PASS",
-                       "report":  "reports\\operator-v2-self-state-sync\\e10-refresh-final-state-and-close-objective-20260622-093752.json",
-                       "next":  "VALORAR_SIGUIENTE_OBJETIVO_OPERADOR_V2",
-                       "readiness":  100,
-                       "summary":  "Objetivo SELF_STATE_SYNC_001 cerrado: Operador V2 ya tiene registry vivo, helper de actualizacion, pantalla Estado vivo V2 integrada en launcher y validada por humano.",
-                       "head":  "97887d8f",
-                       "rev_sync":  "0\t36",
-                       "tree_clean":  true
+                       "report":  "reports\\operator-v2-next-action-engine\\e06-validate-launcher-option-7-s-and-commit-scoped-20260622-094429.json",
+                       "next":  "PROBAR_DESDE_LAUNCHER_OPCION_7_O_S",
+                       "readiness":  85,
+                       "summary":  "Opcion 7/s Siguiente accion V2 validada en launcher maestro; cierre scoped sin push.",
+                       "head":  "b1a1425b",
+                       "rev_sync":  "0\t37",
+                       "tree_clean":  false
                    }
 }

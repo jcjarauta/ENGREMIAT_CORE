@@ -1,0 +1,40 @@
+﻿{
+    "screen":  "OPERATOR_V2_NEXT_ACTION",
+    "updated_at":  "2026-06-22T09:41:20",
+    "current_objective":  "ENGREMIAT_OPERATOR_V2_NEXT_ACTION_ENGINE_001",
+    "current_stage":  "E02_CREATE_NEXT_ACTION_CONTRACT",
+    "current_step":  "E02",
+    "current_status":  "PASS",
+    "readiness":  20,
+    "next_action":  "E03_CREATE_NEXT_ACTION_SCREEN_READONLY",
+    "recommendation":  "Continuar con el siguiente bloque del objetivo activo manteniendo validacion y cierre scoped.",
+    "why":  "El estado vivo V2 contiene next_action, readiness, ultimo estado y resumen; esta pantalla los convierte en decision operativa visible.",
+    "risk":  "MEDIUM",
+    "allowed_actions":  [
+                            "mostrar_estado_v2",
+                            "abrir_reporte",
+                            "pausar",
+                            "seguir_con_siguiente_bloque",
+                            "preparar_gate"
+                        ],
+    "blocked_actions":  [
+                            "push",
+                            "fetch",
+                            "merge",
+                            "borrar_archivos",
+                            "worker_real",
+                            "api_externa",
+                            "navegador",
+                            "clipboard"
+                        ],
+    "summary":  "Contrato del motor Siguiente accion V2 creado: decision visible, explicable y sin acciones sensibles.",
+    "events_count":  10,
+    "git_state":  {
+                      "head":  "b1a1425b",
+                      "rev_sync":  "0\t37",
+                      "tree_clean":  false,
+                      "status_short":  "M data/operator-v2-self-state-sync/v2-state.events.jsonl\n M data/operator-v2-self-state-sync/v2-state.latest.json\n M data/operator-v2-self-state-sync/v2-state.registry.json\n M documents/operator-v2-self-state-sync/V2_STATE_INDEX.md\n?? documents/operator-v2-next-action-engine/\n?? reports/operator-v2-next-action-engine/",
+                      "push_executed":  false
+                  },
+    "human_prompt":  "Decidir: seguir, pausar, preparar gate o cerrar objetivo."
+}

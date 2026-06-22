@@ -4,27 +4,27 @@ Estado vivo del Operador V2.
 
 ## Ultima actualizacion
 - Package: 
-ENGREMIAT_OPERATOR_V2_SELF_STATE_SYNC_001
+ENGREMIAT_OPERATOR_V2_NEXT_ACTION_ENGINE_001
 - Stage: 
-E10_REFRESH_FINAL_STATE_AND_CLOSE_OBJECTIVE
+E06_VALIDATE_LAUNCHER_OPTION_7_S_AND_COMMIT_SCOPED
 - Step: 
-E10
+E06
 - Status: 
 PASS
 - Readiness: 
-100
+85
 - Head: 
-97887d8f
+b1a1425b
 - Rev sync: 
-0	36
+0	37
 - Tree clean: 
-True
+False
 
 ## Resumen humano
-Objetivo SELF_STATE_SYNC_001 cerrado: Operador V2 ya tiene registry vivo, helper de actualizacion, pantalla Estado vivo V2 integrada en launcher y validada por humano.
+Opcion 7/s Siguiente accion V2 validada en launcher maestro; cierre scoped sin push.
 
 ## Report
-reports\operator-v2-self-state-sync\e10-refresh-final-state-and-close-objective-20260622-093752.json
+reports\operator-v2-next-action-engine\e06-validate-launcher-option-7-s-and-commit-scoped-20260622-094429.json
 
 ## NEXT
-VALORAR_SIGUIENTE_OBJETIVO_OPERADOR_V2
+PROBAR_DESDE_LAUNCHER_OPCION_7_O_S
