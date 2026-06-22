@@ -1,0 +1,22 @@
+﻿{
+    "package":  "ENGREMIAT_DIAGNOSTIC_RECOVERY_001",
+    "stage":  "E03B_REPAIR_OBSERVER_WATCH_READONLY_MINIMAL_STABLE",
+    "status":  "PASS",
+    "created_at":  "2026-06-21T16:32:52",
+    "observer":  "C:\\ENGREMIAT_CORE\\tools\\observer\\engremiat-observer.ps1",
+    "observer_watch":  "C:\\ENGREMIAT_CORE\\tools\\observer\\engremiat-observer-watch.ps1",
+    "mode":  "READONLY_ONCE_BY_DEFAULT__WATCH_WITH_EXPLICIT_SWITCH",
+    "memory_outputs":  [
+                           "memory\\development\\events.jsonl",
+                           "memory\\development\\latest-state.json",
+                           "memory\\development\\watch-state.json",
+                           "memory\\development\\timeline.md"
+                       ],
+    "reports":  [
+                    "reports\\observer\\latest-observer.json",
+                    "reports\\observer\\latest-observer.md"
+                ],
+    "run_once_command":  "powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\ENGREMIAT_CORE\\tools\\observer\\engremiat-observer-watch.ps1\"",
+    "watch_command":  "powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\ENGREMIAT_CORE\\tools\\observer\\engremiat-observer-watch.ps1\" -Watch -DurationSeconds 120",
+    "next":  "E04_INTEGRATE_OBSERVER_COMMAND_IN_MASTER_MAINTENANCE_OR_HELP"
+}

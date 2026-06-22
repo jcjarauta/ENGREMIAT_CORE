@@ -1,0 +1,225 @@
+﻿{
+    "package":  "ENGREMIAT_SCREEN_NORMALIZATION_001",
+    "stage":  "E36_RUN_READONLY_SYSTEM_OBSERVER_NEEDS_ANALYSIS",
+    "status":  "PASS",
+    "git_write":  false,
+    "external_actions":  false,
+    "worker_execution":  false,
+    "master_command":  "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1\"",
+    "master_checks":  {
+                          "exists":  true,
+                          "parse_ok":  true,
+                          "has_master_title":  true,
+                          "has_common_legend":  true,
+                          "has_master_command":  true,
+                          "has_inicio":  true,
+                          "has_proyectos":  true,
+                          "has_memoria":  true,
+                          "has_data":  true,
+                          "has_health":  true,
+                          "launcher_actual_fallbacks":  0
+                      },
+    "screens":  [
+                    {
+                        "key":  "master",
+                        "path":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+                        "exists":  true,
+                        "parse_ok":  true,
+                        "has_common_legend":  true,
+                        "has_engremiat_title":  true,
+                        "length":  3489,
+                        "last_write":  "2026-06-21T12:12:36"
+                    },
+                    {
+                        "key":  "inicio",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatOperatorMenu.ps1",
+                        "exists":  true,
+                        "parse_ok":  true,
+                        "has_common_legend":  false,
+                        "has_engremiat_title":  false,
+                        "length":  2511,
+                        "last_write":  "2026-06-21T06:23:28"
+                    },
+                    {
+                        "key":  "proyectos",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-projects-manager.ps1",
+                        "exists":  true,
+                        "parse_ok":  true,
+                        "has_common_legend":  false,
+                        "has_engremiat_title":  false,
+                        "length":  12208,
+                        "last_write":  "2026-06-21T06:23:28"
+                    },
+                    {
+                        "key":  "memoria",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-MEMORY-DOCUMENTATION-CENTER-NORMALIZED.ps1",
+                        "exists":  true,
+                        "parse_ok":  true,
+                        "has_common_legend":  false,
+                        "has_engremiat_title":  false,
+                        "length":  9964,
+                        "last_write":  "2026-06-21T06:23:28"
+                    },
+                    {
+                        "key":  "data",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-DATA-INTAKE-CENTER-NORMALIZED.ps1",
+                        "exists":  true,
+                        "parse_ok":  true,
+                        "has_common_legend":  false,
+                        "has_engremiat_title":  false,
+                        "length":  8442,
+                        "last_write":  "2026-06-21T06:23:28"
+                    },
+                    {
+                        "key":  "health",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-HEALTH.ps1",
+                        "exists":  true,
+                        "parse_ok":  true,
+                        "has_common_legend":  false,
+                        "has_engremiat_title":  true,
+                        "length":  1150,
+                        "last_write":  "2026-06-21T06:23:28"
+                    },
+                    {
+                        "key":  "mantenimiento",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\human-card-assistant.ps1",
+                        "exists":  true,
+                        "parse_ok":  true,
+                        "has_common_legend":  true,
+                        "has_engremiat_title":  true,
+                        "length":  5749,
+                        "last_write":  "2026-06-21T06:54:23"
+                    },
+                    {
+                        "key":  "launcher_actual",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1",
+                        "exists":  true,
+                        "parse_ok":  true,
+                        "has_common_legend":  true,
+                        "has_engremiat_title":  true,
+                        "length":  7498,
+                        "last_write":  "2026-06-21T11:53:49"
+                    }
+                ],
+    "observer_files":  [
+
+                       ],
+    "latest_reports":  [
+                           {
+                               "file":  "C:\\ENGREMIAT_CORE\\reports\\screen-normalization\\e35-master-real-navigation-verify-20260621-121332.json",
+                               "last_write":  "2026-06-21T12:13:32",
+                               "size":  1702
+                           },
+                           {
+                               "file":  "C:\\ENGREMIAT_CORE\\reports\\screen-normalization\\e34-apply-master-real-navigation-20260621-121307.json",
+                               "last_write":  "2026-06-21T12:13:07",
+                               "size":  1579
+                           },
+                           {
+                               "file":  "C:\\ENGREMIAT_CORE\\reports\\screen-normalization\\e33-planned-master-real-navigation-20260621-121236.json",
+                               "last_write":  "2026-06-21T12:12:36",
+                               "size":  1391
+                           },
+                           {
+                               "file":  "C:\\ENGREMIAT_CORE\\reports\\screen-normalization\\e32-real-navigation-targets-20260621-121146.md",
+                               "last_write":  "2026-06-21T12:11:46",
+                               "size":  2589
+                           },
+                           {
+                               "file":  "C:\\ENGREMIAT_CORE\\reports\\screen-normalization\\e32-real-navigation-targets-20260621-121146.json",
+                               "last_write":  "2026-06-21T12:11:46",
+                               "size":  14619
+                           },
+                           {
+                               "file":  "C:\\ENGREMIAT_CORE\\reports\\screen-normalization\\e31-master-only-stable-navigation-candidates-20260621-121102.json",
+                               "last_write":  "2026-06-21T12:11:02",
+                               "size":  30309
+                           },
+                           {
+                               "file":  "C:\\ENGREMIAT_CORE\\reports\\screen-normalization\\e31-master-only-stable-navigation-candidates-20260621-121102.md",
+                               "last_write":  "2026-06-21T12:11:02",
+                               "size":  3587
+                           },
+                           {
+                               "file":  "C:\\ENGREMIAT_CORE\\reports\\screen-normalization\\e30-master-entry-deep-route-audit-20260621-120957.md",
+                               "last_write":  "2026-06-21T12:09:57",
+                               "size":  4624
+                           },
+                           {
+                               "file":  "C:\\ENGREMIAT_CORE\\reports\\screen-normalization\\e30-master-entry-deep-route-audit-20260621-120957.json",
+                               "last_write":  "2026-06-21T12:09:57",
+                               "size":  55465
+                           },
+                           {
+                               "file":  "C:\\ENGREMIAT_CORE\\reports\\screen-normalization\\e29-deepest-internal-navigation-audit-20260621-120801.md",
+                               "last_write":  "2026-06-21T12:08:01",
+                               "size":  16734
+                           },
+                           {
+                               "file":  "C:\\ENGREMIAT_CORE\\reports\\screen-normalization\\e29-deepest-internal-navigation-audit-20260621-120801.json",
+                               "last_write":  "2026-06-21T12:08:01",
+                               "size":  119480
+                           },
+                           {
+                               "file":  "C:\\ENGREMIAT_CORE\\reports\\screen-normalization\\e28-master-navigation-tree-audit-20260621-120627.json",
+                               "last_write":  "2026-06-21T12:06:27",
+                               "size":  83285
+                           },
+                           {
+                               "file":  "C:\\ENGREMIAT_CORE\\reports\\screen-normalization\\e27-emergency-rollback-master-stable-20260621-120233.json",
+                               "last_write":  "2026-06-21T12:02:33",
+                               "size":  629
+                           },
+                           {
+                               "file":  "C:\\ENGREMIAT_CORE\\reports\\screen-normalization\\e25-operational-common-command-operative-20260621-115349.json",
+                               "last_write":  "2026-06-21T11:53:49",
+                               "size":  672
+                           },
+                           {
+                               "file":  "C:\\ENGREMIAT_CORE\\reports\\screen-normalization\\e26-rollback-master-menu-keep-hierarchy-20260621-115257.json",
+                               "last_write":  "2026-06-21T11:52:57",
+                               "size":  899
+                           },
+                           {
+                               "file":  "C:\\ENGREMIAT_CORE\\reports\\screen-normalization\\e26-master-remove-inicio-renumber-20260621-102303.json",
+                               "last_write":  "2026-06-21T10:23:03",
+                               "size":  686
+                           },
+                           {
+                               "file":  "C:\\ENGREMIAT_CORE\\reports\\screen-normalization\\e25-operational-common-command-operative-20260621-101744.json",
+                               "last_write":  "2026-06-21T10:17:44",
+                               "size":  672
+                           },
+                           {
+                               "file":  "C:\\ENGREMIAT_CORE\\reports\\screen-normalization\\e24-operational-writehost-readonly-20260621-070737.md",
+                               "last_write":  "2026-06-21T07:07:37",
+                               "size":  2277
+                           },
+                           {
+                               "file":  "C:\\ENGREMIAT_CORE\\reports\\screen-normalization\\e23-operational-command-contract-exact-block-20260621-070659.json",
+                               "last_write":  "2026-06-21T07:06:59",
+                               "size":  548
+                           },
+                           {
+                               "file":  "C:\\ENGREMIAT_CORE\\reports\\screen-normalization\\e22-operational-command-block-readonly-20260621-070631.md",
+                               "last_write":  "2026-06-21T07:06:31",
+                               "size":  5705
+                           }
+                       ],
+    "needs":  [
+                  "MEDIUM: target sin leyenda comun inicio -\u003e C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatOperatorMenu.ps1",
+                  "MEDIUM: target sin leyenda comun proyectos -\u003e C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-projects-manager.ps1",
+                  "MEDIUM: target sin leyenda comun memoria -\u003e C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-MEMORY-DOCUMENTATION-CENTER-NORMALIZED.ps1",
+                  "MEDIUM: target sin leyenda comun data -\u003e C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-DATA-INTAKE-CENTER-NORMALIZED.ps1",
+                  "MEDIUM: target sin leyenda comun health -\u003e C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-HEALTH.ps1",
+                  "MEDIUM: no se detecta observer ps1 dedicado fuera de reports/backups; conviene consolidar uno"
+              ],
+    "recommendations":  [
+                            "1) No tocar mas rutas a mano: usar observer readonly + planned master antes de aplicar.",
+                            "2) Probar manualmente el maestro: Enter, ?, m, 1, 2, 3, 4, 5, b/q.",
+                            "3) Normalizar una pantalla cada vez: primero Inicio operador, luego Proyectos, Memoria, Data, Health.",
+                            "4) Crear un NAVIGATION_CONTRACT.json con option -\u003e target -\u003e resultado esperado.",
+                            "5) Solo cerrar cuando el observer confirme parse OK, target OK, leyenda OK y rutas no duplicadas."
+                        ],
+    "next":  "E37_CREATE_NAVIGATION_CONTRACT_AND_TEST_MATRIX_READONLY"
+}

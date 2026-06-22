@@ -1,0 +1,1007 @@
+﻿{
+    "package":  "ENGREMIAT_SCREEN_NORMALIZATION_001",
+    "stage":  "E38B_CREATE_STABLE_SYSTEM_FREEZER_COMPATIBLE_POWERSHELL",
+    "status":  "PASS",
+    "created_at":  "2026-06-21T12:34:59",
+    "root":  "C:\\ENGREMIAT_CORE",
+    "freeze_dir":  "C:\\ENGREMIAT_CORE\\freezers\\ENGREMIAT_STABLE_FREEZER_BEFORE_CHILD_NORMALIZATION_20260621-123459",
+    "master_command":  "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1\"",
+    "principle":  "Freezer estable antes de normalizar pantallas hijas. Referencia fisica para recuperar arbol, rutas, funciones, pantallas, proyectos, modulos y tarjetas.",
+    "navigation":  {
+                       "master_command":  "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1\"",
+                       "entry":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+                       "common_command_legend":  "[b/q] salir/volver | m = mantenimiento | ? = ayuda | Enter = refrescar",
+                       "tree":  [
+                                    {
+                                        "option":  "1",
+                                        "label":  "Inicio operador",
+                                        "target":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatOperatorMenu.ps1"
+                                    },
+                                    {
+                                        "option":  "2",
+                                        "label":  "Proyectos",
+                                        "target":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-projects-manager.ps1"
+                                    },
+                                    {
+                                        "option":  "3",
+                                        "label":  "Memoria y documentacion",
+                                        "target":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-MEMORY-DOCUMENTATION-CENTER-NORMALIZED.ps1"
+                                    },
+                                    {
+                                        "option":  "4",
+                                        "label":  "Data Intake",
+                                        "target":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-DATA-INTAKE-CENTER-NORMALIZED.ps1"
+                                    },
+                                    {
+                                        "option":  "5",
+                                        "label":  "Health launchers",
+                                        "target":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-HEALTH.ps1"
+                                    },
+                                    {
+                                        "option":  "m",
+                                        "label":  "Mantenimiento",
+                                        "target":  "C:\\ENGREMIAT_CORE\\tools\\human-card-assistant.ps1"
+                                    },
+                                    {
+                                        "option":  "?",
+                                        "label":  "Ayuda",
+                                        "target":  "internal"
+                                    },
+                                    {
+                                        "option":  "Enter",
+                                        "label":  "Refrescar",
+                                        "target":  "internal"
+                                    },
+                                    {
+                                        "option":  "b/q",
+                                        "label":  "Salir/volver",
+                                        "target":  "internal"
+                                    }
+                                ]
+                   },
+    "screens":  [
+                    {
+                        "key":  "master",
+                        "path":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+                        "relative":  "ENGREMIAT.ps1",
+                        "exists":  true,
+                        "parse_ok":  true,
+                        "has_common_legend":  true,
+                        "has_engremiat_title":  true,
+                        "functions":  [
+                                          "Run-Screen",
+                                          "Show-Help",
+                                          "Show-Maintenance",
+                                          "Show-Menu",
+                                          "W",
+                                          "Wait-Back"
+                                      ],
+                        "snapshot":  "C:\\ENGREMIAT_CORE\\freezers\\ENGREMIAT_STABLE_FREEZER_BEFORE_CHILD_NORMALIZATION_20260621-123459\\snapshots\\master__ENGREMIAT.ps1",
+                        "length":  3489,
+                        "last_write":  "2026-06-21T12:12:36"
+                    },
+                    {
+                        "key":  "inicio",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatOperatorMenu.ps1",
+                        "relative":  "tools\\desktop-terminal-operator\\Start-EngremiatOperatorMenu.ps1",
+                        "exists":  true,
+                        "parse_ok":  true,
+                        "has_common_legend":  false,
+                        "has_engremiat_title":  false,
+                        "functions":  [
+                                          "B",
+                                          "W"
+                                      ],
+                        "snapshot":  "C:\\ENGREMIAT_CORE\\freezers\\ENGREMIAT_STABLE_FREEZER_BEFORE_CHILD_NORMALIZATION_20260621-123459\\snapshots\\inicio__Start-EngremiatOperatorMenu.ps1",
+                        "length":  2511,
+                        "last_write":  "2026-06-21T06:23:28"
+                    },
+                    {
+                        "key":  "proyectos",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-projects-manager.ps1",
+                        "relative":  "tools\\desktop-terminal-operator\\eng-projects-manager.ps1",
+                        "exists":  true,
+                        "parse_ok":  true,
+                        "has_common_legend":  false,
+                        "has_engremiat_title":  false,
+                        "functions":  [
+                                          "B",
+                                          "D",
+                                          "EnsureProjectJson",
+                                          "GetActivePath",
+                                          "GetProjects",
+                                          "LoadJsonOrNew",
+                                          "New-EngProjectsManagerMaintenanceCard",
+                                          "SaveActive",
+                                          "SendHistoric",
+                                          "SetProp",
+                                          "Show-EngProjectsManagerHelp",
+                                          "ShowWorkspace",
+                                          "W"
+                                      ],
+                        "snapshot":  "C:\\ENGREMIAT_CORE\\freezers\\ENGREMIAT_STABLE_FREEZER_BEFORE_CHILD_NORMALIZATION_20260621-123459\\snapshots\\proyectos__eng-projects-manager.ps1",
+                        "length":  12208,
+                        "last_write":  "2026-06-21T06:23:28"
+                    },
+                    {
+                        "key":  "memoria",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-MEMORY-DOCUMENTATION-CENTER-NORMALIZED.ps1",
+                        "relative":  "tools\\launcher\\ENGREMIAT-MEMORY-DOCUMENTATION-CENTER-NORMALIZED.ps1",
+                        "exists":  true,
+                        "parse_ok":  true,
+                        "has_common_legend":  false,
+                        "has_engremiat_title":  false,
+                        "functions":  [
+                                          "ActiveProfilePath",
+                                          "Arr",
+                                          "AssistGrantProfile",
+                                          "DossierClientes",
+                                          "DossierPartners",
+                                          "DossierSubvenciones",
+                                          "EditGrantProfile",
+                                          "EnsureDir",
+                                          "EnsureDoc",
+                                          "EnsureProfile",
+                                          "GenerateAdaptedDossier",
+                                          "Header",
+                                          "Menu",
+                                          "OpenDataIntake",
+                                          "OpenMd",
+                                          "P",
+                                          "PlaceholderSub",
+                                          "StatusHelp",
+                                          "SubConvocatorias",
+                                          "UX",
+                                          "UXOk",
+                                          "UXWarn",
+                                          "Val",
+                                          "W"
+                                      ],
+                        "snapshot":  "C:\\ENGREMIAT_CORE\\freezers\\ENGREMIAT_STABLE_FREEZER_BEFORE_CHILD_NORMALIZATION_20260621-123459\\snapshots\\memoria__ENGREMIAT-MEMORY-DOCUMENTATION-CENTER-NORMALIZED.ps1",
+                        "length":  9964,
+                        "last_write":  "2026-06-21T06:23:28"
+                    },
+                    {
+                        "key":  "data",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-DATA-INTAKE-CENTER-NORMALIZED.ps1",
+                        "relative":  "tools\\launcher\\ENGREMIAT-DATA-INTAKE-CENTER-NORMALIZED.ps1",
+                        "exists":  true,
+                        "parse_ok":  true,
+                        "has_common_legend":  false,
+                        "has_engremiat_title":  false,
+                        "functions":  [
+                                          "ActiveProfilePath",
+                                          "EditManualProfile",
+                                          "EnsureDemoProfile",
+                                          "EnsureDir",
+                                          "ExtractValue",
+                                          "GrantsDir",
+                                          "Header",
+                                          "ImportJson",
+                                          "ImportTxtMd",
+                                          "IntakeContracts",
+                                          "IntakeInbox",
+                                          "IntakeNormalized",
+                                          "NewDemoObject",
+                                          "OpenPath",
+                                          "P",
+                                          "SaveProfile",
+                                          "ShowHelp",
+                                          "ShowStatus",
+                                          "UX",
+                                          "UXErr",
+                                          "UXOk",
+                                          "UXWarn",
+                                          "W"
+                                      ],
+                        "snapshot":  "C:\\ENGREMIAT_CORE\\freezers\\ENGREMIAT_STABLE_FREEZER_BEFORE_CHILD_NORMALIZATION_20260621-123459\\snapshots\\data__ENGREMIAT-DATA-INTAKE-CENTER-NORMALIZED.ps1",
+                        "length":  8442,
+                        "last_write":  "2026-06-21T06:23:28"
+                    },
+                    {
+                        "key":  "health",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-HEALTH.ps1",
+                        "relative":  "tools\\launcher\\ENGREMIAT-LAUNCHER-HEALTH.ps1",
+                        "exists":  true,
+                        "parse_ok":  true,
+                        "has_common_legend":  false,
+                        "has_engremiat_title":  true,
+                        "functions":  [
+                                          "ParseOk",
+                                          "W"
+                                      ],
+                        "snapshot":  "C:\\ENGREMIAT_CORE\\freezers\\ENGREMIAT_STABLE_FREEZER_BEFORE_CHILD_NORMALIZATION_20260621-123459\\snapshots\\health__ENGREMIAT-LAUNCHER-HEALTH.ps1",
+                        "length":  1150,
+                        "last_write":  "2026-06-21T06:23:28"
+                    },
+                    {
+                        "key":  "mantenimiento",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\human-card-assistant.ps1",
+                        "relative":  "tools\\human-card-assistant.ps1",
+                        "exists":  true,
+                        "parse_ok":  true,
+                        "has_common_legend":  true,
+                        "has_engremiat_title":  true,
+                        "functions":  [
+                                          "Ensure-Dirs",
+                                          "Is-Cancel",
+                                          "New-HumanCard",
+                                          "Read-FormValue",
+                                          "SafeText",
+                                          "Show-Help",
+                                          "Show-Inbox",
+                                          "Show-Index",
+                                          "Show-Maintenance",
+                                          "W",
+                                          "Wait-Back"
+                                      ],
+                        "snapshot":  "C:\\ENGREMIAT_CORE\\freezers\\ENGREMIAT_STABLE_FREEZER_BEFORE_CHILD_NORMALIZATION_20260621-123459\\snapshots\\mantenimiento__human-card-assistant.ps1",
+                        "length":  5749,
+                        "last_write":  "2026-06-21T06:54:23"
+                    },
+                    {
+                        "key":  "launcher_actual",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1",
+                        "relative":  "tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1",
+                        "exists":  true,
+                        "parse_ok":  true,
+                        "has_common_legend":  true,
+                        "has_engremiat_title":  true,
+                        "functions":  [
+                                          "ActiveProject",
+                                          "Invoke-HumanCardAssistant",
+                                          "Main",
+                                          "OpenActiveProjectFolder",
+                                          "P",
+                                          "RunScript",
+                                          "Show-EngLauncherActualHelp",
+                                          "Show-EngLauncherActualMaintenance",
+                                          "ShowStatus",
+                                          "W"
+                                      ],
+                        "snapshot":  "C:\\ENGREMIAT_CORE\\freezers\\ENGREMIAT_STABLE_FREEZER_BEFORE_CHILD_NORMALIZATION_20260621-123459\\snapshots\\launcher_actual__ENGREMIAT-LAUNCHER-ACTUAL.ps1",
+                        "length":  7498,
+                        "last_write":  "2026-06-21T11:53:49"
+                    }
+                ],
+    "contracts":  [
+                      {
+                          "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-contracts\\MASTER_ENTRY_CONTRACT.json",
+                          "relative":  "documents\\launcher-contracts\\MASTER_ENTRY_CONTRACT.json",
+                          "snapshot":  "C:\\ENGREMIAT_CORE\\freezers\\ENGREMIAT_STABLE_FREEZER_BEFORE_CHILD_NORMALIZATION_20260621-123459\\snapshots\\contract_MASTER_ENTRY_CONTRACT__MASTER_ENTRY_CONTRACT.json"
+                      },
+                      {
+                          "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-contracts\\NAVIGATION_CONTRACT.json",
+                          "relative":  "documents\\launcher-contracts\\NAVIGATION_CONTRACT.json",
+                          "snapshot":  "C:\\ENGREMIAT_CORE\\freezers\\ENGREMIAT_STABLE_FREEZER_BEFORE_CHILD_NORMALIZATION_20260621-123459\\snapshots\\contract_NAVIGATION_CONTRACT__NAVIGATION_CONTRACT.json"
+                      }
+                  ],
+    "projects":  [
+                     {
+                         "name":  "ENGREMIAT_PROJECT_heartbeat_demo",
+                         "path":  "C:\\ENGREMIAT_CORE\\projects\\ENGREMIAT_PROJECT_heartbeat_demo",
+                         "last_write":  "2026-06-20T10:37:56"
+                     },
+                     {
+                         "name":  "projects",
+                         "path":  "C:\\ENGREMIAT_CORE\\projects\\projects",
+                         "last_write":  "2026-06-20T13:56:16"
+                     },
+                     {
+                         "name":  "ENGREMIAT_PROJECT_E1_20260619-220618",
+                         "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_E1_20260619-220618",
+                         "last_write":  "2026-06-19T22:07:06"
+                     },
+                     {
+                         "name":  "ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706",
+                         "path":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_nuevo-proyecto_20260619-161706",
+                         "last_write":  "2026-06-20T02:16:39"
+                     }
+                 ],
+    "modules":  [
+                    {
+                        "name":  "cline-real-proposal-no-apply",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\cline-real-proposal-no-apply",
+                        "last_write":  "2026-06-16T15:32:45"
+                    },
+                    {
+                        "name":  "controlled-action-from-proposal-015",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\controlled-action-from-proposal-015",
+                        "last_write":  "2026-06-17T08:10:37"
+                    },
+                    {
+                        "name":  "controlled-action-instance-018",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\controlled-action-instance-018",
+                        "last_write":  "2026-06-17T10:01:06"
+                    },
+                    {
+                        "name":  "controlled-action-replication-016",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\controlled-action-replication-016",
+                        "last_write":  "2026-06-17T08:29:03"
+                    },
+                    {
+                        "name":  "controlled-action-template-017",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\controlled-action-template-017",
+                        "last_write":  "2026-06-17T08:54:01"
+                    },
+                    {
+                        "name":  "controlled-apply-or-repair-014",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\controlled-apply-or-repair-014",
+                        "last_write":  "2026-06-17T08:01:29"
+                    },
+                    {
+                        "name":  "desktop-terminal-operator",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator",
+                        "last_write":  "2026-06-20T19:01:39"
+                    },
+                    {
+                        "name":  "dual-pc-development-workflow",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\dual-pc-development-workflow",
+                        "last_write":  "2026-06-16T15:32:45"
+                    },
+                    {
+                        "name":  "first-cline-proposal-task-009",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\first-cline-proposal-task-009",
+                        "last_write":  "2026-06-16T22:01:32"
+                    },
+                    {
+                        "name":  "gated-worker-execution",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\gated-worker-execution",
+                        "last_write":  "2026-06-16T15:32:45"
+                    },
+                    {
+                        "name":  "global-modular-replicable",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\global-modular-replicable",
+                        "last_write":  "2026-06-18T19:35:31"
+                    },
+                    {
+                        "name":  "health",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\health",
+                        "last_write":  "2026-06-21T06:32:37"
+                    },
+                    {
+                        "name":  "human-maintenance-cards",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\human-maintenance-cards",
+                        "last_write":  "2026-06-20T15:37:37"
+                    },
+                    {
+                        "name":  "kanban-backlog",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\kanban-backlog",
+                        "last_write":  "2026-06-18T19:54:47"
+                    },
+                    {
+                        "name":  "kanban-human-control",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\kanban-human-control",
+                        "last_write":  "2026-06-16T15:32:45"
+                    },
+                    {
+                        "name":  "kanban-local",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\kanban-local",
+                        "last_write":  "2026-06-18T10:57:40"
+                    },
+                    {
+                        "name":  "kanban-real-setup-012",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\kanban-real-setup-012",
+                        "last_write":  "2026-06-16T16:51:35"
+                    },
+                    {
+                        "name":  "kanban-visible-ollama-ready-013",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\kanban-visible-ollama-ready-013",
+                        "last_write":  "2026-06-17T06:44:43"
+                    },
+                    {
+                        "name":  "launcher",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher",
+                        "last_write":  "2026-06-20T15:10:51"
+                    },
+                    {
+                        "name":  "local-kanban-execution-cycle",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\local-kanban-execution-cycle",
+                        "last_write":  "2026-06-19T08:48:45"
+                    },
+                    {
+                        "name":  "local-kanban-state-update",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\local-kanban-state-update",
+                        "last_write":  "2026-06-19T08:27:50"
+                    },
+                    {
+                        "name":  "local-kanban-worker-loop",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\local-kanban-worker-loop",
+                        "last_write":  "2026-06-19T08:17:44"
+                    },
+                    {
+                        "name":  "local-multiworker-launch-and-link-n1",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\local-multiworker-launch-and-link-n1",
+                        "last_write":  "2026-06-16T15:32:45"
+                    },
+                    {
+                        "name":  "local-multiworker-launch-and-link-n2",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\local-multiworker-launch-and-link-n2",
+                        "last_write":  "2026-06-16T15:32:45"
+                    },
+                    {
+                        "name":  "main-pc-linking",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\main-pc-linking",
+                        "last_write":  "2026-06-16T16:15:31"
+                    },
+                    {
+                        "name":  "memory",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\memory",
+                        "last_write":  "2026-06-16T15:32:45"
+                    },
+                    {
+                        "name":  "module-cards",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\module-cards",
+                        "last_write":  "2026-06-20T14:43:17"
+                    },
+                    {
+                        "name":  "node-link",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\node-link",
+                        "last_write":  "2026-06-16T15:32:45"
+                    },
+                    {
+                        "name":  "obsidian-to-worker-real-exercise",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\obsidian-to-worker-real-exercise",
+                        "last_write":  "2026-06-19T09:01:13"
+                    },
+                    {
+                        "name":  "operational",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\operational",
+                        "last_write":  "2026-06-17T16:29:17"
+                    },
+                    {
+                        "name":  "operator-context",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\operator-context",
+                        "last_write":  "2026-06-19T17:58:37"
+                    },
+                    {
+                        "name":  "plan-to-worker",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\plan-to-worker",
+                        "last_write":  "2026-06-16T15:32:45"
+                    },
+                    {
+                        "name":  "prompt-factory",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\prompt-factory",
+                        "last_write":  "2026-06-16T15:32:45"
+                    },
+                    {
+                        "name":  "real-cline-kanban-ollama-tests",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\real-cline-kanban-ollama-tests",
+                        "last_write":  "2026-06-16T16:38:00"
+                    },
+                    {
+                        "name":  "real-intake-importer",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\real-intake-importer",
+                        "last_write":  "2026-06-19T09:55:32"
+                    },
+                    {
+                        "name":  "real-roadmap-generator-ollama-preview",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\real-roadmap-generator-ollama-preview",
+                        "last_write":  "2026-06-19T10:08:25"
+                    },
+                    {
+                        "name":  "runtime",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\runtime",
+                        "last_write":  "2026-06-16T15:32:45"
+                    },
+                    {
+                        "name":  "screen-master-template",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\screen-master-template",
+                        "last_write":  "2026-06-20T21:08:30"
+                    },
+                    {
+                        "name":  "screen-normalizer",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\screen-normalizer",
+                        "last_write":  "2026-06-20T16:37:50"
+                    },
+                    {
+                        "name":  "template-improvement",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\template-improvement",
+                        "last_write":  "2026-06-19T23:58:49"
+                    },
+                    {
+                        "name":  "tool-calibration-controller",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\tool-calibration-controller",
+                        "last_write":  "2026-06-18T20:39:30"
+                    },
+                    {
+                        "name":  "toolchain",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\toolchain",
+                        "last_write":  "2026-06-16T15:32:45"
+                    },
+                    {
+                        "name":  "vault-module-builder",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\vault-module-builder",
+                        "last_write":  "2026-06-19T12:15:49"
+                    },
+                    {
+                        "name":  "worker-adapters",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\worker-adapters",
+                        "last_write":  "2026-06-16T15:32:45"
+                    },
+                    {
+                        "name":  "worker-response-import-020",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\worker-response-import-020",
+                        "last_write":  "2026-06-17T10:48:06"
+                    }
+                ],
+    "cards":  [
+                  {
+                      "name":  "observer-review-20260621-061203.md",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\human-cards\\observer-review\\observer-review-20260621-061203.md",
+                      "relative":  "documents\\human-cards\\observer-review\\observer-review-20260621-061203.md",
+                      "last_write":  "2026-06-21T06:12:04",
+                      "size":  622
+                  },
+                  {
+                      "name":  "module-card-action-flow-close-20260620-145744.md",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\flow-close\\module-card-action-flow-close-20260620-145744.md",
+                      "relative":  "documents\\module-cards\\flow-close\\module-card-action-flow-close-20260620-145744.md",
+                      "last_write":  "2026-06-20T14:57:44",
+                      "size":  724
+                  },
+                  {
+                      "name":  "module-card-action-flow-close.latest.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\flow-close\\module-card-action-flow-close.latest.json",
+                      "relative":  "documents\\module-cards\\flow-close\\module-card-action-flow-close.latest.json",
+                      "last_write":  "2026-06-20T14:57:44",
+                      "size":  2565
+                  },
+                  {
+                      "name":  "module-card-action-flow-close-20260620-145744.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\flow-close\\module-card-action-flow-close-20260620-145744.json",
+                      "relative":  "documents\\module-cards\\flow-close\\module-card-action-flow-close-20260620-145744.json",
+                      "last_write":  "2026-06-20T14:57:44",
+                      "size":  2565
+                  },
+                  {
+                      "name":  "approved-module-action-execution.latest.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\approved-action-runner\\approved-module-action-execution.latest.json",
+                      "relative":  "documents\\module-cards\\approved-action-runner\\approved-module-action-execution.latest.json",
+                      "last_write":  "2026-06-20T14:57:18",
+                      "size":  1761
+                  },
+                  {
+                      "name":  "approved-module-action-execution-20260620-145718.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\approved-action-runner\\approved-module-action-execution-20260620-145718.json",
+                      "relative":  "documents\\module-cards\\approved-action-runner\\approved-module-action-execution-20260620-145718.json",
+                      "last_write":  "2026-06-20T14:57:18",
+                      "size":  1761
+                  },
+                  {
+                      "name":  "pending-auth-module-action-runner-20260620-145635.md",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\approved-action-runner\\pending-auth-module-action-runner-20260620-145635.md",
+                      "relative":  "documents\\module-cards\\approved-action-runner\\pending-auth-module-action-runner-20260620-145635.md",
+                      "last_write":  "2026-06-20T14:56:35",
+                      "size":  776
+                  },
+                  {
+                      "name":  "pending-auth-module-action-runner.latest.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\approved-action-runner\\pending-auth-module-action-runner.latest.json",
+                      "relative":  "documents\\module-cards\\approved-action-runner\\pending-auth-module-action-runner.latest.json",
+                      "last_write":  "2026-06-20T14:56:35",
+                      "size":  1079
+                  },
+                  {
+                      "name":  "pending-auth-module-action-runner-20260620-145635.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\approved-action-runner\\pending-auth-module-action-runner-20260620-145635.json",
+                      "relative":  "documents\\module-cards\\approved-action-runner\\pending-auth-module-action-runner-20260620-145635.json",
+                      "last_write":  "2026-06-20T14:56:35",
+                      "size":  1079
+                  },
+                  {
+                      "name":  "approved-module-blueprint-execution-plan-20260620-145604.md",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\blueprint-execution-plans\\approved-module-blueprint-execution-plan-20260620-145604.md",
+                      "relative":  "documents\\module-cards\\blueprint-execution-plans\\approved-module-blueprint-execution-plan-20260620-145604.md",
+                      "last_write":  "2026-06-20T14:56:04",
+                      "size":  773
+                  },
+                  {
+                      "name":  "approved-module-blueprint-execution-plan-20260620-145604.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\blueprint-execution-plans\\approved-module-blueprint-execution-plan-20260620-145604.json",
+                      "relative":  "documents\\module-cards\\blueprint-execution-plans\\approved-module-blueprint-execution-plan-20260620-145604.json",
+                      "last_write":  "2026-06-20T14:56:04",
+                      "size":  3867
+                  },
+                  {
+                      "name":  "approved-module-blueprint-execution-plan.latest.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\blueprint-execution-plans\\approved-module-blueprint-execution-plan.latest.json",
+                      "relative":  "documents\\module-cards\\blueprint-execution-plans\\approved-module-blueprint-execution-plan.latest.json",
+                      "last_write":  "2026-06-20T14:56:04",
+                      "size":  3867
+                  },
+                  {
+                      "name":  "approved-module-card-action-flow-20260620-145539.md",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\approved-action-flow\\approved-module-card-action-flow-20260620-145539.md",
+                      "relative":  "documents\\module-cards\\approved-action-flow\\approved-module-card-action-flow-20260620-145539.md",
+                      "last_write":  "2026-06-20T14:55:39",
+                      "size":  816
+                  },
+                  {
+                      "name":  "approved-module-card-action-flow-20260620-145539.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\approved-action-flow\\approved-module-card-action-flow-20260620-145539.json",
+                      "relative":  "documents\\module-cards\\approved-action-flow\\approved-module-card-action-flow-20260620-145539.json",
+                      "last_write":  "2026-06-20T14:55:39",
+                      "size":  2647
+                  },
+                  {
+                      "name":  "approved-module-card-action-flow.latest.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\approved-action-flow\\approved-module-card-action-flow.latest.json",
+                      "relative":  "documents\\module-cards\\approved-action-flow\\approved-module-card-action-flow.latest.json",
+                      "last_write":  "2026-06-20T14:55:39",
+                      "size":  2647
+                  },
+                  {
+                      "name":  "human-gate-cab-cap-card-action-unlock.latest.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\action-unlocks\\human-gate-cab-cap-card-action-unlock.latest.json",
+                      "relative":  "documents\\module-cards\\action-unlocks\\human-gate-cab-cap-card-action-unlock.latest.json",
+                      "last_write":  "2026-06-20T14:55:15",
+                      "size":  1311
+                  },
+                  {
+                      "name":  "human-gate-cab-cap-card-action-unlock-20260620-145515.md",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\action-unlocks\\human-gate-cab-cap-card-action-unlock-20260620-145515.md",
+                      "relative":  "documents\\module-cards\\action-unlocks\\human-gate-cab-cap-card-action-unlock-20260620-145515.md",
+                      "last_write":  "2026-06-20T14:55:15",
+                      "size":  872
+                  },
+                  {
+                      "name":  "human-gate-cab-cap-card-action-unlock-20260620-145515.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\action-unlocks\\human-gate-cab-cap-card-action-unlock-20260620-145515.json",
+                      "relative":  "documents\\module-cards\\action-unlocks\\human-gate-cab-cap-card-action-unlock-20260620-145515.json",
+                      "last_write":  "2026-06-20T14:55:15",
+                      "size":  1311
+                  },
+                  {
+                      "name":  "gate-approval-real-mutation-receipt-20260620-145448.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\gate-mutation-contracts\\gate-approval-real-mutation-receipt-20260620-145448.json",
+                      "relative":  "documents\\module-cards\\gate-mutation-contracts\\gate-approval-real-mutation-receipt-20260620-145448.json",
+                      "last_write":  "2026-06-20T14:54:49",
+                      "size":  971
+                  },
+                  {
+                      "name":  "human-gate-cab-cap-card-state.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\gate-state\\human-gate-cab-cap-card-state.json",
+                      "relative":  "documents\\module-cards\\gate-state\\human-gate-cab-cap-card-state.json",
+                      "last_write":  "2026-06-20T14:54:49",
+                      "size":  2455
+                  },
+                  {
+                      "name":  "human-gate-cab-cap-card-state.README.20260620-145334.md",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\gate-state\\human-gate-cab-cap-card-state.README.20260620-145334.md",
+                      "relative":  "documents\\module-cards\\gate-state\\human-gate-cab-cap-card-state.README.20260620-145334.md",
+                      "last_write":  "2026-06-20T14:53:34",
+                      "size":  700
+                  },
+                  {
+                      "name":  "human-gate-cab-cap-card-state.before-e110-20260620-145448.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\gate-state\\human-gate-cab-cap-card-state.before-e110-20260620-145448.json",
+                      "relative":  "documents\\module-cards\\gate-state\\human-gate-cab-cap-card-state.before-e110-20260620-145448.json",
+                      "last_write":  "2026-06-20T14:53:34",
+                      "size":  1406
+                  },
+                  {
+                      "name":  "canonical-gate-target-classification-20260620-145307.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\gate-mutation-contracts\\canonical-gate-target-classification-20260620-145307.json",
+                      "relative":  "documents\\module-cards\\gate-mutation-contracts\\canonical-gate-target-classification-20260620-145307.json",
+                      "last_write":  "2026-06-20T14:53:07",
+                      "size":  1546
+                  },
+                  {
+                      "name":  "canonical-gate-target-classification-20260620-145307.md",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\gate-mutation-contracts\\canonical-gate-target-classification-20260620-145307.md",
+                      "relative":  "documents\\module-cards\\gate-mutation-contracts\\canonical-gate-target-classification-20260620-145307.md",
+                      "last_write":  "2026-06-20T14:53:07",
+                      "size":  725
+                  },
+                  {
+                      "name":  "canonical-gate-target-readonly-plan-20260620-145237.md",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\gate-mutation-contracts\\canonical-gate-target-readonly-plan-20260620-145237.md",
+                      "relative":  "documents\\module-cards\\gate-mutation-contracts\\canonical-gate-target-readonly-plan-20260620-145237.md",
+                      "last_write":  "2026-06-20T14:52:41",
+                      "size":  794
+                  },
+                  {
+                      "name":  "gate-approval-real-mutation-script.pending-auth.20260620-145137.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\gate-mutation-contracts\\gate-approval-real-mutation-script.pending-auth.20260620-145137.json",
+                      "relative":  "documents\\module-cards\\gate-mutation-contracts\\gate-approval-real-mutation-script.pending-auth.20260620-145137.json",
+                      "last_write":  "2026-06-20T14:51:37",
+                      "size":  917
+                  },
+                  {
+                      "name":  "gate-mutation-preview.dry-run.20260620-145102.md",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\gate-mutation-contracts\\gate-mutation-preview.dry-run.20260620-145102.md",
+                      "relative":  "documents\\module-cards\\gate-mutation-contracts\\gate-mutation-preview.dry-run.20260620-145102.md",
+                      "last_write":  "2026-06-20T14:51:02",
+                      "size":  947
+                  },
+                  {
+                      "name":  "gate-mutation-preview.dry-run.20260620-145102.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\gate-mutation-contracts\\gate-mutation-preview.dry-run.20260620-145102.json",
+                      "relative":  "documents\\module-cards\\gate-mutation-contracts\\gate-mutation-preview.dry-run.20260620-145102.json",
+                      "last_write":  "2026-06-20T14:51:02",
+                      "size":  2298
+                  },
+                  {
+                      "name":  "gate-mutation-validator.no-execution.schema-tolerant.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\gate-mutation-contracts\\gate-mutation-validator.no-execution.schema-tolerant.json",
+                      "relative":  "documents\\module-cards\\gate-mutation-contracts\\gate-mutation-validator.no-execution.schema-tolerant.json",
+                      "last_write":  "2026-06-20T14:50:33",
+                      "size":  2030
+                  },
+                  {
+                      "name":  "gate-mutation-validator.no-execution.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\gate-mutation-contracts\\gate-mutation-validator.no-execution.json",
+                      "relative":  "documents\\module-cards\\gate-mutation-contracts\\gate-mutation-validator.no-execution.json",
+                      "last_write":  "2026-06-20T14:50:00",
+                      "size":  1362
+                  },
+                  {
+                      "name":  "GMC-HUMAN-GATE-CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830-20260620-144931.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\gate-mutation-contracts\\GMC-HUMAN-GATE-CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830-20260620-144931.json",
+                      "relative":  "documents\\module-cards\\gate-mutation-contracts\\GMC-HUMAN-GATE-CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830-20260620-144931.json",
+                      "last_write":  "2026-06-20T14:49:31",
+                      "size":  4181
+                  },
+                  {
+                      "name":  "gate-decision-mutation-contract.schema.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\gate-mutation-contracts\\gate-decision-mutation-contract.schema.json",
+                      "relative":  "documents\\module-cards\\gate-mutation-contracts\\gate-decision-mutation-contract.schema.json",
+                      "last_write":  "2026-06-20T14:49:31",
+                      "size":  2576
+                  },
+                  {
+                      "name":  "gate-decision-mutation-contract.md",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\gate-mutation-contracts\\gate-decision-mutation-contract.md",
+                      "relative":  "documents\\module-cards\\gate-mutation-contracts\\gate-decision-mutation-contract.md",
+                      "last_write":  "2026-06-20T14:49:31",
+                      "size":  574
+                  },
+                  {
+                      "name":  "HUMAN_GATE_DECISION_DRY_RUN_STAGE_CLOSE.md",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\HUMAN_GATE_DECISION_DRY_RUN_STAGE_CLOSE.md",
+                      "relative":  "documents\\module-cards\\HUMAN_GATE_DECISION_DRY_RUN_STAGE_CLOSE.md",
+                      "last_write":  "2026-06-20T14:47:00",
+                      "size":  525
+                  },
+                  {
+                      "name":  "HGD-HUMAN-GATE-CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830-20260620-144247.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\gate-decisions\\HGD-HUMAN-GATE-CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830-20260620-144247.json",
+                      "relative":  "documents\\module-cards\\gate-decisions\\HGD-HUMAN-GATE-CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830-20260620-144247.json",
+                      "last_write":  "2026-06-20T14:42:47",
+                      "size":  1936
+                  },
+                  {
+                      "name":  "HUMAN_GATE_READONLY_STAGE_CLOSE.md",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\HUMAN_GATE_READONLY_STAGE_CLOSE.md",
+                      "relative":  "documents\\module-cards\\HUMAN_GATE_READONLY_STAGE_CLOSE.md",
+                      "last_write":  "2026-06-20T14:42:18",
+                      "size":  707
+                  },
+                  {
+                      "name":  "card-blueprint-human-gate.schema.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\gates\\card-blueprint-human-gate.schema.json",
+                      "relative":  "documents\\module-cards\\gates\\card-blueprint-human-gate.schema.json",
+                      "last_write":  "2026-06-20T14:38:14",
+                      "size":  3726
+                  },
+                  {
+                      "name":  "HUMAN-GATE-CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\gates\\HUMAN-GATE-CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830.json",
+                      "relative":  "documents\\module-cards\\gates\\HUMAN-GATE-CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830.json",
+                      "last_write":  "2026-06-20T14:38:14",
+                      "size":  1772
+                  },
+                  {
+                      "name":  "card-blueprint-human-gate.example.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\gates\\card-blueprint-human-gate.example.json",
+                      "relative":  "documents\\module-cards\\gates\\card-blueprint-human-gate.example.json",
+                      "last_write":  "2026-06-20T14:38:14",
+                      "size":  1772
+                  },
+                  {
+                      "name":  "CARD_ACTION_VIEW_STAGE_CLOSE.md",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\CARD_ACTION_VIEW_STAGE_CLOSE.md",
+                      "relative":  "documents\\module-cards\\CARD_ACTION_VIEW_STAGE_CLOSE.md",
+                      "last_write":  "2026-06-20T14:37:43",
+                      "size":  514
+                  },
+                  {
+                      "name":  "CARD_ACTION_PROPOSAL_FLOW_CLOSE.md",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\CARD_ACTION_PROPOSAL_FLOW_CLOSE.md",
+                      "relative":  "documents\\module-cards\\CARD_ACTION_PROPOSAL_FLOW_CLOSE.md",
+                      "last_write":  "2026-06-20T14:09:46",
+                      "size":  541
+                  },
+                  {
+                      "name":  "CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\blueprints\\CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830.json",
+                      "relative":  "documents\\module-cards\\blueprints\\CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830.json",
+                      "last_write":  "2026-06-20T14:09:05",
+                      "size":  3117
+                  },
+                  {
+                      "name":  "CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\proposals\\CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830.json",
+                      "relative":  "documents\\module-cards\\proposals\\CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830.json",
+                      "last_write":  "2026-06-20T14:08:30",
+                      "size":  1770
+                  },
+                  {
+                      "name":  "card-action-proposal.example.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\card-action-proposal.example.json",
+                      "relative":  "documents\\module-cards\\card-action-proposal.example.json",
+                      "last_write":  "2026-06-20T14:07:01",
+                      "size":  1663
+                  },
+                  {
+                      "name":  "card-action-proposal.schema.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\card-action-proposal.schema.json",
+                      "relative":  "documents\\module-cards\\card-action-proposal.schema.json",
+                      "last_write":  "2026-06-20T14:07:01",
+                      "size":  5073
+                  },
+                  {
+                      "name":  "card-action-proposal-flow.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\card-action-proposal-flow.json",
+                      "relative":  "documents\\module-cards\\card-action-proposal-flow.json",
+                      "last_write":  "2026-06-20T14:06:31",
+                      "size":  3677
+                  },
+                  {
+                      "name":  "card-action-proposal-flow.md",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\card-action-proposal-flow.md",
+                      "relative":  "documents\\module-cards\\card-action-proposal-flow.md",
+                      "last_write":  "2026-06-20T14:06:31",
+                      "size":  620
+                  },
+                  {
+                      "name":  "MODULE_CARD_CANON_FINAL_CLOSE.md",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\MODULE_CARD_CANON_FINAL_CLOSE.md",
+                      "relative":  "documents\\module-cards\\MODULE_CARD_CANON_FINAL_CLOSE.md",
+                      "last_write":  "2026-06-20T14:05:59",
+                      "size":  1104
+                  },
+                  {
+                      "name":  "module-linked-card.index.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\module-linked-card.index.json",
+                      "relative":  "documents\\module-cards\\module-linked-card.index.json",
+                      "last_write":  "2026-06-20T14:00:52",
+                      "size":  2598
+                  },
+                  {
+                      "name":  "project-module-card-table.normalized.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\project-module-card-table.normalized.json",
+                      "relative":  "documents\\module-cards\\project-module-card-table.normalized.json",
+                      "last_write":  "2026-06-20T14:00:52",
+                      "size":  3113
+                  },
+                  {
+                      "name":  "MODULE_CARD_PROJECT_ROUTE_STAGE_CLOSE.md",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\MODULE_CARD_PROJECT_ROUTE_STAGE_CLOSE.md",
+                      "relative":  "documents\\module-cards\\MODULE_CARD_PROJECT_ROUTE_STAGE_CLOSE.md",
+                      "last_write":  "2026-06-20T13:58:05",
+                      "size":  684
+                  },
+                  {
+                      "name":  "CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001.json",
+                      "relative":  "documents\\module-cards\\CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001.json",
+                      "last_write":  "2026-06-20T13:56:16",
+                      "size":  1198
+                  },
+                  {
+                      "name":  "CARD-projects-MODULE_inicio-START-001.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\CARD-projects-MODULE_inicio-START-001.json",
+                      "relative":  "documents\\module-cards\\CARD-projects-MODULE_inicio-START-001.json",
+                      "last_write":  "2026-06-20T13:50:58",
+                      "size":  1162
+                  },
+                  {
+                      "name":  "CARD-ENGREMIAT_PROJECT_heartbeat_demo-MODULE_inicio-START-001.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\CARD-ENGREMIAT_PROJECT_heartbeat_demo-MODULE_inicio-START-001.json",
+                      "relative":  "documents\\module-cards\\CARD-ENGREMIAT_PROJECT_heartbeat_demo-MODULE_inicio-START-001.json",
+                      "last_write":  "2026-06-20T13:50:56",
+                      "size":  1234
+                  },
+                  {
+                      "name":  "project-start-module-rule.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\project-start-module-rule.json",
+                      "relative":  "documents\\module-cards\\project-start-module-rule.json",
+                      "last_write":  "2026-06-20T13:47:48",
+                      "size":  2347
+                  },
+                  {
+                      "name":  "card-view-project-module-integration.decision.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\card-view-project-module-integration.decision.json",
+                      "relative":  "documents\\module-cards\\card-view-project-module-integration.decision.json",
+                      "last_write":  "2026-06-20T13:39:47",
+                      "size":  1922
+                  },
+                  {
+                      "name":  "card-view-project-module-integration.decision.md",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\card-view-project-module-integration.decision.md",
+                      "relative":  "documents\\module-cards\\card-view-project-module-integration.decision.md",
+                      "last_write":  "2026-06-20T13:39:47",
+                      "size":  515
+                  },
+                  {
+                      "name":  "project-module-card-view.contract.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\project-module-card-view.contract.json",
+                      "relative":  "documents\\module-cards\\project-module-card-view.contract.json",
+                      "last_write":  "2026-06-20T13:35:53",
+                      "size":  4421
+                  },
+                  {
+                      "name":  "project-module-card-view.contract.md",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\project-module-card-view.contract.md",
+                      "relative":  "documents\\module-cards\\project-module-card-view.contract.md",
+                      "last_write":  "2026-06-20T13:35:53",
+                      "size":  677
+                  },
+                  {
+                      "name":  "MODULE_CARD_CANON_STAGE_CLOSE.md",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\MODULE_CARD_CANON_STAGE_CLOSE.md",
+                      "relative":  "documents\\module-cards\\MODULE_CARD_CANON_STAGE_CLOSE.md",
+                      "last_write":  "2026-06-20T13:31:33",
+                      "size":  682
+                  },
+                  {
+                      "name":  "card-to-module-flow.md",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\card-to-module-flow.md",
+                      "relative":  "documents\\module-cards\\card-to-module-flow.md",
+                      "last_write":  "2026-06-20T13:30:33",
+                      "size":  851
+                  },
+                  {
+                      "name":  "card-to-module-decision-matrix.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\card-to-module-decision-matrix.json",
+                      "relative":  "documents\\module-cards\\card-to-module-decision-matrix.json",
+                      "last_write":  "2026-06-20T13:30:33",
+                      "size":  2611
+                  },
+                  {
+                      "name":  "card-to-module-flow.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\card-to-module-flow.json",
+                      "relative":  "documents\\module-cards\\card-to-module-flow.json",
+                      "last_write":  "2026-06-20T13:30:33",
+                      "size":  4156
+                  },
+                  {
+                      "name":  "README.md",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\README.md",
+                      "relative":  "documents\\module-cards\\README.md",
+                      "last_write":  "2026-06-20T13:29:19",
+                      "size":  532
+                  },
+                  {
+                      "name":  "module-linked-card.template.md",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\module-linked-card.template.md",
+                      "relative":  "documents\\module-cards\\module-linked-card.template.md",
+                      "last_write":  "2026-06-20T13:29:19",
+                      "size":  480
+                  },
+                  {
+                      "name":  "module-linked-card.example.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\module-linked-card.example.json",
+                      "relative":  "documents\\module-cards\\module-linked-card.example.json",
+                      "last_write":  "2026-06-20T13:29:19",
+                      "size":  1208
+                  },
+                  {
+                      "name":  "module-linked-card.schema.json",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\module-linked-card.schema.json",
+                      "relative":  "documents\\module-cards\\module-linked-card.schema.json",
+                      "last_write":  "2026-06-20T13:29:19",
+                      "size":  2778
+                  }
+              ],
+    "needs":  [
+                  "MEDIUM: normalizar leyenda comun en inicio",
+                  "MEDIUM: normalizar leyenda comun en proyectos",
+                  "MEDIUM: normalizar leyenda comun en memoria",
+                  "MEDIUM: normalizar leyenda comun en data",
+                  "MEDIUM: normalizar leyenda comun en health"
+              ],
+    "next":  "E39_NORMALIZE_CHILD_SCREEN_LEGENDS_ONE_BY_ONE_START_WITH_INICIO"
+}
