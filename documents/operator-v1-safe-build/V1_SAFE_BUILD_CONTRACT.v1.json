@@ -1,0 +1,84 @@
+﻿{
+    "contract_id":  "ENGREMIAT_OPERATOR_V1_SAFE_BUILD_CONTRACT_V1",
+    "package":  "ENGREMIAT_OPERATOR_V1_SAFE_BUILD_001",
+    "stage":  "E02_DEFINE_V1_SAFE_BUILD_CONTRACT",
+    "created_at":  "2026-06-22T10:06:25",
+    "purpose":  "Construir V1 de forma segura usando V2 como capa de gobierno, empezando por normalizar Inicio operador V1 como pantalla operativa real.",
+    "strategy":  "V2 gobierna y audita; V1 opera el sistema diario. Cada mejora V1 debe ser pequeña, testeable, reversible y con integración gated.",
+    "scope_first_objective":  {
+                                  "name":  "NORMALIZAR_INICIO_OPERADOR_V1",
+                                  "description":  "Convertir Inicio operador V1 en una pantalla útil: estado operativo real, enlaces a proyectos/modulos, pendientes y navegacion clara.",
+                                  "risk":  "LOW_MEDIUM",
+                                  "reason":  "Inicio es la entrada diaria y ya existe como opcion 1; mejorarla reduce friccion sin tocar acciones sensibles."
+                              },
+    "principles":  [
+                       "No romper opciones V2 6/7/8/9.",
+                       "No ejecutar worker real, API externa, navegador, clipboard ni borrado.",
+                       "Mantener launcher maestro como puerta estable.",
+                       "Crear pantalla V1 versionada antes de sustituir rutas si hace falta.",
+                       "Todo cambio de launcher debe pasar por gate humano.",
+                       "Modo Json sin pausa y modo visual con pausa en pantallas nuevas.",
+                       "Commit scoped por frontera tecnica."
+                   ],
+    "v1_target_sections":  [
+                               "Estado operativo",
+                               "Proyectos activos/historicos",
+                               "Modulos",
+                               "Pendientes",
+                               "Siguiente accion humana",
+                               "Enlaces V2 de gobierno"
+                           ],
+    "blocked_actions":  [
+                            "push_auto",
+                            "fetch_auto",
+                            "merge_auto",
+                            "delete_files",
+                            "worker_real",
+                            "api_externa",
+                            "navegador",
+                            "clipboard",
+                            "reescritura_total_no_gated"
+                        ],
+    "allowed_actions":  [
+                            "readonly_audit",
+                            "create_contract",
+                            "create_screen_readonly",
+                            "prepare_launcher_gate",
+                            "apply_launcher_gate_with_auth",
+                            "validate_and_commit_scoped"
+                        ],
+    "planned_stages":  [
+                           {
+                               "id":  "E03",
+                               "name":  "CREATE_V1_HOME_SCREEN_READONLY",
+                               "description":  "Crear pantalla Inicio operador V1 read-only versionada y testeable."
+                           },
+                           {
+                               "id":  "E04",
+                               "name":  "GATE_LAUNCHER_INTEGRATION_V1_HOME",
+                               "description":  "Preparar integracion gated de opcion 1 si procede."
+                           },
+                           {
+                               "id":  "E05",
+                               "name":  "APPLY_V1_HOME_INTEGRATION_WITH_AUTH",
+                               "description":  "Aplicar solo con autorizacion humana."
+                           },
+                           {
+                               "id":  "E06",
+                               "name":  "VALIDATE_AND_COMMIT_SCOPED",
+                               "description":  "Validar launcher/pantalla y commit scoped."
+                           },
+                           {
+                               "id":  "E07",
+                               "name":  "HUMAN_RETEST_AND_CLOSE",
+                               "description":  "Prueba humana y cierre."
+                           }
+                       ],
+    "current_git":  {
+                        "branch":  "main",
+                        "head":  "8902743f",
+                        "rev_sync":  "0\t1",
+                        "tree_clean":  true
+                    },
+    "next":  "E03_CREATE_V1_HOME_SCREEN_READONLY"
+}

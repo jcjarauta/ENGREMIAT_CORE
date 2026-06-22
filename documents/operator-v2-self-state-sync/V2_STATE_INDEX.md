@@ -6,25 +6,25 @@ Estado vivo del Operador V2.
 - Package: 
 ENGREMIAT_OPERATOR_V1_SAFE_BUILD_001
 - Stage: 
-E01_AUDIT_V1_CURRENT_STATE_READONLY
+E06_VALIDATE_LAUNCHER_OPTION_1_AND_COMMIT_SCOPED
 - Step: 
-E01
+E06
 - Status: 
 PASS
 - Readiness: 
-10
+85
 - Head: 
-199c05b9
+8902743f
 - Rev sync: 
-0	0
+0	1
 - Tree clean: 
 False
 
 ## Resumen humano
-Auditado estado actual para construir V1 de forma segura: launcher, opciones V1/V2, Git limpio y candidatos de pantallas sin modificar archivos.
+Opcion 1 Inicio operador validada apuntando a pantalla V1; V2 permanece como gobierno 6/7/8/9; cierre scoped sin push.
 
 ## Report
-reports\operator-v1-safe-build\e01-audit-v1-current-state-readonly-20260622-100419.json
+reports\operator-v1-safe-build\e06-validate-launcher-option-1-and-commit-scoped-20260622-101102.json
 
 ## NEXT
-E02_DEFINE_V1_SAFE_BUILD_CONTRACT
+PROBAR_DESDE_LAUNCHER_OPCION_1

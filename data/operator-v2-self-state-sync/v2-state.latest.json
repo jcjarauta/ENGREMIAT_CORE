@@ -1,27 +1,27 @@
 ﻿{
     "schema":  "ENGREMIAT_OPERATOR_V2_STATE_LATEST_V1",
-    "updated_at":  "2026-06-22T10:04:26",
+    "updated_at":  "2026-06-22T10:11:09",
     "active_objective":  {
                              "id":  "ENGREMIAT_OPERATOR_V1_SAFE_BUILD_001",
                              "title":  "Operador V2 self-state sync",
                              "status":  "ACTIVE",
                              "purpose":  "Mantener V2 actualizado desde cada bloque cerrado.",
-                             "active_stage":  "E01_AUDIT_V1_CURRENT_STATE_READONLY",
-                             "readiness":  10,
-                             "next_action":  "E02_DEFINE_V1_SAFE_BUILD_CONTRACT"
+                             "active_stage":  "E06_VALIDATE_LAUNCHER_OPTION_1_AND_COMMIT_SCOPED",
+                             "readiness":  85,
+                             "next_action":  "PROBAR_DESDE_LAUNCHER_OPCION_1"
                          },
-    "last_stage":  "E01_AUDIT_V1_CURRENT_STATE_READONLY",
-    "last_step":  "E01",
+    "last_stage":  "E06_VALIDATE_LAUNCHER_OPTION_1_AND_COMMIT_SCOPED",
+    "last_step":  "E06",
     "last_status":  "PASS",
-    "last_report":  "reports\\operator-v1-safe-build\\e01-audit-v1-current-state-readonly-20260622-100419.json",
-    "readiness":  10,
+    "last_report":  "reports\\operator-v1-safe-build\\e06-validate-launcher-option-1-and-commit-scoped-20260622-101102.json",
+    "readiness":  85,
     "git_state":  {
-                      "head":  "199c05b9",
-                      "rev_sync":  "0\t0",
+                      "head":  "8902743f",
+                      "rev_sync":  "0\t1",
                       "tree_clean":  false,
-                      "status_short":  "?? documents/operator-v1-safe-build/\n?? documents/operator-v2-push-gate/E02R_COMMIT_PUSH_GATE_EVIDENCE_AND_EXECUTE_AUTHORIZED_PUSH_20260622-100325.md\n?? reports/operator-v1-safe-build/\n?? reports/operator-v2-push-gate/e02r-commit-push-gate-evidence-and-execute-authorized-push-20260622-100325.json",
+                      "status_short":  "M ENGREMIAT.ps1\n M data/operator-v2-self-state-sync/v2-state.events.jsonl\n M data/operator-v2-self-state-sync/v2-state.latest.json\n M data/operator-v2-self-state-sync/v2-state.registry.json\n M documents/operator-v2-self-state-sync/V2_STATE_INDEX.md\n?? data/operator-v1-safe-build/\n?? documents/operator-v1-safe-build/E04_GATE_LAUNCHER_INTEGRATION_V1_HOME_20260622-100750.md\n?? documents/operator-v1-safe-build/V1_HOME_INDEX.md\n?? documents/operator-v1-safe-build/V1_SAFE_BUILD_CONTRACT.v1.json\n?? documents/operator-v1-safe-build/V1_SAFE_BUILD_CONTRACT.v1.md\n?? reports/operator-v1-safe-build/e02-define-v1-safe-build-contract-20260622-100621.json\n?? reports/operator-v1-safe-build/e03-create-v1-home-screen-readonly-20260622-100706.json\n?? reports/operator-v1-safe-build/e04-gate-launcher-integration-v1-home-20260622-100750.json\n?? reports/operator-v1-safe-build/e05r-apply-v1-home-launcher-integration-by-case-boundary-20260622-101002.json\n?? tools/operator-v1/",
                       "push_executed":  false
                   },
-    "next_action":  "E02_DEFINE_V1_SAFE_BUILD_CONTRACT",
-    "human_summary":  "Auditado estado actual para construir V1 de forma segura: launcher, opciones V1/V2, Git limpio y candidatos de pantallas sin modificar archivos."
+    "next_action":  "PROBAR_DESDE_LAUNCHER_OPCION_1",
+    "human_summary":  "Opcion 1 Inicio operador validada apuntando a pantalla V1; V2 permanece como gobierno 6/7/8/9; cierre scoped sin push."
 }
