@@ -1,0 +1,38 @@
+﻿{
+    "package_id":  "ENGREMIAT_WORKER_SYNC_001",
+    "stage":  "E78D2_CLOSE_WORKER_SIGNALS_TOGGLE_HUMAN_VALIDATION",
+    "status":  "PASS",
+    "human_validation":  "CONFIRMED_BY_USER_SCREEN_TEXT",
+    "validated_chain":  [
+                            "worker signals config can turn worker signal reading OFF",
+                            "OFF mode shows local lightweight project state",
+                            "ON mode consumes project-signal/heartbeat",
+                            "Projects Center shows EVENT_SEQUENCE DONE OK when ON",
+                            "UI footer documents Workers ON/OFF config path"
+                        ],
+    "validated_view":  "PROYECTOS / CARTERA DE PROYECTOS / PROCESO VIVO",
+    "validated_expected":  {
+                               "block":  0,
+                               "wait":  0,
+                               "block_status":  "OK",
+                               "run":  0,
+                               "worker_signals_mode":  "ON",
+                               "ok":  1,
+                               "project":  "ENGREMIAT_PROJECT_heartbeat_demo",
+                               "worker":  "DONE",
+                               "warn":  0,
+                               "next_action":  "secuencia local completada",
+                               "phase":  "EVENT_SEQUENCE",
+                               "total":  1,
+                               "progress":  "[##########]"
+                           },
+    "architecture_decision":  "Worker signal reading is controlled by local ON/OFF config to save resources when no workers are active",
+    "config":  "C:\\ENGREMIAT_CORE\\documents\\worker-sync\\worker-signals-config.json",
+    "toggle_script":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-WORKER-SIGNALS-TOGGLE.ps1",
+    "launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1",
+    "heartbeat":  "C:\\ENGREMIAT_CORE\\documents\\worker-sync\\worker-heartbeat-latest.json",
+    "project_signal":  "C:\\ENGREMIAT_CORE\\documents\\worker-sync\\project-signal-latest.json",
+    "events":  "C:\\ENGREMIAT_CORE\\documents\\worker-sync\\worker-events.jsonl",
+    "created_at":  "2026-06-20T12:38:33",
+    "next":  "E79_CLOSE_WORKER_SYNC_STAGE"
+}

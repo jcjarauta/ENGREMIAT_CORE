@@ -1,0 +1,22 @@
+﻿{
+    "package_id":  "ENGREMIAT_OPERATOR_LAUNCHER_001",
+    "stage":  "E88B_CLOSE_CMD_HUMAN_ENTRYPOINT_VALIDATION",
+    "status":  "PASS",
+    "human_validation":  "CONFIRMED_BY_USER_SCREEN_TEXT",
+    "validated_screen":  "ENGREMIAT / LAUNCHER HUMANO ESTABLE",
+    "validated_options":  [
+                              "[1] Inicio operador",
+                              "[2] Proyectos",
+                              "[3] Memoria y documentacion",
+                              "[4] Data Intake",
+                              "[5] Health launchers",
+                              "[b/q] salir"
+                          ],
+    "cmd_launcher":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.cmd",
+    "ps1_launcher":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+    "registry":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-REGISTRY.json",
+    "recommended_command":  ".\\ENGREMIAT.cmd",
+    "architecture_decision":  "El acceso humano estable real es ENGREMIAT.cmd porque evita bloqueo de ExecutionPolicy y enruta al PS1 versionado",
+    "created_at":  "2026-06-20T13:17:03",
+    "next":  "E89_RESUME_OPERATOR_WALKTHROUGH_FROM_CMD_LAUNCHER"
+}

@@ -1,0 +1,27 @@
+﻿{
+    "off":  {
+                "signals_enabled":  false,
+                "project":  "ENGREMIAT_PROJECT_heartbeat_demo",
+                "phase":  "MODULOS",
+                "score":  20,
+                "worker":  "IDLE",
+                "block":  "WARN",
+                "next":  "generar evidencia",
+                "source":  "local",
+                "cause":  "generar evidencia"
+            }
+}
+---ON---
+{
+    "off":  {
+                "signals_enabled":  true,
+                "project":  "ENGREMIAT_PROJECT_heartbeat_demo",
+                "phase":  "EVENT_SEQUENCE",
+                "score":  100,
+                "worker":  "DONE",
+                "block":  "OK",
+                "next":  "secuencia local completada",
+                "source":  "heartbeat",
+                "cause":  "signal_ok"
+            }
+}

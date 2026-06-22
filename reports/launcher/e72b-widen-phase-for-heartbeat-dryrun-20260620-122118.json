@@ -1,0 +1,27 @@
+﻿{
+    "package_id":  "ENGREMIAT_WORKER_SYNC_001",
+    "stage":  "E72B_WIDEN_PHASE_FOR_HEARTBEAT_DRYRUN",
+    "status":  "PASS",
+    "exit_code":  0,
+    "result":  {
+                   "project":  "ENGREMIAT_PROJECT_heartbeat_demo",
+                   "phase":  "HEARTBEAT_DRY_RUN",
+                   "score":  10,
+                   "worker":  "RUNNING",
+                   "block":  "OK",
+                   "next":  "validar writer minimo de heartbeat",
+                   "source":  "heartbeat",
+                   "cause":  "signal_ok",
+                   "rendered_line":  " 1 ENGREMIAT_PROJECT_heartbeat_demo     HEARTBEAT_DRY_RUN    [#\u003e--------] RUNNING OK    validar writer minimo de ..."
+               },
+    "error":  "",
+    "probe":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e72b-probe-heartbeat-dryrun-render-20260620-122118.ps1",
+    "stdout":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e72b-probe-stdout-20260620-122118.txt",
+    "stderr":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e72b-probe-stderr-20260620-122118.txt",
+    "projects_launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1",
+    "backup":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\backup-projects-center-before-e72b-20260620-122118.ps1",
+    "heartbeat":  "C:\\ENGREMIAT_CORE\\documents\\worker-sync\\worker-heartbeat-latest.json",
+    "project_signal":  "C:\\ENGREMIAT_CORE\\documents\\worker-sync\\project-signal-latest.json",
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e72b-widen-phase-for-heartbeat-dryrun-20260620-122118.json",
+    "next":  "E73_OPEN_PROJECTS_VIEW_WRITER_SIGNAL_HUMAN_TEST"
+}

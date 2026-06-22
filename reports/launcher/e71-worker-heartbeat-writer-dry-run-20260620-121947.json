@@ -1,0 +1,22 @@
+﻿{
+    "package_id":  "ENGREMIAT_WORKER_SYNC_001",
+    "stage":  "E71_WORKER_HEARTBEAT_WRITER_MINIMAL_DRY_RUN",
+    "status":  "PASS",
+    "writer":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-WORKER-HEARTBEAT-WRITER-MINIMAL.ps1",
+    "stdout":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e71-writer-stdout-20260620-121947.txt",
+    "stderr":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e71-writer-stderr-20260620-121947.txt",
+    "heartbeat":  "C:\\ENGREMIAT_CORE\\documents\\worker-sync\\worker-heartbeat-latest.json",
+    "project_signal":  "C:\\ENGREMIAT_CORE\\documents\\worker-sync\\project-signal-latest.json",
+    "events":  "C:\\ENGREMIAT_CORE\\documents\\worker-sync\\worker-events.jsonl",
+    "events_count":  2,
+    "validated":  {
+                      "phase":  "HEARTBEAT_DRY_RUN",
+                      "project_id":  "ENGREMIAT_PROJECT_heartbeat_demo",
+                      "progress_pct":  10,
+                      "next_action":  "validar writer minimo de heartbeat",
+                      "block":  "OK",
+                      "state":  "RUNNING"
+                  },
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e71-worker-heartbeat-writer-dry-run-20260620-121947.json",
+    "next":  "E72_VERIFY_PROJECTS_VIEW_READS_WRITER_SIGNAL"
+}

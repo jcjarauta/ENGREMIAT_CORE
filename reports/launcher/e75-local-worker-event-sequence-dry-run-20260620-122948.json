@@ -1,0 +1,26 @@
+﻿{
+    "package_id":  "ENGREMIAT_WORKER_SYNC_001",
+    "stage":  "E75_CREATE_LOCAL_WORKER_EVENT_SEQUENCE_DRY_RUN",
+    "status":  "PASS",
+    "runner":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LOCAL-WORKER-EVENT-SEQUENCE-DRY-RUN.ps1",
+    "stdout":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e75-runner-stdout-20260620-122948.txt",
+    "stderr":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e75-runner-stderr-20260620-122948.txt",
+    "heartbeat":  "C:\\ENGREMIAT_CORE\\documents\\worker-sync\\worker-heartbeat-latest.json",
+    "project_signal":  "C:\\ENGREMIAT_CORE\\documents\\worker-sync\\project-signal-latest.json",
+    "events":  "C:\\ENGREMIAT_CORE\\documents\\worker-sync\\worker-events.jsonl",
+    "validated_sequence":  [
+                               "QUEUED",
+                               "RUNNING",
+                               "WAITING_HUMAN",
+                               "DONE"
+                           ],
+    "final":  {
+                  "phase":  "EVENT_SEQUENCE",
+                  "block":  "OK",
+                  "progress_pct":  100,
+                  "next_action":  "secuencia local completada",
+                  "state":  "DONE"
+              },
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e75-local-worker-event-sequence-dry-run-20260620-122948.json",
+    "next":  "E76_VERIFY_PROJECTS_VIEW_READS_EVENT_SEQUENCE_DONE"
+}

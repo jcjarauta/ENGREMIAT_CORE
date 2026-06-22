@@ -1,0 +1,13 @@
+﻿{
+    "package_id":  "ENGREMIAT_OPERATOR_LAUNCHER_001",
+    "stage":  "E88A_CREATE_CMD_HUMAN_ENTRYPOINT_FOR_EXECUTION_POLICY",
+    "status":  "PASS",
+    "problem":  "PowerShell execution policy blocks direct .ps1 launch",
+    "solution":  "Use ENGREMIAT.cmd as stable human entrypoint; cmd calls PowerShell with ExecutionPolicy Bypass",
+    "ps1_launcher":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+    "cmd_launcher":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.cmd",
+    "recommended_command":  ".\\ENGREMIAT.cmd",
+    "registry":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-REGISTRY.json",
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e88a-create-cmd-human-entrypoint-for-execution-policy-20260620-131613.json",
+    "next":  "E88B_VALIDATE_CMD_HUMAN_ENTRYPOINT"
+}

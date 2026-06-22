@@ -1,0 +1,81 @@
+{
+    "package_id":  "ENGREMIAT_MODULE_CARD_CANON_001",
+    "stage":  "E95A_DIAGNOSE_PROJECT_ID_NORMALIZATION",
+    "status":  "PASS",
+    "mode":  "READONLY_DIAGNOSTIC",
+    "projects":  [
+                     {
+                         "folder":  "ENGREMIAT_PROJECT_heartbeat_demo",
+                         "path":  "C:\\ENGREMIAT_CORE\\projects\\ENGREMIAT_PROJECT_heartbeat_demo",
+                         "project_json":  "C:\\ENGREMIAT_CORE\\projects\\ENGREMIAT_PROJECT_heartbeat_demo\\project.json",
+                         "project_json_exists":  true,
+                         "fields":  {
+                                        "id":  "ENGREMIAT_PROJECT_heartbeat_demo",
+                                        "name":  "heartbeat demo"
+                                    },
+                         "detected_project_id":  "ENGREMIAT_PROJECT_heartbeat_demo",
+                         "detected_source":  "id",
+                         "looks_generic":  false,
+                         "modules":  [
+                                         {
+                                             "folder":  "MODULE_inicio",
+                                             "module_id":  "MODULE_inicio",
+                                             "module_project_id":  "ENGREMIAT_PROJECT_heartbeat_demo",
+                                             "module_json":  "C:\\ENGREMIAT_CORE\\projects\\ENGREMIAT_PROJECT_heartbeat_demo\\MODULOS\\MODULE_inicio\\module.json",
+                                             "module_json_exists":  true
+                                         }
+                                     ]
+                     },
+                     {
+                         "folder":  "projects",
+                         "path":  "C:\\ENGREMIAT_CORE\\projects\\projects",
+                         "project_json":  "C:\\ENGREMIAT_CORE\\projects\\projects\\project.json",
+                         "project_json_exists":  false,
+                         "fields":  {
+
+                                    },
+                         "detected_project_id":  "projects",
+                         "detected_source":  "folder_name",
+                         "looks_generic":  true,
+                         "modules":  [
+                                         {
+                                             "folder":  "MODULE_inicio",
+                                             "module_id":  "MODULE_inicio",
+                                             "module_project_id":  "projects",
+                                             "module_json":  "C:\\ENGREMIAT_CORE\\projects\\projects\\MODULOS\\MODULE_inicio\\module.json",
+                                             "module_json_exists":  true
+                                         }
+                                     ]
+                     }
+                 ],
+    "card_rows":  [
+                      {
+                          "card_id":  "CARD-ENG-ROOT-UX-001",
+                          "project_id":  "ENGREMIAT_CORE",
+                          "module_id":  "MODULE_OPERATOR_NAVIGATION",
+                          "status":  "PROPOSED",
+                          "type":  "UX",
+                          "title":  "Normalizar Control y estado como panel util"
+                      },
+                      {
+                          "card_id":  "CARD-ENGREMIAT_PROJECT_heartbeat_demo-MODULE_inicio-START-001",
+                          "project_id":  "ENGREMIAT_PROJECT_heartbeat_demo",
+                          "module_id":  "MODULE_inicio",
+                          "status":  "PROPOSED",
+                          "type":  "CONTROL",
+                          "title":  "Tarjeta base de inicio del proyecto"
+                      },
+                      {
+                          "card_id":  "CARD-projects-MODULE_inicio-START-001",
+                          "project_id":  "projects",
+                          "module_id":  "MODULE_inicio",
+                          "status":  "PROPOSED",
+                          "type":  "CONTROL",
+                          "title":  "Tarjeta base de inicio del proyecto"
+                      }
+                  ],
+    "open_issue":  "Detectar y corregir project_id generico projects sin romper tarjetas ni modulos",
+    "recommendation":  "Si aparece looks_generic=True, ejecutar E95B normalizacion controlada con backup",
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e95a-diagnose-project-id-normalization-20260620-135511.json",
+    "next":  "E95B_NORMALIZE_GENERIC_PROJECT_ID_WITH_BACKUP_IF_NEEDED"
+}

@@ -1,0 +1,27 @@
+﻿{
+    "package_id":  "ENGREMIAT_WORKER_SYNC_001",
+    "stage":  "E73F_CLOSE_WORKER_WRITER_HUMAN_VALIDATION",
+    "status":  "PASS",
+    "human_validation":  "CONFIRMED_BY_USER_SCREEN_TEXT",
+    "validated_view":  "PROYECTOS / CARTERA DE PROYECTOS / PROCESO VIVO",
+    "validated_expected":  {
+                               "total":  1,
+                               "progress":  "[#\u003e--------]",
+                               "block_status":  "OK",
+                               "project":  "ENGREMIAT_PROJECT_heartbeat_demo",
+                               "run":  1,
+                               "phase":  "HEARTBEAT_DRY_RUN",
+                               "block":  0,
+                               "ok":  1,
+                               "worker":  "RUNNING",
+                               "warn":  0
+                           },
+    "architecture_decision":  "Minimal heartbeat writer publishes local heartbeat, event log and project signal; Projects Center consumes it as live signal",
+    "writer":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-WORKER-HEARTBEAT-WRITER-MINIMAL.ps1",
+    "launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1",
+    "heartbeat":  "C:\\ENGREMIAT_CORE\\documents\\worker-sync\\worker-heartbeat-latest.json",
+    "project_signal":  "C:\\ENGREMIAT_CORE\\documents\\worker-sync\\project-signal-latest.json",
+    "events":  "C:\\ENGREMIAT_CORE\\documents\\worker-sync\\worker-events.jsonl",
+    "created_at":  "2026-06-20T12:26:14",
+    "next":  "E74_DEFINE_NEXT_REAL_WORKER_EVENT_WRITER_OR_CLOSE_STAGE"
+}

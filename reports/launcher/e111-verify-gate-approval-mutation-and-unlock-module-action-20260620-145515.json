@@ -1,0 +1,21 @@
+﻿{
+    "schema":  "engremiat.module_action_unlock.v1",
+    "package_id":  "ENGREMIAT_MODULE_CARD_ACTION_FLOW_001",
+    "stage":  "E111_VERIFY_GATE_APPROVAL_MUTATION_AND_UNLOCK_MODULE_ACTION",
+    "created_at":  "2026-06-20T14:55:15",
+    "status":  "UNLOCKED",
+    "unlock_id":  "UNLOCK-HUMAN-GATE-CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001",
+    "gate_id":  "HUMAN-GATE-CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830",
+    "approved_decision_id":  "HGD-HUMAN-GATE-CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001",
+    "canonical_gate_state":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\gate-state\\human-gate-cab-cap-card-state.json",
+    "mutation_receipt":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\gate-mutation-contracts\\gate-approval-real-mutation-receipt-20260620-145448.json",
+    "allowed_next_action":  "CONTINUE_MODULE_CARD_APPROVED_BLUEPRINT_FLOW",
+    "human_gate_status":  "APPROVED",
+    "safety":  {
+                   "verified_after_real_mutation":  true,
+                   "reports_are_evidence_only":  true,
+                   "unlock_created":  true,
+                   "additional_real_mutation":  false
+               },
+    "next":  "E112_CONTINUE_APPROVED_MODULE_CARD_ACTION_FLOW"
+}

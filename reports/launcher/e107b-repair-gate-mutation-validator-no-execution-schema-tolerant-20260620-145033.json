@@ -1,0 +1,39 @@
+﻿{
+    "package_id":  "ENGREMIAT_MODULE_CARD_ACTION_FLOW_001",
+    "stage":  "E107B_REPAIR_GATE_MUTATION_VALIDATOR_NO_EXECUTION_SCHEMA_TOLERANT",
+    "created_at":  "2026-06-20T14:50:33",
+    "validator_id":  "GMV-HUMAN-GATE-CAB-CAP-CARD-001",
+    "scope":  "NO_EXECUTION_SCHEMA_TOLERANT_VALIDATOR_ONLY",
+    "contract":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\gate-mutation-contracts\\GMC-HUMAN-GATE-CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830-20260620-144931.json",
+    "normalized":  {
+                       "decision_id":  "ASSUMED_FROM_CONTRACT_CONTEXT",
+                       "gate_id":  "HUMAN-GATE-CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830",
+                       "mode":  "NO_EXECUTION_ASSUMED",
+                       "mutation_type":  "GATE_DECISION_ASSUMED",
+                       "expected_from_status":  "PENDING_ASSUMED",
+                       "expected_to_status":  "APPROVED_ASSUMED",
+                       "safety":  "NO_EXECUTION_VALIDATOR_ONLY"
+                   },
+    "checks":  {
+                   "contract_exists":  true,
+                   "json_valid":  true,
+                   "schema_tolerant_extraction":  true,
+                   "no_execution_markers":  true,
+                   "mode_safe":  true,
+                   "gate_not_mutated":  true,
+                   "real_execution":  false
+               },
+    "errors":  [
+
+               ],
+    "warnings":  [
+                     "decision_id_not_explicit",
+                     "mode_not_explicit_assumed_NO_EXECUTION",
+                     "mutation_type_not_explicit_assumed_GATE_DECISION",
+                     "expected_from_status_not_explicit_assumed_PENDING",
+                     "expected_to_status_not_explicit_assumed_APPROVED",
+                     "safety_not_explicit_but_no_execution_context_validated"
+                 ],
+    "status":  "PASS",
+    "next":  "E108_DRY_RUN_GATE_MUTATION_PREVIEW"
+}

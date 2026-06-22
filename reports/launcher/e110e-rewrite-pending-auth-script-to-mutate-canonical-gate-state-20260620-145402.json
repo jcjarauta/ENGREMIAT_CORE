@@ -1,0 +1,16 @@
+﻿{
+    "package_id":  "ENGREMIAT_MODULE_CARD_ACTION_FLOW_001",
+    "stage":  "E110E_REWRITE_PENDING_AUTH_SCRIPT_TO_MUTATE_CANONICAL_GATE_STATE",
+    "created_at":  "2026-06-20T14:54:02",
+    "status":  "PASS",
+    "mode":  "REWRITE_PENDING_AUTH_SCRIPT_ONLY_NO_EXECUTION",
+    "script":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\gate-mutations\\apply-human-gate-approval.pending-auth.ps1",
+    "canonical_gate_state":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\gate-state\\human-gate-cab-cap-card-state.json",
+    "authorization_required":  true,
+    "authorization_status":  "PENDING_EXPLICIT_HUMAN_AUTHORIZATION",
+    "required_env":  "ENGREMIAT_GATE_MUTATION_AUTH",
+    "required_value":  "AUTORIZO_E110_APPLY_REAL_GATE_APPROVAL_MUTATION",
+    "real_execution":  false,
+    "gate_mutated":  false,
+    "next":  "E110F_VERIFY_REWRITTEN_SCRIPT_BLOCKS_WITHOUT_AUTH"
+}

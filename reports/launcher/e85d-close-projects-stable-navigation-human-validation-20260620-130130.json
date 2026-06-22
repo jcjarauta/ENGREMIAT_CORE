@@ -1,0 +1,32 @@
+﻿{
+    "package_id":  "ENGREMIAT_OPERATOR_UX_001",
+    "stage":  "E85D_CLOSE_PROJECTS_STABLE_NAVIGATION_HUMAN_VALIDATION",
+    "status":  "PASS",
+    "human_validation":  "CONFIRMED_BY_USER_SCREEN_TEXT",
+    "validated_flow":  [
+                           "PROYECTOS menu opens",
+                           "[1] opens PROYECTOS / CARTERA DE PROYECTOS",
+                           "CARTERA [1] opens PROYECTO / ACCIONES"
+                       ],
+    "validated_screen":  {
+                             "modulos":  "OK",
+                             "project_json":  "OK",
+                             "actions":  [
+                                             "[1] abrir carpeta del proyecto",
+                                             "[2] abrir project.json",
+                                             "[3] abrir MODULOS",
+                                             "[4] ver estado/ayuda del operador",
+                                             "[b] volver a cartera | Enter = refrescar"
+                                         ],
+                             "workers_mode":  "OFF",
+                             "latest_signal":  "EVENT_SEQUENCE / DONE / OK / 100%",
+                             "title":  "PROYECTO / ACCIONES",
+                             "project":  "ENGREMIAT_PROJECT_heartbeat_demo"
+                         },
+    "launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1",
+    "config":  "C:\\ENGREMIAT_CORE\\documents\\worker-sync\\worker-signals-config.json",
+    "project_path":  "C:\\ENGREMIAT_CORE\\projects\\ENGREMIAT_PROJECT_heartbeat_demo",
+    "project_signal":  "C:\\ENGREMIAT_CORE\\documents\\worker-sync\\project-signal-latest.json",
+    "created_at":  "2026-06-20T13:01:30",
+    "next":  "E86_APPLY_OPERATOR_NAVIGATION_MODEL_TO_ROOT"
+}

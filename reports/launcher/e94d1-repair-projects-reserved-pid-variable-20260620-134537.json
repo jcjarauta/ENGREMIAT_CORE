@@ -1,0 +1,11 @@
+{
+    "package_id":  "ENGREMIAT_MODULE_CARD_CANON_001",
+    "stage":  "E94D1_REPAIR_PROJECTS_RESERVED_PID_VARIABLE",
+    "status":  "PASS",
+    "problem":  "PowerShell variable $PID is reserved and $pid collides because variable names are case-insensitive",
+    "repair":  "Renamed $pid to $ProjectIdValue",
+    "projects_launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1",
+    "capture":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e94d0-projects-error-capture-20260620-134506.txt",
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e94d1-repair-projects-reserved-pid-variable-20260620-134537.json",
+    "next":  "E94D_VALIDATE_PROJECT_MODULE_CARD_ROUTE"
+}

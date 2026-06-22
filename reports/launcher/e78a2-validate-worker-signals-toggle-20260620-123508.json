@@ -1,0 +1,14 @@
+﻿{
+    "package_id":  "ENGREMIAT_WORKER_SYNC_001",
+    "stage":  "E78A2_VALIDATE_WORKER_SIGNALS_TOGGLE",
+    "status":  "PASS",
+    "decision":  "Toggle ON/OFF validado para lectura de señales worker en Projects Center",
+    "config":  "C:\\ENGREMIAT_CORE\\documents\\worker-sync\\worker-signals-config.json",
+    "toggle_script":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-WORKER-SIGNALS-TOGGLE.ps1",
+    "launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1",
+    "toggle_test_stdout":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e78a2-toggle-test-stdout-20260620-123508.txt",
+    "toggle_test_stderr":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e78a2-toggle-test-stderr-20260620-123508.txt",
+    "current_mode":  "ON",
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e78a2-validate-worker-signals-toggle-20260620-123508.json",
+    "next":  "E78B_VALIDATE_PROJECTS_VIEW_WITH_WORKER_SIGNALS_OFF_ON"
+}

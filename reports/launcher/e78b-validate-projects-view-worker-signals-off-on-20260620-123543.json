@@ -1,0 +1,35 @@
+﻿{
+    "package_id":  "ENGREMIAT_WORKER_SYNC_001",
+    "stage":  "E78B_VALIDATE_PROJECTS_VIEW_WITH_WORKER_SIGNALS_OFF_ON",
+    "status":  "PASS",
+    "config":  "C:\\ENGREMIAT_CORE\\documents\\worker-sync\\worker-signals-config.json",
+    "toggle_script":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-WORKER-SIGNALS-TOGGLE.ps1",
+    "launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1",
+    "off_result":  {
+                       "signals_enabled":  false,
+                       "project":  "ENGREMIAT_PROJECT_heartbeat_demo",
+                       "phase":  "MODULOS",
+                       "score":  20,
+                       "worker":  "IDLE",
+                       "block":  "WARN",
+                       "next":  "generar evidencia",
+                       "source":  "local",
+                       "cause":  "generar evidencia"
+                   },
+    "on_result":  {
+                      "signals_enabled":  true,
+                      "project":  "ENGREMIAT_PROJECT_heartbeat_demo",
+                      "phase":  "EVENT_SEQUENCE",
+                      "score":  100,
+                      "worker":  "DONE",
+                      "block":  "OK",
+                      "next":  "secuencia local completada",
+                      "source":  "heartbeat",
+                      "cause":  "signal_ok"
+                  },
+    "final_mode":  "ON",
+    "stdout":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e78b-probe-stdout-20260620-123543.txt",
+    "stderr":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e78b-probe-stderr-20260620-123543.txt",
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e78b-validate-projects-view-worker-signals-off-on-20260620-123543.json",
+    "next":  "E78C_OPEN_PROJECTS_VIEW_WORKER_SIGNALS_ON_FINAL"
+}

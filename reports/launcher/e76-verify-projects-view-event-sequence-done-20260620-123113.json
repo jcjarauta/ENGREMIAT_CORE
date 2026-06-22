@@ -1,0 +1,27 @@
+﻿{
+    "package_id":  "ENGREMIAT_WORKER_SYNC_001",
+    "stage":  "E76_VERIFY_PROJECTS_VIEW_READS_EVENT_SEQUENCE_DONE",
+    "status":  "PASS",
+    "exit_code":  0,
+    "result":  {
+                   "project":  "ENGREMIAT_PROJECT_heartbeat_demo",
+                   "phase":  "EVENT_SEQUENCE",
+                   "score":  100,
+                   "worker":  "DONE",
+                   "block":  "OK",
+                   "next":  "secuencia local completada",
+                   "source":  "heartbeat",
+                   "cause":  "signal_ok",
+                   "rendered_line":  " 1 ENGREMIAT_PROJECT_heartbeat_demo     EVENT_SEQUENCE           [##########] DONE    OK    secuencia local completada"
+               },
+    "error":  "",
+    "probe":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e76-probe-projects-event-sequence-done-20260620-123113.ps1",
+    "stdout":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e76-probe-stdout-20260620-123113.txt",
+    "stderr":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e76-probe-stderr-20260620-123113.txt",
+    "projects_launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1",
+    "heartbeat":  "C:\\ENGREMIAT_CORE\\documents\\worker-sync\\worker-heartbeat-latest.json",
+    "project_signal":  "C:\\ENGREMIAT_CORE\\documents\\worker-sync\\project-signal-latest.json",
+    "events":  "C:\\ENGREMIAT_CORE\\documents\\worker-sync\\worker-events.jsonl",
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e76-verify-projects-view-event-sequence-done-20260620-123113.json",
+    "next":  "E77_OPEN_PROJECTS_VIEW_EVENT_SEQUENCE_HUMAN_TEST"
+}

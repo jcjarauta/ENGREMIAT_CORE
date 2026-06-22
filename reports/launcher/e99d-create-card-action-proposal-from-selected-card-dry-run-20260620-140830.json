@@ -1,0 +1,21 @@
+{
+    "package_id":  "ENGREMIAT_MODULE_CARD_ACTION_FLOW_001",
+    "stage":  "E99D_CREATE_CARD_ACTION_PROPOSAL_FROM_SELECTED_CARD_DRY_RUN",
+    "status":  "PASS",
+    "mode":  "DRY_RUN_NO_EXECUTION",
+    "card":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001.json",
+    "proposal":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\proposals\\CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830.json",
+    "validator":  "C:\\ENGREMIAT_CORE\\tools\\module-cards\\validate-card-action-proposal.ps1",
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e99d-create-card-action-proposal-from-selected-card-dry-run-20260620-140830.json",
+    "guards":  [
+                   "execute_worker",
+                   "modify_code_directly",
+                   "git_commit",
+                   "git_push",
+                   "network_call",
+                   "browser_action",
+                   "autohotkey_action",
+                   "delete_files"
+               ],
+    "next":  "E99E_CREATE_CARD_ACTION_BLUEPRINT_DRY_RUN"
+}

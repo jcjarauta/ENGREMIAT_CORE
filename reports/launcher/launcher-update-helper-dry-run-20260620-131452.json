@@ -1,0 +1,52 @@
+﻿{
+    "package_id":  "ENGREMIAT_OPERATOR_LAUNCHER_001",
+    "stage":  "LAUNCHER_UPDATE_HELPER",
+    "status":  "PASS",
+    "mode":  "dry-run",
+    "launcher_id":  "",
+    "checked":  [
+                    {
+                        "id":  "inicio",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO-NORMALIZED.ps1",
+                        "exists":  true,
+                        "parse":  "OK",
+                        "backup":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\launcher-update-helper-backup-inicio-20260620-131452.ps1",
+                        "mode":  "dry-run"
+                    },
+                    {
+                        "id":  "proyectos",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1",
+                        "exists":  true,
+                        "parse":  "OK",
+                        "backup":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\launcher-update-helper-backup-proyectos-20260620-131452.ps1",
+                        "mode":  "dry-run"
+                    },
+                    {
+                        "id":  "documentacion",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-MEMORY-DOCUMENTATION-CENTER-NORMALIZED.ps1",
+                        "exists":  true,
+                        "parse":  "OK",
+                        "backup":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\launcher-update-helper-backup-documentacion-20260620-131452.ps1",
+                        "mode":  "dry-run"
+                    },
+                    {
+                        "id":  "data-intake",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-DATA-INTAKE-CENTER-NORMALIZED.ps1",
+                        "exists":  true,
+                        "parse":  "OK",
+                        "backup":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\launcher-update-helper-backup-data-intake-20260620-131452.ps1",
+                        "mode":  "dry-run"
+                    },
+                    {
+                        "id":  "worker-toggle",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-WORKER-SIGNALS-TOGGLE.ps1",
+                        "exists":  true,
+                        "parse":  "OK",
+                        "backup":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\launcher-update-helper-backup-worker-toggle-20260620-131452.ps1",
+                        "mode":  "dry-run"
+                    }
+                ],
+    "health":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-HEALTH.ps1",
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\launcher-update-helper-dry-run-20260620-131452.json",
+    "next":  "Use Mode=apply only from controlled patch scripts"
+}

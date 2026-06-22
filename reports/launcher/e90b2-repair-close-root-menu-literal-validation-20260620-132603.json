@@ -1,0 +1,28 @@
+{
+    "package_id":  "ENGREMIAT_OPERATOR_UX_001",
+    "stage":  "E90B2_REPAIR_CLOSE_ROOT_MENU_LITERAL_VALIDATION",
+    "status":  "PASS",
+    "human_validation":  "CONFIRMED_BY_USER_SCREEN_TEXT",
+    "validated_screen":  "ENGREMIAT / INICIO",
+    "validated_menu":  [
+                           "[1] Proyectos",
+                           "[2] Memoria y documentacion",
+                           "[3] Control y estado",
+                           "[4] Launchers y configuracion",
+                           "[5] Operador y workers  PAUSADO",
+                           "[?] Ayuda",
+                           "[b/q] salir | Enter = refrescar"
+                       ],
+    "validation_fix":  "Use string.Contains instead of wildcard -like because brackets are wildcard character classes",
+    "removed_issues":  [
+                           "old [7/?] numbering",
+                           "Herramientas y configuracion PENDIENTE as vague active option",
+                           "Estado y ayuda duplicated with Control y estado"
+                       ],
+    "future_seeded":  "Sistema vivo / Autodiagnostico para tarjetas, modulos y tareas propuestas",
+    "root_launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO-NORMALIZED.ps1",
+    "cmd_entrypoint":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.cmd",
+    "future_autodiagnosis_seed":  "C:\\ENGREMIAT_CORE\\documents\\system-autodiagnosis\\system-autodiagnosis-future-module.seed.json",
+    "closed_at":  "2026-06-20T13:26:03",
+    "next":  "E91_REVIEW_CONTROL_AND_STATUS_LAYER"
+}

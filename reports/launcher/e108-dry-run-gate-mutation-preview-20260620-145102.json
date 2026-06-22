@@ -1,0 +1,38 @@
+﻿{
+    "package_id":  "ENGREMIAT_MODULE_CARD_ACTION_FLOW_001",
+    "stage":  "E108_DRY_RUN_GATE_MUTATION_PREVIEW",
+    "created_at":  "2026-06-20T14:51:02",
+    "mode":  "DRY_RUN_NO_GATE_MUTATION",
+    "contract":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\gate-mutation-contracts\\GMC-HUMAN-GATE-CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830-20260620-144931.json",
+    "validator":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\gate-mutation-contracts\\gate-mutation-validator.no-execution.schema-tolerant.json",
+    "source_screen":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\screens\\HUMAN_GATE_DECISION_DRY_RUN_STAGE_CLOSE.json",
+    "decision":  {
+                     "decision_id":  "ASSUMED_FROM_CONTRACT_CONTEXT",
+                     "gate_id":  "HUMAN-GATE-CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830",
+                     "requested_transition":  {
+                                                  "from":  "PENDING_ASSUMED",
+                                                  "to":  "APPROVED_ASSUMED"
+                                              },
+                     "screen_status":  "PENDING"
+                 },
+    "planned_mutation":  {
+                             "would_update_gate_status":  true,
+                             "would_set_status":  "APPROVED_ASSUMED",
+                             "would_attach_decision_id":  "ASSUMED_FROM_CONTRACT_CONTEXT",
+                             "would_create_evidence":  true,
+                             "would_write_real_gate":  false,
+                             "would_touch_project_module_card":  false
+                         },
+    "safety":  {
+                   "real_execution":  false,
+                   "gate_mutated":  false,
+                   "files_mutated":  [
+                                         "dry_run_preview_json",
+                                         "dry_run_preview_markdown",
+                                         "report_json"
+                                     ],
+                   "blocked_real_write":  true
+               },
+    "result":  "READY_FOR_HUMAN_REVIEW",
+    "next":  "E109_CREATE_REAL_GATE_APPROVAL_MUTATION_SCRIPT_PENDING_EXPLICIT_AUTHORIZATION"
+}
