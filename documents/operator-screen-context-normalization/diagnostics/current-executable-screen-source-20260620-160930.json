@@ -1,0 +1,79 @@
+﻿{
+    "schema":  "engremiat.operator_screen_context_current_source_locator.v1",
+    "package_id":  "ENGREMIAT_OPERATOR_SCREEN_CONTEXT_NORMALIZATION_001",
+    "stage":  "E01B_LOCATE_CURRENT_EXECUTABLE_SCREEN_SOURCE_READONLY_EXCLUDE_BACKUPS",
+    "created_at":  "2026-06-20T16:09:31",
+    "status":  "PASS",
+    "mode":  "READONLY_CURRENT_EXECUTABLE_SOURCE_LOCATOR_EXCLUDE_BACKUPS",
+    "preferred_target":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1",
+    "searched_roots":  [
+                           "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator",
+                           "C:\\ENGREMIAT_CORE\\tools\\launcher",
+                           "C:\\ENGREMIAT_CORE\\tools\\operator",
+                           "C:\\ENGREMIAT_CORE\\scripts"
+                       ],
+    "excluded":  "documents,reports,backups,bak,tmp,old,copy",
+    "files_scanned":  247,
+    "hits_count":  184,
+    "best_match":  {
+                       "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO.ps1.bak-inicio-v6-20260620075519",
+                       "score":  10,
+                       "extension":  ".bak-inicio-v6-20260620075519",
+                       "parse_ok":  true,
+                       "is_preferred":  false,
+                       "sample":  [
+                                      "line 9: $ToolDir=Join-Path $Core \"tools\\desktop-terminal-operator\" / $FocusFile=Join-Path $Core \"data\\desktop-terminal-operator\\last-focus.json\" /  / function W($m,$c=\"White\"){ Write-Host $m -ForegroundColor $c } / function P(){ [void](Read-Host \"Enter\") } /  / function ActiveProject(){ /   $j=Join-Path $Core \"data\\desktop-terminal-operator\\active-project.json\" /   $t=Join-Path $Core \"data\\desktop-terminal-operator\\active-project.txt\"",
+                                      "line 150:       W (\"     {0}\" -f $scripts[$i].path) DarkGray /     } /  /     W \"\" /     $cmd=Read-Host \"OPERADOR\" /     if([string]::IsNullOrWhiteSpace($cmd)){ $scripts=FindMainOperatorScripts; continue } /     if($cmd -eq \"b\"){ return } /     if($cmd -as [int]){ /       $ix=[int]$cmd-1",
+                                      "line 564:     W \"\" /     W \"q = salir | Enter = refrescar\" Cyan /     W \"\" /  /     $cmd=Read-Host \"ENGREMIAT_INICIO\" /  /     if([string]::IsNullOrWhiteSpace($cmd)){ continue } /     if($cmd -eq \"q\"){ return } / "
+                                  ]
+                   },
+    "preferred_match":  [
+                            {
+                                "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1",
+                                "score":  130,
+                                "extension":  ".ps1",
+                                "parse_ok":  true,
+                                "is_preferred":  true,
+                                "sample":  [
+                                               "line 174: } / Set-BootGlobalKeepContext / while($true){ /   Refresh-Screen /   $cmd=Normalize-Command (Read-Host \"ENGREMIAT\") /   # ENGREMIAT_ROUTE_BINDING_M_MAINTENANCE_BEGIN /    / if($cmd -in @(\"m\",\"mant\",\"mantenimiento\")){ /     Invoke-EngremiatHumanMaintenanceInteractiveForm -SourceScreen \"desktop-terminal-operator\" -SourceContext \"operator-readhost-route\"",
+                                               "line 175: Set-BootGlobalKeepContext / while($true){ /   Refresh-Screen /   $cmd=Normalize-Command (Read-Host \"ENGREMIAT\") /   # ENGREMIAT_ROUTE_BINDING_M_MAINTENANCE_BEGIN /    / if($cmd -in @(\"m\",\"mant\",\"mantenimiento\")){ /     Invoke-EngremiatHumanMaintenanceInteractiveForm -SourceScreen \"desktop-terminal-operator\" -SourceContext \"operator-readhost-route\" /     continue",
+                                               "line 178:   $cmd=Normalize-Command (Read-Host \"ENGREMIAT\") /   # ENGREMIAT_ROUTE_BINDING_M_MAINTENANCE_BEGIN /    / if($cmd -in @(\"m\",\"mant\",\"mantenimiento\")){ /     Invoke-EngremiatHumanMaintenanceInteractiveForm -SourceScreen \"desktop-terminal-operator\" -SourceContext \"operator-readhost-route\" /     continue /   } /   # ENGREMIAT_ROUTE_BINDING_M_MAINTENANCE_END /   if($cmd -eq \"__refresh__\"){continue}",
+                                               "line 183:     continue /   } /   # ENGREMIAT_ROUTE_BINDING_M_MAINTENANCE_END /   if($cmd -eq \"__refresh__\"){continue} /   if($cmd -eq \"ayuda\"){Show-Help;Read-Host \"Enter para volver\"|Out-Null;continue} /   if($cmd -eq \"salir\"){if((Get-Level) -eq \"GLOBAL\"){break}else{Go-Back;continue}} /   if($cmd -eq \"atras\"){Go-Back;continue} /   \u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $Router $cmd / }",
+                                               "line 208: # ENGREMIAT_MAINTENANCE_ROUTE_NOTE_END / # ENGREMIAT_HUMAN_MAINTENANCE_COMMAND_END /  / # ENGREMIAT_HUMAN_MAINTENANCE_INTERACTIVE_FORM_BEGIN / function Invoke-EngremiatHumanMaintenanceInteractiveForm { /   param([string]$SourceScreen=\"desktop-terminal-operator\",[string]$SourceContext=\"operator-interactive-form\") /   Write-Host \"\" /   Write-Host \"==== MANTENIMIENTO HUMANO ====\" -ForegroundColor Cyan /   Write-Host \"Deja un campo vacio para usar valor por defecto.\" -ForegroundColor DarkGray",
+                                               "line 213:   param([string]$SourceScreen=\"desktop-terminal-operator\",[string]$SourceContext=\"operator-interactive-form\") /   Write-Host \"\" /   Write-Host \"==== MANTENIMIENTO HUMANO ====\" -ForegroundColor Cyan /   Write-Host \"Deja un campo vacio para usar valor por defecto.\" -ForegroundColor DarkGray /   $title=Read-Host \"Titulo breve\" /   if([string]::IsNullOrWhiteSpace($title)){$title=\"Mantenimiento humano desde operator\"} /   $dimension=Read-Host \"Dimension [ux/software/architecture/documentation/security/hardware/humans/financing/growth/governance/operations/workers/other]\" /   if([string]::IsNullOrWhiteSpace($dimension)){$dimension=\"ux\"} /   $allowedDimensions=@(\"ux\",\"software\",\"architecture\",\"documentation\",\"security\",\"hardware\",\"humans\",\"financing\",\"growth\",\"governance\",\"operations\",\"workers\",\"other\")",
+                                               "line 215:   Write-Host \"==== MANTENIMIENTO HUMANO ====\" -ForegroundColor Cyan /   Write-Host \"Deja un campo vacio para usar valor por defecto.\" -ForegroundColor DarkGray /   $title=Read-Host \"Titulo breve\" /   if([string]::IsNullOrWhiteSpace($title)){$title=\"Mantenimiento humano desde operator\"} /   $dimension=Read-Host \"Dimension [ux/software/architecture/documentation/security/hardware/humans/financing/growth/governance/operations/workers/other]\" /   if([string]::IsNullOrWhiteSpace($dimension)){$dimension=\"ux\"} /   $allowedDimensions=@(\"ux\",\"software\",\"architecture\",\"documentation\",\"security\",\"hardware\",\"humans\",\"financing\",\"growth\",\"governance\",\"operations\",\"workers\",\"other\") /   if($dimension -notin $allowedDimensions){$dimension=\"other\"} /   $severity=Read-Host \"Severidad [LOW/MEDIUM/HIGH/CRITICAL]\"",
+                                               "line 219:   $dimension=Read-Host \"Dimension [ux/software/architecture/documentation/security/hardware/humans/financing/growth/governance/operations/workers/other]\" /   if([string]::IsNullOrWhiteSpace($dimension)){$dimension=\"ux\"} /   $allowedDimensions=@(\"ux\",\"software\",\"architecture\",\"documentation\",\"security\",\"hardware\",\"humans\",\"financing\",\"growth\",\"governance\",\"operations\",\"workers\",\"other\") /   if($dimension -notin $allowedDimensions){$dimension=\"other\"} /   $severity=Read-Host \"Severidad [LOW/MEDIUM/HIGH/CRITICAL]\" /   if([string]::IsNullOrWhiteSpace($severity)){$severity=\"MEDIUM\"} /   $severity=$severity.ToUpperInvariant() /   if($severity -notin @(\"LOW\",\"MEDIUM\",\"HIGH\",\"CRITICAL\")){$severity=\"MEDIUM\"} /   $observation=Read-Host \"Observacion\"",
+                                               "line 223:   $severity=Read-Host \"Severidad [LOW/MEDIUM/HIGH/CRITICAL]\" /   if([string]::IsNullOrWhiteSpace($severity)){$severity=\"MEDIUM\"} /   $severity=$severity.ToUpperInvariant() /   if($severity -notin @(\"LOW\",\"MEDIUM\",\"HIGH\",\"CRITICAL\")){$severity=\"MEDIUM\"} /   $observation=Read-Host \"Observacion\" /   if([string]::IsNullOrWhiteSpace($observation)){$observation=\"Observacion humana pendiente de detalle\"} /   $suggested=Read-Host \"Accion sugerida\" /   if([string]::IsNullOrWhiteSpace($suggested)){$suggested=\"Revisar y convertir en mejora/tarea si procede\"} /   if($title.Length -gt 120){$title=$title.Substring(0,120)}",
+                                               "line 225:   $severity=$severity.ToUpperInvariant() /   if($severity -notin @(\"LOW\",\"MEDIUM\",\"HIGH\",\"CRITICAL\")){$severity=\"MEDIUM\"} /   $observation=Read-Host \"Observacion\" /   if([string]::IsNullOrWhiteSpace($observation)){$observation=\"Observacion humana pendiente de detalle\"} /   $suggested=Read-Host \"Accion sugerida\" /   if([string]::IsNullOrWhiteSpace($suggested)){$suggested=\"Revisar y convertir en mejora/tarea si procede\"} /   if($title.Length -gt 120){$title=$title.Substring(0,120)} /   if($observation.Length -gt 1200){$observation=$observation.Substring(0,1200)} /   if($suggested.Length -gt 800){$suggested=$suggested.Substring(0,800)}"
+                                           ]
+                            }
+                        ],
+    "normalization_contract":  {
+                                   "required_header_fields":  [
+                                                                  "Pantalla",
+                                                                  "Ruta",
+                                                                  "Rol",
+                                                                  "Principio",
+                                                                  "Comandos"
+                                                              ],
+                                   "required_commands":  [
+                                                             "Enter = refrescar",
+                                                             "? = ayuda",
+                                                             "b = volver cuando aplique",
+                                                             "m = mantenimiento"
+                                                         ],
+                                   "rule":  "toda pantalla debe informar donde estamos y comandos visibles antes del prompt"
+                               },
+    "decision":  "USE_PREFERRED_TARGET_IF_PRESENT_AND_PARSE_OK",
+    "safety":  {
+                   "real_execution":  false,
+                   "system_mutation":  false,
+                   "screen_mutation":  false,
+                   "worker":  false,
+                   "browser":  false,
+                   "network":  false,
+                   "git":  false,
+                   "readonly":  true
+               },
+    "next":  "E02_PREPARE_PROJECTS_SCREEN_CONTEXT_AND_M_COMMAND_PATCH_NO_WRITE"
+}

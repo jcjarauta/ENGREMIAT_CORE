@@ -1,0 +1,67 @@
+﻿{
+    "schema":  "engremiat.screen_maintenance_real_integration_close.v1",
+    "package_id":  "ENGREMIAT_SCREEN_MAINTENANCE_COMMAND_REAL_INTEGRATION_001",
+    "stage":  "E06_CLOSE_SCREEN_MAINTENANCE_COMMAND_REAL_INTEGRATION_AND_VALUE_NEXT_OBJECTIVE",
+    "created_at":  "2026-06-20T15:48:35",
+    "status":  "PASS",
+    "readiness":  100,
+    "closed":  true,
+    "decision":  "SCREEN_MAINTENANCE_HELPER_INTEGRATED_IN_OPERATOR_CAPTURE_ONLY",
+    "canonical_command":  "m",
+    "target":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1",
+    "summary":  {
+                    "target_parse_ok":  true,
+                    "target_marker_present":  true,
+                    "helper_present":  true,
+                    "capture_script_reference_present":  true,
+                    "pending_auth_blocked_without_auth":  true,
+                    "patch_applied_with_backup":  true,
+                    "smoke_created_card":  true,
+                    "created_card":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-cards\\inbox\\HMC-desktop-terminal-operator-smoke-20260620-154739.json",
+                    "created_card_id":  "HMC-desktop-terminal-operator-smoke-20260620-154739",
+                    "command_route_status":  "HELPER_READY_ROUTE_NOTE_PRESENT_NOT_FULL_INTERACTIVE_ROUTE_TESTED"
+                },
+    "evidence":  {
+                     "inventory":  "C:\\ENGREMIAT_CORE\\documents\\screen-maintenance-real-integration\\inventory\\screen-maintenance-real-target-inventory.latest.json",
+                     "proposal":  "C:\\ENGREMIAT_CORE\\documents\\screen-maintenance-real-integration\\patch-proposal\\exact-patch-proposal-no-write.latest.json",
+                     "pending_auth":  "C:\\ENGREMIAT_CORE\\documents\\screen-maintenance-real-integration\\pending-auth-patch\\pending-auth-patch-script.latest.json",
+                     "apply":  "C:\\ENGREMIAT_CORE\\documents\\screen-maintenance-real-integration\\pending-auth-patch\\apply-patch-with-explicit-auth.latest.json",
+                     "smoke":  "C:\\ENGREMIAT_CORE\\documents\\screen-maintenance-real-integration\\smoke\\screen-maintenance-command-smoke.latest.json",
+                     "human_maintenance_card_close":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-cards\\close\\human-maintenance-card-v0-close.latest.json",
+                     "screen_contract":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-cards\\screen-contract\\canonical-screen-maintenance-command-contract.latest.json"
+                 },
+    "what_we_built":  [
+                          "localizado target real del operator",
+                          "propuesta exacta no-write",
+                          "script pending-auth con bloqueo sin autorizacion",
+                          "parche real aplicado con backup",
+                          "helper Invoke-EngremiatHumanMaintenanceCard integrado al final para respetar param",
+                          "smoke aislado que crea tarjeta humana real capture-only",
+                          "evidencia de parse OK y flags seguros"
+                      ],
+    "known_limits":  [
+                         "se ha integrado helper, pero no se ha probado todavia la pulsacion interactiva m dentro del menu real",
+                         "puede faltar enganchar rutas m/mant/mantenimiento en todos los switch/menus internos",
+                         "la ayuda visual puede no aparecer en todas las pantallas si cada vista imprime su propia linea",
+                         "el formulario de tarjeta todavia no es interactivo comodo",
+                         "git sigue diferido por decision del usuario"
+                     ],
+    "recommended_next_objective":  "ENGREMIAT_SCREEN_MAINTENANCE_ROUTE_BINDING_001",
+    "possible_next":  [
+                          "A: enlazar rutas m/mant/mantenimiento en el menu real principal y probar con ejecucion controlada del operator",
+                          "B: crear formulario interactivo para tarjeta humana desde terminal",
+                          "C: propagar contrato m = mantenimiento a pantallas PROYECTOS/MODULOS/HUMAN_GATE",
+                          "D: fusionar tarjetas humanas nuevas en el ciclo normal del System Observer"
+                      ],
+    "recommendation":  "A primero para que m funcione realmente desde pantalla; B despues para hacer la captura comoda; C despues para universalizar en todas las pantallas",
+    "safety":  {
+                   "real_execution":  false,
+                   "system_mutation":  true,
+                   "screen_mutation":  true,
+                   "worker":  false,
+                   "browser":  false,
+                   "network":  false,
+                   "git":  false
+               },
+    "next":  "PAUSE_AND_VALUE_NEXT_OBJECTIVE_AFTER_SCREEN_MAINTENANCE_REAL_INTEGRATION"
+}

@@ -1,0 +1,109 @@
+﻿{
+    "schema":  "engremiat.human_maintenance_interactive_form_contract.v1",
+    "package_id":  "ENGREMIAT_HUMAN_MAINTENANCE_INTERACTIVE_FORM_001",
+    "stage":  "E01_DEFINE_INTERACTIVE_FORM_CONTRACT_READONLY",
+    "created_at":  "2026-06-20T15:58:42",
+    "status":  "PASS",
+    "mode":  "READONLY_CONTRACT_NO_WRITE_TO_OPERATOR",
+    "purpose":  "convertir comando m en captura humana util y estructurada",
+    "entrypoint":  "m / mant / mantenimiento desde operator",
+    "current_route_status":  "BOUND_TO_Invoke-EngremiatHumanMaintenanceCard",
+    "capture_script":  "C:\\ENGREMIAT_CORE\\tools\\human-maintenance-cards\\new-human-maintenance-card.ps1",
+    "fields":  [
+                   {
+                       "name":  "Title",
+                       "prompt":  "Titulo breve",
+                       "required":  true,
+                       "default":  "Mantenimiento humano desde operator",
+                       "max_length":  120
+                   },
+                   {
+                       "name":  "Dimension",
+                       "prompt":  "Dimension",
+                       "required":  false,
+                       "default":  "ux",
+                       "allowed":  [
+                                       "ux",
+                                       "software",
+                                       "architecture",
+                                       "documentation",
+                                       "security",
+                                       "hardware",
+                                       "humans",
+                                       "financing",
+                                       "growth",
+                                       "governance",
+                                       "operations",
+                                       "workers",
+                                       "other"
+                                   ]
+                   },
+                   {
+                       "name":  "Severity",
+                       "prompt":  "Severidad",
+                       "required":  false,
+                       "default":  "MEDIUM",
+                       "allowed":  [
+                                       "LOW",
+                                       "MEDIUM",
+                                       "HIGH",
+                                       "CRITICAL"
+                                   ]
+                   },
+                   {
+                       "name":  "Observation",
+                       "prompt":  "Observacion",
+                       "required":  true,
+                       "default":  "Observacion humana pendiente de detalle",
+                       "max_length":  1200
+                   },
+                   {
+                       "name":  "SuggestedAction",
+                       "prompt":  "Accion sugerida",
+                       "required":  false,
+                       "default":  "Revisar y convertir en mejora/tarea si procede",
+                       "max_length":  800
+                   },
+                   {
+                       "name":  "SourceContext",
+                       "prompt":  "Contexto/pantalla",
+                       "required":  false,
+                       "default":  "operator-interactive-form"
+                   }
+               ],
+    "defaults":  {
+                     "SourceScreen":  "desktop-terminal-operator",
+                     "SourceContext":  "operator-interactive-form",
+                     "Dimension":  "ux",
+                     "Severity":  "MEDIUM",
+                     "Title":  "Mantenimiento humano desde operator",
+                     "Observation":  "Observacion humana pendiente de detalle",
+                     "SuggestedAction":  "Revisar y convertir en mejora/tarea si procede"
+                 },
+    "validation":  {
+                       "empty_required_fields_use_default":  true,
+                       "severity_normalized":  true,
+                       "dimension_normalized":  true,
+                       "max_lengths_enforced":  true,
+                       "no_execution_from_form":  true
+                   },
+    "safety":  {
+                   "real_execution":  false,
+                   "system_mutation":  false,
+                   "screen_mutation":  false,
+                   "worker":  false,
+                   "browser":  false,
+                   "network":  false,
+                   "git":  false,
+                   "readonly":  true
+               },
+    "implementation_plan":  [
+                                "E02 crear funcion Invoke-EngremiatHumanMaintenanceInteractiveForm en patch no-write",
+                                "E03 crear pending-auth patch script sin aplicar",
+                                "E04 aplicar helper interactivo con backup",
+                                "E05 smoke aislado con inputs simulados",
+                                "E06 enlazar ruta m al formulario en vez de tarjeta generica",
+                                "E07 cierre y valorar propagacion a pantallas"
+                            ],
+    "next":  "E02_PREPARE_INTERACTIVE_FORM_HELPER_PATCH_NO_WRITE"
+}

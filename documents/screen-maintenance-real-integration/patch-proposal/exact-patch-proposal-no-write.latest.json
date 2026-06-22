@@ -1,0 +1,81 @@
+﻿{
+    "schema":  "engremiat.screen_maintenance_exact_patch_proposal.v1",
+    "package_id":  "ENGREMIAT_SCREEN_MAINTENANCE_COMMAND_REAL_INTEGRATION_001",
+    "stage":  "E02_PREPARE_EXACT_PATCH_PROPOSAL_NO_WRITE",
+    "created_at":  "2026-06-20T15:43:50",
+    "status":  "PASS",
+    "target":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1",
+    "proposal":  {
+                     "mode":  "NO_WRITE_EXACT_PATCH_PROPOSAL",
+                     "target":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1",
+                     "target_sha256_before":  "7ABA46813C93E63A13206758A5CEFF467A947A84E4B29311495D34F791B508CD",
+                     "target_parse_ok":  true,
+                     "already_mentions_maintenance":  false,
+                     "canonical_command":  "m",
+                     "capture_script":  "C:\\ENGREMIAT_CORE\\tools\\human-maintenance-cards\\new-human-maintenance-card.ps1",
+                     "recommended_help_line":  "refrescar/f5/Enter = redibujar pantalla | ? = ayuda | comandos = menu actual | m = mantenimiento",
+                     "marker_begin":  "# ENGREMIAT_HUMAN_MAINTENANCE_COMMAND_BEGIN",
+                     "marker_end":  "# ENGREMIAT_HUMAN_MAINTENANCE_COMMAND_END",
+                     "planned_insert_block":  [
+                                                  "# ENGREMIAT_HUMAN_MAINTENANCE_COMMAND_BEGIN",
+                                                  "function Invoke-EngremiatHumanMaintenanceCard {",
+                                                  "  param([string]$SourceScreen=\"desktop-terminal-operator\",[string]$SourceContext=\"operator-screen\")",
+                                                  "  $scriptPath = Join-Path (Get-Location).Path \"tools\\human-maintenance-cards\\new-human-maintenance-card.ps1\"",
+                                                  "  if(-not (Test-Path -LiteralPath $scriptPath)){ Write-Host \"NO_GO maintenance_capture_script_not_found path=$scriptPath\" -ForegroundColor Red; return }",
+                                                  "  \u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $scriptPath -SourceScreen $SourceScreen -SourceContext $SourceContext -Dimension \"ux\" -Severity \"INFO\" -Title \"Mantenimiento humano desde pantalla\" -Description \"Tarjeta creada desde comando m = mantenimiento.\" -Observation \"Observacion humana pendiente de ampliar/evaluar por Observer.\" -SuggestedAction \"Evaluar esta senal humana y convertirla en mejora/tarea si procede.\"",
+                                                  "}",
+                                                  "# ENGREMIAT_HUMAN_MAINTENANCE_COMMAND_END"
+                                              ],
+                     "planned_command_routes":  [
+                                                    {
+                                                        "command":  "m",
+                                                        "action":  "Invoke-EngremiatHumanMaintenanceCard",
+                                                        "source_screen":  "desktop-terminal-operator",
+                                                        "source_context":  "current operator screen",
+                                                        "after_action":  "return_to_same_screen"
+                                                    },
+                                                    {
+                                                        "command":  "mant",
+                                                        "action":  "Invoke-EngremiatHumanMaintenanceCard",
+                                                        "source_screen":  "desktop-terminal-operator",
+                                                        "source_context":  "current operator screen",
+                                                        "after_action":  "return_to_same_screen"
+                                                    },
+                                                    {
+                                                        "command":  "mantenimiento",
+                                                        "action":  "Invoke-EngremiatHumanMaintenanceCard",
+                                                        "source_screen":  "desktop-terminal-operator",
+                                                        "source_context":  "current operator screen",
+                                                        "after_action":  "return_to_same_screen"
+                                                    }
+                                                ],
+                     "required_future_flow":  [
+                                                  "create backup",
+                                                  "create pending-auth patch script",
+                                                  "validate block without auth",
+                                                  "apply only with explicit auth",
+                                                  "parse target after patch",
+                                                  "smoke help line includes maintenance",
+                                                  "smoke command m creates card capture-only",
+                                                  "confirm no worker/browser/network/git"
+                                              ],
+                     "blocked_now":  [
+                                         "write target",
+                                         "patch target",
+                                         "execute command m in target",
+                                         "git"
+                                     ],
+                     "safety":  {
+                                    "real_execution":  false,
+                                    "system_mutation":  false,
+                                    "screen_mutation":  false,
+                                    "worker":  false,
+                                    "browser":  false,
+                                    "network":  false,
+                                    "git":  false,
+                                    "no_write":  true
+                                },
+                     "next":  "E03_CREATE_PENDING_AUTH_PATCH_SCRIPT_NO_APPLY"
+                 },
+    "next":  "E03_CREATE_PENDING_AUTH_PATCH_SCRIPT_NO_APPLY"
+}

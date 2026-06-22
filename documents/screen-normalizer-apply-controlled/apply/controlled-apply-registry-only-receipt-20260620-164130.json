@@ -1,0 +1,23 @@
+﻿{
+    "schema":  "engremiat.screen_normalizer_apply_registry_only_receipt.v1",
+    "package_id":  "ENGREMIAT_SCREEN_NORMALIZER_APPLY_CONTROLLED_001",
+    "stage":  "E02_APPLY_PREVIEW_TO_REGISTRY_ONLY_AFTER_AUTHORIZATION",
+    "created_at":  "2026-06-20T16:41:30",
+    "status":  "PASS",
+    "applied":  true,
+    "authorization":  "AUTORIZO_SCREEN_NORMALIZER_APPLY_REGISTRY_ONLY",
+    "scope":  "REGISTRY_ONLY",
+    "registry":  "C:\\ENGREMIAT_CORE\\data\\screen-normalizer\\screen-registry.v1.json",
+    "backup":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-apply-controlled\\backups\\screen-registry.before-apply-20260620-164130.json",
+    "candidate":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-apply-controlled\\apply\\screen-registry.candidate-20260620-164130.json",
+    "parent_screen":  "INICIO",
+    "new_screen_id":  "DEMO_FUNCION_ANIDADA_20260620-164034",
+    "screen_count_before":  7,
+    "screen_count_after":  8,
+    "patch_launchers":  false,
+    "worker":  false,
+    "browser":  false,
+    "network":  false,
+    "git":  false,
+    "next":  "E03_VALIDATE_CONTROLLED_APPLY_REGISTRY_ONLY"
+}

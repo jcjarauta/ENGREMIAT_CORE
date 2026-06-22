@@ -1,0 +1,35 @@
+﻿{
+    "schema":  "engremiat.screen_normalizer_apply_controlled_gate.v1",
+    "package_id":  "ENGREMIAT_SCREEN_NORMALIZER_APPLY_CONTROLLED_001",
+    "stage":  "E01_PREPARE_CONTROLLED_APPLY_PREVIEW_AND_GATE",
+    "created_at":  "2026-06-20T16:40:35",
+    "status":  "PENDING_HUMAN_AUTHORIZATION",
+    "mode":  "CONTROLLED_APPLY_GATE_NO_WRITE",
+    "authorization_required":  true,
+    "authorization_status":  "PENDING_EXPLICIT_HUMAN_AUTHORIZATION",
+    "required_phrase":  "AUTORIZO_SCREEN_NORMALIZER_APPLY_REGISTRY_ONLY",
+    "scope":  {
+                  "apply_to_registry_only":  true,
+                  "patch_launchers":  false,
+                  "generate_launchers":  false,
+                  "worker":  false,
+                  "browser":  false,
+                  "network":  false,
+                  "git":  false
+              },
+    "parent_screen":  "INICIO",
+    "new_screen_id":  "DEMO_FUNCION_ANIDADA_20260620-164034",
+    "preview":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-apply-controlled\\preview\\controlled-apply-preview-20260620-164034.json",
+    "registry":  "C:\\ENGREMIAT_CORE\\data\\screen-normalizer\\screen-registry.v1.json",
+    "validations":  {
+                        "preview_status":  "PASS",
+                        "parent_exists":  true,
+                        "new_screen_not_in_registry":  true,
+                        "commands_normalized":  true,
+                        "m_help":  true,
+                        "enter_refresh":  true,
+                        "context_help":  true,
+                        "back":  true
+                    },
+    "next":  "E02_APPLY_PREVIEW_TO_REGISTRY_ONLY_AFTER_AUTHORIZATION"
+}

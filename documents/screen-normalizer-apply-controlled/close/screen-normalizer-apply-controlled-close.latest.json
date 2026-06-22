@@ -1,0 +1,53 @@
+﻿{
+    "schema":  "engremiat.screen_normalizer_apply_controlled_close.v1",
+    "package_id":  "ENGREMIAT_SCREEN_NORMALIZER_APPLY_CONTROLLED_001",
+    "stage":  "E04_CLOSE_SCREEN_NORMALIZER_APPLY_CONTROLLED_AND_VALUE_NEXT_OBJECTIVE",
+    "created_at":  "2026-06-20T16:42:31",
+    "status":  "PASS",
+    "closed":  true,
+    "readiness":  100,
+    "decision":  "CONTROLLED_APPLY_REGISTRY_ONLY_VALIDATED",
+    "summary":  {
+                    "parent_screen":  "INICIO",
+                    "new_screen_id":  "DEMO_FUNCION_ANIDADA_20260620-164034",
+                    "screen_count_before":  7,
+                    "screen_count_after":  8,
+                    "registry_only":  true,
+                    "patch_launchers":  false,
+                    "worker":  false,
+                    "browser":  false,
+                    "network":  false,
+                    "git":  false,
+                    "commands_normalized":  true,
+                    "human_authorization":  "AUTORIZO_SCREEN_NORMALIZER_APPLY_REGISTRY_ONLY"
+                },
+    "artifacts":  {
+                      "registry":  "C:\\ENGREMIAT_CORE\\data\\screen-normalizer\\screen-registry.v1.json",
+                      "receipt":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-apply-controlled\\apply\\controlled-apply-registry-only-receipt.latest.json",
+                      "validation":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-apply-controlled\\validation\\controlled-apply-registry-only-validation.latest.json",
+                      "backup":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-apply-controlled\\backups\\screen-registry.before-apply-20260620-164130.json",
+                      "candidate":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-apply-controlled\\apply\\screen-registry.candidate-20260620-164130.json"
+                  },
+    "known_limits":  [
+                         "La pantalla demo existe en registry pero no se ha generado launcher real",
+                         "No se ha migrado INICIO al helper comun todavia",
+                         "El flujo real m tarjeta queda pendiente hasta que una pantalla real use el helper"
+                     ],
+    "recommended_next_objective":  "ENGREMIAT_SCREEN_NORMALIZER_REAL_SCREEN_GENERATION_001",
+    "possible_next":  [
+                          "A: generar pantalla demo desde registry en archivo aislado no conectado",
+                          "B: migrar INICIO al helper comun con backup y gate humano",
+                          "C: crear comparador registry vs launchers actuales",
+                          "D: cerrar etapa con git scoped si decides consolidar"
+                      ],
+    "recommendation":  "A primero: genera una pantalla aislada desde registry sin tocar launchers; después B para migrar INICIO de forma controlada.",
+    "safety":  {
+                   "registry_write_done":  true,
+                   "patch_existing_launchers":  false,
+                   "worker":  false,
+                   "browser":  false,
+                   "network":  false,
+                   "git":  false
+               },
+    "next":  "PAUSE_AND_VALUE_NEXT_OBJECTIVE_AFTER_SCREEN_NORMALIZER_APPLY_CONTROLLED"
+}

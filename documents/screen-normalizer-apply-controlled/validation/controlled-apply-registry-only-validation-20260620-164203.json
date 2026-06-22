@@ -1,0 +1,48 @@
+﻿{
+    "schema":  "engremiat.screen_normalizer_apply_registry_only_validation.v1",
+    "package_id":  "ENGREMIAT_SCREEN_NORMALIZER_APPLY_CONTROLLED_001",
+    "stage":  "E03_VALIDATE_CONTROLLED_APPLY_REGISTRY_ONLY",
+    "created_at":  "2026-06-20T16:42:03",
+    "status":  "PASS",
+    "receipt":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-apply-controlled\\apply\\controlled-apply-registry-only-receipt.latest.json",
+    "registry":  "C:\\ENGREMIAT_CORE\\data\\screen-normalizer\\screen-registry.v1.json",
+    "backup":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-apply-controlled\\backups\\screen-registry.before-apply-20260620-164130.json",
+    "candidate":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-apply-controlled\\apply\\screen-registry.candidate-20260620-164130.json",
+    "parent_screen":  "INICIO",
+    "new_screen_id":  "DEMO_FUNCION_ANIDADA_20260620-164034",
+    "screen_count_before":  7,
+    "screen_count_after":  8,
+    "new_screen_found":  true,
+    "parent_found":  true,
+    "backup_did_not_have_new_screen":  true,
+    "required_fields_ok":  true,
+    "commands_normalized":  true,
+    "required_commands":  [
+                              "b = volver",
+                              "m = mantenimiento",
+                              "? = ayuda",
+                              "Enter = refrescar"
+                          ],
+    "registry_only_confirmed":  true,
+    "patch_launchers":  false,
+    "launcher_touched_by_this_validation":  false,
+    "launcher_evidence":  [
+                              {
+                                  "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO-NORMALIZED.ps1",
+                                  "last_write":  "2026-06-20T16:17:25"
+                              },
+                              {
+                                  "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1",
+                                  "last_write":  "2026-06-20T13:45:37"
+                              },
+                              {
+                                  "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-CARDS-VIEW-NORMALIZED.ps1",
+                                  "last_write":  "2026-06-20T14:02:37"
+                              }
+                          ],
+    "worker":  false,
+    "browser":  false,
+    "network":  false,
+    "git":  false,
+    "next":  "E04_CLOSE_SCREEN_NORMALIZER_APPLY_CONTROLLED_AND_VALUE_NEXT_OBJECTIVE"
+}

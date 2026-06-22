@@ -1,0 +1,58 @@
+﻿{
+    "schema":  "engremiat.screen_maintenance_route_binding_close.v1",
+    "package_id":  "ENGREMIAT_SCREEN_MAINTENANCE_ROUTE_BINDING_001",
+    "stage":  "E07_CLOSE_SCREEN_MAINTENANCE_ROUTE_BINDING_AND_VALUE_NEXT_OBJECTIVE",
+    "created_at":  "2026-06-20T15:57:51",
+    "status":  "PASS",
+    "closed":  true,
+    "readiness":  100,
+    "decision":  "M_MANT_MANTENIMIENTO_ROUTE_BOUND_TO_HUMAN_MAINTENANCE_HELPER",
+    "target":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1",
+    "summary":  {
+                    "route_points_inventory":  "PASS",
+                    "patch_needed_detected":  true,
+                    "pattern_specific_variable":  "cmd",
+                    "insert_after_line":  "174",
+                    "route_binding_applied":  "PASS_APPLIED",
+                    "static_smoke":  "PASS",
+                    "controlled_capture_smoke":  "PASS",
+                    "command_tested":  "m",
+                    "created_card":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-cards\\inbox\\HMC-desktop-terminal-operator-20260620-155721.json",
+                    "created_card_id":  "HMC-desktop-terminal-operator-20260620-155721",
+                    "target_parse_ok":  true,
+                    "marker_present":  true,
+                    "helper_call_present":  true,
+                    "commands_present":  true
+                },
+    "evidence":  {
+                     "inventory":  "C:\\ENGREMIAT_CORE\\documents\\screen-maintenance-route-binding\\inventory\\operator-route-points-inventory.latest.json",
+                     "proposal":  "C:\\ENGREMIAT_CORE\\documents\\screen-maintenance-route-binding\\proposal\\route-binding-patch-proposal-no-write.latest.json",
+                     "pattern_specific_proposal":  "C:\\ENGREMIAT_CORE\\documents\\screen-maintenance-route-binding\\proposal\\pattern-specific-route-binding-proposal.latest.json",
+                     "apply":  "C:\\ENGREMIAT_CORE\\documents\\screen-maintenance-route-binding\\pending-auth-patch\\apply-route-binding-with-explicit-auth.latest.json",
+                     "static_smoke":  "C:\\ENGREMIAT_CORE\\documents\\screen-maintenance-route-binding\\smoke\\route-binding-static-smoke.latest.json",
+                     "controlled_smoke":  "C:\\ENGREMIAT_CORE\\documents\\screen-maintenance-route-binding\\smoke\\route-binding-controlled-smoke.latest.json"
+                 },
+    "known_limits":  [
+                         "no se ha probado todavia el operator interactivo real con pulsacion humana m dentro de la pantalla viva",
+                         "el smoke controlado valida la ruta aislada y la creacion de tarjeta",
+                         "el formulario todavia crea tarjeta generica; falta UX interactiva para titulo dimension severidad observacion"
+                     ],
+    "recommended_next_objective":  "ENGREMIAT_HUMAN_MAINTENANCE_INTERACTIVE_FORM_001",
+    "possible_next":  [
+                          "A: crear formulario interactivo humano para m",
+                          "B: probar operator real manualmente pulsando m y validar tarjeta",
+                          "C: propagar m a pantallas internas si tienen loops propios",
+                          "D: fusionar tarjetas humanas en System Observer"
+                      ],
+    "recommendation":  "A primero: mejorar captura humana; B despues: prueba manual real del operator; C despues: universalizacion por pantallas",
+    "safety":  {
+                   "real_execution":  false,
+                   "system_mutation":  true,
+                   "screen_mutation":  true,
+                   "worker":  false,
+                   "browser":  false,
+                   "network":  false,
+                   "git":  false
+               },
+    "next":  "PAUSE_AND_VALUE_NEXT_OBJECTIVE_AFTER_ROUTE_BINDING"
+}

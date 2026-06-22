@@ -1,0 +1,71 @@
+﻿{
+    "schema":  "engremiat.screen_maintenance_real_integration_e01_inventory.v1",
+    "package_id":  "ENGREMIAT_SCREEN_MAINTENANCE_COMMAND_REAL_INTEGRATION_001",
+    "stage":  "E01_LOCATE_REAL_LAUNCHER_OPERATOR_TARGET_READONLY",
+    "created_at":  "2026-06-20T15:43:16",
+    "status":  "PASS",
+    "mode":  "READONLY_TARGET_DISCOVERY_NO_WRITE",
+    "human_maintenance_close":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-cards\\close\\human-maintenance-card-v0-close.latest.json",
+    "screen_contract":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-cards\\screen-contract\\canonical-screen-maintenance-command-contract.latest.json",
+    "previous_patch_plan":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-cards\\screen-integration-plan\\screen-maintenance-command-patch-plan-no-write.latest.json",
+    "capture_script":  "C:\\ENGREMIAT_CORE\\tools\\human-maintenance-cards\\new-human-maintenance-card.ps1",
+    "canonical_command":  "m",
+    "targets":  [
+                    {
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1",
+                        "relative":  "tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1",
+                        "exists":  true,
+                        "size":  8136,
+                        "sha256":  "7ABA46813C93E63A13206758A5CEFF467A947A84E4B29311495D34F791B508CD",
+                        "parse_ok":  true,
+                        "parse_errors":  0,
+                        "mentions_maintenance":  false,
+                        "mentions_refresh":  true,
+                        "mentions_help":  true,
+                        "mentions_commands":  true,
+                        "looks_like_interactive_screen":  true,
+                        "priority":  "PRIMARY"
+                    },
+                    {
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\runtime-ui-adapter\\launcher-runtime-ui-adapter.readonly.ps1",
+                        "relative":  "tools\\launcher\\runtime-ui-adapter\\launcher-runtime-ui-adapter.readonly.ps1",
+                        "exists":  true,
+                        "size":  4873,
+                        "sha256":  "D4FB88EC03E75A60EC18FA05514CBEC5FA01A795EEABCC3A45014A9E99F6F163",
+                        "parse_ok":  true,
+                        "parse_errors":  0,
+                        "mentions_maintenance":  false,
+                        "mentions_refresh":  true,
+                        "mentions_help":  true,
+                        "mentions_commands":  true,
+                        "looks_like_interactive_screen":  true,
+                        "priority":  "REFERENCE"
+                    }
+                ],
+    "primary_target":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1",
+    "recommendation":  {
+                           "target":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1",
+                           "reason":  "Target real ya usado por launcher runtime UI integration y parece pantalla/operator principal",
+                           "write_now":  false,
+                           "next_stage":  "E02_PREPARE_EXACT_PATCH_PROPOSAL_NO_WRITE",
+                           "required_future_safety":  [
+                                                          "backup before patch",
+                                                          "pending-auth script",
+                                                          "block without explicit authorization",
+                                                          "parse validation after patch",
+                                                          "smoke command m creates card capture-only",
+                                                          "return to same screen"
+                                                      ]
+                       },
+    "safety":  {
+                   "real_execution":  false,
+                   "system_mutation":  false,
+                   "screen_mutation":  false,
+                   "worker":  false,
+                   "browser":  false,
+                   "network":  false,
+                   "git":  false,
+                   "readonly":  true
+               },
+    "next":  "E02_PREPARE_EXACT_PATCH_PROPOSAL_NO_WRITE"
+}

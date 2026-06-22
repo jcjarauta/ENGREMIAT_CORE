@@ -1,0 +1,23 @@
+﻿# E05 SCREEN MAINTENANCE COMMAND SMOKE
+
+- package: ENGREMIAT_SCREEN_MAINTENANCE_COMMAND_REAL_INTEGRATION_001
+- stage: E05_SMOKE_SCREEN_MAINTENANCE_COMMAND_INTEGRATION
+- status: PASS
+- mode: SMOKE_HELPER_CAPTURE_ONLY_NO_OPERATOR_LAUNCH
+- target: C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\Start-EngremiatDesktopOperator.ps1
+- target_parse_ok: true
+- marker_present: True
+- helper_present: True
+- capture_script_reference_present: True
+- created_card: C:\ENGREMIAT_CORE\documents\human-maintenance-cards\inbox\HMC-desktop-terminal-operator-smoke-20260620-154739.json
+- created_card_id: HMC-desktop-terminal-operator-smoke-20260620-154739
+- command_route_status: HELPER_READY_ROUTE_NOTE_PRESENT_NOT_FULL_INTERACTIVE_ROUTE_TESTED
+- report: C:\ENGREMIAT_CORE\reports\screen-maintenance-real-integration\e05-smoke-screen-maintenance-command-integration-20260620-154737.json
+- real_execution: false
+- system_mutation: false
+- screen_mutation: false
+- worker: false
+- browser: false
+- network: false
+- git: false
+- next: E06_CLOSE_SCREEN_MAINTENANCE_COMMAND_REAL_INTEGRATION_AND_VALUE_NEXT_OBJECTIVE

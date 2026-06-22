@@ -1,0 +1,20 @@
+﻿{
+    "schema":  "engremiat.interactive_form_pending_auth_patch.v1",
+    "package_id":  "ENGREMIAT_HUMAN_MAINTENANCE_INTERACTIVE_FORM_001",
+    "stage":  "E03_CREATE_PENDING_AUTH_INTERACTIVE_FORM_PATCH_NO_APPLY",
+    "created_at":  "2026-06-20T15:59:46",
+    "status":  "PASS",
+    "mode":  "PENDING_AUTH_INTERACTIVE_FORM_HELPER_CREATED_NO_APPLY",
+    "target":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1",
+    "script":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-interactive-form\\pending-auth-patch\\apply-interactive-form-helper.pending-auth.ps1",
+    "required_authorization_code":  "AUTORIZO_INTEGRAR_FORMULARIO_MANTENIMIENTO_OPERATOR",
+    "dry_run_without_auth":  "NO_GO",
+    "real_execution":  false,
+    "system_mutation":  false,
+    "screen_mutation":  false,
+    "worker":  false,
+    "browser":  false,
+    "network":  false,
+    "git":  false,
+    "next":  "E04_APPLY_INTERACTIVE_FORM_HELPER_WITH_EXPLICIT_AUTH"
+}
