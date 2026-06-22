@@ -1,7 +1,7 @@
 ﻿{
     "schema":  "ENGREMIAT_OPERATOR_V2_STATE_REGISTRY_V1",
     "created_at":  "2026-06-22T09:23:43",
-    "updated_at":  "2026-06-22T10:51:43",
+    "updated_at":  "2026-06-22T10:54:20",
     "source_contract":  "documents/operator-v2-self-state-sync/V2_STATE_REGISTRY_CONTRACT.v1.json",
     "objectives":  [
                        {
@@ -69,27 +69,27 @@
                   }
               ],
     "git_state":  {
-                      "head":  "ca44ce5a",
-                      "rev_sync":  "0\t10",
-                      "tree_clean":  false,
-                      "status_short":  "M ENGREMIAT.ps1\n M data/operator-v2-self-state-sync/v2-state.events.jsonl\n M data/operator-v2-self-state-sync/v2-state.latest.json\n M data/operator-v2-self-state-sync/v2-state.registry.json\n M documents/operator-v2-self-state-sync/V2_STATE_INDEX.md\n?? data/operator-v1-health-launchers-screen/\n?? documents/operator-v1-health-launchers-screen/\n?? reports/operator-v1-health-launchers-screen/\n?? tools/operator-v1/operator-v1-health-launchers-screen.ps1",
+                      "head":  "590f69f0",
+                      "rev_sync":  "0\t11",
+                      "tree_clean":  true,
+                      "status_short":  "",
                       "push_executed":  false
                   },
-    "next_action":  "PROBAR_DESDE_LAUNCHER_OPCION_5",
-    "events_count":  65,
+    "next_action":  "VALORAR_PUSH_FINAL_V1_BATCH_O_SIGUIENTE_OBJETIVO",
+    "events_count":  66,
     "last_event":  {
-                       "ts":  "2026-06-22T10:51:43",
+                       "ts":  "2026-06-22T10:54:20",
                        "event":  "V2_STATE_UPDATE",
                        "package":  "ENGREMIAT_OPERATOR_V1_HEALTH_LAUNCHERS_SCREEN_001",
-                       "stage":  "E06_VALIDATE_LAUNCHER_OPTION_5_AND_COMMIT_SCOPED",
-                       "step":  "E06",
+                       "stage":  "E07_HUMAN_RETEST_AND_CLOSE_OBJECTIVE_NO_PUSH",
+                       "step":  "E07",
                        "status":  "PASS",
-                       "report":  "reports\\operator-v1-health-launchers-screen\\e06-validate-launcher-option-5-and-commit-scoped-20260622-105135.json",
-                       "next":  "PROBAR_DESDE_LAUNCHER_OPCION_5",
-                       "readiness":  85,
-                       "summary":  "Opcion 5 Health Launchers validada apuntando a pantalla V1; V1 1-4 y V2 gobierno conservados; commit scoped sin push.",
-                       "head":  "ca44ce5a",
-                       "rev_sync":  "0\t10",
-                       "tree_clean":  false
+                       "report":  "reports\\operator-v1-health-launchers-screen\\e07-human-retest-and-close-objective-no-push-20260622-105407.json",
+                       "next":  "VALORAR_PUSH_FINAL_V1_BATCH_O_SIGUIENTE_OBJETIVO",
+                       "readiness":  100,
+                       "summary":  "Objetivo Health Launchers Screen V1 cerrado: opcion 5 abre pantalla Health Launchers V1 con launchers, healthchecks, smokes/checks, repairs, status/reports, Git, V1 operativo, gobierno V2 y acciones bloqueadas. No se ejecuto push.",
+                       "head":  "590f69f0",
+                       "rev_sync":  "0\t11",
+                       "tree_clean":  true
                    }
 }
