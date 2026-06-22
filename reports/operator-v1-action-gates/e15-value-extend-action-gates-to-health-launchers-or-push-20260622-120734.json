@@ -1,0 +1,53 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V1_ACTION_GATES_001",
+    "stage":  "E15_VALUE_EXTEND_ACTION_GATES_TO_HEALTH_LAUNCHERS_OR_PUSH",
+    "status":  "PASS",
+    "created_at":  "2026-06-22T12:08:02",
+    "projects_gate_prepare_ready":  true,
+    "memory_docs_gate_prepare_ready":  true,
+    "data_intake_gate_prepare_ready":  true,
+    "health_launchers_available":  true,
+    "gate_previewer_prepare_only":  true,
+    "projects_count":  10,
+    "memory_items":  1830,
+    "data_items":  2738,
+    "health_items":  1200,
+    "head":  "b2b94303",
+    "rev_sync":  "0\t8",
+    "rev_sync_left":  0,
+    "rev_sync_right":  8,
+    "remote_synced":  false,
+    "tree_clean":  true,
+    "recommended_next_step":  "E16_INTEGRATE_HEALTH_LAUNCHERS_GATE_PREPARE_ONLY",
+    "alternatives":  [
+                         {
+                             "id":  "A",
+                             "next":  "E16_INTEGRATE_HEALTH_LAUNCHERS_GATE_PREPARE_ONLY",
+                             "score":  98,
+                             "reason":  "Health Launchers completa la cobertura V1; ejecutar healthcheck/smoke/repair debe quedar como gate preview, no acción directa."
+                         },
+                         {
+                             "id":  "B",
+                             "next":  "PUSH_PARTIAL_PROJECTS_MEMORY_DATA_GATES",
+                             "score":  76,
+                             "reason":  "Projects, Memory y Data ya funcionan, pero quedaría incompleto sin Health Launchers."
+                         },
+                         {
+                             "id":  "C",
+                             "next":  "UX_POLISH_GATES_BEFORE_HEALTH",
+                             "score":  64,
+                             "reason":  "La UX puede esperar; primero cerrar cobertura funcional de gates."
+                         },
+                         {
+                             "id":  "D",
+                             "next":  "REAL_GATE_EXECUTION_CONTRACT",
+                             "score":  58,
+                             "reason":  "Ejecutar gates reales aún es pronto; falta cubrir Health Launchers en PREPARE_ONLY."
+                         }
+                     ],
+    "push_executed":  false,
+    "fetch_executed":  false,
+    "merge_executed":  false,
+    "delete_files":  false,
+    "next":  "E16_INTEGRATE_HEALTH_LAUNCHERS_GATE_PREPARE_ONLY"
+}
