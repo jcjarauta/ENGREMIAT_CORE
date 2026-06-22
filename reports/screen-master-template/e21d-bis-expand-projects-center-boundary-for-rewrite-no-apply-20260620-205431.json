@@ -1,0 +1,163 @@
+﻿{
+    "package_id":  "ENGREMIAT_SCREEN_MASTER_TEMPLATE_001",
+    "stage":  "E21D_BIS_EXPAND_PROJECTS_CENTER_BOUNDARY_FOR_REWRITE_NO_APPLY",
+    "status":  "PASS",
+    "decision":  "GO_BOUNDARY_EXPANDED_READY_FOR_STABLE_REWRITE_NO_APPLY",
+    "runtime_write":  false,
+    "git_write":  false,
+    "target":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1",
+    "parse":  true,
+    "hit_lines":  [
+                      16,
+                      17,
+                      18,
+                      19,
+                      20,
+                      21,
+                      22,
+                      23
+                  ],
+    "readhosts":  [
+                      {
+                          "line":  16,
+                          "text":  "function OpenPath($p){if(Test-Path $p){Start-Process $p}else{W \"NO_GO no existe: $p\" Red;Read-Host \u0027Enter\u0027|Out-Null}}",
+                          "expanded":  [
+                                           "function OpenPath($p){if(Test-Path $p){Start-Process $p}else{W \"NO_GO no existe: $p\" Red",
+                                           "Read-Host \u0027Enter\u0027|Out-Null}}"
+                                       ]
+                      },
+                      {
+                          "line":  17,
+                          "text":  "function CardsFor($ProjectId,$ModuleId){if(!(Test-Path $CardsView)){W \"NO_GO falta vista tarjetas: $CardsView\" Red;Read-Host \u0027Enter\u0027|Out-Null;return};\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $CardsView -ProjectId $ProjectId -ModuleId $ModuleId}",
+                          "expanded":  [
+                                           "function CardsFor($ProjectId,$ModuleId){if(!(Test-Path $CardsView)){W \"NO_GO falta vista tarjetas: $CardsView\" Red",
+                                           "Read-Host \u0027Enter\u0027|Out-Null",
+                                           "return}",
+                                           "\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $CardsView -ProjectId $ProjectId -ModuleId $ModuleId}"
+                                       ]
+                      },
+                      {
+                          "line":  19,
+                          "text":  "function ProjectList(){while($true){Header;$items=GetProjects;if($items.Count -eq 0){W \u0027No hay proyectos en C:\\ENGREMIAT_CORE\\projects\u0027 Yellow}else{$i=0;foreach($p in $items){$i++;$ProjectIdValue=SafeId $p.FullName;W (\u0027[\u0027+$i+\u0027] \u0027+$ProjectIdValue+\u0027  \u0027+$p.Name) White}};W \u0027\u0027;W \u0027numero = abrir proyecto | b = volver | Enter = refrescar\u0027 DarkGray;$c=Read-Host \u0027PROYECTOS\u0027;if([string]::IsNullOrWhiteSpace($c)){continue};if($c.ToLower() -eq \u0027b\u0027){break};$n=0;if([int]::TryParse($c,[ref]$n) -and $n -ge 1 -and $n -le $items.Count){ProjectActions $items[$n-1].FullName}else{W \u0027Comando no reconocido\u0027 Yellow;Start-Sleep -Milliseconds 700}}}",
+                          "expanded":  [
+                                           "function ProjectList(){while($true){Header",
+                                           "$items=GetProjects",
+                                           "if($items.Count -eq 0){W \u0027No hay proyectos en C:\\ENGREMIAT_CORE\\projects\u0027 Yellow}else{$i=0",
+                                           "foreach($p in $items){$i++",
+                                           "$ProjectIdValue=SafeId $p.FullName",
+                                           "W (\u0027[\u0027+$i+\u0027] \u0027+$ProjectIdValue+\u0027  \u0027+$p.Name) White}}",
+                                           "W \u0027\u0027",
+                                           "W \u0027numero = abrir proyecto | b = volver | Enter = refrescar\u0027 DarkGray",
+                                           "$c=Read-Host \u0027PROYECTOS\u0027",
+                                           "if([string]::IsNullOrWhiteSpace($c)){continue}",
+                                           "if($c.ToLower() -eq \u0027b\u0027){break}",
+                                           "$n=0",
+                                           "if([int]::TryParse($c,[ref]$n) -and $n -ge 1 -and $n -le $items.Count){ProjectActions $items[$n-1].FullName}else{W \u0027Comando no reconocido\u0027 Yellow",
+                                           "Start-Sleep -Milliseconds 700}}}"
+                                       ]
+                      },
+                      {
+                          "line":  20,
+                          "text":  "function ProjectActions($ProjectPath){$ProjectId=SafeId $ProjectPath;while($true){Clear-Host;W \u0027==== PROYECTO / ACCIONES ====\u0027 Cyan;W (\u0027Ruta: INICIO \u003e Proyectos \u003e \u0027+$ProjectId) DarkCyan;W \u0027Rol: acciones locales del proyecto\u0027 DarkCyan;W \u0027Principio: sin workers reales, sin git, sin red\u0027 DarkCyan;W \u0027\u0027;W (\u0027Proyecto: \u0027+$ProjectId) White;W (\u0027Ruta: \u0027+$ProjectPath) Gray;W (\u0027Workers: \u0027+(WorkersState)) Yellow;W (\u0027Ultima senal: \u0027+(LatestWorkerText)) Gray;W \u0027\u0027;W \u0027[1] abrir carpeta del proyecto\u0027 White;W \u0027[2] abrir project.json\u0027 White;W \u0027[3] modulos\u0027 White;W \u0027[4] tarjetas canon navegacion\u0027 White;W \u0027[5] estado/ayuda\u0027 White;W \u0027[b] volver a cartera | Enter = refrescar\u0027 DarkGray;$c=Read-Host \u0027PROYECTO\u0027;if([string]::IsNullOrWhiteSpace($c)){continue};switch($c.ToLower()){\u00271\u0027{OpenPath $ProjectPath}\u00272\u0027{OpenPath (Join-Path $ProjectPath \u0027project.json\u0027)}\u00273\u0027{ModulesScreen $ProjectPath $ProjectId}\u00274\u0027{CardsFor \u0027ENGREMIAT_CORE\u0027 \u0027MODULE_OPERATOR_NAVIGATION\u0027}\u00275\u0027{ProjectStatus $ProjectPath $ProjectId}\u0027b\u0027{return}default{W \u0027Comando no reconocido\u0027 Yellow;Start-Sleep -Milliseconds 700}}}}",
+                          "expanded":  [
+                                           "function ProjectActions($ProjectPath){$ProjectId=SafeId $ProjectPath",
+                                           "while($true){Clear-Host",
+                                           "W \u0027==== PROYECTO / ACCIONES ====\u0027 Cyan",
+                                           "W (\u0027Ruta: INICIO \u003e Proyectos \u003e \u0027+$ProjectId) DarkCyan",
+                                           "W \u0027Rol: acciones locales del proyecto\u0027 DarkCyan",
+                                           "W \u0027Principio: sin workers reales, sin git, sin red\u0027 DarkCyan",
+                                           "W \u0027\u0027",
+                                           "W (\u0027Proyecto: \u0027+$ProjectId) White",
+                                           "W (\u0027Ruta: \u0027+$ProjectPath) Gray",
+                                           "W (\u0027Workers: \u0027+(WorkersState)) Yellow",
+                                           "W (\u0027Ultima senal: \u0027+(LatestWorkerText)) Gray",
+                                           "W \u0027\u0027",
+                                           "W \u0027[1] abrir carpeta del proyecto\u0027 White",
+                                           "W \u0027[2] abrir project.json\u0027 White",
+                                           "W \u0027[3] modulos\u0027 White",
+                                           "W \u0027[4] tarjetas canon navegacion\u0027 White",
+                                           "W \u0027[5] estado/ayuda\u0027 White",
+                                           "W \u0027[b] volver a cartera | Enter = refrescar\u0027 DarkGray",
+                                           "$c=Read-Host \u0027PROYECTO\u0027",
+                                           "if([string]::IsNullOrWhiteSpace($c)){continue}",
+                                           "switch($c.ToLower()){\u00271\u0027{OpenPath $ProjectPath}\u00272\u0027{OpenPath (Join-Path $ProjectPath \u0027project.json\u0027)}\u00273\u0027{ModulesScreen $ProjectPath $ProjectId}\u00274\u0027{CardsFor \u0027ENGREMIAT_CORE\u0027 \u0027MODULE_OPERATOR_NAVIGATION\u0027}\u00275\u0027{ProjectStatus $ProjectPath $ProjectId}\u0027b\u0027{return}default{W \u0027Comando no reconocido\u0027 Yellow",
+                                           "Start-Sleep -Milliseconds 700}}}}"
+                                       ]
+                      },
+                      {
+                          "line":  21,
+                          "text":  "function ModulesScreen($ProjectPath,$ProjectId){while($true){Clear-Host;W \u0027==== MODULOS ====\u0027 Cyan;W (\u0027Ruta: INICIO \u003e Proyectos \u003e \u0027+$ProjectId+\u0027 \u003e Modulos\u0027) DarkCyan;W \u0027Rol: modulos del proyecto y tarjetas vinculadas\u0027 DarkCyan;W \u0027\u0027;$mods=GetModules $ProjectPath;if($mods.Count -eq 0){W \u0027No hay carpeta MODULOS o no contiene modulos.\u0027 Yellow}else{$i=0;foreach($m in $mods){$i++;W (\u0027[\u0027+$i+\u0027] \u0027+(ModuleId $m.FullName)+\u0027  \u0027+$m.Name) White}};W \u0027\u0027;W \u0027numero = abrir modulo | b = volver | Enter = refrescar\u0027 DarkGray;$c=Read-Host \u0027MODULOS\u0027;if([string]::IsNullOrWhiteSpace($c)){continue};if($c.ToLower() -eq \u0027b\u0027){return};$n=0;if([int]::TryParse($c,[ref]$n) -and $n -ge 1 -and $n -le $mods.Count){ModuleActions $ProjectId $mods[$n-1].FullName}else{W \u0027Comando no reconocido\u0027 Yellow;Start-Sleep -Milliseconds 700}}}",
+                          "expanded":  [
+                                           "function ModulesScreen($ProjectPath,$ProjectId){while($true){Clear-Host",
+                                           "W \u0027==== MODULOS ====\u0027 Cyan",
+                                           "W (\u0027Ruta: INICIO \u003e Proyectos \u003e \u0027+$ProjectId+\u0027 \u003e Modulos\u0027) DarkCyan",
+                                           "W \u0027Rol: modulos del proyecto y tarjetas vinculadas\u0027 DarkCyan",
+                                           "W \u0027\u0027",
+                                           "$mods=GetModules $ProjectPath",
+                                           "if($mods.Count -eq 0){W \u0027No hay carpeta MODULOS o no contiene modulos.\u0027 Yellow}else{$i=0",
+                                           "foreach($m in $mods){$i++",
+                                           "W (\u0027[\u0027+$i+\u0027] \u0027+(ModuleId $m.FullName)+\u0027  \u0027+$m.Name) White}}",
+                                           "W \u0027\u0027",
+                                           "W \u0027numero = abrir modulo | b = volver | Enter = refrescar\u0027 DarkGray",
+                                           "$c=Read-Host \u0027MODULOS\u0027",
+                                           "if([string]::IsNullOrWhiteSpace($c)){continue}",
+                                           "if($c.ToLower() -eq \u0027b\u0027){return}",
+                                           "$n=0",
+                                           "if([int]::TryParse($c,[ref]$n) -and $n -ge 1 -and $n -le $mods.Count){ModuleActions $ProjectId $mods[$n-1].FullName}else{W \u0027Comando no reconocido\u0027 Yellow",
+                                           "Start-Sleep -Milliseconds 700}}}"
+                                       ]
+                      },
+                      {
+                          "line":  22,
+                          "text":  "function ModuleActions($ProjectId,$ModulePath){$Mid=ModuleId $ModulePath;while($true){Clear-Host;W \u0027==== MODULO / ACCIONES ====\u0027 Cyan;W (\u0027Ruta: INICIO \u003e Proyectos \u003e Proyecto \u003e Modulos \u003e \u0027+$Mid) DarkCyan;W \u0027Rol: acciones locales del modulo\u0027 DarkCyan;W \u0027\u0027;W (\u0027Proyecto: \u0027+$ProjectId) Gray;W (\u0027Modulo:   \u0027+$Mid) White;W (\u0027Ruta:     \u0027+$ModulePath) Gray;W \u0027\u0027;W \u0027[1] abrir carpeta del modulo\u0027 White;W \u0027[2] abrir module.json\u0027 White;W \u0027[3] tarjetas del modulo\u0027 White;W \u0027[b] volver a modulos | Enter = refrescar\u0027 DarkGray;$c=Read-Host \u0027MODULO\u0027;if([string]::IsNullOrWhiteSpace($c)){continue};switch($c.ToLower()){\u00271\u0027{OpenPath $ModulePath}\u00272\u0027{OpenPath (Join-Path $ModulePath \u0027module.json\u0027)}\u00273\u0027{CardsFor $ProjectId $Mid}\u0027b\u0027{return}default{W \u0027Comando no reconocido\u0027 Yellow;Start-Sleep -Milliseconds 700}}}}",
+                          "expanded":  [
+                                           "function ModuleActions($ProjectId,$ModulePath){$Mid=ModuleId $ModulePath",
+                                           "while($true){Clear-Host",
+                                           "W \u0027==== MODULO / ACCIONES ====\u0027 Cyan",
+                                           "W (\u0027Ruta: INICIO \u003e Proyectos \u003e Proyecto \u003e Modulos \u003e \u0027+$Mid) DarkCyan",
+                                           "W \u0027Rol: acciones locales del modulo\u0027 DarkCyan",
+                                           "W \u0027\u0027",
+                                           "W (\u0027Proyecto: \u0027+$ProjectId) Gray",
+                                           "W (\u0027Modulo:   \u0027+$Mid) White",
+                                           "W (\u0027Ruta:     \u0027+$ModulePath) Gray",
+                                           "W \u0027\u0027",
+                                           "W \u0027[1] abrir carpeta del modulo\u0027 White",
+                                           "W \u0027[2] abrir module.json\u0027 White",
+                                           "W \u0027[3] tarjetas del modulo\u0027 White",
+                                           "W \u0027[b] volver a modulos | Enter = refrescar\u0027 DarkGray",
+                                           "$c=Read-Host \u0027MODULO\u0027",
+                                           "if([string]::IsNullOrWhiteSpace($c)){continue}",
+                                           "switch($c.ToLower()){\u00271\u0027{OpenPath $ModulePath}\u00272\u0027{OpenPath (Join-Path $ModulePath \u0027module.json\u0027)}\u00273\u0027{CardsFor $ProjectId $Mid}\u0027b\u0027{return}default{W \u0027Comando no reconocido\u0027 Yellow",
+                                           "Start-Sleep -Milliseconds 700}}}}"
+                                       ]
+                      },
+                      {
+                          "line":  23,
+                          "text":  "function ProjectStatus($ProjectPath,$ProjectId){Clear-Host;W \u0027==== PROYECTO / ESTADO ====\u0027 Cyan;W (\u0027Proyecto: \u0027+$ProjectId) White;W (\u0027Ruta: \u0027+$ProjectPath) Gray;W (\u0027Workers: \u0027+(WorkersState)) Yellow;W (\u0027Ultima senal: \u0027+(LatestWorkerText)) Gray;W \u0027\u0027;W \u0027Tarjetas: entrar por [3] modulos \u003e modulo \u003e [3] tarjetas del modulo.\u0027 Cyan;W \u0027\u0027;W \u0027[Enter] volver\u0027 DarkGray;Read-Host|Out-Null}",
+                          "expanded":  [
+                                           "function ProjectStatus($ProjectPath,$ProjectId){Clear-Host",
+                                           "W \u0027==== PROYECTO / ESTADO ====\u0027 Cyan",
+                                           "W (\u0027Proyecto: \u0027+$ProjectId) White",
+                                           "W (\u0027Ruta: \u0027+$ProjectPath) Gray",
+                                           "W (\u0027Workers: \u0027+(WorkersState)) Yellow",
+                                           "W (\u0027Ultima senal: \u0027+(LatestWorkerText)) Gray",
+                                           "W \u0027\u0027",
+                                           "W \u0027Tarjetas: entrar por [3] modulos \u003e modulo \u003e [3] tarjetas del modulo.\u0027 Cyan",
+                                           "W \u0027\u0027",
+                                           "W \u0027[Enter] volver\u0027 DarkGray",
+                                           "Read-Host|Out-Null}"
+                                       ]
+                      }
+                  ],
+    "project_lines":  [
+                          18,
+                          19,
+                          20,
+                          21,
+                          22
+                      ],
+    "expanded":  "C:\\ENGREMIAT_CORE\\documents\\screen-master-template\\planned\\projects-center-boundary-expanded-for-rewrite.latest.txt",
+    "summary":  "C:\\ENGREMIAT_CORE\\documents\\screen-master-template\\planned\\projects-center-boundary-expanded-for-rewrite.latest.md",
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\screen-master-template\\e21d-bis-expand-projects-center-boundary-for-rewrite-no-apply-20260620-205431.json",
+    "next":  "E21E_PREPARE_PROJECTS_CENTER_REWRITE_FROM_EXPANDED_BOUNDARY_NO_APPLY"
+}

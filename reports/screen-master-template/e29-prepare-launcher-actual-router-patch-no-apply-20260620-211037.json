@@ -1,0 +1,33 @@
+﻿{
+    "package_id":  "ENGREMIAT_SCREEN_MASTER_TEMPLATE_001",
+    "stage":  "E29_PREPARE_REFINED_TARGET_ROUTER_PATCH_NO_APPLY",
+    "status":  "PASS",
+    "decision":  "GO_LAUNCHER_ACTUAL_ROUTER_PATCH_READY_NO_APPLY",
+    "runtime_write":  false,
+    "git_write":  false,
+    "target":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1",
+    "selected_candidate":  "C:\\ENGREMIAT_CORE\\documents\\screen-master-template\\planned\\ENGREMIAT-LAUNCHER-ACTUAL.screen-master-candidate.latest.ps1",
+    "readhost_line":  106,
+    "command_var":  "cmd",
+    "checks":  {
+                   "source_parse":  true,
+                   "candidate_parse":  true,
+                   "readhost_found":  true,
+                   "router_insertions":  1,
+                   "has_help_function":  true,
+                   "has_help_router":  true,
+                   "has_b_router":  true,
+                   "has_marker":  true,
+                   "keeps_m":  true
+               },
+    "old_errors":  [
+
+                   ],
+    "new_errors":  {
+
+                   },
+    "summary":  "C:\\ENGREMIAT_CORE\\documents\\screen-master-template\\planned\\launcher-actual-router-patch-no-apply.latest.md",
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\screen-master-template\\e29-prepare-launcher-actual-router-patch-no-apply-20260620-211037.json",
+    "gate":  "AUTORIZO_APLICAR_PLANTILLA_MASTER_A_LAUNCHER_ACTUAL",
+    "next":  "E30_APPLY_LAUNCHER_ACTUAL_ROUTER_PATCH_WITH_GATE"
+}

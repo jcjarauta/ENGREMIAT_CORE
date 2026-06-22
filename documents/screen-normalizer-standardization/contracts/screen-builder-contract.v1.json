@@ -1,0 +1,43 @@
+﻿{
+    "schema":  "engremiat.screen_builder_contract.v1",
+    "package_id":  "ENGREMIAT_SCREEN_NORMALIZER_STANDARDIZATION_001",
+    "created_at":  "2026-06-20T16:34:47",
+    "status":  "PASS",
+    "purpose":  "Actualizar pantallas del operador seleccionando donde anidar una nueva funcion",
+    "flow":  [
+                 "1. Humano elige pantalla padre",
+                 "2. Humano define nueva funcion desde plantilla",
+                 "3. Builder valida contrato",
+                 "4. Builder actualiza registry",
+                 "5. Builder genera o actualiza pantalla desde plantilla",
+                 "6. Builder actualiza ayuda, comandos, rutas y acciones",
+                 "7. Builder ejecuta smoke estatico",
+                 "8. Humano hace smoke visual"
+             ],
+    "inputs":  [
+                   "parent_screen_id",
+                   "new_screen_id",
+                   "title",
+                   "role",
+                   "description",
+                   "action_label",
+                   "risk",
+                   "requires_human_gate",
+                   "target_script_or_mode"
+               ],
+    "outputs":  [
+                    "screen registry actualizado",
+                    "pantalla generada/actualizada",
+                    "ayuda contextual",
+                    "comandos normalizados",
+                    "reporte de validacion",
+                    "siguiente paso recomendado"
+                ],
+    "do_not_do":  [
+                      "no parchear switches manualmente",
+                      "no duplicar textos de ayuda en cada pantalla",
+                      "no crear rutas sin registry",
+                      "no ocultar comandos globales",
+                      "no activar workers reales por defecto"
+                  ]
+}

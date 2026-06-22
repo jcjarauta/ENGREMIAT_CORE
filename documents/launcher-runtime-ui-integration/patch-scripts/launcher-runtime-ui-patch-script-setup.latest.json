@@ -1,0 +1,166 @@
+﻿{
+    "schema":  "engremiat.launcher_runtime_ui_patch_script_setup.v1",
+    "package_id":  "ENGREMIAT_LAUNCHER_RUNTIME_UI_INTEGRATION_001",
+    "stage":  "E06B_REPAIR_LAUNCHER_RUNTIME_UI_PATCH_TARGET_EXCLUDE_BACKUPS",
+    "created_at":  "2026-06-20T15:13:41",
+    "status":  "PASS",
+    "mode":  "PATCH_SCRIPT_REPAIRED_PENDING_AUTH_NO_UI_MUTATION",
+    "source_proposal":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\patch-proposals\\launcher-runtime-ui-patch-proposal.latest.json",
+    "old_target":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1.e08b-pre-boot-global-20260619-215953.bak",
+    "target":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1",
+    "target_is_backup":  false,
+    "adapter_script":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\runtime-ui-adapter\\launcher-runtime-ui-adapter.readonly.ps1",
+    "patch_script":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\patch-scripts\\apply-launcher-runtime-ui-patch.pending-auth.ps1",
+    "authorization_required":  true,
+    "required_env":  "ENGREMIAT_LAUNCHER_RUNTIME_UI_PATCH_AUTH",
+    "required_value":  "AUTORIZO_LAUNCHER_RUNTIME_UI_PATCH",
+    "candidate_targets":  [
+                              {
+                                  "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-select-module-safe.ps1",
+                                  "relative":  "tools\\desktop-terminal-operator\\eng-select-module-safe.ps1",
+                                  "score":  2,
+                                  "last_write":  "2026-06-19T23:03:31",
+                                  "size":  6157
+                              },
+                              {
+                                  "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-status.ps1",
+                                  "relative":  "tools\\desktop-terminal-operator\\eng-status.ps1",
+                                  "score":  3,
+                                  "last_write":  "2026-06-19T21:51:14",
+                                  "size":  1429
+                              },
+                              {
+                                  "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-vault-master-link-normalizer.ps1",
+                                  "relative":  "tools\\desktop-terminal-operator\\eng-vault-master-link-normalizer.ps1",
+                                  "score":  1,
+                                  "last_write":  "2026-06-19T16:08:47",
+                                  "size":  6017
+                              },
+                              {
+                                  "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-router.ps1.bak-e07h-20260619195748",
+                                  "relative":  "tools\\desktop-terminal-operator\\eng-router.ps1.bak-e07h-20260619195748",
+                                  "score":  7,
+                                  "last_write":  "2026-06-19T19:45:43",
+                                  "size":  6798
+                              },
+                              {
+                                  "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-router.ps1.bak-e06c-20260619194021",
+                                  "relative":  "tools\\desktop-terminal-operator\\eng-router.ps1.bak-e06c-20260619194021",
+                                  "score":  7,
+                                  "last_write":  "2026-06-19T19:38:03",
+                                  "size":  6035
+                              },
+                              {
+                                  "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-router.ps1.bak-e06d-20260619194157",
+                                  "relative":  "tools\\desktop-terminal-operator\\eng-router.ps1.bak-e06d-20260619194157",
+                                  "score":  7,
+                                  "last_write":  "2026-06-19T19:40:21",
+                                  "size":  6271
+                              },
+                              {
+                                  "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-router.ps1.bak-e07b-20260619194543",
+                                  "relative":  "tools\\desktop-terminal-operator\\eng-router.ps1.bak-e07b-20260619194543",
+                                  "score":  7,
+                                  "last_write":  "2026-06-19T19:41:57",
+                                  "size":  6517
+                              },
+                              {
+                                  "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1.bak-e04h-20260619182202",
+                                  "relative":  "tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1.bak-e04h-20260619182202",
+                                  "score":  2,
+                                  "last_write":  "2026-06-19T18:15:38",
+                                  "size":  1118
+                              },
+                              {
+                                  "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1.bak-e04i-20260619182628",
+                                  "relative":  "tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1.bak-e04i-20260619182628",
+                                  "score":  2,
+                                  "last_write":  "2026-06-19T18:22:02",
+                                  "size":  1714
+                              },
+                              {
+                                  "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1.bak-e04j-20260619182916",
+                                  "relative":  "tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1.bak-e04j-20260619182916",
+                                  "score":  2,
+                                  "last_write":  "2026-06-19T18:26:28",
+                                  "size":  2496
+                              },
+                              {
+                                  "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1.bak-e04g-20260619181840",
+                                  "relative":  "tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1.bak-e04g-20260619181840",
+                                  "score":  2,
+                                  "last_write":  "2026-06-19T18:15:38",
+                                  "size":  1118
+                              },
+                              {
+                                  "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\ENGREMIAT_OPERATOR_HELP.md",
+                                  "relative":  "tools\\desktop-terminal-operator\\ENGREMIAT_OPERATOR_HELP.md",
+                                  "score":  3,
+                                  "last_write":  "2026-06-19T17:40:37",
+                                  "size":  512
+                              },
+                              {
+                                  "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1",
+                                  "relative":  "tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1",
+                                  "score":  9,
+                                  "last_write":  "2026-06-19T22:15:52",
+                                  "size":  7726
+                              },
+                              {
+                                  "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1.bak-e04f-safe-20260619181538",
+                                  "relative":  "tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1.bak-e04f-safe-20260619181538",
+                                  "score":  2,
+                                  "last_write":  "2026-06-19T15:09:59",
+                                  "size":  794
+                              },
+                              {
+                                  "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-router.ps1.bak-e06b-20260619193803",
+                                  "relative":  "tools\\desktop-terminal-operator\\eng-router.ps1.bak-e06b-20260619193803",
+                                  "score":  7,
+                                  "last_write":  "2026-06-19T19:34:48",
+                                  "size":  5822
+                              },
+                              {
+                                  "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-router.ps1.bak-e04t-20260619185758",
+                                  "relative":  "tools\\desktop-terminal-operator\\eng-router.ps1.bak-e04t-20260619185758",
+                                  "score":  2,
+                                  "last_write":  "2026-06-19T18:39:56",
+                                  "size":  4882
+                              },
+                              {
+                                  "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-router.ps1.bak-e04v-20260619190139",
+                                  "relative":  "tools\\desktop-terminal-operator\\eng-router.ps1.bak-e04v-20260619190139",
+                                  "score":  2,
+                                  "last_write":  "2026-06-19T18:57:58",
+                                  "size":  4945
+                              },
+                              {
+                                  "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-router.ps1.bak-e04w-20260619190301",
+                                  "relative":  "tools\\desktop-terminal-operator\\eng-router.ps1.bak-e04w-20260619190301",
+                                  "score":  2,
+                                  "last_write":  "2026-06-19T19:01:39",
+                                  "size":  5219
+                              },
+                              {
+                                  "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-router.ps1.bak-e04o-20260619183956",
+                                  "relative":  "tools\\desktop-terminal-operator\\eng-router.ps1.bak-e04o-20260619183956",
+                                  "score":  2,
+                                  "last_write":  "2026-06-19T18:37:46",
+                                  "size":  4891
+                              },
+                              {
+                                  "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-router.ps1.bak-e04k-20260619183145",
+                                  "relative":  "tools\\desktop-terminal-operator\\eng-router.ps1.bak-e04k-20260619183145",
+                                  "score":  2,
+                                  "last_write":  "2026-06-19T18:29:16",
+                                  "size":  4753
+                              }
+                          ],
+    "real_execution":  false,
+    "ui_mutated":  false,
+    "worker":  false,
+    "browser":  false,
+    "network":  false,
+    "git":  false,
+    "next":  "E07_VERIFY_LAUNCHER_RUNTIME_UI_PATCH_SCRIPT_BLOCKS_WITHOUT_AUTH"
+}

@@ -1,0 +1,29 @@
+{
+    "schema":  "engremiat.guided_subscreen_navigation_runner_prepared.v1",
+    "package_id":  "ENGREMIAT_SCREEN_NORMALIZER_SUBSCREEN_ROUTING_ADAPTER_001",
+    "stage":  "E06_CREATE_GUIDED_SUBSCREEN_NAVIGATION_RUNNER",
+    "created_at":  "2026-06-20T18:27:21",
+    "status":  "PASS",
+    "runner":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-subscreen-routing-adapter\\guided-navigation-smoke\\run-guided-subscreen-navigation-smoke.ps1",
+    "results_json":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-subscreen-routing-adapter\\guided-navigation-smoke\\guided-subscreen-navigation-smoke.manual.latest.json",
+    "results_tsv":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-subscreen-routing-adapter\\guided-navigation-smoke\\guided-subscreen-navigation-smoke.manual.latest.tsv",
+    "screens_count":  6,
+    "screens":  [
+                    "PROYECTOS",
+                    "MEMORIA_DOCUMENTACION",
+                    "CONTROL_ESTADO",
+                    "LAUNCHERS_CONFIGURACION",
+                    "OPERADOR_WORKERS",
+                    "TARJETAS"
+                ],
+    "runner_parse_ok":  true,
+    "purpose":  "Obliga a abrir y validar cada subpantalla antes de cerrar navegacion real",
+    "patch_existing_launchers":  false,
+    "registry_write":  false,
+    "migration_applied":  false,
+    "worker":  false,
+    "browser":  false,
+    "network":  false,
+    "git":  false,
+    "next":  "E07_RUN_GUIDED_SUBSCREEN_NAVIGATION_SMOKE"
+}

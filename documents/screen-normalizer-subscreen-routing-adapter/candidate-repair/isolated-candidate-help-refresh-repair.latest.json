@@ -1,0 +1,79 @@
+{
+    "schema":  "engremiat.isolated_candidate_help_refresh_repair.v1",
+    "package_id":  "ENGREMIAT_SCREEN_NORMALIZER_SUBSCREEN_ROUTING_ADAPTER_001",
+    "stage":  "E10_BACKUP_AND_REPAIR_ISOLATED_CANDIDATE_HELP_REFRESH_CONTRACTS",
+    "created_at":  "2026-06-20T18:39:30",
+    "status":  "PASS",
+    "decision":  "ISOLATED_CANDIDATES_REPAIRED_HELP_REFRESH_CONTRACTS",
+    "backup_dir":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-subscreen-routing-adapter\\candidate-repair\\backup-20260620-183930",
+    "repaired_count":  5,
+    "repaired":  [
+                     {
+                         "screen_id":  "OPERADOR_WORKERS",
+                         "path":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\OPERADOR_WORKERS.candidate.isolated.ps1",
+                         "backup":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-subscreen-routing-adapter\\candidate-repair\\backup-20260620-183930\\OPERADOR_WORKERS.candidate.isolated.ps1",
+                         "parse_ok":  true,
+                         "contract_ok":  true,
+                         "sha256_after":  "5E07D849663DBE341741BE7AD16D6F50BD25039AD19E95E23DA5EB7F9F4451BB",
+                         "actions":  [
+                                         "repair_question_mark_help_contract",
+                                         "repair_enter_empty_refresh_contract"
+                                     ]
+                     },
+                     {
+                         "screen_id":  "LAUNCHERS_CONFIGURACION",
+                         "path":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\LAUNCHERS_CONFIGURACION.candidate.isolated.ps1",
+                         "backup":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-subscreen-routing-adapter\\candidate-repair\\backup-20260620-183930\\LAUNCHERS_CONFIGURACION.candidate.isolated.ps1",
+                         "parse_ok":  true,
+                         "contract_ok":  true,
+                         "sha256_after":  "2EB270263703CA28F0D389BE87DB08E7CE3F80BA680C197779DF3DBF336A13A8",
+                         "actions":  [
+                                         "repair_question_mark_help_contract",
+                                         "repair_enter_empty_refresh_contract"
+                                     ]
+                     },
+                     {
+                         "screen_id":  "TARJETAS",
+                         "path":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\TARJETAS.candidate.isolated.ps1",
+                         "backup":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-subscreen-routing-adapter\\candidate-repair\\backup-20260620-183930\\TARJETAS.candidate.isolated.ps1",
+                         "parse_ok":  true,
+                         "contract_ok":  true,
+                         "sha256_after":  "9407B05F2BF72938AFCEFF7BABE1300D3813686E37C30170BB31EAA41A99618B",
+                         "actions":  [
+                                         "repair_question_mark_help_contract"
+                                     ]
+                     },
+                     {
+                         "screen_id":  "CONTROL_ESTADO",
+                         "path":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\CONTROL_ESTADO.candidate.isolated.ps1",
+                         "backup":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-subscreen-routing-adapter\\candidate-repair\\backup-20260620-183930\\CONTROL_ESTADO.candidate.isolated.ps1",
+                         "parse_ok":  true,
+                         "contract_ok":  true,
+                         "sha256_after":  "722D88FC747D4905A1839395825E80C6D95D9374B4E94BD58828168FD6FC00FE",
+                         "actions":  [
+                                         "repair_question_mark_help_contract"
+                                     ]
+                     },
+                     {
+                         "screen_id":  "MEMORIA_DOCUMENTACION",
+                         "path":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\MEMORIA_DOCUMENTACION.candidate.isolated.ps1",
+                         "backup":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-subscreen-routing-adapter\\candidate-repair\\backup-20260620-183930\\MEMORIA_DOCUMENTACION.candidate.isolated.ps1",
+                         "parse_ok":  true,
+                         "contract_ok":  true,
+                         "sha256_after":  "892BEC639B3E11633A0DE2936E8690CDBCBB6245F1CE207DB35848760246AD29",
+                         "actions":  [
+                                         "repair_question_mark_help_contract"
+                                     ]
+                     }
+                 ],
+    "scope":  "ISOLATED_CANDIDATE_FILES_ONLY",
+    "launcher_general_untouched":  true,
+    "patch_existing_launchers":  false,
+    "registry_write":  false,
+    "migration_applied":  false,
+    "worker":  false,
+    "browser":  false,
+    "network":  false,
+    "git":  false,
+    "next":  "E11_STATIC_SMOKE_REPAIRED_CANDIDATES"
+}

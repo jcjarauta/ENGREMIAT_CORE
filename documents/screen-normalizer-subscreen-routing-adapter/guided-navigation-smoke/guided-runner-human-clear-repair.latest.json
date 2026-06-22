@@ -1,0 +1,24 @@
+{
+    "schema":  "engremiat.guided_runner_human_clear_repair.v1",
+    "package_id":  "ENGREMIAT_SCREEN_NORMALIZER_SUBSCREEN_ROUTING_ADAPTER_001",
+    "stage":  "E07B_REPAIR_GUIDED_RUNNER_HUMAN_CLEAR_INSTRUCTIONS",
+    "created_at":  "2026-06-20T18:30:48",
+    "status":  "PASS",
+    "runner":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-subscreen-routing-adapter\\guided-navigation-smoke\\run-guided-subscreen-navigation-smoke.ps1",
+    "runner_parse_ok":  true,
+    "repair":  "HUMAN_CLEAR_STEP_BY_STEP_INSTRUCTIONS",
+    "improvements":  [
+                         "guia global antes de empezar",
+                         "guia por pantalla antes de abrir",
+                         "explica que m se prueba en pantalla principal no en ayuda",
+                         "validacion posterior clara",
+                         "preguntas s/n robustas",
+                         "persistencia parcial"
+                     ],
+    "screens_count":  6,
+    "patch_existing_launchers":  false,
+    "registry_write":  false,
+    "migration_applied":  false,
+    "git":  false,
+    "next":  "E07_RETRY_GUIDED_SUBSCREEN_NAVIGATION_SMOKE_CLEAR"
+}

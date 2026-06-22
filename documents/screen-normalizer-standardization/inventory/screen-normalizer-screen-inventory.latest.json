@@ -1,0 +1,105 @@
+﻿{
+    "package_id":  "ENGREMIAT_SCREEN_NORMALIZER_STANDARDIZATION_001",
+    "status":  "PASS",
+    "screens":  [
+                    {
+                        "id":  "INICIO",
+                        "status":  "VISUAL_OK",
+                        "source":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO-NORMALIZED.ps1",
+                        "validated":  [
+                                          "Ruta",
+                                          "Rol",
+                                          "Principio",
+                                          "m visible",
+                                          "Enter refrescar"
+                                      ],
+                        "pending":  [
+                                        "m handler real desde normalizador comun"
+                                    ]
+                    },
+                    {
+                        "id":  "PROYECTOS",
+                        "status":  "PENDING_SWEEP",
+                        "source":  "tools\\launcher\\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1",
+                        "validated":  [
+
+                                      ],
+                        "pending":  [
+                                        "cabecera normalizada",
+                                        "m visible",
+                                        "m handler comun",
+                                        "Enter refrescar"
+                                    ]
+                    },
+                    {
+                        "id":  "MEMORIA_Y_DOCUMENTACION",
+                        "status":  "PENDING_SWEEP",
+                        "source":  "tools\\launcher\\ENGREMIAT-MEMORY-DOCUMENTATION-CENTER-NORMALIZED.ps1",
+                        "validated":  [
+
+                                      ],
+                        "pending":  [
+                                        "cabecera normalizada",
+                                        "m visible",
+                                        "m handler comun",
+                                        "Enter refrescar"
+                                    ]
+                    },
+                    {
+                        "id":  "CONTROL_Y_ESTADO",
+                        "status":  "PENDING_SWEEP",
+                        "source":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO-NORMALIZED.ps1",
+                        "validated":  [
+
+                                      ],
+                        "pending":  [
+                                        "cabecera normalizada",
+                                        "m visible",
+                                        "m handler comun",
+                                        "Enter refrescar"
+                                    ]
+                    },
+                    {
+                        "id":  "LAUNCHERS_Y_CONFIGURACION",
+                        "status":  "PENDING_SWEEP",
+                        "source":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO-NORMALIZED.ps1",
+                        "validated":  [
+
+                                      ],
+                        "pending":  [
+                                        "cabecera normalizada",
+                                        "m visible",
+                                        "m handler comun",
+                                        "Enter refrescar"
+                                    ]
+                    },
+                    {
+                        "id":  "OPERADOR_Y_WORKERS",
+                        "status":  "PENDING_SWEEP",
+                        "source":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO-NORMALIZED.ps1",
+                        "validated":  [
+
+                                      ],
+                        "pending":  [
+                                        "cabecera normalizada",
+                                        "m visible",
+                                        "m handler comun",
+                                        "Enter refrescar"
+                                    ]
+                    },
+                    {
+                        "id":  "TARJETAS",
+                        "status":  "PENDING_SWEEP",
+                        "source":  "tools\\launcher\\ENGREMIAT-CARDS-VIEW-NORMALIZED.ps1",
+                        "validated":  [
+
+                                      ],
+                        "pending":  [
+                                        "cabecera normalizada",
+                                        "m visible",
+                                        "m handler comun",
+                                        "Enter refrescar"
+                                    ]
+                    }
+                ]
+}

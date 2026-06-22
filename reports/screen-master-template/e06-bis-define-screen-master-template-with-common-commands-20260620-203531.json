@@ -1,0 +1,30 @@
+﻿{
+    "package_id":  "ENGREMIAT_SCREEN_MASTER_TEMPLATE_001",
+    "stage":  "E06_BIS_DEFINE_SCREEN_MASTER_TEMPLATE_WITH_COMMON_COMMANDS",
+    "status":  "PASS",
+    "decision":  "GO_SCREEN_MASTER_TEMPLATE_DEFINED",
+    "runtime_write":  false,
+    "git_write":  false,
+    "contract":  "C:\\ENGREMIAT_CORE\\documents\\screen-master-template\\contracts\\screen-master-template-contract.v1.json",
+    "template":  "C:\\ENGREMIAT_CORE\\documents\\screen-master-template\\templates\\SCREEN_MASTER_TEMPLATE.v1.md",
+    "snippet":  "C:\\ENGREMIAT_CORE\\documents\\screen-master-template\\templates\\screen-master-template-snippet.v1.ps1",
+    "validator":  "C:\\ENGREMIAT_CORE\\tools\\screen-master-template\\validate-screen-master-template.ps1",
+    "snippet_parse":  true,
+    "validator_parse":  true,
+    "validator_exit":  0,
+    "validator_output":  [
+                             "SCREEN_MASTER_TEMPLATE_VALIDATION ok=True",
+                             "contract_exists=True",
+                             "snippet_exists=True",
+                             "snippet_parse=True",
+                             "inicio_exists=True",
+                             "inicio_parse=True",
+                             "inicio_has_enter_refresh=True",
+                             "inicio_has_b_return=True",
+                             "inicio_has_q_return=True",
+                             "inicio_has_m_card=True",
+                             "inicio_has_help=True",
+                             "inicio_has_cancel=True"
+                         ],
+    "next":  "E07_VALIDATE_SCREEN_TEMPLATE_AGAINST_CANDIDATE_SCREENS"
+}

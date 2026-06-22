@@ -1,0 +1,122 @@
+﻿{
+    "schema":  "engremiat.launcher_runtime_ui_integration_plan.v1",
+    "package_id":  "ENGREMIAT_LAUNCHER_RUNTIME_UI_INTEGRATION_001",
+    "stage":  "E04_DEFINE_LAUNCHER_RUNTIME_ADAPTER_INTEGRATION_PLAN_NO_UI_MUTATION",
+    "created_at":  "2026-06-20T15:11:51",
+    "status":  "READY",
+    "mode":  "INTEGRATION_PLAN_ONLY_NO_UI_MUTATION",
+    "source_adapter":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\adapter\\launcher-runtime-ui-adapter.latest.json",
+    "source_smoke":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\adapter\\launcher-runtime-ui-adapter-smoke.latest.json",
+    "integration_strategy":  "ADAPTER_LAYER_FIRST_THEN_UI_PATCH",
+    "target_surface":  {
+                           "name":  "launcher_actions_runtime_menu",
+                           "visible_label":  "ACCIONES / RUNTIME",
+                           "entry_command":  "runtime",
+                           "fallback_command":  "acciones",
+                           "screen_contract":  "readonly first; sensitive commands NO_GO until explicit auth wiring"
+                       },
+    "commands_to_expose":  [
+                               {
+                                   "command":  "acciones",
+                                   "ui_label":  "Listar acciones",
+                                   "mode":  "READONLY",
+                                   "risk":  "LOW"
+                               },
+                               {
+                                   "command":  "estado",
+                                   "ui_label":  "Estado runtime",
+                                   "mode":  "READONLY",
+                                   "risk":  "LOW"
+                               },
+                               {
+                                   "command":  "preview",
+                                   "ui_label":  "Preview dry-run",
+                                   "mode":  "READONLY",
+                                   "risk":  "LOW"
+                               },
+                               {
+                                   "command":  "aprobar",
+                                   "ui_label":  "Aprobar gate",
+                                   "mode":  "NO_GO_IN_UI_ADAPTER_UNTIL_REAL_AUTH_BRIDGE",
+                                   "risk":  "HIGH"
+                               },
+                               {
+                                   "command":  "ejecutar",
+                                   "ui_label":  "Ejecutar acción",
+                                   "mode":  "NO_GO_IN_UI_ADAPTER_UNTIL_REAL_AUTH_BRIDGE",
+                                   "risk":  "HIGH"
+                               },
+                               {
+                                   "command":  "volver",
+                                   "ui_label":  "Volver",
+                                   "mode":  "READONLY_NAVIGATION",
+                                   "risk":  "LOW"
+                               }
+                           ],
+    "ux_rules":  [
+                     "Enter vacío/refrescar/f5 redibuja pantalla",
+                     "? muestra ayuda contextual",
+                     "comandos muestra menú actual",
+                     "acciones muestra lista canónica",
+                     "estado muestra estado compacto",
+                     "preview no muta nada",
+                     "aprobar/ejecutar muestran NO_GO hasta puente explícito"
+                 ],
+    "implementation_phases":  [
+                                  {
+                                      "id":  "E05",
+                                      "name":  "CREATE_UI_PATCH_PROPOSAL_NO_WRITE",
+                                      "description":  "Generar propuesta de parche UI sin tocar archivo real",
+                                      "risk":  "LOW"
+                                  },
+                                  {
+                                      "id":  "E06",
+                                      "name":  "CREATE_UI_PATCH_SCRIPT_PENDING_AUTH",
+                                      "description":  "Crear script de parche UI bloqueado por autorización",
+                                      "risk":  "MEDIUM"
+                                  },
+                                  {
+                                      "id":  "E07",
+                                      "name":  "VERIFY_UI_PATCH_SCRIPT_BLOCKS_WITHOUT_AUTH",
+                                      "description":  "Comprobar NO_GO sin token",
+                                      "risk":  "LOW"
+                                  },
+                                  {
+                                      "id":  "E08",
+                                      "name":  "APPLY_UI_PATCH_WITH_EXPLICIT_AUTH",
+                                      "description":  "Aplicar integración UI real si se autoriza",
+                                      "risk":  "HIGH"
+                                  },
+                                  {
+                                      "id":  "E09",
+                                      "name":  "SMOKE_REAL_LAUNCHER_RUNTIME_MENU",
+                                      "description":  "Probar menú real",
+                                      "risk":  "MEDIUM"
+                                  },
+                                  {
+                                      "id":  "E10",
+                                      "name":  "CLOSE_UI_INTEGRATION",
+                                      "description":  "Cerrar objetivo y valorar siguiente",
+                                      "risk":  "LOW"
+                                  }
+                              ],
+    "blocked_until_auth":  [
+                               "modify_launcher_real_files",
+                               "wire_sensitive_approve_execute",
+                               "worker_real_execution",
+                               "browser",
+                               "network",
+                               "git_commit",
+                               "git_push"
+                           ],
+    "safety":  {
+                   "real_execution":  false,
+                   "ui_mutated":  false,
+                   "worker":  false,
+                   "browser":  false,
+                   "network":  false,
+                   "git":  false,
+                   "plan_only":  true
+               },
+    "next":  "E05_CREATE_LAUNCHER_RUNTIME_UI_PATCH_PROPOSAL_NO_WRITE"
+}

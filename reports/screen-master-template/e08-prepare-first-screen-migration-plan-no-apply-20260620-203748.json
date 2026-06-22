@@ -1,0 +1,24 @@
+﻿{
+    "package_id":  "ENGREMIAT_SCREEN_MASTER_TEMPLATE_001",
+    "stage":  "E08_PREPARE_FIRST_SCREEN_MIGRATION_PLAN_NO_APPLY",
+    "status":  "PASS",
+    "decision":  "GO_FIRST_SCREEN_MIGRATION_PLAN_READY_NO_APPLY",
+    "runtime_write":  false,
+    "git_write":  false,
+    "source_e07":  "C:\\ENGREMIAT_CORE\\reports\\screen-master-template\\e07-validate-screen-template-against-candidate-screens-20260620-203630.json",
+    "target_path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-add-module-safe.ps1",
+    "target_status":  "NEEDS_TEMPLATE",
+    "target_score":  1,
+    "target_parse":  true,
+    "missing":  [
+                    "Enter refrescar",
+                    "b volver",
+                    "q volver",
+                    "m mantenimiento",
+                    "? ayuda"
+                ],
+    "risk":  "MEDIUM",
+    "plan":  "C:\\ENGREMIAT_CORE\\documents\\screen-master-template\\planned\\first-screen-migration-plan.latest.md",
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\screen-master-template\\e08-prepare-first-screen-migration-plan-no-apply-20260620-203748.json",
+    "next":  "E09_PREPARE_SELECTED_SCREEN_PATCH_NO_APPLY"
+}

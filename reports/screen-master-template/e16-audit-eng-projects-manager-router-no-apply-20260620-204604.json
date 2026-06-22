@@ -1,0 +1,55 @@
+﻿{
+    "package_id":  "ENGREMIAT_SCREEN_MASTER_TEMPLATE_001",
+    "stage":  "E16_AUDIT_SELECTED_REAL_RENDERER_ROUTER_NO_APPLY",
+    "status":  "PASS",
+    "decision":  "GO_PROJECTS_MANAGER_ROUTER_ANCHOR_CONFIRMED_NO_APPLY",
+    "runtime_write":  false,
+    "git_write":  false,
+    "target":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-projects-manager.ps1",
+    "parse":  true,
+    "screen_line":  22,
+    "nearest_readhost":  {
+                             "line":  25,
+                             "var":  "a",
+                             "text":  "$a=Read-Host \"ENGREMIAT\""
+                         },
+    "command_var":  "a",
+    "readhosts":  [
+                      {
+                          "line":  14,
+                          "var":  "UNKNOWN",
+                          "text":  "function ShowWorkspace($project){while($true){Clear-Host;B \"ESPACIO DE TRABAJO\" @($project.Name,$project.Path,(\"Estado: \"+$project.Status)) \"Cyan\";Write-Host \" [1] Carpeta del proyecto\" -ForegroundColor Green;Write-Host \" [2] Módulos del proyecto\" -ForegroundColor Green;Write-Host \" [3] Espacio módulo inicio\" -ForegroundColor Green;Write-Host \" [4] Control del proyecto\" -ForegroundColor Yellow;Write-Host \" [b] Atrás\" -ForegroundColor Yellow;Write-Host \"\";Write-Host \"Enter = refrescar | b = volver | 1 carpeta | 2 modulos | 3 modulo inicio | 4 control\" -ForegroundColor DarkGray;$a=Read-Host \"PROYECTO\";if([string]::IsNullOrWhiteSpace($a)){continue};$a=$a.Trim().ToLowerInvariant();if($a -eq \"b\"){break};if($a -eq \"1\"){Start-Process explorer.exe $project.Path;continue};if($a -eq \"2\"){\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-project-modules-screen.ps1\" -ProjectPath $project.Path;continue};if($a -eq \"3\"){$p=Join-Path $project.Path \"MODULOS\\MODULE_inicio\\BOVEDA_MODULO\";if(Test-Path -LiteralPath $p){Start-Process explorer.exe $p}else{B \"NO_GO\" @(\"No existe: $p\") \"Yellow\";Read-Host \"Enter\"};continue};if($a -eq \"4\"){$p=Join-Path $project.Path \"BOVEDA_PROYECTO\\00_CONTROL\";if(Test-Path -LiteralPath $p){Start-Process explorer.exe $p}else{B \"NO_GO\" @(\"No existe: $p\") \"Yellow\";Read-Host \"Enter\"};continue}}}"
+                      },
+                      {
+                          "line":  25,
+                          "var":  "a",
+                          "text":  "$a=Read-Host \"ENGREMIAT\""
+                      },
+                      {
+                          "line":  27,
+                          "var":  "UNKNOWN",
+                          "text":  "if($a -eq \"n\"){$creator=Join-Path $root \"tools\\desktop-terminal-operator\\eng-new-project-safe.ps1\";if(Test-Path -LiteralPath $creator){\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $creator}else{B \"NO_GO\" @(\"No encuentro creador: $creator\") \"Yellow\";Read-Host \"Enter\"};$latest=@(Get-ChildItem -LiteralPath $base -Directory -Filter \"ENGREMIAT_PROJECT_*\" -ErrorAction SilentlyContinue|Sort-Object LastWriteTime -Descending|Select-Object -First 1);if($latest.Count -gt 0){SaveActive $latest[0].FullName};continue}"
+                      },
+                      {
+                          "line":  28,
+                          "var":  "UNKNOWN",
+                          "text":  "if($a -eq \"v\"){while($true){Clear-Host;$projects=GetProjects $base;$hist=@($projects|Where-Object{$_.Status -ne \"ACTIVO\"}|Sort-Object LastWriteTime -Descending);B \"HISTORICO\" @(\"numero = activar | oN = abrir carpeta | b = atras\") \"Yellow\";if($hist.Count -eq 0){W \" Historico vacio.\" \"Yellow\"}else{for($i=0;$i -lt $hist.Count;$i++){W (\" [\"+($i+1)+\"] \"+$hist[$i].Name+\"  \"+$hist[$i].LastWriteTime.ToString(\"yyyy-MM-dd HH:mm\")+\"  HISTORICO\") \"Gray\"}};W \"\";$h=Read-Host \"HISTORICO\";if([string]::IsNullOrWhiteSpace($h)){continue};$h=$h.Trim().ToLowerInvariant();if($h -eq \"b\"){break};if($h -match \"^o(\\d+)$\"){$idx=[int]$Matches[1]-1;if($idx -ge 0 -and $idx -lt $hist.Count){Start-Process explorer.exe $hist[$idx].Path};continue};$hn=0;if([int]::TryParse($h,[ref]$hn) -and $hn -ge 1 -and $hn -le $hist.Count){SaveActive $hist[($hn-1)].Path;break}};continue}"
+                      },
+                      {
+                          "line":  33,
+                          "var":  "UNKNOWN",
+                          "text":  "}catch{B \"ERR\" @(\"status=FAIL\",$_.Exception.Message) \"Red\";Read-Host \"Enter para salir\";exit 1}"
+                      }
+                  ],
+    "coverage":  {
+                     "enter":  true,
+                     "b":  true,
+                     "q":  true,
+                     "m":  false,
+                     "help":  false,
+                     "project_options":  true
+                 },
+    "summary":  "C:\\ENGREMIAT_CORE\\documents\\screen-master-template\\planned\\eng-projects-manager-router-audit.latest.md",
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\screen-master-template\\e16-audit-eng-projects-manager-router-no-apply-20260620-204604.json",
+    "next":  "E17_PREPARE_PROJECTS_MANAGER_SCREEN_PATCH_NO_APPLY"
+}

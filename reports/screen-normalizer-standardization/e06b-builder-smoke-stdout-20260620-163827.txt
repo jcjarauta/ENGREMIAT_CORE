@@ -1,0 +1,110 @@
+OK screen_builder_dry_run_preview_ready parent=INICIO new=NUEVA_FUNCION_DEMO_20260620-163827 write_now=False preview=C:\ENGREMIAT_CORE\documents\screen-normalizer-standardization\builder\screen-builder-dry-run-preview.latest.json
+{
+    "schema":  "engremiat.screen_builder_dry_run_preview.v1",
+    "status":  "PASS",
+    "mode":  "DRY_RUN_NO_REGISTRY_WRITE",
+    "parent_screen":  {
+                          "screen_id":  "INICIO",
+                          "parent":  null,
+                          "title":  "ENGREMIAT / INICIO",
+                          "route":  "INICIO",
+                          "role":  "hub humano principal del operador",
+                          "description":  "Entrada principal para navegar por proyectos, memoria, control, launchers, workers y tarjetas.",
+                          "status":  "READY",
+                          "principle":  "local-first | workers OFF | worker real pausado",
+                          "prompt":  "INICIO",
+                          "source":  "tools\\launcher\\ENGREMIAT-INICIO-NORMALIZED.ps1",
+                          "risk":  "LOW",
+                          "requires_human_gate":  false,
+                          "commands":  [
+                                           "b/q = salir",
+                                           "m = mantenimiento",
+                                           "? = ayuda",
+                                           "Enter = refrescar"
+                                       ],
+                          "actions":  [
+                                          {
+                                              "id":  "1",
+                                              "label":  "Proyectos",
+                                              "type":  "screen",
+                                              "target_screen":  "PROYECTOS",
+                                              "risk":  "LOW",
+                                              "requires_auth":  false
+                                          },
+                                          {
+                                              "id":  "2",
+                                              "label":  "Memoria y documentacion",
+                                              "type":  "screen",
+                                              "target_screen":  "MEMORIA_DOCUMENTACION",
+                                              "risk":  "LOW",
+                                              "requires_auth":  false
+                                          },
+                                          {
+                                              "id":  "3",
+                                              "label":  "Control y estado",
+                                              "type":  "screen",
+                                              "target_screen":  "CONTROL_ESTADO",
+                                              "risk":  "LOW",
+                                              "requires_auth":  false
+                                          },
+                                          {
+                                              "id":  "4",
+                                              "label":  "Launchers y configuracion",
+                                              "type":  "screen",
+                                              "target_screen":  "LAUNCHERS_CONFIGURACION",
+                                              "risk":  "LOW",
+                                              "requires_auth":  false
+                                          },
+                                          {
+                                              "id":  "5",
+                                              "label":  "Operador y workers",
+                                              "type":  "screen",
+                                              "target_screen":  "OPERADOR_WORKERS",
+                                              "risk":  "MEDIUM",
+                                              "requires_auth":  true
+                                          },
+                                          {
+                                              "id":  "6",
+                                              "label":  "Tarjetas",
+                                              "type":  "screen",
+                                              "target_screen":  "TARJETAS",
+                                              "risk":  "LOW",
+                                              "requires_auth":  false
+                                          }
+                                      ]
+                      },
+    "new_screen":  {
+                       "screen_id":  "NUEVA_FUNCION_DEMO_20260620-163827",
+                       "parent":  "INICIO",
+                       "title":  "Nueva funcion demo",
+                       "route":  "INICIO \u003e Nueva funcion demo",
+                       "role":  "funcion demo anidada",
+                       "description":  "Validacion dry-run del builder de pantallas",
+                       "status":  "PROPOSED_DRY_RUN",
+                       "principle":  "template-first | dry-run | human_gate=SI antes de escritura real",
+                       "prompt":  "NUEVA_FUNCION_DEMO_20260620-163827",
+                       "source":  "GENERATED_BY_SCREEN_BUILDER_DRY_RUN",
+                       "risk":  "LOW",
+                       "requires_human_gate":  true,
+                       "commands":  [
+                                        "b = volver",
+                                        "m = mantenimiento",
+                                        "? = ayuda",
+                                        "Enter = refrescar"
+                                    ],
+                       "actions":  [
+
+                                   ]
+                   },
+    "generated_menu_patch_preview":  {
+                                         "parent":  "INICIO",
+                                         "add_child":  "NUEVA_FUNCION_DEMO_20260620-163827",
+                                         "menu_label":  "Nueva funcion demo",
+                                         "route":  "INICIO \u003e Nueva funcion demo"
+                                     },
+    "generated_ui_preview":  [
+                                 "==== Nueva funcion demo ==== Ruta: INICIO \u003e Nueva funcion demo Rol: funcion demo anidada Estado: PROPOSED_DRY_RUN Principio: template-first | dry-run | human_gate=SI antes de escritura real  Validacion dry-run del builder de pantallas  [b] volver | m = mantenimiento | ? = ayuda | Enter = refrescar NUEVA_FUNCION_DEMO_20260620-163827:"
+                             ],
+    "write_now":  false,
+    "next":  "E07_SCREEN_BUILDER_APPLY_WITH_HUMAN_GATE_PENDING"
+}

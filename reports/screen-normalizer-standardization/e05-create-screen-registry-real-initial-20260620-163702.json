@@ -1,0 +1,233 @@
+﻿{
+    "schema":  "engremiat.screen_registry.v1",
+    "package_id":  "ENGREMIAT_SCREEN_NORMALIZER_STANDARDIZATION_001",
+    "stage":  "E05_CREATE_SCREEN_REGISTRY_REAL_INITIAL",
+    "created_at":  "2026-06-20T16:37:02",
+    "status":  "PASS",
+    "purpose":  "Registro real inicial de pantallas para generar UI normalizada y anidar nuevas funciones por plantilla",
+    "helper":  "C:\\ENGREMIAT_CORE\\tools\\screen-normalizer\\screen-normalizer.ps1",
+    "screen_count":  7,
+    "screens":  [
+                    {
+                        "screen_id":  "INICIO",
+                        "parent":  null,
+                        "title":  "ENGREMIAT / INICIO",
+                        "route":  "INICIO",
+                        "role":  "hub humano principal del operador",
+                        "description":  "Entrada principal para navegar por proyectos, memoria, control, launchers, workers y tarjetas.",
+                        "status":  "READY",
+                        "principle":  "local-first | workers OFF | worker real pausado",
+                        "prompt":  "INICIO",
+                        "source":  "tools\\launcher\\ENGREMIAT-INICIO-NORMALIZED.ps1",
+                        "risk":  "LOW",
+                        "requires_human_gate":  false,
+                        "commands":  [
+                                         "b/q = salir",
+                                         "m = mantenimiento",
+                                         "? = ayuda",
+                                         "Enter = refrescar"
+                                     ],
+                        "actions":  [
+                                        {
+                                            "id":  "1",
+                                            "label":  "Proyectos",
+                                            "type":  "screen",
+                                            "target_screen":  "PROYECTOS",
+                                            "risk":  "LOW",
+                                            "requires_auth":  false
+                                        },
+                                        {
+                                            "id":  "2",
+                                            "label":  "Memoria y documentacion",
+                                            "type":  "screen",
+                                            "target_screen":  "MEMORIA_DOCUMENTACION",
+                                            "risk":  "LOW",
+                                            "requires_auth":  false
+                                        },
+                                        {
+                                            "id":  "3",
+                                            "label":  "Control y estado",
+                                            "type":  "screen",
+                                            "target_screen":  "CONTROL_ESTADO",
+                                            "risk":  "LOW",
+                                            "requires_auth":  false
+                                        },
+                                        {
+                                            "id":  "4",
+                                            "label":  "Launchers y configuracion",
+                                            "type":  "screen",
+                                            "target_screen":  "LAUNCHERS_CONFIGURACION",
+                                            "risk":  "LOW",
+                                            "requires_auth":  false
+                                        },
+                                        {
+                                            "id":  "5",
+                                            "label":  "Operador y workers",
+                                            "type":  "screen",
+                                            "target_screen":  "OPERADOR_WORKERS",
+                                            "risk":  "MEDIUM",
+                                            "requires_auth":  true
+                                        },
+                                        {
+                                            "id":  "6",
+                                            "label":  "Tarjetas",
+                                            "type":  "screen",
+                                            "target_screen":  "TARJETAS",
+                                            "risk":  "LOW",
+                                            "requires_auth":  false
+                                        }
+                                    ]
+                    },
+                    {
+                        "screen_id":  "PROYECTOS",
+                        "parent":  "INICIO",
+                        "title":  "PROYECTOS",
+                        "route":  "INICIO \u003e Proyectos",
+                        "role":  "cartera de proyectos, modulos y tarjetas vinculadas",
+                        "description":  "Permite seleccionar proyectos, revisar historicos y navegar hacia modulos/tarjetas.",
+                        "status":  "PENDING_MIGRATION",
+                        "principle":  "PROYECTO \u003e MODULO \u003e TARJETA | readonly por defecto | workers seguros",
+                        "prompt":  "PROYECTOS",
+                        "source":  "tools\\launcher\\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1",
+                        "risk":  "LOW",
+                        "requires_human_gate":  false,
+                        "commands":  [
+                                         "b = volver",
+                                         "m = mantenimiento",
+                                         "? = ayuda",
+                                         "Enter = refrescar"
+                                     ],
+                        "actions":  [
+
+                                    ]
+                    },
+                    {
+                        "screen_id":  "MEMORIA_DOCUMENTACION",
+                        "parent":  "INICIO",
+                        "title":  "MEMORIA Y DOCUMENTACION",
+                        "route":  "INICIO \u003e Memoria y documentacion",
+                        "role":  "consulta de conocimiento, documentos y memoria operativa",
+                        "description":  "Agrupa accesos a documentacion, contexto y memoria del sistema.",
+                        "status":  "PENDING_MIGRATION",
+                        "principle":  "readonly | trazabilidad | no worker real",
+                        "prompt":  "MEMORIA",
+                        "source":  "tools\\launcher\\ENGREMIAT-MEMORY-DOCUMENTATION-CENTER-NORMALIZED.ps1",
+                        "risk":  "LOW",
+                        "requires_human_gate":  false,
+                        "commands":  [
+                                         "b = volver",
+                                         "m = mantenimiento",
+                                         "? = ayuda",
+                                         "Enter = refrescar"
+                                     ],
+                        "actions":  [
+
+                                    ]
+                    },
+                    {
+                        "screen_id":  "CONTROL_ESTADO",
+                        "parent":  "INICIO",
+                        "title":  "CONTROL Y ESTADO",
+                        "route":  "INICIO \u003e Control y estado",
+                        "role":  "estado compacto del operador local",
+                        "description":  "Muestra salud, estado operativo, pausas, canon y siguientes recomendaciones.",
+                        "status":  "PENDING_MIGRATION",
+                        "principle":  "readonly | diagnostico | evidencia local",
+                        "prompt":  "CONTROL",
+                        "source":  "tools\\launcher\\ENGREMIAT-INICIO-NORMALIZED.ps1",
+                        "risk":  "LOW",
+                        "requires_human_gate":  false,
+                        "commands":  [
+                                         "b = volver",
+                                         "m = mantenimiento",
+                                         "? = ayuda",
+                                         "Enter = refrescar"
+                                     ],
+                        "actions":  [
+
+                                    ]
+                    },
+                    {
+                        "screen_id":  "LAUNCHERS_CONFIGURACION",
+                        "parent":  "INICIO",
+                        "title":  "LAUNCHERS Y CONFIGURACION",
+                        "route":  "INICIO \u003e Launchers y configuracion",
+                        "role":  "health, configuracion y herramientas del operador",
+                        "description":  "Permite revisar launchers, helper update dry-run y data intake.",
+                        "status":  "PENDING_MIGRATION",
+                        "principle":  "dry-run primero | no cambios sensibles sin gate",
+                        "prompt":  "CONFIG",
+                        "source":  "tools\\launcher\\ENGREMIAT-INICIO-NORMALIZED.ps1",
+                        "risk":  "MEDIUM",
+                        "requires_human_gate":  true,
+                        "commands":  [
+                                         "b = volver",
+                                         "m = mantenimiento",
+                                         "? = ayuda",
+                                         "Enter = refrescar"
+                                     ],
+                        "actions":  [
+
+                                    ]
+                    },
+                    {
+                        "screen_id":  "OPERADOR_WORKERS",
+                        "parent":  "INICIO",
+                        "title":  "OPERADOR Y WORKERS",
+                        "route":  "INICIO \u003e Operador y workers",
+                        "role":  "estado de workers y automatizacion",
+                        "description":  "Pantalla de workers pausados y autorizaciones futuras.",
+                        "status":  "PAUSADO",
+                        "principle":  "worker real pausado | autorizacion explicita | local-only",
+                        "prompt":  "WORKERS",
+                        "source":  "tools\\launcher\\ENGREMIAT-INICIO-NORMALIZED.ps1",
+                        "risk":  "HIGH",
+                        "requires_human_gate":  true,
+                        "commands":  [
+                                         "b = volver",
+                                         "m = mantenimiento",
+                                         "? = ayuda",
+                                         "Enter = refrescar"
+                                     ],
+                        "actions":  [
+
+                                    ]
+                    },
+                    {
+                        "screen_id":  "TARJETAS",
+                        "parent":  "INICIO",
+                        "title":  "TARJETAS",
+                        "route":  "INICIO \u003e Tarjetas",
+                        "role":  "vista de tarjetas humanas y vinculacion con modulos",
+                        "description":  "Permite revisar tarjetas y preparar mejoras/tareas desde observaciones humanas.",
+                        "status":  "PENDING_MIGRATION",
+                        "principle":  "readonly por defecto | human_gate=SI | tarjeta antes que accion",
+                        "prompt":  "TARJETAS",
+                        "source":  "tools\\launcher\\ENGREMIAT-CARDS-VIEW-NORMALIZED.ps1",
+                        "risk":  "LOW",
+                        "requires_human_gate":  false,
+                        "commands":  [
+                                         "b = volver",
+                                         "m = mantenimiento",
+                                         "? = ayuda",
+                                         "Enter = refrescar"
+                                     ],
+                        "actions":  [
+
+                                    ]
+                    }
+                ],
+    "global_commands":  [
+                            "Enter = refrescar",
+                            "? = ayuda",
+                            "m = mantenimiento",
+                            "b = volver cuando aplique",
+                            "q = salir cuando aplique"
+                        ],
+    "builder_policy":  {
+                           "patch_switches_manually":  false,
+                           "new_function_flow":  "select_parent_screen -\u003e fill_template -\u003e validate_registry -\u003e generate_ui -\u003e smoke -\u003e visual_check",
+                           "default_safety":  "local-first | no worker real | no network | no git"
+                       },
+    "next":  "E06_CREATE_SCREEN_BUILDER_DRY_RUN"
+}

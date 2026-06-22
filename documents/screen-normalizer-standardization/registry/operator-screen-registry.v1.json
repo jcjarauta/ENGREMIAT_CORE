@@ -1,0 +1,148 @@
+﻿{
+    "schema":  "engremiat.operator_screen_registry.v1",
+    "package_id":  "ENGREMIAT_SCREEN_NORMALIZER_STANDARDIZATION_001",
+    "created_at":  "2026-06-20T16:34:47",
+    "status":  "PASS",
+    "purpose":  "Registro declarativo de pantallas del operador para poder anidar nuevas funciones sin parchear codigo manualmente",
+    "principle":  "La UI se genera desde fichas de pantalla, no desde switches sueltos",
+    "screens":  [
+                    {
+                        "screen_id":  "INICIO",
+                        "parent":  null,
+                        "route":  "INICIO",
+                        "title":  "ENGREMIAT / INICIO",
+                        "role":  "hub humano principal del operador",
+                        "description":  "Entrada principal al operador local",
+                        "status":  "READY",
+                        "source":  "tools\\launcher\\ENGREMIAT-INICIO-NORMALIZED.ps1",
+                        "children":  [
+                                         "PROYECTOS",
+                                         "MEMORIA_DOCUMENTACION",
+                                         "CONTROL_ESTADO",
+                                         "LAUNCHERS_CONFIGURACION",
+                                         "OPERADOR_WORKERS",
+                                         "TARJETAS"
+                                     ],
+                        "commands":  [
+                                         "Enter=refrescar",
+                                         "?=ayuda",
+                                         "m=mantenimiento",
+                                         "q=salir"
+                                     ]
+                    },
+                    {
+                        "screen_id":  "PROYECTOS",
+                        "parent":  "INICIO",
+                        "route":  "INICIO \u003e Proyectos",
+                        "title":  "PROYECTOS",
+                        "role":  "cartera de proyectos, modulos y tarjetas vinculadas",
+                        "description":  "Permite elegir proyecto y navegar a sus modulos/tarjetas",
+                        "status":  "PENDING_NORMALIZATION",
+                        "source":  "tools\\launcher\\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1",
+                        "children":  [
+
+                                     ],
+                        "commands":  [
+                                         "Enter=refrescar",
+                                         "?=ayuda",
+                                         "b=volver",
+                                         "m=mantenimiento"
+                                     ]
+                    },
+                    {
+                        "screen_id":  "TARJETAS",
+                        "parent":  "INICIO",
+                        "route":  "INICIO \u003e Tarjetas",
+                        "title":  "TARJETAS",
+                        "role":  "vista readonly de tarjetas humanas y vinculacion con modulos",
+                        "description":  "Permite revisar tarjetas y su relacion con proyecto/modulo",
+                        "status":  "PENDING_NORMALIZATION",
+                        "source":  "tools\\launcher\\ENGREMIAT-CARDS-VIEW-NORMALIZED.ps1",
+                        "children":  [
+
+                                     ],
+                        "commands":  [
+                                         "Enter=refrescar",
+                                         "?=ayuda",
+                                         "b=volver",
+                                         "m=mantenimiento"
+                                     ]
+                    },
+                    {
+                        "screen_id":  "PANTALLAS_UX",
+                        "id":  "pantallas_ux",
+                        "title":  "Pantallas y UX",
+                        "titulo":  "Pantallas y UX",
+                        "route":  "1.2 · pantallas_ux",
+                        "ruta":  "1.2 · pantallas_ux",
+                        "status":  "ACTIVE",
+                        "estado":  "ACTIVE",
+                        "progress":  35,
+                        "progreso":  35,
+                        "purpose":  "Pantalla real de arquitectura UX: registry, estados, progreso, pendientes y normalizacion visual",
+                        "proposito":  "Pantalla real de arquitectura UX: registry, estados, progreso, pendientes y normalizacion visual",
+                        "children":  [
+                                         {
+                                             "status":  "ACTIVE",
+                                             "title":  "UX registry",
+                                             "id":  "ux_registry",
+                                             "progress":  35
+                                         },
+                                         {
+                                             "status":  "ACTIVE",
+                                             "title":  "Estados de pantalla",
+                                             "id":  "screen_states",
+                                             "progress":  35
+                                         },
+                                         {
+                                             "status":  "PLANNED",
+                                             "title":  "Reglas visuales",
+                                             "id":  "layout_rules",
+                                             "progress":  20
+                                         },
+                                         {
+                                             "status":  "ACTIVE",
+                                             "title":  "Reparaciones UX pendientes",
+                                             "id":  "pending_ux_repairs",
+                                             "progress":  35
+                                         }
+                                     ],
+                        "hijos":  [
+                                      {
+                                          "status":  "ACTIVE",
+                                          "title":  "UX registry",
+                                          "id":  "ux_registry",
+                                          "progress":  35
+                                      },
+                                      {
+                                          "status":  "ACTIVE",
+                                          "title":  "Estados de pantalla",
+                                          "id":  "screen_states",
+                                          "progress":  35
+                                      },
+                                      {
+                                          "status":  "PLANNED",
+                                          "title":  "Reglas visuales",
+                                          "id":  "layout_rules",
+                                          "progress":  20
+                                      },
+                                      {
+                                          "status":  "ACTIVE",
+                                          "title":  "Reparaciones UX pendientes",
+                                          "id":  "pending_ux_repairs",
+                                          "progress":  35
+                                      }
+                                  ],
+                        "pending":  [
+                                        "conectar acciones reales de subpantallas",
+                                        "normalizar espacios entre indice, comandos y prompt",
+                                        "unificar leyenda comun"
+                                    ],
+                        "pendientes":  [
+                                           "conectar acciones reales de subpantallas",
+                                           "normalizar espacios entre indice, comandos y prompt",
+                                           "unificar leyenda comun"
+                                       ]
+                    }
+                ]
+}

@@ -1,0 +1,990 @@
+﻿{
+    "schema":  "engremiat.launcher_runtime_ui_inventory.v1",
+    "package_id":  "ENGREMIAT_LAUNCHER_RUNTIME_UI_INTEGRATION_001",
+    "stage":  "E01_INVENTORY_LAUNCHER_UI_AND_RUNTIME_INTEGRATION_POINTS",
+    "created_at":  "2026-06-20T15:09:41",
+    "status":  "PASS",
+    "mode":  "READONLY_INVENTORY_NO_UI_MUTATION",
+    "runtime_close":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\close\\launcher-canonical-action-runtime-close.latest.json",
+    "search_roots":  [
+                         "C:\\ENGREMIAT_CORE\\tools\\launcher",
+                         "C:\\ENGREMIAT_CORE\\tools",
+                         "C:\\ENGREMIAT_CORE\\documents\\ux-system",
+                         "C:\\ENGREMIAT_CORE\\documents\\module-cards"
+                     ],
+    "candidate_files_count":  521,
+    "top_candidates":  [
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\templates\\ENGREMIAT-CANONICAL-SCREEN-TEMPLATE.ps1",
+                               "relative":  "tools\\launcher\\templates\\ENGREMIAT-CANONICAL-SCREEN-TEMPLATE.ps1",
+                               "name":  "ENGREMIAT-CANONICAL-SCREEN-TEMPLATE.ps1",
+                               "score":  5,
+                               "tags":  [
+                                            "menu",
+                                            "pantalla",
+                                            "screen",
+                                            "accion",
+                                            "refrescar"
+                                        ],
+                               "last_write":  "2026-06-20T10:11:32",
+                               "size":  1786
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\module-actions\\run-approved-module-action.pending-auth.ps1",
+                               "relative":  "tools\\launcher\\module-actions\\run-approved-module-action.pending-auth.ps1",
+                               "name":  "run-approved-module-action.pending-auth.ps1",
+                               "score":  2,
+                               "tags":  [
+                                            "launcher",
+                                            "module-card"
+                                        ],
+                               "last_write":  "2026-06-20T14:56:35",
+                               "size":  3709
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\local-multiworker-launch-and-link-n1\\Test-LocalDashboardAndLauncherN1.ps1",
+                               "relative":  "tools\\local-multiworker-launch-and-link-n1\\Test-LocalDashboardAndLauncherN1.ps1",
+                               "name":  "Test-LocalDashboardAndLauncherN1.ps1",
+                               "score":  1,
+                               "tags":  [
+                                            "launcher"
+                                        ],
+                               "last_write":  "2026-06-16T15:32:45",
+                               "size":  3230
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\local-multiworker-launch-and-link-n1\\Open-LocalMultiworkerSurfacesN1.ps1",
+                               "relative":  "tools\\local-multiworker-launch-and-link-n1\\Open-LocalMultiworkerSurfacesN1.ps1",
+                               "name":  "Open-LocalMultiworkerSurfacesN1.ps1",
+                               "score":  1,
+                               "tags":  [
+                                            "launcher"
+                                        ],
+                               "last_write":  "2026-06-16T15:32:45",
+                               "size":  1949
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\canonical-action-runtime\\actions\\DEMO-CANONICAL-MODULE-ACTION-001\\apply-gate-mutation.pending-auth.ps1",
+                               "relative":  "tools\\launcher\\canonical-action-runtime\\actions\\DEMO-CANONICAL-MODULE-ACTION-001\\apply-gate-mutation.pending-auth.ps1",
+                               "name":  "apply-gate-mutation.pending-auth.ps1",
+                               "score":  3,
+                               "tags":  [
+                                            "launcher",
+                                            "canonical-action-runtime",
+                                            "runtime"
+                                        ],
+                               "last_write":  "2026-06-20T15:05:51",
+                               "size":  4490
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\canonical-action-runtime\\new-canonical-action-package.no-execution.ps1",
+                               "relative":  "tools\\launcher\\canonical-action-runtime\\new-canonical-action-package.no-execution.ps1",
+                               "name":  "new-canonical-action-package.no-execution.ps1",
+                               "score":  3,
+                               "tags":  [
+                                            "launcher",
+                                            "canonical-action-runtime",
+                                            "runtime"
+                                        ],
+                               "last_write":  "2026-06-20T15:02:49",
+                               "size":  3272
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\gate-mutations\\apply-human-gate-approval.pending-auth.ps1",
+                               "relative":  "tools\\launcher\\gate-mutations\\apply-human-gate-approval.pending-auth.ps1",
+                               "name":  "apply-human-gate-approval.pending-auth.ps1",
+                               "score":  3,
+                               "tags":  [
+                                            "launcher",
+                                            "module-card",
+                                            "human-gate"
+                                        ],
+                               "last_write":  "2026-06-20T14:54:02",
+                               "size":  4232
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\canonical-action-runtime\\actions\\DEMO-CANONICAL-MODULE-ACTION-001\\run-action.pending-auth.ps1",
+                               "relative":  "tools\\launcher\\canonical-action-runtime\\actions\\DEMO-CANONICAL-MODULE-ACTION-001\\run-action.pending-auth.ps1",
+                               "name":  "run-action.pending-auth.ps1",
+                               "score":  3,
+                               "tags":  [
+                                            "launcher",
+                                            "canonical-action-runtime",
+                                            "runtime"
+                                        ],
+                               "last_write":  "2026-06-20T15:06:58",
+                               "size":  3804
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\module-cards\\validate-module-card.ps1",
+                               "relative":  "tools\\module-cards\\validate-module-card.ps1",
+                               "name":  "validate-module-card.ps1",
+                               "score":  1,
+                               "tags":  [
+                                            "module-card"
+                                        ],
+                               "last_write":  "2026-06-20T13:29:53",
+                               "size":  1651
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\module-cards\\validate-human-gate-decision.ps1",
+                               "relative":  "tools\\module-cards\\validate-human-gate-decision.ps1",
+                               "name":  "validate-human-gate-decision.ps1",
+                               "score":  1,
+                               "tags":  [
+                                            "human-gate"
+                                        ],
+                               "last_write":  "2026-06-20T14:43:17",
+                               "size":  2161
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\runtime\\Build-LocalRuntimeEvidence.ps1",
+                               "relative":  "tools\\runtime\\Build-LocalRuntimeEvidence.ps1",
+                               "name":  "Build-LocalRuntimeEvidence.ps1",
+                               "score":  1,
+                               "tags":  [
+                                            "runtime"
+                                        ],
+                               "last_write":  "2026-06-16T15:32:45",
+                               "size":  177
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\runtime\\Build-LocalRuntimeDashboard.ps1",
+                               "relative":  "tools\\runtime\\Build-LocalRuntimeDashboard.ps1",
+                               "name":  "Build-LocalRuntimeDashboard.ps1",
+                               "score":  1,
+                               "tags":  [
+                                            "runtime"
+                                        ],
+                               "last_write":  "2026-06-16T15:32:45",
+                               "size":  178
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\main-pc-linking\\Open-MainPcLinkDashboard.ps1",
+                               "relative":  "tools\\main-pc-linking\\Open-MainPcLinkDashboard.ps1",
+                               "name":  "Open-MainPcLinkDashboard.ps1",
+                               "score":  1,
+                               "tags":  [
+                                            "launcher"
+                                        ],
+                               "last_write":  "2026-06-16T16:15:31",
+                               "size":  1191
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\local-multiworker-launch-and-link-n1\\Test-LocalPoliciesN1.ps1",
+                               "relative":  "tools\\local-multiworker-launch-and-link-n1\\Test-LocalPoliciesN1.ps1",
+                               "name":  "Test-LocalPoliciesN1.ps1",
+                               "score":  1,
+                               "tags":  [
+                                            "launcher"
+                                        ],
+                               "last_write":  "2026-06-16T15:32:45",
+                               "size":  3837
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\module-cards\\check-card-to-module-flow.ps1",
+                               "relative":  "tools\\module-cards\\check-card-to-module-flow.ps1",
+                               "name":  "check-card-to-module-flow.ps1",
+                               "score":  1,
+                               "tags":  [
+                                            "module-card"
+                                        ],
+                               "last_write":  "2026-06-20T13:31:01",
+                               "size":  2420
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\main-pc-linking\\Test-MainPcLinkDashboard.ps1",
+                               "relative":  "tools\\main-pc-linking\\Test-MainPcLinkDashboard.ps1",
+                               "name":  "Test-MainPcLinkDashboard.ps1",
+                               "score":  1,
+                               "tags":  [
+                                            "launcher"
+                                        ],
+                               "last_write":  "2026-06-16T16:15:31",
+                               "size":  3005
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECT-MEMORY.ps1.bak-rewrite-stable-20260620080557",
+                               "relative":  "tools\\launcher\\ENGREMIAT-PROJECT-MEMORY.ps1.bak-rewrite-stable-20260620080557",
+                               "name":  "ENGREMIAT-PROJECT-MEMORY.ps1.bak-rewrite-stable-20260620080557",
+                               "score":  7,
+                               "tags":  [
+                                            "launcher",
+                                            "menu",
+                                            "pantalla",
+                                            "screen",
+                                            "accion",
+                                            "module-card",
+                                            "refrescar"
+                                        ],
+                               "last_write":  "2026-06-20T08:03:31",
+                               "size":  13328
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECT-MEMORY.ps1",
+                               "relative":  "tools\\launcher\\ENGREMIAT-PROJECT-MEMORY.ps1",
+                               "name":  "ENGREMIAT-PROJECT-MEMORY.ps1",
+                               "score":  6,
+                               "tags":  [
+                                            "launcher",
+                                            "pantalla",
+                                            "screen",
+                                            "accion",
+                                            "module-card",
+                                            "refrescar"
+                                        ],
+                               "last_write":  "2026-06-20T08:05:57",
+                               "size":  8115
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1",
+                               "relative":  "tools\\launcher\\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1",
+                               "name":  "ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1",
+                               "score":  4,
+                               "tags":  [
+                                            "launcher",
+                                            "screen",
+                                            "accion",
+                                            "refrescar"
+                                        ],
+                               "last_write":  "2026-06-20T13:45:37",
+                               "size":  6206
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECT-MODULE-CARDS-BRIDGE.ps1",
+                               "relative":  "tools\\launcher\\ENGREMIAT-PROJECT-MODULE-CARDS-BRIDGE.ps1",
+                               "name":  "ENGREMIAT-PROJECT-MODULE-CARDS-BRIDGE.ps1",
+                               "score":  2,
+                               "tags":  [
+                                            "launcher",
+                                            "module-card"
+                                        ],
+                               "last_write":  "2026-06-20T13:41:37",
+                               "size":  803
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECT-MEMORY-GENERATE.ps1",
+                               "relative":  "tools\\launcher\\ENGREMIAT-PROJECT-MEMORY-GENERATE.ps1",
+                               "name":  "ENGREMIAT-PROJECT-MEMORY-GENERATE.ps1",
+                               "score":  5,
+                               "tags":  [
+                                            "launcher",
+                                            "pantalla",
+                                            "screen",
+                                            "accion",
+                                            "module-card"
+                                        ],
+                               "last_write":  "2026-06-20T08:11:23",
+                               "size":  9866
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-NAVIGATION-VIEWER.ps1.bak-v25-prompt-spacing-20260620084406",
+                               "relative":  "tools\\launcher\\ENGREMIAT-NAVIGATION-VIEWER.ps1.bak-v25-prompt-spacing-20260620084406",
+                               "name":  "ENGREMIAT-NAVIGATION-VIEWER.ps1.bak-v25-prompt-spacing-20260620084406",
+                               "score":  4,
+                               "tags":  [
+                                            "launcher",
+                                            "pantalla",
+                                            "screen",
+                                            "refrescar"
+                                        ],
+                               "last_write":  "2026-06-20T08:42:46",
+                               "size":  3966
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECT-MEMORY-SAFE.ps1",
+                               "relative":  "tools\\launcher\\ENGREMIAT-PROJECT-MEMORY-SAFE.ps1",
+                               "name":  "ENGREMIAT-PROJECT-MEMORY-SAFE.ps1",
+                               "score":  1,
+                               "tags":  [
+                                            "launcher"
+                                        ],
+                               "last_write":  "2026-06-20T08:04:52",
+                               "size":  2052
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECT-MEMORY-GENERATE.ps1.bak-live-memory-20260620081123",
+                               "relative":  "tools\\launcher\\ENGREMIAT-PROJECT-MEMORY-GENERATE.ps1.bak-live-memory-20260620081123",
+                               "name":  "ENGREMIAT-PROJECT-MEMORY-GENERATE.ps1.bak-live-memory-20260620081123",
+                               "score":  6,
+                               "tags":  [
+                                            "launcher",
+                                            "pantalla",
+                                            "screen",
+                                            "accion",
+                                            "module-card",
+                                            "refrescar"
+                                        ],
+                               "last_write":  "2026-06-20T08:07:56",
+                               "size":  7453
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-SELECT-MODULE-WORKSPACE.ps1.bak-param-first-20260620083423",
+                               "relative":  "tools\\launcher\\ENGREMIAT-SELECT-MODULE-WORKSPACE.ps1.bak-param-first-20260620083423",
+                               "name":  "ENGREMIAT-SELECT-MODULE-WORKSPACE.ps1.bak-param-first-20260620083423",
+                               "score":  2,
+                               "tags":  [
+                                            "screen",
+                                            "refrescar"
+                                        ],
+                               "last_write":  "2026-06-20T08:32:10",
+                               "size":  4303
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-SELECT-MODULE-WORKSPACE.ps1",
+                               "relative":  "tools\\launcher\\ENGREMIAT-SELECT-MODULE-WORKSPACE.ps1",
+                               "name":  "ENGREMIAT-SELECT-MODULE-WORKSPACE.ps1",
+                               "score":  2,
+                               "tags":  [
+                                            "screen",
+                                            "refrescar"
+                                        ],
+                               "last_write":  "2026-06-20T08:35:57",
+                               "size":  4714
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\canonical-action-runtime\\canonical-action-runtime.noop.ps1",
+                               "relative":  "tools\\launcher\\canonical-action-runtime\\canonical-action-runtime.noop.ps1",
+                               "name":  "canonical-action-runtime.noop.ps1",
+                               "score":  3,
+                               "tags":  [
+                                            "launcher",
+                                            "canonical-action-runtime",
+                                            "runtime"
+                                        ],
+                               "last_write":  "2026-06-20T15:00:26",
+                               "size":  645
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-SELECT-MODULE-WORKSPACE.ps1.bak-status-display-20260620083557",
+                               "relative":  "tools\\launcher\\ENGREMIAT-SELECT-MODULE-WORKSPACE.ps1.bak-status-display-20260620083557",
+                               "name":  "ENGREMIAT-SELECT-MODULE-WORKSPACE.ps1.bak-status-display-20260620083557",
+                               "score":  2,
+                               "tags":  [
+                                            "screen",
+                                            "refrescar"
+                                        ],
+                               "last_write":  "2026-06-20T08:34:23",
+                               "size":  4251
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-SELECT-MODULE-CARDS.ps1.bak-param-first-20260620083423",
+                               "relative":  "tools\\launcher\\ENGREMIAT-SELECT-MODULE-CARDS.ps1.bak-param-first-20260620083423",
+                               "name":  "ENGREMIAT-SELECT-MODULE-CARDS.ps1.bak-param-first-20260620083423",
+                               "score":  3,
+                               "tags":  [
+                                            "screen",
+                                            "module-card",
+                                            "refrescar"
+                                        ],
+                               "last_write":  "2026-06-20T08:32:10",
+                               "size":  4292
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-SELECT-MODULE-CARDS.ps1",
+                               "relative":  "tools\\launcher\\ENGREMIAT-SELECT-MODULE-CARDS.ps1",
+                               "name":  "ENGREMIAT-SELECT-MODULE-CARDS.ps1",
+                               "score":  3,
+                               "tags":  [
+                                            "screen",
+                                            "module-card",
+                                            "refrescar"
+                                        ],
+                               "last_write":  "2026-06-20T08:35:57",
+                               "size":  4708
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-SELECT-MODULE-SAFE.ps1",
+                               "relative":  "tools\\launcher\\ENGREMIAT-SELECT-MODULE-SAFE.ps1",
+                               "name":  "ENGREMIAT-SELECT-MODULE-SAFE.ps1",
+                               "score":  2,
+                               "tags":  [
+                                            "launcher",
+                                            "module-card"
+                                        ],
+                               "last_write":  "2026-06-20T08:33:24",
+                               "size":  2643
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-SELECT-MODULE-CARDS.ps1.bak-status-display-20260620083557",
+                               "relative":  "tools\\launcher\\ENGREMIAT-SELECT-MODULE-CARDS.ps1.bak-status-display-20260620083557",
+                               "name":  "ENGREMIAT-SELECT-MODULE-CARDS.ps1.bak-status-display-20260620083557",
+                               "score":  3,
+                               "tags":  [
+                                            "screen",
+                                            "module-card",
+                                            "refrescar"
+                                        ],
+                               "last_write":  "2026-06-20T08:34:23",
+                               "size":  4245
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\runtime\\Set-RemoteOllamaMainPcIp.ps1",
+                               "relative":  "tools\\runtime\\Set-RemoteOllamaMainPcIp.ps1",
+                               "name":  "Set-RemoteOllamaMainPcIp.ps1",
+                               "score":  1,
+                               "tags":  [
+                                            "runtime"
+                                        ],
+                               "last_write":  "2026-06-16T15:32:45",
+                               "size":  982
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\canonical-screen-workflow-guide.md",
+                               "relative":  "documents\\ux-system\\canonical-screen-workflow-guide.md",
+                               "name":  "canonical-screen-workflow-guide.md",
+                               "score":  5,
+                               "tags":  [
+                                            "launcher",
+                                            "menu",
+                                            "pantalla",
+                                            "screen",
+                                            "accion"
+                                        ],
+                               "last_write":  "2026-06-20T09:56:25",
+                               "size":  1524
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\canonical-screen-workflow-contract.json",
+                               "relative":  "documents\\ux-system\\canonical-screen-workflow-contract.json",
+                               "name":  "canonical-screen-workflow-contract.json",
+                               "score":  6,
+                               "tags":  [
+                                            "launcher",
+                                            "menu",
+                                            "pantalla",
+                                            "screen",
+                                            "accion",
+                                            "refrescar"
+                                        ],
+                               "last_write":  "2026-06-20T09:56:25",
+                               "size":  3537
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\canonical-terminal-table-process-ux-guide.md",
+                               "relative":  "documents\\ux-system\\canonical-terminal-table-process-ux-guide.md",
+                               "name":  "canonical-terminal-table-process-ux-guide.md",
+                               "score":  3,
+                               "tags":  [
+                                            "pantalla",
+                                            "accion",
+                                            "refrescar"
+                                        ],
+                               "last_write":  "2026-06-20T10:33:21",
+                               "size":  1098
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\canonical-terminal-table-process-ux-contract.json",
+                               "relative":  "documents\\ux-system\\canonical-terminal-table-process-ux-contract.json",
+                               "name":  "canonical-terminal-table-process-ux-contract.json",
+                               "score":  3,
+                               "tags":  [
+                                            "screen",
+                                            "accion",
+                                            "refrescar"
+                                        ],
+                               "last_write":  "2026-06-20T10:33:21",
+                               "size":  5170
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\canonical-palette-application-registry.json",
+                               "relative":  "documents\\ux-system\\canonical-palette-application-registry.json",
+                               "name":  "canonical-palette-application-registry.json",
+                               "score":  2,
+                               "tags":  [
+                                            "launcher",
+                                            "screen"
+                                        ],
+                               "last_write":  "2026-06-20T10:11:32",
+                               "size":  1742
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\canonical-local-command-numbering-policy.md",
+                               "relative":  "documents\\ux-system\\canonical-local-command-numbering-policy.md",
+                               "name":  "canonical-local-command-numbering-policy.md",
+                               "score":  3,
+                               "tags":  [
+                                            "pantalla",
+                                            "accion",
+                                            "refrescar"
+                                        ],
+                               "last_write":  "2026-06-20T10:03:28",
+                               "size":  755
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\canonical-screen-visual-cleanliness-policy.json",
+                               "relative":  "documents\\ux-system\\canonical-screen-visual-cleanliness-policy.json",
+                               "name":  "canonical-screen-visual-cleanliness-policy.json",
+                               "score":  3,
+                               "tags":  [
+                                            "pantalla",
+                                            "screen",
+                                            "accion"
+                                        ],
+                               "last_write":  "2026-06-20T10:09:34",
+                               "size":  726
+                           }
+                       ],
+    "integration_points":  [
+                               {
+                                   "kind":  "LAUNCHER_SCRIPT",
+                                   "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\templates\\ENGREMIAT-CANONICAL-SCREEN-TEMPLATE.ps1",
+                                   "relative":  "tools\\launcher\\templates\\ENGREMIAT-CANONICAL-SCREEN-TEMPLATE.ps1",
+                                   "score":  5,
+                                   "tags":  [
+                                                "menu",
+                                                "pantalla",
+                                                "screen",
+                                                "accion",
+                                                "refrescar"
+                                            ]
+                               },
+                               {
+                                   "kind":  "LAUNCHER_SCRIPT",
+                                   "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\module-actions\\run-approved-module-action.pending-auth.ps1",
+                                   "relative":  "tools\\launcher\\module-actions\\run-approved-module-action.pending-auth.ps1",
+                                   "score":  2,
+                                   "tags":  [
+                                                "launcher",
+                                                "module-card"
+                                            ]
+                               },
+                               {
+                                   "kind":  "TOOLING",
+                                   "path":  "C:\\ENGREMIAT_CORE\\tools\\local-multiworker-launch-and-link-n1\\Test-LocalDashboardAndLauncherN1.ps1",
+                                   "relative":  "tools\\local-multiworker-launch-and-link-n1\\Test-LocalDashboardAndLauncherN1.ps1",
+                                   "score":  1,
+                                   "tags":  [
+                                                "launcher"
+                                            ]
+                               },
+                               {
+                                   "kind":  "TOOLING",
+                                   "path":  "C:\\ENGREMIAT_CORE\\tools\\local-multiworker-launch-and-link-n1\\Open-LocalMultiworkerSurfacesN1.ps1",
+                                   "relative":  "tools\\local-multiworker-launch-and-link-n1\\Open-LocalMultiworkerSurfacesN1.ps1",
+                                   "score":  1,
+                                   "tags":  [
+                                                "launcher"
+                                            ]
+                               },
+                               {
+                                   "kind":  "LAUNCHER_SCRIPT",
+                                   "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\canonical-action-runtime\\actions\\DEMO-CANONICAL-MODULE-ACTION-001\\apply-gate-mutation.pending-auth.ps1",
+                                   "relative":  "tools\\launcher\\canonical-action-runtime\\actions\\DEMO-CANONICAL-MODULE-ACTION-001\\apply-gate-mutation.pending-auth.ps1",
+                                   "score":  3,
+                                   "tags":  [
+                                                "launcher",
+                                                "canonical-action-runtime",
+                                                "runtime"
+                                            ]
+                               },
+                               {
+                                   "kind":  "LAUNCHER_SCRIPT",
+                                   "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\canonical-action-runtime\\new-canonical-action-package.no-execution.ps1",
+                                   "relative":  "tools\\launcher\\canonical-action-runtime\\new-canonical-action-package.no-execution.ps1",
+                                   "score":  3,
+                                   "tags":  [
+                                                "launcher",
+                                                "canonical-action-runtime",
+                                                "runtime"
+                                            ]
+                               },
+                               {
+                                   "kind":  "LAUNCHER_SCRIPT",
+                                   "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\gate-mutations\\apply-human-gate-approval.pending-auth.ps1",
+                                   "relative":  "tools\\launcher\\gate-mutations\\apply-human-gate-approval.pending-auth.ps1",
+                                   "score":  3,
+                                   "tags":  [
+                                                "launcher",
+                                                "module-card",
+                                                "human-gate"
+                                            ]
+                               },
+                               {
+                                   "kind":  "LAUNCHER_SCRIPT",
+                                   "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\canonical-action-runtime\\actions\\DEMO-CANONICAL-MODULE-ACTION-001\\run-action.pending-auth.ps1",
+                                   "relative":  "tools\\launcher\\canonical-action-runtime\\actions\\DEMO-CANONICAL-MODULE-ACTION-001\\run-action.pending-auth.ps1",
+                                   "score":  3,
+                                   "tags":  [
+                                                "launcher",
+                                                "canonical-action-runtime",
+                                                "runtime"
+                                            ]
+                               },
+                               {
+                                   "kind":  "TOOLING",
+                                   "path":  "C:\\ENGREMIAT_CORE\\tools\\module-cards\\validate-module-card.ps1",
+                                   "relative":  "tools\\module-cards\\validate-module-card.ps1",
+                                   "score":  1,
+                                   "tags":  [
+                                                "module-card"
+                                            ]
+                               },
+                               {
+                                   "kind":  "TOOLING",
+                                   "path":  "C:\\ENGREMIAT_CORE\\tools\\module-cards\\validate-human-gate-decision.ps1",
+                                   "relative":  "tools\\module-cards\\validate-human-gate-decision.ps1",
+                                   "score":  1,
+                                   "tags":  [
+                                                "human-gate"
+                                            ]
+                               },
+                               {
+                                   "kind":  "TOOLING",
+                                   "path":  "C:\\ENGREMIAT_CORE\\tools\\runtime\\Build-LocalRuntimeEvidence.ps1",
+                                   "relative":  "tools\\runtime\\Build-LocalRuntimeEvidence.ps1",
+                                   "score":  1,
+                                   "tags":  [
+                                                "runtime"
+                                            ]
+                               },
+                               {
+                                   "kind":  "TOOLING",
+                                   "path":  "C:\\ENGREMIAT_CORE\\tools\\runtime\\Build-LocalRuntimeDashboard.ps1",
+                                   "relative":  "tools\\runtime\\Build-LocalRuntimeDashboard.ps1",
+                                   "score":  1,
+                                   "tags":  [
+                                                "runtime"
+                                            ]
+                               },
+                               {
+                                   "kind":  "TOOLING",
+                                   "path":  "C:\\ENGREMIAT_CORE\\tools\\main-pc-linking\\Open-MainPcLinkDashboard.ps1",
+                                   "relative":  "tools\\main-pc-linking\\Open-MainPcLinkDashboard.ps1",
+                                   "score":  1,
+                                   "tags":  [
+                                                "launcher"
+                                            ]
+                               },
+                               {
+                                   "kind":  "TOOLING",
+                                   "path":  "C:\\ENGREMIAT_CORE\\tools\\local-multiworker-launch-and-link-n1\\Test-LocalPoliciesN1.ps1",
+                                   "relative":  "tools\\local-multiworker-launch-and-link-n1\\Test-LocalPoliciesN1.ps1",
+                                   "score":  1,
+                                   "tags":  [
+                                                "launcher"
+                                            ]
+                               },
+                               {
+                                   "kind":  "TOOLING",
+                                   "path":  "C:\\ENGREMIAT_CORE\\tools\\module-cards\\check-card-to-module-flow.ps1",
+                                   "relative":  "tools\\module-cards\\check-card-to-module-flow.ps1",
+                                   "score":  1,
+                                   "tags":  [
+                                                "module-card"
+                                            ]
+                               },
+                               {
+                                   "kind":  "TOOLING",
+                                   "path":  "C:\\ENGREMIAT_CORE\\tools\\main-pc-linking\\Test-MainPcLinkDashboard.ps1",
+                                   "relative":  "tools\\main-pc-linking\\Test-MainPcLinkDashboard.ps1",
+                                   "score":  1,
+                                   "tags":  [
+                                                "launcher"
+                                            ]
+                               },
+                               {
+                                   "kind":  "LAUNCHER_SCRIPT",
+                                   "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECT-MEMORY.ps1.bak-rewrite-stable-20260620080557",
+                                   "relative":  "tools\\launcher\\ENGREMIAT-PROJECT-MEMORY.ps1.bak-rewrite-stable-20260620080557",
+                                   "score":  7,
+                                   "tags":  [
+                                                "launcher",
+                                                "menu",
+                                                "pantalla",
+                                                "screen",
+                                                "accion",
+                                                "module-card",
+                                                "refrescar"
+                                            ]
+                               },
+                               {
+                                   "kind":  "LAUNCHER_SCRIPT",
+                                   "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECT-MEMORY.ps1",
+                                   "relative":  "tools\\launcher\\ENGREMIAT-PROJECT-MEMORY.ps1",
+                                   "score":  6,
+                                   "tags":  [
+                                                "launcher",
+                                                "pantalla",
+                                                "screen",
+                                                "accion",
+                                                "module-card",
+                                                "refrescar"
+                                            ]
+                               },
+                               {
+                                   "kind":  "LAUNCHER_SCRIPT",
+                                   "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1",
+                                   "relative":  "tools\\launcher\\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1",
+                                   "score":  4,
+                                   "tags":  [
+                                                "launcher",
+                                                "screen",
+                                                "accion",
+                                                "refrescar"
+                                            ]
+                               },
+                               {
+                                   "kind":  "LAUNCHER_SCRIPT",
+                                   "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECT-MODULE-CARDS-BRIDGE.ps1",
+                                   "relative":  "tools\\launcher\\ENGREMIAT-PROJECT-MODULE-CARDS-BRIDGE.ps1",
+                                   "score":  2,
+                                   "tags":  [
+                                                "launcher",
+                                                "module-card"
+                                            ]
+                               },
+                               {
+                                   "kind":  "LAUNCHER_SCRIPT",
+                                   "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECT-MEMORY-GENERATE.ps1",
+                                   "relative":  "tools\\launcher\\ENGREMIAT-PROJECT-MEMORY-GENERATE.ps1",
+                                   "score":  5,
+                                   "tags":  [
+                                                "launcher",
+                                                "pantalla",
+                                                "screen",
+                                                "accion",
+                                                "module-card"
+                                            ]
+                               },
+                               {
+                                   "kind":  "LAUNCHER_SCRIPT",
+                                   "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-NAVIGATION-VIEWER.ps1.bak-v25-prompt-spacing-20260620084406",
+                                   "relative":  "tools\\launcher\\ENGREMIAT-NAVIGATION-VIEWER.ps1.bak-v25-prompt-spacing-20260620084406",
+                                   "score":  4,
+                                   "tags":  [
+                                                "launcher",
+                                                "pantalla",
+                                                "screen",
+                                                "refrescar"
+                                            ]
+                               },
+                               {
+                                   "kind":  "LAUNCHER_SCRIPT",
+                                   "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECT-MEMORY-SAFE.ps1",
+                                   "relative":  "tools\\launcher\\ENGREMIAT-PROJECT-MEMORY-SAFE.ps1",
+                                   "score":  1,
+                                   "tags":  [
+                                                "launcher"
+                                            ]
+                               },
+                               {
+                                   "kind":  "LAUNCHER_SCRIPT",
+                                   "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECT-MEMORY-GENERATE.ps1.bak-live-memory-20260620081123",
+                                   "relative":  "tools\\launcher\\ENGREMIAT-PROJECT-MEMORY-GENERATE.ps1.bak-live-memory-20260620081123",
+                                   "score":  6,
+                                   "tags":  [
+                                                "launcher",
+                                                "pantalla",
+                                                "screen",
+                                                "accion",
+                                                "module-card",
+                                                "refrescar"
+                                            ]
+                               },
+                               {
+                                   "kind":  "LAUNCHER_SCRIPT",
+                                   "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-SELECT-MODULE-WORKSPACE.ps1.bak-param-first-20260620083423",
+                                   "relative":  "tools\\launcher\\ENGREMIAT-SELECT-MODULE-WORKSPACE.ps1.bak-param-first-20260620083423",
+                                   "score":  2,
+                                   "tags":  [
+                                                "screen",
+                                                "refrescar"
+                                            ]
+                               },
+                               {
+                                   "kind":  "LAUNCHER_SCRIPT",
+                                   "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-SELECT-MODULE-WORKSPACE.ps1",
+                                   "relative":  "tools\\launcher\\ENGREMIAT-SELECT-MODULE-WORKSPACE.ps1",
+                                   "score":  2,
+                                   "tags":  [
+                                                "screen",
+                                                "refrescar"
+                                            ]
+                               },
+                               {
+                                   "kind":  "LAUNCHER_SCRIPT",
+                                   "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\canonical-action-runtime\\canonical-action-runtime.noop.ps1",
+                                   "relative":  "tools\\launcher\\canonical-action-runtime\\canonical-action-runtime.noop.ps1",
+                                   "score":  3,
+                                   "tags":  [
+                                                "launcher",
+                                                "canonical-action-runtime",
+                                                "runtime"
+                                            ]
+                               },
+                               {
+                                   "kind":  "LAUNCHER_SCRIPT",
+                                   "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-SELECT-MODULE-WORKSPACE.ps1.bak-status-display-20260620083557",
+                                   "relative":  "tools\\launcher\\ENGREMIAT-SELECT-MODULE-WORKSPACE.ps1.bak-status-display-20260620083557",
+                                   "score":  2,
+                                   "tags":  [
+                                                "screen",
+                                                "refrescar"
+                                            ]
+                               },
+                               {
+                                   "kind":  "LAUNCHER_SCRIPT",
+                                   "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-SELECT-MODULE-CARDS.ps1.bak-param-first-20260620083423",
+                                   "relative":  "tools\\launcher\\ENGREMIAT-SELECT-MODULE-CARDS.ps1.bak-param-first-20260620083423",
+                                   "score":  3,
+                                   "tags":  [
+                                                "screen",
+                                                "module-card",
+                                                "refrescar"
+                                            ]
+                               },
+                               {
+                                   "kind":  "LAUNCHER_SCRIPT",
+                                   "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-SELECT-MODULE-CARDS.ps1",
+                                   "relative":  "tools\\launcher\\ENGREMIAT-SELECT-MODULE-CARDS.ps1",
+                                   "score":  3,
+                                   "tags":  [
+                                                "screen",
+                                                "module-card",
+                                                "refrescar"
+                                            ]
+                               },
+                               {
+                                   "kind":  "LAUNCHER_SCRIPT",
+                                   "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-SELECT-MODULE-SAFE.ps1",
+                                   "relative":  "tools\\launcher\\ENGREMIAT-SELECT-MODULE-SAFE.ps1",
+                                   "score":  2,
+                                   "tags":  [
+                                                "launcher",
+                                                "module-card"
+                                            ]
+                               },
+                               {
+                                   "kind":  "LAUNCHER_SCRIPT",
+                                   "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-SELECT-MODULE-CARDS.ps1.bak-status-display-20260620083557",
+                                   "relative":  "tools\\launcher\\ENGREMIAT-SELECT-MODULE-CARDS.ps1.bak-status-display-20260620083557",
+                                   "score":  3,
+                                   "tags":  [
+                                                "screen",
+                                                "module-card",
+                                                "refrescar"
+                                            ]
+                               },
+                               {
+                                   "kind":  "TOOLING",
+                                   "path":  "C:\\ENGREMIAT_CORE\\tools\\runtime\\Set-RemoteOllamaMainPcIp.ps1",
+                                   "relative":  "tools\\runtime\\Set-RemoteOllamaMainPcIp.ps1",
+                                   "score":  1,
+                                   "tags":  [
+                                                "runtime"
+                                            ]
+                               },
+                               {
+                                   "kind":  "UX_SCREEN_OR_CONTRACT",
+                                   "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\canonical-screen-workflow-guide.md",
+                                   "relative":  "documents\\ux-system\\canonical-screen-workflow-guide.md",
+                                   "score":  5,
+                                   "tags":  [
+                                                "launcher",
+                                                "menu",
+                                                "pantalla",
+                                                "screen",
+                                                "accion"
+                                            ]
+                               },
+                               {
+                                   "kind":  "UX_SCREEN_OR_CONTRACT",
+                                   "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\canonical-screen-workflow-contract.json",
+                                   "relative":  "documents\\ux-system\\canonical-screen-workflow-contract.json",
+                                   "score":  6,
+                                   "tags":  [
+                                                "launcher",
+                                                "menu",
+                                                "pantalla",
+                                                "screen",
+                                                "accion",
+                                                "refrescar"
+                                            ]
+                               },
+                               {
+                                   "kind":  "UX_SCREEN_OR_CONTRACT",
+                                   "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\canonical-terminal-table-process-ux-guide.md",
+                                   "relative":  "documents\\ux-system\\canonical-terminal-table-process-ux-guide.md",
+                                   "score":  3,
+                                   "tags":  [
+                                                "pantalla",
+                                                "accion",
+                                                "refrescar"
+                                            ]
+                               },
+                               {
+                                   "kind":  "UX_SCREEN_OR_CONTRACT",
+                                   "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\canonical-terminal-table-process-ux-contract.json",
+                                   "relative":  "documents\\ux-system\\canonical-terminal-table-process-ux-contract.json",
+                                   "score":  3,
+                                   "tags":  [
+                                                "screen",
+                                                "accion",
+                                                "refrescar"
+                                            ]
+                               },
+                               {
+                                   "kind":  "UX_SCREEN_OR_CONTRACT",
+                                   "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\canonical-palette-application-registry.json",
+                                   "relative":  "documents\\ux-system\\canonical-palette-application-registry.json",
+                                   "score":  2,
+                                   "tags":  [
+                                                "launcher",
+                                                "screen"
+                                            ]
+                               },
+                               {
+                                   "kind":  "UX_SCREEN_OR_CONTRACT",
+                                   "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\canonical-local-command-numbering-policy.md",
+                                   "relative":  "documents\\ux-system\\canonical-local-command-numbering-policy.md",
+                                   "score":  3,
+                                   "tags":  [
+                                                "pantalla",
+                                                "accion",
+                                                "refrescar"
+                                            ]
+                               },
+                               {
+                                   "kind":  "UX_SCREEN_OR_CONTRACT",
+                                   "path":  "C:\\ENGREMIAT_CORE\\documents\\ux-system\\canonical-screen-visual-cleanliness-policy.json",
+                                   "relative":  "documents\\ux-system\\canonical-screen-visual-cleanliness-policy.json",
+                                   "score":  3,
+                                   "tags":  [
+                                                "pantalla",
+                                                "screen",
+                                                "accion"
+                                            ]
+                               }
+                           ],
+    "recommendation":  {
+                           "preferred_integration":  "ADAPTER_LAYER_BEFORE_UI_MUTATION",
+                           "reason":  "Primero crear adaptador launcher-\u003ecanonical runtime y probarlo en readonly/noop antes de tocar menús reales",
+                           "candidate_commands":  [
+                                                      "acciones",
+                                                      "runtime",
+                                                      "preview",
+                                                      "aprobar",
+                                                      "ejecutar",
+                                                      "estado",
+                                                      "volver"
+                                                  ],
+                           "ui_principles":  [
+                                                 "Enter vacío refresca/redibuja pantalla",
+                                                 "? muestra ayuda contextual",
+                                                 "comandos muestra menú actual",
+                                                 "NO_GO visible si falta autorización",
+                                                 "reports son evidencia, no estado mutable"
+                                             ],
+                           "next":  "E02_DEFINE_LAUNCHER_RUNTIME_UI_COMMAND_CONTRACT"
+                       },
+    "safety":  {
+                   "real_execution":  false,
+                   "ui_mutated":  false,
+                   "worker":  false,
+                   "browser":  false,
+                   "network":  false,
+                   "git":  false
+               },
+    "next":  "E02_DEFINE_LAUNCHER_RUNTIME_UI_COMMAND_CONTRACT"
+}

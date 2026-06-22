@@ -1,0 +1,70 @@
+﻿{
+    "schema":  "engremiat.launcher_runtime_ui_adapter_smoke.v1",
+    "package_id":  "ENGREMIAT_LAUNCHER_RUNTIME_UI_INTEGRATION_001",
+    "stage":  "E03B_SMOKE_LAUNCHER_RUNTIME_ADAPTER_READONLY",
+    "created_at":  "2026-06-20T15:11:20",
+    "status":  "PASS",
+    "adapter":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\adapter\\launcher-runtime-ui-adapter.latest.json",
+    "script":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\runtime-ui-adapter\\launcher-runtime-ui-adapter.readonly.ps1",
+    "commands_tested":  [
+                            "estado",
+                            "preview",
+                            "acciones",
+                            "?",
+                            "aprobar",
+                            "ejecutar"
+                        ],
+    "results":  [
+                    {
+                        "command":  "estado",
+                        "expect_no_go":  false,
+                        "passed":  true,
+                        "text_contains_no_go":  false,
+                        "text_contains_pass":  true
+                    },
+                    {
+                        "command":  "preview",
+                        "expect_no_go":  false,
+                        "passed":  true,
+                        "text_contains_no_go":  false,
+                        "text_contains_pass":  true
+                    },
+                    {
+                        "command":  "acciones",
+                        "expect_no_go":  false,
+                        "passed":  true,
+                        "text_contains_no_go":  false,
+                        "text_contains_pass":  true
+                    },
+                    {
+                        "command":  "?",
+                        "expect_no_go":  false,
+                        "passed":  true,
+                        "text_contains_no_go":  true,
+                        "text_contains_pass":  true
+                    },
+                    {
+                        "command":  "aprobar",
+                        "expect_no_go":  true,
+                        "passed":  true,
+                        "text_contains_no_go":  true,
+                        "text_contains_pass":  false
+                    },
+                    {
+                        "command":  "ejecutar",
+                        "expect_no_go":  true,
+                        "passed":  true,
+                        "text_contains_no_go":  true,
+                        "text_contains_pass":  false
+                    }
+                ],
+    "sensitive_commands_blocked":  true,
+    "readonly_commands_passed":  true,
+    "real_execution":  false,
+    "ui_mutated":  false,
+    "worker":  false,
+    "browser":  false,
+    "network":  false,
+    "git":  false,
+    "next":  "E04_DEFINE_LAUNCHER_RUNTIME_ADAPTER_INTEGRATION_PLAN_NO_UI_MUTATION"
+}

@@ -1,0 +1,20 @@
+﻿{
+    "schema":  "engremiat.screen_normalizer_helper_skeleton.v1",
+    "package_id":  "ENGREMIAT_SCREEN_NORMALIZER_STANDARDIZATION_001",
+    "stage":  "E03_CREATE_SCREEN_NORMALIZER_HELPER_SKELETON_NO_LAUNCHER_PATCH",
+    "created_at":  "2026-06-20T16:35:23",
+    "status":  "PASS",
+    "helper":  "C:\\ENGREMIAT_CORE\\tools\\screen-normalizer\\screen-normalizer.ps1",
+    "functions":  [
+                      "Show-EngremiatScreenHeader",
+                      "Show-EngremiatScreenCommands",
+                      "Show-EngremiatScreenHelp",
+                      "Read-EngremiatScreenCommand",
+                      "New-EngremiatHumanMaintenanceCard",
+                      "Invoke-EngremiatMaintenanceFlow",
+                      "Show-EngremiatNormalizedScreen"
+                  ],
+    "patch_existing_launchers":  false,
+    "helper_parse_ok":  true,
+    "next":  "E04_SMOKE_SCREEN_NORMALIZER_HELPER_ISOLATED"
+}

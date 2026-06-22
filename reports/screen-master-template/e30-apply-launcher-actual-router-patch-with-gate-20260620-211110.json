@@ -1,0 +1,26 @@
+﻿{
+    "package_id":  "ENGREMIAT_SCREEN_MASTER_TEMPLATE_001",
+    "stage":  "E30_APPLY_LAUNCHER_ACTUAL_ROUTER_PATCH_WITH_GATE",
+    "status":  "PASS",
+    "decision":  "GO_LAUNCHER_ACTUAL_ROUTER_PATCH_APPLIED_WITH_BACKUP_AND_SMOKE",
+    "runtime_write":  true,
+    "git_write":  false,
+    "target":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1",
+    "backup":  "C:\\ENGREMIAT_CORE\\backups\\screen-master-template\\ENGREMIAT-LAUNCHER-ACTUAL.before-e30-screen-template-20260620-211110.ps1",
+    "candidate":  "C:\\ENGREMIAT_CORE\\documents\\screen-master-template\\planned\\ENGREMIAT-LAUNCHER-ACTUAL.screen-master-candidate.latest.ps1",
+    "checks":  {
+                   "target_parse_before":  true,
+                   "candidate_parse":  true,
+                   "target_parse_after":  true,
+                   "has_backup":  true,
+                   "has_help_function":  true,
+                   "has_help_router":  true,
+                   "has_b_router":  true,
+                   "has_marker":  true,
+                   "keeps_q":  true,
+                   "keeps_m":  true
+               },
+    "summary":  "C:\\ENGREMIAT_CORE\\documents\\screen-master-template\\planned\\launcher-actual-router-patch-apply.latest.md",
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\screen-master-template\\e30-apply-launcher-actual-router-patch-with-gate-20260620-211110.json",
+    "next":  "E31_MANUAL_TEST_LAUNCHER_ACTUAL_SCREEN_TEMPLATE"
+}

@@ -1,0 +1,64 @@
+﻿{
+    "package_id":  "ENGREMIAT_SCREEN_MASTER_TEMPLATE_001",
+    "stage":  "E20_AUDIT_PROJECTS_SCREEN_ROUTER_NO_APPLY",
+    "status":  "PASS",
+    "decision":  "GO_PROJECTS_CENTER_ROUTER_ANCHOR_CONFIRMED_NO_APPLY",
+    "runtime_write":  false,
+    "git_write":  false,
+    "target":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1",
+    "parse":  true,
+    "screen_line":  18,
+    "nearest_readhost":  {
+                             "line":  19,
+                             "var":  "UNKNOWN",
+                             "text":  "function ProjectList(){while($true){Header;$items=GetProjects;if($items.Count -eq 0){W \u0027No hay proyectos en C:\\ENGREMIAT_CORE\\projects\u0027 Yellow}else{$i=0;foreach($p in $items){$i++;$ProjectIdValue=SafeId $p.FullName;W (\u0027[\u0027+$i+\u0027] \u0027+$ProjectIdValue+\u0027  \u0027+$p.Name) White}};W \u0027\u0027;W \u0027numero = abrir proyecto | b = volver | Enter = refrescar\u0027 DarkGray;$c=Read-Host \u0027PROYECTOS\u0027;if([string]::IsNullOrWhiteSpace($c)){continue};if($c.ToLower() -eq \u0027b\u0027){break};$n=0;if([int]::TryParse($c,[ref]$n) -and $n -ge 1 -and $n -le $items.Count){ProjectActions $items[$n-1].FullName}else{W \u0027Comando no reconocido\u0027 Yellow;Start-Sleep -Milliseconds 700}}}"
+                         },
+    "command_var":  "UNKNOWN",
+    "readhosts":  [
+                      {
+                          "line":  16,
+                          "var":  "UNKNOWN",
+                          "text":  "function OpenPath($p){if(Test-Path $p){Start-Process $p}else{W \"NO_GO no existe: $p\" Red;Read-Host \u0027Enter\u0027|Out-Null}}"
+                      },
+                      {
+                          "line":  17,
+                          "var":  "UNKNOWN",
+                          "text":  "function CardsFor($ProjectId,$ModuleId){if(!(Test-Path $CardsView)){W \"NO_GO falta vista tarjetas: $CardsView\" Red;Read-Host \u0027Enter\u0027|Out-Null;return};\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $CardsView -ProjectId $ProjectId -ModuleId $ModuleId}"
+                      },
+                      {
+                          "line":  19,
+                          "var":  "UNKNOWN",
+                          "text":  "function ProjectList(){while($true){Header;$items=GetProjects;if($items.Count -eq 0){W \u0027No hay proyectos en C:\\ENGREMIAT_CORE\\projects\u0027 Yellow}else{$i=0;foreach($p in $items){$i++;$ProjectIdValue=SafeId $p.FullName;W (\u0027[\u0027+$i+\u0027] \u0027+$ProjectIdValue+\u0027  \u0027+$p.Name) White}};W \u0027\u0027;W \u0027numero = abrir proyecto | b = volver | Enter = refrescar\u0027 DarkGray;$c=Read-Host \u0027PROYECTOS\u0027;if([string]::IsNullOrWhiteSpace($c)){continue};if($c.ToLower() -eq \u0027b\u0027){break};$n=0;if([int]::TryParse($c,[ref]$n) -and $n -ge 1 -and $n -le $items.Count){ProjectActions $items[$n-1].FullName}else{W \u0027Comando no reconocido\u0027 Yellow;Start-Sleep -Milliseconds 700}}}"
+                      },
+                      {
+                          "line":  20,
+                          "var":  "UNKNOWN",
+                          "text":  "function ProjectActions($ProjectPath){$ProjectId=SafeId $ProjectPath;while($true){Clear-Host;W \u0027==== PROYECTO / ACCIONES ====\u0027 Cyan;W (\u0027Ruta: INICIO \u003e Proyectos \u003e \u0027+$ProjectId) DarkCyan;W \u0027Rol: acciones locales del proyecto\u0027 DarkCyan;W \u0027Principio: sin workers reales, sin git, sin red\u0027 DarkCyan;W \u0027\u0027;W (\u0027Proyecto: \u0027+$ProjectId) White;W (\u0027Ruta: \u0027+$ProjectPath) Gray;W (\u0027Workers: \u0027+(WorkersState)) Yellow;W (\u0027Ultima senal: \u0027+(LatestWorkerText)) Gray;W \u0027\u0027;W \u0027[1] abrir carpeta del proyecto\u0027 White;W \u0027[2] abrir project.json\u0027 White;W \u0027[3] modulos\u0027 White;W \u0027[4] tarjetas canon navegacion\u0027 White;W \u0027[5] estado/ayuda\u0027 White;W \u0027[b] volver a cartera | Enter = refrescar\u0027 DarkGray;$c=Read-Host \u0027PROYECTO\u0027;if([string]::IsNullOrWhiteSpace($c)){continue};switch($c.ToLower()){\u00271\u0027{OpenPath $ProjectPath}\u00272\u0027{OpenPath (Join-Path $ProjectPath \u0027project.json\u0027)}\u00273\u0027{ModulesScreen $ProjectPath $ProjectId}\u00274\u0027{CardsFor \u0027ENGREMIAT_CORE\u0027 \u0027MODULE_OPERATOR_NAVIGATION\u0027}\u00275\u0027{ProjectStatus $ProjectPath $ProjectId}\u0027b\u0027{return}default{W \u0027Comando no reconocido\u0027 Yellow;Start-Sleep -Milliseconds 700}}}}"
+                      },
+                      {
+                          "line":  21,
+                          "var":  "UNKNOWN",
+                          "text":  "function ModulesScreen($ProjectPath,$ProjectId){while($true){Clear-Host;W \u0027==== MODULOS ====\u0027 Cyan;W (\u0027Ruta: INICIO \u003e Proyectos \u003e \u0027+$ProjectId+\u0027 \u003e Modulos\u0027) DarkCyan;W \u0027Rol: modulos del proyecto y tarjetas vinculadas\u0027 DarkCyan;W \u0027\u0027;$mods=GetModules $ProjectPath;if($mods.Count -eq 0){W \u0027No hay carpeta MODULOS o no contiene modulos.\u0027 Yellow}else{$i=0;foreach($m in $mods){$i++;W (\u0027[\u0027+$i+\u0027] \u0027+(ModuleId $m.FullName)+\u0027  \u0027+$m.Name) White}};W \u0027\u0027;W \u0027numero = abrir modulo | b = volver | Enter = refrescar\u0027 DarkGray;$c=Read-Host \u0027MODULOS\u0027;if([string]::IsNullOrWhiteSpace($c)){continue};if($c.ToLower() -eq \u0027b\u0027){return};$n=0;if([int]::TryParse($c,[ref]$n) -and $n -ge 1 -and $n -le $mods.Count){ModuleActions $ProjectId $mods[$n-1].FullName}else{W \u0027Comando no reconocido\u0027 Yellow;Start-Sleep -Milliseconds 700}}}"
+                      },
+                      {
+                          "line":  22,
+                          "var":  "UNKNOWN",
+                          "text":  "function ModuleActions($ProjectId,$ModulePath){$Mid=ModuleId $ModulePath;while($true){Clear-Host;W \u0027==== MODULO / ACCIONES ====\u0027 Cyan;W (\u0027Ruta: INICIO \u003e Proyectos \u003e Proyecto \u003e Modulos \u003e \u0027+$Mid) DarkCyan;W \u0027Rol: acciones locales del modulo\u0027 DarkCyan;W \u0027\u0027;W (\u0027Proyecto: \u0027+$ProjectId) Gray;W (\u0027Modulo:   \u0027+$Mid) White;W (\u0027Ruta:     \u0027+$ModulePath) Gray;W \u0027\u0027;W \u0027[1] abrir carpeta del modulo\u0027 White;W \u0027[2] abrir module.json\u0027 White;W \u0027[3] tarjetas del modulo\u0027 White;W \u0027[b] volver a modulos | Enter = refrescar\u0027 DarkGray;$c=Read-Host \u0027MODULO\u0027;if([string]::IsNullOrWhiteSpace($c)){continue};switch($c.ToLower()){\u00271\u0027{OpenPath $ModulePath}\u00272\u0027{OpenPath (Join-Path $ModulePath \u0027module.json\u0027)}\u00273\u0027{CardsFor $ProjectId $Mid}\u0027b\u0027{return}default{W \u0027Comando no reconocido\u0027 Yellow;Start-Sleep -Milliseconds 700}}}}"
+                      },
+                      {
+                          "line":  23,
+                          "var":  "UNKNOWN",
+                          "text":  "function ProjectStatus($ProjectPath,$ProjectId){Clear-Host;W \u0027==== PROYECTO / ESTADO ====\u0027 Cyan;W (\u0027Proyecto: \u0027+$ProjectId) White;W (\u0027Ruta: \u0027+$ProjectPath) Gray;W (\u0027Workers: \u0027+(WorkersState)) Yellow;W (\u0027Ultima senal: \u0027+(LatestWorkerText)) Gray;W \u0027\u0027;W \u0027Tarjetas: entrar por [3] modulos \u003e modulo \u003e [3] tarjetas del modulo.\u0027 Cyan;W \u0027\u0027;W \u0027[Enter] volver\u0027 DarkGray;Read-Host|Out-Null}"
+                      }
+                  ],
+    "coverage":  {
+                     "enter":  true,
+                     "b":  true,
+                     "q":  false,
+                     "m":  false,
+                     "help":  false
+                 },
+    "summary":  "C:\\ENGREMIAT_CORE\\documents\\screen-master-template\\planned\\projects-center-router-audit.latest.md",
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\screen-master-template\\e20-audit-projects-center-router-no-apply-20260620-205103.json",
+    "next":  "E21_PREPARE_PROJECTS_CENTER_SCREEN_PATCH_NO_APPLY"
+}

@@ -1,0 +1,54 @@
+﻿{
+    "schema":  "engremiat.screen_builder_apply_gate_contract.v1",
+    "package_id":  "ENGREMIAT_SCREEN_NORMALIZER_STANDARDIZATION_001",
+    "stage":  "E07_CREATE_SCREEN_BUILDER_APPLY_GATE_CONTRACT",
+    "created_at":  "2026-06-20T16:38:58",
+    "status":  "PASS",
+    "mode":  "APPLY_GATE_CONTRACT_ONLY_NO_WRITE",
+    "purpose":  "Permitir que una funcion nueva pase de preview dry-run a registry/pantalla real solo con autorizacion humana explicita",
+    "apply_command_future":  "AUTORIZO_SCREEN_BUILDER_APPLY \u003cpreview_id\u003e",
+    "authorization_required":  true,
+    "authorization_status":  "PENDING_EXPLICIT_HUMAN_AUTHORIZATION",
+    "preview":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-standardization\\builder\\screen-builder-dry-run-preview.latest.json",
+    "builder":  "C:\\ENGREMIAT_CORE\\tools\\screen-normalizer\\screen-builder-dry-run.ps1",
+    "registry":  "C:\\ENGREMIAT_CORE\\data\\screen-normalizer\\screen-registry.v1.json",
+    "apply_scope":  {
+                        "allowed":  [
+                                        "add_new_screen_to_registry",
+                                        "add_child_to_parent",
+                                        "generate_screen_from_template",
+                                        "generate_help_and_commands",
+                                        "create_validation_report"
+                                    ],
+                        "blocked_by_default":  [
+                                                   "patch_existing_launcher_switches",
+                                                   "worker_real_execution",
+                                                   "network",
+                                                   "git",
+                                                   "browser",
+                                                   "clipboard",
+                                                   "delete_files"
+                                               ]
+                    },
+    "minimum_validations_before_apply":  [
+                                             "preview.status=PASS",
+                                             "parent exists",
+                                             "new screen does not exist",
+                                             "new screen has route role description status principle commands",
+                                             "mantenimiento and Enter commands present",
+                                             "human_gate accepted"
+                                         ],
+    "rollback_policy":  [
+                            "copy registry before write",
+                            "write candidate registry to temp",
+                            "parse/readback JSON",
+                            "restore backup if validation fails"
+                        ],
+    "evidence_outputs":  [
+                             "apply receipt json",
+                             "updated registry json",
+                             "screen preview md",
+                             "smoke report"
+                         ],
+    "next":  "E08_CLOSE_SCREEN_NORMALIZER_STANDARDIZATION_OR_E08A_CREATE_APPLY_STUB_NO_EXECUTION"
+}

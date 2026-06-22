@@ -1,0 +1,50 @@
+﻿{
+    "package_id":  "ENGREMIAT_SCREEN_MASTER_TEMPLATE_001",
+    "stage":  "E36_PREPARE_SPECIAL_COMMAND_LEGEND_REPAIR_NO_APPLY",
+    "generated_at":  "2026-06-20T21:19:30",
+    "legend":  "[b/q] salir/volver | m = mantenimiento | ? = ayuda | Enter = refrescar",
+    "gate":  "AUTORIZO_APLICAR_LEYENDA_COMUN_PANTALLAS_ESPECIALES",
+    "decision":  "GO_SPECIAL_LEGEND_CANDIDATES_READY_NO_APPLY",
+    "total_gaps":  4,
+    "safe_candidates":  2,
+    "unsafe_candidates":  2,
+    "candidates_dir":  "C:\\ENGREMIAT_CORE\\documents\\screen-master-template\\planned\\legend-special-candidates",
+    "rows":  [
+                 {
+                     "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-router.ps1",
+                     "candidate":  "C:\\ENGREMIAT_CORE\\documents\\screen-master-template\\planned\\legend-special-candidates\\tools__desktop-terminal-operator__eng-router.ps1.special-candidate.ps1",
+                     "insert_line":  39,
+                     "candidate_parse":  true,
+                     "has_legend":  true,
+                     "already":  false,
+                     "safe_to_apply":  true
+                 },
+                 {
+                     "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-UPDATE-HELPER.ps1",
+                     "candidate":  "C:\\ENGREMIAT_CORE\\documents\\screen-master-template\\planned\\legend-special-candidates\\tools__launcher__ENGREMIAT-LAUNCHER-UPDATE-HELPER.ps1.special-candidate.ps1",
+                     "insert_line":  1,
+                     "candidate_parse":  false,
+                     "has_legend":  true,
+                     "already":  false,
+                     "safe_to_apply":  false
+                 },
+                 {
+                     "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-NAVIGATION-TREE.ps1",
+                     "candidate":  "C:\\ENGREMIAT_CORE\\documents\\screen-master-template\\planned\\legend-special-candidates\\tools__launcher__ENGREMIAT-NAVIGATION-TREE.ps1.special-candidate.ps1",
+                     "insert_line":  1,
+                     "candidate_parse":  false,
+                     "has_legend":  true,
+                     "already":  false,
+                     "safe_to_apply":  false
+                 },
+                 {
+                     "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-NAVIGATION-VIEWER.ps1",
+                     "candidate":  "C:\\ENGREMIAT_CORE\\documents\\screen-master-template\\planned\\legend-special-candidates\\tools__launcher__ENGREMIAT-NAVIGATION-VIEWER.ps1.special-candidate.ps1",
+                     "insert_line":  13,
+                     "candidate_parse":  true,
+                     "has_legend":  true,
+                     "already":  false,
+                     "safe_to_apply":  true
+                 }
+             ]
+}

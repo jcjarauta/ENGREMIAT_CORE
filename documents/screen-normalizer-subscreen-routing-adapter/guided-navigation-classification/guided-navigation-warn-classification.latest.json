@@ -1,0 +1,132 @@
+{
+    "schema":  "engremiat.guided_navigation_warn_classification.v1",
+    "package_id":  "ENGREMIAT_SCREEN_NORMALIZER_SUBSCREEN_ROUTING_ADAPTER_001",
+    "stage":  "E08_CLASSIFY_GUIDED_NAVIGATION_WARN_RESULTS",
+    "created_at":  "2026-06-20T18:37:58",
+    "status":  "PASS",
+    "source_status":  "WARN",
+    "passed":  1,
+    "total":  6,
+    "navigation_full_pass":  false,
+    "decision":  "TARGETED_REPAIR_BY_SCREEN",
+    "classified_results":  [
+                               {
+                                   "screen_id":  "PROYECTOS",
+                                   "visual_pass":  true,
+                                   "opened":  true,
+                                   "enter_ok":  true,
+                                   "help_ok":  true,
+                                   "m_ok":  true,
+                                   "exit_ok":  true,
+                                   "adapter_return_ok":  true,
+                                   "failed_checks":  [
+
+                                                     ],
+                                   "root_cause":  "PASS",
+                                   "notes":  "",
+                                   "path":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\PROYECTOS.candidate.isolated.ps1"
+                               },
+                               {
+                                   "screen_id":  "MEMORIA_DOCUMENTACION",
+                                   "visual_pass":  false,
+                                   "opened":  true,
+                                   "enter_ok":  true,
+                                   "help_ok":  false,
+                                   "m_ok":  true,
+                                   "exit_ok":  true,
+                                   "adapter_return_ok":  true,
+                                   "failed_checks":  [
+                                                         "help_question_mark"
+                                                     ],
+                                   "root_cause":  "HELP_CONTRACT_GAP",
+                                   "notes":  "",
+                                   "path":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\MEMORIA_DOCUMENTACION.candidate.isolated.ps1"
+                               },
+                               {
+                                   "screen_id":  "CONTROL_ESTADO",
+                                   "visual_pass":  false,
+                                   "opened":  true,
+                                   "enter_ok":  true,
+                                   "help_ok":  false,
+                                   "m_ok":  true,
+                                   "exit_ok":  true,
+                                   "adapter_return_ok":  true,
+                                   "failed_checks":  [
+                                                         "help_question_mark"
+                                                     ],
+                                   "root_cause":  "HELP_CONTRACT_GAP",
+                                   "notes":  "",
+                                   "path":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\CONTROL_ESTADO.candidate.isolated.ps1"
+                               },
+                               {
+                                   "screen_id":  "LAUNCHERS_CONFIGURACION",
+                                   "visual_pass":  false,
+                                   "opened":  true,
+                                   "enter_ok":  false,
+                                   "help_ok":  false,
+                                   "m_ok":  true,
+                                   "exit_ok":  true,
+                                   "adapter_return_ok":  true,
+                                   "failed_checks":  [
+                                                         "enter_refresh",
+                                                         "help_question_mark"
+                                                     ],
+                                   "root_cause":  "HELP_CONTRACT_GAP",
+                                   "notes":  "",
+                                   "path":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\LAUNCHERS_CONFIGURACION.candidate.isolated.ps1"
+                               },
+                               {
+                                   "screen_id":  "OPERADOR_WORKERS",
+                                   "visual_pass":  false,
+                                   "opened":  true,
+                                   "enter_ok":  false,
+                                   "help_ok":  false,
+                                   "m_ok":  true,
+                                   "exit_ok":  true,
+                                   "adapter_return_ok":  true,
+                                   "failed_checks":  [
+                                                         "enter_refresh",
+                                                         "help_question_mark"
+                                                     ],
+                                   "root_cause":  "HELP_CONTRACT_GAP",
+                                   "notes":  "",
+                                   "path":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\OPERADOR_WORKERS.candidate.isolated.ps1"
+                               },
+                               {
+                                   "screen_id":  "TARJETAS",
+                                   "visual_pass":  false,
+                                   "opened":  true,
+                                   "enter_ok":  true,
+                                   "help_ok":  false,
+                                   "m_ok":  true,
+                                   "exit_ok":  true,
+                                   "adapter_return_ok":  true,
+                                   "failed_checks":  [
+                                                         "help_question_mark"
+                                                     ],
+                                   "root_cause":  "HELP_CONTRACT_GAP",
+                                   "notes":  "",
+                                   "path":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\TARJETAS.candidate.isolated.ps1"
+                               }
+                           ],
+    "failures_by_cause":  {
+                              "root_cause":  "HELP_CONTRACT_GAP",
+                              "count":  5,
+                              "screens":  [
+                                              "MEMORIA_DOCUMENTACION",
+                                              "CONTROL_ESTADO",
+                                              "LAUNCHERS_CONFIGURACION",
+                                              "OPERADOR_WORKERS",
+                                              "TARJETAS"
+                                          ]
+                          },
+    "recommendation":  "Preparar reparacion dirigida segun fallos por pantalla.",
+    "patch_existing_launchers":  false,
+    "registry_write":  false,
+    "migration_applied":  false,
+    "worker":  false,
+    "browser":  false,
+    "network":  false,
+    "git":  false,
+    "next":  "E09_PREPARE_REPAIR_PLAN_FOR_GUIDED_NAVIGATION_GAPS"
+}

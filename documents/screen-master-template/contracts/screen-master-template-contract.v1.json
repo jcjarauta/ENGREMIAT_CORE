@@ -1,0 +1,38 @@
+﻿{
+    "package_id":  "ENGREMIAT_SCREEN_MASTER_TEMPLATE_001",
+    "version":  "v1",
+    "purpose":  "Plantilla master reusable para pantallas ENGREMIAT",
+    "common_commands":  {
+                            "enter":  "refrescar/redibujar",
+                            "b":  "volver/salir",
+                            "q":  "volver/salir",
+                            "m":  "tarjeta mantenimiento contextual",
+                            "question":  "ayuda contextual"
+                        },
+    "must_support":  [
+                         "Enter",
+                         "b",
+                         "q",
+                         "m",
+                         "?"
+                     ],
+    "maintenance_card":  {
+                             "cancel_tokens":  [
+                                                   "b",
+                                                   "q",
+                                                   "c",
+                                                   "cancelar",
+                                                   "cancel",
+                                                   "salir"
+                                               ],
+                             "storage":  "documents/manual-screen-maintenance-cards/cards",
+                             "queue":  "documents/manual-screen-maintenance-cards/MAINTENANCE_QUEUE.json"
+                         },
+    "rules":  [
+                  "No router comprimido en una linea",
+                  "m dentro del switch real",
+                  "b/q usan return dentro de pantallas/funciones",
+                  "Enter vacio hace continue",
+                  "tarjeta siempre cancelable"
+              ]
+}

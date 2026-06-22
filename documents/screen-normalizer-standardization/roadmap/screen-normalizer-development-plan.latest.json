@@ -1,0 +1,45 @@
+﻿{
+    "schema":  "engremiat.screen_normalizer_development_plan.v1",
+    "package_id":  "ENGREMIAT_SCREEN_NORMALIZER_STANDARDIZATION_001",
+    "status":  "PASS",
+    "current_decision":  "ADOPT_SCREEN_REGISTRY_TEMPLATE_BUILDER",
+    "next":  "E03_CREATE_SCREEN_NORMALIZER_HELPER_SKELETON_NO_LAUNCHER_PATCH",
+    "steps":  [
+                  {
+                      "id":  "E03",
+                      "name":  "Crear helper comun aislado",
+                      "result":  "tools\\screen-normalizer\\screen-normalizer.ps1",
+                      "risk":  "LOW"
+                  },
+                  {
+                      "id":  "E04",
+                      "name":  "Smoke helper aislado",
+                      "result":  "validar cabecera, comandos, ayuda, mantenimiento dry-run",
+                      "risk":  "LOW"
+                  },
+                  {
+                      "id":  "E05",
+                      "name":  "Crear registry real inicial",
+                      "result":  "screen-registry.json con INICIO, PROYECTOS, TARJETAS",
+                      "risk":  "LOW"
+                  },
+                  {
+                      "id":  "E06",
+                      "name":  "Crear builder dry-run",
+                      "result":  "simular anidar funcion sin tocar launchers",
+                      "risk":  "LOW"
+                  },
+                  {
+                      "id":  "E07",
+                      "name":  "Migrar INICIO por plantilla",
+                      "result":  "primer launcher generado desde registry",
+                      "risk":  "MEDIUM"
+                  },
+                  {
+                      "id":  "E08",
+                      "name":  "Prueba real m tarjeta",
+                      "result":  "m crea tarjeta desde helper comun",
+                      "risk":  "MEDIUM"
+                  }
+              ]
+}

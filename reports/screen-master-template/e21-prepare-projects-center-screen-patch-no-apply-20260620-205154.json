@@ -1,0 +1,37 @@
+﻿{
+    "package_id":  "ENGREMIAT_SCREEN_MASTER_TEMPLATE_001",
+    "stage":  "E21_PREPARE_PROJECTS_CENTER_SCREEN_PATCH_NO_APPLY",
+    "status":  "WARN",
+    "decision":  "NO_GO_PROJECTS_CENTER_PATCH_NEEDS_REPAIR",
+    "runtime_write":  false,
+    "git_write":  false,
+    "target":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1",
+    "selected_candidate":  "C:\\ENGREMIAT_CORE\\documents\\screen-master-template\\planned\\projects-center.screen-master-candidate.latest.ps1",
+    "readhost_line":  19,
+    "readhost_text":  "function ProjectList(){while($true){Header;$items=GetProjects;if($items.Count -eq 0){W \u0027No hay proyectos en C:\\ENGREMIAT_CORE\\projects\u0027 Yellow}else{$i=0;foreach($p in $items){$i++;$ProjectIdValue=SafeId $p.FullName;W (\u0027[\u0027+$i+\u0027] \u0027+$ProjectIdValue+\u0027  \u0027+$p.Name) White}};W \u0027\u0027;W \u0027numero = abrir proyecto | b = volver | Enter = refrescar\u0027 DarkGray;$c=Read-Host \u0027PROYECTOS\u0027;if([string]::IsNullOrWhiteSpace($c)){continue};if($c.ToLower() -eq \u0027b\u0027){break};$n=0;if([int]::TryParse($c,[ref]$n) -and $n -ge 1 -and $n -le $items.Count){ProjectActions $items[$n-1].FullName}else{W \u0027Comando no reconocido\u0027 Yellow;Start-Sleep -Milliseconds 700}}}",
+    "patch_mode":  "READHOST_UNKNOWN_SHAPE",
+    "checks":  {
+                   "source_parse":  true,
+                   "candidate_parse":  true,
+                   "inserted_route":  true,
+                   "inserted_router":  true,
+                   "mode_supported":  false,
+                   "has_function":  true,
+                   "has_help_function":  true,
+                   "has_m_router":  false,
+                   "has_help_router":  false,
+                   "has_q_router":  false,
+                   "has_cancel":  true,
+                   "has_screen_markers":  true
+               },
+    "old_errors":  [
+
+                   ],
+    "new_errors":  {
+
+                   },
+    "summary":  "C:\\ENGREMIAT_CORE\\documents\\screen-master-template\\planned\\projects-center-screen-patch-no-apply.latest.md",
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\screen-master-template\\e21-prepare-projects-center-screen-patch-no-apply-20260620-205154.json",
+    "gate":  "AUTORIZO_APLICAR_PLANTILLA_MASTER_A_PROJECTS_CENTER",
+    "next":  "E22_APPLY_PROJECTS_CENTER_SCREEN_TEMPLATE_WITH_GATE"
+}

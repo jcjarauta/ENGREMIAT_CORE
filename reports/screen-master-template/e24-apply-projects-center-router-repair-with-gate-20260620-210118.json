@@ -1,0 +1,29 @@
+﻿{
+    "package_id":  "ENGREMIAT_SCREEN_MASTER_TEMPLATE_001",
+    "stage":  "E24_APPLY_PROJECTS_CENTER_ROUTER_REPAIR_WITH_GATE",
+    "status":  "PASS",
+    "decision":  "GO_PROJECTS_CENTER_ROUTER_REPAIR_APPLIED_WITH_BACKUP_AND_SMOKE",
+    "runtime_write":  true,
+    "git_write":  false,
+    "target":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1",
+    "backup":  "C:\\ENGREMIAT_CORE\\backups\\screen-master-template\\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.before-e24-router-repair-20260620-210118.ps1",
+    "candidate":  "C:\\ENGREMIAT_CORE\\documents\\screen-master-template\\planned\\projects-center.router-repair-candidate.latest.ps1",
+    "checks":  {
+                   "target_parse_before":  true,
+                   "candidate_parse":  true,
+                   "target_parse_after":  true,
+                   "has_backup":  true,
+                   "has_repair_marker":  true,
+                   "has_no_old_router_marker":  true,
+                   "has_m_router":  true,
+                   "has_help_router":  true,
+                   "has_q_router":  true,
+                   "has_common_menu":  true,
+                   "has_card_function":  true,
+                   "has_help_function":  true,
+                   "has_cancel":  true
+               },
+    "summary":  "C:\\ENGREMIAT_CORE\\documents\\screen-master-template\\planned\\projects-center-router-repair-apply.latest.md",
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\screen-master-template\\e24-apply-projects-center-router-repair-with-gate-20260620-210118.json",
+    "next":  "E25_MANUAL_TEST_PROJECTS_CENTER_ROUTER_REPAIR"
+}

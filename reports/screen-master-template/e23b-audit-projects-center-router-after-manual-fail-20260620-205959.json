@@ -1,0 +1,77 @@
+﻿{
+    "package_id":  "ENGREMIAT_SCREEN_MASTER_TEMPLATE_001",
+    "stage":  "E23B_AUDIT_PROJECTS_CENTER_ROUTER_AFTER_MANUAL_FAIL_NO_APPLY",
+    "status":  "PASS",
+    "decision":  "NO_GO_ROUTER_VISIBLE_BUT_COMMANDS_NOT_CAPTURED_PREPARE_REPAIR",
+    "runtime_write":  false,
+    "git_write":  false,
+    "target":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1",
+    "parse":  true,
+    "checks":  {
+                   "has_menu":  true,
+                   "has_function":  true,
+                   "has_help_function":  true,
+                   "has_router_marker":  true,
+                   "has_m_if":  true,
+                   "has_help_if":  true,
+                   "has_q_if":  true
+               },
+    "readhosts":  [
+                      {
+                          "line":  10,
+                          "text":  "$sev = Read-Host \"Severidad LOW/MEDIUM/HIGH/BLOCKER\""
+                      },
+                      {
+                          "line":  12,
+                          "text":  "$exp = Read-Host \"Esperado\""
+                      },
+                      {
+                          "line":  14,
+                          "text":  "$obs = Read-Host \"Observado / que falla\""
+                      },
+                      {
+                          "line":  16,
+                          "text":  "$act = Read-Host \"Accion realizada antes del fallo\""
+                      },
+                      {
+                          "line":  41,
+                          "text":  "Read-Host \"Enter para volver a PROYECTOS\" | Out-Null"
+                      },
+                      {
+                          "line":  56,
+                          "text":  "Read-Host \"Enter para volver\" | Out-Null"
+                      },
+                      {
+                          "line":  91,
+                          "text":  "Read-Host \u0027Enter\u0027|Out-Null}}"
+                      },
+                      {
+                          "line":  93,
+                          "text":  "Read-Host \u0027Enter\u0027|Out-Null;"
+                      },
+                      {
+                          "line":  110,
+                          "text":  "$c=Read-Host \u0027PROYECTOS\u0027;"
+                      },
+                      {
+                          "line":  141,
+                          "text":  "$c=Read-Host \u0027PROYECTO\u0027;"
+                      },
+                      {
+                          "line":  156,
+                          "text":  "$c=Read-Host \u0027MODULOS\u0027;"
+                      },
+                      {
+                          "line":  176,
+                          "text":  "$c=Read-Host \u0027MODULO\u0027;"
+                      },
+                      {
+                          "line":  190,
+                          "text":  "Read-Host|Out-Null}"
+                      }
+                  ],
+    "maintenance_card":  "C:\\ENGREMIAT_CORE\\documents\\manual-screen-maintenance-cards\\cards\\MCARD-20260620-205959-projects-center-m-help-router.md",
+    "summary":  "C:\\ENGREMIAT_CORE\\documents\\screen-master-template\\planned\\projects-center-router-after-manual-fail.latest.md",
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\screen-master-template\\e23b-audit-projects-center-router-after-manual-fail-20260620-205959.json",
+    "next":  "E23C_PREPARE_PROJECTS_CENTER_ROUTER_REPAIR_NO_APPLY"
+}

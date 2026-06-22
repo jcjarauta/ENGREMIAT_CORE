@@ -1,0 +1,27 @@
+﻿{
+    "package_id":  "ENGREMIAT_SCREEN_MASTER_TEMPLATE_001",
+    "stage":  "E17_PREPARE_PROJECTS_MANAGER_SCREEN_PATCH_NO_APPLY",
+    "status":  "WARN",
+    "decision":  "NO_GO_PROJECTS_MANAGER_PATCH_NEEDS_REPAIR",
+    "runtime_write":  false,
+    "git_write":  false,
+    "target":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-projects-manager.ps1",
+    "selected_candidate":  "C:\\ENGREMIAT_CORE\\documents\\screen-master-template\\planned\\eng-projects-manager.screen-master-candidate.latest.ps1",
+    "readhost_line":  25,
+    "command_var":  "a",
+    "checks":  {
+                   "source_parse":  true,
+                   "candidate_parse":  false,
+                   "has_function":  true,
+                   "has_help_function":  true,
+                   "has_m_router":  true,
+                   "has_help_router":  true,
+                   "has_anchor":  true,
+                   "has_project_options":  true,
+                   "has_noapply_markers":  true
+               },
+    "summary":  "C:\\ENGREMIAT_CORE\\documents\\screen-master-template\\planned\\eng-projects-manager-screen-patch-no-apply.latest.md",
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\screen-master-template\\e17-prepare-projects-manager-screen-patch-no-apply-20260620-204721.json",
+    "gate":  "AUTORIZO_APLICAR_PLANTILLA_MASTER_A_PROJECTS_MANAGER",
+    "next":  "E18_APPLY_PROJECTS_MANAGER_SCREEN_TEMPLATE_WITH_GATE"
+}

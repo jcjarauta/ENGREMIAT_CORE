@@ -1,0 +1,37 @@
+﻿{
+    "package_id":  "ENGREMIAT_SCREEN_MASTER_TEMPLATE_001",
+    "stage":  "E28_PREPARE_REFINED_NEXT_SCREEN_TARGET_NO_APPLY",
+    "status":  "PASS",
+    "decision":  "GO_REFINED_TARGET_AUDITED_READY_FOR_CANDIDATE_NO_APPLY",
+    "runtime_write":  false,
+    "git_write":  false,
+    "refined_queue":  "C:\\ENGREMIAT_CORE\\documents\\screen-master-template\\planned\\screen-template-migration-queue.refined.latest.json",
+    "target":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1",
+    "parse":  true,
+    "strategy":  "PREPARE_ROUTER_PATCH_NO_APPLY",
+    "compressed":  false,
+    "coverage":  {
+                     "enter":  true,
+                     "b":  false,
+                     "q":  true,
+                     "m":  true,
+                     "help":  false
+                 },
+    "readhosts":  [
+                      {
+                          "line":  8,
+                          "shape":  "UNKNOWN",
+                          "var":  "UNKNOWN",
+                          "text":  "function P(){ [void](Read-Host \"Enter\") }"
+                      },
+                      {
+                          "line":  106,
+                          "shape":  "ASSIGNMENT",
+                          "var":  "cmd",
+                          "text":  "$cmd=Read-Host \"ENGREMIAT\""
+                      }
+                  ],
+    "summary":  "C:\\ENGREMIAT_CORE\\documents\\screen-master-template\\planned\\refined-next-screen-target-no-apply.latest.md",
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\screen-master-template\\e28-prepare-refined-next-screen-target-no-apply-20260620-210949.json",
+    "next":  "E29_PREPARE_REFINED_TARGET_ROUTER_PATCH_NO_APPLY"
+}

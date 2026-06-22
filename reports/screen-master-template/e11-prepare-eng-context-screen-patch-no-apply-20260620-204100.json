@@ -1,0 +1,27 @@
+﻿{
+    "package_id":  "ENGREMIAT_SCREEN_MASTER_TEMPLATE_001",
+    "stage":  "E11_PREPARE_SCREEN_TEMPLATE_PATCH_FOR_SELECTED_SCREEN_NO_APPLY",
+    "status":  "PASS",
+    "decision":  "GO_SELECTED_SCREEN_PATCH_READY_NO_APPLY",
+    "runtime_write":  false,
+    "git_write":  false,
+    "target_path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-context.ps1",
+    "selected_candidate":  "C:\\ENGREMIAT_CORE\\documents\\screen-master-template\\planned\\eng-context.screen-master-candidate.latest.ps1",
+    "summary":  "C:\\ENGREMIAT_CORE\\documents\\screen-master-template\\planned\\eng-context-screen-patch-no-apply.latest.md",
+    "source_parse":  true,
+    "candidate_parse":  true,
+    "checks":  {
+                   "source_parse":  true,
+                   "candidate_parse":  true,
+                   "has_enter":  true,
+                   "has_bq":  true,
+                   "has_m":  true,
+                   "has_help":  true,
+                   "has_cancel":  true,
+                   "has_noapply_marker":  true
+               },
+    "risk":  "MEDIUM",
+    "gate":  "AUTORIZO_APLICAR_PLANTILLA_MASTER_A_ENG_CONTEXT",
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\screen-master-template\\e11-prepare-eng-context-screen-patch-no-apply-20260620-204100.json",
+    "next":  "E12_APPLY_ENG_CONTEXT_SCREEN_TEMPLATE_WITH_GATE"
+}

@@ -1,0 +1,57 @@
+﻿{
+    "schema":  "engremiat.screen_normalizer_remaining_roadmap.v1",
+    "package_id":  "ENGREMIAT_SCREEN_NORMALIZER_STANDARDIZATION_001",
+    "status":  "PASS",
+    "objective":  "Normalizar pantallas y mantenimiento sin parches fragiles",
+    "steps":  [
+                  {
+                      "id":  "E02",
+                      "name":  "Contrato helper comun",
+                      "action":  "definir funciones comunes sin tocar pantallas reales",
+                      "risk":  "LOW",
+                      "status":  "NEXT"
+                  },
+                  {
+                      "id":  "E03",
+                      "name":  "Implementar helper aislado",
+                      "action":  "crear tools\\screen-normalizer\\screen-normalizer.ps1 con ShowHeader, ReadCommand y MaintenanceFlow",
+                      "risk":  "LOW",
+                      "status":  "PENDING"
+                  },
+                  {
+                      "id":  "E04",
+                      "name":  "Smoke helper aislado",
+                      "action":  "probar helper sin launchers reales",
+                      "risk":  "LOW",
+                      "status":  "PENDING"
+                  },
+                  {
+                      "id":  "E05",
+                      "name":  "Migrar INICIO a helper",
+                      "action":  "reescribir frontera INICIO completa usando helper comun",
+                      "risk":  "MEDIUM",
+                      "status":  "PENDING"
+                  },
+                  {
+                      "id":  "E06",
+                      "name":  "Migrar pantallas internas una a una",
+                      "action":  "Proyectos, Tarjetas, Control, Memoria, Launchers, Workers",
+                      "risk":  "MEDIUM",
+                      "status":  "PENDING"
+                  },
+                  {
+                      "id":  "E07",
+                      "name":  "Prueba real m tarjeta",
+                      "action":  "pulsar m y validar nueva tarjeta",
+                      "risk":  "MEDIUM",
+                      "status":  "PENDING"
+                  },
+                  {
+                      "id":  "E08",
+                      "name":  "Cierre y git scoped",
+                      "action":  "cerrar etapa si usuario autoriza",
+                      "risk":  "LOW",
+                      "status":  "PENDING"
+                  }
+              ]
+}

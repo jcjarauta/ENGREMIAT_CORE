@@ -1,0 +1,127 @@
+{
+    "schema":  "engremiat.guided_navigation_repair_plan.v1",
+    "package_id":  "ENGREMIAT_SCREEN_NORMALIZER_SUBSCREEN_ROUTING_ADAPTER_001",
+    "stage":  "E09_PREPARE_REPAIR_PLAN_FOR_GUIDED_NAVIGATION_GAPS",
+    "created_at":  "2026-06-20T18:38:32",
+    "status":  "PASS",
+    "source_classification":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-subscreen-routing-adapter\\guided-navigation-classification\\guided-navigation-warn-classification.latest.json",
+    "passed":  1,
+    "total":  6,
+    "decision":  "REPAIR_SHARED_HELP_CONTRACT_IN_ISOLATED_CANDIDATES",
+    "summary":  {
+                    "screens_ok":  1,
+                    "screens_to_repair":  5,
+                    "help_failures":  5,
+                    "enter_refresh_failures":  2,
+                    "launcher_general_untouched":  true
+                },
+    "repair_targets":  [
+                           {
+                               "screen_id":  "OPERADOR_WORKERS",
+                               "status":  "REPAIR_REQUIRED",
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\OPERADOR_WORKERS.candidate.isolated.ps1",
+                               "actions":  [
+                                               "repair_question_mark_help_contract",
+                                               "repair_enter_empty_refresh_contract"
+                                           ],
+                               "risk":  "LOW_ISOLATED_CANDIDATE_ONLY",
+                               "priority":  12,
+                               "reason":  "HELP_CONTRACT_GAP",
+                               "failed_checks":  [
+                                                     "enter_refresh",
+                                                     "help_question_mark"
+                                                 ]
+                           },
+                           {
+                               "screen_id":  "LAUNCHERS_CONFIGURACION",
+                               "status":  "REPAIR_REQUIRED",
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\LAUNCHERS_CONFIGURACION.candidate.isolated.ps1",
+                               "actions":  [
+                                               "repair_question_mark_help_contract",
+                                               "repair_enter_empty_refresh_contract"
+                                           ],
+                               "risk":  "LOW_ISOLATED_CANDIDATE_ONLY",
+                               "priority":  12,
+                               "reason":  "HELP_CONTRACT_GAP",
+                               "failed_checks":  [
+                                                     "enter_refresh",
+                                                     "help_question_mark"
+                                                 ]
+                           },
+                           {
+                               "screen_id":  "TARJETAS",
+                               "status":  "REPAIR_REQUIRED",
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\TARJETAS.candidate.isolated.ps1",
+                               "actions":  [
+                                               "repair_question_mark_help_contract"
+                                           ],
+                               "risk":  "LOW_ISOLATED_CANDIDATE_ONLY",
+                               "priority":  11,
+                               "reason":  "HELP_CONTRACT_GAP",
+                               "failed_checks":  [
+                                                     "help_question_mark"
+                                                 ]
+                           },
+                           {
+                               "screen_id":  "CONTROL_ESTADO",
+                               "status":  "REPAIR_REQUIRED",
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\CONTROL_ESTADO.candidate.isolated.ps1",
+                               "actions":  [
+                                               "repair_question_mark_help_contract"
+                                           ],
+                               "risk":  "LOW_ISOLATED_CANDIDATE_ONLY",
+                               "priority":  11,
+                               "reason":  "HELP_CONTRACT_GAP",
+                               "failed_checks":  [
+                                                     "help_question_mark"
+                                                 ]
+                           },
+                           {
+                               "screen_id":  "MEMORIA_DOCUMENTACION",
+                               "status":  "REPAIR_REQUIRED",
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\MEMORIA_DOCUMENTACION.candidate.isolated.ps1",
+                               "actions":  [
+                                               "repair_question_mark_help_contract"
+                                           ],
+                               "risk":  "LOW_ISOLATED_CANDIDATE_ONLY",
+                               "priority":  11,
+                               "reason":  "HELP_CONTRACT_GAP",
+                               "failed_checks":  [
+                                                     "help_question_mark"
+                                                 ]
+                           }
+                       ],
+    "repair_policy":  {
+                          "scope":  "ISOLATED_CANDIDATE_FILES_ONLY",
+                          "allowed":  [
+                                          "backup candidate",
+                                          "patch candidate help contract",
+                                          "patch candidate Enter refresh contract",
+                                          "parse validate each candidate",
+                                          "static smoke patched candidates"
+                                      ],
+                          "blocked":  [
+                                          "touch ENGREMIAT-LAUNCHER-ACTUAL.ps1",
+                                          "touch INICIO",
+                                          "write registry",
+                                          "git",
+                                          "network",
+                                          "workers",
+                                          "browser"
+                                      ]
+                      },
+    "recommended_sequence":  [
+                                 "E10_BACKUP_AND_REPAIR_ISOLATED_CANDIDATE_HELP_REFRESH_CONTRACTS",
+                                 "E11_STATIC_SMOKE_REPAIRED_CANDIDATES",
+                                 "E12_RERUN_GUIDED_NAVIGATION_SMOKE",
+                                 "E13_CLOSE_ADAPTER_IF_PASS_OR_ITERATE"
+                             ],
+    "patch_existing_launchers":  false,
+    "registry_write":  false,
+    "migration_applied":  false,
+    "worker":  false,
+    "browser":  false,
+    "network":  false,
+    "git":  false,
+    "next":  "E10_BACKUP_AND_REPAIR_ISOLATED_CANDIDATE_HELP_REFRESH_CONTRACTS"
+}

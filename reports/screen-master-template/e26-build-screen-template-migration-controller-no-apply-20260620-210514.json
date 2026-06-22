@@ -1,0 +1,31 @@
+﻿{
+    "package_id":  "ENGREMIAT_SCREEN_MASTER_TEMPLATE_001",
+    "stage":  "E26_BUILD_SCREEN_TEMPLATE_MIGRATION_CONTROLLER_NO_APPLY",
+    "status":  "PASS",
+    "decision":  "GO_SCREEN_TEMPLATE_MIGRATION_CONTROLLER_READY_NO_APPLY",
+    "runtime_write":  false,
+    "git_write":  false,
+    "controller":  "C:\\ENGREMIAT_CORE\\tools\\screen-master-template\\screen-template-migration-controller.ps1",
+    "controller_parse":  true,
+    "controller_exit":  0,
+    "controller_output":  [
+                              "SCREEN_TEMPLATE_MIGRATION_CONTROLLER mode=audit total=0 ready=0 partial=0 needs=0 actions=0",
+                              "NEXT_TARGET=NONE",
+                              "QUEUE=C:\\ENGREMIAT_CORE\\documents\\screen-master-template\\planned\\screen-template-migration-queue.latest.json",
+                              "SUMMARY=C:\\ENGREMIAT_CORE\\documents\\screen-master-template\\planned\\screen-template-migration-queue.latest.md",
+                              "REPORT=C:\\ENGREMIAT_CORE\\reports\\screen-master-template\\screen-template-migration-controller-audit-20260620-210515.json"
+                          ],
+    "queue":  "C:\\ENGREMIAT_CORE\\documents\\screen-master-template\\planned\\screen-template-migration-queue.latest.json",
+    "queue_exists":  true,
+    "queue_total":  0,
+    "queue_ready":  0,
+    "queue_partial":  0,
+    "queue_needs_template":  0,
+    "queue_excluded_actions":  0,
+    "next_target":  {
+
+                    },
+    "summary":  "C:\\ENGREMIAT_CORE\\documents\\screen-master-template\\planned\\screen-template-migration-controller.latest.md",
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\screen-master-template\\e26-build-screen-template-migration-controller-no-apply-20260620-210514.json",
+    "next":  "E27_USE_MIGRATION_CONTROLLER_NEXT_TARGET_NO_APPLY"
+}

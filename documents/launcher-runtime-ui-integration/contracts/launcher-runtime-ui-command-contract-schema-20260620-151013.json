@@ -1,0 +1,30 @@
+﻿{
+    "schema":  "engremiat.launcher_runtime_ui_command_contract_schema.v1",
+    "contract_id":  "LAUNCHER_RUNTIME_UI_COMMAND_CONTRACT_V1",
+    "required_commands":  [
+                              "acciones",
+                              "preview",
+                              "aprobar",
+                              "ejecutar",
+                              "estado",
+                              "volver"
+                          ],
+    "required_screen_rules":  [
+                                  "Enter vacío redibuja pantalla",
+                                  "? ayuda contextual",
+                                  "comandos menú actual"
+                              ],
+    "required_safety":  [
+                            "no_ui_mutation_before_adapter",
+                            "explicit_auth_for_approve",
+                            "explicit_auth_for_execute",
+                            "worker_browser_network_git_blocked_by_default"
+                        ],
+    "validation_rules":  [
+                             "all required commands present",
+                             "approve command has mutation auth env",
+                             "execute command has run auth env",
+                             "readonly commands do not require auth",
+                             "contract safety flags false"
+                         ]
+}

@@ -1,0 +1,26 @@
+﻿{
+    "package_id":  "ENGREMIAT_SCREEN_MASTER_TEMPLATE_001",
+    "stage":  "E12_APPLY_ENG_CONTEXT_SCREEN_TEMPLATE_WITH_GATE",
+    "status":  "PASS",
+    "decision":  "GO_ENG_CONTEXT_SCREEN_TEMPLATE_APPLIED_WITH_BACKUP_AND_SMOKE",
+    "runtime_write":  true,
+    "git_write":  false,
+    "target":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-context.ps1",
+    "backup":  "C:\\ENGREMIAT_CORE\\backups\\screen-master-template\\eng-context.before-e12-screen-template-20260620-204223.ps1",
+    "candidate":  "C:\\ENGREMIAT_CORE\\documents\\screen-master-template\\planned\\eng-context.screen-master-candidate.latest.ps1",
+    "checks":  {
+                   "target_parse_before":  true,
+                   "candidate_parse":  true,
+                   "target_parse_after":  true,
+                   "has_footer":  true,
+                   "has_m":  true,
+                   "has_b":  true,
+                   "has_q":  true,
+                   "has_help":  true,
+                   "has_cancel":  true,
+                   "has_backup":  true
+               },
+    "summary":  "C:\\ENGREMIAT_CORE\\documents\\screen-master-template\\planned\\eng-context-screen-template-apply.latest.md",
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\screen-master-template\\e12-apply-eng-context-screen-template-with-gate-20260620-204223.json",
+    "next":  "E13_MANUAL_TEST_ENG_CONTEXT_SCREEN_TEMPLATE"
+}

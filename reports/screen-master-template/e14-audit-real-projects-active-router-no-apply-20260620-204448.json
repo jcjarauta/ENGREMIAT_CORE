@@ -1,0 +1,61 @@
+﻿{
+    "package_id":  "ENGREMIAT_SCREEN_MASTER_TEMPLATE_001",
+    "stage":  "E14_AUDIT_REAL_PROJECTS_ACTIVE_ROUTER_NO_APPLY",
+    "status":  "PASS",
+    "decision":  "WARN_ROUTER_ANCHOR_NOT_CONFIRMED",
+    "runtime_write":  false,
+    "git_write":  false,
+    "target":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-context.ps1",
+    "parse":  true,
+    "screen_line":  0,
+    "nearest_readhost":  null,
+    "readhosts":  [
+                      {
+                          "line":  72,
+                          "var":  "UNKNOWN",
+                          "text":  "$parentRaw=(Read-Host \"Carpeta base\").Trim()"
+                      },
+                      {
+                          "line":  86,
+                          "var":  "UNKNOWN",
+                          "text":  "$ok=(Read-Host \"Crear aqui usando plantilla maestra original? Enter/s = si | n = cambiar ruta\").Trim().ToLowerInvariant()"
+                      },
+                      {
+                          "line":  151,
+                          "var":  "UNKNOWN",
+                          "text":  "Read-Host \"Enter para volver\""
+                      },
+                      {
+                          "line":  172,
+                          "var":  "UNKNOWN",
+                          "text":  "$sel=(Read-Host \"ENGREMIAT\").Trim().ToLowerInvariant()"
+                      },
+                      {
+                          "line":  198,
+                          "var":  "UNKNOWN",
+                          "text":  "$name=(Read-Host \"Nombre del modulo\").Trim()"
+                      },
+                      {
+                          "line":  222,
+                          "var":  "UNKNOWN",
+                          "text":  "$sel=(Read-Host \"Elige modulo\").Trim().ToLowerInvariant()"
+                      },
+                      {
+                          "line":  235,
+                          "var":  "UNKNOWN",
+                          "text":  "if($cmd -eq \"nuevo-proyecto\"){$name=Read-Host \"Nombre del proyecto\";$p=New-Project $name;Set-Project-State $p;exit}"
+                      },
+                      {
+                          "line":  251,
+                          "var":  "UNKNOWN",
+                          "text":  "Read-Host \"Enter para volver\""
+                      }
+                  ],
+    "has_enter":  true,
+    "has_bq":  false,
+    "has_m":  false,
+    "has_help":  false,
+    "summary":  "C:\\ENGREMIAT_CORE\\documents\\screen-master-template\\planned\\real-projects-active-router-audit.latest.md",
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\screen-master-template\\e14-audit-real-projects-active-router-no-apply-20260620-204448.json",
+    "next":  "E15_PREPARE_PROJECTS_ACTIVE_ROUTER_PATCH_NO_APPLY"
+}

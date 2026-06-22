@@ -1,0 +1,53 @@
+﻿{
+    "schema":  "engremiat.operator_screen_context_normalization_close.v1",
+    "package_id":  "ENGREMIAT_OPERATOR_SCREEN_CONTEXT_NORMALIZATION_001",
+    "stage":  "E05_CLOSE_OPERATOR_SCREEN_CONTEXT_NORMALIZATION_AND_VALUE_NEXT_OBJECTIVE",
+    "created_at":  "2026-06-20T16:13:51",
+    "status":  "PASS",
+    "closed":  true,
+    "readiness":  100,
+    "decision":  "OPERATOR_SCREEN_CONTEXT_MINIMUM_NORMALIZED_ON_PREFERRED_OPERATOR",
+    "target":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1",
+    "summary":  {
+                    "preferred_operator_only":  true,
+                    "backups_excluded_after_repair":  true,
+                    "has_ruta":  true,
+                    "has_rol":  true,
+                    "has_principio":  true,
+                    "has_m_help":  true,
+                    "has_enter_refresh":  true,
+                    "has_interactive_form_route":  true,
+                    "target_parse_ok":  true,
+                    "audit":  "PASS",
+                    "proposal":  "PASS",
+                    "repair_static_smoke":  "PASS"
+                },
+    "evidence":  {
+                     "audit":  "C:\\ENGREMIAT_CORE\\documents\\operator-screen-context-normalization\\diagnostics\\preferred-operator-screen-context-audit.latest.json",
+                     "proposal":  "C:\\ENGREMIAT_CORE\\documents\\operator-screen-context-normalization\\proposal\\preferred-operator-context-patch-proposal.latest.json",
+                     "smoke":  "C:\\ENGREMIAT_CORE\\documents\\operator-screen-context-normalization\\smoke\\preferred-operator-context-static-smoke.latest.json"
+                 },
+    "known_limits":  [
+                         "validacion estatica; falta abrir operator real y comprobar visualmente la pantalla actual",
+                         "pueden existir pantallas generadas por otros scripts/launchers que requieren normalizacion equivalente",
+                         "no se ha hecho git por decision activa del usuario"
+                     ],
+    "recommended_next_objective":  "ENGREMIAT_OPERATOR_REAL_SCREEN_CONTEXT_VISUAL_SMOKE_001",
+    "possible_next":  [
+                          "A: abrir operator real y comprobar visualmente cabecera/contexto/comandos",
+                          "B: propagar contrato a launchers secundarios actuales",
+                          "C: crear helper comun Show-EngremiatScreenHeader para todas las pantallas",
+                          "D: integrar tarjetas humanas nuevas en System Observer"
+                      ],
+    "recommendation":  "A primero para validar experiencia real; C despues para evitar parches pantalla a pantalla; D despues para cerrar ciclo observer",
+    "safety":  {
+                   "real_execution":  false,
+                   "system_mutation":  true,
+                   "screen_mutation":  true,
+                   "worker":  false,
+                   "browser":  false,
+                   "network":  false,
+                   "git":  false
+               },
+    "next":  "PAUSE_AND_VALUE_NEXT_OBJECTIVE_AFTER_SCREEN_CONTEXT_NORMALIZATION"
+}

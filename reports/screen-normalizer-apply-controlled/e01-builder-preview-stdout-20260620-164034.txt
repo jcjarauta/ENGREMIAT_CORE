@@ -1,0 +1,110 @@
+OK screen_builder_dry_run_preview_ready parent=INICIO new=DEMO_FUNCION_ANIDADA_20260620-164034 write_now=False preview=C:\ENGREMIAT_CORE\documents\screen-normalizer-standardization\builder\screen-builder-dry-run-preview.latest.json
+{
+    "schema":  "engremiat.screen_builder_dry_run_preview.v1",
+    "status":  "PASS",
+    "mode":  "DRY_RUN_NO_REGISTRY_WRITE",
+    "parent_screen":  {
+                          "screen_id":  "INICIO",
+                          "parent":  null,
+                          "title":  "ENGREMIAT / INICIO",
+                          "route":  "INICIO",
+                          "role":  "hub humano principal del operador",
+                          "description":  "Entrada principal para navegar por proyectos, memoria, control, launchers, workers y tarjetas.",
+                          "status":  "READY",
+                          "principle":  "local-first | workers OFF | worker real pausado",
+                          "prompt":  "INICIO",
+                          "source":  "tools\\launcher\\ENGREMIAT-INICIO-NORMALIZED.ps1",
+                          "risk":  "LOW",
+                          "requires_human_gate":  false,
+                          "commands":  [
+                                           "b/q = salir",
+                                           "m = mantenimiento",
+                                           "? = ayuda",
+                                           "Enter = refrescar"
+                                       ],
+                          "actions":  [
+                                          {
+                                              "id":  "1",
+                                              "label":  "Proyectos",
+                                              "type":  "screen",
+                                              "target_screen":  "PROYECTOS",
+                                              "risk":  "LOW",
+                                              "requires_auth":  false
+                                          },
+                                          {
+                                              "id":  "2",
+                                              "label":  "Memoria y documentacion",
+                                              "type":  "screen",
+                                              "target_screen":  "MEMORIA_DOCUMENTACION",
+                                              "risk":  "LOW",
+                                              "requires_auth":  false
+                                          },
+                                          {
+                                              "id":  "3",
+                                              "label":  "Control y estado",
+                                              "type":  "screen",
+                                              "target_screen":  "CONTROL_ESTADO",
+                                              "risk":  "LOW",
+                                              "requires_auth":  false
+                                          },
+                                          {
+                                              "id":  "4",
+                                              "label":  "Launchers y configuracion",
+                                              "type":  "screen",
+                                              "target_screen":  "LAUNCHERS_CONFIGURACION",
+                                              "risk":  "LOW",
+                                              "requires_auth":  false
+                                          },
+                                          {
+                                              "id":  "5",
+                                              "label":  "Operador y workers",
+                                              "type":  "screen",
+                                              "target_screen":  "OPERADOR_WORKERS",
+                                              "risk":  "MEDIUM",
+                                              "requires_auth":  true
+                                          },
+                                          {
+                                              "id":  "6",
+                                              "label":  "Tarjetas",
+                                              "type":  "screen",
+                                              "target_screen":  "TARJETAS",
+                                              "risk":  "LOW",
+                                              "requires_auth":  false
+                                          }
+                                      ]
+                      },
+    "new_screen":  {
+                       "screen_id":  "DEMO_FUNCION_ANIDADA_20260620-164034",
+                       "parent":  "INICIO",
+                       "title":  "Demo funcion anidada",
+                       "route":  "INICIO \u003e Demo funcion anidada",
+                       "role":  "validar anidacion controlada por registry",
+                       "description":  "Funcion demo para probar apply controlado al registry sin tocar launchers reales.",
+                       "status":  "PROPOSED_DRY_RUN",
+                       "principle":  "template-first | dry-run | human_gate=SI antes de escritura real",
+                       "prompt":  "DEMO_FUNCION_ANIDADA_20260620-164034",
+                       "source":  "GENERATED_BY_SCREEN_BUILDER_DRY_RUN",
+                       "risk":  "LOW",
+                       "requires_human_gate":  true,
+                       "commands":  [
+                                        "b = volver",
+                                        "m = mantenimiento",
+                                        "? = ayuda",
+                                        "Enter = refrescar"
+                                    ],
+                       "actions":  [
+
+                                   ]
+                   },
+    "generated_menu_patch_preview":  {
+                                         "parent":  "INICIO",
+                                         "add_child":  "DEMO_FUNCION_ANIDADA_20260620-164034",
+                                         "menu_label":  "Demo funcion anidada",
+                                         "route":  "INICIO \u003e Demo funcion anidada"
+                                     },
+    "generated_ui_preview":  [
+                                 "==== Demo funcion anidada ==== Ruta: INICIO \u003e Demo funcion anidada Rol: validar anidacion controlada por registry Estado: PROPOSED_DRY_RUN Principio: template-first | dry-run | human_gate=SI antes de escritura real  Funcion demo para probar apply controlado al registry sin tocar launchers reales.  [b] volver | m = mantenimiento | ? = ayuda | Enter = refrescar DEMO_FUNCION_ANIDADA_20260620-164034:"
+                             ],
+    "write_now":  false,
+    "next":  "E07_SCREEN_BUILDER_APPLY_WITH_HUMAN_GATE_PENDING"
+}

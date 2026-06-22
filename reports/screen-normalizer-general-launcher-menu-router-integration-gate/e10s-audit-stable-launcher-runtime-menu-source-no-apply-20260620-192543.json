@@ -1,0 +1,42 @@
+﻿{
+    "package_id":  "ENGREMIAT_SCREEN_NORMALIZER_GENERAL_LAUNCHER_MENU_ROUTER_INTEGRATION_GATE_001",
+    "stage":  "E10S_AUDIT_STABLE_LAUNCHER_RUNTIME_MENU_SOURCE_NO_APPLY",
+    "status":  "PASS",
+    "decision":  "WARN_MENU6_IN_FILE_AND_VISIBLE_BLOCK_BUT_RUNTIME_NOT_REFRESHED_OR_DIFFERENT_ENTRYPOINT",
+    "apply_now":  false,
+    "stable_write":  false,
+    "inicio_write":  false,
+    "operator_write":  false,
+    "adapter_write":  false,
+    "git_write":  false,
+    "stable_launcher":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+    "stable_parse":  true,
+    "operator_parse":  true,
+    "adapter_parse":  true,
+    "file_has_menu6":  true,
+    "visible_block_has_menu6":  true,
+    "file_has_route":  true,
+    "operator_has_10":  true,
+    "operator_routes_adapter":  true,
+    "adapter_readonly":  true,
+    "menu6_hits":  [
+                       9,
+                       11
+                   ],
+    "visible_menu_hits":  [
+                              10
+                          ],
+    "read_host_hits":  [
+                           10
+                       ],
+    "route_hits":  [
+                       12,
+                       13
+                   ],
+    "runtime_candidate_count":  2,
+    "best_runtime_candidate":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+    "runtime_same_as_stable":  true,
+    "audit":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-general-launcher-menu-router-integration-gate\\planned\\stable-launcher-runtime-menu-source-audit.latest.md",
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\screen-normalizer-general-launcher-menu-router-integration-gate\\e10s-audit-stable-launcher-runtime-menu-source-no-apply-20260620-192543.json",
+    "next":  "E10T_PREPARE_RUNTIME_TRUE_MENU_REPAIR_OR_RELOAD_DIAGNOSIS_NO_APPLY"
+}

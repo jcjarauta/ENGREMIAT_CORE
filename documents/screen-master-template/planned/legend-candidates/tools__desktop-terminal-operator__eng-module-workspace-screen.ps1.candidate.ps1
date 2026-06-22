@@ -1,0 +1,613 @@
+﻿param(
+  [string]$ProjectPath="",
+  [string]$ModulePath=""
+)
+
+$ErrorActionPreference="Stop"
+
+function W($m,$c="White"){ Write-Host $m -ForegroundColor $c }
+function P(){ [void](Read-Host "Enter") }
+function Now(){ return (Get-Date).ToString("s") }
+function SafeName($s){ return (($s.Trim()) -replace "[^\w\.-]","_") }
+
+function ActiveProject([string]$p){
+  if($p -and (Test-Path $p)){ return $p }
+  $j="C:\ENGREMIAT_CORE\data\desktop-terminal-operator\active-project.json"
+  $t="C:\ENGREMIAT_CORE\data\desktop-terminal-operator\active-project.txt"
+  if(Test-Path $j){
+    $x=Get-Content $j -Raw | ConvertFrom-Json
+    if($x.active_project -and (Test-Path ([string]$x.active_project))){ return [string]$x.active_project }
+  }
+  if(Test-Path $t){
+    $y=(Get-Content $t -Raw).Trim()
+    if(Test-Path $y){ return $y }
+  }
+  throw "active_project_missing"
+}
+
+function ReadJsonOrDefault($path,$default){
+  if(Test-Path $path){
+    try { return Get-Content $path -Raw | ConvertFrom-Json }
+    catch { return $default }
+  }
+  return $default
+}
+
+function SaveJson($path,$obj){
+  $dir=Split-Path $path
+  New-Item -ItemType Directory -Force -Path $dir | Out-Null
+  $obj | ConvertTo-Json -Depth 40 | Set-Content $path -Encoding UTF8
+}
+
+function ReadMod($dir){
+  $mj=Join-Path $dir "module.json"
+  if(Test-Path $mj){
+    try { return Get-Content $mj -Raw | ConvertFrom-Json }
+    catch { return [pscustomobject]@{ id=(Split-Path $dir -Leaf); name=(Split-Path $dir -Leaf); status="INVALID_JSON"; type="module" } }
+  }
+  return [pscustomobject]@{ id=(Split-Path $dir -Leaf); name=(Split-Path $dir -Leaf); status="ACTIVO"; type="module" }
+}
+
+function SaveMod($dir,$j){
+  if(-not $j.id){ $j | Add-Member -NotePropertyName id -NotePropertyValue (Split-Path $dir -Leaf) -Force }
+  if(-not $j.name){ $j | Add-Member -NotePropertyName name -NotePropertyValue (Split-Path $dir -Leaf) -Force }
+  $j | Add-Member -NotePropertyName updated_at -NotePropertyValue (Now) -Force
+  SaveJson (Join-Path $dir "module.json") $j
+}
+
+function EnsureModuleWorkspace($project,$module){
+  if(-not(Test-Path $module)){ throw "module_path_missing=$module" }
+
+  $ws=Join-Path $module "_workspace"
+  $dirs=@(
+    $ws,
+    (Join-Path $ws "tarjetas"),
+    (Join-Path $ws "tareas"),
+    (Join-Path $ws "tipos"),
+    (Join-Path $ws "enlaces"),
+    (Join-Path $ws "periodicidad"),
+    (Join-Path $ws "estado")
+  )
+  foreach($d in $dirs){ New-Item -ItemType Directory -Force -Path $d | Out-Null }
+
+  $meta=Join-Path $ws "module-workspace.json"
+  if(-not(Test-Path $meta)){
+    SaveJson $meta ([pscustomobject]@{
+      module=(Split-Path $module -Leaf)
+      project=$project
+      created_at=Now
+      purpose="Espacio operativo del modulo: tarjetas, tareas, tipos, enlaces y periodicidad."
+      screens=@("tarjetas","tareas","tipos","enlaces","periodicidad","estado")
+    })
+  }
+
+  $defs=@(
+    @{name="tarjetas"; file="tarjetas\tarjetas.json"; kind="card"},
+    @{name="tareas"; file="tareas\tareas.json"; kind="task"},
+    @{name="tipos"; file="tipos\tipos.json"; kind="type"},
+    @{name="enlaces"; file="enlaces\enlaces.json"; kind="link"},
+    @{name="periodicidad"; file="periodicidad\periodicidad.json"; kind="periodicity"},
+    @{name="estado"; file="estado\estado.json"; kind="state"}
+  )
+
+  foreach($d in $defs){
+    $path=Join-Path $ws $d.file
+    if(-not(Test-Path $path)){
+      SaveJson $path ([pscustomobject]@{
+        collection=$d.name
+        kind=$d.kind
+        module=(Split-Path $module -Leaf)
+        project=$project
+        created_at=Now
+        items=@()
+      })
+    }
+  }
+
+  return $ws
+}
+
+function LoadCollection($path,$name,$kind,$module,$project){
+  $default=[pscustomobject]@{
+    collection=$name
+    kind=$kind
+    module=(Split-Path $module -Leaf)
+    project=$project
+    created_at=Now
+    items=@()
+  }
+  $obj=ReadJsonOrDefault $path $default
+  if(-not $obj.items){ $obj | Add-Member -NotePropertyName items -NotePropertyValue @() -Force }
+  return $obj
+}
+
+function SaveCollection($path,$obj){
+  SaveJson $path $obj
+}
+
+function NewItem($collectionName,$kind){
+  Clear-Host
+  W "==== NUEVO ELEMENTO: $collectionName ====" Cyan
+  $title=Read-Host "titulo"
+  if([string]::IsNullOrWhiteSpace($title)){ return $null }
+  $desc=Read-Host "descripcion"
+  $priority=Read-Host "prioridad BAJA/MEDIA/ALTA"
+  if([string]::IsNullOrWhiteSpace($priority)){ $priority="MEDIA" }
+
+  return [pscustomobject]@{
+    id=(SafeName $title)+"_"+(Get-Date -Format yyyyMMddHHmmss)
+    title=$title
+    description=$desc
+    kind=$kind
+    status="ACTIVO"
+    priority=$priority.ToUpper()
+    created_at=Now
+    updated_at=Now
+  }
+}
+
+function ItemMenu($obj,$path,$index){
+  while($true){
+    $item=$obj.items[$index]
+    Clear-Host
+    W "==== ELEMENTO ====" Cyan
+    W ("titulo: {0}" -f $item.title) White
+    W ("tipo: {0} | estado: {1} | prioridad: {2}" -f $item.kind,$item.status,$item.priority) DarkCyan
+    W ("descripcion: {0}" -f $item.description) DarkGray
+    W ("id: {0}" -f $item.id) DarkGray
+    W ""
+    W "e = editar descripcion | p = cambiar prioridad | h = historico | r = reactivar | x = borrar | b = atras" Cyan
+    $cmd=Read-Host "ITEM"
+    if($cmd -eq "b"){ return }
+    if($cmd -eq "e"){
+      $item.description=Read-Host "nueva_descripcion"
+      $item.updated_at=Now
+      $obj.items[$index]=$item
+      SaveCollection $path $obj
+      continue
+    }
+    if($cmd -eq "p"){
+      $item.priority=(Read-Host "prioridad BAJA/MEDIA/ALTA").ToUpper()
+      $item.updated_at=Now
+      $obj.items[$index]=$item
+      SaveCollection $path $obj
+      continue
+    }
+    if($cmd -eq "h"){
+      $item.status="HISTORICO"
+      $item.updated_at=Now
+      $obj.items[$index]=$item
+      SaveCollection $path $obj
+      return
+    }
+    if($cmd -eq "r"){
+      $item.status="ACTIVO"
+      $item.updated_at=Now
+      $obj.items[$index]=$item
+      SaveCollection $path $obj
+      return
+    }
+    if($cmd -eq "x"){
+      W "s = confirmar borrado | b = cancelar" Yellow
+      $c=Read-Host "CONFIRMAR"
+      if($c -eq "s" -or $c -eq "S"){
+        $list=@()
+        for($i=0;$i -lt $obj.items.Count;$i++){
+          if($i -ne $index){ $list += $obj.items[$i] }
+        }
+        $obj.items=$list
+        SaveCollection $path $obj
+        return
+      }
+    }
+  }
+}
+
+function CollectionScreen($project,$module,$ws,$name,$kind,$relPath){
+  $path=Join-Path $ws $relPath
+  $view="ACTIVOS"
+  $query=""
+
+  while($true){
+    $obj=LoadCollection $path $name $kind $module $project
+    $items=@($obj.items)
+
+    if($query){
+      $items=@($items | Where-Object { $_.title -like "*$query*" -or $_.description -like "*$query*" })
+    }
+
+    if($view -eq "ACTIVOS"){ $items=@($items | Where-Object { $_.status -ne "HISTORICO" }) }
+    elseif($view -eq "HISTORICOS"){ $items=@($items | Where-Object { $_.status -eq "HISTORICO" }) }
+
+    Clear-Host
+    W "==== $($name.ToUpper()) DEL MODULO ====" Cyan
+    W ("Modulo: {0}" -f (Split-Path $module -Leaf)) White
+    W ("VISTA: {0} | BUSQUEDA: {1}" -f $view,$(if($query){$query}else{"-"})) Magenta
+Write-Host "[b/q] salir/volver | m = mantenimiento | ? = ayuda | Enter = refrescar" -ForegroundColor DarkGray
+    W ""
+
+    if(-not $items){ W "No hay elementos en esta vista." DarkYellow }
+    else{
+      W ("{0,-4} {1,-38} {2,-10} {3,-8} {4}" -f "N","TITULO","ESTADO","PRIO","DESCRIPCION") DarkGray
+      W ("{0,-4} {1,-38} {2,-10} {3,-8} {4}" -f "--","------","------","----","-----------") DarkGray
+      for($i=0;$i -lt $items.Count;$i++){
+        $color=if($items[$i].status -eq "HISTORICO"){"DarkYellow"}elseif($items[$i].priority -eq "ALTA"){"Yellow"}else{"Green"}
+        W ("[{0,-2}] {1,-38} {2,-10} {3,-8} {4}" -f ($i+1),$items[$i].title,$items[$i].status,$items[$i].priority,$items[$i].description) $color
+      }
+    }
+
+    W ""
+    $cmd=Read-Host $name.ToUpper()
+    if([string]::IsNullOrWhiteSpace($cmd)){ continue }
+    if($cmd -eq "b"){ return }
+    if($cmd -eq "a"){ $view="ACTIVOS"; continue }
+    if($cmd -eq "h"){ $view="HISTORICOS"; continue }
+    if($cmd -eq "t"){ $view="TODOS"; continue }
+    if($cmd -eq "q"){ $query=Read-Host "buscar"; continue }
+    if($cmd -eq "limpiar"){ $query=""; continue }
+    if($cmd -eq "o"){ Start-Process explorer.exe (Split-Path $path); continue }
+    if($cmd -eq "n"){
+      $new=NewItem $name $kind
+      if($new){
+        $obj=LoadCollection $path $name $kind $module $project
+        $arr=@($obj.items)
+        $arr += $new
+        $obj.items=$arr
+        SaveCollection $path $obj
+      }
+      continue
+    }
+    if($cmd -as [int]){
+      $ix=[int]$cmd-1
+      if($ix -ge 0 -and $ix -lt $items.Count){
+        $obj=LoadCollection $path $name $kind $module $project
+        $realIndex=-1
+        for($j=0;$j -lt $obj.items.Count;$j++){
+          if($obj.items[$j].id -eq $items[$ix].id){ $realIndex=$j; break }
+        }
+        if($realIndex -ge 0){ ItemMenu $obj $path $realIndex }
+      }
+    }
+  }
+}
+
+function ModuleStateScreen($project,$module,$ws){
+  while($true){
+    $j=ReadMod $module
+    $files=@(Get-ChildItem $module -File -Recurse -ErrorAction SilentlyContinue)
+    $dirs=@(Get-ChildItem $module -Directory -Recurse -ErrorAction SilentlyContinue)
+    $cards=ReadJsonOrDefault (Join-Path $ws "tarjetas\tarjetas.json") ([pscustomobject]@{items=@()})
+    $tasks=ReadJsonOrDefault (Join-Path $ws "tareas\tareas.json") ([pscustomobject]@{items=@()})
+    $types=ReadJsonOrDefault (Join-Path $ws "tipos\tipos.json") ([pscustomobject]@{items=@()})
+    $links=ReadJsonOrDefault (Join-Path $ws "enlaces\enlaces.json") ([pscustomobject]@{items=@()})
+    $periods=ReadJsonOrDefault (Join-Path $ws "periodicidad\periodicidad.json") ([pscustomobject]@{items=@()})
+
+    Clear-Host
+    W "==== ESTADO GLOBAL DEL MODULO ====" Cyan
+    W ("Modulo: {0}" -f (Split-Path $module -Leaf)) White
+    W ("Proyecto: {0}" -f (Split-Path $project -Leaf)) DarkCyan
+    W ("Estado module.json: {0}" -f $j.status) Green
+    W ("Contenido: {0} archivos | {1} carpetas" -f $files.Count,$dirs.Count) DarkCyan
+    W ""
+    W ("Tarjetas: {0} | Tareas: {1} | Tipos: {2} | Enlaces: {3} | Periodicidad: {4}" -f @($cards.items).Count,@($tasks.items).Count,@($types.items).Count,@($links.items).Count,@($periods.items).Count) Yellow
+    W ""
+    W "o = abrir modulo | w = abrir workspace | j = module.json | b = atras" Cyan
+    $cmd=Read-Host "ESTADO_MODULO"
+    if($cmd -eq "b"){ return }
+    if($cmd -eq "o"){ Start-Process explorer.exe $module; continue }
+    if($cmd -eq "w"){ Start-Process explorer.exe $ws; continue }
+    if($cmd -eq "j"){ Clear-Host; Get-Content (Join-Path $module "module.json") -Raw | Write-Host; P; continue }
+  }
+}
+
+function CountActiveItems($obj){
+  if(-not $obj.items){ return 0 }
+  return @($obj.items | Where-Object { $_.status -ne "HISTORICO" }).Count
+}
+
+function CountHistoricItems($obj){
+  if(-not $obj.items){ return 0 }
+  return @($obj.items | Where-Object { $_.status -eq "HISTORICO" }).Count
+}
+
+function ModuleWorkspaceStats($project,$module,$ws){
+  $cards=ReadJsonOrDefault (Join-Path $ws "tarjetas\tarjetas.json") ([pscustomobject]@{items=@()})
+  $tasks=ReadJsonOrDefault (Join-Path $ws "tareas\tareas.json") ([pscustomobject]@{items=@()})
+  $types=ReadJsonOrDefault (Join-Path $ws "tipos\tipos.json") ([pscustomobject]@{items=@()})
+  $links=ReadJsonOrDefault (Join-Path $ws "enlaces\enlaces.json") ([pscustomobject]@{items=@()})
+  $periods=ReadJsonOrDefault (Join-Path $ws "periodicidad\periodicidad.json") ([pscustomobject]@{items=@()})
+
+  $activeCards=CountActiveItems $cards
+  $activeTasks=CountActiveItems $tasks
+  $activeTypes=CountActiveItems $types
+  $activeLinks=CountActiveItems $links
+  $activePeriods=CountActiveItems $periods
+
+  $score=0
+  if($activeCards -gt 0){ $score+=20 }
+  if($activeTasks -gt 0){ $score+=25 }
+  if($activeTypes -gt 0){ $score+=15 }
+  if($activeLinks -gt 0){ $score+=15 }
+  if($activePeriods -gt 0){ $score+=15 }
+
+  $next="crear primera tarjeta"
+  if($activeCards -gt 0 -and $activeTasks -eq 0){ $next="crear tareas vinculadas a tarjetas" }
+  elseif($activeTasks -gt 0 -and $activeTypes -eq 0){ $next="definir tipos de trabajo" }
+  elseif($activeTypes -gt 0 -and $activeLinks -eq 0){ $next="crear enlaces internos/externos" }
+  elseif($activeLinks -gt 0 -and $activePeriods -eq 0){ $next="definir periodicidad/revision" }
+  elseif($score -ge 90){ $next="modulo listo para operar y revisar" }
+
+  return [pscustomobject]@{
+    cards_active=$activeCards
+    cards_historic=(CountHistoricItems $cards)
+    tasks_active=$activeTasks
+    tasks_historic=(CountHistoricItems $tasks)
+    types_active=$activeTypes
+    links_active=$activeLinks
+    periods_active=$activePeriods
+    readiness=$score
+    next=$next
+  }
+}
+function SelectModulePathForWorkspace($project){
+  while($true){
+    $candidates=@()
+
+    $projectMods=Join-Path $project "MODULOS"
+    if(Test-Path $projectMods){
+      foreach($m in (Get-ChildItem $projectMods -Directory -ErrorAction SilentlyContinue | Sort-Object Name)){
+        $st="-"
+        try { $st=[string](ReadMod $m.FullName).status } catch { $st="UNKNOWN" }
+        $candidates += [pscustomobject]@{ source="PROYECTO"; dir=$m; status=$st }
+      }
+    }
+
+    $libraryRoots=@(
+      @{root="C:\ENGREMIAT_CORE\library\modules"; source="BIBLIOTECA"},
+      @{root="C:\ENGREMIAT_CORE\library\modules_historico"; source="BIB_HIST"}
+    )
+
+    foreach($lr in $libraryRoots){
+      if(Test-Path $lr.root){
+        foreach($m in (Get-ChildItem $lr.root -Directory -ErrorAction SilentlyContinue | Sort-Object Name)){
+          $st="-"
+          try { $st=[string](ReadMod $m.FullName).status } catch { $st="UNKNOWN" }
+          if($lr.source -eq "BIB_HIST"){ $st="HISTORICO" }
+          $candidates += [pscustomobject]@{ source=$lr.source; dir=$m; status=$st }
+        }
+      }
+    }
+
+    Clear-Host
+    W "==== SELECCIONAR MODULO PARA WORKSPACE ====" Cyan
+    W ("Proyecto activo: {0}" -f (Split-Path $project -Leaf)) White
+    W "numero = abrir workspace del modulo | b = atras | Enter = refrescar" Cyan
+    W ""
+
+    if(-not $candidates){
+      W "No hay modulos encontrados en proyecto ni biblioteca." Yellow
+      P
+      return ""
+    }
+
+    W ("{0,-4} {1,-12} {2,-44} {3}" -f "N","ORIGEN","MODULO","ESTADO") DarkGray
+    W ("{0,-4} {1,-12} {2,-44} {3}" -f "--","------","------","------") DarkGray
+
+    for($i=0;$i -lt $candidates.Count;$i++){
+      $color="Cyan"
+      if($candidates[$i].source -eq "PROYECTO"){ $color="Green" }
+      elseif($candidates[$i].source -eq "BIB_HIST"){ $color="DarkYellow" }
+      W ("[{0,-2}] {1,-12} {2,-44} {3}" -f ($i+1),$candidates[$i].source,$candidates[$i].dir.Name,$candidates[$i].status) $color
+    }
+
+    W ""
+    $cmd=Read-Host "MODULO_WORKSPACE_SELECTOR"
+    if([string]::IsNullOrWhiteSpace($cmd)){ continue }
+    if($cmd -eq "b"){ return "" }
+    if($cmd -as [int]){
+      $ix=[int]$cmd-1
+      if($ix -ge 0 -and $ix -lt $candidates.Count){
+        return $candidates[$ix].dir.FullName
+      }
+    }
+  }
+}
+
+
+
+
+
+function ReadinessBar($score){
+  $total=20
+  $filled=[Math]::Floor(($score/100)*$total)
+  if($filled -lt 0){ $filled=0 }
+  if($filled -gt $total){ $filled=$total }
+  $empty=$total-$filled
+  return ("[" + ("#" * $filled) + ("-" * $empty) + "]")
+}
+
+function SectionState($count,$label){
+  if($count -gt 0){ return [pscustomobject]@{ label=$label; state="OK"; color="Green"; note="con datos" } }
+  return [pscustomobject]@{ label=$label; state="PENDIENTE"; color="Yellow"; note="crear primero" }
+}
+
+function ShowSectionHealth($stats){
+  $sections=@(
+    (SectionState $stats.cards_active "tarjetas"),
+    (SectionState $stats.tasks_active "tareas"),
+    (SectionState $stats.types_active "tipos"),
+    (SectionState $stats.links_active "enlaces"),
+    (SectionState $stats.periods_active "periodicidad")
+  )
+  foreach($s in $sections){
+    W (" - {0,-13} {1,-10} {2}" -f $s.label,$s.state,$s.note) $s.color
+  }
+}
+
+function ShowRecommendedPath($stats){
+  W "RUTA RECOMENDADA" Yellow
+  if($stats.cards_active -eq 0){
+    W "  1) ct crear tarjeta inicial" White
+    W "  2) convertir tarjeta en tareas" DarkGray
+    W "  3) definir tipos/enlaces/periodicidad" DarkGray
+    return
+  }
+  if($stats.tasks_active -eq 0){
+    W "  1) tt crear tareas vinculadas a tarjetas" White
+    W "  2) revisar tipos de trabajo" DarkGray
+    W "  3) programar periodicidad" DarkGray
+    return
+  }
+  if($stats.types_active -eq 0){
+    W "  1) abrir tipos" White
+    W "  2) clasificar tareas humanas/automatizables/asistidas" DarkGray
+    W "  3) revisar enlaces" DarkGray
+    return
+  }
+  if($stats.links_active -eq 0){
+    W "  1) abrir enlaces" White
+    W "  2) vincular proyecto, modulo, evidencias y recursos" DarkGray
+    W "  3) revisar periodicidad" DarkGray
+    return
+  }
+  if($stats.periods_active -eq 0){
+    W "  1) abrir periodicidad" White
+    W "  2) definir revision diaria/semanal" DarkGray
+    W "  3) operar modulo" DarkGray
+    return
+  }
+  W "  1) revisar tarjetas activas" Green
+  W "  2) ejecutar/probar tareas prioritarias" Green
+  W "  3) historizar o desactivar ruido" Green
+}
+
+function QuickCreateInCollection($project,$module,$ws,$name,$kind,$relPath){
+  $path=Join-Path $ws $relPath
+  $obj=LoadCollection $path $name $kind $module $project
+  $new=NewItem $name $kind
+  if($new){
+    $arr=@($obj.items)
+    $arr += $new
+    $obj.items=$arr
+    SaveCollection $path $obj
+  }
+}
+function Main($project,$module){
+  if(-not(Test-Path $module)){ throw "module_path_missing=$module" }
+  $ws=EnsureModuleWorkspace $project $module
+
+  while($true){
+    $j=ReadMod $module
+    $stats=ModuleWorkspaceStats $project $module $ws
+    $bar=ReadinessBar $stats.readiness
+
+    Clear-Host
+    W "==== PANEL OPERATIVO DEL MODULO ====" Cyan
+    W ("Modulo: {0} | Estado: {1}" -f (Split-Path $module -Leaf),$j.status) White
+    W ("Proyecto activo: {0}" -f (Split-Path $project -Leaf)) DarkCyan
+    W ("Readiness: {0}% {1}" -f $stats.readiness,$bar) $(if($stats.readiness -ge 80){"Green"}elseif($stats.readiness -ge 50){"Yellow"}else{"Red"})
+    W ("Siguiente recomendado: {0}" -f $stats.next) Yellow
+    W ""
+
+    W "SALUD DEL MODULO" Cyan
+    ShowSectionHealth $stats
+    W ""
+
+    W "RESUMEN OPERATIVO" Cyan
+    W ("Tarjetas:     {0} activas / {1} historicas" -f $stats.cards_active,$stats.cards_historic) White
+    W ("Tareas:       {0} activas / {1} historicas" -f $stats.tasks_active,$stats.tasks_historic) White
+    W ("Tipos:        {0} activos" -f $stats.types_active) White
+    W ("Enlaces:      {0} activos" -f $stats.links_active) White
+    W ("Periodicidad: {0} reglas activas" -f $stats.periods_active) White
+    W ""
+
+    ShowRecommendedPath $stats
+    W ""
+
+    W "SECCIONES" Yellow
+    W "1 = estado global / diagnostico" White
+    W "2 = tarjetas" White
+    W "3 = tareas" White
+    W "4 = tipos" White
+    W "5 = enlaces" White
+    W ""
+
+    W "ACCIONES RAPIDAS" Yellow
+    W "ct = crear tarjeta | tt = crear tarea | q = buscar global" White
+    W "ot = abrir tarjetas | oa = abrir tareas | ow = abrir workspace" White
+    W ""
+
+    W "CONTROL" Yellow
+    W "o = abrir modulo | w = abrir workspace | j = module.json | b = atras | Enter = refrescar" White
+    W ""
+
+    $cmd=Read-Host "MODULO_WORKSPACE"
+
+    if([string]::IsNullOrWhiteSpace($cmd)){ continue }
+    if($cmd -eq "b"){ return }
+    if($cmd -eq "o"){ Start-Process explorer.exe $module; continue }
+    if($cmd -eq "w" -or $cmd -eq "ow"){ Start-Process explorer.exe $ws; continue }
+    if($cmd -eq "ot"){ Start-Process explorer.exe (Join-Path $ws "tarjetas"); continue }
+    if($cmd -eq "oa"){ Start-Process explorer.exe (Join-Path $ws "tareas"); continue }
+    if($cmd -eq "j"){ Clear-Host; Get-Content (Join-Path $module "module.json") -Raw | Write-Host; P; continue }
+
+    if($cmd -eq "1"){ ModuleStateScreen $project $module $ws; continue }
+    if($cmd -eq "2"){ & powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot "eng-module-cards-screen.ps1") -ProjectPath $project -ModulePath $module; continue }
+    if($cmd -eq "3"){ CollectionScreen $project $module $ws "tareas" "task" "tareas\tareas.json"; continue }
+    if($cmd -eq "4"){ CollectionScreen $project $module $ws "tipos" "type" "tipos\tipos.json"; continue }
+    if($cmd -eq "5"){ CollectionScreen $project $module $ws "enlaces" "link" "enlaces\enlaces.json"; continue }
+
+    if($cmd -eq "ct"){
+      QuickCreateInCollection $project $module $ws "tarjetas" "card" "tarjetas\tarjetas.json"
+      continue
+    }
+
+    if($cmd -eq "tt"){
+      QuickCreateInCollection $project $module $ws "tareas" "task" "tareas\tareas.json"
+      continue
+    }
+
+    if($cmd -eq "q"){
+      Clear-Host
+      W "==== BUSQUEDA GLOBAL DEL MODULO ====" Cyan
+      $query=Read-Host "buscar"
+      if([string]::IsNullOrWhiteSpace($query)){ continue }
+      $collections=@(
+        @{name="tarjetas"; path="tarjetas\tarjetas.json"},
+        @{name="tareas"; path="tareas\tareas.json"},
+        @{name="tipos"; path="tipos\tipos.json"},
+        @{name="enlaces"; path="enlaces\enlaces.json"},
+        @{name="periodicidad"; path="periodicidad\periodicidad.json"}
+      )
+      $hitsTotal=0
+      foreach($c in $collections){
+        $obj=ReadJsonOrDefault (Join-Path $ws $c.path) ([pscustomobject]@{items=@()})
+        $hits=@($obj.items | Where-Object { $_.title -like "*$query*" -or $_.description -like "*$query*" })
+        if($hits.Count -gt 0){
+          $hitsTotal += $hits.Count
+          W "" White
+          W ("-- {0} --" -f $c.name.ToUpper()) Cyan
+          foreach($h in $hits){ W (" - {0} [{1}] {2}" -f $h.title,$h.status,$h.description) White }
+        }
+      }
+      if($hitsTotal -eq 0){ W "sin_resultados" Yellow }
+      P
+      continue
+    }
+  }
+}
+
+
+
+
+
+$ProjectPath=ActiveProject $ProjectPath
+if([string]::IsNullOrWhiteSpace($ModulePath)){ $ModulePath=SelectModulePathForWorkspace $ProjectPath; if([string]::IsNullOrWhiteSpace($ModulePath)){ return } }
+Main $ProjectPath $ModulePath
+
+
+
+
+
+
+

@@ -1,0 +1,76 @@
+{
+    "schema":  "engremiat.subscreen_routing_adapter_static_smoke.v1",
+    "package_id":  "ENGREMIAT_SCREEN_NORMALIZER_SUBSCREEN_ROUTING_ADAPTER_001",
+    "stage":  "E02_STATIC_SMOKE_SUBSCREEN_ROUTING_ADAPTER_NO_EXECUTE",
+    "created_at":  "2026-06-20T17:28:57",
+    "status":  "PASS",
+    "mode":  "STATIC_SMOKE_NO_EXECUTE",
+    "adapter":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-subscreen-routing-adapter\\adapter\\ENGREMIAT-SUBSCREEN-ROUTING-ADAPTER.isolated.ps1",
+    "adapter_sha256":  "B3443218868C75753D423CDFC342F90A80F23A1E30CD02C2060BF6DCE8C2D737",
+    "checks":  {
+                   "adapter_parse_ok":  true,
+                   "has_title":  true,
+                   "has_route":  true,
+                   "has_isolated_state":  true,
+                   "has_screen_list":  true,
+                   "has_enter_refresh":  true,
+                   "has_help":  true,
+                   "has_exit":  true,
+                   "has_subscreen_execution":  true,
+                   "has_no_launcher_patch":  true,
+                   "blocks_launcher_write":  true,
+                   "screens_count_ok":  true,
+                   "candidate_parses_ok":  true
+               },
+    "failed_checks":  [
+
+                      ],
+    "screens_count":  6,
+    "candidate_checks":  [
+                             {
+                                 "screen_id":  "PROYECTOS",
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\PROYECTOS.candidate.isolated.ps1",
+                                 "parse_ok":  true,
+                                 "sha256":  "F56F1F3C73F22CFFD5F6E6E5FFF1CA87EA97B8282B69CB656B13A1E013E7F465"
+                             },
+                             {
+                                 "screen_id":  "MEMORIA_DOCUMENTACION",
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\MEMORIA_DOCUMENTACION.candidate.isolated.ps1",
+                                 "parse_ok":  true,
+                                 "sha256":  "CA09A41904F9C0FB923457DFC7BBEE8B1A7C05CD8668526915A3FED5F07A0C24"
+                             },
+                             {
+                                 "screen_id":  "CONTROL_ESTADO",
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\CONTROL_ESTADO.candidate.isolated.ps1",
+                                 "parse_ok":  true,
+                                 "sha256":  "72E585DAC556CBC0B903F1B109814250F56E3CEC44D072C8997F601BD0049FEB"
+                             },
+                             {
+                                 "screen_id":  "LAUNCHERS_CONFIGURACION",
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\LAUNCHERS_CONFIGURACION.candidate.isolated.ps1",
+                                 "parse_ok":  true,
+                                 "sha256":  "58608C17B1BCFDB421A6CF2122DA9F1CB6D79CFB2C92242217B8B6E294618F59"
+                             },
+                             {
+                                 "screen_id":  "OPERADOR_WORKERS",
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\OPERADOR_WORKERS.candidate.isolated.ps1",
+                                 "parse_ok":  true,
+                                 "sha256":  "25BFF4B6AD3252F4CC180F094D8F81732AA865007B5FEB0CF8471D947FFD9E35"
+                             },
+                             {
+                                 "screen_id":  "TARJETAS",
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\TARJETAS.candidate.isolated.ps1",
+                                 "parse_ok":  true,
+                                 "sha256":  "ADBACC220A4D00CE025211FD7436F08698913D42F1B6465DB0F731EAAAE6AD92"
+                             }
+                         ],
+    "launcher_general_untouched":  true,
+    "patch_existing_launchers":  false,
+    "registry_write":  false,
+    "migration_applied":  false,
+    "worker":  false,
+    "browser":  false,
+    "network":  false,
+    "git":  false,
+    "next":  "E03_PREPARE_MANUAL_VISUAL_SMOKE_FOR_ADAPTER"
+}

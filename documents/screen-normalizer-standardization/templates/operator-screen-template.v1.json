@@ -1,0 +1,75 @@
+﻿{
+    "schema":  "engremiat.operator_screen_template.v1",
+    "package_id":  "ENGREMIAT_SCREEN_NORMALIZER_STANDARDIZATION_001",
+    "created_at":  "2026-06-20T16:34:47",
+    "status":  "PASS",
+    "required_fields":  [
+                            "screen_id",
+                            "parent",
+                            "route",
+                            "title",
+                            "role",
+                            "description",
+                            "status",
+                            "principle",
+                            "commands",
+                            "actions",
+                            "children",
+                            "source",
+                            "risk",
+                            "requires_human_gate"
+                        ],
+    "default_commands":  {
+                             "enter":  "refrescar/redibujar pantalla",
+                             "question":  "ayuda contextual",
+                             "b":  "volver si aplica",
+                             "q":  "salir si aplica",
+                             "m":  "crear tarjeta de mantenimiento humano",
+                             "e":  "estado compacto si aplica",
+                             "s":  "siguiente recomendado si aplica"
+                         },
+    "ui_sections":  [
+                        "HEADER",
+                        "STATUS",
+                        "DESCRIPTION",
+                        "OPTIONS",
+                        "COMMANDS",
+                        "PROMPT",
+                        "MESSAGES",
+                        "EVIDENCE"
+                    ],
+    "standard_header":  [
+                            "Titulo",
+                            "Ruta",
+                            "Rol",
+                            "Estado",
+                            "Principio"
+                        ],
+    "standard_action_fields":  [
+                                   "id",
+                                   "label",
+                                   "type",
+                                   "target_screen",
+                                   "target_script",
+                                   "risk",
+                                   "requires_auth",
+                                   "description",
+                                   "evidence_output"
+                               ],
+    "maintenance_contract":  {
+                                 "visible_on_all_screens":  true,
+                                 "handler":  "Invoke-EngremiatMaintenanceFlow",
+                                 "card_fields":  [
+                                                     "source_screen",
+                                                     "route",
+                                                     "title",
+                                                     "dimension",
+                                                     "severity",
+                                                     "observation",
+                                                     "suggested_action",
+                                                     "status",
+                                                     "created_at"
+                                                 ],
+                                 "default_status":  "PENDING_REVIEW"
+                             }
+}

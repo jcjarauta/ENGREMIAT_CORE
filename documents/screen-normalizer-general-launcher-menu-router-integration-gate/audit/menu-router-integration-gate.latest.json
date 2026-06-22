@@ -1,0 +1,70 @@
+{
+    "schema":  "engremiat.general_launcher_menu_router_integration_gate.v1",
+    "package_id":  "ENGREMIAT_SCREEN_NORMALIZER_GENERAL_LAUNCHER_MENU_ROUTER_INTEGRATION_GATE_001",
+    "stage":  "E01_AUDIT_MENU_ROUTER_PATTERN_AND_PREPARE_MINIMAL_DIFF_NO_APPLY",
+    "created_at":  "2026-06-20T18:50:28",
+    "status":  "PASS",
+    "mode":  "READONLY_PLANNED_NO_APPLY",
+    "launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1",
+    "launcher_sha256":  "D0E71B7CD08317AAE25EB6A39DCB3EB674F7EB5C8FC6C42693C360026C0D9EB8",
+    "launcher_parse_ok":  true,
+    "adapter":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-subscreen-routing-adapter\\adapter\\ENGREMIAT-SUBSCREEN-ROUTING-ADAPTER.isolated.ps1",
+    "adapter_sha256":  "1D92C30A084217126546DD4D6EFA221AED3D99B587A2DA8A307B5639B053BE61",
+    "adapter_navigation_pass":  "6/6",
+    "menu_rows_count":  0,
+    "router_rows_count":  0,
+    "readhost_rows_count":  2,
+    "exit_rows_count":  1,
+    "proposed_option_number":  9,
+    "menu_anchor":  null,
+    "switch_start":  null,
+    "router_anchor":  null,
+    "exit_anchor":  {
+                        "line":  104,
+                        "text":  "    W \"q = salir | Enter = refrescar\" Cyan"
+                    },
+    "proposed_menu_line":  "Write-Host \u0027 [9] Adapter subpantallas normalizadas\u0027",
+    "proposed_route_block":  [
+                                 "    \u00279\u0027 {",
+                                 "      \u0026 powershell -NoProfile -ExecutionPolicy Bypass -File \u0027C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-subscreen-routing-adapter\\adapter\\ENGREMIAT-SUBSCREEN-ROUTING-ADAPTER.isolated.ps1\u0027",
+                                 "      continue",
+                                 "    }"
+                             ],
+    "planned_launcher":  null,
+    "planned_launcher_latest":  null,
+    "planned_parse_ok":  false,
+    "planned_sha256":  null,
+    "diff_md":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-general-launcher-menu-router-integration-gate\\planned\\menu-router-integration-diff.latest.md",
+    "decision":  "NO_GO_PATTERN_NOT_CLEAR",
+    "authorization_required":  false,
+    "authorization_status":  "NO_GO",
+    "required_phrase":  null,
+    "backup_plan":  {
+                        "backup_before_write":  true,
+                        "backup_dir":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-general-launcher-menu-router-integration-gate\\backup",
+                        "scope":  "ONLY_ENGREMIAT_LAUNCHER_ACTUAL"
+                    },
+    "rollback_plan":  {
+                          "restore_backup_on_parse_fail":  true,
+                          "restore_backup_on_smoke_fail":  true,
+                          "scope":  "ONLY_ENGREMIAT_LAUNCHER_ACTUAL"
+                      },
+    "smoke_plan":  [
+                       "parse launcher after apply",
+                       "open launcher manually",
+                       "confirm option appears",
+                       "choose adapter option",
+                       "confirm adapter opens",
+                       "exit adapter",
+                       "return launcher stable"
+                   ],
+    "apply_now":  false,
+    "patch_existing_launchers":  false,
+    "registry_write":  false,
+    "migration_applied":  false,
+    "worker":  false,
+    "browser":  false,
+    "network":  false,
+    "git":  false,
+    "next":  "E02_CLOSE_NO_APPLY_PATTERN_REVIEW"
+}

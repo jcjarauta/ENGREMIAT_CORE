@@ -1,0 +1,35 @@
+﻿{
+    "package_id":  "ENGREMIAT_SCREEN_MASTER_TEMPLATE_001",
+    "stage":  "E23C_PREPARE_PROJECTS_CENTER_ROUTER_REPAIR_NO_APPLY",
+    "status":  "PASS",
+    "decision":  "GO_PROJECTS_CENTER_ROUTER_REPAIR_READY_NO_APPLY",
+    "runtime_write":  false,
+    "git_write":  false,
+    "target":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1",
+    "selected_candidate":  "C:\\ENGREMIAT_CORE\\documents\\screen-master-template\\planned\\projects-center.router-repair-candidate.latest.ps1",
+    "mode":  "ASSIGNMENT_READHOST_REPAIRED",
+    "insertions":  1,
+    "checks":  {
+                   "source_parse":  true,
+                   "candidate_parse":  true,
+                   "insertions":  1,
+                   "mode_safe":  true,
+                   "has_functions":  true,
+                   "has_repair_marker":  true,
+                   "has_no_old_router_marker":  true,
+                   "has_m_router":  true,
+                   "has_help_router":  true,
+                   "has_q_router":  true,
+                   "has_common_menu":  true
+               },
+    "old_errors":  [
+
+                   ],
+    "new_errors":  {
+
+                   },
+    "summary":  "C:\\ENGREMIAT_CORE\\documents\\screen-master-template\\planned\\projects-center-router-repair-no-apply.latest.md",
+    "report":  "C:\\ENGREMIAT_CORE\\reports\\screen-master-template\\e23c-prepare-projects-center-router-repair-no-apply-20260620-210045.json",
+    "gate":  "AUTORIZO_REPARAR_ROUTER_PROJECTS_CENTER_M_HELP_Q",
+    "next":  "E24_APPLY_PROJECTS_CENTER_ROUTER_REPAIR_WITH_GATE"
+}

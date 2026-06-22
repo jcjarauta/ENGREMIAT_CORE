@@ -1,0 +1,117 @@
+﻿{
+    "schema":  "engremiat.launcher_runtime_ui_command_contract.v1",
+    "package_id":  "ENGREMIAT_LAUNCHER_RUNTIME_UI_INTEGRATION_001",
+    "stage":  "E02_DEFINE_LAUNCHER_RUNTIME_UI_COMMAND_CONTRACT",
+    "created_at":  "2026-06-20T15:10:13",
+    "status":  "READY",
+    "mode":  "COMMAND_CONTRACT_ONLY_NO_UI_MUTATION",
+    "source_inventory":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\inventory\\launcher-ui-runtime-integration-inventory.latest.json",
+    "contract_id":  "LAUNCHER_RUNTIME_UI_COMMAND_CONTRACT_V1",
+    "purpose":  "Define visible launcher commands for canonical action runtime without mutating launcher UI yet",
+    "entry_surface":  {
+                          "preferred_menu":  "launcher_actions_menu",
+                          "label":  "ACCIONES / RUNTIME",
+                          "visibility":  "visible_in_launcher_after_adapter_validation",
+                          "refresh_rule":  "Enter vacío redibuja pantalla",
+                          "help_rule":  "? muestra ayuda contextual",
+                          "commands_rule":  "comandos muestra menú actual"
+                      },
+    "commands":  [
+                     {
+                         "command":  "acciones",
+                         "alias":  [
+                                       "a_runtime",
+                                       "runtime"
+                                   ],
+                         "description":  "Abrir panel de acciones canónicas disponibles",
+                         "risk":  "LOW",
+                         "requires_auth":  false,
+                         "operation":  "list_actions_readonly"
+                     },
+                     {
+                         "command":  "preview",
+                         "alias":  [
+                                       "ver",
+                                       "detalle"
+                                   ],
+                         "description":  "Mostrar preview dry-run de una acción",
+                         "risk":  "LOW",
+                         "requires_auth":  false,
+                         "operation":  "show_dry_run_preview_readonly"
+                     },
+                     {
+                         "command":  "aprobar",
+                         "alias":  [
+                                       "approve",
+                                       "gate"
+                                   ],
+                         "description":  "Preparar/aplicar mutación de gate con autorización explícita",
+                         "risk":  "HIGH",
+                         "requires_auth":  true,
+                         "auth_env":  "ENGREMIAT_CANONICAL_ACTION_MUTATION_AUTH",
+                         "operation":  "apply_gate_mutation_explicit_auth_only"
+                     },
+                     {
+                         "command":  "ejecutar",
+                         "alias":  [
+                                       "run"
+                                   ],
+                         "description":  "Ejecutar acción local aprobada con autorización explícita",
+                         "risk":  "HIGH",
+                         "requires_auth":  true,
+                         "auth_env":  "ENGREMIAT_CANONICAL_ACTION_RUN_AUTH",
+                         "operation":  "run_approved_action_explicit_auth_only"
+                     },
+                     {
+                         "command":  "estado",
+                         "alias":  [
+                                       "status",
+                                       "e"
+                                   ],
+                         "description":  "Mostrar estado canónico, gate, unlock y ejecución",
+                         "risk":  "LOW",
+                         "requires_auth":  false,
+                         "operation":  "show_runtime_state_readonly"
+                     },
+                     {
+                         "command":  "volver",
+                         "alias":  [
+                                       "b",
+                                       "back"
+                                   ],
+                         "description":  "Volver al menú anterior",
+                         "risk":  "LOW",
+                         "requires_auth":  false,
+                         "operation":  "return_previous_menu"
+                     }
+                 ],
+    "screens":  {
+                    "actions_list":  "Lista acciones con estado gate/unlock/execution",
+                    "action_detail":  "Detalle acción + preview + comandos disponibles",
+                    "authorization_gate":  "Pantalla NO_GO/pendiente autorización",
+                    "execution_result":  "Resultado ejecución local y evidencia",
+                    "state_view":  "Estado compacto runtime"
+                },
+    "adapter_policy":  {
+                           "first_step":  "create_adapter_no_ui_mutation",
+                           "ui_mutation_allowed_after":  "adapter_smoke_pass",
+                           "blocked_until_validated":  [
+                                                           "modificar_launcher_real",
+                                                           "ejecutar_worker",
+                                                           "abrir_browser",
+                                                           "git_commit",
+                                                           "git_push",
+                                                           "network"
+                                                       ]
+                       },
+    "safety":  {
+                   "real_execution":  false,
+                   "ui_mutated":  false,
+                   "worker":  false,
+                   "browser":  false,
+                   "network":  false,
+                   "git":  false,
+                   "contract_only":  true
+               },
+    "next":  "E03_CREATE_LAUNCHER_RUNTIME_ADAPTER_NO_UI_MUTATION"
+}
