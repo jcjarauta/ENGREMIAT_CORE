@@ -1,0 +1,53 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V1_ACTION_GATES_001",
+    "stage":  "E11_VALUE_EXTEND_ACTION_GATES_TO_DATA_INTAKE_OR_PUSH",
+    "status":  "PASS",
+    "created_at":  "2026-06-22T11:58:56",
+    "projects_gate_prepare_ready":  true,
+    "memory_docs_gate_prepare_ready":  true,
+    "data_intake_available":  true,
+    "health_launchers_available":  true,
+    "gate_previewer_prepare_only":  true,
+    "projects_count":  10,
+    "memory_items":  1830,
+    "data_items":  762,
+    "health_items":  1200,
+    "head":  "8b25582b",
+    "rev_sync":  "0\t6",
+    "rev_sync_left":  0,
+    "rev_sync_right":  6,
+    "remote_synced":  false,
+    "tree_clean":  false,
+    "recommended_next_step":  "E12_INTEGRATE_DATA_INTAKE_GATE_PREPARE_ONLY",
+    "alternatives":  [
+                         {
+                             "id":  "A",
+                             "next":  "E12_INTEGRATE_DATA_INTAKE_GATE_PREPARE_ONLY",
+                             "score":  97,
+                             "reason":  "Data Intake es la siguiente pantalla V1 accionable: importar/procesar fuentes debe quedar como gate preview, no acción directa."
+                         },
+                         {
+                             "id":  "B",
+                             "next":  "E12B_BATCH_INTEGRATE_DATA_AND_HEALTH_GATES_PREPARE_ONLY",
+                             "score":  78,
+                             "reason":  "Podría agruparse, pero Data Intake tiene más riesgo por importaciones y conviene aislar la frontera."
+                         },
+                         {
+                             "id":  "C",
+                             "next":  "PUSH_PARTIAL_PROJECTS_MEMORY_GATES",
+                             "score":  73,
+                             "reason":  "Projects y Memory ya funcionan, pero el objetivo Action Gates aún queda incompleto sin Data y Health."
+                         },
+                         {
+                             "id":  "D",
+                             "next":  "UX_POLISH_GATES_BEFORE_DATA",
+                             "score":  62,
+                             "reason":  "La UX puede mejorar después; ahora conviene completar cobertura funcional."
+                         }
+                     ],
+    "push_executed":  false,
+    "fetch_executed":  false,
+    "merge_executed":  false,
+    "delete_files":  false,
+    "next":  "E12_INTEGRATE_DATA_INTAKE_GATE_PREPARE_ONLY"
+}
