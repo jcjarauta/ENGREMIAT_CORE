@@ -1,7 +1,7 @@
 ﻿{
     "schema":  "ENGREMIAT_OPERATOR_V2_STATE_REGISTRY_V1",
     "created_at":  "2026-06-22T09:23:43",
-    "updated_at":  "2026-06-22T11:07:49",
+    "updated_at":  "2026-06-22T11:13:09",
     "source_contract":  "documents/operator-v2-self-state-sync/V2_STATE_REGISTRY_CONTRACT.v1.json",
     "objectives":  [
                        {
@@ -69,27 +69,27 @@
                   }
               ],
     "git_state":  {
-                      "head":  "7b5f91aa",
-                      "rev_sync":  "0\t0",
+                      "head":  "0c982bd8",
+                      "rev_sync":  "0\t2",
                       "tree_clean":  false,
-                      "status_short":  "M data/operator-v2-self-state-sync/v2-state.events.jsonl\n M data/operator-v2-self-state-sync/v2-state.latest.json\n M data/operator-v2-self-state-sync/v2-state.registry.json\n M documents/operator-v2-self-state-sync/V2_STATE_INDEX.md\n M tools/operator-v1/operator-v1-projects-screen.ps1\n?? data/operator-v1-actionable-navigation/\n?? documents/next-objective-after-v1-batch-sync/\n?? documents/operator-v1-actionable-navigation/\n?? reports/next-objective-after-v1-batch-sync/\n?? reports/operator-v1-actionable-navigation/\n?? tools/operator-v1/operator-v1-detail-viewer-readonly.ps1",
+                      "status_short":  "?? reports/operator-v1-actionable-navigation/e06r-commit-pending-next-objective-evidence-no-push-20260622-110840.json",
                       "push_executed":  false
                   },
-    "next_action":  "PROBAR_PROJECTS_ACTIONABLE_READONLY_DESDE_LAUNCHER",
-    "events_count":  75,
+    "next_action":  "VALORAR_EXTENDER_ACTIONABLE_NAVIGATION_A_MEMORY_DATA_HEALTH_O_PUSH",
+    "events_count":  76,
     "last_event":  {
-                       "ts":  "2026-06-22T11:07:49",
+                       "ts":  "2026-06-22T11:13:09",
                        "event":  "V2_STATE_UPDATE",
                        "package":  "ENGREMIAT_OPERATOR_V1_ACTIONABLE_NAVIGATION_001",
-                       "stage":  "E06_VALIDATE_ACTIONABLE_PROJECTS_AND_COMMIT_SCOPED",
-                       "step":  "E06",
+                       "stage":  "E07_HUMAN_RETEST_CLOSE_PROJECTS_ACTIONABLE_READONLY_NO_PUSH",
+                       "step":  "E07",
                        "status":  "PASS",
-                       "report":  "reports\\operator-v1-actionable-navigation\\e06-validate-actionable-projects-and-commit-scoped-20260622-110742.json",
-                       "next":  "PROBAR_PROJECTS_ACTIONABLE_READONLY_DESDE_LAUNCHER",
-                       "readiness":  80,
-                       "summary":  "Projects V1 accionable read-only validado: numero abre detalle seguro, Enter refresca, b/q vuelve, acciones reales bloqueadas por gate; commit scoped sin push.",
-                       "head":  "7b5f91aa",
-                       "rev_sync":  "0\t0",
+                       "report":  "reports\\operator-v1-actionable-navigation\\e07-human-retest-close-projects-actionable-readonly-no-push-20260622-111256.json",
+                       "next":  "VALORAR_EXTENDER_ACTIONABLE_NAVIGATION_A_MEMORY_DATA_HEALTH_O_PUSH",
+                       "readiness":  100,
+                       "summary":  "Projects V1 accionable read-only probado por humano: numero abre Detail Viewer readonly, Enter vuelve, acciones externas bloqueadas. Sin push.",
+                       "head":  "0c982bd8",
+                       "rev_sync":  "0\t2",
                        "tree_clean":  false
                    }
 }
