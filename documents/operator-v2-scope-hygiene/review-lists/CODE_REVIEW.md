@@ -1,0 +1,52 @@
+﻿# CODE_REVIEW  Count: 50 Apply changes: NO Delete files: NO Commit: NO  ```text
+?? ENGREMIAT.ps1
+?? tools/data-intake.ps1
+ M tools/desktop-terminal-operator/eng-context.ps1
+ M tools/desktop-terminal-operator/eng-library-import.ps1
+ M tools/desktop-terminal-operator/eng-module-artifact.ps1
+ M tools/desktop-terminal-operator/eng-module-cards-screen.ps1
+ M tools/desktop-terminal-operator/eng-module-edit.ps1
+ M tools/desktop-terminal-operator/eng-module-library-screen.ps1
+ M tools/desktop-terminal-operator/eng-module-objective.ps1
+ M tools/desktop-terminal-operator/eng-module-promote.ps1
+ M tools/desktop-terminal-operator/eng-module-workspace-screen.ps1
+ M tools/desktop-terminal-operator/eng-navigation.ps1
+ M tools/desktop-terminal-operator/eng-project-modules.ps1
+ M tools/desktop-terminal-operator/eng-project-modules-screen.ps1
+ M tools/desktop-terminal-operator/eng-projects-manager.ps1
+ M tools/desktop-terminal-operator/eng-refresh-project-module-graph.ps1
+ M tools/desktop-terminal-operator/eng-review-project.ps1
+ M tools/desktop-terminal-operator/eng-router.ps1
+ M tools/desktop-terminal-operator/eng-status.ps1
+ M tools/desktop-terminal-operator/eng-vault-master-link-normalizer.ps1
+?? tools/desktop-terminal-operator/screen-normalizer-general-launcher-adapter.ps1
+ M tools/desktop-terminal-operator/Start-EngremiatDesktopOperator.ps1
+ M tools/desktop-terminal-operator/Start-EngremiatOperatorMenu.ps1
+?? tools/human-card-assistant.ps1
+?? tools/launcher/ENGREMIAT-CARD-DETAIL-VIEW-NORMALIZED.ps1
+?? tools/launcher/ENGREMIAT-CARDS-VIEW-NORMALIZED.ps1
+ M tools/launcher/ENGREMIAT-DATA-INTAKE-CENTER.ps1
+ M tools/launcher/ENGREMIAT-DATA-INTAKE-CENTER-NORMALIZED.ps1
+ M tools/launcher/ENGREMIAT-INICIO.ps1
+ M tools/launcher/ENGREMIAT-INICIO-NORMALIZED.ps1
+ M tools/launcher/ENGREMIAT-INICIO-STATUS.ps1
+ M tools/launcher/ENGREMIAT-LAUNCHER-ACTUAL.ps1
+?? tools/launcher/ENGREMIAT-LAUNCHER-HEALTH.ps1
+?? tools/launcher/ENGREMIAT-LAUNCHER-UPDATE-HELPER.ps1
+?? tools/launcher/ENGREMIAT-LOCAL-WORKER-EVENT-SEQUENCE-DRY-RUN.ps1
+ M tools/launcher/ENGREMIAT-MEMORY-DOCUMENTATION-CENTER.ps1
+ M tools/launcher/ENGREMIAT-MEMORY-DOCUMENTATION-CENTER-NORMALIZED.ps1
+ M tools/launcher/ENGREMIAT-NAVIGATION-AUDIT.ps1
+ M tools/launcher/ENGREMIAT-NAVIGATION-VIEWER.ps1
+ M tools/launcher/ENGREMIAT-PROJECT-MEMORY.ps1
+ M tools/launcher/ENGREMIAT-PROJECT-MEMORY-GENERATE.ps1
+?? tools/launcher/ENGREMIAT-PROJECT-MODULE-CARDS-BRIDGE.ps1
+ M tools/launcher/ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1
+ M tools/launcher/ENGREMIAT-SELECT-MODULE-CARDS.ps1
+ M tools/launcher/ENGREMIAT-SELECT-MODULE-WORKSPACE.ps1
+?? tools/launcher/ENGREMIAT-WORKER-HEARTBEAT-WRITER-MINIMAL.ps1
+?? tools/launcher/ENGREMIAT-WORKER-SIGNALS-TOGGLE.ps1
+ M tools/launcher/templates/ENGREMIAT-CANONICAL-SCREEN-TEMPLATE.ps1
+ M tools/launcher/templates/ENGREMIAT-CONSOLE-PALETTE.ps1
+ M tools/launcher/templates/ENGREMIAT-OBSIDIAN-HEARTBEAT-SYNC-DRAFT.ps1
+```

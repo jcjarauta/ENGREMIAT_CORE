@@ -1,0 +1,105 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_SCOPE_HYGIENE_017",
+    "stage":  "E01_CLASSIFY_OUTSIDE_SCOPE_HYGIENE_NO_APPLY",
+    "status":  "PASS",
+    "apply_changes":  false,
+    "delete_files":  false,
+    "commit_executed":  false,
+    "push_executed":  false,
+    "scoped_count":  12,
+    "outside_scope_count":  339,
+    "by_class":  [
+                     {
+                         "class":  "DOCS_REPORTS_REVIEW",
+                         "count":  244
+                     },
+                     {
+                         "class":  "CODE_REVIEW",
+                         "count":  50
+                     },
+                     {
+                         "class":  "NOISE_OR_GENERATED",
+                         "count":  28
+                     },
+                     {
+                         "class":  "UNTRACKED_REVIEW",
+                         "count":  17
+                     }
+                 ],
+    "by_top":  [
+                   {
+                       "top":  "reports",
+                       "count":  189
+                   },
+                   {
+                       "top":  "documents",
+                       "count":  80
+                   },
+                   {
+                       "top":  "tools",
+                       "count":  62
+                   },
+                   {
+                       "top":  "projects",
+                       "count":  2
+                   },
+                   {
+                       "top":  "data",
+                       "count":  2
+                   },
+                   {
+                       "top":  "ENGREMIAT.cmd",
+                       "count":  1
+                   },
+                   {
+                       "top":  "ENGREMIAT.ps1",
+                       "count":  1
+                   },
+                   {
+                       "top":  "freezers",
+                       "count":  1
+                   },
+                   {
+                       "top":  "memory",
+                       "count":  1
+                   }
+               ],
+    "by_ext":  [
+                   {
+                       "ext":  ".json",
+                       "count":  145
+                   },
+                   {
+                       "ext":  "_no_ext",
+                       "count":  91
+                   },
+                   {
+                       "ext":  ".ps1",
+                       "count":  81
+                   },
+                   {
+                       "ext":  ".txt",
+                       "count":  17
+                   },
+                   {
+                       "ext":  ".md",
+                       "count":  3
+                   },
+                   {
+                       "ext":  ".cmd",
+                       "count":  1
+                   },
+                   {
+                       "ext":  ".jsonl",
+                       "count":  1
+                   }
+               ],
+    "noise_count":  28,
+    "docs_reports_count":  244,
+    "code_count":  50,
+    "untracked_count":  17,
+    "work_review_count":  0,
+    "decision":  "GO_PREPARE_HYGIENE_PLAN_NO_DELETE",
+    "doc":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-scope-hygiene\\E01_CLASSIFY_OUTSIDE_SCOPE_HYGIENE_NO_APPLY.md",
+    "next":  "E02_PREPARE_SCOPE_HYGIENE_PLAN_NO_DELETE"
+}

@@ -1,0 +1,28 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_REVIEW_NEXT_SCOPE_GROUP_022",
+    "stage":  "E02_R1_FAST_NEXT_GROUP_DETAIL_NO_CONTENT_READ",
+    "status":  "PASS",
+    "mode":  "FAST_NO_CONTENT_READ",
+    "apply_changes":  false,
+    "delete_files":  false,
+    "commit_executed":  false,
+    "push_executed":  false,
+    "selected_module":  "ENGREMIAT.cmd",
+    "items_count":  1,
+    "details":  [
+                    {
+                        "path":  "ENGREMIAT.cmd",
+                        "exists":  true,
+                        "is_directory":  false,
+                        "extension":  ".cmd",
+                        "size":  129,
+                        "modified":  "2026-06-20T13:16:13",
+                        "classification":  "WINDOWS_LAUNCHER_SCRIPT",
+                        "recommendation":  "COMPARE_WITH_CANONICAL_LAUNCHER_BEFORE_TRACKING",
+                        "raw":  "?? ENGREMIAT.cmd"
+                    }
+                ],
+    "decision":  "REVIEW_CMD_LAUNCHER_BEFORE_TRACKING_OR_IGNORE",
+    "doc":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-review-next-scope-group\\E02_R1_FAST_NEXT_GROUP_DETAIL_NO_CONTENT_READ.md",
+    "next":  "E03_DECIDE_NEXT_GROUP_ACTION_NO_APPLY"
+}

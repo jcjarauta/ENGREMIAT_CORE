@@ -1,0 +1,30 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_REVIEW_FIRST_SCOPE_GROUP_019",
+    "stage":  "E02_PREPARE_FIRST_GROUP_DIFF_SUMMARY_NO_APPLY",
+    "status":  "PASS",
+    "apply_changes":  false,
+    "delete_files":  false,
+    "commit_executed":  false,
+    "push_executed":  false,
+    "source_report":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-review-first-scope-group\\e01-r1-review-first-available-scope-group-no-apply-20260622-072259.json",
+    "selected_module":  "data\\screen-normalizer",
+    "items_count":  1,
+    "summaries":  [
+                      {
+                          "path":  "data/screen-normalizer/",
+                          "raw":  "?? data/screen-normalizer/",
+                          "exists":  true,
+                          "is_directory":  true,
+                          "size":  0,
+                          "sha256":  "",
+                          "classification":  "NEW_UNTRACKED_REVIEW",
+                          "recommendation":  "CLASSIFY_BEFORE_TRACKING",
+                          "preview":  [
+                                          "[directory]"
+                                      ]
+                      }
+                  ],
+    "doc":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-review-first-scope-group\\E02_FIRST_GROUP_DIFF_SUMMARY_NO_APPLY.md",
+    "decision":  "GO_CLOSE_FIRST_GROUP_REVIEW_NO_APPLY",
+    "next":  "E03_CLOSE_FIRST_GROUP_REVIEW_AND_PAUSE"
+}

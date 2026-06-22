@@ -1,11 +1,7 @@
 ﻿# NEXT OBJECTIVE
 
-Recomendado: REVIEW_OUTSIDE_SCOPE_OR_AUTHORIZE_SCOPED_COMMIT
+Pausar y valorar desarrollo.
 
-Objetivo: decidir si limpiar/revisar los 339 cambios fuera de scope o autorizar un commit scoped de los cambios Operator V2 detectados.
+Estado: Operador V2 LAB queda commiteado localmente sin push. Quedan cambios fuera de scope que no se han mezclado.
 
-Reglas:
-- no usar git add .;
-- no hacer push automatico;
-- si se autoriza commit scoped, añadir solo rutas Operator V2/documentos/reports de esta etapa;
-- si no se autoriza, continuar desarrollo sin cierre Git.
+Siguiente conversacion/valoracion: decidir si continuar con integracion visual real, limpieza de scope externo o siguiente modulo funcional.

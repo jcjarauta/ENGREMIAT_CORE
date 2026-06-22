@@ -1,6 +1,6 @@
 ﻿# ENGREMIAT OPERADOR V2 - INFORME PLAN DE DESARROLLO
 
-Generado: 2026-06-22T07:01:20
+Generado: 2026-06-22T07:40:29
 Estado general: REPORT_READY_SYNCED
 Readiness global estimada: 85
 
@@ -46,4 +46,4 @@ Operador V2 actua como hoja de tareas viva: indica que esta cerrado, que esta en
 Cerrar PLAN_SYNC_012 y despues iniciar ACTIONS_LAB_STATUS_013 para invocar informe/estado/home desde acciones LAB.
 
 ## Salida maquina
-JSON: C:\ENGREMIAT_CORE\reports\operator-v2-live-context\operator-v2-development-plan-report-20260622-070119.json
+JSON: C:\ENGREMIAT_CORE\reports\operator-v2-live-context\operator-v2-development-plan-report-20260622-074029.json

@@ -1,0 +1,38 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_REVIEW_NEXT_SCOPE_GROUP_022",
+    "stage":  "E01_SELECT_AND_INSPECT_NEXT_SCOPE_GROUP_NO_APPLY",
+    "status":  "PASS",
+    "source_plan":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-scope-code-untracked-review\\e03-select-safe-review-order-no-apply-20260622-072011.json",
+    "skipped_module":  "data\\screen-normalizer",
+    "selected_module":  "ENGREMIAT.cmd",
+    "apply_changes":  false,
+    "delete_files":  false,
+    "commit_executed":  false,
+    "push_executed":  false,
+    "total_items":  1,
+    "by_kind":  [
+                    {
+                        "kind":  "NEW_UNTRACKED_ARTIFACT",
+                        "count":  1
+                    }
+                ],
+    "by_ext":  [
+                   {
+                       "ext":  ".cmd",
+                       "count":  1
+                   }
+               ],
+    "items":  [
+                  {
+                      "status_code":  "??",
+                      "path":  "ENGREMIAT.cmd",
+                      "module":  "ENGREMIAT.cmd",
+                      "ext":  ".cmd",
+                      "kind":  "NEW_UNTRACKED_ARTIFACT",
+                      "raw":  "?? ENGREMIAT.cmd"
+                  }
+              ],
+    "decision":  "CLASSIFY_NEW_ARTIFACTS_BEFORE_TRACKING",
+    "doc":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-review-next-scope-group\\E01_SELECT_AND_INSPECT_NEXT_SCOPE_GROUP_NO_APPLY.md",
+    "next":  "E02_PREPARE_NEXT_GROUP_DETAIL_NO_APPLY"
+}

@@ -1,0 +1,38 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_REVIEW_UNTRACKED_DIRECTORY_CONTENTS_020",
+    "stage":  "E01_R1_FAST_INSPECT_DATA_SCREEN_NORMALIZER_NO_APPLY",
+    "status":  "PASS",
+    "mode":  "FAST_NO_HASH_NO_CONTENT_READ",
+    "target":  "data\\screen-normalizer",
+    "apply_changes":  false,
+    "delete_files":  false,
+    "commit_executed":  false,
+    "push_executed":  false,
+    "files_count":  1,
+    "dirs_count":  0,
+    "total_bytes":  19737,
+    "by_kind":  [
+                    {
+                        "kind":  "EVIDENCE_OR_DATA",
+                        "count":  1
+                    }
+                ],
+    "by_ext":  [
+                   {
+                       "extension":  ".json",
+                       "count":  1
+                   }
+               ],
+    "sample":  [
+                   {
+                       "relative_path":  "data\\screen-normalizer\\screen-registry.v1.json",
+                       "extension":  ".json",
+                       "kind":  "EVIDENCE_OR_DATA",
+                       "size":  19737,
+                       "modified":  "2026-06-21T18:08:18"
+                   }
+               ],
+    "decision":  "LIKELY_EVIDENCE_OR_DATA_DIRECTORY",
+    "doc":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-review-untracked-directory-contents\\E01_R1_FAST_INSPECT_DATA_SCREEN_NORMALIZER_NO_APPLY.md",
+    "next":  "E02_DECIDE_DIRECTORY_CLASSIFICATION_NO_APPLY"
+}

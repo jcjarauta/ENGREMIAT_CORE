@@ -1,0 +1,79 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_SCOPE_HYGIENE_017",
+    "stage":  "E03_GENERATE_SCOPE_HYGIENE_REVIEW_LISTS_NO_DELETE",
+    "status":  "PASS",
+    "apply_changes":  false,
+    "delete_files":  false,
+    "commit_executed":  false,
+    "push_executed":  false,
+    "scoped_count":  14,
+    "outside_scope_count":  339,
+    "list_files":  [
+                       {
+                           "class":  "DOCS_REPORTS_REVIEW",
+                           "count":  244,
+                           "file":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-scope-hygiene\\review-lists\\DOCS_REPORTS_REVIEW.md"
+                       },
+                       {
+                           "class":  "CODE_REVIEW",
+                           "count":  50,
+                           "file":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-scope-hygiene\\review-lists\\CODE_REVIEW.md"
+                       },
+                       {
+                           "class":  "UNTRACKED_REVIEW",
+                           "count":  17,
+                           "file":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-scope-hygiene\\review-lists\\UNTRACKED_REVIEW.md"
+                       },
+                       {
+                           "class":  "NOISE_OR_GENERATED",
+                           "count":  28,
+                           "file":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-scope-hygiene\\review-lists\\NOISE_OR_GENERATED.md"
+                       },
+                       {
+                           "class":  "WORK_REVIEW",
+                           "count":  0,
+                           "file":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-scope-hygiene\\review-lists\\WORK_REVIEW.md"
+                       }
+                   ],
+    "top_summary":  [
+                        {
+                            "top":  "reports",
+                            "count":  189
+                        },
+                        {
+                            "top":  "documents",
+                            "count":  80
+                        },
+                        {
+                            "top":  "tools",
+                            "count":  62
+                        },
+                        {
+                            "top":  "projects",
+                            "count":  2
+                        },
+                        {
+                            "top":  "data",
+                            "count":  2
+                        },
+                        {
+                            "top":  "ENGREMIAT.cmd",
+                            "count":  1
+                        },
+                        {
+                            "top":  "ENGREMIAT.ps1",
+                            "count":  1
+                        },
+                        {
+                            "top":  "freezers",
+                            "count":  1
+                        },
+                        {
+                            "top":  "memory",
+                            "count":  1
+                        }
+                    ],
+    "doc":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-scope-hygiene\\E03_SCOPE_HYGIENE_REVIEW_LISTS.md",
+    "decision":  "GO_REVIEW_LISTS_AND_SELECT_ACTION_NO_DELETE",
+    "next":  "E04_REVIEW_HYGIENE_LISTS_AND_SELECT_ACTION_NO_DELETE"
+}

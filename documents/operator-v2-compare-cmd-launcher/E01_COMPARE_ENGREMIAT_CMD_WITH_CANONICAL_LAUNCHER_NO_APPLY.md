@@ -1,0 +1,143 @@
+﻿# E01 Compare ENGREMIAT.cmd With Canonical Launcher No Apply
+
+Estado: PASS
+Apply changes: NO
+Delete files: NO
+Commit: NO
+Push: NO
+
+## Files
+- CMD: 
+C:\ENGREMIAT_CORE\ENGREMIAT.cmd
+- Canonical: 
+C:\ENGREMIAT_CORE\ENGREMIAT.ps1
+
+## CMD metadata
+- Exists: 
+True
+- Size: 
+129
+- Modified: 
+2026-06-20T13:16:13
+
+## Canonical metadata
+- Exists: 
+True
+- Size: 
+6871
+- Modified: 
+2026-06-21T21:40:24
+
+## Checks
+- References canonical ENGREMIAT.ps1: 
+True
+- References PowerShell: 
+True
+- Uses NoProfile: 
+True
+- Uses ExecutionPolicy: 
+True
+- Uses Bypass: 
+True
+- Uses -File: 
+True
+
+## Classification
+CANONICAL_CMD_WRAPPER_CANDIDATE
+
+## Decision
+CANDIDATE_SCOPED_COMMIT_OR_DOCUMENT_AS_LOCAL_LAUNCHER
+
+## Recommendation
+SAFE_TO_CONSIDER_SCOPED_COMMIT_IF_HUMAN_WANTS_CMD_ENTRYPOINT
+
+## ENGREMIAT.cmd preview
+```text
+@echo off
+cd /d C:\ENGREMIAT_CORE
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "C:\ENGREMIAT_CORE\ENGREMIAT.ps1"
+
+```
+
+## ENGREMIAT.ps1 preview first 80 lines
+```text
+function Set-EngSafeProp($o,[string]$n,$v){
+  if($null -eq $o){throw "Set-EngSafeProp objeto nulo: $n"}
+  $p=$o.PSObject.Properties[$n]
+  if($p){$o.$n=$v}else{$o|Add-Member -NotePropertyName $n -NotePropertyValue $v -Force}
+}
+$ErrorActionPreference = "Stop"
+[Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
+$Root = "C:\ENGREMIAT_CORE"
+$CommonCommandLegend = "[b/q] salir/volver | m = mantenimiento | ? = ayuda | Enter = refrescar"
+function W([string]$Text,[string]$Color="Gray"){ Write-Host $Text -ForegroundColor $Color }
+function Wait-Back(){ W ""; $x = Read-Host "Enter = volver/refrescar | b/q = salir"; $x = ($x + "").Trim().ToLowerInvariant(); if($x -eq "b" -or $x -eq "q"){ return "quit" }; return "back" }
+# ENGREMIAT_OPERATOR_V2_ACTIONS_ROUTER_OBSERVER_BEGIN
+# mode=DRY_RUN_ONLY observer; legacy switch/router preserved
+try {
+  $script:ENGREMIAT_OPERATOR_V2_ACTIONS_LAST_DRYRUN = $null
+  if(Get-Command Invoke-EngremiatOperatorV2ActionsBridgeDryRun -ErrorAction SilentlyContinue){
+    $script:ENGREMIAT_OPERATOR_V2_ACTIONS_LAST_DRYRUN = Invoke-EngremiatOperatorV2ActionsBridgeDryRun -InputText $input
+  }
+} catch {
+  $script:ENGREMIAT_OPERATOR_V2_ACTIONS_LAST_DRYRUN = [pscustomobject]@{ ok=$false; handled=$false; executed=$false; mode='DRY_RUN_ONLY'; reason='OBSERVER_ERROR' }
+}
+# IMPORTANT: no continue/return here; existing legacy flow remains active.
+# ENGREMIAT_OPERATOR_V2_ACTIONS_ROUTER_OBSERVER_END
+# ENGREMIAT_OPERATOR_V2_NAVIGATION_OBSERVER_BEGIN
+# mode=DRY_RUN_ONLY navigation observer; legacy switch/router preserved
+try {
+  $script:ENGREMIAT_OPERATOR_V2_NAVIGATION_LAST_DRYRUN = $null
+  $script:ENGREMIAT_OPERATOR_V2_NAVIGATION_BRIDGE = 'C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2\engine\navigation-launcher-bridge.ps1'
+  if(Test-Path $script:ENGREMIAT_OPERATOR_V2_NAVIGATION_BRIDGE){
+    . $script:ENGREMIAT_OPERATOR_V2_NAVIGATION_BRIDGE
+    if(Get-Command Invoke-EngNavigationLauncherInputDryRun -ErrorAction SilentlyContinue){
+      $script:ENGREMIAT_OPERATOR_V2_NAVIGATION_LAST_DRYRUN = Invoke-EngNavigationLauncherInputDryRun -InputText $input
+    }
+  }
+} catch {
+  $script:ENGREMIAT_OPERATOR_V2_NAVIGATION_LAST_DRYRUN = [pscustomobject]@{ ok=$false; handled=$false; executed=$false; real_execution=$false; mode='DRY_RUN_ONLY'; reason='NAV_OBSERVER_ERROR' }
+}
+# IMPORTANT: navigation observer does not continue/return; existing legacy flow remains active.
+# ENGREMIAT_OPERATOR_V2_NAVIGATION_OBSERVER_END
+function Run-Screen([string]$Label,[string]$Path){ if(Test-Path $Path){ W ("OK abriendo " + $Label + " -> " + $Path) Cyan; & powershell -NoProfile -ExecutionPolicy Bypass -File $Path; return }; W ("PENDIENTE " + $Label) Yellow; W ("No se encontro: " + $Path) DarkYellow; $r=Wait-Back; if($r -eq "quit"){ throw "__ENGREMIAT_QUIT__" } }
+function Show-Maintenance(){ Clear-Host; W "==== ENGREMIAT / MANTENIMIENTO ====" Cyan; W ""; W ("Ruta: " + $PSCommandPath) DarkGray; W "Principio: mantenimiento del launcher maestro estable" DarkGray; W ""; W "[1] Abrir asistente de tarjetas humanas" White; W "[2] Mostrar comando maestro" White; W ""; W $CommonCommandLegend DarkGray; W ""; $cmd=Read-Host "MANTENIMIENTO"; $cmd=($cmd+"").Trim().ToLowerInvariant(); if($cmd -eq "1"){ Run-Screen "Asistente tarjetas humanas" "C:\ENGREMIAT_CORE\tools\human-card-assistant.ps1"; return }; if($cmd -eq "2"){ W "C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -File `"C:\ENGREMIAT_CORE\ENGREMIAT.ps1`"" Green; Wait-Back | Out-Null; return }; return }
+function Show-Help(){ Clear-Host; W "==== ENGREMIAT / AYUDA ====" Cyan; W ""; W "1 = Inicio operador / menu operador." White; W "2 = Proyectos / gestor de proyectos." White; W "3 = Memoria y documentacion." White; W "4 = Data Intake." White; W "5 = Health launchers." White; W "m = mantenimiento." White; W "? = ayuda." White; W "Enter vacio = refrescar." White; W "b/q = salir." White; $r=Wait-Back; if($r -eq "quit"){ throw "__ENGREMIAT_QUIT__" } }
+function Show-Menu(){ Clear-Host; W "==== ENGREMIAT / LAUNCHER HUMANO ESTABLE ====" Cyan; W ""; W ("Ruta: " + $PSCommandPath) DarkGray; W "Principio: este archivo no cambia de nombre; enruta a launchers versionados" DarkGray; W ""; W "[1] Inicio operador" White; W "[2] Proyectos" White; W "[3] Memoria y documentacion" White; W "[4] Data Intake" White; W "[5] Health launchers" White; W ""; W $CommonCommandLegend DarkGray; W "" }
+while($true){ try{ Show-Menu; $cmd = Read-Host "ENGREMIAT"; $cmd = ($cmd + "").Trim().ToLowerInvariant(); switch($cmd){ "" { continue } "1" { Run-Screen "Inicio operador" "C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\Start-EngremiatOperatorMenu.ps1" } "2" { Run-Screen "Proyectos" "C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-projects-manager.ps1" } "3" { Run-Screen "Memoria y documentacion" "C:\ENGREMIAT_CORE\tools\launcher\ENGREMIAT-MEMORY-DOCUMENTATION-CENTER-NORMALIZED.ps1" } "4" { Run-Screen "Data Intake" "C:\ENGREMIAT_CORE\tools\launcher\ENGREMIAT-DATA-INTAKE-CENTER-NORMALIZED.ps1" } "5" { Run-Screen "Health launchers" "C:\ENGREMIAT_CORE\tools\launcher\ENGREMIAT-LAUNCHER-HEALTH.ps1" } "m" { Show-Maintenance } "?" { Show-Help } "h" { Show-Help } "help" { Show-Help } "b" { return } "q" { return } default { W ("Comando no reconocido: " + $cmd) Yellow; $r=Wait-Back; if($r -eq "quit"){ return } } } } catch { if($_.Exception.Message -eq "__ENGREMIAT_QUIT__"){ return } else { throw } } }
+
+
+# ENGREMIAT_OPERATOR_V2_ACTIONS_BIND_BEGIN
+# package=ENGREMIAT_OPERATOR_V2_ACTIONS_003
+# stage=E08_R2 no-plus parse-safe guarded minimal bind
+# mode=DRY_RUN_ONLY
+$script:ENGREMIAT_OPERATOR_V2_ACTIONS_BRIDGE = 'C:\Users\pc\Desktop\ENGREMIAT_OPERADOR_V2\engine\screen-actions-entrypoint-bridge.ps1'
+function Test-EngremiatOperatorV2ActionsBridge {
+  try {
+    if([string]::IsNullOrWhiteSpace($script:ENGREMIAT_OPERATOR_V2_ACTIONS_BRIDGE)){ return $false }
+    if(!(Test-Path $script:ENGREMIAT_OPERATOR_V2_ACTIONS_BRIDGE)){ return $false }
+    return $true
+  } catch {
+    return $false
+  }
+}
+function Invoke-EngremiatOperatorV2ActionsBridgeDryRun {
+  param([string]$InputText)
+  if(!(Test-EngremiatOperatorV2ActionsBridge)){
+    return [pscustomobject]@{ ok=$false; handled=$false; input=$InputText; reason='BRIDGE_NOT_AVAILABLE'; executed=$false; mode='DRY_RUN_ONLY' }
+  }
+  try {
+    . $script:ENGREMIAT_OPERATOR_V2_ACTIONS_BRIDGE
+    return Invoke-EngOperatorInputWithActionsBridge -InputText $InputText
+  } catch {
+    return [pscustomobject]@{ ok=$false; handled=$false; input=$InputText; reason='BRIDGE_ERROR'; executed=$false; mode='DRY_RUN_ONLY' }
+  }
+}
+# Integration note: existing launcher flow is intentionally preserved. Future router code can call Invoke-EngremiatOperatorV2ActionsBridgeDryRun before legacy fallback.
+# ENGREMIAT_OPERATOR_V2_ACTIONS_BIND_END
+
+
+```
+
+## Siguiente
+E02_DECIDE_CMD_LAUNCHER_TRACK_OR_IGNORE_NO_APPLY

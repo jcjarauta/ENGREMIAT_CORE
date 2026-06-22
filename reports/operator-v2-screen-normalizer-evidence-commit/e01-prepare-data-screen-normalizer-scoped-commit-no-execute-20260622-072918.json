@@ -1,0 +1,27 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_SCREEN_NORMALIZER_EVIDENCE_SCOPED_COMMIT_021",
+    "stage":  "E01_PREPARE_DATA_SCREEN_NORMALIZER_SCOPED_COMMIT_NO_EXECUTE",
+    "status":  "PASS",
+    "target":  "data/screen-normalizer/",
+    "authorization_required":  "AUTORIZO_COMMIT_SCOPED_DATA_SCREEN_NORMALIZER_SIN_ADD_DOT_SIN_PUSH",
+    "commit_executed":  false,
+    "push_executed":  false,
+    "delete_files":  false,
+    "files_count":  1,
+    "dirs_count":  0,
+    "total_bytes":  19737,
+    "scoped_status":  [
+                          "?? data/screen-normalizer/"
+                      ],
+    "outside_scope_count":  359,
+    "commit_message":  "screen normalizer evidence data scoped",
+    "commands":  [
+                     "cd C:\\ENGREMIAT_CORE",
+                     "git status --short -- data/screen-normalizer/",
+                     "git add -- \"data/screen-normalizer/\"",
+                     "git diff --cached --stat",
+                     "git commit -m \"screen normalizer evidence data scoped\""
+                 ],
+    "doc":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-screen-normalizer-evidence-commit\\E01_DATA_SCREEN_NORMALIZER_SCOPED_COMMIT_AUTHORIZATION_PACKET.md",
+    "next":  "WAIT_EXPLICIT_AUTHORIZATION_FOR_SCOPED_COMMIT"
+}

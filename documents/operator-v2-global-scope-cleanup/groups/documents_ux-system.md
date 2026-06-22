@@ -1,0 +1,35 @@
+﻿# GROUP - documents\ux-system  Count: 33 Classes: DOCS_REPORTS_REVIEW:33 Recommended action: CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE Apply changes: NO Delete files: NO Commit: NO Push: NO  ```text
+?? documents/ux-system/screens/CARD_ACTION_PROPOSAL_FLOW_CLOSE.json
+?? documents/ux-system/screens/CARD_ACTION_VIEW_FROM_UI_CLOSE.json
+?? documents/ux-system/screens/CARD_ACTION_VIEW_STAGE_CLOSE.json
+?? documents/ux-system/screens/CARD_DETAIL_VIEW_FROM_UI_CLOSE.json
+?? documents/ux-system/screens/CARD_VIEW_FROM_ROOT_MENU_VALIDATION_CLOSE.json
+?? documents/ux-system/screens/CARDS_VIEW_JSON_FALLBACK_VISUAL_VALIDATION_CLOSE.json
+?? documents/ux-system/screens/CMD_HUMAN_ENTRYPOINT_VALIDATION_CLOSE.json
+?? documents/ux-system/screens/CONTROL_STATUS_WITH_CARD_CANON_VALIDATION_CLOSE.json
+?? documents/ux-system/screens/FILTERABLE_CARD_VIEW_HUMAN_VALIDATION_CLOSE.json
+?? documents/ux-system/screens/GATE_DECISION_DRY_RUN_VIEW_FROM_UI_CLOSE.json
+?? documents/ux-system/screens/HUMAN_GATE_DECISION_DRY_RUN_STAGE_CLOSE.json
+?? documents/ux-system/screens/HUMAN_GATE_READONLY_STAGE_CLOSE.json
+?? documents/ux-system/screens/HUMAN_GATE_VIEW_FROM_UI_CLOSE.json
+?? documents/ux-system/screens/LAUNCHER_MANAGEMENT_STAGE_CLOSE.json
+?? documents/ux-system/screens/MODULE_CARD_CANON_FINAL_CLOSE.json
+?? documents/ux-system/screens/MODULE_CARD_CANON_STAGE_CLOSE.json
+?? documents/ux-system/screens/MODULE_CARD_PROJECT_ROUTE_STAGE_CLOSE.json
+?? documents/ux-system/screens/NORMALIZED_PROJECT_ID_ROUTE_VALIDATION_CLOSE.json
+?? documents/ux-system/screens/OPERATOR_NAVIGATION_MODEL_APPLIED_TO_PROJECTS.json
+?? documents/ux-system/screens/OPERATOR_NAVIGATION_MODEL_APPLIED_TO_ROOT.json
+?? documents/ux-system/screens/OPERATOR_NAVIGATION_MODEL_DEFINED.json
+?? documents/ux-system/screens/OPERATOR_NAVIGATION_TREE_LAYER_PLAN_READY.json
+?? documents/ux-system/screens/PROJECT_MODULE_CARD_ROUTE_WITH_START_CARD_CLOSE.json
+?? documents/ux-system/screens/PROJECTS_HEARTBEAT_MARKDOWN_VIEW_HUMAN_VALIDATION_CLOSE.json
+?? documents/ux-system/screens/PROJECTS_OPERATOR_WORKER_TOGGLE_MENU_HUMAN_VALIDATION_CLOSE.json
+?? documents/ux-system/screens/PROJECTS_STABLE_NAVIGATION_HUMAN_VALIDATION_CLOSE.json
+?? documents/ux-system/screens/REAL_WORKER_BRIDGE_MINIMAL_CONTRACT_READY.json
+?? documents/ux-system/screens/ROOT_MENU_FROM_CMD_VALIDATION_CLOSE.json
+?? documents/ux-system/screens/ROOT_PROJECTS_ENTRY_HUMAN_VALIDATION_CLOSE.json
+?? documents/ux-system/screens/WORKER_EVENT_SEQUENCE_PROJECTS_VIEW_HUMAN_VALIDATION_CLOSE.json
+?? documents/ux-system/screens/WORKER_HEARTBEAT_WRITER_PROJECTS_VIEW_HUMAN_VALIDATION_CLOSE.json
+?? documents/ux-system/screens/WORKER_SIGNALS_TOGGLE_PROJECTS_VIEW_HUMAN_VALIDATION_CLOSE.json
+?? documents/ux-system/screens/WORKER_SYNC_LOCAL_STAGE_CLOSE.json
+```

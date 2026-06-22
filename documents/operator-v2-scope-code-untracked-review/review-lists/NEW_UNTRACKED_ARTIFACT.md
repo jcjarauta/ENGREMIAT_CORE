@@ -1,0 +1,31 @@
+﻿# NEW_UNTRACKED_ARTIFACT  Count: 29 Apply changes: NO Delete files: NO Commit: NO  ```text
+?? data/screen-normalizer/
+?? ENGREMIAT.cmd
+?? ENGREMIAT.ps1
+?? freezers/
+?? memory/development/
+?? projects/ENGREMIAT_PROJECT_heartbeat_demo/MODULOS/
+?? projects/projects/
+?? tools/context-guardian/
+?? tools/data-intake.ps1
+?? tools/desktop-terminal-operator/screen-normalizer-general-launcher-adapter.ps1
+?? tools/health/
+?? tools/human-card-assistant.ps1
+?? tools/human-maintenance-cards/
+?? tools/launcher/canonical-action-runtime/
+?? tools/launcher/ENGREMIAT-CARD-DETAIL-VIEW-NORMALIZED.ps1
+?? tools/launcher/ENGREMIAT-CARDS-VIEW-NORMALIZED.ps1
+?? tools/launcher/ENGREMIAT-LAUNCHER-HEALTH.ps1
+?? tools/launcher/ENGREMIAT-LAUNCHER-UPDATE-HELPER.ps1
+?? tools/launcher/ENGREMIAT-LOCAL-WORKER-EVENT-SEQUENCE-DRY-RUN.ps1
+?? tools/launcher/ENGREMIAT-PROJECT-MODULE-CARDS-BRIDGE.ps1
+?? tools/launcher/ENGREMIAT-WORKER-HEARTBEAT-WRITER-MINIMAL.ps1
+?? tools/launcher/ENGREMIAT-WORKER-SIGNALS-TOGGLE.ps1
+?? tools/launcher/gate-mutations/
+?? tools/launcher/module-actions/
+?? tools/launcher/runtime-ui-adapter/
+?? tools/module-cards/
+?? tools/observer/
+?? tools/screen-master-template/
+?? tools/screen-normalizer/
+```

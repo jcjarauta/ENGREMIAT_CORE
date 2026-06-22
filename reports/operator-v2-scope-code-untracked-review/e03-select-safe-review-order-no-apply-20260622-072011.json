@@ -1,0 +1,196 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_SCOPE_CODE_UNTRACKED_REVIEW_018",
+    "stage":  "E03_SELECT_SAFE_REVIEW_ORDER_NO_APPLY",
+    "status":  "PASS",
+    "apply_changes":  false,
+    "delete_files":  false,
+    "commit_executed":  false,
+    "push_executed":  false,
+    "source_report":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-scope-code-untracked-review\\e02-module-grouping-no-apply-20260622-071940.json",
+    "groups_count":  18,
+    "review_plan":  [
+                        {
+                            "order":  1,
+                            "module":  "data\\screen-normalizer",
+                            "count":  1,
+                            "code_candidates":  0,
+                            "new_untracked":  1,
+                            "decision":  "CLASSIFY_NEW_ARTIFACTS_FIRST",
+                            "recommended_action":  "DECIDE_TRACK_OR_IGNORE_NO_DELETE",
+                            "risk":  "LOW_MEDIUM"
+                        },
+                        {
+                            "order":  2,
+                            "module":  "ENGREMIAT.cmd",
+                            "count":  1,
+                            "code_candidates":  0,
+                            "new_untracked":  1,
+                            "decision":  "CLASSIFY_NEW_ARTIFACTS_FIRST",
+                            "recommended_action":  "DECIDE_TRACK_OR_IGNORE_NO_DELETE",
+                            "risk":  "LOW_MEDIUM"
+                        },
+                        {
+                            "order":  3,
+                            "module":  "ENGREMIAT.ps1",
+                            "count":  1,
+                            "code_candidates":  0,
+                            "new_untracked":  1,
+                            "decision":  "CLASSIFY_NEW_ARTIFACTS_FIRST",
+                            "recommended_action":  "DECIDE_TRACK_OR_IGNORE_NO_DELETE",
+                            "risk":  "LOW_MEDIUM"
+                        },
+                        {
+                            "order":  4,
+                            "module":  "freezers",
+                            "count":  1,
+                            "code_candidates":  0,
+                            "new_untracked":  1,
+                            "decision":  "CLASSIFY_NEW_ARTIFACTS_FIRST",
+                            "recommended_action":  "DECIDE_TRACK_OR_IGNORE_NO_DELETE",
+                            "risk":  "LOW_MEDIUM"
+                        },
+                        {
+                            "order":  5,
+                            "module":  "memory\\development",
+                            "count":  1,
+                            "code_candidates":  0,
+                            "new_untracked":  1,
+                            "decision":  "CLASSIFY_NEW_ARTIFACTS_FIRST",
+                            "recommended_action":  "DECIDE_TRACK_OR_IGNORE_NO_DELETE",
+                            "risk":  "LOW_MEDIUM"
+                        },
+                        {
+                            "order":  6,
+                            "module":  "projects\\ENGREMIAT_PROJECT_heartbeat_demo",
+                            "count":  1,
+                            "code_candidates":  0,
+                            "new_untracked":  1,
+                            "decision":  "CLASSIFY_NEW_ARTIFACTS_FIRST",
+                            "recommended_action":  "DECIDE_TRACK_OR_IGNORE_NO_DELETE",
+                            "risk":  "LOW_MEDIUM"
+                        },
+                        {
+                            "order":  7,
+                            "module":  "projects\\projects",
+                            "count":  1,
+                            "code_candidates":  0,
+                            "new_untracked":  1,
+                            "decision":  "CLASSIFY_NEW_ARTIFACTS_FIRST",
+                            "recommended_action":  "DECIDE_TRACK_OR_IGNORE_NO_DELETE",
+                            "risk":  "LOW_MEDIUM"
+                        },
+                        {
+                            "order":  8,
+                            "module":  "tools\\context-guardian",
+                            "count":  1,
+                            "code_candidates":  0,
+                            "new_untracked":  1,
+                            "decision":  "CLASSIFY_NEW_ARTIFACTS_FIRST",
+                            "recommended_action":  "DECIDE_TRACK_OR_IGNORE_NO_DELETE",
+                            "risk":  "LOW_MEDIUM"
+                        },
+                        {
+                            "order":  9,
+                            "module":  "tools\\data-intake.ps1",
+                            "count":  1,
+                            "code_candidates":  0,
+                            "new_untracked":  1,
+                            "decision":  "CLASSIFY_NEW_ARTIFACTS_FIRST",
+                            "recommended_action":  "DECIDE_TRACK_OR_IGNORE_NO_DELETE",
+                            "risk":  "LOW_MEDIUM"
+                        },
+                        {
+                            "order":  10,
+                            "module":  "tools\\health",
+                            "count":  1,
+                            "code_candidates":  0,
+                            "new_untracked":  1,
+                            "decision":  "CLASSIFY_NEW_ARTIFACTS_FIRST",
+                            "recommended_action":  "DECIDE_TRACK_OR_IGNORE_NO_DELETE",
+                            "risk":  "LOW_MEDIUM"
+                        },
+                        {
+                            "order":  11,
+                            "module":  "tools\\human-card-assistant.ps1",
+                            "count":  1,
+                            "code_candidates":  0,
+                            "new_untracked":  1,
+                            "decision":  "CLASSIFY_NEW_ARTIFACTS_FIRST",
+                            "recommended_action":  "DECIDE_TRACK_OR_IGNORE_NO_DELETE",
+                            "risk":  "LOW_MEDIUM"
+                        },
+                        {
+                            "order":  12,
+                            "module":  "tools\\human-maintenance-cards",
+                            "count":  1,
+                            "code_candidates":  0,
+                            "new_untracked":  1,
+                            "decision":  "CLASSIFY_NEW_ARTIFACTS_FIRST",
+                            "recommended_action":  "DECIDE_TRACK_OR_IGNORE_NO_DELETE",
+                            "risk":  "LOW_MEDIUM"
+                        },
+                        {
+                            "order":  13,
+                            "module":  "tools\\module-cards",
+                            "count":  1,
+                            "code_candidates":  0,
+                            "new_untracked":  1,
+                            "decision":  "CLASSIFY_NEW_ARTIFACTS_FIRST",
+                            "recommended_action":  "DECIDE_TRACK_OR_IGNORE_NO_DELETE",
+                            "risk":  "LOW_MEDIUM"
+                        },
+                        {
+                            "order":  14,
+                            "module":  "tools\\observer",
+                            "count":  1,
+                            "code_candidates":  0,
+                            "new_untracked":  1,
+                            "decision":  "CLASSIFY_NEW_ARTIFACTS_FIRST",
+                            "recommended_action":  "DECIDE_TRACK_OR_IGNORE_NO_DELETE",
+                            "risk":  "LOW_MEDIUM"
+                        },
+                        {
+                            "order":  15,
+                            "module":  "tools\\screen-master-template",
+                            "count":  1,
+                            "code_candidates":  0,
+                            "new_untracked":  1,
+                            "decision":  "CLASSIFY_NEW_ARTIFACTS_FIRST",
+                            "recommended_action":  "DECIDE_TRACK_OR_IGNORE_NO_DELETE",
+                            "risk":  "LOW_MEDIUM"
+                        },
+                        {
+                            "order":  16,
+                            "module":  "tools\\screen-normalizer",
+                            "count":  1,
+                            "code_candidates":  0,
+                            "new_untracked":  1,
+                            "decision":  "CLASSIFY_NEW_ARTIFACTS_FIRST",
+                            "recommended_action":  "DECIDE_TRACK_OR_IGNORE_NO_DELETE",
+                            "risk":  "LOW_MEDIUM"
+                        },
+                        {
+                            "order":  17,
+                            "module":  "tools\\desktop-terminal-operator",
+                            "count":  21,
+                            "code_candidates":  20,
+                            "new_untracked":  1,
+                            "decision":  "REVIEW_CODE_AND_NEW_ARTIFACTS_TOGETHER",
+                            "recommended_action":  "SPLIT_CODE_AND_NEW_ARTIFACTS_BEFORE_COMMIT",
+                            "risk":  "MEDIUM"
+                        },
+                        {
+                            "order":  18,
+                            "module":  "tools\\launcher",
+                            "count":  30,
+                            "code_candidates":  18,
+                            "new_untracked":  12,
+                            "decision":  "REVIEW_CODE_AND_NEW_ARTIFACTS_TOGETHER",
+                            "recommended_action":  "SPLIT_CODE_AND_NEW_ARTIFACTS_BEFORE_COMMIT",
+                            "risk":  "MEDIUM"
+                        }
+                    ],
+    "doc":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-scope-code-untracked-review\\E03_SAFE_REVIEW_ORDER_NO_APPLY.md",
+    "decision":  "GO_CLOSE_AND_PAUSE_REVIEW",
+    "next":  "E04_PREPARE_CLOSE_AND_DEVELOPMENT_REVIEW_NO_APPLY"
+}

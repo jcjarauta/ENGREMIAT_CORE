@@ -1,0 +1,26 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_SCOPE_HYGIENE_017",
+    "stage":  "E02_PREPARE_SCOPE_HYGIENE_PLAN_NO_DELETE",
+    "status":  "PASS",
+    "apply_changes":  false,
+    "delete_files":  false,
+    "commit_executed":  false,
+    "push_executed":  false,
+    "source_report":  "C:\\ENGREMIAT_CORE\\reports\\operator-v2-scope-hygiene\\e01-classify-outside-scope-hygiene-no-apply-20260622-071405.json",
+    "outside_scope_count":  339,
+    "noise_count":  28,
+    "docs_reports_count":  244,
+    "code_count":  50,
+    "untracked_count":  17,
+    "plan":  {
+                 "strategy":  "NO_DELETE_NO_COMMIT",
+                 "priority_1":  "Revisar DOCS_REPORTS_REVIEW porque son 244 y probablemente evidencias utiles o ruido documental",
+                 "priority_2":  "Revisar CODE_REVIEW porque son 50 y pueden ser trabajo funcional fuera de Operator V2",
+                 "priority_3":  "Revisar UNTRACKED_REVIEW porque son 17 y pueden ser nuevos artefactos no clasificados",
+                 "priority_4":  "Aislar NOISE_OR_GENERATED porque son 28 y pueden ir a .gitignore o limpieza posterior con autorizacion",
+                 "rule":  "No usar git add punto; no borrar; no commit global; commits scoped por modulo cuando se decida."
+             },
+    "doc":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-scope-hygiene\\E02_SCOPE_HYGIENE_PLAN_NO_DELETE.md",
+    "decision":  "GO_GENERATE_REVIEW_LISTS_NO_DELETE",
+    "next":  "E03_GENERATE_SCOPE_HYGIENE_REVIEW_LISTS_NO_DELETE"
+}

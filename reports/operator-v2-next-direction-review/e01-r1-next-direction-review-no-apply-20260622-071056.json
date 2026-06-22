@@ -1,0 +1,64 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_NEXT_DIRECTION_REVIEW_016",
+    "stage":  "E01_R1_CREATE_NEXT_DIRECTION_REVIEW_REPAIR_HOME_VARIABLE_NO_APPLY",
+    "status":  "PASS",
+    "repair":  "RENAMED_HOME_RESERVED_VARIABLE_TO_HOME_PREVIEW_PATH",
+    "apply_changes":  false,
+    "commit_executed":  false,
+    "push_executed":  false,
+    "last_commit":  "9ff7aef operator v2 lab actions maintenance and plan sync",
+    "scoped_pending_count":  3,
+    "outside_scope_count":  339,
+    "smokes":  [
+                   {
+                       "id":  "plan",
+                       "exit":  0,
+                       "ok":  true,
+                       "preview":  "{"
+                   },
+                   {
+                       "id":  "home-preview",
+                       "exit":  0,
+                       "ok":  true,
+                       "preview":  "{"
+                   },
+                   {
+                       "id":  "actions-plan",
+                       "exit":  0,
+                       "ok":  true,
+                       "preview":  "{"
+                   },
+                   {
+                       "id":  "maintenance-validar",
+                       "exit":  0,
+                       "ok":  true,
+                       "preview":  "{"
+                   }
+               ],
+    "options":  [
+                    {
+                        "id":  "A",
+                        "title":  "Integrar home preview en pantalla real",
+                        "value":  "Alto impacto UX",
+                        "risk":  "Medio/alto por motor de render aun compacto",
+                        "recommendation":  "No primero"
+                    },
+                    {
+                        "id":  "B",
+                        "title":  "Limpiar/revisar 339 cambios fuera de scope",
+                        "value":  "Alta higiene Git y menos riesgo futuro",
+                        "risk":  "Puede consumir tiempo sin avanzar producto",
+                        "recommendation":  "Mejor si queremos base limpia"
+                    },
+                    {
+                        "id":  "C",
+                        "title":  "Seguir funciones LAB sobre base actual",
+                        "value":  "Avance funcional rapido sin tocar root",
+                        "risk":  "Acumula deuda de integracion visual",
+                        "recommendation":  "Mejor si priorizamos producto"
+                    }
+                ],
+    "recommended":  "B_OR_C_DECISION_REQUIRED_OUTSIDE_SCOPE_HIGH",
+    "doc":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-next-direction-review\\E01_R1_NEXT_DIRECTION_REVIEW.md",
+    "next":  "E02_SELECT_NEXT_DIRECTION_AND_PREPARE_SAFE_OBJECTIVE"
+}
