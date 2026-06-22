@@ -1,0 +1,109 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_GLOBAL_SCOPE_CLEANUP_024",
+    "stage":  "E23_INSPECT_OPERATOR_V2_GLOBAL_CLEANUP_UNTRACKED_OTHER_NO_APPLY",
+    "status":  "PASS",
+    "apply_changes":  false,
+    "delete_files":  false,
+    "commit_executed":  false,
+    "push_executed":  false,
+    "pending_count":  7,
+    "by_kind":  [
+                    {
+                        "kind":  "DOC_OR_REPORT_ARTIFACT",
+                        "count":  4
+                    },
+                    {
+                        "kind":  "AUXILIARY_REVIEW_DIRECTORY",
+                        "count":  3
+                    }
+                ],
+    "items":  [
+                  {
+                      "status_code":  "M",
+                      "path":  "documents/operator-v2-global-scope-cleanup/NEXT_OBJECTIVE.md",
+                      "exists":  true,
+                      "is_dir":  false,
+                      "ext":  ".md",
+                      "kind":  "DOC_OR_REPORT_ARTIFACT",
+                      "file_count":  1,
+                      "total_bytes":  369,
+                      "raw":  " M documents/operator-v2-global-scope-cleanup/NEXT_OBJECTIVE.md",
+                      "preview":  "# NEXT OBJECTIVE\n\nE23_INSPECT_OPERATOR_V2_GLOBAL_CLEANUP_UNTRACKED_OTHER_NO_APPLY\n\nObjetivo: revisar los 3 UNTRACKED_OTHER restantes del grupo documents\\operator-v2-global-scope-cleanup y decidir si son docs con extension no reconocida, carpetas auxiliares o ruido.\n\nReglas: no git add punto, no borrar sin autorizacion explicita, no push salvo autorizacion."
+                  },
+                  {
+                      "status_code":  "??",
+                      "path":  "documents/operator-v2-global-scope-cleanup/E20_OPERATOR_V2_GLOBAL_CLEANUP_LEFTOVERS_INSPECTION_NO_APPLY.md",
+                      "exists":  true,
+                      "is_dir":  false,
+                      "ext":  ".md",
+                      "kind":  "DOC_OR_REPORT_ARTIFACT",
+                      "file_count":  1,
+                      "total_bytes":  3708,
+                      "raw":  "?? documents/operator-v2-global-scope-cleanup/E20_OPERATOR_V2_GLOBAL_CLEANUP_LEFTOVERS_INSPECTION_NO_APPLY.md",
+                      "preview":  "# E20 Operator V2 Global Cleanup Leftovers Inspection No Apply\n\nEstado: PASS\nApply changes: NO\nDelete files: NO\nCommit: NO\nPush: NO\n\n## Conteo\n- Pending in group: \n7\n\n## By kind\n- DOC_OR_REPORT_ARTIFACT: 4\n- UNTRACKED_OTHER: 3"
+                  },
+                  {
+                      "status_code":  "??",
+                      "path":  "documents/operator-v2-global-scope-cleanup/E21_OPERATOR_V2_GLOBAL_CLEANUP_REMAINING_DOCS_COMMIT_PACKET.md",
+                      "exists":  true,
+                      "is_dir":  false,
+                      "ext":  ".md",
+                      "kind":  "DOC_OR_REPORT_ARTIFACT",
+                      "file_count":  1,
+                      "total_bytes":  1584,
+                      "raw":  "?? documents/operator-v2-global-scope-cleanup/E21_OPERATOR_V2_GLOBAL_CLEANUP_REMAINING_DOCS_COMMIT_PACKET.md",
+                      "preview":  "# E21 Operator V2 Global Cleanup Remaining Docs Commit Packet\n\nEstado: PASS\nCommit executed: NO\nPush executed: NO\nDelete files: NO\nAuthorization required: \nAUTORIZO_COMMIT_SCOPED_OPERATOR_V2_GLOBAL_CLEANUP_REMAINING_DOCS_SIN_ADD_DOT_SIN_PUSH\nSource: \nC:\\ENGREMIAT_CORE\\reports\\operator-v2-global-scope-cleanup\\e20-inspect-operator-v2-global-cleanup-blocked-leftovers-no-apply-20260622-080108.json\n\n## Scope\nCerrar solo los DOC_OR_REPORT_ARTIFACT restantes del grupo documents\\operator-v2-global-scope-cleanup. Los UNTRACKED_OTHER quedan fuera para revision separada. No usar git add punto.\n\n## Conteo"
+                  },
+                  {
+                      "status_code":  "??",
+                      "path":  "documents/operator-v2-global-scope-cleanup/E22_OPERATOR_V2_GLOBAL_CLEANUP_REMAINING_DOCS_COMMIT_CLOSE.md",
+                      "exists":  true,
+                      "is_dir":  false,
+                      "ext":  ".md",
+                      "kind":  "DOC_OR_REPORT_ARTIFACT",
+                      "file_count":  1,
+                      "total_bytes":  2223,
+                      "raw":  "?? documents/operator-v2-global-scope-cleanup/E22_OPERATOR_V2_GLOBAL_CLEANUP_REMAINING_DOCS_COMMIT_CLOSE.md",
+                      "preview":  "# E22 Operator V2 Global Cleanup Remaining Docs Commit Close\n\nEstado: COMMITTED_SCOPED_NO_PUSH\nAuthorization: \nAUTORIZO_COMMIT_SCOPED_OPERATOR_V2_GLOBAL_CLEANUP_REMAINING_DOCS_SIN_ADD_DOT_SIN_PUSH\nCommit executed: YES\nPush executed: NO\nDelete files: NO\nCommit: \na5f693d operator v2 global cleanup remaining docs scoped\n\n## Scope\nSe ejecuto commit scoped solo de los 4 DOC_OR_REPORT_ARTIFACT restantes del grupo documents\\operator-v2-global-scope-cleanup. Los UNTRACKED_OTHER quedan fuera para revision separada. No se uso git add punto. No se hizo push.\n\n## Conteo"
+                  },
+                  {
+                      "status_code":  "??",
+                      "path":  "documents/operator-v2-global-scope-cleanup/groups-after-e04/",
+                      "exists":  true,
+                      "is_dir":  true,
+                      "ext":  "_no_ext",
+                      "kind":  "AUXILIARY_REVIEW_DIRECTORY",
+                      "file_count":  60,
+                      "total_bytes":  35689,
+                      "raw":  "?? documents/operator-v2-global-scope-cleanup/groups-after-e04/",
+                      "preview":  "documents\\operator-v2-global-scope-cleanup\\groups-after-e04\\documents_launcher-runtime-ui-integration.md\ndocuments\\operator-v2-global-scope-cleanup\\groups-after-e04\\documents_manual-screen-maintenance-cards.md\ndocuments\\operator-v2-global-scope-cleanup\\groups-after-e04\\documents_module-cards.md\ndocuments\\operator-v2-global-scope-cleanup\\groups-after-e04\\documents_operator-internal-screens-and-m-card-visual-sweep.md\ndocuments\\operator-v2-global-scope-cleanup\\groups-after-e04\\documents_operator-navigation.md\ndocuments\\operator-v2-global-scope-cleanup\\groups-after-e04\\documents_operator-real-maintenance-manual-smoke.md\ndocuments\\operator-v2-global-scope-cleanup\\groups-after-e04\\documents_operator-v2-global-scope-cleanup.md\ndocuments\\operator-v2-global-scope-cleanup\\groups-after-e04\\documents_real-project-walkthrough.md\ndocuments\\operator-v2-global-scope-cleanup\\groups-after-e04\\documents_screen-maintenance-real-integration.md\ndocuments\\operator-v2-global-scope-cleanup\\groups-after-e04\\documents_screen-maintenance-route-binding.md\ndocuments\\operator-v2-global-scope-cleanup\\groups-after-e04\\documents_ux-system.md\ndocuments\\operator-v2-global-scope-cleanup\\groups-after-e04\\documents_worker-sync.md\ndocuments\\operator-v2-global-scope-cleanup\\groups-after-e04\\reports_context-guardian.md\ndocuments\\operator-v2-global-scope-cleanup\\groups-after-e04\\reports_diagnostics.md\ndocuments\\operator-v2-global-scope-cleanup\\groups-after-e04\\reports_human-maintenance-cards.md\ndocuments\\operator-v2-global-scope-cleanup\\groups-after-e04\\reports_human-maintenance-interactive-form.md\ndocuments\\operator-v2-global-scope-cleanup\\groups-after-e04\\reports_launcher-actual-impact-audit.md\ndocuments\\operator-v2-global-scope-cleanup\\groups-after-e04\\reports_launcher-canonical-action-runtime.md\ndocuments\\operator-v2-global-scope-cleanup\\groups-after-e04\\reports_launcher-health.md\ndocuments\\operator-v2-global-scope-cleanup\\groups-after-e04\\reports_launcher-runtime-ui-integration.md"
+                  },
+                  {
+                      "status_code":  "??",
+                      "path":  "documents/operator-v2-global-scope-cleanup/groups-after-reports-launcher/",
+                      "exists":  true,
+                      "is_dir":  true,
+                      "ext":  "_no_ext",
+                      "kind":  "AUXILIARY_REVIEW_DIRECTORY",
+                      "file_count":  80,
+                      "total_bytes":  32837,
+                      "raw":  "?? documents/operator-v2-global-scope-cleanup/groups-after-reports-launcher/",
+                      "preview":  "documents\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\data_desktop-terminal-operator.md\ndocuments\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_context-guardian-enforcement.md\ndocuments\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_context-guardian.md\ndocuments\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_diagnostics.md\ndocuments\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_human-cards.md\ndocuments\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_human-maintenance-cards.md\ndocuments\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_human-maintenance-interactive-form.md\ndocuments\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_launcher-actual-impact-audit.md\ndocuments\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_launcher-canonical-action-runtime.md\ndocuments\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_launcher-contracts.md\ndocuments\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_launcher-management.md\ndocuments\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_launcher-runtime-ui-integration.md\ndocuments\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_manual-screen-maintenance-cards.md\ndocuments\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_module-cards.md\ndocuments\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_operator-internal-screens-and-m-card-visual-sweep.md\ndocuments\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_operator-navigation.md\ndocuments\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_operator-real-maintenance-manual-smoke.md\ndocuments\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_operator-real-screen-context-visual-smoke.md\ndocuments\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_operator-screen-context-normalization.md\ndocuments\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_operator-v2-global-scope-cleanup.md"
+                  },
+                  {
+                      "status_code":  "??",
+                      "path":  "documents/operator-v2-global-scope-cleanup/reports-launcher-split/",
+                      "exists":  true,
+                      "is_dir":  true,
+                      "ext":  "_no_ext",
+                      "kind":  "AUXILIARY_REVIEW_DIRECTORY",
+                      "file_count":  3,
+                      "total_bytes":  12873,
+                      "raw":  "?? documents/operator-v2-global-scope-cleanup/reports-launcher-split/",
+                      "preview":  "documents\\operator-v2-global-scope-cleanup\\reports-launcher-split\\CODE_OR_SCRIPT.md\ndocuments\\operator-v2-global-scope-cleanup\\reports-launcher-split\\NOISE_OR_GENERATED.md\ndocuments\\operator-v2-global-scope-cleanup\\reports-launcher-split\\REPORT_ARTIFACT.md"
+                  }
+              ],
+    "decision":  "REVIEW_UNTRACKED_OTHER_BY_KIND",
+    "doc":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-global-scope-cleanup\\E23_OPERATOR_V2_GLOBAL_CLEANUP_UNTRACKED_OTHER_INSPECTION_NO_APPLY.md",
+    "next":  "E24_HANDLE_OPERATOR_V2_GLOBAL_CLEANUP_UNTRACKED_OTHER_BY_KIND_NO_APPLY"
+}

@@ -1,0 +1,71 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_GLOBAL_SCOPE_CLEANUP_024",
+    "stage":  "E13_R1_INSPECT_REPORTS_LAUNCHER_REMAINDER_NO_APPLY",
+    "status":  "PASS",
+    "apply_changes":  false,
+    "delete_files":  false,
+    "commit_executed":  false,
+    "push_executed":  false,
+    "pending_count":  5,
+    "by_kind":  [
+                    {
+                        "kind":  "CODE_OR_SCRIPT",
+                        "count":  5
+                    }
+                ],
+    "items":  [
+                  {
+                      "status_code":  "??",
+                      "path":  "reports/launcher/e72-probe-projects-writer-signal-20260620-122028.ps1",
+                      "exists":  true,
+                      "ext":  ".ps1",
+                      "kind":  "CODE_OR_SCRIPT",
+                      "size":  8801,
+                      "modified":  "2026-06-20T12:20:28",
+                      "raw":  "?? reports/launcher/e72-probe-projects-writer-signal-20260620-122028.ps1"
+                  },
+                  {
+                      "status_code":  "??",
+                      "path":  "reports/launcher/e72b-probe-heartbeat-dryrun-render-20260620-122118.ps1",
+                      "exists":  true,
+                      "ext":  ".ps1",
+                      "kind":  "CODE_OR_SCRIPT",
+                      "size":  8806,
+                      "modified":  "2026-06-20T12:21:18",
+                      "raw":  "?? reports/launcher/e72b-probe-heartbeat-dryrun-render-20260620-122118.ps1"
+                  },
+                  {
+                      "status_code":  "??",
+                      "path":  "reports/launcher/e76-probe-projects-event-sequence-done-20260620-123113.ps1",
+                      "exists":  true,
+                      "ext":  ".ps1",
+                      "kind":  "CODE_OR_SCRIPT",
+                      "size":  8970,
+                      "modified":  "2026-06-20T12:31:13",
+                      "raw":  "?? reports/launcher/e76-probe-projects-event-sequence-done-20260620-123113.ps1"
+                  },
+                  {
+                      "status_code":  "??",
+                      "path":  "reports/launcher/e78b-probe-off-on-20260620-123543.ps1",
+                      "exists":  true,
+                      "ext":  ".ps1",
+                      "kind":  "CODE_OR_SCRIPT",
+                      "size":  9423,
+                      "modified":  "2026-06-20T12:35:43",
+                      "raw":  "?? reports/launcher/e78b-probe-off-on-20260620-123543.ps1"
+                  },
+                  {
+                      "status_code":  "??",
+                      "path":  "reports/launcher/e94d0-run-projects-capture-20260620-134506.ps1",
+                      "exists":  true,
+                      "ext":  ".ps1",
+                      "kind":  "CODE_OR_SCRIPT",
+                      "size":  976,
+                      "modified":  "2026-06-20T13:45:06",
+                      "raw":  "?? reports/launcher/e94d0-run-projects-capture-20260620-134506.ps1"
+                  }
+              ],
+    "decision":  "REVIEW_REMAINDER_BEFORE_ACTION",
+    "doc":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-global-scope-cleanup\\E13_R1_REPORTS_LAUNCHER_REMAINDER_INSPECTION_NO_APPLY.md",
+    "next":  "E14_HANDLE_REPORTS_LAUNCHER_REMAINDER_BY_KIND_NO_APPLY"
+}

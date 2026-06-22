@@ -1,0 +1,624 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_GLOBAL_SCOPE_CLEANUP_024",
+    "stage":  "E05_REBUILD_GLOBAL_SCOPE_AFTER_OPERATOR_V2_COMMIT_NO_APPLY",
+    "status":  "PASS",
+    "apply_changes":  false,
+    "delete_files":  false,
+    "commit_executed":  false,
+    "push_executed":  false,
+    "last_commit":  "f70b390 operator v2 cleanup docs and reports scoped",
+    "total_status_count":  340,
+    "by_class":  [
+                     {
+                         "class":  "DOCS_REPORTS_REVIEW",
+                         "count":  244
+                     },
+                     {
+                         "class":  "CODE_REVIEW",
+                         "count":  50
+                     },
+                     {
+                         "class":  "NOISE_OR_GENERATED",
+                         "count":  28
+                     },
+                     {
+                         "class":  "UNTRACKED_REVIEW",
+                         "count":  15
+                     },
+                     {
+                         "class":  "OPERATOR_V2_SCOPED_REVIEW",
+                         "count":  3
+                     }
+                 ],
+    "by_module":  [
+                      {
+                          "module":  "reports\\launcher",
+                          "count":  151,
+                          "classes":  "NOISE_OR_GENERATED:27, DOCS_REPORTS_REVIEW:124",
+                          "recommended_action":  "CANDIDATE_IGNORE_OR_DELETE_WITH_AUTHORIZATION"
+                      },
+                      {
+                          "module":  "documents\\ux-system",
+                          "count":  33,
+                          "classes":  "DOCS_REPORTS_REVIEW:33",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "tools\\launcher",
+                          "count":  31,
+                          "classes":  "CODE_REVIEW:26, DOCS_REPORTS_REVIEW:1, UNTRACKED_REVIEW:4",
+                          "recommended_action":  "INSPECT_DIFF_BEFORE_SCOPED_COMMIT"
+                      },
+                      {
+                          "module":  "tools\\desktop-terminal-operator",
+                          "count":  22,
+                          "classes":  "CODE_REVIEW:21, NOISE_OR_GENERATED:1",
+                          "recommended_action":  "INSPECT_DIFF_BEFORE_SCOPED_COMMIT"
+                      },
+                      {
+                          "module":  "documents\\worker-sync",
+                          "count":  10,
+                          "classes":  "DOCS_REPORTS_REVIEW:10",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "documents\\operator-v2-global-scope-cleanup",
+                          "count":  2,
+                          "classes":  "OPERATOR_V2_SCOPED_REVIEW:2",
+                          "recommended_action":  "CHECK_IF_OPERATOR_V2_LEFTOVERS"
+                      },
+                      {
+                          "module":  "reports\\operator-module-blueprint",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "reports\\operator-real-screen-context-visual-smoke",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "reports\\operator-navigation-model",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "reports\\operator-real-maintenance-manual-smoke",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "reports\\screen-maintenance-real-integration",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "reports\\screen-maintenance-route-binding",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "reports\\screen-master-template",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "reports\\operator-screen-context-normalization",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "reports\\operator-v2-global-scope-cleanup",
+                          "count":  1,
+                          "classes":  "OPERATOR_V2_SCOPED_REVIEW:1",
+                          "recommended_action":  "CHECK_IF_OPERATOR_V2_LEFTOVERS"
+                      },
+                      {
+                          "module":  "reports\\real-project-walkthrough",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "reports\\human-maintenance-interactive-form",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "reports\\launcher-actual-impact-audit",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "reports\\human-maintenance-cards",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "reports\\context-guardian",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "reports\\diagnostics",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "reports\\launcher-canonical-action-runtime",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "reports\\observer",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "reports\\operator-internal-screens-and-m-card-visual-sweep",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "reports\\manual-screen-maintenance-cards",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "reports\\launcher-health",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "reports\\launcher-runtime-ui-integration",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "reports\\screen-normalization",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "tools\\data-intake.ps1",
+                          "count":  1,
+                          "classes":  "CODE_REVIEW:1",
+                          "recommended_action":  "INSPECT_DIFF_BEFORE_SCOPED_COMMIT"
+                      },
+                      {
+                          "module":  "tools\\health",
+                          "count":  1,
+                          "classes":  "UNTRACKED_REVIEW:1",
+                          "recommended_action":  "CLASSIFY_NEW_ARTIFACT_BEFORE_TRACKING"
+                      },
+                      {
+                          "module":  "tools\\context-guardian",
+                          "count":  1,
+                          "classes":  "UNTRACKED_REVIEW:1",
+                          "recommended_action":  "CLASSIFY_NEW_ARTIFACT_BEFORE_TRACKING"
+                      },
+                      {
+                          "module":  "reports\\screen-normalizer-target-launcher-disambiguation",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "reports\\system-observer",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "tools\\human-card-assistant.ps1",
+                          "count":  1,
+                          "classes":  "CODE_REVIEW:1",
+                          "recommended_action":  "INSPECT_DIFF_BEFORE_SCOPED_COMMIT"
+                      },
+                      {
+                          "module":  "tools\\screen-master-template",
+                          "count":  1,
+                          "classes":  "UNTRACKED_REVIEW:1",
+                          "recommended_action":  "CLASSIFY_NEW_ARTIFACT_BEFORE_TRACKING"
+                      },
+                      {
+                          "module":  "tools\\screen-normalizer",
+                          "count":  1,
+                          "classes":  "UNTRACKED_REVIEW:1",
+                          "recommended_action":  "CLASSIFY_NEW_ARTIFACT_BEFORE_TRACKING"
+                      },
+                      {
+                          "module":  "tools\\observer",
+                          "count":  1,
+                          "classes":  "UNTRACKED_REVIEW:1",
+                          "recommended_action":  "CLASSIFY_NEW_ARTIFACT_BEFORE_TRACKING"
+                      },
+                      {
+                          "module":  "tools\\human-maintenance-cards",
+                          "count":  1,
+                          "classes":  "UNTRACKED_REVIEW:1",
+                          "recommended_action":  "CLASSIFY_NEW_ARTIFACT_BEFORE_TRACKING"
+                      },
+                      {
+                          "module":  "tools\\module-cards",
+                          "count":  1,
+                          "classes":  "UNTRACKED_REVIEW:1",
+                          "recommended_action":  "CLASSIFY_NEW_ARTIFACT_BEFORE_TRACKING"
+                      },
+                      {
+                          "module":  "reports\\screen-normalizer-subscreen-routing-adapter",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "reports\\screen-normalizer-inicio-migration-gate",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "reports\\screen-normalizer-inicio-parity-audit",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "reports\\screen-normalizer-general-launcher-route-gate",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "reports\\screen-normalizer-apply-controlled",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "reports\\screen-normalizer-general-launcher-menu-router-integration-gate",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "reports\\screen-normalizer-internal-candidates-generation",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "reports\\screen-normalizer-small-batch-migration-gate",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "reports\\screen-normalizer-standardization",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "reports\\screen-normalizer-real-screen-generation",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "reports\\screen-normalizer-internal-registry-sweep",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "reports\\screen-normalizer-internal-visual-smoke-results",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "documents\\operator-internal-screens-and-m-card-visual-sweep",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "documents\\operator-navigation",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "documents\\module-cards",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "documents\\launcher-runtime-ui-integration",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "documents\\manual-screen-maintenance-cards",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "documents\\operator-real-maintenance-manual-smoke",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "documents\\screen-maintenance-real-integration",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "documents\\screen-maintenance-route-binding",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "documents\\real-project-walkthrough",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "documents\\operator-real-screen-context-visual-smoke",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "documents\\operator-screen-context-normalization",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "documents\\launcher-management",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "documents\\context-guardian",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "documents\\diagnostics",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "documents\\context-guardian-enforcement",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "data\\desktop-terminal-operator",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "ENGREMIAT.ps1",
+                          "count":  1,
+                          "classes":  "CODE_REVIEW:1",
+                          "recommended_action":  "INSPECT_DIFF_BEFORE_SCOPED_COMMIT"
+                      },
+                      {
+                          "module":  "documents\\human-cards",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "documents\\launcher-canonical-action-runtime",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "documents\\launcher-contracts",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "documents\\launcher-actual-impact-audit",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "documents\\human-maintenance-cards",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "documents\\human-maintenance-interactive-form",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "documents\\system-observer",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "freezers",
+                          "count":  1,
+                          "classes":  "UNTRACKED_REVIEW:1",
+                          "recommended_action":  "CLASSIFY_NEW_ARTIFACT_BEFORE_TRACKING"
+                      },
+                      {
+                          "module":  "documents\\system-autodiagnosis",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "documents\\screen-normalizer-subscreen-routing-adapter",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "documents\\screen-normalizer-target-launcher-disambiguation",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "memory\\development",
+                          "count":  1,
+                          "classes":  "UNTRACKED_REVIEW:1",
+                          "recommended_action":  "CLASSIFY_NEW_ARTIFACT_BEFORE_TRACKING"
+                      },
+                      {
+                          "module":  "reports\\child-screen-normalization",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "reports\\context-guardian-enforcement",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "reports\\autoobservation",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "projects\\ENGREMIAT_PROJECT_heartbeat_demo",
+                          "count":  1,
+                          "classes":  "UNTRACKED_REVIEW:1",
+                          "recommended_action":  "CLASSIFY_NEW_ARTIFACT_BEFORE_TRACKING"
+                      },
+                      {
+                          "module":  "projects\\projects",
+                          "count":  1,
+                          "classes":  "UNTRACKED_REVIEW:1",
+                          "recommended_action":  "CLASSIFY_NEW_ARTIFACT_BEFORE_TRACKING"
+                      },
+                      {
+                          "module":  "documents\\screen-normalizer-standardization",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "documents\\screen-normalizer-general-launcher-route-gate",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "documents\\screen-normalizer-inicio-migration-gate",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "documents\\screen-normalizer-general-launcher-menu-router-integration-gate",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "documents\\screen-master-template",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "documents\\screen-normalizer-apply-controlled",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "documents\\screen-normalizer-inicio-parity-audit",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "documents\\screen-normalizer-real-screen-generation",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "documents\\screen-normalizer-small-batch-migration-gate",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "documents\\screen-normalizer-internal-visual-smoke-results",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "documents\\screen-normalizer-internal-candidates-generation",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      },
+                      {
+                          "module":  "documents\\screen-normalizer-internal-registry-sweep",
+                          "count":  1,
+                          "classes":  "DOCS_REPORTS_REVIEW:1",
+                          "recommended_action":  "CANDIDATE_SCOPED_DOCS_REPORTS_COMMIT_BY_PACKAGE"
+                      }
+                  ],
+    "next_class":  "DOCS_REPORTS_REVIEW",
+    "selected_group":  "reports\\launcher",
+    "selected_group_count":  124,
+    "group_dir":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-global-scope-cleanup\\groups-after-e04",
+    "doc":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-global-scope-cleanup\\E05_GLOBAL_SCOPE_AFTER_OPERATOR_V2_COMMIT_NO_APPLY.md",
+    "decision":  "GO_PREPARE_NEXT_GLOBAL_CLEANUP_GROUP_NO_APPLY",
+    "next":  "E06_PREPARE_NEXT_GLOBAL_CLEANUP_GROUP_NO_APPLY"
+}

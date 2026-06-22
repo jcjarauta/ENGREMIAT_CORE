@@ -1,0 +1,50 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_GLOBAL_SCOPE_CLEANUP_024",
+    "stage":  "E10_REBUILD_GLOBAL_SCOPE_AFTER_REPORTS_LAUNCHER_ARTIFACTS_RECONCILE_NO_APPLY",
+    "status":  "PASS",
+    "apply_changes":  false,
+    "delete_files":  false,
+    "commit_executed":  false,
+    "push_executed":  false,
+    "last_commit":  "0e82928 reports launcher artifacts scoped",
+    "total_status_count":  235,
+    "by_class":  [
+                     {
+                         "class":  "DOCS_REPORTS_REVIEW",
+                         "count":  125
+                     },
+                     {
+                         "class":  "CODE_REVIEW",
+                         "count":  50
+                     },
+                     {
+                         "class":  "NOISE_OR_GENERATED",
+                         "count":  28
+                     },
+                     {
+                         "class":  "OPERATOR_V2_SCOPED_REVIEW",
+                         "count":  17
+                     },
+                     {
+                         "class":  "UNTRACKED_REVIEW",
+                         "count":  15
+                     }
+                 ],
+    "reports_launcher_pending_count":  32,
+    "reports_launcher_by_class":  [
+                                      {
+                                          "class":  "NOISE_OR_GENERATED",
+                                          "count":  27
+                                      },
+                                      {
+                                          "class":  "DOCS_REPORTS_REVIEW",
+                                          "count":  5
+                                      }
+                                  ],
+    "reports_launcher_code_count":  0,
+    "reports_launcher_noise_count":  27,
+    "reports_launcher_docs_count":  5,
+    "next_action":  "PREPARE_NOISE_REVIEW_NO_DELETE",
+    "doc":  "C:\\ENGREMIAT_CORE\\documents\\operator-v2-global-scope-cleanup\\E10_GLOBAL_SCOPE_AFTER_REPORTS_LAUNCHER_RECONCILE_NO_APPLY.md",
+    "next":  "E11_PREPARE_REPORTS_LAUNCHER_NOISE_REVIEW_NO_DELETE"
+}
