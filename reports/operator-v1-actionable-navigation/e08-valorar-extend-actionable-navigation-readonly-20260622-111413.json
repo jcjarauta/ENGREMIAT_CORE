@@ -1,0 +1,47 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V1_ACTIONABLE_NAVIGATION_001",
+    "stage":  "E08_VALORAR_EXTEND_ACTIONABLE_NAVIGATION_READONLY",
+    "status":  "PASS",
+    "created_at":  "2026-06-22T11:14:16",
+    "launcher_parse":  true,
+    "launcher_ok":  true,
+    "head":  "b0af392b",
+    "rev_sync":  "0\t3",
+    "rev_sync_left":  0,
+    "rev_sync_right":  3,
+    "remote_synced":  false,
+    "tree_clean":  true,
+    "recommended_next_step":  "E09_INTEGRATE_MEMORY_DOCS_ACTIONS_READONLY",
+    "reason":  "Memory Docs es la extension natural: usa el mismo visor de detalle, no ejecuta procesos, no abre externos y permite validar seleccion por numero sobre indices/contratos/evidencias antes de pasar a Data Intake o Health.",
+    "alternatives":  [
+                         {
+                             "id":  "A",
+                             "objective":  "EXTEND_TO_MEMORY_DOCS_READONLY",
+                             "score":  96,
+                             "reason":  "Mas seguro: solo lista documentos y abre detalle readonly con el visor comun."
+                         },
+                         {
+                             "id":  "B",
+                             "objective":  "EXTEND_TO_DATA_INTAKE_READONLY",
+                             "score":  88,
+                             "reason":  "Alto valor, pero conviene hacerlo despues porque prepara gates de import/staging."
+                         },
+                         {
+                             "id":  "C",
+                             "objective":  "EXTEND_TO_HEALTH_LAUNCHERS_READONLY",
+                             "score":  82,
+                             "reason":  "Util, pero contiene smokes/repairs y hay que mantener bloqueos muy visibles."
+                         },
+                         {
+                             "id":  "D",
+                             "objective":  "PUSH_CURRENT_ACTIONABLE_PROJECTS_ONLY",
+                             "score":  70,
+                             "reason":  "Sincroniza lo hecho, pero corta el objetivo antes de completar el patron V1."
+                         }
+                     ],
+    "push_executed":  false,
+    "fetch_executed":  false,
+    "merge_executed":  false,
+    "delete_files":  false,
+    "next":  "E09_INTEGRATE_MEMORY_DOCS_ACTIONS_READONLY"
+}

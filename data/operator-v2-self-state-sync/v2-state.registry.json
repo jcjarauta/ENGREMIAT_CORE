@@ -1,7 +1,7 @@
 ﻿{
     "schema":  "ENGREMIAT_OPERATOR_V2_STATE_REGISTRY_V1",
     "created_at":  "2026-06-22T09:23:43",
-    "updated_at":  "2026-06-22T11:13:09",
+    "updated_at":  "2026-06-22T11:16:40",
     "source_contract":  "documents/operator-v2-self-state-sync/V2_STATE_REGISTRY_CONTRACT.v1.json",
     "objectives":  [
                        {
@@ -69,27 +69,27 @@
                   }
               ],
     "git_state":  {
-                      "head":  "0c982bd8",
-                      "rev_sync":  "0\t2",
+                      "head":  "b0af392b",
+                      "rev_sync":  "0\t3",
                       "tree_clean":  false,
-                      "status_short":  "?? reports/operator-v1-actionable-navigation/e06r-commit-pending-next-objective-evidence-no-push-20260622-110840.json",
+                      "status_short":  "M data/operator-v2-self-state-sync/v2-state.events.jsonl\n M data/operator-v2-self-state-sync/v2-state.latest.json\n M data/operator-v2-self-state-sync/v2-state.registry.json\n M documents/operator-v2-self-state-sync/V2_STATE_INDEX.md\n M tools/operator-v1/operator-v1-memory-docs-screen.ps1\n?? data/operator-v1-actionable-navigation/memory-docs-actionable-readonly.latest.json\n?? documents/operator-v1-actionable-navigation/E08_VALORAR_EXTEND_ACTIONABLE_NAVIGATION_READONLY_20260622-111413.md\n?? documents/operator-v1-actionable-navigation/MEMORY_DOCS_ACTIONABLE_READONLY.v1.md\n?? reports/operator-v1-actionable-navigation/e08-valorar-extend-actionable-navigation-readonly-20260622-111413.json\n?? reports/operator-v1-actionable-navigation/e09-integrate-memory-docs-actions-readonly-20260622-111524.json",
                       "push_executed":  false
                   },
-    "next_action":  "VALORAR_EXTENDER_ACTIONABLE_NAVIGATION_A_MEMORY_DATA_HEALTH_O_PUSH",
-    "events_count":  76,
+    "next_action":  "PROBAR_MEMORY_DOCS_ACTIONABLE_READONLY_DESDE_LAUNCHER",
+    "events_count":  79,
     "last_event":  {
-                       "ts":  "2026-06-22T11:13:09",
+                       "ts":  "2026-06-22T11:16:40",
                        "event":  "V2_STATE_UPDATE",
                        "package":  "ENGREMIAT_OPERATOR_V1_ACTIONABLE_NAVIGATION_001",
-                       "stage":  "E07_HUMAN_RETEST_CLOSE_PROJECTS_ACTIONABLE_READONLY_NO_PUSH",
-                       "step":  "E07",
+                       "stage":  "E10_VALIDATE_ACTIONABLE_MEMORY_DOCS_AND_COMMIT_SCOPED",
+                       "step":  "E10",
                        "status":  "PASS",
-                       "report":  "reports\\operator-v1-actionable-navigation\\e07-human-retest-close-projects-actionable-readonly-no-push-20260622-111256.json",
-                       "next":  "VALORAR_EXTENDER_ACTIONABLE_NAVIGATION_A_MEMORY_DATA_HEALTH_O_PUSH",
-                       "readiness":  100,
-                       "summary":  "Projects V1 accionable read-only probado por humano: numero abre Detail Viewer readonly, Enter vuelve, acciones externas bloqueadas. Sin push.",
-                       "head":  "0c982bd8",
-                       "rev_sync":  "0\t2",
+                       "report":  "reports\\operator-v1-actionable-navigation\\e10-validate-actionable-memory-docs-and-commit-scoped-20260622-111632.json",
+                       "next":  "PROBAR_MEMORY_DOCS_ACTIONABLE_READONLY_DESDE_LAUNCHER",
+                       "readiness":  82,
+                       "summary":  "Memory Docs V1 accionable read-only validado: numero abre detalle seguro, Enter refresca, b/q vuelve, acciones reales bloqueadas por gate; commit scoped sin push.",
+                       "head":  "b0af392b",
+                       "rev_sync":  "0\t3",
                        "tree_clean":  false
                    }
 }

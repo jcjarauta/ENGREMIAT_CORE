@@ -1,0 +1,43 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V1_ACTIONABLE_NAVIGATION_001",
+    "stage":  "E09_INTEGRATE_MEMORY_DOCS_ACTIONS_READONLY",
+    "status":  "PASS",
+    "created_at":  "2026-06-22T11:15:35",
+    "backup":  "C:\\ENGREMIAT_CORE\\backups\\operator-v1-actionable-navigation\\operator-v1-memory-docs-screen.before-e09-actionable-20260622-111524.ps1",
+    "memory_screen":  "C:\\ENGREMIAT_CORE\\tools\\operator-v1\\operator-v1-memory-docs-screen.ps1",
+    "detail_viewer":  "C:\\ENGREMIAT_CORE\\tools\\operator-v1\\operator-v1-detail-viewer-readonly.ps1",
+    "viewer_parse":  true,
+    "screen_parse":  true,
+    "json_smoke":  true,
+    "detail_viewer_smoke":  true,
+    "memory_items_count":  480,
+    "index_count":  13,
+    "contract_count":  41,
+    "evidence_count":  109,
+    "state_count":  43,
+    "manual_count":  4,
+    "safe_actions":  [
+                         "numero_ver_detalle_readonly",
+                         "Enter_refrescar",
+                         "b_q_volver",
+                         "ayuda"
+                     ],
+    "gated_actions":  [
+                          "abrir_documento_externo",
+                          "editar_documento",
+                          "generar_indice",
+                          "modificar_memoria"
+                      ],
+    "latest":  "C:\\ENGREMIAT_CORE\\data\\operator-v1-actionable-navigation\\memory-docs-actionable-readonly.latest.json",
+    "index":  "C:\\ENGREMIAT_CORE\\documents\\operator-v1-actionable-navigation\\MEMORY_DOCS_ACTIONABLE_READONLY.v1.md",
+    "branch":  "main",
+    "head":  "b0af392b",
+    "rev_sync":  "0\t3",
+    "remote_synced":  false,
+    "tree_clean":  false,
+    "push_executed":  false,
+    "fetch_executed":  false,
+    "merge_executed":  false,
+    "delete_files":  false,
+    "next":  "E10_VALIDATE_ACTIONABLE_MEMORY_DOCS_AND_COMMIT_SCOPED"
+}
