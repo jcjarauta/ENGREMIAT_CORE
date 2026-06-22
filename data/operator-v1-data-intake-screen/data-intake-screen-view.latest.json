@@ -1,0 +1,2413 @@
+﻿{
+    "screen":  "OPERATOR_V1_DATA_INTAKE",
+    "updated_at":  "2026-06-22T10:35:49",
+    "purpose":  "Pantalla V1 para operar entrada de datos bajo gobierno V2.",
+    "git":  {
+                "branch":  "main",
+                "head":  "1868462c",
+                "rev_sync":  "0\t8",
+                "tree_clean":  false,
+                "status_short":  "M data/operator-v2-self-state-sync/v2-state.events.jsonl\n M data/operator-v2-self-state-sync/v2-state.latest.json\n M data/operator-v2-self-state-sync/v2-state.registry.json\n M documents/operator-v2-self-state-sync/V2_STATE_INDEX.md\n?? data/operator-v1-data-intake-screen/\n?? documents/operator-v1-data-intake-screen/\n?? reports/operator-v1-data-intake-screen/\n?? tools/operator-v1/operator-v1-data-intake-screen.ps1"
+            },
+    "summary":  {
+                    "intake_dirs_count":  10,
+                    "intake_files_count":  322,
+                    "source_count":  104,
+                    "staging_count":  7,
+                    "import_count":  20,
+                    "sheet_count":  52,
+                    "api_count":  11,
+                    "reports_recent_count":  10,
+                    "next_human_action":  "VALIDAR_PANTALLA_DATA_INTAKE_V1_Y_PREPARAR_GATE_LAUNCHER"
+                },
+    "intake_dirs":  [
+                        {
+                            "name":  "operator-v1-data-intake-screen",
+                            "path":  "data\\operator-v1-data-intake-screen",
+                            "modified":  "2026-06-22T10:34:46",
+                            "kind":  "DATA_HINT"
+                        },
+                        {
+                            "name":  "real-intake-importer",
+                            "path":  "data\\real-intake-importer",
+                            "modified":  "2026-06-19T10:06:47",
+                            "kind":  "IMPORT_HINT"
+                        },
+                        {
+                            "name":  "real-human-intake-ui",
+                            "path":  "data\\real-human-intake-ui",
+                            "modified":  "2026-06-19T09:51:36",
+                            "kind":  "DATA_HINT"
+                        },
+                        {
+                            "name":  "kanban-backlog-25-cards-import-prep",
+                            "path":  "data\\kanban-backlog-25-cards-import-prep",
+                            "modified":  "2026-06-18T19:53:38",
+                            "kind":  "IMPORT_HINT"
+                        },
+                        {
+                            "name":  "task-packet-to-module-intake-001",
+                            "path":  "data\\task-packet-to-module-intake-001",
+                            "modified":  "2026-06-17T22:07:28",
+                            "kind":  "DATA_HINT"
+                        },
+                        {
+                            "name":  "ENGREMIAT_MODULE_INTAKE_REGISTRY_001",
+                            "path":  "data\\ENGREMIAT_MODULE_INTAKE_REGISTRY_001",
+                            "modified":  "2026-06-17T21:36:34",
+                            "kind":  "DATA_HINT"
+                        },
+                        {
+                            "name":  "plan-intake-191",
+                            "path":  "data\\plan-intake-191",
+                            "modified":  "2026-06-17T18:46:38",
+                            "kind":  "DATA_HINT"
+                        },
+                        {
+                            "name":  "operator-v1-data-intake-screen",
+                            "path":  "documents\\operator-v1-data-intake-screen",
+                            "modified":  "2026-06-22T10:34:46",
+                            "kind":  "DATA_HINT"
+                        },
+                        {
+                            "name":  "intake",
+                            "path":  "documents\\intake",
+                            "modified":  "2026-06-20T09:36:06",
+                            "kind":  "DATA_HINT"
+                        },
+                        {
+                            "name":  "operator-v1-data-intake-screen",
+                            "path":  "reports\\operator-v1-data-intake-screen",
+                            "modified":  "2026-06-22T10:34:46",
+                            "kind":  "DATA_HINT"
+                        }
+                    ],
+    "intake_files":  [
+                         {
+                             "name":  "data-intake-screen.latest.json",
+                             "path":  "data\\operator-v1-data-intake-screen\\data-intake-screen.latest.json",
+                             "modified":  "2026-06-22T10:34:46",
+                             "bytes":  5213,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "module-relations-template.v1.tsv",
+                             "path":  "data\\operator-module-blueprint\\module-relations-template.v1.tsv",
+                             "modified":  "2026-06-20T02:08:35",
+                             "bytes":  400,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "module-cards-template.v1.tsv",
+                             "path":  "data\\operator-module-blueprint\\module-cards-template.v1.tsv",
+                             "modified":  "2026-06-20T02:08:35",
+                             "bytes":  599,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "project-intake.json",
+                             "path":  "data\\project-start-flow\\SIM_PROJECT_20260619-164503_nuevo-proyecto\\project-intake.json",
+                             "modified":  "2026-06-19T16:45:03",
+                             "bytes":  1459,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "project-intake.json",
+                             "path":  "data\\project-start-flow\\SIM_PROJECT_20260619-162809_nuevo-proyecto\\project-intake.json",
+                             "modified":  "2026-06-19T16:28:10",
+                             "bytes":  1478,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "project-intake.json",
+                             "path":  "data\\project-start-flow\\SIM_PROJECT_20260619-161706_nuevo-proyecto\\project-intake.json",
+                             "modified":  "2026-06-19T16:17:06",
+                             "bytes":  1478,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "project-intake.json",
+                             "path":  "data\\project-start-flow\\SIM_PROJECT_20260619-160241_nuevo-proyecto-nuevo-proyecto\\project-intake.json",
+                             "modified":  "2026-06-19T16:02:41",
+                             "bytes":  1613,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "project-intake.json",
+                             "path":  "data\\project-start-flow\\SIM_PROJECT_20260619-155454_nuevo-proyecto\\project-intake.json",
+                             "modified":  "2026-06-19T15:54:54",
+                             "bytes":  1370,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "project-intake.json",
+                             "path":  "data\\project-start-flow\\SIM_PROJECT_20260619-154656_nuevo-proyecto\\project-intake.json",
+                             "modified":  "2026-06-19T15:46:56",
+                             "bytes":  1133,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "project-intake.json",
+                             "path":  "data\\project-start-flow\\SIM_PROJECT_20260619-153849_nuevo-proyecto\\project-intake.json",
+                             "modified":  "2026-06-19T15:38:50",
+                             "bytes":  889,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "project-intake.json",
+                             "path":  "data\\project-start-flow\\SIM_PROJECT_20260619-153753_nuevo-proyecto\\project-intake.json",
+                             "modified":  "2026-06-19T15:37:54",
+                             "bytes":  889,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "project-intake.json",
+                             "path":  "data\\project-start-flow\\SIM_PROJECT_20260619-153711_nuevo-proyecto\\project-intake.json",
+                             "modified":  "2026-06-19T15:37:11",
+                             "bytes":  889,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "project-intake.json",
+                             "path":  "data\\project-start-flow\\SIM_PROJECT_20260619-153553_nuevo-proyecto\\project-intake.json",
+                             "modified":  "2026-06-19T15:35:53",
+                             "bytes":  889,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "project-intake.json",
+                             "path":  "data\\project-start-flow\\SIM_PROJECT_20260619-153101_prueba2\\project-intake.json",
+                             "modified":  "2026-06-19T15:31:01",
+                             "bytes":  945,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "project-intake.json",
+                             "path":  "data\\project-start-flow\\SIM_PROJECT_20260619-153021_prueba2\\project-intake.json",
+                             "modified":  "2026-06-19T15:30:21",
+                             "bytes":  914,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "project-intake.json",
+                             "path":  "data\\project-start-flow\\SIM_PROJECT_20260619-152304_prueba1\\project-intake.json",
+                             "modified":  "2026-06-19T15:23:04",
+                             "bytes":  952,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "project-start-intake-SIM_PROJECT_20260619-144124.json",
+                             "path":  "data\\system-simulation-lab\\project-start-intake-SIM_PROJECT_20260619-144124.json",
+                             "modified":  "2026-06-19T14:41:24",
+                             "bytes":  2118,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "manual-obsidian-open-instructions.json",
+                             "path":  "data\\obsidian-vault-human-review\\manual-obsidian-open-instructions.json",
+                             "modified":  "2026-06-19T11:25:55",
+                             "bytes":  1457,
+                             "kind":  "API"
+                         },
+                         {
+                             "name":  "kanban-import-gate.closed-preview.json",
+                             "path":  "data\\kanban-roadmap-card-export-preview\\kanban-import-gate.closed-preview.json",
+                             "modified":  "2026-06-19T10:14:41",
+                             "bytes":  2803,
+                             "kind":  "IMPORT"
+                         },
+                         {
+                             "name":  "kanban-import-review-receipt.pending.json",
+                             "path":  "data\\kanban-roadmap-card-export-preview\\kanban-import-review-receipt.pending.json",
+                             "modified":  "2026-06-19T10:13:50",
+                             "bytes":  563,
+                             "kind":  "IMPORT"
+                         },
+                         {
+                             "name":  "kanban-import-review.pending.json",
+                             "path":  "data\\kanban-roadmap-card-export-preview\\kanban-import-review.pending.json",
+                             "modified":  "2026-06-19T10:13:50",
+                             "bytes":  1950,
+                             "kind":  "IMPORT"
+                         },
+                         {
+                             "name":  "real-intake-importer-close-manifest.json",
+                             "path":  "data\\real-intake-importer\\real-intake-importer-close-manifest.json",
+                             "modified":  "2026-06-19T10:06:47",
+                             "bytes":  772,
+                             "kind":  "IMPORT"
+                         },
+                         {
+                             "name":  "real-intake-roadmap-preview.20260619-100319.json",
+                             "path":  "data\\real-intake-importer\\real-intake-roadmap-preview.20260619-100319.json",
+                             "modified":  "2026-06-19T10:03:19",
+                             "bytes":  4696,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "real-intake-roadmap-preview.latest.json",
+                             "path":  "data\\real-intake-importer\\real-intake-roadmap-preview.latest.json",
+                             "modified":  "2026-06-19T10:03:19",
+                             "bytes":  4696,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "real-human-intake.accepted.latest.json",
+                             "path":  "data\\real-intake-importer\\real-human-intake.accepted.latest.json",
+                             "modified":  "2026-06-19T10:03:19",
+                             "bytes":  2010,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "real-human-intake.accepted.20260619-100319.json",
+                             "path":  "data\\real-intake-importer\\real-human-intake.accepted.20260619-100319.json",
+                             "modified":  "2026-06-19T10:03:19",
+                             "bytes":  2010,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "real-intake-importer-contract.json",
+                             "path":  "data\\real-intake-importer\\real-intake-importer-contract.json",
+                             "modified":  "2026-06-19T10:02:57",
+                             "bytes":  1167,
+                             "kind":  "IMPORT"
+                         },
+                         {
+                             "name":  "real-intake-roadmap-preview.json",
+                             "path":  "data\\real-human-intake-ui\\real-intake-roadmap-preview.json",
+                             "modified":  "2026-06-19T09:51:36",
+                             "bytes":  3905,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "real-human-intake.accepted.json",
+                             "path":  "data\\real-human-intake-ui\\real-human-intake.accepted.json",
+                             "modified":  "2026-06-19T09:51:36",
+                             "bytes":  1908,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "real-human-intake-ui-contract.json",
+                             "path":  "data\\real-human-intake-ui\\real-human-intake-ui-contract.json",
+                             "modified":  "2026-06-19T09:47:46",
+                             "bytes":  1169,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "real-human-intake.sample.json",
+                             "path":  "data\\real-human-intake-ui\\real-human-intake.sample.json",
+                             "modified":  "2026-06-19T09:47:46",
+                             "bytes":  479,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "human-project-intake-contract.json",
+                             "path":  "data\\project-builder-to-worker-loop\\human-project-intake-contract.json",
+                             "modified":  "2026-06-19T09:42:23",
+                             "bytes":  1190,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "human-project-intake-sample.json",
+                             "path":  "data\\project-builder-to-worker-loop\\human-project-intake-sample.json",
+                             "modified":  "2026-06-19T09:42:23",
+                             "bytes":  683,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "project-intake-to-ollama-prompt-bridge.preview.md",
+                             "path":  "data\\project-builder-to-worker-loop-001\\prompts\\project-intake-to-ollama-prompt-bridge.preview.md",
+                             "modified":  "2026-06-19T09:41:32",
+                             "bytes":  508,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "project-intake.template.json",
+                             "path":  "data\\project-builder-to-worker-loop-001\\input\\project-intake.template.json",
+                             "modified":  "2026-06-19T09:41:32",
+                             "bytes":  423,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "gate-save-human-project-intake.json",
+                             "path":  "data\\project-builder-to-worker-loop-001\\gates\\gate-save-human-project-intake.json",
+                             "modified":  "2026-06-19T09:41:32",
+                             "bytes":  804,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "project-intake.schema.json",
+                             "path":  "data\\project-builder-to-worker-loop-001\\contracts\\project-intake.schema.json",
+                             "modified":  "2026-06-19T09:41:32",
+                             "bytes":  1499,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "project-intake.sample.json",
+                             "path":  "data\\project-builder-to-worker-loop-001\\input\\project-intake.sample.json",
+                             "modified":  "2026-06-19T09:39:46",
+                             "bytes":  1059,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "E08_OPEN_AND_VALIDATE_MARKDOWN_KANBAN_BOARD.md",
+                             "path":  "data\\obsidian-system-bridge-001\\evaluation\\E08_OPEN_AND_VALIDATE_MARKDOWN_KANBAN_BOARD.md",
+                             "modified":  "2026-06-19T07:39:46",
+                             "bytes":  673,
+                             "kind":  "API"
+                         },
+                         {
+                             "name":  "E05_OPEN_MARKDOWN_KANBAN_TEST_AND_CHECK_EXTENSIONS.md",
+                             "path":  "data\\obsidian-system-bridge-001\\evaluation\\E05_OPEN_MARKDOWN_KANBAN_TEST_AND_CHECK_EXTENSIONS.md",
+                             "modified":  "2026-06-19T07:36:20",
+                             "bytes":  850,
+                             "kind":  "API"
+                         },
+                         {
+                             "name":  "system-needs-25-import-template.json",
+                             "path":  "data\\kanban-backlog-25-cards-import-prep\\system-needs-25-import-template.json",
+                             "modified":  "2026-06-18T19:53:38",
+                             "bytes":  21415,
+                             "kind":  "IMPORT"
+                         },
+                         {
+                             "name":  "backlog-source-binding.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_CLINE_KANBAN_BACKLOG_REFRESH_001\\contracts\\backlog-source-binding.json",
+                             "modified":  "2026-06-18T09:12:08",
+                             "bytes":  325,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "pipeline-source-binding.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_IMPROVEMENT_TO_EXECUTION_PIPELINE_001\\contracts\\pipeline-source-binding.json",
+                             "modified":  "2026-06-18T08:58:46",
+                             "bytes":  360,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "operation-loop-source-map.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_KANBAN_OPERATION_LOOP_001\\contracts\\operation-loop-source-map.json",
+                             "modified":  "2026-06-18T08:44:11",
+                             "bytes":  374,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "manual-tsv-target.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_KANBAN_EXTERNAL_WRITE_ADAPTER_001\\contracts\\manual-tsv-target.json",
+                             "modified":  "2026-06-18T08:30:47",
+                             "bytes":  143,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "Invoke-KanbanSourceScanner.ps1",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_INTERNAL_IMPROVEMENT_KANBAN_SEED_001\\tools\\Invoke-KanbanSourceScanner.ps1",
+                             "modified":  "2026-06-18T08:03:56",
+                             "bytes":  1886,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "system-source-map.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_INTERNAL_IMPROVEMENT_KANBAN_SEED_001\\contracts\\system-source-map.json",
+                             "modified":  "2026-06-18T08:03:56",
+                             "bytes":  507,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "sample-resource-selection.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_RESOURCE_COMPOSER_CORE_001\\samples\\sample-resource-selection.json",
+                             "modified":  "2026-06-18T07:19:20",
+                             "bytes":  324,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "sample-composer-input.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_RESOURCE_COMPOSER_CORE_001\\samples\\sample-composer-input.json",
+                             "modified":  "2026-06-18T07:19:20",
+                             "bytes":  331,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "resource-selection-rules.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_RESOURCE_COMPOSER_CORE_001\\rules\\resource-selection-rules.json",
+                             "modified":  "2026-06-18T07:18:13",
+                             "bytes":  181,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "Invoke-ResourceSelectionEngine.ps1",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_RESOURCE_COMPOSER_CORE_001\\tools\\Invoke-ResourceSelectionEngine.ps1",
+                             "modified":  "2026-06-18T07:18:13",
+                             "bytes":  175,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "candidate-resource-selection.schema.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_RESOURCE_COMPOSER_CORE_001\\schemas\\candidate-resource-selection.schema.json",
+                             "modified":  "2026-06-18T07:18:13",
+                             "bytes":  174,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "resource-query-binding.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_RESOURCE_COMPOSER_CORE_001\\contracts\\resource-query-binding.json",
+                             "modified":  "2026-06-18T07:18:13",
+                             "bytes":  110,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "composer-input.schema.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_RESOURCE_COMPOSER_CORE_001\\schemas\\composer-input.schema.json",
+                             "modified":  "2026-06-18T07:18:13",
+                             "bytes":  215,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "sample-resource-query-output.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_SYSTEM_OUTPUT_STANDARD_001\\samples\\outputs\\sample-resource-query-output.json",
+                             "modified":  "2026-06-18T07:07:02",
+                             "bytes":  850,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "resource-query-output.schema.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_SYSTEM_OUTPUT_STANDARD_001\\schemas\\resource-query-output.schema.json",
+                             "modified":  "2026-06-18T07:04:50",
+                             "bytes":  743,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "state-source-catalog.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_NEEDS_TO_SOLUTION_PROPOSAL_001\\contracts\\state-source-catalog.json",
+                             "modified":  "2026-06-18T06:49:52",
+                             "bytes":  1317,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "resource-library-index.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_RESOURCE_LIBRARY_STANDARD_001\\library\\index\\resource-library-index.json",
+                             "modified":  "2026-06-18T06:34:31",
+                             "bytes":  6147,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "Invoke-ResourceLibraryValidator.ps1",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_RESOURCE_LIBRARY_STANDARD_001\\tools\\Invoke-ResourceLibraryValidator.ps1",
+                             "modified":  "2026-06-18T06:34:30",
+                             "bytes":  2629,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "Invoke-ResourceLibraryIndexBuilder.ps1",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_RESOURCE_LIBRARY_STANDARD_001\\tools\\Invoke-ResourceLibraryIndexBuilder.ps1",
+                             "modified":  "2026-06-18T06:34:30",
+                             "bytes":  1654,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "resource-workflow-audio-meeting.manifest.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_RESOURCE_LIBRARY_STANDARD_001\\samples\\resources\\resource-workflow-audio-meeting.manifest.json",
+                             "modified":  "2026-06-18T06:34:30",
+                             "bytes":  1142,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "resource-business-plan-template.manifest.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_RESOURCE_LIBRARY_STANDARD_001\\samples\\resources\\resource-business-plan-template.manifest.json",
+                             "modified":  "2026-06-18T06:34:30",
+                             "bytes":  1077,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "resource-template-module-initiator.manifest.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_RESOURCE_LIBRARY_STANDARD_001\\samples\\resources\\resource-template-module-initiator.manifest.json",
+                             "modified":  "2026-06-18T06:34:30",
+                             "bytes":  1162,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "resource-module-json-factory.manifest.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_RESOURCE_LIBRARY_STANDARD_001\\samples\\resources\\resource-module-json-factory.manifest.json",
+                             "modified":  "2026-06-18T06:34:30",
+                             "bytes":  1135,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "resource-composer-query.schema.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_RESOURCE_LIBRARY_STANDARD_001\\schemas\\resource-composer-query.schema.json",
+                             "modified":  "2026-06-18T06:34:30",
+                             "bytes":  781,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "resource-search-fields.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_RESOURCE_LIBRARY_STANDARD_001\\schemas\\resource-search-fields.json",
+                             "modified":  "2026-06-18T06:34:30",
+                             "bytes":  906,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "resource-library-index.schema.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_RESOURCE_LIBRARY_STANDARD_001\\schemas\\resource-library-index.schema.json",
+                             "modified":  "2026-06-18T06:34:30",
+                             "bytes":  760,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "resource-grant-application-template.manifest.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_RESOURCE_LIBRARY_STANDARD_001\\samples\\resources\\resource-grant-application-template.manifest.json",
+                             "modified":  "2026-06-18T06:34:30",
+                             "bytes":  1118,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "resource-officialization-gate.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_RESOURCE_LIBRARY_STANDARD_001\\gates\\resource-officialization-gate.json",
+                             "modified":  "2026-06-18T06:31:15",
+                             "bytes":  860,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "resource-evidence-policy.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_RESOURCE_LIBRARY_STANDARD_001\\contracts\\resource-evidence-policy.json",
+                             "modified":  "2026-06-18T06:31:15",
+                             "bytes":  2669,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "resource-reuse-policy.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_RESOURCE_LIBRARY_STANDARD_001\\contracts\\resource-reuse-policy.json",
+                             "modified":  "2026-06-18T06:31:15",
+                             "bytes":  787,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "resource-quality-score.schema.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_RESOURCE_LIBRARY_STANDARD_001\\schemas\\resource-quality-score.schema.json",
+                             "modified":  "2026-06-18T06:31:15",
+                             "bytes":  719,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "resource-compatibility-matrix.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_RESOURCE_LIBRARY_STANDARD_001\\contracts\\resource-compatibility-matrix.json",
+                             "modified":  "2026-06-18T06:31:15",
+                             "bytes":  758,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "resource-composition-blueprint.schema.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_RESOURCE_LIBRARY_STANDARD_001\\schemas\\resource-composition-blueprint.schema.json",
+                             "modified":  "2026-06-18T06:31:15",
+                             "bytes":  948,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "resource-dependency-model.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_RESOURCE_LIBRARY_STANDARD_001\\schemas\\resource-dependency-model.json",
+                             "modified":  "2026-06-18T06:31:15",
+                             "bytes":  650,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "resource-capability-tags.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_RESOURCE_LIBRARY_STANDARD_001\\schemas\\resource-capability-tags.json",
+                             "modified":  "2026-06-18T06:31:15",
+                             "bytes":  728,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "resource-manifest.schema.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_RESOURCE_LIBRARY_STANDARD_001\\schemas\\resource-manifest.schema.json",
+                             "modified":  "2026-06-18T06:31:15",
+                             "bytes":  1374,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "resource-status-enum.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_RESOURCE_LIBRARY_STANDARD_001\\schemas\\resource-status-enum.json",
+                             "modified":  "2026-06-18T06:31:15",
+                             "bytes":  511,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "resource-version-model.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_RESOURCE_LIBRARY_STANDARD_001\\schemas\\resource-version-model.json",
+                             "modified":  "2026-06-18T06:31:15",
+                             "bytes":  405,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "resource-type-taxonomy.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_RESOURCE_LIBRARY_STANDARD_001\\schemas\\resource-type-taxonomy.json",
+                             "modified":  "2026-06-18T06:31:15",
+                             "bytes":  674,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "resource-library-contract.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_RESOURCE_LIBRARY_STANDARD_001\\contracts\\resource-library-contract.json",
+                             "modified":  "2026-06-18T06:31:15",
+                             "bytes":  956,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "create-resource-gate-policy.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_TOOL_ADAPTER_GATE_001\\gates\\create-resource-gate-policy.json",
+                             "modified":  "2026-06-18T06:20:59",
+                             "bytes":  219,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "publish-resource-gate-policy.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_TOOL_ADAPTER_GATE_001\\gates\\publish-resource-gate-policy.json",
+                             "modified":  "2026-06-18T06:20:59",
+                             "bytes":  241,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "officialize-resource-gate-policy.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_TOOL_ADAPTER_GATE_001\\gates\\officialize-resource-gate-policy.json",
+                             "modified":  "2026-06-18T06:20:59",
+                             "bytes":  239,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "resource-type-taxonomy.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_INTERNAL_WORKFLOW_STANDARD_001\\schemas\\resource-type-taxonomy.json",
+                             "modified":  "2026-06-17T23:02:23",
+                             "bytes":  539,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "resource.schema.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_INTERNAL_WORKFLOW_STANDARD_001\\schemas\\resource.schema.json",
+                             "modified":  "2026-06-17T23:02:23",
+                             "bytes":  1255,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "sample-row.tsv",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_SHEETS_MODULE_INITIATOR_001\\samples\\sample-row.tsv",
+                             "modified":  "2026-06-17T22:20:59",
+                             "bytes":  2294,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "sheets-module-initiator-row-schema.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_SHEETS_MODULE_INITIATOR_001\\schemas\\sheets-module-initiator-row-schema.json",
+                             "modified":  "2026-06-17T22:20:04",
+                             "bytes":  5243,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "sheets-module-initiator-headers.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_SHEETS_MODULE_INITIATOR_001\\schemas\\sheets-module-initiator-headers.json",
+                             "modified":  "2026-06-17T22:20:04",
+                             "bytes":  969,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "sheets-module-initiator-headers.tsv",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_SHEETS_MODULE_INITIATOR_001\\schemas\\sheets-module-initiator-headers.tsv",
+                             "modified":  "2026-06-17T22:20:04",
+                             "bytes":  304,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "sheets-module-initiator-contract.json",
+                             "path":  "data\\_OFFICIAL_MODULES\\_NEXT_MODULES\\ENGREMIAT_SHEETS_MODULE_INITIATOR_001\\contracts\\sheets-module-initiator-contract.json",
+                             "modified":  "2026-06-17T22:19:34",
+                             "bytes":  1608,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "module-intake-candidate.demo.json",
+                             "path":  "data\\task-packet-to-module-intake-001\\module-intake-candidate.demo.json",
+                             "modified":  "2026-06-17T22:07:28",
+                             "bytes":  2790,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "module-intake-candidate-schema.json",
+                             "path":  "data\\task-packet-to-module-intake-001\\module-intake-candidate-schema.json",
+                             "modified":  "2026-06-17T22:06:41",
+                             "bytes":  11909,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "task-packet-to-module-intake-contract.json",
+                             "path":  "data\\task-packet-to-module-intake-001\\task-packet-to-module-intake-contract.json",
+                             "modified":  "2026-06-17T22:06:13",
+                             "bytes":  2989,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "task-packet-demo-source.json",
+                             "path":  "data\\knowledge-to-task-packet-001\\task-packet-demo-source.json",
+                             "modified":  "2026-06-17T22:00:26",
+                             "bytes":  718,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "cline-kanban-export.tsv",
+                             "path":  "data\\ENGREMIAT_KNOWLEDGE_TO_TASK_PACKET_001\\packages\\cline-kanban-export.tsv",
+                             "modified":  "2026-06-17T21:55:29",
+                             "bytes":  245,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "official-modules-validation-results.tsv",
+                             "path":  "data\\ENGREMIAT_MODULES_OFFICIALIZATION_001\\E06_VALIDATE_OFFICIAL_MODULES\\packages\\official-modules-validation-results.tsv",
+                             "modified":  "2026-06-17T21:49:01",
+                             "bytes":  37856,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "identity-patches.tsv",
+                             "path":  "data\\ENGREMIAT_MODULES_OFFICIALIZATION_001\\E03_PREPARE_IDENTITY_PATCHES_NO_APPLY\\packages\\identity-patches.tsv",
+                             "modified":  "2026-06-17T21:44:03",
+                             "bytes":  76624,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "worker-response-import-020.module.json",
+                             "path":  "data\\ENGREMIAT_MODULES_OFFICIALIZATION_001\\E03_PREPARE_IDENTITY_PATCHES_NO_APPLY\\identity-patches\\worker-response-import-020.module.json",
+                             "modified":  "2026-06-17T21:44:03",
+                             "bytes":  1608,
+                             "kind":  "IMPORT"
+                         },
+                         {
+                             "name":  "worker-proposal-intake-078.module.json",
+                             "path":  "data\\ENGREMIAT_MODULES_OFFICIALIZATION_001\\E03_PREPARE_IDENTITY_PATCHES_NO_APPLY\\identity-patches\\worker-proposal-intake-078.module.json",
+                             "modified":  "2026-06-17T21:44:03",
+                             "bytes":  1609,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "worker-import-049.module.json",
+                             "path":  "data\\ENGREMIAT_MODULES_OFFICIALIZATION_001\\E03_PREPARE_IDENTITY_PATCHES_NO_APPLY\\identity-patches\\worker-import-049.module.json",
+                             "modified":  "2026-06-17T21:44:03",
+                             "bytes":  1581,
+                             "kind":  "IMPORT"
+                         },
+                         {
+                             "name":  "unified-human-inbox-087.module.json",
+                             "path":  "data\\ENGREMIAT_MODULES_OFFICIALIZATION_001\\E03_PREPARE_IDENTITY_PATCHES_NO_APPLY\\identity-patches\\unified-human-inbox-087.module.json",
+                             "modified":  "2026-06-17T21:44:03",
+                             "bytes":  1599,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "useful-input-123.module.json",
+                             "path":  "data\\ENGREMIAT_MODULES_OFFICIALIZATION_001\\E03_PREPARE_IDENTITY_PATCHES_NO_APPLY\\identity-patches\\useful-input-123.module.json",
+                             "modified":  "2026-06-17T21:44:03",
+                             "bytes":  1578,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "task-intake-113.module.json",
+                             "path":  "data\\ENGREMIAT_MODULES_OFFICIALIZATION_001\\E03_PREPARE_IDENTITY_PATCHES_NO_APPLY\\identity-patches\\task-intake-113.module.json",
+                             "modified":  "2026-06-17T21:44:03",
+                             "bytes":  1576,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "plan-intake-191.module.json",
+                             "path":  "data\\ENGREMIAT_MODULES_OFFICIALIZATION_001\\E03_PREPARE_IDENTITY_PATCHES_NO_APPLY\\identity-patches\\plan-intake-191.module.json",
+                             "modified":  "2026-06-17T21:44:03",
+                             "bytes":  1576,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "plan-intake-190.module.json",
+                             "path":  "data\\ENGREMIAT_MODULES_OFFICIALIZATION_001\\E03_PREPARE_IDENTITY_PATCHES_NO_APPLY\\identity-patches\\plan-intake-190.module.json",
+                             "modified":  "2026-06-17T21:44:03",
+                             "bytes":  1576,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "operational-inbox-047.module.json",
+                             "path":  "data\\ENGREMIAT_MODULES_OFFICIALIZATION_001\\E03_PREPARE_IDENTITY_PATCHES_NO_APPLY\\identity-patches\\operational-inbox-047.module.json",
+                             "modified":  "2026-06-17T21:44:03",
+                             "bytes":  1593,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "operational-input-133.module.json",
+                             "path":  "data\\ENGREMIAT_MODULES_OFFICIALIZATION_001\\E03_PREPARE_IDENTITY_PATCHES_NO_APPLY\\identity-patches\\operational-input-133.module.json",
+                             "modified":  "2026-06-17T21:44:03",
+                             "bytes":  1593,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "plan-intake-189.module.json",
+                             "path":  "data\\ENGREMIAT_MODULES_OFFICIALIZATION_001\\E03_PREPARE_IDENTITY_PATCHES_NO_APPLY\\identity-patches\\plan-intake-189.module.json",
+                             "modified":  "2026-06-17T21:44:03",
+                             "bytes":  1576,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "plan-intake-188.module.json",
+                             "path":  "data\\ENGREMIAT_MODULES_OFFICIALIZATION_001\\E03_PREPARE_IDENTITY_PATCHES_NO_APPLY\\identity-patches\\plan-intake-188.module.json",
+                             "modified":  "2026-06-17T21:44:03",
+                             "bytes":  1576,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "open-source-toolchain-bootstrap.module.json",
+                             "path":  "data\\ENGREMIAT_MODULES_OFFICIALIZATION_001\\E03_PREPARE_IDENTITY_PATCHES_NO_APPLY\\identity-patches\\open-source-toolchain-bootstrap.module.json",
+                             "modified":  "2026-06-17T21:44:03",
+                             "bytes":  1623,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "human-need-intake-097.module.json",
+                             "path":  "data\\ENGREMIAT_MODULES_OFFICIALIZATION_001\\E03_PREPARE_IDENTITY_PATCHES_NO_APPLY\\identity-patches\\human-need-intake-097.module.json",
+                             "modified":  "2026-06-17T21:44:03",
+                             "bytes":  1594,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "file-intake-152.module.json",
+                             "path":  "data\\ENGREMIAT_MODULES_OFFICIALIZATION_001\\E03_PREPARE_IDENTITY_PATCHES_NO_APPLY\\identity-patches\\file-intake-152.module.json",
+                             "modified":  "2026-06-17T21:44:03",
+                             "bytes":  1576,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "officialization-plan.tsv",
+                             "path":  "data\\ENGREMIAT_MODULES_OFFICIALIZATION_001\\E02_CREATE_OFFICIALIZATION_PLAN_NO_APPLY\\packages\\officialization-plan.tsv",
+                             "modified":  "2026-06-17T21:42:58",
+                             "bytes":  48401,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "modules-officialization-inventory.tsv",
+                             "path":  "data\\ENGREMIAT_MODULES_OFFICIALIZATION_001\\packages\\modules-officialization-inventory.tsv",
+                             "modified":  "2026-06-17T21:41:55",
+                             "bytes":  44797,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "module-intake-readiness-report.json",
+                             "path":  "data\\ENGREMIAT_MODULE_INTAKE_REGISTRY_001\\E05_CLOSE_AND_NEXT\\reports\\module-intake-readiness-report.json",
+                             "modified":  "2026-06-17T21:36:34",
+                             "bytes":  661,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "module-intake-close-report.md",
+                             "path":  "data\\ENGREMIAT_MODULE_INTAKE_REGISTRY_001\\E05_CLOSE_AND_NEXT\\reports\\module-intake-close-report.md",
+                             "modified":  "2026-06-17T21:36:34",
+                             "bytes":  453,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "module-intake-close-manifest.json",
+                             "path":  "data\\ENGREMIAT_MODULE_INTAKE_REGISTRY_001\\E05_CLOSE_AND_NEXT\\contracts\\module-intake-close-manifest.json",
+                             "modified":  "2026-06-17T21:36:34",
+                             "bytes":  830,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "MODULE_INTAKE_HUMAN_MACHINE_MANUAL.md",
+                             "path":  "data\\ENGREMIAT_MODULE_INTAKE_REGISTRY_001\\E05_CLOSE_AND_NEXT\\docs\\MODULE_INTAKE_HUMAN_MACHINE_MANUAL.md",
+                             "modified":  "2026-06-17T21:36:34",
+                             "bytes":  859,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "module-intake-registry.json",
+                             "path":  "data\\ENGREMIAT_MODULE_INTAKE_REGISTRY_001\\registry\\module-intake-registry.json",
+                             "modified":  "2026-06-17T21:35:36",
+                             "bytes":  1370,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "DATA_INTAKE_SCREEN_CONTRACT.v1.md",
+                             "path":  "documents\\operator-v1-data-intake-screen\\DATA_INTAKE_SCREEN_CONTRACT.v1.md",
+                             "modified":  "2026-06-22T10:34:46",
+                             "bytes":  1472,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "DATA_INTAKE_SCREEN_CONTRACT.v1.json",
+                             "path":  "documents\\operator-v1-data-intake-screen\\DATA_INTAKE_SCREEN_CONTRACT.v1.json",
+                             "modified":  "2026-06-22T10:34:46",
+                             "bytes":  5213,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "E01_AUDIT_DATA_INTAKE_SCREEN_STATE_READONLY_20260622-103351.md",
+                             "path":  "documents\\operator-v1-data-intake-screen\\E01_AUDIT_DATA_INTAKE_SCREEN_STATE_READONLY_20260622-103351.md",
+                             "modified":  "2026-06-22T10:33:56",
+                             "bytes":  709,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "E01_AUDIT_CONTROL_PANEL_INPUTS_READONLY_20260622-094717.md",
+                             "path":  "documents\\operator-v2-control-panel\\E01_AUDIT_CONTROL_PANEL_INPUTS_READONLY_20260622-094717.md",
+                             "modified":  "2026-06-22T09:47:20",
+                             "bytes":  660,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "data_desktop-terminal-operator.md",
+                             "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\data_desktop-terminal-operator.md",
+                             "modified":  "2026-06-22T07:58:11",
+                             "bytes":  300,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "tools_data-intake.ps1.md",
+                             "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\tools_data-intake.ps1.md",
+                             "modified":  "2026-06-22T07:58:11",
+                             "bytes":  246,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "tools_data-intake.ps1.md",
+                             "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-e04\\tools_data-intake.ps1.md",
+                             "modified":  "2026-06-22T07:44:10",
+                             "bytes":  228,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "data_desktop-terminal-operator.md",
+                             "path":  "documents\\operator-v2-global-scope-cleanup\\groups\\data_desktop-terminal-operator.md",
+                             "modified":  "2026-06-22T07:41:00",
+                             "bytes":  281,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "tools_data-intake.ps1.md",
+                             "path":  "documents\\operator-v2-global-scope-cleanup\\groups\\tools_data-intake.ps1.md",
+                             "modified":  "2026-06-22T07:41:00",
+                             "bytes":  218,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "E01_DATA_SCREEN_NORMALIZER_SCOPED_COMMIT_AUTHORIZATION_PACKET.md",
+                             "path":  "documents\\operator-v2-screen-normalizer-evidence-commit\\E01_DATA_SCREEN_NORMALIZER_SCOPED_COMMIT_AUTHORIZATION_PACKET.md",
+                             "modified":  "2026-06-22T07:29:18",
+                             "bytes":  779,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "E01_R1_FAST_INSPECT_DATA_SCREEN_NORMALIZER_NO_APPLY.md",
+                             "path":  "documents\\operator-v2-review-untracked-directory-contents\\E01_R1_FAST_INSPECT_DATA_SCREEN_NORMALIZER_NO_APPLY.md",
+                             "modified":  "2026-06-22T07:26:43",
+                             "bytes":  576,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "E01_INSPECT_DATA_SCREEN_NORMALIZER_CONTENTS_NO_APPLY.md",
+                             "path":  "documents\\operator-v2-review-untracked-directory-contents\\E01_INSPECT_DATA_SCREEN_NORMALIZER_CONTENTS_NO_APPLY.md",
+                             "modified":  "2026-06-22T07:25:07",
+                             "bytes":  1249,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "E01_REVIEW_DATA_SCREEN_NORMALIZER_NO_APPLY.md",
+                             "path":  "documents\\operator-v2-review-first-scope-group\\E01_REVIEW_DATA_SCREEN_NORMALIZER_NO_APPLY.md",
+                             "modified":  "2026-06-22T07:22:18",
+                             "bytes":  371,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "data_screen-normalizer.md",
+                             "path":  "documents\\operator-v2-scope-code-untracked-review\\module-groups\\data_screen-normalizer.md",
+                             "modified":  "2026-06-22T07:19:40",
+                             "bytes":  217,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "tools_data-intake.ps1.md",
+                             "path":  "documents\\operator-v2-scope-code-untracked-review\\module-groups\\tools_data-intake.ps1.md",
+                             "modified":  "2026-06-22T07:19:40",
+                             "bytes":  214,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "E01_AUDIT_PLAN_SYNC_SOURCES.md",
+                             "path":  "documents\\operator-v2-plan-sync\\E01_AUDIT_PLAN_SYNC_SOURCES.md",
+                             "modified":  "2026-06-22T06:47:07",
+                             "bytes":  10541,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "E05_BIND_LIVE_CONTEXT_RESOURCE_TO_SCREEN_TEMPLATE.md",
+                             "path":  "documents\\operator-v2-live-context\\E05_BIND_LIVE_CONTEXT_RESOURCE_TO_SCREEN_TEMPLATE.md",
+                             "modified":  "2026-06-22T06:28:42",
+                             "bytes":  1442,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "E04_REGISTER_PLAN_REPORT_AS_OPERATOR_V2_RESOURCE.md",
+                             "path":  "documents\\operator-v2-live-context\\E04_REGISTER_PLAN_REPORT_AS_OPERATOR_V2_RESOURCE.md",
+                             "modified":  "2026-06-22T06:27:47",
+                             "bytes":  961,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "E09_REAL_INPUT_ROUTER_DISCOVERY.md",
+                             "path":  "documents\\operator-v2-actions\\E09_REAL_INPUT_ROUTER_DISCOVERY.md",
+                             "modified":  "2026-06-21T21:30:26",
+                             "bytes":  7170,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "tools__launcher__ENGREMIAT-DATA-INTAKE-CENTER-NORMALIZED.ps1.candidate.ps1",
+                             "path":  "documents\\screen-master-template\\planned\\legend-candidates\\tools__launcher__ENGREMIAT-DATA-INTAKE-CENTER-NORMALIZED.ps1.candidate.ps1",
+                             "modified":  "2026-06-20T21:17:29",
+                             "bytes":  8421,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "tools__launcher__ENGREMIAT-DATA-INTAKE-CENTER.ps1.candidate.ps1",
+                             "path":  "documents\\screen-master-template\\planned\\legend-candidates\\tools__launcher__ENGREMIAT-DATA-INTAKE-CENTER.ps1.candidate.ps1",
+                             "modified":  "2026-06-20T21:17:29",
+                             "bytes":  11266,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "tools__desktop-terminal-operator__eng-library-import.ps1.candidate.ps1",
+                             "path":  "documents\\screen-master-template\\planned\\legend-candidates\\tools__desktop-terminal-operator__eng-library-import.ps1.candidate.ps1",
+                             "modified":  "2026-06-20T21:17:28",
+                             "bytes":  6625,
+                             "kind":  "IMPORT"
+                         },
+                         {
+                             "name":  "stable-launcher-runtime-menu-source-audit.latest.md",
+                             "path":  "documents\\screen-normalizer-general-launcher-menu-router-integration-gate\\planned\\stable-launcher-runtime-menu-source-audit.latest.md",
+                             "modified":  "2026-06-20T19:25:45",
+                             "bytes":  16176,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "E08E_BIS_VALIDATE_NO_OPEN_TERMINAL_READONLY.md",
+                             "path":  "documents\\screen-normalizer-general-launcher-menu-router-integration-gate\\close\\E08E_BIS_VALIDATE_NO_OPEN_TERMINAL_READONLY.md",
+                             "modified":  "2026-06-20T19:05:38",
+                             "bytes":  1331,
+                             "kind":  "API"
+                         },
+                         {
+                             "name":  "guided-subscreen-navigation-smoke.manual.latest.tsv",
+                             "path":  "documents\\screen-normalizer-subscreen-routing-adapter\\guided-navigation-smoke\\guided-subscreen-navigation-smoke.manual.latest.tsv",
+                             "modified":  "2026-06-20T18:45:04",
+                             "bytes":  422,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "subscreen-routing-adapter-visual-smoke.manual.latest.tsv",
+                             "path":  "documents\\screen-normalizer-subscreen-routing-adapter\\manual-smoke\\subscreen-routing-adapter-visual-smoke.manual.latest.tsv",
+                             "modified":  "2026-06-20T18:26:08",
+                             "bytes":  191,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "internal-visual-smoke-results.manual.latest.tsv",
+                             "path":  "documents\\screen-normalizer-internal-visual-smoke-results\\runner\\internal-visual-smoke-results.manual.latest.tsv",
+                             "modified":  "2026-06-20T17:15:02",
+                             "bytes":  1525,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "internal-visual-smoke-results-template.latest.tsv",
+                             "path":  "documents\\screen-normalizer-internal-visual-smoke-results\\template\\internal-visual-smoke-results-template.latest.tsv",
+                             "modified":  "2026-06-20T16:58:36",
+                             "bytes":  1687,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "real-inicio-screen-source-strict-20260620-161650.json",
+                             "path":  "documents\\operator-real-screen-context-visual-smoke\\diagnostics\\real-inicio-screen-source-strict-20260620-161650.json",
+                             "modified":  "2026-06-20T16:16:50",
+                             "bytes":  25987,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "real-inicio-screen-source-strict.latest.json",
+                             "path":  "documents\\operator-real-screen-context-visual-smoke\\diagnostics\\real-inicio-screen-source-strict.latest.json",
+                             "modified":  "2026-06-20T16:16:50",
+                             "bytes":  25987,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "current-executable-screen-source.latest.json",
+                             "path":  "documents\\operator-screen-context-normalization\\diagnostics\\current-executable-screen-source.latest.json",
+                             "modified":  "2026-06-20T16:10:55",
+                             "bytes":  11208,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "current-executable-screen-source-20260620-161055.json",
+                             "path":  "documents\\operator-screen-context-normalization\\diagnostics\\current-executable-screen-source-20260620-161055.json",
+                             "modified":  "2026-06-20T16:10:55",
+                             "bytes":  11208,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "current-executable-screen-source-20260620-160930.json",
+                             "path":  "documents\\operator-screen-context-normalization\\diagnostics\\current-executable-screen-source-20260620-160930.json",
+                             "modified":  "2026-06-20T16:09:31",
+                             "bytes":  11208,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "executable-screen-sources.latest.json",
+                             "path":  "documents\\operator-screen-context-normalization\\diagnostics\\executable-screen-sources.latest.json",
+                             "modified":  "2026-06-20T16:08:53",
+                             "bytes":  66370,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "executable-screen-sources-20260620-160852.json",
+                             "path":  "documents\\operator-screen-context-normalization\\diagnostics\\executable-screen-sources-20260620-160852.json",
+                             "modified":  "2026-06-20T16:08:53",
+                             "bytes":  66370,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "projects-screen-source-locate-20260620-160744.json",
+                             "path":  "documents\\operator-real-maintenance-manual-smoke\\diagnostics\\projects-screen-source-locate-20260620-160744.json",
+                             "modified":  "2026-06-20T16:07:45",
+                             "bytes":  25763,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "projects-screen-source-locate.latest.json",
+                             "path":  "documents\\operator-real-maintenance-manual-smoke\\diagnostics\\projects-screen-source-locate.latest.json",
+                             "modified":  "2026-06-20T16:07:45",
+                             "bytes":  25763,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "operator-input-flow-diagnostic.latest.json",
+                             "path":  "documents\\screen-maintenance-route-binding\\diagnostics\\operator-input-flow-diagnostic.latest.json",
+                             "modified":  "2026-06-20T15:53:55",
+                             "bytes":  45980,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "operator-input-flow-diagnostic-20260620-155355.json",
+                             "path":  "documents\\screen-maintenance-route-binding\\diagnostics\\operator-input-flow-diagnostic-20260620-155355.json",
+                             "modified":  "2026-06-20T15:53:55",
+                             "bytes":  45980,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "human-maintenance-summary.latest.tsv",
+                             "path":  "documents\\human-maintenance-cards\\exports\\human-maintenance-summary.latest.tsv",
+                             "modified":  "2026-06-20T15:40:10",
+                             "bytes":  85,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "human-maintenance-kanban-cards.latest.tsv",
+                             "path":  "documents\\human-maintenance-cards\\exports\\human-maintenance-kanban-cards.latest.tsv",
+                             "modified":  "2026-06-20T15:40:10",
+                             "bytes":  328,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "human-maintenance-summary-20260620-154010.tsv",
+                             "path":  "documents\\human-maintenance-cards\\exports\\human-maintenance-summary-20260620-154010.tsv",
+                             "modified":  "2026-06-20T15:40:10",
+                             "bytes":  85,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "human-maintenance-tasks-for-sheets.latest.tsv",
+                             "path":  "documents\\human-maintenance-cards\\exports\\human-maintenance-tasks-for-sheets.latest.tsv",
+                             "modified":  "2026-06-20T15:40:10",
+                             "bytes":  753,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "human-maintenance-tasks-for-sheets-20260620-154010.tsv",
+                             "path":  "documents\\human-maintenance-cards\\exports\\human-maintenance-tasks-for-sheets-20260620-154010.tsv",
+                             "modified":  "2026-06-20T15:40:10",
+                             "bytes":  753,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "human-maintenance-kanban-cards-20260620-154010.tsv",
+                             "path":  "documents\\human-maintenance-cards\\exports\\human-maintenance-kanban-cards-20260620-154010.tsv",
+                             "modified":  "2026-06-20T15:40:10",
+                             "bytes":  328,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "human-maintenance-tasks-v0-20260620-153941.tsv",
+                             "path":  "documents\\human-maintenance-cards\\tasks\\human-maintenance-tasks-v0-20260620-153941.tsv",
+                             "modified":  "2026-06-20T15:39:41",
+                             "bytes":  482,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "human-maintenance-tasks-v0.latest.tsv",
+                             "path":  "documents\\human-maintenance-cards\\tasks\\human-maintenance-tasks-v0.latest.tsv",
+                             "modified":  "2026-06-20T15:39:41",
+                             "bytes":  482,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "human-maintenance-card-inbox-index.latest.json",
+                             "path":  "documents\\human-maintenance-cards\\inbox\\human-maintenance-card-inbox-index.latest.json",
+                             "modified":  "2026-06-20T15:38:07",
+                             "bytes":  1194,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "human-maintenance-card-inbox-index-20260620-153806.json",
+                             "path":  "documents\\human-maintenance-cards\\inbox\\human-maintenance-card-inbox-index-20260620-153806.json",
+                             "modified":  "2026-06-20T15:38:07",
+                             "bytes":  1194,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "system-observer-summary-20260620-152938.tsv",
+                             "path":  "documents\\system-observer\\exports\\system-observer-summary-20260620-152938.tsv",
+                             "modified":  "2026-06-20T15:29:38",
+                             "bytes":  86,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "system-observer-summary.latest.tsv",
+                             "path":  "documents\\system-observer\\exports\\system-observer-summary.latest.tsv",
+                             "modified":  "2026-06-20T15:29:38",
+                             "bytes":  86,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "system-observer-kanban-cards-20260620-152938.tsv",
+                             "path":  "documents\\system-observer\\exports\\system-observer-kanban-cards-20260620-152938.tsv",
+                             "modified":  "2026-06-20T15:29:38",
+                             "bytes":  3161,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "system-observer-kanban-cards.latest.tsv",
+                             "path":  "documents\\system-observer\\exports\\system-observer-kanban-cards.latest.tsv",
+                             "modified":  "2026-06-20T15:29:38",
+                             "bytes":  3161,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "system-observer-tasks-for-sheets.latest.tsv",
+                             "path":  "documents\\system-observer\\exports\\system-observer-tasks-for-sheets.latest.tsv",
+                             "modified":  "2026-06-20T15:29:38",
+                             "bytes":  6258,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "system-observer-tasks-for-sheets-20260620-152938.tsv",
+                             "path":  "documents\\system-observer\\exports\\system-observer-tasks-for-sheets-20260620-152938.tsv",
+                             "modified":  "2026-06-20T15:29:38",
+                             "bytes":  6258,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "system-observer-tasks-v0-20260620-152902.tsv",
+                             "path":  "documents\\system-observer\\tasks\\system-observer-tasks-v0-20260620-152902.tsv",
+                             "modified":  "2026-06-20T15:29:02",
+                             "bytes":  3227,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "system-observer-tasks-v0.latest.tsv",
+                             "path":  "documents\\system-observer\\tasks\\system-observer-tasks-v0.latest.tsv",
+                             "modified":  "2026-06-20T15:29:02",
+                             "bytes":  3227,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "E47_NEXT_SCREEN_AFTER_DATA_INTAKE.selection.json",
+                             "path":  "documents\\ux-system\\screens\\E47_NEXT_SCREEN_AFTER_DATA_INTAKE.selection.json",
+                             "modified":  "2026-06-20T10:20:26",
+                             "bytes":  721,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "DOCCENTER_TO_DATAINTAKE_NORMALIZED_TEST_CLOSE.md",
+                             "path":  "documents\\ux-system\\screens\\DOCCENTER_TO_DATAINTAKE_NORMALIZED_TEST_CLOSE.md",
+                             "modified":  "2026-06-20T10:19:27",
+                             "bytes":  858,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "DOCCENTER_TO_DATAINTAKE_NORMALIZED_TEST_CLOSE.json",
+                             "path":  "documents\\ux-system\\screens\\DOCCENTER_TO_DATAINTAKE_NORMALIZED_TEST_CLOSE.json",
+                             "modified":  "2026-06-20T10:19:27",
+                             "bytes":  2001,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "DOCUMENTATION_CENTER_TO_DATA_INTAKE_NORMALIZED.connection.json",
+                             "path":  "documents\\ux-system\\screens\\DOCUMENTATION_CENTER_TO_DATA_INTAKE_NORMALIZED.connection.json",
+                             "modified":  "2026-06-20T10:16:11",
+                             "bytes":  737,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "DATA_INTAKE_REAL_HANDLERS_TEST_CLOSE.md",
+                             "path":  "documents\\ux-system\\screens\\DATA_INTAKE_REAL_HANDLERS_TEST_CLOSE.md",
+                             "modified":  "2026-06-20T10:15:43",
+                             "bytes":  583,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "DATA_INTAKE_REAL_HANDLERS_TEST_CLOSE.json",
+                             "path":  "documents\\ux-system\\screens\\DATA_INTAKE_REAL_HANDLERS_TEST_CLOSE.json",
+                             "modified":  "2026-06-20T10:15:43",
+                             "bytes":  1439,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "DATA_INTAKE_CLEAN_HEADER_VALIDATION_CLOSE.md",
+                             "path":  "documents\\ux-system\\screens\\DATA_INTAKE_CLEAN_HEADER_VALIDATION_CLOSE.md",
+                             "modified":  "2026-06-20T10:13:13",
+                             "bytes":  591,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "DATA_INTAKE_CLEAN_HEADER_VALIDATION_CLOSE.json",
+                             "path":  "documents\\ux-system\\screens\\DATA_INTAKE_CLEAN_HEADER_VALIDATION_CLOSE.json",
+                             "modified":  "2026-06-20T10:13:13",
+                             "bytes":  1008,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "DATA_INTAKE_NORMALIZED.screen.md",
+                             "path":  "documents\\ux-system\\screens\\DATA_INTAKE_NORMALIZED.screen.md",
+                             "modified":  "2026-06-20T10:07:33",
+                             "bytes":  865,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "DATA_INTAKE_NORMALIZED.screen.json",
+                             "path":  "documents\\ux-system\\screens\\DATA_INTAKE_NORMALIZED.screen.json",
+                             "modified":  "2026-06-20T10:07:32",
+                             "bytes":  3093,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "SYSTEM_SCREEN_INVENTORY.tsv",
+                             "path":  "documents\\ux-system\\screens\\SYSTEM_SCREEN_INVENTORY.tsv",
+                             "modified":  "2026-06-20T10:06:18",
+                             "bytes":  1808,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "DATA_INTAKE_UI_SMOKE_LATEST.md",
+                             "path":  "documents\\intake\\reports\\DATA_INTAKE_UI_SMOKE_LATEST.md",
+                             "modified":  "2026-06-20T09:37:39",
+                             "bytes":  488,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "ENGREMIAT_DATA_INTAKE_V1_CLOSE_SUMMARY.md",
+                             "path":  "documents\\intake\\reports\\ENGREMIAT_DATA_INTAKE_V1_CLOSE_SUMMARY.md",
+                             "modified":  "2026-06-20T09:36:06",
+                             "bytes":  1326,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "ENGREMIAT_DATA_INTAKE_V1_MANIFEST.json",
+                             "path":  "documents\\intake\\ENGREMIAT_DATA_INTAKE_V1_MANIFEST.json",
+                             "modified":  "2026-06-20T09:36:06",
+                             "bytes":  2818,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "intake-output-status-latest.md",
+                             "path":  "documents\\intake\\reports\\intake-output-status-latest.md",
+                             "modified":  "2026-06-20T09:35:30",
+                             "bytes":  1517,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "intake-latest-pointers.json",
+                             "path":  "documents\\intake\\connections\\intake-latest-pointers.json",
+                             "modified":  "2026-06-20T09:35:30",
+                             "bytes":  6988,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "intake-output-consumer-map.json",
+                             "path":  "documents\\intake\\contracts\\intake-output-consumer-map.json",
+                             "modified":  "2026-06-20T09:35:30",
+                             "bytes":  2617,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "intake-source-pdf-latest.json",
+                             "path":  "documents\\intake\\profiles\\intake-source-pdf-latest.json",
+                             "modified":  "2026-06-20T09:34:50",
+                             "bytes":  592,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "README_PDF_INTAKE.txt",
+                             "path":  "documents\\intake\\inbox\\pdf\\README_PDF_INTAKE.txt",
+                             "modified":  "2026-06-20T09:34:50",
+                             "bytes":  272,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "intake-source-folder-latest.json",
+                             "path":  "documents\\intake\\profiles\\intake-source-folder-latest.json",
+                             "modified":  "2026-06-20T09:34:11",
+                             "bytes":  821,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "metadata.json",
+                             "path":  "documents\\intake\\inbox\\convocatoria-demo-folder\\metadata.json",
+                             "modified":  "2026-06-20T09:34:11",
+                             "bytes":  114,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "intake-source-txt-md-latest.json",
+                             "path":  "documents\\intake\\profiles\\intake-source-txt-md-latest.json",
+                             "modified":  "2026-06-20T09:32:24",
+                             "bytes":  443,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "grant-call-profile-from-intake-latest.json",
+                             "path":  "documents\\intake\\normalized\\grant-call-profile-from-intake-latest.json",
+                             "modified":  "2026-06-20T09:28:21",
+                             "bytes":  4038,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "grant-call-demo-source.json",
+                             "path":  "documents\\intake\\samples\\grant-call-demo-source.json",
+                             "modified":  "2026-06-20T09:28:21",
+                             "bytes":  463,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "intake-source-contract.json",
+                             "path":  "documents\\intake\\contracts\\intake-source-contract.json",
+                             "modified":  "2026-06-20T09:27:37",
+                             "bytes":  1818,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "e02-define-data-intake-screen-contract-20260622-103442.json",
+                             "path":  "reports\\operator-v1-data-intake-screen\\e02-define-data-intake-screen-contract-20260622-103442.json",
+                             "modified":  "2026-06-22T10:34:46",
+                             "bytes":  831,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "e01-audit-data-intake-screen-state-readonly-20260622-103351.json",
+                             "path":  "reports\\operator-v1-data-intake-screen\\e01-audit-data-intake-screen-state-readonly-20260622-103351.json",
+                             "modified":  "2026-06-22T10:33:56",
+                             "bytes":  170744,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "e01-audit-control-panel-inputs-readonly-20260622-094717.json",
+                             "path":  "reports\\operator-v2-control-panel\\e01-audit-control-panel-inputs-readonly-20260622-094717.json",
+                             "modified":  "2026-06-22T09:47:20",
+                             "bytes":  18995,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "e02-execute-authorized-data-screen-normalizer-scoped-commit-no-push-20260622-073011.json",
+                             "path":  "reports\\operator-v2-screen-normalizer-evidence-commit\\e02-execute-authorized-data-screen-normalizer-scoped-commit-no-push-20260622-073011.json",
+                             "modified":  "2026-06-22T07:30:11",
+                             "bytes":  26133,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "e01-prepare-data-screen-normalizer-scoped-commit-no-execute-20260622-072918.json",
+                             "path":  "reports\\operator-v2-screen-normalizer-evidence-commit\\e01-prepare-data-screen-normalizer-scoped-commit-no-execute-20260622-072918.json",
+                             "modified":  "2026-06-22T07:29:18",
+                             "bytes":  1291,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "e01-r1-fast-inspect-data-screen-normalizer-no-apply-20260622-072643.json",
+                             "path":  "reports\\operator-v2-review-untracked-directory-contents\\e01-r1-fast-inspect-data-screen-normalizer-no-apply-20260622-072643.json",
+                             "modified":  "2026-06-22T07:26:44",
+                             "bytes":  1451,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "e01-review-data-screen-normalizer-no-apply-20260622-072218.json",
+                             "path":  "reports\\operator-v2-review-first-scope-group\\e01-review-data-screen-normalizer-no-apply-20260622-072218.json",
+                             "modified":  "2026-06-22T07:22:18",
+                             "bytes":  724,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "e01-audit-plan-sync-sources-no-apply-20260622-064707.json",
+                             "path":  "reports\\operator-v2-plan-sync\\e01-audit-plan-sync-sources-no-apply-20260622-064707.json",
+                             "modified":  "2026-06-22T06:47:07",
+                             "bytes":  1058,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "e01-plan-sync-sources-data-20260622-064707.json",
+                             "path":  "reports\\operator-v2-plan-sync\\e01-plan-sync-sources-data-20260622-064707.json",
+                             "modified":  "2026-06-22T06:47:07",
+                             "bytes":  41342,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "e05-confirmed-render-body-bind-plan-data-20260622-063824.json",
+                             "path":  "reports\\operator-v2-home-render-binding\\e05-confirmed-render-body-bind-plan-data-20260622-063824.json",
+                             "modified":  "2026-06-22T06:38:24",
+                             "bytes":  8847,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "e04-primary-call-chain-dump-data-20260622-063733.json",
+                             "path":  "reports\\operator-v2-home-render-binding\\e04-primary-call-chain-dump-data-20260622-063733.json",
+                             "modified":  "2026-06-22T06:37:33",
+                             "bytes":  10642,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "e03-trace-home-render-call-chain-data-20260622-063644.json",
+                             "path":  "reports\\operator-v2-home-render-binding\\e03-trace-home-render-call-chain-data-20260622-063644.json",
+                             "modified":  "2026-06-22T06:36:44",
+                             "bytes":  27160,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "e02-home-render-binding-plan-data-20260622-063541.json",
+                             "path":  "reports\\operator-v2-home-render-binding\\e02-home-render-binding-plan-data-20260622-063541.json",
+                             "modified":  "2026-06-22T06:35:41",
+                             "bytes":  6965,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "e01-home-render-binding-discovery-data-20260622-063500.json",
+                             "path":  "reports\\operator-v2-home-render-binding\\e01-home-render-binding-discovery-data-20260622-063500.json",
+                             "modified":  "2026-06-22T06:35:00",
+                             "bytes":  92033,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "e05-bind-live-context-resource-to-screen-template-20260622-062842.json",
+                             "path":  "reports\\operator-v2-live-context\\e05-bind-live-context-resource-to-screen-template-20260622-062842.json",
+                             "modified":  "2026-06-22T06:28:42",
+                             "bytes":  1551,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "e04-register-plan-report-resource-20260622-062747.json",
+                             "path":  "reports\\operator-v2-live-context\\e04-register-plan-report-resource-20260622-062747.json",
+                             "modified":  "2026-06-22T06:27:47",
+                             "bytes":  958,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "e03-r2-screen-engine-template-diagnosis-data-20260622-062656.json",
+                             "path":  "reports\\operator-v2-live-context\\e03-r2-screen-engine-template-diagnosis-data-20260622-062656.json",
+                             "modified":  "2026-06-22T06:26:56",
+                             "bytes":  59592,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "e02-r2-current-screen-discovery-data-20260622-062412.json",
+                             "path":  "reports\\operator-v2-live-context\\e02-r2-current-screen-discovery-data-20260622-062412.json",
+                             "modified":  "2026-06-22T06:24:12",
+                             "bytes":  8353,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "e02-r1-real-screen-discovery-data-20260622-062341.json",
+                             "path":  "reports\\operator-v2-live-context\\e02-r1-real-screen-discovery-data-20260622-062341.json",
+                             "modified":  "2026-06-22T06:23:41",
+                             "bytes":  17141,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "e02-screen-discovery-data-20260622-062259.json",
+                             "path":  "reports\\operator-v2-live-context\\e02-screen-discovery-data-20260622-062259.json",
+                             "modified":  "2026-06-22T06:22:59",
+                             "bytes":  20597,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "e03-feedback-matrix-data-20260622-060535.json",
+                             "path":  "reports\\operator-v2-command-feedback-inside-wrapper\\e03-feedback-matrix-data-20260622-060535.json",
+                             "modified":  "2026-06-22T06:05:35",
+                             "bytes":  10073,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "e03-wrapper-compare-data-20260622-060122.json",
+                             "path":  "reports\\operator-v2-root-wrapper\\e03-wrapper-compare-data-20260622-060122.json",
+                             "modified":  "2026-06-22T06:01:22",
+                             "bytes":  8092,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "e06-root-loop-router-planned-diff-data-20260622-055511.json",
+                             "path":  "reports\\operator-v2-root-loop-router\\e06-root-loop-router-planned-diff-data-20260622-055511.json",
+                             "modified":  "2026-06-22T05:55:11",
+                             "bytes":  9673,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "e05-r3-root-loop-router-compare-data-20260622-055434.json",
+                             "path":  "reports\\operator-v2-root-loop-router\\e05-r3-root-loop-router-compare-data-20260622-055434.json",
+                             "modified":  "2026-06-22T05:54:34",
+                             "bytes":  15274,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "e05-root-loop-router-compare-data-20260622-055250.json",
+                             "path":  "reports\\operator-v2-root-loop-router\\e05-root-loop-router-compare-data-20260622-055250.json",
+                             "modified":  "2026-06-22T05:52:51",
+                             "bytes":  7742,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "e05-r3-active-screen-ux-audit-data-20260621-215147.json",
+                             "path":  "reports\\operator-v2-screen-ux\\e05-r3-active-screen-ux-audit-data-20260621-215147.json",
+                             "modified":  "2026-06-21T21:51:48",
+                             "bytes":  1122,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "e09-locate-real-input-router-20260621-213026.json",
+                             "path":  "reports\\operator-v2-actions\\e09-locate-real-input-router-20260621-213026.json",
+                             "modified":  "2026-06-21T21:30:26",
+                             "bytes":  26537,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "e05q-real-operator-v2-source-20260621-181300.txt",
+                             "path":  "reports\\operator-v2-screen-architecture\\e05q-real-operator-v2-source-20260621-181300.txt",
+                             "modified":  "2026-06-21T18:13:01",
+                             "bytes":  48433,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "e05g-locate-real-pantallas-ux-source-20260621-180305.json",
+                             "path":  "reports\\operator-v2-screen-architecture\\e05g-locate-real-pantallas-ux-source-20260621-180305.json",
+                             "modified":  "2026-06-21T18:03:05",
+                             "bytes":  35466,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "e04-normalize-data-20260621-164133.json",
+                             "path":  "reports\\child-screen-normalization\\e04-normalize-data-20260621-164133.json",
+                             "modified":  "2026-06-21T16:41:37",
+                             "bytes":  684,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "e20-master-visual-source-readonly-20260621-070107.md",
+                             "path":  "reports\\screen-normalization\\e20-master-visual-source-readonly-20260621-070107.md",
+                             "modified":  "2026-06-21T07:01:07",
+                             "bytes":  2043,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "e05-data-intake-readonly-20260621-063816.json",
+                             "path":  "reports\\screen-normalization\\e05-data-intake-readonly-20260621-063816.json",
+                             "modified":  "2026-06-21T06:38:16",
+                             "bytes":  845,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "e10s-audit-stable-launcher-runtime-menu-source-no-apply-20260620-192543.json",
+                             "path":  "reports\\screen-normalizer-general-launcher-menu-router-integration-gate\\e10s-audit-stable-launcher-runtime-menu-source-no-apply-20260620-192543.json",
+                             "modified":  "2026-06-20T19:25:45",
+                             "bytes":  1804,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "e08e-bis-validate-no-open-terminal-readonly-20260620-190538.json",
+                             "path":  "reports\\screen-normalizer-general-launcher-menu-router-integration-gate\\e08e-bis-validate-no-open-terminal-readonly-20260620-190538.json",
+                             "modified":  "2026-06-20T19:05:38",
+                             "bytes":  1253,
+                             "kind":  "API"
+                         },
+                         {
+                             "name":  "e04g-repair-input-variable-and-reselect-patch-no-apply-20260620-185902.json",
+                             "path":  "reports\\screen-normalizer-general-launcher-menu-router-integration-gate\\e04g-repair-input-variable-and-reselect-patch-no-apply-20260620-185902.json",
+                             "modified":  "2026-06-20T18:59:02",
+                             "bytes":  2313,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "e02-inicio-candidate-input-20260620-164724.txt",
+                             "path":  "reports\\screen-normalizer-inicio-migration-gate\\e02-inicio-candidate-input-20260620-164724.txt",
+                             "modified":  "2026-06-20T16:47:24",
+                             "bytes":  6,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "e02-isolated-screen-smoke-input-20260620-164356.txt",
+                             "path":  "reports\\screen-normalizer-real-screen-generation\\e02-isolated-screen-smoke-input-20260620-164356.txt",
+                             "modified":  "2026-06-20T16:43:56",
+                             "bytes":  5,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "e02c-validate-reopened-operator-visual-confirmation-20260620-161853.json",
+                             "path":  "reports\\operator-real-screen-context-visual-smoke\\e02c-validate-reopened-operator-visual-confirmation-20260620-161853.json",
+                             "modified":  "2026-06-20T16:18:53",
+                             "bytes":  1176,
+                             "kind":  "API"
+                         },
+                         {
+                             "name":  "e02b3-patch-real-inicio-screen-m-help-on-located-source-safe-20260620-161725.json",
+                             "path":  "reports\\operator-real-screen-context-visual-smoke\\e02b3-patch-real-inicio-screen-m-help-on-located-source-safe-20260620-161725.json",
+                             "modified":  "2026-06-20T16:17:25",
+                             "bytes":  1030,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "e02b2-locate-real-inicio-screen-source-strict-readonly-20260620-161650.json",
+                             "path":  "reports\\operator-real-screen-context-visual-smoke\\e02b2-locate-real-inicio-screen-source-strict-readonly-20260620-161650.json",
+                             "modified":  "2026-06-20T16:16:50",
+                             "bytes":  25987,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "e01b-locate-current-executable-screen-source-readonly-exclude-backups-20260620-161055.json",
+                             "path":  "reports\\operator-screen-context-normalization\\e01b-locate-current-executable-screen-source-readonly-exclude-backups-20260620-161055.json",
+                             "modified":  "2026-06-20T16:10:55",
+                             "bytes":  11208,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "e01b-locate-current-executable-screen-source-readonly-exclude-backups-20260620-160930.json",
+                             "path":  "reports\\operator-screen-context-normalization\\e01b-locate-current-executable-screen-source-readonly-exclude-backups-20260620-160930.json",
+                             "modified":  "2026-06-20T16:09:31",
+                             "bytes":  11208,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "e01-locate-executable-screen-sources-readonly-20260620-160852.json",
+                             "path":  "reports\\operator-screen-context-normalization\\e01-locate-executable-screen-sources-readonly-20260620-160852.json",
+                             "modified":  "2026-06-20T16:08:53",
+                             "bytes":  66370,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "e02c3-locate-projects-screen-source-readonly-20260620-160744.json",
+                             "path":  "reports\\operator-real-maintenance-manual-smoke\\e02c3-locate-projects-screen-source-readonly-20260620-160744.json",
+                             "modified":  "2026-06-20T16:07:45",
+                             "bytes":  25763,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "e07-smoke-m-route-to-interactive-form-with-simulated-inputs-20260620-160151.json",
+                             "path":  "reports\\human-maintenance-interactive-form\\e07-smoke-m-route-to-interactive-form-with-simulated-inputs-20260620-160151.json",
+                             "modified":  "2026-06-20T16:01:53",
+                             "bytes":  1431,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "e05-smoke-interactive-form-helper-with-simulated-inputs-20260620-160042.json",
+                             "path":  "reports\\human-maintenance-interactive-form\\e05-smoke-interactive-form-helper-with-simulated-inputs-20260620-160042.json",
+                             "modified":  "2026-06-20T16:00:44",
+                             "bytes":  1326,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "e04c-diagnose-operator-input-flow-readonly-20260620-155355.json",
+                             "path":  "reports\\screen-maintenance-route-binding\\e04c-diagnose-operator-input-flow-readonly-20260620-155355.json",
+                             "modified":  "2026-06-20T15:53:55",
+                             "bytes":  45980,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "e07-export-human-maintenance-tasks-tsv-20260620-154010.json",
+                             "path":  "reports\\human-maintenance-cards\\e07-export-human-maintenance-tasks-tsv-20260620-154010.json",
+                             "modified":  "2026-06-20T15:40:10",
+                             "bytes":  1971,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "e07-system-observer-export-tasks-tsv-for-sheets-kanban-20260620-152938.json",
+                             "path":  "reports\\system-observer\\e07-system-observer-export-tasks-tsv-for-sheets-kanban-20260620-152938.json",
+                             "modified":  "2026-06-20T15:29:38",
+                             "bytes":  1860,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "e45-close-doccenter-to-dataintake-normalized-test-20260620-101927.json",
+                             "path":  "reports\\launcher\\e45-close-doccenter-to-dataintake-normalized-test-20260620-101927.json",
+                             "modified":  "2026-06-20T10:19:27",
+                             "bytes":  636,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "e43-connect-doccenter-to-dataintake-normalized-20260620-101611.json",
+                             "path":  "reports\\launcher\\e43-connect-doccenter-to-dataintake-normalized-20260620-101611.json",
+                             "modified":  "2026-06-20T10:16:11",
+                             "bytes":  846,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "e42-close-data-intake-real-handlers-test-20260620-101543.json",
+                             "path":  "reports\\launcher\\e42-close-data-intake-real-handlers-test-20260620-101543.json",
+                             "modified":  "2026-06-20T10:15:43",
+                             "bytes":  586,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "data-intake-normalized-import-txt-md-20260620-101510.json",
+                             "path":  "reports\\launcher\\data-intake-normalized-import-txt-md-20260620-101510.json",
+                             "modified":  "2026-06-20T10:15:11",
+                             "bytes":  493,
+                             "kind":  "IMPORT"
+                         },
+                         {
+                             "name":  "e41-data-intake-real-handlers-20260620-101405.json",
+                             "path":  "reports\\launcher\\e41-data-intake-real-handlers-20260620-101405.json",
+                             "modified":  "2026-06-20T10:14:05",
+                             "bytes":  709,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "e40-close-data-intake-clean-header-validation-20260620-101312.json",
+                             "path":  "reports\\launcher\\e40-close-data-intake-clean-header-validation-20260620-101312.json",
+                             "modified":  "2026-06-20T10:13:13",
+                             "bytes":  612,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "e39-repair-data-intake-normalized-clean-palette-20260620-101225.json",
+                             "path":  "reports\\launcher\\e39-repair-data-intake-normalized-clean-palette-20260620-101225.json",
+                             "modified":  "2026-06-20T10:12:25",
+                             "bytes":  661,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "backup-data-intake-normalized-before-e41-20260620-101405.ps1",
+                             "path":  "reports\\launcher\\backup-data-intake-normalized-before-e41-20260620-101405.ps1",
+                             "modified":  "2026-06-20T10:12:25",
+                             "bytes":  4886,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "backup-data-intake-normalized-before-e39-repair-20260620-101225.ps1",
+                             "path":  "reports\\launcher\\backup-data-intake-normalized-before-e39-repair-20260620-101225.ps1",
+                             "modified":  "2026-06-20T10:11:32",
+                             "bytes":  4487,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "backup-doccenter-before-e43-connect-dataintake-20260620-101611.ps1",
+                             "path":  "reports\\launcher\\backup-doccenter-before-e43-connect-dataintake-20260620-101611.ps1",
+                             "modified":  "2026-06-20T10:11:32",
+                             "bytes":  10232,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "backup-before-e38-ENGREMIAT-DATA-INTAKE-CENTER-NORMALIZED-20260620-101132.ps1",
+                             "path":  "reports\\launcher\\backup-before-e38-ENGREMIAT-DATA-INTAKE-CENTER-NORMALIZED-20260620-101132.ps1",
+                             "modified":  "2026-06-20T10:09:34",
+                             "bytes":  3880,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "e34-data-intake-normalized-blueprint-20260620-100732.json",
+                             "path":  "reports\\launcher\\e34-data-intake-normalized-blueprint-20260620-100732.json",
+                             "modified":  "2026-06-20T10:07:33",
+                             "bytes":  770,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "backup-before-e36-repair-ENGREMIAT-DATA-INTAKE-CENTER-NORMALIZED-20260620-100934.ps1",
+                             "path":  "reports\\launcher\\backup-before-e36-repair-ENGREMIAT-DATA-INTAKE-CENTER-NORMALIZED-20260620-100934.ps1",
+                             "modified":  "2026-06-20T10:07:32",
+                             "bytes":  4339,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "e21-repair-documental-grant-profile-source-20260620-094602.json",
+                             "path":  "reports\\launcher\\e21-repair-documental-grant-profile-source-20260620-094602.json",
+                             "modified":  "2026-06-20T09:46:02",
+                             "bytes":  2616,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "e19-normalize-data-intake-ux-20260620-094057.json",
+                             "path":  "reports\\launcher\\e19-normalize-data-intake-ux-20260620-094057.json",
+                             "modified":  "2026-06-20T09:40:57",
+                             "bytes":  759,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "e18-smoke-data-intake-ui-20260620-093739.json",
+                             "path":  "reports\\launcher\\e18-smoke-data-intake-ui-20260620-093739.json",
+                             "modified":  "2026-06-20T09:37:39",
+                             "bytes":  4980,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "e17-data-intake-ui-persistence-20260620-093708.json",
+                             "path":  "reports\\launcher\\e17-data-intake-ui-persistence-20260620-093708.json",
+                             "modified":  "2026-06-20T09:37:08",
+                             "bytes":  1005,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "backup-ENGREMIAT-DATA-INTAKE-CENTER-before-e19-20260620-094057.ps1",
+                             "path":  "reports\\launcher\\backup-ENGREMIAT-DATA-INTAKE-CENTER-before-e19-20260620-094057.ps1",
+                             "modified":  "2026-06-20T09:37:08",
+                             "bytes":  11378,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "e16-close-data-intake-v1-20260620-093606.json",
+                             "path":  "reports\\launcher\\e16-close-data-intake-v1-20260620-093606.json",
+                             "modified":  "2026-06-20T09:36:06",
+                             "bytes":  790,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "e15-connect-intake-outputs-20260620-093530.json",
+                             "path":  "reports\\launcher\\e15-connect-intake-outputs-20260620-093530.json",
+                             "modified":  "2026-06-20T09:35:30",
+                             "bytes":  747,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "e13-folder-as-source-20260620-093411.json",
+                             "path":  "reports\\launcher\\e13-folder-as-source-20260620-093411.json",
+                             "modified":  "2026-06-20T09:34:11",
+                             "bytes":  787,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "e11-intake-txt-md-minimo-20260620-093046.json",
+                             "path":  "reports\\launcher\\e11-intake-txt-md-minimo-20260620-093046.json",
+                             "modified":  "2026-06-20T09:30:47",
+                             "bytes":  480,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "e10b-activate-intake-demo-20260620-092821.json",
+                             "path":  "reports\\launcher\\e10b-activate-intake-demo-20260620-092821.json",
+                             "modified":  "2026-06-20T09:28:21",
+                             "bytes":  691,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "e10r-repair-intake-contracts-20260620-092737.json",
+                             "path":  "reports\\launcher\\e10r-repair-intake-contracts-20260620-092737.json",
+                             "modified":  "2026-06-20T09:27:37",
+                             "bytes":  976,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "data-intake-e10-base-20260620-092444.json",
+                             "path":  "reports\\launcher\\data-intake-e10-base-20260620-092444.json",
+                             "modified":  "2026-06-20T09:24:44",
+                             "bytes":  646,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "backup-ENGREMIAT-DATA-INTAKE-CENTER-before-e17-20260620-093708.ps1",
+                             "path":  "reports\\launcher\\backup-ENGREMIAT-DATA-INTAKE-CENTER-before-e17-20260620-093708.ps1",
+                             "modified":  "2026-06-20T09:24:44",
+                             "bytes":  12253,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "e22e-seed-module-workspace-test-data-20260620-033840.json",
+                             "path":  "reports\\operator-module-blueprint\\e22e-seed-module-workspace-test-data-20260620-033840.json",
+                             "modified":  "2026-06-20T03:38:40",
+                             "bytes":  802,
+                             "kind":  "DATA_FILE"
+                         },
+                         {
+                             "name":  "e21n-remove-open-graph-from-modules-main-20260620-025624.json",
+                             "path":  "reports\\operator-module-blueprint\\e21n-remove-open-graph-from-modules-main-20260620-025624.json",
+                             "modified":  "2026-06-20T02:56:24",
+                             "bytes":  391,
+                             "kind":  "API"
+                         },
+                         {
+                             "name":  "e21k-library-import-archive-delete-selectors-20260620-024942.json",
+                             "path":  "reports\\operator-module-blueprint\\e21k-library-import-archive-delete-selectors-20260620-024942.json",
+                             "modified":  "2026-06-20T02:49:42",
+                             "bytes":  953,
+                             "kind":  "IMPORT"
+                         },
+                         {
+                             "name":  "e21f-recover-modules-screen-library-import-20260620-022911.json",
+                             "path":  "reports\\operator-module-blueprint\\e21f-recover-modules-screen-library-import-20260620-022911.json",
+                             "modified":  "2026-06-20T02:29:11",
+                             "bytes":  790,
+                             "kind":  "IMPORT"
+                         },
+                         {
+                             "name":  "e12-prueba7-vs-core-exact-diff-20260620-012232.tsv",
+                             "path":  "reports\\operator-template-canonicalization\\e12-prueba7-vs-core-exact-diff-20260620-012232.tsv",
+                             "modified":  "2026-06-20T01:22:32",
+                             "bytes":  97,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "e12-prueba7-vs-prueba11-exact-diff-20260620-012232.tsv",
+                             "path":  "reports\\operator-template-canonicalization\\e12-prueba7-vs-prueba11-exact-diff-20260620-012232.tsv",
+                             "modified":  "2026-06-20T01:22:32",
+                             "bytes":  97,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "e11b-prueba7-vs-prueba11-master-diff-20260620-011623.tsv",
+                             "path":  "reports\\operator-template-canonicalization\\e11b-prueba7-vs-prueba11-master-diff-20260620-011623.tsv",
+                             "modified":  "2026-06-20T01:16:23",
+                             "bytes":  73,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "e11b-prueba7-vs-prueba11-master-diff-20260620-011558.tsv",
+                             "path":  "reports\\operator-template-canonicalization\\e11b-prueba7-vs-prueba11-master-diff-20260620-011558.tsv",
+                             "modified":  "2026-06-20T01:15:58",
+                             "bytes":  6475,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "e09-review-real-master-template-v2-source.json",
+                             "path":  "reports\\operator-navigation-model\\e09-review-real-master-template-v2-source.json",
+                             "modified":  "2026-06-20T01:03:18",
+                             "bytes":  703,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "E09_REVIEW_REAL_MASTER_TEMPLATE_V2_SOURCE.md",
+                             "path":  "reports\\operator-navigation-model\\E09_REVIEW_REAL_MASTER_TEMPLATE_V2_SOURCE.md",
+                             "modified":  "2026-06-20T01:03:18",
+                             "bytes":  667,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "e09-real-v2-dir-candidates.tsv",
+                             "path":  "reports\\operator-navigation-model\\e09-real-v2-dir-candidates.tsv",
+                             "modified":  "2026-06-20T01:03:18",
+                             "bytes":  665,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "e09-real-v2-file-hits.tsv",
+                             "path":  "reports\\operator-navigation-model\\e09-real-v2-file-hits.tsv",
+                             "modified":  "2026-06-20T01:03:18",
+                             "bytes":  19352,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "e07-master-v2-real-candidates.tsv",
+                             "path":  "reports\\operator-navigation-model\\e07-master-v2-real-candidates.tsv",
+                             "modified":  "2026-06-20T00:58:21",
+                             "bytes":  28,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "e06-fix-master-template-source.json",
+                             "path":  "reports\\operator-navigation-model\\e06-fix-master-template-source.json",
+                             "modified":  "2026-06-20T00:55:51",
+                             "bytes":  959,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "e05-fix-module-inicio-template-source.json",
+                             "path":  "reports\\operator-navigation-model\\e05-fix-module-inicio-template-source.json",
+                             "modified":  "2026-06-20T00:54:31",
+                             "bytes":  463,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "e04-patch-project-manager-active-source-of-truth.json",
+                             "path":  "reports\\operator-project-lifecycle\\e04-patch-project-manager-active-source-of-truth.json",
+                             "modified":  "2026-06-20T00:50:48",
+                             "bytes":  565,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "e02d-eng-context-function-candidates.tsv",
+                             "path":  "reports\\operator-project-lifecycle\\e02d-eng-context-function-candidates.tsv",
+                             "modified":  "2026-06-20T00:41:18",
+                             "bytes":  539,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "e02c-real-project-menu-candidates.tsv",
+                             "path":  "reports\\operator-project-lifecycle\\e02c-real-project-menu-candidates.tsv",
+                             "modified":  "2026-06-20T00:40:02",
+                             "bytes":  6692,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "e02b-project-menu-candidates.tsv",
+                             "path":  "reports\\operator-project-lifecycle\\e02b-project-menu-candidates.tsv",
+                             "modified":  "2026-06-20T00:39:05",
+                             "bytes":  6194,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "library-import-20260620-002847.json",
+                             "path":  "reports\\operator-navigation-model\\library-import-20260620-002847.json",
+                             "modified":  "2026-06-20T00:28:47",
+                             "bytes":  5155,
+                             "kind":  "IMPORT"
+                         },
+                         {
+                             "name":  "e09b-build-manual-grouping-layer-staging-no-apply.json",
+                             "path":  "reports\\template-improvement\\e09b-manual-grouping-staging\\e09b-build-manual-grouping-layer-staging-no-apply.json",
+                             "modified":  "2026-06-19T23:51:15",
+                             "bytes":  1555,
+                             "kind":  "STAGING"
+                         },
+                         {
+                             "name":  "e09a2-find-manual-grouping-control-document-fix-tsv.json",
+                             "path":  "reports\\template-improvement\\e09a2-find-manual-grouping-control\\e09a2-find-manual-grouping-control-document-fix-tsv.json",
+                             "modified":  "2026-06-19T23:49:37",
+                             "bytes":  14336,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "e09a2-manual-grouping-control-candidates.tsv",
+                             "path":  "reports\\template-improvement\\e09a2-find-manual-grouping-control\\e09a2-manual-grouping-control-candidates.tsv",
+                             "modified":  "2026-06-19T23:49:37",
+                             "bytes":  51691,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "e08h-apply-staging-v2-to-official-master-with-backup.json",
+                             "path":  "reports\\template-improvement\\e08h-apply-v2-official-master\\e08h-apply-staging-v2-to-official-master-with-backup.json",
+                             "modified":  "2026-06-19T23:32:44",
+                             "bytes":  1592,
+                             "kind":  "STAGING"
+                         },
+                         {
+                             "name":  "e08g-review-staging-v2-designed-and-prepare-gate-no-apply.json",
+                             "path":  "reports\\template-improvement\\e08g-review-staging-v2\\e08g-review-staging-v2-designed-and-prepare-gate-no-apply.json",
+                             "modified":  "2026-06-19T23:31:41",
+                             "bytes":  1921,
+                             "kind":  "STAGING"
+                         },
+                         {
+                             "name":  "GATE_E08H_APPLY_STAGING_V2_TO_OFFICIAL_MASTER.md",
+                             "path":  "reports\\template-improvement\\e08g-review-staging-v2\\GATE_E08H_APPLY_STAGING_V2_TO_OFFICIAL_MASTER.md",
+                             "modified":  "2026-06-19T23:31:41",
+                             "bytes":  773,
+                             "kind":  "STAGING"
+                         },
+                         {
+                             "name":  "E08G_REVISION_STAGING_V2_DISENADO.md",
+                             "path":  "reports\\template-improvement\\e08g-review-staging-v2\\E08G_REVISION_STAGING_V2_DISENADO.md",
+                             "modified":  "2026-06-19T23:31:41",
+                             "bytes":  922,
+                             "kind":  "STAGING"
+                         },
+                         {
+                             "name":  "e08f2-build-staging-v2-designed-short-path-no-apply.json",
+                             "path":  "reports\\template-improvement\\e08f2-staging-v2-designed\\e08f2-build-staging-v2-designed-short-path-no-apply.json",
+                             "modified":  "2026-06-19T23:30:27",
+                             "bytes":  1820,
+                             "kind":  "STAGING"
+                         },
+                         {
+                             "name":  "e08d-build-hybrid-staging-from-rich-original-no-apply.json",
+                             "path":  "reports\\template-improvement\\e08d-hybrid-staging\\e08d-build-hybrid-staging-from-rich-original-no-apply.json",
+                             "modified":  "2026-06-19T23:25:34",
+                             "bytes":  2216,
+                             "kind":  "STAGING"
+                         },
+                         {
+                             "name":  "e08b-template-candidates.tsv",
+                             "path":  "reports\\template-improvement\\e08b-template-map\\e08b-template-candidates.tsv",
+                             "modified":  "2026-06-19T23:23:06",
+                             "bytes":  18885,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "e08a-sources-summary.tsv",
+                             "path":  "reports\\template-improvement\\e08a-project-audit\\e08a-sources-summary.tsv",
+                             "modified":  "2026-06-19T23:21:44",
+                             "bytes":  896,
+                             "kind":  "SOURCE"
+                         },
+                         {
+                             "name":  "library-import-20260619-225439.json",
+                             "path":  "reports\\operator-navigation-model\\library-import-20260619-225439.json",
+                             "modified":  "2026-06-19T22:54:39",
+                             "bytes":  4248,
+                             "kind":  "IMPORT"
+                         },
+                         {
+                             "name":  "e10k-readonly-select-most-complete-obsidian-template-package.tsv",
+                             "path":  "reports\\operator-navigation-model\\e10k-readonly-select-most-complete-obsidian-template-package.tsv",
+                             "modified":  "2026-06-19T22:36:30",
+                             "bytes":  8588,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "e10j3-readonly-select-most-complete-template-package.tsv",
+                             "path":  "reports\\operator-navigation-model\\e10j3-readonly-select-most-complete-template-package.tsv",
+                             "modified":  "2026-06-19T22:35:17",
+                             "bytes":  6942,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "library-import-20260619-221355.json",
+                             "path":  "reports\\operator-navigation-model\\library-import-20260619-221355.json",
+                             "modified":  "2026-06-19T22:13:55",
+                             "bytes":  708,
+                             "kind":  "IMPORT"
+                         },
+                         {
+                             "name":  "library-import-20260619-220652.json",
+                             "path":  "reports\\operator-navigation-model\\library-import-20260619-220652.json",
+                             "modified":  "2026-06-19T22:06:52",
+                             "bytes":  1138,
+                             "kind":  "IMPORT"
+                         },
+                         {
+                             "name":  "e09d-open-project-active-historical-labels-report.json",
+                             "path":  "reports\\operator-navigation-model\\e09d-open-project-active-historical-labels-report.json",
+                             "modified":  "2026-06-19T22:04:28",
+                             "bytes":  476,
+                             "kind":  "API"
+                         },
+                         {
+                             "name":  "e08a-library-import-selector-stable-report.json",
+                             "path":  "reports\\operator-navigation-model\\e08a-library-import-selector-stable-report.json",
+                             "modified":  "2026-06-19T21:58:19",
+                             "bytes":  707,
+                             "kind":  "IMPORT"
+                         },
+                         {
+                             "name":  "e07b-library-import-20260619215617.json",
+                             "path":  "reports\\operator-context-decision-tree\\e07b-library-import-20260619215617.json",
+                             "modified":  "2026-06-19T21:56:17",
+                             "bytes":  1005,
+                             "kind":  "IMPORT"
+                         },
+                         {
+                             "name":  "e07b-library-import-20260619215448.json",
+                             "path":  "reports\\operator-context-decision-tree\\e07b-library-import-20260619215448.json",
+                             "modified":  "2026-06-19T21:54:48",
+                             "bytes":  2016,
+                             "kind":  "IMPORT"
+                         },
+                         {
+                             "name":  "e05b-find-open-project-selector-caller-readonly.txt",
+                             "path":  "reports\\operator-navigation-model\\e05b-find-open-project-selector-caller-readonly.txt",
+                             "modified":  "2026-06-19T21:32:13",
+                             "bytes":  17519,
+                             "kind":  "API"
+                         },
+                         {
+                             "name":  "e01-command-navigation-audit.tsv",
+                             "path":  "reports\\operator-navigation-model\\e01-command-navigation-audit.tsv",
+                             "modified":  "2026-06-19T21:26:51",
+                             "bytes":  2111,
+                             "kind":  "SHEET"
+                         },
+                         {
+                             "name":  "e07y-context-command-aliases-open-project-report.json",
+                             "path":  "reports\\operator-context-decision-tree\\e07y-context-command-aliases-open-project-report.json",
+                             "modified":  "2026-06-19T20:54:37",
+                             "bytes":  464,
+                             "kind":  "API"
+                         },
+                         {
+                             "name":  "e07s-back-opens-project-selector-report.json",
+                             "path":  "reports\\operator-context-decision-tree\\e07s-back-opens-project-selector-report.json",
+                             "modified":  "2026-06-19T20:44:43",
+                             "bytes":  433,
+                             "kind":  "API"
+                         },
+                         {
+                             "name":  "e07i-audit-real-imported-modules-report.json",
+                             "path":  "reports\\operator-context-decision-tree\\e07i-audit-real-imported-modules-report.json",
+                             "modified":  "2026-06-19T19:59:44",
+                             "bytes":  4345,
+                             "kind":  "IMPORT"
+                         }
+                     ],
+    "reports_recent":  [
+                           {
+                               "path":  "reports\\operator-v1-data-intake-screen\\e02-define-data-intake-screen-contract-20260622-103442.json",
+                               "modified":  "2026-06-22T10:34:46",
+                               "bytes":  831
+                           },
+                           {
+                               "path":  "reports\\operator-v1-data-intake-screen\\e01-audit-data-intake-screen-state-readonly-20260622-103351.json",
+                               "modified":  "2026-06-22T10:33:56",
+                               "bytes":  170744
+                           },
+                           {
+                               "path":  "reports\\operator-v1-memory-docs-screen\\e07-human-retest-and-close-objective-no-push-20260622-103249.json",
+                               "modified":  "2026-06-22T10:33:03",
+                               "bytes":  1247
+                           },
+                           {
+                               "path":  "reports\\operator-v1-memory-docs-screen\\e06-validate-launcher-option-3-and-commit-scoped-20260622-103106.json",
+                               "modified":  "2026-06-22T10:31:15",
+                               "bytes":  2057
+                           },
+                           {
+                               "path":  "reports\\operator-v1-memory-docs-screen\\e05-apply-memory-docs-launcher-integration-with-backup-and-smoke-20260622-102958.json",
+                               "modified":  "2026-06-22T10:30:14",
+                               "bytes":  1530
+                           },
+                           {
+                               "path":  "reports\\operator-v1-memory-docs-screen\\e04-gate-launcher-integration-memory-docs-20260622-102850.json",
+                               "modified":  "2026-06-22T10:28:59",
+                               "bytes":  2034
+                           },
+                           {
+                               "path":  "reports\\operator-v1-memory-docs-screen\\e03-create-memory-docs-screen-readonly-20260622-102747.json",
+                               "modified":  "2026-06-22T10:27:58",
+                               "bytes":  1052
+                           },
+                           {
+                               "path":  "reports\\operator-v1-memory-docs-screen\\e02-define-memory-docs-screen-contract-20260622-102647.json",
+                               "modified":  "2026-06-22T10:26:51",
+                               "bytes":  831
+                           },
+                           {
+                               "path":  "reports\\operator-v1-memory-docs-screen\\e01-audit-memory-docs-screen-state-readonly-20260622-102600.json",
+                               "modified":  "2026-06-22T10:26:05",
+                               "bytes":  239612
+                           },
+                           {
+                               "path":  "reports\\operator-v1-projects-screen\\e07-human-retest-and-close-objective-no-push-20260622-102447.json",
+                               "modified":  "2026-06-22T10:25:01",
+                               "bytes":  1176
+                           }
+                       ],
+    "v2_governance":  [
+                          "6 Estado vivo V2",
+                          "7 Siguiente accion V2",
+                          "8 Panel control V2",
+                          "9 Close \u0026 Sync V2"
+                      ],
+    "blocked_actions":  [
+                            "worker_real",
+                            "api_externa",
+                            "navegador",
+                            "clipboard",
+                            "delete_files",
+                            "push_auto",
+                            "fetch_auto",
+                            "merge_auto",
+                            "importar_datos_sin_gate",
+                            "modificar_staging_sin_gate",
+                            "transformar_datos_sin_gate"
+                        ],
+    "next":  "E04_GATE_LAUNCHER_INTEGRATION_DATA_INTAKE"
+}
