@@ -1,27 +1,27 @@
 ﻿{
     "schema":  "ENGREMIAT_OPERATOR_V2_STATE_LATEST_V1",
-    "updated_at":  "2026-06-22T11:32:55",
+    "updated_at":  "2026-06-22T11:34:56",
     "active_objective":  {
                              "id":  "ENGREMIAT_OPERATOR_V1_ACTIONABLE_NAVIGATION_001",
                              "title":  "Operador V2 self-state sync",
                              "status":  "ACTIVE",
                              "purpose":  "Mantener V2 actualizado desde cada bloque cerrado.",
-                             "active_stage":  "E19_HUMAN_RETEST_CLOSE_HEALTH_LAUNCHERS_ACTIONABLE_READONLY_NO_PUSH",
+                             "active_stage":  "E20_FINAL_VALIDATE_COMMIT_AND_PUSH_ACTIONABLE_NAVIGATION",
                              "readiness":  100,
-                             "next_action":  "VALORAR_PUSH_FINAL_ACTIONABLE_NAVIGATION_O_SIGUIENTE_OBJETIVO"
+                             "next_action":  "VALORAR_SIGUIENTE_OBJETIVO_TRAS_V1_ACTIONABLE_NAVIGATION"
                          },
-    "last_stage":  "E19_HUMAN_RETEST_CLOSE_HEALTH_LAUNCHERS_ACTIONABLE_READONLY_NO_PUSH",
-    "last_step":  "E19",
+    "last_stage":  "E20_FINAL_VALIDATE_COMMIT_AND_PUSH_ACTIONABLE_NAVIGATION",
+    "last_step":  "E20",
     "last_status":  "PASS",
-    "last_report":  "reports\\operator-v1-actionable-navigation\\e19-human-retest-close-health-launchers-actionable-readonly-no-push-20260622-113241.json",
+    "last_report":  "reports\\operator-v1-actionable-navigation\\e20-final-validate-commit-and-push-actionable-navigation-20260622-113422.json",
     "readiness":  100,
     "git_state":  {
-                      "head":  "3be15a6a",
-                      "rev_sync":  "0\t8",
+                      "head":  "4ee845a2",
+                      "rev_sync":  "0\t9",
                       "tree_clean":  true,
                       "status_short":  "",
                       "push_executed":  false
                   },
-    "next_action":  "VALORAR_PUSH_FINAL_ACTIONABLE_NAVIGATION_O_SIGUIENTE_OBJETIVO",
-    "human_summary":  "Health Launchers V1 accionable read-only probado por humano: numero abre Detail Viewer readonly, Enter vuelve, smokes/repairs/healthchecks/launchers bloqueados. Sin push."
+    "next_action":  "VALORAR_SIGUIENTE_OBJETIVO_TRAS_V1_ACTIONABLE_NAVIGATION",
+    "human_summary":  "Actionable Navigation V1 completado: Projects, Memory Docs, Data Intake y Health Launchers con detalle readonly probado, acciones reales bloqueadas y push final."
 }
