@@ -4,27 +4,27 @@ Estado vivo del Operador V2.
 
 ## Ultima actualizacion
 - Package: 
-ENGREMIAT_OPERATOR_V1_SAFE_BUILD_001
+ENGREMIAT_OPERATOR_V1_PROJECTS_SCREEN_001
 - Stage: 
-E07R_REPAIR_HOME_RESERVED_VAR_AND_CLOSE_OBJECTIVE_NO_PUSH
+E06_VALIDATE_LAUNCHER_OPTION_2_AND_COMMIT_SCOPED
 - Step: 
-E07R
+E06
 - Status: 
 PASS
 - Readiness: 
-100
+85
 - Head: 
-cc0f07a0
+71579f30
 - Rev sync: 
-0	3
+0	4
 - Tree clean: 
-True
+False
 
 ## Resumen humano
-Reparado cierre V1_SAFE_BUILD_001: evitada variable reservada HOME; Inicio operador V1 funciona desde opcion 1 y V2 queda como gobierno 6/7/8/9. No se ejecuto push.
+Opcion 2 Proyectos validada apuntando a pantalla V1; V1 Home y V2 gobierno conservados; cierre scoped sin push.
 
 ## Report
-reports\operator-v1-safe-build\e07r-repair-home-reserved-var-and-close-objective-no-push-20260622-101616.json
+reports\operator-v1-projects-screen\e06-validate-launcher-option-2-and-commit-scoped-20260622-102231.json
 
 ## NEXT
-VALORAR_SIGUIENTE_MEJORA_V1_PROJECTS_SCREEN
+PROBAR_DESDE_LAUNCHER_OPCION_2

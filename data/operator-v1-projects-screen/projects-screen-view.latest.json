@@ -1,0 +1,853 @@
+﻿{
+    "screen":  "OPERATOR_V1_PROJECTS",
+    "updated_at":  "2026-06-22T10:19:13",
+    "purpose":  "Pantalla V1 para operar proyectos detectados bajo gobierno V2.",
+    "git":  {
+                "branch":  "main",
+                "head":  "71579f30",
+                "rev_sync":  "0\t4",
+                "tree_clean":  false,
+                "status_short":  "M data/operator-v2-self-state-sync/v2-state.events.jsonl\n M data/operator-v2-self-state-sync/v2-state.latest.json\n M data/operator-v2-self-state-sync/v2-state.registry.json\n M documents/operator-v2-self-state-sync/V2_STATE_INDEX.md\n?? data/operator-v1-projects-screen/\n?? documents/operator-v1-projects-screen/\n?? reports/operator-v1-projects-screen/\n?? tools/operator-v1/operator-v1-projects-screen.ps1"
+            },
+    "summary":  {
+                    "project_dirs_count":  8,
+                    "project_files_count":  120,
+                    "active_hint_count":  0,
+                    "historic_hint_count":  0,
+                    "unknown_count":  8,
+                    "reports_recent_count":  8,
+                    "next_human_action":  "VALIDAR_PANTALLA_PROYECTOS_V1_Y_PREPARAR_GATE_LAUNCHER"
+                },
+    "project_dirs":  [
+                         {
+                             "name":  "projects",
+                             "path":  "projects\\projects",
+                             "modified":  "2026-06-20T13:56:16",
+                             "kind":  "UNKNOWN"
+                         },
+                         {
+                             "name":  "ENGREMIAT_PROJECT_heartbeat_demo",
+                             "path":  "projects\\ENGREMIAT_PROJECT_heartbeat_demo",
+                             "modified":  "2026-06-20T10:37:56",
+                             "kind":  "UNKNOWN"
+                         },
+                         {
+                             "name":  "operator-v1-projects-screen",
+                             "path":  "data\\operator-v1-projects-screen",
+                             "modified":  "2026-06-22T10:18:11",
+                             "kind":  "UNKNOWN"
+                         },
+                         {
+                             "name":  "project-start-flow",
+                             "path":  "data\\project-start-flow",
+                             "modified":  "2026-06-19T16:45:03",
+                             "kind":  "UNKNOWN"
+                         },
+                         {
+                             "name":  "project-builder-to-worker-loop",
+                             "path":  "data\\project-builder-to-worker-loop",
+                             "modified":  "2026-06-19T09:45:59",
+                             "kind":  "UNKNOWN"
+                         },
+                         {
+                             "name":  "project-builder-to-worker-loop-001",
+                             "path":  "data\\project-builder-to-worker-loop-001",
+                             "modified":  "2026-06-19T09:39:46",
+                             "kind":  "UNKNOWN"
+                         },
+                         {
+                             "name":  "operator-v1-projects-screen",
+                             "path":  "documents\\operator-v1-projects-screen",
+                             "modified":  "2026-06-22T10:18:11",
+                             "kind":  "UNKNOWN"
+                         },
+                         {
+                             "name":  "real-project-walkthrough",
+                             "path":  "documents\\real-project-walkthrough",
+                             "modified":  "2026-06-21T06:03:56",
+                             "kind":  "UNKNOWN"
+                         }
+                     ],
+    "project_files":  [
+                          {
+                              "name":  "projects-screen.latest.json",
+                              "path":  "data\\operator-v1-projects-screen\\projects-screen.latest.json",
+                              "modified":  "2026-06-22T10:18:11",
+                              "bytes":  4805
+                          },
+                          {
+                              "name":  "active-project.json",
+                              "path":  "data\\desktop-terminal-operator\\active-project.json",
+                              "modified":  "2026-06-20T02:29:10",
+                              "bytes":  228
+                          },
+                          {
+                              "name":  "active-project.txt",
+                              "path":  "data\\desktop-terminal-operator\\active-project.txt",
+                              "modified":  "2026-06-20T02:29:10",
+                              "bytes":  86
+                          },
+                          {
+                              "name":  "03_NEXT_BLOCK_EXT04_PROJECT_REVIEW_SAFE.md",
+                              "path":  "data\\operator-extension-plan\\03_NEXT_BLOCK_EXT04_PROJECT_REVIEW_SAFE.md",
+                              "modified":  "2026-06-19T22:59:08",
+                              "bytes":  566
+                          },
+                          {
+                              "name":  "module-project-lifecycle-policy.v1.json",
+                              "path":  "data\\operator-state\\policies\\module-project-lifecycle-policy.v1.json",
+                              "modified":  "2026-06-19T18:36:41",
+                              "bytes":  924
+                          },
+                          {
+                              "name":  "project-registry.json",
+                              "path":  "data\\operator-state\\project-registry.json",
+                              "modified":  "2026-06-19T17:57:08",
+                              "bytes":  2666
+                          },
+                          {
+                              "name":  "engremiat-project-registry.json",
+                              "path":  "data\\operator-state\\engremiat-project-registry.json",
+                              "modified":  "2026-06-19T17:46:03",
+                              "bytes":  3292
+                          },
+                          {
+                              "name":  "obsidian-project-registry.json",
+                              "path":  "data\\operator-state\\obsidian-project-registry.json",
+                              "modified":  "2026-06-19T17:44:00",
+                              "bytes":  47757
+                          },
+                          {
+                              "name":  "project-intake.json",
+                              "path":  "data\\project-start-flow\\SIM_PROJECT_20260619-164503_nuevo-proyecto\\project-intake.json",
+                              "modified":  "2026-06-19T16:45:03",
+                              "bytes":  1459
+                          },
+                          {
+                              "name":  "project-intake.json",
+                              "path":  "data\\project-start-flow\\SIM_PROJECT_20260619-162809_nuevo-proyecto\\project-intake.json",
+                              "modified":  "2026-06-19T16:28:10",
+                              "bytes":  1478
+                          },
+                          {
+                              "name":  "project-intake.json",
+                              "path":  "data\\project-start-flow\\SIM_PROJECT_20260619-161706_nuevo-proyecto\\project-intake.json",
+                              "modified":  "2026-06-19T16:17:06",
+                              "bytes":  1478
+                          },
+                          {
+                              "name":  "project-intake.json",
+                              "path":  "data\\project-start-flow\\SIM_PROJECT_20260619-160241_nuevo-proyecto-nuevo-proyecto\\project-intake.json",
+                              "modified":  "2026-06-19T16:02:41",
+                              "bytes":  1613
+                          },
+                          {
+                              "name":  "project-intake.json",
+                              "path":  "data\\project-start-flow\\SIM_PROJECT_20260619-155454_nuevo-proyecto\\project-intake.json",
+                              "modified":  "2026-06-19T15:54:54",
+                              "bytes":  1370
+                          },
+                          {
+                              "name":  "project-intake.json",
+                              "path":  "data\\project-start-flow\\SIM_PROJECT_20260619-154656_nuevo-proyecto\\project-intake.json",
+                              "modified":  "2026-06-19T15:46:56",
+                              "bytes":  1133
+                          },
+                          {
+                              "name":  "project-intake.json",
+                              "path":  "data\\project-start-flow\\SIM_PROJECT_20260619-153849_nuevo-proyecto\\project-intake.json",
+                              "modified":  "2026-06-19T15:38:50",
+                              "bytes":  889
+                          },
+                          {
+                              "name":  "project-intake.json",
+                              "path":  "data\\project-start-flow\\SIM_PROJECT_20260619-153753_nuevo-proyecto\\project-intake.json",
+                              "modified":  "2026-06-19T15:37:54",
+                              "bytes":  889
+                          },
+                          {
+                              "name":  "project-intake.json",
+                              "path":  "data\\project-start-flow\\SIM_PROJECT_20260619-153711_nuevo-proyecto\\project-intake.json",
+                              "modified":  "2026-06-19T15:37:11",
+                              "bytes":  889
+                          },
+                          {
+                              "name":  "project-intake.json",
+                              "path":  "data\\project-start-flow\\SIM_PROJECT_20260619-153553_nuevo-proyecto\\project-intake.json",
+                              "modified":  "2026-06-19T15:35:53",
+                              "bytes":  889
+                          },
+                          {
+                              "name":  "project-intake.json",
+                              "path":  "data\\project-start-flow\\SIM_PROJECT_20260619-153101_prueba2\\project-intake.json",
+                              "modified":  "2026-06-19T15:31:01",
+                              "bytes":  945
+                          },
+                          {
+                              "name":  "project-intake.json",
+                              "path":  "data\\project-start-flow\\SIM_PROJECT_20260619-153021_prueba2\\project-intake.json",
+                              "modified":  "2026-06-19T15:30:21",
+                              "bytes":  914
+                          },
+                          {
+                              "name":  "project-intake.json",
+                              "path":  "data\\project-start-flow\\SIM_PROJECT_20260619-152304_prueba1\\project-intake.json",
+                              "modified":  "2026-06-19T15:23:04",
+                              "bytes":  952
+                          },
+                          {
+                              "name":  "project-start-worker-result-SIM_PROJECT_20260619-144124.json",
+                              "path":  "data\\system-simulation-lab\\project-start-worker-result-SIM_PROJECT_20260619-144124.json",
+                              "modified":  "2026-06-19T14:43:53",
+                              "bytes":  1235
+                          },
+                          {
+                              "name":  "human-review-project-start-SIM_PROJECT_20260619-144124.json",
+                              "path":  "data\\system-simulation-lab\\human-review-project-start-SIM_PROJECT_20260619-144124.json",
+                              "modified":  "2026-06-19T14:42:47",
+                              "bytes":  1103
+                          },
+                          {
+                              "name":  "project-start-intake-SIM_PROJECT_20260619-144124.json",
+                              "path":  "data\\system-simulation-lab\\project-start-intake-SIM_PROJECT_20260619-144124.json",
+                              "modified":  "2026-06-19T14:41:24",
+                              "bytes":  2118
+                          },
+                          {
+                              "name":  "project-module-space-linked-architecture-module.v1.json",
+                              "path":  "data\\obsidian-hierarchical-vaults\\project-module-space-linked-architecture-module.v1.json",
+                              "modified":  "2026-06-19T14:19:33",
+                              "bytes":  2291
+                          },
+                          {
+                              "name":  "master-project-link-registry.v1.json",
+                              "path":  "data\\obsidian-hierarchical-vaults\\master-project-link-registry.v1.json",
+                              "modified":  "2026-06-19T14:18:30",
+                              "bytes":  1565
+                          },
+                          {
+                              "name":  "boveda-project-engremiat-core.v1.json",
+                              "path":  "data\\obsidian-hierarchical-vaults\\boveda-project-engremiat-core.v1.json",
+                              "modified":  "2026-06-19T14:17:39",
+                              "bytes":  1829
+                          },
+                          {
+                              "name":  "project-vault-template.v1.json",
+                              "path":  "data\\obsidian-hierarchical-vaults\\project-vault-template.v1.json",
+                              "modified":  "2026-06-19T14:15:08",
+                              "bytes":  2298
+                          },
+                          {
+                              "name":  "project-module-space-generator-preview.v1.json",
+                              "path":  "data\\vault-module-builder\\project-module-space-generator-preview.v1.json",
+                              "modified":  "2026-06-19T12:14:59",
+                              "bytes":  1434
+                          },
+                          {
+                              "name":  "obsidian-project-preview-from-last-workflow-manifest.json",
+                              "path":  "data\\obsidian-operative-memory-architecture\\obsidian-project-preview-from-last-workflow-manifest.json",
+                              "modified":  "2026-06-19T10:50:43",
+                              "bytes":  2061
+                          },
+                          {
+                              "name":  "project-builder-to-worker-loop-close-manifest.json",
+                              "path":  "data\\project-builder-to-worker-loop\\project-builder-to-worker-loop-close-manifest.json",
+                              "modified":  "2026-06-19T09:45:59",
+                              "bytes":  790
+                          },
+                          {
+                              "name":  "human-project-intake-contract.json",
+                              "path":  "data\\project-builder-to-worker-loop\\human-project-intake-contract.json",
+                              "modified":  "2026-06-19T09:42:23",
+                              "bytes":  1190
+                          },
+                          {
+                              "name":  "human-project-intake-sample.json",
+                              "path":  "data\\project-builder-to-worker-loop\\human-project-intake-sample.json",
+                              "modified":  "2026-06-19T09:42:23",
+                              "bytes":  683
+                          },
+                          {
+                              "name":  "project-intake-to-ollama-prompt-bridge.preview.md",
+                              "path":  "data\\project-builder-to-worker-loop-001\\prompts\\project-intake-to-ollama-prompt-bridge.preview.md",
+                              "modified":  "2026-06-19T09:41:32",
+                              "bytes":  508
+                          },
+                          {
+                              "name":  "project-intake.schema.json",
+                              "path":  "data\\project-builder-to-worker-loop-001\\contracts\\project-intake.schema.json",
+                              "modified":  "2026-06-19T09:41:32",
+                              "bytes":  1499
+                          },
+                          {
+                              "name":  "project-intake.template.json",
+                              "path":  "data\\project-builder-to-worker-loop-001\\input\\project-intake.template.json",
+                              "modified":  "2026-06-19T09:41:32",
+                              "bytes":  423
+                          },
+                          {
+                              "name":  "gate-save-human-project-intake.json",
+                              "path":  "data\\project-builder-to-worker-loop-001\\gates\\gate-save-human-project-intake.json",
+                              "modified":  "2026-06-19T09:41:32",
+                              "bytes":  804
+                          },
+                          {
+                              "name":  "project-intake.sample.json",
+                              "path":  "data\\project-builder-to-worker-loop-001\\input\\project-intake.sample.json",
+                              "modified":  "2026-06-19T09:39:46",
+                              "bytes":  1059
+                          },
+                          {
+                              "name":  "project-builder-loop-contract.v1.json",
+                              "path":  "data\\project-builder-to-worker-loop-001\\contracts\\project-builder-loop-contract.v1.json",
+                              "modified":  "2026-06-19T09:39:46",
+                              "bytes":  1974
+                          },
+                          {
+                              "name":  "mock-ollama-project-roadmap-proposal.json",
+                              "path":  "data\\project-builder-to-worker-loop-001\\mock-ollama\\mock-ollama-project-roadmap-proposal.json",
+                              "modified":  "2026-06-19T09:39:46",
+                              "bytes":  5576
+                          },
+                          {
+                              "name":  "PROJECTS_SCREEN_CONTRACT.v1.md",
+                              "path":  "documents\\operator-v1-projects-screen\\PROJECTS_SCREEN_CONTRACT.v1.md",
+                              "modified":  "2026-06-22T10:18:11",
+                              "bytes":  1226
+                          },
+                          {
+                              "name":  "PROJECTS_SCREEN_CONTRACT.v1.json",
+                              "path":  "documents\\operator-v1-projects-screen\\PROJECTS_SCREEN_CONTRACT.v1.json",
+                              "modified":  "2026-06-22T10:18:11",
+                              "bytes":  4805
+                          },
+                          {
+                              "name":  "E01_AUDIT_PROJECTS_SCREEN_STATE_READONLY_20260622-101718.md",
+                              "path":  "documents\\operator-v1-projects-screen\\E01_AUDIT_PROJECTS_SCREEN_STATE_READONLY_20260622-101718.md",
+                              "modified":  "2026-06-22T10:17:23",
+                              "bytes":  602
+                          },
+                          {
+                              "name":  "documents_real-project-walkthrough.md",
+                              "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\documents_real-project-walkthrough.md",
+                              "modified":  "2026-06-22T07:58:11",
+                              "bytes":  286
+                          },
+                          {
+                              "name":  "reports_real-project-walkthrough.md",
+                              "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-reports-launcher\\reports_real-project-walkthrough.md",
+                              "modified":  "2026-06-22T07:58:11",
+                              "bytes":  282
+                          },
+                          {
+                              "name":  "documents_real-project-walkthrough.md",
+                              "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-e04\\documents_real-project-walkthrough.md",
+                              "modified":  "2026-06-22T07:44:10",
+                              "bytes":  277
+                          },
+                          {
+                              "name":  "reports_real-project-walkthrough.md",
+                              "path":  "documents\\operator-v2-global-scope-cleanup\\groups-after-e04\\reports_real-project-walkthrough.md",
+                              "modified":  "2026-06-22T07:44:10",
+                              "bytes":  273
+                          },
+                          {
+                              "name":  "documents_real-project-walkthrough.md",
+                              "path":  "documents\\operator-v2-global-scope-cleanup\\groups\\documents_real-project-walkthrough.md",
+                              "modified":  "2026-06-22T07:41:00",
+                              "bytes":  267
+                          },
+                          {
+                              "name":  "projects_projects.md",
+                              "path":  "documents\\operator-v2-global-scope-cleanup\\groups\\projects_projects.md",
+                              "modified":  "2026-06-22T07:41:00",
+                              "bytes":  220
+                          },
+                          {
+                              "name":  "projects_ENGREMIAT_PROJECT_heartbeat_demo.md",
+                              "path":  "documents\\operator-v2-global-scope-cleanup\\groups\\projects_ENGREMIAT_PROJECT_heartbeat_demo.md",
+                              "modified":  "2026-06-22T07:41:00",
+                              "bytes":  276
+                          },
+                          {
+                              "name":  "reports_real-project-walkthrough.md",
+                              "path":  "documents\\operator-v2-global-scope-cleanup\\groups\\reports_real-project-walkthrough.md",
+                              "modified":  "2026-06-22T07:41:00",
+                              "bytes":  263
+                          },
+                          {
+                              "name":  "projects_ENGREMIAT_PROJECT_heartbeat_demo.md",
+                              "path":  "documents\\operator-v2-scope-code-untracked-review\\module-groups\\projects_ENGREMIAT_PROJECT_heartbeat_demo.md",
+                              "modified":  "2026-06-22T07:19:40",
+                              "bytes":  263
+                          },
+                          {
+                              "name":  "projects_projects.md",
+                              "path":  "documents\\operator-v2-scope-code-untracked-review\\module-groups\\projects_projects.md",
+                              "modified":  "2026-06-22T07:19:40",
+                              "bytes":  207
+                          },
+                          {
+                              "name":  "projects-center-router-repair-apply.latest.md",
+                              "path":  "documents\\screen-master-template\\planned\\projects-center-router-repair-apply.latest.md",
+                              "modified":  "2026-06-20T21:01:28",
+                              "bytes":  1138
+                          },
+                          {
+                              "name":  "projects-center-router-repair-no-apply.latest.md",
+                              "path":  "documents\\screen-master-template\\planned\\projects-center-router-repair-no-apply.latest.md",
+                              "modified":  "2026-06-20T21:00:45",
+                              "bytes":  863
+                          },
+                          {
+                              "name":  "projects-center-router-after-manual-fail.latest.md",
+                              "path":  "documents\\screen-master-template\\planned\\projects-center-router-after-manual-fail.latest.md",
+                              "modified":  "2026-06-20T20:59:59",
+                              "bytes":  30435
+                          },
+                          {
+                              "name":  "MCARD-20260620-205959-projects-center-m-help-router.md",
+                              "path":  "documents\\manual-screen-maintenance-cards\\cards\\MCARD-20260620-205959-projects-center-m-help-router.md",
+                              "modified":  "2026-06-20T20:59:59",
+                              "bytes":  368
+                          },
+                          {
+                              "name":  "projects-center-screen-template-apply.latest.md",
+                              "path":  "documents\\screen-master-template\\planned\\projects-center-screen-template-apply.latest.md",
+                              "modified":  "2026-06-20T20:57:04",
+                              "bytes":  1183
+                          },
+                          {
+                              "name":  "projects-center-expanded-candidate-no-apply.latest.md",
+                              "path":  "documents\\screen-master-template\\planned\\projects-center-expanded-candidate-no-apply.latest.md",
+                              "modified":  "2026-06-20T20:56:27",
+                              "bytes":  898
+                          },
+                          {
+                              "name":  "projects-center-boundary-expanded-for-rewrite.latest.md",
+                              "path":  "documents\\screen-master-template\\planned\\projects-center-boundary-expanded-for-rewrite.latest.md",
+                              "modified":  "2026-06-20T20:54:31",
+                              "bytes":  16667
+                          },
+                          {
+                              "name":  "projects-center-boundary-expanded-for-rewrite.latest.txt",
+                              "path":  "documents\\screen-master-template\\planned\\projects-center-boundary-expanded-for-rewrite.latest.txt",
+                              "modified":  "2026-06-20T20:54:31",
+                              "bytes":  11853
+                          },
+                          {
+                              "name":  "projects-center-compact-boundary-extract.latest.md",
+                              "path":  "documents\\screen-master-template\\planned\\projects-center-compact-boundary-extract.latest.md",
+                              "modified":  "2026-06-20T20:53:08",
+                              "bytes":  6454
+                          },
+                          {
+                              "name":  "projects-center-compact-boundary-line19.latest.txt",
+                              "path":  "documents\\screen-master-template\\planned\\projects-center-compact-boundary-line19.latest.txt",
+                              "modified":  "2026-06-20T20:53:08",
+                              "bytes":  635
+                          },
+                          {
+                              "name":  "projects-center-readhost-shape-audit.latest.md",
+                              "path":  "documents\\screen-master-template\\planned\\projects-center-readhost-shape-audit.latest.md",
+                              "modified":  "2026-06-20T20:52:30",
+                              "bytes":  86
+                          },
+                          {
+                              "name":  "projects-center-screen-patch-no-apply.latest.md",
+                              "path":  "documents\\screen-master-template\\planned\\projects-center-screen-patch-no-apply.latest.md",
+                              "modified":  "2026-06-20T20:51:54",
+                              "bytes":  1568
+                          },
+                          {
+                              "name":  "projects-center-router-audit.latest.md",
+                              "path":  "documents\\screen-master-template\\planned\\projects-center-router-audit.latest.md",
+                              "modified":  "2026-06-20T20:51:03",
+                              "bytes":  229
+                          },
+                          {
+                              "name":  "projects-screen-mismatch-renderer-search.latest.md",
+                              "path":  "documents\\screen-master-template\\planned\\projects-screen-mismatch-renderer-search.latest.md",
+                              "modified":  "2026-06-20T20:50:30",
+                              "bytes":  83648
+                          },
+                          {
+                              "name":  "MCARD-20260620-205030-projects-screen-template.md",
+                              "path":  "documents\\manual-screen-maintenance-cards\\cards\\MCARD-20260620-205030-projects-screen-template.md",
+                              "modified":  "2026-06-20T20:50:30",
+                              "bytes":  449
+                          },
+                          {
+                              "name":  "eng-projects-manager-screen-template-apply.latest.md",
+                              "path":  "documents\\screen-master-template\\planned\\eng-projects-manager-screen-template-apply.latest.md",
+                              "modified":  "2026-06-20T20:48:55",
+                              "bytes":  1064
+                          },
+                          {
+                              "name":  "eng-projects-manager-screen-patch-no-apply.latest.md",
+                              "path":  "documents\\screen-master-template\\planned\\eng-projects-manager-screen-patch-no-apply.latest.md",
+                              "modified":  "2026-06-20T20:48:14",
+                              "bytes":  1325
+                          },
+                          {
+                              "name":  "eng-projects-manager-router-audit.latest.md",
+                              "path":  "documents\\screen-master-template\\planned\\eng-projects-manager-router-audit.latest.md",
+                              "modified":  "2026-06-20T20:46:04",
+                              "bytes":  264
+                          },
+                          {
+                              "name":  "real-projects-active-renderer-search.latest.md",
+                              "path":  "documents\\screen-master-template\\planned\\real-projects-active-renderer-search.latest.md",
+                              "modified":  "2026-06-20T20:45:29",
+                              "bytes":  111099
+                          },
+                          {
+                              "name":  "real-projects-active-router-audit.latest.md",
+                              "path":  "documents\\screen-master-template\\planned\\real-projects-active-router-audit.latest.md",
+                              "modified":  "2026-06-20T20:44:48",
+                              "bytes":  488
+                          },
+                          {
+                              "name":  "proyectos-standard-contract-repair.latest.json",
+                              "path":  "documents\\screen-normalizer-subscreen-routing-adapter\\candidate-repair\\proyectos-standard-contract-repair.latest.json",
+                              "modified":  "2026-06-20T18:40:38",
+                              "bytes":  1129
+                          },
+                          {
+                              "name":  "proyectos-standard-contract-repair-20260620-184038.json",
+                              "path":  "documents\\screen-normalizer-subscreen-routing-adapter\\candidate-repair\\proyectos-standard-contract-repair-20260620-184038.json",
+                              "modified":  "2026-06-20T18:40:38",
+                              "bytes":  1129
+                          },
+                          {
+                              "name":  "projects-screen-source-locate.latest.json",
+                              "path":  "documents\\operator-real-maintenance-manual-smoke\\diagnostics\\projects-screen-source-locate.latest.json",
+                              "modified":  "2026-06-20T16:07:45",
+                              "bytes":  25763
+                          },
+                          {
+                              "name":  "projects-screen-source-locate-20260620-160744.json",
+                              "path":  "documents\\operator-real-maintenance-manual-smoke\\diagnostics\\projects-screen-source-locate-20260620-160744.json",
+                              "modified":  "2026-06-20T16:07:45",
+                              "bytes":  25763
+                          },
+                          {
+                              "name":  "projects-screen-m-gap-diagnostic.latest.json",
+                              "path":  "documents\\operator-real-maintenance-manual-smoke\\diagnostics\\projects-screen-m-gap-diagnostic.latest.json",
+                              "modified":  "2026-06-20T16:05:52",
+                              "bytes":  20331
+                          },
+                          {
+                              "name":  "projects-screen-m-gap-diagnostic-20260620-160552.json",
+                              "path":  "documents\\operator-real-maintenance-manual-smoke\\diagnostics\\projects-screen-m-gap-diagnostic-20260620-160552.json",
+                              "modified":  "2026-06-20T16:05:52",
+                              "bytes":  20331
+                          },
+                          {
+                              "name":  "GMC-HUMAN-GATE-CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830-20260620-144931.json",
+                              "path":  "documents\\module-cards\\gate-mutation-contracts\\GMC-HUMAN-GATE-CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830-20260620-144931.json",
+                              "modified":  "2026-06-20T14:49:31",
+                              "bytes":  4181
+                          },
+                          {
+                              "name":  "e02-define-projects-screen-contract-20260622-101806.json",
+                              "path":  "reports\\operator-v1-projects-screen\\e02-define-projects-screen-contract-20260622-101806.json",
+                              "modified":  "2026-06-22T10:18:11",
+                              "bytes":  804
+                          },
+                          {
+                              "name":  "e01-audit-projects-screen-state-readonly-20260622-101718.json",
+                              "path":  "reports\\operator-v1-projects-screen\\e01-audit-projects-screen-state-readonly-20260622-101718.json",
+                              "modified":  "2026-06-22T10:17:23",
+                              "bytes":  52076
+                          },
+                          {
+                              "name":  "e09-final-validate-after-projects-manager-patch-and-pause-20260622-091540.json",
+                              "path":  "reports\\functional-validation\\e09-final-validate-after-projects-manager-patch-and-pause-20260622-091540.json",
+                              "modified":  "2026-06-22T09:15:40",
+                              "bytes":  628
+                          },
+                          {
+                              "name":  "e08-evaluate-smoke-and-commit-projects-manager-patch-no-push-20260622-091509.json",
+                              "path":  "reports\\functional-validation\\e08-evaluate-smoke-and-commit-projects-manager-patch-no-push-20260622-091509.json",
+                              "modified":  "2026-06-22T09:15:09",
+                              "bytes":  1225
+                          },
+                          {
+                              "name":  "e06-r1-rewrite-projects-manager-stable-error-capture-no-commit-no-push-20260622-091154.json",
+                              "path":  "reports\\functional-validation\\e06-r1-rewrite-projects-manager-stable-error-capture-no-commit-no-push-20260622-091154.json",
+                              "modified":  "2026-06-22T09:11:54",
+                              "bytes":  714
+                          },
+                          {
+                              "name":  "e05-diagnose-projects-manager-active-projects-no-apply-20260622-090909.json",
+                              "path":  "reports\\functional-validation\\e05-diagnose-projects-manager-active-projects-no-apply-20260622-090909.json",
+                              "modified":  "2026-06-22T09:09:09",
+                              "bytes":  489395
+                          },
+                          {
+                              "name":  "e04-diagnose-child-operator-active-projects-screen-no-apply-20260622-090832.json",
+                              "path":  "reports\\functional-validation\\e04-diagnose-child-operator-active-projects-screen-no-apply-20260622-090832.json",
+                              "modified":  "2026-06-22T09:08:32",
+                              "bytes":  35833
+                          },
+                          {
+                              "name":  "e03-diagnose-active-projects-screen-static-no-apply-20260622-090754.json",
+                              "path":  "reports\\functional-validation\\e03-diagnose-active-projects-screen-static-no-apply-20260622-090754.json",
+                              "modified":  "2026-06-22T09:07:54",
+                              "bytes":  150456
+                          },
+                          {
+                              "name":  "e02-normalize-proyectos-20260621-163951.json",
+                              "path":  "reports\\child-screen-normalization\\e02-normalize-proyectos-20260621-163951.json",
+                              "modified":  "2026-06-21T16:39:55",
+                              "bytes":  679
+                          },
+                          {
+                              "name":  "new-project-safe-v2-canonical-20260621-122227.json",
+                              "path":  "reports\\operator-navigation-model\\new-project-safe-v2-canonical-20260621-122227.json",
+                              "modified":  "2026-06-21T12:22:27",
+                              "bytes":  999
+                          },
+                          {
+                              "name":  "e24-apply-projects-center-router-repair-with-gate-20260620-210118.json",
+                              "path":  "reports\\screen-master-template\\e24-apply-projects-center-router-repair-with-gate-20260620-210118.json",
+                              "modified":  "2026-06-20T21:01:28",
+                              "bytes":  1663
+                          },
+                          {
+                              "name":  "e23c-prepare-projects-center-router-repair-no-apply-20260620-210045.json",
+                              "path":  "reports\\screen-master-template\\e23c-prepare-projects-center-router-repair-no-apply-20260620-210045.json",
+                              "modified":  "2026-06-20T21:00:45",
+                              "bytes":  1632
+                          },
+                          {
+                              "name":  "e23b-audit-projects-center-router-after-manual-fail-20260620-205959.json",
+                              "path":  "reports\\screen-master-template\\e23b-audit-projects-center-router-after-manual-fail-20260620-205959.json",
+                              "modified":  "2026-06-20T20:59:59",
+                              "bytes":  3505
+                          },
+                          {
+                              "name":  "e22-apply-projects-center-screen-template-with-gate-20260620-205656.json",
+                              "path":  "reports\\screen-master-template\\e22-apply-projects-center-screen-template-with-gate-20260620-205656.json",
+                              "modified":  "2026-06-20T20:57:04",
+                              "bytes":  1663
+                          },
+                          {
+                              "name":  "e21e-prepare-projects-center-expanded-candidate-no-apply-20260620-205627.json",
+                              "path":  "reports\\screen-master-template\\e21e-prepare-projects-center-expanded-candidate-no-apply-20260620-205627.json",
+                              "modified":  "2026-06-20T20:56:27",
+                              "bytes":  1643
+                          },
+                          {
+                              "name":  "e21d-bis-expand-projects-center-boundary-for-rewrite-no-apply-20260620-205431.json",
+                              "path":  "reports\\screen-master-template\\e21d-bis-expand-projects-center-boundary-for-rewrite-no-apply-20260620-205431.json",
+                              "modified":  "2026-06-20T20:54:31",
+                              "bytes":  16921
+                          },
+                          {
+                              "name":  "e21c-extract-projects-center-compact-boundary-no-apply-20260620-205307.json",
+                              "path":  "reports\\screen-master-template\\e21c-extract-projects-center-compact-boundary-no-apply-20260620-205307.json",
+                              "modified":  "2026-06-20T20:53:08",
+                              "bytes":  1266
+                          },
+                          {
+                              "name":  "e21b-audit-projects-center-readhost-shape-no-apply-20260620-205230.json",
+                              "path":  "reports\\screen-master-template\\e21b-audit-projects-center-readhost-shape-no-apply-20260620-205230.json",
+                              "modified":  "2026-06-20T20:52:30",
+                              "bytes":  8407
+                          },
+                          {
+                              "name":  "e21-prepare-projects-center-screen-patch-no-apply-20260620-205154.json",
+                              "path":  "reports\\screen-master-template\\e21-prepare-projects-center-screen-patch-no-apply-20260620-205154.json",
+                              "modified":  "2026-06-20T20:51:54",
+                              "bytes":  2428
+                          },
+                          {
+                              "name":  "e20-audit-projects-center-router-no-apply-20260620-205103.json",
+                              "path":  "reports\\screen-master-template\\e20-audit-projects-center-router-no-apply-20260620-205103.json",
+                              "modified":  "2026-06-20T20:51:03",
+                              "bytes":  8103
+                          },
+                          {
+                              "name":  "e19b-record-projects-screen-mismatch-and-find-renderer-20260620-205030.json",
+                              "path":  "reports\\screen-master-template\\e19b-record-projects-screen-mismatch-and-find-renderer-20260620-205030.json",
+                              "modified":  "2026-06-20T20:50:30",
+                              "bytes":  1542
+                          },
+                          {
+                              "name":  "e18-apply-projects-manager-screen-template-with-gate-20260620-204846.json",
+                              "path":  "reports\\screen-master-template\\e18-apply-projects-manager-screen-template-with-gate-20260620-204846.json",
+                              "modified":  "2026-06-20T20:48:55",
+                              "bytes":  1573
+                          },
+                          {
+                              "name":  "e17b-repair-projects-manager-screen-patch-no-apply-20260620-204814.json",
+                              "path":  "reports\\screen-master-template\\e17b-repair-projects-manager-screen-patch-no-apply-20260620-204814.json",
+                              "modified":  "2026-06-20T20:48:14",
+                              "bytes":  2334
+                          },
+                          {
+                              "name":  "e17-prepare-projects-manager-screen-patch-no-apply-20260620-204721.json",
+                              "path":  "reports\\screen-master-template\\e17-prepare-projects-manager-screen-patch-no-apply-20260620-204721.json",
+                              "modified":  "2026-06-20T20:47:21",
+                              "bytes":  1450
+                          },
+                          {
+                              "name":  "e16-audit-eng-projects-manager-router-no-apply-20260620-204604.json",
+                              "path":  "reports\\screen-master-template\\e16-audit-eng-projects-manager-router-no-apply-20260620-204604.json",
+                              "modified":  "2026-06-20T20:46:04",
+                              "bytes":  5191
+                          },
+                          {
+                              "name":  "e15-find-real-projects-active-renderer-no-apply-20260620-204528.json",
+                              "path":  "reports\\screen-master-template\\e15-find-real-projects-active-renderer-no-apply-20260620-204528.json",
+                              "modified":  "2026-06-20T20:45:29",
+                              "bytes":  60287
+                          },
+                          {
+                              "name":  "e14-audit-real-projects-active-router-no-apply-20260620-204448.json",
+                              "path":  "reports\\screen-master-template\\e14-audit-real-projects-active-router-no-apply-20260620-204448.json",
+                              "modified":  "2026-06-20T20:44:48",
+                              "bytes":  2830
+                          },
+                          {
+                              "name":  "e11b-repair-proyectos-standard-contract-after-smoke-fail-20260620-184038.json",
+                              "path":  "reports\\screen-normalizer-subscreen-routing-adapter\\e11b-repair-proyectos-standard-contract-after-smoke-fail-20260620-184038.json",
+                              "modified":  "2026-06-20T18:40:38",
+                              "bytes":  1129
+                          },
+                          {
+                              "name":  "e03e-repair-runner-save-and-seed-proyectos-pass-20260620-171306.json",
+                              "path":  "reports\\screen-normalizer-internal-visual-smoke-results\\e03e-repair-runner-save-and-seed-proyectos-pass-20260620-171306.json",
+                              "modified":  "2026-06-20T17:13:06",
+                              "bytes":  1030
+                          },
+                          {
+                              "name":  "e02c3-locate-projects-screen-source-readonly-20260620-160744.json",
+                              "path":  "reports\\operator-real-maintenance-manual-smoke\\e02c3-locate-projects-screen-source-readonly-20260620-160744.json",
+                              "modified":  "2026-06-20T16:07:45",
+                              "bytes":  25763
+                          },
+                          {
+                              "name":  "e02b-diagnose-projects-screen-m-command-gap-readonly-20260620-160552.json",
+                              "path":  "reports\\operator-real-maintenance-manual-smoke\\e02b-diagnose-projects-screen-m-command-gap-readonly-20260620-160552.json",
+                              "modified":  "2026-06-20T16:05:52",
+                              "bytes":  20331
+                          },
+                          {
+                              "name":  "e96-close-module-card-project-route-stage-20260620-135805.json",
+                              "path":  "reports\\launcher\\e96-close-module-card-project-route-stage-20260620-135805.json",
+                              "modified":  "2026-06-20T13:58:05",
+                              "bytes":  526
+                          },
+                          {
+                              "name":  "e95c-validate-normalized-project-route-20260620-135728.json",
+                              "path":  "reports\\launcher\\e95c-validate-normalized-project-route-20260620-135728.json",
+                              "modified":  "2026-06-20T13:57:28",
+                              "bytes":  462
+                          },
+                          {
+                              "name":  "e95a-diagnose-project-id-normalization-20260620-135511.json",
+                              "path":  "reports\\launcher\\e95a-diagnose-project-id-normalization-20260620-135511.json",
+                              "modified":  "2026-06-20T13:55:11",
+                              "bytes":  4640
+                          },
+                          {
+                              "name":  "e94d4-close-project-module-card-route-with-start-card-20260620-135432.json",
+                              "path":  "reports\\launcher\\e94d4-close-project-module-card-route-with-start-card-20260620-135432.json",
+                              "modified":  "2026-06-20T13:54:33",
+                              "bytes":  501
+                          },
+                          {
+                              "name":  "e94d2-ensure-projects-have-start-module-20260620-134748.json",
+                              "path":  "reports\\launcher\\e94d2-ensure-projects-have-start-module-20260620-134748.json",
+                              "modified":  "2026-06-20T13:47:48",
+                              "bytes":  491
+                          },
+                          {
+                              "name":  "e94d1-repair-projects-reserved-pid-variable-20260620-134537.json",
+                              "path":  "reports\\launcher\\e94d1-repair-projects-reserved-pid-variable-20260620-134537.json",
+                              "modified":  "2026-06-20T13:45:37",
+                              "bytes":  710
+                          },
+                          {
+                              "name":  "e94c3-rewrite-projects-center-with-module-card-route-20260620-134325.json",
+                              "path":  "reports\\launcher\\e94c3-rewrite-projects-center-with-module-card-route-20260620-134325.json",
+                              "modified":  "2026-06-20T13:43:25",
+                              "bytes":  690
+                          },
+                          {
+                              "name":  "e94c2-projects-switch-anchor-missing-20260620-134231.txt",
+                              "path":  "reports\\launcher\\e94c2-projects-switch-anchor-missing-20260620-134231.txt",
+                              "modified":  "2026-06-20T13:42:31",
+                              "bytes":  10039
+                          },
+                          {
+                              "name":  "e94a-decide-card-view-integration-with-project-module-screen-20260620-133947.json",
+                              "path":  "reports\\launcher\\e94a-decide-card-view-integration-with-project-module-screen-20260620-133947.json",
+                              "modified":  "2026-06-20T13:39:47",
+                              "bytes":  809
+                          }
+                      ],
+    "reports_recent":  [
+                           {
+                               "path":  "reports\\operator-v1-projects-screen\\e02-define-projects-screen-contract-20260622-101806.json",
+                               "modified":  "2026-06-22T10:18:11",
+                               "bytes":  804
+                           },
+                           {
+                               "path":  "reports\\operator-v1-projects-screen\\e01-audit-projects-screen-state-readonly-20260622-101718.json",
+                               "modified":  "2026-06-22T10:17:23",
+                               "bytes":  52076
+                           },
+                           {
+                               "path":  "reports\\operator-v1-safe-build\\e07r-repair-home-reserved-var-and-close-objective-no-push-20260622-101616.json",
+                               "modified":  "2026-06-22T10:16:29",
+                               "bytes":  1075
+                           },
+                           {
+                               "path":  "reports\\operator-v1-safe-build\\e07r-repair-home-reserved-var-and-close-objective-no-push-20260622-101535.json",
+                               "modified":  "2026-06-22T10:15:48",
+                               "bytes":  1075
+                           },
+                           {
+                               "path":  "reports\\operator-v1-safe-build\\e06-validate-launcher-option-1-and-commit-scoped-20260622-101102.json",
+                               "modified":  "2026-06-22T10:11:10",
+                               "bytes":  2363
+                           },
+                           {
+                               "path":  "reports\\operator-v1-safe-build\\e05r-apply-v1-home-launcher-integration-by-case-boundary-20260622-101002.json",
+                               "modified":  "2026-06-22T10:10:17",
+                               "bytes":  1289
+                           },
+                           {
+                               "path":  "reports\\operator-v1-safe-build\\e04-gate-launcher-integration-v1-home-20260622-100750.json",
+                               "modified":  "2026-06-22T10:07:59",
+                               "bytes":  2056
+                           },
+                           {
+                               "path":  "reports\\operator-v1-safe-build\\e03-create-v1-home-screen-readonly-20260622-100706.json",
+                               "modified":  "2026-06-22T10:07:15",
+                               "bytes":  8831
+                           }
+                       ],
+    "v2_governance":  [
+                          "6 Estado vivo V2",
+                          "7 Siguiente accion V2",
+                          "8 Panel control V2",
+                          "9 Close \u0026 Sync V2"
+                      ],
+    "blocked_actions":  [
+                            "worker_real",
+                            "api_externa",
+                            "navegador",
+                            "clipboard",
+                            "delete_files",
+                            "push_auto",
+                            "fetch_auto",
+                            "merge_auto",
+                            "modificar_proyectos_sin_gate"
+                        ],
+    "next":  "E04_GATE_LAUNCHER_INTEGRATION_PROJECTS"
+}
