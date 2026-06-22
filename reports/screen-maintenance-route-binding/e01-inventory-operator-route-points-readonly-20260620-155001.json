@@ -1,0 +1,111 @@
+﻿{
+    "schema":  "engremiat.screen_maintenance_route_binding_inventory.v1",
+    "package_id":  "ENGREMIAT_SCREEN_MAINTENANCE_ROUTE_BINDING_001",
+    "stage":  "E01_INVENTORY_OPERATOR_ROUTE_POINTS_READONLY",
+    "created_at":  "2026-06-20T15:50:01",
+    "status":  "PASS",
+    "mode":  "READONLY_ROUTE_POINT_INVENTORY_NO_WRITE",
+    "target":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1",
+    "target_parse_ok":  true,
+    "previous_integration_close":  "C:\\ENGREMIAT_CORE\\documents\\screen-maintenance-real-integration\\close\\screen-maintenance-real-integration-close.latest.json",
+    "helper_present":  true,
+    "marker_present":  true,
+    "capture_script_reference_present":  true,
+    "route_already_bound":  true,
+    "route_points_count":  11,
+    "route_points":  [
+                         {
+                             "line":  102,
+                             "text":  "L \"refrescar/f5/Enter = redibujar pantalla | ? = ayuda | comandos = menu actual\" DarkGray",
+                             "context":  "  } /   L \"\" /   L \"refrescar/f5/Enter = redibujar pantalla | ? = ayuda | comandos = menu actual\" DarkGray /   L \"\" / }",
+                             "kind":  "HELP_OR_COMMAND_HINT"
+                         },
+                         {
+                             "line":  118,
+                             "text":  "if($x -in @(\"refrescar\",\"refresh\",\"f5\",\"menu\",\"comandos\")){return \"__refresh__\"}",
+                             "context":  "  $level=Get-Level /   if([string]::IsNullOrWhiteSpace($x)){return \"__refresh__\"} /   if($x -in @(\"refrescar\",\"refresh\",\"f5\",\"menu\",\"comandos\")){return \"__refresh__\"} /   if($x -in @(\"?\",\"ayuda\")){return \"ayuda\"} /   if($x -in @(\"q\",\"salir\",\"exit\")){return \"salir\"}",
+                             "kind":  "HELP_OR_COMMAND_HINT"
+                         },
+                         {
+                             "line":  119,
+                             "text":  "if($x -in @(\"?\",\"ayuda\")){return \"ayuda\"}",
+                             "context":  "  if([string]::IsNullOrWhiteSpace($x)){return \"__refresh__\"} /   if($x -in @(\"refrescar\",\"refresh\",\"f5\",\"menu\",\"comandos\")){return \"__refresh__\"} /   if($x -in @(\"?\",\"ayuda\")){return \"ayuda\"} /   if($x -in @(\"q\",\"salir\",\"exit\")){return \"salir\"} /   if($x -in @(\"a\",\"atras\",\"atrás\",\"volver\",\"back\",\"..\",\"0\")){return \"atras\"}",
+                             "kind":  "HELP_OR_COMMAND_HINT"
+                         },
+                         {
+                             "line":  166,
+                             "text":  "L \"AYUDA\" Cyan",
+                             "context":  "} / function Show-Help{ /   L \"AYUDA\" Cyan /   L \"Enter/refrescar/f5 redibuja pantalla.\" Gray /   L \"a/b/atras vuelve al nivel anterior.\" Gray",
+                             "kind":  "HELP_OR_COMMAND_HINT"
+                         },
+                         {
+                             "line":  167,
+                             "text":  "L \"Enter/refrescar/f5 redibuja pantalla.\" Gray",
+                             "context":  "function Show-Help{ /   L \"AYUDA\" Cyan /   L \"Enter/refrescar/f5 redibuja pantalla.\" Gray /   L \"a/b/atras vuelve al nivel anterior.\" Gray /   L \"q sale desde GLOBAL.\" Gray",
+                             "kind":  "HELP_OR_COMMAND_HINT"
+                         },
+                         {
+                             "line":  174,
+                             "text":  "$cmd=Normalize-Command (Read-Host \"ENGREMIAT\")",
+                             "context":  "while($true){ /   Refresh-Screen /   $cmd=Normalize-Command (Read-Host \"ENGREMIAT\") /   if($cmd -eq \"__refresh__\"){continue} /   if($cmd -eq \"ayuda\"){Show-Help;Read-Host \"Enter para volver\"|Out-Null;continue}",
+                             "kind":  "READ_HOST"
+                         },
+                         {
+                             "line":  175,
+                             "text":  "if($cmd -eq \"__refresh__\"){continue}",
+                             "context":  "  Refresh-Screen /   $cmd=Normalize-Command (Read-Host \"ENGREMIAT\") /   if($cmd -eq \"__refresh__\"){continue} /   if($cmd -eq \"ayuda\"){Show-Help;Read-Host \"Enter para volver\"|Out-Null;continue} /   if($cmd -eq \"salir\"){if((Get-Level) -eq \"GLOBAL\"){break}else{Go-Back;continue}}",
+                             "kind":  "COMMAND_VAR"
+                         },
+                         {
+                             "line":  176,
+                             "text":  "if($cmd -eq \"ayuda\"){Show-Help;Read-Host \"Enter para volver\"|Out-Null;continue}",
+                             "context":  "  $cmd=Normalize-Command (Read-Host \"ENGREMIAT\") /   if($cmd -eq \"__refresh__\"){continue} /   if($cmd -eq \"ayuda\"){Show-Help;Read-Host \"Enter para volver\"|Out-Null;continue} /   if($cmd -eq \"salir\"){if((Get-Level) -eq \"GLOBAL\"){break}else{Go-Back;continue}} /   if($cmd -eq \"atras\"){Go-Back;continue}",
+                             "kind":  "READ_HOST"
+                         },
+                         {
+                             "line":  177,
+                             "text":  "if($cmd -eq \"salir\"){if((Get-Level) -eq \"GLOBAL\"){break}else{Go-Back;continue}}",
+                             "context":  "  if($cmd -eq \"__refresh__\"){continue} /   if($cmd -eq \"ayuda\"){Show-Help;Read-Host \"Enter para volver\"|Out-Null;continue} /   if($cmd -eq \"salir\"){if((Get-Level) -eq \"GLOBAL\"){break}else{Go-Back;continue}} /   if($cmd -eq \"atras\"){Go-Back;continue} /   \u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $Router $cmd",
+                             "kind":  "COMMAND_VAR"
+                         },
+                         {
+                             "line":  178,
+                             "text":  "if($cmd -eq \"atras\"){Go-Back;continue}",
+                             "context":  "  if($cmd -eq \"ayuda\"){Show-Help;Read-Host \"Enter para volver\"|Out-Null;continue} /   if($cmd -eq \"salir\"){if((Get-Level) -eq \"GLOBAL\"){break}else{Go-Back;continue}} /   if($cmd -eq \"atras\"){Go-Back;continue} /   \u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $Router $cmd / }",
+                             "kind":  "COMMAND_VAR"
+                         },
+                         {
+                             "line":  179,
+                             "text":  "\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $Router $cmd",
+                             "context":  "  if($cmd -eq \"salir\"){if((Get-Level) -eq \"GLOBAL\"){break}else{Go-Back;continue}} /   if($cmd -eq \"atras\"){Go-Back;continue} /   \u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $Router $cmd / } / ",
+                             "kind":  "COMMAND_VAR"
+                         }
+                     ],
+    "candidate_strategy":  {
+                               "recommended_target":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1",
+                               "helper_present":  true,
+                               "marker_present":  true,
+                               "capture_ref_present":  true,
+                               "route_already_bound":  true,
+                               "preferred_binding":  "add minimal command handler near existing switch/read-host flow if safe; otherwise add wrapper route notes and prepare exact patch",
+                               "commands_to_bind":  [
+                                                        "m",
+                                                        "mant",
+                                                        "mantenimiento"
+                                                    ],
+                               "route_action":  "Invoke-EngremiatHumanMaintenanceCard -SourceScreen current_screen -SourceContext current_context",
+                               "write_now":  false,
+                               "next_stage":  "E02_PREPARE_ROUTE_BINDING_PATCH_PROPOSAL_NO_WRITE"
+                           },
+    "safety":  {
+                   "real_execution":  false,
+                   "system_mutation":  false,
+                   "screen_mutation":  false,
+                   "worker":  false,
+                   "browser":  false,
+                   "network":  false,
+                   "git":  false,
+                   "readonly":  true
+               },
+    "next":  "E02_PREPARE_ROUTE_BINDING_PATCH_PROPOSAL_NO_WRITE"
+}

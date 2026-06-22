@@ -1,0 +1,2074 @@
+﻿{
+    "package":  "ENGREMIAT_DIAGNOSTIC_RECOVERY_001",
+    "stage":  "E01B_REPAIR_SCAN_PRIORITY_CANDIDATES_CONTENT_LIGHT_READONLY",
+    "status":  "PASS",
+    "readonly":  true,
+    "git_write":  false,
+    "external_actions":  false,
+    "root":  "C:\\ENGREMIAT_CORE",
+    "created_at":  "2026-06-21T15:47:46",
+    "source_index":  "C:\\ENGREMIAT_CORE\\documents\\diagnostics\\DIAGNOSTIC_RECOVERY_LATEST_INDEX.json",
+    "scanned":  80,
+    "recoverable_count":  18,
+    "canonical_proposal":  {
+                               "problem":  "Las soluciones disenadas se pierden si no pasan a archivo fisico, registro o memoria.",
+                               "solution":  "Crear registro recuperable de herramientas y consolidar observer/autodiagnostico permanente por fases.",
+                               "observer":  "C:\\ENGREMIAT_CORE\\tools\\observer\\engremiat-observer.ps1",
+                               "observer_watch":  "C:\\ENGREMIAT_CORE\\tools\\observer\\engremiat-observer-watch.ps1",
+                               "registry":  "C:\\ENGREMIAT_CORE\\documents\\diagnostics\\DIAGNOSTIC_TOOL_REGISTRY.json",
+                               "memory_events":  "C:\\ENGREMIAT_CORE\\memory\\development\\events.jsonl",
+                               "timeline":  "C:\\ENGREMIAT_CORE\\memory\\development\\timeline.md"
+                           },
+    "top_recoverable":  [
+                            {
+                                "rank_input":  54,
+                                "name":  "sample-human-gate-decision.json",
+                                "path":  "C:\\ENGREMIAT_CORE\\data\\controlled-action-from-proposal-015\\sample-human-gate-decision.json",
+                                "relative":  "data\\controlled-action-from-proposal-015\\sample-human-gate-decision.json",
+                                "extension":  ".json",
+                                "size":  502,
+                                "last_write":  "2026-06-17T08:09:16",
+                                "parse_ok":  null,
+                                "score":  10,
+                                "tags":  [
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "{",
+                                                    "    \"objective\":  \"ENGREMIAT_CONTROLLED_ACTION_FROM_PROPOSAL_015\",",
+                                                    "    \"stage\":  \"E02\",",
+                                                    "    \"block\":  \"B02.2\",",
+                                                    "    \"step\":  \"P02.2.1\",",
+                                                    "    \"gate_id\":  \"CONTROLLED-ACTION-GATE-001\",",
+                                                    "    \"decision\":  \"DEFER\",",
+                                                    "    \"human_confirmation\":  false,",
+                                                    "    \"execution_allowed\":  false,",
+                                                    "    \"reason\":  \"Sin gate no hay avance.\","
+                                                ]
+                            },
+                            {
+                                "rank_input":  55,
+                                "name":  "selected-kanban-context.json",
+                                "path":  "C:\\ENGREMIAT_CORE\\data\\cline-real-proposal-no-apply\\selected-kanban-context.json",
+                                "relative":  "data\\cline-real-proposal-no-apply\\selected-kanban-context.json",
+                                "extension":  ".json",
+                                "size":  8107,
+                                "last_write":  "2026-06-16T15:32:45",
+                                "parse_ok":  null,
+                                "score":  128,
+                                "tags":  [
+                                             "kanban",
+                                             "navigation",
+                                             "safe",
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "{",
+                                                    "    \"objective\":  \"ENGREMIAT_CLINE_REAL_PROPOSAL_NO_APPLY_008\",",
+                                                    "    \"stage\":  \"E02\",",
+                                                    "    \"source_objective\":  \"ENGREMIAT_KANBAN_HUMAN_CONTROL_SURFACE_007\",",
+                                                    "    \"source_board\":  \"data/kanban-human-control/kanban-board.json\",",
+                                                    "    \"source_preview\":  \"data/kanban-human-control/cline-kanban-export-preview.json\",",
+                                                    "    \"source_gate\":  \"data/kanban-human-control/kanban-write-gate.json\",",
+                                                    "    \"source_close_report\":  \"reports/kanban-human-control/e06-close-validation-report.json\",",
+                                                    "    \"selected_card_id\":  \"KANBAN-007-E06-CLOSE\",",
+                                                    "    \"selected_card\":  {"
+                                                ]
+                            },
+                            {
+                                "rank_input":  53,
+                                "name":  "controlled-action-instance-gate.json",
+                                "path":  "C:\\ENGREMIAT_CORE\\data\\controlled-action-instance-018\\controlled-action-instance-gate.json",
+                                "relative":  "data\\controlled-action-instance-018\\controlled-action-instance-gate.json",
+                                "extension":  ".json",
+                                "size":  624,
+                                "last_write":  "2026-06-17T09:59:45",
+                                "parse_ok":  null,
+                                "score":  0,
+                                "tags":  [
+
+                                         ],
+                                "first_lines":  [
+                                                    "{",
+                                                    "    \"objective\":  \"ENGREMIAT_CONTROLLED_ACTION_INSTANCE_018\",",
+                                                    "    \"stage\":  \"E02\",",
+                                                    "    \"source_template\":  \"ENGREMIAT_CONTROLLED_ACTION_TEMPLATE_017\",",
+                                                    "    \"gate_type\":  \"INSTANCE_HUMAN_GATE\",",
+                                                    "    \"default_decision\":  \"DEFER\",",
+                                                    "    \"current_decision\":  \"DEFER\",",
+                                                    "    \"approval_formula\":  \"decision=APPROVE AND human_confirmation=true AND execution_allowed=true\",",
+                                                    "    \"human_confirmation\":  false,",
+                                                    "    \"execution_allowed\":  false,"
+                                                ]
+                            },
+                            {
+                                "rank_input":  51,
+                                "name":  "artifacts-manifest-after-dry-run.json",
+                                "path":  "C:\\ENGREMIAT_CORE\\data\\controlled-action-instance-018\\artifacts-manifest-after-dry-run.json",
+                                "relative":  "data\\controlled-action-instance-018\\artifacts-manifest-after-dry-run.json",
+                                "extension":  ".json",
+                                "size":  1279,
+                                "last_write":  "2026-06-17T10:01:06",
+                                "parse_ok":  null,
+                                "score":  20,
+                                "tags":  [
+                                             "devsystem",
+                                             "diagnostic"
+                                         ],
+                                "first_lines":  [
+                                                    "{",
+                                                    "    \"objective\":  \"ENGREMIAT_CONTROLLED_ACTION_INSTANCE_018\",",
+                                                    "    \"stage\":  \"E03\",",
+                                                    "    \"created_at\":  \"2026-06-17T10:01:06.5160499+02:00\",",
+                                                    "    \"artifacts\":  [",
+                                                    "                      \"data/controlled-action-instance-018/controlled-action-instance-dry-run-request.json\",",
+                                                    "                      \"tools/controlled-action-instance-018/Invoke-ControlledActionInstance018.ps1\",",
+                                                    "                      \"data/controlled-action-instance-018/controlled-action-instance-dry-run-result.json\",",
+                                                    "                      \"data/controlled-action-instance-018/receipts/dry-run-receipt.json\",",
+                                                    "                      \"reports/controlled-action-instance-018/e03-dry-run-readiness-report.json\","
+                                                ]
+                            },
+                            {
+                                "rank_input":  52,
+                                "name":  "initial-artifacts-manifest.json",
+                                "path":  "C:\\ENGREMIAT_CORE\\data\\controlled-action-instance-018\\initial-artifacts-manifest.json",
+                                "relative":  "data\\controlled-action-instance-018\\initial-artifacts-manifest.json",
+                                "extension":  ".json",
+                                "size":  1543,
+                                "last_write":  "2026-06-17T09:58:36",
+                                "parse_ok":  null,
+                                "score":  20,
+                                "tags":  [
+                                             "devsystem",
+                                             "diagnostic"
+                                         ],
+                                "first_lines":  [
+                                                    "{",
+                                                    "    \"objective\":  \"ENGREMIAT_CONTROLLED_ACTION_INSTANCE_018\",",
+                                                    "    \"stage\":  \"E01\",",
+                                                    "    \"created_at\":  \"2026-06-17T09:58:36.5084083+02:00\",",
+                                                    "    \"artifacts\":  [",
+                                                    "                      \"data/controlled-action-instance-018/controlled-action-instance-scope.json\",",
+                                                    "                      \"data/controlled-action-instance-018/template-reference.json\",",
+                                                    "                      \"data/controlled-action-instance-018/controlled-action-instance-preview.json\",",
+                                                    "                      \"data/controlled-action-instance-018/initial-artifacts-manifest.json\",",
+                                                    "                      \"reports/controlled-action-instance-018/e01-instance-readiness-report.json\","
+                                                ]
+                            },
+                            {
+                                "rank_input":  59,
+                                "name":  "SIM_PROJECT_20260619-144124_GATE_VALIDATE_RESULT.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e05-20260619-231559\\05_HUMAN_GATES\\SIM_PROJECT_20260619-144124_GATE_VALIDATE_RESULT.md",
+                                "relative":  "backups\\template-improvement\\official-master-before-e05-20260619-231559\\05_HUMAN_GATES\\SIM_PROJECT_20260619-144124_GATE_VALIDATE_RESULT.md",
+                                "extension":  ".md",
+                                "size":  506,
+                                "last_write":  "2026-06-19T14:43:53",
+                                "parse_ok":  null,
+                                "score":  0,
+                                "tags":  [
+
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: human_gate",
+                                                    "project_id: ",
+                                                    "SIM_PROJECT_20260619-144124",
+                                                    "status: pending_human_decision",
+                                                    "target_id: RESULT_PROJECT_START_SIMULATION",
+                                                    "tags:",
+                                                    "  - engremiat/simulation",
+                                                    "  - engremiat/gate",
+                                                    "---"
+                                                ]
+                            },
+                            {
+                                "rank_input":  60,
+                                "name":  "SIM_PROJECT_20260619-144124_GATE_APPROVE_ROADMAP.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e05-20260619-231559\\05_HUMAN_GATES\\SIM_PROJECT_20260619-144124_GATE_APPROVE_ROADMAP.md",
+                                "relative":  "backups\\template-improvement\\official-master-before-e05-20260619-231559\\05_HUMAN_GATES\\SIM_PROJECT_20260619-144124_GATE_APPROVE_ROADMAP.md",
+                                "extension":  ".md",
+                                "size":  546,
+                                "last_write":  "2026-06-19T14:42:47",
+                                "parse_ok":  null,
+                                "score":  20,
+                                "tags":  [
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: human_gate",
+                                                    "project_id: ",
+                                                    "SIM_PROJECT_20260619-144124",
+                                                    "status: ",
+                                                    "approved_by_human",
+                                                    "target_id: ",
+                                                    "SIM_PROJECT_20260619-144124",
+                                                    "_ROADMAP_PROPOSAL",
+                                                    "decision: "
+                                                ]
+                            },
+                            {
+                                "rank_input":  58,
+                                "name":  "controlled-action-execution-plan.json",
+                                "path":  "C:\\ENGREMIAT_CORE\\data\\controlled-action-from-proposal-015\\controlled-action-execution-plan.json",
+                                "relative":  "data\\controlled-action-from-proposal-015\\controlled-action-execution-plan.json",
+                                "extension":  ".json",
+                                "size":  623,
+                                "last_write":  "2026-06-17T08:17:14",
+                                "parse_ok":  null,
+                                "score":  10,
+                                "tags":  [
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "{",
+                                                    "    \"objective\":  \"ENGREMIAT_CONTROLLED_ACTION_FROM_PROPOSAL_015\",",
+                                                    "    \"stage\":  \"E04\",",
+                                                    "    \"block\":  \"B04.1\",",
+                                                    "    \"step\":  \"P04.1.1\",",
+                                                    "    \"execution_kind\":  \"BLOCKED_BY_GATE\",",
+                                                    "    \"gate_file\":  \"data\\\\controlled-action-from-proposal-015\\\\sample-human-gate-decision.json\",",
+                                                    "    \"gate_decision\":  \"DEFER\",",
+                                                    "    \"human_confirmation\":  false,",
+                                                    "    \"execution_allowed\":  false,"
+                                                ]
+                            },
+                            {
+                                "rank_input":  56,
+                                "name":  "cline-task-creation-gate.json",
+                                "path":  "C:\\ENGREMIAT_CORE\\data\\cline-real-proposal-no-apply\\cline-task-creation-gate.json",
+                                "relative":  "data\\cline-real-proposal-no-apply\\cline-task-creation-gate.json",
+                                "extension":  ".json",
+                                "size":  2838,
+                                "last_write":  "2026-06-16T15:32:45",
+                                "parse_ok":  null,
+                                "score":  70,
+                                "tags":  [
+                                             "kanban",
+                                             "navigation",
+                                             "risk_review",
+                                             "safe",
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "{",
+                                                    "    \"gate_id\":  \"engremiat.cline_task_creation_gate.v1\",",
+                                                    "    \"objective\":  \"ENGREMIAT_CLINE_REAL_PROPOSAL_NO_APPLY_008\",",
+                                                    "    \"stage\":  \"E03\",",
+                                                    "    \"purpose\":  \"Preparar decision humana explicita para crear o no la primera tarea real de Cline proposal-only.\",",
+                                                    "    \"decision\":  \"DEFER\",",
+                                                    "    \"decision_reason\":  \"E03 prepara el gate y una request preview; no crea tarea real sin autorizacion especifica.\",",
+                                                    "    \"authorization_required\":  true,",
+                                                    "    \"required_human_phrase\":  \"AUTORIZO_CLINE_REAL_PROPOSAL_TASK_NO_APPLY_FOR_SPECIFIC_REQUEST\",",
+                                                    "    \"allowed_future_scope\":  ["
+                                                ]
+                            },
+                            {
+                                "rank_input":  57,
+                                "name":  "controlled-action-gate-schema.json",
+                                "path":  "C:\\ENGREMIAT_CORE\\data\\controlled-action-from-proposal-015\\controlled-action-gate-schema.json",
+                                "relative":  "data\\controlled-action-from-proposal-015\\controlled-action-gate-schema.json",
+                                "extension":  ".json",
+                                "size":  771,
+                                "last_write":  "2026-06-17T08:09:16",
+                                "parse_ok":  null,
+                                "score":  20,
+                                "tags":  [
+                                             "kanban",
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "{",
+                                                    "    \"objective\":  \"ENGREMIAT_CONTROLLED_ACTION_FROM_PROPOSAL_015\",",
+                                                    "    \"stage\":  \"E02\",",
+                                                    "    \"block\":  \"B02.1\",",
+                                                    "    \"step\":  \"P02.1.1\",",
+                                                    "    \"gate_id\":  \"CONTROLLED-ACTION-GATE-001\",",
+                                                    "    \"default_decision\":  \"DEFER\",",
+                                                    "    \"allowed_decisions\":  [",
+                                                    "                              \"APPROVE\",",
+                                                    "                              \"DEFER\","
+                                                ]
+                            },
+                            {
+                                "rank_input":  44,
+                                "name":  "visual-readiness-report.json",
+                                "path":  "C:\\ENGREMIAT_CORE\\data\\006E_VALIDACION_OPERATIVA_VISUAL\\reports\\visual-readiness-report.json",
+                                "relative":  "data\\006E_VALIDACION_OPERATIVA_VISUAL\\reports\\visual-readiness-report.json",
+                                "extension":  ".json",
+                                "size":  690,
+                                "last_write":  "2026-06-17T20:48:14",
+                                "parse_ok":  null,
+                                "score":  40,
+                                "tags":  [
+                                             "devsystem",
+                                             "diagnostic",
+                                             "kanban"
+                                         ],
+                                "first_lines":  [
+                                                    "{",
+                                                    "    \"package_id\":  \"006E_VALIDACION_OPERATIVA_VISUAL\",",
+                                                    "    \"status\":  \"PASS\",",
+                                                    "    \"readiness\":  100,",
+                                                    "    \"checks\":  {",
+                                                    "                   \"base_001_exists\":  true,",
+                                                    "                   \"simulation_004e_exists\":  true,",
+                                                    "                   \"apply_005e_exists\":  true,",
+                                                    "                   \"manuals_exist\":  true,",
+                                                    "                   \"documental_close_exists\":  true,"
+                                                ]
+                            },
+                            {
+                                "rank_input":  45,
+                                "name":  "WORKER_MODEL.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e09c-20260619-235221\\07_WORKERS\\WORKER_MODEL.md",
+                                "relative":  "backups\\template-improvement\\official-master-before-e09c-20260619-235221\\07_WORKERS\\WORKER_MODEL.md",
+                                "extension":  ".md",
+                                "size":  382,
+                                "last_write":  "2026-06-19T23:36:47",
+                                "parse_ok":  null,
+                                "score":  10,
+                                "tags":  [
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "# WORKER_MODEL",
+                                                    "",
+                                                    "## Enlaces",
+                                                    "Entrada: [[TASK_MODEL]]",
+                                                    "Salida: [[EVIDENCE_MODEL]] y [[RESULT_MODEL]]",
+                                                    "",
+                                                    "## Modelo de worker",
+                                                    "Humano, script local, CLI, IA local o servicio futuro.",
+                                                    "",
+                                                    "## Contrato"
+                                                ]
+                            },
+                            {
+                                "rank_input":  43,
+                                "name":  "batch-apply-gate.json",
+                                "path":  "C:\\ENGREMIAT_CORE\\data\\batch-apply-preview-070\\batch-apply-gate.json",
+                                "relative":  "data\\batch-apply-preview-070\\batch-apply-gate.json",
+                                "extension":  ".json",
+                                "size":  722,
+                                "last_write":  "2026-06-17T12:39:16",
+                                "parse_ok":  null,
+                                "score":  10,
+                                "tags":  [
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "{",
+                                                    "    \"objective\":  \"ENGREMIAT_MULTI_WORKER_ORCHESTRATION_AND_REAL_VALUE_PIPELINE_066_075\",",
+                                                    "    \"stage\":  \"E70\",",
+                                                    "    \"gate_id\":  \"E70_BATCH_APPLY_GATE_001\",",
+                                                    "    \"status\":  \"LOCKED_PREVIEW_ONLY\",",
+                                                    "    \"default_decision\":  \"DEFER\",",
+                                                    "    \"current_decision\":  \"DEFER\",",
+                                                    "    \"batch_apply_authorized\":  false,",
+                                                    "    \"preview_authorized\":  true,",
+                                                    "    \"approval_authorizes_real_batch_apply\":  false,"
+                                                ]
+                            },
+                            {
+                                "rank_input":  41,
+                                "name":  "proposal-approval-gate.json",
+                                "path":  "C:\\ENGREMIAT_CORE\\data\\approval-console-059\\proposal-approval-gate.json",
+                                "relative":  "data\\approval-console-059\\proposal-approval-gate.json",
+                                "extension":  ".json",
+                                "size":  1008,
+                                "last_write":  "2026-06-17T12:21:45",
+                                "parse_ok":  null,
+                                "score":  20,
+                                "tags":  [
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "{",
+                                                    "    \"objective\":  \"ENGREMIAT_CONTROLLED_REAL_WORKER_DAILY_VALUE_LOOP_056_065\",",
+                                                    "    \"stage\":  \"E59\",",
+                                                    "    \"gate_id\":  \"E59_PROPOSAL_APPROVAL_GATE_001\",",
+                                                    "    \"status\":  \"OPEN_DEFAULT_DEFER\",",
+                                                    "    \"default_decision\":  \"DEFER_FOR_HUMAN_REVIEW\",",
+                                                    "    \"current_decision\":  \"DEFER_FOR_HUMAN_REVIEW\",",
+                                                    "    \"approval_authorizes_apply\":  false,",
+                                                    "    \"approval_authorizes_prepare_e60_only\":  true,",
+                                                    "    \"allowed_decisions\":  ["
+                                                ]
+                            },
+                            {
+                                "rank_input":  42,
+                                "name":  "PROMPT_CONTINUIDAD.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\data\\CIERRE_DOCUMENTAL_001\\continuidad\\PROMPT_CONTINUIDAD.md",
+                                "relative":  "data\\CIERRE_DOCUMENTAL_001\\continuidad\\PROMPT_CONTINUIDAD.md",
+                                "extension":  ".md",
+                                "size":  570,
+                                "last_write":  "2026-06-17T20:47:38",
+                                "parse_ok":  null,
+                                "score":  10,
+                                "tags":  [
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "# PROMPT DE CONTINUIDAD",
+                                                    "",
+                                                    "Actua como experto en ENGREMIAT. Continuamos desde CIERRE_DOCUMENTAL_001 cerrado con PASS. La cadena estable es: ENGREMIAT_MODULAR_PLATFORM_001 como base modular congelada, NEXT_ENGREMIAT_MODULAR_PLATFORM_004E como simulador local, NEXT_ENGREMIAT_MODULAR_PLATFORM_005E como apply local controlado de artefactos, y ENGREMIAT_MODULAR_PLATFORM_MANUALS_001 como manuales consolidados. No tocar core, no red externa, no git write, no activacion real salvo autorizacion explicita. Siguiente paso recomendado: NEXT 006E_VALIDACION_OPERATIVA_VISUAL.",
+                                                    ""
+                                                ]
+                            },
+                            {
+                                "rank_input":  49,
+                                "name":  "cline-proposal-prompt-preview.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\data\\cline-real-proposal-no-apply\\cline-proposal-prompt-preview.md",
+                                "relative":  "data\\cline-real-proposal-no-apply\\cline-proposal-prompt-preview.md",
+                                "extension":  ".md",
+                                "size":  1576,
+                                "last_write":  "2026-06-16T15:32:45",
+                                "parse_ok":  null,
+                                "score":  80,
+                                "tags":  [
+                                             "kanban",
+                                             "navigation",
+                                             "risk_review",
+                                             "safe",
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "# ENGREMIAT_CLINE_REAL_PROPOSAL_NO_APPLY_008 - PROMPT PREVIEW",
+                                                    "",
+                                                    "DESTINO FUTURO: CLINE-KANBAN",
+                                                    "",
+                                                    "Actua como worker Cline dentro del sistema ENGREMIAT. Tu tarea es PROPONER, no aplicar.",
+                                                    "",
+                                                    "## Objetivo",
+                                                    "Preparar una propuesta tecnica revisable para avanzar desde ENGREMIAT_KANBAN_HUMAN_CONTROL_SURFACE_007 hacia el siguiente paso seguro.",
+                                                    "",
+                                                    "## Contexto origen"
+                                                ]
+                            },
+                            {
+                                "rank_input":  50,
+                                "name":  "controlled-action-instance-execution-plan.json",
+                                "path":  "C:\\ENGREMIAT_CORE\\data\\controlled-action-instance-018\\controlled-action-instance-execution-plan.json",
+                                "relative":  "data\\controlled-action-instance-018\\controlled-action-instance-execution-plan.json",
+                                "extension":  ".json",
+                                "size":  714,
+                                "last_write":  "2026-06-17T10:05:23",
+                                "parse_ok":  null,
+                                "score":  0,
+                                "tags":  [
+
+                                         ],
+                                "first_lines":  [
+                                                    "{",
+                                                    "    \"objective\":  \"ENGREMIAT_CONTROLLED_ACTION_INSTANCE_018\",",
+                                                    "    \"stage\":  \"E04\",",
+                                                    "    \"created_at\":  \"2026-06-17T10:05:23.5476464+02:00\",",
+                                                    "    \"plan_type\":  \"CONTROLLED_MINIMAL_EXECUTION_PLAN\",",
+                                                    "    \"source_stage\":  \"E03_DRY_RUN\",",
+                                                    "    \"gate\":  \"DEFER\",",
+                                                    "    \"decision\":  \"DEFER\",",
+                                                    "    \"human_confirmation\":  false,",
+                                                    "    \"execution_allowed\":  false,"
+                                                ]
+                            },
+                            {
+                                "rank_input":  48,
+                                "name":  "HUMAN_GATE_MODEL_ORIGINAL.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e09c-20260619-235221\\99_ARCHIVO_ORIGEN\\HUMAN_GATE_MODEL_ORIGINAL.md",
+                                "relative":  "backups\\template-improvement\\official-master-before-e09c-20260619-235221\\99_ARCHIVO_ORIGEN\\HUMAN_GATE_MODEL_ORIGINAL.md",
+                                "extension":  ".md",
+                                "size":  402,
+                                "last_write":  "2026-06-19T14:32:29",
+                                "parse_ok":  null,
+                                "score":  0,
+                                "tags":  [
+
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: simulation_object_model",
+                                                    "object_id: ",
+                                                    "HUMAN_GATE",
+                                                    "status: active",
+                                                    "tags:",
+                                                    "  - engremiat/simulation",
+                                                    "  - ",
+                                                    "engremiat/gate",
+                                                    "---"
+                                                ]
+                            },
+                            {
+                                "rank_input":  46,
+                                "name":  "HUMAN_GATE_MODEL.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e09c-20260619-235221\\05_GATES_HUMANOS\\HUMAN_GATE_MODEL.md",
+                                "relative":  "backups\\template-improvement\\official-master-before-e09c-20260619-235221\\05_GATES_HUMANOS\\HUMAN_GATE_MODEL.md",
+                                "extension":  ".md",
+                                "size":  370,
+                                "last_write":  "2026-06-19T23:36:47",
+                                "parse_ok":  null,
+                                "score":  8,
+                                "tags":  [
+                                             "safe"
+                                         ],
+                                "first_lines":  [
+                                                    "# HUMAN_GATE_MODEL",
+                                                    "",
+                                                    "## Enlaces",
+                                                    "Anterior: [[TASK_MODEL]]",
+                                                    "Siguiente: [[EVIDENCE_MODEL]]",
+                                                    "",
+                                                    "## Modelo de gate humano",
+                                                    "Estado, decision, riesgo, evidencia previa y frase de autorizacion.",
+                                                    "",
+                                                    "## Regla"
+                                                ]
+                            },
+                            {
+                                "rank_input":  47,
+                                "name":  "SIM_WORKER_MODEL_ORIGINAL.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e09c-20260619-235221\\99_ARCHIVO_ORIGEN\\SIM_WORKER_MODEL_ORIGINAL.md",
+                                "relative":  "backups\\template-improvement\\official-master-before-e09c-20260619-235221\\99_ARCHIVO_ORIGEN\\SIM_WORKER_MODEL_ORIGINAL.md",
+                                "extension":  ".md",
+                                "size":  398,
+                                "last_write":  "2026-06-19T14:32:29",
+                                "parse_ok":  null,
+                                "score":  10,
+                                "tags":  [
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: simulation_object_model",
+                                                    "object_id: ",
+                                                    "SIM_WORKER",
+                                                    "status: active",
+                                                    "tags:",
+                                                    "  - engremiat/simulation",
+                                                    "  - ",
+                                                    "engremiat/worker",
+                                                    "---"
+                                                ]
+                            },
+                            {
+                                "rank_input":  74,
+                                "name":  "SIM_PROJECT_20260619-144124_WORKER_RESULT_CANVAS.canvas",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e05-20260619-231559\\10_CANVAS\\SIM_PROJECT_20260619-144124_WORKER_RESULT_CANVAS.canvas",
+                                "relative":  "backups\\template-improvement\\official-master-before-e05-20260619-231559\\10_CANVAS\\SIM_PROJECT_20260619-144124_WORKER_RESULT_CANVAS.canvas",
+                                "extension":  ".canvas",
+                                "size":  5095,
+                                "last_write":  "2026-06-19T14:43:53",
+                                "parse_ok":  null,
+                                "score":  10,
+                                "tags":  [
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "{",
+                                                    "    \"nodes\":  [",
+                                                    "                  {",
+                                                    "                      \"id\":  \"r1\",",
+                                                    "                      \"type\":  \"file\",",
+                                                    "                      \"file\":  \"04_SIMULATED_WORKERS/RUNS/SIM_PROJECT_20260619-144124/RUN_001_SIM_WORKER_PLANNER.md\",",
+                                                    "                      \"x\":  -760,",
+                                                    "                      \"y\":  -180,",
+                                                    "                      \"width\":  330,",
+                                                    "                      \"height\":  140,"
+                                                ]
+                            },
+                            {
+                                "rank_input":  75,
+                                "name":  "RESULT_002_WORKER_SIMULATION_OUTPUT.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e05-20260619-231559\\08_RESULTS\\SCENARIO_001_visual_task_management_module\\RESULT_002_WORKER_SIMULATION_OUTPUT.md",
+                                "relative":  "backups\\template-improvement\\official-master-before-e05-20260619-231559\\08_RESULTS\\SCENARIO_001_visual_task_management_module\\RESULT_002_WORKER_SIMULATION_OUTPUT.md",
+                                "extension":  ".md",
+                                "size":  635,
+                                "last_write":  "2026-06-19T14:36:54",
+                                "parse_ok":  null,
+                                "score":  10,
+                                "tags":  [
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: simulation_result",
+                                                    "result_id: RESULT_002",
+                                                    "scenario_id: ",
+                                                    "SCENARIO_001_visual_task_management_module",
+                                                    "status: accepted_simulated",
+                                                    "accepted: true",
+                                                    "tags:",
+                                                    "  - engremiat/simulation",
+                                                    "  - engremiat/result"
+                                                ]
+                            },
+                            {
+                                "rank_input":  73,
+                                "name":  "GATES.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e08h-20260619-233243\\05_GATES\\GATES.md",
+                                "relative":  "backups\\template-improvement\\official-master-before-e08h-20260619-233243\\05_GATES\\GATES.md",
+                                "extension":  ".md",
+                                "size":  52,
+                                "last_write":  "2026-06-19T23:12:10",
+                                "parse_ok":  null,
+                                "score":  0,
+                                "tags":  [
+
+                                         ],
+                                "first_lines":  [
+                                                    "# Gates",
+                                                    "",
+                                                    "Autorizaciones y decisiones humanas.",
+                                                    ""
+                                                ]
+                            },
+                            {
+                                "rank_input":  71,
+                                "name":  "SIM_WORKER_MODEL_ORIGINAL.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e08j-graph-20260619-233647\\99_ARCHIVO_ORIGEN\\SIM_WORKER_MODEL_ORIGINAL.md",
+                                "relative":  "backups\\template-improvement\\official-master-before-e08j-graph-20260619-233647\\99_ARCHIVO_ORIGEN\\SIM_WORKER_MODEL_ORIGINAL.md",
+                                "extension":  ".md",
+                                "size":  398,
+                                "last_write":  "2026-06-19T14:32:29",
+                                "parse_ok":  null,
+                                "score":  10,
+                                "tags":  [
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: simulation_object_model",
+                                                    "object_id: ",
+                                                    "SIM_WORKER",
+                                                    "status: active",
+                                                    "tags:",
+                                                    "  - engremiat/simulation",
+                                                    "  - ",
+                                                    "engremiat/worker",
+                                                    "---"
+                                                ]
+                            },
+                            {
+                                "rank_input":  72,
+                                "name":  "HUMAN_GATE_MODEL_ORIGINAL.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e08j-graph-20260619-233647\\99_ARCHIVO_ORIGEN\\HUMAN_GATE_MODEL_ORIGINAL.md",
+                                "relative":  "backups\\template-improvement\\official-master-before-e08j-graph-20260619-233647\\99_ARCHIVO_ORIGEN\\HUMAN_GATE_MODEL_ORIGINAL.md",
+                                "extension":  ".md",
+                                "size":  402,
+                                "last_write":  "2026-06-19T14:32:29",
+                                "parse_ok":  null,
+                                "score":  0,
+                                "tags":  [
+
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: simulation_object_model",
+                                                    "object_id: ",
+                                                    "HUMAN_GATE",
+                                                    "status: active",
+                                                    "tags:",
+                                                    "  - engremiat/simulation",
+                                                    "  - ",
+                                                    "engremiat/gate",
+                                                    "---"
+                                                ]
+                            },
+                            {
+                                "rank_input":  79,
+                                "name":  "GATES.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\operator-template-canonicalization\\MODULE_BEFORE_E16B_20260620-013743\\04_GATES\\GATES.md",
+                                "relative":  "backups\\operator-template-canonicalization\\MODULE_BEFORE_E16B_20260620-013743\\04_GATES\\GATES.md",
+                                "extension":  ".md",
+                                "size":  59,
+                                "last_write":  "2026-06-19T23:12:10",
+                                "parse_ok":  null,
+                                "score":  0,
+                                "tags":  [
+
+                                         ],
+                                "first_lines":  [
+                                                    "# Gates modulo",
+                                                    "",
+                                                    "Autorizaciones y decisiones humanas.",
+                                                    ""
+                                                ]
+                            },
+                            {
+                                "rank_input":  80,
+                                "name":  "GATES.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\operator-template-canonicalization\\MODULE_INICIO_TEMPLATE_V2_BEFORE_E15_20260620-013217\\04_GATES\\GATES.md",
+                                "relative":  "backups\\operator-template-canonicalization\\MODULE_INICIO_TEMPLATE_V2_BEFORE_E15_20260620-013217\\04_GATES\\GATES.md",
+                                "extension":  ".md",
+                                "size":  59,
+                                "last_write":  "2026-06-19T23:12:10",
+                                "parse_ok":  null,
+                                "score":  0,
+                                "tags":  [
+
+                                         ],
+                                "first_lines":  [
+                                                    "# Gates modulo",
+                                                    "",
+                                                    "Autorizaciones y decisiones humanas.",
+                                                    ""
+                                                ]
+                            },
+                            {
+                                "rank_input":  78,
+                                "name":  "GATES.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\operator-template-canonicalization\\MODULE_BEFORE_E16C_20260620-013906\\04_GATES\\GATES.md",
+                                "relative":  "backups\\operator-template-canonicalization\\MODULE_BEFORE_E16C_20260620-013906\\04_GATES\\GATES.md",
+                                "extension":  ".md",
+                                "size":  59,
+                                "last_write":  "2026-06-19T23:12:10",
+                                "parse_ok":  null,
+                                "score":  0,
+                                "tags":  [
+
+                                         ],
+                                "first_lines":  [
+                                                    "# Gates modulo",
+                                                    "",
+                                                    "Autorizaciones y decisiones humanas.",
+                                                    ""
+                                                ]
+                            },
+                            {
+                                "rank_input":  76,
+                                "name":  "GATES.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e07-20260619-231838\\05_GATES\\GATES.md",
+                                "relative":  "backups\\template-improvement\\official-master-before-e07-20260619-231838\\05_GATES\\GATES.md",
+                                "extension":  ".md",
+                                "size":  52,
+                                "last_write":  "2026-06-19T23:12:10",
+                                "parse_ok":  null,
+                                "score":  0,
+                                "tags":  [
+
+                                         ],
+                                "first_lines":  [
+                                                    "# Gates",
+                                                    "",
+                                                    "Autorizaciones y decisiones humanas.",
+                                                    ""
+                                                ]
+                            },
+                            {
+                                "rank_input":  77,
+                                "name":  "WORKER_SIMULATION_RESULT_CANVAS.canvas",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e05-20260619-231559\\10_CANVAS\\WORKER_SIMULATION_RESULT_CANVAS.canvas",
+                                "relative":  "backups\\template-improvement\\official-master-before-e05-20260619-231559\\10_CANVAS\\WORKER_SIMULATION_RESULT_CANVAS.canvas",
+                                "extension":  ".canvas",
+                                "size":  6393,
+                                "last_write":  "2026-06-19T14:36:01",
+                                "parse_ok":  null,
+                                "score":  10,
+                                "tags":  [
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "{",
+                                                    "    \"nodes\":  [",
+                                                    "                  {",
+                                                    "                      \"id\":  \"task1\",",
+                                                    "                      \"type\":  \"file\",",
+                                                    "                      \"file\":  \"03_SIMULATED_TASKS/TASK_001_DEFINE_MODULE_SCOPE.md\",",
+                                                    "                      \"x\":  -760,",
+                                                    "                      \"y\":  -180,",
+                                                    "                      \"width\":  330,",
+                                                    "                      \"height\":  140,"
+                                                ]
+                            },
+                            {
+                                "rank_input":  64,
+                                "name":  "GATE_001_APPROVE_ROADMAP.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e05-20260619-231559\\05_HUMAN_GATES\\GATE_001_APPROVE_ROADMAP.md",
+                                "relative":  "backups\\template-improvement\\official-master-before-e05-20260619-231559\\05_HUMAN_GATES\\GATE_001_APPROVE_ROADMAP.md",
+                                "extension":  ".md",
+                                "size":  790,
+                                "last_write":  "2026-06-19T14:34:45",
+                                "parse_ok":  null,
+                                "score":  10,
+                                "tags":  [
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: human_gate",
+                                                    "gate_id: GATE_001",
+                                                    "scenario_id: ",
+                                                    "SCENARIO_001_visual_task_management_module",
+                                                    "status: approved_simulated",
+                                                    "target_id: ROADMAP_001",
+                                                    "decision: APPROVE_SIMULATED",
+                                                    "tags:",
+                                                    "  - engremiat/simulation"
+                                                ]
+                            },
+                            {
+                                "rank_input":  65,
+                                "name":  "RUN_003_SIM_WORKER_VALIDATOR.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\RUNS\\SIM_PROJECT_20260619-144124\\RUN_003_SIM_WORKER_VALIDATOR.md",
+                                "relative":  "backups\\template-improvement\\official-master-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\RUNS\\SIM_PROJECT_20260619-144124\\RUN_003_SIM_WORKER_VALIDATOR.md",
+                                "extension":  ".md",
+                                "size":  590,
+                                "last_write":  "2026-06-19T14:43:53",
+                                "parse_ok":  null,
+                                "score":  10,
+                                "tags":  [
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: project_start_sim_worker_run",
+                                                    "project_id: ",
+                                                    "SIM_PROJECT_20260619-144124",
+                                                    "run_id: ",
+                                                    "RUN_003",
+                                                    "worker_id: ",
+                                                    "SIM_WORKER_VALIDATOR",
+                                                    "task_id: ",
+                                                    "TASK_003_VALIDATE_FIRST_EVIDENCE"
+                                                ]
+                            },
+                            {
+                                "rank_input":  63,
+                                "name":  "HUMAN_GATE_MODEL.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e05-20260619-231559\\05_HUMAN_GATES\\HUMAN_GATE_MODEL.md",
+                                "relative":  "backups\\template-improvement\\official-master-before-e05-20260619-231559\\05_HUMAN_GATES\\HUMAN_GATE_MODEL.md",
+                                "extension":  ".md",
+                                "size":  402,
+                                "last_write":  "2026-06-19T14:32:29",
+                                "parse_ok":  null,
+                                "score":  0,
+                                "tags":  [
+
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: simulation_object_model",
+                                                    "object_id: ",
+                                                    "HUMAN_GATE",
+                                                    "status: active",
+                                                    "tags:",
+                                                    "  - engremiat/simulation",
+                                                    "  - ",
+                                                    "engremiat/gate",
+                                                    "---"
+                                                ]
+                            },
+                            {
+                                "rank_input":  61,
+                                "name":  "SIM_PROJECT_20260619-153021_prueba2_GATE_REVIEW_PROJECT_START.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e05-20260619-231559\\05_HUMAN_GATES\\SIM_PROJECT_20260619-153021_prueba2_GATE_REVIEW_PROJECT_START.md",
+                                "relative":  "backups\\template-improvement\\official-master-before-e05-20260619-231559\\05_HUMAN_GATES\\SIM_PROJECT_20260619-153021_prueba2_GATE_REVIEW_PROJECT_START.md",
+                                "extension":  ".md",
+                                "size":  258,
+                                "last_write":  "2026-06-19T15:30:21",
+                                "parse_ok":  null,
+                                "score":  0,
+                                "tags":  [
+
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: human_gate",
+                                                    "project_id: SIM_PROJECT_20260619-153021_prueba2",
+                                                    "status: pending_human_decision",
+                                                    "---",
+                                                    "# Gate humano - revisar inicio de proyecto",
+                                                    "",
+                                                    "Boveda Obsidian real: C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_prueba2_20260619-153021\\BOVEDA_MAESTRA",
+                                                    ""
+                                                ]
+                            },
+                            {
+                                "rank_input":  62,
+                                "name":  "SIM_PROJECT_20260619-152304_prueba1_GATE_REVIEW_PROJECT_START.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e05-20260619-231559\\05_HUMAN_GATES\\SIM_PROJECT_20260619-152304_prueba1_GATE_REVIEW_PROJECT_START.md",
+                                "relative":  "backups\\template-improvement\\official-master-before-e05-20260619-231559\\05_HUMAN_GATES\\SIM_PROJECT_20260619-152304_prueba1_GATE_REVIEW_PROJECT_START.md",
+                                "extension":  ".md",
+                                "size":  567,
+                                "last_write":  "2026-06-19T15:23:04",
+                                "parse_ok":  null,
+                                "score":  0,
+                                "tags":  [
+
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: human_gate",
+                                                    "project_id: SIM_PROJECT_20260619-152304_prueba1",
+                                                    "status: pending_human_decision",
+                                                    "allowed_decisions: APPROVE, ADJUST, BLOCK",
+                                                    "---",
+                                                    "# Gate humano - revisar inicio de proyecto",
+                                                    "",
+                                                    "Proyecto escritorio: C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_prueba1_20260619-152304",
+                                                    ""
+                                                ]
+                            },
+                            {
+                                "rank_input":  69,
+                                "name":  "WORKER_MODEL.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e08j-graph-20260619-233647\\07_WORKERS\\WORKER_MODEL.md",
+                                "relative":  "backups\\template-improvement\\official-master-before-e08j-graph-20260619-233647\\07_WORKERS\\WORKER_MODEL.md",
+                                "extension":  ".md",
+                                "size":  93,
+                                "last_write":  "2026-06-19T23:30:27",
+                                "parse_ok":  null,
+                                "score":  10,
+                                "tags":  [
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "# Modelo de worker",
+                                                    "",
+                                                    "Entrada, accion permitida, limites, salida, evidencia y seguridad.",
+                                                    ""
+                                                ]
+                            },
+                            {
+                                "rank_input":  70,
+                                "name":  "HUMAN_GATE_MODEL.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e08j-graph-20260619-233647\\05_GATES_HUMANOS\\HUMAN_GATE_MODEL.md",
+                                "relative":  "backups\\template-improvement\\official-master-before-e08j-graph-20260619-233647\\05_GATES_HUMANOS\\HUMAN_GATE_MODEL.md",
+                                "extension":  ".md",
+                                "size":  99,
+                                "last_write":  "2026-06-19T23:30:27",
+                                "parse_ok":  null,
+                                "score":  0,
+                                "tags":  [
+
+                                         ],
+                                "first_lines":  [
+                                                    "# Modelo de gate humano",
+                                                    "",
+                                                    "Estado, decision, riesgo, evidencia previa y frase de autorizacion.",
+                                                    ""
+                                                ]
+                            },
+                            {
+                                "rank_input":  68,
+                                "name":  "SIM_PROJECT_20260619-153101_prueba2_GATE_REVIEW_PROJECT_START.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e05-20260619-231559\\05_HUMAN_GATES\\SIM_PROJECT_20260619-153101_prueba2_GATE_REVIEW_PROJECT_START.md",
+                                "relative":  "backups\\template-improvement\\official-master-before-e05-20260619-231559\\05_HUMAN_GATES\\SIM_PROJECT_20260619-153101_prueba2_GATE_REVIEW_PROJECT_START.md",
+                                "extension":  ".md",
+                                "size":  258,
+                                "last_write":  "2026-06-19T15:31:01",
+                                "parse_ok":  null,
+                                "score":  0,
+                                "tags":  [
+
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: human_gate",
+                                                    "project_id: SIM_PROJECT_20260619-153101_prueba2",
+                                                    "status: pending_human_decision",
+                                                    "---",
+                                                    "# Gate humano - revisar inicio de proyecto",
+                                                    "",
+                                                    "Boveda Obsidian real: C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_prueba2_20260619-153101\\BOVEDA_MAESTRA",
+                                                    ""
+                                                ]
+                            },
+                            {
+                                "rank_input":  66,
+                                "name":  "HUMAN_GATES_INDEX.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e05-20260619-231559\\05_HUMAN_GATES\\HUMAN_GATES_INDEX.md",
+                                "relative":  "backups\\template-improvement\\official-master-before-e05-20260619-231559\\05_HUMAN_GATES\\HUMAN_GATES_INDEX.md",
+                                "extension":  ".md",
+                                "size":  615,
+                                "last_write":  "2026-06-19T14:43:53",
+                                "parse_ok":  null,
+                                "score":  0,
+                                "tags":  [
+
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: ",
+                                                    "human_gates_index",
+                                                    "status: active",
+                                                    "tags:",
+                                                    "  - engremiat/simulation",
+                                                    "  - engremiat/lab",
+                                                    "---",
+                                                    "# ",
+                                                    "HUMAN_GATES_INDEX"
+                                                ]
+                            },
+                            {
+                                "rank_input":  67,
+                                "name":  "GATE_002_ACCEPT_SIMULATED_RESULT.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e05-20260619-231559\\05_HUMAN_GATES\\GATE_002_ACCEPT_SIMULATED_RESULT.md",
+                                "relative":  "backups\\template-improvement\\official-master-before-e05-20260619-231559\\05_HUMAN_GATES\\GATE_002_ACCEPT_SIMULATED_RESULT.md",
+                                "extension":  ".md",
+                                "size":  634,
+                                "last_write":  "2026-06-19T14:36:54",
+                                "parse_ok":  null,
+                                "score":  10,
+                                "tags":  [
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: human_gate",
+                                                    "gate_id: GATE_002",
+                                                    "scenario_id: ",
+                                                    "SCENARIO_001_visual_task_management_module",
+                                                    "status: accepted_simulated",
+                                                    "target_id: RESULT_002",
+                                                    "decision: ACCEPT_SIMULATED",
+                                                    "tags:",
+                                                    "  - engremiat/simulation"
+                                                ]
+                            },
+                            {
+                                "rank_input":  14,
+                                "name":  "RUN_003_SIM_WORKER_VALIDATOR.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\RUNS\\RUN_003_SIM_WORKER_VALIDATOR.md",
+                                "relative":  "backups\\template-improvement\\official-master-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\RUNS\\RUN_003_SIM_WORKER_VALIDATOR.md",
+                                "extension":  ".md",
+                                "size":  665,
+                                "last_write":  "2026-06-19T14:36:01",
+                                "parse_ok":  null,
+                                "score":  10,
+                                "tags":  [
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: simulated_worker_run",
+                                                    "run_id: ",
+                                                    "RUN_003",
+                                                    "scenario_id: ",
+                                                    "SCENARIO_001_visual_task_management_module",
+                                                    "task_id: ",
+                                                    "TASK_003",
+                                                    "worker_id: ",
+                                                    "SIM_WORKER_VALIDATOR"
+                                                ]
+                            },
+                            {
+                                "rank_input":  15,
+                                "name":  "SIM_WORKER_VALIDATOR.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\SIM_WORKER_VALIDATOR.md",
+                                "relative":  "backups\\template-improvement\\official-master-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\SIM_WORKER_VALIDATOR.md",
+                                "extension":  ".md",
+                                "size":  453,
+                                "last_write":  "2026-06-19T14:33:42",
+                                "parse_ok":  null,
+                                "score":  50,
+                                "tags":  [
+                                             "devsystem",
+                                             "diagnostic",
+                                             "kanban",
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: simulated_worker",
+                                                    "worker_id: ",
+                                                    "SIM_WORKER_VALIDATOR",
+                                                    "scenario_id: ",
+                                                    "SCENARIO_001_visual_task_management_module",
+                                                    "status: available",
+                                                    "tags:",
+                                                    "  - engremiat/simulation",
+                                                    "  - engremiat/worker"
+                                                ]
+                            },
+                            {
+                                "rank_input":  13,
+                                "name":  "RUN_001_SIM_WORKER_PLANNER.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\RUNS\\SIM_PROJECT_20260619-144124\\RUN_001_SIM_WORKER_PLANNER.md",
+                                "relative":  "backups\\template-improvement\\official-master-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\RUNS\\SIM_PROJECT_20260619-144124\\RUN_001_SIM_WORKER_PLANNER.md",
+                                "extension":  ".md",
+                                "size":  602,
+                                "last_write":  "2026-06-19T14:43:53",
+                                "parse_ok":  null,
+                                "score":  10,
+                                "tags":  [
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: project_start_sim_worker_run",
+                                                    "project_id: ",
+                                                    "SIM_PROJECT_20260619-144124",
+                                                    "run_id: ",
+                                                    "RUN_001",
+                                                    "worker_id: ",
+                                                    "SIM_WORKER_PLANNER",
+                                                    "task_id: ",
+                                                    "TASK_001_DEFINE_SCOPE"
+                                                ]
+                            },
+                            {
+                                "rank_input":  11,
+                                "name":  "RUN_002_SIM_WORKER_OBSIDIAN_BUILDER.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\RUNS\\RUN_002_SIM_WORKER_OBSIDIAN_BUILDER.md",
+                                "relative":  "backups\\template-improvement\\official-master-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\RUNS\\RUN_002_SIM_WORKER_OBSIDIAN_BUILDER.md",
+                                "extension":  ".md",
+                                "size":  687,
+                                "last_write":  "2026-06-19T14:36:01",
+                                "parse_ok":  null,
+                                "score":  10,
+                                "tags":  [
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: simulated_worker_run",
+                                                    "run_id: ",
+                                                    "RUN_002",
+                                                    "scenario_id: ",
+                                                    "SCENARIO_001_visual_task_management_module",
+                                                    "task_id: ",
+                                                    "TASK_002",
+                                                    "worker_id: ",
+                                                    "SIM_WORKER_OBSIDIAN_BUILDER"
+                                                ]
+                            },
+                            {
+                                "rank_input":  12,
+                                "name":  "RUN_001_SIM_WORKER_PLANNER.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\RUNS\\RUN_001_SIM_WORKER_PLANNER.md",
+                                "relative":  "backups\\template-improvement\\official-master-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\RUNS\\RUN_001_SIM_WORKER_PLANNER.md",
+                                "extension":  ".md",
+                                "size":  661,
+                                "last_write":  "2026-06-19T14:36:01",
+                                "parse_ok":  null,
+                                "score":  10,
+                                "tags":  [
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: simulated_worker_run",
+                                                    "run_id: ",
+                                                    "RUN_001",
+                                                    "scenario_id: ",
+                                                    "SCENARIO_001_visual_task_management_module",
+                                                    "task_id: ",
+                                                    "TASK_001",
+                                                    "worker_id: ",
+                                                    "SIM_WORKER_PLANNER"
+                                                ]
+                            },
+                            {
+                                "rank_input":  19,
+                                "name":  "SIM_WORKER_OBSIDIAN_BUILDER.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\SIM_WORKER_OBSIDIAN_BUILDER.md",
+                                "relative":  "backups\\template-improvement\\official-master-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\SIM_WORKER_OBSIDIAN_BUILDER.md",
+                                "extension":  ".md",
+                                "size":  502,
+                                "last_write":  "2026-06-19T14:33:42",
+                                "parse_ok":  null,
+                                "score":  30,
+                                "tags":  [
+                                             "kanban",
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: simulated_worker",
+                                                    "worker_id: ",
+                                                    "SIM_WORKER_OBSIDIAN_BUILDER",
+                                                    "scenario_id: ",
+                                                    "SCENARIO_001_visual_task_management_module",
+                                                    "status: available",
+                                                    "tags:",
+                                                    "  - engremiat/simulation",
+                                                    "  - engremiat/worker"
+                                                ]
+                            },
+                            {
+                                "rank_input":  20,
+                                "name":  "SIM_WORKER_PLANNER.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\SIM_WORKER_PLANNER.md",
+                                "relative":  "backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\SIM_WORKER_PLANNER.md",
+                                "extension":  ".md",
+                                "size":  440,
+                                "last_write":  "2026-06-19T14:33:42",
+                                "parse_ok":  null,
+                                "score":  30,
+                                "tags":  [
+                                             "kanban",
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: simulated_worker",
+                                                    "worker_id: ",
+                                                    "SIM_WORKER_PLANNER",
+                                                    "scenario_id: ",
+                                                    "SCENARIO_001_visual_task_management_module",
+                                                    "status: available",
+                                                    "tags:",
+                                                    "  - engremiat/simulation",
+                                                    "  - engremiat/worker"
+                                                ]
+                            },
+                            {
+                                "rank_input":  18,
+                                "name":  "SIM_WORKER_PLANNER.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\SIM_WORKER_PLANNER.md",
+                                "relative":  "backups\\template-improvement\\official-master-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\SIM_WORKER_PLANNER.md",
+                                "extension":  ".md",
+                                "size":  440,
+                                "last_write":  "2026-06-19T14:33:42",
+                                "parse_ok":  null,
+                                "score":  30,
+                                "tags":  [
+                                             "kanban",
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: simulated_worker",
+                                                    "worker_id: ",
+                                                    "SIM_WORKER_PLANNER",
+                                                    "scenario_id: ",
+                                                    "SCENARIO_001_visual_task_management_module",
+                                                    "status: available",
+                                                    "tags:",
+                                                    "  - engremiat/simulation",
+                                                    "  - engremiat/worker"
+                                                ]
+                            },
+                            {
+                                "rank_input":  16,
+                                "name":  "SIM_WORKER_MODEL.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\SIM_WORKER_MODEL.md",
+                                "relative":  "backups\\template-improvement\\official-master-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\SIM_WORKER_MODEL.md",
+                                "extension":  ".md",
+                                "size":  398,
+                                "last_write":  "2026-06-19T14:32:29",
+                                "parse_ok":  null,
+                                "score":  10,
+                                "tags":  [
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: simulation_object_model",
+                                                    "object_id: ",
+                                                    "SIM_WORKER",
+                                                    "status: active",
+                                                    "tags:",
+                                                    "  - engremiat/simulation",
+                                                    "  - ",
+                                                    "engremiat/worker",
+                                                    "---"
+                                                ]
+                            },
+                            {
+                                "rank_input":  17,
+                                "name":  "SIMULATED_WORKERS_INDEX.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\SIMULATED_WORKERS_INDEX.md",
+                                "relative":  "backups\\template-improvement\\official-master-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\SIMULATED_WORKERS_INDEX.md",
+                                "extension":  ".md",
+                                "size":  334,
+                                "last_write":  "2026-06-19T14:32:29",
+                                "parse_ok":  null,
+                                "score":  10,
+                                "tags":  [
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: ",
+                                                    "simulated_workers_index",
+                                                    "status: active",
+                                                    "tags:",
+                                                    "  - engremiat/simulation",
+                                                    "  - engremiat/lab",
+                                                    "---",
+                                                    "# ",
+                                                    "SIMULATED_WORKERS_INDEX"
+                                                ]
+                            },
+                            {
+                                "rank_input":  4,
+                                "name":  "GATES.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\module-ref-before-e07-20260619-231838\\04_GATES\\GATES.md",
+                                "relative":  "backups\\template-improvement\\module-ref-before-e07-20260619-231838\\04_GATES\\GATES.md",
+                                "extension":  ".md",
+                                "size":  59,
+                                "last_write":  "2026-06-19T23:12:10",
+                                "parse_ok":  null,
+                                "score":  0,
+                                "tags":  [
+
+                                         ],
+                                "first_lines":  [
+                                                    "# Gates modulo",
+                                                    "",
+                                                    "Autorizaciones y decisiones humanas.",
+                                                    ""
+                                                ]
+                            },
+                            {
+                                "rank_input":  5,
+                                "name":  "RESULT_002_WORKER_SIMULATION_OUTPUT.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\08_RESULTS\\SCENARIO_001_visual_task_management_module\\RESULT_002_WORKER_SIMULATION_OUTPUT.md",
+                                "relative":  "backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\08_RESULTS\\SCENARIO_001_visual_task_management_module\\RESULT_002_WORKER_SIMULATION_OUTPUT.md",
+                                "extension":  ".md",
+                                "size":  635,
+                                "last_write":  "2026-06-19T14:36:54",
+                                "parse_ok":  null,
+                                "score":  10,
+                                "tags":  [
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: simulation_result",
+                                                    "result_id: RESULT_002",
+                                                    "scenario_id: ",
+                                                    "SCENARIO_001_visual_task_management_module",
+                                                    "status: accepted_simulated",
+                                                    "accepted: true",
+                                                    "tags:",
+                                                    "  - engremiat/simulation",
+                                                    "  - engremiat/result"
+                                                ]
+                            },
+                            {
+                                "rank_input":  3,
+                                "name":  "GATES.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\module-ref-before-e09c-20260619-235221\\04_GATES\\GATES.md",
+                                "relative":  "backups\\template-improvement\\module-ref-before-e09c-20260619-235221\\04_GATES\\GATES.md",
+                                "extension":  ".md",
+                                "size":  59,
+                                "last_write":  "2026-06-19T23:12:10",
+                                "parse_ok":  null,
+                                "score":  0,
+                                "tags":  [
+
+                                         ],
+                                "first_lines":  [
+                                                    "# Gates modulo",
+                                                    "",
+                                                    "Autorizaciones y decisiones humanas.",
+                                                    ""
+                                                ]
+                            },
+                            {
+                                "rank_input":  1,
+                                "name":  "WORKER_SIMULATION_RESULT_CANVAS.canvas",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\10_CANVAS\\WORKER_SIMULATION_RESULT_CANVAS.canvas",
+                                "relative":  "backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\10_CANVAS\\WORKER_SIMULATION_RESULT_CANVAS.canvas",
+                                "extension":  ".canvas",
+                                "size":  6393,
+                                "last_write":  "2026-06-19T14:36:01",
+                                "parse_ok":  null,
+                                "score":  10,
+                                "tags":  [
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "{",
+                                                    "    \"nodes\":  [",
+                                                    "                  {",
+                                                    "                      \"id\":  \"task1\",",
+                                                    "                      \"type\":  \"file\",",
+                                                    "                      \"file\":  \"03_SIMULATED_TASKS/TASK_001_DEFINE_MODULE_SCOPE.md\",",
+                                                    "                      \"x\":  -760,",
+                                                    "                      \"y\":  -180,",
+                                                    "                      \"width\":  330,",
+                                                    "                      \"height\":  140,"
+                                                ]
+                            },
+                            {
+                                "rank_input":  2,
+                                "name":  "SIM_PROJECT_20260619-144124_WORKER_RESULT_CANVAS.canvas",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\10_CANVAS\\SIM_PROJECT_20260619-144124_WORKER_RESULT_CANVAS.canvas",
+                                "relative":  "backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\10_CANVAS\\SIM_PROJECT_20260619-144124_WORKER_RESULT_CANVAS.canvas",
+                                "extension":  ".canvas",
+                                "size":  5095,
+                                "last_write":  "2026-06-19T14:43:53",
+                                "parse_ok":  null,
+                                "score":  10,
+                                "tags":  [
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "{",
+                                                    "    \"nodes\":  [",
+                                                    "                  {",
+                                                    "                      \"id\":  \"r1\",",
+                                                    "                      \"type\":  \"file\",",
+                                                    "                      \"file\":  \"04_SIMULATED_WORKERS/RUNS/SIM_PROJECT_20260619-144124/RUN_001_SIM_WORKER_PLANNER.md\",",
+                                                    "                      \"x\":  -760,",
+                                                    "                      \"y\":  -180,",
+                                                    "                      \"width\":  330,",
+                                                    "                      \"height\":  140,"
+                                                ]
+                            },
+                            {
+                                "rank_input":  9,
+                                "name":  "SIM_PROJECT_20260619-153021_prueba2_GATE_REVIEW_PROJECT_START.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\05_HUMAN_GATES\\SIM_PROJECT_20260619-153021_prueba2_GATE_REVIEW_PROJECT_START.md",
+                                "relative":  "backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\05_HUMAN_GATES\\SIM_PROJECT_20260619-153021_prueba2_GATE_REVIEW_PROJECT_START.md",
+                                "extension":  ".md",
+                                "size":  258,
+                                "last_write":  "2026-06-19T15:30:21",
+                                "parse_ok":  null,
+                                "score":  0,
+                                "tags":  [
+
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: human_gate",
+                                                    "project_id: SIM_PROJECT_20260619-153021_prueba2",
+                                                    "status: pending_human_decision",
+                                                    "---",
+                                                    "# Gate humano - revisar inicio de proyecto",
+                                                    "",
+                                                    "Boveda Obsidian real: C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_prueba2_20260619-153021\\BOVEDA_MAESTRA",
+                                                    ""
+                                                ]
+                            },
+                            {
+                                "rank_input":  10,
+                                "name":  "T03_Preparar_worker_smoke_futuro.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e05-20260619-231559\\03_SIMULATED_TASKS\\SIM_PROJECT_20260619-152304_prueba1\\T03_Preparar_worker_smoke_futuro.md",
+                                "relative":  "backups\\template-improvement\\official-master-before-e05-20260619-231559\\03_SIMULATED_TASKS\\SIM_PROJECT_20260619-152304_prueba1\\T03_Preparar_worker_smoke_futuro.md",
+                                "extension":  ".md",
+                                "size":  263,
+                                "last_write":  "2026-06-19T15:23:04",
+                                "parse_ok":  null,
+                                "score":  10,
+                                "tags":  [
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: simulated_task",
+                                                    "project_id: SIM_PROJECT_20260619-152304_prueba1",
+                                                    "task_id: T03",
+                                                    "status: proposed",
+                                                    "---",
+                                                    "# T03 - Preparar worker smoke futuro",
+                                                    "",
+                                                    "## Objetivo",
+                                                    "Dejar tarea preparada para simulacion o worker smoke"
+                                                ]
+                            },
+                            {
+                                "rank_input":  8,
+                                "name":  "SIM_PROJECT_20260619-153101_prueba2_GATE_REVIEW_PROJECT_START.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\05_HUMAN_GATES\\SIM_PROJECT_20260619-153101_prueba2_GATE_REVIEW_PROJECT_START.md",
+                                "relative":  "backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\05_HUMAN_GATES\\SIM_PROJECT_20260619-153101_prueba2_GATE_REVIEW_PROJECT_START.md",
+                                "extension":  ".md",
+                                "size":  258,
+                                "last_write":  "2026-06-19T15:31:01",
+                                "parse_ok":  null,
+                                "score":  0,
+                                "tags":  [
+
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: human_gate",
+                                                    "project_id: SIM_PROJECT_20260619-153101_prueba2",
+                                                    "status: pending_human_decision",
+                                                    "---",
+                                                    "# Gate humano - revisar inicio de proyecto",
+                                                    "",
+                                                    "Boveda Obsidian real: C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_prueba2_20260619-153101\\BOVEDA_MAESTRA",
+                                                    ""
+                                                ]
+                            },
+                            {
+                                "rank_input":  6,
+                                "name":  "SIM_PROJECT_20260619-152304_prueba1_GATE_REVIEW_PROJECT_START.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\05_HUMAN_GATES\\SIM_PROJECT_20260619-152304_prueba1_GATE_REVIEW_PROJECT_START.md",
+                                "relative":  "backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\05_HUMAN_GATES\\SIM_PROJECT_20260619-152304_prueba1_GATE_REVIEW_PROJECT_START.md",
+                                "extension":  ".md",
+                                "size":  567,
+                                "last_write":  "2026-06-19T15:23:04",
+                                "parse_ok":  null,
+                                "score":  0,
+                                "tags":  [
+
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: human_gate",
+                                                    "project_id: SIM_PROJECT_20260619-152304_prueba1",
+                                                    "status: pending_human_decision",
+                                                    "allowed_decisions: APPROVE, ADJUST, BLOCK",
+                                                    "---",
+                                                    "# Gate humano - revisar inicio de proyecto",
+                                                    "",
+                                                    "Proyecto escritorio: C:\\Users\\pc\\Desktop\\ENGREMIAT_PROJECT_prueba1_20260619-152304",
+                                                    ""
+                                                ]
+                            },
+                            {
+                                "rank_input":  7,
+                                "name":  "SIM_PROJECT_20260619-144124_GATE_VALIDATE_RESULT.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\05_HUMAN_GATES\\SIM_PROJECT_20260619-144124_GATE_VALIDATE_RESULT.md",
+                                "relative":  "backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\05_HUMAN_GATES\\SIM_PROJECT_20260619-144124_GATE_VALIDATE_RESULT.md",
+                                "extension":  ".md",
+                                "size":  506,
+                                "last_write":  "2026-06-19T14:43:53",
+                                "parse_ok":  null,
+                                "score":  0,
+                                "tags":  [
+
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: human_gate",
+                                                    "project_id: ",
+                                                    "SIM_PROJECT_20260619-144124",
+                                                    "status: pending_human_decision",
+                                                    "target_id: RESULT_PROJECT_START_SIMULATION",
+                                                    "tags:",
+                                                    "  - engremiat/simulation",
+                                                    "  - engremiat/gate",
+                                                    "---"
+                                                ]
+                            },
+                            {
+                                "rank_input":  34,
+                                "name":  "GATE_001_APPROVE_ROADMAP.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\05_HUMAN_GATES\\GATE_001_APPROVE_ROADMAP.md",
+                                "relative":  "backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\05_HUMAN_GATES\\GATE_001_APPROVE_ROADMAP.md",
+                                "extension":  ".md",
+                                "size":  790,
+                                "last_write":  "2026-06-19T14:34:45",
+                                "parse_ok":  null,
+                                "score":  10,
+                                "tags":  [
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: human_gate",
+                                                    "gate_id: GATE_001",
+                                                    "scenario_id: ",
+                                                    "SCENARIO_001_visual_task_management_module",
+                                                    "status: approved_simulated",
+                                                    "target_id: ROADMAP_001",
+                                                    "decision: APPROVE_SIMULATED",
+                                                    "tags:",
+                                                    "  - engremiat/simulation"
+                                                ]
+                            },
+                            {
+                                "rank_input":  35,
+                                "name":  "RUN_001_SIM_WORKER_PLANNER.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\RUNS\\SIM_PROJECT_20260619-144124\\RUN_001_SIM_WORKER_PLANNER.md",
+                                "relative":  "backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\RUNS\\SIM_PROJECT_20260619-144124\\RUN_001_SIM_WORKER_PLANNER.md",
+                                "extension":  ".md",
+                                "size":  602,
+                                "last_write":  "2026-06-19T14:43:53",
+                                "parse_ok":  null,
+                                "score":  10,
+                                "tags":  [
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: project_start_sim_worker_run",
+                                                    "project_id: ",
+                                                    "SIM_PROJECT_20260619-144124",
+                                                    "run_id: ",
+                                                    "RUN_001",
+                                                    "worker_id: ",
+                                                    "SIM_WORKER_PLANNER",
+                                                    "task_id: ",
+                                                    "TASK_001_DEFINE_SCOPE"
+                                                ]
+                            },
+                            {
+                                "rank_input":  33,
+                                "name":  "HUMAN_GATE_MODEL.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\05_HUMAN_GATES\\HUMAN_GATE_MODEL.md",
+                                "relative":  "backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\05_HUMAN_GATES\\HUMAN_GATE_MODEL.md",
+                                "extension":  ".md",
+                                "size":  402,
+                                "last_write":  "2026-06-19T14:32:29",
+                                "parse_ok":  null,
+                                "score":  0,
+                                "tags":  [
+
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: simulation_object_model",
+                                                    "object_id: ",
+                                                    "HUMAN_GATE",
+                                                    "status: active",
+                                                    "tags:",
+                                                    "  - engremiat/simulation",
+                                                    "  - ",
+                                                    "engremiat/gate",
+                                                    "---"
+                                                ]
+                            },
+                            {
+                                "rank_input":  31,
+                                "name":  "GATE_002_ACCEPT_SIMULATED_RESULT.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\05_HUMAN_GATES\\GATE_002_ACCEPT_SIMULATED_RESULT.md",
+                                "relative":  "backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\05_HUMAN_GATES\\GATE_002_ACCEPT_SIMULATED_RESULT.md",
+                                "extension":  ".md",
+                                "size":  634,
+                                "last_write":  "2026-06-19T14:36:54",
+                                "parse_ok":  null,
+                                "score":  10,
+                                "tags":  [
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: human_gate",
+                                                    "gate_id: GATE_002",
+                                                    "scenario_id: ",
+                                                    "SCENARIO_001_visual_task_management_module",
+                                                    "status: accepted_simulated",
+                                                    "target_id: RESULT_002",
+                                                    "decision: ACCEPT_SIMULATED",
+                                                    "tags:",
+                                                    "  - engremiat/simulation"
+                                                ]
+                            },
+                            {
+                                "rank_input":  32,
+                                "name":  "SIM_PROJECT_20260619-144124_GATE_APPROVE_ROADMAP.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\05_HUMAN_GATES\\SIM_PROJECT_20260619-144124_GATE_APPROVE_ROADMAP.md",
+                                "relative":  "backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\05_HUMAN_GATES\\SIM_PROJECT_20260619-144124_GATE_APPROVE_ROADMAP.md",
+                                "extension":  ".md",
+                                "size":  546,
+                                "last_write":  "2026-06-19T14:42:47",
+                                "parse_ok":  null,
+                                "score":  20,
+                                "tags":  [
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: human_gate",
+                                                    "project_id: ",
+                                                    "SIM_PROJECT_20260619-144124",
+                                                    "status: ",
+                                                    "approved_by_human",
+                                                    "target_id: ",
+                                                    "SIM_PROJECT_20260619-144124",
+                                                    "_ROADMAP_PROPOSAL",
+                                                    "decision: "
+                                                ]
+                            },
+                            {
+                                "rank_input":  39,
+                                "name":  "RUN_002_SIM_WORKER_OBSIDIAN_BUILDER.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\RUNS\\SIM_PROJECT_20260619-144124\\RUN_002_SIM_WORKER_OBSIDIAN_BUILDER.md",
+                                "relative":  "backups\\template-improvement\\official-master-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\RUNS\\SIM_PROJECT_20260619-144124\\RUN_002_SIM_WORKER_OBSIDIAN_BUILDER.md",
+                                "extension":  ".md",
+                                "size":  609,
+                                "last_write":  "2026-06-19T14:43:53",
+                                "parse_ok":  null,
+                                "score":  10,
+                                "tags":  [
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: project_start_sim_worker_run",
+                                                    "project_id: ",
+                                                    "SIM_PROJECT_20260619-144124",
+                                                    "run_id: ",
+                                                    "RUN_002",
+                                                    "worker_id: ",
+                                                    "SIM_WORKER_OBSIDIAN_BUILDER",
+                                                    "task_id: ",
+                                                    "TASK_002_PREPARE_STRUCTURE"
+                                                ]
+                            },
+                            {
+                                "rank_input":  40,
+                                "name":  "arbitration-gate.json",
+                                "path":  "C:\\ENGREMIAT_CORE\\data\\arbitration-069\\arbitration-gate.json",
+                                "relative":  "data\\arbitration-069\\arbitration-gate.json",
+                                "extension":  ".json",
+                                "size":  1009,
+                                "last_write":  "2026-06-17T12:38:15",
+                                "parse_ok":  null,
+                                "score":  12,
+                                "tags":  [
+                                             "risk_review",
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "{",
+                                                    "    \"objective\":  \"ENGREMIAT_MULTI_WORKER_ORCHESTRATION_AND_REAL_VALUE_PIPELINE_066_075\",",
+                                                    "    \"stage\":  \"E69\",",
+                                                    "    \"gate_id\":  \"E69_ARBITRATION_GATE_001\",",
+                                                    "    \"status\":  \"OPEN_DEFAULT_DEFER\",",
+                                                    "    \"default_decision\":  \"DEFER\",",
+                                                    "    \"current_decision\":  \"DEFER\",",
+                                                    "    \"selected_proposal_ids\":  [",
+                                                    "",
+                                                    "                              ],"
+                                                ]
+                            },
+                            {
+                                "rank_input":  38,
+                                "name":  "RUN_002_SIM_WORKER_OBSIDIAN_BUILDER.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\RUNS\\SIM_PROJECT_20260619-144124\\RUN_002_SIM_WORKER_OBSIDIAN_BUILDER.md",
+                                "relative":  "backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\RUNS\\SIM_PROJECT_20260619-144124\\RUN_002_SIM_WORKER_OBSIDIAN_BUILDER.md",
+                                "extension":  ".md",
+                                "size":  609,
+                                "last_write":  "2026-06-19T14:43:53",
+                                "parse_ok":  null,
+                                "score":  10,
+                                "tags":  [
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: project_start_sim_worker_run",
+                                                    "project_id: ",
+                                                    "SIM_PROJECT_20260619-144124",
+                                                    "run_id: ",
+                                                    "RUN_002",
+                                                    "worker_id: ",
+                                                    "SIM_WORKER_OBSIDIAN_BUILDER",
+                                                    "task_id: ",
+                                                    "TASK_002_PREPARE_STRUCTURE"
+                                                ]
+                            },
+                            {
+                                "rank_input":  36,
+                                "name":  "RUN_003_SIM_WORKER_VALIDATOR.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\RUNS\\RUN_003_SIM_WORKER_VALIDATOR.md",
+                                "relative":  "backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\RUNS\\RUN_003_SIM_WORKER_VALIDATOR.md",
+                                "extension":  ".md",
+                                "size":  665,
+                                "last_write":  "2026-06-19T14:36:01",
+                                "parse_ok":  null,
+                                "score":  10,
+                                "tags":  [
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: simulated_worker_run",
+                                                    "run_id: ",
+                                                    "RUN_003",
+                                                    "scenario_id: ",
+                                                    "SCENARIO_001_visual_task_management_module",
+                                                    "task_id: ",
+                                                    "TASK_003",
+                                                    "worker_id: ",
+                                                    "SIM_WORKER_VALIDATOR"
+                                                ]
+                            },
+                            {
+                                "rank_input":  37,
+                                "name":  "RUN_003_SIM_WORKER_VALIDATOR.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\RUNS\\SIM_PROJECT_20260619-144124\\RUN_003_SIM_WORKER_VALIDATOR.md",
+                                "relative":  "backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\RUNS\\SIM_PROJECT_20260619-144124\\RUN_003_SIM_WORKER_VALIDATOR.md",
+                                "extension":  ".md",
+                                "size":  590,
+                                "last_write":  "2026-06-19T14:43:53",
+                                "parse_ok":  null,
+                                "score":  10,
+                                "tags":  [
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: project_start_sim_worker_run",
+                                                    "project_id: ",
+                                                    "SIM_PROJECT_20260619-144124",
+                                                    "run_id: ",
+                                                    "RUN_003",
+                                                    "worker_id: ",
+                                                    "SIM_WORKER_VALIDATOR",
+                                                    "task_id: ",
+                                                    "TASK_003_VALIDATE_FIRST_EVIDENCE"
+                                                ]
+                            },
+                            {
+                                "rank_input":  24,
+                                "name":  "SIM_WORKER_MODEL.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\SIM_WORKER_MODEL.md",
+                                "relative":  "backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\SIM_WORKER_MODEL.md",
+                                "extension":  ".md",
+                                "size":  398,
+                                "last_write":  "2026-06-19T14:32:29",
+                                "parse_ok":  null,
+                                "score":  10,
+                                "tags":  [
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: simulation_object_model",
+                                                    "object_id: ",
+                                                    "SIM_WORKER",
+                                                    "status: active",
+                                                    "tags:",
+                                                    "  - engremiat/simulation",
+                                                    "  - ",
+                                                    "engremiat/worker",
+                                                    "---"
+                                                ]
+                            },
+                            {
+                                "rank_input":  25,
+                                "name":  "ENGREMIAT-INICIO-NORMALIZED.before-e10j-workers-paused-safe-operator-access-20260620-191422.ps1",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\screen-normalizer-general-launcher-menu-router-integration-gate\\ENGREMIAT-INICIO-NORMALIZED.before-e10j-workers-paused-safe-operator-access-20260620-191422.ps1",
+                                "relative":  "backups\\screen-normalizer-general-launcher-menu-router-integration-gate\\ENGREMIAT-INICIO-NORMALIZED.before-e10j-workers-paused-safe-operator-access-20260620-191422.ps1",
+                                "extension":  ".ps1",
+                                "size":  4740,
+                                "last_write":  "2026-06-20T19:10:19",
+                                "parse_ok":  true,
+                                "score":  138,
+                                "tags":  [
+                                             "diagnostic",
+                                             "kanban",
+                                             "memory",
+                                             "navigation",
+                                             "safe",
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "$ErrorActionPreference=\u0027Stop\u0027",
+                                                    "[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()",
+                                                    "$Core=\u0027C:\\ENGREMIAT_CORE\u0027",
+                                                    "$LauncherDir=Join-Path $Core \u0027tools\\launcher\u0027",
+                                                    "$CardBase=Join-Path $Core \u0027documents\\module-cards\u0027",
+                                                    "function W($m,$c=\u0027Gray\u0027){try{Write-Host $m -ForegroundColor $c}catch{Write-Host $m}}",
+                                                    "function RunPs1($p){if(!(Test-Path $p)){W \"NO_GO falta launcher: $p\" Red;Read-Host \u0027Enter\u0027;return};\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $p}",
+                                                    "function Header(){Clear-Host;W \u0027==== ENGREMIAT / INICIO ====\u0027 Cyan;W \u0027Ruta: INICIO\u0027 DarkCyan;W \u0027Rol: hub humano principal del operador\u0027 DarkCyan;W \u0027Principio: local-first | workers OFF | worker real\u0027 DarkCyan;W \u0027\u0027;W \u0027[1] Proyectos\u0027 White;W \u0027[2] Memoria y documentacion\u0027 White;W \u0027[3] Control y estado\u0027 White;W \u0027[4] Launchers y configuracion\u0027 White;W \u0027[5] Operador y workers\u0027 Yellow;W \u0027[6] Tarjetas\u0027 White;W \u0027[?] Ayuda\u0027 White;W \u0027[b/q] salir | m = mantenimiento | Enter = refrescar\u0027 DarkGray}",
+                                                    "function StatusPanel(){Clear-Host;W \u0027==== CONTROL Y ESTADO ====\u0027 Cyan;W \u0027Estado compacto del operador local.\u0027 DarkCyan;W \u0027\u0027;$schema=Join-Path $CardBase \u0027module-linked-card.schema.json\u0027;$index=Join-Path $CardBase \u0027module-linked-card.index.json\u0027;$flow=Join-Path $CardBase \u0027card-to-module-flow.json\u0027;$checker=Join-Path $Core \u0027tools\\module-cards\\check-card-to-module-flow.ps1\u0027;$view=Join-Path $LauncherDir \u0027ENGREMIAT-CARDS-VIEW-NORMALIZED.ps1\u0027;W \u0027OK entrada humana: .\\ENGREMIAT.cmd\u0027 Green;W \u0027OK launchers: usar [4] para health\u0027 Green;W \u0027PAUSADO worker real: no ejecutar hasta cerrar operador\u0027 Yellow;if((Test-Path $schema) -and (Test-Path $index) -and (Test-Path $flow) -and (Test-Path $checker)){W \u0027OK canon tarjetas-modulos: schema + index + flow + checker\u0027 Green;W \u0027REGLA tarjetas: PROPOSED no ejecuta | human_gate=SI\u0027 Magenta}else{W \u0027WARN canon tarjetas-modulos incompleto\u0027 Yellow};if(Test-Path $view){W \u0027OK vista tarjetas: [6] Tarjetas\u0027 Green}else{W \u0027WARN vista tarjetas no enlazada\u0027 Yellow};W \u0027FUTURO sistema vivo: autodiagnostico genera tarjetas PROPOSED, no acciones directas\u0027 Magenta;W \u0027\u0027;W \u0027Siguiente recomendado: revisar Tarjetas o Launchers/configuracion.\u0027 Cyan;W \u0027\u0027;W \u0027[Enter] volver\u0027 DarkGray;Read-Host|Out-Null}",
+                                                    "function LauncherTools(){while($true){Clear-Host;W \u0027==== LAUNCHERS Y CONFIGURACION ====\u0027 Cyan;W \u0027Ruta: INICIO \u003e Launchers y configuracion\u0027 DarkCyan;W \u0027\u0027;W \u0027[1] Health launchers\u0027 White;W \u0027[2] Helper update dry-run\u0027 White;W \u0027[3] Data Intake\u0027 White;W \u0027[b] volver | Enter = refrescar\u0027 DarkGray;$x=Read-Host \u0027CONFIG\u0027;if([string]::IsNullOrWhiteSpace($x)){continue};switch($x.ToLower()){\u00271\u0027{RunPs1 (Join-Path $LauncherDir \u0027ENGREMIAT-LAUNCHER-HEALTH.ps1\u0027);Read-Host \u0027Enter\u0027}\u00272\u0027{RunPs1 (Join-Path $LauncherDir \u0027ENGREMIAT-LAUNCHER-UPDATE-HELPER.ps1\u0027);Read-Host \u0027Enter\u0027}\u00273\u0027{RunPs1 (Join-Path $LauncherDir \u0027ENGREMIAT-DATA-INTAKE-CENTER-NORMALIZED.ps1\u0027)}\u0027b\u0027{return}default{W \u0027Comando no reconocido\u0027 Yellow;Start-Sleep -Milliseconds 700}}}}"
+                                                ]
+                            },
+                            {
+                                "rank_input":  23,
+                                "name":  "SIM_WORKER_VALIDATOR.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\SIM_WORKER_VALIDATOR.md",
+                                "relative":  "backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\SIM_WORKER_VALIDATOR.md",
+                                "extension":  ".md",
+                                "size":  453,
+                                "last_write":  "2026-06-19T14:33:42",
+                                "parse_ok":  null,
+                                "score":  50,
+                                "tags":  [
+                                             "devsystem",
+                                             "diagnostic",
+                                             "kanban",
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: simulated_worker",
+                                                    "worker_id: ",
+                                                    "SIM_WORKER_VALIDATOR",
+                                                    "scenario_id: ",
+                                                    "SCENARIO_001_visual_task_management_module",
+                                                    "status: available",
+                                                    "tags:",
+                                                    "  - engremiat/simulation",
+                                                    "  - engremiat/worker"
+                                                ]
+                            },
+                            {
+                                "rank_input":  21,
+                                "name":  "SIM_WORKER_OBSIDIAN_BUILDER.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\SIM_WORKER_OBSIDIAN_BUILDER.md",
+                                "relative":  "backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\SIM_WORKER_OBSIDIAN_BUILDER.md",
+                                "extension":  ".md",
+                                "size":  502,
+                                "last_write":  "2026-06-19T14:33:42",
+                                "parse_ok":  null,
+                                "score":  30,
+                                "tags":  [
+                                             "kanban",
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: simulated_worker",
+                                                    "worker_id: ",
+                                                    "SIM_WORKER_OBSIDIAN_BUILDER",
+                                                    "scenario_id: ",
+                                                    "SCENARIO_001_visual_task_management_module",
+                                                    "status: available",
+                                                    "tags:",
+                                                    "  - engremiat/simulation",
+                                                    "  - engremiat/worker"
+                                                ]
+                            },
+                            {
+                                "rank_input":  22,
+                                "name":  "RUN_001_SIM_WORKER_PLANNER.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\RUNS\\RUN_001_SIM_WORKER_PLANNER.md",
+                                "relative":  "backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\RUNS\\RUN_001_SIM_WORKER_PLANNER.md",
+                                "extension":  ".md",
+                                "size":  661,
+                                "last_write":  "2026-06-19T14:36:01",
+                                "parse_ok":  null,
+                                "score":  10,
+                                "tags":  [
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: simulated_worker_run",
+                                                    "run_id: ",
+                                                    "RUN_001",
+                                                    "scenario_id: ",
+                                                    "SCENARIO_001_visual_task_management_module",
+                                                    "task_id: ",
+                                                    "TASK_001",
+                                                    "worker_id: ",
+                                                    "SIM_WORKER_PLANNER"
+                                                ]
+                            },
+                            {
+                                "rank_input":  29,
+                                "name":  "RUN_002_SIM_WORKER_OBSIDIAN_BUILDER.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\RUNS\\RUN_002_SIM_WORKER_OBSIDIAN_BUILDER.md",
+                                "relative":  "backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\RUNS\\RUN_002_SIM_WORKER_OBSIDIAN_BUILDER.md",
+                                "extension":  ".md",
+                                "size":  687,
+                                "last_write":  "2026-06-19T14:36:01",
+                                "parse_ok":  null,
+                                "score":  10,
+                                "tags":  [
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: simulated_worker_run",
+                                                    "run_id: ",
+                                                    "RUN_002",
+                                                    "scenario_id: ",
+                                                    "SCENARIO_001_visual_task_management_module",
+                                                    "task_id: ",
+                                                    "TASK_002",
+                                                    "worker_id: ",
+                                                    "SIM_WORKER_OBSIDIAN_BUILDER"
+                                                ]
+                            },
+                            {
+                                "rank_input":  30,
+                                "name":  "HUMAN_GATES_INDEX.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\05_HUMAN_GATES\\HUMAN_GATES_INDEX.md",
+                                "relative":  "backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\05_HUMAN_GATES\\HUMAN_GATES_INDEX.md",
+                                "extension":  ".md",
+                                "size":  615,
+                                "last_write":  "2026-06-19T14:43:53",
+                                "parse_ok":  null,
+                                "score":  0,
+                                "tags":  [
+
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: ",
+                                                    "human_gates_index",
+                                                    "status: active",
+                                                    "tags:",
+                                                    "  - engremiat/simulation",
+                                                    "  - engremiat/lab",
+                                                    "---",
+                                                    "# ",
+                                                    "HUMAN_GATES_INDEX"
+                                                ]
+                            },
+                            {
+                                "rank_input":  28,
+                                "name":  "T03_Preparar_worker_smoke_futuro.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\03_SIMULATED_TASKS\\SIM_PROJECT_20260619-152304_prueba1\\T03_Preparar_worker_smoke_futuro.md",
+                                "relative":  "backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\03_SIMULATED_TASKS\\SIM_PROJECT_20260619-152304_prueba1\\T03_Preparar_worker_smoke_futuro.md",
+                                "extension":  ".md",
+                                "size":  263,
+                                "last_write":  "2026-06-19T15:23:04",
+                                "parse_ok":  null,
+                                "score":  10,
+                                "tags":  [
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: simulated_task",
+                                                    "project_id: SIM_PROJECT_20260619-152304_prueba1",
+                                                    "task_id: T03",
+                                                    "status: proposed",
+                                                    "---",
+                                                    "# T03 - Preparar worker smoke futuro",
+                                                    "",
+                                                    "## Objetivo",
+                                                    "Dejar tarea preparada para simulacion o worker smoke"
+                                                ]
+                            },
+                            {
+                                "rank_input":  26,
+                                "name":  "health-launchers.ps1.before-e14r2-m-card-assistant-20260621-064606.ps1",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\screen-normalization\\health-launchers.ps1.before-e14r2-m-card-assistant-20260621-064606.ps1",
+                                "relative":  "backups\\screen-normalization\\health-launchers.ps1.before-e14r2-m-card-assistant-20260621-064606.ps1",
+                                "extension":  ".ps1",
+                                "size":  2690,
+                                "last_write":  "2026-06-21T06:32:37",
+                                "parse_ok":  true,
+                                "score":  40,
+                                "tags":  [
+                                             "diagnostic",
+                                             "kanban",
+                                             "navigation"
+                                         ],
+                                "first_lines":  [
+                                                    "$ErrorActionPreference = \"Stop\"",
+                                                    "[Console]::OutputEncoding = [System.Text.Encoding]::UTF8",
+                                                    "$Root = Split-Path -Parent (Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Path))",
+                                                    "$ReportDir = Join-Path $Root \"reports\\launcher-health\"",
+                                                    "function W([string]$Text,[string]$Color=\"Gray\"){ Write-Host $Text -ForegroundColor $Color }",
+                                                    "function Test-LauncherPath([string]$Label,[string]$Relative){ $path=Join-Path $Root $Relative; $exists=Test-Path $path; $status=if($exists){\"OK\"}else{\"PENDING\"}; $color=if($exists){\"Green\"}else{\"Yellow\"}; W ($status+\" \"+$Label+\" -\u003e \"+$Relative) $color; return [ordered]@{label=$Label;relative=$Relative;path=$path;exists=$exists} }",
+                                                    "function Run-Health(){ New-Item -ItemType Directory -Force -Path $ReportDir | Out-Null; Clear-Host; W \"==== ENGREMIAT / HEALTH LAUNCHERS ====\" Cyan; W \"\"; W (\"Root: \"+$Root) DarkGray; W \"Contrato: revisar launchers reales enlazados desde ENGREMIAT.ps1\" DarkGray; W \"\"; $items=@(); $items+=Test-LauncherPath \"Launcher maestro\" \"ENGREMIAT.ps1\"; $items+=Test-LauncherPath \"Inicio operador\" \"tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\"; $items+=Test-LauncherPath \"Asistente tarjetas humanas\" \"tools\\human-card-assistant.ps1\"; $items+=Test-LauncherPath \"Data Intake\" \"tools\\data-intake.ps1\"; $items+=Test-LauncherPath \"Health launchers\" \"tools\\health\\health-launchers.ps1\"; W \"\"; $ok=($items|Where-Object {$_.exists}).Count; $total=$items.Count; $missing=($items|Where-Object {-not $_.exists}).Count; $status=if($missing -eq 0){\"PASS\"}else{\"WARN\"}; W (\"RESUMEN status=\"+$status+\" ok=\"+$ok+\" missing=\"+$missing+\" total=\"+$total) $(if($missing -eq 0){\"Green\"}else{\"Yellow\"}); $report=Join-Path $ReportDir (\"health-launchers-\"+(Get-Date -Format \"yyyyMMdd-HHmmss\")+\".json\"); $payload=[ordered]@{package=\"ENGREMIAT_REAL_PROJECT_WALKTHROUGH_001\";stage=\"E02J_CREATE_HEALTH_LAUNCHERS_MINIMAL_REAL\";status=$status;created_at=(Get-Date -Format s);root=$Root;items=$items}; Set-Content -Path $report -Value ($payload|ConvertTo-Json -Depth 6) -Encoding UTF8; W (\"OK report=\"+$report) Green; W \"NEXT si falta algun launcher, crear pantalla minima real o enrutar al asistente de tarjetas.\" Cyan; W \"\"; W \"[b/q] salir/volver | m = mantenimiento | ? = ayuda | Enter = refrescar\" DarkGray; W \"\"; $cmd=Read-Host \"HEALTH\"; $cmd=($cmd+\"\").Trim().ToLowerInvariant(); if($cmd -eq \"?\" -or $cmd -eq \"m\"){ W \"\"; W \"AYUDA\" Cyan; W \"Este health comprueba que las opciones del launcher maestro apunten a scripts reales.\" White; Read-Host \"Enter = volver\" | Out-Null } }",
+                                                    "while($true){ Run-Health; $again=Read-Host \"Enter = refrescar | b/q = volver\"; $again=($again+\"\").Trim().ToLowerInvariant(); if($again -eq \"b\" -or $again -eq \"q\"){ break } }",
+                                                    ""
+                                                ]
+                            },
+                            {
+                                "rank_input":  27,
+                                "name":  "SIMULATED_WORKERS_INDEX.md",
+                                "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\SIMULATED_WORKERS_INDEX.md",
+                                "relative":  "backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\SIMULATED_WORKERS_INDEX.md",
+                                "extension":  ".md",
+                                "size":  334,
+                                "last_write":  "2026-06-19T14:32:29",
+                                "parse_ok":  null,
+                                "score":  10,
+                                "tags":  [
+                                             "worker"
+                                         ],
+                                "first_lines":  [
+                                                    "---",
+                                                    "type: ",
+                                                    "simulated_workers_index",
+                                                    "status: active",
+                                                    "tags:",
+                                                    "  - engremiat/simulation",
+                                                    "  - engremiat/lab",
+                                                    "---",
+                                                    "# ",
+                                                    "SIMULATED_WORKERS_INDEX"
+                                                ]
+                            }
+                        ],
+    "next":  "E01C_SELECT_RECOVERABLE_AUTODIAGNOSTIC_FAMILY_AND_CREATE_CANONICAL_MAP"
+}

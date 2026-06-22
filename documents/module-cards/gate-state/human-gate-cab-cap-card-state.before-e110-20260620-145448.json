@@ -1,0 +1,28 @@
+﻿{
+    "schema":  "engremiat.human_gate_state.v1",
+    "package_id":  "ENGREMIAT_MODULE_CARD_ACTION_FLOW_001",
+    "created_or_refreshed_at":  "2026-06-20T14:53:34",
+    "state_file_role":  "CANONICAL_MUTABLE_GATE_STATE",
+    "gate_id":  "HUMAN-GATE-CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830",
+    "status":  "PENDING",
+    "pending_decision_id":  "HGD-HUMAN-GATE-CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001",
+    "approved_decision_id":  null,
+    "last_transition":  null,
+    "source_preview":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\gate-mutation-contracts\\gate-mutation-preview.dry-run.20260620-145102.json",
+    "history":  [
+
+                ],
+    "safety":  {
+                   "created_as_canonical_state":  true,
+                   "approval_applied":  false,
+                   "real_execution":  false,
+                   "gate_mutated":  false,
+                   "reports_are_not_mutation_targets":  true
+               },
+    "next_allowed_transition":  {
+                                    "from":  "PENDING",
+                                    "to":  "APPROVED",
+                                    "requires_env":  "ENGREMIAT_GATE_MUTATION_AUTH",
+                                    "requires_value":  "AUTORIZO_E110_APPLY_REAL_GATE_APPROVAL_MUTATION"
+                                }
+}

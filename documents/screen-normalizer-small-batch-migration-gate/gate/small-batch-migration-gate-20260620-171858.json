@@ -1,0 +1,79 @@
+{
+    "schema":  "engremiat.small_batch_migration_gate.v1",
+    "package_id":  "ENGREMIAT_SCREEN_NORMALIZER_SMALL_BATCH_MIGRATION_GATE_001",
+    "stage":  "E01D_PREPARE_SMALL_BATCH_MIGRATION_GATE_NO_APPLY_PIPELINE_SAFE",
+    "created_at":  "2026-06-20T17:18:58",
+    "status":  "PENDING_HUMAN_AUTHORIZATION",
+    "mode":  "SMALL_BATCH_GATE_ONLY_NO_APPLY",
+    "target_screen_id":  "CONTROL_ESTADO",
+    "target_reason":  "Pantalla interna de bajo riesgo frente a INICIO; validada visualmente; candidata adecuada para primera migracion real controlada",
+    "authorization_required":  true,
+    "authorization_status":  "PENDING_EXPLICIT_HUMAN_AUTHORIZATION",
+    "required_phrase":  "AUTORIZO_MIGRAR_CONTROL_ESTADO_A_SCREEN_NORMALIZER",
+    "candidate":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\CONTROL_ESTADO.candidate.isolated.ps1",
+    "candidate_sha256":  "72E585DAC556CBC0B903F1B109814250F56E3CEC44D072C8997F601BD0049FEB",
+    "candidate_parse_ok":  true,
+    "detected_current_launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO-NORMALIZED.ps1",
+    "current_launcher_parse_ok":  true,
+    "current_launcher_sha256":  "B1516AF2F864539649472507A6C26A9D02DCA56CBBB0854D49D9AC471CAE0BDF",
+    "launcher_matches":  [
+                             {
+                                 "name":  "ENGREMIAT-INICIO-NORMALIZED.ps1",
+                                 "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO-NORMALIZED.ps1",
+                                 "score":  1,
+                                 "has_control_estado":  true,
+                                 "has_state_words":  true
+                             },
+                             {
+                                 "name":  "ENGREMIAT-LAUNCHER-ACTUAL.ps1",
+                                 "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1",
+                                 "score":  1,
+                                 "has_control_estado":  false,
+                                 "has_state_words":  true
+                             }
+                         ],
+    "apply_scope":  {
+                        "allowed":  [
+                                        "backup current target launcher if detected",
+                                        "replace only target launcher with candidate",
+                                        "validate parse after replace",
+                                        "create rollback file",
+                                        "record evidence"
+                                    ],
+                        "blocked":  [
+                                        "migrate INICIO",
+                                        "migrate multiple launchers",
+                                        "registry write",
+                                        "workers",
+                                        "browser",
+                                        "network",
+                                        "git",
+                                        "delete unrelated files"
+                                    ]
+                    },
+    "rollback_policy":  [
+                            "backup before write",
+                            "candidate parse required",
+                            "target launcher parse checked if exists",
+                            "restore backup if post-apply parse fails",
+                            "stop immediately on failure"
+                        ],
+    "post_apply_checks":  [
+                              "target launcher parses",
+                              "candidate helper load present",
+                              "screen title/ruta/rol/estado/principio present",
+                              "m maintenance handler present",
+                              "Enter refresh present",
+                              "? help present",
+                              "b/q exit present"
+                          ],
+    "decision":  "READY_FOR_HUMAN_GATE_TARGET_DETECTED",
+    "patch_existing_launchers":  false,
+    "registry_write":  false,
+    "migration_applied":  false,
+    "worker":  false,
+    "browser":  false,
+    "network":  false,
+    "git":  false,
+    "next":  "E02_APPLY_SMALL_BATCH_AFTER_EXPLICIT_AUTHORIZATION_OR_CLOSE_GATE"
+}

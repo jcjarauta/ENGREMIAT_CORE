@@ -1,0 +1,46 @@
+﻿{
+    "schema":  "engremiat.system_observer_task_to_canonical_action_bridge_contract.v1",
+    "package_id":  "ENGREMIAT_SYSTEM_OBSERVER_001",
+    "stage":  "E08_SYSTEM_OBSERVER_PREPARE_TASK_TO_CANONICAL_ACTION_BRIDGE",
+    "created_at":  "2026-06-20T15:30:22",
+    "status":  "READY",
+    "bridge_id":  "SYSTEM_OBSERVER_TASK_TO_CANONICAL_ACTION_BRIDGE_V1",
+    "purpose":  "Convertir tareas propuestas por el System Observer en paquetes de accion canonica gobernados por preview, gate humano y autorizacion explicita",
+    "source_tasks":  "C:\\ENGREMIAT_CORE\\documents\\system-observer\\tasks\\system-observer-tasks-v0.latest.json",
+    "source_export":  "C:\\ENGREMIAT_CORE\\documents\\system-observer\\exports\\system-observer-tasks-export-v0.latest.json",
+    "canonical_runtime_close":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\close\\launcher-canonical-action-runtime-close.latest.json",
+    "allowed_inputs":  [
+                           "system_observer_task",
+                           "improvement_proposal",
+                           "manual_gap",
+                           "diagnostic_risk"
+                       ],
+    "outputs":  [
+                    "canonical_action_candidate",
+                    "dry_run_preview",
+                    "human_gate_proposal",
+                    "pending_auth_runtime_package"
+                ],
+    "blocked_by_default":  [
+                               "auto_execute",
+                               "auto_apply",
+                               "worker",
+                               "browser",
+                               "network",
+                               "git",
+                               "delete",
+                               "move"
+                           ],
+    "required_gate_for_execution":  true,
+    "safety":  {
+                   "real_execution":  false,
+                   "system_mutation":  false,
+                   "action_executed":  false,
+                   "worker":  false,
+                   "browser":  false,
+                   "network":  false,
+                   "git":  false,
+                   "bridge_only":  true
+               },
+    "next":  "E09_SYSTEM_OBSERVER_SMOKE_TASK_TO_ACTION_BRIDGE_NO_EXECUTION"
+}

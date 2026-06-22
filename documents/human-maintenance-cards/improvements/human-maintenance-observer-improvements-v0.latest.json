@@ -1,0 +1,65 @@
+﻿{
+    "schema":  "engremiat.human_maintenance_card_observer_improvements_v0.v1",
+    "package_id":  "ENGREMIAT_HUMAN_MAINTENANCE_CARD_001",
+    "stage":  "E05_CONVERT_HUMAN_MAINTENANCE_CARD_TO_OBSERVER_IMPROVEMENT_V0",
+    "created_at":  "2026-06-20T15:39:13",
+    "status":  "PASS",
+    "mode":  "HUMAN_SIGNAL_TO_OBSERVER_IMPROVEMENT_NO_TASK_NO_EXECUTION",
+    "source_signals":  "C:\\ENGREMIAT_CORE\\documents\\system-observer\\human-signals\\human-maintenance-signals-for-observer.latest.json",
+    "system_observer_close":  "C:\\ENGREMIAT_CORE\\documents\\system-observer\\close\\system-observer-v0-close.latest.json",
+    "summary":  {
+                    "total":  1,
+                    "high":  0,
+                    "medium":  1,
+                    "low":  0,
+                    "requires_authorization":  0
+                },
+    "improvements":  [
+                         {
+                             "improvement_id":  "HMC-IMP-001-UX",
+                             "source_signal_id":  "HUMAN-SIGNAL-HMC-demo-system-observer-screen-20260620-153807",
+                             "source_card":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-cards\\inbox\\HMC-demo-system-observer-screen-20260620-153807.json",
+                             "maintenance_card_id":  "HMC-demo-system-observer-screen-20260620-153807",
+                             "dimension":  "ux",
+                             "title":  "Demo mantenimiento humano: mejorar claridad de pantallas",
+                             "problem":  "Senal humana indica posible hueco de deteccion: human_signal_not_yet_evaluated_by_observer",
+                             "human_observation":  "En pantallas futuras debe aparecer m = mantenimiento junto a refrescar, ayuda y comandos.",
+                             "proposal":  "Integrar m = mantenimiento como opcion canonica en contrato de pantalla.",
+                             "expected_impact":  "mejorar capacidad del sistema para captar mantenimiento humano no detectado automaticamente",
+                             "priority":  "MEDIUM",
+                             "risk":  "MEDIUM",
+                             "status":  "OBSERVER_IMPROVEMENT_PROPOSED",
+                             "requires_authorization":  false,
+                             "allowed_now":  "improvement_proposal_only",
+                             "suggested_task_type":  "READONLY_OR_DOCUMENTATION_TASK",
+                             "blocked_operations":  [
+                                                        "auto_apply",
+                                                        "auto_execute",
+                                                        "worker",
+                                                        "browser",
+                                                        "network",
+                                                        "git",
+                                                        "delete",
+                                                        "move"
+                                                    ],
+                             "evidence":  [
+                                              "C:\\ENGREMIAT_CORE\\documents\\system-observer\\human-signals\\human-maintenance-signals-for-observer.latest.json",
+                                              "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-cards\\inbox\\HMC-demo-system-observer-screen-20260620-153807.json",
+                                              "C:\\ENGREMIAT_CORE\\documents\\system-observer\\close\\system-observer-v0-close.latest.json"
+                                          ],
+                             "observer_transition":  "OBSERVER_PENDING_REVIEW_TO_OBSERVER_EVALUATED",
+                             "next_step":  "E06_CONVERT_HUMAN_MAINTENANCE_IMPROVEMENT_TO_TASK_V0"
+                         }
+                     ],
+    "safety":  {
+                   "real_execution":  false,
+                   "system_mutation":  false,
+                   "screen_mutation":  false,
+                   "worker":  false,
+                   "browser":  false,
+                   "network":  false,
+                   "git":  false,
+                   "readonly":  true
+               },
+    "next":  "E06_CONVERT_HUMAN_MAINTENANCE_IMPROVEMENT_TO_TASK_V0"
+}

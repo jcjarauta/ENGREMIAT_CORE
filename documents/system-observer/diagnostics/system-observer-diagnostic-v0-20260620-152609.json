@@ -1,0 +1,281 @@
+﻿{
+    "schema":  "engremiat.system_observer_diagnostic_v0.v1",
+    "package_id":  "ENGREMIAT_SYSTEM_OBSERVER_001",
+    "stage":  "E03_SYSTEM_OBSERVER_DIAGNOSTIC_V0",
+    "created_at":  "2026-06-20T15:26:09",
+    "status":  "PASS",
+    "mode":  "READONLY_DIAGNOSTIC_NO_TASKS_NO_EXECUTION",
+    "observer_id":  "ENGREMIAT_SYSTEM_OBSERVER_V1",
+    "inventory":  "C:\\ENGREMIAT_CORE\\documents\\system-observer\\inventory\\system-observer-readonly-inventory.latest.json",
+    "dimensions":  "C:\\ENGREMIAT_CORE\\documents\\system-observer\\dimensions\\system-observer-dimensions.latest.json",
+    "safety_policy":  "C:\\ENGREMIAT_CORE\\documents\\system-observer\\safety\\system-observer-safety-policy.latest.json",
+    "global_score":  69,
+    "global_level":  "STABLE_ENOUGH",
+    "summary":  {
+                    "system_maturity":  "suficiente para observer readonly, manual vivo y propuestas clasificadas",
+                    "main_strength":  "runtime canonico + UI adapter + evidencias abundantes",
+                    "main_risk":  "crecimiento documental y scripts altos sin diagnostico profundo ni manual vivo consolidado",
+                    "recommended_path":  "E04 manual vivo v0, E05 mejoras v0, E06 tareas clasificadas"
+                },
+    "diagnostics":  [
+                        {
+                            "dimension_id":  "architecture",
+                            "label":  "Arquitectura",
+                            "question":  "El sistema esta ordenado, modular y escalable?",
+                            "score":  93,
+                            "level":  "STRONG",
+                            "signals":  [
+                                            "runtime_close=True",
+                                            "ui_close=True",
+                                            "closed_signals=40"
+                                        ],
+                            "risks":  [
+
+                                      ],
+                            "opportunities":  [
+                                                  "usar runtime canonico para convertir mejoras en acciones gobernadas"
+                                              ],
+                            "recommended_next_improvement":  "usar runtime canonico para convertir mejoras en acciones gobernadas",
+                            "evidence_basis":  "minimum readonly inventory v0"
+                        },
+                        {
+                            "dimension_id":  "software",
+                            "label":  "Software",
+                            "question":  "El codigo, scripts y herramientas son estables y mantenibles?",
+                            "score":  62,
+                            "level":  "STABLE_ENOUGH",
+                            "signals":  [
+                                            "powershell_files=502",
+                                            "latest_scripts_sample=120"
+                                        ],
+                            "risks":  [
+                                          "volumen alto de scripts PowerShell; riesgo de duplicacion y deuda tecnica"
+                                      ],
+                            "opportunities":  [
+
+                                              ],
+                            "recommended_next_improvement":  "ampliar evidencias de la dimension",
+                            "evidence_basis":  "minimum readonly inventory v0"
+                        },
+                        {
+                            "dimension_id":  "hardware",
+                            "label":  "Hardware",
+                            "question":  "Los nodos y recursos fisicos soportan los objetivos actuales?",
+                            "score":  55,
+                            "level":  "WEAK",
+                            "signals":  [
+                                            "hardware evidence not deeply scanned in v0"
+                                        ],
+                            "risks":  [
+                                          "diagnostico hardware aun superficial; falta leer perfiles y limites por nodo"
+                                      ],
+                            "opportunities":  [
+                                                  "crear inventario hardware por nodo main/legacy/raspberry/mobile"
+                                              ],
+                            "recommended_next_improvement":  "crear inventario hardware por nodo main/legacy/raspberry/mobile",
+                            "evidence_basis":  "minimum readonly inventory v0"
+                        },
+                        {
+                            "dimension_id":  "humans",
+                            "label":  "Humanos",
+                            "question":  "La carga humana, decisiones y friccion estan controladas?",
+                            "score":  68,
+                            "level":  "STABLE_ENOUGH",
+                            "signals":  [
+                                            "gates humanos y autorizaciones presentes en runtime"
+                                        ],
+                            "risks":  [
+                                          "aun no existe metrica automatica de carga humana"
+                                      ],
+                            "opportunities":  [
+                                                  "medir friccion humana por numero de pasos, Enter/clicks y gates"
+                                              ],
+                            "recommended_next_improvement":  "medir friccion humana por numero de pasos, Enter/clicks y gates",
+                            "evidence_basis":  "minimum readonly inventory v0"
+                        },
+                        {
+                            "dimension_id":  "financing",
+                            "label":  "Financiacion",
+                            "question":  "Hay claridad sobre costes, ingresos, inversion y sostenibilidad?",
+                            "score":  42,
+                            "level":  "WEAK",
+                            "signals":  [
+                                            "financing files not deeply scanned in v0"
+                                        ],
+                            "risks":  [
+                                          "dimension financiera sin evidencias estructuradas todavia"
+                                      ],
+                            "opportunities":  [
+                                                  "crear presupuesto operativo, costes por hardware/software/humano y necesidades de financiacion"
+                                              ],
+                            "recommended_next_improvement":  "crear presupuesto operativo, costes por hardware/software/humano y necesidades de financiacion",
+                            "evidence_basis":  "minimum readonly inventory v0"
+                        },
+                        {
+                            "dimension_id":  "documentation",
+                            "label":  "Documentacion",
+                            "question":  "El sistema puede explicarse y usarse mediante manuales vivos?",
+                            "score":  78,
+                            "level":  "STABLE_ENOUGH",
+                            "signals":  [
+                                            "markdown_files=2823",
+                                            "latest_documents_sample=80"
+                                        ],
+                            "risks":  [
+                                          "mucho markdown sin manual vivo consolidado puede dispersar conocimiento"
+                                      ],
+                            "opportunities":  [
+                                                  "generar manual vivo desde evidencias cerradas"
+                                              ],
+                            "recommended_next_improvement":  "generar manual vivo desde evidencias cerradas",
+                            "evidence_basis":  "minimum readonly inventory v0"
+                        },
+                        {
+                            "dimension_id":  "security",
+                            "label":  "Seguridad y limites",
+                            "question":  "Las acciones sensibles estan bloqueadas por defecto y auditadas?",
+                            "score":  88,
+                            "level":  "STRONG",
+                            "signals":  [
+                                            "observer_policy=SYSTEM_OBSERVER_READONLY_SAFETY_POLICY_V1",
+                                            "NO_GO/auth env pattern consolidated",
+                                            "worker/browser/network/git blocked by default"
+                                        ],
+                            "risks":  [
+
+                                      ],
+                            "opportunities":  [
+                                                  "convertir politicas en validador automatico por objetivo"
+                                              ],
+                            "recommended_next_improvement":  "convertir politicas en validador automatico por objetivo",
+                            "evidence_basis":  "minimum readonly inventory v0"
+                        },
+                        {
+                            "dimension_id":  "ux",
+                            "label":  "UX operador",
+                            "question":  "El humano puede operar el sistema sin perderse?",
+                            "score":  78,
+                            "level":  "STABLE_ENOUGH",
+                            "signals":  [
+                                            "launcher runtime UI adapter readonly validated",
+                                            "Enter/refrescar/f5 and ? rules established"
+                                        ],
+                            "risks":  [
+                                          "hook actual es marcador, no navegacion profunda final"
+                                      ],
+                            "opportunities":  [
+                                                  "insertar ruta interactiva real runtime/acciones en menu principal"
+                                              ],
+                            "recommended_next_improvement":  "insertar ruta interactiva real runtime/acciones en menu principal",
+                            "evidence_basis":  "minimum readonly inventory v0"
+                        },
+                        {
+                            "dimension_id":  "workers",
+                            "label":  "Workers e IA",
+                            "question":  "Los workers estan preparados, limitados y trazables?",
+                            "score":  58,
+                            "level":  "WEAK",
+                            "signals":  [
+                                            "workers blocked by default in observer v0"
+                                        ],
+                            "risks":  [
+                                          "workers/Ollama/Cline no integrados al observer todavia"
+                                      ],
+                            "opportunities":  [
+                                                  "usar IA local solo como worker interpretativo despues de diagnostico determinista"
+                                              ],
+                            "recommended_next_improvement":  "usar IA local solo como worker interpretativo despues de diagnostico determinista",
+                            "evidence_basis":  "minimum readonly inventory v0"
+                        },
+                        {
+                            "dimension_id":  "growth",
+                            "label":  "Crecimiento y deuda",
+                            "question":  "El sistema crece sin desordenarse ni exceder sus limites?",
+                            "score":  56,
+                            "level":  "WEAK",
+                            "signals":  [
+                                            "json_files=4294",
+                                            "reports_json=1656"
+                                        ],
+                            "risks":  [
+                                          "crecimiento documental alto; riesgo de ruido, duplicados y dificultad de busqueda"
+                                      ],
+                            "opportunities":  [
+                                                  "crear limpieza, indices latest y compactacion de evidencias"
+                                              ],
+                            "recommended_next_improvement":  "crear limpieza, indices latest y compactacion de evidencias",
+                            "evidence_basis":  "minimum readonly inventory v0"
+                        },
+                        {
+                            "dimension_id":  "governance",
+                            "label":  "Gobernanza",
+                            "question":  "Las decisiones, prioridades y gates estan claros?",
+                            "score":  76,
+                            "level":  "STABLE_ENOUGH",
+                            "signals":  [
+                                            "closed_signals=40",
+                                            "gates, close reports and next objectives pattern visible"
+                                        ],
+                            "risks":  [
+
+                                      ],
+                            "opportunities":  [
+                                                  "crear tablero de decisiones y prioridades desde reports"
+                                              ],
+                            "recommended_next_improvement":  "crear tablero de decisiones y prioridades desde reports",
+                            "evidence_basis":  "minimum readonly inventory v0"
+                        },
+                        {
+                            "dimension_id":  "operations",
+                            "label":  "Operacion diaria",
+                            "question":  "El sistema puede usarse cada dia con estabilidad?",
+                            "score":  74,
+                            "level":  "STABLE_ENOUGH",
+                            "signals":  [
+                                            "launcher, runtime, adapter y observer existen",
+                                            "inventario minimo PASS"
+                                        ],
+                            "risks":  [
+
+                                      ],
+                            "opportunities":  [
+                                                  "crear comando diario observer: estado, diagnostico, manual, tareas"
+                                              ],
+                            "recommended_next_improvement":  "crear comando diario observer: estado, diagnostico, manual, tareas",
+                            "evidence_basis":  "minimum readonly inventory v0"
+                        }
+                    ],
+    "top_risks":  [
+                      "volumen alto de scripts PowerShell; riesgo de duplicacion y deuda tecnica",
+                      "diagnostico hardware aun superficial; falta leer perfiles y limites por nodo",
+                      "aun no existe metrica automatica de carga humana",
+                      "dimension financiera sin evidencias estructuradas todavia",
+                      "mucho markdown sin manual vivo consolidado puede dispersar conocimiento",
+                      "hook actual es marcador, no navegacion profunda final",
+                      "workers/Ollama/Cline no integrados al observer todavia",
+                      "crecimiento documental alto; riesgo de ruido, duplicados y dificultad de busqueda"
+                  ],
+    "top_opportunities":  [
+                              "usar runtime canonico para convertir mejoras en acciones gobernadas",
+                              "crear inventario hardware por nodo main/legacy/raspberry/mobile",
+                              "medir friccion humana por numero de pasos, Enter/clicks y gates",
+                              "crear presupuesto operativo, costes por hardware/software/humano y necesidades de financiacion",
+                              "generar manual vivo desde evidencias cerradas",
+                              "convertir politicas en validador automatico por objetivo",
+                              "insertar ruta interactiva real runtime/acciones en menu principal",
+                              "usar IA local solo como worker interpretativo despues de diagnostico determinista",
+                              "crear limpieza, indices latest y compactacion de evidencias",
+                              "crear tablero de decisiones y prioridades desde reports",
+                              "crear comando diario observer: estado, diagnostico, manual, tareas"
+                          ],
+    "safety":  {
+                   "real_execution":  false,
+                   "system_mutation":  false,
+                   "worker":  false,
+                   "browser":  false,
+                   "network":  false,
+                   "git":  false,
+                   "readonly":  true
+               },
+    "next":  "E04_SYSTEM_OBSERVER_LIVING_MANUAL_V0"
+}

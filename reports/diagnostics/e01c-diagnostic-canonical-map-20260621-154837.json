@@ -1,0 +1,742 @@
+﻿{
+    "package":  "ENGREMIAT_DIAGNOSTIC_RECOVERY_001",
+    "stage":  "E01C_SELECT_RECOVERABLE_AUTODIAGNOSTIC_FAMILY_AND_CREATE_CANONICAL_MAP",
+    "status":  "PASS",
+    "created_at":  "2026-06-21T15:48:37",
+    "root":  "C:\\ENGREMIAT_CORE",
+    "source_registry":  "C:\\ENGREMIAT_CORE\\documents\\diagnostics\\DIAGNOSTIC_TOOL_REGISTRY_CANDIDATES.json",
+    "total_candidates":  80,
+    "families":  [
+                     {
+                         "family":  "observer_diagnostic",
+                         "why":  "Base para recuperar autodiagnostico, readiness, artifact registry y salud del sistema.",
+                         "count":  7,
+                         "items":  [
+                                       {
+                                           "score":  138,
+                                           "tags":  [
+                                                        "diagnostic",
+                                                        "kanban",
+                                                        "memory",
+                                                        "navigation",
+                                                        "safe",
+                                                        "worker"
+                                                    ],
+                                           "relative":  "backups\\screen-normalizer-general-launcher-menu-router-integration-gate\\ENGREMIAT-INICIO-NORMALIZED.before-e10j-workers-paused-safe-operator-access-20260620-191422.ps1",
+                                           "path":  "C:\\ENGREMIAT_CORE\\backups\\screen-normalizer-general-launcher-menu-router-integration-gate\\ENGREMIAT-INICIO-NORMALIZED.before-e10j-workers-paused-safe-operator-access-20260620-191422.ps1",
+                                           "parse_ok":  true,
+                                           "name":  "ENGREMIAT-INICIO-NORMALIZED.before-e10j-workers-paused-safe-operator-access-20260620-191422.ps1",
+                                           "size":  4740,
+                                           "last_write":  "2026-06-20T19:10:19"
+                                       },
+                                       {
+                                           "score":  50,
+                                           "tags":  [
+                                                        "devsystem",
+                                                        "diagnostic",
+                                                        "kanban",
+                                                        "worker"
+                                                    ],
+                                           "relative":  "backups\\template-improvement\\official-master-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\SIM_WORKER_VALIDATOR.md",
+                                           "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\SIM_WORKER_VALIDATOR.md",
+                                           "parse_ok":  null,
+                                           "name":  "SIM_WORKER_VALIDATOR.md",
+                                           "size":  453,
+                                           "last_write":  "2026-06-19T14:33:42"
+                                       },
+                                       {
+                                           "score":  50,
+                                           "tags":  [
+                                                        "devsystem",
+                                                        "diagnostic",
+                                                        "kanban",
+                                                        "worker"
+                                                    ],
+                                           "relative":  "backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\SIM_WORKER_VALIDATOR.md",
+                                           "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\SIM_WORKER_VALIDATOR.md",
+                                           "parse_ok":  null,
+                                           "name":  "SIM_WORKER_VALIDATOR.md",
+                                           "size":  453,
+                                           "last_write":  "2026-06-19T14:33:42"
+                                       },
+                                       {
+                                           "score":  40,
+                                           "tags":  [
+                                                        "diagnostic",
+                                                        "kanban",
+                                                        "navigation"
+                                                    ],
+                                           "relative":  "backups\\screen-normalization\\health-launchers.ps1.before-e14r2-m-card-assistant-20260621-064606.ps1",
+                                           "path":  "C:\\ENGREMIAT_CORE\\backups\\screen-normalization\\health-launchers.ps1.before-e14r2-m-card-assistant-20260621-064606.ps1",
+                                           "parse_ok":  true,
+                                           "name":  "health-launchers.ps1.before-e14r2-m-card-assistant-20260621-064606.ps1",
+                                           "size":  2690,
+                                           "last_write":  "2026-06-21T06:32:37"
+                                       },
+                                       {
+                                           "score":  40,
+                                           "tags":  [
+                                                        "devsystem",
+                                                        "diagnostic",
+                                                        "kanban"
+                                                    ],
+                                           "relative":  "data\\006E_VALIDACION_OPERATIVA_VISUAL\\reports\\visual-readiness-report.json",
+                                           "path":  "C:\\ENGREMIAT_CORE\\data\\006E_VALIDACION_OPERATIVA_VISUAL\\reports\\visual-readiness-report.json",
+                                           "parse_ok":  null,
+                                           "name":  "visual-readiness-report.json",
+                                           "size":  690,
+                                           "last_write":  "2026-06-17T20:48:14"
+                                       },
+                                       {
+                                           "score":  20,
+                                           "tags":  [
+                                                        "devsystem",
+                                                        "diagnostic"
+                                                    ],
+                                           "relative":  "data\\controlled-action-instance-018\\artifacts-manifest-after-dry-run.json",
+                                           "path":  "C:\\ENGREMIAT_CORE\\data\\controlled-action-instance-018\\artifacts-manifest-after-dry-run.json",
+                                           "parse_ok":  null,
+                                           "name":  "artifacts-manifest-after-dry-run.json",
+                                           "size":  1279,
+                                           "last_write":  "2026-06-17T10:01:06"
+                                       },
+                                       {
+                                           "score":  20,
+                                           "tags":  [
+                                                        "devsystem",
+                                                        "diagnostic"
+                                                    ],
+                                           "relative":  "data\\controlled-action-instance-018\\initial-artifacts-manifest.json",
+                                           "path":  "C:\\ENGREMIAT_CORE\\data\\controlled-action-instance-018\\initial-artifacts-manifest.json",
+                                           "parse_ok":  null,
+                                           "name":  "initial-artifacts-manifest.json",
+                                           "size":  1543,
+                                           "last_write":  "2026-06-17T09:58:36"
+                                       }
+                                   ]
+                     },
+                     {
+                         "family":  "memory_development",
+                         "why":  "Base para memoria de desarrollo: eventos, contexto, artefactos, gates y timeline.",
+                         "count":  12,
+                         "items":  [
+                                       {
+                                           "score":  138,
+                                           "tags":  [
+                                                        "diagnostic",
+                                                        "kanban",
+                                                        "memory",
+                                                        "navigation",
+                                                        "safe",
+                                                        "worker"
+                                                    ],
+                                           "relative":  "backups\\screen-normalizer-general-launcher-menu-router-integration-gate\\ENGREMIAT-INICIO-NORMALIZED.before-e10j-workers-paused-safe-operator-access-20260620-191422.ps1",
+                                           "path":  "C:\\ENGREMIAT_CORE\\backups\\screen-normalizer-general-launcher-menu-router-integration-gate\\ENGREMIAT-INICIO-NORMALIZED.before-e10j-workers-paused-safe-operator-access-20260620-191422.ps1",
+                                           "parse_ok":  true,
+                                           "name":  "ENGREMIAT-INICIO-NORMALIZED.before-e10j-workers-paused-safe-operator-access-20260620-191422.ps1",
+                                           "size":  4740,
+                                           "last_write":  "2026-06-20T19:10:19"
+                                       },
+                                       {
+                                           "score":  128,
+                                           "tags":  [
+                                                        "kanban",
+                                                        "navigation",
+                                                        "safe",
+                                                        "worker"
+                                                    ],
+                                           "relative":  "data\\cline-real-proposal-no-apply\\selected-kanban-context.json",
+                                           "path":  "C:\\ENGREMIAT_CORE\\data\\cline-real-proposal-no-apply\\selected-kanban-context.json",
+                                           "parse_ok":  null,
+                                           "name":  "selected-kanban-context.json",
+                                           "size":  8107,
+                                           "last_write":  "2026-06-16T15:32:45"
+                                       },
+                                       {
+                                           "score":  70,
+                                           "tags":  [
+                                                        "kanban",
+                                                        "navigation",
+                                                        "risk_review",
+                                                        "safe",
+                                                        "worker"
+                                                    ],
+                                           "relative":  "data\\cline-real-proposal-no-apply\\cline-task-creation-gate.json",
+                                           "path":  "C:\\ENGREMIAT_CORE\\data\\cline-real-proposal-no-apply\\cline-task-creation-gate.json",
+                                           "parse_ok":  null,
+                                           "name":  "cline-task-creation-gate.json",
+                                           "size":  2838,
+                                           "last_write":  "2026-06-16T15:32:45"
+                                       },
+                                       {
+                                           "score":  40,
+                                           "tags":  [
+                                                        "devsystem",
+                                                        "diagnostic",
+                                                        "kanban"
+                                                    ],
+                                           "relative":  "data\\006E_VALIDACION_OPERATIVA_VISUAL\\reports\\visual-readiness-report.json",
+                                           "path":  "C:\\ENGREMIAT_CORE\\data\\006E_VALIDACION_OPERATIVA_VISUAL\\reports\\visual-readiness-report.json",
+                                           "parse_ok":  null,
+                                           "name":  "visual-readiness-report.json",
+                                           "size":  690,
+                                           "last_write":  "2026-06-17T20:48:14"
+                                       },
+                                       {
+                                           "score":  20,
+                                           "tags":  [
+                                                        "worker"
+                                                    ],
+                                           "relative":  "backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\05_HUMAN_GATES\\SIM_PROJECT_20260619-144124_GATE_APPROVE_ROADMAP.md",
+                                           "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\05_HUMAN_GATES\\SIM_PROJECT_20260619-144124_GATE_APPROVE_ROADMAP.md",
+                                           "parse_ok":  null,
+                                           "name":  "SIM_PROJECT_20260619-144124_GATE_APPROVE_ROADMAP.md",
+                                           "size":  546,
+                                           "last_write":  "2026-06-19T14:42:47"
+                                       },
+                                       {
+                                           "score":  20,
+                                           "tags":  [
+                                                        "worker"
+                                                    ],
+                                           "relative":  "backups\\template-improvement\\official-master-before-e05-20260619-231559\\05_HUMAN_GATES\\SIM_PROJECT_20260619-144124_GATE_APPROVE_ROADMAP.md",
+                                           "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e05-20260619-231559\\05_HUMAN_GATES\\SIM_PROJECT_20260619-144124_GATE_APPROVE_ROADMAP.md",
+                                           "parse_ok":  null,
+                                           "name":  "SIM_PROJECT_20260619-144124_GATE_APPROVE_ROADMAP.md",
+                                           "size":  546,
+                                           "last_write":  "2026-06-19T14:42:47"
+                                       },
+                                       {
+                                           "score":  20,
+                                           "tags":  [
+                                                        "worker"
+                                                    ],
+                                           "relative":  "data\\approval-console-059\\proposal-approval-gate.json",
+                                           "path":  "C:\\ENGREMIAT_CORE\\data\\approval-console-059\\proposal-approval-gate.json",
+                                           "parse_ok":  null,
+                                           "name":  "proposal-approval-gate.json",
+                                           "size":  1008,
+                                           "last_write":  "2026-06-17T12:21:45"
+                                       },
+                                       {
+                                           "score":  20,
+                                           "tags":  [
+                                                        "devsystem",
+                                                        "diagnostic"
+                                                    ],
+                                           "relative":  "data\\controlled-action-instance-018\\artifacts-manifest-after-dry-run.json",
+                                           "path":  "C:\\ENGREMIAT_CORE\\data\\controlled-action-instance-018\\artifacts-manifest-after-dry-run.json",
+                                           "parse_ok":  null,
+                                           "name":  "artifacts-manifest-after-dry-run.json",
+                                           "size":  1279,
+                                           "last_write":  "2026-06-17T10:01:06"
+                                       },
+                                       {
+                                           "score":  20,
+                                           "tags":  [
+                                                        "devsystem",
+                                                        "diagnostic"
+                                                    ],
+                                           "relative":  "data\\controlled-action-instance-018\\initial-artifacts-manifest.json",
+                                           "path":  "C:\\ENGREMIAT_CORE\\data\\controlled-action-instance-018\\initial-artifacts-manifest.json",
+                                           "parse_ok":  null,
+                                           "name":  "initial-artifacts-manifest.json",
+                                           "size":  1543,
+                                           "last_write":  "2026-06-17T09:58:36"
+                                       },
+                                       {
+                                           "score":  20,
+                                           "tags":  [
+                                                        "kanban",
+                                                        "worker"
+                                                    ],
+                                           "relative":  "data\\controlled-action-from-proposal-015\\controlled-action-gate-schema.json",
+                                           "path":  "C:\\ENGREMIAT_CORE\\data\\controlled-action-from-proposal-015\\controlled-action-gate-schema.json",
+                                           "parse_ok":  null,
+                                           "name":  "controlled-action-gate-schema.json",
+                                           "size":  771,
+                                           "last_write":  "2026-06-17T08:09:16"
+                                       },
+                                       {
+                                           "score":  12,
+                                           "tags":  [
+                                                        "risk_review",
+                                                        "worker"
+                                                    ],
+                                           "relative":  "data\\arbitration-069\\arbitration-gate.json",
+                                           "path":  "C:\\ENGREMIAT_CORE\\data\\arbitration-069\\arbitration-gate.json",
+                                           "parse_ok":  null,
+                                           "name":  "arbitration-gate.json",
+                                           "size":  1009,
+                                           "last_write":  "2026-06-17T12:38:15"
+                                       },
+                                       {
+                                           "score":  10,
+                                           "tags":  [
+                                                        "worker"
+                                                    ],
+                                           "relative":  "backups\\template-improvement\\official-master-before-e05-20260619-231559\\05_HUMAN_GATES\\GATE_002_ACCEPT_SIMULATED_RESULT.md",
+                                           "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e05-20260619-231559\\05_HUMAN_GATES\\GATE_002_ACCEPT_SIMULATED_RESULT.md",
+                                           "parse_ok":  null,
+                                           "name":  "GATE_002_ACCEPT_SIMULATED_RESULT.md",
+                                           "size":  634,
+                                           "last_write":  "2026-06-19T14:36:54"
+                                       }
+                                   ]
+                     },
+                     {
+                         "family":  "navigation_freezer",
+                         "why":  "Base para comparar sistema vivo contra contratos, freezer y snapshots.",
+                         "count":  5,
+                         "items":  [
+                                       {
+                                           "score":  138,
+                                           "tags":  [
+                                                        "diagnostic",
+                                                        "kanban",
+                                                        "memory",
+                                                        "navigation",
+                                                        "safe",
+                                                        "worker"
+                                                    ],
+                                           "relative":  "backups\\screen-normalizer-general-launcher-menu-router-integration-gate\\ENGREMIAT-INICIO-NORMALIZED.before-e10j-workers-paused-safe-operator-access-20260620-191422.ps1",
+                                           "path":  "C:\\ENGREMIAT_CORE\\backups\\screen-normalizer-general-launcher-menu-router-integration-gate\\ENGREMIAT-INICIO-NORMALIZED.before-e10j-workers-paused-safe-operator-access-20260620-191422.ps1",
+                                           "parse_ok":  true,
+                                           "name":  "ENGREMIAT-INICIO-NORMALIZED.before-e10j-workers-paused-safe-operator-access-20260620-191422.ps1",
+                                           "size":  4740,
+                                           "last_write":  "2026-06-20T19:10:19"
+                                       },
+                                       {
+                                           "score":  128,
+                                           "tags":  [
+                                                        "kanban",
+                                                        "navigation",
+                                                        "safe",
+                                                        "worker"
+                                                    ],
+                                           "relative":  "data\\cline-real-proposal-no-apply\\selected-kanban-context.json",
+                                           "path":  "C:\\ENGREMIAT_CORE\\data\\cline-real-proposal-no-apply\\selected-kanban-context.json",
+                                           "parse_ok":  null,
+                                           "name":  "selected-kanban-context.json",
+                                           "size":  8107,
+                                           "last_write":  "2026-06-16T15:32:45"
+                                       },
+                                       {
+                                           "score":  80,
+                                           "tags":  [
+                                                        "kanban",
+                                                        "navigation",
+                                                        "risk_review",
+                                                        "safe",
+                                                        "worker"
+                                                    ],
+                                           "relative":  "data\\cline-real-proposal-no-apply\\cline-proposal-prompt-preview.md",
+                                           "path":  "C:\\ENGREMIAT_CORE\\data\\cline-real-proposal-no-apply\\cline-proposal-prompt-preview.md",
+                                           "parse_ok":  null,
+                                           "name":  "cline-proposal-prompt-preview.md",
+                                           "size":  1576,
+                                           "last_write":  "2026-06-16T15:32:45"
+                                       },
+                                       {
+                                           "score":  70,
+                                           "tags":  [
+                                                        "kanban",
+                                                        "navigation",
+                                                        "risk_review",
+                                                        "safe",
+                                                        "worker"
+                                                    ],
+                                           "relative":  "data\\cline-real-proposal-no-apply\\cline-task-creation-gate.json",
+                                           "path":  "C:\\ENGREMIAT_CORE\\data\\cline-real-proposal-no-apply\\cline-task-creation-gate.json",
+                                           "parse_ok":  null,
+                                           "name":  "cline-task-creation-gate.json",
+                                           "size":  2838,
+                                           "last_write":  "2026-06-16T15:32:45"
+                                       },
+                                       {
+                                           "score":  40,
+                                           "tags":  [
+                                                        "diagnostic",
+                                                        "kanban",
+                                                        "navigation"
+                                                    ],
+                                           "relative":  "backups\\screen-normalization\\health-launchers.ps1.before-e14r2-m-card-assistant-20260621-064606.ps1",
+                                           "path":  "C:\\ENGREMIAT_CORE\\backups\\screen-normalization\\health-launchers.ps1.before-e14r2-m-card-assistant-20260621-064606.ps1",
+                                           "parse_ok":  true,
+                                           "name":  "health-launchers.ps1.before-e14r2-m-card-assistant-20260621-064606.ps1",
+                                           "size":  2690,
+                                           "last_write":  "2026-06-21T06:32:37"
+                                       }
+                                   ]
+                     },
+                     {
+                         "family":  "worker_governance",
+                         "why":  "Base para recuperar flujo worker gobernado: Cline/Ollama, proposal-only, gates, receipts y Kanban humano.",
+                         "count":  12,
+                         "items":  [
+                                       {
+                                           "score":  138,
+                                           "tags":  [
+                                                        "diagnostic",
+                                                        "kanban",
+                                                        "memory",
+                                                        "navigation",
+                                                        "safe",
+                                                        "worker"
+                                                    ],
+                                           "relative":  "backups\\screen-normalizer-general-launcher-menu-router-integration-gate\\ENGREMIAT-INICIO-NORMALIZED.before-e10j-workers-paused-safe-operator-access-20260620-191422.ps1",
+                                           "path":  "C:\\ENGREMIAT_CORE\\backups\\screen-normalizer-general-launcher-menu-router-integration-gate\\ENGREMIAT-INICIO-NORMALIZED.before-e10j-workers-paused-safe-operator-access-20260620-191422.ps1",
+                                           "parse_ok":  true,
+                                           "name":  "ENGREMIAT-INICIO-NORMALIZED.before-e10j-workers-paused-safe-operator-access-20260620-191422.ps1",
+                                           "size":  4740,
+                                           "last_write":  "2026-06-20T19:10:19"
+                                       },
+                                       {
+                                           "score":  128,
+                                           "tags":  [
+                                                        "kanban",
+                                                        "navigation",
+                                                        "safe",
+                                                        "worker"
+                                                    ],
+                                           "relative":  "data\\cline-real-proposal-no-apply\\selected-kanban-context.json",
+                                           "path":  "C:\\ENGREMIAT_CORE\\data\\cline-real-proposal-no-apply\\selected-kanban-context.json",
+                                           "parse_ok":  null,
+                                           "name":  "selected-kanban-context.json",
+                                           "size":  8107,
+                                           "last_write":  "2026-06-16T15:32:45"
+                                       },
+                                       {
+                                           "score":  80,
+                                           "tags":  [
+                                                        "kanban",
+                                                        "navigation",
+                                                        "risk_review",
+                                                        "safe",
+                                                        "worker"
+                                                    ],
+                                           "relative":  "data\\cline-real-proposal-no-apply\\cline-proposal-prompt-preview.md",
+                                           "path":  "C:\\ENGREMIAT_CORE\\data\\cline-real-proposal-no-apply\\cline-proposal-prompt-preview.md",
+                                           "parse_ok":  null,
+                                           "name":  "cline-proposal-prompt-preview.md",
+                                           "size":  1576,
+                                           "last_write":  "2026-06-16T15:32:45"
+                                       },
+                                       {
+                                           "score":  70,
+                                           "tags":  [
+                                                        "kanban",
+                                                        "navigation",
+                                                        "risk_review",
+                                                        "safe",
+                                                        "worker"
+                                                    ],
+                                           "relative":  "data\\cline-real-proposal-no-apply\\cline-task-creation-gate.json",
+                                           "path":  "C:\\ENGREMIAT_CORE\\data\\cline-real-proposal-no-apply\\cline-task-creation-gate.json",
+                                           "parse_ok":  null,
+                                           "name":  "cline-task-creation-gate.json",
+                                           "size":  2838,
+                                           "last_write":  "2026-06-16T15:32:45"
+                                       },
+                                       {
+                                           "score":  50,
+                                           "tags":  [
+                                                        "devsystem",
+                                                        "diagnostic",
+                                                        "kanban",
+                                                        "worker"
+                                                    ],
+                                           "relative":  "backups\\template-improvement\\official-master-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\SIM_WORKER_VALIDATOR.md",
+                                           "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\SIM_WORKER_VALIDATOR.md",
+                                           "parse_ok":  null,
+                                           "name":  "SIM_WORKER_VALIDATOR.md",
+                                           "size":  453,
+                                           "last_write":  "2026-06-19T14:33:42"
+                                       },
+                                       {
+                                           "score":  50,
+                                           "tags":  [
+                                                        "devsystem",
+                                                        "diagnostic",
+                                                        "kanban",
+                                                        "worker"
+                                                    ],
+                                           "relative":  "backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\SIM_WORKER_VALIDATOR.md",
+                                           "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\SIM_WORKER_VALIDATOR.md",
+                                           "parse_ok":  null,
+                                           "name":  "SIM_WORKER_VALIDATOR.md",
+                                           "size":  453,
+                                           "last_write":  "2026-06-19T14:33:42"
+                                       },
+                                       {
+                                           "score":  40,
+                                           "tags":  [
+                                                        "diagnostic",
+                                                        "kanban",
+                                                        "navigation"
+                                                    ],
+                                           "relative":  "backups\\screen-normalization\\health-launchers.ps1.before-e14r2-m-card-assistant-20260621-064606.ps1",
+                                           "path":  "C:\\ENGREMIAT_CORE\\backups\\screen-normalization\\health-launchers.ps1.before-e14r2-m-card-assistant-20260621-064606.ps1",
+                                           "parse_ok":  true,
+                                           "name":  "health-launchers.ps1.before-e14r2-m-card-assistant-20260621-064606.ps1",
+                                           "size":  2690,
+                                           "last_write":  "2026-06-21T06:32:37"
+                                       },
+                                       {
+                                           "score":  40,
+                                           "tags":  [
+                                                        "devsystem",
+                                                        "diagnostic",
+                                                        "kanban"
+                                                    ],
+                                           "relative":  "data\\006E_VALIDACION_OPERATIVA_VISUAL\\reports\\visual-readiness-report.json",
+                                           "path":  "C:\\ENGREMIAT_CORE\\data\\006E_VALIDACION_OPERATIVA_VISUAL\\reports\\visual-readiness-report.json",
+                                           "parse_ok":  null,
+                                           "name":  "visual-readiness-report.json",
+                                           "size":  690,
+                                           "last_write":  "2026-06-17T20:48:14"
+                                       },
+                                       {
+                                           "score":  30,
+                                           "tags":  [
+                                                        "kanban",
+                                                        "worker"
+                                                    ],
+                                           "relative":  "backups\\template-improvement\\official-master-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\SIM_WORKER_OBSIDIAN_BUILDER.md",
+                                           "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\SIM_WORKER_OBSIDIAN_BUILDER.md",
+                                           "parse_ok":  null,
+                                           "name":  "SIM_WORKER_OBSIDIAN_BUILDER.md",
+                                           "size":  502,
+                                           "last_write":  "2026-06-19T14:33:42"
+                                       },
+                                       {
+                                           "score":  30,
+                                           "tags":  [
+                                                        "kanban",
+                                                        "worker"
+                                                    ],
+                                           "relative":  "backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\SIM_WORKER_OBSIDIAN_BUILDER.md",
+                                           "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\SIM_WORKER_OBSIDIAN_BUILDER.md",
+                                           "parse_ok":  null,
+                                           "name":  "SIM_WORKER_OBSIDIAN_BUILDER.md",
+                                           "size":  502,
+                                           "last_write":  "2026-06-19T14:33:42"
+                                       },
+                                       {
+                                           "score":  30,
+                                           "tags":  [
+                                                        "kanban",
+                                                        "worker"
+                                                    ],
+                                           "relative":  "backups\\template-improvement\\official-master-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\SIM_WORKER_PLANNER.md",
+                                           "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\SIM_WORKER_PLANNER.md",
+                                           "parse_ok":  null,
+                                           "name":  "SIM_WORKER_PLANNER.md",
+                                           "size":  440,
+                                           "last_write":  "2026-06-19T14:33:42"
+                                       },
+                                       {
+                                           "score":  30,
+                                           "tags":  [
+                                                        "kanban",
+                                                        "worker"
+                                                    ],
+                                           "relative":  "backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\SIM_WORKER_PLANNER.md",
+                                           "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\04_SIMULATED_WORKERS\\SIM_WORKER_PLANNER.md",
+                                           "parse_ok":  null,
+                                           "name":  "SIM_WORKER_PLANNER.md",
+                                           "size":  440,
+                                           "last_write":  "2026-06-19T14:33:42"
+                                       }
+                                   ]
+                     },
+                     {
+                         "family":  "safe_recovery",
+                         "why":  "Base para fail-closed, gate humano, rollback, receipt y recuperacion.",
+                         "count":  12,
+                         "items":  [
+                                       {
+                                           "score":  138,
+                                           "tags":  [
+                                                        "diagnostic",
+                                                        "kanban",
+                                                        "memory",
+                                                        "navigation",
+                                                        "safe",
+                                                        "worker"
+                                                    ],
+                                           "relative":  "backups\\screen-normalizer-general-launcher-menu-router-integration-gate\\ENGREMIAT-INICIO-NORMALIZED.before-e10j-workers-paused-safe-operator-access-20260620-191422.ps1",
+                                           "path":  "C:\\ENGREMIAT_CORE\\backups\\screen-normalizer-general-launcher-menu-router-integration-gate\\ENGREMIAT-INICIO-NORMALIZED.before-e10j-workers-paused-safe-operator-access-20260620-191422.ps1",
+                                           "parse_ok":  true,
+                                           "name":  "ENGREMIAT-INICIO-NORMALIZED.before-e10j-workers-paused-safe-operator-access-20260620-191422.ps1",
+                                           "size":  4740,
+                                           "last_write":  "2026-06-20T19:10:19"
+                                       },
+                                       {
+                                           "score":  128,
+                                           "tags":  [
+                                                        "kanban",
+                                                        "navigation",
+                                                        "safe",
+                                                        "worker"
+                                                    ],
+                                           "relative":  "data\\cline-real-proposal-no-apply\\selected-kanban-context.json",
+                                           "path":  "C:\\ENGREMIAT_CORE\\data\\cline-real-proposal-no-apply\\selected-kanban-context.json",
+                                           "parse_ok":  null,
+                                           "name":  "selected-kanban-context.json",
+                                           "size":  8107,
+                                           "last_write":  "2026-06-16T15:32:45"
+                                       },
+                                       {
+                                           "score":  80,
+                                           "tags":  [
+                                                        "kanban",
+                                                        "navigation",
+                                                        "risk_review",
+                                                        "safe",
+                                                        "worker"
+                                                    ],
+                                           "relative":  "data\\cline-real-proposal-no-apply\\cline-proposal-prompt-preview.md",
+                                           "path":  "C:\\ENGREMIAT_CORE\\data\\cline-real-proposal-no-apply\\cline-proposal-prompt-preview.md",
+                                           "parse_ok":  null,
+                                           "name":  "cline-proposal-prompt-preview.md",
+                                           "size":  1576,
+                                           "last_write":  "2026-06-16T15:32:45"
+                                       },
+                                       {
+                                           "score":  70,
+                                           "tags":  [
+                                                        "kanban",
+                                                        "navigation",
+                                                        "risk_review",
+                                                        "safe",
+                                                        "worker"
+                                                    ],
+                                           "relative":  "data\\cline-real-proposal-no-apply\\cline-task-creation-gate.json",
+                                           "path":  "C:\\ENGREMIAT_CORE\\data\\cline-real-proposal-no-apply\\cline-task-creation-gate.json",
+                                           "parse_ok":  null,
+                                           "name":  "cline-task-creation-gate.json",
+                                           "size":  2838,
+                                           "last_write":  "2026-06-16T15:32:45"
+                                       },
+                                       {
+                                           "score":  20,
+                                           "tags":  [
+                                                        "worker"
+                                                    ],
+                                           "relative":  "backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\05_HUMAN_GATES\\SIM_PROJECT_20260619-144124_GATE_APPROVE_ROADMAP.md",
+                                           "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\05_HUMAN_GATES\\SIM_PROJECT_20260619-144124_GATE_APPROVE_ROADMAP.md",
+                                           "parse_ok":  null,
+                                           "name":  "SIM_PROJECT_20260619-144124_GATE_APPROVE_ROADMAP.md",
+                                           "size":  546,
+                                           "last_write":  "2026-06-19T14:42:47"
+                                       },
+                                       {
+                                           "score":  20,
+                                           "tags":  [
+                                                        "worker"
+                                                    ],
+                                           "relative":  "backups\\template-improvement\\official-master-before-e05-20260619-231559\\05_HUMAN_GATES\\SIM_PROJECT_20260619-144124_GATE_APPROVE_ROADMAP.md",
+                                           "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e05-20260619-231559\\05_HUMAN_GATES\\SIM_PROJECT_20260619-144124_GATE_APPROVE_ROADMAP.md",
+                                           "parse_ok":  null,
+                                           "name":  "SIM_PROJECT_20260619-144124_GATE_APPROVE_ROADMAP.md",
+                                           "size":  546,
+                                           "last_write":  "2026-06-19T14:42:47"
+                                       },
+                                       {
+                                           "score":  20,
+                                           "tags":  [
+                                                        "worker"
+                                                    ],
+                                           "relative":  "data\\approval-console-059\\proposal-approval-gate.json",
+                                           "path":  "C:\\ENGREMIAT_CORE\\data\\approval-console-059\\proposal-approval-gate.json",
+                                           "parse_ok":  null,
+                                           "name":  "proposal-approval-gate.json",
+                                           "size":  1008,
+                                           "last_write":  "2026-06-17T12:21:45"
+                                       },
+                                       {
+                                           "score":  20,
+                                           "tags":  [
+                                                        "kanban",
+                                                        "worker"
+                                                    ],
+                                           "relative":  "data\\controlled-action-from-proposal-015\\controlled-action-gate-schema.json",
+                                           "path":  "C:\\ENGREMIAT_CORE\\data\\controlled-action-from-proposal-015\\controlled-action-gate-schema.json",
+                                           "parse_ok":  null,
+                                           "name":  "controlled-action-gate-schema.json",
+                                           "size":  771,
+                                           "last_write":  "2026-06-17T08:09:16"
+                                       },
+                                       {
+                                           "score":  12,
+                                           "tags":  [
+                                                        "risk_review",
+                                                        "worker"
+                                                    ],
+                                           "relative":  "data\\arbitration-069\\arbitration-gate.json",
+                                           "path":  "C:\\ENGREMIAT_CORE\\data\\arbitration-069\\arbitration-gate.json",
+                                           "parse_ok":  null,
+                                           "name":  "arbitration-gate.json",
+                                           "size":  1009,
+                                           "last_write":  "2026-06-17T12:38:15"
+                                       },
+                                       {
+                                           "score":  10,
+                                           "tags":  [
+                                                        "worker"
+                                                    ],
+                                           "relative":  "backups\\template-improvement\\official-master-before-e05-20260619-231559\\05_HUMAN_GATES\\GATE_002_ACCEPT_SIMULATED_RESULT.md",
+                                           "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e05-20260619-231559\\05_HUMAN_GATES\\GATE_002_ACCEPT_SIMULATED_RESULT.md",
+                                           "parse_ok":  null,
+                                           "name":  "GATE_002_ACCEPT_SIMULATED_RESULT.md",
+                                           "size":  634,
+                                           "last_write":  "2026-06-19T14:36:54"
+                                       },
+                                       {
+                                           "score":  10,
+                                           "tags":  [
+                                                        "worker"
+                                                    ],
+                                           "relative":  "backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\05_HUMAN_GATES\\GATE_002_ACCEPT_SIMULATED_RESULT.md",
+                                           "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\module-inicio-ref-before-e05-20260619-231559\\05_HUMAN_GATES\\GATE_002_ACCEPT_SIMULATED_RESULT.md",
+                                           "parse_ok":  null,
+                                           "name":  "GATE_002_ACCEPT_SIMULATED_RESULT.md",
+                                           "size":  634,
+                                           "last_write":  "2026-06-19T14:36:54"
+                                       },
+                                       {
+                                           "score":  10,
+                                           "tags":  [
+                                                        "worker"
+                                                    ],
+                                           "relative":  "backups\\template-improvement\\official-master-before-e05-20260619-231559\\05_HUMAN_GATES\\GATE_001_APPROVE_ROADMAP.md",
+                                           "path":  "C:\\ENGREMIAT_CORE\\backups\\template-improvement\\official-master-before-e05-20260619-231559\\05_HUMAN_GATES\\GATE_001_APPROVE_ROADMAP.md",
+                                           "parse_ok":  null,
+                                           "name":  "GATE_001_APPROVE_ROADMAP.md",
+                                           "size":  790,
+                                           "last_write":  "2026-06-19T14:34:45"
+                                       }
+                                   ]
+                     }
+                 ],
+    "recommended_paths":  {
+                              "observer_file":  "C:\\ENGREMIAT_CORE\\tools\\observer\\engremiat-observer.ps1",
+                              "observer_watch_file":  "C:\\ENGREMIAT_CORE\\tools\\observer\\engremiat-observer-watch.ps1",
+                              "registry_file":  "C:\\ENGREMIAT_CORE\\documents\\diagnostics\\DIAGNOSTIC_TOOL_REGISTRY.json",
+                              "canonical_map_file":  "C:\\ENGREMIAT_CORE\\documents\\diagnostics\\DIAGNOSTIC_CANONICAL_MAP.json",
+                              "memory_events":  "C:\\ENGREMIAT_CORE\\memory\\development\\events.jsonl",
+                              "memory_latest":  "C:\\ENGREMIAT_CORE\\memory\\development\\latest-state.json",
+                              "memory_timeline":  "C:\\ENGREMIAT_CORE\\memory\\development\\timeline.md"
+                          },
+    "decision":  {
+                     "main_problem":  "Soluciones antiguas o disenadas se pierden si quedan solo en chat, backups o reports sin registry canonico.",
+                     "solution":  "Crear una capa permanente: observer puntual + observer-watch + memoria de desarrollo + registry de herramientas recuperables.",
+                     "mode_now":  "READONLY_MAP_ONLY",
+                     "apply_now":  false,
+                     "git_write":  false,
+                     "external_actions":  false,
+                     "next":  "E02_CREATE_PERMANENT_OBSERVER_READONLY_USING_FREEZER_AND_CONTRACTS"
+                 },
+    "next":  "E02_CREATE_PERMANENT_OBSERVER_READONLY_USING_FREEZER_AND_CONTRACTS"
+}

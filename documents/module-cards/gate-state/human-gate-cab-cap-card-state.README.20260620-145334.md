@@ -1,0 +1,13 @@
+﻿# E110D CANONICAL GATE STATE CREATED
+
+- package: ENGREMIAT_MODULE_CARD_ACTION_FLOW_001
+- stage: E110D_CREATE_CANONICAL_GATE_STATE_FILE_NO_MUTATION
+- mode: CREATE_CANONICAL_STATE_NO_APPROVAL_MUTATION
+- gate_state_file: C:\ENGREMIAT_CORE\documents\module-cards\gate-state\human-gate-cab-cap-card-state.json
+- gate_id: HUMAN-GATE-CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830
+- initialized_status: PENDING
+- pending_decision_id: HGD-HUMAN-GATE-CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001
+- target_status: APPROVED
+- real_execution: false
+- gate_mutated: false
+- next: E110E_REWRITE_PENDING_AUTH_SCRIPT_TO_MUTATE_CANONICAL_GATE_STATE

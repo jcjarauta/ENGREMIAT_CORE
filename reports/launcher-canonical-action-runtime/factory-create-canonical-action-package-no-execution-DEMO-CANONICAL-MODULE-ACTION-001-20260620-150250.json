@@ -1,0 +1,53 @@
+﻿{
+    "schema":  "engremiat.canonical_action_package.v1",
+    "package_id":  "ENGREMIAT_LAUNCHER_CANONICAL_ACTION_RUNTIME_001",
+    "stage":  "FACTORY_CREATE_CANONICAL_ACTION_PACKAGE_NO_EXECUTION",
+    "created_at":  "2026-06-20T15:02:50",
+    "status":  "CREATED_NO_EXECUTION",
+    "action_id":  "DEMO-CANONICAL-MODULE-ACTION-001",
+    "action_type":  "MODULE_CARD_ACTION",
+    "project_ref":  "ENGREMIAT_PROJECT/demo-runtime",
+    "module_ref":  "ENGREMIAT_PROJECT/demo-runtime/MODULE_demo/START-001",
+    "gate_id":  "GATE-DEMO-CANONICAL-MODULE-ACTION-001",
+    "decision_id":  "DECISION-DEMO-CANONICAL-MODULE-ACTION-001",
+    "requested_transition":  {
+                                 "from":  "PENDING",
+                                 "to":  "APPROVED"
+                             },
+    "authorization":  {
+                          "mutation_env":  "ENGREMIAT_CANONICAL_ACTION_MUTATION_AUTH",
+                          "mutation_value":  "AUTORIZO_DEMO-CANONICAL-MODULE-ACTION-001_GATE_MUTATION",
+                          "action_env":  "ENGREMIAT_CANONICAL_ACTION_RUN_AUTH",
+                          "action_value":  "AUTORIZO_DEMO-CANONICAL-MODULE-ACTION-001_RUN_ACTION"
+                      },
+    "allowed_operations":  [
+                               "local_file_write",
+                               "local_json_markdown_evidence",
+                               "readonly_validation",
+                               "pending_auth_script_creation"
+                           ],
+    "blocked_operations":  [
+                               "worker_real_execution",
+                               "browser",
+                               "network",
+                               "git_commit",
+                               "git_push",
+                               "external_write"
+                           ],
+    "state":  {
+                  "gate_status":  "PENDING",
+                  "unlock_status":  "LOCKED",
+                  "execution_status":  "NOT_EXECUTED"
+              },
+    "safety":  {
+                   "factory_only":  true,
+                   "real_execution":  false,
+                   "gate_mutated":  false,
+                   "action_executed":  false,
+                   "worker":  false,
+                   "browser":  false,
+                   "network":  false,
+                   "git":  false
+               },
+    "next":  "VALIDATE_CANONICAL_ACTION_PACKAGE_NO_EXECUTION"
+}

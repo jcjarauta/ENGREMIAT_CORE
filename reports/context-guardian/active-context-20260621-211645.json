@@ -1,0 +1,53 @@
+﻿{
+    "created_at":  "2026-06-21T21:16:45",
+    "package_id":  "ENGREMIAT_CONTEXT_GUARDIAN_001",
+    "stage":  "E01B_CREATE_ACTIVE_CONTEXT_RESOLVER_REPAIR",
+    "decision":  "GO_ACTIVE_CONTEXT_RESOLVED",
+    "active_root":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2",
+    "active_registry":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\contracts\\SCREEN_REGISTRY.json",
+    "active_engine":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\operator\\lib\\OperatorV2.ScreenEngine.ps1",
+    "active_launcher":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\operator\\ENGREMIAT_OPERADOR_V2.ps1",
+    "protected_do_not_patch":  [
+                                   "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+                                   "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1"
+                               ],
+    "candidates":  [
+                       {
+                           "root":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2",
+                           "score":  120,
+                           "registry":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\contracts\\SCREEN_REGISTRY.json",
+                           "registry_exists":  true,
+                           "engine":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\operator\\lib\\OperatorV2.ScreenEngine.ps1",
+                           "engine_exists":  true,
+                           "ui":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\operator\\lib\\OperatorV2.UI.ps1",
+                           "ui_exists":  true,
+                           "launcher":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\operator\\ENGREMIAT_OPERADOR_V2.ps1",
+                           "launcher_exists":  true,
+                           "screen_count":  21,
+                           "pantallas_ux_nodes":  1,
+                           "engine_has_engremiat_v2":  true,
+                           "engine_reads_registry":  true,
+                           "engine_has_header":  true,
+                           "engine_has_prompt":  true
+                       },
+                       {
+                           "root":  "C:\\ENGREMIAT_CORE",
+                           "score":  0,
+                           "registry":  "C:\\ENGREMIAT_CORE\\contracts\\SCREEN_REGISTRY.json",
+                           "registry_exists":  false,
+                           "engine":  "C:\\ENGREMIAT_CORE\\operator\\lib\\OperatorV2.ScreenEngine.ps1",
+                           "engine_exists":  false,
+                           "ui":  "C:\\ENGREMIAT_CORE\\operator\\lib\\OperatorV2.UI.ps1",
+                           "ui_exists":  false,
+                           "launcher":  "C:\\ENGREMIAT_CORE\\operator\\ENGREMIAT_OPERADOR_V2.ps1",
+                           "launcher_exists":  false,
+                           "screen_count":  0,
+                           "pantallas_ux_nodes":  0,
+                           "engine_has_engremiat_v2":  false,
+                           "engine_reads_registry":  false,
+                           "engine_has_header":  false,
+                           "engine_has_prompt":  false
+                       }
+                   ],
+    "next":  "PATCH_ONLY_ACTIVE_ROOT_REGISTRY_OR_ENGINE"
+}

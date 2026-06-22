@@ -1,0 +1,47 @@
+﻿{
+    "schema":  "engremiat.canonical_action_dry_run_preview.v1",
+    "package_id":  "ENGREMIAT_LAUNCHER_CANONICAL_ACTION_RUNTIME_001",
+    "stage":  "E07_CREATE_CANONICAL_ACTION_PACKAGE_DRY_RUN_PREVIEW",
+    "created_at":  "2026-06-20T15:03:58",
+    "status":  "READY",
+    "mode":  "DRY_RUN_NO_MUTATION_NO_ACTION",
+    "action_id":  "DEMO-CANONICAL-MODULE-ACTION-001",
+    "action_type":  "MODULE_CARD_ACTION",
+    "source_package":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\actions\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-package.latest.json",
+    "validator":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\validators\\canonical-action-package-validator.latest.json",
+    "planned_state":  {
+                          "gate_status_before":  "PENDING",
+                          "gate_status_after":  "APPROVED",
+                          "unlock_status_before":  "LOCKED",
+                          "unlock_status_after":  "UNLOCKED_AFTER_APPROVAL",
+                          "execution_status_before":  "NOT_EXECUTED",
+                          "execution_status_after":  "PENDING_AUTH_ACTION_RUNNER"
+                      },
+    "planned_artifacts":  {
+                              "canonical_state":  "documents/launcher-canonical-action-runtime/state/DEMO-CANONICAL-MODULE-ACTION-001/canonical-action-state.latest.json",
+                              "mutation_contract":  "documents/launcher-canonical-action-runtime/contracts/DEMO-CANONICAL-MODULE-ACTION-001/mutation-contract.latest.json",
+                              "pending_auth_mutation_script":  "tools/launcher/canonical-action-runtime/actions/DEMO-CANONICAL-MODULE-ACTION-001/apply-gate-mutation.pending-auth.ps1",
+                              "unlock":  "documents/launcher-canonical-action-runtime/unlocks/DEMO-CANONICAL-MODULE-ACTION-001/action-unlock.latest.json",
+                              "execution_plan":  "documents/launcher-canonical-action-runtime/plans/DEMO-CANONICAL-MODULE-ACTION-001/action-execution-plan.latest.json",
+                              "pending_auth_runner":  "tools/launcher/canonical-action-runtime/actions/DEMO-CANONICAL-MODULE-ACTION-001/run-action.pending-auth.ps1",
+                              "execution_receipt":  "documents/launcher-canonical-action-runtime/executions/DEMO-CANONICAL-MODULE-ACTION-001/action-execution.latest.json"
+                          },
+    "guards":  {
+                   "canonical_state_required":  true,
+                   "authorization_required_for_mutation":  true,
+                   "authorization_required_for_action":  true,
+                   "reports_are_evidence_only":  true,
+                   "no_worker_browser_network_git":  true
+               },
+    "safety":  {
+                   "real_execution":  false,
+                   "gate_mutated":  false,
+                   "action_executed":  false,
+                   "worker":  false,
+                   "browser":  false,
+                   "network":  false,
+                   "git":  false,
+                   "dry_run_only":  true
+               },
+    "next":  "E08_CREATE_CANONICAL_ACTION_STATE_AND_PENDING_AUTH_MUTATION_SCRIPT"
+}

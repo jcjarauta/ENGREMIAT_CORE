@@ -1,0 +1,104 @@
+{
+    "$schema":  "https://json-schema.org/draft/2020-12/schema",
+    "title":  "ENGREMIAT Card Action Proposal",
+    "type":  "object",
+    "required":  [
+                     "proposal_id",
+                     "card_id",
+                     "project_id",
+                     "module_id",
+                     "action",
+                     "status",
+                     "risk",
+                     "human_gate",
+                     "reason",
+                     "expected_output",
+                     "forbidden_execution",
+                     "created_by",
+                     "created_at"
+                 ],
+    "additionalProperties":  true,
+    "properties":  {
+                       "proposal_id":  {
+                                           "type":  "string",
+                                           "minLength":  8
+                                       },
+                       "card_id":  {
+                                       "type":  "string",
+                                       "minLength":  8
+                                   },
+                       "project_id":  {
+                                          "type":  "string",
+                                          "minLength":  3
+                                      },
+                       "module_id":  {
+                                         "type":  "string",
+                                         "minLength":  3
+                                     },
+                       "action":  {
+                                      "type":  "string",
+                                      "enum":  [
+                                                   "review",
+                                                   "approve_proposal",
+                                                   "block",
+                                                   "convert_to_module_blueprint",
+                                                   "convert_to_task_blueprint"
+                                               ]
+                                  },
+                       "status":  {
+                                      "type":  "string",
+                                      "enum":  [
+                                                   "PROPOSED",
+                                                   "REVIEWED",
+                                                   "APPROVED_FOR_BLUEPRINT",
+                                                   "BLOCKED",
+                                                   "BLUEPRINT_CREATED"
+                                               ]
+                                  },
+                       "risk":  {
+                                    "type":  "string",
+                                    "enum":  [
+                                                 "LOW",
+                                                 "MEDIUM",
+                                                 "HIGH"
+                                             ]
+                                },
+                       "human_gate":  {
+                                          "type":  "string",
+                                          "enum":  [
+                                                       "SI",
+                                                       "NO"
+                                                   ]
+                                      },
+                       "reason":  {
+                                      "type":  "string"
+                                  },
+                       "expected_output":  {
+                                               "type":  "string"
+                                           },
+                       "forbidden_execution":  {
+                                                   "type":  "array",
+                                                   "items":  {
+                                                                 "type":  "string"
+                                                             }
+                                               },
+                       "decision_log":  {
+                                            "type":  "array",
+                                            "items":  {
+                                                          "type":  "object"
+                                                      }
+                                        },
+                       "source_card_path":  {
+                                                "type":  "string"
+                                            },
+                       "created_by":  {
+                                          "type":  "string"
+                                      },
+                       "created_at":  {
+                                          "type":  "string"
+                                      },
+                       "updated_at":  {
+                                          "type":  "string"
+                                      }
+                   }
+}

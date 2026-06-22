@@ -1,0 +1,51 @@
+{
+    "schema":  "engremiat.small_batch_migration_gate_close_without_apply.v1",
+    "package_id":  "ENGREMIAT_SCREEN_NORMALIZER_SMALL_BATCH_MIGRATION_GATE_001",
+    "stage":  "E02_CLOSE_SMALL_BATCH_GATE_WITHOUT_APPLY",
+    "created_at":  "2026-06-20T17:20:16",
+    "status":  "PASS",
+    "closed":  true,
+    "readiness":  100,
+    "decision":  "DO_NOT_APPLY_SMALL_BATCH_GATE_TARGET_AMBIGUOUS",
+    "summary":  {
+                    "target_screen_id":  "CONTROL_ESTADO",
+                    "candidate_ready":  true,
+                    "candidate_parse_ok":  true,
+                    "current_detected":  true,
+                    "launcher_matches_count":  2,
+                    "migration_applied":  false,
+                    "authorization_status":  "PENDING_NOT_USED",
+                    "required_phrase":  "AUTORIZO_MIGRAR_CONTROL_ESTADO_A_SCREEN_NORMALIZER",
+                    "patch_launchers":  false,
+                    "registry_write":  false,
+                    "git":  false
+                },
+    "artifacts":  {
+                      "gate":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-small-batch-migration-gate\\gate\\small-batch-migration-gate.latest.json",
+                      "candidate":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\CONTROL_ESTADO.candidate.isolated.ps1",
+                      "detected_current_launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO-NORMALIZED.ps1"
+                  },
+    "known_limits":  [
+                         "No se aplico migracion real",
+                         "Hay mas de un launcher candidato para CONTROL_ESTADO",
+                         "Antes de reemplazar hay que auditar y seleccionar el target launcher correcto"
+                     ],
+    "recommended_next_objective":  "ENGREMIAT_SCREEN_NORMALIZER_TARGET_LAUNCHER_DISAMBIGUATION_001",
+    "possible_next":  [
+                          "A: auditar los 2 launchers candidatos y escoger target real",
+                          "B: preparar gate para otra pantalla interna con menos ambiguedad",
+                          "C: volver a INICIO y mantener migracion pendiente",
+                          "D: cierre git scoped cuando decidas consolidar"
+                      ],
+    "recommendation":  "A recomendado: desambiguar target launcher antes de cualquier reemplazo real.",
+    "safety":  {
+                   "patch_existing_launchers":  false,
+                   "registry_write":  false,
+                   "migration_applied":  false,
+                   "worker":  false,
+                   "browser":  false,
+                   "network":  false,
+                   "git":  false
+               },
+    "next":  "PAUSE_AND_VALUE_NEXT_OBJECTIVE_AFTER_SMALL_BATCH_GATE_CLOSE"
+}

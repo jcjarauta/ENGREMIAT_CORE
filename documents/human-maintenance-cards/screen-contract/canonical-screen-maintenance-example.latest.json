@@ -1,0 +1,41 @@
+﻿{
+    "schema":  "engremiat.canonical_screen_with_maintenance_example.v1",
+    "package_id":  "ENGREMIAT_HUMAN_MAINTENANCE_CARD_001",
+    "stage":  "E08_DEFINE_CANONICAL_SCREEN_MAINTENANCE_COMMAND_CONTRACT",
+    "created_at":  "2026-06-20T15:40:49",
+    "status":  "READY",
+    "screen_id":  "EXAMPLE_SCREEN_ID",
+    "screen_title":  "Pantalla ejemplo ENGREMIAT",
+    "screen_context":  "example_context",
+    "supports_refresh":  true,
+    "supports_help":  true,
+    "supports_commands":  true,
+    "supports_human_maintenance_card":  true,
+    "maintenance_command":  "m",
+    "maintenance_aliases":  [
+                                "mant",
+                                "mantenimiento"
+                            ],
+    "help_line":  "refrescar/f5/Enter = redibujar pantalla | ? = ayuda | comandos = menu actual | m = mantenimiento",
+    "on_maintenance_command":  {
+                                   "operation":  "create_human_maintenance_card_capture_only",
+                                   "script":  "C:\\ENGREMIAT_CORE\\tools\\human-maintenance-cards\\new-human-maintenance-card.ps1",
+                                   "required_inputs":  [
+                                                           "source_screen",
+                                                           "source_context",
+                                                           "dimension",
+                                                           "severity",
+                                                           "title",
+                                                           "description",
+                                                           "human_observation"
+                                                       ],
+                                   "forbidden_outputs":  [
+                                                             "system mutation",
+                                                             "screen mutation",
+                                                             "execution",
+                                                             "git",
+                                                             "network",
+                                                             "worker"
+                                                         ]
+                               }
+}

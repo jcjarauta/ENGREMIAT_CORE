@@ -1,0 +1,74 @@
+{
+    "package_id":  "ENGREMIAT_MODULE_CARD_ACTION_FLOW_001",
+    "stage":  "E99A_DEFINE_CARD_ACTION_PROPOSAL_FLOW",
+    "status":  "PASS",
+    "mode":  "CONTRACT_ONLY_NO_EXECUTION",
+    "principle":  "Una tarjeta PROPOSED no ejecuta; solo puede generar propuesta de accion con gate humano",
+    "allowed_actions":  [
+                            {
+                                "action":  "review",
+                                "risk":  "LOW",
+                                "effect":  "leer detalle y validar coherencia",
+                                "requires_human_gate":  "NO",
+                                "executes":  "NO"
+                            },
+                            {
+                                "action":  "approve_proposal",
+                                "risk":  "MEDIUM",
+                                "effect":  "marca la propuesta como aprobable para siguiente etapa",
+                                "requires_human_gate":  "SI",
+                                "executes":  "NO"
+                            },
+                            {
+                                "action":  "block",
+                                "risk":  "LOW",
+                                "effect":  "bloquea tarjeta con razon humana",
+                                "requires_human_gate":  "SI",
+                                "executes":  "NO"
+                            },
+                            {
+                                "action":  "convert_to_module_blueprint",
+                                "risk":  "MEDIUM",
+                                "effect":  "crea blueprint de modulo, no crea modulo real aun",
+                                "requires_human_gate":  "SI",
+                                "executes":  "NO"
+                            },
+                            {
+                                "action":  "convert_to_task_blueprint",
+                                "risk":  "MEDIUM",
+                                "effect":  "crea blueprint de tarea, no ejecuta worker",
+                                "requires_human_gate":  "SI",
+                                "executes":  "NO"
+                            }
+                        ],
+    "forbidden_actions":  [
+                              "execute_worker",
+                              "modify_code_directly",
+                              "git_commit",
+                              "git_push",
+                              "network_call",
+                              "browser_action",
+                              "autohotkey_action",
+                              "delete_files"
+                          ],
+    "states":  [
+                   "PROPOSED",
+                   "REVIEWED",
+                   "APPROVED_FOR_BLUEPRINT",
+                   "BLOCKED",
+                   "BLUEPRINT_CREATED"
+               ],
+    "transition_rules":  [
+                             "PROPOSED -\u003e REVIEWED mediante lectura humana",
+                             "REVIEWED -\u003e APPROVED_FOR_BLUEPRINT solo con gate humano",
+                             "REVIEWED -\u003e BLOCKED con razon",
+                             "APPROVED_FOR_BLUEPRINT -\u003e BLUEPRINT_CREATED mediante generador local readonly/write-simple",
+                             "BLUEPRINT_CREATED no ejecuta worker real"
+                         ],
+    "outputs":  [
+                    "card-action-proposal.json",
+                    "card-action-blueprint.json",
+                    "card-action-decision-log.json"
+                ],
+    "next":  "E99B_CREATE_CARD_ACTION_PROPOSAL_SCHEMA"
+}

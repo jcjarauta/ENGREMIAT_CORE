@@ -1,0 +1,30 @@
+﻿{
+    "schema":  "engremiat.isolated_generated_screen_smoke.v1",
+    "package_id":  "ENGREMIAT_SCREEN_NORMALIZER_REAL_SCREEN_GENERATION_001",
+    "stage":  "E02_SMOKE_RUN_ISOLATED_GENERATED_SCREEN",
+    "created_at":  "2026-06-20T16:43:58",
+    "status":  "PASS",
+    "mode":  "RUN_ISOLATED_GENERATED_SCREEN_NO_REAL_LAUNCHER",
+    "screen_id":  "DEMO_FUNCION_ANIDADA_20260620-164034",
+    "generated_screen":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-real-screen-generation\\generated\\DEMO_FUNCION_ANIDADA_20260620-164034.isolated.ps1",
+    "stdout":  "C:\\ENGREMIAT_CORE\\reports\\screen-normalizer-real-screen-generation\\e02-isolated-screen-smoke-stdout-20260620-164356.txt",
+    "stderr":  "C:\\ENGREMIAT_CORE\\reports\\screen-normalizer-real-screen-generation\\e02-isolated-screen-smoke-stderr-20260620-164356.txt",
+    "exit_code":  0,
+    "checks":  {
+                   "title":  true,
+                   "ruta":  true,
+                   "rol":  true,
+                   "estado":  true,
+                   "m_help":  true,
+                   "enter_refresh":  true,
+                   "isolated_notice":  true
+               },
+    "connected_to_launcher":  false,
+    "registry_write":  false,
+    "patch_launchers":  false,
+    "worker":  false,
+    "browser":  false,
+    "network":  false,
+    "git":  false,
+    "next":  "E03_CLOSE_SCREEN_NORMALIZER_REAL_SCREEN_GENERATION_AND_VALUE_NEXT_OBJECTIVE"
+}

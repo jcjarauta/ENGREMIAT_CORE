@@ -1,0 +1,16 @@
+﻿card_id	lane	title	description	priority	risk	dimension	status	requires_authorization	next_action
+OBS-TASK-014	PENDIENTE_GATE	Control de crecimiento documental	Crear indices latest, resumen compacto, limpieza segura de temporales y detector de duplicados sin borrar nada automaticamente	HIGH	HIGH	growth	PENDING_HUMAN_GATE	True	prepare_canonical_action_preview_later
+OBS-TASK-013	ALTA_PRIORIDAD_READONLY	Manual vivo consolidado	Crear manual vivo regenerable por secciones: uso humano, arquitectura, limites, operaciones, workers, financiacion y tareas	HIGH	HIGH	documentation	READY_READONLY	False	can_be_grouped_in_readonly_observer_work
+OBS-TASK-005	ALTA_PRIORIDAD_READONLY	Financiacion	crear presupuesto operativo, costes por hardware/software/humano y necesidades de financiacion	HIGH	HIGH	financing	READY_READONLY	False	can_be_grouped_in_readonly_observer_work
+OBS-TASK-010	PENDIENTE_GATE	Crecimiento y deuda	crear limpieza, indices latest y compactacion de evidencias	MEDIUM	MEDIUM	growth	PENDING_HUMAN_GATE	True	prepare_canonical_action_preview_later
+OBS-TASK-003	PENDIENTE_GATE	Hardware	crear inventario hardware por nodo main/legacy/raspberry/mobile	MEDIUM	MEDIUM	hardware	PENDING_HUMAN_GATE	True	prepare_canonical_action_preview_later
+OBS-TASK-015	PENDIENTE_GATE	Puente observer a runtime canonico	Preparar conversion mejora -> tarea -> paquete de accion canonica -> preview -> gate humano	MEDIUM	MEDIUM	operations	PENDING_HUMAN_GATE	True	prepare_canonical_action_preview_later
+OBS-TASK-002	PENDIENTE_GATE	Software	ampliar evidencias de la dimension	MEDIUM	MEDIUM	software	PENDING_HUMAN_GATE	True	prepare_canonical_action_preview_later
+OBS-TASK-009	PENDIENTE_GATE	Workers e IA	usar IA local solo como worker interpretativo despues de diagnostico determinista	MEDIUM	MEDIUM	workers	PENDING_HUMAN_GATE	True	prepare_canonical_action_preview_later
+OBS-TASK-004	BACKLOG_OBSERVER	Humanos	medir friccion humana por numero de pasos, Enter/clicks y gates	MEDIUM	MEDIUM	humans	READY_READONLY	False	can_be_grouped_in_readonly_observer_work
+OBS-TASK-001	PENDIENTE_GATE	Arquitectura	usar runtime canonico para convertir mejoras en acciones gobernadas	LOW	LOW	architecture	PENDING_HUMAN_GATE	True	prepare_canonical_action_preview_later
+OBS-TASK-012	PENDIENTE_GATE	Operacion diaria	crear comando diario observer: estado, diagnostico, manual, tareas	LOW	LOW	operations	PENDING_HUMAN_GATE	True	prepare_canonical_action_preview_later
+OBS-TASK-008	PENDIENTE_GATE	UX operador	insertar ruta interactiva real runtime/acciones en menu principal	LOW	LOW	ux	PENDING_HUMAN_GATE	True	prepare_canonical_action_preview_later
+OBS-TASK-006	BACKLOG_OBSERVER	Documentacion	generar manual vivo desde evidencias cerradas	LOW	LOW	documentation	READY_READONLY	False	can_be_grouped_in_readonly_observer_work
+OBS-TASK-011	BACKLOG_OBSERVER	Gobernanza	crear tablero de decisiones y prioridades desde reports	LOW	LOW	governance	READY_READONLY	False	can_be_grouped_in_readonly_observer_work
+OBS-TASK-007	BACKLOG_OBSERVER	Seguridad y limites	convertir politicas en validador automatico por objetivo	LOW	LOW	security	READY_READONLY	False	can_be_grouped_in_readonly_observer_work

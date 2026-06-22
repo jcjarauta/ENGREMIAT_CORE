@@ -1,0 +1,70 @@
+{
+    "schema":  "engremiat.explicit_target_migration_gate.v1",
+    "package_id":  "ENGREMIAT_SCREEN_NORMALIZER_TARGET_LAUNCHER_DISAMBIGUATION_001",
+    "stage":  "E02_PREPARE_EXPLICIT_TARGET_GATE_NO_APPLY",
+    "created_at":  "2026-06-20T17:22:20",
+    "status":  "PENDING_HUMAN_AUTHORIZATION",
+    "mode":  "EXPLICIT_TARGET_GATE_ONLY_NO_APPLY",
+    "target_screen_id":  "CONTROL_ESTADO",
+    "target_launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1",
+    "target_launcher_sha256":  "D0E71B7CD08317AAE25EB6A39DCB3EB674F7EB5C8FC6C42693C360026C0D9EB8",
+    "target_launcher_parse_ok":  true,
+    "candidate":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\CONTROL_ESTADO.candidate.isolated.ps1",
+    "candidate_sha256":  "72E585DAC556CBC0B903F1B109814250F56E3CEC44D072C8997F601BD0049FEB",
+    "candidate_parse_ok":  true,
+    "authorization_required":  true,
+    "authorization_status":  "PENDING_EXPLICIT_HUMAN_AUTHORIZATION",
+    "required_phrase":  "AUTORIZO_MIGRAR_CONTROL_ESTADO_TARGET_EXPLICITO",
+    "decision":  "READY_FOR_EXPLICIT_HUMAN_GATE",
+    "preflight":  {
+                      "target_has_control_terms":  true,
+                      "target_has_human_screen_signals":  true,
+                      "candidate_has_helper":  true,
+                      "candidate_has_m":  true,
+                      "candidate_has_exit":  true
+                  },
+    "apply_scope":  {
+                        "allowed":  [
+                                        "backup exact target launcher",
+                                        "replace only exact target launcher with candidate",
+                                        "validate parse after replace",
+                                        "create rollback evidence",
+                                        "restore backup on parse failure"
+                                    ],
+                        "blocked":  [
+                                        "migrate INICIO",
+                                        "migrate any other launcher",
+                                        "change registry",
+                                        "workers",
+                                        "browser",
+                                        "network",
+                                        "git",
+                                        "delete unrelated files"
+                                    ]
+                    },
+    "rollback_policy":  [
+                            "backup target before write",
+                            "verify candidate parse before write",
+                            "write candidate only to explicit target",
+                            "parse target after write",
+                            "restore backup immediately if parse fails"
+                        ],
+    "post_apply_checks":  [
+                              "target launcher parses",
+                              "target file hash changed to candidate hash or content equivalent",
+                              "helper load present",
+                              "screen title/ruta/rol/estado/principio present",
+                              "m maintenance handler present",
+                              "Enter refresh present",
+                              "? help present",
+                              "b/q exit present"
+                          ],
+    "patch_existing_launchers":  false,
+    "registry_write":  false,
+    "migration_applied":  false,
+    "worker":  false,
+    "browser":  false,
+    "network":  false,
+    "git":  false,
+    "next":  "E03_APPLY_EXPLICIT_TARGET_AFTER_AUTHORIZATION_OR_CLOSE"
+}

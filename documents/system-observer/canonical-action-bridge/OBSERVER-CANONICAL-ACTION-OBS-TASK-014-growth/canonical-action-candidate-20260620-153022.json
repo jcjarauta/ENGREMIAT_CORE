@@ -1,0 +1,46 @@
+﻿{
+    "schema":  "engremiat.system_observer_canonical_action_candidate.v1",
+    "package_id":  "ENGREMIAT_SYSTEM_OBSERVER_001",
+    "stage":  "E08_SYSTEM_OBSERVER_PREPARE_TASK_TO_CANONICAL_ACTION_BRIDGE",
+    "created_at":  "2026-06-20T15:30:22",
+    "status":  "CANDIDATE_NO_EXECUTION",
+    "action_id":  "OBSERVER-CANONICAL-ACTION-OBS-TASK-014-growth",
+    "bridge_id":  "SYSTEM_OBSERVER_TASK_TO_CANONICAL_ACTION_BRIDGE_V1",
+    "source_task_id":  "OBS-TASK-014",
+    "source_improvement_id":  "IMP-901-GROWTH-CONTROL",
+    "dimension":  "growth",
+    "title":  "Control de crecimiento documental",
+    "description":  "Crear indices latest, resumen compacto, limpieza segura de temporales y detector de duplicados sin borrar nada automaticamente",
+    "problem":  "Volumen alto de json, markdown, ps1 y reports",
+    "priority":  "HIGH",
+    "risk":  "HIGH",
+    "requires_authorization":  true,
+    "gate_status":  "PENDING",
+    "preview_status":  "READY_TO_CREATE",
+    "execution_status":  "NOT_EXECUTED",
+    "expected_output":  "canonical_action_proposal_after_human_gate",
+    "allowed_now":  "preview_and_gate_preparation_only",
+    "blocked_operations":  [
+                               "auto_execute",
+                               "auto_apply",
+                               "worker",
+                               "browser",
+                               "network",
+                               "git",
+                               "delete",
+                               "move"
+                           ],
+    "source_evidence":  [
+                            "C:\\ENGREMIAT_CORE\\documents\\system-observer\\diagnostics\\system-observer-diagnostic-v0.latest.json"
+                        ],
+    "safety":  {
+                   "real_execution":  false,
+                   "system_mutation":  false,
+                   "action_executed":  false,
+                   "worker":  false,
+                   "browser":  false,
+                   "network":  false,
+                   "git":  false
+               },
+    "next":  "E09_SYSTEM_OBSERVER_SMOKE_TASK_TO_ACTION_BRIDGE_NO_EXECUTION"
+}

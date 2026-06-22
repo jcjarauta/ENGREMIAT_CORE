@@ -1,0 +1,33 @@
+﻿{
+    "schema":  "engremiat.screen_maintenance_patch_rules.v1",
+    "package_id":  "ENGREMIAT_HUMAN_MAINTENANCE_CARD_001",
+    "stage":  "E09_CREATE_SCREEN_MAINTENANCE_COMMAND_PATCH_PLAN_NO_WRITE",
+    "created_at":  "2026-06-20T15:41:24",
+    "status":  "READY",
+    "mode":  "NO_WRITE_PATCH_PLAN",
+    "canonical_command":  "m",
+    "help_line":  "refrescar/f5/Enter = redibujar pantalla | ? = ayuda | comandos = menu actual | m = mantenimiento",
+    "patch_strategy":  [
+                           "no aplicar en esta fase",
+                           "priorizar launcher/operator real",
+                           "crear backup antes de cualquier parche futuro",
+                           "inyectar opcion m solo donde exista menu interactivo",
+                           "la opcion m debe llamar new-human-maintenance-card.ps1 en capture-only",
+                           "despues de crear tarjeta debe volver a la misma pantalla",
+                           "validar parse del ps1 si se parchea PowerShell",
+                           "validar que no hay worker/browser/network/git"
+                       ],
+    "do_not_patch_now":  true,
+    "requires_future_authorization_for_write":  true,
+    "blocked_operations":  [
+                               "write_patch_now",
+                               "auto_apply",
+                               "worker",
+                               "browser",
+                               "network",
+                               "git",
+                               "delete",
+                               "move"
+                           ],
+    "next":  "E10_CLOSE_HUMAN_MAINTENANCE_CARD_V0_AND_VALUE_NEXT_OBJECTIVE"
+}

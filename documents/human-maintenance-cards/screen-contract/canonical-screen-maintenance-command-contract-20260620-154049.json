@@ -1,0 +1,96 @@
+﻿{
+    "schema":  "engremiat.canonical_screen_maintenance_command_contract.v1",
+    "package_id":  "ENGREMIAT_HUMAN_MAINTENANCE_CARD_001",
+    "stage":  "E08_DEFINE_CANONICAL_SCREEN_MAINTENANCE_COMMAND_CONTRACT",
+    "created_at":  "2026-06-20T15:40:49",
+    "status":  "READY",
+    "contract_id":  "CANONICAL_SCREEN_MAINTENANCE_COMMAND_CONTRACT_V1",
+    "purpose":  "Definir que toda pantalla ENGREMIAT pueda ofrecer una entrada canonica para crear tarjeta de mantenimiento humano",
+    "canonical_command":  "m",
+    "canonical_label":  "mantenimiento",
+    "canonical_aliases":  [
+                              "mant",
+                              "mantenimiento",
+                              "maintenance"
+                          ],
+    "recommended_help_line":  "refrescar/f5/Enter = redibujar pantalla | ? = ayuda | comandos = menu actual | m = mantenimiento",
+    "minimum_screen_fields":  [
+                                  "screen_id",
+                                  "screen_title",
+                                  "screen_context",
+                                  "supports_refresh",
+                                  "supports_help",
+                                  "supports_commands",
+                                  "supports_human_maintenance_card",
+                                  "maintenance_command"
+                              ],
+    "required_defaults":  {
+                              "supports_refresh":  true,
+                              "supports_help":  true,
+                              "supports_commands":  true,
+                              "supports_human_maintenance_card":  true,
+                              "maintenance_command":  "m"
+                          },
+    "screen_action_when_m_pressed":  [
+                                         "collect current screen_id",
+                                         "collect current context",
+                                         "ask or infer dimension severity title observation",
+                                         "call tools/human-maintenance-cards/new-human-maintenance-card.ps1",
+                                         "return card_id and path",
+                                         "do not mutate current screen state"
+                                     ],
+    "capture_script":  "C:\\ENGREMIAT_CORE\\tools\\human-maintenance-cards\\new-human-maintenance-card.ps1",
+    "allowed_in_screen":  [
+                              "show maintenance option",
+                              "create capture-only card",
+                              "show created card id",
+                              "return to same screen"
+                          ],
+    "blocked_in_screen":  [
+                              "execute suggested action",
+                              "modify screen code automatically",
+                              "open browser",
+                              "use network",
+                              "run worker",
+                              "git action",
+                              "delete or move files"
+                          ],
+    "integration_levels":  [
+                               {
+                                   "level":  1,
+                                   "name":  "contract_only",
+                                   "description":  "pantalla declara soporte sin parche real"
+                               },
+                               {
+                                   "level":  2,
+                                   "name":  "manual_call",
+                                   "description":  "pantalla muestra m y llama script de captura"
+                               },
+                               {
+                                   "level":  3,
+                                   "name":  "contextual_capture",
+                                   "description":  "pantalla pasa screen_id, proyecto, modulo y objeto"
+                               },
+                               {
+                                   "level":  4,
+                                   "name":  "observer_feedback",
+                                   "description":  "pantalla muestra si la tarjeta ya fue evaluada por Observer"
+                               },
+                               {
+                                   "level":  5,
+                                   "name":  "canonical_action_candidate",
+                                   "description":  "si procede, la tarjeta se convierte en accion canonica con gate"
+                               }
+                           ],
+    "safety":  {
+                   "real_execution":  false,
+                   "system_mutation":  false,
+                   "screen_mutation":  false,
+                   "worker":  false,
+                   "browser":  false,
+                   "network":  false,
+                   "git":  false,
+                   "contract_only":  true
+               },
+    "next":  "E09_CREATE_SCREEN_MAINTENANCE_COMMAND_PATCH_PLAN_NO_WRITE"
+}

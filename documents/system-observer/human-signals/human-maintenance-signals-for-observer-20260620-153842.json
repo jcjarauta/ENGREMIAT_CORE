@@ -1,0 +1,74 @@
+﻿{
+    "schema":  "engremiat.system_observer_human_signals_bundle.v1",
+    "package_id":  "ENGREMIAT_HUMAN_MAINTENANCE_CARD_001",
+    "stage":  "E04_INTEGRATE_HUMAN_MAINTENANCE_CARDS_WITH_SYSTEM_OBSERVER_READONLY",
+    "created_at":  "2026-06-20T15:38:42",
+    "status":  "PASS",
+    "mode":  "READONLY_HUMAN_SIGNAL_INTEGRATION_NO_TASKS_NO_EXECUTION",
+    "source_inbox":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-cards\\inbox",
+    "source_contract":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-cards\\contracts\\human-maintenance-card-contract.latest.json",
+    "source_taxonomy":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-cards\\taxonomy\\human-maintenance-card-taxonomy.latest.json",
+    "source_safety":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-cards\\safety\\human-maintenance-card-safety-policy.latest.json",
+    "system_observer_close":  "C:\\ENGREMIAT_CORE\\documents\\system-observer\\close\\system-observer-v0-close.latest.json",
+    "summary":  {
+                    "total_signals":  1,
+                    "high":  0,
+                    "medium":  1,
+                    "low":  0,
+                    "requires_authorization":  0,
+                    "dimensions":  [
+                                       "ux"
+                                   ]
+                },
+    "signals":  [
+                    {
+                        "signal_id":  "HUMAN-SIGNAL-HMC-demo-system-observer-screen-20260620-153807",
+                        "source_card":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-cards\\inbox\\HMC-demo-system-observer-screen-20260620-153807.json",
+                        "maintenance_card_id":  "HMC-demo-system-observer-screen-20260620-153807",
+                        "created_at":  "2026-06-20T15:38:07",
+                        "source_screen":  "demo-system-observer-screen",
+                        "source_context":  "E03 smoke demo: humano detecta mejora no necesariamente detectable por maquina",
+                        "dimension":  "ux",
+                        "severity":  "MEDIUM",
+                        "priority":  "MEDIUM",
+                        "title":  "Demo mantenimiento humano: mejorar claridad de pantallas",
+                        "human_observation":  "En pantallas futuras debe aparecer m = mantenimiento junto a refrescar, ayuda y comandos.",
+                        "suggested_action":  "Integrar m = mantenimiento como opcion canonica en contrato de pantalla.",
+                        "machine_detection_gap":  "human_signal_not_yet_evaluated_by_observer",
+                        "requires_authorization":  false,
+                        "observer_recommendation":  "EVALUATE_AS_HUMAN_SIGNAL",
+                        "suggested_observer_transition":  "OBSERVER_PENDING_REVIEW",
+                        "allowed_now":  "readonly_evaluation_only",
+                        "blocked_operations":  [
+                                                   "auto_apply",
+                                                   "auto_execute",
+                                                   "worker",
+                                                   "browser",
+                                                   "network",
+                                                   "git",
+                                                   "delete",
+                                                   "move"
+                                               ],
+                        "safety":  {
+                                       "real_execution":  false,
+                                       "system_mutation":  false,
+                                       "screen_mutation":  false,
+                                       "worker":  false,
+                                       "browser":  false,
+                                       "network":  false,
+                                       "git":  false
+                                   }
+                    }
+                ],
+    "safety":  {
+                   "real_execution":  false,
+                   "system_mutation":  false,
+                   "screen_mutation":  false,
+                   "worker":  false,
+                   "browser":  false,
+                   "network":  false,
+                   "git":  false,
+                   "readonly":  true
+               },
+    "next":  "E05_CONVERT_HUMAN_MAINTENANCE_CARD_TO_OBSERVER_IMPROVEMENT_V0"
+}

@@ -1,0 +1,67 @@
+﻿{
+    "schema":  "engremiat.inicio_parity_audit.v1",
+    "package_id":  "ENGREMIAT_SCREEN_NORMALIZER_INICIO_PARITY_AUDIT_001",
+    "stage":  "E01_AUDIT_INICIO_CURRENT_VS_REGISTRY_AND_CANDIDATE_READONLY",
+    "created_at":  "2026-06-20T16:50:41",
+    "status":  "PASS",
+    "mode":  "READONLY_PARITY_AUDIT_NO_PATCH",
+    "current_launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO-NORMALIZED.ps1",
+    "registry":  "C:\\ENGREMIAT_CORE\\data\\screen-normalizer\\screen-registry.v1.json",
+    "candidate":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-inicio-migration-gate\\dry-run\\ENGREMIAT-INICIO-NORMALIZED.candidate.latest.ps1",
+    "current_parse_ok":  true,
+    "candidate_parse_ok":  true,
+    "current_options":  [
+                            "1:Proyectos",
+                            "2:Memoria y documentacion",
+                            "3:Control y estado",
+                            "4:Launchers y configuracion",
+                            "5:Operador y workers",
+                            "6:Tarjetas"
+                        ],
+    "registry_actions":  [
+                             "1:Proyectos",
+                             "2:Memoria y documentacion",
+                             "3:Control y estado",
+                             "4:Launchers y configuracion",
+                             "5:Operador y workers",
+                             "6:Tarjetas"
+                         ],
+    "registry_commands":  [
+                              "b/q = salir",
+                              "m = mantenimiento",
+                              "? = ayuda",
+                              "Enter = refrescar"
+                          ],
+    "current_commands":  {
+                             "enter":  true,
+                             "help":  true,
+                             "back_or_quit":  true,
+                             "maintenance_visible":  true,
+                             "maintenance_routed":  false
+                         },
+    "candidate_commands":  {
+                               "enter":  true,
+                               "help":  true,
+                               "back_or_quit":  true,
+                               "maintenance_visible":  true,
+                               "maintenance_routed":  true
+                           },
+    "missing_in_registry":  [
+
+                            ],
+    "extra_registry_actions":  [
+
+                               ],
+    "risk_items":  [
+                       "current_m_visible_but_not_routed"
+                   ],
+    "decision":  "MIGRATION_CAN_BE_PREPARED_WITH_VISUAL_GATE",
+    "recommendation":  "Preparar gate de migracion real con backup y smoke visual",
+    "patch_existing_launchers":  false,
+    "migration_applied":  false,
+    "worker":  false,
+    "browser":  false,
+    "network":  false,
+    "git":  false,
+    "next":  "E02_PREPARE_INICIO_MIGRATION_APPLY_GATE"
+}

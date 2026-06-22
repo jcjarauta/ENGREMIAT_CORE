@@ -1,0 +1,40 @@
+{
+    "package_id":  "ENGREMIAT_MODULE_CARD_CANON_001",
+    "stage":  "E94D2_ENSURE_PROJECTS_HAVE_START_MODULE",
+    "status":  "PASS",
+    "rule":  "Todo proyecto debe tener un modulo de inicio",
+    "canonical_hierarchy":  "PROYECTO \u003e MODULE_inicio \u003e TARJETA",
+    "module_id":  "MODULE_inicio",
+    "fallback_rule":  "Si una tarjeta no tiene modulo especifico, se vincula a MODULE_inicio",
+    "checked":  [
+                    {
+                        "project_id":  "ENGREMIAT_PROJECT_heartbeat_demo",
+                        "project_path":  "C:\\ENGREMIAT_CORE\\projects\\ENGREMIAT_PROJECT_heartbeat_demo",
+                        "modules_dir":  "C:\\ENGREMIAT_CORE\\projects\\ENGREMIAT_PROJECT_heartbeat_demo\\MODULOS",
+                        "start_module":  "C:\\ENGREMIAT_CORE\\projects\\ENGREMIAT_PROJECT_heartbeat_demo\\MODULOS\\MODULE_inicio",
+                        "module_json":  "C:\\ENGREMIAT_CORE\\projects\\ENGREMIAT_PROJECT_heartbeat_demo\\MODULOS\\MODULE_inicio\\module.json",
+                        "exists":  true
+                    },
+                    {
+                        "project_id":  "projects",
+                        "project_path":  "C:\\ENGREMIAT_CORE\\projects\\projects",
+                        "modules_dir":  "C:\\ENGREMIAT_CORE\\projects\\projects\\MODULOS",
+                        "start_module":  "C:\\ENGREMIAT_CORE\\projects\\projects\\MODULOS\\MODULE_inicio",
+                        "module_json":  "C:\\ENGREMIAT_CORE\\projects\\projects\\MODULOS\\MODULE_inicio\\module.json",
+                        "exists":  true
+                    }
+                ],
+    "created":  [
+                    {
+                        "project_id":  "ENGREMIAT_PROJECT_heartbeat_demo",
+                        "module":  "MODULE_inicio",
+                        "path":  "C:\\ENGREMIAT_CORE\\projects\\ENGREMIAT_PROJECT_heartbeat_demo\\MODULOS\\MODULE_inicio\\module.json"
+                    },
+                    {
+                        "project_id":  "projects",
+                        "module":  "MODULE_inicio",
+                        "path":  "C:\\ENGREMIAT_CORE\\projects\\projects\\MODULOS\\MODULE_inicio\\module.json"
+                    }
+                ],
+    "next":  "E94D3_VALIDATE_PROJECT_MODULE_CARD_ROUTE_WITH_START_MODULE"
+}

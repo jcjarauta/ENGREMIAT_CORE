@@ -1,0 +1,75 @@
+﻿{
+    "schema":  "engremiat.module_blueprint_execution_plan.v1",
+    "package_id":  "ENGREMIAT_MODULE_CARD_ACTION_FLOW_001",
+    "stage":  "E113_CREATE_APPROVED_MODULE_BLUEPRINT_EXECUTION_PLAN",
+    "created_at":  "2026-06-20T14:56:04",
+    "status":  "READY",
+    "mode":  "LOCAL_PLAN_ONLY_NO_WORKER_NO_EXTERNAL_EXECUTION",
+    "source_flow":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\approved-action-flow\\approved-module-card-action-flow.latest.json",
+    "gate_id":  "HUMAN-GATE-CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830",
+    "approved_decision_id":  "HGD-HUMAN-GATE-CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001",
+    "module_ref":  "ENGREMIAT_PROJECT/projects/MODULE_inicio/START-001",
+    "objective":  "Continue approved module card blueprint flow after human gate approval",
+    "execution_boundaries":  {
+                                 "allowed":  [
+                                                 "local_file_creation",
+                                                 "local_json_markdown_evidence",
+                                                 "pending_auth_runner_creation",
+                                                 "readonly_validation"
+                                             ],
+                                 "blocked":  [
+                                                 "worker_real_execution",
+                                                 "browser",
+                                                 "network",
+                                                 "git_commit",
+                                                 "git_push",
+                                                 "external_write",
+                                                 "auto_module_execution"
+                                             ]
+                             },
+    "steps":  [
+                  {
+                      "id":  "BEP-01",
+                      "name":  "Normalize approved blueprint context",
+                      "risk":  "LOW",
+                      "operation":  "local_file_write",
+                      "output":  "blueprint-context.json"
+                  },
+                  {
+                      "id":  "BEP-02",
+                      "name":  "Prepare module action runner pending auth",
+                      "risk":  "MEDIUM",
+                      "operation":  "script_write_no_execution",
+                      "output":  "run-approved-module-action.pending-auth.ps1"
+                  },
+                  {
+                      "id":  "BEP-03",
+                      "name":  "Validate runner blocks without auth",
+                      "risk":  "LOW",
+                      "operation":  "readonly_validation",
+                      "output":  "auth-gate-validation-report.json"
+                  },
+                  {
+                      "id":  "BEP-04",
+                      "name":  "Wait explicit authorization before real module action",
+                      "risk":  "HIGH",
+                      "operation":  "human_gate_required",
+                      "output":  "NO_GO until authorized"
+                  }
+              ],
+    "readiness":  {
+                      "human_gate_approved":  true,
+                      "unlock_present":  true,
+                      "flow_ready":  true,
+                      "runner_created":  false,
+                      "real_execution_allowed":  false
+                  },
+    "safety":  {
+                   "real_execution":  false,
+                   "worker_execution":  false,
+                   "external_execution":  false,
+                   "git":  false,
+                   "additional_gate_mutation":  false
+               },
+    "next":  "E114_CREATE_PENDING_AUTH_MODULE_ACTION_RUNNER"
+}

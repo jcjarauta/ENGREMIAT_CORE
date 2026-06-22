@@ -1,0 +1,49 @@
+{
+    "package_id":  "ENGREMIAT_MODULE_CARD_CANON_001",
+    "stage":  "E91B_CREATE_MODULE_CARD_VALIDATOR_AND_INDEX",
+    "status":  "PASS",
+    "created_at":  "2026-06-20T13:29:54",
+    "schema":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\module-linked-card.schema.json",
+    "validator":  "C:\\ENGREMIAT_CORE\\tools\\module-cards\\validate-module-card.ps1",
+    "rules":  [
+                  "Toda tarjeta nueva debe pasar validate-module-card.ps1",
+                  "El indice registra tarjetas canonicas conocidas",
+                  "Autodiagnostico solo podra generar tarjetas PROPOSED",
+                  "Worker real no consume tarjetas sin APPROVED y gate humano"
+              ],
+    "next":  "E91C_DEFINE_CARD_TO_MODULE_FLOW",
+    "flow_checker":  "C:\\ENGREMIAT_CORE\\tools\\module-cards\\check-card-to-module-flow.ps1",
+    "cards":  [
+                  {
+                      "card_id":  "CARD-ENG-ROOT-UX-001",
+                      "module_id":  "MODULE_OPERATOR_NAVIGATION",
+                      "project_id":  "ENGREMIAT_CORE",
+                      "type":  "UX",
+                      "status":  "PROPOSED",
+                      "priority":  "MEDIUM",
+                      "risk":  "LOW",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\module-linked-card.example.json"
+                  },
+                  {
+                      "card_id":  "CARD-ENGREMIAT_PROJECT_heartbeat_demo-MODULE_inicio-START-001",
+                      "module_id":  "MODULE_inicio",
+                      "project_id":  "ENGREMIAT_PROJECT_heartbeat_demo",
+                      "type":  "CONTROL",
+                      "status":  "PROPOSED",
+                      "priority":  "MEDIUM",
+                      "risk":  "LOW",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\CARD-ENGREMIAT_PROJECT_heartbeat_demo-MODULE_inicio-START-001.json"
+                  },
+                  {
+                      "card_id":  "CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001",
+                      "module_id":  "MODULE_inicio",
+                      "project_id":  "ENGREMIAT_PROJECT_projects",
+                      "type":  "CONTROL",
+                      "status":  "PROPOSED",
+                      "priority":  "MEDIUM",
+                      "risk":  "LOW",
+                      "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001.json"
+                  }
+              ],
+    "updated_at":  "2026-06-20T14:00:52"
+}

@@ -1,0 +1,33 @@
+﻿{
+    "schema":  "engremiat.launcher_canonical_action_runtime.factory.v1",
+    "package_id":  "ENGREMIAT_LAUNCHER_CANONICAL_ACTION_RUNTIME_001",
+    "stage":  "E05_CREATE_CANONICAL_ACTION_RUNTIME_FACTORY_NO_EXECUTION",
+    "created_at":  "2026-06-20T15:01:55",
+    "status":  "READY_NO_EXECUTION",
+    "factory_id":  "CANONICAL_ACTION_PACKAGE_FACTORY_V1",
+    "script":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\canonical-action-runtime\\new-canonical-action-package.no-execution.ps1",
+    "source_contract":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\contracts\\canonical-action-gate-contract.latest.json",
+    "purpose":  "Create parameterized canonical action packages from the standard action gate contract",
+    "default_inputs":  {
+                           "ActionId":  "DEMO-ACTION-001",
+                           "ActionType":  "MODULE_CARD_ACTION",
+                           "ProjectRef":  "ENGREMIAT_PROJECT/demo",
+                           "ModuleRef":  "ENGREMIAT_PROJECT/demo/MODULE_demo/START-001"
+                       },
+    "outputs":  [
+                    "canonical-action-package timestamped json",
+                    "canonical-action-package.latest.json",
+                    "factory report"
+                ],
+    "safety":  {
+                   "factory_only":  true,
+                   "real_execution":  false,
+                   "gate_mutated":  false,
+                   "action_executed":  false,
+                   "worker":  false,
+                   "browser":  false,
+                   "network":  false,
+                   "git":  false
+               },
+    "next":  "E05B_RUN_FACTORY_DEMO_PACKAGE_NO_EXECUTION"
+}

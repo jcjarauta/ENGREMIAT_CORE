@@ -1,0 +1,46 @@
+﻿{
+    "schema":  "engremiat.canonical_action_state.v1",
+    "package_id":  "ENGREMIAT_LAUNCHER_CANONICAL_ACTION_RUNTIME_001",
+    "stage":  "E08_CREATE_CANONICAL_ACTION_STATE_AND_PENDING_AUTH_MUTATION_SCRIPT",
+    "created_at":  "2026-06-20T15:04:40",
+    "status":  "PENDING",
+    "state_file_role":  "CANONICAL_MUTABLE_ACTION_STATE",
+    "action_id":  "DEMO-CANONICAL-MODULE-ACTION-001",
+    "action_type":  "MODULE_CARD_ACTION",
+    "gate_status":  "APPROVED",
+    "unlock_status":  "UNLOCKED_AFTER_APPROVAL",
+    "execution_status":  "EXECUTED_LOCAL",
+    "requested_transition":  {
+                                 "from":  "PENDING",
+                                 "to":  "APPROVED"
+                             },
+    "approved_decision_id":  "DECISION-DEMO-CANONICAL-MODULE-ACTION-001",
+    "last_transition":  {
+                            "event":  "APPROVE_CANONICAL_ACTION",
+                            "at":  "2026-06-20T15:05:52",
+                            "from":  "PENDING",
+                            "to":  "APPROVED",
+                            "authorization_status":  "EXPLICIT_HUMAN_AUTHORIZATION_GRANTED"
+                        },
+    "source_preview":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\previews\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-dry-run-preview.latest.json",
+    "history":  [
+                    {
+                        "event":  "CANONICAL_GATE_MUTATION_APPLIED",
+                        "at":  "2026-06-20T15:05:51",
+                        "from":  "PENDING",
+                        "to":  "APPROVED",
+                        "authorization":  "AUTORIZO_DEMO-CANONICAL-MODULE-ACTION-001_GATE_MUTATION",
+                        "backup":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\state\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-state.before-mutation-20260620-150551.json"
+                    }
+                ],
+    "safety":  {
+                   "canonical_state_created":  true,
+                   "real_execution":  true,
+                   "gate_mutated":  true,
+                   "action_executed":  true,
+                   "worker":  false,
+                   "browser":  false,
+                   "network":  false,
+                   "git":  false
+               }
+}

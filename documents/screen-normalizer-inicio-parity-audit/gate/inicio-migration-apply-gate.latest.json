@@ -1,0 +1,79 @@
+﻿{
+    "schema":  "engremiat.inicio_migration_apply_gate.v1",
+    "package_id":  "ENGREMIAT_SCREEN_NORMALIZER_INICIO_PARITY_AUDIT_001",
+    "stage":  "E02_PREPARE_INICIO_MIGRATION_APPLY_GATE",
+    "created_at":  "2026-06-20T16:51:13",
+    "status":  "PENDING_HUMAN_AUTHORIZATION",
+    "mode":  "APPLY_GATE_ONLY_NO_WRITE",
+    "authorization_required":  true,
+    "authorization_status":  "PENDING_EXPLICIT_HUMAN_AUTHORIZATION",
+    "required_phrase":  "AUTORIZO_MIGRAR_INICIO_A_SCREEN_NORMALIZER",
+    "decision":  "READY_FOR_HUMAN_DECISION",
+    "current_launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO-NORMALIZED.ps1",
+    "candidate_launcher":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-inicio-migration-gate\\dry-run\\ENGREMIAT-INICIO-NORMALIZED.candidate.latest.ps1",
+    "current_sha256":  "B1516AF2F864539649472507A6C26A9D02DCA56CBBB0854D49D9AC471CAE0BDF",
+    "candidate_sha256":  "6DE312DEB6930B7FD03181C94B60BD175AD33FAABC10C1009DEABE2B89754725",
+    "audit":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-inicio-parity-audit\\audit\\inicio-parity-audit.latest.json",
+    "parity":  {
+                   "current_options":  [
+                                           "1:Proyectos",
+                                           "2:Memoria y documentacion",
+                                           "3:Control y estado",
+                                           "4:Launchers y configuracion",
+                                           "5:Operador y workers",
+                                           "6:Tarjetas"
+                                       ],
+                   "registry_actions":  [
+                                            "1:Proyectos",
+                                            "2:Memoria y documentacion",
+                                            "3:Control y estado",
+                                            "4:Launchers y configuracion",
+                                            "5:Operador y workers",
+                                            "6:Tarjetas"
+                                        ],
+                   "missing_in_registry":  [
+
+                                           ],
+                   "current_m_visible":  true,
+                   "current_m_routed":  false,
+                   "candidate_m_routed":  true,
+                   "decision":  "MIGRATION_CAN_BE_PREPARED_WITH_VISUAL_GATE"
+               },
+    "apply_scope":  {
+                        "allowed":  [
+                                        "backup current launcher",
+                                        "replace current INICIO launcher with candidate",
+                                        "validate parse after replace",
+                                        "run visual/manual smoke",
+                                        "restore backup on parse failure"
+                                    ],
+                        "blocked":  [
+                                        "workers",
+                                        "network",
+                                        "browser",
+                                        "git",
+                                        "delete unrelated files",
+                                        "patch other launchers",
+                                        "change registry"
+                                    ]
+                    },
+    "rollback_policy":  [
+                            "backup before write",
+                            "parse candidate before write",
+                            "write candidate to launcher",
+                            "parse launcher after write",
+                            "restore backup on failure"
+                        ],
+    "post_apply_smoke_required":  [
+                                      "INICIO opens",
+                                      "Ruta visible",
+                                      "Rol visible",
+                                      "Estado visible",
+                                      "Principio visible",
+                                      "m visible and routed dry-run/maintenance",
+                                      "Enter refrescar",
+                                      "? ayuda",
+                                      "b/q salir"
+                                  ],
+    "next":  "E03_APPLY_INICIO_MIGRATION_AFTER_EXPLICIT_AUTHORIZATION_OR_STOP"
+}

@@ -1,0 +1,55 @@
+{
+    "$schema":  "https://json-schema.org/draft/2020-12/schema",
+    "title":  "ENGREMIAT gate decision mutation contract no execution",
+    "type":  "object",
+    "required":  [
+                     "contract_id",
+                     "gate_id",
+                     "card_id",
+                     "blueprint_id",
+                     "scope",
+                     "allowed_mutations",
+                     "forbidden_actions",
+                     "safety_rules",
+                     "status"
+                 ],
+    "properties":  {
+                       "contract_id":  {
+                                           "type":  "string"
+                                       },
+                       "gate_id":  {
+                                       "type":  "string"
+                                   },
+                       "card_id":  {
+                                       "type":  "string"
+                                   },
+                       "blueprint_id":  {
+                                            "type":  "string"
+                                        },
+                       "scope":  {
+                                     "const":  "GATE_JSON_MUTATION_ONLY_NO_EXECUTION",
+                                     "type":  "string"
+                                 },
+                       "allowed_mutations":  {
+                                                 "items":  {
+                                                               "type":  "object"
+                                                           },
+                                                 "type":  "array"
+                                             },
+                       "forbidden_actions":  {
+                                                 "items":  {
+                                                               "type":  "string"
+                                                           },
+                                                 "type":  "array"
+                                             },
+                       "safety_rules":  {
+                                            "items":  {
+                                                          "type":  "string"
+                                                      },
+                                            "type":  "array"
+                                        },
+                       "status":  {
+                                      "type":  "string"
+                                  }
+                   }
+}

@@ -1,0 +1,114 @@
+﻿{
+    "schema":  "engremiat.launcher_canonical_action_gate_contract.v1",
+    "package_id":  "ENGREMIAT_LAUNCHER_CANONICAL_ACTION_RUNTIME_001",
+    "stage":  "E02_DEFINE_CANONICAL_ACTION_GATE_CONTRACT",
+    "created_at":  "2026-06-20T14:59:55",
+    "status":  "READY",
+    "contract_id":  "CANONICAL_ACTION_GATE_CONTRACT_V1",
+    "source_pattern":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\patterns\\canonical-action-gate-runtime-pattern.latest.json",
+    "purpose":  "Standard contract for launcher/card actions requiring human approval, dry-run preview, canonical mutation, unlock, and local controlled execution",
+    "required_inputs":  {
+                            "action_id":  "string stable unique action id",
+                            "action_type":  "string e.g. MODULE_CARD_ACTION, PROJECT_ACTION, SYSTEM_ACTION",
+                            "project_ref":  "string optional but recommended",
+                            "module_ref":  "string optional for module flows",
+                            "gate_id":  "string stable gate id",
+                            "decision_id":  "string stable human decision id",
+                            "requested_transition":  {
+                                                         "from":  "PENDING",
+                                                         "to":  "APPROVED"
+                                                     },
+                            "authorization":  {
+                                                  "mutation_env":  "ENGREMIAT_GATE_MUTATION_AUTH",
+                                                  "mutation_value_template":  "AUTORIZO_\u003cACTION_ID\u003e_GATE_MUTATION",
+                                                  "action_env":  "ENGREMIAT_MODULE_ACTION_AUTH",
+                                                  "action_value_template":  "AUTORIZO_\u003cACTION_ID\u003e_RUN_ACTION"
+                                              },
+                            "allowed_operations":  [
+                                                       "local_file_write",
+                                                       "local_json_markdown_evidence",
+                                                       "readonly_validation",
+                                                       "pending_auth_script_creation"
+                                                   ],
+                            "blocked_operations":  [
+                                                       "worker_real_execution",
+                                                       "browser",
+                                                       "network",
+                                                       "git_commit",
+                                                       "git_push",
+                                                       "external_write"
+                                                   ]
+                        },
+    "required_outputs":  {
+                             "contract_json":  "mutation contract no execution",
+                             "validator_json":  "schema/safety validator",
+                             "dry_run_preview_json":  "planned mutation preview",
+                             "canonical_state_json":  "mutable canonical state, not report",
+                             "pending_auth_mutation_script":  "script blocked without env token",
+                             "unlock_json":  "action unlock after approved gate",
+                             "execution_plan_json":  "approved execution plan",
+                             "pending_auth_action_runner":  "runner blocked without env token",
+                             "execution_receipt_json":  "local execution receipt",
+                             "close_report_json":  "final close evidence"
+                         },
+    "mandatory_guards":  [
+                             "reports_are_evidence_only_never_mutation_target",
+                             "canonical_state_file_required_before_real_gate_mutation",
+                             "dry_run_preview_required_before_pending_auth_script",
+                             "pending_auth_script_must_return_NO_GO_without_token",
+                             "real_gate_mutation_requires_explicit_env_token",
+                             "post_mutation_verification_required_before_unlock",
+                             "action_runner_must_return_NO_GO_without_token",
+                             "worker_browser_network_git_blocked_by_default",
+                             "close_requires_gate_approved_unlock_execution_receipt"
+                         ],
+    "state_machine":  {
+                          "initial":  "PENDING",
+                          "allowed_transitions":  [
+                                                      {
+                                                          "from":  "PENDING",
+                                                          "to":  "APPROVED",
+                                                          "requires":  "EXPLICIT_HUMAN_AUTHORIZATION"
+                                                      },
+                                                      {
+                                                          "from":  "PENDING",
+                                                          "to":  "REJECTED",
+                                                          "requires":  "EXPLICIT_HUMAN_AUTHORIZATION"
+                                                      },
+                                                      {
+                                                          "from":  "APPROVED",
+                                                          "to":  "EXECUTED_LOCAL",
+                                                          "requires":  "ACTION_RUNNER_AUTHORIZATION"
+                                                      },
+                                                      {
+                                                          "from":  "EXECUTED_LOCAL",
+                                                          "to":  "CLOSED",
+                                                          "requires":  "VERIFICATION_PASS"
+                                                      }
+                                                  ]
+                      },
+    "path_policy":  {
+                        "canonical_state_root":  "documents/launcher-canonical-action-runtime/state",
+                        "contracts_root":  "documents/launcher-canonical-action-runtime/contracts",
+                        "previews_root":  "documents/launcher-canonical-action-runtime/previews",
+                        "unlocks_root":  "documents/launcher-canonical-action-runtime/unlocks",
+                        "plans_root":  "documents/launcher-canonical-action-runtime/plans",
+                        "executions_root":  "documents/launcher-canonical-action-runtime/executions",
+                        "close_root":  "documents/launcher-canonical-action-runtime/close",
+                        "scripts_root":  "tools/launcher/canonical-action-runtime",
+                        "blocked_mutation_roots":  [
+                                                       "reports",
+                                                       "dashboard",
+                                                       "documents/module-cards/flow-close"
+                                                   ]
+                    },
+    "safety":  {
+                   "real_execution":  false,
+                   "worker":  false,
+                   "browser":  false,
+                   "network":  false,
+                   "git":  false,
+                   "contract_definition_only":  true
+               },
+    "next":  "E03_CREATE_CANONICAL_ACTION_RUNTIME_SKELETON_NO_EXECUTION"
+}

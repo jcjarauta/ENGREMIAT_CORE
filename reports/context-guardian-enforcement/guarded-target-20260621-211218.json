@@ -1,0 +1,20 @@
+﻿{
+    "created_at":  "2026-06-21T21:12:18",
+    "package_id":  "ENGREMIAT_OPERATOR_V2_CONTEXT_GUARDIAN_ENFORCEMENT_002",
+    "operation":  "smoke-protected-launcher",
+    "allow_write":  false,
+    "decision":  "NO_GO_PROTECTED_TARGET",
+    "reasons":  [
+                    "target is outside active_root",
+                    "target is protected"
+                ],
+    "target":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+    "active_root":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2",
+    "active_registry":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\contracts\\SCREEN_REGISTRY.json",
+    "active_engine":  "C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERADOR_V2\\operator\\lib\\OperatorV2.ScreenEngine.ps1",
+    "protected_do_not_patch":  [
+                                   "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+                                   "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1"
+                               ],
+    "next":  "STOP_AND_RESELECT_TARGET"
+}

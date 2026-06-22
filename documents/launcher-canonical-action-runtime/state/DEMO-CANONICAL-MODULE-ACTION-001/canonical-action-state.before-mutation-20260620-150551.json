@@ -1,0 +1,33 @@
+﻿{
+    "schema":  "engremiat.canonical_action_state.v1",
+    "package_id":  "ENGREMIAT_LAUNCHER_CANONICAL_ACTION_RUNTIME_001",
+    "stage":  "E08_CREATE_CANONICAL_ACTION_STATE_AND_PENDING_AUTH_MUTATION_SCRIPT",
+    "created_at":  "2026-06-20T15:04:40",
+    "status":  "PENDING",
+    "state_file_role":  "CANONICAL_MUTABLE_ACTION_STATE",
+    "action_id":  "DEMO-CANONICAL-MODULE-ACTION-001",
+    "action_type":  "MODULE_CARD_ACTION",
+    "gate_status":  "PENDING",
+    "unlock_status":  "LOCKED",
+    "execution_status":  "NOT_EXECUTED",
+    "requested_transition":  {
+                                 "from":  "PENDING",
+                                 "to":  "APPROVED"
+                             },
+    "approved_decision_id":  null,
+    "last_transition":  null,
+    "source_preview":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\previews\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-dry-run-preview.latest.json",
+    "history":  [
+
+                ],
+    "safety":  {
+                   "canonical_state_created":  true,
+                   "real_execution":  false,
+                   "gate_mutated":  false,
+                   "action_executed":  false,
+                   "worker":  false,
+                   "browser":  false,
+                   "network":  false,
+                   "git":  false
+               }
+}

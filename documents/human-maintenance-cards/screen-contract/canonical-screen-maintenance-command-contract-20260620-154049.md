@@ -1,0 +1,21 @@
+﻿# E08 CANONICAL SCREEN MAINTENANCE COMMAND CONTRACT
+
+- package: ENGREMIAT_HUMAN_MAINTENANCE_CARD_001
+- stage: E08_DEFINE_CANONICAL_SCREEN_MAINTENANCE_COMMAND_CONTRACT
+- status: PASS
+- readiness: 100
+- canonical_command: m
+- aliases: mant, mantenimiento, maintenance
+- help_line: refrescar/f5/Enter = redibujar pantalla | ? = ayuda | comandos = menu actual | m = mantenimiento
+- contract: C:\ENGREMIAT_CORE\documents\human-maintenance-cards\screen-contract\canonical-screen-maintenance-command-contract-20260620-154049.json
+- example: C:\ENGREMIAT_CORE\documents\human-maintenance-cards\screen-contract\canonical-screen-maintenance-example-20260620-154049.json
+- checklist: C:\ENGREMIAT_CORE\documents\human-maintenance-cards\screen-contract\screen-maintenance-integration-checklist-20260620-154049.json
+- capture_script: C:\ENGREMIAT_CORE\tools\human-maintenance-cards\new-human-maintenance-card.ps1
+- real_execution: false
+- system_mutation: false
+- screen_mutation: false
+- worker: false
+- browser: false
+- network: false
+- git: false
+- next: E09_CREATE_SCREEN_MAINTENANCE_COMMAND_PATCH_PLAN_NO_WRITE

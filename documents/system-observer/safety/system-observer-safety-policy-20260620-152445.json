@@ -1,0 +1,68 @@
+﻿{
+    "schema":  "engremiat.system_observer_safety_policy.v1",
+    "package_id":  "ENGREMIAT_SYSTEM_OBSERVER_001",
+    "stage":  "E01_CREATE_SYSTEM_OBSERVER_CONTRACT_DIMENSIONS_AND_SAFETY_POLICY",
+    "created_at":  "2026-06-20T15:24:45",
+    "status":  "ACTIVE",
+    "policy_id":  "SYSTEM_OBSERVER_READONLY_SAFETY_POLICY_V1",
+    "default_mode":  "READONLY_NO_MUTATION",
+    "allowed_by_default":  [
+                               "read files",
+                               "index files",
+                               "read reports",
+                               "read documents",
+                               "generate observer documents",
+                               "generate diagnostics",
+                               "generate manuals",
+                               "generate improvement proposals",
+                               "generate task lists",
+                               "generate tsv exports",
+                               "create evidence under documents/system-observer and reports/system-observer"
+                           ],
+    "blocked_by_default":  [
+                               "modify existing project files outside observer dirs",
+                               "modify launcher",
+                               "execute workers",
+                               "open browser",
+                               "network calls",
+                               "git commit",
+                               "git push",
+                               "git fetch",
+                               "git merge",
+                               "delete files",
+                               "move files",
+                               "run external tools with side effects",
+                               "spend money",
+                               "send messages"
+                           ],
+    "authorization_model":  {
+                                "write_to_observer_dirs":  "allowed",
+                                "write_outside_observer_dirs":  "requires explicit gate",
+                                "worker_execution":  "requires explicit gate and runtime action",
+                                "launcher_mutation":  "requires explicit gate and backup",
+                                "git":  "defer to scoped close after human review",
+                                "financial_action":  "never automatic"
+                            },
+    "runtime_bridge":  {
+                           "observer_can_create_action_proposal":  true,
+                           "observer_can_execute_action":  false,
+                           "execution_requires":  "canonical runtime + human gate + explicit auth env"
+                       },
+    "evidence_rules":  [
+                           "reports are evidence, not mutable state",
+                           "observer outputs must cite source paths internally",
+                           "diagnostics must distinguish observed facts from inferred recommendations",
+                           "tasks must include risk and authorization requirement",
+                           "manual must be regenerable from evidence"
+                       ],
+    "safety_flags":  {
+                         "real_execution":  false,
+                         "system_mutation":  false,
+                         "worker":  false,
+                         "browser":  false,
+                         "network":  false,
+                         "git":  false,
+                         "readonly":  true
+                     },
+    "next":  "E02_SYSTEM_OBSERVER_READONLY_INVENTORY_MINIMUM"
+}

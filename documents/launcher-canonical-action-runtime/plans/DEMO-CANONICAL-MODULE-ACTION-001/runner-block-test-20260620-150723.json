@@ -1,0 +1,28 @@
+﻿{
+    "schema":  "engremiat.canonical_action_runner_block_test.v1",
+    "package_id":  "ENGREMIAT_LAUNCHER_CANONICAL_ACTION_RUNTIME_001",
+    "stage":  "E11B_VERIFY_CANONICAL_ACTION_RUNNER_BLOCKS_WITHOUT_AUTH",
+    "created_at":  "2026-06-20T15:07:24",
+    "status":  "PASS",
+    "action_id":  "DEMO-CANONICAL-MODULE-ACTION-001",
+    "runner":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\canonical-action-runtime\\actions\\DEMO-CANONICAL-MODULE-ACTION-001\\run-action.pending-auth.ps1",
+    "canonical_state":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\state\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-state.latest.json",
+    "auth_gate_confirmed":  true,
+    "before":  {
+                   "gate_status":  "APPROVED",
+                   "execution_status":  "NOT_EXECUTED",
+                   "action_executed":  "False"
+               },
+    "after":  {
+                  "gate_status":  "APPROVED",
+                  "execution_status":  "NOT_EXECUTED",
+                  "action_executed":  "False"
+              },
+    "real_execution":  false,
+    "action_executed":  false,
+    "worker":  false,
+    "browser":  false,
+    "network":  false,
+    "git":  false,
+    "next":  "E12_RUN_CANONICAL_APPROVED_ACTION_WITH_EXPLICIT_AUTHORIZATION"
+}

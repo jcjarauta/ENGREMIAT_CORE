@@ -1,0 +1,21 @@
+﻿# E07 HUMAN MAINTENANCE TASKS EXPORT
+
+- package: ENGREMIAT_HUMAN_MAINTENANCE_CARD_001
+- stage: E07_EXPORT_HUMAN_MAINTENANCE_TASKS_TSV
+- status: PASS
+- mode: TSV_EXPORT_FOR_SHEETS_KANBAN_NO_EXECUTION
+- tasks_total: 1
+- pending_gate: 0
+- ready_readonly: 1
+- tasks_tsv: C:\ENGREMIAT_CORE\documents\human-maintenance-cards\exports\human-maintenance-tasks-for-sheets-20260620-154010.tsv
+- kanban_tsv: C:\ENGREMIAT_CORE\documents\human-maintenance-cards\exports\human-maintenance-kanban-cards-20260620-154010.tsv
+- summary_tsv: C:\ENGREMIAT_CORE\documents\human-maintenance-cards\exports\human-maintenance-summary-20260620-154010.tsv
+- report: C:\ENGREMIAT_CORE\reports\human-maintenance-cards\e07-export-human-maintenance-tasks-tsv-20260620-154010.json
+- real_execution: false
+- system_mutation: false
+- screen_mutation: false
+- worker: false
+- browser: false
+- network: false
+- git: false
+- next: E08_DEFINE_CANONICAL_SCREEN_MAINTENANCE_COMMAND_CONTRACT

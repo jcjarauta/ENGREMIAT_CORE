@@ -1,0 +1,117 @@
+﻿{
+    "schema":  "engremiat.internal_candidates_generation.v1",
+    "package_id":  "ENGREMIAT_SCREEN_NORMALIZER_INTERNAL_CANDIDATES_GENERATION_001",
+    "stage":  "E01_GENERATE_ISOLATED_CANDIDATES_FOR_BASE_INTERNAL_SCREENS",
+    "created_at":  "2026-06-20T16:55:59",
+    "status":  "PASS",
+    "mode":  "GENERATE_ISOLATED_CANDIDATES_NO_REAL_PATCH",
+    "targets":  [
+                    "PROYECTOS",
+                    "MEMORIA_DOCUMENTACION",
+                    "CONTROL_ESTADO",
+                    "LAUNCHERS_CONFIGURACION",
+                    "OPERADOR_WORKERS",
+                    "TARJETAS"
+                ],
+    "generated_count":  6,
+    "generated":  [
+                      {
+                          "screen_id":  "PROYECTOS",
+                          "title":  "PROYECTOS",
+                          "candidate":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\PROYECTOS.candidate.isolated.ps1",
+                          "checks":  {
+                                         "parse_ok":  true,
+                                         "loads_helper":  true,
+                                         "shows_normalized_screen":  true,
+                                         "reads_normalized_command":  true,
+                                         "handles_refresh":  true,
+                                         "handles_help":  true,
+                                         "handles_m_dry_run":  true,
+                                         "handles_exit":  true
+                                     }
+                      },
+                      {
+                          "screen_id":  "MEMORIA_DOCUMENTACION",
+                          "title":  "MEMORIA Y DOCUMENTACION",
+                          "candidate":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\MEMORIA_DOCUMENTACION.candidate.isolated.ps1",
+                          "checks":  {
+                                         "parse_ok":  true,
+                                         "loads_helper":  true,
+                                         "shows_normalized_screen":  true,
+                                         "reads_normalized_command":  true,
+                                         "handles_refresh":  true,
+                                         "handles_help":  true,
+                                         "handles_m_dry_run":  true,
+                                         "handles_exit":  true
+                                     }
+                      },
+                      {
+                          "screen_id":  "CONTROL_ESTADO",
+                          "title":  "CONTROL Y ESTADO",
+                          "candidate":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\CONTROL_ESTADO.candidate.isolated.ps1",
+                          "checks":  {
+                                         "parse_ok":  true,
+                                         "loads_helper":  true,
+                                         "shows_normalized_screen":  true,
+                                         "reads_normalized_command":  true,
+                                         "handles_refresh":  true,
+                                         "handles_help":  true,
+                                         "handles_m_dry_run":  true,
+                                         "handles_exit":  true
+                                     }
+                      },
+                      {
+                          "screen_id":  "LAUNCHERS_CONFIGURACION",
+                          "title":  "LAUNCHERS Y CONFIGURACION",
+                          "candidate":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\LAUNCHERS_CONFIGURACION.candidate.isolated.ps1",
+                          "checks":  {
+                                         "parse_ok":  true,
+                                         "loads_helper":  true,
+                                         "shows_normalized_screen":  true,
+                                         "reads_normalized_command":  true,
+                                         "handles_refresh":  true,
+                                         "handles_help":  true,
+                                         "handles_m_dry_run":  true,
+                                         "handles_exit":  true
+                                     }
+                      },
+                      {
+                          "screen_id":  "OPERADOR_WORKERS",
+                          "title":  "OPERADOR Y WORKERS",
+                          "candidate":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\OPERADOR_WORKERS.candidate.isolated.ps1",
+                          "checks":  {
+                                         "parse_ok":  true,
+                                         "loads_helper":  true,
+                                         "shows_normalized_screen":  true,
+                                         "reads_normalized_command":  true,
+                                         "handles_refresh":  true,
+                                         "handles_help":  true,
+                                         "handles_m_dry_run":  true,
+                                         "handles_exit":  true
+                                     }
+                      },
+                      {
+                          "screen_id":  "TARJETAS",
+                          "title":  "TARJETAS",
+                          "candidate":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\TARJETAS.candidate.isolated.ps1",
+                          "checks":  {
+                                         "parse_ok":  true,
+                                         "loads_helper":  true,
+                                         "shows_normalized_screen":  true,
+                                         "reads_normalized_command":  true,
+                                         "handles_refresh":  true,
+                                         "handles_help":  true,
+                                         "handles_m_dry_run":  true,
+                                         "handles_exit":  true
+                                     }
+                      }
+                  ],
+    "patch_existing_launchers":  false,
+    "registry_write":  false,
+    "migration_applied":  false,
+    "worker":  false,
+    "browser":  false,
+    "network":  false,
+    "git":  false,
+    "next":  "E02_STATIC_SMOKE_INTERNAL_CANDIDATES_NO_EXECUTE"
+}

@@ -1,0 +1,30 @@
+{
+    "package_id":  "ENGREMIAT_MODULE_CARD_CANON_001",
+    "stage":  "E94A_DECIDE_CARD_VIEW_INTEGRATION_WITH_PROJECT_MODULE_SCREEN",
+    "status":  "PASS",
+    "created_at":  "2026-06-20T13:39:47",
+    "decision":  "Integrar tarjetas dentro de Proyectos \u003e Proyecto \u003e Modulos; mantener vista global solo como acceso transversal si no genera confusion",
+    "canonical_route":  "INICIO \u003e Proyectos \u003e Proyecto \u003e Modulos \u003e Tarjetas",
+    "global_route":  "INICIO \u003e Tarjetas",
+    "hierarchy":  "PROYECTO \u003e MODULO \u003e TARJETA",
+    "rules":  [
+                  "La tarjeta nunca existe suelta",
+                  "Toda tarjeta pertenece a modulo",
+                  "Todo modulo pertenece a proyecto",
+                  "La pantalla de tarjetas dentro de modulo debe filtrar por project_id y module_id",
+                  "La vista global puede listar todas, pero el trabajo normal empieza desde proyecto/modulo",
+                  "Readonly primero; crear/aprobar despues"
+              ],
+    "projects_screen_detected":  {
+                                     "projects_launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1",
+                                     "has_modules_text":  true,
+                                     "has_project_actions_text":  true
+                                 },
+    "integration_plan":  [
+                             "E94B crear vista tarjetas filtrable por project_id/module_id",
+                             "E94C enlazar desde pantalla Proyecto/Acciones o Modulos",
+                             "E94D validar ruta Proyectos \u003e Proyecto \u003e Modulos \u003e Tarjetas",
+                             "E94E decidir si mantener [6] Tarjetas global o marcarla como vista global"
+                         ],
+    "next":  "E94B_CREATE_FILTERABLE_CARD_VIEW_FOR_PROJECT_MODULE"
+}

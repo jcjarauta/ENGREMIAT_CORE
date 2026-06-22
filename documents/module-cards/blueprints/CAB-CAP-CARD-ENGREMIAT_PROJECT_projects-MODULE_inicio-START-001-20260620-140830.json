@@ -1,0 +1,63 @@
+{
+    "blueprint_id":  "CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830",
+    "proposal_id":  "CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830",
+    "card_id":  "CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001",
+    "project_id":  "ENGREMIAT_PROJECT_projects",
+    "module_id":  "MODULE_inicio",
+    "blueprint_type":  "TASK_BLUEPRINT",
+    "status":  "BLUEPRINT_CREATED",
+    "execution_status":  "NOT_EXECUTED",
+    "human_gate":  "SI",
+    "risk":  "MEDIUM",
+    "title":  "Blueprint de tarea desde tarjeta de inicio",
+    "summary":  "Blueprint dry-run generado desde propuesta de accion sobre tarjeta. No ejecuta worker ni modifica codigo.",
+    "objective":  "Preparar una tarea candidata revisable para evolucionar MODULE_inicio sin acciones reales.",
+    "inputs":  [
+                   {
+                       "type":  "card",
+                       "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001.json"
+                   },
+                   {
+                       "type":  "proposal",
+                       "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\proposals\\CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830.json"
+                   }
+               ],
+    "planned_steps":  [
+                          {
+                              "step":  1,
+                              "name":  "review_card_context",
+                              "operation":  "read",
+                              "risk":  "LOW",
+                              "executes":  "NO"
+                          },
+                          {
+                              "step":  2,
+                              "name":  "define_task_scope",
+                              "operation":  "contract",
+                              "risk":  "LOW",
+                              "executes":  "NO"
+                          },
+                          {
+                              "step":  3,
+                              "name":  "request_human_approval",
+                              "operation":  "gate",
+                              "risk":  "MEDIUM",
+                              "executes":  "NO"
+                          }
+                      ],
+    "forbidden_execution":  [
+                                "execute_worker",
+                                "modify_code_directly",
+                                "git_commit",
+                                "git_push",
+                                "network_call",
+                                "browser_action",
+                                "autohotkey_action",
+                                "delete_files"
+                            ],
+    "expected_output":  "Tarea candidata lista para aprobar o bloquear desde interfaz humana.",
+    "decision":  "READY_FOR_HUMAN_REVIEW_NOT_EXECUTION",
+    "created_by":  "human_assisted_system",
+    "created_at":  "2026-06-20T14:09:05",
+    "updated_at":  "2026-06-20T14:09:05"
+}

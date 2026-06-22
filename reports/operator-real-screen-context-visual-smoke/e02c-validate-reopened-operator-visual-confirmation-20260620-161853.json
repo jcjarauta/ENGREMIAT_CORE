@@ -1,0 +1,29 @@
+﻿{
+    "schema":  "engremiat.operator_real_screen_context_visual_confirmation.v1",
+    "package_id":  "ENGREMIAT_OPERATOR_REAL_SCREEN_CONTEXT_VISUAL_SMOKE_001",
+    "stage":  "E02C_VALIDATE_REOPENED_OPERATOR_VISUAL_CONFIRMATION",
+    "created_at":  "2026-06-20T16:18:53",
+    "status":  "PASS",
+    "mode":  "REOPENED_OPERATOR_VISUAL_CONFIRMATION_REGISTERED",
+    "target":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO-NORMALIZED.ps1",
+    "target_parse_ok":  true,
+    "checks":  {
+                   "title":  true,
+                   "ruta":  true,
+                   "rol":  true,
+                   "principio":  true,
+                   "m_help":  true,
+                   "enter_refresh":  true
+               },
+    "human_visual_confirmation":  "INICIO_SHOWS_ROUTE_ROLE_PRINCIPLE_M_HELP_ENTER_REFRESH",
+    "operator_reopened_by_human":  true,
+    "screen_checked":  "INICIO",
+    "real_execution":  false,
+    "system_mutation":  false,
+    "screen_mutation":  false,
+    "worker":  false,
+    "browser":  false,
+    "network":  false,
+    "git":  false,
+    "next":  "E03_CLOSE_OPERATOR_REAL_SCREEN_CONTEXT_VISUAL_SMOKE"
+}

@@ -1,0 +1,63 @@
+﻿{
+    "schema":  "engremiat.human_maintenance_interactive_form_close.v1",
+    "package_id":  "ENGREMIAT_HUMAN_MAINTENANCE_INTERACTIVE_FORM_001",
+    "stage":  "E08_CLOSE_HUMAN_MAINTENANCE_INTERACTIVE_FORM_AND_VALUE_NEXT_OBJECTIVE",
+    "created_at":  "2026-06-20T16:02:22",
+    "status":  "PASS",
+    "closed":  true,
+    "readiness":  100,
+    "decision":  "M_ROUTE_REWIRED_TO_INTERACTIVE_HUMAN_MAINTENANCE_FORM",
+    "target":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1",
+    "summary":  {
+                    "contract":  "PASS",
+                    "helper_patch_proposal":  "PASS",
+                    "pending_auth_blocked_without_auth":  "PASS",
+                    "helper_applied":  "PASS",
+                    "helper_smoke":  "PASS",
+                    "route_rewired":  "PASS",
+                    "m_route_smoke":  "PASS",
+                    "created_card":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-cards\\inbox\\HMC-desktop-terminal-operator-20260620-160153.json",
+                    "created_card_id":  "HMC-desktop-terminal-operator-20260620-160153",
+                    "title":  "Ruta m formulario real",
+                    "dimension":  "operations",
+                    "severity":  "MEDIUM",
+                    "form_marker_present":  true,
+                    "form_helper_present":  true,
+                    "route_calls_form":  true,
+                    "route_still_generic":  false,
+                    "target_parse_ok":  true
+                },
+    "evidence":  {
+                     "contract":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-interactive-form\\contracts\\interactive-form-contract.latest.json",
+                     "proposal":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-interactive-form\\proposal\\interactive-form-helper-patch-proposal.latest.json",
+                     "pending_auth":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-interactive-form\\pending-auth-patch\\pending-auth-interactive-form-helper.latest.json",
+                     "apply":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-interactive-form\\pending-auth-patch\\apply-interactive-form-helper-with-explicit-auth.latest.json",
+                     "helper_smoke":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-interactive-form\\smoke\\interactive-form-helper-smoke.latest.json",
+                     "rewire":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-interactive-form\\rewire\\rewire-m-route-to-interactive-form.latest.json",
+                     "m_route_smoke":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-interactive-form\\smoke\\m-route-to-interactive-form-smoke.latest.json"
+                 },
+    "known_limits":  [
+                         "no se ha probado todavia pulsando m manualmente dentro del operator vivo",
+                         "el formulario usa Read-Host simple y no tiene aun selector visual de opciones",
+                         "falta propagar ayuda contextual m = mantenimiento a todas las pantallas internas si imprimen ayuda propia",
+                         "git sigue diferido por decision del usuario"
+                     ],
+    "recommended_next_objective":  "ENGREMIAT_OPERATOR_REAL_MAINTENANCE_MANUAL_SMOKE_001",
+    "possible_next":  [
+                          "A: prueba manual real del operator pulsando m",
+                          "B: mejorar UX del formulario con selector de dimension/severidad",
+                          "C: propagar ayuda m a pantallas internas",
+                          "D: integrar tarjetas nuevas con ciclo normal de System Observer"
+                      ],
+    "recommendation":  "A primero para validar experiencia real; B despues para mejorar comodidad; D despues para cerrar el ciclo observer",
+    "safety":  {
+                   "real_execution":  false,
+                   "system_mutation":  true,
+                   "screen_mutation":  true,
+                   "worker":  false,
+                   "browser":  false,
+                   "network":  false,
+                   "git":  false
+               },
+    "next":  "PAUSE_AND_VALUE_NEXT_OBJECTIVE_AFTER_INTERACTIVE_FORM"
+}

@@ -1,0 +1,54 @@
+﻿# E09 SCREEN MAINTENANCE COMMAND PATCH PLAN NO-WRITE
+
+- package: ENGREMIAT_HUMAN_MAINTENANCE_CARD_001
+- stage: E09_CREATE_SCREEN_MAINTENANCE_COMMAND_PATCH_PLAN_NO_WRITE
+- status: PASS
+- mode: SCREEN_MAINTENANCE_PATCH_PLAN_NO_WRITE
+- canonical_command: m
+- candidates_total: 282
+- top_candidates_count: 30
+- capture_script: C:\ENGREMIAT_CORE\tools\human-maintenance-cards\new-human-maintenance-card.ps1
+
+## Top candidates
+- [HIGH] C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-router.ps1.e05l-pre-early-module-bypass-20260619-214925.bak already_mentions_maintenance=False action=PLAN_PATCH_ADD_MAINTENANCE_COMMAND
+- [HIGH] C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-router.ps1.e05j-pre-pass-context-command-20260619-214609.bak already_mentions_maintenance=False action=PLAN_PATCH_ADD_MAINTENANCE_COMMAND
+- [HIGH] C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-select-module-safe.ps1 already_mentions_maintenance=False action=PLAN_PATCH_ADD_MAINTENANCE_COMMAND
+- [HIGH] C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-router.ps1.e06-stable-rebuild-20260619-215114.bak already_mentions_maintenance=False action=PLAN_PATCH_ADD_MAINTENANCE_COMMAND
+- [HIGH] C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-router.ps1.bak-e07h-20260619195748 already_mentions_maintenance=False action=PLAN_PATCH_ADD_MAINTENANCE_COMMAND
+- [HIGH] C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-router.ps1.bak-e06c-20260619194021 already_mentions_maintenance=False action=PLAN_PATCH_ADD_MAINTENANCE_COMMAND
+- [HIGH] C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-router.ps1.bak-e06b-20260619193803 already_mentions_maintenance=False action=PLAN_PATCH_ADD_MAINTENANCE_COMMAND
+- [HIGH] C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-router.ps1.bak-e07b-20260619194543 already_mentions_maintenance=False action=PLAN_PATCH_ADD_MAINTENANCE_COMMAND
+- [HIGH] C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-router.ps1.bak-e06d-20260619194157 already_mentions_maintenance=False action=PLAN_PATCH_ADD_MAINTENANCE_COMMAND
+- [HIGH] C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-status.ps1 already_mentions_maintenance=False action=PLAN_PATCH_ADD_MAINTENANCE_COMMAND
+- [HIGH] C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\Start-EngremiatDesktopOperator.ps1.bak-e04t-20260619185758 already_mentions_maintenance=False action=PLAN_PATCH_ADD_MAINTENANCE_COMMAND
+- [HIGH] C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\Start-EngremiatDesktopOperator.ps1.bak-e04s-rewrite-20260619185551 already_mentions_maintenance=False action=PLAN_PATCH_ADD_MAINTENANCE_COMMAND
+- [HIGH] C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\Start-EngremiatDesktopOperator.ps1.bak-e05b-20260619191249 already_mentions_maintenance=False action=PLAN_PATCH_ADD_MAINTENANCE_COMMAND
+- [HIGH] C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\Start-EngremiatDesktopOperator.ps1.bak-e05a-20260619191007 already_mentions_maintenance=False action=PLAN_PATCH_ADD_MAINTENANCE_COMMAND
+- [HIGH] C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\Start-EngremiatDesktopOperator.ps1.bak-e04s-20260619185430 already_mentions_maintenance=False action=PLAN_PATCH_ADD_MAINTENANCE_COMMAND
+- [HIGH] C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-status.ps1.e06-stable-rebuild-20260619-215114.bak already_mentions_maintenance=False action=PLAN_PATCH_ADD_MAINTENANCE_COMMAND
+- [HIGH] C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-status.ps1.e04-pre-helper-adapt-20260619-212953.bak already_mentions_maintenance=False action=PLAN_PATCH_ADD_MAINTENANCE_COMMAND
+- [HIGH] C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\Start-EngremiatDesktopOperator.ps1 already_mentions_maintenance=False action=PLAN_PATCH_ADD_MAINTENANCE_COMMAND
+- [HIGH] C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\ENGREMIAT_OPERATOR_HELP.md already_mentions_maintenance=False action=PLAN_PATCH_ADD_MAINTENANCE_COMMAND
+- [HIGH] C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-router.ps1.bak-e06a-20260619193448 already_mentions_maintenance=False action=PLAN_PATCH_ADD_MAINTENANCE_COMMAND
+- [HIGH] C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-router.ps1.bak-e04k-20260619183145 already_mentions_maintenance=False action=PLAN_PATCH_ADD_MAINTENANCE_COMMAND
+- [HIGH] C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-router.ps1.bak-e04j-20260619182916 already_mentions_maintenance=False action=PLAN_PATCH_ADD_MAINTENANCE_COMMAND
+- [HIGH] C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-router.ps1.bak-e04n-repair-20260619183746 already_mentions_maintenance=False action=PLAN_PATCH_ADD_MAINTENANCE_COMMAND
+- [HIGH] C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-router.ps1.bak-e04n-20260619183710 already_mentions_maintenance=False action=PLAN_PATCH_ADD_MAINTENANCE_COMMAND
+- [HIGH] C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-router.ps1.bak-e04b-20260619180730 already_mentions_maintenance=False action=PLAN_PATCH_ADD_MAINTENANCE_COMMAND
+- [HIGH] C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-router.ps1 already_mentions_maintenance=False action=PLAN_PATCH_ADD_MAINTENANCE_COMMAND
+- [HIGH] C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-projects-manager.ps1 already_mentions_maintenance=False action=PLAN_PATCH_ADD_MAINTENANCE_COMMAND
+- [HIGH] C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-router.ps1.bak-e04-20260619180610 already_mentions_maintenance=False action=PLAN_PATCH_ADD_MAINTENANCE_COMMAND
+- [HIGH] C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-router.ps1.bak-e03j-20260619175840 already_mentions_maintenance=False action=PLAN_PATCH_ADD_MAINTENANCE_COMMAND
+- [HIGH] C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-router.ps1.bak-e04o-20260619183956 already_mentions_maintenance=False action=PLAN_PATCH_ADD_MAINTENANCE_COMMAND
+
+- plan: C:\ENGREMIAT_CORE\documents\human-maintenance-cards\screen-integration-plan\screen-maintenance-command-patch-plan-no-write-20260620-154123.json
+- rules: C:\ENGREMIAT_CORE\documents\human-maintenance-cards\screen-integration-plan\screen-maintenance-patch-rules-20260620-154123.json
+- report: C:\ENGREMIAT_CORE\reports\human-maintenance-cards\e09-create-screen-maintenance-command-patch-plan-no-write-20260620-154123.json
+- real_execution: false
+- system_mutation: false
+- screen_mutation: false
+- worker: false
+- browser: false
+- network: false
+- git: false
+- next: E10_CLOSE_HUMAN_MAINTENANCE_CARD_V0_AND_VALUE_NEXT_OBJECTIVE

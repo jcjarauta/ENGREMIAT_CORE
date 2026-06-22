@@ -1,0 +1,34 @@
+﻿{
+    "schema":  "engremiat.human_maintenance_card_tasks_export_v0.v1",
+    "package_id":  "ENGREMIAT_HUMAN_MAINTENANCE_CARD_001",
+    "stage":  "E07_EXPORT_HUMAN_MAINTENANCE_TASKS_TSV",
+    "created_at":  "2026-06-20T15:40:10",
+    "status":  "PASS",
+    "mode":  "TSV_EXPORT_FOR_SHEETS_KANBAN_NO_EXECUTION",
+    "source_tasks":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-cards\\tasks\\human-maintenance-tasks-v0.latest.json",
+    "tasks_tsv":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-cards\\exports\\human-maintenance-tasks-for-sheets-20260620-154010.tsv",
+    "tasks_tsv_latest":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-cards\\exports\\human-maintenance-tasks-for-sheets.latest.tsv",
+    "kanban_tsv":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-cards\\exports\\human-maintenance-kanban-cards-20260620-154010.tsv",
+    "kanban_tsv_latest":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-cards\\exports\\human-maintenance-kanban-cards.latest.tsv",
+    "summary_tsv":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-cards\\exports\\human-maintenance-summary-20260620-154010.tsv",
+    "summary_tsv_latest":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-cards\\exports\\human-maintenance-summary.latest.tsv",
+    "summary":  {
+                    "total":  1,
+                    "pending_gate":  0,
+                    "ready_readonly":  1,
+                    "high":  0,
+                    "medium":  1,
+                    "low":  0
+                },
+    "safety":  {
+                   "real_execution":  false,
+                   "system_mutation":  false,
+                   "screen_mutation":  false,
+                   "worker":  false,
+                   "browser":  false,
+                   "network":  false,
+                   "git":  false,
+                   "readonly":  true
+               },
+    "next":  "E08_DEFINE_CANONICAL_SCREEN_MAINTENANCE_COMMAND_CONTRACT"
+}

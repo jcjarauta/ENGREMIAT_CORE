@@ -1,0 +1,30 @@
+{
+    "gate_id":  "HUMAN-GATE-CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830",
+    "card_id":  "CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001",
+    "proposal_id":  "CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830",
+    "blueprint_id":  "CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830",
+    "decision":  "PENDING_HUMAN_DECISION",
+    "status":  "PENDING",
+    "human_gate":  "SI",
+    "reason":  "Gate humano pendiente. El blueprint puede aprobarse, bloquearse o pedirse cambios, pero no ejecuta acciones.",
+    "allowed_decisions":  [
+                              "APPROVE_BLUEPRINT",
+                              "BLOCK_BLUEPRINT",
+                              "REQUEST_CHANGES"
+                          ],
+    "forbidden_execution":  [
+                                "execute_worker",
+                                "modify_code_directly",
+                                "git_commit",
+                                "git_push",
+                                "network_call",
+                                "browser_action",
+                                "autohotkey_action",
+                                "delete_files"
+                            ],
+    "source_blueprint_path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\blueprints\\CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830.json",
+    "source_proposal_path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\proposals\\CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830.json",
+    "created_by":  "human_assisted_system",
+    "created_at":  "2026-06-20T14:38:14",
+    "updated_at":  "2026-06-20T14:38:14"
+}

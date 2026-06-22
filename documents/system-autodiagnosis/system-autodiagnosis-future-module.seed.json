@@ -1,0 +1,41 @@
+{
+    "package_id":  "ENGREMIAT_SYSTEM_AUTODIAGNOSIS_001",
+    "status":  "SEEDED_NOT_IMPLEMENTED",
+    "purpose":  "Crear un espacio para que el sistema se autodiagnostique y proponga tarjetas, modulos, tareas y mejoras",
+    "inputs":  [
+                   "launcher health",
+                   "reports",
+                   "pantallas validadas",
+                   "errores recientes",
+                   "modulos existentes",
+                   "pendientes declarados",
+                   "workers pausados",
+                   "friccion humana observada"
+               ],
+    "outputs":  [
+                    "tarjeta propuesta",
+                    "modulo candidato",
+                    "tarea de mejora",
+                    "bug detectado",
+                    "documentacion pendiente",
+                    "gate humano requerido"
+                ],
+    "card_schema":  {
+                        "risk":  "LOW|MEDIUM|HIGH",
+                        "priority":  "LOW|MEDIUM|HIGH",
+                        "type":  "BUG|MEJORA|MODULO|DOCUMENTACION|WORKER|UX|CONTROL",
+                        "evidence":  "ruta o pantalla que lo justifica",
+                        "reason":  "por que se propone",
+                        "title":  "titulo corto",
+                        "human_gate":  "SI"
+                    },
+    "policy":  [
+                   "solo propone, no ejecuta",
+                   "requiere aprobacion humana",
+                   "no worker real por defecto",
+                   "local-first",
+                   "una capa cada vez"
+               ],
+    "recommended_future_menu":  "Sistema vivo / Autodiagnostico",
+    "next_when_ready":  "ENGREMIAT_SYSTEM_AUTODIAGNOSIS_001_E01_DEFINE_SELF_DIAGNOSIS_READ_MODEL"
+}

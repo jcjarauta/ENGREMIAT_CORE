@@ -1,0 +1,493 @@
+﻿{
+    "schema":  "engremiat.system_observer_improvements_v0.v1",
+    "package_id":  "ENGREMIAT_SYSTEM_OBSERVER_001",
+    "stage":  "E05_SYSTEM_OBSERVER_IMPROVEMENTS_V0",
+    "created_at":  "2026-06-20T15:28:15",
+    "status":  "PASS",
+    "mode":  "READONLY_IMPROVEMENT_PROPOSALS_NO_TASKS_NO_EXECUTION",
+    "observer_id":  "ENGREMIAT_SYSTEM_OBSERVER_V1",
+    "source_diagnostic":  "C:\\ENGREMIAT_CORE\\documents\\system-observer\\diagnostics\\system-observer-diagnostic-v0.latest.json",
+    "source_manual_index":  "C:\\ENGREMIAT_CORE\\documents\\system-observer\\manuals\\system-observer-living-manual-index.latest.json",
+    "summary":  {
+                    "total":  15,
+                    "high":  3,
+                    "medium":  6,
+                    "low":  6,
+                    "requires_authorization":  9,
+                    "readonly_or_documentation":  6
+                },
+    "improvements":  [
+                         {
+                             "id":  "IMP-001-ARCHITECTURE",
+                             "dimension":  "architecture",
+                             "label":  "Arquitectura",
+                             "source_score":  93,
+                             "source_level":  "STRONG",
+                             "priority":  "LOW",
+                             "type":  "technical",
+                             "status":  "PROPOSED",
+                             "problem_detected":  "Sin riesgo principal detectado en v0",
+                             "improvement_proposed":  "usar runtime canonico para convertir mejoras en acciones gobernadas",
+                             "impact_expected":  "optimizar sistema ya usable",
+                             "human_effort":  "MEDIUM_HIGH",
+                             "technical_effort":  "MEDIUM_HIGH",
+                             "financial_cost":  "LOW_OR_NONE",
+                             "requires_authorization":  true,
+                             "allowed_now":  "proposal_only",
+                             "blocked_operations":  [
+                                                        "auto_apply",
+                                                        "worker",
+                                                        "browser",
+                                                        "network",
+                                                        "git"
+                                                    ],
+                             "evidence":  [
+                                              "C:\\ENGREMIAT_CORE\\documents\\system-observer\\diagnostics\\system-observer-diagnostic-v0.latest.json",
+                                              "C:\\ENGREMIAT_CORE\\documents\\system-observer\\manuals\\MANUAL_VIVO_ENGREMIAT_SYSTEM_OBSERVER_V0.latest.md"
+                                          ],
+                             "recommended_task_kind":  "TASK_PROPOSAL_PENDING_GATE",
+                             "next_step":  "E06_CLASSIFY_IMPROVEMENTS_AS_TASKS_V0"
+                         },
+                         {
+                             "id":  "IMP-002-SOFTWARE",
+                             "dimension":  "software",
+                             "label":  "Software",
+                             "source_score":  62,
+                             "source_level":  "STABLE_ENOUGH",
+                             "priority":  "MEDIUM",
+                             "type":  "technical",
+                             "status":  "PROPOSED",
+                             "problem_detected":  "volumen alto de scripts PowerShell; riesgo de duplicacion y deuda tecnica",
+                             "improvement_proposed":  "ampliar evidencias de la dimension",
+                             "impact_expected":  "mejorar estabilidad y claridad operativa",
+                             "human_effort":  "MEDIUM_HIGH",
+                             "technical_effort":  "MEDIUM_HIGH",
+                             "financial_cost":  "LOW_OR_NONE",
+                             "requires_authorization":  true,
+                             "allowed_now":  "proposal_only",
+                             "blocked_operations":  [
+                                                        "auto_apply",
+                                                        "worker",
+                                                        "browser",
+                                                        "network",
+                                                        "git"
+                                                    ],
+                             "evidence":  [
+                                              "C:\\ENGREMIAT_CORE\\documents\\system-observer\\diagnostics\\system-observer-diagnostic-v0.latest.json",
+                                              "C:\\ENGREMIAT_CORE\\documents\\system-observer\\manuals\\MANUAL_VIVO_ENGREMIAT_SYSTEM_OBSERVER_V0.latest.md"
+                                          ],
+                             "recommended_task_kind":  "TASK_PROPOSAL_PENDING_GATE",
+                             "next_step":  "E06_CLASSIFY_IMPROVEMENTS_AS_TASKS_V0"
+                         },
+                         {
+                             "id":  "IMP-003-HARDWARE",
+                             "dimension":  "hardware",
+                             "label":  "Hardware",
+                             "source_score":  55,
+                             "source_level":  "WEAK",
+                             "priority":  "MEDIUM",
+                             "type":  "infrastructure",
+                             "status":  "PROPOSED",
+                             "problem_detected":  "diagnostico hardware aun superficial; falta leer perfiles y limites por nodo",
+                             "improvement_proposed":  "crear inventario hardware por nodo main/legacy/raspberry/mobile",
+                             "impact_expected":  "mejorar estabilidad y claridad operativa",
+                             "human_effort":  "MEDIUM",
+                             "technical_effort":  "MEDIUM",
+                             "financial_cost":  "TO_ESTIMATE",
+                             "requires_authorization":  true,
+                             "allowed_now":  "proposal_only",
+                             "blocked_operations":  [
+                                                        "auto_apply",
+                                                        "worker",
+                                                        "browser",
+                                                        "network",
+                                                        "git"
+                                                    ],
+                             "evidence":  [
+                                              "C:\\ENGREMIAT_CORE\\documents\\system-observer\\diagnostics\\system-observer-diagnostic-v0.latest.json",
+                                              "C:\\ENGREMIAT_CORE\\documents\\system-observer\\manuals\\MANUAL_VIVO_ENGREMIAT_SYSTEM_OBSERVER_V0.latest.md"
+                                          ],
+                             "recommended_task_kind":  "TASK_PROPOSAL_PENDING_GATE",
+                             "next_step":  "E06_CLASSIFY_IMPROVEMENTS_AS_TASKS_V0"
+                         },
+                         {
+                             "id":  "IMP-004-HUMANS",
+                             "dimension":  "humans",
+                             "label":  "Humanos",
+                             "source_score":  68,
+                             "source_level":  "STABLE_ENOUGH",
+                             "priority":  "MEDIUM",
+                             "type":  "human_process",
+                             "status":  "PROPOSED",
+                             "problem_detected":  "aun no existe metrica automatica de carga humana",
+                             "improvement_proposed":  "medir friccion humana por numero de pasos, Enter/clicks y gates",
+                             "impact_expected":  "mejorar estabilidad y claridad operativa",
+                             "human_effort":  "LOW_MEDIUM",
+                             "technical_effort":  "LOW_MEDIUM",
+                             "financial_cost":  "LOW_OR_NONE",
+                             "requires_authorization":  false,
+                             "allowed_now":  "proposal_only",
+                             "blocked_operations":  [
+                                                        "auto_apply",
+                                                        "worker",
+                                                        "browser",
+                                                        "network",
+                                                        "git"
+                                                    ],
+                             "evidence":  [
+                                              "C:\\ENGREMIAT_CORE\\documents\\system-observer\\diagnostics\\system-observer-diagnostic-v0.latest.json",
+                                              "C:\\ENGREMIAT_CORE\\documents\\system-observer\\manuals\\MANUAL_VIVO_ENGREMIAT_SYSTEM_OBSERVER_V0.latest.md"
+                                          ],
+                             "recommended_task_kind":  "READONLY_OR_DOCUMENTATION_TASK",
+                             "next_step":  "E06_CLASSIFY_IMPROVEMENTS_AS_TASKS_V0"
+                         },
+                         {
+                             "id":  "IMP-005-FINANCING",
+                             "dimension":  "financing",
+                             "label":  "Financiacion",
+                             "source_score":  42,
+                             "source_level":  "WEAK",
+                             "priority":  "HIGH",
+                             "type":  "financial_planning",
+                             "status":  "PROPOSED",
+                             "problem_detected":  "dimension financiera sin evidencias estructuradas todavia",
+                             "improvement_proposed":  "crear presupuesto operativo, costes por hardware/software/humano y necesidades de financiacion",
+                             "impact_expected":  "reduce bloqueo estructural",
+                             "human_effort":  "MEDIUM",
+                             "technical_effort":  "MEDIUM",
+                             "financial_cost":  "TO_ESTIMATE",
+                             "requires_authorization":  false,
+                             "allowed_now":  "proposal_only",
+                             "blocked_operations":  [
+                                                        "auto_apply",
+                                                        "worker",
+                                                        "browser",
+                                                        "network",
+                                                        "git"
+                                                    ],
+                             "evidence":  [
+                                              "C:\\ENGREMIAT_CORE\\documents\\system-observer\\diagnostics\\system-observer-diagnostic-v0.latest.json",
+                                              "C:\\ENGREMIAT_CORE\\documents\\system-observer\\manuals\\MANUAL_VIVO_ENGREMIAT_SYSTEM_OBSERVER_V0.latest.md"
+                                          ],
+                             "recommended_task_kind":  "READONLY_OR_DOCUMENTATION_TASK",
+                             "next_step":  "E06_CLASSIFY_IMPROVEMENTS_AS_TASKS_V0"
+                         },
+                         {
+                             "id":  "IMP-006-DOCUMENTATION",
+                             "dimension":  "documentation",
+                             "label":  "Documentacion",
+                             "source_score":  78,
+                             "source_level":  "STABLE_ENOUGH",
+                             "priority":  "LOW",
+                             "type":  "documentation",
+                             "status":  "PROPOSED",
+                             "problem_detected":  "mucho markdown sin manual vivo consolidado puede dispersar conocimiento",
+                             "improvement_proposed":  "generar manual vivo desde evidencias cerradas",
+                             "impact_expected":  "optimizar sistema ya usable",
+                             "human_effort":  "LOW_MEDIUM",
+                             "technical_effort":  "LOW_MEDIUM",
+                             "financial_cost":  "LOW_OR_NONE",
+                             "requires_authorization":  false,
+                             "allowed_now":  "proposal_only",
+                             "blocked_operations":  [
+                                                        "auto_apply",
+                                                        "worker",
+                                                        "browser",
+                                                        "network",
+                                                        "git"
+                                                    ],
+                             "evidence":  [
+                                              "C:\\ENGREMIAT_CORE\\documents\\system-observer\\diagnostics\\system-observer-diagnostic-v0.latest.json",
+                                              "C:\\ENGREMIAT_CORE\\documents\\system-observer\\manuals\\MANUAL_VIVO_ENGREMIAT_SYSTEM_OBSERVER_V0.latest.md"
+                                          ],
+                             "recommended_task_kind":  "READONLY_OR_DOCUMENTATION_TASK",
+                             "next_step":  "E06_CLASSIFY_IMPROVEMENTS_AS_TASKS_V0"
+                         },
+                         {
+                             "id":  "IMP-007-SECURITY",
+                             "dimension":  "security",
+                             "label":  "Seguridad y limites",
+                             "source_score":  88,
+                             "source_level":  "STRONG",
+                             "priority":  "LOW",
+                             "type":  "safety",
+                             "status":  "PROPOSED",
+                             "problem_detected":  "Sin riesgo principal detectado en v0",
+                             "improvement_proposed":  "convertir politicas en validador automatico por objetivo",
+                             "impact_expected":  "optimizar sistema ya usable",
+                             "human_effort":  "LOW_MEDIUM",
+                             "technical_effort":  "LOW_MEDIUM",
+                             "financial_cost":  "LOW_OR_NONE",
+                             "requires_authorization":  false,
+                             "allowed_now":  "proposal_only",
+                             "blocked_operations":  [
+                                                        "auto_apply",
+                                                        "worker",
+                                                        "browser",
+                                                        "network",
+                                                        "git"
+                                                    ],
+                             "evidence":  [
+                                              "C:\\ENGREMIAT_CORE\\documents\\system-observer\\diagnostics\\system-observer-diagnostic-v0.latest.json",
+                                              "C:\\ENGREMIAT_CORE\\documents\\system-observer\\manuals\\MANUAL_VIVO_ENGREMIAT_SYSTEM_OBSERVER_V0.latest.md"
+                                          ],
+                             "recommended_task_kind":  "READONLY_OR_DOCUMENTATION_TASK",
+                             "next_step":  "E06_CLASSIFY_IMPROVEMENTS_AS_TASKS_V0"
+                         },
+                         {
+                             "id":  "IMP-008-UX",
+                             "dimension":  "ux",
+                             "label":  "UX operador",
+                             "source_score":  78,
+                             "source_level":  "STABLE_ENOUGH",
+                             "priority":  "LOW",
+                             "type":  "technical",
+                             "status":  "PROPOSED",
+                             "problem_detected":  "hook actual es marcador, no navegacion profunda final",
+                             "improvement_proposed":  "insertar ruta interactiva real runtime/acciones en menu principal",
+                             "impact_expected":  "optimizar sistema ya usable",
+                             "human_effort":  "MEDIUM_HIGH",
+                             "technical_effort":  "MEDIUM_HIGH",
+                             "financial_cost":  "LOW_OR_NONE",
+                             "requires_authorization":  true,
+                             "allowed_now":  "proposal_only",
+                             "blocked_operations":  [
+                                                        "auto_apply",
+                                                        "worker",
+                                                        "browser",
+                                                        "network",
+                                                        "git"
+                                                    ],
+                             "evidence":  [
+                                              "C:\\ENGREMIAT_CORE\\documents\\system-observer\\diagnostics\\system-observer-diagnostic-v0.latest.json",
+                                              "C:\\ENGREMIAT_CORE\\documents\\system-observer\\manuals\\MANUAL_VIVO_ENGREMIAT_SYSTEM_OBSERVER_V0.latest.md"
+                                          ],
+                             "recommended_task_kind":  "TASK_PROPOSAL_PENDING_GATE",
+                             "next_step":  "E06_CLASSIFY_IMPROVEMENTS_AS_TASKS_V0"
+                         },
+                         {
+                             "id":  "IMP-009-WORKERS",
+                             "dimension":  "workers",
+                             "label":  "Workers e IA",
+                             "source_score":  58,
+                             "source_level":  "WEAK",
+                             "priority":  "MEDIUM",
+                             "type":  "technical",
+                             "status":  "PROPOSED",
+                             "problem_detected":  "workers/Ollama/Cline no integrados al observer todavia",
+                             "improvement_proposed":  "usar IA local solo como worker interpretativo despues de diagnostico determinista",
+                             "impact_expected":  "mejorar estabilidad y claridad operativa",
+                             "human_effort":  "MEDIUM",
+                             "technical_effort":  "MEDIUM",
+                             "financial_cost":  "LOW_OR_NONE",
+                             "requires_authorization":  true,
+                             "allowed_now":  "proposal_only",
+                             "blocked_operations":  [
+                                                        "auto_apply",
+                                                        "worker",
+                                                        "browser",
+                                                        "network",
+                                                        "git"
+                                                    ],
+                             "evidence":  [
+                                              "C:\\ENGREMIAT_CORE\\documents\\system-observer\\diagnostics\\system-observer-diagnostic-v0.latest.json",
+                                              "C:\\ENGREMIAT_CORE\\documents\\system-observer\\manuals\\MANUAL_VIVO_ENGREMIAT_SYSTEM_OBSERVER_V0.latest.md"
+                                          ],
+                             "recommended_task_kind":  "TASK_PROPOSAL_PENDING_GATE",
+                             "next_step":  "E06_CLASSIFY_IMPROVEMENTS_AS_TASKS_V0"
+                         },
+                         {
+                             "id":  "IMP-010-GROWTH",
+                             "dimension":  "growth",
+                             "label":  "Crecimiento y deuda",
+                             "source_score":  56,
+                             "source_level":  "WEAK",
+                             "priority":  "MEDIUM",
+                             "type":  "technical",
+                             "status":  "PROPOSED",
+                             "problem_detected":  "crecimiento documental alto; riesgo de ruido, duplicados y dificultad de busqueda",
+                             "improvement_proposed":  "crear limpieza, indices latest y compactacion de evidencias",
+                             "impact_expected":  "mejorar estabilidad y claridad operativa",
+                             "human_effort":  "MEDIUM_HIGH",
+                             "technical_effort":  "MEDIUM_HIGH",
+                             "financial_cost":  "LOW_OR_NONE",
+                             "requires_authorization":  true,
+                             "allowed_now":  "proposal_only",
+                             "blocked_operations":  [
+                                                        "auto_apply",
+                                                        "worker",
+                                                        "browser",
+                                                        "network",
+                                                        "git"
+                                                    ],
+                             "evidence":  [
+                                              "C:\\ENGREMIAT_CORE\\documents\\system-observer\\diagnostics\\system-observer-diagnostic-v0.latest.json",
+                                              "C:\\ENGREMIAT_CORE\\documents\\system-observer\\manuals\\MANUAL_VIVO_ENGREMIAT_SYSTEM_OBSERVER_V0.latest.md"
+                                          ],
+                             "recommended_task_kind":  "TASK_PROPOSAL_PENDING_GATE",
+                             "next_step":  "E06_CLASSIFY_IMPROVEMENTS_AS_TASKS_V0"
+                         },
+                         {
+                             "id":  "IMP-011-GOVERNANCE",
+                             "dimension":  "governance",
+                             "label":  "Gobernanza",
+                             "source_score":  76,
+                             "source_level":  "STABLE_ENOUGH",
+                             "priority":  "LOW",
+                             "type":  "human_process",
+                             "status":  "PROPOSED",
+                             "problem_detected":  "Sin riesgo principal detectado en v0",
+                             "improvement_proposed":  "crear tablero de decisiones y prioridades desde reports",
+                             "impact_expected":  "optimizar sistema ya usable",
+                             "human_effort":  "LOW_MEDIUM",
+                             "technical_effort":  "LOW_MEDIUM",
+                             "financial_cost":  "LOW_OR_NONE",
+                             "requires_authorization":  false,
+                             "allowed_now":  "proposal_only",
+                             "blocked_operations":  [
+                                                        "auto_apply",
+                                                        "worker",
+                                                        "browser",
+                                                        "network",
+                                                        "git"
+                                                    ],
+                             "evidence":  [
+                                              "C:\\ENGREMIAT_CORE\\documents\\system-observer\\diagnostics\\system-observer-diagnostic-v0.latest.json",
+                                              "C:\\ENGREMIAT_CORE\\documents\\system-observer\\manuals\\MANUAL_VIVO_ENGREMIAT_SYSTEM_OBSERVER_V0.latest.md"
+                                          ],
+                             "recommended_task_kind":  "READONLY_OR_DOCUMENTATION_TASK",
+                             "next_step":  "E06_CLASSIFY_IMPROVEMENTS_AS_TASKS_V0"
+                         },
+                         {
+                             "id":  "IMP-012-OPERATIONS",
+                             "dimension":  "operations",
+                             "label":  "Operacion diaria",
+                             "source_score":  74,
+                             "source_level":  "STABLE_ENOUGH",
+                             "priority":  "LOW",
+                             "type":  "technical",
+                             "status":  "PROPOSED",
+                             "problem_detected":  "Sin riesgo principal detectado en v0",
+                             "improvement_proposed":  "crear comando diario observer: estado, diagnostico, manual, tareas",
+                             "impact_expected":  "optimizar sistema ya usable",
+                             "human_effort":  "LOW_MEDIUM",
+                             "technical_effort":  "LOW_MEDIUM",
+                             "financial_cost":  "LOW_OR_NONE",
+                             "requires_authorization":  true,
+                             "allowed_now":  "proposal_only",
+                             "blocked_operations":  [
+                                                        "auto_apply",
+                                                        "worker",
+                                                        "browser",
+                                                        "network",
+                                                        "git"
+                                                    ],
+                             "evidence":  [
+                                              "C:\\ENGREMIAT_CORE\\documents\\system-observer\\diagnostics\\system-observer-diagnostic-v0.latest.json",
+                                              "C:\\ENGREMIAT_CORE\\documents\\system-observer\\manuals\\MANUAL_VIVO_ENGREMIAT_SYSTEM_OBSERVER_V0.latest.md"
+                                          ],
+                             "recommended_task_kind":  "TASK_PROPOSAL_PENDING_GATE",
+                             "next_step":  "E06_CLASSIFY_IMPROVEMENTS_AS_TASKS_V0"
+                         },
+                         {
+                             "id":  "IMP-900-MANUAL-CONSOLIDATION",
+                             "dimension":  "documentation",
+                             "label":  "Manual vivo consolidado",
+                             "source_score":  69,
+                             "source_level":  "STABLE_ENOUGH",
+                             "priority":  "HIGH",
+                             "type":  "documentation",
+                             "status":  "PROPOSED",
+                             "problem_detected":  "Mucho conocimiento disperso en reports, markdown y scripts",
+                             "improvement_proposed":  "Crear manual vivo regenerable por secciones: uso humano, arquitectura, limites, operaciones, workers, financiacion y tareas",
+                             "impact_expected":  "reducir perdida de contexto y acelerar operacion diaria",
+                             "human_effort":  "LOW_MEDIUM",
+                             "technical_effort":  "LOW_MEDIUM",
+                             "financial_cost":  "LOW_OR_NONE",
+                             "requires_authorization":  false,
+                             "allowed_now":  "documentation_generation",
+                             "blocked_operations":  [
+                                                        "auto_apply",
+                                                        "worker",
+                                                        "browser",
+                                                        "network",
+                                                        "git"
+                                                    ],
+                             "evidence":  [
+                                              "C:\\ENGREMIAT_CORE\\documents\\system-observer\\manuals\\MANUAL_VIVO_ENGREMIAT_SYSTEM_OBSERVER_V0.latest.md",
+                                              "C:\\ENGREMIAT_CORE\\documents\\system-observer\\diagnostics\\system-observer-diagnostic-v0.latest.json"
+                                          ],
+                             "recommended_task_kind":  "DOCUMENTATION_TASK",
+                             "next_step":  "E06_CLASSIFY_IMPROVEMENTS_AS_TASKS_V0"
+                         },
+                         {
+                             "id":  "IMP-901-GROWTH-CONTROL",
+                             "dimension":  "growth",
+                             "label":  "Control de crecimiento documental",
+                             "source_score":  69,
+                             "source_level":  "STABLE_ENOUGH",
+                             "priority":  "HIGH",
+                             "type":  "technical",
+                             "status":  "PROPOSED",
+                             "problem_detected":  "Volumen alto de json, markdown, ps1 y reports",
+                             "improvement_proposed":  "Crear indices latest, resumen compacto, limpieza segura de temporales y detector de duplicados sin borrar nada automaticamente",
+                             "impact_expected":  "evitar ruido, duplicacion y perdida de señales importantes",
+                             "human_effort":  "MEDIUM",
+                             "technical_effort":  "MEDIUM_HIGH",
+                             "financial_cost":  "LOW_OR_NONE",
+                             "requires_authorization":  true,
+                             "allowed_now":  "proposal_only",
+                             "blocked_operations":  [
+                                                        "delete",
+                                                        "move",
+                                                        "git",
+                                                        "auto_apply"
+                                                    ],
+                             "evidence":  [
+                                              "C:\\ENGREMIAT_CORE\\documents\\system-observer\\diagnostics\\system-observer-diagnostic-v0.latest.json"
+                                          ],
+                             "recommended_task_kind":  "TASK_PROPOSAL_PENDING_GATE",
+                             "next_step":  "E06_CLASSIFY_IMPROVEMENTS_AS_TASKS_V0"
+                         },
+                         {
+                             "id":  "IMP-902-RUNTIME-ACTION-BRIDGE",
+                             "dimension":  "operations",
+                             "label":  "Puente observer a runtime canonico",
+                             "source_score":  69,
+                             "source_level":  "STABLE_ENOUGH",
+                             "priority":  "MEDIUM",
+                             "type":  "technical",
+                             "status":  "PROPOSED",
+                             "problem_detected":  "Las mejoras aun no se convierten en acciones canonicas gobernadas",
+                             "improvement_proposed":  "Preparar conversion mejora -\u003e tarea -\u003e paquete de accion canonica -\u003e preview -\u003e gate humano",
+                             "impact_expected":  "empezar a probar funciones reales consolidadas con seguridad",
+                             "human_effort":  "MEDIUM",
+                             "technical_effort":  "MEDIUM_HIGH",
+                             "financial_cost":  "LOW_OR_NONE",
+                             "requires_authorization":  true,
+                             "allowed_now":  "proposal_only",
+                             "blocked_operations":  [
+                                                        "execute",
+                                                        "worker",
+                                                        "browser",
+                                                        "network",
+                                                        "git"
+                                                    ],
+                             "evidence":  [
+                                              "C:\\ENGREMIAT_CORE\\documents\\system-observer\\diagnostics\\system-observer-diagnostic-v0.latest.json"
+                                          ],
+                             "recommended_task_kind":  "TASK_PROPOSAL_PENDING_GATE",
+                             "next_step":  "E06_CLASSIFY_IMPROVEMENTS_AS_TASKS_V0"
+                         }
+                     ],
+    "safety":  {
+                   "real_execution":  false,
+                   "system_mutation":  false,
+                   "worker":  false,
+                   "browser":  false,
+                   "network":  false,
+                   "git":  false,
+                   "readonly":  true
+               },
+    "next":  "E06_SYSTEM_OBSERVER_CLASSIFY_IMPROVEMENTS_AS_TASKS_V0"
+}

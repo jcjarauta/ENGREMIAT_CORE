@@ -1,0 +1,237 @@
+﻿{
+    "schema":  "engremiat.system_observer_dimensions.v1",
+    "package_id":  "ENGREMIAT_SYSTEM_OBSERVER_001",
+    "stage":  "E01_CREATE_SYSTEM_OBSERVER_CONTRACT_DIMENSIONS_AND_SAFETY_POLICY",
+    "created_at":  "2026-06-20T15:24:45",
+    "status":  "READY",
+    "dimensions":  [
+                       {
+                           "id":  "architecture",
+                           "label":  "Arquitectura",
+                           "question":  "El sistema esta ordenado, modular y escalable?",
+                           "signals":  [
+                                           "contracts",
+                                           "module boundaries",
+                                           "runtime chains",
+                                           "dependency clarity"
+                                       ],
+                           "outputs":  [
+                                           "risks",
+                                           "improvements",
+                                           "architecture tasks"
+                                       ]
+                       },
+                       {
+                           "id":  "software",
+                           "label":  "Software",
+                           "question":  "El codigo, scripts y herramientas son estables y mantenibles?",
+                           "signals":  [
+                                           "parse checks",
+                                           "smoke reports",
+                                           "duplicated scripts",
+                                           "fragile patches",
+                                           "errors"
+                                       ],
+                           "outputs":  [
+                                           "technical debt",
+                                           "repair tasks",
+                                           "validation tasks"
+                                       ]
+                       },
+                       {
+                           "id":  "hardware",
+                           "label":  "Hardware",
+                           "question":  "Los nodos y recursos fisicos soportan los objetivos actuales?",
+                           "signals":  [
+                                           "hardware profiles",
+                                           "gpu/cpu/ram notes",
+                                           "node roles",
+                                           "resource bottlenecks"
+                                       ],
+                           "outputs":  [
+                                           "capacity warnings",
+                                           "hardware tasks",
+                                           "migration tasks"
+                                       ]
+                       },
+                       {
+                           "id":  "humans",
+                           "label":  "Humanos",
+                           "question":  "La carga humana, decisiones y friccion estan controladas?",
+                           "signals":  [
+                                           "manual gates",
+                                           "human actions",
+                                           "click/enter friction",
+                                           "review burden"
+                                       ],
+                           "outputs":  [
+                                           "human workload risks",
+                                           "ux tasks",
+                                           "delegation tasks"
+                                       ]
+                       },
+                       {
+                           "id":  "financing",
+                           "label":  "Financiacion",
+                           "question":  "Hay claridad sobre costes, ingresos, inversion y sostenibilidad?",
+                           "signals":  [
+                                           "budget files",
+                                           "cost notes",
+                                           "resource plans",
+                                           "missing financial evidence"
+                                       ],
+                           "outputs":  [
+                                           "financial risks",
+                                           "funding tasks",
+                                           "cost estimation tasks"
+                                       ]
+                       },
+                       {
+                           "id":  "documentation",
+                           "label":  "Documentacion",
+                           "question":  "El sistema puede explicarse y usarse mediante manuales vivos?",
+                           "signals":  [
+                                           "manuals",
+                                           "readmes",
+                                           "close reports",
+                                           "md summaries"
+                                       ],
+                           "outputs":  [
+                                           "manual gaps",
+                                           "usage manual tasks",
+                                           "architecture manual tasks"
+                                       ]
+                       },
+                       {
+                           "id":  "security",
+                           "label":  "Seguridad y limites",
+                           "question":  "Las acciones sensibles estan bloqueadas por defecto y auditadas?",
+                           "signals":  [
+                                           "NO_GO",
+                                           "auth envs",
+                                           "gate receipts",
+                                           "backups",
+                                           "blocked worker/browser/network/git"
+                                       ],
+                           "outputs":  [
+                                           "safety warnings",
+                                           "gate tasks",
+                                           "policy tasks"
+                                       ]
+                       },
+                       {
+                           "id":  "ux",
+                           "label":  "UX operador",
+                           "question":  "El humano puede operar el sistema sin perderse?",
+                           "signals":  [
+                                           "launcher screens",
+                                           "help text",
+                                           "refresh rules",
+                                           "menu routes",
+                                           "adapter smoke"
+                                       ],
+                           "outputs":  [
+                                           "ui improvements",
+                                           "navigation tasks",
+                                           "help tasks"
+                                       ]
+                       },
+                       {
+                           "id":  "workers",
+                           "label":  "Workers e IA",
+                           "question":  "Los workers estan preparados, limitados y trazables?",
+                           "signals":  [
+                                           "worker contracts",
+                                           "ollama evidence",
+                                           "cline evidence",
+                                           "no-go gates"
+                                       ],
+                           "outputs":  [
+                                           "worker readiness",
+                                           "worker risk",
+                                           "worker tasks"
+                                       ]
+                       },
+                       {
+                           "id":  "growth",
+                           "label":  "Crecimiento y deuda",
+                           "question":  "El sistema crece sin desordenarse ni exceder sus limites?",
+                           "signals":  [
+                                           "file counts",
+                                           "reports volume",
+                                           "duplicated objectives",
+                                           "unclosed changes",
+                                           "complexity"
+                                       ],
+                           "outputs":  [
+                                           "growth limits",
+                                           "cleanup tasks",
+                                           "modularization tasks"
+                                       ]
+                       },
+                       {
+                           "id":  "governance",
+                           "label":  "Gobernanza",
+                           "question":  "Las decisiones, prioridades y gates estan claros?",
+                           "signals":  [
+                                           "decision files",
+                                           "gates",
+                                           "close reports",
+                                           "next objectives"
+                                       ],
+                           "outputs":  [
+                                           "decision gaps",
+                                           "priority tasks",
+                                           "governance tasks"
+                                       ]
+                       },
+                       {
+                           "id":  "operations",
+                           "label":  "Operacion diaria",
+                           "question":  "El sistema puede usarse cada dia con estabilidad?",
+                           "signals":  [
+                                           "launcher readiness",
+                                           "status commands",
+                                           "logs",
+                                           "latest reports"
+                                       ],
+                           "outputs":  [
+                                           "operator tasks",
+                                           "stability tasks",
+                                           "routine tasks"
+                                       ]
+                       }
+                   ],
+    "scoring":  {
+                    "min":  0,
+                    "max":  100,
+                    "levels":  [
+                                   {
+                                       "range":  "0-39",
+                                       "label":  "CRITICAL",
+                                       "meaning":  "bloqueo o falta evidencia"
+                                   },
+                                   {
+                                       "range":  "40-59",
+                                       "label":  "WEAK",
+                                       "meaning":  "funciona parcialmente o con alto riesgo"
+                                   },
+                                   {
+                                       "range":  "60-79",
+                                       "label":  "STABLE_ENOUGH",
+                                       "meaning":  "usable con vigilancia"
+                                   },
+                                   {
+                                       "range":  "80-94",
+                                       "label":  "STRONG",
+                                       "meaning":  "estable y documentado"
+                                   },
+                                   {
+                                       "range":  "95-100",
+                                       "label":  "READY",
+                                       "meaning":  "cerrado, evidenciado y listo para integrar"
+                                   }
+                               ]
+                },
+    "next":  "E02_SYSTEM_OBSERVER_READONLY_INVENTORY_MINIMUM"
+}

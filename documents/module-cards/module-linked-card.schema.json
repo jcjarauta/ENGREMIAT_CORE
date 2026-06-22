@@ -1,0 +1,70 @@
+{
+    "schema_version":  "1.0",
+    "package_id":  "ENGREMIAT_MODULE_CARD_CANON_001",
+    "entity":  "module_linked_card",
+    "purpose":  "Unidad canonica para describir tareas, mejoras, bugs, documentacion, propuestas de modulo y acciones vinculadas a modulos",
+    "required_fields":  [
+                            "card_id",
+                            "module_id",
+                            "project_id",
+                            "type",
+                            "status",
+                            "title",
+                            "summary",
+                            "reason",
+                            "evidence",
+                            "expected_result",
+                            "priority",
+                            "risk",
+                            "human_gate",
+                            "dependencies",
+                            "suggested_action",
+                            "created_by",
+                            "created_at",
+                            "updated_at"
+                        ],
+    "types":  [
+                  "BUG",
+                  "MEJORA",
+                  "MODULO",
+                  "DOCUMENTACION",
+                  "UX",
+                  "CONTROL",
+                  "WORKER",
+                  "DATA"
+              ],
+    "statuses":  [
+                     "PROPOSED",
+                     "APPROVED",
+                     "IN_PROGRESS",
+                     "BLOCKED",
+                     "DONE",
+                     "REJECTED",
+                     "ARCHIVED"
+                 ],
+    "priorities":  [
+                       "LOW",
+                       "MEDIUM",
+                       "HIGH"
+                   ],
+    "risks":  [
+                  "LOW",
+                  "MEDIUM",
+                  "HIGH"
+              ],
+    "rules":  [
+                  "Una tarjeta describe una accion concreta, no sustituye al modulo",
+                  "Toda tarjeta debe vincularse a un module_id aunque sea MODULE_PENDING",
+                  "Toda propuesta automatica queda en PROPOSED",
+                  "human_gate=SI por defecto",
+                  "worker real nunca ejecuta una tarjeta sin APPROVED",
+                  "evidence debe apuntar a pantalla, reporte, archivo o razon humana",
+                  "suggested_action debe ser una accion concreta y verificable"
+              ],
+    "relations":  {
+                      "evidence":  "Base verificable de la propuesta",
+                      "dependencies":  "Tarjetas o modulos necesarios antes de ejecutar",
+                      "module_id":  "Modulo afectado o propuesto",
+                      "project_id":  "Proyecto donde aplica"
+                  }
+}

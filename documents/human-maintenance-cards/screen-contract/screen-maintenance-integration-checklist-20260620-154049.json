@@ -1,0 +1,35 @@
+﻿{
+    "schema":  "engremiat.screen_maintenance_integration_checklist.v1",
+    "package_id":  "ENGREMIAT_HUMAN_MAINTENANCE_CARD_001",
+    "stage":  "E08_DEFINE_CANONICAL_SCREEN_MAINTENANCE_COMMAND_CONTRACT",
+    "created_at":  "2026-06-20T15:40:49",
+    "status":  "READY",
+    "checks":  [
+                   {
+                       "id":  "CHK-001",
+                       "name":  "help_line_contains_m",
+                       "expected":  "m = mantenimiento"
+                   },
+                   {
+                       "id":  "CHK-002",
+                       "name":  "screen_declares_support",
+                       "expected":  "supports_human_maintenance_card=true"
+                   },
+                   {
+                       "id":  "CHK-003",
+                       "name":  "command_calls_capture_script",
+                       "expected":  "new-human-maintenance-card.ps1"
+                   },
+                   {
+                       "id":  "CHK-004",
+                       "name":  "capture_only",
+                       "expected":  "no execution, no mutation"
+                   },
+                   {
+                       "id":  "CHK-005",
+                       "name":  "returns_to_same_screen",
+                       "expected":  "screen flow continues after card creation"
+                   }
+               ],
+    "next":  "E09_CREATE_SCREEN_MAINTENANCE_COMMAND_PATCH_PLAN_NO_WRITE"
+}

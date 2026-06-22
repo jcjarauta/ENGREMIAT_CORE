@@ -1,0 +1,34 @@
+﻿{
+    "schema_version":  "1.0",
+    "package_id":  "ENGREMIAT_OPERATOR_LAUNCHER_001",
+    "stage":  "E87C_NORMALIZE_LAUNCHER_UPDATE_PROTOCOL",
+    "status":  "PASS",
+    "created_at":  "2026-06-20T13:13:51",
+    "human_entrypoint":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+    "principle":  "El humano ejecuta siempre el launcher estable; los launchers internos pueden cambiar solo con backup, parse, registry y health",
+    "rules":  [
+                  "Nunca cambiar el nombre del launcher humano estable sin crear migracion explicita",
+                  "Antes de modificar un launcher interno crear backup en reports/launcher",
+                  "Despues de modificar un launcher ejecutar ParseOk",
+                  "Si cambia ruta/nombre/rol actualizar ENGREMIAT-LAUNCHER-REGISTRY.json",
+                  "Ejecutar ENGREMIAT-LAUNCHER-HEALTH.ps1 antes de validar con humano",
+                  "Crear reporte PASS/FAIL del cambio",
+                  "No ejecutar workers reales desde protocolo de actualizacion",
+                  "No usar git/red/API externa en esta fase"
+              ],
+    "update_steps":  [
+                         "1_BACKUP launcher objetivo",
+                         "2_APPLY cambio local",
+                         "3_PARSEOK launcher objetivo",
+                         "4_UPDATE_REGISTRY si aplica",
+                         "5_HEALTH all launchers",
+                         "6_HUMAN_VALIDATION si cambia UX",
+                         "7_REPORT close"
+                     ],
+    "protected_files":  [
+                            "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+                            "tools\\launcher\\ENGREMIAT-LAUNCHER-REGISTRY.json",
+                            "tools\\launcher\\ENGREMIAT-LAUNCHER-HEALTH.ps1"
+                        ],
+    "next":  "E87D_CREATE_LAUNCHER_UPDATE_HELPER_DRY_RUN"
+}

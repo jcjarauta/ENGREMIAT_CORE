@@ -1,0 +1,43 @@
+﻿{
+    "schema":  "engremiat.canonical_approved_action_plan.v1",
+    "package_id":  "ENGREMIAT_LAUNCHER_CANONICAL_ACTION_RUNTIME_001",
+    "stage":  "E11_CREATE_CANONICAL_APPROVED_ACTION_PLAN_AND_PENDING_AUTH_RUNNER",
+    "created_at":  "2026-06-20T15:06:58",
+    "status":  "READY",
+    "mode":  "LOCAL_ACTION_PLAN_ONLY_NO_EXECUTION",
+    "action_id":  "DEMO-CANONICAL-MODULE-ACTION-001",
+    "source_unlock":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\unlocks\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-unlock.latest.json",
+    "canonical_state":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\state\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-state.latest.json",
+    "approved_decision_id":  "DECISION-DEMO-CANONICAL-MODULE-ACTION-001",
+    "planned_action":  {
+                           "operation":  "CREATE_LOCAL_APPROVED_ACTION_RECEIPT",
+                           "description":  "Demo local action proving canonical runtime can execute approved actions under explicit authorization",
+                           "outputs":  [
+                                           "action-execution timestamped json",
+                                           "action-execution.latest.json",
+                                           "report json"
+                                       ]
+                       },
+    "authorization":  {
+                          "env":  "ENGREMIAT_CANONICAL_ACTION_RUN_AUTH",
+                          "value":  "AUTORIZO_DEMO-CANONICAL-MODULE-ACTION-001_RUN_ACTION"
+                      },
+    "blocked_operations":  [
+                               "worker_real_execution",
+                               "browser",
+                               "network",
+                               "git_commit",
+                               "git_push",
+                               "external_write"
+                           ],
+    "safety":  {
+                   "real_execution":  false,
+                   "action_executed":  false,
+                   "worker":  false,
+                   "browser":  false,
+                   "network":  false,
+                   "git":  false,
+                   "plan_only":  true
+               },
+    "next":  "E11B_VERIFY_CANONICAL_ACTION_RUNNER_BLOCKS_WITHOUT_AUTH"
+}

@@ -1,0 +1,29 @@
+﻿{
+    "schema":  "engremiat.canonical_action_pending_auth_mutation_block_test.v1",
+    "package_id":  "ENGREMIAT_LAUNCHER_CANONICAL_ACTION_RUNTIME_001",
+    "stage":  "E08B_VERIFY_PENDING_AUTH_MUTATION_SCRIPT_BLOCKS_WITHOUT_AUTH",
+    "created_at":  "2026-06-20T15:05:05",
+    "status":  "PASS",
+    "action_id":  "DEMO-CANONICAL-MODULE-ACTION-001",
+    "canonical_state":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\state\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-state.latest.json",
+    "pending_auth_mutation_script":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\canonical-action-runtime\\actions\\DEMO-CANONICAL-MODULE-ACTION-001\\apply-gate-mutation.pending-auth.ps1",
+    "auth_gate_confirmed":  true,
+    "before":  {
+                   "gate_status":  "PENDING",
+                   "unlock_status":  "LOCKED",
+                   "execution_status":  "NOT_EXECUTED"
+               },
+    "after":  {
+                  "gate_status":  "PENDING",
+                  "unlock_status":  "LOCKED",
+                  "execution_status":  "NOT_EXECUTED"
+              },
+    "real_execution":  false,
+    "gate_mutated":  false,
+    "action_executed":  false,
+    "worker":  false,
+    "browser":  false,
+    "network":  false,
+    "git":  false,
+    "next":  "E09_APPLY_CANONICAL_ACTION_GATE_MUTATION_WITH_EXPLICIT_AUTHORIZATION"
+}

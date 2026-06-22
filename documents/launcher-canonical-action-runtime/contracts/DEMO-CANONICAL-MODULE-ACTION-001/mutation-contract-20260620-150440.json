@@ -1,0 +1,29 @@
+﻿{
+    "schema":  "engremiat.canonical_action_gate_mutation_contract.v1",
+    "package_id":  "ENGREMIAT_LAUNCHER_CANONICAL_ACTION_RUNTIME_001",
+    "stage":  "E08_CREATE_CANONICAL_ACTION_STATE_AND_PENDING_AUTH_MUTATION_SCRIPT",
+    "created_at":  "2026-06-20T15:04:40",
+    "status":  "READY_NO_EXECUTION",
+    "mode":  "CONTRACT_ONLY_NO_MUTATION",
+    "action_id":  "DEMO-CANONICAL-MODULE-ACTION-001",
+    "canonical_state":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\state\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-state.latest.json",
+    "source_preview":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\previews\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-dry-run-preview.latest.json",
+    "requested_transition":  {
+                                 "from":  "PENDING",
+                                 "to":  "APPROVED"
+                             },
+    "authorization":  {
+                          "env":  "ENGREMIAT_CANONICAL_ACTION_MUTATION_AUTH",
+                          "value":  "AUTORIZO_DEMO-CANONICAL-MODULE-ACTION-001_GATE_MUTATION"
+                      },
+    "safety":  {
+                   "real_execution":  false,
+                   "gate_mutated":  false,
+                   "action_executed":  false,
+                   "worker":  false,
+                   "browser":  false,
+                   "network":  false,
+                   "git":  false
+               },
+    "next":  "VERIFY_PENDING_AUTH_MUTATION_SCRIPT_BLOCKS_WITHOUT_AUTH"
+}

@@ -1,0 +1,34 @@
+{
+    "proposal_id":  "CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830",
+    "card_id":  "CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001",
+    "project_id":  "ENGREMIAT_PROJECT_projects",
+    "module_id":  "MODULE_inicio",
+    "action":  "convert_to_task_blueprint",
+    "status":  "PROPOSED",
+    "risk":  "MEDIUM",
+    "human_gate":  "SI",
+    "reason":  "Dry-run: crear una propuesta controlada desde la tarjeta seleccionada para convertirla en blueprint de tarea sin ejecutar worker real.",
+    "expected_output":  "card-action-blueprint.json preparado para revision humana en la siguiente etapa.",
+    "forbidden_execution":  [
+                                "execute_worker",
+                                "modify_code_directly",
+                                "git_commit",
+                                "git_push",
+                                "network_call",
+                                "browser_action",
+                                "autohotkey_action",
+                                "delete_files"
+                            ],
+    "decision_log":  [
+                         {
+                             "at":  "2026-06-20T14:08:30",
+                             "by":  "human_assisted_system",
+                             "event":  "proposal_dry_run_created",
+                             "note":  "No ejecuta acciones; solo crea propuesta validable."
+                         }
+                     ],
+    "source_card_path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001.json",
+    "created_by":  "human_assisted_system",
+    "created_at":  "2026-06-20T14:08:30",
+    "updated_at":  "2026-06-20T14:08:30"
+}

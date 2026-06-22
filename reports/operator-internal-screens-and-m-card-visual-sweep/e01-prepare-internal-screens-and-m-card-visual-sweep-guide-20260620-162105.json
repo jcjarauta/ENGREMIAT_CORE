@@ -1,0 +1,52 @@
+﻿{
+    "schema":  "engremiat.operator_internal_screens_and_m_card_visual_sweep_guide.v1",
+    "package_id":  "ENGREMIAT_OPERATOR_INTERNAL_SCREENS_AND_M_CARD_VISUAL_SWEEP_001",
+    "stage":  "E01_PREPARE_INTERNAL_SCREENS_AND_M_CARD_VISUAL_SWEEP_GUIDE",
+    "created_at":  "2026-06-20T16:21:05",
+    "status":  "PASS",
+    "mode":  "MANUAL_VISUAL_SWEEP_AND_REAL_M_CARD_TEST_GUIDE",
+    "launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO-NORMALIZED.ps1",
+    "launcher_parse_ok":  true,
+    "cards_dir":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-cards\\inbox",
+    "cards_before":  51,
+    "screens_to_check":  [
+                             "INICIO",
+                             "PROYECTOS",
+                             "MEMORIA_Y_DOCUMENTACION",
+                             "CONTROL_Y_ESTADO",
+                             "LAUNCHERS_Y_CONFIGURACION",
+                             "OPERADOR_Y_WORKERS",
+                             "TARJETAS"
+                         ],
+    "must_see_on_each_screen":  [
+                                    "Ruta:",
+                                    "Rol:",
+                                    "Principio:",
+                                    "m = mantenimiento",
+                                    "Enter = refrescar"
+                                ],
+    "card_test":  {
+                      "title":  "Smoke tarjeta m real 20260620-162105",
+                      "dimension":  "operations",
+                      "severity":  "LOW",
+                      "observation":  "Prueba real: pulsar m desde pantalla interna y confirmar que crea tarjeta",
+                      "suggested_action":  "Validar creacion de tarjeta y cerrar sweep visual"
+                  },
+    "manual_steps":  [
+                         "Abrir ENGREMIAT-INICIO-NORMALIZED o launcher habitual",
+                         "Recorrer cada pantalla listada",
+                         "En cada pantalla confirmar Ruta, Rol, Principio, m = mantenimiento y Enter = refrescar",
+                         "En una pantalla interna pulsar m y rellenar la tarjeta con los datos de card_test",
+                         "Volver a PowerShell y devolver pantalla/log si falta algo",
+                         "Si todo va bien, ejecutar E02 para registrar cards_after y resultado"
+                     ],
+    "operator_launched":  false,
+    "real_execution":  false,
+    "system_mutation":  false,
+    "screen_mutation":  false,
+    "worker":  false,
+    "browser":  false,
+    "network":  false,
+    "git":  false,
+    "next":  "E02_VALIDATE_INTERNAL_SCREENS_AND_M_CARD_RESULT"
+}

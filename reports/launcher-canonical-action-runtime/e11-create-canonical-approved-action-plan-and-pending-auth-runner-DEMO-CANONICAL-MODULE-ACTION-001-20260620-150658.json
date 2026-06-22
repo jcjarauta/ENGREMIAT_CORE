@@ -1,0 +1,22 @@
+﻿{
+    "schema":  "engremiat.canonical_action_plan_and_runner_setup.v1",
+    "package_id":  "ENGREMIAT_LAUNCHER_CANONICAL_ACTION_RUNTIME_001",
+    "stage":  "E11_CREATE_CANONICAL_APPROVED_ACTION_PLAN_AND_PENDING_AUTH_RUNNER",
+    "created_at":  "2026-06-20T15:06:58",
+    "status":  "PASS",
+    "mode":  "PLAN_AND_RUNNER_CREATED_NO_EXECUTION",
+    "action_id":  "DEMO-CANONICAL-MODULE-ACTION-001",
+    "unlock":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\unlocks\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-unlock.latest.json",
+    "plan":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\plans\\DEMO-CANONICAL-MODULE-ACTION-001\\approved-action-plan.latest.json",
+    "runner":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\canonical-action-runtime\\actions\\DEMO-CANONICAL-MODULE-ACTION-001\\run-action.pending-auth.ps1",
+    "authorization_required":  true,
+    "required_env":  "ENGREMIAT_CANONICAL_ACTION_RUN_AUTH",
+    "required_value":  "AUTORIZO_DEMO-CANONICAL-MODULE-ACTION-001_RUN_ACTION",
+    "real_execution":  false,
+    "action_executed":  false,
+    "worker":  false,
+    "browser":  false,
+    "network":  false,
+    "git":  false,
+    "next":  "E11B_VERIFY_CANONICAL_ACTION_RUNNER_BLOCKS_WITHOUT_AUTH"
+}

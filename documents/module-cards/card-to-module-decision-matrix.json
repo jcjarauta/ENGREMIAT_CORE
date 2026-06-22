@@ -1,0 +1,62 @@
+{
+    "package_id":  "ENGREMIAT_MODULE_CARD_CANON_001",
+    "matrix":  [
+                   {
+                       "type":  "BUG",
+                       "module_id":  "EXISTING",
+                       "action":  "repair existing module",
+                       "requires_blueprint":  "NO",
+                       "human_gate":  "SI"
+                   },
+                   {
+                       "type":  "MEJORA",
+                       "module_id":  "EXISTING",
+                       "action":  "improve existing module",
+                       "requires_blueprint":  "NO",
+                       "human_gate":  "SI"
+                   },
+                   {
+                       "type":  "MODULO",
+                       "module_id":  "MODULE_PENDING",
+                       "action":  "create module blueprint candidate",
+                       "requires_blueprint":  "SI",
+                       "human_gate":  "SI"
+                   },
+                   {
+                       "type":  "DOCUMENTACION",
+                       "module_id":  "EXISTING_OR_PENDING",
+                       "action":  "create or update docs",
+                       "requires_blueprint":  "NO",
+                       "human_gate":  "SI"
+                   },
+                   {
+                       "type":  "UX",
+                       "module_id":  "EXISTING",
+                       "action":  "improve human screen or flow",
+                       "requires_blueprint":  "NO",
+                       "human_gate":  "SI"
+                   },
+                   {
+                       "type":  "CONTROL",
+                       "module_id":  "EXISTING_OR_PENDING",
+                       "action":  "improve state/control/readiness",
+                       "requires_blueprint":  "OPTIONAL",
+                       "human_gate":  "SI"
+                   },
+                   {
+                       "type":  "WORKER",
+                       "module_id":  "EXISTING_OR_PENDING",
+                       "action":  "prepare worker contract only",
+                       "requires_blueprint":  "SI",
+                       "human_gate":  "SI"
+                   },
+                   {
+                       "type":  "DATA",
+                       "module_id":  "EXISTING_OR_PENDING",
+                       "action":  "define intake/read model",
+                       "requires_blueprint":  "OPTIONAL",
+                       "human_gate":  "SI"
+                   }
+               ],
+    "next":  "E91D_CREATE_MODULE_CARD_FLOW_CHECKER"
+}

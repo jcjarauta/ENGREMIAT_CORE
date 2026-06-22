@@ -1,0 +1,57 @@
+﻿{
+    "schema":  "engremiat.human_maintenance_card_safety_policy.v1",
+    "package_id":  "ENGREMIAT_HUMAN_MAINTENANCE_CARD_001",
+    "stage":  "E01_CREATE_HUMAN_MAINTENANCE_CARD_CONTRACT_DIMENSIONS_STATES_AND_SAFETY",
+    "created_at":  "2026-06-20T15:36:59",
+    "status":  "ACTIVE",
+    "policy_id":  "HUMAN_MAINTENANCE_CARD_READONLY_CAPTURE_POLICY_V1",
+    "default_mode":  "CAPTURE_ONLY_NO_EXECUTION",
+    "allowed_by_default":  [
+                               "create card under documents/human-maintenance-cards/inbox",
+                               "create markdown summary",
+                               "create report under reports/human-maintenance-cards",
+                               "append local index under human-maintenance-cards only"
+                           ],
+    "blocked_by_default":  [
+                               "modify launcher",
+                               "modify project files outside human-maintenance-cards",
+                               "execute worker",
+                               "open browser",
+                               "use network",
+                               "git commit",
+                               "git push",
+                               "git fetch",
+                               "git merge",
+                               "delete files",
+                               "move files",
+                               "financial action",
+                               "auto approve card",
+                               "auto execute suggested action"
+                           ],
+    "authorization_model":  {
+                                "card_creation":  "allowed",
+                                "observer_evaluation":  "allowed readonly",
+                                "task_creation":  "allowed under observer/tasks only",
+                                "system_change":  "requires canonical runtime + human gate + explicit auth",
+                                "screen_integration":  "requires separate objective and backup",
+                                "git":  "deferred until necessary"
+                            },
+    "evidence_rules":  [
+                           "card must preserve source_screen and source_context",
+                           "card must separate human observation from suggested action",
+                           "card must mark whether observer_should_evaluate is true",
+                           "card must never execute suggested action directly",
+                           "card must include safety flags"
+                       ],
+    "safety_flags":  {
+                         "real_execution":  false,
+                         "system_mutation":  false,
+                         "screen_mutation":  false,
+                         "worker":  false,
+                         "browser":  false,
+                         "network":  false,
+                         "git":  false,
+                         "capture_only":  true
+                     },
+    "next":  "E02_CREATE_HUMAN_MAINTENANCE_CARD_LOCAL_CAPTURE_SCRIPT"
+}

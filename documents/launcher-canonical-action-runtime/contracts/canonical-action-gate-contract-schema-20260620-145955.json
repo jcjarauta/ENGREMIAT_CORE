@@ -1,0 +1,36 @@
+﻿{
+    "schema":  "engremiat.launcher_canonical_action_gate_contract_schema.v1",
+    "contract_id":  "CANONICAL_ACTION_GATE_CONTRACT_V1",
+    "required_fields":  [
+                            "action_id",
+                            "action_type",
+                            "gate_id",
+                            "decision_id",
+                            "requested_transition",
+                            "authorization",
+                            "allowed_operations",
+                            "blocked_operations"
+                        ],
+    "boolean_safety_fields":  [
+                                  "real_execution",
+                                  "worker",
+                                  "browser",
+                                  "network",
+                                  "git"
+                              ],
+    "default_blocked_operations":  [
+                                       "worker_real_execution",
+                                       "browser",
+                                       "network",
+                                       "git_commit",
+                                       "git_push",
+                                       "external_write"
+                                   ],
+    "validation_rules":  [
+                             "required fields must exist",
+                             "authorization env/value must be non-empty before real mutation",
+                             "requested transition from/to must be explicit",
+                             "canonical state path must not be under reports",
+                             "blocked operations must include worker/browser/network/git by default"
+                         ]
+}

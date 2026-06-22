@@ -1,0 +1,83 @@
+﻿{
+    "schema":  "engremiat.human_maintenance_card_close_v0.v1",
+    "package_id":  "ENGREMIAT_HUMAN_MAINTENANCE_CARD_001",
+    "stage":  "E10_CLOSE_HUMAN_MAINTENANCE_CARD_V0_AND_VALUE_NEXT_OBJECTIVE",
+    "created_at":  "2026-06-20T15:42:08",
+    "status":  "PASS",
+    "readiness":  100,
+    "closed":  true,
+    "decision":  "HUMAN_MAINTENANCE_CARD_V0_READY_CAPTURE_SIGNAL_OBSERVER_TASK_EXPORT_SCREEN_CONTRACT",
+    "canonical_command":  "m",
+    "canonical_aliases":  [
+                              "mant",
+                              "mantenimiento",
+                              "maintenance"
+                          ],
+    "summary":  {
+                    "dimensions_count":  13,
+                    "states_count":  8,
+                    "cards_inbox":  1,
+                    "human_signals":  1,
+                    "improvements":  1,
+                    "tasks":  1,
+                    "tasks_ready_readonly":  1,
+                    "tasks_pending_gate":  0,
+                    "screen_candidates_no_write":  282,
+                    "top_candidates":  30,
+                    "capture_script":  "C:\\ENGREMIAT_CORE\\tools\\human-maintenance-cards\\new-human-maintenance-card.ps1"
+                },
+    "evidence":  {
+                     "contract":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-cards\\contracts\\human-maintenance-card-contract.latest.json",
+                     "taxonomy":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-cards\\taxonomy\\human-maintenance-card-taxonomy.latest.json",
+                     "safety":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-cards\\safety\\human-maintenance-card-safety-policy.latest.json",
+                     "capture_setup":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-cards\\capture-script-setup.latest.json",
+                     "inbox_index":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-cards\\inbox\\human-maintenance-card-inbox-index.latest.json",
+                     "observer_human_signals":  "C:\\ENGREMIAT_CORE\\documents\\system-observer\\human-signals\\human-maintenance-signals-for-observer.latest.json",
+                     "improvements":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-cards\\improvements\\human-maintenance-observer-improvements-v0.latest.json",
+                     "tasks":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-cards\\tasks\\human-maintenance-tasks-v0.latest.json",
+                     "exports":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-cards\\exports\\human-maintenance-tasks-export-v0.latest.json",
+                     "screen_contract":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-cards\\screen-contract\\canonical-screen-maintenance-command-contract.latest.json",
+                     "screen_checklist":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-cards\\screen-contract\\screen-maintenance-integration-checklist.latest.json",
+                     "screen_patch_plan_no_write":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-cards\\screen-integration-plan\\screen-maintenance-command-patch-plan-no-write.latest.json"
+                 },
+    "what_we_built":  [
+                          "contrato canonico de tarjeta de mantenimiento humano",
+                          "taxonomia de dimensiones severidad y estados",
+                          "politica capture-only sin ejecucion",
+                          "script reutilizable new-human-maintenance-card.ps1",
+                          "tarjeta demo en inbox",
+                          "bundle de senales humanas para System Observer",
+                          "conversion senal humana -\u003e mejora Observer",
+                          "conversion mejora -\u003e tarea trazable",
+                          "export TSV para Sheets/Kanban",
+                          "contrato canonico de pantalla con m = mantenimiento",
+                          "plan no-write de integracion sobre pantallas candidatas"
+                      ],
+    "known_limits":  [
+                         "aun no se ha parcheado ninguna pantalla real",
+                         "el flujo de captura es parametrico, no formulario interactivo completo",
+                         "Observer lee senales humanas en paquete separado, todavia no fusiona automaticamente con diagnostico global",
+                         "no se actualiza estado de la tarjeta de NEW a evaluada en el inbox",
+                         "no hay dashboard visual de tarjetas humanas",
+                         "git diferido por decision del usuario"
+                     ],
+    "recommended_next_objective":  "ENGREMIAT_SCREEN_MAINTENANCE_COMMAND_REAL_INTEGRATION_001",
+    "possible_next":  [
+                          "A: integrar m = mantenimiento en launcher/operator principal con backup y smoke",
+                          "B: crear formulario interactivo humano para nueva tarjeta sin depender de parametros largos",
+                          "C: fusionar tarjetas humanas dentro del ciclo normal del System Observer",
+                          "D: crear dashboard local HTML de mantenimiento humano"
+                      ],
+    "recommendation":  "A primero si queremos que cada pantalla empiece a tener entrada real de mantenimiento; B despues para hacerlo comodo; C despues para cerrar el ciclo Observer completo",
+    "safety":  {
+                   "real_execution":  false,
+                   "system_mutation":  false,
+                   "screen_mutation":  false,
+                   "worker":  false,
+                   "browser":  false,
+                   "network":  false,
+                   "git":  false,
+                   "no_write_patch_plan_only":  true
+               },
+    "next":  "PAUSE_AND_VALUE_NEXT_OBJECTIVE_AFTER_HUMAN_MAINTENANCE_CARD_V0"
+}

@@ -1,0 +1,24 @@
+﻿# E01 HUMAN MAINTENANCE CARD
+
+- package: ENGREMIAT_HUMAN_MAINTENANCE_CARD_001
+- stage: E01_CREATE_HUMAN_MAINTENANCE_CARD_CONTRACT_DIMENSIONS_STATES_AND_SAFETY
+- status: PASS
+- readiness: 100
+- contract_id: HUMAN_MAINTENANCE_CARD_CONTRACT_V1
+- canonical_command: m
+- aliases: mant, mantenimiento, maintenance
+- dimensions_count: 13
+- states_count: 8
+- default_mode: CAPTURE_ONLY_NO_EXECUTION
+- contract: C:\ENGREMIAT_CORE\documents\human-maintenance-cards\contracts\human-maintenance-card-contract-20260620-153659.json
+- taxonomy: C:\ENGREMIAT_CORE\documents\human-maintenance-cards\taxonomy\human-maintenance-card-taxonomy-20260620-153659.json
+- safety_policy: C:\ENGREMIAT_CORE\documents\human-maintenance-cards\safety\human-maintenance-card-safety-policy-20260620-153659.json
+- report: C:\ENGREMIAT_CORE\reports\human-maintenance-cards\e01-create-human-maintenance-card-contract-dimensions-states-and-safety-20260620-153659.json
+- real_execution: false
+- system_mutation: false
+- screen_mutation: false
+- worker: false
+- browser: false
+- network: false
+- git: false
+- next: E02_CREATE_HUMAN_MAINTENANCE_CARD_LOCAL_CAPTURE_SCRIPT

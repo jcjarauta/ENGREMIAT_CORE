@@ -1,0 +1,25 @@
+﻿{
+    "schema":  "engremiat.system_observer_task_to_action_mapping.v1",
+    "package_id":  "ENGREMIAT_SYSTEM_OBSERVER_001",
+    "stage":  "E08_SYSTEM_OBSERVER_PREPARE_TASK_TO_CANONICAL_ACTION_BRIDGE",
+    "created_at":  "2026-06-20T15:30:22",
+    "status":  "READY",
+    "task_fields_to_action_fields":  {
+                                         "task_id":  "action.source_task_id",
+                                         "dimension":  "action.dimension",
+                                         "title":  "action.title",
+                                         "description":  "action.description",
+                                         "priority":  "action.priority",
+                                         "risk":  "action.risk",
+                                         "requires_authorization":  "action.requires_gate",
+                                         "expected_output":  "action.expected_output",
+                                         "evidence":  "action.source_evidence"
+                                     },
+    "risk_policy":  {
+                        "HIGH":  "requires_human_gate_and_explicit_auth",
+                        "MEDIUM":  "requires_preview_and_may_require_gate",
+                        "LOW":  "readonly_or_documentation_first"
+                    },
+    "execution_policy":  "NO_EXECUTION_IN_BRIDGE_PHASE",
+    "next":  "E09_SYSTEM_OBSERVER_SMOKE_TASK_TO_ACTION_BRIDGE_NO_EXECUTION"
+}

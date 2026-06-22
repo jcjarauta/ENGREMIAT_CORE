@@ -1,0 +1,72 @@
+{
+    "contract_id":  "GMC-HUMAN-GATE-CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830-20260620-144931",
+    "gate_id":  "HUMAN-GATE-CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830",
+    "card_id":  "CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001",
+    "proposal_id":  "CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830",
+    "blueprint_id":  "CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830",
+    "scope":  "GATE_JSON_MUTATION_ONLY_NO_EXECUTION",
+    "status":  "CONTRACT_CREATED",
+    "source_gate_path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\gates\\HUMAN-GATE-CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830.json",
+    "source_blueprint_path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\blueprints\\CAB-CAP-CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001-20260620-140830.json",
+    "preconditions":  [
+                          "gate.decision == PENDING_HUMAN_DECISION",
+                          "gate.status == PENDING",
+                          "gate.human_gate == SI",
+                          "blueprint.execution_status == NOT_EXECUTED"
+                      ],
+    "allowed_mutations":  [
+                              {
+                                  "decision":  "APPROVE_BLUEPRINT",
+                                  "gate_status_after":  "APPROVED",
+                                  "gate_decision_after":  "APPROVE_BLUEPRINT",
+                                  "blueprint_execution_status_after":  "NOT_EXECUTED",
+                                  "meaning":  "Humano aprueba el blueprint para fase posterior, pero no ejecuta nada"
+                              },
+                              {
+                                  "decision":  "BLOCK_BLUEPRINT",
+                                  "gate_status_after":  "BLOCKED",
+                                  "gate_decision_after":  "BLOCK_BLUEPRINT",
+                                  "blueprint_execution_status_after":  "NOT_EXECUTED",
+                                  "meaning":  "Humano bloquea el blueprint y detiene el avance"
+                              },
+                              {
+                                  "decision":  "REQUEST_CHANGES",
+                                  "gate_status_after":  "CHANGES_REQUESTED",
+                                  "gate_decision_after":  "REQUEST_CHANGES",
+                                  "blueprint_execution_status_after":  "NOT_EXECUTED",
+                                  "meaning":  "Humano pide cambios antes de aprobar o bloquear"
+                              }
+                          ],
+    "forbidden_actions":  [
+                              "execute_worker",
+                              "run_blueprint",
+                              "modify_code_directly",
+                              "git_commit",
+                              "git_push",
+                              "network_call",
+                              "browser_action",
+                              "autohotkey_action",
+                              "delete_files",
+                              "mutate_blueprint_execution_status_to_executed"
+                          ],
+    "safety_rules":  [
+                         "MUTATE_GATE_JSON_ONLY",
+                         "KEEP_BLUEPRINT_NOT_EXECUTED",
+                         "NO_WORKER",
+                         "NO_CODE_MODIFICATION",
+                         "NO_GIT",
+                         "NO_NETWORK",
+                         "NO_BROWSER",
+                         "NO_AUTOHOTKEY",
+                         "WRITE_AUDIT_REPORT",
+                         "ALLOW_ROLLBACK_FROM_BACKUP"
+                     ],
+    "outputs_planned":  [
+                            "gate_json_backup",
+                            "mutated_gate_json",
+                            "mutation_receipt",
+                            "validation_report"
+                        ],
+    "created_at":  "2026-06-20T14:49:31",
+    "updated_at":  "2026-06-20T14:49:31"
+}

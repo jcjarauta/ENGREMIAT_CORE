@@ -1,0 +1,33 @@
+﻿{
+    "schema":  "engremiat.system_observer_task_to_action_bridge_smoke.v1",
+    "package_id":  "ENGREMIAT_SYSTEM_OBSERVER_001",
+    "stage":  "E09_SYSTEM_OBSERVER_SMOKE_TASK_TO_ACTION_BRIDGE_NO_EXECUTION",
+    "created_at":  "2026-06-20T15:30:52",
+    "status":  "PASS",
+    "mode":  "BRIDGE_SMOKE_NO_EXECUTION",
+    "bridge_id":  "SYSTEM_OBSERVER_TASK_TO_CANONICAL_ACTION_BRIDGE_V1",
+    "action_id":  "OBSERVER-CANONICAL-ACTION-OBS-TASK-014-growth",
+    "source_task_id":  "OBS-TASK-014",
+    "contract":  "C:\\ENGREMIAT_CORE\\documents\\system-observer\\canonical-action-bridge\\task-to-canonical-action-bridge-contract.latest.json",
+    "mapping":  "C:\\ENGREMIAT_CORE\\documents\\system-observer\\canonical-action-bridge\\task-to-canonical-action-mapping.latest.json",
+    "candidate":  "C:\\ENGREMIAT_CORE\\documents\\system-observer\\canonical-action-bridge\\OBSERVER-CANONICAL-ACTION-OBS-TASK-014-growth\\canonical-action-candidate.latest.json",
+    "preview":  "C:\\ENGREMIAT_CORE\\documents\\system-observer\\canonical-action-bridge\\OBSERVER-CANONICAL-ACTION-OBS-TASK-014-growth\\canonical-action-preview.latest.json",
+    "checks":  {
+                   "contract_ready":  true,
+                   "mapping_ready":  true,
+                   "candidate_no_execution":  true,
+                   "preview_dry_run":  true,
+                   "gate_pending":  true,
+                   "execution_not_executed":  true,
+                   "blocked_operations_present":  true,
+                   "unsafe_flags_false":  true
+               },
+    "real_execution":  false,
+    "system_mutation":  false,
+    "action_executed":  false,
+    "worker":  false,
+    "browser":  false,
+    "network":  false,
+    "git":  false,
+    "next":  "E10_SYSTEM_OBSERVER_CLOSE_V0_AND_VALUE_NEXT_OBJECTIVE"
+}

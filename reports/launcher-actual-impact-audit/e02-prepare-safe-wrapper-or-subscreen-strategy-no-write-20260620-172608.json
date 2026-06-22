@@ -1,0 +1,68 @@
+{
+    "schema":  "engremiat.launcher_actual_safe_wrapper_strategy.v1",
+    "package_id":  "ENGREMIAT_LAUNCHER_ACTUAL_IMPACT_AUDIT_001",
+    "stage":  "E02_PREPARE_SAFE_WRAPPER_OR_SUBSCREEN_STRATEGY_NO_WRITE",
+    "created_at":  "2026-06-20T17:26:08",
+    "status":  "PASS",
+    "mode":  "STRATEGY_ONLY_NO_WRITE",
+    "target_launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1",
+    "target_kind":  "GENERAL_LAUNCHER_OR_ROUTER",
+    "target_risk_if_replaced":  "HIGH",
+    "decision":  "DO_NOT_REPLACE_GENERAL_LAUNCHER_WITH_SINGLE_SCREEN",
+    "safe_strategy":  {
+                          "recommended":  "SUBSCREEN_ROUTING_ADAPTER",
+                          "description":  "Mantener launcher general intacto y anadir, en fase posterior con gate, rutas a pantallas normalizadas generadas desde registry/helper.",
+                          "allowed_future_actions":  [
+                                                         "crear wrapper aparte para llamadas a pantallas normalizadas",
+                                                         "probar wrapper aislado",
+                                                         "insertar ruta en launcher general solo con gate explicito",
+                                                         "mantener backup y rollback"
+                                                     ],
+                          "blocked_actions":  [
+                                                  "reemplazar ENGREMIAT-LAUNCHER-ACTUAL.ps1 completo por CONTROL_ESTADO",
+                                                  "migrar multiples pantallas a la vez",
+                                                  "tocar INICIO sin gate propio",
+                                                  "registry write no solicitado"
+                                              ]
+                      },
+    "migration_path":  [
+                           {
+                               "step":  1,
+                               "name":  "crear wrapper aislado para pantalla normalizada",
+                               "risk":  "LOW",
+                               "write_real_launcher":  false
+                           },
+                           {
+                               "step":  2,
+                               "name":  "probar wrapper aislado con smoke visual",
+                               "risk":  "LOW",
+                               "write_real_launcher":  false
+                           },
+                           {
+                               "step":  3,
+                               "name":  "preparar gate para insertar opcion/ruta en launcher general",
+                               "risk":  "MEDIUM",
+                               "write_real_launcher":  false
+                           },
+                           {
+                               "step":  4,
+                               "name":  "aplicar insercion minima al launcher general con backup/rollback",
+                               "risk":  "HIGH",
+                               "write_real_launcher":  true
+                           }
+                       ],
+    "impact_notes":  [
+                         "ENGREMIAT-LAUNCHER-ACTUAL.ps1 tiene senales de router general",
+                         "No debe ser sustituido por CONTROL_ESTADO",
+                         "La migracion debe ser por adicion de ruta o wrapper, no por reemplazo total"
+                     ],
+    "patch_existing_launchers":  false,
+    "registry_write":  false,
+    "migration_applied":  false,
+    "worker":  false,
+    "browser":  false,
+    "network":  false,
+    "git":  false,
+    "recommended_next_objective":  "ENGREMIAT_SCREEN_NORMALIZER_SUBSCREEN_ROUTING_ADAPTER_001",
+    "next":  "E03_CLOSE_LAUNCHER_ACTUAL_IMPACT_AUDIT_AND_VALUE_NEXT_OBJECTIVE"
+}

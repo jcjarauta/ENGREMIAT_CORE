@@ -1,0 +1,2011 @@
+﻿{
+    "schema":  "engremiat.system_observer_readonly_inventory.v1",
+    "package_id":  "ENGREMIAT_SYSTEM_OBSERVER_001",
+    "stage":  "E02_SYSTEM_OBSERVER_READONLY_INVENTORY_MINIMUM",
+    "created_at":  "2026-06-20T15:25:27",
+    "status":  "PASS",
+    "mode":  "READONLY_INVENTORY_MINIMUM_NO_DIAGNOSTIC",
+    "root":  "C:\\ENGREMIAT_CORE",
+    "observer_id":  "ENGREMIAT_SYSTEM_OBSERVER_V1",
+    "dimensions_count":  12,
+    "root_directories":  [
+                             {
+                                 "name":  "documents",
+                                 "path":  [
+                                              "C:\\ENGREMIAT_CORE\\documents",
+                                              "DirInfo"
+                                          ],
+                                 "relative":  [
+                                                  "documents",
+                                                  "DirInfo"
+                                              ],
+                                 "exists":  [
+                                                true,
+                                                false
+                                            ],
+                                 "files":  369,
+                                 "dirs":  76
+                             }
+                         ],
+    "counts":  {
+                   "json":  4294,
+                   "markdown":  2823,
+                   "powershell":  502,
+                   "cmd":  4,
+                   "reports_json":  1656,
+                   "documents_json":  237,
+                   "documents_md":  123
+               },
+    "runtime_evidence":  {
+                             "canonical_runtime_close":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\close\\launcher-canonical-action-runtime-close.latest.json",
+                             "launcher_ui_close":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\close\\launcher-runtime-ui-integration-close.latest.json",
+                             "system_observer_contract":  "C:\\ENGREMIAT_CORE\\documents\\system-observer\\contracts\\system-observer-contract.latest.json",
+                             "system_observer_dimensions":  "C:\\ENGREMIAT_CORE\\documents\\system-observer\\dimensions\\system-observer-dimensions.latest.json",
+                             "system_observer_safety":  "C:\\ENGREMIAT_CORE\\documents\\system-observer\\safety\\system-observer-safety-policy.latest.json"
+                         },
+    "latest_reports":  [
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\system-observer\\e01-create-system-observer-contract-dimensions-and-safety-policy-20260620-152445.json",
+                               "relative":  "reports\\system-observer\\e01-create-system-observer-contract-dimensions-and-safety-policy-20260620-152445.json",
+                               "last_write":  "2026-06-20T15:24:45",
+                               "size":  1031
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher-runtime-ui-integration\\e10-close-launcher-runtime-ui-integration-and-value-next-objective-20260620-151614.json",
+                               "relative":  "reports\\launcher-runtime-ui-integration\\e10-close-launcher-runtime-ui-integration-and-value-next-objective-20260620-151614.json",
+                               "last_write":  "2026-06-20T15:16:14",
+                               "size":  4633
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher-runtime-ui-integration\\e09-smoke-real-launcher-runtime-menu-20260620-151528.json",
+                               "relative":  "reports\\launcher-runtime-ui-integration\\e09-smoke-real-launcher-runtime-menu-20260620-151528.json",
+                               "last_write":  "2026-06-20T15:15:34",
+                               "size":  2114
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher-runtime-ui-integration\\e08-apply-launcher-runtime-ui-patch-with-explicit-auth-20260620-151458.json",
+                               "relative":  "reports\\launcher-runtime-ui-integration\\e08-apply-launcher-runtime-ui-patch-with-explicit-auth-20260620-151458.json",
+                               "last_write":  "2026-06-20T15:14:59",
+                               "size":  1331
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher-runtime-ui-integration\\launcher-runtime-ui-patch-application-20260620-151459.json",
+                               "relative":  "reports\\launcher-runtime-ui-integration\\launcher-runtime-ui-patch-application-20260620-151459.json",
+                               "last_write":  "2026-06-20T15:14:59",
+                               "size":  985
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher-runtime-ui-integration\\e07b-repair-patch-block-test-hash-alias-and-verify-no-auth-20260620-151427.json",
+                               "relative":  "reports\\launcher-runtime-ui-integration\\e07b-repair-patch-block-test-hash-alias-and-verify-no-auth-20260620-151427.json",
+                               "last_write":  "2026-06-20T15:14:28",
+                               "size":  1372
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher-runtime-ui-integration\\e06b-repair-launcher-runtime-ui-patch-target-exclude-backups-20260620-151340.json",
+                               "relative":  "reports\\launcher-runtime-ui-integration\\e06b-repair-launcher-runtime-ui-patch-target-exclude-backups-20260620-151340.json",
+                               "last_write":  "2026-06-20T15:13:41",
+                               "size":  11663
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher-runtime-ui-integration\\e06-create-launcher-runtime-ui-patch-script-pending-auth-20260620-151302.json",
+                               "relative":  "reports\\launcher-runtime-ui-integration\\e06-create-launcher-runtime-ui-patch-script-pending-auth-20260620-151302.json",
+                               "last_write":  "2026-06-20T15:13:02",
+                               "size":  1335
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher-runtime-ui-integration\\e05-create-launcher-runtime-ui-patch-proposal-no-write-20260620-151221.json",
+                               "relative":  "reports\\launcher-runtime-ui-integration\\e05-create-launcher-runtime-ui-patch-proposal-no-write-20260620-151221.json",
+                               "last_write":  "2026-06-20T15:12:22",
+                               "size":  18851
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher-runtime-ui-integration\\e04-define-launcher-runtime-adapter-integration-plan-no-ui-mutation-20260620-151151.json",
+                               "relative":  "reports\\launcher-runtime-ui-integration\\e04-define-launcher-runtime-adapter-integration-plan-no-ui-mutation-20260620-151151.json",
+                               "last_write":  "2026-06-20T15:11:51",
+                               "size":  6602
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher-runtime-ui-integration\\e03b-smoke-launcher-runtime-adapter-readonly-20260620-151115.json",
+                               "relative":  "reports\\launcher-runtime-ui-integration\\e03b-smoke-launcher-runtime-adapter-readonly-20260620-151115.json",
+                               "last_write":  "2026-06-20T15:11:20",
+                               "size":  2928
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher-runtime-ui-integration\\e03-create-launcher-runtime-adapter-no-ui-mutation-20260620-151051.json",
+                               "relative":  "reports\\launcher-runtime-ui-integration\\e03-create-launcher-runtime-adapter-no-ui-mutation-20260620-151051.json",
+                               "last_write":  "2026-06-20T15:10:51",
+                               "size":  1651
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher-runtime-ui-integration\\e02-define-launcher-runtime-ui-command-contract-20260620-151013.json",
+                               "relative":  "reports\\launcher-runtime-ui-integration\\e02-define-launcher-runtime-ui-command-contract-20260620-151013.json",
+                               "last_write":  "2026-06-20T15:10:13",
+                               "size":  1002
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher-runtime-ui-integration\\e01-inventory-launcher-ui-and-runtime-integration-points-20260620-150940.json",
+                               "relative":  "reports\\launcher-runtime-ui-integration\\e01-inventory-launcher-ui-and-runtime-integration-points-20260620-150940.json",
+                               "last_write":  "2026-06-20T15:09:41",
+                               "size":  62755
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher-canonical-action-runtime\\e13-verify-canonical-action-execution-and-close-runtime-DEMO-CANONICAL-MODULE-ACTION-001-20260620-150824.json",
+                               "relative":  "reports\\launcher-canonical-action-runtime\\e13-verify-canonical-action-execution-and-close-runtime-DEMO-CANONICAL-MODULE-ACTION-001-20260620-150824.json",
+                               "last_write":  "2026-06-20T15:08:24",
+                               "size":  5750
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher-canonical-action-runtime\\e12-run-canonical-approved-action-with-explicit-authorization-DEMO-CANONICAL-MODULE-ACTION-001-20260620-150746.json",
+                               "relative":  "reports\\launcher-canonical-action-runtime\\e12-run-canonical-approved-action-with-explicit-authorization-DEMO-CANONICAL-MODULE-ACTION-001-20260620-150746.json",
+                               "last_write":  "2026-06-20T15:07:47",
+                               "size":  1256
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher-canonical-action-runtime\\canonical-action-execution-DEMO-CANONICAL-MODULE-ACTION-001-20260620-150746.json",
+                               "relative":  "reports\\launcher-canonical-action-runtime\\canonical-action-execution-DEMO-CANONICAL-MODULE-ACTION-001-20260620-150746.json",
+                               "last_write":  "2026-06-20T15:07:47",
+                               "size":  1030
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher-canonical-action-runtime\\e11b-verify-canonical-action-runner-blocks-without-auth-DEMO-CANONICAL-MODULE-ACTION-001-20260620-150723.json",
+                               "relative":  "reports\\launcher-canonical-action-runtime\\e11b-verify-canonical-action-runner-blocks-without-auth-DEMO-CANONICAL-MODULE-ACTION-001-20260620-150723.json",
+                               "last_write":  "2026-06-20T15:07:24",
+                               "size":  1308
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher-canonical-action-runtime\\e11-create-canonical-approved-action-plan-and-pending-auth-runner-DEMO-CANONICAL-MODULE-ACTION-001-20260620-150658.json",
+                               "relative":  "reports\\launcher-canonical-action-runtime\\e11-create-canonical-approved-action-plan-and-pending-auth-runner-DEMO-CANONICAL-MODULE-ACTION-001-20260620-150658.json",
+                               "last_write":  "2026-06-20T15:06:58",
+                               "size":  1290
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher-canonical-action-runtime\\e10-verify-canonical-action-gate-mutation-and-create-unlock-DEMO-CANONICAL-MODULE-ACTION-001-20260620-150617.json",
+                               "relative":  "reports\\launcher-canonical-action-runtime\\e10-verify-canonical-action-gate-mutation-and-create-unlock-DEMO-CANONICAL-MODULE-ACTION-001-20260620-150617.json",
+                               "last_write":  "2026-06-20T15:06:17",
+                               "size":  1776
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher-canonical-action-runtime\\e09-apply-canonical-action-gate-mutation-with-explicit-authorization-DEMO-CANONICAL-MODULE-ACTION-001-20260620-150551.json",
+                               "relative":  "reports\\launcher-canonical-action-runtime\\e09-apply-canonical-action-gate-mutation-with-explicit-authorization-DEMO-CANONICAL-MODULE-ACTION-001-20260620-150551.json",
+                               "last_write":  "2026-06-20T15:05:52",
+                               "size":  1134
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher-canonical-action-runtime\\canonical-action-gate-mutation-DEMO-CANONICAL-MODULE-ACTION-001-20260620-150551.json",
+                               "relative":  "reports\\launcher-canonical-action-runtime\\canonical-action-gate-mutation-DEMO-CANONICAL-MODULE-ACTION-001-20260620-150551.json",
+                               "last_write":  "2026-06-20T15:05:52",
+                               "size":  1063
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher-canonical-action-runtime\\e08b-verify-pending-auth-mutation-script-blocks-without-auth-DEMO-CANONICAL-MODULE-ACTION-001-20260620-150504.json",
+                               "relative":  "reports\\launcher-canonical-action-runtime\\e08b-verify-pending-auth-mutation-script-blocks-without-auth-DEMO-CANONICAL-MODULE-ACTION-001-20260620-150504.json",
+                               "last_write":  "2026-06-20T15:05:05",
+                               "size":  1391
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher-canonical-action-runtime\\e08-create-canonical-action-state-and-pending-auth-mutation-script-DEMO-CANONICAL-MODULE-ACTION-001-20260620-150440.json",
+                               "relative":  "reports\\launcher-canonical-action-runtime\\e08-create-canonical-action-state-and-pending-auth-mutation-script-DEMO-CANONICAL-MODULE-ACTION-001-20260620-150440.json",
+                               "last_write":  "2026-06-20T15:04:40",
+                               "size":  1426
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher-canonical-action-runtime\\e07-create-canonical-action-package-dry-run-preview-DEMO-CANONICAL-MODULE-ACTION-001-20260620-150358.json",
+                               "relative":  "reports\\launcher-canonical-action-runtime\\e07-create-canonical-action-package-dry-run-preview-DEMO-CANONICAL-MODULE-ACTION-001-20260620-150358.json",
+                               "last_write":  "2026-06-20T15:03:58",
+                               "size":  3256
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher-canonical-action-runtime\\e06-create-canonical-action-package-validator-no-execution-20260620-150331.json",
+                               "relative":  "reports\\launcher-canonical-action-runtime\\e06-create-canonical-action-package-validator-no-execution-20260620-150331.json",
+                               "last_write":  "2026-06-20T15:03:31",
+                               "size":  1449
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher-canonical-action-runtime\\e05c-repair-factory-param-order-and-rerun-demo-no-execution-20260620-150249.json",
+                               "relative":  "reports\\launcher-canonical-action-runtime\\e05c-repair-factory-param-order-and-rerun-demo-no-execution-20260620-150249.json",
+                               "last_write":  "2026-06-20T15:02:50",
+                               "size":  987
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher-canonical-action-runtime\\factory-create-canonical-action-package-no-execution-DEMO-CANONICAL-MODULE-ACTION-001-20260620-150250.json",
+                               "relative":  "reports\\launcher-canonical-action-runtime\\factory-create-canonical-action-package-no-execution-DEMO-CANONICAL-MODULE-ACTION-001-20260620-150250.json",
+                               "last_write":  "2026-06-20T15:02:50",
+                               "size":  2490
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher-canonical-action-runtime\\e05-create-canonical-action-runtime-factory-no-execution-20260620-150155.json",
+                               "relative":  "reports\\launcher-canonical-action-runtime\\e05-create-canonical-action-runtime-factory-no-execution-20260620-150155.json",
+                               "last_write":  "2026-06-20T15:01:55",
+                               "size":  1717
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher-canonical-action-runtime\\e04b-run-canonical-action-runtime-noop-block-test-20260620-150123.json",
+                               "relative":  "reports\\launcher-canonical-action-runtime\\e04b-run-canonical-action-runtime-noop-block-test-20260620-150123.json",
+                               "last_write":  "2026-06-20T15:01:24",
+                               "size":  899
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher-canonical-action-runtime\\e04-create-canonical-action-runtime-validator-no-execution-20260620-150100.json",
+                               "relative":  "reports\\launcher-canonical-action-runtime\\e04-create-canonical-action-runtime-validator-no-execution-20260620-150100.json",
+                               "last_write":  "2026-06-20T15:01:00",
+                               "size":  2052
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher-canonical-action-runtime\\e03-create-canonical-action-runtime-skeleton-no-execution-20260620-150026.json",
+                               "relative":  "reports\\launcher-canonical-action-runtime\\e03-create-canonical-action-runtime-skeleton-no-execution-20260620-150026.json",
+                               "last_write":  "2026-06-20T15:00:26",
+                               "size":  863
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher-canonical-action-runtime\\e02-define-canonical-action-gate-contract-20260620-145955.json",
+                               "relative":  "reports\\launcher-canonical-action-runtime\\e02-define-canonical-action-gate-contract-20260620-145955.json",
+                               "last_write":  "2026-06-20T14:59:55",
+                               "size":  790
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher-canonical-action-runtime\\e01-inventory-module-card-action-flow-and-extract-reusable-pattern-20260620-145922.json",
+                               "relative":  "reports\\launcher-canonical-action-runtime\\e01-inventory-module-card-action-flow-and-extract-reusable-pattern-20260620-145922.json",
+                               "last_write":  "2026-06-20T14:59:22",
+                               "size":  807
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e116-verify-approved-module-action-execution-and-close-flow-20260620-145744.json",
+                               "relative":  "reports\\launcher\\e116-verify-approved-module-action-execution-and-close-flow-20260620-145744.json",
+                               "last_write":  "2026-06-20T14:57:44",
+                               "size":  2565
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e115-run-approved-module-action-with-explicit-authorization-20260620-145717.json",
+                               "relative":  "reports\\launcher\\e115-run-approved-module-action-with-explicit-authorization-20260620-145717.json",
+                               "last_write":  "2026-06-20T14:57:18",
+                               "size":  1171
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e115-run-approved-module-action-explicit-auth-only-20260620-145718.json",
+                               "relative":  "reports\\launcher\\e115-run-approved-module-action-explicit-auth-only-20260620-145718.json",
+                               "last_write":  "2026-06-20T14:57:18",
+                               "size":  1761
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e114b-verify-module-action-runner-blocks-without-auth-20260620-145654.json",
+                               "relative":  "reports\\launcher\\e114b-verify-module-action-runner-blocks-without-auth-20260620-145654.json",
+                               "last_write":  "2026-06-20T14:56:54",
+                               "size":  678
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e114-create-pending-auth-module-action-runner-20260620-145635.json",
+                               "relative":  "reports\\launcher\\e114-create-pending-auth-module-action-runner-20260620-145635.json",
+                               "last_write":  "2026-06-20T14:56:35",
+                               "size":  1079
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e113-create-approved-module-blueprint-execution-plan-20260620-145604.json",
+                               "relative":  "reports\\launcher\\e113-create-approved-module-blueprint-execution-plan-20260620-145604.json",
+                               "last_write":  "2026-06-20T14:56:04",
+                               "size":  3867
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e112-continue-approved-module-card-action-flow-20260620-145539.json",
+                               "relative":  "reports\\launcher\\e112-continue-approved-module-card-action-flow-20260620-145539.json",
+                               "last_write":  "2026-06-20T14:55:39",
+                               "size":  2647
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e111-verify-gate-approval-mutation-and-unlock-module-action-20260620-145515.json",
+                               "relative":  "reports\\launcher\\e111-verify-gate-approval-mutation-and-unlock-module-action-20260620-145515.json",
+                               "last_write":  "2026-06-20T14:55:15",
+                               "size":  1311
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e110-apply-real-gate-approval-mutation-with-explicit-authorization-20260620-145447.json",
+                               "relative":  "reports\\launcher\\e110-apply-real-gate-approval-mutation-with-explicit-authorization-20260620-145447.json",
+                               "last_write":  "2026-06-20T14:54:49",
+                               "size":  833
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e110-apply-real-gate-approval-mutation-explicit-auth-only-20260620-145448.json",
+                               "relative":  "reports\\launcher\\e110-apply-real-gate-approval-mutation-explicit-auth-only-20260620-145448.json",
+                               "last_write":  "2026-06-20T14:54:49",
+                               "size":  971
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e110f-verify-rewritten-script-blocks-without-auth-20260620-145421.json",
+                               "relative":  "reports\\launcher\\e110f-verify-rewritten-script-blocks-without-auth-20260620-145421.json",
+                               "last_write":  "2026-06-20T14:54:22",
+                               "size":  775
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e110e-rewrite-pending-auth-script-to-mutate-canonical-gate-state-20260620-145402.json",
+                               "relative":  "reports\\launcher\\e110e-rewrite-pending-auth-script-to-mutate-canonical-gate-state-20260620-145402.json",
+                               "last_write":  "2026-06-20T14:54:02",
+                               "size":  886
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e110d-create-canonical-gate-state-file-no-mutation-20260620-145334.json",
+                               "relative":  "reports\\launcher\\e110d-create-canonical-gate-state-file-no-mutation-20260620-145334.json",
+                               "last_write":  "2026-06-20T14:53:34",
+                               "size":  856
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e110c-classify-canonical-gate-target-and-block-report-mutation-20260620-145307.json",
+                               "relative":  "reports\\launcher\\e110c-classify-canonical-gate-target-and-block-report-mutation-20260620-145307.json",
+                               "last_write":  "2026-06-20T14:53:07",
+                               "size":  1546
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e110b-locate-canonical-gate-target-readonly-before-real-mutation-20260620-145237.json",
+                               "relative":  "reports\\launcher\\e110b-locate-canonical-gate-target-readonly-before-real-mutation-20260620-145237.json",
+                               "last_write":  "2026-06-20T14:52:41",
+                               "size":  5433
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e110a-verify-real-gate-approval-script-blocks-without-auth-20260620-145201.json",
+                               "relative":  "reports\\launcher\\e110a-verify-real-gate-approval-script-blocks-without-auth-20260620-145201.json",
+                               "last_write":  "2026-06-20T14:52:01",
+                               "size":  511
+                           }
+                       ],
+    "latest_documents":  [
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\system-observer\\SYSTEM_OBSERVER_E01_SUMMARY_20260620-152445.md",
+                                 "relative":  "documents\\system-observer\\SYSTEM_OBSERVER_E01_SUMMARY_20260620-152445.md",
+                                 "extension":  ".md",
+                                 "last_write":  "2026-06-20T15:24:45",
+                                 "size":  950
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\system-observer\\dimensions\\system-observer-dimensions-20260620-152445.json",
+                                 "relative":  "documents\\system-observer\\dimensions\\system-observer-dimensions-20260620-152445.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:24:45",
+                                 "size":  12469
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\system-observer\\safety\\system-observer-safety-policy.latest.json",
+                                 "relative":  "documents\\system-observer\\safety\\system-observer-safety-policy.latest.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:24:45",
+                                 "size":  3658
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\system-observer\\safety\\system-observer-safety-policy-20260620-152445.json",
+                                 "relative":  "documents\\system-observer\\safety\\system-observer-safety-policy-20260620-152445.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:24:45",
+                                 "size":  3658
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\system-observer\\dimensions\\system-observer-dimensions.latest.json",
+                                 "relative":  "documents\\system-observer\\dimensions\\system-observer-dimensions.latest.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:24:45",
+                                 "size":  12469
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\system-observer\\contracts\\system-observer-contract.latest.json",
+                                 "relative":  "documents\\system-observer\\contracts\\system-observer-contract.latest.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:24:45",
+                                 "size":  3643
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\system-observer\\contracts\\system-observer-contract-20260620-152445.json",
+                                 "relative":  "documents\\system-observer\\contracts\\system-observer-contract-20260620-152445.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:24:45",
+                                 "size":  3643
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\close\\launcher-runtime-ui-integration-close.latest.json",
+                                 "relative":  "documents\\launcher-runtime-ui-integration\\close\\launcher-runtime-ui-integration-close.latest.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:16:14",
+                                 "size":  4633
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\close\\launcher-runtime-ui-integration-close-20260620-151614.json",
+                                 "relative":  "documents\\launcher-runtime-ui-integration\\close\\launcher-runtime-ui-integration-close-20260620-151614.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:16:14",
+                                 "size":  4633
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\close\\launcher-runtime-ui-integration-close-20260620-151614.md",
+                                 "relative":  "documents\\launcher-runtime-ui-integration\\close\\launcher-runtime-ui-integration-close-20260620-151614.md",
+                                 "extension":  ".md",
+                                 "last_write":  "2026-06-20T15:16:14",
+                                 "size":  1469
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\patch-application\\e09-smoke-real-launcher-runtime-menu.latest.json",
+                                 "relative":  "documents\\launcher-runtime-ui-integration\\patch-application\\e09-smoke-real-launcher-runtime-menu.latest.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:15:34",
+                                 "size":  2114
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\patch-application\\e09-smoke-real-launcher-runtime-menu-20260620-151528.md",
+                                 "relative":  "documents\\launcher-runtime-ui-integration\\patch-application\\e09-smoke-real-launcher-runtime-menu-20260620-151528.md",
+                                 "extension":  ".md",
+                                 "last_write":  "2026-06-20T15:15:34",
+                                 "size":  830
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\patch-application\\e09-smoke-real-launcher-runtime-menu-20260620-151528.json",
+                                 "relative":  "documents\\launcher-runtime-ui-integration\\patch-application\\e09-smoke-real-launcher-runtime-menu-20260620-151528.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:15:34",
+                                 "size":  2114
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\patch-application\\e08-apply-launcher-runtime-ui-patch-with-explicit-auth.latest.json",
+                                 "relative":  "documents\\launcher-runtime-ui-integration\\patch-application\\e08-apply-launcher-runtime-ui-patch-with-explicit-auth.latest.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:14:59",
+                                 "size":  1331
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\patch-application\\e08-apply-launcher-runtime-ui-patch-with-explicit-auth-20260620-151458.json",
+                                 "relative":  "documents\\launcher-runtime-ui-integration\\patch-application\\e08-apply-launcher-runtime-ui-patch-with-explicit-auth-20260620-151458.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:14:59",
+                                 "size":  1331
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\patch-application\\launcher-runtime-ui-patch-application-20260620-151459.json",
+                                 "relative":  "documents\\launcher-runtime-ui-integration\\patch-application\\launcher-runtime-ui-patch-application-20260620-151459.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:14:59",
+                                 "size":  985
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\patch-application\\launcher-runtime-ui-patch-application.latest.json",
+                                 "relative":  "documents\\launcher-runtime-ui-integration\\patch-application\\launcher-runtime-ui-patch-application.latest.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:14:59",
+                                 "size":  985
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\patch-scripts\\launcher-runtime-ui-patch-no-auth-block-test.latest.json",
+                                 "relative":  "documents\\launcher-runtime-ui-integration\\patch-scripts\\launcher-runtime-ui-patch-no-auth-block-test.latest.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:14:28",
+                                 "size":  1372
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\patch-scripts\\launcher-runtime-ui-patch-no-auth-block-test-20260620-151427.json",
+                                 "relative":  "documents\\launcher-runtime-ui-integration\\patch-scripts\\launcher-runtime-ui-patch-no-auth-block-test-20260620-151427.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:14:28",
+                                 "size":  1372
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\patch-scripts\\launcher-runtime-ui-patch-script-setup-20260620-151340.json",
+                                 "relative":  "documents\\launcher-runtime-ui-integration\\patch-scripts\\launcher-runtime-ui-patch-script-setup-20260620-151340.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:13:41",
+                                 "size":  11663
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\patch-scripts\\apply-launcher-runtime-ui-patch.pending-auth.ps1",
+                                 "relative":  "documents\\launcher-runtime-ui-integration\\patch-scripts\\apply-launcher-runtime-ui-patch.pending-auth.ps1",
+                                 "extension":  ".ps1",
+                                 "last_write":  "2026-06-20T15:13:41",
+                                 "size":  4314
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\patch-scripts\\launcher-runtime-ui-patch-script-setup.latest.json",
+                                 "relative":  "documents\\launcher-runtime-ui-integration\\patch-scripts\\launcher-runtime-ui-patch-script-setup.latest.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:13:41",
+                                 "size":  11663
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\patch-scripts\\launcher-runtime-ui-patch-script-setup-20260620-151340.md",
+                                 "relative":  "documents\\launcher-runtime-ui-integration\\patch-scripts\\launcher-runtime-ui-patch-script-setup-20260620-151340.md",
+                                 "extension":  ".md",
+                                 "last_write":  "2026-06-20T15:13:41",
+                                 "size":  978
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\patch-scripts\\launcher-runtime-ui-patch-script-setup-20260620-151302.md",
+                                 "relative":  "documents\\launcher-runtime-ui-integration\\patch-scripts\\launcher-runtime-ui-patch-script-setup-20260620-151302.md",
+                                 "extension":  ".md",
+                                 "last_write":  "2026-06-20T15:13:02",
+                                 "size":  1084
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\patch-scripts\\launcher-runtime-ui-patch-script-setup-20260620-151302.json",
+                                 "relative":  "documents\\launcher-runtime-ui-integration\\patch-scripts\\launcher-runtime-ui-patch-script-setup-20260620-151302.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:13:02",
+                                 "size":  1335
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\patch-proposals\\launcher-runtime-ui-patch-proposal.latest.json",
+                                 "relative":  "documents\\launcher-runtime-ui-integration\\patch-proposals\\launcher-runtime-ui-patch-proposal.latest.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:12:22",
+                                 "size":  18851
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\patch-proposals\\launcher-runtime-ui-patch-proposal-20260620-151221.md",
+                                 "relative":  "documents\\launcher-runtime-ui-integration\\patch-proposals\\launcher-runtime-ui-patch-proposal-20260620-151221.md",
+                                 "extension":  ".md",
+                                 "last_write":  "2026-06-20T15:12:22",
+                                 "size":  1044
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\patch-proposals\\launcher-runtime-ui-patch-proposal-20260620-151221.json",
+                                 "relative":  "documents\\launcher-runtime-ui-integration\\patch-proposals\\launcher-runtime-ui-patch-proposal-20260620-151221.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:12:22",
+                                 "size":  18851
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\plans\\launcher-runtime-ui-integration-plan-20260620-151151.md",
+                                 "relative":  "documents\\launcher-runtime-ui-integration\\plans\\launcher-runtime-ui-integration-plan-20260620-151151.md",
+                                 "extension":  ".md",
+                                 "last_write":  "2026-06-20T15:11:51",
+                                 "size":  881
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\plans\\launcher-runtime-ui-integration-plan-20260620-151151.json",
+                                 "relative":  "documents\\launcher-runtime-ui-integration\\plans\\launcher-runtime-ui-integration-plan-20260620-151151.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:11:51",
+                                 "size":  6602
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\plans\\launcher-runtime-ui-integration-plan.latest.json",
+                                 "relative":  "documents\\launcher-runtime-ui-integration\\plans\\launcher-runtime-ui-integration-plan.latest.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:11:51",
+                                 "size":  6602
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\adapter\\launcher-runtime-ui-adapter-smoke-20260620-151115.md",
+                                 "relative":  "documents\\launcher-runtime-ui-integration\\adapter\\launcher-runtime-ui-adapter-smoke-20260620-151115.md",
+                                 "extension":  ".md",
+                                 "last_write":  "2026-06-20T15:11:20",
+                                 "size":  744
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\adapter\\launcher-runtime-ui-adapter-smoke-20260620-151115.json",
+                                 "relative":  "documents\\launcher-runtime-ui-integration\\adapter\\launcher-runtime-ui-adapter-smoke-20260620-151115.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:11:20",
+                                 "size":  2928
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\adapter\\launcher-runtime-ui-adapter-smoke.latest.json",
+                                 "relative":  "documents\\launcher-runtime-ui-integration\\adapter\\launcher-runtime-ui-adapter-smoke.latest.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:11:20",
+                                 "size":  2928
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\adapter\\launcher-runtime-ui-adapter-20260620-151051.json",
+                                 "relative":  "documents\\launcher-runtime-ui-integration\\adapter\\launcher-runtime-ui-adapter-20260620-151051.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:10:51",
+                                 "size":  1651
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\adapter\\launcher-runtime-ui-adapter-20260620-151051.md",
+                                 "relative":  "documents\\launcher-runtime-ui-integration\\adapter\\launcher-runtime-ui-adapter-20260620-151051.md",
+                                 "extension":  ".md",
+                                 "last_write":  "2026-06-20T15:10:51",
+                                 "size":  640
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\adapter\\launcher-runtime-ui-adapter.latest.json",
+                                 "relative":  "documents\\launcher-runtime-ui-integration\\adapter\\launcher-runtime-ui-adapter.latest.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:10:51",
+                                 "size":  1651
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\contracts\\launcher-runtime-ui-command-contract-20260620-151013.md",
+                                 "relative":  "documents\\launcher-runtime-ui-integration\\contracts\\launcher-runtime-ui-command-contract-20260620-151013.md",
+                                 "extension":  ".md",
+                                 "last_write":  "2026-06-20T15:10:13",
+                                 "size":  919
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\contracts\\launcher-runtime-ui-command-contract-20260620-151013.json",
+                                 "relative":  "documents\\launcher-runtime-ui-integration\\contracts\\launcher-runtime-ui-command-contract-20260620-151013.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:10:13",
+                                 "size":  6118
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\contracts\\launcher-runtime-ui-command-contract-schema-20260620-151013.json",
+                                 "relative":  "documents\\launcher-runtime-ui-integration\\contracts\\launcher-runtime-ui-command-contract-schema-20260620-151013.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:10:13",
+                                 "size":  1408
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\contracts\\launcher-runtime-ui-command-contract.latest.json",
+                                 "relative":  "documents\\launcher-runtime-ui-integration\\contracts\\launcher-runtime-ui-command-contract.latest.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:10:13",
+                                 "size":  6118
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\contracts\\launcher-runtime-ui-command-contract-schema.latest.json",
+                                 "relative":  "documents\\launcher-runtime-ui-integration\\contracts\\launcher-runtime-ui-command-contract-schema.latest.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:10:13",
+                                 "size":  1408
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\inventory\\launcher-ui-runtime-integration-inventory-20260620-150940.md",
+                                 "relative":  "documents\\launcher-runtime-ui-integration\\inventory\\launcher-ui-runtime-integration-inventory-20260620-150940.md",
+                                 "extension":  ".md",
+                                 "last_write":  "2026-06-20T15:09:41",
+                                 "size":  780
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\inventory\\launcher-ui-runtime-integration-inventory.latest.json",
+                                 "relative":  "documents\\launcher-runtime-ui-integration\\inventory\\launcher-ui-runtime-integration-inventory.latest.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:09:41",
+                                 "size":  62755
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\inventory\\launcher-ui-runtime-integration-inventory-20260620-150940.json",
+                                 "relative":  "documents\\launcher-runtime-ui-integration\\inventory\\launcher-ui-runtime-integration-inventory-20260620-150940.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:09:41",
+                                 "size":  62755
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\close\\launcher-canonical-action-runtime-close-20260620-150824.md",
+                                 "relative":  "documents\\launcher-canonical-action-runtime\\close\\launcher-canonical-action-runtime-close-20260620-150824.md",
+                                 "extension":  ".md",
+                                 "last_write":  "2026-06-20T15:08:24",
+                                 "size":  945
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\close\\launcher-canonical-action-runtime-close.latest.json",
+                                 "relative":  "documents\\launcher-canonical-action-runtime\\close\\launcher-canonical-action-runtime-close.latest.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:08:24",
+                                 "size":  5750
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\close\\launcher-canonical-action-runtime-close-20260620-150824.json",
+                                 "relative":  "documents\\launcher-canonical-action-runtime\\close\\launcher-canonical-action-runtime-close-20260620-150824.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:08:24",
+                                 "size":  5750
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\executions\\DEMO-CANONICAL-MODULE-ACTION-001\\action-execution.latest.json",
+                                 "relative":  "documents\\launcher-canonical-action-runtime\\executions\\DEMO-CANONICAL-MODULE-ACTION-001\\action-execution.latest.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:07:47",
+                                 "size":  1030
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\executions\\DEMO-CANONICAL-MODULE-ACTION-001\\action-execution-20260620-150746.json",
+                                 "relative":  "documents\\launcher-canonical-action-runtime\\executions\\DEMO-CANONICAL-MODULE-ACTION-001\\action-execution-20260620-150746.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:07:47",
+                                 "size":  1030
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\state\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-state.latest.json",
+                                 "relative":  "documents\\launcher-canonical-action-runtime\\state\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-state.latest.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:07:47",
+                                 "size":  2353
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\plans\\DEMO-CANONICAL-MODULE-ACTION-001\\runner-block-test-20260620-150723.json",
+                                 "relative":  "documents\\launcher-canonical-action-runtime\\plans\\DEMO-CANONICAL-MODULE-ACTION-001\\runner-block-test-20260620-150723.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:07:24",
+                                 "size":  1308
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\plans\\DEMO-CANONICAL-MODULE-ACTION-001\\runner-block-test.latest.json",
+                                 "relative":  "documents\\launcher-canonical-action-runtime\\plans\\DEMO-CANONICAL-MODULE-ACTION-001\\runner-block-test.latest.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:07:24",
+                                 "size":  1308
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\plans\\DEMO-CANONICAL-MODULE-ACTION-001\\plan-and-runner-setup-20260620-150658.json",
+                                 "relative":  "documents\\launcher-canonical-action-runtime\\plans\\DEMO-CANONICAL-MODULE-ACTION-001\\plan-and-runner-setup-20260620-150658.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:06:58",
+                                 "size":  1290
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\plans\\DEMO-CANONICAL-MODULE-ACTION-001\\plan-and-runner-setup.latest.json",
+                                 "relative":  "documents\\launcher-canonical-action-runtime\\plans\\DEMO-CANONICAL-MODULE-ACTION-001\\plan-and-runner-setup.latest.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:06:58",
+                                 "size":  1290
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\plans\\DEMO-CANONICAL-MODULE-ACTION-001\\approved-action-plan-20260620-150658.json",
+                                 "relative":  "documents\\launcher-canonical-action-runtime\\plans\\DEMO-CANONICAL-MODULE-ACTION-001\\approved-action-plan-20260620-150658.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:06:58",
+                                 "size":  2354
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\plans\\DEMO-CANONICAL-MODULE-ACTION-001\\approved-action-plan.latest.json",
+                                 "relative":  "documents\\launcher-canonical-action-runtime\\plans\\DEMO-CANONICAL-MODULE-ACTION-001\\approved-action-plan.latest.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:06:58",
+                                 "size":  2354
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\unlocks\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-unlock-20260620-150617.json",
+                                 "relative":  "documents\\launcher-canonical-action-runtime\\unlocks\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-unlock-20260620-150617.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:06:17",
+                                 "size":  1776
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\unlocks\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-unlock-20260620-150617.md",
+                                 "relative":  "documents\\launcher-canonical-action-runtime\\unlocks\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-unlock-20260620-150617.md",
+                                 "extension":  ".md",
+                                 "last_write":  "2026-06-20T15:06:17",
+                                 "size":  954
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\unlocks\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-unlock.latest.json",
+                                 "relative":  "documents\\launcher-canonical-action-runtime\\unlocks\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-unlock.latest.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:06:17",
+                                 "size":  1776
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\contracts\\DEMO-CANONICAL-MODULE-ACTION-001\\gate-mutation-receipt.latest.json",
+                                 "relative":  "documents\\launcher-canonical-action-runtime\\contracts\\DEMO-CANONICAL-MODULE-ACTION-001\\gate-mutation-receipt.latest.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:05:52",
+                                 "size":  1063
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\contracts\\DEMO-CANONICAL-MODULE-ACTION-001\\gate-mutation-receipt-20260620-150551.json",
+                                 "relative":  "documents\\launcher-canonical-action-runtime\\contracts\\DEMO-CANONICAL-MODULE-ACTION-001\\gate-mutation-receipt-20260620-150551.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:05:52",
+                                 "size":  1063
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\state\\DEMO-CANONICAL-MODULE-ACTION-001\\pending-auth-mutation-block-test.latest.json",
+                                 "relative":  "documents\\launcher-canonical-action-runtime\\state\\DEMO-CANONICAL-MODULE-ACTION-001\\pending-auth-mutation-block-test.latest.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:05:05",
+                                 "size":  1391
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\state\\DEMO-CANONICAL-MODULE-ACTION-001\\pending-auth-mutation-block-test-20260620-150504.json",
+                                 "relative":  "documents\\launcher-canonical-action-runtime\\state\\DEMO-CANONICAL-MODULE-ACTION-001\\pending-auth-mutation-block-test-20260620-150504.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:05:05",
+                                 "size":  1391
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\state\\DEMO-CANONICAL-MODULE-ACTION-001\\state-and-pending-auth-mutation-setup-20260620-150440.json",
+                                 "relative":  "documents\\launcher-canonical-action-runtime\\state\\DEMO-CANONICAL-MODULE-ACTION-001\\state-and-pending-auth-mutation-setup-20260620-150440.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:04:40",
+                                 "size":  1426
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\state\\DEMO-CANONICAL-MODULE-ACTION-001\\state-and-pending-auth-mutation-setup.latest.json",
+                                 "relative":  "documents\\launcher-canonical-action-runtime\\state\\DEMO-CANONICAL-MODULE-ACTION-001\\state-and-pending-auth-mutation-setup.latest.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:04:40",
+                                 "size":  1426
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\contracts\\DEMO-CANONICAL-MODULE-ACTION-001\\mutation-contract.latest.json",
+                                 "relative":  "documents\\launcher-canonical-action-runtime\\contracts\\DEMO-CANONICAL-MODULE-ACTION-001\\mutation-contract.latest.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:04:40",
+                                 "size":  1560
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\state\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-state.before-mutation-20260620-150551.json",
+                                 "relative":  "documents\\launcher-canonical-action-runtime\\state\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-state.before-mutation-20260620-150551.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:04:40",
+                                 "size":  1392
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\contracts\\DEMO-CANONICAL-MODULE-ACTION-001\\mutation-contract-20260620-150440.json",
+                                 "relative":  "documents\\launcher-canonical-action-runtime\\contracts\\DEMO-CANONICAL-MODULE-ACTION-001\\mutation-contract-20260620-150440.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:04:40",
+                                 "size":  1560
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\previews\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-dry-run-preview-20260620-150358.md",
+                                 "relative":  "documents\\launcher-canonical-action-runtime\\previews\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-dry-run-preview-20260620-150358.md",
+                                 "extension":  ".md",
+                                 "last_write":  "2026-06-20T15:03:58",
+                                 "size":  986
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\previews\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-dry-run-preview.latest.json",
+                                 "relative":  "documents\\launcher-canonical-action-runtime\\previews\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-dry-run-preview.latest.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:03:58",
+                                 "size":  3256
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\previews\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-dry-run-preview-20260620-150358.json",
+                                 "relative":  "documents\\launcher-canonical-action-runtime\\previews\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-dry-run-preview-20260620-150358.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:03:58",
+                                 "size":  3256
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\validators\\canonical-action-package-validator.latest.json",
+                                 "relative":  "documents\\launcher-canonical-action-runtime\\validators\\canonical-action-package-validator.latest.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:03:31",
+                                 "size":  1449
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\validators\\canonical-action-package-validator-20260620-150331.md",
+                                 "relative":  "documents\\launcher-canonical-action-runtime\\validators\\canonical-action-package-validator-20260620-150331.md",
+                                 "extension":  ".md",
+                                 "last_write":  "2026-06-20T15:03:31",
+                                 "size":  797
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\validators\\canonical-action-package-validator-20260620-150331.json",
+                                 "relative":  "documents\\launcher-canonical-action-runtime\\validators\\canonical-action-package-validator-20260620-150331.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:03:31",
+                                 "size":  1449
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\factory\\factory-demo-package-result.latest.json",
+                                 "relative":  "documents\\launcher-canonical-action-runtime\\factory\\factory-demo-package-result.latest.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:02:50",
+                                 "size":  987
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\factory\\factory-repair-demo-result-20260620-150249.json",
+                                 "relative":  "documents\\launcher-canonical-action-runtime\\factory\\factory-repair-demo-result-20260620-150249.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:02:50",
+                                 "size":  987
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\actions\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-package-20260620-150250.json",
+                                 "relative":  "documents\\launcher-canonical-action-runtime\\actions\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-package-20260620-150250.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:02:50",
+                                 "size":  2490
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\actions\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-package.latest.json",
+                                 "relative":  "documents\\launcher-canonical-action-runtime\\actions\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-package.latest.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:02:50",
+                                 "size":  2490
+                             },
+                             {
+                                 "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\factory\\canonical-action-package-factory-20260620-150155.json",
+                                 "relative":  "documents\\launcher-canonical-action-runtime\\factory\\canonical-action-package-factory-20260620-150155.json",
+                                 "extension":  ".json",
+                                 "last_write":  "2026-06-20T15:01:55",
+                                 "size":  1717
+                             }
+                         ],
+    "latest_scripts":  [
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\system-observer\\SYSTEM_OBSERVER_E01_SUMMARY_20260620-152445.md",
+                               "relative":  "documents\\system-observer\\SYSTEM_OBSERVER_E01_SUMMARY_20260620-152445.md",
+                               "extension":  ".md",
+                               "last_write":  "2026-06-20T15:24:45",
+                               "size":  950
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\system-observer\\contracts\\system-observer-contract.latest.json",
+                               "relative":  "documents\\system-observer\\contracts\\system-observer-contract.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:24:45",
+                               "size":  3643
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\system-observer\\contracts\\system-observer-contract-20260620-152445.json",
+                               "relative":  "documents\\system-observer\\contracts\\system-observer-contract-20260620-152445.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:24:45",
+                               "size":  3643
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\system-observer\\dimensions\\system-observer-dimensions-20260620-152445.json",
+                               "relative":  "documents\\system-observer\\dimensions\\system-observer-dimensions-20260620-152445.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:24:45",
+                               "size":  12469
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\system-observer\\safety\\system-observer-safety-policy-20260620-152445.json",
+                               "relative":  "documents\\system-observer\\safety\\system-observer-safety-policy-20260620-152445.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:24:45",
+                               "size":  3658
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\system-observer\\safety\\system-observer-safety-policy.latest.json",
+                               "relative":  "documents\\system-observer\\safety\\system-observer-safety-policy.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:24:45",
+                               "size":  3658
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\system-observer\\dimensions\\system-observer-dimensions.latest.json",
+                               "relative":  "documents\\system-observer\\dimensions\\system-observer-dimensions.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:24:45",
+                               "size":  12469
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\close\\launcher-runtime-ui-integration-close.latest.json",
+                               "relative":  "documents\\launcher-runtime-ui-integration\\close\\launcher-runtime-ui-integration-close.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:16:14",
+                               "size":  4633
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\close\\launcher-runtime-ui-integration-close-20260620-151614.md",
+                               "relative":  "documents\\launcher-runtime-ui-integration\\close\\launcher-runtime-ui-integration-close-20260620-151614.md",
+                               "extension":  ".md",
+                               "last_write":  "2026-06-20T15:16:14",
+                               "size":  1469
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\close\\launcher-runtime-ui-integration-close-20260620-151614.json",
+                               "relative":  "documents\\launcher-runtime-ui-integration\\close\\launcher-runtime-ui-integration-close-20260620-151614.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:16:14",
+                               "size":  4633
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\patch-application\\e09-smoke-real-launcher-runtime-menu-20260620-151528.json",
+                               "relative":  "documents\\launcher-runtime-ui-integration\\patch-application\\e09-smoke-real-launcher-runtime-menu-20260620-151528.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:15:34",
+                               "size":  2114
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\patch-application\\e09-smoke-real-launcher-runtime-menu.latest.json",
+                               "relative":  "documents\\launcher-runtime-ui-integration\\patch-application\\e09-smoke-real-launcher-runtime-menu.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:15:34",
+                               "size":  2114
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\patch-application\\e09-smoke-real-launcher-runtime-menu-20260620-151528.md",
+                               "relative":  "documents\\launcher-runtime-ui-integration\\patch-application\\e09-smoke-real-launcher-runtime-menu-20260620-151528.md",
+                               "extension":  ".md",
+                               "last_write":  "2026-06-20T15:15:34",
+                               "size":  830
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\patch-application\\e08-apply-launcher-runtime-ui-patch-with-explicit-auth.latest.json",
+                               "relative":  "documents\\launcher-runtime-ui-integration\\patch-application\\e08-apply-launcher-runtime-ui-patch-with-explicit-auth.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:14:59",
+                               "size":  1331
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\patch-application\\e08-apply-launcher-runtime-ui-patch-with-explicit-auth-20260620-151458.json",
+                               "relative":  "documents\\launcher-runtime-ui-integration\\patch-application\\e08-apply-launcher-runtime-ui-patch-with-explicit-auth-20260620-151458.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:14:59",
+                               "size":  1331
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\patch-application\\launcher-runtime-ui-patch-application-20260620-151459.json",
+                               "relative":  "documents\\launcher-runtime-ui-integration\\patch-application\\launcher-runtime-ui-patch-application-20260620-151459.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:14:59",
+                               "size":  985
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\patch-application\\launcher-runtime-ui-patch-application.latest.json",
+                               "relative":  "documents\\launcher-runtime-ui-integration\\patch-application\\launcher-runtime-ui-patch-application.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:14:59",
+                               "size":  985
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1",
+                               "relative":  "tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1",
+                               "extension":  ".ps1",
+                               "last_write":  "2026-06-20T15:14:59",
+                               "size":  8136
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\patch-scripts\\launcher-runtime-ui-patch-no-auth-block-test.latest.json",
+                               "relative":  "documents\\launcher-runtime-ui-integration\\patch-scripts\\launcher-runtime-ui-patch-no-auth-block-test.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:14:28",
+                               "size":  1372
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\patch-scripts\\launcher-runtime-ui-patch-no-auth-block-test-20260620-151427.json",
+                               "relative":  "documents\\launcher-runtime-ui-integration\\patch-scripts\\launcher-runtime-ui-patch-no-auth-block-test-20260620-151427.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:14:28",
+                               "size":  1372
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\patch-scripts\\apply-launcher-runtime-ui-patch.pending-auth.ps1",
+                               "relative":  "documents\\launcher-runtime-ui-integration\\patch-scripts\\apply-launcher-runtime-ui-patch.pending-auth.ps1",
+                               "extension":  ".ps1",
+                               "last_write":  "2026-06-20T15:13:41",
+                               "size":  4314
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\patch-scripts\\launcher-runtime-ui-patch-script-setup.latest.json",
+                               "relative":  "documents\\launcher-runtime-ui-integration\\patch-scripts\\launcher-runtime-ui-patch-script-setup.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:13:41",
+                               "size":  11663
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\patch-scripts\\launcher-runtime-ui-patch-script-setup-20260620-151340.md",
+                               "relative":  "documents\\launcher-runtime-ui-integration\\patch-scripts\\launcher-runtime-ui-patch-script-setup-20260620-151340.md",
+                               "extension":  ".md",
+                               "last_write":  "2026-06-20T15:13:41",
+                               "size":  978
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\patch-scripts\\launcher-runtime-ui-patch-script-setup-20260620-151340.json",
+                               "relative":  "documents\\launcher-runtime-ui-integration\\patch-scripts\\launcher-runtime-ui-patch-script-setup-20260620-151340.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:13:41",
+                               "size":  11663
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\patch-scripts\\launcher-runtime-ui-patch-script-setup-20260620-151302.md",
+                               "relative":  "documents\\launcher-runtime-ui-integration\\patch-scripts\\launcher-runtime-ui-patch-script-setup-20260620-151302.md",
+                               "extension":  ".md",
+                               "last_write":  "2026-06-20T15:13:02",
+                               "size":  1084
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\patch-scripts\\launcher-runtime-ui-patch-script-setup-20260620-151302.json",
+                               "relative":  "documents\\launcher-runtime-ui-integration\\patch-scripts\\launcher-runtime-ui-patch-script-setup-20260620-151302.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:13:02",
+                               "size":  1335
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\patch-proposals\\launcher-runtime-ui-patch-proposal-20260620-151221.json",
+                               "relative":  "documents\\launcher-runtime-ui-integration\\patch-proposals\\launcher-runtime-ui-patch-proposal-20260620-151221.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:12:22",
+                               "size":  18851
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\patch-proposals\\launcher-runtime-ui-patch-proposal-20260620-151221.md",
+                               "relative":  "documents\\launcher-runtime-ui-integration\\patch-proposals\\launcher-runtime-ui-patch-proposal-20260620-151221.md",
+                               "extension":  ".md",
+                               "last_write":  "2026-06-20T15:12:22",
+                               "size":  1044
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\patch-proposals\\launcher-runtime-ui-patch-proposal.latest.json",
+                               "relative":  "documents\\launcher-runtime-ui-integration\\patch-proposals\\launcher-runtime-ui-patch-proposal.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:12:22",
+                               "size":  18851
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\plans\\launcher-runtime-ui-integration-plan-20260620-151151.md",
+                               "relative":  "documents\\launcher-runtime-ui-integration\\plans\\launcher-runtime-ui-integration-plan-20260620-151151.md",
+                               "extension":  ".md",
+                               "last_write":  "2026-06-20T15:11:51",
+                               "size":  881
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\plans\\launcher-runtime-ui-integration-plan.latest.json",
+                               "relative":  "documents\\launcher-runtime-ui-integration\\plans\\launcher-runtime-ui-integration-plan.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:11:51",
+                               "size":  6602
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\plans\\launcher-runtime-ui-integration-plan-20260620-151151.json",
+                               "relative":  "documents\\launcher-runtime-ui-integration\\plans\\launcher-runtime-ui-integration-plan-20260620-151151.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:11:51",
+                               "size":  6602
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\adapter\\launcher-runtime-ui-adapter-smoke.latest.json",
+                               "relative":  "documents\\launcher-runtime-ui-integration\\adapter\\launcher-runtime-ui-adapter-smoke.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:11:20",
+                               "size":  2928
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\adapter\\launcher-runtime-ui-adapter-smoke-20260620-151115.json",
+                               "relative":  "documents\\launcher-runtime-ui-integration\\adapter\\launcher-runtime-ui-adapter-smoke-20260620-151115.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:11:20",
+                               "size":  2928
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\adapter\\launcher-runtime-ui-adapter-smoke-20260620-151115.md",
+                               "relative":  "documents\\launcher-runtime-ui-integration\\adapter\\launcher-runtime-ui-adapter-smoke-20260620-151115.md",
+                               "extension":  ".md",
+                               "last_write":  "2026-06-20T15:11:20",
+                               "size":  744
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\adapter\\launcher-runtime-ui-adapter-20260620-151051.json",
+                               "relative":  "documents\\launcher-runtime-ui-integration\\adapter\\launcher-runtime-ui-adapter-20260620-151051.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:10:51",
+                               "size":  1651
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\adapter\\launcher-runtime-ui-adapter.latest.json",
+                               "relative":  "documents\\launcher-runtime-ui-integration\\adapter\\launcher-runtime-ui-adapter.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:10:51",
+                               "size":  1651
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\adapter\\launcher-runtime-ui-adapter-20260620-151051.md",
+                               "relative":  "documents\\launcher-runtime-ui-integration\\adapter\\launcher-runtime-ui-adapter-20260620-151051.md",
+                               "extension":  ".md",
+                               "last_write":  "2026-06-20T15:10:51",
+                               "size":  640
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\runtime-ui-adapter\\launcher-runtime-ui-adapter.readonly.ps1",
+                               "relative":  "tools\\launcher\\runtime-ui-adapter\\launcher-runtime-ui-adapter.readonly.ps1",
+                               "extension":  ".ps1",
+                               "last_write":  "2026-06-20T15:10:51",
+                               "size":  4873
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\contracts\\launcher-runtime-ui-command-contract.latest.json",
+                               "relative":  "documents\\launcher-runtime-ui-integration\\contracts\\launcher-runtime-ui-command-contract.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:10:13",
+                               "size":  6118
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\contracts\\launcher-runtime-ui-command-contract-schema.latest.json",
+                               "relative":  "documents\\launcher-runtime-ui-integration\\contracts\\launcher-runtime-ui-command-contract-schema.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:10:13",
+                               "size":  1408
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\contracts\\launcher-runtime-ui-command-contract-20260620-151013.md",
+                               "relative":  "documents\\launcher-runtime-ui-integration\\contracts\\launcher-runtime-ui-command-contract-20260620-151013.md",
+                               "extension":  ".md",
+                               "last_write":  "2026-06-20T15:10:13",
+                               "size":  919
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\contracts\\launcher-runtime-ui-command-contract-schema-20260620-151013.json",
+                               "relative":  "documents\\launcher-runtime-ui-integration\\contracts\\launcher-runtime-ui-command-contract-schema-20260620-151013.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:10:13",
+                               "size":  1408
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\contracts\\launcher-runtime-ui-command-contract-20260620-151013.json",
+                               "relative":  "documents\\launcher-runtime-ui-integration\\contracts\\launcher-runtime-ui-command-contract-20260620-151013.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:10:13",
+                               "size":  6118
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\inventory\\launcher-ui-runtime-integration-inventory-20260620-150940.md",
+                               "relative":  "documents\\launcher-runtime-ui-integration\\inventory\\launcher-ui-runtime-integration-inventory-20260620-150940.md",
+                               "extension":  ".md",
+                               "last_write":  "2026-06-20T15:09:41",
+                               "size":  780
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\inventory\\launcher-ui-runtime-integration-inventory.latest.json",
+                               "relative":  "documents\\launcher-runtime-ui-integration\\inventory\\launcher-ui-runtime-integration-inventory.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:09:41",
+                               "size":  62755
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-runtime-ui-integration\\inventory\\launcher-ui-runtime-integration-inventory-20260620-150940.json",
+                               "relative":  "documents\\launcher-runtime-ui-integration\\inventory\\launcher-ui-runtime-integration-inventory-20260620-150940.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:09:41",
+                               "size":  62755
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\close\\launcher-canonical-action-runtime-close-20260620-150824.md",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\close\\launcher-canonical-action-runtime-close-20260620-150824.md",
+                               "extension":  ".md",
+                               "last_write":  "2026-06-20T15:08:24",
+                               "size":  945
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\close\\launcher-canonical-action-runtime-close.latest.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\close\\launcher-canonical-action-runtime-close.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:08:24",
+                               "size":  5750
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\close\\launcher-canonical-action-runtime-close-20260620-150824.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\close\\launcher-canonical-action-runtime-close-20260620-150824.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:08:24",
+                               "size":  5750
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\executions\\DEMO-CANONICAL-MODULE-ACTION-001\\action-execution-20260620-150746.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\executions\\DEMO-CANONICAL-MODULE-ACTION-001\\action-execution-20260620-150746.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:07:47",
+                               "size":  1030
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\executions\\DEMO-CANONICAL-MODULE-ACTION-001\\action-execution.latest.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\executions\\DEMO-CANONICAL-MODULE-ACTION-001\\action-execution.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:07:47",
+                               "size":  1030
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\state\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-state.latest.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\state\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-state.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:07:47",
+                               "size":  2353
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\plans\\DEMO-CANONICAL-MODULE-ACTION-001\\runner-block-test-20260620-150723.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\plans\\DEMO-CANONICAL-MODULE-ACTION-001\\runner-block-test-20260620-150723.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:07:24",
+                               "size":  1308
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\plans\\DEMO-CANONICAL-MODULE-ACTION-001\\runner-block-test.latest.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\plans\\DEMO-CANONICAL-MODULE-ACTION-001\\runner-block-test.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:07:24",
+                               "size":  1308
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\plans\\DEMO-CANONICAL-MODULE-ACTION-001\\plan-and-runner-setup-20260620-150658.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\plans\\DEMO-CANONICAL-MODULE-ACTION-001\\plan-and-runner-setup-20260620-150658.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:06:58",
+                               "size":  1290
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\canonical-action-runtime\\actions\\DEMO-CANONICAL-MODULE-ACTION-001\\run-action.pending-auth.ps1",
+                               "relative":  "tools\\launcher\\canonical-action-runtime\\actions\\DEMO-CANONICAL-MODULE-ACTION-001\\run-action.pending-auth.ps1",
+                               "extension":  ".ps1",
+                               "last_write":  "2026-06-20T15:06:58",
+                               "size":  3804
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\plans\\DEMO-CANONICAL-MODULE-ACTION-001\\plan-and-runner-setup.latest.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\plans\\DEMO-CANONICAL-MODULE-ACTION-001\\plan-and-runner-setup.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:06:58",
+                               "size":  1290
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\plans\\DEMO-CANONICAL-MODULE-ACTION-001\\approved-action-plan-20260620-150658.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\plans\\DEMO-CANONICAL-MODULE-ACTION-001\\approved-action-plan-20260620-150658.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:06:58",
+                               "size":  2354
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\plans\\DEMO-CANONICAL-MODULE-ACTION-001\\approved-action-plan.latest.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\plans\\DEMO-CANONICAL-MODULE-ACTION-001\\approved-action-plan.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:06:58",
+                               "size":  2354
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\unlocks\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-unlock-20260620-150617.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\unlocks\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-unlock-20260620-150617.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:06:17",
+                               "size":  1776
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\unlocks\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-unlock.latest.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\unlocks\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-unlock.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:06:17",
+                               "size":  1776
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\unlocks\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-unlock-20260620-150617.md",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\unlocks\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-unlock-20260620-150617.md",
+                               "extension":  ".md",
+                               "last_write":  "2026-06-20T15:06:17",
+                               "size":  954
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\contracts\\DEMO-CANONICAL-MODULE-ACTION-001\\gate-mutation-receipt.latest.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\contracts\\DEMO-CANONICAL-MODULE-ACTION-001\\gate-mutation-receipt.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:05:52",
+                               "size":  1063
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\contracts\\DEMO-CANONICAL-MODULE-ACTION-001\\gate-mutation-receipt-20260620-150551.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\contracts\\DEMO-CANONICAL-MODULE-ACTION-001\\gate-mutation-receipt-20260620-150551.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:05:52",
+                               "size":  1063
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\canonical-action-runtime\\actions\\DEMO-CANONICAL-MODULE-ACTION-001\\apply-gate-mutation.pending-auth.ps1",
+                               "relative":  "tools\\launcher\\canonical-action-runtime\\actions\\DEMO-CANONICAL-MODULE-ACTION-001\\apply-gate-mutation.pending-auth.ps1",
+                               "extension":  ".ps1",
+                               "last_write":  "2026-06-20T15:05:51",
+                               "size":  4490
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\state\\DEMO-CANONICAL-MODULE-ACTION-001\\pending-auth-mutation-block-test.latest.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\state\\DEMO-CANONICAL-MODULE-ACTION-001\\pending-auth-mutation-block-test.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:05:05",
+                               "size":  1391
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\state\\DEMO-CANONICAL-MODULE-ACTION-001\\pending-auth-mutation-block-test-20260620-150504.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\state\\DEMO-CANONICAL-MODULE-ACTION-001\\pending-auth-mutation-block-test-20260620-150504.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:05:05",
+                               "size":  1391
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\state\\DEMO-CANONICAL-MODULE-ACTION-001\\state-and-pending-auth-mutation-setup.latest.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\state\\DEMO-CANONICAL-MODULE-ACTION-001\\state-and-pending-auth-mutation-setup.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:04:40",
+                               "size":  1426
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\state\\DEMO-CANONICAL-MODULE-ACTION-001\\state-and-pending-auth-mutation-setup-20260620-150440.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\state\\DEMO-CANONICAL-MODULE-ACTION-001\\state-and-pending-auth-mutation-setup-20260620-150440.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:04:40",
+                               "size":  1426
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\contracts\\DEMO-CANONICAL-MODULE-ACTION-001\\mutation-contract-20260620-150440.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\contracts\\DEMO-CANONICAL-MODULE-ACTION-001\\mutation-contract-20260620-150440.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:04:40",
+                               "size":  1560
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\contracts\\DEMO-CANONICAL-MODULE-ACTION-001\\mutation-contract.latest.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\contracts\\DEMO-CANONICAL-MODULE-ACTION-001\\mutation-contract.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:04:40",
+                               "size":  1560
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\state\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-state.before-mutation-20260620-150551.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\state\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-state.before-mutation-20260620-150551.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:04:40",
+                               "size":  1392
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\previews\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-dry-run-preview-20260620-150358.md",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\previews\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-dry-run-preview-20260620-150358.md",
+                               "extension":  ".md",
+                               "last_write":  "2026-06-20T15:03:58",
+                               "size":  986
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\previews\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-dry-run-preview.latest.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\previews\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-dry-run-preview.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:03:58",
+                               "size":  3256
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\previews\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-dry-run-preview-20260620-150358.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\previews\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-dry-run-preview-20260620-150358.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:03:58",
+                               "size":  3256
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\validators\\canonical-action-package-validator-20260620-150331.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\validators\\canonical-action-package-validator-20260620-150331.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:03:31",
+                               "size":  1449
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\validators\\canonical-action-package-validator.latest.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\validators\\canonical-action-package-validator.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:03:31",
+                               "size":  1449
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\validators\\canonical-action-package-validator-20260620-150331.md",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\validators\\canonical-action-package-validator-20260620-150331.md",
+                               "extension":  ".md",
+                               "last_write":  "2026-06-20T15:03:31",
+                               "size":  797
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\factory\\factory-demo-package-result.latest.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\factory\\factory-demo-package-result.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:02:50",
+                               "size":  987
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\factory\\factory-repair-demo-result-20260620-150249.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\factory\\factory-repair-demo-result-20260620-150249.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:02:50",
+                               "size":  987
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\actions\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-package-20260620-150250.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\actions\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-package-20260620-150250.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:02:50",
+                               "size":  2490
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\actions\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-package.latest.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\actions\\DEMO-CANONICAL-MODULE-ACTION-001\\canonical-action-package.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:02:50",
+                               "size":  2490
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\canonical-action-runtime\\new-canonical-action-package.no-execution.ps1",
+                               "relative":  "tools\\launcher\\canonical-action-runtime\\new-canonical-action-package.no-execution.ps1",
+                               "extension":  ".ps1",
+                               "last_write":  "2026-06-20T15:02:49",
+                               "size":  3272
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\factory\\canonical-action-package-factory.latest.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\factory\\canonical-action-package-factory.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:01:55",
+                               "size":  1717
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\factory\\canonical-action-package-factory-20260620-150155.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\factory\\canonical-action-package-factory-20260620-150155.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:01:55",
+                               "size":  1717
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\factory\\canonical-action-package-factory-20260620-150155.md",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\factory\\canonical-action-package-factory-20260620-150155.md",
+                               "extension":  ".md",
+                               "last_write":  "2026-06-20T15:01:55",
+                               "size":  683
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\runtime\\canonical-action-runtime-noop-test-20260620-150123.md",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\runtime\\canonical-action-runtime-noop-test-20260620-150123.md",
+                               "extension":  ".md",
+                               "last_write":  "2026-06-20T15:01:24",
+                               "size":  680
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\runtime\\canonical-action-runtime-noop-test-20260620-150123.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\runtime\\canonical-action-runtime-noop-test-20260620-150123.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:01:24",
+                               "size":  899
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\runtime\\canonical-action-runtime-noop-test.latest.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\runtime\\canonical-action-runtime-noop-test.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:01:24",
+                               "size":  899
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\validators\\canonical-action-runtime-validator-20260620-150100.md",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\validators\\canonical-action-runtime-validator-20260620-150100.md",
+                               "extension":  ".md",
+                               "last_write":  "2026-06-20T15:01:00",
+                               "size":  715
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\validators\\canonical-action-runtime-validator-20260620-150100.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\validators\\canonical-action-runtime-validator-20260620-150100.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:01:00",
+                               "size":  2052
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\validators\\canonical-action-runtime-validator.latest.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\validators\\canonical-action-runtime-validator.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:01:00",
+                               "size":  2052
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\runtime\\canonical-action-runtime-skeleton-20260620-150026.md",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\runtime\\canonical-action-runtime-skeleton-20260620-150026.md",
+                               "extension":  ".md",
+                               "last_write":  "2026-06-20T15:00:26",
+                               "size":  800
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\runtime\\canonical-action-runtime.manifest-20260620-150026.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\runtime\\canonical-action-runtime.manifest-20260620-150026.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:00:26",
+                               "size":  3553
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\runtime\\canonical-action-runtime.manifest.latest.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\runtime\\canonical-action-runtime.manifest.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:00:26",
+                               "size":  3553
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\runtime\\canonical-action-runtime.config.latest.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\runtime\\canonical-action-runtime.config.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:00:26",
+                               "size":  2859
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\canonical-action-runtime\\canonical-action-runtime.noop.ps1",
+                               "relative":  "tools\\launcher\\canonical-action-runtime\\canonical-action-runtime.noop.ps1",
+                               "extension":  ".ps1",
+                               "last_write":  "2026-06-20T15:00:26",
+                               "size":  645
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\runtime\\canonical-action-runtime.config-20260620-150026.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\runtime\\canonical-action-runtime.config-20260620-150026.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T15:00:26",
+                               "size":  2859
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\contracts\\canonical-action-gate-contract-schema-20260620-145955.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\contracts\\canonical-action-gate-contract-schema-20260620-145955.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T14:59:55",
+                               "size":  1749
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\contracts\\canonical-action-gate-contract-20260620-145955.md",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\contracts\\canonical-action-gate-contract-20260620-145955.md",
+                               "extension":  ".md",
+                               "last_write":  "2026-06-20T14:59:55",
+                               "size":  811
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\contracts\\canonical-action-gate-contract-20260620-145955.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\contracts\\canonical-action-gate-contract-20260620-145955.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T14:59:55",
+                               "size":  7930
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\contracts\\canonical-action-gate-contract-schema.latest.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\contracts\\canonical-action-gate-contract-schema.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T14:59:55",
+                               "size":  1749
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\contracts\\canonical-action-gate-contract.latest.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\contracts\\canonical-action-gate-contract.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T14:59:55",
+                               "size":  7930
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\inventory\\module-card-action-flow-inventory.latest.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\inventory\\module-card-action-flow-inventory.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T14:59:22",
+                               "size":  5734
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\patterns\\canonical-action-gate-runtime-pattern-20260620-145922.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\patterns\\canonical-action-gate-runtime-pattern-20260620-145922.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T14:59:22",
+                               "size":  2411
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\E01_INVENTORY_AND_PATTERN_20260620-145922.md",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\E01_INVENTORY_AND_PATTERN_20260620-145922.md",
+                               "extension":  ".md",
+                               "last_write":  "2026-06-20T14:59:22",
+                               "size":  910
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\inventory\\module-card-action-flow-inventory-20260620-145922.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\inventory\\module-card-action-flow-inventory-20260620-145922.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T14:59:22",
+                               "size":  5734
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\patterns\\canonical-action-gate-runtime-pattern.latest.json",
+                               "relative":  "documents\\launcher-canonical-action-runtime\\patterns\\canonical-action-gate-runtime-pattern.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T14:59:22",
+                               "size":  2411
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\flow-close\\module-card-action-flow-close.latest.json",
+                               "relative":  "documents\\module-cards\\flow-close\\module-card-action-flow-close.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T14:57:44",
+                               "size":  2565
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\flow-close\\module-card-action-flow-close-20260620-145744.md",
+                               "relative":  "documents\\module-cards\\flow-close\\module-card-action-flow-close-20260620-145744.md",
+                               "extension":  ".md",
+                               "last_write":  "2026-06-20T14:57:44",
+                               "size":  724
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\flow-close\\module-card-action-flow-close-20260620-145744.json",
+                               "relative":  "documents\\module-cards\\flow-close\\module-card-action-flow-close-20260620-145744.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T14:57:44",
+                               "size":  2565
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\approved-action-runner\\approved-module-action-execution-20260620-145718.json",
+                               "relative":  "documents\\module-cards\\approved-action-runner\\approved-module-action-execution-20260620-145718.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T14:57:18",
+                               "size":  1761
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\approved-action-runner\\approved-module-action-execution.latest.json",
+                               "relative":  "documents\\module-cards\\approved-action-runner\\approved-module-action-execution.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T14:57:18",
+                               "size":  1761
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\approved-action-runner\\pending-auth-module-action-runner-20260620-145635.json",
+                               "relative":  "documents\\module-cards\\approved-action-runner\\pending-auth-module-action-runner-20260620-145635.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T14:56:35",
+                               "size":  1079
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\approved-action-runner\\pending-auth-module-action-runner.latest.json",
+                               "relative":  "documents\\module-cards\\approved-action-runner\\pending-auth-module-action-runner.latest.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T14:56:35",
+                               "size":  1079
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\approved-action-runner\\pending-auth-module-action-runner-20260620-145635.md",
+                               "relative":  "documents\\module-cards\\approved-action-runner\\pending-auth-module-action-runner-20260620-145635.md",
+                               "extension":  ".md",
+                               "last_write":  "2026-06-20T14:56:35",
+                               "size":  776
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\module-actions\\run-approved-module-action.pending-auth.ps1",
+                               "relative":  "tools\\launcher\\module-actions\\run-approved-module-action.pending-auth.ps1",
+                               "extension":  ".ps1",
+                               "last_write":  "2026-06-20T14:56:35",
+                               "size":  3709
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\blueprint-execution-plans\\approved-module-blueprint-execution-plan-20260620-145604.md",
+                               "relative":  "documents\\module-cards\\blueprint-execution-plans\\approved-module-blueprint-execution-plan-20260620-145604.md",
+                               "extension":  ".md",
+                               "last_write":  "2026-06-20T14:56:04",
+                               "size":  773
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\blueprint-execution-plans\\approved-module-blueprint-execution-plan-20260620-145604.json",
+                               "relative":  "documents\\module-cards\\blueprint-execution-plans\\approved-module-blueprint-execution-plan-20260620-145604.json",
+                               "extension":  ".json",
+                               "last_write":  "2026-06-20T14:56:04",
+                               "size":  3867
+                           }
+                       ],
+    "closed_signals":  [
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher-runtime-ui-integration\\e10-close-launcher-runtime-ui-integration-and-value-next-objective-20260620-151614.json",
+                               "relative":  "reports\\launcher-runtime-ui-integration\\e10-close-launcher-runtime-ui-integration-and-value-next-objective-20260620-151614.json",
+                               "last_write":  "2026-06-20T15:16:14",
+                               "size":  4633
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher-canonical-action-runtime\\e13-verify-canonical-action-execution-and-close-runtime-DEMO-CANONICAL-MODULE-ACTION-001-20260620-150824.json",
+                               "relative":  "reports\\launcher-canonical-action-runtime\\e13-verify-canonical-action-execution-and-close-runtime-DEMO-CANONICAL-MODULE-ACTION-001-20260620-150824.json",
+                               "last_write":  "2026-06-20T15:08:24",
+                               "size":  5750
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher-canonical-action-runtime\\e10-verify-canonical-action-gate-mutation-and-create-unlock-DEMO-CANONICAL-MODULE-ACTION-001-20260620-150617.json",
+                               "relative":  "reports\\launcher-canonical-action-runtime\\e10-verify-canonical-action-gate-mutation-and-create-unlock-DEMO-CANONICAL-MODULE-ACTION-001-20260620-150617.json",
+                               "last_write":  "2026-06-20T15:06:17",
+                               "size":  1776
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e116-verify-approved-module-action-execution-and-close-flow-20260620-145744.json",
+                               "relative":  "reports\\launcher\\e116-verify-approved-module-action-execution-and-close-flow-20260620-145744.json",
+                               "last_write":  "2026-06-20T14:57:44",
+                               "size":  2565
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e109-create-real-gate-approval-mutation-script-pending-auth-20260620-145137.json",
+                               "relative":  "reports\\launcher\\e109-create-real-gate-approval-mutation-script-pending-auth-20260620-145137.json",
+                               "last_write":  "2026-06-20T14:51:37",
+                               "size":  917
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e108-dry-run-gate-mutation-preview-20260620-145102.json",
+                               "relative":  "reports\\launcher\\e108-dry-run-gate-mutation-preview-20260620-145102.json",
+                               "last_write":  "2026-06-20T14:51:02",
+                               "size":  2298
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e107b-repair-gate-mutation-validator-no-execution-schema-tolerant-20260620-145033.json",
+                               "relative":  "reports\\launcher\\e107b-repair-gate-mutation-validator-no-execution-schema-tolerant-20260620-145033.json",
+                               "last_write":  "2026-06-20T14:50:33",
+                               "size":  2030
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e107-create-gate-mutation-validator-no-execution-20260620-145000.json",
+                               "relative":  "reports\\launcher\\e107-create-gate-mutation-validator-no-execution-20260620-145000.json",
+                               "last_write":  "2026-06-20T14:50:00",
+                               "size":  1362
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e106-create-gate-decision-mutation-contract-no-execution-20260620-144931.json",
+                               "relative":  "reports\\launcher\\e106-create-gate-decision-mutation-contract-no-execution-20260620-144931.json",
+                               "last_write":  "2026-06-20T14:49:31",
+                               "size":  1216
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e105-close-human-gate-decision-dry-run-stage-20260620-144659.json",
+                               "relative":  "reports\\launcher\\e105-close-human-gate-decision-dry-run-stage-20260620-144659.json",
+                               "last_write":  "2026-06-20T14:47:00",
+                               "size":  567
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e104d2-close-gate-decision-view-from-ui-json-validation-20260620-144621.json",
+                               "relative":  "reports\\launcher\\e104d2-close-gate-decision-view-from-ui-json-validation-20260620-144621.json",
+                               "last_write":  "2026-06-20T14:46:22",
+                               "size":  512
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e104c-integrate-gate-decision-readonly-view-20260620-144405.json",
+                               "relative":  "reports\\launcher\\e104c-integrate-gate-decision-readonly-view-20260620-144405.json",
+                               "last_write":  "2026-06-20T14:44:05",
+                               "size":  541
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e104b-create-human-gate-decision-validator-20260620-144317.json",
+                               "relative":  "reports\\launcher\\e104b-create-human-gate-decision-validator-20260620-144317.json",
+                               "last_write":  "2026-06-20T14:43:18",
+                               "size":  680
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e104a-create-human-gate-decision-dry-run-20260620-144247.json",
+                               "relative":  "reports\\launcher\\e104a-create-human-gate-decision-dry-run-20260620-144247.json",
+                               "last_write":  "2026-06-20T14:42:47",
+                               "size":  885
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e103-close-human-gate-readonly-stage-20260620-144217.json",
+                               "relative":  "reports\\launcher\\e103-close-human-gate-readonly-stage-20260620-144217.json",
+                               "last_write":  "2026-06-20T14:42:18",
+                               "size":  522
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e102c-close-human-gate-view-from-ui-20260620-144144.json",
+                               "relative":  "reports\\launcher\\e102c-close-human-gate-view-from-ui-20260620-144144.json",
+                               "last_write":  "2026-06-20T14:41:44",
+                               "size":  447
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e102b2-validate-human-gate-view-in-detail-menu-20260620-143949.json",
+                               "relative":  "reports\\launcher\\e102b2-validate-human-gate-view-in-detail-menu-20260620-143949.json",
+                               "last_write":  "2026-06-20T14:39:49",
+                               "size":  725
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e102a-create-human-approval-gate-for-card-blueprint-20260620-143814.json",
+                               "relative":  "reports\\launcher\\e102a-create-human-approval-gate-for-card-blueprint-20260620-143814.json",
+                               "last_write":  "2026-06-20T14:38:14",
+                               "size":  1144
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e101-close-card-action-view-stage-20260620-143742.json",
+                               "relative":  "reports\\launcher\\e101-close-card-action-view-stage-20260620-143742.json",
+                               "last_write":  "2026-06-20T14:37:43",
+                               "size":  521
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e100b-close-card-action-view-from-ui-20260620-143700.json",
+                               "relative":  "reports\\launcher\\e100b-close-card-action-view-from-ui-20260620-143700.json",
+                               "last_write":  "2026-06-20T14:37:01",
+                               "size":  445
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e100a-integrate-card-action-view-in-detail-menu-20260620-141027.json",
+                               "relative":  "reports\\launcher\\e100a-integrate-card-action-view-in-detail-menu-20260620-141027.json",
+                               "last_write":  "2026-06-20T14:10:27",
+                               "size":  625
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e99f-close-card-action-proposal-flow-20260620-140945.json",
+                               "relative":  "reports\\launcher\\e99f-close-card-action-proposal-flow-20260620-140945.json",
+                               "last_write":  "2026-06-20T14:09:46",
+                               "size":  529
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e98-close-module-card-canon-20260620-140559.json",
+                               "relative":  "reports\\launcher\\e98-close-module-card-canon-20260620-140559.json",
+                               "last_write":  "2026-06-20T14:05:59",
+                               "size":  491
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e97c-close-card-detail-view-from-ui-20260620-140525.json",
+                               "relative":  "reports\\launcher\\e97c-close-card-detail-view-from-ui-20260620-140525.json",
+                               "last_write":  "2026-06-20T14:05:25",
+                               "size":  437
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e97b4-close-cards-view-json-fallback-after-visual-validation-20260620-140401.json",
+                               "relative":  "reports\\launcher\\e97b4-close-cards-view-json-fallback-after-visual-validation-20260620-140401.json",
+                               "last_write":  "2026-06-20T14:04:01",
+                               "size":  480
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e96-close-module-card-project-route-stage-20260620-135805.json",
+                               "relative":  "reports\\launcher\\e96-close-module-card-project-route-stage-20260620-135805.json",
+                               "last_write":  "2026-06-20T13:58:05",
+                               "size":  526
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e94d4-close-project-module-card-route-with-start-card-20260620-135432.json",
+                               "relative":  "reports\\launcher\\e94d4-close-project-module-card-route-with-start-card-20260620-135432.json",
+                               "last_write":  "2026-06-20T13:54:33",
+                               "size":  501
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e94b2-close-filterable-card-view-human-validation-20260620-134052.json",
+                               "relative":  "reports\\launcher\\e94b2-close-filterable-card-view-human-validation-20260620-134052.json",
+                               "last_write":  "2026-06-20T13:40:52",
+                               "size":  466
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e93d-close-card-view-from-root-menu-validation-20260620-133859.json",
+                               "relative":  "reports\\launcher\\e93d-close-card-view-from-root-menu-validation-20260620-133859.json",
+                               "last_write":  "2026-06-20T13:39:01",
+                               "size":  466
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e92b-close-control-status-with-card-canon-validation-20260620-133305.json",
+                               "relative":  "reports\\launcher\\e92b-close-control-status-with-card-canon-validation-20260620-133305.json",
+                               "last_write":  "2026-06-20T13:33:05",
+                               "size":  445
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e91e-close-module-card-canon-stage-20260620-133130.json",
+                               "relative":  "reports\\launcher\\e91e-close-module-card-canon-stage-20260620-133130.json",
+                               "last_write":  "2026-06-20T13:31:33",
+                               "size":  513
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e90b2-repair-close-root-menu-literal-validation-20260620-132603.json",
+                               "relative":  "reports\\launcher\\e90b2-repair-close-root-menu-literal-validation-20260620-132603.json",
+                               "last_write":  "2026-06-20T13:26:03",
+                               "size":  1568
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e88b-close-cmd-human-entrypoint-validation-20260620-131703.json",
+                               "relative":  "reports\\launcher\\e88b-close-cmd-human-entrypoint-validation-20260620-131703.json",
+                               "last_write":  "2026-06-20T13:17:03",
+                               "size":  1161
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e87e-close-launcher-management-stage-20260620-131518.json",
+                               "relative":  "reports\\launcher\\e87e-close-launcher-management-stage-20260620-131518.json",
+                               "last_write":  "2026-06-20T13:15:21",
+                               "size":  1416
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e86b-close-root-projects-entry-human-validation-20260620-130433.json",
+                               "relative":  "reports\\launcher\\e86b-close-root-projects-entry-human-validation-20260620-130433.json",
+                               "last_write":  "2026-06-20T13:04:33",
+                               "size":  923
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e85d-close-projects-stable-navigation-human-validation-20260620-130130.json",
+                               "relative":  "reports\\launcher\\e85d-close-projects-stable-navigation-human-validation-20260620-130130.json",
+                               "last_write":  "2026-06-20T13:01:30",
+                               "size":  1856
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e81b-close-projects-operator-worker-toggle-menu-human-validation-20260620-124419.json",
+                               "relative":  "reports\\launcher\\e81b-close-projects-operator-worker-toggle-menu-human-validation-20260620-124419.json",
+                               "last_write":  "2026-06-20T12:44:19",
+                               "size":  1355
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e79b-repair-missing-event-sequence-close-and-close-stage-20260620-123939.json",
+                               "relative":  "reports\\launcher\\e79b-repair-missing-event-sequence-close-and-close-stage-20260620-123939.json",
+                               "last_write":  "2026-06-20T12:39:40",
+                               "size":  3679
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e78d2-close-worker-signals-toggle-human-validation-20260620-123832.json",
+                               "relative":  "reports\\launcher\\e78d2-close-worker-signals-toggle-human-validation-20260620-123832.json",
+                               "last_write":  "2026-06-20T12:38:33",
+                               "size":  2304
+                           },
+                           {
+                               "path":  "C:\\ENGREMIAT_CORE\\reports\\launcher\\e73f-close-worker-writer-human-validation-20260620-122614.json",
+                               "relative":  "reports\\launcher\\e73f-close-worker-writer-human-validation-20260620-122614.json",
+                               "last_write":  "2026-06-20T12:26:15",
+                               "size":  1624
+                           }
+                       ],
+    "inventory_limits":  [
+                             "minimum inventory only",
+                             "no file content analysis yet",
+                             "no diagnostics yet",
+                             "no task classification yet",
+                             "node_modules dist git excluded"
+                         ],
+    "safety":  {
+                   "real_execution":  false,
+                   "system_mutation":  false,
+                   "worker":  false,
+                   "browser":  false,
+                   "network":  false,
+                   "git":  false,
+                   "readonly":  true
+               },
+    "next":  "E03_SYSTEM_OBSERVER_DIAGNOSTIC_V0"
+}

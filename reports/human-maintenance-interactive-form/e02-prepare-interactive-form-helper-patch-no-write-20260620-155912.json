@@ -1,0 +1,29 @@
+﻿{
+    "schema":  "engremiat.human_maintenance_interactive_form_helper_patch_proposal.v1",
+    "package_id":  "ENGREMIAT_HUMAN_MAINTENANCE_INTERACTIVE_FORM_001",
+    "stage":  "E02_PREPARE_INTERACTIVE_FORM_HELPER_PATCH_NO_WRITE",
+    "created_at":  "2026-06-20T15:59:12",
+    "status":  "PASS",
+    "mode":  "HELPER_PATCH_PROPOSAL_NO_WRITE",
+    "target":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1",
+    "target_parse_ok":  true,
+    "contract":  "C:\\ENGREMIAT_CORE\\documents\\human-maintenance-interactive-form\\contracts\\interactive-form-contract.latest.json",
+    "capture_script":  "C:\\ENGREMIAT_CORE\\tools\\human-maintenance-cards\\new-human-maintenance-card.ps1",
+    "helper_name":  "Invoke-EngremiatHumanMaintenanceInteractiveForm",
+    "helper_parse_ok":  true,
+    "planned_marker_begin":  "ENGREMIAT_HUMAN_MAINTENANCE_INTERACTIVE_FORM_BEGIN",
+    "planned_marker_end":  "ENGREMIAT_HUMAN_MAINTENANCE_INTERACTIVE_FORM_END",
+    "helper_block":  "function Invoke-EngremiatHumanMaintenanceInteractiveForm {\r\n  param([string]$SourceScreen=\"desktop-terminal-operator\",[string]$SourceContext=\"operator-interactive-form\")\r\n  Write-Host \"\"\r\n  Write-Host \"==== MANTENIMIENTO HUMANO ====\" -ForegroundColor Cyan\r\n  Write-Host \"Deja un campo vacio para usar valor por defecto.\" -ForegroundColor DarkGray\r\n  $title=Read-Host \"Titulo breve\"\r\n  if([string]::IsNullOrWhiteSpace($title)){$title=\"Mantenimiento humano desde operator\"}\r\n  $dimension=Read-Host \"Dimension [ux/software/architecture/documentation/security/hardware/humans/financing/growth/governance/operations/workers/other]\"\r\n  if([string]::IsNullOrWhiteSpace($dimension)){$dimension=\"ux\"}\r\n  $allowedDimensions=@(\"ux\",\"software\",\"architecture\",\"documentation\",\"security\",\"hardware\",\"humans\",\"financing\",\"growth\",\"governance\",\"operations\",\"workers\",\"other\")\r\n  if($dimension -notin $allowedDimensions){$dimension=\"other\"}\r\n  $severity=Read-Host \"Severidad [LOW/MEDIUM/HIGH/CRITICAL]\"\r\n  if([string]::IsNullOrWhiteSpace($severity)){$severity=\"MEDIUM\"}\r\n  $severity=$severity.ToUpperInvariant()\r\n  if($severity -notin @(\"LOW\",\"MEDIUM\",\"HIGH\",\"CRITICAL\")){$severity=\"MEDIUM\"}\r\n  $observation=Read-Host \"Observacion\"\r\n  if([string]::IsNullOrWhiteSpace($observation)){$observation=\"Observacion humana pendiente de detalle\"}\r\n  $suggested=Read-Host \"Accion sugerida\"\r\n  if([string]::IsNullOrWhiteSpace($suggested)){$suggested=\"Revisar y convertir en mejora/tarea si procede\"}\r\n  if($title.Length -gt 120){$title=$title.Substring(0,120)}\r\n  if($observation.Length -gt 1200){$observation=$observation.Substring(0,1200)}\r\n  if($suggested.Length -gt 800){$suggested=$suggested.Substring(0,800)}\r\n  $scriptPath=Join-Path (Get-Location).Path \"tools\\human-maintenance-cards\\new-human-maintenance-card.ps1\"\r\n  if(-not(Test-Path -LiteralPath $scriptPath)){throw \"HUMAN_MAINTENANCE_CAPTURE_SCRIPT_NOT_FOUND path=$scriptPath\"}\r\n  \u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $scriptPath -SourceScreen $SourceScreen -SourceContext $SourceContext -Title $title -Dimension $dimension -Severity $severity -Observation $observation -SuggestedAction $suggested\r\n}",
+    "write_now":  false,
+    "safety":  {
+                   "real_execution":  false,
+                   "system_mutation":  false,
+                   "screen_mutation":  false,
+                   "worker":  false,
+                   "browser":  false,
+                   "network":  false,
+                   "git":  false,
+                   "readonly":  true
+               },
+    "next":  "E03_CREATE_PENDING_AUTH_INTERACTIVE_FORM_PATCH_NO_APPLY"
+}

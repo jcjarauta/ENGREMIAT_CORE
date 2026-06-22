@@ -1,0 +1,16 @@
+﻿{
+    "contract":  "ENGREMIAT_MASTER_ENTRY_CONTRACT",
+    "status":  "ACTIVE",
+    "master_file":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+    "master_command":  "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1\"",
+    "principle":  "ENGREMIAT.ps1 es la entrada fija del sistema; puede actualizarse internamente, pero no debe perder jerarquia ni enrutar opciones distintas al mismo fallback.",
+    "common_command_legend":  "[b/q] salir/volver | m = mantenimiento | ? = ayuda | Enter = refrescar",
+    "expected_menu":  [
+                          "[1] Inicio operador",
+                          "[2] Proyectos",
+                          "[3] Memoria y documentacion",
+                          "[4] Data Intake",
+                          "[5] Health launchers"
+                      ],
+    "created_at":  "2026-06-21T12:09:57"
+}

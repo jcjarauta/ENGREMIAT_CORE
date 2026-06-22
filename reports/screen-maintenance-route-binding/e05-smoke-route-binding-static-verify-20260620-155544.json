@@ -1,0 +1,32 @@
+﻿{
+    "schema":  "engremiat.route_binding_e05_static_smoke.v1",
+    "package_id":  "ENGREMIAT_SCREEN_MAINTENANCE_ROUTE_BINDING_001",
+    "stage":  "E05_SMOKE_ROUTE_BINDING_STATIC_VERIFY",
+    "created_at":  "2026-06-20T15:55:44",
+    "status":  "PASS",
+    "mode":  "STATIC_ROUTE_BINDING_VERIFY_NO_OPERATOR_LAUNCH",
+    "target":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1",
+    "target_parse_ok":  true,
+    "readhost_line":  174,
+    "binding_line":  175,
+    "marker_begin_count":  1,
+    "marker_end_count":  1,
+    "commands":  {
+                     "m":  true,
+                     "mant":  true,
+                     "mantenimiento":  true
+                 },
+    "helper_call_present":  true,
+    "continue_present":  true,
+    "cmd_variable_present":  true,
+    "operator_launched":  false,
+    "card_created":  false,
+    "real_execution":  false,
+    "system_mutation":  false,
+    "screen_mutation":  false,
+    "worker":  false,
+    "browser":  false,
+    "network":  false,
+    "git":  false,
+    "next":  "E06_SMOKE_ROUTE_BINDING_CAPTURE_CONTROLLED"
+}

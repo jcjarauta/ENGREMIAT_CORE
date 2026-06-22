@@ -1,0 +1,56 @@
+﻿{
+    "schema":  "engremiat.launcher_canonical_action_runtime.manifest.v1",
+    "package_id":  "ENGREMIAT_LAUNCHER_CANONICAL_ACTION_RUNTIME_001",
+    "stage":  "E03_CREATE_CANONICAL_ACTION_RUNTIME_SKELETON_NO_EXECUTION",
+    "created_at":  "2026-06-20T15:00:26",
+    "status":  "SKELETON_READY",
+    "runtime_id":  "LAUNCHER_CANONICAL_ACTION_RUNTIME_V1",
+    "contract":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\contracts\\canonical-action-gate-contract.latest.json",
+    "contract_schema":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\contracts\\canonical-action-gate-contract-schema.latest.json",
+    "directories":  {
+                        "runtime":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\runtime",
+                        "state":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\state",
+                        "contracts":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\contracts",
+                        "previews":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\previews",
+                        "unlocks":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\unlocks",
+                        "plans":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\plans",
+                        "executions":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\executions",
+                        "close":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\close",
+                        "scripts":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\canonical-action-runtime",
+                        "reports":  "C:\\ENGREMIAT_CORE\\reports\\launcher-canonical-action-runtime"
+                    },
+    "entrypoints":  {
+                        "runtime_noop":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\canonical-action-runtime\\canonical-action-runtime.noop.ps1",
+                        "runtime_manifest":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\runtime\\canonical-action-runtime.manifest.latest.json",
+                        "runtime_config":  "C:\\ENGREMIAT_CORE\\documents\\launcher-canonical-action-runtime\\runtime\\canonical-action-runtime.config.latest.json"
+                    },
+    "supported_flow":  [
+                           "contract",
+                           "validate",
+                           "preview",
+                           "pending_auth_mutation",
+                           "canonical_state_mutation",
+                           "unlock",
+                           "plan",
+                           "pending_auth_runner",
+                           "authorized_local_execution",
+                           "verify_close"
+                       ],
+    "blocked_by_default":  [
+                               "worker_real_execution",
+                               "browser",
+                               "network",
+                               "git_commit",
+                               "git_push",
+                               "external_write"
+                           ],
+    "safety":  {
+                   "skeleton_only":  true,
+                   "real_execution":  false,
+                   "worker":  false,
+                   "browser":  false,
+                   "network":  false,
+                   "git":  false
+               },
+    "next":  "E04_CREATE_CANONICAL_ACTION_RUNTIME_VALIDATOR_NO_EXECUTION"
+}

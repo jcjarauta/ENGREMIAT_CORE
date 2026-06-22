@@ -1,0 +1,50 @@
+﻿{
+    "schema":  "engremiat.launcher_canonical_action_runtime.pattern.v1",
+    "package_id":  "ENGREMIAT_LAUNCHER_CANONICAL_ACTION_RUNTIME_001",
+    "stage":  "E01_INVENTORY_MODULE_CARD_ACTION_FLOW_AND_EXTRACT_REUSABLE_PATTERN",
+    "created_at":  "2026-06-20T14:59:22",
+    "pattern_id":  "CANONICAL_ACTION_GATE_RUNTIME_V1",
+    "status":  "DRAFT_READY",
+    "runtime_inputs":  [
+                           "action_id",
+                           "action_type",
+                           "module_ref",
+                           "project_ref",
+                           "gate_id",
+                           "decision_id",
+                           "requested_transition",
+                           "allowed_operations",
+                           "blocked_operations",
+                           "authorization_env",
+                           "authorization_value"
+                       ],
+    "runtime_outputs":  [
+                            "gate_state_file",
+                            "mutation_contract",
+                            "dry_run_preview",
+                            "pending_auth_script",
+                            "unlock_file",
+                            "execution_plan",
+                            "pending_auth_runner",
+                            "execution_receipt",
+                            "close_report"
+                        ],
+    "mandatory_guards":  [
+                             "NO_EXECUTION contract before preview",
+                             "DRY_RUN preview before pending auth script",
+                             "canonical mutable state before real mutation",
+                             "explicit authorization token before real mutation",
+                             "post-mutation verification before unlock",
+                             "pending auth runner must block without token",
+                             "local-only execution unless explicitly extended"
+                         ],
+    "blocked_by_default":  [
+                               "worker_real_execution",
+                               "browser",
+                               "network",
+                               "git_commit",
+                               "git_push",
+                               "external_write"
+                           ],
+    "next":  "E02_DEFINE_CANONICAL_ACTION_GATE_CONTRACT"
+}

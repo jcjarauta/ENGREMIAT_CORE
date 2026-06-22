@@ -1,0 +1,36 @@
+﻿{
+    "schema":  "engremiat.operator_real_maintenance_manual_smoke_guide.v1",
+    "package_id":  "ENGREMIAT_OPERATOR_REAL_MAINTENANCE_MANUAL_SMOKE_001",
+    "stage":  "E01_PREPARE_REAL_OPERATOR_MANUAL_SMOKE_GUIDE",
+    "created_at":  "2026-06-20T16:03:43",
+    "status":  "PASS",
+    "mode":  "MANUAL_SMOKE_GUIDE_NO_OPERATOR_LAUNCH",
+    "target":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatDesktopOperator.ps1",
+    "target_parse_ok":  true,
+    "route_calls_interactive_form":  true,
+    "before_card_count":  48,
+    "manual_steps":  [
+                         "Ejecuta el operator real con tu launcher habitual o con el script Start-EngremiatDesktopOperator.ps1 si ya lo usas asi",
+                         "En la pantalla principal escribe m y pulsa Enter",
+                         "Rellena los campos con los valores expected_inputs de este archivo",
+                         "Sal del operator si procede",
+                         "Ejecuta el siguiente bloque E02_VALIDATE_REAL_OPERATOR_MANUAL_SMOKE_RESULT"
+                     ],
+    "expected_inputs":  {
+                            "Title":  "Smoke manual operator m 20260620-160343",
+                            "Dimension":  "operations",
+                            "Severity":  "LOW",
+                            "Observation":  "Smoke manual real: he pulsado m en el operator vivo y el formulario ha respondido",
+                            "SuggestedAction":  "Validar tarjeta y cerrar smoke manual"
+                        },
+    "validation_rule":  "buscar nueva tarjeta HMC-desktop-terminal-operator posterior a este timestamp con title exacto",
+    "operator_launched":  false,
+    "real_execution":  false,
+    "system_mutation":  false,
+    "screen_mutation":  false,
+    "worker":  false,
+    "browser":  false,
+    "network":  false,
+    "git":  false,
+    "next":  "E02_VALIDATE_REAL_OPERATOR_MANUAL_SMOKE_RESULT"
+}

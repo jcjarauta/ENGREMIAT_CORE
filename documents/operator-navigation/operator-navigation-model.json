@@ -1,0 +1,140 @@
+﻿{
+    "schema_version":  "1.0",
+    "package_id":  "ENGREMIAT_OPERATOR_UX_001",
+    "stage":  "E84_DEFINE_OPERATOR_NAVIGATION_MODEL",
+    "status":  "PASS",
+    "created_at":  "2026-06-20T12:50:06",
+    "purpose":  "Definir mapa operativo del operador antes de seguir parcheando pantallas",
+    "principles":  [
+                       "operador navegable antes que coleccion de scripts",
+                       "pantallas con una funcion clara",
+                       "acciones humanas separadas de acciones worker",
+                       "workers reales pausados hasta contrato posterior",
+                       "Enter refresca cuando aplique",
+                       "b vuelve",
+                       "? muestra ayuda contextual",
+                       "palancas visibles para ahorro de recursos"
+                   ],
+    "root_menu":  [
+                      {
+                          "key":  "1",
+                          "label":  "Proyectos",
+                          "role":  "entrada humana principal para cartera, creacion, modulos, workers asociados y bloqueos"
+                      },
+                      {
+                          "key":  "2",
+                          "label":  "Memoria y documentacion",
+                          "role":  "documentos, intake, normalizados, dossiers y conocimiento"
+                      },
+                      {
+                          "key":  "3",
+                          "label":  "Operador y workers",
+                          "role":  "supervision de workers, señales, eventos y futuro puente real"
+                      },
+                      {
+                          "key":  "4",
+                          "label":  "Control y estado",
+                          "role":  "readiness, ultimos reportes, bloqueos, salud del sistema"
+                      },
+                      {
+                          "key":  "5",
+                          "label":  "Herramientas y configuracion",
+                          "role":  "rutas, modos, palancas y configuracion local"
+                      },
+                      {
+                          "key":  "7",
+                          "label":  "Estado y ayuda",
+                          "role":  "ayuda global y mapa de navegacion"
+                      }
+                  ],
+    "projects_center":  {
+                            "current_status":  "EXISTS_AND_VALIDATED",
+                            "keep":  [
+                                         "ver cartera viva",
+                                         "crear proyecto minimo",
+                                         "abrir carpeta proyectos",
+                                         "estado y ayuda",
+                                         "Workers ON/OFF compacto [5/w]"
+                                     ],
+                            "avoid_now":  [
+                                              "worker real",
+                                              "automatizacion navegador",
+                                              "Cline/Ollama execution",
+                                              "git",
+                                              "red",
+                                              "acciones destructivas"
+                                          ],
+                            "next_candidate_actions":  [
+                                                           "convertir cartera en pantalla accionable por numero de proyecto",
+                                                           "mostrar menu de acciones por proyecto",
+                                                           "abrir carpeta proyecto",
+                                                           "abrir project.json",
+                                                           "abrir MODULOS",
+                                                           "ver ultima señal asociada al proyecto"
+                                                       ]
+                        },
+    "operator_workers_area":  {
+                                  "status":  "DESIGN_ONLY",
+                                  "purpose":  "mover supervision worker fuera de Proyectos cuando crezca",
+                                  "includes":  [
+                                                   "Workers ON/OFF",
+                                                   "ultima señal worker",
+                                                   "eventos worker",
+                                                   "contratos worker",
+                                                   "futuro puente worker real"
+                                               ]
+                              },
+    "control_status_area":  {
+                                "status":  "DESIGN_ONLY",
+                                "purpose":  "estado compacto del sistema y readiness",
+                                "includes":  [
+                                                 "ultimos reportes",
+                                                 "bloqueos",
+                                                 "estado de rutas",
+                                                 "estado de configs",
+                                                 "resumen de cierres"
+                                             ]
+                            },
+    "decisions":  [
+                      "No seguir afinando por microparches sin mapa",
+                      "Aplicar primero modelo a Proyectos",
+                      "Despues aplicar modelo al Inicio",
+                      "Despues crear panel de estado del operador",
+                      "Dejar worker real pausado en E80 hasta que operador sea comodo"
+                  ],
+    "recommended_sequence":  [
+                                 "E85_APPLY_OPERATOR_NAVIGATION_MODEL_TO_PROJECTS",
+                                 "E86_APPLY_OPERATOR_NAVIGATION_MODEL_TO_ROOT",
+                                 "E87_ADD_OPERATOR_STATUS_PANEL",
+                                 "E88_CLOSE_OPERATOR_UX_REFINEMENT_STAGE",
+                                 "E89_REASSESS_REAL_WORKER_BRIDGE"
+                             ],
+    "launcher_status":  [
+                            {
+                                "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO-NORMALIZED.ps1",
+                                "exists":  true,
+                                "parse":  "OK"
+                            },
+                            {
+                                "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1",
+                                "exists":  true,
+                                "parse":  "OK"
+                            },
+                            {
+                                "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-MEMORY-DOCUMENTATION-CENTER-NORMALIZED.ps1",
+                                "exists":  true,
+                                "parse":  "OK"
+                            },
+                            {
+                                "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-DATA-INTAKE-CENTER-NORMALIZED.ps1",
+                                "exists":  true,
+                                "parse":  "OK"
+                            },
+                            {
+                                "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-WORKER-SIGNALS-TOGGLE.ps1",
+                                "exists":  true,
+                                "parse":  "OK"
+                            }
+                        ],
+    "next":  "E85_APPLY_OPERATOR_NAVIGATION_MODEL_TO_PROJECTS"
+}

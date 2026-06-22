@@ -1,0 +1,58 @@
+{
+    "package_id":  "ENGREMIAT_MODULE_CARD_CANON_001",
+    "stage":  "E93A_DEFINE_PROJECT_MODULE_CARD_TABLE_VIEW_CONTRACT",
+    "status":  "PASS",
+    "table":  "project_module_card_table",
+    "primary_key":  "card_id",
+    "required_links":  [
+                           "project_id",
+                           "module_id"
+                       ],
+    "normalizer_note":  "Preparado para integrarse con normalizador de tablas/procesos: salida tabular estable con columnas canonicas.",
+    "next":  "E93B_CREATE_FIRST_CARD_VIEW_READONLY",
+    "rows":  [
+                 {
+                     "num":  1,
+                     "card_id":  "CARD-ENG-ROOT-UX-001",
+                     "project_id":  "ENGREMIAT_CORE",
+                     "module_id":  "MODULE_OPERATOR_NAVIGATION",
+                     "type":  "UX",
+                     "status":  "PROPOSED",
+                     "priority":  "MEDIUM",
+                     "risk":  "LOW",
+                     "title":  "Normalizar Control y estado como panel util",
+                     "human_gate":  "SI",
+                     "suggested_action":  "Crear E91B_REVIEW_CONTROL_STATUS_CARD_AND_PANEL_PLAN antes de parchear pantalla.",
+                     "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\module-linked-card.example.json"
+                 },
+                 {
+                     "num":  2,
+                     "card_id":  "CARD-ENGREMIAT_PROJECT_heartbeat_demo-MODULE_inicio-START-001",
+                     "project_id":  "ENGREMIAT_PROJECT_heartbeat_demo",
+                     "module_id":  "MODULE_inicio",
+                     "type":  "CONTROL",
+                     "status":  "PROPOSED",
+                     "priority":  "MEDIUM",
+                     "risk":  "LOW",
+                     "title":  "Tarjeta base de inicio del proyecto",
+                     "human_gate":  "SI",
+                     "suggested_action":  "Usar esta tarjeta como punto base para proponer mejoras, modulos o tareas del proyecto.",
+                     "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\CARD-ENGREMIAT_PROJECT_heartbeat_demo-MODULE_inicio-START-001.json"
+                 },
+                 {
+                     "num":  3,
+                     "card_id":  "CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001",
+                     "project_id":  "ENGREMIAT_PROJECT_projects",
+                     "module_id":  "MODULE_inicio",
+                     "type":  "CONTROL",
+                     "status":  "PROPOSED",
+                     "priority":  "MEDIUM",
+                     "risk":  "LOW",
+                     "title":  "Tarjeta base de inicio del proyecto",
+                     "human_gate":  "SI",
+                     "suggested_action":  "Usar esta tarjeta como punto base para proponer mejoras, modulos o tareas del proyecto.",
+                     "path":  "C:\\ENGREMIAT_CORE\\documents\\module-cards\\CARD-ENGREMIAT_PROJECT_projects-MODULE_inicio-START-001.json"
+                 }
+             ],
+    "updated_at":  "2026-06-20T14:00:52"
+}

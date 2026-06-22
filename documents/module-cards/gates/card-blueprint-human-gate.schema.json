@@ -1,0 +1,77 @@
+{
+    "$schema":  "https://json-schema.org/draft/2020-12/schema",
+    "title":  "ENGREMIAT Card Blueprint Human Gate",
+    "type":  "object",
+    "required":  [
+                     "gate_id",
+                     "card_id",
+                     "proposal_id",
+                     "blueprint_id",
+                     "decision",
+                     "status",
+                     "human_gate",
+                     "allowed_decisions",
+                     "forbidden_execution",
+                     "created_at"
+                 ],
+    "additionalProperties":  true,
+    "properties":  {
+                       "gate_id":  {
+                                       "type":  "string"
+                                   },
+                       "card_id":  {
+                                       "type":  "string"
+                                   },
+                       "proposal_id":  {
+                                           "type":  "string"
+                                       },
+                       "blueprint_id":  {
+                                            "type":  "string"
+                                        },
+                       "decision":  {
+                                        "type":  "string",
+                                        "enum":  [
+                                                     "PENDING_HUMAN_DECISION",
+                                                     "APPROVE_BLUEPRINT",
+                                                     "BLOCK_BLUEPRINT",
+                                                     "REQUEST_CHANGES"
+                                                 ]
+                                    },
+                       "status":  {
+                                      "type":  "string",
+                                      "enum":  [
+                                                   "PENDING",
+                                                   "APPROVED",
+                                                   "BLOCKED",
+                                                   "CHANGES_REQUESTED"
+                                               ]
+                                  },
+                       "human_gate":  {
+                                          "type":  "string",
+                                          "enum":  [
+                                                       "SI"
+                                                   ]
+                                      },
+                       "reason":  {
+                                      "type":  "string"
+                                  },
+                       "allowed_decisions":  {
+                                                 "type":  "array",
+                                                 "items":  {
+                                                               "type":  "string"
+                                                           }
+                                             },
+                       "forbidden_execution":  {
+                                                   "type":  "array",
+                                                   "items":  {
+                                                                 "type":  "string"
+                                                             }
+                                               },
+                       "created_at":  {
+                                          "type":  "string"
+                                      },
+                       "updated_at":  {
+                                          "type":  "string"
+                                      }
+                   }
+}

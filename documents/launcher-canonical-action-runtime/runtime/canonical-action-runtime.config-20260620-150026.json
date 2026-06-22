@@ -1,0 +1,44 @@
+﻿{
+    "schema":  "engremiat.launcher_canonical_action_runtime.config.v1",
+    "runtime_id":  "LAUNCHER_CANONICAL_ACTION_RUNTIME_V1",
+    "status":  "READY_NO_EXECUTION",
+    "default_authorization":  {
+                                  "mutation_env":  "ENGREMIAT_CANONICAL_ACTION_MUTATION_AUTH",
+                                  "action_env":  "ENGREMIAT_CANONICAL_ACTION_RUN_AUTH",
+                                  "require_exact_token":  true
+                              },
+    "default_path_policy":  {
+                                "canonical_state_root":  "documents/launcher-canonical-action-runtime/state",
+                                "contracts_root":  "documents/launcher-canonical-action-runtime/contracts",
+                                "previews_root":  "documents/launcher-canonical-action-runtime/previews",
+                                "unlocks_root":  "documents/launcher-canonical-action-runtime/unlocks",
+                                "plans_root":  "documents/launcher-canonical-action-runtime/plans",
+                                "executions_root":  "documents/launcher-canonical-action-runtime/executions",
+                                "close_root":  "documents/launcher-canonical-action-runtime/close",
+                                "scripts_root":  "tools/launcher/canonical-action-runtime",
+                                "blocked_mutation_roots":  [
+                                                               "reports",
+                                                               "dashboard",
+                                                               "documents/module-cards/flow-close"
+                                                           ]
+                            },
+    "default_guards":  [
+                           "reports_are_evidence_only_never_mutation_target",
+                           "canonical_state_file_required_before_real_gate_mutation",
+                           "dry_run_preview_required_before_pending_auth_script",
+                           "pending_auth_script_must_return_NO_GO_without_token",
+                           "real_gate_mutation_requires_explicit_env_token",
+                           "post_mutation_verification_required_before_unlock",
+                           "action_runner_must_return_NO_GO_without_token",
+                           "worker_browser_network_git_blocked_by_default",
+                           "close_requires_gate_approved_unlock_execution_receipt"
+                       ],
+    "default_blocked_operations":  null,
+    "safety":  {
+                   "allow_worker":  false,
+                   "allow_browser":  false,
+                   "allow_network":  false,
+                   "allow_git":  false,
+                   "allow_external_write":  false
+               }
+}

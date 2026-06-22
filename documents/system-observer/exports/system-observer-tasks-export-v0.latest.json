@@ -1,0 +1,33 @@
+﻿{
+    "schema":  "engremiat.system_observer_tasks_export_v0.v1",
+    "package_id":  "ENGREMIAT_SYSTEM_OBSERVER_001",
+    "stage":  "E07_SYSTEM_OBSERVER_EXPORT_TASKS_TSV_FOR_SHEETS_KANBAN",
+    "created_at":  "2026-06-20T15:29:38",
+    "status":  "PASS",
+    "mode":  "TSV_EXPORT_FOR_SHEETS_KANBAN_NO_EXECUTION",
+    "source_tasks":  "C:\\ENGREMIAT_CORE\\documents\\system-observer\\tasks\\system-observer-tasks-v0.latest.json",
+    "tasks_tsv":  "C:\\ENGREMIAT_CORE\\documents\\system-observer\\exports\\system-observer-tasks-for-sheets-20260620-152938.tsv",
+    "tasks_tsv_latest":  "C:\\ENGREMIAT_CORE\\documents\\system-observer\\exports\\system-observer-tasks-for-sheets.latest.tsv",
+    "kanban_tsv":  "C:\\ENGREMIAT_CORE\\documents\\system-observer\\exports\\system-observer-kanban-cards-20260620-152938.tsv",
+    "kanban_tsv_latest":  "C:\\ENGREMIAT_CORE\\documents\\system-observer\\exports\\system-observer-kanban-cards.latest.tsv",
+    "summary_tsv":  "C:\\ENGREMIAT_CORE\\documents\\system-observer\\exports\\system-observer-summary-20260620-152938.tsv",
+    "summary_tsv_latest":  "C:\\ENGREMIAT_CORE\\documents\\system-observer\\exports\\system-observer-summary.latest.tsv",
+    "summary":  {
+                    "total":  15,
+                    "pending_gate":  9,
+                    "ready_readonly":  6,
+                    "high":  3,
+                    "medium":  6,
+                    "low":  6
+                },
+    "safety":  {
+                   "real_execution":  false,
+                   "system_mutation":  false,
+                   "worker":  false,
+                   "browser":  false,
+                   "network":  false,
+                   "git":  false,
+                   "readonly":  true
+               },
+    "next":  "E08_SYSTEM_OBSERVER_PREPARE_TASK_TO_CANONICAL_ACTION_BRIDGE"
+}

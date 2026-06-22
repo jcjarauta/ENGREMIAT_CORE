@@ -1,0 +1,107 @@
+{
+    "schema_version":  "1.0",
+    "package_id":  "ENGREMIAT_OPERATOR_UX_001",
+    "stage":  "E89C_REPAIR_NAVIGATION_TREE_LAYER_PLAN_VARIABLE_COLLISION",
+    "status":  "PASS",
+    "created_at":  "2026-06-20T13:19:27",
+    "stable_entrypoint":  {
+                              "health":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-HEALTH.ps1",
+                              "cmd":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.cmd",
+                              "command":  ".\\ENGREMIAT.cmd",
+                              "registry":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-REGISTRY.json",
+                              "ps1":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1"
+                          },
+    "current_tree":  [
+                         {
+                             "layer":  "L0",
+                             "node":  "ENGREMIAT.cmd",
+                             "role":  "entrada humana estable anti-ExecutionPolicy",
+                             "status":  "VALIDATED",
+                             "next":  "mantener fijo"
+                         },
+                         {
+                             "layer":  "L1",
+                             "node":  "ENGREMIAT.ps1",
+                             "role":  "launcher humano estable con registry",
+                             "status":  "VALIDATED",
+                             "next":  "mantener menu simple"
+                         },
+                         {
+                             "layer":  "L2",
+                             "node":  "INICIO",
+                             "role":  "hub humano principal",
+                             "status":  "VALIDATED",
+                             "next":  "recorrer opciones"
+                         },
+                         {
+                             "layer":  "L3",
+                             "node":  "Proyectos",
+                             "role":  "cartera, acciones locales, modulos y workers ON/OFF",
+                             "status":  "VALIDATED",
+                             "next":  "seguir afinando desde uso real"
+                         },
+                         {
+                             "layer":  "L3",
+                             "node":  "Memoria y documentacion",
+                             "role":  "documentos, intake, normalizados, dossiers",
+                             "status":  "ACTIVE_NOT_REVIEWED_IN_THIS_ROUND",
+                             "next":  "recorrer"
+                         },
+                         {
+                             "layer":  "L3",
+                             "node":  "Data Intake",
+                             "role":  "entrada/normalizacion de datos",
+                             "status":  "ACTIVE_NOT_REVIEWED_IN_THIS_ROUND",
+                             "next":  "recorrer despues de documentacion"
+                         },
+                         {
+                             "layer":  "L3",
+                             "node":  "Operador y workers",
+                             "role":  "supervision futura; worker real pausado",
+                             "status":  "PAUSED_AFTER_E80",
+                             "next":  "no tocar hasta cerrar operador"
+                         },
+                         {
+                             "layer":  "L3",
+                             "node":  "Control y estado",
+                             "role":  "panel operativo/readiness/reportes",
+                             "status":  "PARTIAL",
+                             "next":  "validar utilidad"
+                         },
+                         {
+                             "layer":  "L3",
+                             "node":  "Herramientas y configuracion",
+                             "role":  "rutas, palancas, health, update helper",
+                             "status":  "PARTIAL",
+                             "next":  "decidir centralizacion"
+                         }
+                     ],
+    "validated_so_far":  [
+                             "CMD human entrypoint works",
+                             "launcher registry health 5/5",
+                             "INICIO [1] opens Proyectos",
+                             "Proyectos menu works",
+                             "Proyectos [1] opens Cartera",
+                             "Cartera [1] opens Proyecto / Acciones",
+                             "Workers ON/OFF integrated and compacted",
+                             "Worker real paused after E80"
+                         ],
+    "issues_detected":  [
+                            "Direct .ps1 launch blocked by ExecutionPolicy; solved with .cmd",
+                            "Need avoid repetitive validation loops",
+                            "Need review navigation from top-down before more patches",
+                            "Some root areas are placeholders or partial"
+                        ],
+    "recommended_walkthrough":  [
+                                    "1 Ejecutar .\\ENGREMIAT.cmd",
+                                    "2 Revisar launcher humano estable",
+                                    "3 Entrar [1] Inicio operador",
+                                    "4 Revisar INICIO sin cambiar nada",
+                                    "5 Entrar [1] Proyectos y confirmar flujo validado",
+                                    "6 Volver y revisar [4] Control y estado",
+                                    "7 Volver y revisar [2] Memoria/documentacion",
+                                    "8 Anotar fricciones por pantalla",
+                                    "9 Aplicar una capa cada vez"
+                                ],
+    "next":  "E90_WALKTHROUGH_FROM_CMD_LAYER_0"
+}

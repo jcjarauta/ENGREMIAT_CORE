@@ -1,0 +1,114 @@
+{
+    "package_id":  "ENGREMIAT_MODULE_CARD_CANON_001",
+    "stage":  "E93A_DEFINE_PROJECT_MODULE_CARD_TABLE_VIEW_CONTRACT",
+    "status":  "PASS",
+    "created_at":  "2026-06-20T13:35:53",
+    "principle":  "Las tarjetas se muestran como tabla normalizada parecida a Modulos, siempre vinculadas a proyecto y modulo.",
+    "hierarchy":  [
+                      "project_id",
+                      "module_id",
+                      "card_id"
+                  ],
+    "hard_rules":  [
+                       "card_id obligatorio",
+                       "project_id obligatorio",
+                       "module_id obligatorio",
+                       "Una tarjeta nunca existe suelta",
+                       "Toda tarjeta pertenece a un modulo",
+                       "Todo modulo pertenece a un proyecto",
+                       "Vista solo lectura inicialmente",
+                       "Las acciones de tarjeta requieren gate humano",
+                       "PROPOSED no ejecuta"
+                   ],
+    "view_name":  "TARJETAS",
+    "route":  "INICIO \u003e Proyectos \u003e Proyecto \u003e Modulos \u003e Tarjetas",
+    "columns":  [
+                    {
+                        "key":  "num",
+                        "label":  "#",
+                        "width":  "SMALL"
+                    },
+                    {
+                        "key":  "card_id",
+                        "label":  "CARD",
+                        "width":  "MEDIUM"
+                    },
+                    {
+                        "key":  "project_id",
+                        "label":  "PROYECTO",
+                        "width":  "MEDIUM"
+                    },
+                    {
+                        "key":  "module_id",
+                        "label":  "MODULO",
+                        "width":  "MEDIUM"
+                    },
+                    {
+                        "key":  "type",
+                        "label":  "TIPO",
+                        "width":  "SMALL"
+                    },
+                    {
+                        "key":  "status",
+                        "label":  "ESTADO",
+                        "width":  "SMALL"
+                    },
+                    {
+                        "key":  "priority",
+                        "label":  "PRIO",
+                        "width":  "SMALL"
+                    },
+                    {
+                        "key":  "risk",
+                        "label":  "RIESGO",
+                        "width":  "SMALL"
+                    },
+                    {
+                        "key":  "title",
+                        "label":  "TITULO",
+                        "width":  "LARGE"
+                    },
+                    {
+                        "key":  "human_gate",
+                        "label":  "GATE",
+                        "width":  "SMALL"
+                    },
+                    {
+                        "key":  "suggested_action",
+                        "label":  "SIGUIENTE",
+                        "width":  "LARGE"
+                    }
+                ],
+    "commands":  [
+                     {
+                         "command":  "numero",
+                         "meaning":  "abrir tarjeta"
+                     },
+                     {
+                         "command":  "m",
+                         "meaning":  "filtrar por modulo"
+                     },
+                     {
+                         "command":  "p",
+                         "meaning":  "filtrar por proyecto"
+                     },
+                     {
+                         "command":  "a",
+                         "meaning":  "crear tarjeta propuesta"
+                     },
+                     {
+                         "command":  "v",
+                         "meaning":  "validar tarjeta"
+                     },
+                     {
+                         "command":  "b",
+                         "meaning":  "volver"
+                     },
+                     {
+                         "command":  "Enter",
+                         "meaning":  "refrescar"
+                     }
+                 ],
+    "future_autodiagnosis_rule":  "El autodiagnostico solo puede crear tarjetas PROPOSED vinculadas a project_id y module_id.",
+    "next":  "E93B_CREATE_FIRST_CARD_VIEW_READONLY"
+}

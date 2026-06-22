@@ -1,0 +1,15 @@
+==== Demo funcion anidada ====
+Ruta: INICIO > Demo funcion anidada
+Rol: validar anidacion controlada por registry
+Estado: PROPOSED_DRY_RUN
+Principio: template-first | dry-run | human_gate=SI antes de escritura real
+
+Funcion demo para probar apply controlado al registry sin tocar launchers reales.
+
+
+b = volver | m = mantenimiento | ? = ayuda | Enter = refrescar
+
+AISLADO: esta pantalla viene del registry y no esta conectada al launcher real.
+Prueba segura: no toca registry, launchers, workers, red ni git.
+
+´╗┐
