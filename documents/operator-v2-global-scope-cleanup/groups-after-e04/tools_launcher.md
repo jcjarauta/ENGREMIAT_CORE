@@ -1,0 +1,33 @@
+﻿# GROUP AFTER E04 - tools\launcher  Count: 31 Classes: CODE_REVIEW:26, DOCS_REPORTS_REVIEW:1, UNTRACKED_REVIEW:4 Recommended action: INSPECT_DIFF_BEFORE_SCOPED_COMMIT Apply changes: NO Delete files: NO Commit: NO Push: NO  ```text
+?? tools/launcher/ENGREMIAT-CARD-DETAIL-VIEW-NORMALIZED.ps1
+?? tools/launcher/ENGREMIAT-CARDS-VIEW-NORMALIZED.ps1
+ M tools/launcher/ENGREMIAT-DATA-INTAKE-CENTER.ps1
+ M tools/launcher/ENGREMIAT-DATA-INTAKE-CENTER-NORMALIZED.ps1
+ M tools/launcher/ENGREMIAT-INICIO.ps1
+ M tools/launcher/ENGREMIAT-INICIO-NORMALIZED.ps1
+ M tools/launcher/ENGREMIAT-INICIO-STATUS.ps1
+ M tools/launcher/ENGREMIAT-LAUNCHER-ACTUAL.ps1
+?? tools/launcher/ENGREMIAT-LAUNCHER-HEALTH.ps1
+?? tools/launcher/ENGREMIAT-LAUNCHER-UPDATE-HELPER.ps1
+?? tools/launcher/ENGREMIAT-LOCAL-WORKER-EVENT-SEQUENCE-DRY-RUN.ps1
+ M tools/launcher/ENGREMIAT-MEMORY-DOCUMENTATION-CENTER.ps1
+ M tools/launcher/ENGREMIAT-MEMORY-DOCUMENTATION-CENTER-NORMALIZED.ps1
+ M tools/launcher/ENGREMIAT-NAVIGATION-AUDIT.ps1
+ M tools/launcher/ENGREMIAT-NAVIGATION-VIEWER.ps1
+ M tools/launcher/ENGREMIAT-PROJECT-MEMORY.ps1
+ M tools/launcher/ENGREMIAT-PROJECT-MEMORY-GENERATE.ps1
+?? tools/launcher/ENGREMIAT-PROJECT-MODULE-CARDS-BRIDGE.ps1
+ M tools/launcher/ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1
+ M tools/launcher/ENGREMIAT-SELECT-MODULE-CARDS.ps1
+ M tools/launcher/ENGREMIAT-SELECT-MODULE-WORKSPACE.ps1
+?? tools/launcher/ENGREMIAT-WORKER-HEARTBEAT-WRITER-MINIMAL.ps1
+?? tools/launcher/ENGREMIAT-WORKER-SIGNALS-TOGGLE.ps1
+ M tools/launcher/templates/ENGREMIAT-CANONICAL-SCREEN-TEMPLATE.ps1
+ M tools/launcher/templates/ENGREMIAT-CONSOLE-PALETTE.ps1
+ M tools/launcher/templates/ENGREMIAT-OBSIDIAN-HEARTBEAT-SYNC-DRAFT.ps1
+?? tools/launcher/ENGREMIAT-LAUNCHER-REGISTRY.json
+?? tools/launcher/canonical-action-runtime/
+?? tools/launcher/gate-mutations/
+?? tools/launcher/module-actions/
+?? tools/launcher/runtime-ui-adapter/
+```
