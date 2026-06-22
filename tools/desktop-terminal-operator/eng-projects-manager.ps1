@@ -1,109 +1,28 @@
-﻿# ENG_PROJECTS_MANAGER_SCREEN_MASTER_E17B_BEGIN
-function New-EngProjectsManagerMaintenanceCard {
-  Clear-Host
-Write-Host "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" -ForegroundColor DarkGray
-  Write-Host "Ruta: PROYECTOS ACTIVOS" -ForegroundColor DarkCyan
-  Write-Host "Cancelar: b / q / c / cancelar" -ForegroundColor DarkGray
-  Write-Host ""
-
-  $cancelTokens = @("b","q","c","cancelar","cancel","salir")
-
-Write-Host ""
-Write-Host "[b/q] salir/volver | m = mantenimiento | ? = ayuda | Enter = refrescar" -ForegroundColor DarkGray
-Write-Host ""
-  $sev = Read-Host "Severidad LOW/MEDIUM/HIGH/BLOCKER"
-  if($cancelTokens -contains $sev.Trim().ToLowerInvariant()){ Write-Host "CANCELADO tarjeta_mantenimiento" -ForegroundColor Yellow; Start-Sleep -Milliseconds 500; return }
-  $exp = Read-Host "Esperado"
-  if($cancelTokens -contains $exp.Trim().ToLowerInvariant()){ Write-Host "CANCELADO tarjeta_mantenimiento" -ForegroundColor Yellow; Start-Sleep -Milliseconds 500; return }
-  $obs = Read-Host "Observado / que falla"
-  if($cancelTokens -contains $obs.Trim().ToLowerInvariant()){ Write-Host "CANCELADO tarjeta_mantenimiento" -ForegroundColor Yellow; Start-Sleep -Milliseconds 500; return }
-  $act = Read-Host "Accion realizada antes del fallo"
-  if($cancelTokens -contains $act.Trim().ToLowerInvariant()){ Write-Host "CANCELADO tarjeta_mantenimiento" -ForegroundColor Yellow; Start-Sleep -Milliseconds 500; return }
-
-  if([string]::IsNullOrWhiteSpace($sev)){ $sev = "MEDIUM" }
-  if([string]::IsNullOrWhiteSpace($exp)){ $exp = "PENDING" }
-  if([string]::IsNullOrWhiteSpace($obs)){ $obs = "PENDING" }
-  if([string]::IsNullOrWhiteSpace($act)){ $act = "PENDING" }
-
-  $cardsDir = "C:\ENGREMIAT_CORE\documents\manual-screen-maintenance-cards\cards"
-  if(!(Test-Path $cardsDir)){ New-Item -ItemType Directory -Force -Path $cardsDir | Out-Null }
-  $id = "MCARD-" + (Get-Date -Format "yyyyMMdd-HHmmss") + "-projects-active"
-  $card = Join-Path $cardsDir ($id + ".md")
-  @(
-    "# " + $id,
-    "",
-    "- screen_id: PROJECTS_ACTIVE",
-    "- route: PROYECTOS ACTIVOS",
-    "- severity: " + $sev,
-    "- expected: " + $exp,
-    "- observed: " + $obs,
-    "- action_done: " + $act,
-    "- status: OPEN",
-    "- created_at: " + (Get-Date).ToString("s")
-  ) | Set-Content -Encoding UTF8 $card
-  Write-Host ("OK tarjeta_mantenimiento_creada=" + $card) -ForegroundColor Green
-  Read-Host "Enter para volver a PROYECTOS ACTIVOS" | Out-Null
-}
-
-function Show-EngProjectsManagerHelp {
-  Clear-Host
-  Write-Host "==== AYUDA - PROYECTOS ACTIVOS ====" -ForegroundColor Cyan
-  Write-Host "Ruta: PROYECTOS ACTIVOS" -ForegroundColor DarkCyan
-  Write-Host ""
-  Write-Host "Enter = refrescar pantalla" -ForegroundColor Gray
-  Write-Host "numero = abrir espacio de trabajo" -ForegroundColor Gray
-  Write-Host "oN = abrir carpeta del proyecto N" -ForegroundColor Gray
-  Write-Host "hN = historico del proyecto N" -ForegroundColor Gray
-  Write-Host "v = historico" -ForegroundColor Gray
-  Write-Host "n = nuevo proyecto" -ForegroundColor Gray
-  Write-Host "m = crear tarjeta de mantenimiento contextual" -ForegroundColor Gray
-  Write-Host "q = salir" -ForegroundColor Gray
-  Write-Host ""
-  Read-Host "Enter para volver" | Out-Null
-}
-# ENG_PROJECTS_MANAGER_SCREEN_MASTER_E17B_END
-param([string]$Mode="menu")
+﻿param([string]$Mode="menu")
 $ErrorActionPreference="Stop"
 [Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
-function W([string]$m,[string]$c="Gray"){Write-Host $m -ForegroundColor $c}
-function B([string]$t,[object[]]$l,[string]$c="Cyan"){Write-Host "";Write-Host "==== $t ====" -ForegroundColor $c;foreach($x in $l){Write-Host ([string]$x) -ForegroundColor $c}}
-function D([string]$p){[System.IO.Directory]::CreateDirectory($p)|Out-Null}
-function SetProp([object]$o,[string]$n,[object]$v){if($o.PSObject.Properties.Name -contains $n){$o.$n=$v}else{$o|Add-Member -NotePropertyName $n -NotePropertyValue $v -Force}}
-function LoadJsonOrNew([string]$p){if(Test-Path -LiteralPath $p){try{return (Get-Content -LiteralPath $p -Raw -Encoding UTF8|ConvertFrom-Json)}catch{}};return [pscustomobject]@{}}
-function GetActivePath{ $p="C:\ENGREMIAT_CORE\data\desktop-terminal-operator\operator-state.v1.json"; if(!(Test-Path -LiteralPath $p)){return ""}; try{$s=Get-Content -LiteralPath $p -Raw -Encoding UTF8|ConvertFrom-Json; foreach($k in @("active_project_path","current_project_path","active_project","current_project")){if($s.PSObject.Properties.Name -contains $k){$v=[string]$s.$k;if($v -and (Test-Path -LiteralPath $v)){return (Resolve-Path -LiteralPath $v).Path}}}}catch{}; return "" }
-function EnsureProjectJson([string]$projectPath,[string]$status){$control=Join-Path $projectPath "BOVEDA_PROYECTO\00_CONTROL";D $control;$pjp=Join-Path $control "project.json";$pj=LoadJsonOrNew $pjp;SetProp $pj "project_id" (Split-Path -Leaf $projectPath);SetProp $pj "name" (Split-Path -Leaf $projectPath);SetProp $pj "path" $projectPath;SetProp $pj "status" $status;SetProp $pj "operator_status" $status;SetProp $pj "updated_at" ((Get-Date).ToString("s"));$pj|ConvertTo-Json -Depth 80|Set-Content -LiteralPath $pjp -Encoding UTF8}
-function GetProjects([string]$base){if(!(Test-Path -LiteralPath $base)){return @()};$activePath=GetActivePath;$items=@();$dirs=@(Get-ChildItem -LiteralPath $base -Directory -Filter "ENGREMIAT_PROJECT_*" -ErrorAction SilentlyContinue|Sort-Object LastWriteTime -Descending);foreach($d in $dirs){$resolved=(Resolve-Path -LiteralPath $d.FullName).Path;$status="HISTORICO";if($activePath -ne "" -and $resolved -eq $activePath){$status="ACTIVO"};$items+=[pscustomobject]@{Name=$d.Name;Path=$resolved;Status=$status;LastWriteTime=$d.LastWriteTime}};return @($items)}
-function SaveActive([string]$projectPath){$root="C:\ENGREMIAT_CORE";$base="C:\Users\pc\Desktop\ENGREMIAT_OPERATOR";$statePath=Join-Path $root "data\desktop-terminal-operator\operator-state.v1.json";D (Split-Path -Parent $statePath);$resolved=(Resolve-Path -LiteralPath $projectPath).Path;$state=LoadJsonOrNew $statePath;$name=Split-Path -Leaf $resolved;SetProp $state "active_project" $resolved;SetProp $state "active_project_path" $resolved;SetProp $state "active_project_name" $name;SetProp $state "current_project" $resolved;SetProp $state "current_project_path" $resolved;SetProp $state "updated_at" ((Get-Date).ToString("s"));SetProp $state "last_project_lifecycle_action" ([ordered]@{action="activate";project=$resolved;created_at=(Get-Date).ToString("s")});$state|ConvertTo-Json -Depth 100|Set-Content -LiteralPath $statePath -Encoding UTF8;foreach($d in @(Get-ChildItem -LiteralPath $base -Directory -Filter "ENGREMIAT_PROJECT_*" -ErrorAction SilentlyContinue)){if((Resolve-Path -LiteralPath $d.FullName).Path -eq $resolved){EnsureProjectJson $d.FullName "ACTIVO"}else{EnsureProjectJson $d.FullName "HISTORICO"}}}
-function SendHistoric([string]$projectPath){$resolved=(Resolve-Path -LiteralPath $projectPath).Path;EnsureProjectJson $resolved "HISTORICO";$active=GetActivePath;if($active -eq $resolved){$statePath="C:\ENGREMIAT_CORE\data\desktop-terminal-operator\operator-state.v1.json";$state=LoadJsonOrNew $statePath;foreach($k in @("active_project","active_project_path","active_project_name","current_project","current_project_path")){SetProp $state $k ""};SetProp $state "updated_at" ((Get-Date).ToString("s"));SetProp $state "last_project_lifecycle_action" ([ordered]@{action="historify_active";project=$resolved;created_at=(Get-Date).ToString("s")});$state|ConvertTo-Json -Depth 100|Set-Content -LiteralPath $statePath -Encoding UTF8}}
-function ShowWorkspace($project){while($true){Clear-Host;B "ESPACIO DE TRABAJO" @($project.Name,$project.Path,("Estado: "+$project.Status)) "Cyan";Write-Host " [1] Carpeta del proyecto" -ForegroundColor Green;Write-Host " [2] Módulos del proyecto" -ForegroundColor Green;Write-Host " [3] Espacio módulo inicio" -ForegroundColor Green;Write-Host " [4] Control del proyecto" -ForegroundColor Yellow;Write-Host " [b] Atrás" -ForegroundColor Yellow;Write-Host "";Write-Host "Enter = refrescar | b = volver | 1 carpeta | 2 modulos | 3 modulo inicio | 4 control" -ForegroundColor DarkGray;$a=Read-Host "PROYECTO";if([string]::IsNullOrWhiteSpace($a)){continue};$a=$a.Trim().ToLowerInvariant();if($a -eq "b"){break};if($a -eq "1"){Start-Process explorer.exe $project.Path;continue};if($a -eq "2"){& powershell -NoProfile -ExecutionPolicy Bypass -File "C:\ENGREMIAT_CORE\tools\desktop-terminal-operator\eng-project-modules-screen.ps1" -ProjectPath $project.Path;continue};if($a -eq "3"){$p=Join-Path $project.Path "MODULOS\MODULE_inicio\BOVEDA_MODULO";if(Test-Path -LiteralPath $p){Start-Process explorer.exe $p}else{B "NO_GO" @("No existe: $p") "Yellow";Read-Host "Enter"};continue};if($a -eq "4"){$p=Join-Path $project.Path "BOVEDA_PROYECTO\00_CONTROL";if(Test-Path -LiteralPath $p){Start-Process explorer.exe $p}else{B "NO_GO" @("No existe: $p") "Yellow";Read-Host "Enter"};continue}}}
-try{
-  $root="C:\ENGREMIAT_CORE";$base="C:\Users\pc\Desktop\ENGREMIAT_OPERATOR"
-  while($true){
-    Clear-Host
-    $projects=GetProjects $base
-    $active=@($projects|Where-Object{$_.Status -eq "ACTIVO"}|Sort-Object LastWriteTime -Descending)
-    $hist=@($projects|Where-Object{$_.Status -ne "ACTIVO"}|Sort-Object LastWriteTime -Descending)
-Write-Host "Ruta: PROYECTOS ACTIVOS" -ForegroundColor DarkCyan
-Write-Host "[?] Ayuda  [m] Mantenimiento  [Enter] Refrescar" -ForegroundColor DarkGray
-    B "PROYECTOS ACTIVOS" @("numero = espacio de trabajo | oN = abrir carpeta | hN = historico | v = historico | n = nuevo | q = salir") "Cyan"
-    if($active.Count -eq 0){W " No hay proyectos activos." "Yellow"}else{for($i=0;$i -lt $active.Count;$i++){W (" ["+($i+1)+"] "+$active[$i].Name+"  "+$active[$i].LastWriteTime.ToString("yyyy-MM-dd HH:mm")+"  ACTIVO") "Green"}}
-    W "";W "[v] Historico  [n] Nuevo  [q] Salir" "Yellow";W ""
-    $a=Read-Host "ENGREMIAT"
-# ENG_PROJECTS_MANAGER_ROUTER_E17B_BEGIN
-$__eng_projects_cmd = if($null -eq $a) { "" } else { [string]$a }
-$__eng_projects_cmd = $__eng_projects_cmd.Trim().ToLowerInvariant()
-if($__eng_projects_cmd -eq "m"){ New-EngProjectsManagerMaintenanceCard; continue }
-if($__eng_projects_cmd -eq "?"){ Show-EngProjectsManagerHelp; continue }
-# ENG_PROJECTS_MANAGER_ROUTER_E17B_END
-    if([string]::IsNullOrWhiteSpace($a)){continue};$a=$a.Trim().ToLowerInvariant();if($a -eq "q"){break}
-    if($a -eq "n"){$creator=Join-Path $root "tools\desktop-terminal-operator\eng-new-project-safe.ps1";if(Test-Path -LiteralPath $creator){& powershell -NoProfile -ExecutionPolicy Bypass -File $creator}else{B "NO_GO" @("No encuentro creador: $creator") "Yellow";Read-Host "Enter"};$latest=@(Get-ChildItem -LiteralPath $base -Directory -Filter "ENGREMIAT_PROJECT_*" -ErrorAction SilentlyContinue|Sort-Object LastWriteTime -Descending|Select-Object -First 1);if($latest.Count -gt 0){SaveActive $latest[0].FullName};continue}
-    if($a -eq "v"){while($true){Clear-Host;$projects=GetProjects $base;$hist=@($projects|Where-Object{$_.Status -ne "ACTIVO"}|Sort-Object LastWriteTime -Descending);B "HISTORICO" @("numero = activar | oN = abrir carpeta | b = atras") "Yellow";if($hist.Count -eq 0){W " Historico vacio." "Yellow"}else{for($i=0;$i -lt $hist.Count;$i++){W (" ["+($i+1)+"] "+$hist[$i].Name+"  "+$hist[$i].LastWriteTime.ToString("yyyy-MM-dd HH:mm")+"  HISTORICO") "Gray"}};W "";$h=Read-Host "HISTORICO";if([string]::IsNullOrWhiteSpace($h)){continue};$h=$h.Trim().ToLowerInvariant();if($h -eq "b"){break};if($h -match "^o(\d+)$"){$idx=[int]$Matches[1]-1;if($idx -ge 0 -and $idx -lt $hist.Count){Start-Process explorer.exe $hist[$idx].Path};continue};$hn=0;if([int]::TryParse($h,[ref]$hn) -and $hn -ge 1 -and $hn -le $hist.Count){SaveActive $hist[($hn-1)].Path;break}};continue}
-    if($a -match "^o(\d+)$"){$idx=[int]$Matches[1]-1;if($idx -ge 0 -and $idx -lt $active.Count){Start-Process explorer.exe $active[$idx].Path};continue}
-    if($a -match "^h(\d+)$"){$idx=[int]$Matches[1]-1;if($idx -ge 0 -and $idx -lt $active.Count){SendHistoric $active[$idx].Path};continue}
-    $n=0;if([int]::TryParse($a,[ref]$n) -and $n -ge 1 -and $n -le $active.Count){ShowWorkspace $active[($n-1)];continue}
-  }
-}catch{B "ERR" @("status=FAIL",$_.Exception.Message) "Red";Read-Host "Enter para salir";exit 1}
-
-
-
-
+$Root="C:\ENGREMIAT_CORE"
+$Base="C:\Users\pc\Desktop\ENGREMIAT_OPERATOR"
+$StatePath=Join-Path $Root "data\desktop-terminal-operator\operator-state.v1.json"
+$ReportDir=Join-Path $Root "reports\functional-validation"
+function W([string]$M,[string]$C="Gray"){ Write-Host $M -ForegroundColor $C }
+function Box([string]$T,[object[]]$L,[string]$C="Cyan"){ W ""; W ("==== "+$T+" ====") $C; foreach($X in $L){ W ([string]$X) $C } }
+function D([string]$P){ [System.IO.Directory]::CreateDirectory($P)|Out-Null }
+function Back([string]$P="Enter para volver"){ [void](Read-Host $P) }
+function Cmd([string]$P){ $V=Read-Host $P; if($null -eq $V){ return "" }; return ([string]$V).Trim().ToLowerInvariant() }
+function SetP([object]$O,[string]$N,[object]$V){ if($O.PSObject.Properties.Name -contains $N){ $O.$N=$V } else { $O|Add-Member -NotePropertyName $N -NotePropertyValue $V -Force } }
+function LoadJ([string]$P){ if(Test-Path -LiteralPath $P -PathType Leaf){ try { return (Get-Content -LiteralPath $P -Raw -Encoding UTF8|ConvertFrom-Json) } catch {} }; return [pscustomobject]@{} }
+function SaveJ([object]$V,[string]$P){ D (Split-Path -Parent $P); $V|ConvertTo-Json -Depth 80|Set-Content -LiteralPath $P -Encoding UTF8 }
+function ErrLog([string]$Where,[object]$E){ D $ReportDir; $P=Join-Path $ReportDir ("projects-manager-error-"+(Get-Date -Format "yyyyMMdd-HHmmss")+".json"); SaveJ ([ordered]@{where=$Where;message=$E.Exception.Message;exception=$E.Exception.ToString();script=$PSCommandPath;created_at=(Get-Date).ToString("s")}) $P; W ""; W ("ERR capturado en "+$Where) Red; W $E.Exception.Message Red; W ("LOG "+$P) Yellow; Back "Enter para continuar" }
+function ActivePath{ if(!(Test-Path -LiteralPath $StatePath -PathType Leaf)){ return "" }; try { $S=Get-Content -LiteralPath $StatePath -Raw -Encoding UTF8|ConvertFrom-Json; foreach($K in @("active_project_path","current_project_path","active_project","current_project")){ if($S.PSObject.Properties.Name -contains $K){ $V=[string]$S.$K; if($V -and (Test-Path -LiteralPath $V)){ return (Resolve-Path -LiteralPath $V).Path } } } } catch {}; return "" }
+function EnsurePJ([string]$P,[string]$Status){ if(!$P -or !(Test-Path -LiteralPath $P -PathType Container)){ return }; $Control=Join-Path $P "BOVEDA_PROYECTO\00_CONTROL"; D $Control; $Jp=Join-Path $Control "project.json"; $J=LoadJ $Jp; SetP $J "project_id" (Split-Path -Leaf $P); SetP $J "name" (Split-Path -Leaf $P); SetP $J "path" $P; SetP $J "status" $Status; SetP $J "operator_status" $Status; SetP $J "updated_at" ((Get-Date).ToString("s")); SaveJ $J $Jp }
+function Projects{ if(!(Test-Path -LiteralPath $Base -PathType Container)){ return @() }; $A=ActivePath; $R=New-Object System.Collections.ArrayList; $Dirs=@(Get-ChildItem -LiteralPath $Base -Directory -Filter "ENGREMIAT_PROJECT_*" -ErrorAction SilentlyContinue|Sort-Object LastWriteTime -Descending); foreach($D0 in $Dirs){ $P=(Resolve-Path -LiteralPath $D0.FullName).Path; $S="HISTORICO"; if($A -ne "" -and $P -eq $A){ $S="ACTIVO" }; [void]$R.Add([pscustomobject]@{Name=$D0.Name;Path=$P;Status=$S;LastWriteTime=$D0.LastWriteTime}) }; return @($R) }
+function SaveActive([string]$P){ if(!$P -or !(Test-Path -LiteralPath $P -PathType Container)){ throw "Proyecto no valido: $P" }; $R=(Resolve-Path -LiteralPath $P).Path; $S=LoadJ $StatePath; $N=Split-Path -Leaf $R; foreach($K in @("active_project","active_project_path","current_project","current_project_path")){ SetP $S $K $R }; SetP $S "active_project_name" $N; SetP $S "updated_at" ((Get-Date).ToString("s")); SetP $S "last_project_lifecycle_action" ([ordered]@{action="activate";project=$R;created_at=(Get-Date).ToString("s")}); SaveJ $S $StatePath; foreach($D0 in @(Get-ChildItem -LiteralPath $Base -Directory -Filter "ENGREMIAT_PROJECT_*" -ErrorAction SilentlyContinue)){ $DP=(Resolve-Path -LiteralPath $D0.FullName).Path; if($DP -eq $R){ EnsurePJ $DP "ACTIVO" } else { EnsurePJ $DP "HISTORICO" } } }
+function Historic([string]$P){ $R=(Resolve-Path -LiteralPath $P).Path; EnsurePJ $R "HISTORICO"; if((ActivePath) -eq $R){ $S=LoadJ $StatePath; foreach($K in @("active_project","active_project_path","active_project_name","current_project","current_project_path")){ SetP $S $K "" }; SetP $S "updated_at" ((Get-Date).ToString("s")); SetP $S "last_project_lifecycle_action" ([ordered]@{action="historify_active";project=$R;created_at=(Get-Date).ToString("s")}); SaveJ $S $StatePath } }
+function OpenF([string]$P){ if(Test-Path -LiteralPath $P){ Start-Process -FilePath "explorer.exe" -ArgumentList @($P)|Out-Null } else { Box "NO_GO" @("No existe: $P") Yellow; Back } }
+function Workspace([object]$Pj){ while($true){ try { Clear-Host; Box "ESPACIO DE TRABAJO" @($Pj.Name,$Pj.Path,("Estado: "+$Pj.Status)) Cyan; W " [1] Carpeta del proyecto" Green; W " [2] Modulos del proyecto" Green; W " [3] Espacio modulo inicio" Green; W " [4] Control del proyecto" Yellow; W " [b] Atras" Yellow; W ""; W "Enter = refrescar | b = volver" DarkGray; $A=Cmd "PROYECTO"; if($A -eq ""){continue}; if($A -eq "b" -or $A -eq "q"){break}; if($A -eq "1"){OpenF $Pj.Path;continue}; if($A -eq "2"){ $Scr=Join-Path $Root "tools\desktop-terminal-operator\eng-project-modules-screen.ps1"; if(Test-Path -LiteralPath $Scr){ & powershell -NoProfile -ExecutionPolicy Bypass -File $Scr -ProjectPath $Pj.Path } else { Box "NO_GO" @("No existe pantalla: $Scr") Yellow; Back }; continue }; if($A -eq "3"){OpenF (Join-Path $Pj.Path "MODULOS\MODULE_inicio\BOVEDA_MODULO");continue}; if($A -eq "4"){OpenF (Join-Path $Pj.Path "BOVEDA_PROYECTO\00_CONTROL");continue}; W ("Comando no reconocido: "+$A) Yellow; Back } catch { ErrLog "Workspace" $_ } } }
+function ShowHist{ while($true){ try { Clear-Host; $Ps=Projects; $H=@($Ps|Where-Object{$_.Status -ne "ACTIVO"}|Sort-Object LastWriteTime -Descending); Box "HISTORICO" @("numero = activar | oN = abrir carpeta | b = atras") Yellow; if($H.Count -eq 0){ W " Historico vacio." Yellow } else { for($I=0;$I -lt $H.Count;$I++){ W (" ["+($I+1)+"] "+$H[$I].Name+"  "+$H[$I].LastWriteTime.ToString("yyyy-MM-dd HH:mm")+"  HISTORICO") Gray } }; W ""; $A=Cmd "HISTORICO"; if($A -eq ""){continue}; if($A -eq "b" -or $A -eq "q"){break}; if($A -match "^o(\d+)$"){ $Idx=[int]$Matches[1]-1; if($Idx -ge 0 -and $Idx -lt $H.Count){OpenF $H[$Idx].Path}; continue }; $N=0; if([int]::TryParse($A,[ref]$N) -and $N -ge 1 -and $N -le $H.Count){SaveActive $H[$N-1].Path;break}; W ("Comando no reconocido: "+$A) Yellow; Back } catch { ErrLog "Historico" $_ } } }
+function Help{ Clear-Host; Box "AYUDA PROYECTOS" @("numero = abrir espacio de trabajo activo","oN = abrir carpeta","hN = enviar activo a historico","v = historico","n = nuevo","b/q = salir") Cyan; Back }
+function Maint{ Clear-Host; Box "MANTENIMIENTO" @("Captura minima de incidencia.") Yellow; $Sev=Read-Host "Severidad LOW/MEDIUM/HIGH/BLOCKER"; $Exp=Read-Host "Esperado"; $Obs=Read-Host "Observado / que falla"; $Act=Read-Host "Accion realizada antes del fallo"; if([string]::IsNullOrWhiteSpace($Sev)){$Sev="MEDIUM"}; $Dir=Join-Path $Root "reports\human-maintenance-cards"; D $Dir; $P=Join-Path $Dir ("human-maintenance-card-"+(Get-Date -Format "yyyyMMdd-HHmmss")+".json"); SaveJ ([ordered]@{severity=$Sev;expected=$Exp;observed=$Obs;action_before_failure=$Act;created_at=(Get-Date).ToString("s");source=$PSCommandPath}) $P; W ("OK tarjeta="+$P) Green; Back }
+function Main{ while($true){ try { Clear-Host; W "Ruta: PROYECTOS ACTIVOS" Cyan; W "[?] Ayuda  [m] Mantenimiento  [Enter] Refrescar" DarkGray; W ""; Box "PROYECTOS ACTIVOS" @("numero = espacio de trabajo | oN = abrir carpeta | hN = historico | v = historico | n = nuevo | q = salir") Cyan; $Ps=Projects; $Acs=@($Ps|Where-Object{$_.Status -eq "ACTIVO"}|Sort-Object LastWriteTime -Descending); if($Acs.Count -eq 0){ W " No hay proyectos activos." Yellow } else { for($I=0;$I -lt $Acs.Count;$I++){ W (" ["+($I+1)+"] "+$Acs[$I].Name+"  "+$Acs[$I].LastWriteTime.ToString("yyyy-MM-dd HH:mm")+"  ACTIVO") Green } }; W ""; W "[v] Historico  [n] Nuevo  [q] Salir" Yellow; W ""; $A=Cmd "ENGREMIAT"; if($A -eq ""){continue}; if($A -eq "q" -or $A -eq "b"){break}; if($A -eq "?" -or $A -eq "h" -or $A -eq "help"){Help;continue}; if($A -eq "m"){Maint;continue}; if($A -eq "v"){ShowHist;continue}; if($A -eq "n"){ $Cr=Join-Path $Root "tools\desktop-terminal-operator\eng-new-project-safe.ps1"; if(Test-Path -LiteralPath $Cr){ & powershell -NoProfile -ExecutionPolicy Bypass -File $Cr; $Latest=@(Get-ChildItem -LiteralPath $Base -Directory -Filter "ENGREMIAT_PROJECT_*" -ErrorAction SilentlyContinue|Sort-Object LastWriteTime -Descending|Select-Object -First 1); if($Latest.Count -gt 0){SaveActive $Latest[0].FullName} } else { Box "NO_GO" @("No encuentro creador: $Cr") Yellow; Back }; continue }; if($A -match "^o(\d+)$"){ $Idx=[int]$Matches[1]-1; if($Idx -ge 0 -and $Idx -lt $Acs.Count){OpenF $Acs[$Idx].Path}; continue }; if($A -match "^h(\d+)$"){ $Idx=[int]$Matches[1]-1; if($Idx -ge 0 -and $Idx -lt $Acs.Count){Historic $Acs[$Idx].Path}; continue }; $N=0; if([int]::TryParse($A,[ref]$N) -and $N -ge 1 -and $N -le $Acs.Count){Workspace $Acs[$N-1];continue}; W ("Comando no reconocido: "+$A) Yellow; Back } catch { ErrLog "Main" $_ } } }
+Main

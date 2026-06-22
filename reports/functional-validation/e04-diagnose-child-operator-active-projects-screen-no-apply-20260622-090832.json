@@ -1,0 +1,202 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_FUNCTIONAL_VALIDATION_001",
+    "stage":  "E04_DIAGNOSE_CHILD_OPERATOR_ACTIVE_PROJECTS_SCREEN_NO_APPLY",
+    "status":  "PASS",
+    "apply_changes":  false,
+    "commit_executed":  false,
+    "push_executed":  false,
+    "delete_files":  false,
+    "target":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatOperatorMenu.ps1",
+    "parse_errors_count":  0,
+    "parse_errors":  [
+
+                     ],
+    "hits_count":  25,
+    "hits":  [
+                 {
+                     "pattern":  "PROYECTOS ACTIVOS",
+                     "line":  17,
+                     "context":  "  B \"ENGREMIAT TERMINAL OPERATOR\" @(\"Workspace: C:\\ENGREMIAT_CORE\",\"Sistema: MENU_V2_ESTABLE\") \"Cyan\"\n  Write-Host \"\"\n  Write-Host \"GLOBAL\" -ForegroundColor Cyan\n  Write-Host \" [1] Abrir / gestionar proyectos     p\" -ForegroundColor Green\n  Write-Host \" [2] Nuevo proyecto                  n\" -ForegroundColor Green\n  Write-Host \" [3] Ver proyectos activos/historico\" -ForegroundColor Green\n  Write-Host \" [4] Estado compacto                 e\" -ForegroundColor Yellow\n  Write-Host \" [q] Salir\" -ForegroundColor Yellow\n  Write-Host \"\"\nWrite-Host \"[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar\" -ForegroundColor DarkGray\n  Write-Host \"\"\n\nWrite-Host \"\"\nWrite-Host \"[b/q] salir/volver | m = mantenimiento | ? = ayuda | Enter = refrescar\" -ForegroundColor DarkGray\nWrite-Host \"\"\n  $a=Read-Host \"ENGREMIAT\"\n  if([string]::IsNullOrWhiteSpace($a)){continue}\n  $a=$a.Trim().ToLowerInvariant()"
+                 },
+                 {
+                     "pattern":  "Ver proyectos activos",
+                     "line":  17,
+                     "context":  "  B \"ENGREMIAT TERMINAL OPERATOR\" @(\"Workspace: C:\\ENGREMIAT_CORE\",\"Sistema: MENU_V2_ESTABLE\") \"Cyan\"\n  Write-Host \"\"\n  Write-Host \"GLOBAL\" -ForegroundColor Cyan\n  Write-Host \" [1] Abrir / gestionar proyectos     p\" -ForegroundColor Green\n  Write-Host \" [2] Nuevo proyecto                  n\" -ForegroundColor Green\n  Write-Host \" [3] Ver proyectos activos/historico\" -ForegroundColor Green\n  Write-Host \" [4] Estado compacto                 e\" -ForegroundColor Yellow\n  Write-Host \" [q] Salir\" -ForegroundColor Yellow\n  Write-Host \"\"\nWrite-Host \"[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar\" -ForegroundColor DarkGray\n  Write-Host \"\"\n\nWrite-Host \"\"\nWrite-Host \"[b/q] salir/volver | m = mantenimiento | ? = ayuda | Enter = refrescar\" -ForegroundColor DarkGray\nWrite-Host \"\"\n  $a=Read-Host \"ENGREMIAT\"\n  if([string]::IsNullOrWhiteSpace($a)){continue}\n  $a=$a.Trim().ToLowerInvariant()"
+                 },
+                 {
+                     "pattern":  "Historico",
+                     "line":  17,
+                     "context":  "  B \"ENGREMIAT TERMINAL OPERATOR\" @(\"Workspace: C:\\ENGREMIAT_CORE\",\"Sistema: MENU_V2_ESTABLE\") \"Cyan\"\n  Write-Host \"\"\n  Write-Host \"GLOBAL\" -ForegroundColor Cyan\n  Write-Host \" [1] Abrir / gestionar proyectos     p\" -ForegroundColor Green\n  Write-Host \" [2] Nuevo proyecto                  n\" -ForegroundColor Green\n  Write-Host \" [3] Ver proyectos activos/historico\" -ForegroundColor Green\n  Write-Host \" [4] Estado compacto                 e\" -ForegroundColor Yellow\n  Write-Host \" [q] Salir\" -ForegroundColor Yellow\n  Write-Host \"\"\nWrite-Host \"[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar\" -ForegroundColor DarkGray\n  Write-Host \"\"\n\nWrite-Host \"\"\nWrite-Host \"[b/q] salir/volver | m = mantenimiento | ? = ayuda | Enter = refrescar\" -ForegroundColor DarkGray\nWrite-Host \"\"\n  $a=Read-Host \"ENGREMIAT\"\n  if([string]::IsNullOrWhiteSpace($a)){continue}\n  $a=$a.Trim().ToLowerInvariant()"
+                 },
+                 {
+                     "pattern":  "historico",
+                     "line":  17,
+                     "context":  "  B \"ENGREMIAT TERMINAL OPERATOR\" @(\"Workspace: C:\\ENGREMIAT_CORE\",\"Sistema: MENU_V2_ESTABLE\") \"Cyan\"\n  Write-Host \"\"\n  Write-Host \"GLOBAL\" -ForegroundColor Cyan\n  Write-Host \" [1] Abrir / gestionar proyectos     p\" -ForegroundColor Green\n  Write-Host \" [2] Nuevo proyecto                  n\" -ForegroundColor Green\n  Write-Host \" [3] Ver proyectos activos/historico\" -ForegroundColor Green\n  Write-Host \" [4] Estado compacto                 e\" -ForegroundColor Yellow\n  Write-Host \" [q] Salir\" -ForegroundColor Yellow\n  Write-Host \"\"\nWrite-Host \"[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar\" -ForegroundColor DarkGray\n  Write-Host \"\"\n\nWrite-Host \"\"\nWrite-Host \"[b/q] salir/volver | m = mantenimiento | ? = ayuda | Enter = refrescar\" -ForegroundColor DarkGray\nWrite-Host \"\"\n  $a=Read-Host \"ENGREMIAT\"\n  if([string]::IsNullOrWhiteSpace($a)){continue}\n  $a=$a.Trim().ToLowerInvariant()"
+                 },
+                 {
+                     "pattern":  "oN",
+                     "line":  1,
+                     "context":  "$ErrorActionPreference=\"Stop\"\n[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()\nfunction W([string]$m,[string]$c=\"Gray\"){Write-Host $m -ForegroundColor $c}\nfunction B([string]$t,[object[]]$l,[string]$c=\"Cyan\"){Write-Host \"\";Write-Host \"==== $t ====\" -ForegroundColor $c;foreach($x in $l){Write-Host ([string]$x) -ForegroundColor $c}}\n$root=\"C:\\ENGREMIAT_CORE\"\n$tools=Join-Path $root \"tools\\desktop-terminal-operator\"\n$manager=Join-Path $tools \"eng-projects-manager.ps1\"\n$creator=Join-Path $tools \"eng-new-project-safe.ps1\"\nSet-Location $root\nwhile($true){\n  Clear-Host\n  B \"ENGREMIAT TERMINAL OPERATOR\" @(\"Workspace: C:\\ENGREMIAT_CORE\",\"Sistema: MENU_V2_ESTABLE\") \"Cyan\"\n  Write-Host \"\""
+                 },
+                 {
+                     "pattern":  "oN",
+                     "line":  2,
+                     "context":  "$ErrorActionPreference=\"Stop\"\n[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()\nfunction W([string]$m,[string]$c=\"Gray\"){Write-Host $m -ForegroundColor $c}\nfunction B([string]$t,[object[]]$l,[string]$c=\"Cyan\"){Write-Host \"\";Write-Host \"==== $t ====\" -ForegroundColor $c;foreach($x in $l){Write-Host ([string]$x) -ForegroundColor $c}}\n$root=\"C:\\ENGREMIAT_CORE\"\n$tools=Join-Path $root \"tools\\desktop-terminal-operator\"\n$manager=Join-Path $tools \"eng-projects-manager.ps1\"\n$creator=Join-Path $tools \"eng-new-project-safe.ps1\"\nSet-Location $root\nwhile($true){\n  Clear-Host\n  B \"ENGREMIAT TERMINAL OPERATOR\" @(\"Workspace: C:\\ENGREMIAT_CORE\",\"Sistema: MENU_V2_ESTABLE\") \"Cyan\"\n  Write-Host \"\"\n  Write-Host \"GLOBAL\" -ForegroundColor Cyan"
+                 },
+                 {
+                     "pattern":  "oN",
+                     "line":  3,
+                     "context":  "$ErrorActionPreference=\"Stop\"\n[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()\nfunction W([string]$m,[string]$c=\"Gray\"){Write-Host $m -ForegroundColor $c}\nfunction B([string]$t,[object[]]$l,[string]$c=\"Cyan\"){Write-Host \"\";Write-Host \"==== $t ====\" -ForegroundColor $c;foreach($x in $l){Write-Host ([string]$x) -ForegroundColor $c}}\n$root=\"C:\\ENGREMIAT_CORE\"\n$tools=Join-Path $root \"tools\\desktop-terminal-operator\"\n$manager=Join-Path $tools \"eng-projects-manager.ps1\"\n$creator=Join-Path $tools \"eng-new-project-safe.ps1\"\nSet-Location $root\nwhile($true){\n  Clear-Host\n  B \"ENGREMIAT TERMINAL OPERATOR\" @(\"Workspace: C:\\ENGREMIAT_CORE\",\"Sistema: MENU_V2_ESTABLE\") \"Cyan\"\n  Write-Host \"\"\n  Write-Host \"GLOBAL\" -ForegroundColor Cyan\n  Write-Host \" [1] Abrir / gestionar proyectos     p\" -ForegroundColor Green"
+                 },
+                 {
+                     "pattern":  "oN",
+                     "line":  4,
+                     "context":  "$ErrorActionPreference=\"Stop\"\n[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()\nfunction W([string]$m,[string]$c=\"Gray\"){Write-Host $m -ForegroundColor $c}\nfunction B([string]$t,[object[]]$l,[string]$c=\"Cyan\"){Write-Host \"\";Write-Host \"==== $t ====\" -ForegroundColor $c;foreach($x in $l){Write-Host ([string]$x) -ForegroundColor $c}}\n$root=\"C:\\ENGREMIAT_CORE\"\n$tools=Join-Path $root \"tools\\desktop-terminal-operator\"\n$manager=Join-Path $tools \"eng-projects-manager.ps1\"\n$creator=Join-Path $tools \"eng-new-project-safe.ps1\"\nSet-Location $root\nwhile($true){\n  Clear-Host\n  B \"ENGREMIAT TERMINAL OPERATOR\" @(\"Workspace: C:\\ENGREMIAT_CORE\",\"Sistema: MENU_V2_ESTABLE\") \"Cyan\"\n  Write-Host \"\"\n  Write-Host \"GLOBAL\" -ForegroundColor Cyan\n  Write-Host \" [1] Abrir / gestionar proyectos     p\" -ForegroundColor Green\n  Write-Host \" [2] Nuevo proyecto                  n\" -ForegroundColor Green"
+                 },
+                 {
+                     "pattern":  "oN",
+                     "line":  9,
+                     "context":  "function B([string]$t,[object[]]$l,[string]$c=\"Cyan\"){Write-Host \"\";Write-Host \"==== $t ====\" -ForegroundColor $c;foreach($x in $l){Write-Host ([string]$x) -ForegroundColor $c}}\n$root=\"C:\\ENGREMIAT_CORE\"\n$tools=Join-Path $root \"tools\\desktop-terminal-operator\"\n$manager=Join-Path $tools \"eng-projects-manager.ps1\"\n$creator=Join-Path $tools \"eng-new-project-safe.ps1\"\nSet-Location $root\nwhile($true){\n  Clear-Host\n  B \"ENGREMIAT TERMINAL OPERATOR\" @(\"Workspace: C:\\ENGREMIAT_CORE\",\"Sistema: MENU_V2_ESTABLE\") \"Cyan\"\n  Write-Host \"\"\n  Write-Host \"GLOBAL\" -ForegroundColor Cyan\n  Write-Host \" [1] Abrir / gestionar proyectos     p\" -ForegroundColor Green\n  Write-Host \" [2] Nuevo proyecto                  n\" -ForegroundColor Green\n  Write-Host \" [3] Ver proyectos activos/historico\" -ForegroundColor Green\n  Write-Host \" [4] Estado compacto                 e\" -ForegroundColor Yellow\n  Write-Host \" [q] Salir\" -ForegroundColor Yellow\n  Write-Host \"\"\nWrite-Host \"[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar\" -ForegroundColor DarkGray"
+                 },
+                 {
+                     "pattern":  "oN",
+                     "line":  15,
+                     "context":  "while($true){\n  Clear-Host\n  B \"ENGREMIAT TERMINAL OPERATOR\" @(\"Workspace: C:\\ENGREMIAT_CORE\",\"Sistema: MENU_V2_ESTABLE\") \"Cyan\"\n  Write-Host \"\"\n  Write-Host \"GLOBAL\" -ForegroundColor Cyan\n  Write-Host \" [1] Abrir / gestionar proyectos     p\" -ForegroundColor Green\n  Write-Host \" [2] Nuevo proyecto                  n\" -ForegroundColor Green\n  Write-Host \" [3] Ver proyectos activos/historico\" -ForegroundColor Green\n  Write-Host \" [4] Estado compacto                 e\" -ForegroundColor Yellow\n  Write-Host \" [q] Salir\" -ForegroundColor Yellow\n  Write-Host \"\"\nWrite-Host \"[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar\" -ForegroundColor DarkGray\n  Write-Host \"\"\n\nWrite-Host \"\"\nWrite-Host \"[b/q] salir/volver | m = mantenimiento | ? = ayuda | Enter = refrescar\" -ForegroundColor DarkGray\nWrite-Host \"\"\n  $a=Read-Host \"ENGREMIAT\""
+                 },
+                 {
+                     "pattern":  "oN",
+                     "line":  28,
+                     "context":  "\nWrite-Host \"\"\nWrite-Host \"[b/q] salir/volver | m = mantenimiento | ? = ayuda | Enter = refrescar\" -ForegroundColor DarkGray\nWrite-Host \"\"\n  $a=Read-Host \"ENGREMIAT\"\n  if([string]::IsNullOrWhiteSpace($a)){continue}\n  $a=$a.Trim().ToLowerInvariant()\n  if($a -eq \"q\"){break}\n  if($a -eq \"1\" -or $a -eq \"3\" -or $a -eq \"p\" -or $a -eq \"proyectos\"){\n    if(Test-Path -LiteralPath $manager){\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $manager}else{B \"NO_GO\" @(\"No encuentro gestor: $manager\") \"Yellow\";Read-Host \"Enter\"}\n    continue\n  }\n  if($a -eq \"2\" -or $a -eq \"n\" -or $a -eq \"nuevo\"){\n    if(Test-Path -LiteralPath $creator){\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $creator}else{B \"NO_GO\" @(\"No encuentro creador: $creator\") \"Yellow\";Read-Host \"Enter\"}\n    if(Test-Path -LiteralPath $manager){\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $manager}\n    continue\n  }\n  if($a -eq \"4\" -or $a -eq \"e\" -or $a -eq \"estado\"){"
+                 },
+                 {
+                     "pattern":  "oN",
+                     "line":  32,
+                     "context":  "  $a=Read-Host \"ENGREMIAT\"\n  if([string]::IsNullOrWhiteSpace($a)){continue}\n  $a=$a.Trim().ToLowerInvariant()\n  if($a -eq \"q\"){break}\n  if($a -eq \"1\" -or $a -eq \"3\" -or $a -eq \"p\" -or $a -eq \"proyectos\"){\n    if(Test-Path -LiteralPath $manager){\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $manager}else{B \"NO_GO\" @(\"No encuentro gestor: $manager\") \"Yellow\";Read-Host \"Enter\"}\n    continue\n  }\n  if($a -eq \"2\" -or $a -eq \"n\" -or $a -eq \"nuevo\"){\n    if(Test-Path -LiteralPath $creator){\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $creator}else{B \"NO_GO\" @(\"No encuentro creador: $creator\") \"Yellow\";Read-Host \"Enter\"}\n    if(Test-Path -LiteralPath $manager){\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $manager}\n    continue\n  }\n  if($a -eq \"4\" -or $a -eq \"e\" -or $a -eq \"estado\"){\n    $base=\"C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\"\n    $projects=@()\n    if(Test-Path -LiteralPath $base){$projects=@(Get-ChildItem -LiteralPath $base -Directory -Filter \"ENGREMIAT_PROJECT_*\" -ErrorAction SilentlyContinue)}\n    B \"ESTADO COMPACTO\" @(\"projects=$($projects.Count)\",\"manager=$manager\",\"creator=$creator\",\"root=$root\") \"Cyan\""
+                 },
+                 {
+                     "pattern":  "oN",
+                     "line":  33,
+                     "context":  "  if([string]::IsNullOrWhiteSpace($a)){continue}\n  $a=$a.Trim().ToLowerInvariant()\n  if($a -eq \"q\"){break}\n  if($a -eq \"1\" -or $a -eq \"3\" -or $a -eq \"p\" -or $a -eq \"proyectos\"){\n    if(Test-Path -LiteralPath $manager){\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $manager}else{B \"NO_GO\" @(\"No encuentro gestor: $manager\") \"Yellow\";Read-Host \"Enter\"}\n    continue\n  }\n  if($a -eq \"2\" -or $a -eq \"n\" -or $a -eq \"nuevo\"){\n    if(Test-Path -LiteralPath $creator){\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $creator}else{B \"NO_GO\" @(\"No encuentro creador: $creator\") \"Yellow\";Read-Host \"Enter\"}\n    if(Test-Path -LiteralPath $manager){\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $manager}\n    continue\n  }\n  if($a -eq \"4\" -or $a -eq \"e\" -or $a -eq \"estado\"){\n    $base=\"C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\"\n    $projects=@()\n    if(Test-Path -LiteralPath $base){$projects=@(Get-ChildItem -LiteralPath $base -Directory -Filter \"ENGREMIAT_PROJECT_*\" -ErrorAction SilentlyContinue)}\n    B \"ESTADO COMPACTO\" @(\"projects=$($projects.Count)\",\"manager=$manager\",\"creator=$creator\",\"root=$root\") \"Cyan\"\n    Read-Host \"Enter para volver\""
+                 },
+                 {
+                     "pattern":  "oN",
+                     "line":  36,
+                     "context":  "  if($a -eq \"1\" -or $a -eq \"3\" -or $a -eq \"p\" -or $a -eq \"proyectos\"){\n    if(Test-Path -LiteralPath $manager){\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $manager}else{B \"NO_GO\" @(\"No encuentro gestor: $manager\") \"Yellow\";Read-Host \"Enter\"}\n    continue\n  }\n  if($a -eq \"2\" -or $a -eq \"n\" -or $a -eq \"nuevo\"){\n    if(Test-Path -LiteralPath $creator){\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $creator}else{B \"NO_GO\" @(\"No encuentro creador: $creator\") \"Yellow\";Read-Host \"Enter\"}\n    if(Test-Path -LiteralPath $manager){\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $manager}\n    continue\n  }\n  if($a -eq \"4\" -or $a -eq \"e\" -or $a -eq \"estado\"){\n    $base=\"C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\"\n    $projects=@()\n    if(Test-Path -LiteralPath $base){$projects=@(Get-ChildItem -LiteralPath $base -Directory -Filter \"ENGREMIAT_PROJECT_*\" -ErrorAction SilentlyContinue)}\n    B \"ESTADO COMPACTO\" @(\"projects=$($projects.Count)\",\"manager=$manager\",\"creator=$creator\",\"root=$root\") \"Cyan\"\n    Read-Host \"Enter para volver\"\n    continue\n  }\n}"
+                 },
+                 {
+                     "pattern":  "oN",
+                     "line":  37,
+                     "context":  "    if(Test-Path -LiteralPath $manager){\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $manager}else{B \"NO_GO\" @(\"No encuentro gestor: $manager\") \"Yellow\";Read-Host \"Enter\"}\n    continue\n  }\n  if($a -eq \"2\" -or $a -eq \"n\" -or $a -eq \"nuevo\"){\n    if(Test-Path -LiteralPath $creator){\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $creator}else{B \"NO_GO\" @(\"No encuentro creador: $creator\") \"Yellow\";Read-Host \"Enter\"}\n    if(Test-Path -LiteralPath $manager){\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $manager}\n    continue\n  }\n  if($a -eq \"4\" -or $a -eq \"e\" -or $a -eq \"estado\"){\n    $base=\"C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\"\n    $projects=@()\n    if(Test-Path -LiteralPath $base){$projects=@(Get-ChildItem -LiteralPath $base -Directory -Filter \"ENGREMIAT_PROJECT_*\" -ErrorAction SilentlyContinue)}\n    B \"ESTADO COMPACTO\" @(\"projects=$($projects.Count)\",\"manager=$manager\",\"creator=$creator\",\"root=$root\") \"Cyan\"\n    Read-Host \"Enter para volver\"\n    continue\n  }\n}\n"
+                 },
+                 {
+                     "pattern":  "oN",
+                     "line":  38,
+                     "context":  "    continue\n  }\n  if($a -eq \"2\" -or $a -eq \"n\" -or $a -eq \"nuevo\"){\n    if(Test-Path -LiteralPath $creator){\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $creator}else{B \"NO_GO\" @(\"No encuentro creador: $creator\") \"Yellow\";Read-Host \"Enter\"}\n    if(Test-Path -LiteralPath $manager){\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $manager}\n    continue\n  }\n  if($a -eq \"4\" -or $a -eq \"e\" -or $a -eq \"estado\"){\n    $base=\"C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\"\n    $projects=@()\n    if(Test-Path -LiteralPath $base){$projects=@(Get-ChildItem -LiteralPath $base -Directory -Filter \"ENGREMIAT_PROJECT_*\" -ErrorAction SilentlyContinue)}\n    B \"ESTADO COMPACTO\" @(\"projects=$($projects.Count)\",\"manager=$manager\",\"creator=$creator\",\"root=$root\") \"Cyan\"\n    Read-Host \"Enter para volver\"\n    continue\n  }\n}\n"
+                 },
+                 {
+                     "pattern":  "oN",
+                     "line":  43,
+                     "context":  "    continue\n  }\n  if($a -eq \"4\" -or $a -eq \"e\" -or $a -eq \"estado\"){\n    $base=\"C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\"\n    $projects=@()\n    if(Test-Path -LiteralPath $base){$projects=@(Get-ChildItem -LiteralPath $base -Directory -Filter \"ENGREMIAT_PROJECT_*\" -ErrorAction SilentlyContinue)}\n    B \"ESTADO COMPACTO\" @(\"projects=$($projects.Count)\",\"manager=$manager\",\"creator=$creator\",\"root=$root\") \"Cyan\"\n    Read-Host \"Enter para volver\"\n    continue\n  }\n}\n"
+                 },
+                 {
+                     "pattern":  "oN",
+                     "line":  46,
+                     "context":  "    $base=\"C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\"\n    $projects=@()\n    if(Test-Path -LiteralPath $base){$projects=@(Get-ChildItem -LiteralPath $base -Directory -Filter \"ENGREMIAT_PROJECT_*\" -ErrorAction SilentlyContinue)}\n    B \"ESTADO COMPACTO\" @(\"projects=$($projects.Count)\",\"manager=$manager\",\"creator=$creator\",\"root=$root\") \"Cyan\"\n    Read-Host \"Enter para volver\"\n    continue\n  }\n}\n"
+                 },
+                 {
+                     "pattern":  "ENGREMIAT_PROJECT_",
+                     "line":  43,
+                     "context":  "    continue\n  }\n  if($a -eq \"4\" -or $a -eq \"e\" -or $a -eq \"estado\"){\n    $base=\"C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\"\n    $projects=@()\n    if(Test-Path -LiteralPath $base){$projects=@(Get-ChildItem -LiteralPath $base -Directory -Filter \"ENGREMIAT_PROJECT_*\" -ErrorAction SilentlyContinue)}\n    B \"ESTADO COMPACTO\" @(\"projects=$($projects.Count)\",\"manager=$manager\",\"creator=$creator\",\"root=$root\") \"Cyan\"\n    Read-Host \"Enter para volver\"\n    continue\n  }\n}\n"
+                 },
+                 {
+                     "pattern":  "Read-Host",
+                     "line":  27,
+                     "context":  "  Write-Host \"\"\n\nWrite-Host \"\"\nWrite-Host \"[b/q] salir/volver | m = mantenimiento | ? = ayuda | Enter = refrescar\" -ForegroundColor DarkGray\nWrite-Host \"\"\n  $a=Read-Host \"ENGREMIAT\"\n  if([string]::IsNullOrWhiteSpace($a)){continue}\n  $a=$a.Trim().ToLowerInvariant()\n  if($a -eq \"q\"){break}\n  if($a -eq \"1\" -or $a -eq \"3\" -or $a -eq \"p\" -or $a -eq \"proyectos\"){\n    if(Test-Path -LiteralPath $manager){\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $manager}else{B \"NO_GO\" @(\"No encuentro gestor: $manager\") \"Yellow\";Read-Host \"Enter\"}\n    continue\n  }\n  if($a -eq \"2\" -or $a -eq \"n\" -or $a -eq \"nuevo\"){\n    if(Test-Path -LiteralPath $creator){\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $creator}else{B \"NO_GO\" @(\"No encuentro creador: $creator\") \"Yellow\";Read-Host \"Enter\"}\n    if(Test-Path -LiteralPath $manager){\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $manager}\n    continue\n  }"
+                 },
+                 {
+                     "pattern":  "Read-Host",
+                     "line":  32,
+                     "context":  "  $a=Read-Host \"ENGREMIAT\"\n  if([string]::IsNullOrWhiteSpace($a)){continue}\n  $a=$a.Trim().ToLowerInvariant()\n  if($a -eq \"q\"){break}\n  if($a -eq \"1\" -or $a -eq \"3\" -or $a -eq \"p\" -or $a -eq \"proyectos\"){\n    if(Test-Path -LiteralPath $manager){\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $manager}else{B \"NO_GO\" @(\"No encuentro gestor: $manager\") \"Yellow\";Read-Host \"Enter\"}\n    continue\n  }\n  if($a -eq \"2\" -or $a -eq \"n\" -or $a -eq \"nuevo\"){\n    if(Test-Path -LiteralPath $creator){\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $creator}else{B \"NO_GO\" @(\"No encuentro creador: $creator\") \"Yellow\";Read-Host \"Enter\"}\n    if(Test-Path -LiteralPath $manager){\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $manager}\n    continue\n  }\n  if($a -eq \"4\" -or $a -eq \"e\" -or $a -eq \"estado\"){\n    $base=\"C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\"\n    $projects=@()\n    if(Test-Path -LiteralPath $base){$projects=@(Get-ChildItem -LiteralPath $base -Directory -Filter \"ENGREMIAT_PROJECT_*\" -ErrorAction SilentlyContinue)}\n    B \"ESTADO COMPACTO\" @(\"projects=$($projects.Count)\",\"manager=$manager\",\"creator=$creator\",\"root=$root\") \"Cyan\""
+                 },
+                 {
+                     "pattern":  "Read-Host",
+                     "line":  36,
+                     "context":  "  if($a -eq \"1\" -or $a -eq \"3\" -or $a -eq \"p\" -or $a -eq \"proyectos\"){\n    if(Test-Path -LiteralPath $manager){\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $manager}else{B \"NO_GO\" @(\"No encuentro gestor: $manager\") \"Yellow\";Read-Host \"Enter\"}\n    continue\n  }\n  if($a -eq \"2\" -or $a -eq \"n\" -or $a -eq \"nuevo\"){\n    if(Test-Path -LiteralPath $creator){\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $creator}else{B \"NO_GO\" @(\"No encuentro creador: $creator\") \"Yellow\";Read-Host \"Enter\"}\n    if(Test-Path -LiteralPath $manager){\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $manager}\n    continue\n  }\n  if($a -eq \"4\" -or $a -eq \"e\" -or $a -eq \"estado\"){\n    $base=\"C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\"\n    $projects=@()\n    if(Test-Path -LiteralPath $base){$projects=@(Get-ChildItem -LiteralPath $base -Directory -Filter \"ENGREMIAT_PROJECT_*\" -ErrorAction SilentlyContinue)}\n    B \"ESTADO COMPACTO\" @(\"projects=$($projects.Count)\",\"manager=$manager\",\"creator=$creator\",\"root=$root\") \"Cyan\"\n    Read-Host \"Enter para volver\"\n    continue\n  }\n}"
+                 },
+                 {
+                     "pattern":  "Read-Host",
+                     "line":  45,
+                     "context":  "  if($a -eq \"4\" -or $a -eq \"e\" -or $a -eq \"estado\"){\n    $base=\"C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\"\n    $projects=@()\n    if(Test-Path -LiteralPath $base){$projects=@(Get-ChildItem -LiteralPath $base -Directory -Filter \"ENGREMIAT_PROJECT_*\" -ErrorAction SilentlyContinue)}\n    B \"ESTADO COMPACTO\" @(\"projects=$($projects.Count)\",\"manager=$manager\",\"creator=$creator\",\"root=$root\") \"Cyan\"\n    Read-Host \"Enter para volver\"\n    continue\n  }\n}\n"
+                 },
+                 {
+                     "pattern":  "Get-ChildItem",
+                     "line":  43,
+                     "context":  "    continue\n  }\n  if($a -eq \"4\" -or $a -eq \"e\" -or $a -eq \"estado\"){\n    $base=\"C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\"\n    $projects=@()\n    if(Test-Path -LiteralPath $base){$projects=@(Get-ChildItem -LiteralPath $base -Directory -Filter \"ENGREMIAT_PROJECT_*\" -ErrorAction SilentlyContinue)}\n    B \"ESTADO COMPACTO\" @(\"projects=$($projects.Count)\",\"manager=$manager\",\"creator=$creator\",\"root=$root\") \"Cyan\"\n    Read-Host \"Enter para volver\"\n    continue\n  }\n}\n"
+                 },
+                 {
+                     "pattern":  "Trim",
+                     "line":  29,
+                     "context":  "Write-Host \"\"\nWrite-Host \"[b/q] salir/volver | m = mantenimiento | ? = ayuda | Enter = refrescar\" -ForegroundColor DarkGray\nWrite-Host \"\"\n  $a=Read-Host \"ENGREMIAT\"\n  if([string]::IsNullOrWhiteSpace($a)){continue}\n  $a=$a.Trim().ToLowerInvariant()\n  if($a -eq \"q\"){break}\n  if($a -eq \"1\" -or $a -eq \"3\" -or $a -eq \"p\" -or $a -eq \"proyectos\"){\n    if(Test-Path -LiteralPath $manager){\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $manager}else{B \"NO_GO\" @(\"No encuentro gestor: $manager\") \"Yellow\";Read-Host \"Enter\"}\n    continue\n  }\n  if($a -eq \"2\" -or $a -eq \"n\" -or $a -eq \"nuevo\"){\n    if(Test-Path -LiteralPath $creator){\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $creator}else{B \"NO_GO\" @(\"No encuentro creador: $creator\") \"Yellow\";Read-Host \"Enter\"}\n    if(Test-Path -LiteralPath $manager){\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $manager}\n    continue\n  }\n  if($a -eq \"4\" -or $a -eq \"e\" -or $a -eq \"estado\"){\n    $base=\"C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\""
+                 }
+             ],
+    "candidate_functions_count":  2,
+    "candidate_functions":  [
+                                {
+                                    "name":  "W",
+                                    "line":  3,
+                                    "preview":  "function W([string]$m,[string]$c=\"Gray\"){Write-Host $m -ForegroundColor $c}\nfunction B([string]$t,[object[]]$l,[string]$c=\"Cyan\"){Write-Host \"\";Write-Host \"==== $t ====\" -ForegroundColor $c;foreach($x in $l){Write-Host ([string]$x) -ForegroundColor $c}}\n$root=\"C:\\ENGREMIAT_CORE\"\n$tools=Join-Path $root \"tools\\desktop-terminal-operator\"\n$manager=Join-Path $tools \"eng-projects-manager.ps1\"\n$creator=Join-Path $tools \"eng-new-project-safe.ps1\"\nSet-Location $root\nwhile($true){\n  Clear-Host\n  B \"ENGREMIAT TERMINAL OPERATOR\" @(\"Workspace: C:\\ENGREMIAT_CORE\",\"Sistema: MENU_V2_ESTABLE\") \"Cyan\"\n  Write-Host \"\"\n  Write-Host \"GLOBAL\" -ForegroundColor Cyan\n  Write-Host \" [1] Abrir / gestionar proyectos     p\" -ForegroundColor Green\n  Write-Host \" [2] Nuevo proyecto                  n\" -ForegroundColor Green\n  Write-Host \" [3] Ver proyectos activos/historico\" -ForegroundColor Green\n  Write-Host \" [4] Estado compacto                 e\" -ForegroundColor Yellow\n  Write-Host \" [q] Salir\" -ForegroundColor Yellow\n  Write-Host \"\"\nWrite-Host \"[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar\" -ForegroundColor DarkGray\n  Write-Host \"\"\n\nWrite-Host \"\"\nWrite-Host \"[b/q] salir/volver | m = mantenimiento | ? = ayuda | Enter = refrescar\" -ForegroundColor DarkGray\nWrite-Host \"\"\n  $a=Read-Host \"ENGREMIAT\"\n  if([string]::IsNullOrWhiteSpace($a)){continue}\n  $a=$a.Trim().ToLowerInvariant()\n  if($a -eq \"q\"){break}\n  if($a -eq \"1\" -or $a -eq \"3\" -or $a -eq \"p\" -or $a -eq \"proyectos\"){\n    if(Test-Path -LiteralPath $manager){\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $manager}else{B \"NO_GO\" @(\"No encuentro gestor: $manager\") \"Yellow\";Read-Host \"Enter\"}\n    continue\n  }\n  if($a -eq \"2\" -or $a -eq \"n\" -or $a -eq \"nuevo\"){\n    if(Test-Path -LiteralPath $creator){\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $creator}else{B \"NO_GO\" @(\"No encuentro creador: $creator\") \"Yellow\";Read-Host \"Enter\"}\n    if(Test-Path -LiteralPath $manager){\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $manager}\n    continue\n  }\n  if($a -eq \"4\" -or $a -eq \"e\" -or $a -eq \"estado\"){\n    $base=\"C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\"\n    $projects=@()\n    if(Test-Path -LiteralPath $base){$projects=@(Get-ChildItem -LiteralPath $base -Directory -Filter \"ENGREMIAT_PROJECT_*\" -ErrorAction SilentlyContinue)}\n    B \"ESTADO COMPACTO\" @(\"projects=$($projects.Count)\",\"manager=$manager\",\"creator=$creator\",\"root=$root\") \"Cyan\"\n    Read-Host \"Enter para volver\"\n    continue\n  }\n}\n"
+                                },
+                                {
+                                    "name":  "B",
+                                    "line":  4,
+                                    "preview":  "function B([string]$t,[object[]]$l,[string]$c=\"Cyan\"){Write-Host \"\";Write-Host \"==== $t ====\" -ForegroundColor $c;foreach($x in $l){Write-Host ([string]$x) -ForegroundColor $c}}\n$root=\"C:\\ENGREMIAT_CORE\"\n$tools=Join-Path $root \"tools\\desktop-terminal-operator\"\n$manager=Join-Path $tools \"eng-projects-manager.ps1\"\n$creator=Join-Path $tools \"eng-new-project-safe.ps1\"\nSet-Location $root\nwhile($true){\n  Clear-Host\n  B \"ENGREMIAT TERMINAL OPERATOR\" @(\"Workspace: C:\\ENGREMIAT_CORE\",\"Sistema: MENU_V2_ESTABLE\") \"Cyan\"\n  Write-Host \"\"\n  Write-Host \"GLOBAL\" -ForegroundColor Cyan\n  Write-Host \" [1] Abrir / gestionar proyectos     p\" -ForegroundColor Green\n  Write-Host \" [2] Nuevo proyecto                  n\" -ForegroundColor Green\n  Write-Host \" [3] Ver proyectos activos/historico\" -ForegroundColor Green\n  Write-Host \" [4] Estado compacto                 e\" -ForegroundColor Yellow\n  Write-Host \" [q] Salir\" -ForegroundColor Yellow\n  Write-Host \"\"\nWrite-Host \"[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar\" -ForegroundColor DarkGray\n  Write-Host \"\"\n\nWrite-Host \"\"\nWrite-Host \"[b/q] salir/volver | m = mantenimiento | ? = ayuda | Enter = refrescar\" -ForegroundColor DarkGray\nWrite-Host \"\"\n  $a=Read-Host \"ENGREMIAT\"\n  if([string]::IsNullOrWhiteSpace($a)){continue}\n  $a=$a.Trim().ToLowerInvariant()\n  if($a -eq \"q\"){break}\n  if($a -eq \"1\" -or $a -eq \"3\" -or $a -eq \"p\" -or $a -eq \"proyectos\"){\n    if(Test-Path -LiteralPath $manager){\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $manager}else{B \"NO_GO\" @(\"No encuentro gestor: $manager\") \"Yellow\";Read-Host \"Enter\"}\n    continue\n  }\n  if($a -eq \"2\" -or $a -eq \"n\" -or $a -eq \"nuevo\"){\n    if(Test-Path -LiteralPath $creator){\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $creator}else{B \"NO_GO\" @(\"No encuentro creador: $creator\") \"Yellow\";Read-Host \"Enter\"}\n    if(Test-Path -LiteralPath $manager){\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $manager}\n    continue\n  }\n  if($a -eq \"4\" -or $a -eq \"e\" -or $a -eq \"estado\"){\n    $base=\"C:\\Users\\pc\\Desktop\\ENGREMIAT_OPERATOR\"\n    $projects=@()\n    if(Test-Path -LiteralPath $base){$projects=@(Get-ChildItem -LiteralPath $base -Directory -Filter \"ENGREMIAT_PROJECT_*\" -ErrorAction SilentlyContinue)}\n    B \"ESTADO COMPACTO\" @(\"projects=$($projects.Count)\",\"manager=$manager\",\"creator=$creator\",\"root=$root\") \"Cyan\"\n    Read-Host \"Enter para volver\"\n    continue\n  }\n}\n"
+                                }
+                            ],
+    "suspect_lines_count":  8,
+    "suspect_lines":  [
+                          {
+                              "line":  7,
+                              "text":  "$manager=Join-Path $tools \"eng-projects-manager.ps1\""
+                          },
+                          {
+                              "line":  8,
+                              "text":  "$creator=Join-Path $tools \"eng-new-project-safe.ps1\""
+                          },
+                          {
+                              "line":  27,
+                              "text":  "$a=Read-Host \"ENGREMIAT\""
+                          },
+                          {
+                              "line":  29,
+                              "text":  "$a=$a.Trim().ToLowerInvariant()"
+                          },
+                          {
+                              "line":  32,
+                              "text":  "if(Test-Path -LiteralPath $manager){\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $manager}else{B \"NO_GO\" @(\"No encuentro gestor: $manager\") \"Yellow\";Read-Host \"Enter\"}"
+                          },
+                          {
+                              "line":  36,
+                              "text":  "if(Test-Path -LiteralPath $creator){\u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $creator}else{B \"NO_GO\" @(\"No encuentro creador: $creator\") \"Yellow\";Read-Host \"Enter\"}"
+                          },
+                          {
+                              "line":  43,
+                              "text":  "if(Test-Path -LiteralPath $base){$projects=@(Get-ChildItem -LiteralPath $base -Directory -Filter \"ENGREMIAT_PROJECT_*\" -ErrorAction SilentlyContinue)}"
+                          },
+                          {
+                              "line":  45,
+                              "text":  "Read-Host \"Enter para volver\""
+                          }
+                      ],
+    "project_dirs_count":  1,
+    "project_dirs":  [
+                         {
+                             "root":  "C:\\ENGREMIAT_CORE\\projects",
+                             "Name":  "ENGREMIAT_PROJECT_heartbeat_demo",
+                             "FullName":  "C:\\ENGREMIAT_CORE\\projects\\ENGREMIAT_PROJECT_heartbeat_demo",
+                             "LastWriteTime":  "\/Date(1781944676150)\/"
+                         }
+                     ],
+    "decision":  "REVIEW_CHILD_OPERATOR_ACTIVE_PROJECTS_SCREEN",
+    "next":  "E05_PATCH_CHILD_OPERATOR_ERROR_CAPTURE_OR_SAFE_ROUTE_AFTER_REVIEW",
+    "note":  "Diagnostico del script hijo que contiene PROYECTOS ACTIVOS. No modifica repo."
+}
