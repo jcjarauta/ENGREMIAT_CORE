@@ -1,7 +1,7 @@
 ﻿{
     "schema":  "ENGREMIAT_OPERATOR_V2_STATE_REGISTRY_V1",
     "created_at":  "2026-06-22T09:23:43",
-    "updated_at":  "2026-06-22T10:01:09",
+    "updated_at":  "2026-06-22T10:04:26",
     "source_contract":  "documents/operator-v2-self-state-sync/V2_STATE_REGISTRY_CONTRACT.v1.json",
     "objectives":  [
                        {
@@ -69,27 +69,27 @@
                   }
               ],
     "git_state":  {
-                      "head":  "767ebc15",
-                      "rev_sync":  "0\t42",
-                      "tree_clean":  true,
-                      "status_short":  "",
+                      "head":  "199c05b9",
+                      "rev_sync":  "0\t0",
+                      "tree_clean":  false,
+                      "status_short":  "?? documents/operator-v1-safe-build/\n?? documents/operator-v2-push-gate/E02R_COMMIT_PUSH_GATE_EVIDENCE_AND_EXECUTE_AUTHORIZED_PUSH_20260622-100325.md\n?? reports/operator-v1-safe-build/\n?? reports/operator-v2-push-gate/e02r-commit-push-gate-evidence-and-execute-authorized-push-20260622-100325.json",
                       "push_executed":  false
                   },
-    "next_action":  "DECIDIR_PUSH_FINAL_O_INICIAR_CONSTRUCCION_SEGURA_V1",
-    "events_count":  28,
+    "next_action":  "E02_DEFINE_V1_SAFE_BUILD_CONTRACT",
+    "events_count":  29,
     "last_event":  {
-                       "ts":  "2026-06-22T10:01:09",
+                       "ts":  "2026-06-22T10:04:26",
                        "event":  "V2_STATE_UPDATE",
-                       "package":  "ENGREMIAT_OPERATOR_V2_CLOSE_AND_SYNC_001",
-                       "stage":  "E07_REFRESH_FINAL_STATE_AND_CLOSE_OBJECTIVE_NO_PUSH",
-                       "step":  "E07",
+                       "package":  "ENGREMIAT_OPERATOR_V1_SAFE_BUILD_001",
+                       "stage":  "E01_AUDIT_V1_CURRENT_STATE_READONLY",
+                       "step":  "E01",
                        "status":  "PASS",
-                       "report":  "reports\\operator-v2-close-and-sync\\e07-refresh-final-state-and-close-objective-no-push-20260622-100107.json",
-                       "next":  "DECIDIR_PUSH_FINAL_O_INICIAR_CONSTRUCCION_SEGURA_V1",
-                       "readiness":  100,
-                       "summary":  "Objetivo CLOSE_AND_SYNC_001 cerrado: Operador V2 ya tiene pantalla de cierre/sync con Git real, ahead/behind, arbol limpio, gate de push y bloqueo de acciones sensibles. No se ejecuto push.",
-                       "head":  "767ebc15",
-                       "rev_sync":  "0\t42",
-                       "tree_clean":  true
+                       "report":  "reports\\operator-v1-safe-build\\e01-audit-v1-current-state-readonly-20260622-100419.json",
+                       "next":  "E02_DEFINE_V1_SAFE_BUILD_CONTRACT",
+                       "readiness":  10,
+                       "summary":  "Auditado estado actual para construir V1 de forma segura: launcher, opciones V1/V2, Git limpio y candidatos de pantallas sin modificar archivos.",
+                       "head":  "199c05b9",
+                       "rev_sync":  "0\t0",
+                       "tree_clean":  false
                    }
 }

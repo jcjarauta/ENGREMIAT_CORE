@@ -1,27 +1,27 @@
 ﻿{
     "schema":  "ENGREMIAT_OPERATOR_V2_STATE_LATEST_V1",
-    "updated_at":  "2026-06-22T10:01:09",
+    "updated_at":  "2026-06-22T10:04:26",
     "active_objective":  {
-                             "id":  "ENGREMIAT_OPERATOR_V2_CLOSE_AND_SYNC_001",
+                             "id":  "ENGREMIAT_OPERATOR_V1_SAFE_BUILD_001",
                              "title":  "Operador V2 self-state sync",
                              "status":  "ACTIVE",
                              "purpose":  "Mantener V2 actualizado desde cada bloque cerrado.",
-                             "active_stage":  "E07_REFRESH_FINAL_STATE_AND_CLOSE_OBJECTIVE_NO_PUSH",
-                             "readiness":  100,
-                             "next_action":  "DECIDIR_PUSH_FINAL_O_INICIAR_CONSTRUCCION_SEGURA_V1"
+                             "active_stage":  "E01_AUDIT_V1_CURRENT_STATE_READONLY",
+                             "readiness":  10,
+                             "next_action":  "E02_DEFINE_V1_SAFE_BUILD_CONTRACT"
                          },
-    "last_stage":  "E07_REFRESH_FINAL_STATE_AND_CLOSE_OBJECTIVE_NO_PUSH",
-    "last_step":  "E07",
+    "last_stage":  "E01_AUDIT_V1_CURRENT_STATE_READONLY",
+    "last_step":  "E01",
     "last_status":  "PASS",
-    "last_report":  "reports\\operator-v2-close-and-sync\\e07-refresh-final-state-and-close-objective-no-push-20260622-100107.json",
-    "readiness":  100,
+    "last_report":  "reports\\operator-v1-safe-build\\e01-audit-v1-current-state-readonly-20260622-100419.json",
+    "readiness":  10,
     "git_state":  {
-                      "head":  "767ebc15",
-                      "rev_sync":  "0\t42",
-                      "tree_clean":  true,
-                      "status_short":  "",
+                      "head":  "199c05b9",
+                      "rev_sync":  "0\t0",
+                      "tree_clean":  false,
+                      "status_short":  "?? documents/operator-v1-safe-build/\n?? documents/operator-v2-push-gate/E02R_COMMIT_PUSH_GATE_EVIDENCE_AND_EXECUTE_AUTHORIZED_PUSH_20260622-100325.md\n?? reports/operator-v1-safe-build/\n?? reports/operator-v2-push-gate/e02r-commit-push-gate-evidence-and-execute-authorized-push-20260622-100325.json",
                       "push_executed":  false
                   },
-    "next_action":  "DECIDIR_PUSH_FINAL_O_INICIAR_CONSTRUCCION_SEGURA_V1",
-    "human_summary":  "Objetivo CLOSE_AND_SYNC_001 cerrado: Operador V2 ya tiene pantalla de cierre/sync con Git real, ahead/behind, arbol limpio, gate de push y bloqueo de acciones sensibles. No se ejecuto push."
+    "next_action":  "E02_DEFINE_V1_SAFE_BUILD_CONTRACT",
+    "human_summary":  "Auditado estado actual para construir V1 de forma segura: launcher, opciones V1/V2, Git limpio y candidatos de pantallas sin modificar archivos."
 }
