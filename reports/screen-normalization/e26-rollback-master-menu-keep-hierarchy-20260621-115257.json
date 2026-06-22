@@ -1,0 +1,20 @@
+﻿{
+    "package":  "ENGREMIAT_SCREEN_NORMALIZATION_001",
+    "stage":  "E26_ROLLBACK_MASTER_MENU_RENUMBER_KEEP_HIERARCHY",
+    "status":  "PASS",
+    "target":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+    "restored_from":  "C:\\ENGREMIAT_CORE\\backups\\screen-normalization\\ENGREMIAT.before-e26-master-renumber-20260621-102303.ps1",
+    "safety_backup":  "C:\\ENGREMIAT_CORE\\backups\\screen-normalization\\ENGREMIAT.before-e26-rollback-safety-20260621-115257.ps1",
+    "parse_after":  true,
+    "hierarchy_restored":  true,
+    "git_write":  false,
+    "menu":  [
+                 "[1] Inicio operador",
+                 "[2] Proyectos",
+                 "[3] Memoria y documentacion",
+                 "[4] Data Intake",
+                 "[5] Health launchers"
+             ],
+    "created_at":  "2026-06-21T11:52:57",
+    "next":  "FIX_DUPLICATED_ROUTE_WITHOUT_RENUMBERING"
+}

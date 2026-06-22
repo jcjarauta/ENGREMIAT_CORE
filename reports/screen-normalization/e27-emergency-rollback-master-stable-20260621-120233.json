@@ -1,0 +1,12 @@
+﻿{
+    "package":  "ENGREMIAT_SCREEN_NORMALIZATION_001",
+    "stage":  "E27_EMERGENCY_ROLLBACK_MASTER_TO_STABLE_BACKUP",
+    "status":  "PASS",
+    "target":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+    "restored_from":  "C:\\ENGREMIAT_CORE\\backups\\screen-normalization\\ENGREMIAT.ps1.before-e14r2-m-card-assistant-20260621-064606.ps1",
+    "safety_backup":  "C:\\ENGREMIAT_CORE\\backups\\screen-normalization\\ENGREMIAT.before-e27-emergency-rollback-safety-20260621-120233.ps1",
+    "parse_after":  true,
+    "smoke":  true,
+    "git_write":  false,
+    "next":  "TEST_MASTER_LAUNCHER_AND_OPERATOR_ONLY_NO_PATCH"
+}

@@ -1,0 +1,42 @@
+{
+    "schema":  "engremiat.general_launcher_route_gate_audit.v1",
+    "package_id":  "ENGREMIAT_SCREEN_NORMALIZER_GENERAL_LAUNCHER_ROUTE_GATE_001",
+    "stage":  "E01_AUDIT_GENERAL_LAUNCHER_ROUTE_INSERTION_GATE_READONLY",
+    "created_at":  "2026-06-20T18:46:40",
+    "status":  "PASS",
+    "mode":  "READONLY_ROUTE_INSERTION_GATE_NO_APPLY",
+    "launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1",
+    "launcher_sha256":  "D0E71B7CD08317AAE25EB6A39DCB3EB674F7EB5C8FC6C42693C360026C0D9EB8",
+    "launcher_parse_ok":  true,
+    "adapter":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-subscreen-routing-adapter\\adapter\\ENGREMIAT-SUBSCREEN-ROUTING-ADAPTER.isolated.ps1",
+    "adapter_sha256":  "1D92C30A084217126546DD4D6EFA221AED3D99B587A2DA8A307B5639B053BE61",
+    "adapter_close":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-subscreen-routing-adapter\\close\\subscreen-routing-adapter-close.latest.json",
+    "already_linked":  false,
+    "menu_candidates_count":  5,
+    "switch_candidates_count":  2,
+    "menu_anchor":  {
+                        "line":  98,
+                        "text":  "    W \"7 = tarjetas de modulo\" White"
+                    },
+    "switch_anchor":  {
+                          "line":  106,
+                          "text":  "    $cmd=Read-Host \"ENGREMIAT\""
+                      },
+    "proposed_option_number":  9,
+    "proposed_menu_line":  "Write-Host \u0027 [9] Adapter subpantallas normalizadas\u0027",
+    "proposed_route_block":  [
+                                 "    \u00279\u0027 {",
+                                 "      \u0026 powershell -NoProfile -ExecutionPolicy Bypass -File \u0027C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-subscreen-routing-adapter\\adapter\\ENGREMIAT-SUBSCREEN-ROUTING-ADAPTER.isolated.ps1\u0027",
+                                 "      continue",
+                                 "    }"
+                             ],
+    "decision":  "GATE_READY_FOR_HUMAN_REVIEW_NO_APPLY",
+    "patch_existing_launchers":  false,
+    "registry_write":  false,
+    "migration_applied":  false,
+    "worker":  false,
+    "browser":  false,
+    "network":  false,
+    "git":  false,
+    "next":  "E02_PREPARE_EXPLICIT_ROUTE_INSERTION_GATE_NO_APPLY"
+}

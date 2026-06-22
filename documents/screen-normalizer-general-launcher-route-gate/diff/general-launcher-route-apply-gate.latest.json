@@ -1,0 +1,53 @@
+{
+    "schema":  "engremiat.general_launcher_route_apply_gate.stable.v1",
+    "package_id":  "ENGREMIAT_SCREEN_NORMALIZER_GENERAL_LAUNCHER_ROUTE_GATE_001",
+    "stage":  "E02B_PREPARE_ROUTE_INSERTION_DIFF_STABLE_NO_APPLY",
+    "created_at":  "2026-06-20T18:48:31",
+    "status":  "PENDING_EXPLICIT_HUMAN_AUTHORIZATION",
+    "decision":  "STABLE_DIFF_BACKUP_ROLLBACK_READY_NO_APPLY",
+    "launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1",
+    "launcher_sha256_before":  "D0E71B7CD08317AAE25EB6A39DCB3EB674F7EB5C8FC6C42693C360026C0D9EB8",
+    "adapter":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-subscreen-routing-adapter\\adapter\\ENGREMIAT-SUBSCREEN-ROUTING-ADAPTER.isolated.ps1",
+    "adapter_sha256":  "1D92C30A084217126546DD4D6EFA221AED3D99B587A2DA8A307B5639B053BE61",
+    "planned_launcher":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-general-launcher-route-gate\\diff\\ENGREMIAT-LAUNCHER-ACTUAL.route-adapter-planned-stable-20260620-184831.ps1",
+    "planned_launcher_latest":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-general-launcher-route-gate\\diff\\ENGREMIAT-LAUNCHER-ACTUAL.route-adapter-planned.latest.ps1",
+    "planned_launcher_sha256":  "6B3F4F93847D65BD95052AA69AA15095D46240FBAA215E94F8570C36B2029E3E",
+    "planned_parse_ok":  true,
+    "proposed_option_number":  9,
+    "diff_md":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-general-launcher-route-gate\\diff\\general-launcher-route-insertion-diff.latest.md",
+    "backup_plan":  {
+                        "backup_dir":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-general-launcher-route-gate\\backup",
+                        "backup_file_pattern":  "ENGREMIAT-LAUNCHER-ACTUAL.backup-\u003ctimestamp\u003e.ps1",
+                        "backup_before_write":  true
+                    },
+    "rollback_plan":  {
+                          "restore_backup_on_parse_fail":  true,
+                          "restore_backup_on_manual_no_go":  true,
+                          "rollback_scope":  "ONLY_EXPLICIT_LAUNCHER_FILE"
+                      },
+    "authorization_required":  true,
+    "authorization_status":  "PENDING_EXPLICIT_HUMAN_AUTHORIZATION",
+    "required_phrase":  "AUTORIZO_APLICAR_RUTA_ADAPTER_EN_LAUNCHER_GENERAL",
+    "apply_now":  false,
+    "allowed_on_apply":  [
+                             "backup exact launcher",
+                             "apply planned candidate or targeted route insertion",
+                             "parse validate launcher",
+                             "restore backup on failure",
+                             "write evidence"
+                         ],
+    "blocked":  [
+                    "touch INICIO",
+                    "write registry",
+                    "git",
+                    "network",
+                    "workers",
+                    "browser",
+                    "replace unrelated launchers"
+                ],
+    "patch_existing_launchers":  false,
+    "registry_write":  false,
+    "migration_applied":  false,
+    "git":  false,
+    "next":  "E03_APPLY_ROUTE_INSERTION_AFTER_EXPLICIT_AUTHORIZATION_OR_CLOSE"
+}

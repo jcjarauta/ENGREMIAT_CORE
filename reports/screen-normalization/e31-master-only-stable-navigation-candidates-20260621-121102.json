@@ -1,0 +1,281 @@
+﻿{
+    "package":  "ENGREMIAT_SCREEN_NORMALIZATION_001",
+    "stage":  "E31_AUDIT_MASTER_ONLY_STABLE_NAVIGATION_CANDIDATES_READONLY",
+    "status":  "PASS",
+    "git_write":  false,
+    "master":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+    "candidates_count":  8,
+    "recommended":  {
+                        "file":  "C:\\ENGREMIAT_CORE\\backups\\screen-normalization\\ENGREMIAT.ps1.before-e14-m-card-assistant-20260621-064534.ps1",
+                        "last_write":  "2026-06-21T06:41:59",
+                        "score":  40,
+                        "parse_ok":  true,
+                        "master_like":  true,
+                        "menu_ok":  true,
+                        "has_common_legend":  true,
+                        "launcher_actual_fallbacks":  3,
+                        "distinct_resolved_count":  2,
+                        "route_labels":  {
+                                             "1":  "INICIO_OPERADOR",
+                                             "2":  "PROYECTOS",
+                                             "3":  "MEMORIA_DOCUMENTACION",
+                                             "4":  "DATA_INTAKE",
+                                             "5":  "HEALTH"
+                                         },
+                        "resolved_routes":  {
+                                                "1":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1",
+                                                "2":  "",
+                                                "3":  "",
+                                                "4":  "",
+                                                "5":  "C:\\ENGREMIAT_CORE\\tools\\health\\health-launchers.ps1"
+                                            },
+                        "route_1":  "Invoke-ResolvedLauncher \"Inicio operador\" @(\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"ENGREMIAT_OPERATOR.ps1\",\"operator.ps1\",\"launcher.ps1\") @(\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"launchers\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"tools\\operator\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"scripts\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\") }",
+                        "route_2":  "Invoke-ResolvedLauncher \"Proyectos\" @(\"projects.ps1\",\"ENGREMIAT-PROJECTS.ps1\",\"project-launcher.ps1\",\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\") @(\"launchers\\projects.ps1\",\"tools\\operator\\projects.ps1\",\"operator\\projects.ps1\",\"ENGREMIAT-PROJECTS.ps1\",\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\") }",
+                        "route_3":  "Invoke-ResolvedLauncher \"Memoria y documentacion\" @(\"memory-docs.ps1\",\"ENGREMIAT-MEMORY-DOCS.ps1\",\"docs.ps1\",\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\") @(\"launchers\\memory-docs.ps1\",\"tools\\operator\\memory-docs.ps1\",\"ENGREMIAT-MEMORY-DOCS.ps1\",\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\") }",
+                        "route_4":  "Invoke-ResolvedLauncher \"Data Intake\" @(\"data-intake.ps1\",\"ENGREMIAT-DATA-INTAKE.ps1\",\"intake.ps1\") @(\"launchers\\data-intake.ps1\",\"tools\\operator\\data-intake.ps1\",\"ENGREMIAT-DATA-INTAKE.ps1\") }",
+                        "route_5":  "Invoke-ResolvedLauncher \"Health launchers\" @(\"health-launchers.ps1\",\"ENGREMIAT-HEALTH-LAUNCHERS.ps1\",\"health.ps1\") @(\"tools\\health\\health-launchers.ps1\",\"launchers\\health-launchers.ps1\",\"ENGREMIAT-HEALTH-LAUNCHERS.ps1\") }"
+                    },
+    "top_candidates":  [
+                           {
+                               "file":  "C:\\ENGREMIAT_CORE\\backups\\screen-normalization\\ENGREMIAT.ps1.before-e14-m-card-assistant-20260621-064534.ps1",
+                               "last_write":  "2026-06-21T06:41:59",
+                               "score":  40,
+                               "parse_ok":  true,
+                               "master_like":  true,
+                               "menu_ok":  true,
+                               "has_common_legend":  true,
+                               "launcher_actual_fallbacks":  3,
+                               "distinct_resolved_count":  2,
+                               "route_labels":  {
+                                                    "1":  "INICIO_OPERADOR",
+                                                    "2":  "PROYECTOS",
+                                                    "3":  "MEMORIA_DOCUMENTACION",
+                                                    "4":  "DATA_INTAKE",
+                                                    "5":  "HEALTH"
+                                                },
+                               "resolved_routes":  {
+                                                       "1":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1",
+                                                       "2":  "",
+                                                       "3":  "",
+                                                       "4":  "",
+                                                       "5":  "C:\\ENGREMIAT_CORE\\tools\\health\\health-launchers.ps1"
+                                                   },
+                               "route_1":  "Invoke-ResolvedLauncher \"Inicio operador\" @(\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"ENGREMIAT_OPERATOR.ps1\",\"operator.ps1\",\"launcher.ps1\") @(\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"launchers\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"tools\\operator\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"scripts\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\") }",
+                               "route_2":  "Invoke-ResolvedLauncher \"Proyectos\" @(\"projects.ps1\",\"ENGREMIAT-PROJECTS.ps1\",\"project-launcher.ps1\",\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\") @(\"launchers\\projects.ps1\",\"tools\\operator\\projects.ps1\",\"operator\\projects.ps1\",\"ENGREMIAT-PROJECTS.ps1\",\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\") }",
+                               "route_3":  "Invoke-ResolvedLauncher \"Memoria y documentacion\" @(\"memory-docs.ps1\",\"ENGREMIAT-MEMORY-DOCS.ps1\",\"docs.ps1\",\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\") @(\"launchers\\memory-docs.ps1\",\"tools\\operator\\memory-docs.ps1\",\"ENGREMIAT-MEMORY-DOCS.ps1\",\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\") }",
+                               "route_4":  "Invoke-ResolvedLauncher \"Data Intake\" @(\"data-intake.ps1\",\"ENGREMIAT-DATA-INTAKE.ps1\",\"intake.ps1\") @(\"launchers\\data-intake.ps1\",\"tools\\operator\\data-intake.ps1\",\"ENGREMIAT-DATA-INTAKE.ps1\") }",
+                               "route_5":  "Invoke-ResolvedLauncher \"Health launchers\" @(\"health-launchers.ps1\",\"ENGREMIAT-HEALTH-LAUNCHERS.ps1\",\"health.ps1\") @(\"tools\\health\\health-launchers.ps1\",\"launchers\\health-launchers.ps1\",\"ENGREMIAT-HEALTH-LAUNCHERS.ps1\") }"
+                           },
+                           {
+                               "file":  "C:\\ENGREMIAT_CORE\\backups\\screen-normalization\\ENGREMIAT.ps1.before-e14-fix-visible-legend-20260621-064819.ps1",
+                               "last_write":  "2026-06-21T06:46:06",
+                               "score":  15,
+                               "parse_ok":  true,
+                               "master_like":  true,
+                               "menu_ok":  true,
+                               "has_common_legend":  false,
+                               "launcher_actual_fallbacks":  3,
+                               "distinct_resolved_count":  2,
+                               "route_labels":  {
+                                                    "1":  "INICIO_OPERADOR",
+                                                    "2":  "PROYECTOS",
+                                                    "3":  "MEMORIA_DOCUMENTACION",
+                                                    "4":  "DATA_INTAKE",
+                                                    "5":  "HEALTH"
+                                                },
+                               "resolved_routes":  {
+                                                       "1":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1",
+                                                       "2":  "",
+                                                       "3":  "",
+                                                       "4":  "",
+                                                       "5":  "C:\\ENGREMIAT_CORE\\tools\\health\\health-launchers.ps1"
+                                                   },
+                               "route_1":  "Invoke-ResolvedLauncher \"Inicio operador\" @(\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"ENGREMIAT_OPERATOR.ps1\",\"operator.ps1\",\"launcher.ps1\") @(\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"launchers\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"tools\\operator\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"scripts\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\") }",
+                               "route_2":  "Invoke-ResolvedLauncher \"Proyectos\" @(\"projects.ps1\",\"ENGREMIAT-PROJECTS.ps1\",\"project-launcher.ps1\",\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\") @(\"launchers\\projects.ps1\",\"tools\\operator\\projects.ps1\",\"operator\\projects.ps1\",\"ENGREMIAT-PROJECTS.ps1\",\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\") }",
+                               "route_3":  "Invoke-ResolvedLauncher \"Memoria y documentacion\" @(\"memory-docs.ps1\",\"ENGREMIAT-MEMORY-DOCS.ps1\",\"docs.ps1\",\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\") @(\"launchers\\memory-docs.ps1\",\"tools\\operator\\memory-docs.ps1\",\"ENGREMIAT-MEMORY-DOCS.ps1\",\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\") }",
+                               "route_4":  "Invoke-ResolvedLauncher \"Data Intake\" @(\"data-intake.ps1\",\"ENGREMIAT-DATA-INTAKE.ps1\",\"intake.ps1\") @(\"launchers\\data-intake.ps1\",\"tools\\operator\\data-intake.ps1\",\"ENGREMIAT-DATA-INTAKE.ps1\") }",
+                               "route_5":  "Invoke-ResolvedLauncher \"Health launchers\" @(\"health-launchers.ps1\",\"ENGREMIAT-HEALTH-LAUNCHERS.ps1\",\"health.ps1\") @(\"tools\\health\\health-launchers.ps1\",\"launchers\\health-launchers.ps1\",\"ENGREMIAT-HEALTH-LAUNCHERS.ps1\") }"
+                           },
+                           {
+                               "file":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+                               "last_write":  "2026-06-21T06:41:59",
+                               "score":  40,
+                               "parse_ok":  true,
+                               "master_like":  true,
+                               "menu_ok":  true,
+                               "has_common_legend":  true,
+                               "launcher_actual_fallbacks":  3,
+                               "distinct_resolved_count":  2,
+                               "route_labels":  {
+                                                    "1":  "INICIO_OPERADOR",
+                                                    "2":  "PROYECTOS",
+                                                    "3":  "MEMORIA_DOCUMENTACION",
+                                                    "4":  "DATA_INTAKE",
+                                                    "5":  "HEALTH"
+                                                },
+                               "resolved_routes":  {
+                                                       "1":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1",
+                                                       "2":  "",
+                                                       "3":  "",
+                                                       "4":  "",
+                                                       "5":  "C:\\ENGREMIAT_CORE\\tools\\health\\health-launchers.ps1"
+                                                   },
+                               "route_1":  "Invoke-ResolvedLauncher \"Inicio operador\" @(\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"ENGREMIAT_OPERATOR.ps1\",\"operator.ps1\",\"launcher.ps1\") @(\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"launchers\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"tools\\operator\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"scripts\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\") }",
+                               "route_2":  "Invoke-ResolvedLauncher \"Proyectos\" @(\"projects.ps1\",\"ENGREMIAT-PROJECTS.ps1\",\"project-launcher.ps1\",\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\") @(\"launchers\\projects.ps1\",\"tools\\operator\\projects.ps1\",\"operator\\projects.ps1\",\"ENGREMIAT-PROJECTS.ps1\",\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\") }",
+                               "route_3":  "Invoke-ResolvedLauncher \"Memoria y documentacion\" @(\"memory-docs.ps1\",\"ENGREMIAT-MEMORY-DOCS.ps1\",\"docs.ps1\",\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\") @(\"launchers\\memory-docs.ps1\",\"tools\\operator\\memory-docs.ps1\",\"ENGREMIAT-MEMORY-DOCS.ps1\",\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\") }",
+                               "route_4":  "Invoke-ResolvedLauncher \"Data Intake\" @(\"data-intake.ps1\",\"ENGREMIAT-DATA-INTAKE.ps1\",\"intake.ps1\") @(\"launchers\\data-intake.ps1\",\"tools\\operator\\data-intake.ps1\",\"ENGREMIAT-DATA-INTAKE.ps1\") }",
+                               "route_5":  "Invoke-ResolvedLauncher \"Health launchers\" @(\"health-launchers.ps1\",\"ENGREMIAT-HEALTH-LAUNCHERS.ps1\",\"health.ps1\") @(\"tools\\health\\health-launchers.ps1\",\"launchers\\health-launchers.ps1\",\"ENGREMIAT-HEALTH-LAUNCHERS.ps1\") }"
+                           },
+                           {
+                               "file":  "C:\\ENGREMIAT_CORE\\backups\\screen-normalization\\ENGREMIAT.ps1.before-e14r2-m-card-assistant-20260621-064606.ps1",
+                               "last_write":  "2026-06-21T06:41:59",
+                               "score":  40,
+                               "parse_ok":  true,
+                               "master_like":  true,
+                               "menu_ok":  true,
+                               "has_common_legend":  true,
+                               "launcher_actual_fallbacks":  3,
+                               "distinct_resolved_count":  2,
+                               "route_labels":  {
+                                                    "1":  "INICIO_OPERADOR",
+                                                    "2":  "PROYECTOS",
+                                                    "3":  "MEMORIA_DOCUMENTACION",
+                                                    "4":  "DATA_INTAKE",
+                                                    "5":  "HEALTH"
+                                                },
+                               "resolved_routes":  {
+                                                       "1":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1",
+                                                       "2":  "",
+                                                       "3":  "",
+                                                       "4":  "",
+                                                       "5":  "C:\\ENGREMIAT_CORE\\tools\\health\\health-launchers.ps1"
+                                                   },
+                               "route_1":  "Invoke-ResolvedLauncher \"Inicio operador\" @(\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"ENGREMIAT_OPERATOR.ps1\",\"operator.ps1\",\"launcher.ps1\") @(\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"launchers\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"tools\\operator\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"scripts\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\") }",
+                               "route_2":  "Invoke-ResolvedLauncher \"Proyectos\" @(\"projects.ps1\",\"ENGREMIAT-PROJECTS.ps1\",\"project-launcher.ps1\",\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\") @(\"launchers\\projects.ps1\",\"tools\\operator\\projects.ps1\",\"operator\\projects.ps1\",\"ENGREMIAT-PROJECTS.ps1\",\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\") }",
+                               "route_3":  "Invoke-ResolvedLauncher \"Memoria y documentacion\" @(\"memory-docs.ps1\",\"ENGREMIAT-MEMORY-DOCS.ps1\",\"docs.ps1\",\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\") @(\"launchers\\memory-docs.ps1\",\"tools\\operator\\memory-docs.ps1\",\"ENGREMIAT-MEMORY-DOCS.ps1\",\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\") }",
+                               "route_4":  "Invoke-ResolvedLauncher \"Data Intake\" @(\"data-intake.ps1\",\"ENGREMIAT-DATA-INTAKE.ps1\",\"intake.ps1\") @(\"launchers\\data-intake.ps1\",\"tools\\operator\\data-intake.ps1\",\"ENGREMIAT-DATA-INTAKE.ps1\") }",
+                               "route_5":  "Invoke-ResolvedLauncher \"Health launchers\" @(\"health-launchers.ps1\",\"ENGREMIAT-HEALTH-LAUNCHERS.ps1\",\"health.ps1\") @(\"tools\\health\\health-launchers.ps1\",\"launchers\\health-launchers.ps1\",\"ENGREMIAT-HEALTH-LAUNCHERS.ps1\") }"
+                           },
+                           {
+                               "file":  "C:\\ENGREMIAT_CORE\\backups\\screen-normalization\\ENGREMIAT.before-e26-master-renumber-20260621-102303.ps1",
+                               "last_write":  "2026-06-21T06:48:19",
+                               "score":  40,
+                               "parse_ok":  true,
+                               "master_like":  true,
+                               "menu_ok":  true,
+                               "has_common_legend":  true,
+                               "launcher_actual_fallbacks":  3,
+                               "distinct_resolved_count":  2,
+                               "route_labels":  {
+                                                    "1":  "INICIO_OPERADOR",
+                                                    "2":  "PROYECTOS",
+                                                    "3":  "MEMORIA_DOCUMENTACION",
+                                                    "4":  "DATA_INTAKE",
+                                                    "5":  "HEALTH"
+                                                },
+                               "resolved_routes":  {
+                                                       "1":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1",
+                                                       "2":  "",
+                                                       "3":  "",
+                                                       "4":  "",
+                                                       "5":  "C:\\ENGREMIAT_CORE\\tools\\health\\health-launchers.ps1"
+                                                   },
+                               "route_1":  "Invoke-ResolvedLauncher \"Inicio operador\" @(\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"ENGREMIAT_OPERATOR.ps1\",\"operator.ps1\",\"launcher.ps1\") @(\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"launchers\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"tools\\operator\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"scripts\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\") }",
+                               "route_2":  "Invoke-ResolvedLauncher \"Proyectos\" @(\"projects.ps1\",\"ENGREMIAT-PROJECTS.ps1\",\"project-launcher.ps1\",\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\") @(\"launchers\\projects.ps1\",\"tools\\operator\\projects.ps1\",\"operator\\projects.ps1\",\"ENGREMIAT-PROJECTS.ps1\",\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\") }",
+                               "route_3":  "Invoke-ResolvedLauncher \"Memoria y documentacion\" @(\"memory-docs.ps1\",\"ENGREMIAT-MEMORY-DOCS.ps1\",\"docs.ps1\",\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\") @(\"launchers\\memory-docs.ps1\",\"tools\\operator\\memory-docs.ps1\",\"ENGREMIAT-MEMORY-DOCS.ps1\",\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\") }",
+                               "route_4":  "Invoke-ResolvedLauncher \"Data Intake\" @(\"data-intake.ps1\",\"ENGREMIAT-DATA-INTAKE.ps1\",\"intake.ps1\") @(\"launchers\\data-intake.ps1\",\"tools\\operator\\data-intake.ps1\",\"ENGREMIAT-DATA-INTAKE.ps1\") }",
+                               "route_5":  "Invoke-ResolvedLauncher \"Health launchers\" @(\"health-launchers.ps1\",\"ENGREMIAT-HEALTH-LAUNCHERS.ps1\",\"health.ps1\") @(\"tools\\health\\health-launchers.ps1\",\"launchers\\health-launchers.ps1\",\"ENGREMIAT-HEALTH-LAUNCHERS.ps1\") }"
+                           },
+                           {
+                               "file":  "C:\\ENGREMIAT_CORE\\backups\\screen-normalization\\ENGREMIAT.before-e12-bq-exit-20260621-064159.ps1",
+                               "last_write":  "2026-06-21T06:30:23",
+                               "score":  40,
+                               "parse_ok":  true,
+                               "master_like":  true,
+                               "menu_ok":  true,
+                               "has_common_legend":  true,
+                               "launcher_actual_fallbacks":  3,
+                               "distinct_resolved_count":  2,
+                               "route_labels":  {
+                                                    "1":  "INICIO_OPERADOR",
+                                                    "2":  "PROYECTOS",
+                                                    "3":  "MEMORIA_DOCUMENTACION",
+                                                    "4":  "DATA_INTAKE",
+                                                    "5":  "HEALTH"
+                                                },
+                               "resolved_routes":  {
+                                                       "1":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1",
+                                                       "2":  "",
+                                                       "3":  "",
+                                                       "4":  "",
+                                                       "5":  "C:\\ENGREMIAT_CORE\\tools\\health\\health-launchers.ps1"
+                                                   },
+                               "route_1":  "Invoke-ResolvedLauncher \"Inicio operador\" @(\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"ENGREMIAT_OPERATOR.ps1\",\"operator.ps1\",\"launcher.ps1\") @(\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"launchers\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"tools\\operator\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"scripts\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\") }",
+                               "route_2":  "Invoke-ResolvedLauncher \"Proyectos\" @(\"projects.ps1\",\"ENGREMIAT-PROJECTS.ps1\",\"project-launcher.ps1\",\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\") @(\"launchers\\projects.ps1\",\"tools\\operator\\projects.ps1\",\"operator\\projects.ps1\",\"ENGREMIAT-PROJECTS.ps1\",\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\") }",
+                               "route_3":  "Invoke-ResolvedLauncher \"Memoria y documentacion\" @(\"memory-docs.ps1\",\"ENGREMIAT-MEMORY-DOCS.ps1\",\"docs.ps1\",\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\") @(\"launchers\\memory-docs.ps1\",\"tools\\operator\\memory-docs.ps1\",\"ENGREMIAT-MEMORY-DOCS.ps1\",\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\") }",
+                               "route_4":  "Invoke-ResolvedLauncher \"Data Intake\" @(\"data-intake.ps1\",\"ENGREMIAT-DATA-INTAKE.ps1\",\"intake.ps1\") @(\"launchers\\data-intake.ps1\",\"tools\\operator\\data-intake.ps1\",\"ENGREMIAT-DATA-INTAKE.ps1\") }",
+                               "route_5":  "Invoke-ResolvedLauncher \"Health launchers\" @(\"health-launchers.ps1\",\"ENGREMIAT-HEALTH-LAUNCHERS.ps1\",\"health.ps1\") @(\"tools\\health\\health-launchers.ps1\",\"launchers\\health-launchers.ps1\",\"ENGREMIAT-HEALTH-LAUNCHERS.ps1\") }"
+                           },
+                           {
+                               "file":  "C:\\ENGREMIAT_CORE\\backups\\screen-normalization\\ENGREMIAT.before-e27-emergency-rollback-safety-20260621-120233.ps1",
+                               "last_write":  "2026-06-21T06:48:19",
+                               "score":  40,
+                               "parse_ok":  true,
+                               "master_like":  true,
+                               "menu_ok":  true,
+                               "has_common_legend":  true,
+                               "launcher_actual_fallbacks":  3,
+                               "distinct_resolved_count":  2,
+                               "route_labels":  {
+                                                    "1":  "INICIO_OPERADOR",
+                                                    "2":  "PROYECTOS",
+                                                    "3":  "MEMORIA_DOCUMENTACION",
+                                                    "4":  "DATA_INTAKE",
+                                                    "5":  "HEALTH"
+                                                },
+                               "resolved_routes":  {
+                                                       "1":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1",
+                                                       "2":  "",
+                                                       "3":  "",
+                                                       "4":  "",
+                                                       "5":  "C:\\ENGREMIAT_CORE\\tools\\health\\health-launchers.ps1"
+                                                   },
+                               "route_1":  "Invoke-ResolvedLauncher \"Inicio operador\" @(\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"ENGREMIAT_OPERATOR.ps1\",\"operator.ps1\",\"launcher.ps1\") @(\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"launchers\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"tools\\operator\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"scripts\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\") }",
+                               "route_2":  "Invoke-ResolvedLauncher \"Proyectos\" @(\"projects.ps1\",\"ENGREMIAT-PROJECTS.ps1\",\"project-launcher.ps1\",\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\") @(\"launchers\\projects.ps1\",\"tools\\operator\\projects.ps1\",\"operator\\projects.ps1\",\"ENGREMIAT-PROJECTS.ps1\",\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\") }",
+                               "route_3":  "Invoke-ResolvedLauncher \"Memoria y documentacion\" @(\"memory-docs.ps1\",\"ENGREMIAT-MEMORY-DOCS.ps1\",\"docs.ps1\",\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\") @(\"launchers\\memory-docs.ps1\",\"tools\\operator\\memory-docs.ps1\",\"ENGREMIAT-MEMORY-DOCS.ps1\",\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\") }",
+                               "route_4":  "Invoke-ResolvedLauncher \"Data Intake\" @(\"data-intake.ps1\",\"ENGREMIAT-DATA-INTAKE.ps1\",\"intake.ps1\") @(\"launchers\\data-intake.ps1\",\"tools\\operator\\data-intake.ps1\",\"ENGREMIAT-DATA-INTAKE.ps1\") }",
+                               "route_5":  "Invoke-ResolvedLauncher \"Health launchers\" @(\"health-launchers.ps1\",\"ENGREMIAT-HEALTH-LAUNCHERS.ps1\",\"health.ps1\") @(\"tools\\health\\health-launchers.ps1\",\"launchers\\health-launchers.ps1\",\"ENGREMIAT-HEALTH-LAUNCHERS.ps1\") }"
+                           },
+                           {
+                               "file":  "C:\\ENGREMIAT_CORE\\backups\\screen-normalization\\ENGREMIAT.before-e26-rollback-safety-20260621-115257.ps1",
+                               "last_write":  "2026-06-21T10:23:03",
+                               "score":  105,
+                               "parse_ok":  true,
+                               "master_like":  true,
+                               "menu_ok":  false,
+                               "has_common_legend":  true,
+                               "launcher_actual_fallbacks":  1,
+                               "distinct_resolved_count":  3,
+                               "route_labels":  {
+                                                    "1":  "PROYECTOS",
+                                                    "2":  "MEMORIA_DOCUMENTACION",
+                                                    "3":  "DATA_INTAKE",
+                                                    "4":  "HEALTH",
+                                                    "5":  "UNKNOWN"
+                                                },
+                               "resolved_routes":  {
+                                                       "1":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1",
+                                                       "2":  "",
+                                                       "3":  "C:\\ENGREMIAT_CORE\\tools\\data-intake.ps1",
+                                                       "4":  "C:\\ENGREMIAT_CORE\\tools\\health\\health-launchers.ps1",
+                                                       "5":  ""
+                                                   },
+                               "route_1":  "Invoke-ResolvedLauncher \"Proyectos\" @(\"ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"projects.ps1\",\"ENGREMIAT-PROJECTS.ps1\",\"project-launcher.ps1\") @(\"tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1\",\"launchers\\projects.ps1\",\"tools\\operator\\projects.ps1\",\"operator\\projects.ps1\",\"ENGREMIAT-PROJECTS.ps1\") }",
+                               "route_2":  "Invoke-ResolvedLauncher \"Memoria y documentacion\" @(\"memory-docs.ps1\",\"ENGREMIAT-MEMORY-DOCS.ps1\",\"docs.ps1\") @(\"launchers\\memory-docs.ps1\",\"tools\\operator\\memory-docs.ps1\",\"ENGREMIAT-MEMORY-DOCS.ps1\") }",
+                               "route_3":  "Invoke-ResolvedLauncher \"Data Intake\" @(\"data-intake.ps1\",\"ENGREMIAT-DATA-INTAKE.ps1\",\"intake.ps1\") @(\"tools\\data-intake.ps1\",\"launchers\\data-intake.ps1\",\"tools\\operator\\data-intake.ps1\",\"ENGREMIAT-DATA-INTAKE.ps1\") }",
+                               "route_4":  "Invoke-ResolvedLauncher \"Health launchers\" @(\"health-launchers.ps1\",\"ENGREMIAT-HEALTH-LAUNCHERS.ps1\",\"health.ps1\") @(\"tools\\health\\health-launchers.ps1\",\"launchers\\health-launchers.ps1\",\"ENGREMIAT-HEALTH-LAUNCHERS.ps1\") }",
+                               "route_5":  ""
+                           }
+                       ],
+    "next":  "SELECT_MASTER_CANDIDATE_AND_DRY_RUN_RESTORE_NO_WRITE"
+}

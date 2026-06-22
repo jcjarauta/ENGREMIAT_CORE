@@ -1,0 +1,59 @@
+﻿{
+    "schema":  "engremiat.screen_normalizer_real_screen_generation_close.v1",
+    "package_id":  "ENGREMIAT_SCREEN_NORMALIZER_REAL_SCREEN_GENERATION_001",
+    "stage":  "E03_CLOSE_SCREEN_NORMALIZER_REAL_SCREEN_GENERATION_AND_VALUE_NEXT_OBJECTIVE",
+    "created_at":  "2026-06-20T16:44:39",
+    "status":  "PASS",
+    "closed":  true,
+    "readiness":  100,
+    "decision":  "REGISTRY_TO_HELPER_TO_ISOLATED_SCREEN_GENERATION_VALIDATED",
+    "summary":  {
+                    "screen_id":  "DEMO_FUNCION_ANIDADA_20260620-164034",
+                    "generated_screen":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-real-screen-generation\\generated\\DEMO_FUNCION_ANIDADA_20260620-164034.isolated.ps1",
+                    "parse_ok":  true,
+                    "smoke":  "PASS",
+                    "title":  true,
+                    "ruta":  true,
+                    "rol":  true,
+                    "estado":  true,
+                    "m_help":  true,
+                    "enter_refresh":  true,
+                    "isolated_notice":  true,
+                    "connected_to_launcher":  false,
+                    "patch_launchers":  false,
+                    "registry_write":  false,
+                    "worker":  false,
+                    "browser":  false,
+                    "network":  false,
+                    "git":  false
+                },
+    "artifacts":  {
+                      "generation":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-real-screen-generation\\generated\\isolated-generated-screen.latest.json",
+                      "smoke":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-real-screen-generation\\smoke\\isolated-generated-screen-smoke.latest.json",
+                      "generated_screen":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-real-screen-generation\\generated\\DEMO_FUNCION_ANIDADA_20260620-164034.isolated.ps1",
+                      "stdout":  "C:\\ENGREMIAT_CORE\\reports\\screen-normalizer-real-screen-generation\\e02-isolated-screen-smoke-stdout-20260620-164356.txt",
+                      "stderr":  "C:\\ENGREMIAT_CORE\\reports\\screen-normalizer-real-screen-generation\\e02-isolated-screen-smoke-stderr-20260620-164356.txt"
+                  },
+    "known_limits":  [
+                         "La pantalla generada es aislada y no esta enlazada al launcher real",
+                         "El flujo m real aun no se ha probado desde una pantalla migrada al helper",
+                         "Falta decidir si migrar INICIO o crear generador de pantalla real con gate"
+                     ],
+    "recommended_next_objective":  "ENGREMIAT_SCREEN_NORMALIZER_INICIO_MIGRATION_GATE_001",
+    "possible_next":  [
+                          "A: preparar migracion de INICIO al helper comun con dry-run y gate",
+                          "B: crear generador de pantalla real desde registry sin conectarlo",
+                          "C: crear comparador registry vs launchers actuales",
+                          "D: cerrar con git scoped si decides consolidar"
+                      ],
+    "recommendation":  "A recomendado: INICIO es la pantalla raiz y debe ser la primera migracion real controlada.",
+    "safety":  {
+                   "patch_existing_launchers":  false,
+                   "apply_real":  false,
+                   "worker":  false,
+                   "browser":  false,
+                   "network":  false,
+                   "git":  false
+               },
+    "next":  "PAUSE_AND_VALUE_NEXT_OBJECTIVE_AFTER_REAL_SCREEN_GENERATION"
+}

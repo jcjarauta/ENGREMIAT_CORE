@@ -1,0 +1,48 @@
+﻿{
+    "package":  "ENGREMIAT_SCREEN_NORMALIZATION_001",
+    "stage":  "E14_FIX_VISIBLE_LEGEND_BACK_TO_MAINTENANCE_ONLY",
+    "status":  "PASS",
+    "changed":  [
+                    "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+                    "C:\\ENGREMIAT_CORE\\tools\\human-card-assistant.ps1",
+                    "C:\\ENGREMIAT_CORE\\tools\\data-intake.ps1",
+                    "C:\\ENGREMIAT_CORE\\tools\\health\\health-launchers.ps1",
+                    "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1"
+                ],
+    "right_found":  [
+                        "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+                        "C:\\ENGREMIAT_CORE\\tools\\human-card-assistant.ps1",
+                        "C:\\ENGREMIAT_CORE\\tools\\data-intake.ps1",
+                        "C:\\ENGREMIAT_CORE\\tools\\health\\health-launchers.ps1",
+                        "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1"
+                    ],
+    "wrong_still_present":  [
+
+                            ],
+    "backups":  [
+                    {
+                        "target":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+                        "backup":  "C:\\ENGREMIAT_CORE\\backups\\screen-normalization\\ENGREMIAT.ps1.before-e14-fix-visible-legend-20260621-064819.ps1"
+                    },
+                    {
+                        "target":  "C:\\ENGREMIAT_CORE\\tools\\human-card-assistant.ps1",
+                        "backup":  "C:\\ENGREMIAT_CORE\\backups\\screen-normalization\\human-card-assistant.ps1.before-e14-fix-visible-legend-20260621-064819.ps1"
+                    },
+                    {
+                        "target":  "C:\\ENGREMIAT_CORE\\tools\\data-intake.ps1",
+                        "backup":  "C:\\ENGREMIAT_CORE\\backups\\screen-normalization\\data-intake.ps1.before-e14-fix-visible-legend-20260621-064819.ps1"
+                    },
+                    {
+                        "target":  "C:\\ENGREMIAT_CORE\\tools\\health\\health-launchers.ps1",
+                        "backup":  "C:\\ENGREMIAT_CORE\\backups\\screen-normalization\\health-launchers.ps1.before-e14-fix-visible-legend-20260621-064819.ps1"
+                    },
+                    {
+                        "target":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1",
+                        "backup":  "C:\\ENGREMIAT_CORE\\backups\\screen-normalization\\ENGREMIAT-LAUNCHER-ACTUAL.ps1.before-e14-fix-visible-legend-20260621-064819.ps1"
+                    }
+                ],
+    "parse_after":  true,
+    "git_write":  false,
+    "created_at":  "2026-06-21T06:48:19",
+    "next":  "CHECK_M_COMMANDS_ONE_SCREEN_AT_A_TIME"
+}

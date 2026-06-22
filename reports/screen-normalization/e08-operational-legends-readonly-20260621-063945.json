@@ -1,0 +1,22 @@
+﻿{
+    "package":  "ENGREMIAT_SCREEN_NORMALIZATION_001",
+    "stage":  "E08_SHOW_OPERATIONAL_LAUNCHER_LEGENDS_READONLY",
+    "status":  "PASS",
+    "git_write":  false,
+    "target":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1",
+    "common_legend":  "[b/q] salir/volver | m = mantenimiento | ? = ayuda | Enter = refrescar",
+    "legend_matches":  [
+                           {
+                               "line":  8,
+                               "text":  "Write-Host \"Enter = refrescar pantalla\" -ForegroundColor Gray",
+                               "common":  false
+                           },
+                           {
+                               "line":  120,
+                               "text":  "W \"b/q = salir | Enter = refrescar\" Cyan | ? = ayuda",
+                               "common":  false
+                           }
+                       ],
+    "needs_patch":  true,
+    "created_at":  "2026-06-21T06:39:45"
+}

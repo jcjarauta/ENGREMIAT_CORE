@@ -1,0 +1,41 @@
+﻿{
+    "schema":  "engremiat.inicio_migration_gate.v1",
+    "package_id":  "ENGREMIAT_SCREEN_NORMALIZER_INICIO_MIGRATION_GATE_001",
+    "stage":  "E01_PREPARE_INICIO_MIGRATION_DRY_RUN_AND_GATE",
+    "created_at":  "2026-06-20T16:45:56",
+    "status":  "PENDING_HUMAN_AUTHORIZATION",
+    "mode":  "INICIO_MIGRATION_DRY_RUN_READY_NO_REAL_PATCH",
+    "authorization_required":  true,
+    "authorization_status":  "PENDING_EXPLICIT_HUMAN_AUTHORIZATION",
+    "required_phrase":  "AUTORIZO_MIGRAR_INICIO_A_SCREEN_NORMALIZER",
+    "scope":  {
+                  "allowed":  [
+                                  "backup current launcher",
+                                  "replace INICIO launcher with generated candidate",
+                                  "validate parse",
+                                  "run visual smoke"
+                              ],
+                  "blocked":  [
+                                  "workers",
+                                  "network",
+                                  "browser",
+                                  "git",
+                                  "delete files",
+                                  "patch unrelated launchers"
+                              ]
+              },
+    "current_launcher":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-INICIO-NORMALIZED.ps1",
+    "candidate_launcher":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-inicio-migration-gate\\dry-run\\ENGREMIAT-INICIO-NORMALIZED.candidate-from-registry-20260620-164556.ps1",
+    "candidate_latest":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-inicio-migration-gate\\dry-run\\ENGREMIAT-INICIO-NORMALIZED.candidate.latest.ps1",
+    "checks":  {
+                   "current_has_inicio":  true,
+                   "current_has_m_help":  true,
+                   "candidate_loads_helper":  true,
+                   "candidate_uses_registry_screen":  true,
+                   "candidate_has_m_handler":  true,
+                   "candidate_has_help_handler":  true,
+                   "candidate_has_refresh":  true,
+                   "candidate_parse_ok":  true
+               },
+    "next":  "E02_SMOKE_INICIO_CANDIDATE_DRY_RUN_VISUAL"
+}

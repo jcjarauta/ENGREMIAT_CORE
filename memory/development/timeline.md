@@ -1,0 +1,8 @@
+﻿- 2026-06-21T16:32:52 | OBSERVER_WATCH_RUN | changes=14 | tracked=14 | report=C:\ENGREMIAT_CORE\reports\observer\observer-watch-20260621-163252.json
+- 2026-06-21T16:35:50 | OBSERVER_WATCH_RUN | changes=5 | tracked=14 | report=C:\ENGREMIAT_CORE\reports\observer\observer-watch-20260621-163550.json
+- 2026-06-21T16:35:53 | OBSERVER_WATCH_RUN | changes=0 | tracked=14 | report=C:\ENGREMIAT_CORE\reports\observer\observer-watch-20260621-163553.json
+- 2026-06-21T16:38:30 | OBSERVER_WATCH_RUN | changes=2 | tracked=14 | report=C:\ENGREMIAT_CORE\reports\observer\observer-watch-20260621-163830.json
+- 2026-06-21T16:39:55 | OBSERVER_WATCH_RUN | changes=5 | tracked=14 | report=C:\ENGREMIAT_CORE\reports\observer\observer-watch-20260621-163955.json
+- 2026-06-21T16:40:52 | OBSERVER_WATCH_RUN | changes=5 | tracked=14 | report=C:\ENGREMIAT_CORE\reports\observer\observer-watch-20260621-164052.json
+- 2026-06-21T16:41:37 | OBSERVER_WATCH_RUN | changes=5 | tracked=14 | report=C:\ENGREMIAT_CORE\reports\observer\observer-watch-20260621-164137.json
+- 2026-06-21T16:42:04 | OBSERVER_WATCH_RUN | changes=5 | tracked=14 | report=C:\ENGREMIAT_CORE\reports\observer\observer-watch-20260621-164204.json

@@ -1,0 +1,47 @@
+﻿{
+    "package":  "ENGREMIAT_SCREEN_NORMALIZATION_001",
+    "stage":  "E11_SCREEN_NORMALIZATION_CLOSE_READONLY",
+    "status":  "PASS",
+    "git_write":  false,
+    "common_legend":  "[b/q] salir/volver | m = mantenimiento | ? = ayuda | Enter = refrescar",
+    "screens":  [
+                    {
+                        "name":  "master",
+                        "path":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+                        "exists":  true,
+                        "parse_ok":  true,
+                        "common_legend":  true
+                    },
+                    {
+                        "name":  "human_cards",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\human-card-assistant.ps1",
+                        "exists":  true,
+                        "parse_ok":  true,
+                        "common_legend":  true
+                    },
+                    {
+                        "name":  "data_intake",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\data-intake.ps1",
+                        "exists":  true,
+                        "parse_ok":  true,
+                        "common_legend":  true
+                    },
+                    {
+                        "name":  "health",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\health\\health-launchers.ps1",
+                        "exists":  true,
+                        "parse_ok":  true,
+                        "common_legend":  true
+                    },
+                    {
+                        "name":  "operational_launcher",
+                        "path":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1",
+                        "exists":  true,
+                        "parse_ok":  true,
+                        "common_legend":  true
+                    }
+                ],
+    "bad_count":  0,
+    "created_at":  "2026-06-21T06:40:43",
+    "next":  "MANUAL_VISUAL_SMOKE_MAIN_MENU_1_4_5_M"
+}

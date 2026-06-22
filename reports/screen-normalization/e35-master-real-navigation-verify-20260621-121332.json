@@ -1,0 +1,31 @@
+﻿{
+    "package":  "ENGREMIAT_SCREEN_NORMALIZATION_001",
+    "stage":  "E35_VERIFY_MASTER_REAL_NAVIGATION_AND_OPEN_TEST",
+    "status":  "PASS",
+    "git_write":  false,
+    "master":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+    "parse":  true,
+    "smoke":  true,
+    "launcher_actual_fallbacks":  0,
+    "targets":  {
+                    "inicio":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\Start-EngremiatOperatorMenu.ps1",
+                    "proyectos":  "C:\\ENGREMIAT_CORE\\tools\\desktop-terminal-operator\\eng-projects-manager.ps1",
+                    "memoria":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-MEMORY-DOCUMENTATION-CENTER-NORMALIZED.ps1",
+                    "data":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-DATA-INTAKE-CENTER-NORMALIZED.ps1",
+                    "health":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-HEALTH.ps1",
+                    "mantenimiento":  "C:\\ENGREMIAT_CORE\\tools\\human-card-assistant.ps1"
+                },
+    "master_command":  "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1\"",
+    "manual_test":  [
+                        "Enter vacio = refrescar",
+                        "? = ayuda",
+                        "m = mantenimiento",
+                        "1 = Inicio operador",
+                        "2 = Proyectos",
+                        "3 = Memoria y documentacion",
+                        "4 = Data Intake",
+                        "5 = Health launchers",
+                        "b/q = salir"
+                    ],
+    "next":  "HUMAN_TEST_MASTER_MENU_OPTIONS"
+}

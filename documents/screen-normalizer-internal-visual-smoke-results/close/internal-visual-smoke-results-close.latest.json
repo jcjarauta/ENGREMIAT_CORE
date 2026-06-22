@@ -1,0 +1,55 @@
+{
+    "schema":  "engremiat.internal_visual_smoke_results_close.v1",
+    "package_id":  "ENGREMIAT_SCREEN_NORMALIZER_INTERNAL_VISUAL_SMOKE_RESULTS_001",
+    "stage":  "E04_CLOSE_INTERNAL_VISUAL_SMOKE_RESULTS_AND_VALUE_NEXT_OBJECTIVE",
+    "created_at":  "2026-06-20T17:15:37",
+    "status":  "PASS",
+    "closed":  true,
+    "readiness":  100,
+    "decision":  "INTERNAL_BASE_SCREEN_CANDIDATES_VISUAL_SMOKE_PASS_NO_REAL_PATCH",
+    "summary":  {
+                    "total_count":  6,
+                    "passed_count":  6,
+                    "decision":  "VISUAL_SMOKE_PASS",
+                    "screens":  [
+                                    "PROYECTOS",
+                                    "MEMORIA_DOCUMENTACION",
+                                    "CONTROL_ESTADO",
+                                    "LAUNCHERS_CONFIGURACION",
+                                    "OPERADOR_WORKERS",
+                                    "TARJETAS"
+                                ],
+                    "patch_launchers":  false,
+                    "registry_write":  false,
+                    "migration_applied":  false,
+                    "git":  false
+                },
+    "artifacts":  {
+                      "results_json":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-visual-smoke-results\\runner\\internal-visual-smoke-results.manual.latest.json",
+                      "results_tsv":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-visual-smoke-results\\runner\\internal-visual-smoke-results.manual.latest.tsv",
+                      "runner_execution":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-visual-smoke-results\\runner\\internal-visual-smoke-runner-execution.latest.json"
+                  },
+    "known_limits":  [
+                         "Los candidatos internos pasan smoke visual pero no sustituyen launchers reales",
+                         "La migracion real debe hacerse por gate humano y lote pequeño",
+                         "INICIO real sigue intacto y pendiente de decision futura"
+                     ],
+    "recommended_next_objective":  "ENGREMIAT_SCREEN_NORMALIZER_SMALL_BATCH_MIGRATION_GATE_001",
+    "possible_next":  [
+                          "A: preparar gate de migracion real por lote pequeno para una pantalla interna",
+                          "B: volver a INICIO y autorizar migracion raiz",
+                          "C: clasificar los 27 launchers gap como pantalla/herramienta/legacy",
+                          "D: cierre git scoped cuando decidas consolidar"
+                      ],
+    "recommendation":  "A recomendado: migrar primero una pantalla interna de bajo riesgo, no INICIO, con backup y rollback.",
+    "safety":  {
+                   "patch_existing_launchers":  false,
+                   "registry_write":  false,
+                   "migration_applied":  false,
+                   "worker":  false,
+                   "browser":  false,
+                   "network":  false,
+                   "git":  false
+               },
+    "next":  "PAUSE_AND_VALUE_NEXT_OBJECTIVE_AFTER_INTERNAL_VISUAL_SMOKE_CLOSE"
+}

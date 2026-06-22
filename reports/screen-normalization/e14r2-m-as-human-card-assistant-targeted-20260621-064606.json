@@ -1,0 +1,39 @@
+﻿{
+    "package":  "ENGREMIAT_SCREEN_NORMALIZATION_001",
+    "stage":  "E14_R2_NORMALIZE_M_AS_CARD_ASSISTANT_TARGETED",
+    "status":  "PASS",
+    "new_legend":  "[b/q] salir/volver | m = asistente tarjetas humanas | ? = ayuda | Enter = refrescar",
+    "changed":  [
+                    "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+                    "C:\\ENGREMIAT_CORE\\tools\\human-card-assistant.ps1",
+                    "C:\\ENGREMIAT_CORE\\tools\\data-intake.ps1",
+                    "C:\\ENGREMIAT_CORE\\tools\\health\\health-launchers.ps1",
+                    "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1"
+                ],
+    "backups":  [
+                    {
+                        "target":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+                        "backup":  "C:\\ENGREMIAT_CORE\\backups\\screen-normalization\\ENGREMIAT.ps1.before-e14r2-m-card-assistant-20260621-064606.ps1"
+                    },
+                    {
+                        "target":  "C:\\ENGREMIAT_CORE\\tools\\human-card-assistant.ps1",
+                        "backup":  "C:\\ENGREMIAT_CORE\\backups\\screen-normalization\\human-card-assistant.ps1.before-e14r2-m-card-assistant-20260621-064606.ps1"
+                    },
+                    {
+                        "target":  "C:\\ENGREMIAT_CORE\\tools\\data-intake.ps1",
+                        "backup":  "C:\\ENGREMIAT_CORE\\backups\\screen-normalization\\data-intake.ps1.before-e14r2-m-card-assistant-20260621-064606.ps1"
+                    },
+                    {
+                        "target":  "C:\\ENGREMIAT_CORE\\tools\\health\\health-launchers.ps1",
+                        "backup":  "C:\\ENGREMIAT_CORE\\backups\\screen-normalization\\health-launchers.ps1.before-e14r2-m-card-assistant-20260621-064606.ps1"
+                    },
+                    {
+                        "target":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1",
+                        "backup":  "C:\\ENGREMIAT_CORE\\backups\\screen-normalization\\ENGREMIAT-LAUNCHER-ACTUAL.ps1.before-e14r2-m-card-assistant-20260621-064606.ps1"
+                    }
+                ],
+    "parse_after":  true,
+    "git_write":  false,
+    "created_at":  "2026-06-21T06:46:06",
+    "next":  "RUN_VISUAL_TEST_M_FROM_MASTER_AND_SUBSCREENS"
+}

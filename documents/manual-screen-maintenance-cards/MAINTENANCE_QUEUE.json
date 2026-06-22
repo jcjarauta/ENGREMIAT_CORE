@@ -1,0 +1,84 @@
+﻿{
+    "package_id":  "ENGREMIAT_MANUAL_SCREEN_MAINTENANCE_CARDS_001",
+    "stage":  "E01_PREPARE_MANUAL_SCREEN_WALK_AND_MAINTENANCE_CARDS",
+    "created_at":  "20260620-193623",
+    "status":  "OPEN",
+    "runtime_write":  false,
+    "git_write":  false,
+    "screens":  [
+                    {
+                        "id":  "S01_MASTER_LAUNCHER",
+                        "route":  "ENGREMIAT.ps1",
+                        "expected":  "Launcher humano estable; opciones 1..5 y b/q; no menu profundo experimental",
+                        "test":  "abrir launcher maestro y comprobar opciones visibles"
+                    },
+                    {
+                        "id":  "S02_INICIO",
+                        "route":  "ENGREMIAT.ps1 -\u003e [1] Inicio operador",
+                        "expected":  "Pantalla INICIO; opciones Proyectos, Memoria, Control, Launchers, Operador y workers, Tarjetas, Ayuda",
+                        "test":  "entrar con 1 desde maestro"
+                    },
+                    {
+                        "id":  "S03_PROYECTOS",
+                        "route":  "INICIO -\u003e [1] Proyectos",
+                        "expected":  "Listado/proyectos y navegacion atras clara",
+                        "test":  "entrar, listar, volver"
+                    },
+                    {
+                        "id":  "S04_MEMORIA_DOCS",
+                        "route":  "INICIO -\u003e [2] Memoria y documentacion",
+                        "expected":  "Acceso a memoria/documentacion sin romper flujo",
+                        "test":  "entrar, revisar opciones, volver"
+                    },
+                    {
+                        "id":  "S05_CONTROL_ESTADO",
+                        "route":  "INICIO -\u003e [3] Control y estado",
+                        "expected":  "Estado compacto/health sin acciones peligrosas",
+                        "test":  "entrar, revisar salida, volver"
+                    },
+                    {
+                        "id":  "S06_LAUNCHERS_CONFIG",
+                        "route":  "INICIO -\u003e [4] Launchers y configuracion",
+                        "expected":  "Gestion de launchers/versiones/configuracion",
+                        "test":  "entrar, revisar opciones, volver"
+                    },
+                    {
+                        "id":  "S07_OPERADOR_WORKERS",
+                        "route":  "INICIO -\u003e [5] Operador y workers",
+                        "expected":  "Worker real pausado o acceso controlado; no romper terminal",
+                        "test":  "entrar, documentar bloqueo/pausa, volver"
+                    },
+                    {
+                        "id":  "S08_TARJETAS",
+                        "route":  "INICIO -\u003e [6] Tarjetas",
+                        "expected":  "Tarjetas o mantenimiento accesible",
+                        "test":  "entrar, crear/ver tarjeta si existe, volver"
+                    },
+                    {
+                        "id":  "S09_OPERATOR_VERSIONED",
+                        "route":  "launcher versionado operador",
+                        "expected":  "Operador versionado con opciones visibles y adapter [10] si aplica",
+                        "test":  "abrir solo si la ruta normal lo permite"
+                    },
+                    {
+                        "id":  "S10_SCREEN_NORMALIZER_ADAPTER",
+                        "route":  "operador -\u003e [10]",
+                        "expected":  "SAFE_READONLY_NO_DANGER; ACCIONES REALES: ninguna",
+                        "test":  "ejecutar solo desde operador estable"
+                    }
+                ],
+    "cards":  [
+                  {
+                      "card_id":  "MCARD-20260620-200438",
+                      "screen_id":  "S02_INICIO",
+                      "route":  "INICIO",
+                      "severity":  "high",
+                      "status":  "OPEN",
+                      "expected":  "comando m en todas las pantallas",
+                      "observed":  "comando m ",
+                      "action_done":  "plantilla master de pantalla",
+                      "created_at":  "2026-06-20T20:04:38",
+                      "card_path":  "C:\\ENGREMIAT_CORE\\documents\\manual-screen-maintenance-cards\\cards\\MCARD-20260620-200438.md"
+                  }
+              ]
+}

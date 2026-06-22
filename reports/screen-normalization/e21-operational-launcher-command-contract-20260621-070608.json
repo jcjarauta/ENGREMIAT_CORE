@@ -1,0 +1,21 @@
+﻿{
+    "package":  "ENGREMIAT_SCREEN_NORMALIZATION_001",
+    "stage":  "E21_VERIFY_OPERATIONAL_LAUNCHER_COMMON_COMMAND_CONTRACT_READONLY",
+    "status":  "WARN",
+    "git_write":  false,
+    "target":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1",
+    "checks":  {
+                   "has_visual_title":  true,
+                   "has_route":  true,
+                   "has_principle":  true,
+                   "has_common_legend":  true,
+                   "has_enter_refresh":  false,
+                   "has_b_exit":  false,
+                   "has_q_exit":  false,
+                   "has_help":  true,
+                   "has_m":  false,
+                   "has_prompt":  true
+               },
+    "created_at":  "2026-06-21T07:06:08",
+    "next":  "VISUAL_TEST_OPERATIONAL_LAUNCHER_ENTER_HELP_M_BQ"
+}

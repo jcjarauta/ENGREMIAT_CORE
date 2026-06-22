@@ -1,0 +1,57 @@
+﻿{
+    "schema":  "engremiat.internal_candidates_generation_close.v1",
+    "package_id":  "ENGREMIAT_SCREEN_NORMALIZER_INTERNAL_CANDIDATES_GENERATION_001",
+    "stage":  "E04_CLOSE_INTERNAL_CANDIDATES_GENERATION_AND_VALUE_NEXT_OBJECTIVE",
+    "created_at":  "2026-06-20T16:57:35",
+    "status":  "PASS",
+    "closed":  true,
+    "readiness":  100,
+    "decision":  "INTERNAL_BASE_SCREEN_CANDIDATES_READY_NO_REAL_PATCH",
+    "summary":  {
+                    "targets":  [
+                                    "PROYECTOS",
+                                    "MEMORIA_DOCUMENTACION",
+                                    "CONTROL_ESTADO",
+                                    "LAUNCHERS_CONFIGURACION",
+                                    "OPERADOR_WORKERS",
+                                    "TARJETAS"
+                                ],
+                    "generated_count":  6,
+                    "static_smoke":  "PASS",
+                    "visual_smoke_guide_ready":  true,
+                    "patch_launchers":  false,
+                    "registry_write":  false,
+                    "migration_applied":  false,
+                    "candidate_executed":  false,
+                    "git":  false
+                },
+    "artifacts":  {
+                      "generation":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\internal-candidates-generation.latest.json",
+                      "static_smoke":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\smoke\\internal-candidates-static-smoke.latest.json",
+                      "visual_guide":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\visual-smoke-guide\\internal-candidates-visual-smoke-guide.latest.json",
+                      "visual_guide_md":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\visual-smoke-guide\\internal-candidates-visual-smoke-guide.latest.md"
+                  },
+    "known_limits":  [
+                         "Los candidatos internos aun no sustituyen launchers reales",
+                         "El smoke visual manual esta preparado pero no recogido",
+                         "La migracion real debe hacerse por gate y por lotes pequeños"
+                     ],
+    "recommended_next_objective":  "ENGREMIAT_SCREEN_NORMALIZER_INTERNAL_VISUAL_SMOKE_RESULTS_001",
+    "possible_next":  [
+                          "A: ejecutar smoke visual manual de los 6 candidatos y registrar resultado",
+                          "B: preparar gate de migracion por lote pequeño para una pantalla interna",
+                          "C: volver a INICIO y decidir migracion real",
+                          "D: cierre git scoped cuando decidas consolidar"
+                      ],
+    "recommendation":  "A recomendado: registrar resultados visuales antes de aplicar ningun launcher real.",
+    "safety":  {
+                   "patch_existing_launchers":  false,
+                   "registry_write":  false,
+                   "migration_applied":  false,
+                   "worker":  false,
+                   "browser":  false,
+                   "network":  false,
+                   "git":  false
+               },
+    "next":  "PAUSE_AND_VALUE_NEXT_OBJECTIVE_AFTER_INTERNAL_CANDIDATES_CLOSE"
+}

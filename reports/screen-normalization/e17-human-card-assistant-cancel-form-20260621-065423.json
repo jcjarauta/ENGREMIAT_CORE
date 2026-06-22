@@ -1,0 +1,19 @@
+﻿{
+    "package":  "ENGREMIAT_SCREEN_NORMALIZATION_001",
+    "stage":  "E17_FIX_HUMAN_CARD_ASSISTANT_CANCEL_DURING_FORM",
+    "status":  "PASS",
+    "target":  "C:\\ENGREMIAT_CORE\\tools\\human-card-assistant.ps1",
+    "backup":  "C:\\ENGREMIAT_CORE\\backups\\screen-normalization\\human-card-assistant.before-e17-cancel-form-20260621-065423.ps1",
+    "common_command_legend":  "[b/q] salir/volver | m = mantenimiento | ? = ayuda | Enter = refrescar",
+    "cancel_words":  [
+                         "b",
+                         "q",
+                         "cancel",
+                         "cancelar",
+                         "salir"
+                     ],
+    "parse_after":  true,
+    "git_write":  false,
+    "created_at":  "2026-06-21T06:54:23",
+    "next":  "RUN_TEST_CARD_ASSISTANT_CREATE_AND_CANCEL"
+}

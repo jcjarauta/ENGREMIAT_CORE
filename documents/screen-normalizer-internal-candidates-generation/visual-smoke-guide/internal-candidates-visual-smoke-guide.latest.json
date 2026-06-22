@@ -1,0 +1,119 @@
+﻿{
+    "schema":  "engremiat.internal_candidates_visual_smoke_guide.v1",
+    "package_id":  "ENGREMIAT_SCREEN_NORMALIZER_INTERNAL_CANDIDATES_GENERATION_001",
+    "stage":  "E03_PREPARE_INTERNAL_CANDIDATES_VISUAL_SMOKE_GUIDE",
+    "created_at":  "2026-06-20T16:57:03",
+    "status":  "PASS",
+    "mode":  "GUIDE_ONLY_NO_EXECUTE_NO_PATCH",
+    "candidates_count":  6,
+    "commands":  [
+                     {
+                         "order":  1,
+                         "screen_id":  "PROYECTOS",
+                         "title":  "PROYECTOS",
+                         "candidate":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\PROYECTOS.candidate.isolated.ps1",
+                         "run_command":  "powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\PROYECTOS.candidate.isolated.ps1\"",
+                         "human_checks":  [
+                                              "Debe mostrar titulo/ruta/rol/estado/principio",
+                                              "Debe mostrar comandos globales: Enter refrescar, ? ayuda, m mantenimiento, b/q salir",
+                                              "Debe indicar AISLADO o DRY-RUN",
+                                              "No debe sustituir launcher real",
+                                              "m debe abrir mantenimiento en DryRun o no escribir real"
+                                          ]
+                     },
+                     {
+                         "order":  2,
+                         "screen_id":  "MEMORIA_DOCUMENTACION",
+                         "title":  "MEMORIA Y DOCUMENTACION",
+                         "candidate":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\MEMORIA_DOCUMENTACION.candidate.isolated.ps1",
+                         "run_command":  "powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\MEMORIA_DOCUMENTACION.candidate.isolated.ps1\"",
+                         "human_checks":  [
+                                              "Debe mostrar titulo/ruta/rol/estado/principio",
+                                              "Debe mostrar comandos globales: Enter refrescar, ? ayuda, m mantenimiento, b/q salir",
+                                              "Debe indicar AISLADO o DRY-RUN",
+                                              "No debe sustituir launcher real",
+                                              "m debe abrir mantenimiento en DryRun o no escribir real"
+                                          ]
+                     },
+                     {
+                         "order":  3,
+                         "screen_id":  "CONTROL_ESTADO",
+                         "title":  "CONTROL Y ESTADO",
+                         "candidate":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\CONTROL_ESTADO.candidate.isolated.ps1",
+                         "run_command":  "powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\CONTROL_ESTADO.candidate.isolated.ps1\"",
+                         "human_checks":  [
+                                              "Debe mostrar titulo/ruta/rol/estado/principio",
+                                              "Debe mostrar comandos globales: Enter refrescar, ? ayuda, m mantenimiento, b/q salir",
+                                              "Debe indicar AISLADO o DRY-RUN",
+                                              "No debe sustituir launcher real",
+                                              "m debe abrir mantenimiento en DryRun o no escribir real"
+                                          ]
+                     },
+                     {
+                         "order":  4,
+                         "screen_id":  "LAUNCHERS_CONFIGURACION",
+                         "title":  "LAUNCHERS Y CONFIGURACION",
+                         "candidate":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\LAUNCHERS_CONFIGURACION.candidate.isolated.ps1",
+                         "run_command":  "powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\LAUNCHERS_CONFIGURACION.candidate.isolated.ps1\"",
+                         "human_checks":  [
+                                              "Debe mostrar titulo/ruta/rol/estado/principio",
+                                              "Debe mostrar comandos globales: Enter refrescar, ? ayuda, m mantenimiento, b/q salir",
+                                              "Debe indicar AISLADO o DRY-RUN",
+                                              "No debe sustituir launcher real",
+                                              "m debe abrir mantenimiento en DryRun o no escribir real"
+                                          ]
+                     },
+                     {
+                         "order":  5,
+                         "screen_id":  "OPERADOR_WORKERS",
+                         "title":  "OPERADOR Y WORKERS",
+                         "candidate":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\OPERADOR_WORKERS.candidate.isolated.ps1",
+                         "run_command":  "powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\OPERADOR_WORKERS.candidate.isolated.ps1\"",
+                         "human_checks":  [
+                                              "Debe mostrar titulo/ruta/rol/estado/principio",
+                                              "Debe mostrar comandos globales: Enter refrescar, ? ayuda, m mantenimiento, b/q salir",
+                                              "Debe indicar AISLADO o DRY-RUN",
+                                              "No debe sustituir launcher real",
+                                              "m debe abrir mantenimiento en DryRun o no escribir real"
+                                          ]
+                     },
+                     {
+                         "order":  6,
+                         "screen_id":  "TARJETAS",
+                         "title":  "TARJETAS",
+                         "candidate":  "C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\TARJETAS.candidate.isolated.ps1",
+                         "run_command":  "powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\ENGREMIAT_CORE\\documents\\screen-normalizer-internal-candidates-generation\\generated\\TARJETAS.candidate.isolated.ps1\"",
+                         "human_checks":  [
+                                              "Debe mostrar titulo/ruta/rol/estado/principio",
+                                              "Debe mostrar comandos globales: Enter refrescar, ? ayuda, m mantenimiento, b/q salir",
+                                              "Debe indicar AISLADO o DRY-RUN",
+                                              "No debe sustituir launcher real",
+                                              "m debe abrir mantenimiento en DryRun o no escribir real"
+                                          ]
+                     }
+                 ],
+    "manual_result_template":  {
+                                   "screen_id":  "",
+                                   "opened":  false,
+                                   "title_ok":  false,
+                                   "ruta_ok":  false,
+                                   "rol_ok":  false,
+                                   "estado_ok":  false,
+                                   "principio_ok":  false,
+                                   "enter_refresh_ok":  false,
+                                   "help_ok":  false,
+                                   "m_ok":  false,
+                                   "back_quit_ok":  false,
+                                   "notes":  ""
+                               },
+    "safety":  {
+                   "patch_existing_launchers":  false,
+                   "registry_write":  false,
+                   "migration_applied":  false,
+                   "worker":  false,
+                   "browser":  false,
+                   "network":  false,
+                   "git":  false
+               },
+    "next":  "E04_CLOSE_INTERNAL_CANDIDATES_GENERATION_OR_E04B_COLLECT_VISUAL_RESULTS"
+}

@@ -1,0 +1,23 @@
+﻿{
+    "package":  "ENGREMIAT_SCREEN_NORMALIZATION_001",
+    "stage":  "E10_VERIFY_OPERATIONAL_LAUNCHER_LEGENDS_READONLY",
+    "status":  "PASS",
+    "git_write":  false,
+    "target":  "C:\\ENGREMIAT_CORE\\tools\\launcher\\ENGREMIAT-LAUNCHER-ACTUAL.ps1",
+    "common_legend":  "[b/q] salir/volver | m = mantenimiento | ? = ayuda | Enter = refrescar",
+    "legend_matches":  [
+                           {
+                               "line":  8,
+                               "text":  "Write-Host \"[b/q] salir/volver | m = mantenimiento | ? = ayuda | Enter = refrescar\" -ForegroundColor Gray",
+                               "common":  true
+                           },
+                           {
+                               "line":  120,
+                               "text":  "W \"[b/q] salir/volver | m = mantenimiento | ? = ayuda | Enter = refrescar\" Cyan",
+                               "common":  true
+                           }
+                       ],
+    "bad_count":  0,
+    "broken_old_legend":  false,
+    "created_at":  "2026-06-21T06:40:22"
+}
