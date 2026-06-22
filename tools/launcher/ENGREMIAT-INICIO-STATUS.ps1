@@ -108,6 +108,7 @@ W ("Core: {0}" -f $Core) White
 if($p){
   W ("Proyecto activo: {0}" -f (Split-Path $p -Leaf)) Green
   W ("Ruta: {0}" -f $p) DarkCyan
+Write-Host "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" -ForegroundColor DarkGray
 }else{
   W "Proyecto activo: NO_DETECTADO" Yellow
   W "Ruta: -" DarkGray
@@ -140,3 +141,4 @@ W ""
 W "[Enter] volver al inicio" Cyan
 W ""
 [void](Read-Host "STATUS_EXTERNO")
+

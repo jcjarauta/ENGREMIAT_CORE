@@ -19,6 +19,7 @@ function UXHeader([string]$title,[string]$route,[string]$role,[string]$principle
   Clear-Host
   UX ('==== '+$title+' ====') 'title'
   UX ('Ruta: '+$route) 'route'
+Write-Host "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" -ForegroundColor DarkGray
   UX ('Rol: '+$role) 'role'
   UX ('Principio: '+$principle) 'principle'
   if($section){UX $section 'section'}
@@ -29,3 +30,4 @@ function UXWarn([string]$m){UX ('[WARN] '+$m) 'warn'}
 function UXErr([string]$m){UX ('[ERR] '+$m) 'err'}
 function UXNext([string]$m){UX ('[NEXT] '+$m) 'next'}
 function UXMuted([string]$m){UX $m 'muted'}
+

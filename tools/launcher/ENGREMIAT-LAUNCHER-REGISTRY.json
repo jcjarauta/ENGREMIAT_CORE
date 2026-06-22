@@ -1,0 +1,51 @@
+﻿{
+    "schema_version":  "1.0",
+    "package_id":  "ENGREMIAT_OPERATOR_LAUNCHER_001",
+    "updated_at":  "2026-06-20T13:16:13",
+    "human_entrypoint":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+    "policy":  [
+                   "El humano ejecuta siempre ENGREMIAT.ps1 desde la raiz",
+                   "Los launchers internos pueden cambiar pero deben registrarse aqui",
+                   "Antes de abrir un launcher se valida existencia y parse",
+                   "No se ejecutan workers reales desde este launcher"
+               ],
+    "launchers":  [
+                      {
+                          "id":  "inicio",
+                          "label":  "Inicio operador",
+                          "path":  "tools\\launcher\\ENGREMIAT-INICIO-NORMALIZED.ps1",
+                          "status":  "ACTIVE",
+                          "role":  "hub humano principal"
+                      },
+                      {
+                          "id":  "proyectos",
+                          "label":  "Centro de Proyectos",
+                          "path":  "tools\\launcher\\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1",
+                          "status":  "ACTIVE",
+                          "role":  "cartera, acciones locales y workers on/off"
+                      },
+                      {
+                          "id":  "documentacion",
+                          "label":  "Memoria y documentacion",
+                          "path":  "tools\\launcher\\ENGREMIAT-MEMORY-DOCUMENTATION-CENTER-NORMALIZED.ps1",
+                          "status":  "ACTIVE",
+                          "role":  "documentos, intake, normalizados"
+                      },
+                      {
+                          "id":  "data-intake",
+                          "label":  "Data Intake",
+                          "path":  "tools\\launcher\\ENGREMIAT-DATA-INTAKE-CENTER-NORMALIZED.ps1",
+                          "status":  "ACTIVE",
+                          "role":  "entrada de datos/documentos"
+                      },
+                      {
+                          "id":  "worker-toggle",
+                          "label":  "Workers ON/OFF",
+                          "path":  "tools\\launcher\\ENGREMIAT-WORKER-SIGNALS-TOGGLE.ps1",
+                          "status":  "UTILITY",
+                          "role":  "activar/desactivar lectura de señales worker"
+                      }
+                  ],
+    "human_cmd_entrypoint":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.cmd",
+    "recommended_human_command":  ".\\ENGREMIAT.cmd"
+}

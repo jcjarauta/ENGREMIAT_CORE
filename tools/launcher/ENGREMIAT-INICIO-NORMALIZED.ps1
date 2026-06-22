@@ -1,19 +1,247 @@
-﻿$ErrorActionPreference="Stop"
-[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
-$Core="C:\ENGREMIAT_CORE"
-$ProjectsCenter=Join-Path $Core "tools\launcher\ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1"
-$DocCenter=Join-Path $Core "tools\launcher\ENGREMIAT-MEMORY-DOCUMENTATION-CENTER-NORMALIZED.ps1"
-$Legacy=Join-Path $Core "tools\launcher\ENGREMIAT-INICIO.ps1"
-function UX([string]$m,[string]$role="info"){$c=switch($role){"title"{"Cyan"}"route"{"DarkGray"}"role"{"Gray"}"principle"{"DarkGray"}"section"{"Yellow"}"ok"{"Green"}"warn"{"Yellow"}"err"{"Red"}"next"{"Cyan"}"muted"{"DarkGray"}default{"Gray"}};try{Write-Host $m -ForegroundColor $c}catch{Write-Host $m}}
-function UXOk([string]$m){UX ("[OK] "+$m) "ok"}
-function UXWarn([string]$m){UX ("[WARN] "+$m) "warn"}
-function P(){Write-Host "";Read-Host "[Enter] volver / refrescar"|Out-Null}
-function Header([string]$section=""){Clear-Host;UX "==== ENGREMIAT / INICIO ====" "title";UX "Ruta: INICIO" "route";UX "Rol: hub raiz del sistema" "role";UX "Principio: entrar por bloques funcionales, no por listado largo" "principle";if($section){UX $section "section"};Write-Host ""}
-function OpenProjectsCenter(){if(Test-Path $ProjectsCenter){& powershell -NoProfile -ExecutionPolicy Bypass -File $ProjectsCenter}else{Header "PROYECTOS";UXWarn ("No encontrado: "+$ProjectsCenter);P}}
-function OpenDocCenter(){if(Test-Path $DocCenter){& powershell -NoProfile -ExecutionPolicy Bypass -File $DocCenter}else{Header "MEMORIA Y DOCUMENTACION";UXWarn ("No encontrado: "+$DocCenter);P}}
-function OpenLegacy(){if(Test-Path $Legacy){& powershell -NoProfile -ExecutionPolicy Bypass -File $Legacy}else{Header "LEGACY";UXWarn ("No encontrado: "+$Legacy);P}}
-function Placeholder([string]$title){Header $title;UXWarn "Bloque raiz pendiente de cablear en fase posterior.";P}
-function Status(){Header "ESTADO";UXOk "Inicio normalizado en modo hub";if(Test-Path $ProjectsCenter){UXOk "Proyectos normalizado conectado"}else{UXWarn "Proyectos normalizado no encontrado"};if(Test-Path $DocCenter){UXOk "Centro Documental normalizado conectado"}else{UXWarn "Centro Documental normalizado no encontrado"};UXWarn "Operador/workers, Control/estado y Herramientas/configuracion pendientes";P}
-function Help(){Header "AYUDA";UX "Inicio normalizado agrupa el sistema por bloques funcionales.";UX "[1] Proyectos ya conecta con Centro de Proyectos normalizado.";UX "[2] Memoria y documentacion ya conecta con Centro Documental normalizado.";UX "[6] Sistema legacy conserva el launcher original como respaldo." "muted";P}
-function Menu(){while($true){Header;UX "[1] Proyectos";UX "[2] Memoria y documentacion";UX "[3] Operador y workers";UX "[4] Control y estado";UX "[5] Herramientas y configuracion";UX "[6] Sistema legacy";UX "[7] Estado y ayuda";Write-Host "";UX "[q] salir | [Enter] refrescar | ? = ayuda" "muted";Write-Host "";$op=Read-Host "INICIO";switch($op){"1"{OpenProjectsCenter};"2"{OpenDocCenter};"3"{Placeholder "OPERADOR Y WORKERS"};"4"{Placeholder "CONTROL Y ESTADO"};"5"{Placeholder "HERRAMIENTAS Y CONFIGURACION"};"6"{OpenLegacy};"7"{Status};"q"{return};""{continue};"?"{Help};default{UXWarn "Opcion no reconocida";Start-Sleep -Milliseconds 700}}}}
-Menu
+﻿$ErrorActionPreference = "Stop"
+
+function New-EngremiatMaintenanceCard {
+  param(
+    [string]$ScreenId,
+    [string]$Route,
+    [string]$Expected,
+    [string]$Observed,
+    [string]$ActionDone,
+    [string]$Severity
+  )
+
+  $RootPath = "C:\ENGREMIAT_CORE"
+  $Base = Join-Path $RootPath "documents\manual-screen-maintenance-cards"
+  $Cards = Join-Path $Base "cards"
+  $Queue = Join-Path $Base "MAINTENANCE_QUEUE.json"
+  $Index = Join-Path $Base "MAINTENANCE_CARDS_INDEX.md"
+
+  foreach($p in @($Base,$Cards)){
+    if(!(Test-Path $p)){ New-Item -ItemType Directory -Force -Path $p | Out-Null }
+  }
+
+  $Id = "MCARD-" + (Get-Date -Format "yyyyMMdd-HHmmss")
+  if([string]::IsNullOrWhiteSpace($Severity)){ $Severity = "MEDIUM" }
+
+  $CardPath = Join-Path $Cards ($Id + ".md")
+  @(
+    "# " + $Id,
+    "",
+    "## Identidad",
+    "- card_id: " + $Id,
+    "- screen_id: " + $ScreenId,
+    "- route: " + $Route,
+    "- severity: " + $Severity,
+    "- status: OPEN",
+    "",
+    "## Evidencia humana",
+    "- expected: " + $Expected,
+    "- observed: " + $Observed,
+    "- action_done: " + $ActionDone,
+    "",
+    "## Diagnostico inicial",
+    "- suspected_file: PENDING",
+    "- suspected_function: PENDING",
+    "- risk: " + $Severity,
+    "",
+    "## Reparacion propuesta",
+    "- minimal_frontier: PENDING",
+    "- no_apply_first: yes",
+    "- rollback_needed: PENDING"
+  ) | Set-Content -Encoding UTF8 $CardPath
+
+  if(!(Test-Path $Index)){
+    @("# Indice tarjetas mantenimiento","","## Tarjetas") | Set-Content -Encoding UTF8 $Index
+  }
+
+  Add-Content -Encoding UTF8 $Index ("- OPEN | " + $Severity + " | " + $ScreenId + " | " + $Id + " | " + $CardPath)
+
+  $Obj = [ordered]@{
+    card_id = $Id
+    screen_id = $ScreenId
+    route = $Route
+    severity = $Severity
+    status = "OPEN"
+    expected = $Expected
+    observed = $Observed
+    action_done = $ActionDone
+    created_at = (Get-Date).ToString("s")
+    card_path = $CardPath
+  }
+
+  if(Test-Path $Queue){
+    try { $Q = Get-Content $Queue -Raw -Encoding UTF8 | ConvertFrom-Json } catch { $Q = $null }
+  } else {
+    $Q = $null
+  }
+
+  if($null -eq $Q){ $Q = [pscustomobject]@{ status="OPEN"; cards=@() } }
+  $Arr = @($Q.cards)
+  $Arr += $Obj
+  $Q.cards = $Arr
+  $Q | ConvertTo-Json -Depth 8 | Set-Content -Encoding UTF8 $Queue
+
+  Write-Host ("OK tarjeta_mantenimiento_creada=" + $CardPath) -ForegroundColor Green
+  return $CardPath
+}
+
+$Core = "C:\ENGREMIAT_CORE"
+$LauncherDir = Join-Path $Core "tools\launcher"
+$CardBase = Join-Path $Core "documents\module-cards"
+
+function W($m,$c="Gray"){
+  try { Write-Host $m -ForegroundColor $c } catch { Write-Host $m }
+}
+
+function RunPs1($p){
+  if(!(Test-Path $p)){
+    W "NO_GO falta launcher: $p" Red
+    Read-Host "Enter" | Out-Null
+    return
+  }
+  & powershell -NoProfile -ExecutionPolicy Bypass -File $p
+}
+
+function Header(){
+  Clear-Host
+  W "==== ENGREMIAT / INICIO ====" Cyan
+  W "Ruta: INICIO" DarkCyan
+  W "Rol: hub humano principal del operador" DarkCyan
+  W "Principio: local-first | workers OFF | worker real" DarkCyan
+  W ""
+  W "[1] Proyectos" White
+  W "[2] Memoria y documentacion" White
+  W "[3] Control y estado" White
+  W "[4] Launchers y configuracion" White
+  W "[5] Operador y workers" Yellow
+  W "[6] Tarjetas" White
+  W "[?] Ayuda" White
+  W "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" DarkGray
+}
+
+function StatusPanel(){
+  Clear-Host
+  W "==== CONTROL Y ESTADO ====" Cyan
+  W "Estado compacto del operador local." DarkCyan
+  W ""
+  $schema = Join-Path $CardBase "module-linked-card.schema.json"
+  $index = Join-Path $CardBase "module-linked-card.index.json"
+  $flow = Join-Path $CardBase "card-to-module-flow.json"
+  $checker = Join-Path $Core "tools\module-cards\check-card-to-module-flow.ps1"
+  $view = Join-Path $LauncherDir "ENGREMIAT-CARDS-VIEW-NORMALIZED.ps1"
+  W "OK entrada humana: .\ENGREMIAT.cmd" Green
+  W "OK launchers: usar [4] para health" Green
+  W "PAUSADO worker real: no ejecutar hasta cerrar operador" Yellow
+  if((Test-Path $schema) -and (Test-Path $index) -and (Test-Path $flow) -and (Test-Path $checker)){
+    W "OK canon tarjetas-modulos: schema + index + flow + checker" Green
+    W "REGLA tarjetas: PROPOSED no ejecuta | human_gate=SI" Magenta
+  } else {
+    W "WARN canon tarjetas-modulos incompleto" Yellow
+  }
+  if(Test-Path $view){ W "OK vista tarjetas: [6] Tarjetas" Green } else { W "WARN vista tarjetas no enlazada" Yellow }
+  W "FUTURO sistema vivo: autodiagnostico genera tarjetas PROPOSED, no acciones directas" Magenta
+  W ""
+  W "Siguiente recomendado: revisar Tarjetas o Launchers/configuracion." Cyan
+  W ""
+  W "[Enter] volver" DarkGray
+  Read-Host | Out-Null
+}
+
+function LauncherTools(){
+  while($true){
+    Clear-Host
+    W "==== LAUNCHERS Y CONFIGURACION ====" Cyan
+    W "Ruta: INICIO > Launchers y configuracion" DarkCyan
+    W ""
+    W "[1] Health launchers" White
+    W "[2] Helper update dry-run" White
+    W "[3] Data Intake" White
+    W "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" DarkGray
+    $x = Read-Host "CONFIG"
+    if([string]::IsNullOrWhiteSpace($x)){ continue }
+    switch($x.Trim().ToLowerInvariant()){
+      "1" { RunPs1 (Join-Path $LauncherDir "ENGREMIAT-LAUNCHER-HEALTH.ps1"); Read-Host "Enter" | Out-Null }
+      "2" { RunPs1 (Join-Path $LauncherDir "ENGREMIAT-LAUNCHER-UPDATE-HELPER.ps1"); Read-Host "Enter" | Out-Null }
+      "3" { RunPs1 (Join-Path $LauncherDir "ENGREMIAT-DATA-INTAKE-CENTER-NORMALIZED.ps1") }
+      "b" { return }
+      "q" { return }
+      default { W "Comando no reconocido" Yellow; Start-Sleep -Milliseconds 700 }
+    }
+  }
+}
+
+function WorkersPaused(){
+  Clear-Host
+  W "==== OPERADOR Y WORKERS ====" Cyan
+  W "Estado: PAUSADO" Yellow
+  W ""
+  W "Worker real pausado tras E80." Yellow
+  W "Siguiente solo cuando cerremos navegacion y control humano." Yellow
+  W ""
+  W "[Enter] volver" DarkGray
+  Read-Host | Out-Null
+}
+
+function Help(){
+  Clear-Host
+  W "==== AYUDA / INICIO ====" Cyan
+  W "Enter refresca la pantalla actual." DarkGray
+  W "b/q vuelve o sale segun pantalla." DarkGray
+  W "[1] Proyectos: cartera y acciones locales." Gray
+  W "[2] Memoria/documentacion: conocimiento del sistema." Gray
+  W "[3] Control y estado: resumen operativo y canon tarjetas-modulos." Gray
+  W "[4] Launchers/configuracion: health y helper." Gray
+  W "[5] Workers: pausado por seguridad." Gray
+  W "[6] Tarjetas: vista readonly PROYECTO > MODULO > TARJETA." Gray
+  W ""
+  W "Futuro: Sistema vivo/autodiagnostico para proponer tarjetas PROPOSED vinculadas a modulos." Magenta
+  W ""
+  W "[Enter] volver" DarkGray
+  Read-Host | Out-Null
+}
+
+function MaintenanceCardFromInicio(){
+  Clear-Host
+  W "==== TARJETA DE MANTENIMIENTO CONTEXTUAL ====" Cyan
+  W "Ruta: INICIO" DarkCyan
+  W "Cancelar: b / q / c / cancelar" DarkGray
+  W ""
+  $cancelTokens = @("b","q","c","cancelar","cancel","salir")
+  $sev = Read-Host "Severidad LOW/MEDIUM/HIGH/BLOCKER"
+  if($cancelTokens -contains $sev.Trim().ToLowerInvariant()){ W "CANCELADO tarjeta_mantenimiento" Yellow; Start-Sleep -Milliseconds 500; return }
+  if([string]::IsNullOrWhiteSpace($sev)){ $sev = "MEDIUM" }
+  $exp = Read-Host "Esperado"
+  if($cancelTokens -contains $exp.Trim().ToLowerInvariant()){ W "CANCELADO tarjeta_mantenimiento" Yellow; Start-Sleep -Milliseconds 500; return }
+  $obs = Read-Host "Observado / que falla"
+  if($cancelTokens -contains $obs.Trim().ToLowerInvariant()){ W "CANCELADO tarjeta_mantenimiento" Yellow; Start-Sleep -Milliseconds 500; return }
+  $act = Read-Host "Accion realizada antes del fallo"
+  if($cancelTokens -contains $act.Trim().ToLowerInvariant()){ W "CANCELADO tarjeta_mantenimiento" Yellow; Start-Sleep -Milliseconds 500; return }
+  if([string]::IsNullOrWhiteSpace($exp)){ $exp = "PENDING" }
+  if([string]::IsNullOrWhiteSpace($obs)){ $obs = "PENDING" }
+  if([string]::IsNullOrWhiteSpace($act)){ $act = "PENDING" }
+  New-EngremiatMaintenanceCard -ScreenId "S02_INICIO" -Route "INICIO" -Expected $exp -Observed $obs -ActionDone $act -Severity $sev | Out-Null
+  Read-Host "Enter para volver a INICIO" | Out-Null
+}
+
+while($true){
+  Header
+  $c = Read-Host "INICIO"
+  if([string]::IsNullOrWhiteSpace($c)){ continue }
+
+  switch($c.Trim().ToLowerInvariant()){
+    "1" { RunPs1 (Join-Path $LauncherDir "ENGREMIAT-PROJECTS-CENTER-NORMALIZED.ps1") }
+    "2" { RunPs1 (Join-Path $LauncherDir "ENGREMIAT-MEMORY-DOCUMENTATION-CENTER-NORMALIZED.ps1") }
+    "3" { StatusPanel }
+    "4" { LauncherTools }
+    "5" { WorkersPaused }
+    "6" { RunPs1 (Join-Path $LauncherDir "ENGREMIAT-CARDS-VIEW-NORMALIZED.ps1") }
+    "?" { Help }
+    "7" { Help }
+    "m" { MaintenanceCardFromInicio }
+    "b" { return }
+    "q" { return }
+    default { W "Comando no reconocido" Yellow; Start-Sleep -Milliseconds 700 }
+  }
+}
+
+

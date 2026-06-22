@@ -1,4 +1,5 @@
-﻿$ErrorActionPreference="Stop"
+﻿Write-Host "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" -ForegroundColor DarkGray
+$ErrorActionPreference="Stop"
 [Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
 param([string]$Core="C:\ENGREMIAT_CORE")
 $Heartbeat=Join-Path $Core "documents\worker-sync\worker-heartbeat.example.json"
@@ -9,3 +10,4 @@ $md=Join-Path $OutDir ($h.project_id+".md")
 $lines=@("---","type: project","project_id: "+$h.project_id,"worker_id: "+$h.worker_id,"task_id: "+$h.task_id,"state: "+$h.state,"progress_pct: "+$h.progress_pct,"heartbeat_at: "+$h.heartbeat_at,"---","","# "+$h.project_id,"","Estado: **"+$h.state+"**","","Progreso: "+$h.progress_pct+"%","","Worker: [["+$h.worker_id+"]]","","Task: [["+$h.task_id+"]]","","Next: "+$h.next_action)
 $lines|Set-Content $md -Encoding UTF8
 Write-Host "OK obsidian_heartbeat_sync_demo=$md" -ForegroundColor Green
+

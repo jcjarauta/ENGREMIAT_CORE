@@ -32,5 +32,6 @@ function Show-Header([string]$Section=''){
   W ''
 }
 function Show-Help(){Show-Header 'AYUDA';W 'Enter refresca. b vuelve. ? ayuda. Las acciones externas requieren gate.';Pause-Screen}
-function Main-Menu(){while($true){Show-Header;W '[1] Accion principal';W '[2] Submenu conceptual';W '';W '[b] volver | [Enter] refrescar | ? = ayuda' DarkGray;W '';$op=Read-Host 'PROMPT_CANONICO';switch($op){'1'{W 'accion_pendiente' Yellow;Pause-Screen};'2'{W 'submenu_pendiente' Yellow;Pause-Screen};'b'{return};''{continue};'?'{Show-Help};default{W 'Opcion no reconocida' Yellow;Start-Sleep -Milliseconds 700}}}}
+Write-Host "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" -ForegroundColor DarkGray
 Main-Menu
+

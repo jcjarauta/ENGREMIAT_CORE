@@ -1,28 +1,303 @@
-﻿$ErrorActionPreference="Stop"
+﻿# ENG_PROJECTS_CENTER_SCREEN_MASTER_E21E_BEGIN
+function New-EngProjectsCenterMaintenanceCard {
+  Clear-Host
+  Write-Host "==== TARJETA DE MANTENIMIENTO CONTEXTUAL ====" -ForegroundColor Cyan
+  Write-Host "Ruta: INICIO > Proyectos" -ForegroundColor DarkCyan
+  Write-Host "Cancelar: b / q / c / cancelar" -ForegroundColor DarkGray
+  Write-Host ""
+
+  $cancelTokens = @("b","q","c","cancelar","cancel","salir")
+  $sev = Read-Host "Severidad LOW/MEDIUM/HIGH/BLOCKER"
+  if($cancelTokens -contains $sev.Trim().ToLowerInvariant()){ Write-Host "CANCELADO tarjeta_mantenimiento" -ForegroundColor Yellow;
+ Start-Sleep -Milliseconds 500;
+ return }
+  $exp = Read-Host "Esperado"
+  if($cancelTokens -contains $exp.Trim().ToLowerInvariant()){ Write-Host "CANCELADO tarjeta_mantenimiento" -ForegroundColor Yellow;
+ Start-Sleep -Milliseconds 500;
+ return }
+  $obs = Read-Host "Observado / que falla"
+  if($cancelTokens -contains $obs.Trim().ToLowerInvariant()){ Write-Host "CANCELADO tarjeta_mantenimiento" -ForegroundColor Yellow;
+ Start-Sleep -Milliseconds 500;
+ return }
+  $act = Read-Host "Accion realizada antes del fallo"
+  if($cancelTokens -contains $act.Trim().ToLowerInvariant()){ Write-Host "CANCELADO tarjeta_mantenimiento" -ForegroundColor Yellow;
+ Start-Sleep -Milliseconds 500;
+ return }
+
+  if([string]::IsNullOrWhiteSpace($sev)){ $sev = "MEDIUM" }
+  if([string]::IsNullOrWhiteSpace($exp)){ $exp = "PENDING" }
+  if([string]::IsNullOrWhiteSpace($obs)){ $obs = "PENDING" }
+  if([string]::IsNullOrWhiteSpace($act)){ $act = "PENDING" }
+
+  $cardsDir = "C:\ENGREMIAT_CORE\documents\manual-screen-maintenance-cards\cards"
+  if(!(Test-Path $cardsDir)){ New-Item -ItemType Directory -Force -Path $cardsDir | Out-Null }
+  $id = "MCARD-" + (Get-Date -Format "yyyyMMdd-HHmmss") + "-projects-center"
+  $card = Join-Path $cardsDir ($id + ".md")
+  @(
+    "# " + $id,
+    "",
+    "- screen_id: PROJECTS_CENTER",
+    "- route: INICIO > Proyectos",
+    "- severity: " + $sev,
+    "- expected: " + $exp,
+    "- observed: " + $obs,
+    "- action_done: " + $act,
+    "- status: OPEN",
+    "- created_at: " + (Get-Date).ToString("s")
+  ) | Set-Content -Encoding UTF8 $card
+  Write-Host ("OK tarjeta_mantenimiento_creada=" + $card) -ForegroundColor Green
+  Read-Host "Enter para volver a PROYECTOS" | Out-Null
+}
+
+function Show-EngProjectsCenterHelp {
+  Clear-Host
+  Write-Host "==== AYUDA - PROYECTOS ====" -ForegroundColor Cyan
+  Write-Host "Ruta: INICIO > Proyectos" -ForegroundColor DarkCyan
+  Write-Host ""
+  Write-Host "Enter = refrescar pantalla" -ForegroundColor Gray
+  Write-Host "numero = abrir proyecto" -ForegroundColor Gray
+  Write-Host "b = volver" -ForegroundColor Gray
+  Write-Host "q = salir / volver" -ForegroundColor Gray
+  Write-Host "m = crear tarjeta de mantenimiento contextual" -ForegroundColor Gray
+  Write-Host "? = ayuda" -ForegroundColor Gray
+  Write-Host ""
+  Read-Host "Enter para volver" | Out-Null
+}
+# ENG_PROJECTS_CENTER_SCREEN_MASTER_E21E_END
+$ErrorActionPreference='Stop'
 [Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
-$Core="C:\ENGREMIAT_CORE"
-$ProjectsRoot=Join-Path $Core "projects"
-$ReportsDir=Join-Path $Core "reports\launcher"
-$WorkerSyncDir=Join-Path $Core "documents\worker-sync"
-function UX([string]$m,[string]$role="info"){ $c="Gray"; if($role -eq "title"){$c="Cyan"}elseif($role -eq "section"){$c="Yellow"}elseif($role -eq "ok"){$c="Green"}elseif($role -eq "warn"){$c="Yellow"}elseif($role -eq "err"){$c="Red"}elseif($role -eq "muted"){$c="DarkGray"}; try{Write-Host $m -ForegroundColor $c}catch{Write-Host $m} }
-function Header([string]$title,[string]$route,[string]$role,[string]$principle){Clear-Host;UX ("==== "+$title+" ====") "title";UX ("Ruta: "+$route) "muted";UX ("Rol: "+$role) "info";UX ("Principio: "+$principle) "muted";UX "" "info"}
-function Short($s,[int]$n){$t=[string]$s;if([string]::IsNullOrWhiteSpace($t)){$t="-"};if($t.Length -le $n){return $t};if($n -le 3){return $t.Substring(0,$n)};return $t.Substring(0,$n-3)+"..."}
-function Bar([int]$score,[string]$worker){$v=[Math]::Max(0,[Math]::Min(100,$score));$filled=[int][Math]::Floor($v/10);if($filled -gt 10){$filled=10};$empty=10-$filled;$core=("#"*$filled)+("-"*$empty);if($worker -eq "RUNNING" -and $filled -lt 10){$core=("#"*$filled)+">"+("-"*([Math]::Max(0,$empty-1)))};return "["+$core+"]"}
-function ReadJsonSafe([string]$p){try{if(Test-Path $p){return Get-Content $p -Raw|ConvertFrom-Json}}catch{};return $null}
-function GetLocalSignals(){[pscustomobject]@{heartbeat=(ReadJsonSafe (Join-Path $WorkerSyncDir "worker-heartbeat-latest.json"));project_signal=(ReadJsonSafe (Join-Path $WorkerSyncDir "project-signal-latest.json"))}}
-function GetProjects(){New-Item -ItemType Directory -Force -Path $ProjectsRoot|Out-Null;@(Get-ChildItem $ProjectsRoot -Directory -ErrorAction SilentlyContinue|Where-Object{$_.Name -like "ENGREMIAT_PROJECT_*" -or (Test-Path (Join-Path $_.FullName "project.json"))}|Sort-Object LastWriteTime -Descending)}
-function CountDirs([string]$p){try{return @(Get-ChildItem $p -Directory -ErrorAction SilentlyContinue).Count}catch{return 0}}
-function CountFiles([string]$p){try{return @(Get-ChildItem $p -File -Recurse -ErrorAction SilentlyContinue).Count}catch{return 0}}
-function MatchSignalForProject($project,$signals){$name=$project.Name;$path=$project.FullName;$candidates=@($signals.project_signal,$signals.heartbeat);foreach($s in $candidates){if($null -eq $s){continue};$sid=[string]$s.project_id;$spath=[string]$s.project_path;if($sid -and ($name -eq $sid -or $name -like ("*"+$sid+"*") -or $sid -like ("*"+$name+"*"))){return $s};if($spath -and $path -eq $spath){return $s}};return $null}
-function DetectPhase($p){if(Test-Path (Join-Path $p.FullName "MODULOS")){return "MODULOS"};return "INICIO"}
-function BaseSignal($p){$mods=CountDirs (Join-Path $p.FullName "MODULOS");$files=CountFiles $p.FullName;$score=20;if($mods -gt 0){$score+=40};if($files -gt 5){$score+=20};$block="WARN";$cause="generar evidencia";if($mods -gt 0 -and $files -gt 5){$block="OK";$cause="estructura minima"};[pscustomobject]@{name=$p.Name;phase=(DetectPhase $p);score=$score;worker="IDLE";block=$block;next=$cause;cause=$cause;signal_source="local"}}
-function ApplySignal($sig,$tmp){if($null -eq $sig){return $tmp};if($sig.PSObject.Properties.Name -contains "phase" -and $sig.phase){$tmp.phase=[string]$sig.phase};if($sig.PSObject.Properties.Name -contains "progress_pct" -and $null -ne $sig.progress_pct){$tmp.score=[int]$sig.progress_pct};if($sig.PSObject.Properties.Name -contains "state" -and $sig.state){$tmp.worker=[string]$sig.state};if($sig.PSObject.Properties.Name -contains "next_action" -and $sig.next_action){$tmp.next=[string]$sig.next_action};if($sig.PSObject.Properties.Name -contains "blocked_reason" -and $sig.blocked_reason){$tmp.block="BLOCK";$tmp.cause=[string]$sig.blocked_reason}elseif($sig.PSObject.Properties.Name -contains "block" -and $sig.block){$tmp.block=[string]$sig.block;if($tmp.block -eq "OK"){$tmp.cause="signal_ok"}}elseif($tmp.worker -eq "RUNNING" -or $tmp.worker -eq "DONE"){$tmp.block="OK";$tmp.cause="live_signal_no_blocked_reason"};$tmp.signal_source="heartbeat";return $tmp}
-function ProjectSignal($p,$signals){$tmp=BaseSignal $p;$sig=MatchSignalForProject $p $signals;return ApplySignal $sig $tmp}
-function ShowProjects(){Header "PROYECTOS / CENTRO DE PROYECTOS" "INICIO > Proyectos" "entrada humana principal para ver cartera, workers y bloqueos" "tabla operativa con progreso visual y senales de worker";UX "CARTERA DE PROYECTOS / PROCESO VIVO" "section";UX "" "info";$items=@(GetProjects);$localSignals=GetLocalSignals;$rows=New-Object System.Collections.Generic.List[object];foreach($p in $items){$rows.Add((ProjectSignal $p $localSignals))};$total=$rows.Count;$ok=@($rows|Where-Object{$_.block -eq "OK"}).Count;$warn=@($rows|Where-Object{$_.block -eq "WARN"}).Count;$block=@($rows|Where-Object{$_.block -eq "BLOCK"}).Count;$run=@($rows|Where-Object{$_.worker -eq "RUNNING"}).Count;$wait=@($rows|Where-Object{$_.worker -eq "WAITING_HUMAN"}).Count;UX ("Total={0}  OK={1}  WARN={2}  BLOCK={3}  RUN={4}  WAIT={5}" -f $total,$ok,$warn,$block,$run,$wait) "info";UX "" "info";UX "N  NOMBRE                               FASE            PROGRESO     WORKER  BLOQ  NEXT" "section";$i=1;foreach($s in $rows){$line=("{0,2} {1,-36} {2,-15} {3} {4,-7} {5,-5} {6}" -f $i,(Short $s.name 36),(Short $s.phase 15),(Bar $s.score $s.worker),(Short $s.worker 7),(Short $s.block 5),(Short $s.next 28));if($s.block -eq "BLOCK"){UX $line "err"}elseif($s.worker -eq "RUNNING"){UX $line "ok"}elseif($s.block -eq "WARN"){UX $line "warn"}else{UX $line "info"};$i++};UX "" "info";UX "Enter refresca. RUNNING se infiere por heartbeat/project-signal local; Obsidian solo visualiza Markdown/YAML." "muted";Read-Host "PROYECTOS"}
-function NewProject(){New-Item -ItemType Directory -Force -Path $ProjectsRoot|Out-Null;$name=Read-Host "Nombre proyecto";if([string]::IsNullOrWhiteSpace($name)){return};$safe=($name -replace "[^a-zA-Z0-9_-]","-").ToLower();$dir=Join-Path $ProjectsRoot ("ENGREMIAT_PROJECT_"+$safe+"_"+(Get-Date -Format "yyyyMMdd-HHmmss"));New-Item -ItemType Directory -Force -Path $dir,(Join-Path $dir "MODULOS"),(Join-Path $dir "documents"),(Join-Path $dir "reports")|Out-Null;[ordered]@{id=(Split-Path $dir -Leaf);name=$name;created_at=(Get-Date).ToString("s");status="ACTIVE"}|ConvertTo-Json -Depth 50|Set-Content (Join-Path $dir "project.json") -Encoding UTF8;UX ("OK proyecto creado: "+$dir) "ok";Read-Host "Enter"}
-function OpenProjectsRoot(){New-Item -ItemType Directory -Force -Path $ProjectsRoot|Out-Null;Start-Process explorer.exe $ProjectsRoot}
-function Status(){Header "PROYECTOS / ESTADO" "INICIO > Proyectos > Estado" "diagnostico local" "sin acciones externas";UX ("ProjectsRoot: "+$ProjectsRoot) "info";UX ("WorkerSyncDir: "+$WorkerSyncDir) "info";UX ("Projects: "+@(GetProjects).Count) "info";Read-Host "ESTADO"}
-function Help(){Header "PROYECTOS / AYUDA" "INICIO > Proyectos > Ayuda" "ayuda contextual" "Enter refresca, b vuelve";UX "[1] ver cartera viva de proyectos" "info";UX "[2] crear proyecto minimo" "info";UX "[3] abrir carpeta proyectos" "info";UX "[4] estado" "info";UX "[b] volver/salir" "info";Read-Host "AYUDA"}
-function Menu(){while($true){Header "PROYECTOS / CENTRO DE PROYECTOS" "INICIO > Proyectos" "entrada humana principal para crear, abrir y operar proyectos" "proyectos primero, modulos despues, heartbeat local como senal viva";UX "[1] ver cartera viva de proyectos" "section";UX "[2] crear proyecto minimo" "section";UX "[3] abrir carpeta proyectos" "section";UX "[4] estado y ayuda" "section";UX "[b] volver | [Enter] refrescar | ? = ayuda" "muted";$op=Read-Host "PROYECTOS";if([string]::IsNullOrWhiteSpace($op)){continue};if($op -eq "1"){ShowProjects}elseif($op -eq "2"){NewProject}elseif($op -eq "3"){OpenProjectsRoot}elseif($op -eq "4" -or $op -eq "?"){Help}elseif($op -eq "b" -or $op -eq "q"){break}else{UX "opcion no reconocida" "warn";Start-Sleep -Milliseconds 700}}}
-Menu
+$Core='C:\ENGREMIAT_CORE'
+$ProjectsDir=Join-Path $Core 'projects'
+$LauncherDir=Join-Path $Core 'tools\launcher'
+$CardsView=Join-Path $LauncherDir 'ENGREMIAT-CARDS-VIEW-NORMALIZED.ps1'
+$SignalsConfig=Join-Path $Core 'documents\worker-sync\worker-signals-config.json'
+$LatestSignal=Join-Path $Core 'documents\worker-sync\project-signal-latest.json'
+function W($m,$c='Gray'){try{Write-Host $m -ForegroundColor $c}catch{Write-Host $m}}
+function SafeId($p){$j=Join-Path $p 'project.json';
+
+if(Test-Path $j){try{$o=Get-Content $j -Raw|ConvertFrom-Json;
+
+if($o.project_id){return [string]$o.project_id};
+
+if($o.id){return [string]$o.id};
+
+if($o.name){return [string]$o.name}}catch{}};
+
+return (Split-Path $p -Leaf)}
+function WorkersState(){if(Test-Path $SignalsConfig){try{$c=Get-Content $SignalsConfig -Raw|ConvertFrom-Json;
+
+if($c.enabled -eq $true){return 'ON'}}catch{}};
+
+return 'OFF'}
+function LatestWorkerText(){if((WorkersState) -ne 'ON'){return 'Workers OFF'};
+
+if(Test-Path $LatestSignal){try{$s=Get-Content $LatestSignal -Raw|ConvertFrom-Json;
+
+return (([string]$s.kind)+' / '+([string]$s.status)+' / '+([string]$s.readiness)+'%')}catch{return 'Signal unreadable'}};
+
+return 'Sin senal'}
+function GetProjects(){@(Get-ChildItem $ProjectsDir -Directory -ErrorAction SilentlyContinue|Sort-Object LastWriteTime -Descending)}
+function GetModules($ProjectPath){$m=Join-Path $ProjectPath 'MODULOS';
+
+if(Test-Path $m){@(Get-ChildItem $m -Directory -ErrorAction SilentlyContinue|Sort-Object Name)}else{@()}}
+function ModuleId($ModulePath){$j=Join-Path $ModulePath 'module.json';
+
+if(Test-Path $j){try{$o=Get-Content $j -Raw|ConvertFrom-Json;
+
+if($o.module_id){return [string]$o.module_id};
+
+if($o.id){return [string]$o.id};
+
+if($o.name){return [string]$o.name}}catch{}};
+
+return (Split-Path $ModulePath -Leaf)}
+function OpenPath($p){if(Test-Path $p){Start-Process $p}else{W "NO_GO no existe: $p" Red;
+
+Read-Host 'Enter'|Out-Null}}
+function CardsFor($ProjectId,$ModuleId){if(!(Test-Path $CardsView)){W "NO_GO falta vista tarjetas: $CardsView" Red;
+
+Read-Host 'Enter'|Out-Null;
+
+return};
+
+& powershell -NoProfile -ExecutionPolicy Bypass -File $CardsView -ProjectId $ProjectId -ModuleId $ModuleId}
+function Header(){Clear-Host;
+
+W '==== PROYECTOS ====' Cyan;
+
+W 'Ruta: INICIO > Proyectos' DarkCyan;
+
+W 'Rol: cartera de proyectos, modulos y tarjetas vinculadas' DarkCyan;
+
+W 'Principio: PROYECTO > MODULO > TARJETA | readonly | workers seguros' DarkCyan;
+
+W ''}
+function ProjectList(){while($true){Header;
+
+$items=GetProjects;
+
+if($items.Count -eq 0){W 'No hay proyectos en C:\ENGREMIAT_CORE\projects' Yellow}else{$i=0;
+
+foreach($p in $items){$i++;
+
+$ProjectIdValue=SafeId $p.FullName;
+
+W ('['+$i+'] '+$ProjectIdValue+'  '+$p.Name) White}};
+
+W '';
+
+W 'numero = abrir proyecto | [b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar' DarkGray;
+
+$c=Read-Host 'PROYECTOS';
+# ENG_PROJECTS_CENTER_ROUTER_E23C_BEGIN
+$__eng_projects_center_cmd = if($null -eq $c) { "" } else { [string]$c }
+$__eng_projects_center_cmd = $__eng_projects_center_cmd.Trim().ToLowerInvariant()
+if($__eng_projects_center_cmd -eq "m"){ New-EngProjectsCenterMaintenanceCard; continue }
+if($__eng_projects_center_cmd -eq "?"){ Show-EngProjectsCenterHelp; continue }
+if($__eng_projects_center_cmd -eq "q"){ return }
+# ENG_PROJECTS_CENTER_ROUTER_E23C_END
+
+if([string]::IsNullOrWhiteSpace($c)){continue};
+
+if($c.ToLower() -eq 'b'){break};
+
+$n=0;
+
+if([int]::TryParse($c,[ref]$n) -and $n -ge 1 -and $n -le $items.Count){ProjectActions $items[$n-1].FullName}else{W 'Comando no reconocido' Yellow;
+
+Start-Sleep -Milliseconds 700}}}
+function ProjectActions($ProjectPath){$ProjectId=SafeId $ProjectPath;
+
+while($true){Clear-Host;
+
+W '==== PROYECTO / ACCIONES ====' Cyan;
+
+W ('Ruta: INICIO > Proyectos > '+$ProjectId) DarkCyan;
+
+W 'Rol: acciones locales del proyecto' DarkCyan;
+
+W 'Principio: sin workers reales, sin git, sin red' DarkCyan;
+
+W '';
+
+W ('Proyecto: '+$ProjectId) White;
+
+W ('Ruta: '+$ProjectPath) Gray;
+
+W ('Workers: '+(WorkersState)) Yellow;
+
+W ('Ultima senal: '+(LatestWorkerText)) Gray;
+
+W '';
+
+W '[1] abrir carpeta del proyecto' White;
+
+W '[2] abrir project.json' White;
+
+W '[3] modulos' White;
+
+W '[4] tarjetas canon navegacion' White;
+
+W '[5] estado/ayuda' White;
+
+W '[b] volver a cartera | Enter = refrescar' DarkGray;
+
+$c=Read-Host 'PROYECTO';
+
+if([string]::IsNullOrWhiteSpace($c)){continue};
+
+switch($c.ToLower()){'1'{OpenPath $ProjectPath}'2'{OpenPath (Join-Path $ProjectPath 'project.json')}'3'{ModulesScreen $ProjectPath $ProjectId}'4'{CardsFor 'ENGREMIAT_CORE' 'MODULE_OPERATOR_NAVIGATION'}'5'{ProjectStatus $ProjectPath $ProjectId}'b'{return}default{W 'Comando no reconocido' Yellow;
+
+Start-Sleep -Milliseconds 700}}}}
+function ModulesScreen($ProjectPath,$ProjectId){while($true){Clear-Host;
+
+W '==== MODULOS ====' Cyan;
+
+W ('Ruta: INICIO > Proyectos > '+$ProjectId+' > Modulos') DarkCyan;
+
+W 'Rol: modulos del proyecto y tarjetas vinculadas' DarkCyan;
+
+W '';
+
+$mods=GetModules $ProjectPath;
+
+if($mods.Count -eq 0){W 'No hay carpeta MODULOS o no contiene modulos.' Yellow}else{$i=0;
+
+foreach($m in $mods){$i++;
+
+W ('['+$i+'] '+(ModuleId $m.FullName)+'  '+$m.Name) White}};
+
+W '';
+
+W 'numero = abrir modulo | b = volver | Enter = refrescar' DarkGray;
+
+$c=Read-Host 'MODULOS';
+
+if([string]::IsNullOrWhiteSpace($c)){continue};
+
+if($c.ToLower() -eq 'b'){return};
+
+$n=0;
+
+if([int]::TryParse($c,[ref]$n) -and $n -ge 1 -and $n -le $mods.Count){ModuleActions $ProjectId $mods[$n-1].FullName}else{W 'Comando no reconocido' Yellow;
+
+Start-Sleep -Milliseconds 700}}}
+function ModuleActions($ProjectId,$ModulePath){$Mid=ModuleId $ModulePath;
+
+while($true){Clear-Host;
+
+W '==== MODULO / ACCIONES ====' Cyan;
+
+W ('Ruta: INICIO > Proyectos > Proyecto > Modulos > '+$Mid) DarkCyan;
+
+W 'Rol: acciones locales del modulo' DarkCyan;
+
+W '';
+
+W ('Proyecto: '+$ProjectId) Gray;
+
+W ('Modulo:   '+$Mid) White;
+
+W ('Ruta:     '+$ModulePath) Gray;
+
+W '';
+
+W '[1] abrir carpeta del modulo' White;
+
+W '[2] abrir module.json' White;
+
+W '[3] tarjetas del modulo' White;
+
+W '[b] volver a modulos | Enter = refrescar' DarkGray;
+
+$c=Read-Host 'MODULO';
+
+if([string]::IsNullOrWhiteSpace($c)){continue};
+
+switch($c.ToLower()){'1'{OpenPath $ModulePath}'2'{OpenPath (Join-Path $ModulePath 'module.json')}'3'{CardsFor $ProjectId $Mid}'b'{return}default{W 'Comando no reconocido' Yellow;
+
+Start-Sleep -Milliseconds 700}}}}
+function ProjectStatus($ProjectPath,$ProjectId){Clear-Host;
+
+W '==== PROYECTO / ESTADO ====' Cyan;
+
+W ('Proyecto: '+$ProjectId) White;
+
+W ('Ruta: '+$ProjectPath) Gray;
+
+W ('Workers: '+(WorkersState)) Yellow;
+
+W ('Ultima senal: '+(LatestWorkerText)) Gray;
+
+W '';
+
+W 'Tarjetas: entrar por [3] modulos > modulo > [3] tarjetas del modulo.' Cyan;
+
+W '';
+
+W '[Enter] volver' DarkGray;
+
+Read-Host|Out-Null}
+ProjectList
+
 

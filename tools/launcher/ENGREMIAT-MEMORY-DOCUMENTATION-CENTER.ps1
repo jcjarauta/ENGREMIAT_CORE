@@ -1021,6 +1021,7 @@ function Show-Tooling {
   W ""
   $pandoc = Find-Pandoc
   if($pandoc){ W "[OK] pandoc detectado" Green; W ("ruta: {0}" -f $pandoc) DarkCyan }
+Write-Host "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" -ForegroundColor DarkGray
   else{ W "[MISS] pandoc no detectado" Yellow; W "Exportación DOCX/HTML automática no disponible todavía." White }
   W ""
   W ("Carpeta exports: {0}" -f (Join-Path $DocDir "exports")) Green
@@ -1117,6 +1118,7 @@ while($true){
   W "WARN comando_no_reconocido" Yellow
   Pause-Eng
 }
+
 
 
 

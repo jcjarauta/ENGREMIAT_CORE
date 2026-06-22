@@ -6,6 +6,10 @@ function W([string]$m,[string]$c="Gray"){try{Write-Host $m -ForegroundColor $c}c
 function UXOk([string]$m){UX ("[OK] "+$m) "ok"}
 function UXWarn([string]$m){UX ("[WARN] "+$m) "warn"}
 function UXErr([string]$m){UX ("[ERR] "+$m) "err"}
+
+Write-Host ""
+Write-Host "[b/q] salir/volver | m = mantenimiento | ? = ayuda | Enter = refrescar" -ForegroundColor DarkGray
+Write-Host ""
 function P(){Write-Host "";Read-Host "[Enter] volver / refrescar"|Out-Null}
 function Header([string]$section=""){Clear-Host;UX "==== DATA INTAKE / ENTRADA DE DATOS Y FICHAS ====" "title";UX "Ruta: INICIO > Memoria y documentacion > Data Intake" "route";UX "Rol: productor y normalizador local de fichas estructuradas" "role";UX "Principio: Entrada de datos produce perfiles normalizados; Centro Documental consume fichas" "principle";if($section){UX $section "section"};Write-Host ""}
 function EnsureDir([string]$p){New-Item -ItemType Directory -Force -Path $p|Out-Null}
@@ -24,5 +28,6 @@ function ImportTxtMd(){EnsureDir (IntakeInbox);$files=@(Get-ChildItem (IntakeInb
 function ImportJson(){EnsureDir (IntakeInbox);$files=@(Get-ChildItem (IntakeInbox) -File -Filter *.json -Recurse -ErrorAction SilentlyContinue|Sort-Object LastWriteTime -Descending);if(!$files.Count){Header "IMPORTAR JSON";UXWarn ("No hay JSON en inbox: "+(IntakeInbox));Start-Process explorer.exe (IntakeInbox);P;return};$f=$files|Select-Object -First 1;try{$obj=Get-Content $f.FullName -Raw|ConvertFrom-Json -AsHashtable}catch{Header "IMPORTAR JSON";UXErr ("JSON invalido: "+$f.FullName);UXErr $_.Exception.Message;P;return};$res=SaveProfile $obj "json" $f.FullName;Header "JSON IMPORTADO COMO FICHA ACTIVA";UXOk ("source: "+$f.FullName);UXOk ("active_profile: "+$res.active);UXOk ("normalized: "+$res.latest);UXOk ("report: "+$res.report);P}
 function ShowStatus(){Header "ESTADO DATA INTAKE";$paths=@((IntakeInbox),(IntakeNormalized),(IntakeContracts),(ActiveProfilePath));foreach($p in $paths){if(Test-Path $p){UXOk $p}else{UXWarn ("MISS "+$p)}};$profiles=@();if(Test-Path (IntakeNormalized)){$profiles=@(Get-ChildItem (IntakeNormalized) -Filter *.json -File|Sort-Object LastWriteTime -Descending|Select-Object -First 5)};UX ("Perfiles normalizados recientes: "+$profiles.Count) "info";foreach($p in $profiles){UX ("- "+$p.Name) "muted"};P}
 function ShowHelp(){Header "AYUDA DATA INTAKE";UX "Usa [3] para tomar el TXT/MD mas reciente del inbox y convertirlo en ficha activa." "info";UX "Usa [4] para tomar el JSON mas reciente del inbox y convertirlo en ficha activa." "info";UX "b vuelve, Enter refresca, ? ayuda." "muted";P}
-function Menu(){while($true){Header;UX "[1] activar ficha demo completa" "info";UX "[2] crear/abrir ficha manual editable" "info";UX "[3] importar TXT/MD desde inbox y normalizar" "info";UX "[4] importar JSON desde inbox como ficha activa" "info";UX "[5] abrir carpeta inbox de entradas" "info";UX "[6] abrir carpeta normalized de fichas" "info";UX "[7] ver estado de Data Intake" "info";UX "[8] abrir contratos Data Intake" "info";Write-Host "";UX "[b] volver al Centro Documental | [Enter] refrescar | ? = ayuda" "muted";Write-Host "";$op=Read-Host "DATA_INTAKE";switch($op){"1"{EnsureDemoProfile};"2"{EditManualProfile};"3"{ImportTxtMd};"4"{ImportJson};"5"{OpenPath (IntakeInbox) "INBOX DE ENTRADAS"};"6"{OpenPath (IntakeNormalized) "FICHAS NORMALIZED"};"7"{ShowStatus};"8"{OpenPath (IntakeContracts) "CONTRATOS DATA INTAKE"};"b"{return};""{continue};"?"{ShowHelp};default{UXWarn "Opcion no reconocida";Start-Sleep -Milliseconds 700}}}}
+Write-Host "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" -ForegroundColor DarkGray
 Menu
+

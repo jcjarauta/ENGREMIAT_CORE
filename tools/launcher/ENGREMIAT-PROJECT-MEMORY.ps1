@@ -52,6 +52,7 @@ function WriteMemory($m){
   $out=@(); $out += "# ENGREMIAT - Memoria del proyecto"; $out += ""; $out += "- Generado: $($m.generated_at)"; $out += "- Proyecto activo: $($m.active_project_name)"; $out += "- Módulos proyecto: $($m.counters.project_modules)"; $out += "- Biblioteca: $($m.counters.library_active) activos / $($m.counters.library_inactive) inactivos / $($m.counters.library_historic) históricos"; $out += ""; $out += "## Qué se ha construido"; foreach($x in $m.built){ $out += "- $x" }; $out += ""; $out += "## Qué se ha aprendido"; foreach($x in $m.learned){ $out += "- $x" }; $out += ""; $out += "## Pendiente"; foreach($x in $m.pending){ $out += "- $x" }; $out += ""; $out += "## Pantallas"; foreach($s in $m.screens){ $ok=if($s.exists){"OK"}else{"MISS"}; $out += "- [$ok] $($s.label): $($s.path)" }; $out += ""; $out += "## Siguiente recomendado"; $out += "- $($m.recommended_next)"; $out | Set-Content $md -Encoding UTF8
   $cp=@(); $cp += "CONTEXTO ENGREMIAT PARA CONTINUAR DESARROLLO"; $cp += ""; $cp += "Actúa como experto en ENGREMIAT / operador local PowerShell."; $cp += "Proyecto activo: $($m.active_project_name)"; $cp += "Estado: inicio V10 con navegación numérica, diagnóstico, memoria y prompts."; $cp += ""; $cp += "Construido:"; foreach($x in $m.built){ $cp += "- $x" }; $cp += ""; $cp += "Aprendido / normas:"; foreach($x in $m.learned){ $cp += "- $x" }; $cp += ""; $cp += "Siguiente recomendado: $($m.recommended_next)"; $cp += "Objetivo: crear pantalla avanzada de tareas equivalente a tarjetas y conectarla al workspace."; $cp += ""; $cp += "Entrega esperada: breve explicación y script PowerShell completo, estable, validado y sin pedir confirmación si el siguiente paso es claro."; $cp | Set-Content $chat -Encoding UTF8
   $wp=@(); $wp += "WORKER PROMPT - ENGREMIAT"; $wp += ""; $wp += "Rol: worker local controlado. No ejecutes acciones externas."; $wp += "Tarea: $($m.recommended_next)."; $wp += "Objetivo: proponer o revisar pantalla avanzada de tareas de módulo siguiendo el patrón de tarjetas."; $wp += "Salida: resumen, archivos afectados, riesgos, propuesta, validación esperada."; $wp | Set-Content $worker -Encoding UTF8
+Write-Host "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" -ForegroundColor DarkGray
   return [pscustomobject]@{ json=$json; md=$md; chatgpt_prompt=$chat; worker_prompt=$worker }
 }
 function Show(){
@@ -66,3 +67,4 @@ function Show(){
   return $true
 }
 while($true){ $keep=Show; if(-not $keep){ break } }
+

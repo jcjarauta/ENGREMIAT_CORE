@@ -10,6 +10,7 @@ $Json=Join-Path $RepDir "navigation-tree-latest.json"
 $Md=Join-Path $RepDir "navigation-tree-latest.md"
 
 function W($m,$c="White"){ Write-Host $m -ForegroundColor $c }
+Write-Host "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" -ForegroundColor DarkGray
 function P(){ [void](Read-Host "Enter") }
 
 function EnsureTree(){
@@ -126,4 +127,5 @@ while($true){
   W "WARN comando_no_reconocido" Yellow
   P
 }
+
 

@@ -1,4 +1,5 @@
-﻿$ErrorActionPreference="Stop"
+﻿Write-Host "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" -ForegroundColor DarkGray
+$ErrorActionPreference="Stop"
 [Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
 $Core="C:\ENGREMIAT_CORE"
 $NavJson=Join-Path $Core "reports\navigation\navigation-tree-latest.json"
@@ -33,3 +34,4 @@ W ("ok={0} pending={1}" -f $audit.ok,$audit.pending) Yellow
 W "latest_json=$latestJson" Green
 W "latest_md=$md" Green
 W "next=E24A_CREATE_MODULE_TASKS_MANAGEMENT_SCREEN" Magenta
+

@@ -108,7 +108,7 @@ function ShowRows($rows,$view,$project){
   else{ W "Proyecto activo: NO_DETECTADO" Yellow }
 
   W ("VISTA: {0}" -f $view) Yellow
-  W "numero = abrir | p = proyecto | l = biblioteca | h = históricos | t = todos | b = atrás | Enter = refrescar" Cyan
+Write-Host "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" -ForegroundColor DarkGray
   W ""
 
   W "N    ORIGEN       MODULO                                       ESTADO" DarkGray
@@ -167,4 +167,5 @@ function Main(){
 }
 
 Main
+
 

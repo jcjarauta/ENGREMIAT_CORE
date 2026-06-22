@@ -138,7 +138,7 @@ function OpenMainOperator(){
   while($true){
     Clear-Host
     W "==== SELECCIONAR OPERADOR PRINCIPAL ====" Cyan
-    W "numero = abrir | b = atras | Enter = refrescar" Cyan
+Write-Host "[b/q] salir/volver  |  m = asistente tarjetas humanas  |  ? = ayuda  |  Enter = refrescar" -ForegroundColor DarkGray
     W ""
 
     for($i=0;$i -lt $scripts.Count;$i++){
@@ -988,6 +988,7 @@ function Main(){
 
 
 Main
+
 
 
 
