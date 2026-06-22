@@ -1,0 +1,27 @@
+﻿{
+    "schema":  "ENGREMIAT_OPERATOR_V2_STATE_LATEST_V1",
+    "updated_at":  "2026-06-22T09:33:00",
+    "active_objective":  {
+                             "id":  "ENGREMIAT_OPERATOR_V2_SELF_STATE_SYNC_001",
+                             "title":  "Operador V2 self-state sync",
+                             "status":  "ACTIVE",
+                             "purpose":  "Mantener V2 actualizado desde cada bloque cerrado.",
+                             "active_stage":  "E08R_VALIDATE_LAUNCHER_OPTION_6_V_AND_CLOSE_SCOPED_FIXED",
+                             "readiness":  85,
+                             "next_action":  "PROBAR_DESDE_LAUNCHER_OPCION_6_O_V"
+                         },
+    "last_stage":  "E08R_VALIDATE_LAUNCHER_OPTION_6_V_AND_CLOSE_SCOPED_FIXED",
+    "last_step":  "E08R",
+    "last_status":  "PASS",
+    "last_report":  "reports\\operator-v2-self-state-sync\\e08r-validate-launcher-option-6-v-and-close-scoped-fixed-20260622-093258.json",
+    "readiness":  85,
+    "git_state":  {
+                      "head":  "5542a460",
+                      "rev_sync":  "0\t33",
+                      "tree_clean":  false,
+                      "status_short":  "M ENGREMIAT.ps1\n?? data/operator-v2-self-state-sync/\n?? documents/operator-v2-self-state-sync/\n?? reports/functional-validation/e09-r1-commit-final-validation-reports-no-push-20260622-091608.json\n?? reports/operator-v2-self-state-sync/\n?? tools/operator-v2/",
+                      "push_executed":  false
+                  },
+    "next_action":  "PROBAR_DESDE_LAUNCHER_OPCION_6_O_V",
+    "human_summary":  "Opcion 6/v Estado vivo V2 validada con Contains literal; cierre scoped sin push."
+}

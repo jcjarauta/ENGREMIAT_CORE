@@ -1,0 +1,30 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_SELF_STATE_SYNC_001",
+    "stage":  "E08R_VALIDATE_LAUNCHER_OPTION_6_V_AND_CLOSE_SCOPED_FIXED",
+    "status":  "PASS",
+    "created_at":  "2026-06-22T09:33:01",
+    "launcher_parse":  true,
+    "screen_parse":  true,
+    "has_menu_option_6":  true,
+    "has_alias_v":  true,
+    "has_screen_path":  true,
+    "state_screen_smoke":  true,
+    "screen_active_stage":  "E07U_APPLY_EXACT_SUBSTRING_LAUNCHER_V2_STATE_PATCH",
+    "screen_last_status":  "PASS",
+    "screen_readiness":  75,
+    "status_before":  "M ENGREMIAT.ps1\n?? data/operator-v2-self-state-sync/\n?? documents/operator-v2-self-state-sync/\n?? reports/functional-validation/e09-r1-commit-final-validation-reports-no-push-20260622-091608.json\n?? reports/operator-v2-self-state-sync/\n?? tools/operator-v2/",
+    "scoped_paths":  [
+                         "ENGREMIAT.ps1",
+                         "tools/operator-v2/operator-v2-state-update.ps1",
+                         "tools/operator-v2/operator-v2-state-screen.ps1",
+                         "data/operator-v2-self-state-sync/v2-state.registry.json",
+                         "data/operator-v2-self-state-sync/v2-state.latest.json",
+                         "data/operator-v2-self-state-sync/v2-state.events.jsonl",
+                         "documents/operator-v2-self-state-sync/V2_STATE_INDEX.md",
+                         "documents/operator-v2-self-state-sync/V2_STATE_REGISTRY_CONTRACT.v1.json",
+                         "documents/operator-v2-self-state-sync/V2_STATE_REGISTRY_CONTRACT.v1.md"
+                     ],
+    "push_executed":  false,
+    "delete_files":  false,
+    "next":  "PROBAR_DESDE_LAUNCHER_OPCION_6_O_V"
+}

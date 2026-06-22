@@ -1,0 +1,107 @@
+﻿{
+    "contract_id":  "ENGREMIAT_OPERATOR_V2_STATE_REGISTRY_CONTRACT_V1",
+    "package":  "ENGREMIAT_OPERATOR_V2_SELF_STATE_SYNC_001",
+    "stage":  "E02_CREATE_V2_STATE_REGISTRY_CONTRACT",
+    "created_at":  "2026-06-22T09:23:01",
+    "purpose":  "Convertir Operador V2 en consola viva del desarrollo, actualizada por cada bloque cerrado.",
+    "principle":  "V2 no solo genera reports: V2 mantiene un registro operativo navegable de objetivos, etapas, bloques, evidencias, decisiones y siguiente accion.",
+    "layers":  [
+                   {
+                       "layer":  "V1",
+                       "role":  "Gestion diaria del sistema ENGREMIAT_CORE",
+                       "must_not":  "Gobernar su propia evolucion sin V2"
+                   },
+                   {
+                       "layer":  "V2",
+                       "role":  "Gestionar, validar, auditar, reparar y evolucionar V1",
+                       "must_not":  "Mezclar estado vivo con reports sueltos sin indice"
+                   }
+               ],
+    "registry_files":  {
+                           "state_json":  "data/operator-v2-self-state-sync/v2-state.registry.json",
+                           "index_md":  "documents/operator-v2-self-state-sync/V2_STATE_INDEX.md",
+                           "events_jsonl":  "data/operator-v2-self-state-sync/v2-state.events.jsonl",
+                           "latest_json":  "data/operator-v2-self-state-sync/v2-state.latest.json"
+                       },
+    "minimum_entities":  [
+                             "objective",
+                             "stage",
+                             "step",
+                             "artifact",
+                             "evidence",
+                             "decision",
+                             "risk",
+                             "next_action",
+                             "git_state"
+                         ],
+    "minimum_fields":  {
+                           "objective":  [
+                                             "id",
+                                             "title",
+                                             "status",
+                                             "purpose",
+                                             "active_stage",
+                                             "readiness",
+                                             "next_action"
+                                         ],
+                           "stage":  [
+                                         "id",
+                                         "objective_id",
+                                         "title",
+                                         "status",
+                                         "order",
+                                         "started_at",
+                                         "closed_at"
+                                     ],
+                           "step":  [
+                                        "id",
+                                        "stage_id",
+                                        "operation",
+                                        "risk",
+                                        "status",
+                                        "input",
+                                        "output",
+                                        "validation",
+                                        "report",
+                                        "next"
+                                    ],
+                           "evidence":  [
+                                            "id",
+                                            "path",
+                                            "type",
+                                            "created_at",
+                                            "package",
+                                            "stage",
+                                            "step",
+                                            "status"
+                                        ],
+                           "decision":  [
+                                            "id",
+                                            "kind",
+                                            "status",
+                                            "reason",
+                                            "next"
+                                        ],
+                           "git_state":  [
+                                             "head",
+                                             "tree_clean",
+                                             "rev_sync",
+                                             "status_short",
+                                             "push_executed"
+                                         ]
+                       },
+    "update_contract":  [
+                            "Cada bloque PASS debe poder registrar package/stage/step/status/report/next.",
+                            "Cada cierre debe actualizar latest_json.",
+                            "Cada objetivo debe tener estado ACTIVE/CLOSED/PAUSED/BLOCKED.",
+                            "Cada pantalla V2 futura debe leer del registry, no de intuicion conversacional.",
+                            "Los reports siguen siendo evidencia; el registry es el indice operativo."
+                        ],
+    "current_git":  {
+                        "head":  "5542a460",
+                        "rev_sync":  "0\t33",
+                        "tree_clean":  false,
+                        "status_short":  "?? reports/functional-validation/e09-r1-commit-final-validation-reports-no-push-20260622-091608.json\n?? reports/operator-v2-self-state-sync/"
+                    },
+    "next":  "E03_CREATE_V2_STATE_REGISTRY_FILES_DRY_RUN_OR_SAFE_INIT"
+}
