@@ -1,0 +1,40 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V1_BATCH_PUSH_FINAL_001",
+    "stage":  "E01R_REPAIR_CLOSE_SYNC_SMOKE_VALIDATE_COMMIT_EVIDENCE_AND_PUSH_FINAL",
+    "status":  "PASS",
+    "created_at":  "2026-06-22T10:57:51",
+    "repair":  "accept_close_sync_screen_alias",
+    "authorization":  "GENERAL_PUSH_AUTHORIZATION_GRANTED_BY_USER_FOR_ENGREMIAT_FINAL_OBJECTIVE_PUSH",
+    "launcher_parse":  true,
+    "launcher_contract":  {
+                              "has_1_home":  true,
+                              "has_2_projects":  true,
+                              "has_3_memory":  true,
+                              "has_4_data":  true,
+                              "has_5_health":  true,
+                              "has_6_v2_state":  true,
+                              "has_7_v2_next":  true,
+                              "has_8_v2_panel":  true,
+                              "has_9_v2_close":  true
+                          },
+    "screens_parse_ok":  true,
+    "json_screens":  {
+                         "tools/operator-v2/operator-v2-close-sync-screen.ps1":  "OPERATOR_V2_CLOSE_AND_SYNC",
+                         "tools/operator-v1/operator-v1-home-screen.ps1":  "OPERATOR_V1_HOME",
+                         "tools/operator-v1/operator-v1-projects-screen.ps1":  "OPERATOR_V1_PROJECTS",
+                         "tools/operator-v2/operator-v2-state-screen.ps1":  "OPERATOR_V2_STATE",
+                         "tools/operator-v1/operator-v1-memory-docs-screen.ps1":  "OPERATOR_V1_MEMORY_DOCS",
+                         "tools/operator-v2/operator-v2-control-panel.ps1":  "OPERATOR_V2_CONTROL_PANEL",
+                         "tools/operator-v1/operator-v1-health-launchers-screen.ps1":  "OPERATOR_V1_HEALTH_LAUNCHERS",
+                         "tools/operator-v2/operator-v2-next-action-screen.ps1":  "OPERATOR_V2_NEXT_ACTION",
+                         "tools/operator-v1/operator-v1-data-intake-screen.ps1":  "OPERATOR_V1_DATA_INTAKE"
+                     },
+    "head_before":  "bc81c20c",
+    "rev_sync_before":  "0\t12",
+    "tree_clean_before":  true,
+    "push_executed":  "PENDING_AFTER_EVIDENCE_COMMIT",
+    "fetch_executed":  false,
+    "merge_executed":  false,
+    "delete_files":  false,
+    "next":  "VALORAR_SIGUIENTE_OBJETIVO_TRAS_V1_BATCH_SYNCED"
+}
