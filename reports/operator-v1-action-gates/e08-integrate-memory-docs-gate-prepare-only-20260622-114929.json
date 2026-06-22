@@ -1,0 +1,43 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V1_ACTION_GATES_001",
+    "stage":  "E08_INTEGRATE_MEMORY_DOCS_GATE_PREPARE_ONLY",
+    "status":  "PASS",
+    "created_at":  "2026-06-22T11:49:40",
+    "backup":  "C:\\ENGREMIAT_CORE\\backups\\operator-v1-action-gates\\operator-v1-memory-docs-screen.before-e08-gates-20260622-114929.ps1",
+    "memory_screen":  "C:\\ENGREMIAT_CORE\\tools\\operator-v1\\operator-v1-memory-docs-screen.ps1",
+    "gate_previewer":  "C:\\ENGREMIAT_CORE\\tools\\operator-v1\\operator-v1-gate-previewer-readonly.ps1",
+    "screen_parse":  true,
+    "json_smoke":  true,
+    "gate_previewer_smoke":  true,
+    "memory_items_count":  1830,
+    "index_count":  160,
+    "contract_count":  124,
+    "evidence_count":  674,
+    "safe_actions":  [
+                         "numero_ver_detalle_readonly",
+                         "gN_preparar_gate_readonly",
+                         "gate_N_preparar_gate_readonly",
+                         "Enter_refrescar",
+                         "b_q_volver",
+                         "ayuda"
+                     ],
+    "gated_actions":  [
+                          "abrir_documento_externo",
+                          "crear_documento",
+                          "editar_documento",
+                          "indexar_documento"
+                      ],
+    "latest":  "C:\\ENGREMIAT_CORE\\data\\operator-v1-action-gates\\memory-docs-gate-prepare-readonly.latest.json",
+    "index":  "C:\\ENGREMIAT_CORE\\documents\\operator-v1-action-gates\\MEMORY_DOCS_GATE_PREPARE_READONLY.v1.md",
+    "branch":  "main",
+    "head":  "3c59f23d",
+    "rev_sync":  "0\t3",
+    "remote_synced":  false,
+    "tree_clean":  false,
+    "real_execution":  false,
+    "push_executed":  false,
+    "fetch_executed":  false,
+    "merge_executed":  false,
+    "delete_files":  false,
+    "next":  "E09_VALIDATE_MEMORY_DOCS_GATE_PREPARE_AND_COMMIT_SCOPED"
+}
