@@ -1,0 +1,30 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_CONTROL_PANEL_001",
+    "stage":  "E04_GATE_LAUNCHER_INTEGRATION_CONTROL_PANEL",
+    "status":  "PASS",
+    "created_at":  "2026-06-22T09:49:30",
+    "launcher":  "C:\\ENGREMIAT_CORE\\ENGREMIAT.ps1",
+    "panel":  "C:\\ENGREMIAT_CORE\\tools\\operator-v2\\operator-v2-control-panel.ps1",
+    "launcher_parse":  true,
+    "panel_parse":  true,
+    "json_smoke":  true,
+    "panel_risk":  "MEDIUM",
+    "has_state_v2_option":  true,
+    "has_next_action_option":  true,
+    "already_integrated":  false,
+    "menu_anchor_found":  true,
+    "switch_anchor_found":  true,
+    "planned_menu":  "[8] Panel control V2",
+    "planned_alias":  "p",
+    "authorization_phrase":  "AUTORIZO_E05_INTEGRAR_PANEL_CONTROL_V2_EN_LAUNCHER_CON_BACKUP_Y_SMOKE",
+    "decision":  "GO_E05_APPLY_CONTROL_PANEL_LAUNCHER_INTEGRATION_WITH_BACKUP_AND_SMOKE",
+    "git":  {
+                "head":  "ab396764",
+                "rev_sync":  "0\t39",
+                "tree_clean":  false,
+                "status_short":  "M data/operator-v2-self-state-sync/v2-state.events.jsonl\n M data/operator-v2-self-state-sync/v2-state.latest.json\n M data/operator-v2-self-state-sync/v2-state.registry.json\n M documents/operator-v2-self-state-sync/V2_STATE_INDEX.md\n?? data/operator-v2-control-panel/\n?? documents/operator-v2-control-panel/\n?? reports/operator-v2-control-panel/\n?? tools/operator-v2/operator-v2-control-panel.ps1"
+            },
+    "push_executed":  false,
+    "delete_files":  false,
+    "next":  "E05_APPLY_CONTROL_PANEL_LAUNCHER_INTEGRATION_WITH_BACKUP_AND_SMOKE"
+}

@@ -4,27 +4,27 @@ Estado vivo del Operador V2.
 
 ## Ultima actualizacion
 - Package: 
-ENGREMIAT_OPERATOR_V2_NEXT_ACTION_ENGINE_001
+ENGREMIAT_OPERATOR_V2_CONTROL_PANEL_001
 - Stage: 
-E07_REFRESH_FINAL_STATE_AND_CLOSE_OBJECTIVE
+E06_VALIDATE_LAUNCHER_OPTION_8_P_AND_COMMIT_SCOPED
 - Step: 
-E07
+E06
 - Status: 
 PASS
 - Readiness: 
-100
+85
 - Head: 
-21af9a62
+ab396764
 - Rev sync: 
-0	38
+0	39
 - Tree clean: 
-True
+False
 
 ## Resumen humano
-Objetivo NEXT_ACTION_ENGINE_001 cerrado: Operador V2 ya tiene pantalla Siguiente accion, recomendacion explicable, riesgo, acciones permitidas/bloqueadas e integracion en launcher validada por humano.
+Opcion 8/p Panel control V2 validada en launcher maestro; cierre scoped sin push.
 
 ## Report
-reports\operator-v2-next-action-engine\e07-refresh-final-state-and-close-objective-20260622-094550.json
+reports\operator-v2-control-panel\e06-validate-launcher-option-8-p-and-commit-scoped-20260622-095137.json
 
 ## NEXT
-VALORAR_SIGUIENTE_OBJETIVO_OPERADOR_V2
+PROBAR_DESDE_LAUNCHER_OPCION_8_O_P

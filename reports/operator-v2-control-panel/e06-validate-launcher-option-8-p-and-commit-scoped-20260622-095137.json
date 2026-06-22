@@ -1,0 +1,30 @@
+﻿{
+    "package":  "ENGREMIAT_OPERATOR_V2_CONTROL_PANEL_001",
+    "stage":  "E06_VALIDATE_LAUNCHER_OPTION_8_P_AND_COMMIT_SCOPED",
+    "status":  "PASS",
+    "created_at":  "2026-06-22T09:51:44",
+    "launcher_parse":  true,
+    "panel_parse":  true,
+    "has_menu_option_8":  true,
+    "has_alias_p":  true,
+    "has_panel_path":  true,
+    "json_smoke":  true,
+    "panel_risk":  "MEDIUM",
+    "reports_recent_count":  12,
+    "events_count":  20,
+    "status_before":  "M ENGREMIAT.ps1\n M data/operator-v2-self-state-sync/v2-state.events.jsonl\n M data/operator-v2-self-state-sync/v2-state.latest.json\n M data/operator-v2-self-state-sync/v2-state.registry.json\n M documents/operator-v2-self-state-sync/V2_STATE_INDEX.md\n?? data/operator-v2-control-panel/\n?? documents/operator-v2-control-panel/\n?? reports/operator-v2-control-panel/\n?? tools/operator-v2/operator-v2-control-panel.ps1",
+    "scoped_paths":  [
+                         "ENGREMIAT.ps1",
+                         "tools/operator-v2/operator-v2-control-panel.ps1",
+                         "data/operator-v2-control-panel",
+                         "documents/operator-v2-control-panel",
+                         "reports/operator-v2-control-panel",
+                         "data/operator-v2-self-state-sync/v2-state.registry.json",
+                         "data/operator-v2-self-state-sync/v2-state.latest.json",
+                         "data/operator-v2-self-state-sync/v2-state.events.jsonl",
+                         "documents/operator-v2-self-state-sync/V2_STATE_INDEX.md"
+                     ],
+    "push_executed":  false,
+    "delete_files":  false,
+    "next":  "PROBAR_DESDE_LAUNCHER_OPCION_8_O_P"
+}
