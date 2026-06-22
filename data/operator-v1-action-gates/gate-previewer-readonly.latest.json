@@ -1,0 +1,49 @@
+﻿{
+    "screen":  "OPERATOR_V1_GATE_PREVIEWER_READONLY",
+    "updated_at":  "2026-06-22T11:40:25",
+    "gate":  {
+                 "gate_id":  "sample_projects_open_folder_gate",
+                 "source_screen":  "OPERATOR_V1_PROJECTS",
+                 "action_id":  "abrir_carpeta_proyecto",
+                 "title":  "Smoke gate preview",
+                 "risk":  "MEDIUM",
+                 "scope":  "PREPARE_ONLY_NO_EXECUTION",
+                 "target_path":  "C:\\ENGREMIAT_CORE\\projects",
+                 "target_exists":  true,
+                 "target_inside_root":  true,
+                 "command_preview":  "PREVIEW_ONLY: Start-Process \u003ctarget\u003e -- NOT EXECUTED",
+                 "requires_human_authorization":  true,
+                 "authorization_phrase":  "AUTORIZO_SAMPLE_PROJECTS_OPEN_FOLDER_GATE_SINGLE_EXECUTION",
+                 "rollback":  "No aplica en preview; rollback especifico obligatorio antes de ejecucion real.",
+                 "validation":  "Preview generado sin ejecutar accion real.",
+                 "blocked_by_default":  true,
+                 "status":  "PENDING_HUMAN_AUTHORIZATION",
+                 "expires_at":  "2026-06-22T13:40:25"
+             },
+    "policy":  {
+                   "mode":  "PREPARE_ONLY",
+                   "real_execution":  false,
+                   "external_open":  false,
+                   "write":  false,
+                   "delete":  false,
+                   "clipboard":  false,
+                   "browser":  false,
+                   "network":  false,
+                   "single_execution_only":  true
+               },
+    "blocked_actions":  [
+                            "execute_command",
+                            "open_external",
+                            "modify_file",
+                            "delete_files",
+                            "clipboard",
+                            "browser",
+                            "network",
+                            "worker_real",
+                            "api_external",
+                            "push",
+                            "fetch",
+                            "merge"
+                        ],
+    "next":  "RETURN_TO_CALLER"
+}

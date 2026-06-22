@@ -1,7 +1,7 @@
 ﻿{
     "schema":  "ENGREMIAT_OPERATOR_V2_STATE_REGISTRY_V1",
     "created_at":  "2026-06-22T09:23:43",
-    "updated_at":  "2026-06-22T11:34:56",
+    "updated_at":  "2026-06-22T11:43:02",
     "source_contract":  "documents/operator-v2-self-state-sync/V2_STATE_REGISTRY_CONTRACT.v1.json",
     "objectives":  [
                        {
@@ -69,27 +69,27 @@
                   }
               ],
     "git_state":  {
-                      "head":  "4ee845a2",
-                      "rev_sync":  "0\t9",
-                      "tree_clean":  true,
-                      "status_short":  "",
+                      "head":  "e3a5cbf1",
+                      "rev_sync":  "0\t0",
+                      "tree_clean":  false,
+                      "status_short":  "M data/operator-v2-self-state-sync/v2-state.events.jsonl\n M data/operator-v2-self-state-sync/v2-state.latest.json\n M data/operator-v2-self-state-sync/v2-state.registry.json\n M documents/operator-v2-self-state-sync/V2_STATE_INDEX.md\n M tools/operator-v1/operator-v1-projects-screen.ps1\n?? data/operator-v1-action-gates/\n?? documents/next-objective-after-v1-actionable-navigation/\n?? documents/operator-v1-action-gates/\n?? reports/next-objective-after-v1-actionable-navigation/\n?? reports/operator-v1-action-gates/\n?? tools/operator-v1/operator-v1-gate-previewer-readonly.ps1",
                       "push_executed":  false
                   },
-    "next_action":  "VALORAR_SIGUIENTE_OBJETIVO_TRAS_V1_ACTIONABLE_NAVIGATION",
-    "events_count":  89,
+    "next_action":  "PROBAR_PROJECTS_GATE_PREPARE_READONLY_DESDE_LAUNCHER",
+    "events_count":  94,
     "last_event":  {
-                       "ts":  "2026-06-22T11:34:56",
+                       "ts":  "2026-06-22T11:43:02",
                        "event":  "V2_STATE_UPDATE",
-                       "package":  "ENGREMIAT_OPERATOR_V1_ACTIONABLE_NAVIGATION_001",
-                       "stage":  "E20_FINAL_VALIDATE_COMMIT_AND_PUSH_ACTIONABLE_NAVIGATION",
-                       "step":  "E20",
+                       "package":  "ENGREMIAT_OPERATOR_V1_ACTION_GATES_001",
+                       "stage":  "E05_VALIDATE_PROJECTS_GATE_PREPARE_AND_COMMIT_SCOPED",
+                       "step":  "E05",
                        "status":  "PASS",
-                       "report":  "reports\\operator-v1-actionable-navigation\\e20-final-validate-commit-and-push-actionable-navigation-20260622-113422.json",
-                       "next":  "VALORAR_SIGUIENTE_OBJETIVO_TRAS_V1_ACTIONABLE_NAVIGATION",
-                       "readiness":  100,
-                       "summary":  "Actionable Navigation V1 completado: Projects, Memory Docs, Data Intake y Health Launchers con detalle readonly probado, acciones reales bloqueadas y push final.",
-                       "head":  "4ee845a2",
-                       "rev_sync":  "0\t9",
-                       "tree_clean":  true
+                       "report":  "reports\\operator-v1-action-gates\\e05-validate-projects-gate-prepare-and-commit-scoped-20260622-114253.json",
+                       "next":  "PROBAR_PROJECTS_GATE_PREPARE_READONLY_DESDE_LAUNCHER",
+                       "readiness":  72,
+                       "summary":  "Projects V1 gate prepare-only validado: gN/gate N muestra Gate Preview readonly, autorizacion requerida y cero ejecucion real; commit scoped sin push.",
+                       "head":  "e3a5cbf1",
+                       "rev_sync":  "0\t0",
+                       "tree_clean":  false
                    }
 }

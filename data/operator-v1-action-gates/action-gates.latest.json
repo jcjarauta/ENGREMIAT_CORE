@@ -1,0 +1,124 @@
+﻿{
+    "contract_id":  "ENGREMIAT_OPERATOR_V1_ACTION_GATE_CONTRACT_V1",
+    "package":  "ENGREMIAT_OPERATOR_V1_ACTION_GATES_001",
+    "stage":  "E01_DEFINE_ACTION_GATE_CONTRACT_READONLY",
+    "created_at":  "2026-06-22T11:38:18",
+    "purpose":  "Definir gates de acciones V1 para preparar acciones reales sin ejecutarlas.",
+    "principles":  [
+                       "gate_preparation_only",
+                       "no_real_execution",
+                       "human_authorization_required",
+                       "risk_visible",
+                       "scope_visible",
+                       "rollback_visible",
+                       "command_preview_only",
+                       "readonly_navigation_preserved",
+                       "one_action_one_gate",
+                       "no_push_fetch_merge_delete_except_closure"
+                   ],
+    "gate_statuses":  [
+                          "DRAFT",
+                          "PENDING_HUMAN_AUTHORIZATION",
+                          "APPROVED_FOR_SINGLE_EXECUTION",
+                          "REJECTED",
+                          "EXPIRED",
+                          "EXECUTED_WITH_EVIDENCE"
+                      ],
+    "risk_levels":  [
+                        "LOW",
+                        "MEDIUM",
+                        "HIGH",
+                        "DANGER"
+                    ],
+    "required_gate_fields":  [
+                                 "gate_id",
+                                 "screen",
+                                 "action_id",
+                                 "title",
+                                 "risk",
+                                 "scope",
+                                 "target_path",
+                                 "command_preview",
+                                 "requires_human_authorization",
+                                 "authorization_phrase",
+                                 "rollback",
+                                 "validation",
+                                 "blocked_by_default",
+                                 "created_at",
+                                 "expires_at",
+                                 "status"
+                             ],
+    "screen_gate_map":  [
+                            {
+                                "screen":  "OPERATOR_V1_PROJECTS",
+                                "blocked_actions":  [
+                                                        "abrir_carpeta_proyecto",
+                                                        "crear_proyecto",
+                                                        "activar_proyecto",
+                                                        "archivar_proyecto"
+                                                    ],
+                                "first_gate":  "prepare_open_project_folder_gate"
+                            },
+                            {
+                                "screen":  "OPERATOR_V1_MEMORY_DOCS",
+                                "blocked_actions":  [
+                                                        "abrir_documento_externo",
+                                                        "editar_documento",
+                                                        "generar_indice",
+                                                        "modificar_memoria"
+                                                    ],
+                                "first_gate":  "prepare_open_document_external_gate"
+                            },
+                            {
+                                "screen":  "OPERATOR_V1_DATA_INTAKE",
+                                "blocked_actions":  [
+                                                        "importar_fuente",
+                                                        "modificar_staging",
+                                                        "transformar_datos",
+                                                        "enviar_a_sheets",
+                                                        "abrir_archivo_externo"
+                                                    ],
+                                "first_gate":  "prepare_import_source_gate"
+                            },
+                            {
+                                "screen":  "OPERATOR_V1_HEALTH_LAUNCHERS",
+                                "blocked_actions":  [
+                                                        "ejecutar_smoke",
+                                                        "ejecutar_healthcheck",
+                                                        "ejecutar_repair",
+                                                        "abrir_launcher_externo",
+                                                        "modificar_launcher"
+                                                    ],
+                                "first_gate":  "prepare_run_healthcheck_gate"
+                            }
+                        ],
+    "hard_blocked_without_explicit_authorization":  [
+                                                        "push",
+                                                        "fetch",
+                                                        "merge",
+                                                        "delete_files",
+                                                        "worker_real",
+                                                        "api_external",
+                                                        "browser",
+                                                        "clipboard",
+                                                        "execute_smoke",
+                                                        "execute_repair",
+                                                        "modify_file",
+                                                        "open_external"
+                                                    ],
+    "next_stages":  [
+                        "E02_CREATE_GATE_MODEL_READONLY",
+                        "E03_CREATE_GATE_PREVIEWER_READONLY",
+                        "E04_INTEGRATE_PROJECTS_GATE_PREPARE_ONLY",
+                        "E05_VALIDATE_AND_COMMIT_SCOPED",
+                        "E06_HUMAN_RETEST_GATE_PREVIEW"
+                    ],
+    "git":  {
+                "head":  "e3a5cbf1",
+                "rev_sync":  "0\t0",
+                "remote_synced":  true,
+                "tree_clean":  false,
+                "status_short":  "?? documents/next-objective-after-v1-actionable-navigation/\n?? reports/next-objective-after-v1-actionable-navigation/"
+            },
+    "next":  "E02_CREATE_GATE_MODEL_READONLY"
+}
