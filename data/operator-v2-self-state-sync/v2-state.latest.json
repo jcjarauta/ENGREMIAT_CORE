@@ -1,27 +1,27 @@
 ﻿{
     "schema":  "ENGREMIAT_OPERATOR_V2_STATE_LATEST_V1",
-    "updated_at":  "2026-06-22T09:59:40",
+    "updated_at":  "2026-06-22T10:01:09",
     "active_objective":  {
                              "id":  "ENGREMIAT_OPERATOR_V2_CLOSE_AND_SYNC_001",
                              "title":  "Operador V2 self-state sync",
                              "status":  "ACTIVE",
                              "purpose":  "Mantener V2 actualizado desde cada bloque cerrado.",
-                             "active_stage":  "E06_VALIDATE_LAUNCHER_OPTION_9_C_AND_COMMIT_SCOPED",
-                             "readiness":  85,
-                             "next_action":  "PROBAR_DESDE_LAUNCHER_OPCION_9_O_C"
+                             "active_stage":  "E07_REFRESH_FINAL_STATE_AND_CLOSE_OBJECTIVE_NO_PUSH",
+                             "readiness":  100,
+                             "next_action":  "DECIDIR_PUSH_FINAL_O_INICIAR_CONSTRUCCION_SEGURA_V1"
                          },
-    "last_stage":  "E06_VALIDATE_LAUNCHER_OPTION_9_C_AND_COMMIT_SCOPED",
-    "last_step":  "E06",
+    "last_stage":  "E07_REFRESH_FINAL_STATE_AND_CLOSE_OBJECTIVE_NO_PUSH",
+    "last_step":  "E07",
     "last_status":  "PASS",
-    "last_report":  "reports\\operator-v2-close-and-sync\\e06-validate-launcher-option-9-c-and-commit-scoped-20260622-095932.json",
-    "readiness":  85,
+    "last_report":  "reports\\operator-v2-close-and-sync\\e07-refresh-final-state-and-close-objective-no-push-20260622-100107.json",
+    "readiness":  100,
     "git_state":  {
-                      "head":  "edf62a14",
-                      "rev_sync":  "0\t41",
-                      "tree_clean":  false,
-                      "status_short":  "M ENGREMIAT.ps1\n M data/operator-v2-self-state-sync/v2-state.events.jsonl\n M data/operator-v2-self-state-sync/v2-state.latest.json\n M data/operator-v2-self-state-sync/v2-state.registry.json\n M documents/operator-v2-self-state-sync/V2_STATE_INDEX.md\n?? data/operator-v2-close-and-sync/\n?? documents/operator-v2-close-and-sync/\n?? reports/operator-v2-close-and-sync/\n?? tools/operator-v2/operator-v2-close-sync-screen.ps1",
+                      "head":  "767ebc15",
+                      "rev_sync":  "0\t42",
+                      "tree_clean":  true,
+                      "status_short":  "",
                       "push_executed":  false
                   },
-    "next_action":  "PROBAR_DESDE_LAUNCHER_OPCION_9_O_C",
-    "human_summary":  "Opcion 9/c Close and Sync V2 validada en launcher maestro; cierre scoped sin push/fetch/merge."
+    "next_action":  "DECIDIR_PUSH_FINAL_O_INICIAR_CONSTRUCCION_SEGURA_V1",
+    "human_summary":  "Objetivo CLOSE_AND_SYNC_001 cerrado: Operador V2 ya tiene pantalla de cierre/sync con Git real, ahead/behind, arbol limpio, gate de push y bloqueo de acciones sensibles. No se ejecuto push."
 }
