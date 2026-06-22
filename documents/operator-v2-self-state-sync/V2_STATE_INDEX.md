@@ -4,27 +4,27 @@ Estado vivo del Operador V2.
 
 ## Ultima actualizacion
 - Package: 
-ENGREMIAT_OPERATOR_V1_DATA_INTAKE_SCREEN_001
+ENGREMIAT_OPERATOR_V1_HEALTH_LAUNCHERS_SCREEN_001
 - Stage: 
-E07_HUMAN_RETEST_AND_CLOSE_OBJECTIVE_NO_PUSH
+E06_VALIDATE_LAUNCHER_OPTION_5_AND_COMMIT_SCOPED
 - Step: 
-E07
+E06
 - Status: 
 PASS
 - Readiness: 
-100
+85
 - Head: 
-3d9d5887
+ca44ce5a
 - Rev sync: 
-0	9
+0	10
 - Tree clean: 
-True
+False
 
 ## Resumen humano
-Objetivo Data Intake Screen V1 cerrado: opcion 4 abre pantalla Data Intake V1 con fuentes, staging, imports, sheets/csv/tsv, API/open, reports, gobierno V2 y acciones bloqueadas. No se ejecuto push.
+Opcion 5 Health Launchers validada apuntando a pantalla V1; V1 1-4 y V2 gobierno conservados; commit scoped sin push.
 
 ## Report
-reports\operator-v1-data-intake-screen\e07-human-retest-and-close-objective-no-push-20260622-104455.json
+reports\operator-v1-health-launchers-screen\e06-validate-launcher-option-5-and-commit-scoped-20260622-105135.json
 
 ## NEXT
-VALORAR_HEALTH_LAUNCHERS_O_PUSH_FINAL_V1_BATCH
+PROBAR_DESDE_LAUNCHER_OPCION_5

@@ -1,0 +1,88 @@
+﻿{
+    "contract_id":  "ENGREMIAT_OPERATOR_V1_HEALTH_LAUNCHERS_SCREEN_CONTRACT_V1",
+    "package":  "ENGREMIAT_OPERATOR_V1_HEALTH_LAUNCHERS_SCREEN_001",
+    "stage":  "E02_DEFINE_HEALTH_LAUNCHERS_SCREEN_CONTRACT",
+    "created_at":  "2026-06-22T10:47:31",
+    "purpose":  "Crear pantalla V1 Health Launchers para operar launchers, validadores, smokes, healthchecks, reports recientes y siguientes acciones humanas bajo gobierno V2.",
+    "strategy":  "Primero pantalla read-only versionada; despues gate de integracion de opcion 5; no ejecutar reparaciones, validaciones destructivas ni cambios sensibles sin gates posteriores.",
+    "scope_first_iteration":  {
+                                  "name":  "HEALTH_LAUNCHERS_SCREEN_READONLY_V1",
+                                  "description":  "Mostrar inventario operativo de salud: launchers, validadores, smokes, doctors, reports, estado Git, acciones bloqueadas y siguiente paso.",
+                                  "risk":  "LOW",
+                                  "reason":  "La opcion 5 existe y debe pasar de placeholder/ruta basica a pantalla operativa real."
+                              },
+    "sections":  [
+                     "Resumen de salud",
+                     "Launchers detectados",
+                     "Validadores y smokes",
+                     "Reports recientes",
+                     "Estado Git",
+                     "Siguiente accion humana",
+                     "Acciones bloqueadas",
+                     "Gobierno V2 disponible"
+                 ],
+    "classification_rules":  {
+                                 "launcher_hint":  "Archivos o carpetas con launcher, launch, inicio.",
+                                 "health_hint":  "Archivos o carpetas con health, healthcheck, doctor.",
+                                 "smoke_hint":  "Archivos o carpetas con smoke, test, validate, validation, check.",
+                                 "repair_hint":  "Archivos o carpetas con repair, fix, restore.",
+                                 "status_hint":  "Archivos o carpetas con status, state, report."
+                             },
+    "allowed_actions":  [
+                            "readonly_audit",
+                            "create_contract",
+                            "create_screen_readonly",
+                            "prepare_launcher_gate",
+                            "apply_launcher_gate_with_auth",
+                            "validate_and_commit_scoped",
+                            "human_retest"
+                        ],
+    "blocked_actions":  [
+                            "push_auto",
+                            "fetch_auto",
+                            "merge_auto",
+                            "delete_files",
+                            "worker_real",
+                            "api_externa",
+                            "navegador",
+                            "clipboard",
+                            "ejecutar_reparaciones_sin_gate",
+                            "ejecutar_smokes_sensibles_sin_gate",
+                            "modificar_launchers_sin_gate"
+                        ],
+    "planned_stages":  [
+                           {
+                               "id":  "E03",
+                               "name":  "CREATE_HEALTH_LAUNCHERS_SCREEN_READONLY",
+                               "description":  "Crear pantalla V1 Health Launchers read-only y testeable."
+                           },
+                           {
+                               "id":  "E04",
+                               "name":  "GATE_LAUNCHER_INTEGRATION_HEALTH_LAUNCHERS",
+                               "description":  "Preparar integracion gated de opcion 5."
+                           },
+                           {
+                               "id":  "E05",
+                               "name":  "APPLY_HEALTH_LAUNCHERS_INTEGRATION_WITH_AUTH",
+                               "description":  "Aplicar solo con autorizacion humana."
+                           },
+                           {
+                               "id":  "E06",
+                               "name":  "VALIDATE_AND_COMMIT_SCOPED",
+                               "description":  "Validar launcher/pantalla y commit scoped."
+                           },
+                           {
+                               "id":  "E07",
+                               "name":  "HUMAN_RETEST_AND_CLOSE",
+                               "description":  "Prueba humana y cierre sin push."
+                           }
+                       ],
+    "current_git":  {
+                        "branch":  "main",
+                        "head":  "ca44ce5a",
+                        "rev_sync":  "0\t10",
+                        "tree_clean":  false,
+                        "status_short":  "M data/operator-v2-self-state-sync/v2-state.events.jsonl\n M data/operator-v2-self-state-sync/v2-state.latest.json\n M data/operator-v2-self-state-sync/v2-state.registry.json\n M documents/operator-v2-self-state-sync/V2_STATE_INDEX.md\n?? documents/operator-v1-health-launchers-screen/\n?? reports/operator-v1-health-launchers-screen/"
+                    },
+    "next":  "E03_CREATE_HEALTH_LAUNCHERS_SCREEN_READONLY"
+}
